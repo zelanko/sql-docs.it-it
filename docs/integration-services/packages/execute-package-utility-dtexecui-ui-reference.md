@@ -24,10 +24,10 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295828"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilità di esecuzione pacchetti (dtexecui.exe)
@@ -35,7 +35,7 @@ ms.locfileid: "71295828"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec** .  
+  Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'utilità esegue i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec** .  
   
  I pacchetti vengono eseguiti nello stesso processo dell'utilità **dtexecui.exe** . Questa utilità è uno strumento a 32 bit, quindi i pacchetti eseguiti usando **dtexecui.exe** in un ambiente a 64 bit vengono eseguiti in Windows on Win32 (WOW). Quando si sviluppano e si verificano i comandi usando l'utilità dtexecui.exe in un computer a 64 bit, è consigliabile eseguire la verifica in modalità a 64 bit usando la versione a 64 bit di **dtexec.exe** prima della distribuzione o della pianificazione dei comandi su un server di produzione.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71295828"
 |||  
 |-|-|  
 |valore|Descrizione|  
-|**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** _nomeutente_ e **/PASSWORD** _password_ options to the comme prompt.|  
+|**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** _nomeutente_ e **/PASSWORD** _password_ al prompt dei comandi.|  
 |**File system**|Selezionare questa opzione se il pacchetto si trova nel file system.|  
 |**Archivio pacchetti SSIS**|Selezionare questa opzione se il pacchetto si trova nell'Archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ### <a name="dynamic-options"></a>Opzioni dinamiche  
@@ -137,7 +137,7 @@ ms.locfileid: "71295828"
 > [!NOTE]  
 >  Se più configurazioni modificano la stessa proprietà, viene utilizzata la configurazione caricata per ultima.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questo pulsante per aggiungere configurazioni tramite la finestra di dialogo **Apri** . Per impostazione predefinita, nella finestra di dialogo sono elencati solo i file con estensione dtsconfig.  
   
  **Rimuovi**  
@@ -146,20 +146,20 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="command-files-page"></a>Pagina File di comando  
  Utilizzare la pagina **File di comando** della finestra di dialogo **Utilità di esecuzione pacchetti** per selezionare i file di comando da caricare in fase di esecuzione.  
   
 ### <a name="options"></a>Opzioni  
- **Command files**  
+ **File di comando**  
  Consente di elencare i file di comando utilizzati dal pacchetto. Un pacchetto può utilizzare più file per l'impostazione delle opzioni della riga di comando.  
   
  **Tasti di direzione**  
  Selezionare un file di comando nell'elenco e utilizzare i tasti di direzione a destra per modificare l'ordine di caricamento. I file di comando vengono caricati in ordine a partire dalla parte superiore dell'elenco.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questo pulsante per aggiungere un file di comando usando la finestra di dialogo **Apri** .  
   
  **Rimuovi**  
@@ -168,7 +168,7 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="connection-managers-page"></a>Pagina Gestioni connessioni  
@@ -187,7 +187,7 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="execution-options-page"></a>Pagina Opzioni di esecuzione  
@@ -218,10 +218,10 @@ ms.locfileid: "71295828"
  **Opzione di riavvio**  
  Consente di selezionare la modalità di utilizzo dei checkpoint, se si ignorano le opzioni di riavvio.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="reporting-page"></a>Pagina Report  
@@ -234,7 +234,7 @@ ms.locfileid: "71295828"
  **Nessuno**  
  Selezionare questa opzione per non generare report.  
   
- **errori**  
+ **Errori**  
  Selezionare questa opzione per segnalare i messaggi di errore.  
   
  **Avvisi**  
@@ -249,7 +249,7 @@ ms.locfileid: "71295828"
  **Informazioni**  
  Selezionare questa opzione per segnalare i messaggi informativi.  
   
- **Verbose**  
+ **Dettagliato**  
  Selezionare questa opzione per utilizzare i report dettagliati.  
   
  **Registrazione console**  
@@ -273,7 +273,7 @@ ms.locfileid: "71295828"
  **GUID esecuzione**  
  Selezionare questa opzione per segnalare il GUID dell'istanza di esecuzione del pacchetto.  
   
- **Message**  
+ **Messaggio**  
  Selezionare questa opzione per segnalare i messaggi.  
   
  **Ora di inizio e fine**  
@@ -282,7 +282,7 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="logging-page"></a>Pagina Registrazione  
@@ -301,7 +301,7 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="set-values-page"></a>Pagina Imposta valori  
@@ -311,7 +311,7 @@ ms.locfileid: "71295828"
  **Percorso proprietà**  
  Consente di immettere il percorso della proprietà. La sintassi del percorso usa una barra rovesciata (\\) per indicare che l'elemento seguente è un contenitore, il punto (.) per indicare che l'elemento seguente è una proprietà e le parentesi per indicare un membro di una raccolta. Il membro può essere identificato tramite il relativo indice o nome. Ad esempio, il percorso della proprietà di una variabile di pacchetto è \Pacchetto.Variabili[Variabile].Valore.  
   
- **Value**  
+ **Valore**  
  Consente di immettere il valore della proprietà.  
   
  **Rimuovi**  
@@ -320,7 +320,7 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="verification-page"></a>Pagina Verifica  
@@ -333,7 +333,7 @@ ms.locfileid: "71295828"
  **Verifica build pacchetto**  
  Selezionare questa opzione per verificare la build del pacchetto.  
   
- Compilazione  
+ Compilare  
  Consente di specificare il numero di build sequenziale associato alla build.  
   
  **Verifica ID pacchetto**  
@@ -351,7 +351,7 @@ ms.locfileid: "71295828"
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="command-line-page"></a>Pagina Riga di comando  
@@ -364,13 +364,13 @@ ms.locfileid: "71295828"
  **Modifica riga di comando manualmente**  
  Fare clic per modificare la riga di comando nella casella di testo **Riga di comando** .  
   
- **Command line**  
+ **Riga di comando**  
  Consente di visualizzare la riga di comando corrente, che risulta modificabile se si seleziona l'opzione per la modifica manuale della riga di comando.  
   
  **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="see-also"></a>Vedere anche  

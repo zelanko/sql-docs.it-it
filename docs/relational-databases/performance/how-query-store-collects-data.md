@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974358"
 ---
 # <a name="how-query-store-collects-data"></a>Modalità di raccolta dei dati di Query Store
@@ -28,10 +28,10 @@ SQL Server Query Store funge da vera e propria scatola nera, raccogliendo costan
 ## <a name="views"></a>Viste 
  Il diagramma seguente mostra le viste di Archivio query e le loro relazioni logiche, con le informazioni della fase di compilazione presentate come entità blu:
   
- ![Viste del processo di Query Store](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
+ ![Viste del processo Query Store](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Descrizioni delle viste**  
   
-|Vista|Descrizione|  
+|Visualizza|Descrizione|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Presenta i testi delle singole query univoche eseguite sul database. I commenti e gli spazi prima e dopo il testo della query vengono ignorati. I commenti e gli spazi all'interno del testo non vengono ignorati. Ogni istruzione del batch genera una voce diversa nell'elenco dei testi di query.|  
 |**sys.query_context_settings**|Presenta combinazioni univoche di impostazioni che influiscono sul piano e con cui sono eseguite le query. Lo stesso testo della query eseguito con impostazioni diverse che influiscono sul piano genera una voce di query separata in Query Store in quanto `context_settings_id` fa parte della chiave della query.|  
@@ -55,12 +55,12 @@ SQL Server Query Store funge da vera e propria scatola nera, raccogliendo costan
   
  Il diagramma seguente illustra i punti di integrazione spiegati nei passaggi precedenti:
   
- ![Processo di Query Store](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
+ ![Processo Query Store](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
  Per ridurre al minimo il sovraccarico di I/O, i nuovi dati sono acquisiti in memoria. Le operazioni di scrittura sono messe in coda e scaricate su disco in un secondo momento. Le informazioni relative alle query e ai piani, visualizzate come Archivio piani nel diagramma seguente, vengono scaricate con latenza minima, mentre le statistiche di runtime, visualizzate come Statistiche runtime, sono mantenute in memoria per un periodo di tempo definito con l'opzione `DATA_FLUSH_INTERVAL_SECONDS` dell'istruzione `SET QUERY_STORE`. È possibile usare la finestra di dialogo Query Store di [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] per immettere un valore per **Intervallo di scaricamento dati (minuti)** , che viene convertito internamente in secondi. 
   
- ![Piano del processo di Query Store](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
+ ![Piano del processo Query Store](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
   
  Se si verifica un arresto anomalo del sistema quando si usa il [flag di traccia 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery), Query Store può perdere i dati di runtime raccolti ma non ancora salvati in modo permanente, fino a un intervallo di tempo definito con `DATA_FLUSH_INTERVAL_SECONDS`. Si consiglia il valore predefinito di 900 secondi (15 minuti) che rappresenta un buon compromesso tra le prestazioni di acquisizione delle query e la disponibilità dei dati.
  
@@ -74,7 +74,7 @@ SQL Server Query Store funge da vera e propria scatola nera, raccogliendo costan
  
  Se una sessione viene terminata o in caso di riavvio o arresto anomalo dell'applicazione client, non verranno registrate le statistiche di query. 
   
- ![Informazioni sul piano del processo di Query Store](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
+ ![Informazioni sul piano del processo Query Store](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
 ## <a name="see-also"></a>Vedere anche
  [Monitoraggio delle prestazioni con Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  

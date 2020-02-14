@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285224"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Istruzione SQL CREATE TABLE (Importazione/Esportazione guidata SQL Server)
@@ -33,7 +33,7 @@ Se nella finestra di dialogo **Mapping colonne** si seleziona **Crea tabella di 
  
 In questo esempio, la finestra di dialogo **Istruzione SQL** contiene l'istruzione **CREATE TABLE** predefinita generata dalla procedura guidata. Questa istruzione crea una nuova tabella di destinazione, denominata **Person.AddressNew**, che è una copia della tabella di origine **Person.Address**. 
   
- ![Pagina Crea tabella dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/create-table.png "Pagina Crea tabella dell'Importazione/Esportazione guidata")  
+ ![Pagina per la creazione di una tabella dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/create-table.png "Pagina per la creazione di una tabella dell'Importazione/Esportazione guidata")  
   
 ## <a name="review-or-regenerate-the-create-table-statement"></a>Rivedere o rigenerare l'istruzione CREATE TABLE  
  **Istruzione SQL**  

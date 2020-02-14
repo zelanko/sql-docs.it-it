@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141286"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
@@ -34,7 +34,7 @@ Legge i valori di tipo **text**, **ntext** o **image** da una colonna di tipo **
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare invece la funzione [SUBSTRING](../../t-sql/functions/substring-transact-sql.md).  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ _size_ è il numero di byte se viene usato il tipo di dati **text** o **image**.
 HOLDLOCK  
 Impedisce la lettura del valore del testo fino alla fine della transazione. Gli altri utenti possono leggere il valore, ma non modificarlo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare la funzione [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) per ottenere un valore _text\_ptr_ valido. TEXTPTR restituisce un puntatore alla colonna di tipo **text**, **ntext** o **image** nella riga specificata. TEXTPRT può anche restituire un puntatore alla colonna di tipo **text**, **ntext** o **image** nell'ultima riga restituita dalla query, se la query restituisce più righe. Poiché TEXTPTR restituisce una stringa binaria di 16 byte, è consigliabile dichiarare una variabile locale in cui archiviare il puntatore di testo e utilizzare quindi la variabile con l'istruzione READTEXT. Per altre informazioni sulla dichiarazione di una variabile locale, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i puntatori di testo all'interno di righe possono esistere, ma possono essere non validi. Per altre informazioni sull'opzione **text in row**, vedere [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Per altre informazioni su come invalidare i puntatori di testo, vedere [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  

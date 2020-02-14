@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297873"
 ---
 # <a name="script-component"></a>Componente script
@@ -138,7 +138,7 @@ ms.locfileid: "71297873"
  **Descrizione**  
  Consente di digitare una descrizione per la connessione.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un'altra connessione all'elenco **Gestioni connessioni** .  
   
  **Rimuovi**  

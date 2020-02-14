@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093588"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
@@ -45,7 +45,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |Istanze del contatore SQL Server Deprecated Features|Descrizione|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
-|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituirla con `SELECT column_list FROM` *< nome_funzione>* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
+|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituirla con `SELECT column_list FROM` *< nome_funzione>* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
 |"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con \@ o \@\@. Non usare come identificatori \@ o \@v@ o nomi che iniziano con \@\@. Si verifica una volta per ogni compilazione.|  
 |ADDING TAPE DEVICE|È stata rilevata la caratteristica deprecata sp_addumpdevice'**tape**'. In alternativa, usare sp_addumpdevice'**disk**'. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
@@ -110,7 +110,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |Hindi|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto. Usare Indic_General_90.|  
 |Hint di tabella HOLDLOCK senza parentesi||  
 |IDENTITYCOL|È stata rilevata la sintassi IDENTITYCOL. Riscrivere le istruzioni in modo che utilizzino la sintassi $identity. Si verifica una volta per ogni compilazione.|  
-|Elenco di selezione di una vista indicizzata senza COUNT_BIG(\*)|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(\*).|  
+|Elenco di selezione di una vista indicizzata senza COUNT_BIG(*)|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(\*).|  
 |INDEX_OPTION|È stata rilevata la sintassi CREATE TABLE, ALTER TABLE o CREATE INDEX senza parentesi per racchiudere le opzioni. Riscrivere le istruzioni in modo che utilizzino la sintassi corrente. Si verifica una volta per ogni query.|  
 |INDEXKEY_PROPERTY|È stata rilevata la sintassi INDEXKEY_PROPERTY. Riscrivere le istruzioni per eseguire query su sys.index_columns. Si verifica una volta per ogni compilazione.|  
 |Hint di funzione con valori di tabella indiretti|L'applicazione indiretta, tramite una vista, di hint di tabella a una chiamata di una funzione con valori di tabella con istruzioni multiple verrà rimossa in una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -118,7 +118,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto.|  
 |Lithuanian_Classic|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto.|  
-|Macedonian|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto. Usare Macedonian_FYROM_90.|  
+|Macedone|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto. Usare Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|È stata rilevata la sintassi MODIFY FILEGROUP READONLY. Riscrivere le istruzioni in modo che utilizzino la sintassi READ_ONLY. Si verifica una volta per ogni compilazione.|  
 |MODIFY FILEGROUP READWRITE|È stata rilevata la sintassi MODIFY FILEGROUP READWRITE. Riscrivere le istruzioni in modo che utilizzino la sintassi READ_WRITE. Si verifica una volta per ogni compilazione.|  
 |Nome di colonna in più di due parti|Una query usano un nome in tre o quattro parti nell'elenco di colonne. Modificare la query in modo che utilizzi nomi in due parti conformi allo standard. Si verifica una volta per ogni compilazione.|  
@@ -275,16 +275,16 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |XMLDATA|È stata rilevata la sintassi FOR XML. Usare la generazione XSD per le modalità RAW e AUTO. Non sono disponibili sostituzioni per la modalità esplicita. Si verifica una volta per ogni compilazione.|  
 |XP_API|È stata rilevata un'istruzione di una stored procedure estesa. Non usare.|  
 |xp_grantlogin|È stata rilevata la procedura xp_grantlogin. In alternativa, usare CREATE LOGIN. Si verifica una volta per ogni compilazione.|  
-|xp_loginconfig|È stata rilevata la procedura xp_loginconfig. In alternativa, usare l'argomento IsIntegratedSecurityOnly di SERVERPROPERTY. Si verifica una volta per ogni query.|  
+|xp_loginConfig|È stata rilevata la procedura xp_loginconfig. In alternativa, usare l'argomento IsIntegratedSecurityOnly di SERVERPROPERTY. Si verifica una volta per ogni query.|  
 |xp_revokelogin|È stata rilevata la procedura xp_revokelogin. In alternativa, usare ALTER LOGIN DISABLE o DROP LOGIN. Si verifica una volta per ogni compilazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità del Motore di database deprecate in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Funzionalità del motore di database deprecate in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Funzionalità deprecate della ricerca full-text in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe di evento Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Classe di evento Deprecation Final Support](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Funzionalità del motore di database non più usate in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Funzionalità della ricerca full-text non più supportate in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Utilizzare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
+ [Usare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

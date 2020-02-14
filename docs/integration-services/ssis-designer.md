@@ -25,10 +25,10 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295670"
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
@@ -52,7 +52,7 @@ ms.locfileid: "71295670"
   
  Nella figura seguente vengono illustrate le finestre Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e **Casella degli strumenti** .  
   
- ![Screenshot di Progettazione SSIS e Casella degli strumenti SSIS](../integration-services/media/denali-designerandtoolbox.gif "Screenshot di Progettazione SSIS e Casella degli strumenti SSIS")  
+ ![Screenshot di Progettazione SSIS e della casella degli strumenti](../integration-services/media/denali-designerandtoolbox.gif "Screenshot di Progettazione SSIS e della casella degli strumenti")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ulteriori finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili finestre e finestre di dialogo che consentono di configurare l'ambiente di sviluppo e usare i pacchetti. Per altre informazioni, vedere [Interfaccia utente di Integration Services](../integration-services/integration-services-user-interface.md).  
   

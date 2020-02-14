@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091421"
 ---
 # <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
@@ -199,9 +199,9 @@ ms.locfileid: "68091421"
   
  Ogni elemento \<FIELD> è indipendente dagli altri. Per la descrizione di un campo vengono utilizzati gli attributi seguenti:  
   
-|Attributo FIELD|Descrizione|Facoltativo /<br /><br /> Obbligatorio|  
+|Attributo FIELD|Descrizione|Facoltativo /<br /><br /> Obbligatoria|  
 |---------------------|-----------------|------------------------------|  
-|ID **="** _fieldID_ **"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> esegue il mapping a \<COLUMN SOURCE **="** _fieldID_ **"** />|Obbligatorio|  
+|ID **="** _fieldID_ **"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> esegue il mapping a \<COLUMN SOURCE **="** _fieldID_ **"** />|Obbligatoria|  
 |xsi:type **="** _fieldType_ **"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo dell'istanza dell'elemento. Il valore di *fieldType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.|Obbligatorio, a seconda del tipo di dati|  
 |LENGTH **="** _n_ **"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
 |PREFIX_LENGTH **="** _p_ **"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p*deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
@@ -216,7 +216,7 @@ ms.locfileid: "68091421"
   
 |Valori xsi:type di \<FIELD>|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
-|**NativeFixed**|**LENGTH**|Nessuna.|  
+|**NativeFixed**|**LENGTH**|No.|  
 |**NativePrefix**|**PREFIX_LENGTH**|MAX_LENGTH|  
 |**CharFixed**|**LENGTH**|COLLATION|  
 |**NCharFixed**|**LENGTH**|COLLATION|  
@@ -225,7 +225,7 @@ ms.locfileid: "68091421"
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
   
- Per altre informazioni sui tipi di dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ Per altre informazioni sui tipi di dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 ####  <a name="AttrOfColumnElement"></a> Attributi dell'elemento \<COLUMN>  
  Questa sezione descrive gli attributi dell'elemento \<COLUMN>, riepilogati nella sintassi dello schema seguente:  
@@ -252,10 +252,10 @@ ms.locfileid: "68091421"
   
  Per eseguire il mapping di un campo a una colonna nella tabella di destinazione vengono utilizzati gli attributi seguenti:  
   
-|Attributo COLUMN|Descrizione|Facoltativo /<br /><br /> Obbligatorio|  
+|Attributo COLUMN|Descrizione|Facoltativo /<br /><br /> Obbligatoria|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="** _fieldID_ **"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> esegue il mapping a \<FIELD ID **="** _fieldID_ **"** />|Obbligatorio|  
-|NAME = "*columnName*"|Specifica il nome della colonna del set di righe rappresentato dal file di formato. Viene utilizzato per identificare la colonna nel set dei risultati e non corrisponde necessariamente al nome di colonna utilizzato nella tabella di destinazione.|Obbligatorio|  
+|SOURCE **="** _fieldID_ **"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> esegue il mapping a \<FIELD ID **="** _fieldID_ **"** />|Obbligatoria|  
+|NAME = "*columnName*"|Specifica il nome della colonna del set di righe rappresentato dal file di formato. Viene utilizzato per identificare la colonna nel set dei risultati e non corrisponde necessariamente al nome di colonna utilizzato nella tabella di destinazione.|Obbligatoria|  
 |xsi **:** type **="** _ColumnType_ **"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati dell'istanza dell'elemento. Il valore di *ColumnType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.<br /><br /> Nota: i valori possibili di *ColumnType* e i relativi attributi associati sono elencati nella tabella dell'elemento \<COLUMN> nella sezione [Valori Xsi:type dell'elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Facoltativo|  
 |LENGTH **="** _n_ **"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa. Viene utilizzato solo quanto il valore xsi:type corrisponde a un tipo di dati string.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati string)|  
 |PRECISION **="** _n_ **"**|Indica il numero di cifre in un numero. Il numero 123,45, ad esempio, ha una precisione di 5.<br /><br /> Il valore deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati numerico variabile)|  
@@ -269,12 +269,12 @@ ms.locfileid: "68091421"
   
 |Categoria del tipo|Tipi di dati di \<COLUMN>|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Fisso|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**e **SQLUNIQUEID**|Nessuna.|NULLABLE|  
-|Numero variabile|**SQLDECIMAL** e **SQLNUMERIC**|Nessuna.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|Nessuna.|NULLABLE|  
-|Character LOB|**SQLNTEXT**|Nessuna.|NULLABLE|  
-|Stringa binaria|**SQLBINARY** e **SQLVARYBIN**|Nessuna.|NULLABLE, LENGTH|  
-|Stringa di caratteri|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nessuna.|NULLABLE, LENGTH|  
+|Correzione|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**e **SQLUNIQUEID**|No.|NULLABLE|  
+|Numero variabile|**SQLDECIMAL** e **SQLNUMERIC**|No.|NULLABLE, PRECISION, SCALE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|No.|NULLABLE|  
+|Character LOB|**SQLNTEXT**|No.|NULLABLE|  
+|Stringa binaria|**SQLBINARY** e **SQLVARYBIN**|No.|NULLABLE, LENGTH|  
+|Stringa di caratteri|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|No.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Per eseguire l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita nelle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode) oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  
@@ -544,7 +544,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="AdditionalExamples"></a> Esempi aggiuntivi  
  Per ulteriori esempi di file di formato XML e non XML, vedere gli argomenti seguenti:  
   
--   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
 -   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
@@ -563,10 +563,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 -   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sull'importazione ed esportazione in blocco di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  

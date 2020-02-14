@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295040"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
@@ -308,7 +308,7 @@ Con SQL Server 2016 Service Pack 1 installato, l'origine OData e la gestione con
 
 La versione più recente del Feature Pack di Azure include una gestione connessione, un'origine e una destinazione per spostare i dati da e verso Azure Data Lake Store. Per altre informazioni, vedere [Feature Pack di Integration Services &#40;SSIS&#41; per Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-#### <a name="sqldwupload"> </a> Supporto per la versione rilasciata di Azure SQL Data Warehouse
+#### <a name="sqldwupload"></a> Supporto per la versione rilasciata di Azure SQL Data Warehouse
 
 La versione più recente del Feature Pack di Azure include l'attività di caricamento di Azure SQL Data Warehouse per l'inserimento di dati in SQL Data Warehouse. Per altre informazioni, vedere [Feature Pack di Integration Services &#40;SSIS&#41; per Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -326,7 +326,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
 
  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
    
- ![Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto")  
+ ![Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto")  
 
 > [!IMPORTANT]
 > Se si sviluppano estensioni personalizzate di SSIS, vedere [Supporto multitargeting nei componenti personalizzati](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) e [Ottenere estensioni SSIS personalizzate supportate da più versioni di SSDT 2015 per SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  

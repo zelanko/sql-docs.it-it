@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127368"
 ---
 # <a name="tables"></a>Tabelle
@@ -95,7 +95,7 @@ Le tabelle estese in larghezza hanno le seguenti implicazioni sulle prestazioni.
 |Viene illustrato come eliminare colonne da una tabella.|[Eliminare le colonne da una tabella](../../relational-databases/tables/delete-columns-from-a-table.md)|
 |Viene illustrato come modificare il nome di una colonna.|[Rinominare colonne &#40;motore di database&#41;](../../relational-databases/tables/rename-columns-database-engine.md)|
 |Viene illustrato come copiare colonne da una tabella a un'altra copiando solo la definizione di colonna oppure la definizione e i dati.|[Copiare colonne da una tabella a un'altra &#40;motore di database&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|
-|Viene illustrato come modificare una definizione di colonna, modificando il tipo di dati o altre proprietà.|[Modificare colonne &#40;motore di database&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|
+|Viene illustrato come modificare una definizione di colonna, modificando il tipo di dati o altre proprietà.|[Modificare colonne &#40;Motore di database&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|
 |Viene illustrato come modificare l'ordine di visualizzazione delle colonne.|[Modificare l'ordine delle colonne in una tabella](../../relational-databases/tables/change-column-order-in-a-table.md)|
 |Viene illustrato come creare una colonna calcolata in una tabella.|[Specificare le colonne calcolate in una tabella](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|
 |Viene illustrato come specificare un valore predefinito per una colonna. Questo valore viene utilizzato nel caso non venga fornito alcun altro valore.|[Specificare valori predefiniti per le colonne](../../relational-databases/tables/specify-default-values-for-columns.md)|

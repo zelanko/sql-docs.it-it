@@ -20,10 +20,10 @@ ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982693"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
@@ -111,7 +111,7 @@ Specifica il numero massimo di operazioni di I/O al secondo per volume di disco 
   
 Se il valore `MAX_IOPS_PER_VOLUME` per un pool è impostato su 0, il pool non è governato e può accettare tutti gli IOPS nel sistema anche se in altri pool è impostato il valore MIN_IOPS_PER_VOLUME. In questo caso, è consigliabile impostare il valore `MAX_IOPS_PER_VOLUME` per questo pool su un numero elevato, ad esempio il valore massimo 2^31-1, se si vuole che questo pool sia governato per l'I/O.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `MIN_IOPS_PER_VOLUME` e `MAX_IOPS_PER_VOLUME` specificano il numero minimo e massimo di letture o scritture al secondo. Queste letture o scritture possono essere di qualsiasi dimensione e non indicano una velocità effettiva minima e massima.  
   
 I valori per `MAX_CPU_PERCENT` e `MAX_MEMORY_PERCENT` devono essere maggiori o uguali ai valori per `MIN_CPU_PERCENT` e `MIN_MEMORY_PERCENT`, rispettivamente.  

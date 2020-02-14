@@ -21,10 +21,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076441"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68076441"
 > [!IMPORTANT]  
 >  SETUSER è disponibile solo per garantire la compatibilità con le versioni precedenti in quanto nelle future versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non essere più supportata. È invece consigliabile usare [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Specifica che le istruzioni SETUSER successive (prive di argomento *username*) non ripristinano l'identità dell'utente sull'amministratore di sistema o sul proprietario del database.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione SETUSER consente ai membri del ruolo predefinito del server **sysadmin** o al proprietario di un database di adottare l'identità di un altro utente in modo da verificarne le autorizzazioni. L'appartenenza al ruolo predefinito del database db_owner non è sufficiente.  
   
  Utilizzare l'istruzione SETUSER solo per utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in quanto non è supportata per gli utenti di Windows. Dopo l'esecuzione di SETUSER per assumere l'identità di un altro utente, tutti gli oggetti che vengono creati sono di proprietà dell'utente rappresentato. Se ad esempio il proprietario del database assume l'identità dell'utente **Margaret** e crea la tabella **orders**, la tabella **orders**  è di proprietà dell'utente **Margaret** e non dell'amministratore del sistema.  

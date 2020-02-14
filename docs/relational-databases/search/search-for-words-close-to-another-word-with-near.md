@@ -21,15 +21,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68702837"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Per cercare parole o frasi vicine, è possibile usare un *termine di prossimità* **NEAR** in un predicato [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o in una funzione [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md). 
+  Per cercare parole o espressioni vicine, è possibile usare il *termine di prossimità* **NEAR** in un predicato [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o in una funzione [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md). 
   
 ##  <a name="Custom_NEAR"></a> Panoramica di NEAR  
 **NEAR** include le funzionalità seguenti:  
@@ -109,7 +109,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Combinare NEAR con altri termini  
- È possibile combinare NEAR con altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Esempio:  
+ È possibile combinare NEAR con altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Ad esempio:  
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
@@ -157,4 +157,4 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
 ## <a name="see-also"></a>Vedere anche  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md)   
+ [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   

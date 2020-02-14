@@ -15,10 +15,10 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298383"
 ---
 # <a name="control-flow"></a>Flusso di controllo
@@ -43,7 +43,7 @@ ms.locfileid: "71298383"
   
  Nella figura seguente viene illustrato il flusso di controllo di un semplice pacchetto nella finestra di progettazione del flusso di controllo. Il flusso di controllo illustrato nella figura è composto da tre attività a livello di pacchetto e da un contenitore a livello di pacchetto contenente tre attività. Le attività e il contenitore sono connessi tramite vincoli di precedenza.  
   
- ![Schermata della finestra di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "Schermata della finestra di progettazione del flusso di controllo con pacchetto")  
+ ![Screenshot della finestra di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot della finestra di progettazione del flusso di controllo con pacchetto")  
   
  Per creare un flusso di controllo è necessario eseguire i passaggi seguenti:  
   

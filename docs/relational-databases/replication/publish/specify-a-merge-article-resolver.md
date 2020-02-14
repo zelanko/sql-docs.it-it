@@ -15,10 +15,10 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846567"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge
@@ -26,13 +26,13 @@ ms.locfileid: "70846567"
   In questo argomento viene descritto come specificare un sistema di risoluzione dell'articolo di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
 
   
-##  <a name="recommendations"></a>Indicazioni  
+##  <a name="recommendations"></a>Consigli  
   
 -   La replica di tipo merge consente i tipi di sistemi di risoluzione dei conflitti dell'articolo indicati di seguito:  
   
     -   Il sistema di risoluzione dei conflitti predefinito. Il comportamento del sistema di risoluzione dei conflitti predefinito dipende dal tipo di sottoscrizione, ovvero se si tratta di una sottoscrizione client o server. Per altre informazioni sulla specifica del tipo di sottoscrizione, vedere [Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
   
-    -   Un sistema di risoluzione dei conflitti personalizzato, che può essere un gestore della logica di business (scritto in codice gestito) oppure un sistema di risoluzione dei conflitti personalizzato basato su COM. Per altre informazioni, vedere [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se è necessario implementare logica personalizzata che viene eseguita per ogni riga replicata e non solo per quelle in conflitto, vedere [Implementare un gestore della logica di business per un articolo di merge](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Un sistema di risoluzione dei conflitti personalizzato, che può essere un gestore della logica di business (scritto in codice gestito) oppure un sistema di risoluzione dei conflitti personalizzato basato su COM. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se è necessario implementare logica personalizzata che viene eseguita per ogni riga replicata e non solo per quelle in conflitto, vedere [Implementare un gestore della logica di business per un articolo di merge](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Un sistema di risoluzione dei conflitti standard basato su COM, incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

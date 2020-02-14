@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531557"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
@@ -33,7 +33,7 @@ ms.locfileid: "73531557"
   
 3.  [Completare l'aggiornamento del motore di database](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). Dopo aver aggiornato il motore di database a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e quando i database sono online, è necessario eseguire passaggi aggiuntivi, tra cui un nuovo backup, l'aggiornamento delle funzionalità dei database per abilitare le nuove funzionalità e il ripopolamento di cataloghi full-text. Questo articolo tratta tali passaggi.  
   
-4.  Aggiornare il [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**Si applica a:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Uno dei passaggi da eseguire quando i database sono online nella nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] può essere l'aggiornamento della modalità di funzionamento dei database per abilitare le nuove funzionalità modificando il livello di compatibilità del database. Questa operazione può essere eseguita manualmente o tramite Assistente ottimizzazione query. 
+4.  Aggiornare il [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**si applica a:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Uno dei passaggi da eseguire quando i database sono online nella nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] può essere l'aggiornamento della modalità di funzionamento dei database per abilitare le nuove funzionalità modificando il livello di compatibilità del database. Questa operazione può essere eseguita manualmente o tramite Assistente ottimizzazione query. 
 
     - [Modificare la modalità di compatibilità del database e usare Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Dopo aver modificato manualmente il livello di compatibilità del database, usare Query Store per monitorare le prestazioni e identificare le possibili regressioni. Questo articolo descrive il processo consigliato e propone un flusso di lavoro consigliato.  
 

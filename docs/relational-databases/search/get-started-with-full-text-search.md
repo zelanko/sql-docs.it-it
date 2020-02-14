@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903829"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
@@ -89,7 +89,7 @@ Per configurare la ricerca full-text con una procedura guidata, vedere [Usare l'
  
  È consigliabile associare nello stesso catalogo full-text le tabelle con caratteristiche di aggiornamento equivalenti, ad esempio un numero ridotto o elevato di modifiche oppure modifiche frequenti apportate a una determinata ora del giorno. Pianificando il popolamento del catalogo full-text, gli indici full-text mantengono la sincronizzazione con le tabelle senza influire negativamente sull'utilizzo delle risorse del server di database durante i periodi di elevata attività del database.  
   
- Tenere presenti le linee guida seguenti:  
+ Considerare le linee guida seguenti:  
   
 -   Se viene indicizzata una tabella che include milioni di righe, assegnarla al relativo catalogo full-text.  
   
@@ -101,14 +101,14 @@ Selezionare sempre il più piccolo indice univoco disponibile per la chiave univ
 ### <a name="associate-a-stoplist"></a>Associare un elenco di parole non significative   
   Un *elenco di parole non significative* è un elenco di termini che non vengono considerati nelle query, viene associato a ogni indice full-text e le parole in esso contenute vengono applicate alle query full-text di quell'indice. Per impostazione predefinita, a un nuovo indice full-text viene associato l'elenco di parole non significative di sistema. È anche possibile creare e usare un elenco di parole non significative personalizzato.   
   
- Ad esempio, l'istruzione [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di creare un nuovo elenco di parole non significative full-text denominato myStoplist, copiando dall'elenco di parole non significative di sistema:  
+ Ad esempio, l'istruzione [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di creare un nuovo elenco di parole non significative full-text denominato myStoplist, copiando dall'elenco di parole non significative di sistema:  
   
 ```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- L'istruzione [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di modificare un elenco di parole non significative denominato myStoplist, aggiungendo la parola "en" per lo spagnolo e poi per il francese:  
+ L'istruzione [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di modificare un elenco di parole non significative denominato myStoplist, aggiungendo la parola "en" per lo spagnolo e poi per il francese:  
   
 ```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  

@@ -16,10 +16,10 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68028635"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servizio SQL Server Browser (Motore database e SSAS)
@@ -44,7 +44,7 @@ ms.locfileid: "68028635"
   
 -   Durante l'installazione di un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="background"></a>Informazioni preliminari  
+## <a name="background"></a>Background  
  Nelle versioni precedenti a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]è possibile installare solo un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resta in attesa delle richieste in entrata sulla porta 1433, assegnata a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'autorità ufficiale IANA (Internet Assigned Numbers Authority). Poiché solo un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare una porta, quando in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] è stato introdotto il supporto per più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è stato sviluppato il protocollo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) per l'ascolto sulla porta UDP 1434. Il servizio listener risponde alle richieste del client con i nomi delle istanze installate e le porte o le named pipe usate dall'istanza. Per risolvere i problemi connessi ai suoi limiti, in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] il sistema SSRP è stato sostituito dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser.  
   
 ## <a name="how-sql-server-browser-works"></a>Funzionamento di SQL Server Browser  

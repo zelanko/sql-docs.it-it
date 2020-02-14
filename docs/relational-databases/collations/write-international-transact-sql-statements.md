@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70913553"
 ---
 # <a name="write-international-transact-sql-statements"></a>Scrittura di istruzioni Transact-SQL internazionali
@@ -35,10 +35,10 @@ ms.locfileid: "70913553"
 
     In questo modo si evitano problemi di conversione della tabella codici. Per altre considerazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sostituire tutte le occorrenze dei tipi di dati **char**, **varchar** e **varchar(max)** con **nchar**, **nvarchar** e **nvarchar(max)**. Se si usano regole di confronto abilitate per [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), i dati vengono codificati con UTF-16. L'uso di regole di confronto non SC comporta la codifica dei dati con UCS-2. In questo modo si evitano problemi di conversione della tabella codici. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sostituire tutte le occorrenze dei tipi di dati **char**, **varchar** e **varchar(max)** con **nchar**, **nvarchar** e **nvarchar(max)** . Se si usano regole di confronto abilitate per [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), i dati vengono codificati con UTF-16. L'uso di regole di confronto non SC comporta la codifica dei dati con UCS-2. In questo modo si evitano problemi di conversione della tabella codici. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
 
     > [!IMPORTANT]
-    > Il tipo di dati **text** è deprecato e non deve essere usato in nuovi progetti di sviluppo. Pianificare la conversione dei dati **text** al tipo di dati **varchar(max)**.
+    > Il tipo di dati **text** è deprecato e non deve essere usato in nuovi progetti di sviluppo. Pianificare la conversione dei dati **text** al tipo di dati **varchar(max)** .
   
 -   Quando si eseguono confronti e operazioni con mesi o giorni della settimana, usare le parti numeriche della data invece delle stringhe di nomi. I nomi dei mesi e dei giorni della settimana restituiti variano a seconda dell'impostazione della lingua. Ad esempio, `DATENAME(MONTH,GETDATE())` restituisce `May` quando la lingua è impostata su inglese (Stati Uniti), `Mai` se è impostato il tedesco e `mai` se è impostato il francese. Specificare quindi una funzione quale [DATEPART](../../t-sql/functions/datepart-transact-sql.md) che usa il numero invece del nome del mese. Utilizzare i nomi DATEPART quando si compilano i set di risultati da visualizzare all'utente, in quanto le stringhe di nomi sono più significative delle parti numeriche. Non creare tuttavia il codice di logica che dipende dai nomi visualizzati di una lingua specifica.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "70913553"
   
     -   Le applicazioni ADO, OLE DB e ODBC devono utilizzare le clausole di escape seguenti relative a timestamp, data e ora:  
   
-         **{ ts'** _aaaa_ **-** _mm_ **-** _gg_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **'}**, ad esempio: **{ ts'1998-09-24 10:02:20'}**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** such as: **{ ts'1998-09-24 10:02:20'}**  
   
-         **{ d'** _aaaa_ **-** _mm_ **-** _gg_ **'}** ad esempio: **{ d'1998-09-24'}**
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** such as: **{ d'1998-09-24'}**
   
-         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** ad esempio: **{ t'10:02:20'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'10:02:20'}**  
   
     -   Nelle applicazioni che utilizzano altre API, oppure script, stored procedure e trigger di [!INCLUDE[tsql](../../includes/tsql-md.md)] , è necessario utilizzare le stringhe numeriche non separate, Ad esempio, *aaaammgg* come 19980924.  
   

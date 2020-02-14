@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768765"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285722"
 ---
 # <a name="replication-programming-concepts"></a>Concetti di base relativi alla programmazione della replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68768765"
   
 -   Topologie di replica e come queste si allineano con i tipi di replica.  
   
- Se non si ha familiarità con la replica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Tipi di replica](../../../relational-databases/replication/types-of-replication.md).  
+ Se non si ha familiarità con la replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Tipi di replica](../../../relational-databases/replication/types-of-replication.md).  
   
 ## <a name="defining-application-functionality"></a>Definizione delle funzionalità dell'applicazione  
  Dopo aver definito la topologia di replica, è necessario decidere quali funzionalità verranno offerte dall'applicazione. Queste funzionalità possono variare da uno script che sincronizza una sottoscrizione a un'applicazione con un'interfaccia utente che consente di configurare la replica. La replica supporta le attività di programmazione generali seguenti:  
@@ -86,7 +86,7 @@ ms.locfileid: "68768765"
   
 -   [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
--   [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Scelta di un ambiente di sviluppo  
  Nello sviluppo di un'applicazione di replica è necessario considerare tre ambienti di sviluppo di base. Ogni ambiente di sviluppo dispone dell'accesso alle stesse funzionalità di replica, ma con alcune eccezioni. Le applicazioni di replica possono essere sviluppate in ognuno degli ambienti seguenti.  
@@ -106,7 +106,7 @@ ms.locfileid: "68768765"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>Scegliere l'interfaccia di programmazione della replica appropriata  
  L'ultimo passaggio della pianificazione consiste nello scegliere l'interfaccia di programmazione della replica appropriata che consenta di implementare le funzionalità di replica desiderate per l'ambiente di sviluppo scelto. Nella tabella seguente vengono illustrate le interfacce di programmazione della replica disponibili.  
   
-|Interfaccia|Ambiente|Utilizzi|  
+|Interfaccia|Environment|Utilizzi|  
 |---------------|-----------------|----------|  
 |[Concetti di base relativi a RMO (Replication Management Objects)](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|Codice gestito|Amministrazione, monitoraggio e sincronizzazione.|  
 |<xref:Microsoft.SqlServer.Replication>|Codice gestito|Sincronizzazione.|  
@@ -123,7 +123,7 @@ ms.locfileid: "68768765"
   
 2.  Oltre all'accesso ai dati tipico richiesto per un'applicazione di vendita, questa applicazione deve consentire a un venditore di sincronizzare la sottoscrizione pull su richiesta facendo clic su un pulsante. Dopo aver installato ed eseguito l'applicazione, i rappresentanti dovranno inoltre essere in grado di configurare una sottoscrizione e applicare lo snapshot iniziale al client. L'applicazione utilizzerà eventualmente l'infrastruttura fornita da Windows per individuare la connettività wireless e per sincronizzare automaticamente la sottoscrizione nel momento in cui viene rilevata una connessione.  
   
-3.  Seguire tutte le linee guida per la sicurezza della replica, incluso l'utilizzo dell'autenticazione di Windows e di una rete privata virtuale (VPN, Virtual Private Network) per la connessione al server di pubblicazione. In caso di implementazione della sincronizzazione Web, utilizzare una connessione SSL (Secure Sockets Layer). Per altre informazioni, vedere [Configurare la sincronizzazione Web](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Seguire tutte le linee guida per la sicurezza della replica, incluso l'utilizzo dell'autenticazione di Windows e di una rete privata virtuale (VPN, Virtual Private Network) per la connessione al server di pubblicazione. In caso di implementazione della sincronizzazione Web, utilizzare una connessione SSL (Secure Sockets Layer). Per altre informazioni, vedere [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  Per sfruttare le caratteristiche offerte da [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], l'applicazione viene sviluppata utilizzando un linguaggio di codice gestito.  
   

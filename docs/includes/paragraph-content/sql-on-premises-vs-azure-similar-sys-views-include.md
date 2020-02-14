@@ -5,19 +5,19 @@
 ### Code examples can differ for Azure SQL Database
 -->
 
-Alcuni esempi di codice Transact-SQL scritti per SQL Server locale richiedono qualche piccola modifica per funzionare nel servizio database SQL di Azure nel cloud. Una categoria di tali esempi di codice prevede viste di sistema i cui prefissi dei nomi differiscono leggermente tra i due sistemi di database:
+Alcuni esempi di codice Transact-SQL scritti per SQL Server locale richiedono qualche piccola modifica per funzionare nel servizio database SQL di Azure nel cloud. Una categoria di questi esempi di codice prevede viste di sistema i cui prefissi dei nomi differiscono leggermente tra i due sistemi di database:
 
 - **server\_** &nbsp; - &nbsp; _prefisso per locale_
 - **database\_** &nbsp; - &nbsp;_prefisso per il servizio database SQL di Azure nel cloud_
 
-Come riferimento visivo, la tabella seguente elenca e confronta due subset delle viste di sistema. Per brevità, i subset sono limitati ai nomi di vista che contengono anche la stringa `_event`. I subset hanno prefissi di nome diversi perché derivano dai due diversi sistemi di database.
+Come riferimento visivo, la tabella seguente elenca e confronta due subset delle viste di sistema. Per brevità, i subset sono limitati ai nomi di vista che contengono anche la stringa `_event`. I nomi dei subset hanno prefissi diversi perché derivano dai due diversi sistemi di database.
 
 | Nome dalla versione 2017 locale | Nome dal servizio cloud |
 | :------------------------- | :---------------------- |
 | server_event_notifications<br />server_event_session_actions<br />server_event_session_events<br />server_event_session_fields<br />server_event_session_targets<br />server_event_sessions<br />server_events<br />server_trigger_events | database_event_session_actions<br />database_event_session_events<br />database_event_session_fields<br />database_event_session_targets<br />database_event_sessions |
 | &nbsp; | &nbsp; |
 
-I due elenchi nella tabella precedente sono aggiornati al giugno 2019. Il contenuto della tabella, tuttavia, può essere obsoleto, perché in questa sede non viene aggiornato. Per ottenere elenchi accurati, eseguire l'istruzione T-SQL SELECT seguente. Eseguire l'istruzione SELECT due volte, una volta per ciascun sistema di database.
+I due elenchi nella tabella precedente sono aggiornati al giugno 2019. Il contenuto della tabella, tuttavia, può essere obsoleto, perché non viene aggiornato in questo articolo. Per ottenere elenchi accurati, eseguire l'istruzione T-SQL SELECT seguente. Eseguire l'istruzione SELECT due volte, una volta per ciascun sistema di database.
 
 ```sql
 SELECT name

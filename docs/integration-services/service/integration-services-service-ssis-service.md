@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296944"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servizio Integration Services (servizio SSIS)
@@ -68,7 +68,7 @@ ms.locfileid: "71296944"
 
 ## <a name="manage-the-service"></a>Gestire il servizio
   
- Quando viene installato il componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene installato anche il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene avviato e impostato per l'avvio automatico. È tuttavia necessario installare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per utilizzare il servizio per la gestione di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archiviati e in esecuzione.  
+ Quando viene installato il componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene installato anche il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene avviato in base al tipo di avvio automatico. È tuttavia necessario installare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per utilizzare il servizio per la gestione di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archiviati e in esecuzione.  
   
 > [!NOTE]
 > Per connettersi direttamente a un'istanza del servizio Integration Services legacy, è necessario usare la versione di SQL Server Management Studio (SSMS) allineata alla versione di SQL Server in cui è in esecuzione il servizio Integration Services. Ad esempio, per connettersi al servizio Integration Services legacy in esecuzione in un'istanza di SQL Server 2016, è necessario usare la versione di SQL Server Management Studio rilasciata per SQL Server 2016. [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
@@ -79,7 +79,7 @@ ms.locfileid: "71296944"
   
  Per la gestione del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile usare uno dei seguenti snap-in di Microsoft Management Console (MMC): Gestione configurazione SQL Server o Servizi di SQL Server. Per gestire pacchetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è prima di tutti necessario assicurarsi che il servizio sia avviato.  
   
- Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti archiviati nel database msdb dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] installata in contemporanea con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se contemporaneamente non viene installata alcuna istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti contenuti nel database msdb dell'istanza predefinita locale del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per gestire pacchetti archiviati in un'istanza denominata o un'istanza remota del [!INCLUDE[ssDE](../../includes/ssde-md.md)]o in più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)], è necessario modificare il file di configurazione per il servizio.
+ Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti archiviati nel database msdb dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] installata in contemporanea con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se contemporaneamente non viene installata alcuna istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti contenuti nel database msdb dell'istanza predefinita locale del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per gestire pacchetti archiviati in un'istanza denominata o un'istanza remota del [!INCLUDE[ssDE](../../includes/ssde-md.md)]o in più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)], è necessario modificare il file di configurazione per il servizio.
   
  Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è configurato in modo che i pacchetti in esecuzione vengano arrestati all'arresto del servizio. Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , tuttavia, non attende che i pacchetti vengano arrestati e l'esecuzione di alcuni pacchetti potrebbe continuare dopo l'arresto del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296944"
   
 4.  Nella finestra di dialogo **Proprietà di SQL Server Integration Services** è possibile eseguire una delle operazioni seguenti:  
   
-    -   Fare clic sulla scheda **Generale** . Per abilitare il servizio, selezionare il tipo di avvio manuale o automatico. Per disabilitarlo, nella casella **Tipo di avvio** selezionare Disabilita. Quando si seleziona Disabilita, il servizio non viene arrestato se è in esecuzione.  
+    -   Fare clic sulla scheda **General** (Generale). Per abilitare il servizio, selezionare il tipo di avvio manuale o automatico. Per disabilitarlo, nella casella **Tipo di avvio** selezionare Disabilita. Quando si seleziona Disabilita, il servizio non viene arrestato se è in esecuzione.  
   
          Se il servizio è già abilitato, è possibile fare clic su **Arresta** per arrestarlo oppure su **Avvia** per avviarlo.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "71296944"
   
 2.  Nella finestra di dialogo **Servizi componenti** espandere il nodo > Computer > Risorse del computer > Config DCOM.  
   
-3.  Fare clic con il pulsante destro del mouse su **Microsoft SQL Server Integration Services 13.0** e quindi scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **Microsoft SQL Server Integration Services 13.0**e quindi scegliere **Proprietà**.  
   
 4.  Nella scheda **Sicurezza** della finestra **Autorizzazioni di esecuzione e attivazione** fare clic su **Modifica** .  
   
@@ -231,7 +231,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
  È possibile modificare il file di configurazione in modo da consentire l'esecuzione dei pacchetti anche quando il servizio viene arrestato, visualizzare cartelle radice aggiuntive in Esplora oggetti oppure specificare un'altra cartella o cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile, ad esempio, creare cartelle radice aggiuntive di tipo **SqlServerFolder**per gestire i pacchetti nei database msdb di istanze aggiuntive del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
->  Alcuni caratteri non sono validi per i nomi delle cartelle. I caratteri validi per i nomi delle cartelle sono determinati dalla classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **System.IO.Path** e dal campo **GetInvalidFilenameChars** . Il campo **GetInvalidFilenameChars** fornisce una matrice specifica della piattaforma che contiene i caratteri che non è possibile specificare negli argomenti delle stringhe dei percorsi passati ai membri della classe **Path** . Il set di caratteri non validi può variare in base al file system. Caratteri non validi sono in genere le virgolette ("), il carattere minore di (<) e la barra verticale (|).  
+>  Alcuni caratteri non sono validi per i nomi delle cartelle. I caratteri validi per i nomi delle cartelle sono determinati dalla classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.IO.Path** e dal campo **GetInvalidFilenameChars** . Il campo **GetInvalidFilenameChars** fornisce una matrice specifica della piattaforma che contiene i caratteri che non è possibile specificare negli argomenti delle stringhe dei percorsi passati ai membri della classe **Path** . Il set di caratteri non validi può variare in base al file system. Caratteri non validi sono in genere le virgolette ("), il carattere minore di (<) e la barra verticale (|).  
   
  Per gestire i pacchetti archiviati in un'istanza denominata o remota del [!INCLUDE[ssDE](../../includes/ssde-md.md)], è tuttavia necessario modificare il file di configurazione. Se non si aggiorna il file di configurazione, non sarà possibile usare **Esplora oggetti** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per visualizzare i pacchetti archiviati nel database msdb nell'istanza denominata o remota. Se si tenta di utilizzare **Esplora oggetti** per visualizzare questi pacchetti, verrà visualizzato il messaggio di errore seguente:  
   
@@ -314,7 +314,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
   
 3.  Nell'elenco **Tipo server** selezionare **Integration Services** .  
   
-4.  Nella casella di testo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server in the **Server name** text box.  
+4.  Nella casella di testo **Nome server** digitare il nome di un server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
     > [!NOTE]  
     >  Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non è specifico dell'istanza. Connettersi al servizio utilizzando il nome del computer sul quale è in esecuzione Integration Services.  
@@ -359,7 +359,7 @@ Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
   
 2.  Nella pagina **Applicazioni** della finestra di dialogo **Proprietà - Configurazione Distributed COM** selezionare SQL Server Integration Services 11.0, quindi fare clic su **Proprietà**.  
   
-3.  Fare clic sulla scheda **Sicurezza** .  
+3.  Selezionare la pagina **Sicurezza** .  
   
 4.  Utilizzare le due finestre di dialogo separate per la configurazione delle **Autorizzazioni di accesso** e delle **Autorizzazioni di avvio**. Non è possibile fare distinzione tra l'accesso remoto e quello locale. Le autorizzazioni di accesso includono l'accesso remoto e locale e quelle di avvio includono l'avvio remoto e locale.  
   

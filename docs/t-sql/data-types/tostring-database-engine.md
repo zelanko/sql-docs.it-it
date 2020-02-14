@@ -18,10 +18,10 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000440"
 ---
 # <a name="tostring-database-engine"></a>ToString (Motore di database)
@@ -49,8 +49,8 @@ string ToString  ( )
   
 **Tipo CLR restituito: String**
   
-## <a name="remarks"></a>Remarks  
-Restituisce il percorso logico nella gerarchia. Ad esempio, `/2/1/` rappresenta la quarta riga ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) nella struttura gerarchica seguente di un file system:
+## <a name="remarks"></a>Osservazioni  
+Restituisce il percorso logico nella gerarchia. Ad esempio, `/2/1/` rappresenta la quarta riga ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) nella struttura gerarchica seguente di un file system:
   
 ```sql
 /        C:\  
@@ -63,7 +63,7 @@ Restituisce il percorso logico nella gerarchia. Ad esempio, `/2/1/` rappresenta 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-transact-sql-example-in-a-table"></a>A. Esempio Transact-SQL in una tabella  
+### <a name="a-transact-sql-example-in-a-table"></a>R. Esempio Transact-SQL in una tabella  
 Nell'esempio seguente viene restituita sia la colonna `OrgNode` sia il tipo di dati **hierarchyid**, in un formato stringa più leggibile:
   
 ```sql

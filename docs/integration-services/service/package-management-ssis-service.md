@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296872"
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
@@ -110,7 +110,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
  È possibile importare o esportare un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da o nei percorsi seguenti:  
   
--   Un pacchetto archiviato può essere importato nel file system, in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Il pacchetto importato viene salvato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in una cartella nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+-   È possibile importare un pacchetto archiviato in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nel file system o nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Il pacchetto importato viene salvato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in una cartella nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 -   Un pacchetto archiviato nel file system, in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] può essere esportato in un percorso e un formato di archiviazione diverso.  
   
@@ -124,7 +124,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>Per importare un pacchetto utilizzando SQL Server Management Studio  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
+1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi fare clic su **SQL Server Management Studio**.  
   
 2.  Nella finestra di dialogo **Connetti al server** impostare le opzioni seguenti:  
   
@@ -160,7 +160,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Per esportare un pacchetto utilizzando SQL Server Management Studio  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
+1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi fare clic su **SQL Server Management Studio**.  
   
 2.  Nella finestra di dialogo **Connetti al server** impostare le opzioni seguenti:  
   
@@ -170,7 +170,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
 3.  Se il riquadro Esplora oggetti non è visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza**.  
   
-4.  In Esplora oggetti espandere la cartella **Pacchetti archiviati**.  
+4.  In Esplora oggetti espandere la cartella **Pacchetti archiviati** .  
   
 5.  Espandere le sottocartelle per individuare il pacchetto da esportare.  
   
@@ -208,7 +208,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
  **Server**  
  Consente di digitare il nome del server o di selezionarlo nell'elenco.  
   
- **Autenticazione**  
+ **autenticazione**  
  Consente di selezionare l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione è disponibile solo se è stato selezionato il percorso di archiviazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -217,11 +217,11 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
  **Tipo di autenticazione**  
  Consente di selezionare un tipo di autenticazione.  
   
- **User name**  
- Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
+ **Nome utente**  
+ Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
   
  **Password**  
- Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
+ Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
  **Percorso pacchetto**  
  Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(...)** per individuare il pacchetto.  
@@ -241,14 +241,14 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
  **SQL Server**  
   
- **File System**  
+ **File system**  
   
  **Archivio pacchetti SSIS**  
   
  **Server**  
  Consente di digitare il nome del server o di selezionarlo nell'elenco.  
   
- **Autenticazione**  
+ **autenticazione**  
  Consente di selezionare l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione è disponibile solo se è stato selezionato il percorso di archiviazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -257,11 +257,11 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
  **Tipo di autenticazione**  
  Consente di selezionare un tipo di autenticazione.  
   
- **User name**  
- Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
+ **Nome utente**  
+ Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente.  
   
  **Password**  
- Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
+ Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
  **Percorso pacchetto**  
  Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(...)** e individuare la cartella in cui archiviare il pacchetto.  
@@ -271,7 +271,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
 
 ## <a name="back-up-and-restore-packages"></a>Eseguire il backup e il ripristino dei pacchetti
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] I pacchetti possono essere salvati nel file system o in msdb, un database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile eseguire il backup e il ripristino dei pacchetti salvati in msdb usando le funzionalità di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ I pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere salvati nel file system o in msdb, un database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile eseguire il backup e il ripristino dei pacchetti salvati in msdb usando le funzionalità di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Per altre informazioni sul backup e sul ripristino del database msdb, fare clic su uno degli argomenti seguenti:  
   

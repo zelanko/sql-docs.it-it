@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295743"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Caricamento dell'output di un pacchetto locale
@@ -52,7 +52,7 @@ ms.locfileid: "71295743"
   
 4.  Creare un oggetto di tipo **DtsClient.DtsCommand** che usi l'oggetto **DtsConnection** creato in precedenza e impostare la relativa proprietà **CommandText** sul nome della destinazione DataReader nel pacchetto. Chiamare quindi il metodo **ExecuteReader** dell'oggetto comando per caricare i risultati del pacchetto in un nuovo DataReader.  
   
-5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto usando la raccolta di oggetti **DtsDataParameter** nell'oggetto **DtsCommand** per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nello spazio dei nomi **DtsClient** affinché sia possibile usarli con l'oggetto **DtsDataParameter** da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto **DtsDataParameter** alla raccolta **Parametri** di **DtsCommand** omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Esempio:  
+5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto usando la raccolta di oggetti **DtsDataParameter** nell'oggetto **DtsCommand** per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nello spazio dei nomi **DtsClient** affinché sia possibile usarli con l'oggetto **DtsDataParameter** da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto **DtsDataParameter** alla raccolta **Parametri** di **DtsCommand** omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Ad esempio:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

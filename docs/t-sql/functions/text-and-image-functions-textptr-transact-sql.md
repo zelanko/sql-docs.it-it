@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099027"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funzioni per i valori text e image - TEXTPTR (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68099027"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Non è disponibile una funzionalità alternativa.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ TEXTPTR ( column )
 ## <a name="return-types"></a>Tipi restituiti  
  **varbinary**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per le tabelle contenenti testo nelle righe, l'istruzione TEXTPTR restituisce un handle per il testo da elaborare. È possibile ottenere un puntatore di testo valido anche se il valore di testo è Null.  
   
  Non è possibile utilizzare la funzione TEXTPTR sulle colonne di viste, ma solo sulle colonne di tabelle. Per usare la funzione TEXTPTR su una colonna di una vista, è necessario impostare il livello di compatibilità su 80 tramite il [livello di compatibilità di ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Se una tabella non contiene testo all'interno di righe e se una colonna di tipo **text**, **ntext** o **image** non è stata inizializzata tramite un'istruzione UPDATETEXT, TEXTPTR restituisce un puntatore Null.  
@@ -62,18 +62,18 @@ TEXTPTR ( column )
   
 |Funzione o istruzione|Descrizione|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** o **ntext**.|  
-|DATALENGTH<b>(</b>_expression_**)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
+|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** o **ntext**.|  
+|DATALENGTH<b>(</b>_expression_ **)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Restituisce il limite in byte dei dati di tipo **text**, **ntext** o **image** da restituire con un'istruzione SELECT.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Restituisce una stringa **varchar** determinata dall'offset *start* specificato e da *length*. La lunghezza massima è di 8 KB.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Restituisce una stringa **varchar** determinata dall'offset *start* specificato e da *length*. La lunghezza massima è di 8 KB.|  
   
 ## <a name="examples"></a>Esempi  
   
 > [!NOTE]  
 >  Per eseguire gli esempi seguenti è necessario installare il database **pubs**.  
   
-### <a name="a-using-textptr"></a>A. Utilizzo di TEXTPTR  
- Nell'esempio seguente viene usata la funzione `TEXTPTR` per trovare la colonna **image** `logo` associata a `New Moon Books` nella tabella `pub_info` del database `pubs`. Il puntatore di testo è inserito in una variabile locale `@ptrval.`  
+### <a name="a-using-textptr"></a>R. Utilizzo di TEXTPTR  
+ Nell'esempio seguente viene usata la funzione `TEXTPTR` per trovare la colonna **image**`logo` associata a `New Moon Books` nella tabella `pub_info` del database `pubs`. Il puntatore di testo è inserito in una variabile locale `@ptrval.`  
   
 ```  
 USE pubs;  

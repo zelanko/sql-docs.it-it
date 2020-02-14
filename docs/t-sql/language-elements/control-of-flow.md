@@ -16,10 +16,10 @@ ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 38ca9a921f1a203535ed104b512fe87aea992208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68079898"
 ---
 # <a name="control-of-flow"></a>Controllo di flusso
@@ -32,7 +32,7 @@ ms.locfileid: "68079898"
 |[BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)|[RETURN](../../t-sql/language-elements/return-transact-sql.md)|  
 |[BREAK](../../t-sql/language-elements/break-transact-sql.md)|[THROW](../../t-sql/language-elements/throw-transact-sql.md)|  
 |[CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)|[TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)|  
-|[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *etichetta*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
+|[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
 |[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

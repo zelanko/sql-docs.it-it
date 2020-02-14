@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295127"
 ---
 # <a name="debugging-control-flow"></a>Debug del flusso di controllo
@@ -31,7 +31,7 @@ ms.locfileid: "71295127"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi del flusso di controllo in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi del flusso di controllo in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta l'uso di punti di interruzione in contenitori e attività.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71295127"
   
 |Tipo di passaggi|Descrizione|  
 |--------------------|-----------------|  
-|Always|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
+|Sempre|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
 |Numero di passaggi uguale a|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte uguale al numero di passaggi specificato.|  
 |Numero di passaggi maggiore o uguale a|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte maggiore o uguale al numero di passaggi specificato.|  
 |Numero di passaggi multiplo di|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte multiplo del numero di passaggi specificato. Se ad esempio questa opzione è impostata su 5, l'esecuzione verrà sospesa ogni cinque volte.|  
@@ -116,7 +116,7 @@ ms.locfileid: "71295127"
 |------------|-----------------|  
 |Punti di interruzione|Elenca i punti di interruzione presenti in un pacchetto e include opzioni che consentono di abilitarli ed eliminarli.|  
 |Output|Visualizza messaggi di stato per le funzionalità di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
-|Controllo immediato|Consente di valutare espressioni ed eseguirne il debug, nonché di visualizzare i valori delle variabili.|  
+|Immediato|Consente di valutare espressioni ed eseguirne il debug, nonché di visualizzare i valori delle variabili.|  
 
 ## <a name="debug"></a> Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore
   In questa procedura viene descritto come impostare punti di interruzione in un pacchetto, in un'attività o in un contenitore Ciclo For, Ciclo Foreach o Sequenza.  
@@ -145,18 +145,18 @@ ms.locfileid: "71295127"
   Utilizzare la finestra di dialogo **Imposta punti di interruzione** per specificare gli eventi su cui abilitare i punti di interruzione e per controllarne il funzionamento.  
   
 ### <a name="options"></a>Opzioni  
- **Abilitata**  
+ **Enabled**  
  Consente di abilitare un punto di interruzione su un evento.  
   
- **Condizione interruzione**  
+ **Break Condition**  
  Consente di visualizzare un elenco di eventi disponibili sui quali è possibile impostare i punti di interruzione.  
   
- **Tipo passaggi**  
+ **Hit Count Type**  
  Consente di specificare quando il punto di interruzione diventa effettivo.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Always**|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
+|**Sempre**|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
 |**Numero di passaggi uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte uguale al numero di passaggi specificato.|  
 |**Numero di passaggi maggiore o uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte maggiore o uguale al numero di passaggi specificato.|  
 |**Numero di passaggi multiplo di**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte multiplo del numero di passaggi specificato. Se ad esempio questa opzione è impostata su 5, l'esecuzione verrà sospesa ogni cinque volte.|  
@@ -165,5 +165,5 @@ ms.locfileid: "71295127"
  Consente di specificare il numero di passaggi al raggiungimento del quale attivare un'interruzione. Questa opzione non è disponibile se il punto di interruzione è sempre attivo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Strumenti per la risoluzione dei problemi di sviluppo di pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

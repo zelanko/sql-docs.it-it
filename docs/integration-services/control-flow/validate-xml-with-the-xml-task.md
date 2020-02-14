@@ -14,10 +14,10 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293825"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -29,7 +29,7 @@ ms.locfileid: "71293825"
   
  L'immagine seguente mostra l' **Editor attività XML** con le impostazioni necessarie per la convalida di XML con l'output di errore completo.  
   
- ![Proprietà attività XML nell'Editor attività XML](../../integration-services/control-flow/media/xmltaskproperties.jpg "Proprietà attività XML nell'Editor attività XML")  
+ ![Proprietà delle attività XML nell'Editor attività XML](../../integration-services/control-flow/media/xmltaskproperties.jpg "Proprietà delle attività XML nell'Editor attività XML")  
   
  Prima che fosse disponibile la proprietà **ValidationDetails** , la convalida XML da parte dell'Attività XML restituiva solo un risultato di tipo True o False, senza informazioni sugli errori o sulle rispettive posizioni. Attualmente, quando si imposta **ValidationDetails** su True, il file di output contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML.  
   
@@ -120,7 +120,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Ecco il risultato in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] della seconda query di esempio illustrata nel testo precedente.  
   
- ![Query per raggruppare gli errori XML in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Query per raggruppare gli errori XML in Management Studio")  
+ ![Errori XML di query su gruppo in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Errori XML di query su gruppo in Management Studio")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività XML](../../integration-services/control-flow/xml-task.md)   

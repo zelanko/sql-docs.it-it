@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946881"
 ---
 # <a name="display-an-actual-execution-plan"></a>Visualizzazione di un piano di esecuzione effettivo
@@ -31,13 +31,13 @@ ms.locfileid: "67946881"
   
 ## <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>Per includere un piano di esecuzione per una query durante l'esecuzione  
   
-1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query del motore di database **nella barra degli strumenti**. Per aprire una query esistente e visualizzare il piano di esecuzione stimato, è anche possibile fare clic sul pulsante **Apri file** della barra degli strumenti e trovare la query. 
+1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query del motore di database **nella barra degli strumenti**. Per aprire una query esistente e visualizzare il piano di esecuzione stimato, è inoltre possibile fare clic sul pulsante **Apri file** della barra degli strumenti e individuare la query. 
   
 2.  Immettere la query per quale si desidera visualizzare il piano di esecuzione effettivo.  
   
 3.  Scegliere **Includi piano di esecuzione effettivo** dal menu **Query** oppure fare clic sul pulsante della barra degli strumenti **Includi piano di esecuzione effettivo**.
 
-    ![Pulsante del piano di esecuzione effettivo nella barra degli strumenti](../../relational-databases/performance/media/actualexecplantoolbar.png "Pulsante del piano di esecuzione effettivo nella barra degli strumenti")   
+    ![Pulsante del piano di esecuzione effettivo sulla barra degli strumenti](../../relational-databases/performance/media/actualexecplantoolbar.png "Pulsante del piano di esecuzione effettivo sulla barra degli strumenti")   
   
 4.  Fare clic sul pulsante della barra degli strumenti **Esegui** per eseguire la query. Il piano usato da Query Optimizer viene visualizzato nella scheda **Piano di esecuzione** del riquadro dei risultati. 
 
@@ -47,7 +47,7 @@ ms.locfileid: "67946881"
   
     In alternativa, è possibile visualizzare le proprietà dell'operatore nella finestra Proprietà. Se tale finestra non è visibile, fare clic con il pulsante destro del mouse su un operatore e scegliere **Proprietà**. Selezionare un operatore e visualizzare le relative proprietà.  
 
-    ![Fare clic con il pulsante destro del mouse sull'operatore del piano per visualizzarne le proprietà](../../relational-databases/performance/media/planproperties.png "Fare clic con il pulsante destro del mouse sull'operatore del piano per visualizzarne le proprietà")    
+    ![Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano](../../relational-databases/performance/media/planproperties.png "Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano")    
   
 6.  È possibile modificare la visualizzazione del piano di esecuzione facendo clic con il pulsante destro del mouse sul piano di esecuzione e scegliendo **Zoom avanti**, **Zoom indietro**, **Personalizza zoom**oppure **Adatta alla finestra**. Le opzioni**Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire e rimpicciolire il piano di esecuzione, mentre **Personalizza zoom** consente di definire un fattore di zoom personalizzato, ad esempio 80 percento. **Adatta alla finestra** consente di ingrandire il piano di esecuzione per adattarlo al riquadro Risultati. In alternativa, usare una combinazione di tasto CTRL e rotellina del mouse per attivare lo **zoom dinamico**.  
 

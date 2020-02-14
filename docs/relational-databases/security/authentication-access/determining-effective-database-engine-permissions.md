@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995632"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
@@ -33,7 +33,7 @@ Questo articolo descrive come determinare chi ha le autorizzazioni per i vari og
 >  * Il sistema precedente e quello nuovo hanno alcune analogie. Ad esempio, l'appartenenza al ruolo predefinito del server `sysadmin` è simile alla disponibilità dell'autorizzazione `CONTROL SERVER`. Ma i sistemi non sono identici. Ad esempio, se un account di accesso ha solo l'autorizzazione `CONTROL SERVER` e una stored procedure controlla l'appartenenza al ruolo predefinito del server `sysadmin`, il controllo delle autorizzazioni avrà esito negativo. È anche vero il contrario. 
 
 
-## <a name="summary"></a>Riepilogo   
+## <a name="summary"></a>Summary   
 * Le autorizzazioni a livello di server possono derivare dall'appartenenza ai ruoli predefiniti del server o ai ruoli del server definiti dall'utente. Tutti gli utenti appartengono al ruolo predefinito del server `public` e ricevono tutte le autorizzazioni assegnate a tale ruolo.   
 * Le autorizzazioni a livello di server possono derivare dalle autorizzazioni concesse agli account di accesso o ai ruoli del server definiti dall'utente.   
 * Le autorizzazioni a livello di database possono derivare dall'appartenenza ai ruoli predefiniti del database o ai ruoli del database definiti dall'utente. Tutti gli utenti appartengono al ruolo predefinito del database `public` e ricevono tutte le autorizzazioni assegnate a tale ruolo.   
@@ -92,7 +92,7 @@ Questo sistema è flessibile e ciò significa che può diventare complicato se g
 
 Le autorizzazioni possono essere concesse a livello di server, a livello di database, a livello di schema, a livello di oggetto e così via. Esistono 26 livelli (denominati classi). L'elenco completo delle classi in ordine alfabetico è: `APPLICATION ROLE`, `ASSEMBLY`, `ASYMMETRIC KEY`, `AVAILABILITY GROUP`, `CERTIFICATE`, `CONTRACT`, `DATABASE`, `DATABASE` `SCOPED CREDENTIAL`, `ENDPOINT`, `FULLTEXT CATALOG`, `FULLTEXT STOPLIST`, `LOGIN`, `MESSAGE TYPE`, `OBJECT`, `REMOTE SERVICE BINDING`, `ROLE`, `ROUTE`, `SCHEMA`, `SEARCH PROPERTY LIST`, `SERVER`, `SERVER ROLE`, `SERVICE`, `SYMMETRIC KEY`, `TYPE`, `USER`, `XML SCHEMA COLLECTION`. (Alcune classi non sono disponibili per alcuni tipi di SQL Server.) Per ottenere informazioni complete su ogni classe, è necessaria una query diversa.
 
-### <a name="principals"></a>Entità
+### <a name="principals"></a>Principals
 
 Le autorizzazioni vengono concesse alle entità. Le entità possono essere ruoli del server, account di accesso, ruoli del database o utenti. Gli account di accesso possono rappresentare gruppi di Windows che includono molti utenti di Windows. Dato che i gruppi di Windows non vengono gestiti in SQL Server, SQL Server non sempre conosce i membri di un gruppo di Windows. Quando un utente di Windows si connette a SQL Server, il pacchetto di accesso contiene i token di appartenenza ai gruppi di Windows per l'utente.
 
@@ -145,7 +145,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-Usare la funzione `HAS_PERMS_BY_NAME` per determinare se un utente specifico (in questo caso `TestUser`) ha un'autorizzazione. Esempio:   
+Usare la funzione `HAS_PERMS_BY_NAME` per determinare se un utente specifico (in questo caso `TestUser`) ha un'autorizzazione. Ad esempio:   
 ```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');

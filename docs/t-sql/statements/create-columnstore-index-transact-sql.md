@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729925"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) e [Configurare operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minuti ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    Per una tabella basata su disco, *delay* specifica il numero minimo di minuti in cui un rowgroup differenziale deve rimanere nello stato CLOSED nel rowgroup differenziale prima che SQL Server lo comprima nel rowgroup compresso. Poiché le tabelle basate su disco non tengono traccia delle ore di inserimento e aggiornamento per le singole righe, SQL Server applica il ritardo ai rowgroup differenziali nello stato CLOSED.  
    Il valore predefinito è 0 minuti.  
    
@@ -175,7 +175,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    Per indicazioni su quando usare COMPRESSION_DELAY, vedere l'[introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Sono disponibili le opzioni seguenti:   
+   Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. descritte di seguito:   
 - `COLUMNSTORE` è l'impostazione predefinita e indica di eseguire la compressione usando il columnstore che offre le prestazioni migliori. Questa è la scelta tipica.  
 - `COLUMNSTORE_ARCHIVE` comprime la tabella o la partizione in una dimensione ancora inferiore. Usare questa opzione per situazioni come l'archiviazione in cui sono richieste risorse di archiviazione più piccole e si ha a disposizione più tempo per l'archiviazione e il recupero.  
   
@@ -240,7 +240,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON` specifica che l'indice columnstore rimane online e disponibile durante la compilazione della nuova copia dell'indice.
@@ -250,11 +250,11 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minuti]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    Specifica un limite inferiore per il periodo di tempo in cui una riga deve rimanere nel rowgroup differenziale prima che sia idonea per la migrazione in un rowgroup compresso. Un cliente ad esempio può dire che se una riga non viene modificata per 120 minuti, diventa idonea per la compressione in formato di archiviazione a colonne. Per l'indice columnstore nelle tabelle basate su disco, non si tiene traccia dell'ora in cui una riga viene inserita o aggiornata, ma si usa l'ora di chiusura del rowgroup differenziale come proxy per la riga. La durata predefinita è 0 minuti. La migrazione di una riga nella risorsa di archiviazione a colonne viene eseguita quando risulta che nel rowgroup differenziale sono state accumulate 1 milione di righe e il rowgroup viene contrassegnato come chiuso.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
-   Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. Sono disponibili le opzioni seguenti:
+   Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. descritte di seguito:
    
 - `COLUMNSTORE`: è l'impostazione predefinita e indica di eseguire la compressione usando il columnstore che offre le prestazioni migliori. Questa è la scelta tipica.  
 - `COLUMNSTORE_ARCHIVE`: COLUMNSTORE_ARCHIVE comprime ulteriormente la tabella o la partizione a una dimensione inferiore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero.  
@@ -309,15 +309,15 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 - I dati di un indice filtrato vengono modificati tramite un'operazione INSERT, UPDATE, DELETE o MERGE.  
 - L'indice filtrato viene usato da Query Optimizer per generare il piano di query.  
   
-    |Opzioni SET|Valore obbligatorio|Valore server predefinito|Default<br /><br /> OLE DB e ODBC predefinito|Default<br /><br /> DB-Library predefinito|  
+    |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|ATTIVA|ATTIVA|ATTIVA|OFF|  
+    |ANSI_PADDING|ATTIVA|ATTIVA|ATTIVA|OFF|  
+    |ANSI_WARNINGS*|ATTIVA|ATTIVA|ATTIVA|OFF|  
+    |ARITHABORT|ATTIVA|ATTIVA|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ATTIVA|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|   
+    |QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ATTIVA|OFF|   
   
      *Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata su ON in modo esplicito.  
   
@@ -336,7 +336,7 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 **Ogni colonna di un indice columnstore deve contenere dati di business di uno dei seguenti tipi comuni:** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   DATETIME  
+-   Datetime  
 -   smalldatetime  
 -   Data  
 -   time [ ( *n* ) ]  
@@ -346,9 +346,9 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
 -   SMALLMONEY  
--   BIGINT  
+-   bigint  
 -   INT  
--   smallint  
+-   SMALLINT  
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
@@ -370,7 +370,7 @@ Se la tabella sottostante ha una colonna con un tipo di dati non supportato per 
 -   rowversion (e timestamp)  
 -   sql_variant  
 -   Tipi CLR (tipi spaziali e hierarchyid)  
--   xml  
+-   Xml  
 -   uniqueidentifier (si applica a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Indici columnstore non cluster:**
@@ -418,7 +418,7 @@ Le limitazioni seguenti si applicano solo a [!INCLUDE[ssSQL14](../../includes/ss
 
 ##  <a name="convert"></a> Esempi per la conversione di una tabella rowstore in columnstore  
   
-### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Convertire un heap in un indice columnstore cluster  
+### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>R. Convertire un heap in un indice columnstore cluster  
  In questo esempio viene creata una tabella come heap, che viene poi convertita in un indice columnstore cluster denominato cci_Simple. In questo modo viene modificata l'archiviazione dell'intera tabella da rowstore a columnstore.  
   
 ```sql  
@@ -603,7 +603,7 @@ WITH ( DROP_EXISTING = ON );
   
 ##  <a name="nonclustered"></a> Esempi per gli indici columnstore non cluster  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Creare un indice columnstore come indice secondario per una tabella rowstore  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>R. Creare un indice columnstore come indice secondario per una tabella rowstore  
  Questo esempio consente di creare un indice columnstore non cluster in una tabella rowstore. In questa situazione può essere creato solo un indice columnstore. L'indice columnstore richiede memoria aggiuntiva poiché contiene una copia dei dati nella tabella rowstore. In questo esempio vengono creati una tabella e un indice cluster semplici, quindi viene illustrata la sintassi di creazione di un indice columnstore non cluster.  
   
 ```sql  
@@ -670,7 +670,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Modificare un indice cluster in un indice columnstore cluster  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>R. Modificare un indice cluster in un indice columnstore cluster  
  Usando l'istruzione CREATE CLUSTERED COLUMNSTORE INDEX con DROP_EXISTING = ON, è possibile:  
   
 -   Trasformare un indice cluster in un indice columnstore cluster.  

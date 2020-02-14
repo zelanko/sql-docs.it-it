@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296221"
 ---
 # <a name="integration-services-programming-overview"></a>Panoramica della programmazione di Integration Services
@@ -49,9 +49,9 @@ ms.locfileid: "71296221"
  Per altre informazioni, vedere [Estensione del flusso di dati con il componente script](../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md), [Sviluppo di un componente flusso di dati personalizzato](../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) e [Compilazione di pacchetti a livello di programmazione](../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
 ## <a name="supported-languages"></a>Lingue supportate  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta pienamente [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. In questo modo gli sviluppatori possono programmare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel linguaggio conforme a .NET che preferiscono. Sebbene il motore di runtime e il motore flusso di dati siano scritti in codice nativo, sono entrambi disponibili tramite un modello a oggetti completamente gestito.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il supporto completo di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. In questo modo gli sviluppatori possono programmare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel linguaggio conforme a .NET che preferiscono. Sebbene il motore di runtime e il motore flusso di dati siano scritti in codice nativo, sono entrambi disponibili tramite un modello a oggetti completamente gestito.  
   
- È possibile programmare pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], attività personalizzate e componenti in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un altro editor di codice o di testo. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre allo sviluppatore numerosi strumenti e funzionalità per semplificare e accelerare i cicli iterativi di codifica, debug e test. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] semplifica la distribuzione. Tuttavia, non è necessario [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] per compilare e ottenere progetti di codice di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK include i compilatori [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e [!INCLUDE[csprcs](../includes/csprcs-md.md)] e gli strumenti correlati.  
+ È possibile programmare pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], attività personalizzate e componenti in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un altro editor di codice o di testo. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre allo sviluppatore numerosi strumenti e funzionalità per semplificare e accelerare i cicli iterativi di codifica, debug e test. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] semplifica la distribuzione. Tuttavia, non è necessario [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] per compilare e ottenere progetti di codice di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK include i compilatori [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e [!INCLUDE[csprcs](../includes/csprcs-md.md)] e gli strumenti correlati.  
   
 > [!IMPORTANT]  
 >  Per impostazione predefinita, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] viene installato con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a differenza di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Se l'SDK non è installato nel computer e la documentazione associata non è inclusa nella documentazione online, non è possibile utilizzare i collegamenti al contenuto dell'SDK presenti in questa sezione. Dopo aver installato [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK, è possibile aggiungere la documentazione associata alla documentazione online e al sommario attenendosi alle istruzioni descritte in [Aggiungere o rimuovere la documentazione del prodotto per SQL Server](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  

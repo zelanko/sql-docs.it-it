@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298361"
 ---
 # <a name="data-mining-query-task"></a>Attività Query di data mining
@@ -84,12 +84,12 @@ ms.locfileid: "71298361"
  Consente di digitare una descrizione dell'attività Query di data mining.  
   
 ### <a name="mining-model-tab-options"></a>Opzioni della scheda Modello di data mining  
- **Connessione**  
+ **Connection**  
  Consente di selezionare una gestione connessione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'elenco o di creare una nuova gestione connessione facendo clic sul pulsante **Nuova** .  
   
  **Argomenti correlati:**  [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **Argomenti correlati:** [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "71298361"
  **Nome variabile**  
  Consente di selezionare una variabile nell'elenco per mapparla al parametro.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un parametro all'elenco.  
   
  **Rimuovi**  
@@ -151,7 +151,7 @@ ms.locfileid: "71298361"
  **Tipo di risultato**  
  Consente di indicare se restituire un singola riga o un set di risultati completo.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere il set di risultati all'elenco.  
   
  **Rimuovi**  
@@ -172,10 +172,10 @@ ms.locfileid: "71298361"
  Consente di digitare una descrizione dell'attività Query di data mining.  
   
 ### <a name="output-tab-options"></a>Opzioni della scheda Output  
- **Connessione**  
+ **Connection**  
  Selezionare una gestione connessione nell'elenco oppure fare clic su **Nuova** per creare una nuova gestione connessione.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione. È possibile utilizzare solo i tipi di gestione connessione ADO.NET e OLE DB.  
   
  **Tabella di output**  

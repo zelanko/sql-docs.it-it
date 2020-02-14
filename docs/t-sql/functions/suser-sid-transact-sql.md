@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981740"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -59,7 +59,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>Tipi restituiti  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione SUSER_SID può essere utilizzata come vincolo DEFAULT nell'istruzione ALTER TABLE o CREATE TABLE. È possibile utilizzare SUSER_SID in un elenco di selezione, in una clausola WHERE e in tutti i casi in cui è consentita un'espressione. SUSER_SID deve essere sempre seguita dalle parentesi, anche in assenza di parametri.  
   
  Se viene richiamata senza alcun argomento, la funzione SUSER_SID restituisce il SID del contesto di sicurezza corrente. Se richiamata senza alcun argomento all'interno di un batch per il quale il contesto è stato cambiato tramite EXECUTE AS, la funzione SUSER_SID restituisce il SID del contesto rappresentato. Se chiamata da un contesto rappresentato, SUSER_SID(ORIGINAL_LOGIN()) restituisce il SID del contesto originale.  
@@ -70,7 +70,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-suser_sid"></a>A. Utilizzo della funzione SUSER_SID  
+### <a name="a-using-suser_sid"></a>R. Utilizzo della funzione SUSER_SID  
  Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per il contesto di sicurezza corrente.  
   
 ```  
@@ -78,7 +78,7 @@ SELECT SUSER_SID();
 ```  
   
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. Utilizzo di SUSER_SID con un account di accesso specifico  
- Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
+ Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per l'account di accesso `sa` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   

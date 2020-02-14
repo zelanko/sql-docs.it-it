@@ -17,10 +17,10 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 53fc016bc4657dd1dce7dd0eefcbea58a28ae14e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297001"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Invio di messaggi a una coda privata remota tramite l'attività Script
@@ -48,13 +48,13 @@ ms.locfileid: "71297001"
   
 3.  Aggiungere un'attività Script all'area di progettazione e modificarla. Nella scheda **Script** dell'**Editor attività Script** aggiungere la variabile `MessageText` alla proprietà **ReadOnlyVariables** per rendere disponibile la variabile all'interno dello script.  
   
-4.  Fare clic su **Modifica script** per aprire l'editor di script [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+4.  Fare clic su **Modifica script** per aprire l'editor di script di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
 5.  Aggiungere un riferimento nel progetto di script allo spazio dei nomi **System.Messaging**.  
   
 6.  Sostituire il contenuto della finestra dello script con il codice nella sezione seguente.  
   
-## <a name="code"></a>codice  
+## <a name="code"></a>Codice  
   
 ```vb  
 Imports System  

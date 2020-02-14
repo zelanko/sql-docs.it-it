@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247315"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918184"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -7997,7 +7997,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   21796   |   16  |   No  |   Alla proprietà "xactsetjobinterval" deve essere assegnato un valore maggiore o uguale a 0.  |
 |   21797   |   16  |   No  |   Impossibile creare il processo di agente. '%s' deve essere un account di accesso di Windows valido con formato 'COMPUTER\\Account di accesso' o 'DOMINIO\\Account di accesso'. Vedere la documentazione relativa a '%s'.    |
 |   21798   |   16  |   No  |   Impossibile eseguire la procedura di amministrazione della replica. Per continuare è necessario aggiungere il processo agente '%s' tramite '%s'. Vedere la documentazione relativa a '%s'.   |
-|   21799   |   16  |   No  |   Impossibile trovare l'agente %s per il server di pubblicazione (%s), database (%s), pubblicazione (%s). Creare l'agente con la procedura appropriata: sp_addpublication_snapshot, sp_addlogreader_agent o sp_addqreader_agent.  |
+|   21799   |   16  |   No  |   Impossibile trovare l'agente %s per il server di pubblicazione (%s), database (%s), pubblicazione (%s). Creare l'agente con la procedura appropriata: sp_addpublication_snapshot, sp_addlogreader_agent o sp_addqreader_agent.   |
 |   21800   |   16  |   No  |   L'identificatore per la generazione comune non è valido in questa replica, perché non esiste oppure perché potrebbero essere stati rimossi i metadati per le modifiche non ancora propagate. |
 |   21801   |   16  |   No  |   La stored procedure sp_createagentparameter non è riuscita ad aggiungere uno o più parametri alla tabella di sistema msdb.dbo.MSagentparameterlist. Controllare gli eventuali errori restituiti da sp_createagentparameter e gli errori restituiti da SQL Server durante l'esecuzione di sp_createagentparameter.    |
 |   21802   |   16  |   No  |   Durante il processo di creazione del profilo agente non è stato possibile convalidare il valore del parametro di agente specificato. '%s' non è un valore valido per il parametro '%s'. Il valore deve essere un numero intero minore o uguale a '%d'. Verificare che la replica sia installata correttamente.   |

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70978602"
 ---
 # <a name="expressions-transact-sql"></a>Espressioni (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70978602"
 
   Un'espressione è una combinazione di simboli e operatori che vengono valutati da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in modo da restituire un singolo valore di dati. Le espressioni semplici possono essere costituite da un'unica costante, variabile, colonna o funzione scalare. È possibile utilizzare gli operatori per unire due o più espressioni semplici in modo da ottenere un'espressione complessa.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -81,15 +81,15 @@ ms.locfileid: "70978602"
   
 ## <a name="arguments"></a>Argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |*constant*|Simbolo che rappresenta un singolo valore di dati specifico. Per altre informazioni, vedere [Costanti &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Unità di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] che offre un servizio specifico e restituisce un valore singolo. *scalar_function* può essere costituito da funzioni scalari predefinite, ad esempio SUM, GETDATE o CAST, o da funzioni scalari definite dall'utente.|  
 |[ _table_name_ **.** ]|Nome o alias di una tabella.|  
 |*column*|Nome di colonna. In un'espressione è consentito soltanto il nome della colonna.|  
 |*variable*|Nome di una variabile o parametro. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** _expression_ **)**|Qualsiasi espressione valida, in base a quanto definito in questo argomento. Le parentesi sono operatori di raggruppamento che assicurano che tutti gli operatori dell'espressione tra parentesi siano valutati prima che l'espressione risultante venga combinata con un'altra espressione.|  
-|**(** _scalar_subquery_ **)**|Sottoquery che restituisce un valore. Esempio:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _expression_  **)**|Qualsiasi espressione valida, in base a quanto definito in questo argomento. Le parentesi sono operatori di raggruppamento che assicurano che tutti gli operatori dell'espressione tra parentesi siano valutati prima che l'espressione risultante venga combinata con un'altra espressione.|  
+|**(** _scalar_subquery_ **)**|Sottoquery che restituisce un valore. Ad esempio:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Gli operatori unari possono essere applicati solo a espressioni che restituiscono un tipo di dati appartenente alla categoria dei tipi di dati numerici. Operatore con un solo operando numerico:<br /><br /> + indica un numero positivo.<br /><br /> - indica un numero negativo.<br /><br /> ~ indica l'operatore di complemento a uno.|  
 |{ *binary_operator* }|Operatore che consente di definire la modalità in base a cui due espressioni vengono unite per ottenere un unico risultato. *binary_operator* può essere un operatore aritmetico, l'operatore di assegnazione (=), un operatore bit per bit, un operatore di confronto, un operatore logico, l'operatore di concatenazione delle stringhe (+) o un operatore unario. Per altre informazioni sugli operatori, vedere [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|Qualsiasi funzione di rango [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni, vedere [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
@@ -104,7 +104,7 @@ ms.locfileid: "70978602"
   
  Le espressioni complesse costituite da più simboli e operatori restituiscono un unico valore. Il tipo di dati, le regole di confronto, la precisione e il valore dell'espressione risultante vengono determinati tramite l'unione di due espressioni componenti alla volta, fino a ottenere il risultato finale. La sequenza in base a cui vengono unite le espressioni è definita dall'ordine di precedenza degli operatori utilizzati nell'espressione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile combinare due espressioni mediante un operatore se entrambe utilizzano tipi di dati supportati dall'operatore e se almeno una delle condizioni seguenti è vera:  
   
 -   Alle espressioni è applicato lo stesso tipo di dati.  
@@ -154,7 +154,7 @@ DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [Conversione del tipo di dati &#40;Motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296164"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
@@ -52,9 +52,9 @@ ms.locfileid: "71296164"
   
 |Nome del valore|Descrizione|Tipo di valore|  
 |----------------|-----------------|-------------------|  
-|Valore di esecuzione|Valore assegnato a un'istanza specifica di esecuzione del pacchetto. Questa assegnazione esegue l'override di tutti gli altri valori, tuttavia è applicabile a una sola istanza di esecuzione del pacchetto.|Valore letterale|  
+|Valore di esecuzione|Valore assegnato a un'istanza specifica di esecuzione del pacchetto. Questa assegnazione esegue l'override di tutti gli altri valori, tuttavia è applicabile a una sola istanza di esecuzione del pacchetto.|Literal (Valore letterale)|  
 |Valore del server|Valore assegnato al parametro nell'ambito del progetto, dopo la distribuzione del progetto nel server Integration Services. Questo valore esegue l'override del valore predefinito di progettazione.|Valore letterale o riferimento a una variabile di ambiente|  
-|Valore di progettazione|Valore assegnato al parametro durante la creazione o modifica del progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Questo valore rimane persistente nel progetto.|Valore letterale|  
+|Valore di progettazione|Valore assegnato al parametro durante la creazione o modifica del progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Questo valore rimane persistente nel progetto.|Literal (Valore letterale)|  
   
  È possibile utilizzare un solo parametro per assegnare un valore a più proprietà del pacchetto. A una singola proprietà del pacchetto è possibile assegnare un valore solo da un singolo parametro.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "71296164"
   
  Durante la preparazione di un'istanza specifica di esecuzione del pacchetto, il valore 5 viene assegnato al parametro **pkgOptions** . A questo valore viene fatto riferimento come valore di esecuzione perché si applica al parametro solo per quell'istanza specifica dell'esecuzione. All'avvio dell'esecuzione, alla proprietà del pacchetto corrispondente al parametro **pkgOptions** viene assegnato il valore 5.  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>Creare un parametro
 Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare parametri di progetto e parametri di pacchetto. Le procedure riportate di seguito contengono istruzioni dettagliate per la creazione di parametri di pacchetto/progetto.  
   
 > **NOTA** Se si converte un progetto creato con una versione precedente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel modello di distribuzione del progetto, è possibile usare la **Conversione guidata progetto di Integration Services** per creare parametri basati su configurazioni. Per altre informazioni, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -112,11 +112,11 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
 1.  Aprire il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] e quindi fare clic sulla scheda **Parametri** in Progettazione SSIS.  
   
-     ![Scheda dei parametri del pacchetto](../integration-services/media/denali-package-parameters.gif "Scheda dei parametri del pacchetto")  
+     ![Scheda Parametri del pacchetto](../integration-services/media/denali-package-parameters.gif "Scheda Parametri del pacchetto")  
   
 2.  Fare clic sul pulsante **Aggiungi parametro** sulla barra degli strumenti.  
   
-     ![Pulsante di aggiunta sulla barra degli strumenti](../integration-services/media/denali-parameter-add.gif "Pulsante di aggiunta sulla barra degli strumenti")  
+     ![Pulsante Aggiungi parametro della barra degli strumenti](../integration-services/media/denali-parameter-add.gif "Pulsante Aggiungi parametro della barra degli strumenti")  
   
 3.  Immettere i valori per le proprietà **Nome**, **Tipo di dati**, **Valore**, **Sensibile** e **Richiesto** nell'elenco stesso o nella finestra **Proprietà**. Nella tabella seguente vengono descritte tali proprietà.  
   
@@ -125,8 +125,8 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
     |Nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
-    |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
-    |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
+    |Sensibili|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
+    |Obbligatoria|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
     |Descrizione|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
     > **NOTA** Quando si distribuisce un progetto nel catalogo, molte più proprietà vengono associate al progetto. Per visualizzare tutte le proprietà di tutti i parametri nel catalogo, usare la vista [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
@@ -143,11 +143,11 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
 2.  Fare clic con il pulsante destro del mouse su **Project.params** in Esplora soluzioni e quindi scegliere **Apri** (OPPURE) fare doppio clic su **Project.params** per aprirlo.  
   
-     ![Finestra dei parametri di progetto](../integration-services/media/denali-project-parameters.gif "Finestra dei parametri di progetto")  
+     ![Finestra dei parametri del progetto](../integration-services/media/denali-project-parameters.gif "Finestra dei parametri del progetto")  
   
 3.  Fare clic sul pulsante **Aggiungi parametro** sulla barra degli strumenti.  
   
-     ![Pulsante di aggiunta sulla barra degli strumenti](../integration-services/media/denali-parameter-add.gif "Pulsante di aggiunta sulla barra degli strumenti")  
+     ![Pulsante Aggiungi parametro della barra degli strumenti](../integration-services/media/denali-parameter-add.gif "Pulsante Aggiungi parametro della barra degli strumenti")  
   
 4.  Immettere valori per le proprietà **Nome**, **Tipo di dati**, **Valore**, **Sensibile** e **Richiesto**.  
   
@@ -156,8 +156,8 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
     |Nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
-    |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
-    |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
+    |Sensibili|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
+    |Obbligatoria|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
     |Descrizione|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
 5.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri sono archiviati nelle configurazioni del file di progetto. Salvare il file di progetto per eseguire il commit al disco delle eventuali modifiche apportate ai valori dei parametri.  
@@ -186,7 +186,7 @@ La finestra di dialogo **Imposta parametri** consente di associare un parametro 
  **Descrizione**  
  Specificare la descrizione per il parametro.  
   
- **Value**  
+ **Valore**  
  Specificare il valore predefinito per il parametro. Definito anche valore predefinito per la progettazione, potrà essere sostituito in seguito in fase di distribuzione.  
   
  **Ambito**  

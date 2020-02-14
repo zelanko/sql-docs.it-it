@@ -18,23 +18,23 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809955"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  ![Immagine della sicurezza a livello di riga](../../relational-databases/security/media/row-level-security-graphic.png "Immagine della sicurezza a livello di riga")  
+  ![Rappresentazione grafica della sicurezza a livello di riga](../../relational-databases/security/media/row-level-security-graphic.png "Rappresentazione grafica della sicurezza a livello di riga")  
   
 La sicurezza a livello di riga consente di usare l'appartenenza a gruppi o il contesto di esecuzione per controllare l'accesso alle righe in una tabella di database.
   
 La sicurezza a livello di riga semplifica la progettazione e la codifica della sicurezza nell'applicazione e facilita l'implementazione delle restrizioni di accesso alle righe di dati. Ad esempio, è possibile assicurarsi che i dipendenti possano accedere solo alle righe di dati pertinenti per il loro reparto. Un altro esempio può essere la limitazione dell'accesso ai dati dei clienti solo ai dati rilevanti per l'azienda.  
   
-La logica di restrizione dell'accesso si trova sul livello del database e non su un altro livello applicazione lontano dai dati. Il sistema del database applica le restrizioni di accesso a ogni tentativo di accesso ai dati da qualsiasi livello. La riduzione della superficie di attacco del sistema di sicurezza lo rende più affidabile e solido.  
+La logica di restrizione dell'accesso si trova sul livello del database e non su un altro livello applicazione lontano dai dati. Il sistema del database applica le restrizioni di accesso a ogni tentativo di accesso ai dati da qualsiasi livello. Il sistema di sicurezza è così più affidabile e solido, grazie alla riduzione della superficie di attacco del sistema di sicurezza.  
   
 Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e i predicati creati come [funzioni con valori di tabella inline](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
@@ -85,7 +85,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 - I predicati di blocco di UPDATE vengono suddivisi in operazioni distinte BEFORE e AFTER. Di conseguenza non è possibile, ad esempio, impedire agli utenti di aggiornare una riga con un valore superiore a quello corrente. Se si deve applicare una logica di questo tipo, occorre usare i trigger con le tabelle intermedie [DELETED e INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) per rimandare ai valori precedenti e nuovi insieme.  
   
-- L'ottimizzatore non controllerà il predicato di blocco AFTER UPDATE se non è stata modificata alcuna delle colonne usate dalla funzione del predicato. Esempio: Alice non deve essere in grado di modificare uno stipendio in modo che sia maggiore di 100.000. Alice può modificare l'indirizzo di un dipendente il cui stipendio è già maggiore di 100.000, purché le colonne a cui fa riferimento il predicato non siano state modificate.  
+- L'ottimizzatore non controllerà il predicato di blocco AFTER UPDATE se non è stata modificata alcuna delle colonne usate dalla funzione del predicato. Ad esempio: Alice non deve essere in grado di modificare uno stipendio in modo che sia maggiore di 100.000. Alice può modificare l'indirizzo di un dipendente il cui stipendio è già maggiore di 100.000, purché le colonne a cui fa riferimento il predicato non siano state modificate.  
   
 - Non sono state modificate le API in blocco, compresa l'API BULK INSERT. Questo significa che i predicati di blocco AFTER INSERT verranno applicati alle operazioni di inserimento in blocco come se fossero operazioni di inserimento regolari.  
   
@@ -101,7 +101,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
  I predicati di filtro della sicurezza a livello di riga sono funzionalmente equivalenti all'aggiunta di una clausola **WHERE** . Il predicato può essere sofisticato, se lo richiedono le procedure aziendali, oppure è possibile usare una clausola semplice, ad esempio `WHERE TenantId = 42`.  
   
- In termini più formali, la sicurezza a livello di riga introduce il controllo degli accessi basato su predicato. Tale controllo include una valutazione flessibile e centralizzata basata su predicato. Il predicato può essere basato su metadati o su qualsiasi altro criterio considerato appropriato dall'amministratore. Il predicato viene usato come criterio per determinare se l'utente dispone dell'accesso appropriato ai dati in base agli attributi utente. Il controllo degli accessi basato su etichetta può essere implementato usando un controllo degli accessi basato su predicato.  
+ In termini più formali, la sicurezza a livello di riga introduce il controllo degli accessi basato su predicato. Tale controllo include una valutazione flessibile e centralizzata basata su predicato. Il predicato può essere basato su metadati o su qualsiasi altro criterio considerato appropriato dall'amministratore. Il predicato viene usato come criterio per determinare se l'utente dispone dell'accesso appropriato ai dati in base agli attributi utente. Il controllo di accesso basato su etichetta può essere implementato usando il controllo di accesso basato su predicato.  
   
 ## <a name="Permissions"></a> Autorizzazioni
 
@@ -149,7 +149,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 ### <a name="carefully-crafted-queries"></a>Query appositamente create
 
-È possibile causare perdite di informazioni usando query appositamente create. Ad esempio, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` consentirebbe a un utente malintenzionato di sapere che lo stipendio di John Doe ammonta a 100.000 dollari. Anche se è disponibile un predicato di sicurezza per impedire le query dirette di un utente malintenzionato relative allo stipendio degli altri dipendenti, l'utente può determinare quando la query restituisce un'eccezione di divisione per zero.  
+È possibile causare perdite di informazioni mediante l'utilizzo di query appositamente create. Ad esempio, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` consentirebbe a un utente malintenzionato di sapere che lo stipendio di John Doe ammonta a 100.000 dollari. Anche se è disponibile un predicato di sicurezza per impedire le query dirette di un utente malintenzionato relative allo stipendio degli altri dipendenti, l'utente può determinare quando la query restituisce un'eccezione di divisione per zero.  
 
 ## <a name="Limitations"></a> Compatibilità tra funzionalità
 

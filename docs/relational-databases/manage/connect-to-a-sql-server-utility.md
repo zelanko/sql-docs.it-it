@@ -11,10 +11,10 @@ ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115426"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Effettuare la connessione a Utilità SQL Server.
@@ -31,13 +31,13 @@ ms.locfileid: "68115426"
   
 3.  Fare clic su **Visualizza** e quindi su **Esplora utilità**.  
   
-4.  Nel riquadro di spostamento di Esplora utilità fare clic su ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connetti a utilità**.  
+4.  Nel riquadro di spostamento di Esplora utilità fare clic su ![](../../relational-databases/manage/media/connect-to-utility.gif "Connetti a utilità")**Connetti a utilità**.  
   
 5.  Nella finestra di dialogo **Connetti al server** specificare il nome dell'istanza del punto di controllo dell'utilità, quindi fare clic su **Connetti**.  
   
 6.  Visualizzare il riquadro di spostamento di Esplora utilità per passare a una visualizzazione albero delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel punto di controllo dell'utilità.  
   
- La creazione di un nuovo punto di controllo dell'utilità consente anche di connettersi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
+ La creazione di un nuovo punto di controllo dell'utilità consente anche di connettersi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

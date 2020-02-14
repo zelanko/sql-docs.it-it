@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706231"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941111"
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ La figura seguente illustra il gruppo di disponibilità AG 1 come replica primar
 
 In entrambi gli esempi precedenti si possono avere fino a 27 repliche totali tra i tre gruppi di disponibilità, ognuno dei quali può essere usato per query di sola lettura. 
 
-Il [routing di sola lettura]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) attualmente non funziona in tutti i casi con i gruppi di disponibilità distribuiti. In particolare:
+Il [routing di sola lettura]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) attualmente non funziona in tutti i casi con i gruppi di disponibilità distribuiti. Più in particolare,
 
 1. Il routing di sola lettura può essere configurato e funziona per il gruppo di disponibilità primario del gruppo di disponibilità distribuito. 
 2. Il routing di sola lettura può essere configurato ma non funziona per il gruppo di disponibilità secondario del gruppo di disponibilità distribuito. Tutte le query che usano il listener per connettersi al gruppo di disponibilità secondario vengono inoltrate alla replica primaria del gruppo di disponibilità secondario. In caso contrario, è necessario configurare ogni replica in modo da consentire tutte le connessioni come replica secondaria e accedervi direttamente. Tuttavia il routing di sola lettura funziona correttamente se il gruppo di disponibilità secondario diventa primario dopo un failover. Questo comportamento potrà essere modificato in un aggiornamento di SQL Server 2016 o in una versione futura di SQL Server.

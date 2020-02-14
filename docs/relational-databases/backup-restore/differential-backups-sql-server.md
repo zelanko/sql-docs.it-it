@@ -14,17 +14,17 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089839"
 ---
 # <a name="differential-backups-sql-server"></a>Backup differenziali [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento relativo a backup e ripristino è applicabile a tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Un backup differenziale si basa sul backup dei dati completo precedente più recente. In un backup differenziale vengono acquisiti solo i dati che hanno subito modifiche dopo il backup completo. Il backup completo su cui si basa un backup differenziale è noto come *base* del backup differenziale. I backup completi, ad eccezione di backup di sola copia, possono servire come base per una serie di backup differenziali, compresi backup di database, backup parziali e backup di file. Il backup di base per un backup differenziale di file può essere contenuto in un backup completo, un backup di file o un backup parziale.  
+ un backup differenziale si basa sul precedente backup completo dei dati più recente. In un backup differenziale vengono acquisiti solo i dati che hanno subito modifiche dopo il backup completo. Il backup completo su cui si basa un backup differenziale è noto come *base* del backup differenziale. I backup completi, ad eccezione di backup di sola copia, possono servire come base per una serie di backup differenziali, compresi backup di database, backup parziali e backup di file. Il backup di base per un backup differenziale di file può essere contenuto in un backup completo, un backup di file o un backup parziale.  
   
   
 ##  <a name="Benefits"></a> Vantaggi  
@@ -68,9 +68,9 @@ ms.locfileid: "68089839"
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Creazione di un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
+-   [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
--   [Ripristino di un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
+-   [Ripristinare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
   
 ## <a name="see-also"></a>Vedere anche  

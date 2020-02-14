@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981722"
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
@@ -82,7 +82,7 @@ SELECT...INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le
   
 Se una di queste condizioni risulta vera, la colonna viene creata come colonna NOT NULL, anziché ereditare la proprietà IDENTITY. Se una colonna Identity è richiesta nella nuova tabella ma tale colonna non è disponibile o si desidera un valore di inizializzazione o di incremento diverso della colonna Identity di origine, definire la colonna nell'elenco di selezione utilizzando la funzione IDENTITY. Vedere "Creazione di una colonna Identity tramite la funzione IDENTITY" nella sezione Esempi più avanti.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Il funzionamento dell'istruzione `SELECT...INTO` è costituito da due parti: viene creata la nuova tabella e poi vengono inserite le righe.  Ciò significa che verrà eseguito il rollback degli inserimenti non riusciti, ma la nuova tabella (vuota) rimarrà.  Se è necessario che l'intera operazione abbia o esito positivo o esito negativo, usare una [transazione esplicita](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
@@ -106,7 +106,7 @@ Il funzionamento dell'istruzione `SELECT...INTO` è costituito da due parti: vie
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Creazione di una tabella specificando colonne provenienti da più origini  
+### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>R. Creazione di una tabella specificando colonne provenienti da più origini  
  Nell'esempio seguente viene creata la tabella `dbo.EmployeeAddresses` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] selezionando sette colonne da diverse tabelle relative a dipendenti e indirizzi.  
   
 ```sql  

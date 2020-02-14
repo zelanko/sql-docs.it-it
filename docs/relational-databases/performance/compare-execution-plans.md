@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907662"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910244"
 ---
 # <a name="compare-execution-plans"></a>Confrontare i piani di esecuzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Quando viene eseguito il confronto di due piani di esecuzione, le aree del piano
      > [!TIP]
      > Tutte le opzioni di zoom e navigazione disponibili per i piani di esecuzione possono essere usate nella modalità di confronto dei piani. Per altre informazioni, vedere [Visualizzazione di un piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Sul lato destro viene aperta anche una finestra delle proprietà doppie, nell'ambito della selezione predefinita. Le proprietà presenti in entrambi gli operatori confrontati ma che presentano differenze verranno precedute dal segno *diverso da* (&ne;) per facilitarne l'identificazione.
+5.  Sul lato destro viene aperta anche una finestra delle proprietà doppie, nell'ambito della selezione predefinita. Le proprietà che sono presenti in entrambi gli operatori confrontati ma presentano differenze verranno precedute dal segno *diverso da* (&ne;) per una più facile identificazione.
 
     ![Finestra delle proprietà doppie](../../relational-databases/performance/media/plancomparison-properties.png "Finestra delle proprietà doppie")  
 

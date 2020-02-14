@@ -22,10 +22,10 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297907"
 ---
 # <a name="integration-services-transformations"></a>Trasformazioni di Integration Services
@@ -33,7 +33,7 @@ ms.locfileid: "71297907"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Le trasformazioni sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , illustrandone il funzionamento.  
+  Le trasformazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , illustrandone il funzionamento.  
   
 ## <a name="business-intelligence-transformations"></a>Trasformazioni di Business Intelligence  
  Le trasformazioni seguenti eseguono operazioni di Business Intelligence quali la pulitura dei dati, il text mining e l'esecuzione di query di stima basate su un modello di data mining.  
@@ -86,7 +86,7 @@ ms.locfileid: "71297907"
 |[Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)|Trasformazione che unisce due set di dati utilizzando un join di tipo FULL, LEFT o INNER.|  
 |[Trasformazione Ricerca](../../../integration-services/data-flow/transformations/lookup-transformation.md)|Trasformazione che esegue la ricerca di valori in una tabella di riferimento utilizzando una corrispondenza esatta.|  
 |[Trasformazione Cache](../../../integration-services/data-flow/transformations/cache-transform.md)|Trasformazione che scrive dati da un'origine dati connessa nel flusso di dati a una gestione connessione cache che salva i dati in un file di cache. La trasformazione Ricerca esegue ricerche sui dati nel file di cache.|  
-|[Trasformazione del server di distribuzione di dati bilanciati](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|Tramite la trasformazione vengono distribuiti in modo uniforme i buffer di righe in entrata negli output di thread distinti per migliorare le prestazioni di pacchetti SSIS in esecuzione in server a più processori e più core.|  
+|[Trasformazione Distribuzione di dati bilanciati](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|Tramite la trasformazione vengono distribuiti in modo uniforme i buffer di righe in entrata negli output di thread distinti per migliorare le prestazioni di pacchetti SSIS in esecuzione in server a più processori e più core.|  
   
 ## <a name="auditing-transformations"></a>Trasformazioni di controllo  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include le trasformazioni seguenti per l'aggiunta di informazioni di controllo e il conteggio delle righe.  

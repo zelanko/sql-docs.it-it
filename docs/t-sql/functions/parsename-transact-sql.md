@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b36e31e163999a6af70b498fef9d65c2ce0ae55
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843624"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
@@ -63,7 +63,7 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>Tipi restituiti  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  PARSENAME restituisce NULL se si verifica una delle condizioni seguenti:  
   
 -   *object_name* o *object_piece* è NULL.  

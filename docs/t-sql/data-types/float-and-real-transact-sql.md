@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682015"
 ---
 # <a name="float-and-real-transact-sql"></a>float e real (Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "71682015"
 
 Tipi di dati numerici approssimati da utilizzare con dati numerici a virgola mobile. I dati a virgola mobile sono approssimati. Pertanto, non tutti i valori nell'intervallo del tipo di dati possono essere rappresentati in modo esatto. Il sinonimo ISO per **real** è **float(24)** .
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
 **float** [ **(** _n_ **)** ] dove *n* è il numero di bit usato per archiviare la mantissa del numero **float** in notazione scientifica e pertanto determina la precisione e le dimensioni di archiviazione. Se *n* è specificato, deve essere un valore tra **1** e **53**. Il valore predefinito di *n* è **53**.
   
-|Valore *n*|Precisione|Dimensioni dello spazio di archiviazione|  
+|Valore *n*|Precision|Dimensioni dello spazio di archiviazione|  
 |---|---|---|
 |**1-24**|7 cifre|4 byte|  
 |**25-53**|15 cifre|8 byte|  
@@ -48,11 +48,11 @@ Tipi di dati numerici approssimati da utilizzare con dati numerici a virgola mob
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta *n* come uno dei due valori possibili. Se **1**<=n<=**24**, *n* viene interpretato come **24**. Se **25**<=n<=**53**, *n* viene interpretato come **53**.  
   
-Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] è conforme allo standard ISO per tutti i valori di *n* da **1** a **53**. Il sinonimo di **double precision** è **float(53)** .
+Il tipo di dati **float**[ **(n)** ] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è conforme allo standard ISO per tutti i valori di *n*, da **1** a **53**. Il sinonimo di **double precision** è **float(53)** .
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
-|Tipo di dati|Intervallo|Archiviazione|  
+|Tipo di dati|Range|Archiviazione|  
 |---|---|---|
 |**float**|Da - 1,79E+308 a -2,23E-308, 0 e da 2,23E-308 a 1,79E+308|Dipende dal valore di *n*|  
 |**real**|Da - 3,40E + 38 a -1,18E - 38, 0 e da 1,18E - 38 a 3,40E + 38|4 byte|  

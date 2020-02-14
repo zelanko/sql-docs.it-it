@@ -25,10 +25,10 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894794"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67894794"
 
   Definisce gli attributi di un cursore del server [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio lo scorrimento e la query utilizzata per compilare il set di risultati su cui agisce il cursore. L'istruzione `DECLARE CURSOR` supporta sia la sintassi basata sullo standard ISO che una sintassi che usi un set di estensioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -137,7 +137,7 @@ Se le clausole nell'argomento *select_statement* sono in conflitto con la funzio
 FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Definisce le colonne aggiornabili nel cursore. Se si specifica `OF <column_name> [, <... n>]`, è possibile apportare modifiche solo nelle colonne elencate. Se l'istruzione `UPDATE` viene specificata senza un elenco di colonne, è possibile aggiornare tutte le colonne, a meno che non sia stata specificata l'opzione di concorrenza `READ_ONLY`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `DECLARE CURSOR` definisce gli attributi di un cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio il comportamento dello scorrimento e la query usata per compilare il set di risultati su cui il cursore opera. L'istruzione `OPEN` popola il set di risultati e l'istruzione `FETCH` restituisce una riga di questo set. L'istruzione `CLOSE` rilascia il set di risultati corrente associato al cursore. L'istruzione `DEALLOCATE` rilascia le risorse usate dal cursore.  
   
 La prima forma dell'istruzione `DECLARE CURSOR` dichiara il funzionamento del cursore tramite la sintassi ISO. La seconda forma dell'istruzione `DECLARE CURSOR` usa estensioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di definire cursori in base allo stesso tipo di cursore usato nelle funzioni di cursore delle API di database ODBC o ADO.  
@@ -174,7 +174,7 @@ Non è possibile usare cursori o trigger in una tabella con un indice columnstor
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-simple-cursor-and-syntax"></a>A. Utilizzo di una semplice sintassi per la definizione di un cursore  
+### <a name="a-using-simple-cursor-and-syntax"></a>R. Utilizzo di una semplice sintassi per la definizione di un cursore  
 
 Il set di risultati generato all'apertura del cursore include tutte le righe e le colonne della tabella. Questo cursore può essere aggiornato e tutti gli aggiornamenti e le eliminazioni sono rappresentati nei recuperi eseguiti su questo cursore. `FETCH NEXT` è l'unica operazione di recupero disponibile perché l'opzione `SCROLL` non è stata specificata.  
  

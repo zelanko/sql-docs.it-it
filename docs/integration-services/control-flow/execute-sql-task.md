@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298310"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
@@ -147,7 +147,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
   
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestione connessione ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestione connessione ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestione connessione SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Connessione**  
+ **Connection**  
  Consente di scegliere una connessione da un elenco di gestioni connessione definite. Per creare una nuova connessione, selezionare \<**Nuova connessione**>.  
   
  **SQLSourceType**  
@@ -225,7 +225,7 @@ Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attivit
   
  Tale impostazione assicura che il provider allochi spazio sufficiente per i valori dei parametri a lunghezza variabile.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questo pulsante per aggiungere un mapping dei parametri.  
   
  **Rimuovi**  
@@ -246,14 +246,14 @@ La pagina **Set dei risultati** della finestra di dialogo **Editor attività Ese
  **Nome variabile**  
  Eseguire il mapping del set di risultati a una variabile selezionando una variabile o facendo clic su \<**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questo pulsante per aggiungere un mapping del set di risultati.  
   
  **Rimuovi**  
  Selezionare un mapping del set di risultati e quindi fare clic su **Rimuovi**.  
  
 ## <a name="parameters-in-the-execute-sql-task"></a>Parametri nell'attività Esegui SQL
-Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , parametri di **output** e codici restituiti. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'attività Esegui SQL supporta i tipi di parametro **Input**, **Output** e **ReturnValue**. Usare il tipo **Input** per parametri di input, **Output** per parametri di output e **ReturnValue** per i codici restituiti.  
+Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , parametri di **output** e codici restituiti. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'attività Esegui SQL supporta i tipi di parametro **Input**, **Output**e **ReturnValue** . Il tipo **Input** viene usato per i parametri di input, il tipo **Output** per i parametri di output e il tipo **ReturnValue** per i codici restituiti.  
   
 > [!NOTE]  
 >  È possibile utilizzare parametri in un'attività Esegui SQL solo se il provider di dati li supporta.  
@@ -312,28 +312,28 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni ADO.NET e ADO  
  Durante la lettura dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **time** and **datetimeoffset**, un'attività Esegui SQL che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADO prevede i requisiti aggiuntivi seguenti:  
   
--   Per i dati **time**, una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiede che i dati vengano archiviati in un parametro con tipo di parametro **Input** o **Output** e con tipo di dati **string**.  
+-   Per i dati **time** , una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiede che i dati vengano archiviati in un parametro con tipo di parametro **Input** o **Output**e con tipo di dati **string**.  
   
--   Per i dati **datetimeoffset**, una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiede che i dati vengano archiviati in uno dei parametri seguenti:  
+-   Per i dati **datetimeoffset** , una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiede che i dati vengano archiviati in uno dei parametri seguenti:  
   
     -   Un parametro il cui tipo di parametro è **Input** e il cui tipo di dati è **string**.  
   
     -   Un parametro il cui tipo di parametro è **Output** o **ReturnValue**e il cui tipo di dati è **datetimeoffset**, **stringa**, o **datetime2**. Se si seleziona un parametro il cui tipo di dati è **string** o **datetime2**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] converte i dati in string o datetime2.  
   
--   Una gestione connessione ADO richiede che i dati **time** o **datetimeoffset** vengano archiviati in un parametro il cui tipo di parametro è **Input** o **Output** e il cui tipo di dati è **adVarWchar**.  
+-   Una gestione connessione ADO richiede che i dati **time** o **datetimeoffset** vengano archiviati in un parametro il cui tipo di parametro è **Input** o **Output**e il cui tipo di dati è **adVarWchar**.  
   
  Per altre informazioni sui tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul relativo mapping nei tipi di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) e [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni OLE DB  
- Quando si usa una gestione connessione OLE DB, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2**e **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
+ Quando si usa una gestione connessione OLE DB, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**date**, **time**, **datetime**, **datetime2**e **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di input del tipo di dati NVARCHAR.  
   
 -   Un parametro di output con il tipo di dati appropriato, come elencato nella tabella seguente.  
   
-    |Tipo di parametro di **Output**|Tipo di dati date|  
+    |Tipo di parametro di**Output**|Tipo di dati date|  
     |-------------------------------|--------------------|  
-    |DBDATE|**data**|  
+    |DBDATE|**date**|  
     |DBTIME2|**time**|  
     |DBTIMESTAMP|**datetime**, **datetime2**|  
     |DBTIMESTAMPOFFSET|**datetimeoffset**|  
@@ -341,7 +341,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni ODBC  
- Quando si usa una gestione connessione ODBC, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date**, **time**, **datetime**, **datetime2**o **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
+ Quando si usa una gestione connessione ODBC, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**date**, **time**, **datetime**, **datetime2**o **datetimeoffset**. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di **input** del tipo di dati SQL_WVARCHAR  
   
@@ -349,9 +349,9 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
     |Tipo di parametro di**Output**|Tipo di dati date|  
     |-------------------------------|--------------------|  
-    |SQL_DATE|**data**|  
+    |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> oppure<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> -oppure-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
@@ -380,12 +380,12 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 ###  <a name="Stored_procedures"></a> Usare parametri con le stored procedure  
  Anche i comandi SQL che eseguono stored procedure possono utilizzare il mapping dei parametri. Come avviene per le regole delle query con parametri, anche le regole che determinano la modalità di utilizzo di marcatori di parametro e nomi di parametro dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  
   
- Nella tabella seguente sono elencati esempi di comandi EXEC per tipo di gestione connessione. Gli esempi eseguono la stored procedure **uspGetBillOfMaterials** nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. Tale stored procedure usa i parametri di `@StartProductID` e `@CheckDate` **e** .  
+ Nella tabella seguente sono elencati esempi di comandi EXEC per tipo di gestione connessione. Gli esempi eseguono la stored procedure **uspGetBillOfMaterials** nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. La stored procedure usa i parametri di **input** `@StartProductID` e `@CheckDate`.  
   
 |Tipo di connessione|Sintassi dell'istruzione EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462) (Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
 |ADO|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostato su **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostato su **True**, `uspGetBillOfMaterials`|  
   
@@ -474,7 +474,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
 |Tipo di connessione|Sintassi dell'istruzione EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462) (Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
 |ADO|Se IsQueryStoreProcedure è impostato su **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure è impostato su **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure è impostato su **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -526,9 +526,9 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
 |Tipo di set di risultati|Tipo di dati della variabile|Tipo di oggetto|  
 |---------------------|---------------------------|--------------------|  
 |Riga singola|Qualunque tipo compatibile con la colonna del tipo nel set di risultati.|Non applicabile|  
-|Set dei risultati completo|**Oggetto**|Se l'attività usa una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto **Recordset**ADO.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l'oggetto restituito è un oggetto **System.Data.DataSet**.<br /><br /> È possibile usare un'attività Script per accedere all'oggetto **System.Data.DataSet** , come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**String**|**String**|  
-|XML|**Oggetto**|Se nell'attività è usata una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto **MSXML6.IXMLDOMDocument**.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l'oggetto restituito è un oggetto **System.Xml.XmlDocument**.|  
+|Set dei risultati completo|**Object**|Se l'attività usa una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto **Recordset**ADO.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , l'oggetto restituito è un oggetto **System.Data.DataSet**.<br /><br /> È possibile usare un'attività Script per accedere all'oggetto **System.Data.DataSet** , come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|XML|**Stringa**|**Stringa**|  
+|XML|**Object**|Se nell'attività è usata una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto **MSXML6.IXMLDOMDocument**.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , l'oggetto restituito è un oggetto **System.Xml.XmlDocument**.|  
   
  La variabile può essere definita nell'ambito dell'attività Esegui SQL o nell'ambito del pacchetto. Se la variabile viene definita nell'ambito del pacchetto, il set di risultati sarà disponibile per altre attività e contenitori all'interno del pacchetto e per altri pacchetti eseguiti dalle attività Esegui pacchetto o Esegui pacchetto DTS 2000.  
   

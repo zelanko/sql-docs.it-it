@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013062"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918347"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,10 +15,10 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4ad4f9578913e3a6fd9d78e50a7c44e9c8642bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295097"
 ---
 # <a name="debugging-script"></a>Debug degli script
@@ -26,7 +26,7 @@ ms.locfileid: "71295097"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Gli script utilizzati nell'attività e nel componente Script vengono scritti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+  Gli script usati nell'attività Script e nel componente script vengono scritti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
  VSTA consente di impostare punti di interruzione negli script. I punti di interruzione possono essere gestiti in VSTA o tramite la finestra di dialogo **Imposta punti di interruzione** disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Per altre informazioni, vedere [Debug del flusso di controllo](../../integration-services/troubleshooting/debugging-control-flow.md).  
   
@@ -41,6 +41,6 @@ ms.locfileid: "71295097"
 -   [Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Strumenti per la risoluzione dei problemi di sviluppo di pacchetti](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
   
   

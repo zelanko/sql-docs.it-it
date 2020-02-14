@@ -24,10 +24,10 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065727"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
@@ -35,7 +35,7 @@ ms.locfileid: "68065727"
 
   In questo argomento è inclusa la sintassi di ALTER DATABASE correlata all'impostazione delle opzioni [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in un database secondario. È consentita una sola opzione SET HADR per ogni istruzione ALTER DATABASE. Queste opzioni sono supportate solo su repliche secondarie.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -123,7 +123,7 @@ ALTER DATABASE database_name
 ## <a name="database-states"></a>Stati del database  
  Quando per un database secondario viene creato un join a un gruppo di disponibilità, la replica secondaria locale modifica lo stato di tale database da RESTORING a ONLINE. Se un database secondario viene rimosso da un gruppo di disponibilità, lo stato viene reimpostato su RESTORING dalla replica secondaria locale. In questo modo è possibile applicare backup di log successivi dal database primario a quello secondario.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Eseguire le istruzioni ALTER DATABASE all'esterno sia delle transazioni che dei batch.  
   
 ## <a name="security"></a>Security  

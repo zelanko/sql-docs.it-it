@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284976"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
@@ -35,7 +35,7 @@ Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes
 ## <a name="screen-shot-of-the-welcome-page"></a>Screenshot della pagina iniziale  
 Lo screenshot seguente illustra la pagina **Importazione/Esportazione guidata SQL Server** della procedura guidata.  
   
-![Importazione/Esportazione guidata](../../integration-services/import-export-data/media/welcome.png "Importazione/Esportazione guidata")  
+![Pagina introduttiva dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/welcome.png "Pagina introduttiva dell'Importazione/Esportazione guidata")  
 
 ## <a name="dont-show-this-page-again"></a>Non visualizzare più questa pagina  
 **Non visualizzare più questa pagina iniziale.**  

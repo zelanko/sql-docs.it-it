@@ -24,10 +24,10 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066108"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68066108"
 > [!WARNING]
 >  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -125,7 +125,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  ALTER ASSEMBLY non interferisce con le sessioni in esecuzione che eseguono codice nell'assembly in fase di modifica. Le sessioni correnti completano l'esecuzione tramite l'utilizzo dei bit non modificati dell'assembly.  
   
  Se si specifica la clausola FROM, ALTER ASSEMBLY aggiorna l'assembly in base alle copie più recenti dei moduli specificati. Poiché nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero essere presenti funzioni CLR, stored procedure, trigger, tipi di dati e funzioni di aggregazione definite dall'utente già definiti in base all'assembly, l'istruzione ALTER ASSEMBLY riassocia questi elementi all'implementazione più recente dell'assembly. Per eseguire questa riassociazione, è necessario che i metodi che eseguono il mapping alle funzioni CLR, alle stored procedure e ai trigger esistano nell'assembly modificati con le stesse firme. Le classi che implementano i tipi CLR definiti dall'utente e le funzioni di aggregazione definite dall'utente devono continuare a soddisfare i requisiti richiesti per i tipi e le funzioni di aggregazione definiti dall'utente.  
@@ -194,7 +194,7 @@ Sono necessarie le autorizzazioni seguenti per modificare un assembly CLR con `C
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-refreshing-an-assembly"></a>A. Aggiornamento di un assembly  
+### <a name="a-refreshing-an-assembly"></a>R. Aggiornamento di un assembly  
  Nell'esempio seguente l'assembly `ComplexNumber` viene aggiornato in base alla copia più recente dei moduli [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] contenenti la relativa implementazione.  
   
 > [!NOTE]  

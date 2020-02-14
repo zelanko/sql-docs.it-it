@@ -21,10 +21,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292404"
 ---
 # <a name="integration-services-paths"></a>Percorsi in Integration Services
@@ -103,7 +103,7 @@ Utilizzare la pagina **Metadati** della finestra di dialogo **Editor percorso fl
  **Precisione**  
  Indica il numero di cifre in un valore numerico.  
   
- **Scala**  
+ **Ridimensionare**  
  Indica il numero di cifre a destra del separatore decimale in un valore numerico.  
   
  **Lunghezza**  
@@ -137,7 +137,7 @@ Utilizzare la pagina **Visualizzatori dati** della finestra di dialogo **Editor 
  **Tipo visualizzatore dati**  
  Consente di elencare il tipo di visualizzatore di dati.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic per aggiungere un visualizzatore di dati tramite la finestra di dialogo **Configura visualizzatore dati** .  
   
  **Elimina**  

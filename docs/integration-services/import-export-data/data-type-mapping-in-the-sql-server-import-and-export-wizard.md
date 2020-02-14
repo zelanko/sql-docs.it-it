@@ -10,10 +10,10 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296333"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server
@@ -31,7 +31,7 @@ La procedura guidata usa file di mapping installati da [!INCLUDE[ssNoVersion](..
  Se si modifica un file di mapping esistente o si aggiunge un nuovo file di mapping alla cartella, è necessario chiudere e riaprire l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per caricare il file di mapping nuovo o modificato.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>È possibile modificare un file di mapping esistente
-Se sono necessari modelli di mapping diversi tra i tipi di dati, è possibile aggiornare i file di mapping per modificare i modelli di mapping usati dalla procedura guidata. Se ad esempio si vuole eseguire il mapping del tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** al tipo di dati DB2 **GRAPHIC** anziché al tipo di dati DB2 **VARGRAPHIC** durante il trasferimento di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il mapping di **nchar** nel file di mapping **SqlClientToIBMDB2.xml** in modo da usare **GRAPHIC** anziché **VARGRAPHIC**.  
+Se sono necessari modelli di mapping diversi tra i tipi di dati, è possibile aggiornare i file di mapping per modificare i modelli di mapping usati dalla procedura guidata. Se, ad esempio, si vuole eseguire il mapping del tipo di dati **nchar** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al tipo di dati **GRAPHIC** di DB2 anziché al tipo di dati **VARGRAPHIC** di DB2 durante il trasferimento di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il mapping di **nchar** nel file di mapping **SqlClientToIBMDB2.xml** in modo da usare **GRAPHIC** anziché **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>È possibile aggiungere un nuovo file di mapping
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa i tipi di mapping tra le combinazioni di origine e destinazione più comuni. È comunque possibile aggiungere nuovi file di mapping alla directory **MappingFiles** per supportare anche altre combinazioni di origine e destinazione. I nuovi file di mapping devono essere conformi allo schema XSD pubblicato ed eseguire il mapping tra una combinazione univoca di origine e destinazione. Lo schema per i file di mapping, **DataTypeMapping.xsd**, è disponibile [qui](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).

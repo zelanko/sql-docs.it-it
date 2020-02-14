@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298294"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
@@ -44,13 +44,13 @@ ms.locfileid: "71298294"
 
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili i tipi di enumeratori seguenti:  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili i tipi di enumeratori seguenti:  
   
 -   Foreach ADO Enumerator, per enumerare righe nelle tabelle. Consente ad esempio di ottenere le righe in un recordset ADO.  
   
      Con la destinazione recordset è possibile salvare i dati in memoria in un recordset archiviato in una variabile del pacchetto il cui tipo di dati è **Object** . In genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. Il tipo di dati della variabile specificata per l'enumeratore Foreach ADO deve essere Object. Per altre informazioni sulla destinazione recordset, vedere [Usare una destinazione recordset](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
--   Foreach ADO.NET Schema Rowset Enumerator, per enumerare le informazioni dello schema relative a un'origine dei dati. Consente ad esempio di enumerare e ottenere un elenco delle tabelle presenti nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Foreach ADO.NET Schema Rowset Enumerator, per enumerare le informazioni dello schema relative a un'origine dei dati. È ad esempio possibile enumerare e ottenere un elenco delle tabelle presenti nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Foreach File Enumerator, per enumerare i file contenuti in una cartella. È possibile includere nell'enumerazione anche le sottocartelle. È ad esempio possibile leggere tutti i file con estensione log presenti nella cartella di Windows e nelle relative sottocartelle. Si noti che non è possibile specificare l'ordine in cui vengono recuperati i file.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71298294"
   
  Nella figura seguente viene illustrato un contenitore Ciclo Foreach che include un'attività File system. Il ciclo Foreach utilizza Foreach File Enumerator e l'attività File system è configurata per la copia di un file. Se la cartella specificata dall'enumeratore contiene quattro file, il ciclo si ripeterà quattro volte e copierà quattro file.  
   
- ![Contenitore Ciclo Foreach che enumera una cartella](../../integration-services/control-flow/media/ssis-foreachloop.gif "Contenitore Ciclo Foreach che enumera una cartella")  
+ ![Contenitore Ciclo Foreach per l'enumerazione di una cartella](../../integration-services/control-flow/media/ssis-foreachloop.gif "Contenitore Ciclo Foreach per l'enumerazione di una cartella")  
   
  È possibile utilizzare una combinazione di variabili ed espressioni di proprietà per aggiornare la proprietà dell'oggetto pacchetto con il valore della raccolta dell'enumeratore. È innanzitutto necessario eseguire il mapping del valore della raccolta a una variabile definita dall'utente e quindi implementare un'espressione di proprietà sulla proprietà che utilizza la variabile. Si supponga, ad esempio, che venga eseguito il mapping del valore della raccolta dell'enumeratore Foreach File a una variabile di nome **MyFile** e che la variabile venga usata nell'espressione di proprietà per la proprietà Oggetto di un'attività Invia messaggi. Quando il pacchetto viene eseguito, la proprietà Oggetto viene aggiornata con il nome di un file ogni volta che il ciclo si ripete. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -313,7 +313,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumeratore = Foreach ADO.NET Schema Rowset Enumerator  
  Foreach ADO.NET Schema Rowset Enumerator consente di enumerare uno schema per un'origine dei dati specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile utilizzare Foreach ADO.NET Schema Rowset Enumerator per enumerare gli schemi, ad esempio le colonne nel database **AdventureWorks** , e utilizzare l'attività Esegui SQL per ottenere le autorizzazioni dello schema.  
   
- **Connessione**  
+ **Connection**  
  Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione ADO.NET.  
   
 > [!IMPORTANT]  
@@ -420,7 +420,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumeratore = Foreach SMO Enumerator  
  Foreach SMO Enumerator consente di enumerare gli oggetti SQL Server Management Objects (SMO). Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile usare l'enumeratore Foreach SMO per enumerare le tabelle nel database **AdventureWorks** ed eseguire query che contino il numero di righe in ogni tabella.  
   
- **Connessione**  
+ **Connection**  
  Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  Argomenti correlati: [Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurazione della gestione connessione ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
@@ -516,9 +516,9 @@ Verificare che gli ACL siano configurati usando l'ID oggetto (OID) dell'entità 
 Questo ID è diverso dall'ID applicazione (client) usato con la configurazione di Controllo degli accessi in base al ruolo.
 Quando a un'entità di sicurezza vengono concesse le autorizzazioni per i dati di Controllo degli accessi in base al ruolo tramite un ruolo predefinito o tramite un ruolo personalizzato, queste autorizzazioni vengono valutate per prime all'autorizzazione di una richiesta.
 Se l'operazione richiesta è autorizzata dalle assegnazioni di Controllo degli accessi in base al ruolo dell'entità di sicurezza, l'autorizzazione viene immediatamente risolta e non vengono eseguiti controlli ACL aggiuntivi.
-In alternativa, se l'entità di sicurezza non dispone di un'assegnazione RBAC o se l'operazione della richiesta non corrisponde all'autorizzazione assegnata, vengono eseguiti i controlli ACL per determinare se l'entità di sicurezza è autorizzata a eseguire l'operazione richiesta.
+In alternativa, se l'entità di sicurezza non dispone di un'assegnazione di Controllo degli accessi in base al ruolo o se l'operazione della richiesta non corrisponde all'autorizzazione assegnata, vengono eseguiti i controlli ACL per determinare se l'entità di sicurezza è autorizzata a eseguire l'operazione richiesta.
 Per il corretto funzionamento dell'enumeratore, concedere almeno l'autorizzazione **Execute** a partire dal file system radice, insieme all'autorizzazione **Read** per la cartella di destinazione.
-In alternativa, concedere almeno il ruolo **Storage Blob Data Reader** con RBAC.
+In alternativa, concedere almeno il **Ruolo con autorizzazioni di lettura per i dati dei BLOB di archiviazione** con Controllo degli accessi in base al ruolo.
 Per informazioni dettagliate, vedere [questo articolo](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Pagina Mapping variabili - Editor ciclo Foreach
@@ -526,7 +526,7 @@ Per informazioni dettagliate, vedere [questo articolo](https://docs.microsoft.co
   
  Per informazioni sull'uso del contenitore Ciclo Foreach in un pacchetto di Integration Services, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md). Per informazioni su come configurarlo, vedere [Configurazione di un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
- Nell'esercitazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la creazione di un pacchetto ETL semplice è inclusa una lezione in cui vengono descritte le procedure di aggiunta e di configurazione di un ciclo Foreach.  
+ Nell'esercitazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la creazione di un pacchetto ETL semplice è inclusa una lezione in cui vengono descritte le procedure di aggiunta e configurazione di un ciclo Foreach.  
   
 ### <a name="options"></a>Opzioni  
  **Variabile**  
@@ -571,7 +571,7 @@ Utilizzare la finestra di dialogo **Colonne For Each Item** per impostare le col
  **Tipo di dati**  
  Consente di selezionare il tipo di dati.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Aggiungere una nuova colonna.  
   
  **Rimuovi**  

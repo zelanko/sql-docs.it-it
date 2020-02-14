@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909311"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
@@ -47,7 +47,7 @@ ms.locfileid: "72909311"
 
 #### <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL  
   
-Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Esempio:  
+Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Ad esempio:  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 
@@ -142,9 +142,9 @@ Di seguito sono descritti alcuni esempi su come ottenere informazioni dettagliat
 |||| 
 |-|-|-|  
 |Esperienza precedente|Esperienza successiva|Azione|
-|Attese di RESOURCE_SEMAPHORE elevate per database|Attese di memoria elevate in Query Store per query specifiche|Individuare le prime query per utilizzo della memoria in Query Store. È probabile che queste query ritardino il successivo l'avanzamento delle query interessate. È consigliabile usare l'hint per la query MAX_GRANT_PERCENT per queste query o per le query interessate.|
-|Attese di LCK_M_X elevate per database|Attese di blocco elevate in Query Store per query specifiche|Controllare i testi di query per le query interessate e identificare le entità di destinazione. In Query Store cercare altre query che modificano la stessa entità, che vengono eseguite frequentemente e/o hanno una durata elevata. Dopo aver individuato queste query, provare a modificare la logica dell'applicazione per migliorare la concorrenza, oppure usare un livello di isolamento meno restrittivo.|
-|Attese di PAGEIOLATCH_SH elevate per database|Attese di I/O del buffer elevate in Query Store per query specifiche|Individuare le query con un numero elevato di letture fisiche in Query Store. Se corrispondono alle query con attese di I/O elevate, provare a introdurre un indice nell'entità sottostante, in modo da eseguire ricerche anziché analisi e ridurre così al minimo il sovraccarico di I/O delle query.|
+|Attese di RESOURCE_SEMAPHORE elevate per database|Attese di memoria elevate in Query Store per query specifiche|Trovare le query con il maggiore utilizzo di memoria in Query Store. Queste query probabilmente ritardano l'avanzamento delle query interessate. È consigliabile usare l'hint per la query MAX_GRANT_PERCENT per queste query o per le query interessate.|
+|Attese di LCK_M_X elevate per database|Attese di blocco elevate in Query Store per query specifiche|Controllare il testo delle query interessate e identificare le entità di destinazione. In Query Store cercare altre query che modificano la stessa entità, che vengono eseguite frequentemente e/o hanno una durata elevata. Dopo aver identificato tali query, valutare la possibilità di modificare la logica dell'applicazione per migliorare la concorrenza o usare un livello di isolamento meno restrittivo.|
+|Attese di PAGEIOLATCH_SH elevate per database|Attese di I/O del buffer elevate in Query Store per query specifiche|Trovare le query con un numero elevato di letture fisiche in Query Store. Se corrispondono alle query con attese di I/O elevate, provare a introdurre un indice nell'entità sottostante, in modo da eseguire ricerche anziché analisi e ridurre così al minimo il sovraccarico di I/O delle query.|
 |Attese di SOS_SCHEDULER_YIELD elevate per database|Attese di CPU elevate in Query Store per query specifiche|Individuare la prime query per utilizzo CPU in Query Store. Tra queste query identificare quelle in cui la tendenza di utilizzo CPU elevato è correlata ad attese di CPU elevate per le query interessate. Concentrarsi sull'ottimizzazione di queste query: considerare la possibilità di una regressione del piano o la mancanza di un indice.|
 
 ##  <a name="Options"></a> Opzioni di configurazione 

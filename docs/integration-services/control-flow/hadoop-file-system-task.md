@@ -13,10 +13,10 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294073"
 ---
 # <a name="hadoop-file-system-task"></a>Attività File system Hadoop
@@ -39,7 +39,7 @@ ms.locfileid: "71294073"
 |**Percorso del file Hadoop**|Specificare il percorso file o directory in HDFS.|  
 |**Tipo di file Hadoop**|Specificare se l'oggetto del File system HDFS è un file o una directory.|  
 |**Sovrascrivere la destinazione**|Specificare se sovrascrivere il file di destinazione, se già presente.|  
-|**Operazione**|Specificare l'operazione. Le operazioni disponibili sono **CopyToHDFS**, **CopyFromHDFS**e **CopyWithinHDFS**.|  
+|**operazione**|Specificare l'operazione. Le operazioni disponibili sono **CopyToHDFS**, **CopyFromHDFS**e **CopyWithinHDFS**.|  
 |**Connessione al file locale**|Specificare un'istanza esistente di Gestione connessione file o crearne una nuova. Questa istanza di Gestione connessione indica dove sono ospitati i file di origine.|  
 |**Ricorsivo**|Specificare se copiare in modo ricorsivo tutte le sottocartelle.|  
   

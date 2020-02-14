@@ -22,10 +22,10 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293517"
 ---
 # <a name="ado-net-source"></a>Origine ADO NET
@@ -109,7 +109,7 @@ ms.locfileid: "71293517"
  **Gestione connessione ADO.NET**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Configura gestione connessione ADO.NET** .  
   
  **Modalità di accesso ai dati**  
@@ -137,7 +137,7 @@ ms.locfileid: "71293517"
  Immettere il testo di una query SQL, fare clic su **Compila query**per compilare la query o fare clic su **Sfoglia**per individuare il file che contiene il testo della query.  
   
  **Compila query**  
- Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici.  
+ Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici visuali.  
   
  **Sfoglia**  
  Usare la finestra di dialogo **Apri** per individuare il file contenente il testo della query SQL.  
@@ -185,7 +185,7 @@ ms.locfileid: "71293517"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine ADO NET** .  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  

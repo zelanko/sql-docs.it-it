@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001792"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
@@ -56,24 +56,24 @@ ms.locfileid: "68001792"
   
     -   Per le righe con valore 2 nella colonna **Tag**, le colonne **Order!2!id** e **Order!2!date** formano un gruppo che viene quindi usato per la costruzione di elementi, <`Order id=... date=... /`>.  
   
-    -   Per le righe con valore 3 nella colonna **Tag**, le colonne **OrderDetail!3!id!id** e **OrderDetail!3!pid!idref** formano un gruppo. Ognuna di queste righe genera un elemento <`OrderDetail id=... pid=...`> da queste colonne.  
+    -   Per le righe con valore 3 nella colonna **Tag** , le colonne **OrderDetail!3!id!id** e **OrderDetail!3!pid!idref** formano un gruppo. Ognuna di queste righe genera un elemento <`OrderDetail id=... pid=...`> da queste colonne.  
   
 -   Si noti che nella generazione della gerarchia XML le righe vengono elaborate in ordine. La gerarchia XML viene determinata come descritto di seguito:  
   
-    -   La prima riga specifica il valore 1 di **Tag** e il valore NULL di **Parent**. L'elemento corrispondente, <`Customer`>, viene pertanto aggiunto nel codice XML come elemento di livello principale.  
+    -   La prima riga specifica il valore 1 di **Tag** e il valore NULL di **Parent** . L'elemento corrispondente, <`Customer`>, viene pertanto aggiunto nel codice XML come elemento di livello principale.  
   
         ```  
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   La seconda riga identifica il valore 2 di **Tag** e il valore 1 di **Parent**. L'elemento <`Order`> viene pertanto aggiunto come elemento figlio dell'elemento <`Customer`>.  
+    -   La seconda riga identifica il valore 2 di **Tag** e il valore 1 di **Parent** . L'elemento <`Order`> viene pertanto aggiunto come elemento figlio dell'elemento <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   Le due righe successive identificano il valore 3 di **Tag** e il valore 2 di **Parent**. I due elementi <`OrderDetail`> vengono pertanto aggiunti come elementi figlio dell'elemento <`Order`>.  
+    -   Le due righe successive identificano il valore 3 di **Tag** e il valore 2 di **Parent** . I due elementi <`OrderDetail`> vengono pertanto aggiunti come elementi figlio dell'elemento <`Order`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -82,7 +82,7 @@ ms.locfileid: "68001792"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   L'ultima riga identifica 2 come valore di **Tag** e 1 come valore di **Parent**. Un altro elemento figlio <`Order`> viene pertanto aggiunto all'elemento padre <`Customer`>.  
+    -   L'ultima riga identifica 2 come valore di **Tag** e 1 come valore di **Parent** . Un altro elemento figlio <`Order`> viene pertanto aggiunto all'elemento padre <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -94,7 +94,7 @@ ms.locfileid: "68001792"
         </Customer>  
         ```  
   
- Per riassumere, per generare il codice XML desiderato in modalità EXPLICIT vengono usati i valori presenti nelle colonne di metadati **Tag** e **Parent**, le informazioni specificate nei nomi delle colonne e l'ordinamento corretto delle righe.  
+ Per riassumere, per generare il codice XML desiderato in modalità EXPLICIT vengono usati i valori presenti nelle colonne di metadati **Tag** e **Parent** , le informazioni specificate nei nomi delle colonne e l'ordinamento corretto delle righe.  
   
 ### <a name="universal-table-row-ordering"></a>Ordinamento delle righe della tabella universale  
  Nella generazione del codice XML, le righe della tabella universale vengono elaborate in ordine. Per recuperare le istanze figlio corrette associate al rispettivo elemento padre, è pertanto necessario che le righe del set vengano ordinate in modo tale che il nodo dell'elemento padre sia seguito immediatamente dagli elementi figlio.  
@@ -169,7 +169,7 @@ ElementName!TagNumber!AttributeName!Directive
 -   [Esempio: Specifica della direttiva XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare la modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
+ [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Utilizzo della modalità AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

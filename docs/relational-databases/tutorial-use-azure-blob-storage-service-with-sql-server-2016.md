@@ -15,10 +15,10 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095700"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
@@ -53,7 +53,7 @@ Una firma di accesso condivisa è un URI che concede diritti di accesso limitati
   
 È possibile creare criteri di accesso archiviati e una firma di accesso condiviso usando Azure PowerShell, Azure Storage SDK, l'API REST di Azure o un'utilità di terze parti. Questa esercitazione illustra come usare uno script Azure PowerShell per completare questa attività. Lo script usa il modello di distribuzione Resource Manager e crea le nuove risorse seguenti  
   
--   Gruppo di risorse   
+-   Resource group   
 -   Account di archiviazione  
 -   Contenitore BLOB di Azure   
 -   Criteri di firma di accesso condiviso    

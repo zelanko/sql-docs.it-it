@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929700"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315591"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "70929700"
   
  Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di server e, dove applicabile, viene specificata la classe di evento di SQL Server equivalente.  
   
-|Nome del gruppo di azioni|Descrizione|  
+|Nome gruppo di azione|Descrizione|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che una password viene modificata per un ruolo applicazione. Equivale a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Questo evento viene generato ogni volta che un controllo viene creato, modificato o eliminato, nonché ogni volta che la specifica di un controllo viene creata, modificata o eliminata. Qualsiasi modifica al controllo viene verificata nel controllo stesso. Equivale a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -93,6 +93,7 @@ ms.locfileid: "70929700"
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Questo evento viene generato ogni volta che un account di accesso viene aggiunto a un ruolo del database o rimosso. La classe di evento viene generata in relazione alle stored procedure sp_addrolemember, sp_changegroup e sp_droprolemember. Questo evento viene generato per qualsiasi modifica apportata ai membri del ruolo del database in qualsiasi database. Equivale a [Classe di evento Audit Add Member to DB Role](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Questo evento viene generato ogni volta che un'entità esegue un comando DBCC. Equivale a [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Viene indicato il tentativo fallito di accesso a un database indipendente da parte di un'entità. Gli eventi di questa classe vengono generati da connessioni nuove o riutilizzate da un pool di connessioni. Equivale a [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|    
+|FAILED_LOGIN_GROUP|Indica che un'entità ha tentato di accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'operazione ha avuto esito negativo. Gli eventi di questa classe vengono generati da connessioni nuove o riutilizzate da un pool di connessioni. Equivale a [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md). Questo controllo non si applica al database SQL di Azure.| 
 |FULLTEXT_GROUP|Viene indicata l'occorrenza di un evento full-text. Equivale a [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md).|  
 |LOGIN_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che una password di accesso viene modificata tramite l'istruzione ALTER LOGIN o la stored procedure sp_password. Equivale a [Audit Login Change Password Event Class](../../../relational-databases/event-classes/audit-login-change-password-event-class.md).|  
 |LOGOUT_GROUP|Viene indicata la disconnessione da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]da parte di un'entità. Gli eventi di questa classe vengono generati da connessioni nuove o riutilizzate da un pool di connessioni. Equivale a [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
@@ -129,7 +130,7 @@ ms.locfileid: "70929700"
   
  Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di database e, dove applicabile, viene specificata la classe di evento di SQL Server equivalente.  
   
-|Nome del gruppo di azioni|Descrizione|  
+|Nome gruppo di azione|Descrizione|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che una password viene modificata per un ruolo applicazione. Equivale a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Questo evento viene generato ogni volta che un controllo viene creato, modificato o eliminato, nonché ogni volta che la specifica di un controllo viene creata, modificata o eliminata. Qualsiasi modifica al controllo viene verificata nel controllo stesso. Equivale a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -179,7 +180,7 @@ ms.locfileid: "70929700"
 ## <a name="audit-level-audit-action-groups"></a>Gruppi di azioni di controllo a livello di controllo  
  È possibile controllare le azioni anche durante il processo di controllo stesso. Questa operazione può essere eseguita sia nell'ambito del server che in quello del database. In quest'ultimo caso l'operazione può essere eseguita solo per le specifiche del controllo del database. Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di controllo.  
   
-|Nome del gruppo di azioni|Descrizione|  
+|Nome gruppo di azione|Descrizione|  
 |-----------------------|-----------------|  
 |AUDIT_CHANGE_GROUP|Questo evento viene generato ogni volta che viene eseguito uno dei comandi seguenti:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

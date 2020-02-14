@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307628"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Indici columnstore - Linee guida per il caricamento di dati
@@ -31,7 +31,7 @@ Il termine *caricamento bulk* fa riferimento al modo in cui viene aggiunto un nu
 
 Per eseguire un caricamento bulk è possibile usare l'[utilità bcp](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md) oppure selezionare righe da una tabella di staging.
 
-![Caricamento in un indice columnstore cluster](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Caricamento in un indice columnstore cluster")  
+![Caricamento in un indice cluster columnstore](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Caricamento in un indice cluster columnstore")  
   
 Come illustrato nel diagramma, un caricamento bulk:
   
@@ -74,7 +74,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![Rowgroup e archivio differenziale per un carico batch](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e archivio differenziale per un carico batch")  
+ ![Rowgroup e deltastore per un carico batch](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore per un carico batch")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>Usare una tabella di staging per migliorare le prestazioni
 Se si caricano dati solo per la gestione temporanea, prima di eseguire ulteriori trasformazioni, il caricamento della tabella nella tabella heap sarà molto più rapido del caricamento dei dati in una tabella columnstore cluster. Inoltre, il caricamento dei dati in una [tabella temporanea][Temporanea] avverrà molto più velocemente del caricamento di una tabella in un archivio permanente.  

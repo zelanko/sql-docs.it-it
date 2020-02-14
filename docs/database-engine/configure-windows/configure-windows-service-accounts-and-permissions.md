@@ -1,7 +1,7 @@
 ---
 title: Configurare account di servizio e autorizzazioni di Windows | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660282"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929154"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,9 +148,9 @@ Nella tabella sono vengono elencati gli account di servizio predefiniti usati da
   
 |Componente|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Nessuna. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|Nessuna. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Nessuna. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|No. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|No. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|No. Fornire un account [utente di dominio](#Domain_User) .|Fornire un account [utente di dominio](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)|  
 |[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[Account virtuale](#VA_Desc)|  
 |Utilità di avvio FD (ricerca full-text)|[LOCAL SERVICE](#Local_Service)|[Account virtuale](#VA_Desc)|  
@@ -168,14 +168,14 @@ Nella tabella sono vengono elencati gli account di servizio predefiniti usati da
   
 Gli account dei servizi gestiti, gli account dei servizi gestiti di gruppo e gli account virtuali sono progettati per offrire ad applicazioni importanti, come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'isolamento dei relativi account, in modo che non sia più necessario che un amministratore amministri manualmente il nome dell'entità servizio e le credenziali per questi account. Inoltre, grazie a questi account, la gestione a lungo termine di utenti di account di servizio, di password e di nomi SPN è più semplice.  
   
--   <a name="MSA"></a> **Managed Service Accounts**  
+-   <a name="MSA"></a> **Account del servizio gestiti**  
   
      Un account del servizio gestito è un tipo di account di dominio creato e gestito dal controller di dominio. Viene assegnato al computer di un singolo membro per l'esecuzione di un servizio e la password viene gestita automaticamente dal controller di dominio. Non è possibile usare un account del servizio gestito per accedere a un computer, tuttavia tale account può essere usato da un computer per l'avvio di un servizio Windows. Un account del servizio gestito ha la capacità di registrare un nome dell'entità servizio (SPN) in Active Directory Domain Services date le autorizzazioni servicePrincipalName di lettura e scrittura. Un account del servizio gestito è denominato con un suffisso **$** , ad esempio **DOMAIN\ACCOUNTNAME$** . Quando si specifica un account del servizio gestito, lasciare la password vuota. Dal momento che un account del servizio gestito viene assegnato a un singolo computer, non può essere usato in nodi diversi di un cluster Windows.  
   
     > [!NOTE]  
     >  Questo tipo di account deve essere creato in Active Directory dall'amministratore di dominio prima che possa essere usato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--  <a name="GMSA"></a> **Account dei servizi gestiti di gruppo**  
+-  <a name="GMSA"></a> **Account del servizio gestito di gruppo**  
   
      Un account del servizio gestito di gruppo è un account del servizio gestito per più server. Windows gestisce un account del servizio per i servizi in esecuzione in un gruppo di server. Active Directory aggiorna automaticamente la password dell'account del servizio gestito di gruppo senza riavviare i servizi. È possibile configurare servizi di SQL Server per l'uso di un'entità di account del servizio gestito di gruppo. A partire da SQL Server 2014, SQL Server supporta gli account del servizio gestito di gruppo per istanze autonome e SQL Server 2016 e versioni successive per istanze del cluster di failover e gruppi di disponibilità.  
   
@@ -195,7 +195,7 @@ Gli account dei servizi gestiti, gli account dei servizi gestiti di gruppo e gli
   
      Nella tabella seguente sono elencati esempi di nomi di account virtuali.  
   
-    |Servizio|Nome dell'account virtuale|  
+    |Service|Nome dell'account virtuale|  
     |-------------|--------------------------|  
     |Istanza predefinita del servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)]|**NT SERVICE\MSSQLSERVER**|  
     |Istanza denominata di un servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] denominato **PAYROLL**|**NT SERVICE\MSSQL$PAYROLL**|  
@@ -323,7 +323,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 ||Instid\MSSQL\Log|Controllo completo|  
 ||Instid\MSSQL\Repldata|Controllo completo|  
 ||130\shared|Lettura, Esecuzione|  
-||Instid\MSSQL\Template Data (solo[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|lettura|  
+||Instid\MSSQL\Template Data (solo[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|Lettura|  
 |SQLServerAgent\*|Instid\MSSQL\binn|Controllo completo|  
 ||Instid\MSSQL\binn|Controllo completo|  
 ||Instid\MSSQL\Log|Lettura, Scrittura, Eliminazione, Esecuzione|  
@@ -344,34 +344,32 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 ||Instid\OLAP\Backup|Lettura, Scrittura|  
 ||Instid\OLAP\Temp|Lettura, Scrittura|  
 ||130\shared\Errordumps|Lettura, Scrittura|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|Lettura, Scrittura, Eliminazione|  
+|ReportServer|Instid\Reporting Services\Log Files|Lettura, Scrittura, Eliminazione|  
 ||Instid\Reporting Services\ReportServer|Lettura, Esecuzione|  
-||Instid\Reportingservices\Reportserver\global.asax|Controllo completo|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|lettura|  
-||Instid\Reporting Services\reportManager|Lettura, Esecuzione|  
-||Instid\Reporting Services\RSTempfiles|Lettura, Scrittura, Esecuzione, Eliminazione|  
+||Instid\Reporting Services\ReportServer\global.asax|Controllo completo|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|Lettura|  
+||Instid\Reporting Services\RSTempfiles|Lettura, Scrittura, Esecuzione, Eliminazione| 
+||Instid\Reporting Services\RSWebApp|Lettura, Esecuzione|   
 ||130\shared|Lettura, Esecuzione|  
 ||130\shared\Errordumps|Lettura, Scrittura|  
-|MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|lettura|  
+|MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|Lettura|  
 ||130\dts\binn|Lettura, Esecuzione|  
 ||130\shared|Lettura, Esecuzione|  
 ||130\shared\Errordumps|Lettura, Scrittura|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|130\shared\ASConfig|lettura|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|130\shared\ASConfig|Lettura|  
 ||130\shared|Lettura, Esecuzione|  
 ||130\shared\Errordumps|Lettura, Scrittura|  
 |SQLWriter|N/D (eseguito come sistema locale)||  
 |Utente|Instid\MSSQL\binn|Lettura, Esecuzione|  
 ||Instid\Reporting Services\ReportServer|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
-||Instid\Reportingservices\Reportserver\global.asax|lettura|  
-||Instid\Reporting Services\reportManager|Lettura, Esecuzione|  
-||Instid\Reporting Services\ReportManager\pages|lettura|  
-||Instid\Reporting Services\ReportManager\Styles|lettura|  
+||Instid\Reporting Services\ReportServer\global.asax|Lettura|  
+||Instid\Reporting Services\RSWebApp|Lettura, Esecuzione, Visualizzazione contenuto cartella|    
 ||130\dts|Lettura, Esecuzione|  
 ||130\tools|Lettura, Esecuzione|  
 ||100\tools|Lettura, Esecuzione|  
 ||90\tools|Lettura, Esecuzione|  
 ||80\tools|Lettura, Esecuzione|  
-||130\sdk|lettura|  
+||130\sdk|Lettura|  
 ||Microsoft SQL Server\130\Setup Bootstrap|Lettura, Esecuzione|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ (directory vuota)|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
@@ -407,18 +405,15 @@ Potrebbe essere necessario concedere alcune autorizzazioni relative al controllo
 ||Solo Amministratore|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<nome_istanza_sql>\*|Controllo completo|  
 ||Administrators, Sistema|\tools\binn\schemas\sqlserver\2004\07\showplan|Controllo completo|  
 ||Utenti|\tools\binn\schemas\sqlserver\2004\07\showplan|Lettura, Esecuzione|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Account del servizio Web ReportServer>|*\<installazione>* \Reporting Services\LogFiles|Elimina<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Identità pool di applicazioni per Gestione report, account di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , Everyone|*\<installazione>* \Reporting Services\ReportManager, *\<installazione>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<installazione>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<installazione>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|lettura|  
-||Identità pool di applicazioni per Gestione report|*\<installazione>* \Reporting Services\ReportManager\Pages\\*.\*|lettura|  
-||\<Account del servizio Web ReportServer>|*\<installazione>* \Reporting Services\ReportServer|lettura|  
-||\<Account del servizio Web ReportServer>|*\<installazione>* \Reporting Services\ReportServer\global.asax|Full|  
-||Everyone|*\<installazione>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||NETWORK SERVICE|*\<installazione>* \Reporting Services\ReportServer\ReportService.asmx|Full|  
-||Everyone|*\<installazione>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Account servizi Windows ReportServer|*\<installazione>* \Reporting Services\ReportServer\RSReportServer.config|Elimina<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Everyone|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> Controllo in lettura|  
-||Utente di Servizi terminali|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumerazione sottochiavi<br /><br /> Notifica<br /><br /> DELETE<br /><br /> Controllo in lettura|  
-||Power Users|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> DELETE<br /><br /> Controllo in lettura|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\LogFiles|Elimina<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\ReportServer|Lettura|  
+||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\ReportServer\global.asax|Full|  
+||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\RSWebApp|Lettura, Esecuzione|  
+||Tutti|*\<installazione>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||Account servizi Windows ReportServer|*\<installazione>* \Reporting Services\ReportServer\rsreportserver.config|Elimina<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Tutti|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> Controllo in lettura|  
+||Utente di Servizi terminali|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumerazione sottochiavi<br /><br /> Notifica<br /><br /> Delete<br /><br /> Controllo in lettura|  
+||Power Users|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> Delete<br /><br /> Controllo in lettura|  
   
  \*Si tratta dello spazio dei nomi del provider WMI.  
   
@@ -526,7 +521,7 @@ In tutte le installazioni, il programma di installazione di [!INCLUDE[ssNoVersio
 ####  <a name="Agent"></a> Account di accesso di SQL Server Agent e privilegi  
  Il provisioning del SID per servizio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene effettuato come account di accesso del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'account di accesso del SID per servizio è un membro del ruolo predefinito del server **sysadmin** .  
   
-####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] e istanza del cluster di failover di SQL e privilegi  
+####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] e istanza e privilegi del cluster di failover di SQL  
  Quando si installa il [!INCLUDE[ssDE](../../includes/ssde-md.md)] come istanza di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] o del cluster di failover di SQL (FCI di SQL), viene effettuato il provisioning di **LOCAL SYSTEM** nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. All'account di accesso **LOCAL SYSTEM** vengono concesse le autorizzazioni **ALTER ANY AVAILABILITY** (per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]) e **VIEW SERVER STATE** (per FCI di SQL).  
   
 ####  <a name="Writer"></a> Writer SQL e privilegi  
@@ -541,7 +536,7 @@ In tutte le installazioni, il programma di installazione di [!INCLUDE[ssNoVersio
 ###  <a name="SSAS"></a> Provisioning di SSAS  
  I requisiti dell'account del servizio[!INCLUDE[ssAS](../../includes/ssas-md.md)] variano a seconda della modalità di distribuzione del server. Se si installa [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà richiesto di configurare il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da eseguire con un account di dominio. Gli account di dominio sono necessari per supportare la funzionalità dell'account gestito compilato in SharePoint. Per questo motivo, il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce un account del servizio predefinito, ad esempio un account virtuale, per un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Per altre informazioni sul provisioning di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, vedere [Configurare gli account del servizio PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).  
   
- Per tutte le altre installazioni autonome di [!INCLUDE[ssAS](../../includes/ssas-md.md)], è possibile effettuare il provisioning del servizio da eseguire con un account di dominio, un account di sistema predefinito, un account gestito o un account virtuale. Per altre informazioni sul provisioning degli account, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
+ Per tutte le altre installazioni autonome di [!INCLUDE[ssAS](../../includes/ssas-md.md)] , è possibile effettuare il provisioning del servizio da eseguire con un account di dominio, un account di sistema predefinito, un account gestito o un account virtuale. Per altre informazioni sul provisioning degli account, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
   
  Per le installazioni cluster, è necessario specificare un account di dominio o un account di sistema predefinito. Per i cluster di failover di [!INCLUDE[ssAS](../../includes/ssas-md.md)] non sono supportati account gestiti, né account virtuali.  
   
@@ -593,15 +588,15 @@ In tutte le installazioni, il programma di installazione di [!INCLUDE[ssNoVersio
 > [!NOTE]  
 >  Se si configura l'applicazione per usare un account di dominio, è possibile isolare i privilegi per l'applicazione, ma è necessario gestire manualmente le password o creare una soluzione personalizzata per tale gestione. In molte applicazioni server viene usata questa strategia per migliorare la sicurezza. Tuttavia, tale strategia richiede attività complesse e amministrazione aggiuntiva. In queste distribuzioni, gli amministratori dei servizi impiegano molto tempo in attività di manutenzione quale la gestione di password del servizio e di nomi dell'entità servizio, necessari per l'autenticazione Kerberos. Inoltre, queste attività di manutenzione possono interrompere il servizio.  
   
- <a name="Local_User"></a> **Local User Accounts**  
+ <a name="Local_User"></a> **Account utente locali**  
   
  Se il computer non fa parte di un dominio, è consigliabile usare un account utente locale senza le autorizzazioni di amministratore di Windows.  
   
- <a name="Local_Service"></a> **Account Servizio locale**  
+ <a name="Local_Service"></a> **Account del servizio locale**  
   
  L'account Servizio locale è un account predefinito che dispone dello stesso livello di accesso a risorse e oggetti dei membri del gruppo Users. Questo accesso limitato permette di proteggere il sistema nel caso in cui singoli servizi o processi risultino danneggiati. I servizi eseguiti come account Servizio locale possono accedere alle risorse di rete come sessione Null senza credenziali. L'account Servizio locale non è supportato per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Servizio locale non è supportato come account che esegue tali servizi, dal momento che si tratta di un servizio condiviso e qualsiasi altro servizio in esecuzione nel servizio locale deve disporre dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]come amministratore di sistema. Il nome effettivo dell'account è **NT AUTHORITY\LOCAL SERVICE**.  
   
- <a name="Network_Service"></a> **Account Servizio di rete**  
+ <a name="Network_Service"></a> **Account del servizio di rete**  
   
  Servizio di rete è un account predefinito che dispone di un livello di accesso più elevato a risorse e oggetti rispetto ai membri del gruppo Users. I servizi eseguiti con l'account Servizio di rete accedono alle risorse di rete usando le credenziali dell'account del computer nel formato _<nome_dominio>_ **\\** _<nome_computer>_ **$** . Il nome effettivo dell'account è **NT AUTHORITY\NETWORK SERVICE**.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322032"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910164"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322032"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>La replica funziona su connessioni a larghezza di banda ridotta? Utilizza la compressione?  
  Sì, la replica funziona su connessioni a larghezza di banda ridotta. Per le connessioni TCP/IP, utilizza la compressione offerta dal protocollo ma non offre una compressione aggiuntiva. Per le connessioni con sincronizzazione Web in HTTPS, utilizza la compressione offerta dal protocollo e la compressione aggiuntiva dei file XML utilizzati per replicare le modifiche.  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>È possibile configurare la replica se ci si connette al server usando l'indirizzo IP? 
+No, la replica funziona solo quando si usa il nome effettivo del server. A partire da SQL Server Management Studio (SSMS) 18.0, la replica può essere configurata usando il nome del server e il numero di porta effettivi. 
+
 ## <a name="logins-and-object-ownership"></a>Account di accesso e proprietà degli oggetti  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Gli account di accesso e le password vengono replicati?  

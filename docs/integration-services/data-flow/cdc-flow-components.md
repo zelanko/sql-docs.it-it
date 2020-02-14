@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293406"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
@@ -89,7 +89,7 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
   
  Nella figura seguente viene visualizzato il flusso di dati **Process Changes** , che mostra concettualmente come vengono elaborate le modifiche.  
   
- ![Flusso di dati delle modifiche del processo](../../integration-services/data-flow/media/processchangesdataflow.gif "Flusso di dati delle modifiche del processo")  
+ ![Flusso di dati di elaborazione delle modifiche](../../integration-services/data-flow/media/processchangesdataflow.gif "Flusso di dati di elaborazione delle modifiche")  
   
  Nella figura sono illustrati i passaggi seguenti:  
   
@@ -125,11 +125,11 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
   
  Nella figura seguente viene mostrato un pacchetto SSIS in grado di gestire i primi due scenari:  
   
- ![Primi due scenari di gestione del pacchetto SSIS](../../integration-services/data-flow/media/scenarioonetwo.gif "Primi due scenari di gestione del pacchetto SSIS")  
+ ![Pacchetto di SSIS per la gestione dei primi due scenari](../../integration-services/data-flow/media/scenarioonetwo.gif "Pacchetto di SSIS per la gestione dei primi due scenari")  
   
  Nella figura seguente viene mostrato un pacchetto SSIS in grado di gestire il terzo scenario:  
   
- ![Terzo scenario di gestione del pacchetto SSIS](../../integration-services/data-flow/media/scenario3.gif "Terzo scenario di gestione del pacchetto SSIS")  
+ ![Pacchetto di SSIS per la gestione del terzo scenario](../../integration-services/data-flow/media/scenario3.gif "Pacchetto di SSIS per la gestione del terzo scenario")  
   
  Seguendo il pacchetto di caricamento iniziale, un pacchetto di aggiornamento Trickle-Feed viene eseguito ripetutamente in base a una pianificazione per elaborare modifiche quando queste diventano disponibili per l'utilizzo.  
   
@@ -137,7 +137,7 @@ Al termine dell'installazione dei componenti, viene visualizzato un messaggio. F
   
  Il valore della variabile di stato CDC deve essere mantenuto nell'archivio permanente. Deve essere letto prima di avviare l'elaborazione CDC e salvato con lo stato corrente al termine dell'elaborazione. L'attività di caricamento e archiviazione dello stato CDC può essere gestita dallo sviluppatore di SSIS ma il componente di controllo CDC può automatizzare questa attività mantenendo il valore dello stato CDC in una tabella di database.  
   
-## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
+## <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
  In questa sezione vengono elencate alcune considerazioni di sicurezza correlate all'utilizzo dei componenti CDC in SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorizzazione di accesso per modificare i dati  

@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287876"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
@@ -45,7 +45,7 @@ ms.locfileid: "71287876"
   
 -   Le variabili incluse in espressioni possono essere aggiornate tramite gli script eseguiti dall'attività Script e dal componente Script.  
   
- Le espressioni vengono compilate in base al linguaggio delle espressioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Nelle espressioni è possibile includere variabili definite dall'utente o di sistema, insieme agli operatori, alle funzioni e ai cast di tipo del linguaggio delle espressioni.  
+ Le espressioni vengono compilate in base al linguaggio delle espressioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Nelle espressioni è possibile includere variabili definite dall'utente o di sistema, insieme agli operatori, alle funzioni e ai cast di tipo del linguaggio delle espressioni.  
   
 > [!NOTE]  
 >  I nomi delle variabili di sistema e delle variabili definite dall'utente devono essere specificati rispettando la distinzione tra maiuscole e minuscole.  
@@ -79,7 +79,7 @@ ms.locfileid: "71287876"
   
 #### <a name="to-work-with-property-expressions"></a>Per utilizzare le espressioni di proprietà  
   
--   [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
+-   [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>Impostazione di espressioni di proprietà per i componenti dei flussi di dati  
  Se si crea un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le proprietà dei componenti di un flusso di dati che supportano espressioni di proprietà vengono esposte sull'attività Flusso di dati a cui appartengono. Per aggiungere, modificare e rimuovere le espressioni di proprietà dei componenti di un flusso di dati, è necessario fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartengono tali componenti e scegliere **Proprietà**. Nella finestra Proprietà sono elencate le proprietà dei componenti del flusso di dati per le quali è possibile utilizzare espressioni di proprietà. Per creare o modificare un'espressione di proprietà per la proprietà SamplingValue di una trasformazione Campionamento righe in un flusso di dati di nome SampleCustomer, ad esempio, fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartiene la trasformazione Campionamento righe e scegliere **Proprietà**. La proprietà SamplingValue è elencata nella finestra Proprietà, con il formato [SampleCustomer].[SamplingValue].  

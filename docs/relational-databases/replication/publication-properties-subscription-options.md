@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769990"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286569"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769990"
   
 ### <a name="creation-and-synchronization"></a>Creazione e sincronizzazione  
  **Consenti sottoscrizioni anonime**  
- Determina se consentire le sottoscrizioni pull anonime. Le sottoscrizioni anonime sono supportate per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows CE. Per utilizzare questa opzione per le pubblicazioni snapshot e transazionali, l'opzione **Snapshot sempre disponibile** deve essere impostata su **True**.  
+ Determina se consentire le sottoscrizioni pull anonime. Le sottoscrizioni anonime sono supportate per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows CE. Per utilizzare questa opzione per le pubblicazioni snapshot e transazionali, l'opzione **Snapshot sempre disponibile** deve essere impostata su **True**.  
   
  **Database di sottoscrizione collegabile**  
  Determina se è possibile creare le sottoscrizioni collegando una copia del database di sottoscrizione. Per le pubblicazioni snapshot e transazionali, è necessario che l'opzione **Snapshot sempre disponibile** sia impostata su **True** .  
@@ -49,8 +49,8 @@ ms.locfileid: "68769990"
  Determina se consentire ai Sottoscrittori di creare sottoscrizioni pull sulla pubblicazione corrente. Per altre informazioni, vedere [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md).  
   
 ### <a name="schema-replication"></a>Replica dello schema  
- **Replica modifiche dello schema**  
- Solo[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se replicare le modifiche dello schema, ad esempio l'aggiunta di una colonna a una tabella o la modifica del tipo di dati di una colonna, agli oggetti pubblicati. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ **Replicare le modifiche dello schema**  
+ Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se replicare le modifiche dello schema, ad esempio l'aggiunta di una colonna a una tabella o la modifica del tipo di dati di una colonna, agli oggetti pubblicati. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Opzioni per le pubblicazioni snapshot e transazionali  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68769990"
  Si applica solo a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta la replica peer-to-peer. Se si imposta questa opzione su **True** , alcune proprietà della pubblicazione verranno modificate per supportare la replica peer-to-peer. Se esistono sottoscrizioni questa opzione è di sola lettura. Questa opzione non può essere impostata su **True** se l'opzione **Consenti sottoscrizioni ad aggiornamento immediato** , **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti Sottoscrittori non SQL Server** è impostata su **True**. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Consenti rilevamento conflitti peer-to-peer**  
- Si applica solo a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Specifica se il rilevamento dei conflitti è abilitato per la pubblicazione. Per utilizzare il rilevamento dei conflitti, tutti i nodi devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versione successiva e il rilevamento deve essere attivato per tutti i nodi. Per utilizzare rilevamento dei conflitti, è inoltre necessario specificare un valore per **ID origine peer**. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ Si applica solo a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Specifica se il rilevamento dei conflitti è abilitato per la pubblicazione. Per usare il rilevamento dei conflitti, tutti i nodi devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive e il rilevamento deve essere abilitato per tutti i nodi. Per utilizzare rilevamento dei conflitti, è inoltre necessario specificare un valore per **ID origine peer**. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **ID origine peer**  
  Si applica solo a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Specifica un ID per un nodo in una topologia peer-to-peer. Questo ID viene utilizzato per il rilevamento dei conflitti se l'opzione **Consenti rilevamento dei conflitti peer-to-peer** è impostata su **True**. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco degli ID che sono già stati utilizzati, eseguire una query sulla tabella di sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
@@ -106,9 +106,9 @@ ms.locfileid: "68769990"
  **Segnala conflitti a livello centrale**  
  Determina se segnalare i conflitti generati dalle modifiche apportate ai dati solo nel server di pubblicazione o sia nel server di pubblicazione che nel Sottoscrittore. Questa opzione è di sola lettura, è impostata su **True** per impostazione predefinita per le pubblicazioni create con la Creazione guidata nuova pubblicazione e non può essere modificata dopo la creazione della pubblicazione. Il valore **True** indica che i conflitti vengono segnalati solo sul server di pubblicazione. I conflitti possono essere visualizzati solo sul server in cui vengono segnalati. Per ulteriori informazioni, vedere la sezione relativa alla visualizzazione dei conflitti in [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-### <a name="filtering"></a>Filtro  
+### <a name="filtering"></a>Filtri  
  **Consenti filtri con parametri**  
- Viene impostata in base al fatto che una pubblicazione utilizzi i filtri con parametri. Questa opzione è sempre di sola lettura. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Viene impostata in base al fatto che una pubblicazione utilizzi i filtri con parametri. Questa opzione è sempre di sola lettura. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Convalida Sottoscrittori**  
  Determina le funzioni da utilizzare per convalidare che un Sottoscrittore disponga della partizione dati corretta. È possibile immettere più valori separandoli con una virgola. Per altre informazioni, vedere [Convalidare le informazioni sulle partizioni per un Sottoscrittore di tipo merge](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  

@@ -1,10 +1,10 @@
 ---
 title: Creare server collegati
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095889"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761895"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74095889"
      **Stringa provider**  
      Digitare il ProgID univoco del provider OLE DB che corrisponde all'origine dati. Per esempi di stringhe provider valide, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-     **Percorso**  
+     **Posizione**  
      Digitare la posizione del database secondo la modalità di interpretazione del provider OLE DB.  
   
      **Catalogo**  
@@ -97,11 +97,14 @@ ms.locfileid: "74095889"
   
      **Utente remoto**  
      Usare l'utente remoto per eseguire il mapping di utenti non definiti in **Account di accesso locale**. L' **Utente remoto** deve essere un account di accesso basato sull'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server remoto.  
-  
+
+    > [!WARNING]
+    > Come "Utente remoto" in una distribuzione di istanza gestita del database SQL di Azure può essere usato solo un utente di SQL Server.  
+
      **Password remota**  
      Consente di specificare la password dell'Utente remoto.  
   
-     **Aggiungi**  
+     **Aggiungere**  
      Consente di aggiungere un nuovo account di accesso locale.  
   
      **Rimuovi**  

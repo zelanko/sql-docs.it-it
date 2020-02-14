@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296270"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
@@ -31,12 +31,12 @@ Se nell'elenco **Mapping** della finestra di dialogo **Mapping colonne** è stat
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>Screenshot della pagina Verifica mapping tra i tipi di dati
  Nella schermata riportata di seguito è presente un esempio della pagina **Verifica mapping tra i tipi di dati** della procedura guidata.
  
- In questo esempio:
+ Esempio:
  -   L'utente ha specificato un mapping nella finestra di dialogo **Mapping colonne** la cui esecuzione potrebbe non riuscire.
  -   L'icona di avviso sulla riga dell'elenco **Tabella** indica che è presente un problema per la conversione di almeno una colonna di dati dai risultati della query a un tipo di dati compatibile nella tabella di destinazione.
  -   L'icona di avviso sulla prima riga dell'elenco **Mapping dei tipi di dati** indica che il mapping tra il tipo di dati **int** della colonna di origine e il tipo di dati **smalldatetime** della colonna di destinazione può determinare una perdita di dati.
  
- ![Pagina Verifica mapping tra i tipi di dati dell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/media/review-mapping.png "Pagina Verifica mapping tra i tipi di dati dell'Importazione/Esportazione guidata SQL Server") 
+ ![Pagina Verifica mapping tra i tipi di dati dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/review-mapping.png "Pagina Verifica mapping tra i tipi di dati dell'Importazione/Esportazione guidata") 
  
 ## <a name="review-the-source-and-destination-tables"></a>Rivedere le tabelle di origine e di destinazione  
  La sezione superiore della pagina **Verifica mapping tra i tipi di dati** è costituita da un elenco **Tabella** contenente le tabelle da copiare dall'origine alla destinazione. Per visualizzare le informazioni di conversione relative a una singola tabella, selezionare una tabella dall'elenco **Tabella** . Le informazioni di conversione relative alle colonne individuali della tabella selezionata vengono visualizzate nella griglia **Mapping dei tipi di dati** nella parte inferiore della pagina.
@@ -47,7 +47,7 @@ In questo esempio, i risultati della query dell'utente verranno copiati nella ta
   
  La tabella seguente descrive le colonne dell'elenco **Tabella** .  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |(Icona di origine)|Indica la probabilità di esito positivo per le conversioni dei tipi di dati:<br /> -   Un'icona raffigurante un segno di spunta **verde** indica che la procedura guidata prevede l'esito positivo di tutte le conversioni dei tipi di dati per la tabella.<br />-   Un'icona di avviso **gialla** indica che è consigliabile verificare le singole conversioni eseguite dalla procedura guidata. Per verificare tali conversioni, selezionare la tabella, quindi controllare le conversioni per singole colonne nell'elenco **Mapping dei tipi di dati** .<br />-   Un'icona di errore **rossa** indica che la procedura guidata non è in grado di eseguire in modo affidabile alcune delle conversioni per la tabella.|  
 |**Origine**|Nome della tabella di origine.|  
@@ -63,7 +63,7 @@ In questo esempio, ogni colonna di origine verrà copiata in una colonna con lo 
 
 La tabella seguente descrive le colonne dell'elenco **Mapping dei tipi di dati** . 
 
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |(Icona di conversione)|Indica la probabilità di esito positivo per le conversioni dei tipi di dati:<br /> -   Un'icona raffigurante un segno di spunta **verde** indica che la procedura guidata prevede l'esito positivo della conversione del tipo di dati per la colonna specifica.<br />-   Un'icona di avviso **gialla** indica che è consigliabile verificare la conversione eseguita dalla procedura guidata. Per verificare la conversione, fare doppio clic sulla colonna per visualizzare la finestra di dialogo **Dettagli conversione colonna** . Per altre informazioni, vedere [Finestra di dialogo Dettagli conversione colonna (Importazione/Esportazione guidata SQL Server)](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />-   Un'icona di errore **rossa** indica che la procedura guidata non è in grado di eseguire in modo affidabile la conversione.|  
 |**Colonna di origine**|Nome della colonna di origine.|  
@@ -98,5 +98,5 @@ Questo esempio visualizza i valori predefiniti per le due opzioni di gestione de
  Dopo aver verificato gli avvisi e aver specificato le opzioni di conversione e gestione degli errori, dalla pagina **Verifica mapping tra i tipi di dati** tornare alla finestra di dialogo **Mapping colonne** . Per altre informazioni, vedere [Mapping colonne](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Vedere anche
-[Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+[Mapping dei tipi di dati nell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119451"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929107"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gestire i metadati quando si rende disponibile un database in un altro server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "74119451"
   
  Alcune applicazioni dipendono da informazioni, entità e/o oggetti esterni all'ambito di un database in modalità a utente singolo. Un'applicazione include in genere dipendenze nei database **master** e **msdb** , nonché nel database utente. Qualsiasi elemento archiviato all'esterno di un database utente necessario per il corretto funzionamento di tale database deve essere reso disponibile nell'istanza del server di destinazione. Ad esempio, gli account di accesso per un'applicazione vengono archiviati come metadati nel database **master** e devono essere creati nuovamente nel server di destinazione. Se il piano di manutenzione di un'applicazione o un database dipende da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent i cui metadati sono archiviati nel database **msdb** , è necessario creare nuovamente tali processi nell'istanza del server di destinazione. Analogamente, i metadati per un trigger a livello di server vengono archiviati nel database **master**.  
   
- Quando il database per un'applicazione viene spostato in un'altra istanza del server, è necessario ricreare tutti i metadati delle entità e degli oggetti dipendenti nei database **master** e **msdb** dell'istanza del server di destinazione. Ad esempio, se un'applicazione del database utilizza trigger a livello di server, non è sufficiente collegare o ripristinare il database nel nuovo sistema. Il database non funzionerà come previsto a meno che non si ricreino manualmente i metadati per tali trigger nel database **master** .  
+ Quando il database per un'applicazione viene spostato in un'altra istanza del server, è necessario creare di nuovo tutti i metadati delle entità e degli oggetti dipendenti nei database **master** e **msdb** dell'istanza del server di destinazione. Ad esempio, se un'applicazione del database utilizza trigger a livello di server, non è sufficiente collegare o ripristinare il database nel nuovo sistema. Il database non funzionerà come previsto a meno che non si ricreino manualmente i metadati per tali trigger nel database **master** .  
   
 ##  <a name="information_entities_and_objects"></a> Informazioni, entità e oggetti archiviati all'esterno dei database utente  
  Nel resto dell'articolo vengono riepilogate le potenziali problematiche che possono influenzare un database reso disponibile in un'altra istanza del server. Potrebbe essere necessario ricreare uno o più tipi di informazioni, entità o oggetti indicati nell'elenco seguente. Per visualizzare un riepilogo, fare clic sul collegamento per l'elemento.  
@@ -138,7 +138,7 @@ ms.locfileid: "74119451"
   
 -   [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
--   [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
+-   [Impostazione di un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Creare chiavi simmetriche identiche su due server](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
@@ -273,15 +273,15 @@ ms.locfileid: "74119451"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Autorizzazioni GRANT, REVOKE o DENY per gli oggetti di sistema  
  Le autorizzazioni per gli oggetti di sistema, ad esempio stored procedure, stored procedure estese, funzioni e viste, sono archiviate nel database **master** e devono essere configurate nell'istanza del server di destinazione.  
   
- Per generare uno script per tutti gli oggetti nella copia originale del database o per alcuni di essi, è possibile utilizzare Generazione guidata script e, nella finestra di dialogo **Selezione opzioni generazione script** , impostare l'opzione **Script per autorizzazioni a livello oggetto** su **True**.  
+ Per generare uno script per alcuni o tutti gli oggetti nella copia originale del database è possibile usare la procedura guidata di generazione script e, nella finestra di dialogo **Selezione opzioni generazione script** impostare l'opzione **Script per autorizzazioni a livello oggetto** su **True**.  
   
    > [!IMPORTANT]
    > Se si creano script per account di accesso, le password non vengono incluse negli script. Se sono presenti account di accesso che utilizzano l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario modificare lo script nella destinazione.  
   
- Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Le autorizzazioni per gli oggetti di sistema sono visibili nella vista del catalogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) nel database **master**. Per informazioni su come eseguire query in queste viste del catalogo e su come concedere autorizzazioni per gli oggetti di sistema, vedere [GRANT - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Per altre informazioni, vedere [REVOKE - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) e [DENY - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
+ Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Le autorizzazioni per gli oggetti di sistema sono visibili nella vista del catalogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) nel database **master** . Per informazioni su come eseguire query in queste viste del catalogo e su come concedere autorizzazioni per gli oggetti di sistema, vedere [GRANT - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Per altre informazioni, vedere [REVOKE - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) e [DENY - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Autorizzazioni GRANT, REVOKE o DENY per un'istanza del server  
- Le autorizzazioni nell'ambito del server vengono archiviate nel database **master** e devono essere configurate nell'istanza del server di destinazione. Per informazioni sulle autorizzazioni del server di un'istanza del server, eseguire una query nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Per informazioni sulle entità del server, eseguire una query nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) e per informazioni sull'appartenenza ai ruoli del server, eseguire una query nella vista del catalogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
+ Le autorizzazioni nell'ambito del server vengono archiviate nel database **master** e devono essere configurate nell'istanza del server di destinazione. Per informazioni sulle autorizzazioni del server di un'istanza del server, eseguire una query nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) . Per informazioni sulle entità del server, eseguire una query nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)e per informazioni sull'appartenenza ai ruoli del server, eseguire una query nella vista del catalogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) .  
   
  Per altre informazioni, vedere [GRANT - autorizzazioni per server&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md), [REVOKE - autorizzazioni per server &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) e [DENY - autorizzazioni per server &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md).  
   

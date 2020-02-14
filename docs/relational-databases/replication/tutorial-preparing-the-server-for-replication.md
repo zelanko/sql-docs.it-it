@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320448"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910024"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Esercitazione: Preparare SQL Server per la replica: server di pubblicazione, server di distribuzione, sottoscrittore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,8 +181,9 @@ In questa esercitazione non è prevista la configurazione del server di pubblica
    ![Comando "Configura distribuzione" nel menu di scelta rapida](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > Se è stata effettuata la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **localhost** anziché il nome effettivo del server, verrà visualizzato un avviso che indica l'impossibilità di stabilire una connessione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il server **localhost**. Selezionare **OK** nella finestra di dialogo dell'avviso. Nella finestra di dialogo **Connetti al server** modificare **Nome server** sostituendo **localhost** con il nome del server. Selezionare **Connetti**.  
-  
+   > - Se è stata effettuata la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **localhost** anziché il nome effettivo del server, verrà visualizzato un avviso che indica l'impossibilità di stabilire una connessione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e **localhost o indirizzo IP**. Selezionare **OK** nella finestra di dialogo dell'avviso. Nella finestra di dialogo **Connetti al server** modificare **Nome server** sostituendo **localhost o indirizzo IP** con il nome del server. Selezionare **Connetti**.  
+   > - Attualmente esiste un problema noto relativo a SQL Server Management Studio (SSMS) 18.0 (e versioni successive) per cui _non_ viene visualizzato un messaggio di avviso quando ci si connette al server di distribuzione con l'indirizzo IP, ma questo non è ancora valido. Per la connessione al database di distribuzione deve essere usato il nome effettivo del server. 
+   
    Verrà avviata la Configurazione guidata distribuzione.  
   
 3. Nella pagina **Server di distribuzione** selezionare < *'NomeServer'* >  **fungerà da database di distribuzione per se stesso. Verranno creati un database di distribuzione e un log**. Fare quindi clic su **Avanti**.  

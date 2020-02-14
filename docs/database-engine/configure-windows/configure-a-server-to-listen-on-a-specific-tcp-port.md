@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012922"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurare un server per l'attesa su una porta TCP specifica
@@ -55,7 +55,7 @@ Poiché la porta 1433 è lo standard noto per [!INCLUDE[ssNoVersion](../../inclu
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Nella casella dell'area **Proprietà**_n_ **IP** immettere nella casella **Porta TCP** box, type the port number you want this Proprietà address to listen on, and then click **OK**. È possibile specificare più porte separandole con una virgola.
+4.  Nella casella **Porta TCP** dell'area **Proprietà** **IP**_n_ immettere il numero di porta su cui deve rimanere in attesa questo indirizzo IP e quindi fare clic su **OK**. È possibile specificare più porte separandole con una virgola.
 
     > [!NOTE] 
     > Se l'impostazione **Attesa su tutti** nella scheda **Protocollo** è impostata su Sì, verranno usati solo i valori **Porta TCP** e **TCP Dynamic Port** (Porta dinamica TCP) nella sezione **IPAll** e le singole sezioni **IP**_n_ verranno ignorate completamente. Se l'impostazione **Attesa su tutti** è impostata su "No", le impostazioni **Porta TCP** e **TCP Dynamic Port** (Porta dinamica TCP) nella sezione **IPAll** verranno ignorate e verranno invece usate le impostazioni **Porta TCP**, **TCP Dynamic Port** (Porta dinamica TCP) e **Enabled** (Abilitata) nelle singole sezioni **IP**_n_.
@@ -63,7 +63,7 @@ Poiché la porta 1433 è lo standard noto per [!INCLUDE[ssNoVersion](../../inclu
   
 5.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (**\<<nome istanza>**)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
   
 ## <a name="connecting"></a>Connecting  
 Dopo la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'ascolto su una porta specifica sono disponibili tre soluzioni per connettersi a una porta specifica con un'applicazione client:  

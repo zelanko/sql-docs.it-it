@@ -11,10 +11,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71016856"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
@@ -75,7 +75,7 @@ TLS viene usato per crittografare le connessioni da un'applicazione client a [!I
 -   **Esempi di stringhe di connessione** 
 
     - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
-  ![Finestra di dialogo della connessione SSMS](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "Finestra di dialogo della connessione SSMS")  
+  ![Finestra di dialogo di connessione di SQL Server Management Studio](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "Finestra di dialogo di connessione di SQL Server Management Studio")  
   
     - **SQLCMD** 
 

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026188"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -40,7 +40,7 @@ Questa funzione aggiunge il valore *number* specificato (ad esempio un intero co
   
 Vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) per una panoramica di tutti i tipi di dati e delle funzioni di data e ora di [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +50,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argomenti  
 *datepart*  
-Parte di *date* a cui `DATEADD` aggiunge un valore **number** di tipo *integer*. Questa tabella elenca tutti gli argomenti validi per *datepart*. 
+Parte di *date* a cui `DATEADD` aggiunge un valore *number* di tipo **integer**. Questa tabella elenca tutti gli argomenti validi per *datepart*. 
 
 > [!NOTE]
 > `DATEADD` non accetta equivalenti di variabili definite dall'utente come argomenti di *datepart*. 
@@ -74,10 +74,10 @@ Parte di *date* a cui `DATEADD` aggiunge un valore **number** di tipo *integer*.
 *number*  
 Espressione che può essere risolta in un tipo [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) aggiunto da `DATEADD` a un elemento *datepart* di *date*. `DATEADD` accetta valori di variabili definite dall'utente per *number*. `DATEADD` tronca un valore *number* specificato che contenga una frazione decimale. In questa situazione, non arrotonda il valore *number*.
   
-*data*  
+*date*  
 Espressione che può risolversi in uno dei valori seguenti: 
 
-+ **data**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -129,12 +129,12 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valori restituiti per una data smalldatetime e un valore datepart in secondi o secondi frazionari  
 La seconda parte di un valore [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) è sempre 00. Per un valore *date* **smalldatetime**, si applica quanto segue: 
 
--   Per un *datepart* **second**e un valore *number* compreso tra -30 e + 29, `DATEADD` non apporta modifiche.  
--   Per un *datepart* **second**e un valore *number* minore di -30 o maggiore di + 29, `DATEADD` esegue l'aggiunta a partire da un minuto.  
--   Per un *datepart* **millisecond**e un valore *number* compreso tra -30001 e + 29998, `DATEADD` non apporta modifiche.  
--   Per un *datepart* **millisecond**e un valore *number* minore di -30001 o maggiore di + 29998, `DATEADD` esegue l'aggiunta a partire da un minuto.  
+-   Per un *datepart***second**e un valore *number* compreso tra -30 e + 29, `DATEADD` non apporta modifiche.  
+-   Per un *datepart***second**e un valore *number* minore di -30 o maggiore di + 29, `DATEADD` esegue l'aggiunta a partire da un minuto.  
+-   Per un *datepart***millisecond**e un valore *number* compreso tra -30001 e + 29998, `DATEADD` non apporta modifiche.  
+-   Per un *datepart***millisecond**e un valore *number* minore di -30001 o maggiore di + 29998, `DATEADD` esegue l'aggiunta a partire da un minuto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare `DATEADD` nelle clausole seguenti:
 
 + GROUP BY
@@ -144,11 +144,11 @@ Usare `DATEADD` nelle clausole seguenti:
 + WHERE
   
 ## <a name="fractional-seconds-precision"></a>Precisione in secondi frazionari
-`DATEADD` non consente l'aggiunta per un elemento *datepart* **microsecond** o **nanosecond** per i tipi di dati *date* **smalldatetime**, **date** e **datetime**.
+`DATEADD` non consente l'aggiunta per un elemento *datepart***microsecond** o **nanosecond** per i tipi di dati *date***smalldatetime**, **date** e **datetime**.
   
-I millisecondi hanno una scala di 3 (.123), i microsecondi hanno una scala di 6 (.123456) e i nanosecondi hanno una scala di 9 (.123456789). I tipi di dati **time**, **datetime2** e **datetimeoffset** hanno una scala massima pari a 7 (0,1234567). Per un elemento *datepart* **nanosecond**, *number* deve essere pari a 100 prima che i secondi frazionari di *date* aumentino. Un valore *number* compreso tra 1 e 49 viene arrotondato per difetto a 0 e un valore number da 50 a 99 viene arrotondato per eccesso a 100.
+I millisecondi hanno una scala di 3 (.123), i microsecondi hanno una scala di 6 (.123456) e i nanosecondi hanno una scala di 9 (.123456789). I tipi di dati **time**, **datetime2** e **datetimeoffset** hanno una scala massima pari a 7 (0,1234567). Per un elemento *datepart***nanosecond**, *number* deve essere pari a 100 prima che i secondi frazionari di *date* aumentino. Un valore *number* compreso tra 1 e 49 viene arrotondato per difetto a 0 e un valore number da 50 a 99 viene arrotondato per eccesso a 100.
   
-Queste istruzioni aggiungono un valore *datepart* **millisecond**, **microsecond** o **nanosecond**.
+Queste istruzioni aggiungono un valore *datepart***millisecond**, **microsecond** o **nanosecond**.
   
 ```sql
 DECLARE @datetime2 datetime2 = '2007-01-01 13:10:10.1111111';  
@@ -184,7 +184,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. Incremento di un datepart a intervalli di una unità  
+### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>R. Incremento di un datepart a intervalli di una unità  
 Ognuna di queste istruzioni incrementa il valore *datepart* a intervalli di una unità:
   
 ```sql

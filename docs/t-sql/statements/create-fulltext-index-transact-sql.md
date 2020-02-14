@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981897"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
@@ -96,7 +96,7 @@ Se il valore è in formato DBCS (Double-Byte Character Set), [!INCLUDE[ssNoVersi
   
 Per la lingua specificata in *language_term* è necessario abilitare risorse quali word breaker e stemmer. Se tali risorse non supportano la lingua specificata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà un errore.  
   
-Utilizzare la stored procedure sp_configure per accedere alle informazioni sulla lingua full-text predefinita dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+Usare la stored procedure sp_configure per accedere alle informazioni sulla lingua full-text predefinita dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 Per le colonne di tipo non BLOB e non XML che contengono dati di testo in più lingue oppure nei casi in cui la lingua del testo archiviato nella colonna è sconosciuta, potrebbe essere appropriato utilizzare la risorsa per la lingua neutra (0x0). È tuttavia necessario considerare prima le possibili conseguenze derivanti dall'utilizzo di tale risorsa. Per informazioni sulle possibili soluzioni e conseguenze dell'uso della risorsa per la lingua neutra (0x0), vedere [Scegliere una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
@@ -153,10 +153,10 @@ Specifica che all'indice full-text non deve essere associato alcun elenco di pro
 *property_list_name*       
 Specifica il nome dell'elenco delle proprietà di ricerca da associare all'indice full-text.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Per altre informazioni sugli indici full-text, vedere [Creare e gestire indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
-Nelle colonne **xml** è possibile creare un indice full-text per indicizzare il contenuto degli elementi XML ignorando il markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag elemento sono utilizzati come limiti del token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue. Per altre informazioni, vedere [Utilizzo della ricerca full-text con colonne XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
+Nelle colonne **xml** è possibile creare un indice full-text per indicizzare il contenuto degli elementi XML ignorando il markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag degli elementi vengono utilizzati come limiti dei token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue. Per altre informazioni, vedere [Utilizzo della ricerca full-text con colonne XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
 Si consiglia di utilizzare un tipo di dati integer per la colonna chiave indice per consentire l'ottimizzazione durante l'esecuzione della query.  
   
@@ -166,9 +166,9 @@ Si consiglia di utilizzare un tipo di dati integer per la colonna chiave indice 
 |Rilevamento modifiche|WITH NO POPULATION|Risultato|  
 |---------------------|------------------------|------------|  
 |Non abilitato|Non specificato|Viene eseguito un popolamento completo dell'indice.|  
-|Non abilitato|Specified|L'indice non viene popolato fino a quando non viene eseguita un'istruzione ALTER FULLTEXT INDEX...START POPULATION.|  
-|Abilitata|Specified|Viene generato un errore e l'indice non viene modificato.|  
-|Abilitata|Non specificato|Viene eseguito un popolamento completo dell'indice.|  
+|Non abilitato|Specificata|L'indice non viene popolato fino a quando non viene eseguita un'istruzione ALTER FULLTEXT INDEX...START POPULATION.|  
+|Attivato|Specificata|Viene generato un errore e l'indice non viene modificato.|  
+|Attivato|Non specificato|Viene eseguito un popolamento completo dell'indice.|  
   
  Per altre informazioni sul popolamento degli indici full-text, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).  
   
@@ -182,7 +182,7 @@ Se si specifica `SET STOPLIST`, l'utente deve avere l'autorizzazione REFERENCES 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. Creazione di un indice univoco, un catalogo full-text e un indice full-text  
+### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>R. Creazione di un indice univoco, un catalogo full-text e un indice full-text  
  Nell'esempio seguente viene creato un indice univoco sulla colonna `JobCandidateID` della tabella `HumanResources.JobCandidate` del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Viene quindi creato un catalogo full-text predefinito, `ft` e infine viene creato un indice full-text sulla colonna `Resume` utilizzando il catalogo `ft` e l'elenco di parole non significative del sistema.  
   
 ```sql  

@@ -29,10 +29,10 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982697"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
@@ -413,7 +413,7 @@ Per creare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGON, 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. Utilizzo di un trigger DML con un messaggio di promemoria  
+### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>R. Utilizzo di un trigger DML con un messaggio di promemoria  
 Il trigger DML seguente visualizza un messaggio nel client quando un utente tenta di aggiungere o di modificare i dati nella tabella `Customer` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

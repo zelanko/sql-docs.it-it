@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293147"
 ---
 # <a name="data-flow"></a>Flusso di dati
@@ -101,7 +101,7 @@ ms.locfileid: "71293147"
 ### <a name="sources-available-for-download"></a>Origini disponibili per il download  
  Nella tabella seguente sono elencate le origini aggiuntive che è possibile scaricare dal sito Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Origine|Descrizione|  
+|Source (Sorgente)|Descrizione|  
 |------------|-----------------|  
 |Origine Oracle|L'origine Oracle è il componente di origine del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Origine SAP BI|L'origine SAP BI è il componente di origine del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e una destinazione. Per altre informazioni, vedere la pagina di download relativa al [Feature Pack per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -130,7 +130,7 @@ ms.locfileid: "71293147"
   
 -   [Trasformazione Campionamento percentuale](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Trasformazione Pivot](../../integration-services/data-flow/transformations/pivot-transformation.md)  
+-   [Trasformazione pivot](../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
 -   [Trasformazione Campionamento righe](../../integration-services/data-flow/transformations/row-sampling-transformation.md)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71293147"
   
  Per altre informazioni, vedere [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md).  
   
-## <a name="destinations"></a>Destinazioni  
+## <a name="destinations"></a>Destinations  
  Una destinazione è il componente flusso di dati che scrive dati da un flusso di dati a un archivio dati specifico oppure crea un set di dati in memoria. È possibile caricare dati in file flat, elaborare oggetti di analisi e fornire dati ad altri processi. È inoltre possibile caricare dati accedendo a tabelle e viste di database ed eseguendo query.  
   
  Un flusso di dati può includere più destinazioni che caricano dati in archivi dati diversi.  
@@ -162,7 +162,7 @@ ms.locfileid: "71293147"
 ### <a name="destinations-available-for-download"></a>Destinazioni disponibili per il download  
  Nella tabella seguente sono elencate le destinazioni aggiuntive che è possibile scaricare dal sito Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Origine|Descrizione|  
+|Source (Sorgente)|Descrizione|  
 |------------|-----------------|  
 |Destinazione Oracle|La destinazione Oracle è il componente di destinazione del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Destinazione SAP BI|La destinazione SAP BI è il componente di destinazione del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e un'origine. Per altre informazioni, vedere la pagina di download relativa al [Feature Pack per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -214,7 +214,7 @@ ms.locfileid: "71293147"
  Per altre informazioni su come impostare le proprietà usando Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Aggiungere o eliminare un componente in un flusso di dati](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
+ [Aggiunta o eliminazione di un componente in un flusso di dati](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [Connettere componenti in un flusso di dati](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   

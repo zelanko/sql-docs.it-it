@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100068"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100068"
 
 Rimuove tutte le righe da una tabella o da partizioni specificate di una tabella senza registrare le eliminazioni delle singole righe. TRUNCATE TABLE è simile all'istruzione DELETE senza clausola WHERE. L'istruzione TRUNCATE TABLE è tuttavia più rapida e utilizza un numero minore di risorse di sistema e del log delle transazioni.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,7 +88,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Per troncare una tabella partizionata, la tabella e gli indici devono essere allineati (partizionati nella stessa funzione di partizione).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Rispetto all'istruzione DELETE, TRUNCATE TABLE presenta i vantaggi seguenti:  
   
 -   Richiede una minore quantità di spazio del log delle transazioni.  
@@ -107,7 +107,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Se la tabella include una colonna Identity, il contattore per quella colonna viene reimpostato sul valore di inizializzazione definito per la colonna. Se non è stato definito alcun valore di inizializzazione, viene utilizzato il valore predefinito. Per mantenere il contatore della tabella Identity, utilizzare l'istruzione DELETE.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Non è possibile utilizzare TRUNCATE TABLE sulle tabelle:  
   
 -   a cui fa riferimento un vincolo FOREIGN KEY È possibile troncare una tabella con una chiave esterna che fa riferimento alla tabella stessa.  
@@ -127,14 +127,14 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
 - TRUNCATE TABLE non può essere eseguita all'interno di una transazione.
   
 ## <a name="truncating-large-tables"></a>Troncamento delle tabelle di grandi dimensioni  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile eliminare o troncare le tabelle che includono più di 128 extent senza mantenere attivi blocchi simultanei in tutti gli extent necessari per l'eliminazione.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile eliminare o troncare le tabelle che includono più di 128 extent senza mantenere attivi blocchi simultanei in tutti gli extent necessari per l'eliminazione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione minima necessaria è ALTER su *table_name*. Le autorizzazioni per l'istruzione TRUNCATE TABLE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server sysadmin, dei ruoli predefiniti del database db_owner e db_ddladmin e al proprietario della tabella e non sono trasferibili. È tuttavia possibile incorporare l'istruzione TRUNCATE TABLE all'interno di un modulo, ad esempio una stored procedure, e concedere le autorizzazioni necessarie al modulo tramite la clausola EXECUTE AS.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-truncate-a-table"></a>A. Troncare una tabella  
+### <a name="a-truncate-a-table"></a>R. Troncare una tabella  
  Nell'esempio seguente vengono rimossi tutti i dati dalla tabella `JobCandidate`. Le istruzioni `SELECT` vengono inserite prima e dopo l'istruzione `TRUNCATE TABLE` per confrontare i risultati.  
   
 ```sql  

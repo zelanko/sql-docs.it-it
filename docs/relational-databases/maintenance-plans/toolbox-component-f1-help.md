@@ -13,15 +13,15 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115525"
 ---
 # <a name="toolbox-component-f1-help"></a>Guida sensibile al contesto del componente Casella degli strumenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Nella**Casella degli strumenti** sono inclusi numerosi elementi utilizzabili nei progetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . È possibile accedere alla **Casella degli strumenti** dal menu **Visualizza** e ancorare la finestra nel modo desiderato. Se ancorata, la finestra **Casella degli strumenti** può essere bloccata in posizione aperta o impostata su **Nascondi automaticamente** quando non in uso.  
+  La **Casella degli strumenti** include numerosi elementi utilizzabili nei progetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile accedere alla **Casella degli strumenti** dal menu **Visualizza** e ancorare la finestra nel modo desiderato. Se ancorata, la finestra **Casella degli strumenti** può essere bloccata in posizione aperta o impostata su **Nascondi automaticamente** quando non in uso.  
   
  Le icone della**Casella degli strumenti** possono essere trascinate con il mouse oppure copiate e incollate nell'area di visualizzazione della finestra di progettazione all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

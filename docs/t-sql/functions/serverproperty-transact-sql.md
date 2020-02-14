@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aad5811c34eadfda4a2a7fabfdd7a9997311b5
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127393"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761710"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -60,7 +60,7 @@ Espressione che contiene le informazioni sulle proprietà da restituire per il s
 |ComparisonStyle|Stile di confronto di Windows per le regole di confronto.<br /><br /> Tipo di dati di base: **int**|  
 |ComputerNamePhysicalNetBIOS|Nome NetBIOS del computer locale in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per un'istanza cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un cluster di failover, questo valore cambia in caso di failover dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su altri nodi del cluster di failover.<br /><br /> In un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo valore rimane costante e restituisce lo stesso valore della proprietà MachineName.<br /><br /> **Nota:** Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa in un cluster di failover e si vuole ottenere il nome dell'istanza del cluster di failover, usare la proprietà MachineName.<br /><br /> NULL = input non valido, errore o non applicabile.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |Edizione|Edizione del prodotto installata per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come ad esempio in [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Nelle versioni a 64 bit del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene aggiunta la dicitura (64 bit) al nome della versione stessa.<br /><br /> Restituisce:<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: Core-based Licensing'<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
-|EditionID|Rappresenta l'edizione del prodotto installata per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come ad esempio in [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Core-based Licensing<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = database SQL o SQL Data Warehouse<br /><br /> Tipo di dati di base: **bigint**|  
+|EditionID|Rappresenta l'edizione del prodotto installata per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come ad esempio in [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Core-based Licensing<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database o Azure Synapse Analytics (in precedenza SQL Data Warehouse)<br /><br /> Tipo di dati di base: **bigint**|  
 |EngineEdition|Edizione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata nel server.<br /><br /> 1 = Personal o Desktop Engine: non disponibile in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.<br /><br /> 2 = Standard: valore restituito per le edizioni Standard, Web e Business Intelligence.<br /><br /> 3 = Enterprise: valore restituito per le edizioni Evaluation, Developer ed Enterprise.<br /><br /> 4 = Express: valore restituito per le edizioni Express, Express with Tools ed Express with Advanced Services.<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = Istanza gestita<br /><br /> Tipo di dati di base: **int**|  
 |HadrManagerStatus|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Indica se Gestione [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] è stata avviata.<br /><br /> 0 = non avviata, comunicazione in sospeso.<br /><br /> 1 = Avviata e in esecuzione.<br /><br /> 2 = Non avviata e non riuscita.<br /><br /> NULL = input non valido, errore o non applicabile.|  
 |InstanceDefaultDataPath|**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla versione corrente con aggiornamenti a partire da fine 2015.<br /><br /> Nome del percorso predefinito per i file di dati dell'istanza.|  
@@ -103,7 +103,7 @@ Espressione che contiene le informazioni sulle proprietà da restituire per il s
 
 **sql_variant**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ### <a name="servername-property"></a>Proprietà ServerName
 

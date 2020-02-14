@@ -16,10 +16,10 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fa693e4e5c8f21b9d8fc8ad02369bff7623b59e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295791"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Riusare il flusso di controllo dei pacchetti tramite le parti del pacchetto del flusso di controllo
@@ -32,18 +32,18 @@ ms.locfileid: "71295791"
 ## <a name="create-a-new-control-flow-package-part"></a>Creare una nuova parte del pacchetto del flusso di controllo  
  Per creare una nuova parte del pacchetto del flusso controllo, in Esplora soluzioni espandere la cartella **Parti del pacchetto** . Fare clic con il pulsante destro del mouse su **Flusso di controllo** e selezionare **Nuova parte del pacchetto del flusso di controllo**.  
   
- ![Creare un nuovo modello di flusso di controllo](../integration-services/media/control-flow-templates-create-new.png "Creare un nuovo modello di flusso di controllo")  
+ ![Creare un nuovo modello del flusso di controllo](../integration-services/media/control-flow-templates-create-new.png "Creare un nuovo modello del flusso di controllo")  
   
  Viene creato un nuovo file di parte con estensione dtsxp nella cartella **Parti del pacchetto | Flusso di controllo** . Allo stesso tempo, viene aggiunto un nuovo elemento con lo stesso nome nella casella degli strumenti SSIS (l'elemento della casella degli strumenti è visibile solo quando si dispone di un progetto che contiene la parte sia aperto in Visual Studio).  
   
- ![Modelli di flusso di controllo nella casella degli strumenti](../integration-services/media/control-flow-templates-in-toolbox.png "Modelli di flusso di controllo nella casella degli strumenti")  
+ ![Modelli del flusso di controllo nella casella degli strumenti](../integration-services/media/control-flow-templates-in-toolbox.png "Modelli del flusso di controllo nella casella degli strumenti")  
   
 ## <a name="design-a-control-flow-package-part"></a>Progettare una parte del pacchetto del flusso di controllo  
  Per aprire l'editor delle parti del pacchetto, fare doppio clic sul file di parte in Esplora soluzioni. È possibile progettare la parte esattamente come si progetta un pacchetto.  
   
- ![Passaggio 1 della progettazione del modello di flusso di controllo](../integration-services/media/control-flow-template-design-step-1.png "Passaggio 1 della progettazione del modello di flusso di controllo")  
+ ![Passaggio 1 della progettazione del modello del flusso di controllo](../integration-services/media/control-flow-template-design-step-1.png "Passaggio 1 della progettazione del modello del flusso di controllo")  
   
- ![Passaggio 2 della progettazione del modello di flusso di controllo](../integration-services/media/control-flow-template-design-step-2.png "Passaggio 2 della progettazione del modello di flusso di controllo")  
+ ![Passaggio 2 della progettazione del modello del flusso di controllo](../integration-services/media/control-flow-template-design-step-2.png "Passaggio 2 della progettazione del modello del flusso di controllo")  
   
  Le parti del pacchetto del flusso di controllo presentano le limitazioni seguenti.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "71295791"
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>Trascinare e rilasciare una parte del pacchetto del flusso di controllo  
  Per riusare una parte in un progetto, è sufficiente trascinare e rilasciare l'elemento della parte dalla casella degli strumenti come qualsiasi altra attività o contenitore. È possibile trascinare e rilasciare più volte la parte in un pacchetto per usare la logica in più posizioni nel pacchetto. Impiegare questo metodo per riusare una parte del progetto corrente.  
   
- ![Aggiungere un modello di flusso di controllo a un pacchetto](../integration-services/media/control-flow-templates-add-to-package.png "Aggiungere un modello di flusso di controllo a un pacchetto")  
+ ![Aggiungere un modello del flusso di controllo a un pacchetto](../integration-services/media/control-flow-templates-add-to-package.png "Aggiungere un modello del flusso di controllo a un pacchetto")  
   
- ![Pacchetto con più modelli di flusso di controllo](../integration-services/media/control-flow-templates-in-package.png "Pacchetto con più modelli di flusso di controllo")  
+ ![Pacchetto con più modelli del flusso di controllo](../integration-services/media/control-flow-templates-in-package.png "Pacchetto con più modelli del flusso di controllo")  
   
  Quando si salva il pacchetto, Progettazione SSIS controlla se sono presenti istanze di parte nel pacchetto.  
   
@@ -71,14 +71,14 @@ ms.locfileid: "71295791"
   
 -   Se il pacchetto non contiene parti, la finestra di progettazione elimina qualsiasi file con estensione dtsx creato in precedenza per il pacchetto (ovvero, qualsiasi file di progettazione con estensione dtsx con lo stesso nome del pacchetto).  
   
- ![Esplora soluzioni con modelli di flusso di controllo](../integration-services/media/control-flow-templates-in-solution-explorer.png "Esplora soluzioni con modelli di flusso di controllo")  
+ ![Esplora soluzioni con i modelli del flusso di controllo](../integration-services/media/control-flow-templates-in-solution-explorer.png "Esplora soluzioni con i modelli del flusso di controllo")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Aggiungere una copia di una parte del pacchetto del flusso di controllo esistente o un riferimento a una parte esistente  
  Per aggiungere a un pacchetto una copia di una parte esistente nel file system, in Esplora soluzioni espandere la cartella **Parti del pacchetto** . Fare clic con il pulsante destro del mouse su **Flusso di controllo** e selezionare **Aggiungi parte del pacchetto del flusso di controllo esistente**.  
   
- ![Aggiungere un nuovo modello di flusso di controllo dal menu](../integration-services/media/control-flow-templates-add-from-menu.png "Aggiungere un nuovo modello di flusso di controllo dal menu")  
+ ![Aggiungere nuovi modelli del flusso di controllo dal menu](../integration-services/media/control-flow-templates-add-from-menu.png "Aggiungere nuovi modelli del flusso di controllo dal menu")  
   
- ![Finestra di dialogo Aggiungi copia della parte del pacchetto esistente](../integration-services/media/control-flow-templates-add-copy-dialog.png "Finestra di dialogo Aggiungi copia della parte del pacchetto esistente")  
+ ![Finestra di dialogo Aggiungi copia del pacchetto esistente](../integration-services/media/control-flow-templates-add-copy-dialog.png "Finestra di dialogo Aggiungi copia del pacchetto esistente")  
   
  **Opzioni**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71295791"
 ### <a name="properties-tab"></a>Scheda Proprietà  
  Usare la scheda **Proprietà** della finestra di dialogo **Configurazione della parte del pacchetto**  per specificare le proprietà della parte.  
   
- ![Scheda Proprietà della finestra di dialogo di configurazione modello](../integration-services/media/template-configuration-properties-tab.png "Scheda Proprietà della finestra di dialogo di configurazione modello")  
+ ![Scheda Proprietà della finestra di dialogo di configurazione del modello](../integration-services/media/template-configuration-properties-tab.png "Scheda Proprietà della finestra di dialogo di configurazione del modello")  
   
  La gerarchia della visualizzazione ad albero nel riquadro sulla sinistra elenca tutte le proprietà configurabili dell'istanza di parte.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71295791"
 ### <a name="connection-managers-tab"></a>Scheda Gestioni connessioni  
  Usare la scheda **Gestioni connessioni** della finestra di dialogo **Configurazione della parte del pacchetto**  per specificare le proprietà delle gestioni connessioni dell'istanza di parte.  
   
- ![Scheda Gestioni connessioni della finestra di dialogo di configurazione modello](../integration-services/media/template-configuration-connection-managers-tab.png "Scheda Gestioni connessioni della finestra di dialogo di configurazione modello")  
+ ![Scheda Gestioni connessioni della finestra di dialogo di configurazione del modello](../integration-services/media/template-configuration-connection-managers-tab.png "Scheda Gestioni connessioni della finestra di dialogo di configurazione del modello")  
   
  La tabella nel riquadro sulla sinistra elenca tutte le gestioni connessioni definite nella parte del flusso di controllo. Scegliere la gestione connessione che si desidera configurare.  
   
@@ -152,6 +152,6 @@ ms.locfileid: "71295791"
   
  Il diagramma seguente illustra la relazione tra le parti (file con estensione dtsxp), Progettazione SSIS e SSIS Runtime.  
   
- ![File e flusso dei modelli di flusso di controllo](../integration-services/media/control-flow-templates-intro.png "File e flusso dei modelli di flusso di controllo")  
+ ![Flusso e file dei modelli del flusso di controllo](../integration-services/media/control-flow-templates-intro.png "Flusso e file dei modelli del flusso di controllo")  
   
   

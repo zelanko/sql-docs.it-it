@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289329"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analizzare un piano di esecuzione effettivo
@@ -50,4 +50,4 @@ La risoluzione dei problemi relativi alle prestazioni delle query richiede una n
 
 4.  Selezionare la scheda Scenari per visualizzare i dettagli sui problemi individuati per il piano di esecuzione effettivo. Per ogni operatore elencato nel riquadro sinistro, il riquadro destro mostra i dettagli sullo scenario tramite il collegamento *Fare clic qui per altre informazioni su questo scenario* e le possibili ragioni che spiegano lo scenario.
 
-    ![Risultati dell'analisi piano di esecuzione](../../relational-databases/performance/media/plananalysis-scenarios.png "Risultati dell'analisi piano di esecuzione") 
+    ![Risultati dell'analisi del piano di esecuzione](../../relational-databases/performance/media/plananalysis-scenarios.png "Risultati dell'analisi del piano di esecuzione") 

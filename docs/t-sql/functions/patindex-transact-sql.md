@@ -22,19 +22,19 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914358"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831829"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce la posizione di inizio della prima occorrenza di un modello in un'espressione specificata, oppure zero se il modello non viene trovato, in tutti i dati di tipo carattere e testo validi.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,10 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Argomenti  
  *pattern*  
- Espressione di caratteri che contiene la sequenza da cercare. È possibile usare i caratteri jolly. Il carattere %, tuttavia, deve precedere e seguire *pattern*, tranne nelle ricerche del primo o dell'ultimo carattere. *pattern* è un'espressione appartenente alla categoria di tipi di dati per stringhe di caratteri. La lunghezza massima di *pattern* è 8000 caratteri.  
+ Espressione di caratteri che contiene la sequenza da cercare. È possibile usare i caratteri jolly. Il carattere %, tuttavia, deve precedere e seguire *pattern*, tranne nelle ricerche del primo o dell'ultimo carattere. *pattern* è un'espressione appartenente alla categoria di tipi di dati per stringhe di caratteri. La lunghezza massima di *pattern* è 8000 caratteri.
+
+ > [!NOTE]
+ > Anche se le espressioni regolari tradizionali non sono supportate in modo nativo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile ottenere una corrispondenza di modelli complessi simili usando varie espressioni con caratteri jolly. Per informazioni più dettagliate sulla sintassi con caratteri jolly, vedere la documentazione relativa agli [operatori stringa](../../t-sql/language-elements/string-operators-transact-sql.md).
   
  *expression*  
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che in genere indica una colonna in cui viene cercato il modello specificato. *expression* appartiene alla categoria di tipi di dati per stringhe di caratteri.  
@@ -52,7 +55,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>Tipi restituiti  
 **bigint** se *expression* è del tipo di dati **varchar(max)** o **nvarchar(max)** , in caso contrario **int**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se *pattern* o *expression* è NULL, PATINDEX restituisce NULL.  
  
 La posizione iniziale per PATINDEX è 1.
@@ -66,22 +69,26 @@ Quando si usano le regole di confronto SC, qualsiasi coppia di surrogati UTF-16 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-patindex-example"></a>A. Esempio semplice di PATINDEX  
+### <a name="a-simple-patindex-example"></a>R. Esempio semplice di PATINDEX  
  L'esempio seguente verifica in una stringa di caratteri breve (`interesting data`) la posizione iniziale dei caratteri `ter`.  
   
 ```sql  
-SELECT PATINDEX('%ter%', 'interesting data');  
+SELECT position = PATINDEX('%ter%', 'interesting data');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-`3`  
+
+```
+position
+--------
+3
+```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. Utilizzo di un modello con PATINDEX  
 Nell'esempio seguente viene individuata la posizione in cui il modello `ensure` ha inizio in una riga specifica della colonna `DocumentSummary` nella tabella `Document` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
-SELECT PATINDEX('%ensure%',DocumentSummary)  
+SELECT position = PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
@@ -90,9 +97,9 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 64  
-(1 row(s) affected)
 ```  
   
 Se non si imposta una limitazione per le righe in cui eseguire la ricerca tramite la clausola `WHERE`, la query restituisce tutte le righe della tabella, indicando valori diversi da zero per le righe in cui il modello è stato trovato e zero per tutte le righe in cui la ricerca ha avuto esito negativo.  
@@ -101,21 +108,36 @@ Se non si imposta una limitazione per le righe in cui eseguire la ricerca tramit
  Nell'esempio seguente vengono utilizzati i caratteri jolly % e _ per individuare la posizione iniziale del modello `'en'`, seguito da un carattere qualsiasi e `'ure'` nella stringa specificata (l'indice comincia col valore 1):  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 Il funzionamento di `PATINDEX` è uguale a quello di `LIKE`, pertanto è possibile utilizzare qualsiasi carattere jolly. Non è necessario racchiudere il modello tra percentuali. `PATINDEX('a%', 'abc')` restituisce 1 e `PATINDEX('%a', 'cba')` restituisce 3.  
   
  A differenza di `LIKE`, `PATINDEX` restituisce una posizione, analogamente a `CHARINDEX`.  
-  
-### <a name="d-using-collate-with-patindex"></a>D. Utilizzo di COLLATE con PATINDEX  
+
+### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D. Uso di espressioni con caratteri jolly complesse con PATINDEX 
+Nell'esempio seguente viene usato l'[operatore stringa](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` per trovare la posizione di un carattere diverso da un numero, una lettera o uno spazio.
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+33
+```
+
+### <a name="e-using-collate-with-patindex"></a>E. Utilizzo di COLLATE con PATINDEX  
  Nell'esempio seguente viene utilizzata la funzione `COLLATE` per specificare in modo esplicito le regole di confronto dell'espressione indicante il contesto della ricerca.  
   
 ```sql  
@@ -124,13 +146,20 @@ GO
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
 GO  
 ```  
-  
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Utilizzo di una variabile per specificare il modello  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+9
+```
+
+### <a name="f-using-a-variable-to-specify-the-pattern"></a>F. Utilizzo di una variabile per specificare il modello  
 L'esempio usa una variabile per passare un valore al parametro *pattern*. In questo esempio viene usato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
-SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
+SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
@@ -138,7 +167,8 @@ WHERE DocumentNode = 0x7B40;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-------------  
+position
+--------  
 22
 ```  
   

@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908815"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
@@ -83,7 +83,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
   
  **Snapshot di Azure:** uno snapshot di un BLOB di Azure acquisito in un momento preciso. Per altre informazioni, vedere [Creazione di uno snapshot di un BLOB](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ore supporta i backup di Azure degli snapshot dei file di database archiviati nel servizio di archiviazione BLOB di Microsoft Azure. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+###  <a name="sqlserver"></a> Componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  **URL:** un URL specifica un URI (Uniform Resource Identifier) in un file di backup univoco. L'URL viene utilizzato per specificare il percorso e il nome del file di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'URL deve puntare a un BLOB effettivo, non solo a un contenitore. Se il BLOB non è disponibile, viene creato. Se viene specificato un BLOB esistente, l'operazione di backup non viene completata a meno che non sia stata specificata l'opzione "WITH FORMAT" per sovrascrivere il file di backup esistente nel BLOB.  
   
  Questo è un valore URL di esempio: http[s]://NOMEACCOUNT.blob.core.windows.net/\<CONTENITORE>/\<NOMEFILE.bak>. Anche se non richiesto, è consigliabile utilizzare HTTPS.  
@@ -150,7 +150,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 |DIFFERENTIAL|S|||  
 |COPY_ONLY|S|||  
 |COMPRESSION&#124;NO_COMPRESSION|S|Non supportato per il backup con snapshot di file||  
-|DESCRIPTION|S|||  
+|DESCRIZIONE|S|||  
 |NAME|S|||  
 |EXPIREDATE &#124; RETAINDAYS|-|||  
 |NOINIT &#124; INIT|-||L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, usare l'argomento **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
@@ -163,7 +163,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 |MAXTRANSFERSIZE|S|Non supportati per i BLOB di pagine. Supportati per i BLOB in blocchi.| Il valore predefinito è 1048576. Il valore può arrivare fino a 4 MB con incrementi di 65536 byte.</br> Si consiglia MAXTRANSFERSIZE=4194304 per ottimizzare l'uso dei 50.000 blocchi consentiti in un BLOB in blocchi. |  
 |NO_CHECKSUM &#124; CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
-|STATS|S|||  
+|STATS (Statistiche)|S|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|S|||  
@@ -197,7 +197,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 |CHECKSUM &#124; NO_CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |FILESTREAM|S|Non supportato per il backup con snapshot di file||  
-|STATS|S|||  
+|STATS (Statistiche)|S|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|S|||  

@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf7d199239be10760df49d586cdf5048fbc4a80
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "67906775"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929129"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
 
@@ -31,7 +31,7 @@ ms.locfileid: "67906775"
 
 Il programma di installazione di SQL Server crea i file di log in una cartella con data di validità e timestamp entro **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** per impostazione predefinita, in cui *nnn* sono numeri che corrispondono alla versione di SQL che viene installata. Il formato del nome della cartella dei log con indicazione di data e ora è AAAAMMGG_hhmmss. Se il programma di installazione viene eseguito in modalità automatica i file di log vengono creati nel percorso % temp%\sqlsetup*.log. Tutti i file inclusi nella cartella di log vengono archiviati nel file Log\*.cab nella rispettiva cartella di log.  
 
-   | File           | Percorso |
+   | File           | Path |
    | :------        | :----------------------------- |
    | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
    | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMGG_hhmmss |
@@ -82,9 +82,9 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 
 
   >[!NOTE]
-  > Quando si applicano patch possono essere presenti più sottocartelle (una per ogni istanza di destinazione delle patch e una per le funzionalità condivise) che contengono set di file simili (ad esempio %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
+  > Quando si applicano patch possono essere presenti più sottocartelle (una per ogni istanza di destinazione delle patch e una per le funzionalità condivise) che contengono set di file simili (ad esempio %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<AAAAMMGG_HHMM>\MSSQLSERVER). 
   
-### <a name="location"></a>Percorso  
+### <a name="location"></a>Location  
  Il file summary.txt si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
  Per individuare gli errori nel file del testo di riepilogo, eseguire una ricerca nel file utilizzando le parole chiave "error" o "failed".
@@ -94,7 +94,7 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 ### <a name="overview"></a>Panoramica  
  Il file di base summary_engine è simile al file di riepilogo e viene generato durante il flusso di lavoro principale.
   
-### <a name="location"></a>Percorso  
+### <a name="location"></a>Location  
  Il file Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
   
@@ -103,7 +103,7 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 ### <a name="overview"></a>Panoramica
  Il file Detail.txt viene generato per il flusso di lavoro principale, ad esempio installazione o aggiornamento, e fornisce i dettagli dell'esecuzione. I log nel file vengono generati in base all'ora in cui è stata chiamata ogni azione per l'installazione. Il file di testo indica l'ordine in cui sono state eseguite le azioni, nonché le dipendenze delle azioni.  
   
-### <a name="location"></a>Percorso  
+### <a name="location"></a>Location  
  Il file detail.txt si trova in %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
  Se si verifica un errore durante il processo di installazione, l'eccezione o l'errore viene registrato alla fine di questo file. Per trovare gli errori in questo file, esaminare prima la parte finale del file, quindi eseguire una ricerca nel file delle parole chiave "error" o "exception".
@@ -119,7 +119,7 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 -   \<Funzionalità>_\<Architettura>\_\<Linguaggio>\_\<Interazione>.log   
 -   \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro>.log  
   
-### <a name="location"></a>Percorso  
+### <a name="location"></a>Location  
  I file di log MSI si trovano nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
  La parte finale del file include un riepilogo dell'esecuzione, in cui sono indicati lo stato riuscito o non riuscito e le proprietà. Per trovare l'errore nel file MSI, cercare "value 3" ed esaminare il testo prima e dopo tale stringa.  
@@ -129,7 +129,7 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 ### <a name="overview"></a>Panoramica  
  Il file di configurazione contiene le impostazioni di input fornite durante l'installazione. Può essere utile riavviare l'installazione senza dover immettere manualmente le impostazioni. Nel file di configurazione non vengono tuttavia salvati le password degli account, i PID e alcuni parametri. Le impostazioni possono essere aggiunte al file o specificate tramite una riga di comando o l'interfaccia utente del programma di installazione. Per altre informazioni, vedere [Installare SQL Server 2016 tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-### <a name="location"></a>Percorso  
+### <a name="location"></a>Location  
  Il file ConfigurationFile.ini si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>File SystemConfigurationCheck_Report.htm
@@ -137,7 +137,7 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 ### <a name="overview"></a>Panoramica  
  Il report di controllo della configurazione di sistema contiene una breve descrizione di ogni regola eseguita, nonché lo stato di esecuzione.
   
-### <a name="location"></a>Percorso  
+### <a name="location"></a>Location  
 Il file SystemConfigurationCheck_Report.htm si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]

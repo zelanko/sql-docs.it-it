@@ -22,16 +22,16 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902101"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Predicato usato nella clausola [WHERE](../../t-sql/queries/where-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]di un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire una ricerca full-text [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in colonne indicizzate full-text che contengono tipi di dati basati su caratteri. Questo predicato esegue la ricerca dei valori che corrispondono al significato e non solo all'esatta formulazione delle parole nella condizione di ricerca. Se si usa FREETEXT, il motore delle query full-text esegue internamente le azioni di seguito elencate in *freetext_string*, assegna un peso a ogni termine e quindi cerca le corrispondenze:  
+  Predicato usato nella clausola [WHERE](../../t-sql/queries/where-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] relativa a un'istruzione SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire una ricerca full-text di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in colonne indicizzate full-text che contengono tipi di dati basati su caratteri. Questo predicato esegue la ricerca dei valori che corrispondono al significato e non solo all'esatta formulazione delle parole nella condizione di ricerca. Se si usa FREETEXT, il motore delle query full-text esegue internamente le azioni di seguito elencate in *freetext_string*, assegna un peso a ogni termine e quindi cerca le corrispondenze:  
   
 -   Separazione della stringa in singole parole in base ai delimitatori di parola (word breaking).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67902101"
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -106,7 +106,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Se documenti di lingue diverse vengono archiviati insieme come oggetti BLOB in una singola colonna, l'identificatore delle impostazioni locali (LCID) di un documento specifico determina la lingua da utilizzare per indicizzarne il contenuto. Se quando si esegue una query su una colonna di questo tipo si specifica LANGUAGE *language_term*, è possibile aumentare la probabilità di una corrispondenza soddisfacente.  
   
- Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna**alias** nella vista di compatibilità [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  La stringa deve essere racchiusa tra virgolette singole, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
+ Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna**alias** nella vista di compatibilità [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  La stringa deve essere racchiusa tra virgolette singole chiuse, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali.  
   
  Se il valore è in formato DBCS (Double-Byte Character Set), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirà in Unicode.  
   
@@ -130,7 +130,7 @@ Le query full-text che utilizzano il predicato FREETEXT sono meno precise delle 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. Utilizzo di FREETEXT per la ricerca di parole contenenti valori di carattere specificati  
+### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>R. Utilizzo di FREETEXT per la ricerca di parole contenenti valori di carattere specificati  
  Nell'esempio seguente viene eseguita la ricerca di tutti i documenti contenenti le parole associate a "vital", "safety" e "components".  
   
 ```sql  

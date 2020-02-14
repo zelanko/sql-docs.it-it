@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009401"
 ---
 # <a name="columnstore-indexes-overview"></a>Indici columnstore: Panoramica
@@ -61,7 +61,7 @@ Un segmento di colonna è una colonna di dati all'interno del rowgroup.
 -   Ogni rowgroup contiene un segmento di colonna per ogni colonna della tabella.  
 -   Ogni segmento di colonna è compresso e archiviato su un supporto fisico.  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Segmento di colonna](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segmento di colonna")  
   
 #### <a name="clustered-columnstore-index"></a>Indice columnstore cluster
 Un indice columnstore cluster rappresenta l'archivio fisico per l'intera tabella.    

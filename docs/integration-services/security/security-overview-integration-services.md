@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281943"
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
@@ -41,7 +41,7 @@ ms.locfileid: "71281943"
   
 |Minaccia o vulnerabilità|Definizione|Strategia di riduzione del rischio|  
 |-----------------------------|----------------|----------------|  
-|Origine pacchetto|L'origine di un pacchetto è l'utente singolo o l'organizzazione che lo ha creato. L'esecuzione di un pacchetto da un'origine ignota o non attendibile potrebbe essere rischiosa.|Identificare l'origine di un pacchetto utilizzando una firma digitale ed eseguire pacchetti provenienti solo da origini note e attendibili. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).|  
+|Origine pacchetto|L'origine di un pacchetto è la persona o l'organizzazione che ha creato il pacchetto. L'esecuzione di un pacchetto da un'origine ignota o non attendibile potrebbe essere rischiosa.|Identificare l'origine di un pacchetto utilizzando una firma digitale ed eseguire pacchetti provenienti solo da origini note e attendibili. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).|  
 |Contenuto del pacchetto|Nel pacchetto sono inclusi gli elementi del pacchetto e le rispettive proprietà. Tali proprietà possono contenere dati sensibili, ad esempio una password o una stringa di connessione. Gli elementi del pacchetto, ad esempio un'istruzione SQL, possono rivelare la struttura del database.|Controllare l'accesso a un pacchetto e al relativo contenuto eseguendo i passaggi seguenti:<br /><br /> 1) Per controllare l'accesso al pacchetto stesso, applicare caratteristiche di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai pacchetti salvati nel database **msdb** in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ai pacchetti salvati nel file system applicare le caratteristiche di sicurezza del file system, ad esempio elenchi di controllo di accesso (ACL).<br /><br /> 2) Per controllare l'accesso al contenuto del pacchetto, impostarne il livello di protezione.<br /><br /> Per altre informazioni, vedere [Panoramica sulla sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) e [Controllo dell'accesso per dati sensibili nei pacchetti](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).|  
 |Output di pacchetto|Quando si configura un pacchetto per l'utilizzo di configurazioni, checkpoint e registrazione, le informazioni vengono archiviate all'esterno del pacchetto stesso. Tali informazioni potrebbero contenere dati sensibili.|Per proteggere le configurazioni e le registrazioni che il pacchetto salva nelle tabelle di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare le caratteristiche di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Per controllare l'accesso ai file, utilizzare gli elenchi di controllo di accesso (ACL) disponibili nel file system.<br /><br /> Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](#files)|  
   

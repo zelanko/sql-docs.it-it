@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134428"
 ---
 # <a name="database-mail-configuration-objects"></a>Oggetti di configurazione di Posta elettronica database
@@ -79,7 +79,7 @@ ms.locfileid: "68134428"
   
 -   Nome del server di posta elettronica.  
   
--   Tipo del server di posta elettronica. Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]corrisponde sempre a Simple Mail Transfer Protocol (SMTP).  
+-   Tipo del server di posta elettronica. Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corrisponde sempre a Simple Mail Transfer Protocol (SMTP).  
   
 -   Numero di porta del server di posta elettronica.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68134428"
   
 |Attività di configurazione|Collegamento all'argomento|  
 |------------------------|----------------|  
-|Viene illustrata la creazione di account di Posta elettronica database|[Creare un account di Posta elettronica database.](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
+|Viene illustrata la creazione di account di Posta elettronica database|[Creare un account di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
 |Viene illustrata la creazione di profili di Posta elettronica database|[Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md)|  
 |Viene illustrata la configurazione di Posta elettronica database|[Configurare Posta elettronica database](../../relational-databases/database-mail/configure-database-mail.md)|  
 |Viene illustrata la creazione di uno script di configurazione per Posta elettronica database utilizzando i modelli||  
@@ -128,14 +128,14 @@ ms.locfileid: "68134428"
   
 ### <a name="database-mail-settings"></a>Impostazioni di Posta elettronica database  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Modifica le impostazioni di configurazione per Posta elettronica database.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Visualizza le impostazioni di configurazione per Posta elettronica database.|  
   
 ### <a name="accounts-and-profiles"></a>Account e profili  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Aggiunge un account di posta a un profilo di Posta elettronica database.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Elimina un account di Posta elettronica database.|  
@@ -150,7 +150,7 @@ ms.locfileid: "68134428"
   
 ### <a name="security"></a>Security  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Concede le autorizzazioni necessarie a una entità database per utilizzare un profilo di Posta elettronica database.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Rimuove le autorizzazioni che consentono a un utente di database di utilizzare un profilo pubblico o privato di Posta elettronica database.|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134428"
   
 ### <a name="system-state"></a>Stato del sistema  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Avvia il programma esterno Posta elettronica database e la coda associata di SQL Service Broker.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Arresta il programma esterno Posta elettronica database e la coda associata di SQL Service Broker.|  

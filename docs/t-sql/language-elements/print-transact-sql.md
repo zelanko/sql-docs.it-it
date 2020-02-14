@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072406"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072406"
 
   Restituisce al client un messaggio definito dall'utente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  Espressione che restituisce una stringa. Può includere variabili, funzioni e valori letterali concatenati. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Una stringa di messaggio può contenere al massimo 8.000 caratteri se è una stringa non Unicode e 4.000 caratteri se è una stringa Unicode. Le stringhe più lunghe vengono troncate. I tipi di dati **varchar(max)** e **nvarchar(max)** vengono troncati a tipi di dati di grandezza non superiore a **varchar(8000)** e **nvarchar(4000)** .  
   
  È possibile utilizzare anche RAISERROR per restituire messaggi. RAISERROR offre questi vantaggi rispetto a PRINT:  
@@ -66,7 +66,7 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-conditionally-executing-print-if-exists"></a>A. Stampa eseguita in modo condizionale (IF EXISTS)  
+### <a name="a-conditionally-executing-print-if-exists"></a>R. Stampa eseguita in modo condizionale (IF EXISTS)  
  Nell'esempio seguente viene utilizzata l'istruzione `PRINT` per restituire un messaggio in modo condizionale.  
   
 ```  

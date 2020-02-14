@@ -13,10 +13,10 @@ ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 62a8af2e4a82a0a0bdeec231db62c2166ed030de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030835"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>Proprietà server - pagina Impostazioni varie
@@ -34,7 +34,7 @@ ms.locfileid: "68030835"
  Consente di specificare un limite di tempo massimo entro il quale può essere eseguita la query. Il costo della query equivale al tempo, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica. Per impostazione predefinita, la funzionalità Query Governor è disattivata ed è consentita l'esecuzione di tutte le query. Se questa opzione è selezionata, è necessario immettere un limite di tempo nella casella di testo sottostante. Se si specifica un valore diverso da zero e positivo, Query Governor non consentirà l'esecuzione delle query il cui costo stimato supera tale valore.  
   
  **Interpreta l'immissione di un anno a due cifre come un anno compreso nell'intervallo dal**  
- Consente di specificare l'intervallo di date a 100 anni per l'interpretazione dei valori degli anni immessi con due cifre. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreterà i valori delle date immesse con due cifre come riferiti all'anno che termina per tali cifre che rientra nell'intervallo specificato.  
+ Consente di specificare l'intervallo di date a 100 anni per l'interpretazione dei valori degli anni immessi con due cifre. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreterà i valori delle date immesse con due cifre come riferiti all'anno che termina per tali cifre e rientra nell'intervallo specificato.  
   
  Impostare l'anno di fine nella casella a destra. Quando l'anno di fine viene salvato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popola automaticamente la casella a sinistra con l'anno di inizio.  
   

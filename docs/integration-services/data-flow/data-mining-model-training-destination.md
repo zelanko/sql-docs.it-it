@@ -20,10 +20,10 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293115"
 ---
 # <a name="data-mining-model-training-destination"></a>Training modello di data mining - destinazione
@@ -57,16 +57,16 @@ ms.locfileid: "71293115"
   Utilizzare la pagina **Connessione** della finestra di dialogo **Editor training modelli di data mining** per selezionare un modello di mining per cui eseguire il training.  
   
 ### <a name="options"></a>Opzioni  
- **Gestione connessione**  
+ **Connection manager**  
  Selezionare una connessione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente dall'elenco oppure creare una nuova connessione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando il pulsante **Nuova** descritto di seguito.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
   
  **Struttura di data mining**  
  Selezionare una struttura di data mining dall'elenco di quelle disponibili oppure creare una nuova struttura facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova struttura e un nuovo modello di data mining mediante la **Creazione guidata modello di data mining**.  
   
  **Modelli di data mining**  

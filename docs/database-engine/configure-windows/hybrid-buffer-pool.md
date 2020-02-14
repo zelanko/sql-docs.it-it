@@ -1,7 +1,7 @@
 ---
 title: Pool di buffer ibrido | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -10,28 +10,34 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+manager: amitban
+ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823565"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831693"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Il pool di buffer ibrido consente al motore di database di accedere direttamente alle pagine di dati nei file di database archiviati nei dispositivi con memoria persistente. Questa funzionalità è stata introdotta in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
+Il pool di buffer ibrido consente agli oggetti del pool di fare riferimento alle pagine dati nei file di database presenti nei dispositivi con memoria persistente, anziché a copie delle pagine dati nella memoria DRAM volatile. Questa funzionalità è stata introdotta in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
-In un sistema tradizionale senza memoria persistente SQL Server memorizza nella cache le pagine di dati del pool di buffer. Con il pool di buffer ibrido, SQL Server non esegue una copia della pagina nella parte di memoria basata su DRAM del pool di buffer, ma accede alla pagina direttamente nel file di database che si trova nel dispositivo con memoria persistente. L'accesso in lettura ai file di dati nei dispositivi PMEM per il pool di buffer ibrido viene eseguito direttamente seguendo un puntatore alle pagine di dati nel dispositivo PMEM.  
+![Pool di buffer ibrido](./media/hybrid-buffer-pool.png)
 
-In un dispositivo con memoria persistente è possibile accedere direttamente solo alle pagine clean. Quando una pagina è contrassegnata come dirty, viene prima copiata nel pool di buffer DRAM e poi riscritta nel dispositivo con memoria persistente e contrassegnata nuovamente come clean. Ciò si verifica durante le normali operazioni di checkpoint. Il meccanismo per copiare il file dal dispositivo PMEM alla DRAM è l'I/O mappato alla memoria (MMIO, Memory-Mapped I/O) diretto ed è noto anche come *riconoscimento* dei file di dati all'interno di SQL Server.
+I dispositivi con memoria persistente (PMEM) sono indirizzabili a byte e, se viene usato un file system con supporto per la memoria persistente (DAX) con accesso diretto (come XFS, EXT4 o NTFS), consentono di accedere ai file nel file system usando le consuete API di file system nel sistema operativo. In alternativa, possono eseguire operazioni di caricamento e archiviazione in base alle mappe di memoria dei file nel dispositivo. In questo modo, le applicazioni in grado di riconoscere i dispositivi con memoria persistente, come SQL Server, possono accedere ai file nel dispositivo senza attraversare lo stack di archiviazione tradizionale.
 
+Il pool di buffer ibrido usa questa funzionalità per eseguire operazioni di caricamento e archiviazione sui file mappati alla memoria, in modo da sfruttare il dispositivo con memoria persistente come cache per il pool di buffer e per l'archiviazione dei file di database. Si verifica così la situazione unica in cui una lettura logica e una lettura fisica sono essenzialmente la stessa operazione. I dispositivi con memoria persistente sono accessibili tramite il bus di memoria esattamente come la normale DRAM volatile.
 
-La funzionalità di pool di buffer ibrido è disponibile sia per Windows che per Linux. Il dispositivo con memoria persistente deve essere formattato con un file system che supporti DAX (DirectAccess). I file system XFS, EXT4 e NTFS supportano tutti DAX. SQL Server rileverà automaticamente se i file di dati si trovano in un dispositivo PMEM formattato in modo appropriato ed eseguirà il mapping di memoria nello spazio utente. Questo mapping si verifica all'avvio, quando un nuovo database viene collegato, ripristinato, creato o quando la funzionalità di pool di buffer ibrido viene abilitata per un database.
+Nella cache del dispositivo per il pool di buffer ibrido vengono memorizzate solo le pagine di dati clean. Quando una pagina è contrassegnata come dirty, viene prima copiata nel pool di buffer DRAM e poi riscritta nel dispositivo con memoria persistente e contrassegnata nuovamente come clean. Questo si verifica durante le normali operazioni di checkpoint in modo analogo a quanto avviene per un dispositivo a blocchi standard.
 
-Per altre informazioni sul supporto di Windows Server per PMEM, vedere [Distribuire la memoria persistente in Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
+La funzionalità di pool di buffer ibrido è disponibile sia per Windows che per Linux. Il dispositivo con memoria persistente deve essere formattato con un file system che supporti DAX (DirectAccess). I file system XFS, EXT4 e NTFS includono tutti il supporto per DAX. SQL Server rileva automaticamente se i file di dati si trovano in un dispositivo con memoria persistente formattato in modo appropriato ed eseguono il mapping della memoria per i file di database all'avvio, quando un nuovo database viene collegato, ripristinato o creato.
 
-Per altre informazioni sulla configurazione di SQL Server in Linux per i dispositivi PMEM, vedere [Distribuire la memoria persistente](../../linux/sql-server-linux-configure-pmem.md).
+Per altre informazioni, vedere:
+
+* [Comprendere e distribuire memoria persistente (Windows)](/windows-server/storage/storage-spaces/deploy-pmem/)
+* [Configurare la memoria persistente per SQL Server in Linux](../../linux/sql-server-linux-configure-pmem.md)
+
 
 ## <a name="enable-hybrid-buffer-pool"></a>Abilitare il pool di buffer ibrido
 
@@ -55,13 +61,13 @@ Per impostazione predefinita, il pool di buffer ibrido è abilitato nell'ambito 
 
 ## <a name="disable-hybrid-buffer-pool"></a>Disabilitare il pool di buffer ibrido
 
-Nell'esempio seguente viene disabilitato il pool di buffer ibrido per un'istanza di SQL Server:
+L'esempio seguente disabilita il pool di buffer ibrido a livello di istanza:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ```
 
-Per impostazione predefinita, il pool di buffer ibrido è disabilitato nell'ambito dell'istanza. Si noti che è necessario riavviare l'istanza di SQL Server per rendere effettiva la modifica dell'impostazione. È necessario un riavvio per impedire l'allocazione eccessiva di pagine hash, perché non occorre tenere conto della capacità PMEM nel server.
+Per impostazione predefinita, il pool di buffer ibrido è disabilitato a livello di istanza. Affinché la modifica abbia effetto, l'istanza deve essere riavviata. Questo consente di assicurarsi che per il pool di buffer venga allocato un numero sufficiente di pagine hash, poiché in questo caso è necessario tenere in considerazione la capacità della memoria persistente sul server.
 
 Nell'esempio seguente viene disabilitato il pool di buffer ibrido per un database specifico.
 
@@ -73,7 +79,7 @@ Per impostazione predefinita, il pool di buffer ibrido è abilitato nell'ambito 
 
 ## <a name="view-hybrid-buffer-pool-configuration"></a>Visualizzare la configurazione pool di buffer ibrido
 
-L'esempio seguente restituisce lo stato corrente della configurazione di sistema del pool di buffer ibrido per un'istanza di SQL Server.
+L'esempio seguente restituisce lo stato corrente della configurazione del pool di buffer ibrido per l'istanza.
 
 ```sql
 SELECT * FROM
@@ -95,10 +101,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Quando si formatta un dispositivo PMEM in Windows, usare le dimensioni di unità di allocazione più grandi disponibili per NTFS (2 MB in Windows Server 2019) e assicurarsi che il dispositivo sia stato formattato per DAX (Direct Access).
 
-Per ottenere prestazioni ottimali, abilitare [Blocco di pagine in memoria](./enable-the-lock-pages-in-memory-option-windows.md) in Windows.
+Usare il modello di allocazione di memoria per pagine di grandi dimensioni, che può essere abilitato con il [flag di traccia 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Questo è un flag di traccia di avvio.
+
+Il modello di allocazione di memoria per pagine di grandi dimensioni richiede l'uso di [pagine bloccate in memoria](./enable-the-lock-pages-in-memory-option-windows.md) in Windows.
 
 Le dimensioni dei file devono essere un multiplo di 2 MB (modulo 2 MB deve essere uguale a zero).
 
-Se l'impostazione con ambito server per il pool di buffer ibrido è disabilitata, il pool di buffer ibrido non verrà usato da alcun database utente.
+Se l'impostazione con ambito server per il pool di buffer ibrido è disabilitata, la funzionalità non verrà usata da alcun database utente.
 
-Se l'impostazione con ambito server per il pool di buffer ibrido è abilitata, è possibile disabilitare l'uso per i database utente singoli seguendo la procedura per disabilitare il pool di buffer ibrido a livello configurazione con ambito database per i database utente.
+Se l'impostazione con ambito server per il pool di buffer ibrido è abilitata, sarà possibile usare l'impostazione con ambito database per disabilitare la funzionalità per i singoli database utente.

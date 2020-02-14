@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300432"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
@@ -197,7 +197,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
     > [!NOTE]  
     >  Un'istruzione SELECT eseguita in uno snapshot del database non deve specificare una colonna FILESTREAM. In caso contrario, verrà restituito il seguente messaggio di errore: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Se le statistiche relative a uno snapshot di sola lettura mancano o non sono aggiornate, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in tempdb. Per altre informazioni, vedere [Statistics](../../relational-databases/statistics/statistics.md).  
+-   Se le statistiche relative a uno snapshot di sola lettura mancano o non sono aggiornate, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in tempdb. Per altre informazioni, vedere l'articolo relativo alle [statistiche](../../relational-databases/statistics/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Requisiti relativi allo spazio su disco  
  Gli snapshot del database richiedono spazio su disco. Se uno snapshot del database esaurisce lo spazio su disco, viene contrassegnato come sospetto e deve essere eliminato. Il database di origine, tuttavia, non viene influenzato e continua a funzionare normalmente. Gli snapshot tuttavia utilizzano lo spazio su disco in maniera molto più efficiente rispetto a una copia completa di un database. Uno snapshot richiede esclusivamente lo spazio necessario per le pagine che vengono modificate durante la sua durata. Poiché in genere gli snapshot vengono conservati per periodi di tempo limitati, le loro dimensioni non rappresentano un problema.  

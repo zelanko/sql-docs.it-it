@@ -17,10 +17,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38c5c4daa65542dd8da14fa5c51a1b964a271fff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296508"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti
@@ -49,7 +49,7 @@ ms.locfileid: "71296508"
   
 -   **Configurare la proprietà DelayValidation per gli elementi del pacchetto non validi fino alla fase di esecuzione**. È possibile impostare la proprietà **DelayValidation** su **True** per gli elementi del pacchetto la cui configurazione non è valida in fase di progettazione, per impedire gli errori di convalida. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. La proprietà **DelayValidation** può essere abilitata a livello di pacchetto oppure delle singole attività e dei singoli contenitori del pacchetto. In genere, è necessario lasciare impostata questa proprietà su **True** negli stessi elementi del pacchetto quando si distribuisce il pacchetto, per impedire gli stessi errori di convalida in fase di esecuzione.  
   
-     La proprietà **DelayValidation** può essere impostata in un'attività Flusso di dati ma non nei singoli componenti flusso di dati. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su **false**. Quando il valore di questa proprietà è impostato su **false**, tuttavia, il componente non riconosce le modifiche apportate ai metadati delle origini dati esterne.  
+     La proprietà **DelayValidation** può essere impostata in un'attività Flusso di dati ma non nei singoli componenti flusso di dati. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su **false**. Quando, tuttavia, il valore di questa proprietà è impostato su **false**, il componente non riconosce le modifiche apportate ai metadati delle origini dati esterne.  
   
  Se gli oggetti di database utilizzati dal pacchetto risultano bloccati durante la convalida, è possibile che il processo di convalida si arresti. In questi casi, si arresterà anche Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . È possibile riprendere la convalida usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per chiudere le sessioni associate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo problema può essere evitato anche utilizzando le impostazioni descritte in questa sezione.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71296508"
  Per altre informazioni su queste funzionalità, vedere [Debug del flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 ## <a name="troubleshooting-scripts"></a>Risoluzione dei problemi relativi agli script  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] L'attività Script e il componente Script usano Microsoft Visual Studio Tools for Applications (VSTA) come ambiente di sviluppo in cui scrivere gli script e come motore in cui eseguirli. In VSTA sono disponibili gli strumenti e le caratteristiche seguenti per la risoluzione dei problemi relativi agli script durante lo sviluppo dei pacchetti:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) è l'ambiente di sviluppo in cui scrivere gli script che vengono usati dall'attività Script e dal componente script. In VSTA sono disponibili gli strumenti e le caratteristiche seguenti per la risoluzione dei problemi relativi agli script durante lo sviluppo dei pacchetti:  
   
 -   **Impostazione dei punti di interruzione negli script delle attività Script.** In VSTA è disponibile il supporto per il debug di script solo per l'attività Script. I punti di interruzione impostati nell'attività Script vengono integrati con i punti di interruzione impostati sia nei pacchetti che nelle attività e nei contenitori dei pacchetti in modo da consentire il debug di tutti gli elementi del pacchetto.  
   

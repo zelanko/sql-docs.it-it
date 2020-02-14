@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35db04fee2cc8d17034414bce9c994db501d5c02
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 45c76487f9165da37d0c5383826b00e85ddf27df
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680891"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286503"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -40,7 +40,7 @@ Crea una credenziale a livello di server. Una credenziale è un record contenent
 > [!NOTE]
 > Per creare credenziali a livello di database, usare [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Usare una credenziale a livello di server quando è necessario usare le stesse credenziali per più database nel server. Usare le credenziali con ambito database per rendere portabile il database. Quando un database viene spostato in un nuovo server, vengono spostate anche le credenziali con ambito database. Usare le credenziali con ambito database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -69,7 +69,7 @@ Quando la credenziale viene usata per accedere ad Azure Key Vault, l'argomento *
 
 FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* specifica il nome di un *provider EKM (Enterprise Key Management provider)* . Per altre informazioni sulla gestione delle chiavi, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Se IDENTITY è un utente di Windows, il segreto può essere la password. Il segreto viene crittografato con la chiave master del servizio. Se la chiave master del servizio viene rigenerata, il segreto viene ricrittografato con la nuova chiave master del servizio.
 
@@ -87,7 +87,7 @@ A un account di accesso è possibile eseguire il mapping di più credenziali, a 
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-basic-example"></a>A. Esempio di base
+### <a name="a-basic-example"></a>R. Esempio di base
 
 Nell'esempio seguente viene creata la credenziale denominata `AlterEgo`. Tale credenziale contiene l'utente di Windows `Mary5` e una password.
 
@@ -99,7 +99,7 @@ GO
 
 ### <a name="b-creating-a-credential-for-ekm"></a>B. Creazione di una credenziale per EKM
 
-Nell'esempio seguente viene usato un account creato in precedenza e denominato `User1OnEKM` in un modulo EKM tramite gli strumenti di gestione di EKM, con un tipo di account di base e una password. L'account **sysadmin** nel server crea una credenziale usata per connettersi all'account EKM e la assegna all'account `User1` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+Nell'esempio seguente viene usato un account creato in precedenza e denominato `User1OnEKM` in un modulo EKM tramite gli strumenti di gestione di EKM, con un tipo di account di base e una password. L'account **sysadmin** nel server crea una credenziale che viene usata per connettersi all'account EKM e la assegna all'account `User1` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -108,13 +108,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Creazione di una credenziale per EKM con l'insieme di credenziali chiave di Azure

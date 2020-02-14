@@ -20,10 +20,10 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294006"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
@@ -116,7 +116,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
  **Operazione di valutazione**  
  Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
   
- **Value**  
+ **Valore**  
  Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**.  
   
 > [!NOTE]  
@@ -154,7 +154,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
     |--------------------------|--------------------------|  
     |Descrizione|Specificare una descrizione.|  
     |EvalOp|Selezionare un'operazione di valutazione. In caso di selezione dell'operazione **Expression**, **ExpressionAndConstant**o **ExpressionOrConstant** , è possibile specificare un'espressione.|  
-    |Espressione|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
+    |Expression|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Impostare **LogicalAnd** in modo da specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al vincolo|  
     |Nome|Aggiornare il nome del vincolo di precedenza.|  
     |ShowAnnotation|Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per attivare le annotazioni su richiesta, **ConstraintName** per aggiungere automaticamente annotazioni usando il valore della proprietà Name, **ConstraintDescription** per aggiungere automaticamente annotazioni usando il valore della proprietà Description e **ConstraintOptions** per aggiungere automaticamente annotazioni usando i valori delle proprietà Value ed Expression.|  
@@ -179,7 +179,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
 ## <a name="add-expressions-to-precedence-constraints"></a>Aggiunta di espressioni ai vincoli di precedenza
  In un vincolo di precedenza è possibile utilizzare un'espressione per definire il vincolo tra due eseguibili: l'eseguibile con precedenza e l'eseguibile soggetto al vincolo. Gli eseguibili possono essere attività o contenitori. L'espressione può essere utilizzata da sola o in combinazione con il risultato dell'esecuzione dell'eseguibile con precedenza. Il risultato dell'esecuzione di un eseguibile può essere Success o Failure. Quando si configura il risultato dell'esecuzione di un vincolo di precedenza è possibile impostare il risultato dell'esecuzione su **Esito positivo**, **Errore**o **Completamento**. **Esito positivo** richiede che l'esecuzione dell'eseguibile con precedenza venga completata correttamente, **Errore** richiede che l'esecuzione dell'eseguibile con precedenza non riesca e **Completamento** indica che l'eseguibile soggetto al vincolo deve essere eseguito indipendentemente dall'esito dell'esecuzione dell'attività con precedenza. Per altre informazioni, vedere [Vincoli di precedenza](../../integration-services/control-flow/precedence-constraints.md).  
   
- L'espressione, che deve restituire **True** o **False**, deve essere un'espressione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valida. e può utilizzare valori letterali, variabili di sistema e personalizzate, nonché le funzioni e gli operatori forniti dalla grammatica delle espressioni di [!INCLUDE[ssIS](../../includes/ssis-md.md)]. L'espressione `@Count == SQRT(144) + 10`, ad esempio, usa la variabile **Count**, la funzione SQRT e gli operatori di uguaglianza (==) e di addizione (+). Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
+ L'espressione, che deve restituire **True** o **False** , deve essere un'espressione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valida. e può utilizzare valori letterali, variabili di sistema e personalizzate, nonché le funzioni e gli operatori forniti dalla grammatica delle espressioni di [!INCLUDE[ssIS](../../includes/ssis-md.md)] . L'espressione `@Count == SQRT(144) + 10` , ad esempio, usa la variabile **Count**, la funzione SQRT e gli operatori di uguaglianza (==) e di addizione (+). Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
  Nella figura seguente le attività A e B sono collegate da un vincolo di precedenza che utilizza il risultato di un'esecuzione e un'espressione. Il valore del vincolo è impostato su **Esito positivo** e l'espressione è  `@X >== @Z`. L'attività B, soggetta al vincolo, viene eseguita solo se l'attività A viene completata e il valore della variabile **X** è maggiore o uguale a quello della variabile **Z**.  
   
@@ -218,8 +218,8 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |Vincolo|True|N/D|True|  
 |Vincolo|False|N/D|False|  
-|Espressione|N/D|True|True|  
-|Espressione|N/D|False|False|  
+|Expression|N/D|True|True|  
+|Expression|N/D|False|False|  
 |Vincolo ed espressione|True|True|True|  
 |Vincolo ed espressione|True|False|False|  
 |Vincolo ed espressione|False|True|False|  

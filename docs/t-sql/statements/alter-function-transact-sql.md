@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982856"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
@@ -422,7 +422,7 @@ Per un elenco delle condizioni che devono essere soddisfatte per consentire l'as
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione ALTER FUNCTION non può essere usata per trasformare una funzione a valori scalari in una funzione con valori di tabella e viceversa, né per convertire una funzione inline in una funzione a più istruzioni e viceversa. Non può inoltre essere usata per convertire una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in una funzione CLR e viceversa.  
   
  Nella definizione di una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente non è possibile includere le istruzioni di Service Broker seguenti:  

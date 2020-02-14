@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816767"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911038"
 ---
 # <a name="attach-a-database"></a>Collegare un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      **Percorso file MDF**  
      Consente di visualizzare il percorso e il nome del file MDF selezionato.  
   
-     **Database Name**  
+     **Nome database**  
      Consente di visualizzare il nome del database.  
   
      **Collega come**  
@@ -81,28 +81,28 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      **Proprietario**  
      Consente di visualizzare un elenco a discesa di possibili proprietari del database in cui è possibile selezionare un proprietario diverso.  
   
-     **Stato**  
+     **Status**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
     |Icona|Testo Stato|Descrizione|  
     |----------|-----------------|-----------------|  
     |(Nessuna icona)|(Nessun testo)|L'operazione di collegamento non è stata avviata o può essere sospesa per questo oggetto. È il valore predefinito all'apertura della finestra di dialogo.|  
     |Triangolo verde che punta a destra|In corso|L'operazione di collegamento è stata avviata ma non ancora completata.|  
-    |Segno di spunta verde|Esito positivo|L'oggetto è stato collegato.|  
+    |Segno di spunta verde|Operazione completata|L'oggetto è stato collegato.|  
     |Cerchio rosso con croce bianca|Errore|Si è verificato un errore durante l'operazione. Il collegamento non è stato completato.|  
-    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Stopped|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
+    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Arrestato|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
     |Cerchio con freccia curva che punta in senso antiorario.|È stato eseguito il rollback|L'operazione di collegamento è stata completata ma ne è stato eseguito il rollback a causa di un errore durante il collegamento di un altro oggetto.|  
   
-     **Message**  
+     **Messaggio**  
      Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale "Impossibile trovare il file".  
   
-     **Aggiungi**  
+     **Aggiungere**  
      Consente di individuare i file principali del database necessari. Se l'utente seleziona un file con estensione mdf, le informazioni appropriate vengono inserite automaticamente nei rispettivi campi della griglia **Database da collegare** .  
   
      **Rimuovi**  
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     **"** *<database_name>* **" dettagli database**  
+     **"** *<nome_database>* **" dettagli database**  
      Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( **...** ).  
   
     > [!NOTE]  
@@ -117,7 +117,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      **Percorso file corrente**  
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
-     **Message**  
+     **Messaggio**  
      Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
@@ -143,7 +143,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
     > In alternativa, è possibile usare la stored procedure [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) o [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) . Tuttavia, queste stored procedure verranno eliminate nelle versioni future di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. È consigliabile utilizzare `CREATE DATABASE ... FOR ATTACH` in alternativa.  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database di SQL Server  
-Una volta aggiornato utilizzando il metodo di collegamento, il database viene reso immediatamente disponibile e viene aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti anche che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati.  
+Una volta aggiornato utilizzando il metodo di collegamento, il database viene reso immediatamente disponibile e viene aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati.  
   
 Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   

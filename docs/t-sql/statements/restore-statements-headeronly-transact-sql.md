@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983026"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Istruzioni RESTORE - HEADERONLY (Transact-SQL)
@@ -138,9 +138,9 @@ FROM <backup_device>
 |**IsForceOffline**|**bit**|**1** = Backup eseguito con NORECOVERY; database offline a causa del backup.|  
 |**IsCopyOnly**|**bit**|**1** = Backup di sola copia.<br /><br /> Un backup di sola copia non ha alcun effetto sulle procedure di backup e ripristino generali per il database. Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**FirstRecoveryForkID**|**uniqueidentifier**|ID per il fork di recupero iniziale. Questa colonna corrisponde a **first_recovery_fork_guid** nella tabella [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).<br /><br /> Per i backup dei dati **FirstRecoveryForkID** è uguale a **RecoveryForkID**.|  
-|**ForkPointLSN**|**numeric(25,0)** Null|Se **FirstRecoveryForkID** è diverso da **RecoveryForkID**, questo è il numero di sequenza del file di log (LSN) del punto di fork. Negli altri casi il valore è NULL.|  
-|**RecoveryModel**|**nvarchar(60)**|Modello di recupero del database. I possibili valori sono i seguenti:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
-|**DifferentialBaseLSN**|**numeric(25,0)** Null|Per un backup differenziale basato su un solo backup, il valore è uguale al valore di **FirstLSN** della base differenziale. Le modifiche con valori LSN maggiori o uguali a **DifferentialBaseLSN** vengono incluse nel backup differenziale.<br /><br /> Per un backup differenziale basato su più backup, il valore è NULL e il valore LSN di base deve essere determinato a livello di file. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).<br /><br /> Per i tipi di backup non differenziali il valore è sempre NULL.<br /><br /> Per altre informazioni, vedere [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
+|**ForkPointLSN**|**numeric(25,0)** NULL|Se **FirstRecoveryForkID** è diverso da **RecoveryForkID**, questo è il numero di sequenza del file di log (LSN) del punto di fork. Negli altri casi il valore è NULL.|  
+|**RecoveryModel**|**nvarchar(60)**|Modello di recupero del database. I possibili valori sono i seguenti:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SEMPLICE|  
+|**DifferentialBaseLSN**|**numeric(25,0)** NULL|Per un backup differenziale basato su un solo backup, il valore è uguale al valore di **FirstLSN** della base differenziale. Le modifiche con valori LSN maggiori o uguali a **DifferentialBaseLSN** vengono incluse nel backup differenziale.<br /><br /> Per un backup differenziale basato su più backup, il valore è NULL e il valore LSN di base deve essere determinato a livello di file. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).<br /><br /> Per i tipi di backup non differenziali il valore è sempre NULL.<br /><br /> Per altre informazioni, vedere [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
 |**DifferentialBaseGUID**|**uniqueidentifier**|Per un backup differenziale basato su un solo backup, il valore è l'identificatore univoco della base differenziale.<br /><br /> Per i backup differenziali basati su più backup, il valore è NULL e la base differenziale deve essere determinata per ogni file.<br /><br /> Per i tipi di backup non differenziali il valore è NULL.|  
 |**BackupTypeDescription**|**nvarchar(60)**|Tipo di backup in formato stringa. I possibili valori sono i seguenti:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** Null|Identificatore univoco del set di backup, che lo identifica nei supporti.|  

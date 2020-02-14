@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155573"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
@@ -132,7 +132,7 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
         7.  Fare clic su **OK**.  
   
-    6.  Scegliere **Avanti**.  
+    6.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Selezione server di destinazione** selezionare i server in cui si desidera eseguire il piano di manutenzione. Questa pagina viene visualizzata solo nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurate come server master.  
   
@@ -157,7 +157,7 @@ In questa pagina sono disponibili le opzioni seguenti.
   
  -  **Tutti i database**  
   
-Viene generato un piano di manutenzione per l'esecuzione di questa attività in tutti i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a eccezione di **tempdb**.  
+Viene generato un piano di manutenzione per l'esecuzione di questa attività in tutti i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a eccezione di **tempdb**.  
   
 **Database di sistema**  
   
@@ -201,7 +201,7 @@ Casella di controllo**Includi indici**
      Il database viene organizzato in pagine contigue, ma queste ultime non vengono deallocate, né i file del database vengono compattati. Utilizzare questa opzione se si prevede una nuova espansione del database e non si desidera riallocare lo spazio. Con questa opzione, i file del database non verranno compattati al massimo. L'opzione utilizza l'istruzione NOTRUNCATE.  
   
      **Restituisci spazio liberato al sistema operativo**  
-     Il database viene organizzato in pagine contigue e queste ultime vengono rilasciate al sistema operativo per essere utilizzate da altri programmi. L'opzione utilizza l'istruzione TRUNCATEONLY. Si tratta dell'opzione predefinita.  
+     Il database viene organizzato in pagine contigue e queste ultime vengono rilasciate al sistema operativo per essere utilizzate da altri programmi. L'opzione utilizza l'istruzione TRUNCATEONLY. Questa è l'opzione predefinita.  
   
 ## <a name="define-the-index-tasks"></a>Definizione delle attività dell'indice  
   
@@ -238,7 +238,7 @@ Casella di controllo**Includi indici**
      Contiene opzioni relative all'applicazione del fattore di riempimento a indici e tabelle.  
   
      **Spazio libero predefinito per pagina**  
-     Riorganizza le pagine mantenendo la quantità predefinita di spazio disponibile. Selezionando questa opzione verranno eliminati gli indici delle tabelle del database e verranno ricreati utilizzando il fattore di riempimento specificato al momento della creazione degli indici. Si tratta dell'opzione predefinita.  
+     Riorganizza le pagine mantenendo la quantità predefinita di spazio disponibile. Selezionando questa opzione verranno eliminati gli indici delle tabelle del database e verranno ricreati utilizzando il fattore di riempimento specificato al momento della creazione degli indici. Questa è l'opzione predefinita.  
   
      Casella**Modifica percentuale di spazio disponibile per pagina**  
      Elimina gli indici delle tabelle del database e li ricrea utilizzando un nuovo fattore di riempimento calcolato automaticamente, riservando in tal modo la quantità di spazio disponibile specificata nelle pagine dell'indice. Maggiore è la percentuale, maggiore sarà la quantità di spazio disponibile riservata nelle pagine dell'indice e maggiori saranno le dimensioni dell'indice. I valori validi sono compresi tra 0 e 100. Utilizza l'opzione `FILLFACTOR` .  
@@ -428,7 +428,7 @@ Casella di controllo**Includi indici**
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definizione attività Pulizia file manutenzione  
   
-1.  Nella pagina **Definizione attività Pulizia file manutenzione** specificare i tipi di file da eliminare come parte del piano di manutenzione, inclusi report di testo creati dai piani di manutenzione e file di backup del database. In questa attività viene utilizzata l'istruzione `EXEC xp_delete_file` . Al termine, fare clic su **Avanti**.  
+1.  Nella pagina **Definizione attività Pulizia file manutenzione** specificare i tipi di file da eliminare come parte del piano di manutenzione, inclusi report di testo creati dai piani di manutenzione e file di backup del database. In questa attività viene utilizzata l'istruzione `EXEC xp_delete_file`. Al termine, fare clic su **Avanti**.  
   
     > **IMPORTANTE** Tramite questa attività non si eliminano automaticamente i file nelle sottocartelle della directory specificata. Si tratta di una misura precauzionale per ridurre le probabilità di un attacco dannoso che utilizzi l'attività Pulizia file manutenzione per eliminare i file. Per eliminare i file nelle sottocartelle di primo livello è necessario selezionare **Includi sottocartelle di primo livello**.  
   
@@ -502,10 +502,10 @@ Casella di controllo**Includi indici**
      **Azione**  
      Specifica il tipo e il nome di ciascuna azione.  
   
-     **Stato**  
+     **Status**  
      Indica se l'intera azione della procedura guidata ha restituito il valore **Esito positivo** o **Esito negativo**.  
   
-     **Message**  
+     **Messaggio**  
      Fornisce tutti i messaggi di errore o di avviso restituiti dal processo.  
   
      **Report**  

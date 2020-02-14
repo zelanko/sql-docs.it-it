@@ -19,10 +19,10 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295708"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Guida sensibile al contesto dell'Aggiornamento guidato pacchetti SSIS
@@ -52,9 +52,9 @@ ms.locfileid: "71295708"
  **Origine pacchetto**  
  Selezionare il percorso di archiviazione che contiene i pacchetti da aggiornare. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**File System**|Indica che i pacchetti da aggiornare si trovano in una cartella nel computer locale.<br /><br /> Per eseguire il backup dei pacchetti originali prima dell'aggiornamento, è necessario archiviare i pacchetti originali nel file system. Per ulteriori informazioni, vedere l'argomento relativo alla procedura.|  
+|**File system**|Indica che i pacchetti da aggiornare si trovano in una cartella nel computer locale.<br /><br /> Per eseguire il backup dei pacchetti originali prima dell'aggiornamento, è necessario archiviare i pacchetti originali nel file system. Per ulteriori informazioni, vedere l'argomento relativo alla procedura.|  
 |**Archivio pacchetti SSIS**|Indica che i pacchetti da aggiornare si trovano nell'archivio pacchetti. L'archivio pacchetti è costituito dal set di cartelle del file system gestito dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  
 |**Microsoft SQL Server**|Indica che i pacchetti da aggiornare provengono da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]esistente.<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71295708"
  **Usa autenticazione di SQL Server**  
  Selezionare questa opzione per usare l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione al server. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
   
- **User name**  
+ **Nome utente**  
  Digitare il nome utente usato dall'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione al server.  
   
  **Password**  
@@ -104,9 +104,9 @@ ms.locfileid: "71295708"
  **Origine pacchetto**  
  Consente di specificare la posizione di archiviazione dei pacchetti di aggiornamento. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**File System**|Indica che i pacchetti aggiornati devono essere salvati in una cartella nel computer locale.|  
+|**File system**|Indica che i pacchetti aggiornati devono essere salvati in una cartella nel computer locale.|  
 |**Archivio pacchetti SSIS**|Indica che i pacchetti aggiornati devono essere salvati nell'archivio pacchetti Integration Services. L'archivio pacchetti è costituito dal set di cartelle del file system gestito dal servizio Integration Services. Per altre informazioni, vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  
 |**Microsoft SQL Server**|Indica che i pacchetti aggiornati devono essere salvati in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]esistente.<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "71295708"
  **Usa autenticazione di SQL Server**  
  Selezionare questa opzione per usare l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione al server. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
   
- **User name**  
+ **Nome utente**  
  Digitare il nome utente da usare quando si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione al server.  
   
  **Password**  
@@ -227,13 +227,13 @@ ms.locfileid: "71295708"
  **Azione**  
  Consente di visualizzare le azioni incluse nell'aggiornamento.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare il risultato di ogni azione.  
   
- **Message**  
+ **Messaggio**  
  Consente di visualizzare i messaggi di errore generati da ogni azione.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare l'aggiornamento del pacchetto.  
   
  **Report**  

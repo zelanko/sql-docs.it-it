@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297542"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "71297542"
 
   L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
   
-## <a name="variables"></a>Variabili  
+## <a name="variables"></a>variables  
  Nelle espressioni è possibile utilizzare anche variabili. Le variabili hanno tipo di dati Variant e, prima di valutare l'espressione, l'analizzatore di espressioni converte il tipo di dati di una variabile da un sottotipo Variant a un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per le variabili è possibile usare solo un subset dei tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per una variabile non è ad esempio possibile utilizzare un tipo di dati BLOB (Binary Large Object).  
   
  Per altre informazioni sui tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e sul mapping dei tipi di dati Variant ai tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "71297542"
   
  Nella figura seguente viene illustrato il tipo di risultato delle conversioni implicite delle operazioni BINARY. L'intersezione di colonna e riga in questa tabella è il tipo di risultato di un'operazione binaria con operandi di tipo sinistra (Da) e destra (A).  
   
- ![Conversione implicita del tipo di dati tra tipi di dati](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversione implicita del tipo di dati tra tipi di dati")  
+ ![Conversione implicita tra tipi di dati](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversione implicita tra tipi di dati")  
   
  L'intersezione tra un valore intero con segno e un valore intero senza segno è un valore intero con segno potenzialmente maggiore di entrambi gli argomenti.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71297542"
  I risultati di molte operazioni e funzioni hanno un tipo di dati predeterminato, che può essere il tipo di dati dell'argomento o il tipo di dati a cui l'analizzatore di espressioni esegue il cast del risultato. Il risultato di un operatore OR logico (||), ad esempio, è sempre un valore booleano, mentre il risultato della funzione ABS è il tipo di dati numeric dell'argomento e il risultato di una moltiplicazione è il più piccolo tipo di dati numeric in grado di contenere il risultato senza causare una perdita di dati. Per altre informazioni sui tipi di dati dei risultati, vedere [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzo di un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Usare un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

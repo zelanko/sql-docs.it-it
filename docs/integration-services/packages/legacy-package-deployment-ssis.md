@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295821"
 ---
 # <a name="legacy-package-deployment-ssis"></a>distribuzione del pacchetto legacy (SSIS)
@@ -56,9 +56,9 @@ ms.locfileid: "71295821"
 4.  Il quarto passaggio consiste nell'eseguire nel computer di destinazione l'Installazione guidata pacchetti per installare i pacchetti nel file system o in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="package-configurations"></a>SSIS
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dispone di configurazioni di pacchetto che è possibile usare per aggiornare i valori delle proprietà in fase di esecuzione.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre configurazioni di pacchetto che è possibile usare per aggiornare i valori delle proprietà in fase di esecuzione.  
   
-> **Nota:** Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).   
+> **NOTA** Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).   
   
  Una configurazione è una coppia proprietà/valore che viene aggiunta a un pacchetto completo. In genere, si crea un pacchetto, si impostano le proprietà per gli oggetti di pacchetto durante lo sviluppo del pacchetto e quindi si aggiunge la configurazione al pacchetto. Quando il pacchetto viene eseguito, ottiene i nuovi valori della proprietà dalla configurazione. Utilizzando ad esempio una configurazione, è possibile modificare la stringa di connessione di una gestione connessione o aggiornare il valore di una variabile.  
   
@@ -110,13 +110,13 @@ ms.locfileid: "71295821"
 ### <a name="package-configuration-types"></a>Tipi di configurazioni di pacchetto  
  Nella tabella seguente vengono descritti i tipi di configurazione di pacchetto.  
   
-|Tipo|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |File di configurazione XML|Le configurazioni sono incluse in un file XML. Il file può includere più configurazioni.|  
 |Variabile di ambiente|La configurazione è contenuta in una variabile di ambiente.|  
 |Voce del Registro di sistema|La configurazione è inclusa in una voce del Registro di sistema.|  
 |Variabile pacchetto padre|La configurazione è contenuta in una variabile del pacchetto. Questo tipo di configurazione viene in genere utilizzato per l'aggiornamento di proprietà in pacchetti figlio.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table|La configurazione è inclusa in una tabella di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella può includere più configurazioni.|  
+|Tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|La configurazione è inclusa in una tabella di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella può includere più configurazioni.|  
   
 #### <a name="xml-configuration-files"></a>File di configurazione XML  
  Se si seleziona il tipo di configurazione **File di configurazione XML** è possibile creare un nuovo file di configurazione, riusare un file esistente e aggiungere nuove configurazioni oppure riusare un file esistente sovrascrivendone il contenuto.  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Al completamento della procedura guidata la nuova configurazione viene aggiunta all'elenco delle configurazioni nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-> **Nota:** Nell'ultima pagina di Configurazione guidata pacchetto, Completamento procedura guidata, sono elencate le proprietà di destinazione presenti nella configurazione. Per aggiornare le proprietà quando i pacchetti vengono eseguiti con l'utilità del prompt dei comandi **dtexec**, è possibile eseguire la Configurazione guidata pacchetto per generare le stringhe che rappresentano i percorsi delle proprietà e quindi copiarle e incollarle nella finestra del prompt dei comandi per usarle con l'opzione set di **dtexec**.  
+> **NOTA** Nell'ultima pagina di Configurazione guidata pacchetto, Completamento procedura guidata, sono elencate le proprietà di destinazione presenti nella configurazione. Per aggiornare le proprietà quando i pacchetti vengono eseguiti con l'utilità del prompt dei comandi **dtexec** , è possibile eseguire la Configurazione guidata pacchetto per generare le stringhe che rappresentano i percorsi delle proprietà e quindi copiarle e incollarle nella finestra del prompt dei comandi per usarle con l'opzione set di **dtexec**.  
   
  Nella tabella seguente vengono descritte le colonne dell'elenco delle configurazioni visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome configurazione**|Nome della configurazione.|  
 |**Tipo configurazione**|Tipo di configurazione.|  
@@ -229,7 +229,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ### <a name="to-create-a-package-configuration"></a>Per creare una configurazione di pacchetto  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
@@ -245,22 +245,22 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 8.  Nel passaggio Selezione proprietà da esportare selezionare le proprietà degli oggetti di pacchetto da includere nella configurazione. Se il tipo di configurazione selezionato supporta una sola proprietà, il titolo di questo passaggio della procedura guidata sarà Selezione proprietà di destinazione. Per altre informazioni, vedere [Riferimento all'interfaccia utente della Configurazione guidata pacchetti](../../integration-services/packages/package-configuration-wizard-ui-reference.md).  
   
-    > **Nota:** Gli unici tipi di configurazione che supportano l'inserimento di più proprietà sono **File di configurazione XML** e **SQL Server**.  
+    > **NOTA** Gli unici tipi di configurazione che supportano l'inserimento di più proprietà sono **File di configurazione XML** e **SQL Server**.  
   
 9. Nel passaggio Completamento procedura guidata digitare il nome della configurazione, quindi fare clic su **Fine**.  
   
 10. La configurazione sarà visibile nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-11. Scegliere **Chiudi**.  
+11. Fare clic su **Close**.  
 
 ## <a name="package-configurations-organizer"></a>Libreria configurazioni pacchetto
   Usare la finestra di dialogo **Libreria configurazioni pacchetto** per abilitare le configurazioni dei pacchetti, visualizzarne un elenco per il pacchetto corrente e specificare l'ordine desiderato in base a cui devono essere caricate.  
   
-> **Nota:** Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).    
+> **NOTA** Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).    
   
  Se più configurazioni aggiornano la stessa proprietà, i valori delle configurazioni che si trovano nella parte inferiore dell'elenco sostituiscono quelli delle configurazioni nelle posizioni superiori nell'elenco. L'ultimo valore caricato nella proprietà è quello utilizzato all'esecuzione del pacchetto. Se il pacchetto utilizza una combinazione di configurazione diretta, ad esempio un file di configurazione XML, e indiretta, ad esempio una variabile di ambiente, la configurazione indiretta che punta al percorso della configurazione diretta deve trovarsi in una posizione superiore nell'elenco.  
   
-> **Nota:** Il caricamento delle configurazioni di pacchetto nell'ordine preferito avviene a partire dall'inizio dell'elenco visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** fino alla fine dell'elenco. In fase di esecuzione, tuttavia, tali configurazioni potrebbero non essere caricate nell'ordine preferito. In particolare, le configurazioni di pacchetto padre vengono caricate dopo quelle di altri tipi.  
+> **NOTA** Il caricamento delle configurazioni di pacchetto nell'ordine preferito avviene a partire dall'inizio dell'elenco visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** fino alla fine dell'elenco. In fase di esecuzione, tuttavia, tali configurazioni potrebbero non essere caricate nell'ordine preferito. In particolare, le configurazioni di pacchetto padre vengono caricate dopo quelle di altri tipi.  
   
  Le configurazioni di pacchetto aggiornano i valori delle proprietà degli oggetti pacchetto in fase di esecuzione. Quando viene caricato un pacchetto, i valori delle configurazioni sostituiscono quelli impostati durante lo sviluppo del pacchetto. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta diversi tipi di configurazione. È possibile, ad esempio, utilizzare un file XML che contiene più configurazioni o una variabile di ambiente che ne contiene una sola. Per altre informazioni, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md).  
   
@@ -283,7 +283,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Proprietà di destinazione**  
  Consente di visualizzare il nome della proprietà modificata dalla configurazione. Se il tipo di configurazione supporta più configurazioni, questa colonna sarà vuota.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere una configurazione tramite la Configurazione guidata pacchetto.  
   
  **Modifica**  
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>Riferimento all'interfaccia utente della Configurazione guidata pacchetti
   Usare la **Configurazione guidata pacchetto** per creare configurazioni tramite cui è possibile aggiornare le proprietà di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i relativi oggetti in fase di esecuzione. Questa procedura guidata viene eseguita quando si aggiunge una nuova configurazione o se ne modifica una esistente nella finestra di dialogo **Libreria configurazioni pacchetto** . Per aprire la finestra di dialogo **Libreria configurazioni pacchetto** , selezionare **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../integration-services/packages/create-package-configurations.md).  
   
-> **NOTA:** Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTA** Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  Nelle sezioni seguenti vengono descritte le pagine della procedura guidata.  
   
@@ -390,7 +390,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Connessione**|Consente di selezionare una connessione nell'elenco o di creare una nuova connessione facendo clic su **Nuova** .|  
+|**Connection**|Consente di selezionare una connessione nell'elenco o di creare una nuova connessione facendo clic su **Nuova** .|  
 |**Tabella configurazione**|Consente di selezionare una tabella esistente o di creare una nuova tabella facendo clic su **Nuova** per scrivere un'apposita istruzione SQL.|  
 |**Filtro configurazione**|Consente di selezionare un nome esistente o di digitarne uno nuovo per la configurazione.<br /><br /> È possibile memorizzare nella stessa tabella molteplici configurazioni di SQL Server, ciascuna delle quali può includere più elementi di configurazione.<br /><br /> Questo valore definito dall'utente è memorizzato nella tabella per identificare gli elementi della configurazione appartenenti a una configurazione specifica.|  
   
@@ -567,7 +567,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Prima di distribuire i pacchetti, è possibile creare configurazioni e distribuirle con i pacchetti. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa le configurazioni per aggiornare in modo dinamico le proprietà di pacchetti e oggetti relativi in fase di esecuzione. La stringa di connessione di una connessione OLE DB può essere ad esempio impostata dinamicamente in fase di esecuzione, specificando una configurazione che esegue il mapping di un valore alla proprietà contenente la stringa di connessione.  
   
- Non è possibile eseguire l'Installazione guidata pacchetti finché non si compila un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e non si crea un'utilità di distribuzione. Per altre informazioni, vedere [Distribuzione dei pacchetti utilizzando l'utilità di distribuzione](../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
+ Non è possibile eseguire l'Installazione guidata pacchetti finché non si compila un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e non si crea un'utilità di distribuzione. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
  Nelle sezioni seguenti vengono descritte le pagine della procedura guidata.  
   
@@ -598,7 +598,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo**  
  Indica il tipo di dati della proprietà.  
   
- **Value**  
+ **Valore**  
  Consente di specificare il valore della configurazione.  
   
  **Avanti**  
@@ -613,7 +613,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Avanti**  
  Consente di installare i pacchetti e le relative dipendenze, quindi di passare alla pagina successiva della procedura al termine dell'installazione.  
   
- **Stato**  
+ **Status**  
  Mostra lo stato dell'installazione del pacchetto.  
   
  **Fine**  
@@ -673,7 +673,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Usa autenticazione di SQL Server**  
  Consente di specificare se il pacchetto deve utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'accesso al server. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
   
- **User name**  
+ **Nome utente**  
  Consente di specificare un nome utente.  
   
  **Password**  

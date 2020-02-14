@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907121"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285058"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurazione della pubblicazione e della distribuzione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Configurare la distribuzione mediante la Creazione guidata nuova pubblicazione o
 
 #### <a name="to-configure-distribution"></a>Per configurare la distribuzione 
 
-1. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi al server che diventerà il database di distribuzione (in molti casi, il database di distribuzione e quello di pubblicazione coincidono) ed espandere il nodo del server.
+1. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi al server che diventerà il server di distribuzione (in molti casi, il server di distribuzione e quello di pubblicazione coincidono) e quindi espandere il nodo del server.
 
 2. Fare clic con il pulsante destro del mouse sulla cartella **Replica** e quindi fare clic su **Configura distribuzione**.
 
@@ -96,15 +96,15 @@ Nell'esempio seguente viene illustrato come configurare la pubblicazione e la di
 
 1. Creare una connessione al server tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare il valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.
+2. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare il valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.
 
-3. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> sul nome del database e la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sul valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.
 
 5. Installare il server di distribuzione chiamando il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passare l'oggetto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> indicato nel passaggio 3.
 
-6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Impostare le proprietà seguenti di <xref:Microsoft.SqlServer.Replication.DistributionPublisher>: 
 
@@ -124,9 +124,9 @@ Nell'esempio seguente viene illustrato come configurare la pubblicazione e la di
 
 1. Creare una connessione al server di distribuzione remoto tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare il valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.
+2. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare il valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.
 
-3. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> sul nome del database e la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sul valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.
 
@@ -134,7 +134,7 @@ Nell'esempio seguente viene illustrato come configurare la pubblicazione e la di
 
    > `IMPORTANT!!` Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
-6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Impostare le proprietà seguenti di <xref:Microsoft.SqlServer.Replication.DistributionPublisher>: 
 
@@ -152,7 +152,7 @@ Nell'esempio seguente viene illustrato come configurare la pubblicazione e la di
 
 9. Creare una connessione al server di pubblicazione locale tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-10. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 9.
+10. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 9.
 
 11. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passare il nome e la password del server di distribuzione remoto specificati al passaggio 5.
 

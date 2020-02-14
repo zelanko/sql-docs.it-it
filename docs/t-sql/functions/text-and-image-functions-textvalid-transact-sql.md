@@ -23,10 +23,10 @@ ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099045"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Funzioni per i valori text e image - TEXTVALID (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68099045"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Non è disponibile una funzionalità alternativa.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *table*  
+ *tabella*  
  Nome della tabella che si desidera utilizzare.  
   
  *column*  
@@ -59,7 +59,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Restituisce 1 se il puntatore è valido e 0 in caso contrario. Si noti che l'identificatore per la colonna di tipo **text** deve includere il nome della tabella. Non è possibile utilizzare UPDATETEXT, WRITETEXT o READTEXT senza un puntatore di testo valido.  
   
  Le funzioni e istruzioni seguenti sono utili anche quando si usano dati di tipo **text**, **ntext** e **image**.  

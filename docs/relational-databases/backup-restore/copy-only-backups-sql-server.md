@@ -1,7 +1,7 @@
 ---
 title: Backup di sola copia | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2018
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908989"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941039"
 ---
 # <a name="copy-only-backups"></a>Backup di sola copia
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere, l'esecuzione di un backup comporta la modifica del database e influisce sulla modalità di ripristino dei backup successivi. In alcuni casi, tuttavia, è utile eseguire un backup per uno scopo speciale senza influire sulle procedure generali di backup e ripristino del database. I backup di sola copia hanno questo scopo.  
+Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere, l'esecuzione di un backup comporta la modifica del database e influisce sulla modalità di ripristino dei backup successivi. In alcuni casi, tuttavia, è utile eseguire un backup per uno scopo speciale senza influire sulle procedure generali di backup e ripristino del database. I backup di sola copia hanno questo scopo.
   
  I tipi di backup di sola copia sono i seguenti:  
   
@@ -42,12 +42,15 @@ Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/
      Il log delle transazioni non viene mai troncato dopo un backup di sola copia.  
   
  I backup di sola copia vengono registrati nella colonna **is_copy_only** della tabella [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
+ 
+ > [!IMPORTANT]  
+> Non è possibile creare il backup di sola copia dell'istanza gestita di SQL di Azure per un database crittografato con [Transparent Data Encryption (TDE) gestita dal servizio](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). La crittografia TDE gestita dal servizio usa la chiave interna per la crittografia dei dati e tale chiave non può essere esportata, quindi non è possibile ripristinare il backup in qualsiasi altro punto. Per poter creare backup di sola copia dei database crittografati, è consigliabile usare [TDE gestita dal cliente](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql), ma assicurarsi che la chiave di crittografia sia disponibile per il ripristino successivo.
   
 ## <a name="to-create-a-copy-only-backup"></a>Per creare un backup di sola copia  
  È possibile creare un backup di sola copia utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
 
 ### <a name="examples"></a>Esempi  
-###  <a name="SSMSProcedure"></a> A. Utilizzo di SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> A. Utilizzare SQL Server Management Studio  
 In questo esempio verrà eseguito il backup di sola copia su disco del database `Sales` nel percorso di backup predefinito.
 
 1. In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
@@ -58,7 +61,7 @@ In questo esempio verrà eseguito il backup di sola copia su disco del database 
 
 1. Fare clic su **OK**.
 
-###  <a name="TsqlProcedure"></a>B. Utilizzo di Transact-SQL  
+###  <a name="TsqlProcedure"></a>B. Uso di Transact-SQL  
 Questo esempio crea un backup di sola copia per il database `Sales` usando il parametro COPY_ONLY.  Viene eseguito anche un backup di sola copia del log delle transazioni.
 
 ```sql

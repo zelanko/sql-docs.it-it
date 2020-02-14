@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142779"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910104"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "73142779"
   Questo articolo descrive le procedure consigliate per l'uso di SQL Server Query Store con un carico di lavoro.
   
 ##  <a name="SSMS"></a> Usare la versione più recente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione di Query Store e l'utilizzo dei dati raccolti relativi al carico di lavoro. Scaricare la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione di Query Store e l'utilizzo dei dati raccolti relativi al carico di lavoro. Scaricare da [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Per una rapida descrizione di come usare Query Store in scenari di risoluzione dei problemi, vedere i post relativi a [Query Store nei blog di @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Intervallo di scaricamento dati (minuti)** : definisce la frequenza per salvare in modo permanente le statistiche di runtime raccolte su disco. È espresso in minuti nell'interfaccia utente grafica (GUI), ma in [!INCLUDE[tsql](../../includes/tsql-md.md)] è espresso in secondi. Il valore predefinito è 900 secondi, ovvero 15 minuti nell'interfaccia utente grafica. Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per salvare i dati in modo permanente prima dell'arresto di un database.
  
 > [!NOTE]
-> L'uso del flag di traccia 7745 impedisce la scrittura su disco dei dati di Query Store nel caso di un comando di failover o arresto. Per altre informazioni, vedere la sezione [Usare i flag di traccia nei server cruciali per migliorare il ripristino di emergenza](#Recovery).
+> L'uso del flag di traccia 7745 impedisce la scrittura su disco dei dati di Query Store nel caso di un comando di failover o arresto. Per altre informazioni, vedere la sezione [Usare i flag di traccia nei server cruciali](#Recovery).
 
 Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per **Intervallo di scaricamento dati**:  
   
@@ -109,9 +109,12 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
 -   **All** (Tutto): Consente di acquisire tutte le query. Si tratta dell'opzione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 -   **Auto**: le query poco frequenti e le query con durata di compilazione ed esecuzione non significativa vengono ignorate. Le soglie per la durata del runtime, della compilazione e del conteggio esecuzioni vengono determinate internamente. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si tratta dell'opzione predefinita.
--   **Nessuno**: Query Store smette di acquisire nuove query.  
+-   **Nessuna**: Query Store smette di acquisire nuove query.  
 -   **Custom**: consente un maggiore controllo e la capacità di ottimizzare i criteri di raccolta dati. Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni. Si tratta di un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store.
-  
+
+> [!IMPORTANT]
+> I cursori, le query all'interno delle stored procedure e le query compilate in modo nativo vengono sempre acquisiti quando la modalità di acquisizione di Query Store è impostata su **All**, **Auto** o **Custom**. Per acquisire le query compilate in modo nativo, abilitare la raccolta delle statistiche per query usando [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
+
  Lo script seguente imposta QUERY_CAPTURE_MODE su AUTO:
   
 ```sql  
@@ -324,10 +327,10 @@ FROM sys.database_query_store_options;
   
 |Modalità di acquisizione dell'archivio query|Scenario|  
 |------------------------|--------------|  
-|**Tutto**|Analizzare accuratamente il carico di lavoro in termini di forme di query, frequenza di esecuzione e altre statistiche.<br /><br /> Identificare le nuove query nel carico di lavoro.<br /><br /> Rilevare l'eventuale uso di query ad hoc per identificare le possibilità di parametrizzazione automatica o dell'utente.<br /><br />Nota: si tratta della modalità di acquisizione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Tutto**|Analizzare accuratamente il carico di lavoro in termini di forme di query, frequenza di esecuzione e altre statistiche.<br /><br /> Identificare le nuove query nel carico di lavoro.<br /><br /> Stabilire se vengono usate query ad hoc per identificare le opportunità di parametrizzazione automatica o da parte dell'utente.<br /><br />Nota: si tratta della modalità di acquisizione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Auto**|Concentrare l'attenzione su query rilevanti e da correggere. Un esempio sono le query eseguite regolarmente o che hanno un consumo di risorse elevato.<br /><br />Nota: a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si tratta della modalità di acquisizione predefinita.|  
 |**Nessuno**|Il set di query da monitorare è stato già acquisito in fase di esecuzione e si vuole eliminare qualsiasi distrazione introdotta da altre query.<br /><br /> È adatta ad ambienti di testing e di benchmarking.<br /><br /> È adatta ai fornitori di software che forniscono l'archivio query configurato per il monitoraggio del carico di lavoro della relativa applicazione.<br /><br /> Deve essere usata con cautela perché può precludere la possibilità di rilevare e ottimizzare nuove query importanti. Evitare di usare questa modalità a meno che non sia richiesta da uno scenario specifico.|  
-|**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una modalità di acquisizione Custom nel comando `ALTER DATABASE SET QUERY_STORE`. Una volta abilitate, le configurazioni aggiuntive di Query Store sono disponibili in una nuova impostazione di criteri di acquisizione di Query Store per ottimizzare la raccolta dati in un server specifico.<br /><br />Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni. Si tratta di un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+|**Impostazione personalizzata**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una modalità di acquisizione Custom nel comando `ALTER DATABASE SET QUERY_STORE`. Una volta abilitate, le configurazioni aggiuntive di Query Store sono disponibili in una nuova impostazione di criteri di acquisizione di Query Store per ottimizzare la raccolta dati in un server specifico.<br /><br />Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni. Si tratta di un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
 > I cursori, le query all'interno delle stored procedure e le query compilate in modo nativo vengono sempre acquisiti quando la modalità di acquisizione di Query Store è impostata su **All**, **Auto** o **Custom**. Per acquisire le query compilate in modo nativo, abilitare la raccolta delle statistiche per query usando [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 

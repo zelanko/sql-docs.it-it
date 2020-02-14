@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085758"
 ---
 # <a name="column-properties-general-page"></a>Proprietà colonna (pagina Generale)
@@ -56,7 +56,7 @@ ms.locfileid: "68085758"
  Indica il valore di riga iniziale per una colonna Identity.  
   
  **Incremento identità**  
- La proprietà **Incremento Identity** specifica il valore aggiunto da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al valore Identity di riga massimo esistente nel momento in cui viene generato un valore Identity per la riga di cui viene eseguito l'inserimento.  
+ La proprietà **Incremento Identity** specifica il valore aggiunto da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al valore Identity di riga massimo esistente nel momento in cui viene generato un valore Identity per una riga inserita.  
   
  **Associazione predefinita**  
  Valore predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associato alla colonna. Se non è associato alcun valore predefinito, questa opzione è vuota.  
@@ -64,16 +64,16 @@ ms.locfileid: "68085758"
  **Schema predefinito**  
  Identifica lo schema di database a cui appartiene il valore predefinito associato alla colonna. Se non è associato alcun valore predefinito, questa opzione è vuota.  
   
- **Rule**  
+ **Regola**  
  Identifica il vincolo di integrità dei dati associato alla colonna. Se non è associata alcuna regola questa opzione è vuota.  
   
  **Schema regola**  
  Visualizza lo schema di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui appartiene la regola associata alla colonna. Se non è associata alcuna regola questa opzione è vuota.  
   
- **Length**  
+ **Lunghezza**  
  Indica il numero massimo di caratteri o byte accettati dalla colonna.  
   
- **Confronto**  
+ **Regole di confronto**  
  Visualizza le regole di confronto correnti per la colonna. Se non è indicato alcun valore, la proprietà relativa alle regole di confronto viene ereditata dall'oggetto.  
   
  **Precisione numerica**  

@@ -13,10 +13,10 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055173"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
@@ -29,7 +29,7 @@ ms.locfileid: "74055173"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Creazione di un piano di manutenzione tramite l'area di progettazione del piano di manutenzione](#SSMSProcedure)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74055173"
   
 -   Per creare un piano di manutenzione multiserver, è necessario configurare un ambiente multiserver composto da un server master e uno o più server di destinazione. I piani di manutenzione multiserver devono essere creati e gestiti nel server master. Questi piani possono essere visualizzati, ma non gestiti, nei server di destinazione.  
   
--   I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i privilegi a **sysadmin**. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I pacchetti possono essere eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
+-   I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i privilegi a **sysadmin**. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I pacchetti possono essere eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo che usino un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74055173"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Piani di manutenzione** e scegliere **Nuovo piano di manutenzione**.  
   
-4.  Nella finestra di dialogo **Nuovo piano di manutenzione** digitare un nome per il piano nella casella **Nome** , quindi fare clic su **OK**. Verranno visualizzate la Casella degli strumenti e l'area *nome_piano_manutenzione* **[Progettazione]** con il sottopiano **Sottopiano_1** creato nella griglia principale.  
+4.  Nella finestra di dialogo **Nuovo piano di manutenzione** digitare un nome per il piano nella casella **Nome** , quindi fare clic su **OK**. Verranno visualizzate la casella degli strumenti e l'area *nome_piano_manutenzione* **[Progettazione]** con il sottopiano **Sottopiano_1** creato nella griglia principale.  
   
      Nell'intestazione dell'area di progettazione sono disponibili le opzioni seguenti.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "74055173"
      **Rimuovi pianificazione**  
      Consente di rimuovere una pianificazione dal sottopiano selezionato.  
   
-     **Gestisci connessioni**  
+     **Gestire le connessioni**  
      Consente di visualizzare la finestra di dialogo **Gestisci connessioni** . Questa finestra di dialogo viene utilizzata per aggiungere ulteriori connessioni a istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al piano di manutenzione. Per ulteriori informazioni su questa finestra di dialogo, vedere di seguito.  
   
      **Report e registrazione**  
@@ -105,7 +105,7 @@ ms.locfileid: "74055173"
      **Descrizione**  
      Breve descrizione del sottopiano.  
   
-     **Pianificazione**  
+     **Pianificare**  
      Indica la pianificazione in base alla quale verrà eseguito il sottopiano. Fare clic su **Pianificazione sottopiano** per aprire la finestra di dialogo **Nuova pianificazione processo** . Fare clic su **Rimuovi pianificazione** per eliminare la pianificazione dal sottopiano.  
   
      Elenco**Esegui come**  
@@ -236,23 +236,23 @@ ms.locfileid: "74055173"
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
   
-     **Esportazione**  
+     **Export**  
      Consente di aprire una finestra di dialogo in cui è possibile esportare in un file di testo le informazioni visualizzate nella griglia **Riepilogo file di log** .  
   
      **Aggiorna**  
      Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
-     **Filtra**  
+     **Filter**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
   
-     **Cerca**  
+     **Ricerca**  
      Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
   
-     **Arresta**  
+     **Stop**  
      Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
      **Riepilogo file di log**  
-     Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo **Filtra voci del log in cui:** \<criteri di filtro>.  
+     Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo seguente: **Filtra voci del log in cui:** \<criteri di filtro>.  
   
      **Data**  
      Visualizza la data dell'evento.  
@@ -260,7 +260,7 @@ ms.locfileid: "74055173"
      **Origine**  
      Consente di visualizzare la funzionalità di origine da cui è stato creato l'evento, ad esempio il nome del servizio, come MSSQLSERVER. Questa opzione non viene visualizzata per tutti i tipi di log.  
   
-     **Message**  
+     **Messaggio**  
      Consente di visualizzare i messaggi associati all'evento.  
   
      **Tipo log**  

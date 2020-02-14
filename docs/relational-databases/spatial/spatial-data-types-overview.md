@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048518"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
@@ -44,7 +44,7 @@ I tipi semplici includono:
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [Poligono](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 I tipi di raccolta includono:  
@@ -77,10 +77,10 @@ Quando il livello di compatibilità è uguale o minore di 100 in [!INCLUDE[ssCur
 -   Qualsiasi istanza **geography** di una rappresentazione Well-Known Text (WKT) o Well-Known Binary (WKB) OCG che produca un oggetto più grande di un emisfero genera **ArgumentException**.  
 -   I metodi del tipo di dati **geography** che richiedono l'input di due istanze **geography** , ad esempio STIntersection(), STUnion(), STDifference() e STSymDifference(), restituiranno Null se i risultati dei metodi non si adattano a un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.  
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **FullGlobe** è un tipo speciale di Polygon che copre l'intero globo. **FullGlobe** dispone di un'area, ma non ha bordi o vertici.  
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**FullGlobe** è un tipo speciale di Polygon che copre l'intero globo. **FullGlobe** dispone di un'area, ma non ha bordi o vertici.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anelli interni ed esterni non rilevanti nel tipo di dati `geography`  
-In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è significativa per il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** . È possibile scegliere qualsiasi anello di un poligono come anello esterno.  
+In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è significativa per il tipo di dati **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile scegliere qualsiasi anello di un poligono come anello esterno.  
 
 Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di seguito:  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Si noti che un'istanza **CircularString** richiede sette punti per definire il triangolo, mentre un'istanza **LineString** richiede solo quattro punti. Il motivo è che un'istanza **CircularString** archivia segmenti di arco circolare e non segmenti di linea. Di conseguenza, i lati del triangolo archiviati nell'istanza **CircularString** sono ABC, CDE ed EFA, mentre i lati del triangolo archiviati nell'istanza **LineString** sono AC, CE ed EA.  
 
-Si consideri l'esempio descritto di seguito.  
+Prendere in considerazione gli esempi seguenti:  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296157"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "71296157"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
+  Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
   
  Nei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile usare variabili per gli scopi seguenti:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71296157"
 > [!NOTE]  
 >  L'unica opzione configurabile delle variabili di sistema è quella che determina se debba essere generato o meno un evento quando il valore viene modificato.  
   
- **Description**    
+ **Descrizione**    
  Specifica la descrizione della variabile.  
   
  **EvaluateAsExpression**    
@@ -138,7 +138,7 @@ Il valore di una variabile definita dall'utente può essere un valore letterale 
 | Boolean | False |
 | Tipi di dati numerici e binari | 0 (zero) |
 | Tipi di dati char e stringa | (stringa vuota) |
-| Object | System.Object |
+| Oggetto | System.Object |
 | | |
 
 Le variabili includono opzioni per l'impostazione del valore della variabile e del relativo tipo di dati. Queste due proprietà devono essere compatibili. Non è ad esempio possibile utilizzare un valore stringa insieme a un tipo di dati Integer.  
@@ -202,13 +202,13 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
  **Nome**  
  Consente di digitare il nome della variabile.  
   
- **Namespace**  
+ **Spazio dei nomi**  
  Consente di specificare lo spazio dei nomi della variabile. Per impostazione predefinita, le variabili definite dall'utente si trovano nello spazio dei nomi **Utente** .  
   
- **Tipo valore**  
+ **Tipo di valore**  
  Consente di selezionare un tipo di dati.  
   
- **Value**  
+ **Valore**  
  Consente di digitare un valore. Il valore deve essere compatibile con il tipo di dati specificato nell'opzione **Tipo valore** .  
   
  **Sola lettura**  
@@ -314,7 +314,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
   
 7.  Nella finestra **Proprietà** aggiornare le proprietà delle variabili in lettura/scrittura. Alcune proprietà sono di sola lettura per le variabili definite dall'utente.  
   
-     Per altre informazioni sulle proprietà, vedere [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md).  
+     Per altre informazioni sulle proprietà, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
 
@@ -322,6 +322,6 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
  Per aggiornare le variabili in modo dinamico, è possibile creare configurazioni per le variabili, distribuirle insieme al pacchetto e quindi aggiornare i valori delle variabili nel file di configurazione quando si distribuiscono i pacchetti. In fase di esecuzione il pacchetto utilizza i valori di variabile aggiornati. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../integration-services/packages/create-package-configurations.md).  
 
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
+ [Usare i valori di variabili e parametri in un pacchetto figlio](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [Mapping dei parametri di query a variabili in un componente del flusso di dati](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [Mapping dei parametri di query a variabili in un componente flusso di dati](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

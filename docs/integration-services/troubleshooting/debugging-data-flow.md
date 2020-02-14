@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295121"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
@@ -28,7 +28,7 @@ ms.locfileid: "71295121"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Progettazione offre visualizzatori dati.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71295121"
 |rosso|Il componente è stato eseguito con errori.|  
 
 ## <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
-  È possibile usare la vista database [execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** per analizzare il flusso di dati dei pacchetti. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
+  È possibile usare la vista [execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) del database **SSISDB** per analizzare il flusso di dati dei pacchetti. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
   
 > [!NOTE]  
 >  Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire informazioni con la vista catalog.execution_data_statistics.  
@@ -222,7 +222,7 @@ order by source_component_name desc
   
 1.  Creare un'istanza di esecuzione di un pacchetto usando la stored procedure [catalog.create_execution &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
-2.  Aggiungere una scelta dei dati usando la stored procedure [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md) o [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md).  
+2.  Aggiungere una scelta dei dati usando la stored procedure [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md) o [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md) .  
   
 3.  Avviare l'istanza di esecuzione del pacchetto usando [catalog.start_execution &#40;databse SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
   

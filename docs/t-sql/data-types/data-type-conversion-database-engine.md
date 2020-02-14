@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697498"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversione del tipo di dati (motore di database)
@@ -122,8 +122,8 @@ Nella tabella seguente vengono descritte le conversioni dei tipi di dati di [!IN
   
 |Tipo di dati di SQL Server|Tipo di dati di Visual Basic|  
 |--------------------------|----------------------------|  
-|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
-|**decimal**, **numeric**|**String**|  
+|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**Stringa**|  
+|**decimal**, **numeric**|**Stringa**|  
 |**bit**|**Boolean**|  
 |**binary**, **varbinary**, **image**|Matrice di **Byte()** unidimensionale|  
 |**int**|**Long**|  
@@ -131,7 +131,7 @@ Nella tabella seguente vengono descritte le conversioni dei tipi di dati di [!IN
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Singolo**|  
-|**money**, **smallmoney**|**Currency**|  
+|**money**, **smallmoney**|**Valuta**|  
 |**datetime**, **smalldatetime**|**Data**|  
 |Qualsiasi tipo impostato su NULL|**Variant** impostato su Null|  
   
@@ -143,7 +143,7 @@ Di seguito sono riportate le conversioni dai tipi di dati [!INCLUDE[vbprvb](../.
 |----------------------------|--------------------------|  
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
-|**Currency**|**money**|  
+|**Valuta**|**money**|  
 |**Data**|**datetime**|  
 |**String** con 4000 caratteri o meno|**varchar**/**nvarchar**|  
 |**String** con più di 4000 caratteri|**text**/**ntext**|  

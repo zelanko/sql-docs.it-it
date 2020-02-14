@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892415"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
@@ -44,7 +44,7 @@ ms.locfileid: "68892415"
   
  Questa sezione include le informazioni necessarie per gestire, modificare e implementare partizioni tramite la **Gestione guidata partizione**.  
   
-##  <a name="Top"></a> Argomenti della sezione  
+##  <a name="Top"></a> Contenuto della sezione  
  Le sezioni seguenti forniscono informazioni sulle pagine della **Gestione guidata partizione**.  
   
  [Gestione guidata partizione (pagina Selezionare un'azione relativa alla partizione)](#SelectPartitionAction)  
@@ -116,7 +116,7 @@ ms.locfileid: "68892415"
  **Tabella di disattivazione**  
  Consente di scegliere una nuova tabella o una esistente in cui spostare i dati.  
   
- **Nuovi**  
+ **Nuovo**  
  Consente di immettere un nuovo nome per la tabella di staging che si desidera utilizzare per la partizione da disattivare per la tabella di origine corrente.  
   
  **Esistente**  
@@ -188,7 +188,7 @@ ms.locfileid: "68892415"
  **Tipo pianificazione**  
  Consente di selezionare il tipo di pianificazione.  
   
- **Abilitata**  
+ **Enabled**  
  Consente di abilitare o disabilitare la pianificazione.  
   
 ### <a name="recurring-schedule-types-options"></a>Opzioni relative ai tipi di pianificazione periodica  
@@ -275,13 +275,13 @@ ms.locfileid: "68892415"
  **Azione**  
  Specifica il tipo e il nome di ciascuna azione.  
   
- **Stato**  
+ **Status**  
  Indica se l'intera azione della procedura guidata ha restituito il valore **Esito positivo** o **Esito negativo**.  
   
- **Message**  
+ **Messaggio**  
  Fornisce tutti i messaggi di errore o di avviso restituiti dal processo.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare l'azione della procedura guidata.  
   
  **Report**  
@@ -298,7 +298,7 @@ ms.locfileid: "68892415"
  **Visualizza report**  
  Consente di aprire la finestra di dialogo **Visualizza report** , che contiene un report di testo dello stato della **Gestione guidata partizione**.  
   
- **Chiudi**  
+ **Close**  
  Consente di chiudere la procedura guidata.  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  

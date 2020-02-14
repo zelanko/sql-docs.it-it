@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a0e861a1619921081a81fa52f72ba6fc88e98668
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908345"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287588"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si assegna la proprietà IDENTITY a una colonna, vengono automaticamente generati numeri sequenziali per le nuove righe inserite nella tabella contenente la colonna Identity. Per altre informazioni, vedere [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Dato che è possibile includere le colonne Identity come parte della chiave primaria, è importante evitare di inserire valori duplicati nelle colonne Identity. Per utilizzare colonne Identity in una topologia di replica con aggiornamenti in più di un nodo, è necessario che ogni nodo presente nella topologia di replica utilizzi un intervallo di valori Identity diverso, in modo da non generare duplicati.  
+  Quando si assegna la proprietà IDENTITY a una colonna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automaticamente numeri sequenziali per le nuove righe inserite nella tabella contenente la colonna Identity. Per altre informazioni, vedere [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Dato che è possibile includere le colonne Identity come parte della chiave primaria, è importante evitare di inserire valori duplicati nelle colonne Identity. Per utilizzare colonne Identity in una topologia di replica con aggiornamenti in più di un nodo, è necessario che ogni nodo presente nella topologia di replica utilizzi un intervallo di valori Identity diverso, in modo da non generare duplicati.  
   
  Ad esempio, al server di pubblicazione potrebbe essere assegnato l'intervallo 1-100, al Sottoscrittore A l'intervallo 101-200 e al Sottoscrittore B l'intervallo 201-300. Se una riga viene inserita nel server di pubblicazione e il valore Identity è, ad esempio, 65, tale valore viene replicato in ogni Sottoscrittore. Durante l'inserimento dei dati nei Sottoscrittori, il valore della colonna Identity nella tabella dei Sottoscrittori non viene incrementato, bensì viene inserito il valore letterale di 65. Il valore della colonna Identity viene incrementato solo in seguito a inserimenti da parte dell'utente e non a inserimenti generati dall'agente di replica.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "72908345"
     > [!NOTE]  
     >  È necessario sincronizzare i Sottoscrittori con il server di pubblicazione per ricevere i nuovi intervalli. Dato che gli intervalli di valori Identity vengono assegnati automaticamente ai Sottoscrittori, è possibile che un Sottoscrittore esaurisca gli intervalli disponibili se ne richiede ripetutamente di nuovi.  
   
--   Manuale. Questa opzione viene utilizzata per la replica snapshot e transazionale con aggiornamenti nel Sottoscrittore, per la replica transazionale peer-to-peer oppure se l'applicazione richiede il controllo degli intervalli di valori Identity a livello di programmazione. Se si sceglie la gestione manuale, è necessario verificare che gli intervalli vengano assegnati al server di pubblicazione e a tutti i Sottoscrittori e che vengano assegnati nuovi intervalli se quelli iniziali sono già in uso. Nella replica l'opzione NOT FOR REPLICATION viene impostata nella colonna Identity del Sottoscrittore.  
+-   manuale. Questa opzione viene utilizzata per la replica snapshot e transazionale con aggiornamenti nel Sottoscrittore, per la replica transazionale peer-to-peer oppure se l'applicazione richiede il controllo degli intervalli di valori Identity a livello di programmazione. Se si sceglie la gestione manuale, è necessario verificare che gli intervalli vengano assegnati al server di pubblicazione e a tutti i Sottoscrittori e che vengano assegnati nuovi intervalli se quelli iniziali sono già in uso. Nella replica l'opzione NOT FOR REPLICATION viene impostata nella colonna Identity del Sottoscrittore.  
   
--   Nessuna. Questa opzione è consigliata solo per la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è disponibile solo dall'interfaccia delle stored procedure delle pubblicazioni transazionali.  
+-   No. Questa opzione è consigliata solo per la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è disponibile solo dall'interfaccia delle stored procedure delle pubblicazioni transazionali.  
   
  Per specificare un'opzione di gestione degli intervalli di valori Identity, vedere [Gestire le colonne Identity](../../../relational-databases/replication/publish/manage-identity-columns.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72908345"
 > [!WARNING]  
 >  Durante l'inserimento di un batch di grandi dimensioni, il trigger di replica viene generato solo una volta, non per ogni riga inserita. Questa condizione può comportare un errore dell'istruzione di inserimento se un intervallo di valori Identity viene esaurito durante un inserimento di grandi dimensioni, ad esempio un'istruzione **INSERT INTO** .  
   
-|Tipo di dati|Intervallo|  
+|Tipo di dati|Range|  
 |---------------|-----------|  
 |**tinyint**|Non supportato per la gestione automatica|  
 |**smallint**|da -2^15 (-32.768) a 2^15-1 (32.767)|  

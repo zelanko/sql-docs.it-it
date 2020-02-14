@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127300"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516552"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68127300"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Registrare tutti i Service Pack e gli hotfix applicati all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le regole di confronto correnti. È necessario riapplicare questi aggiornamenti dopo la ricompilazione dei database di sistema.  
+2.  Registrare tutti gli hotfix applicati all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le regole di confronto correnti. È necessario riapplicare questi hotfix dopo la ricompilazione dei database di sistema.  
   
     ```  
     SELECT  
@@ -106,10 +106,10 @@ ms.locfileid: "68127300"
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
     |/INSTANCENAME=*InstanceName*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per l'istanza predefinita, immettere MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Specifica i gruppi o i singoli account di Windows da aggiungere al ruolo predefinito del server **sysadmin** . Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser**. Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Ad esempio, immettere **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** . Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo. Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importante \*\*** La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account **sa** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo e, Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importante \*\*** La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Specifica il numero di file di dati di tempdb. Questo valore può essere aumentato fino al valore più elevato tra 8 e il numero di core.<br /><br /> Valore predefinito: 8 o il numero di core, a seconda di quale dei due valori risulta inferiore.|  
-    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Vengono specificate le dimensioni iniziali di ogni file di dati tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8|  
+    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali di ogni file di dati tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni di ogni file di dati tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64|  
     |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali del file di log tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8.<br /><br /> Intervallo consentito: min = 8, max = 1024.|  
     |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni del file di log tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64<br /><br /> Intervallo consentito: min = 8, max = 1024.|  
@@ -135,12 +135,12 @@ ms.locfileid: "68127300"
   
 -   Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurata come server di distribuzione repliche, è necessario ripristinare il database di distribuzione. Per altre informazioni, vedere [Eseguire il backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
--   Spostare i database di sistema nei percorsi registrati in precedenza. Per altre informazioni, vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
+-   Spostare i database di sistema nei percorsi registrati in precedenza. Per altre informazioni vedere l'articolo [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
   
 -   Verificare che i valori di configurazione a livello di server corrispondano ai valori registrati in precedenza.  
   
 ##  <a name="Resource"></a> Ricompilare il database resource  
- Con la procedura seguente viene ricompilato il database di sistema delle risorse. Quando si ricompila il database delle risorse, tutti i Service Pack e gli hotfix vanno persi e devono pertanto essere riapplicati.  
+ Con la procedura seguente viene ricompilato il database di sistema delle risorse. Quando si ricompila il database delle risorse, tutti gli hotfix vanno persi e pertanto devono essere riapplicati.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Per ricompilare il database di sistema resource:  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68127300"
   
 2.  Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla riga di comando utilizzando il comando `NET START MSSQLSERVER /T3608`  
   
-     Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  In un'altra finestra della riga di comando scollegare il database **msdb** eseguendo il comando seguente, sostituendo *\<NomeServer>* con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68127300"
   
 7.  Tramite Blocco note di Windows, aprire il file **instmsdb.out** e verificare la presenza di eventuali errori nell'output.  
   
-8.  Applicare di nuovo qualsiasi Service Pack o hotfix installati nell'istanza.  
+8.  Applicare di nuovo gli hotfix installati nell'istanza.  
   
 9. Creare di nuovo il contenuto dell'utente archiviato nel database **msdb** , quali processi, avvisi e così via.  
   

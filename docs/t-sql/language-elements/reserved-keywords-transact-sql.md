@@ -19,16 +19,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091768"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Parole chiave riservate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza parole chiave riservate per la definizione, la modifica e l'accesso ai database. Le parole chiave riservate fanno parte della grammatica del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per analizzare e interpretare istruzioni e batch [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nonostante da un punto di vista sintattico sia possibile utilizzare le parole chiave riservate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come identificatori e nomi di oggetto all'interno di script [!INCLUDE[tsql](../../includes/tsql-md.md)], in tal caso è necessario utilizzare identificatori delimitati.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa parole chiave riservate per la definizione, la modifica e l'accesso ai database. Le parole chiave riservate fanno parte della grammatica del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per analizzare e interpretare istruzioni e batch [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nonostante da un punto di vista sintattico sia possibile utilizzare le parole chiave riservate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come identificatori e nomi di oggetto all'interno di script [!INCLUDE[tsql](../../includes/tsql-md.md)], in tal caso è necessario utilizzare identificatori delimitati.  
   
  La tabella seguente elenca le parole chiave riservate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Azure SQL Data Warehouse.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68091768"
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
-|AUTHORIZATION|FREETEXTTABLE|REPLICATION|  
+|AUTHORIZATION|FREETEXTTABLE|REPLICA|  
 |BACKUP|FROM|RESTORE|  
 |BEGIN|FULL|RESTRICT|  
 |BETWEEN|FUNCTION|RETURN|  
@@ -70,7 +70,7 @@ ms.locfileid: "68091768"
 |CURRENT|LOAD|TABLESAMPLE|  
 |CURRENT_DATE|MERGE|TEXTSIZE|  
 |CURRENT_TIME|NATIONAL|THEN|  
-|CURRENT_TIMESTAMP|NOCHECK|TO|  
+|CURRENT_TIMESTAMP|NOCHECK|A|  
 |CURRENT_USER|NONCLUSTERED|Torna all'inizio|  
 |CURSOR|NOT|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
@@ -78,13 +78,13 @@ ms.locfileid: "68091768"
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|Elimina|ON|UNION|  
-|DENY|OPEN|UNIQUE|  
+|Elimina|ATTIVA|UNION|  
+|NEGA|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
-|DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|Utente|  
+|DISTRIBUTED|OPENXML|USA|  
+|DOUBLE|OPTION|USER|  
 |DROP|o|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -92,7 +92,7 @@ ms.locfileid: "68091768"
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|con|  
+|EXEC|PRECISION|WITH|  
 |EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
@@ -118,7 +118,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**ACTION**|**EXECUTE**|**PAD**|  
+|**AZIONE**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
@@ -163,7 +163,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
 |**CORRESPONDING**|**LAST**|**TEMPORARY**|  
 |**COUNT**|**LEADING**|**THEN**|  
-|**CREATE**|**LEFT**|**TIME**|  
+|**CREATE**|**LEFT**|**ORA**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
@@ -248,7 +248,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 |CUBE|NCLOB|TIME|  
 |CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
-|CURRENT_DEFAULT_TRANSFORM_GROUP|No|TIMEZONE_MINUTE|  
+|CURRENT_DEFAULT_TRANSFORM_GROUP|NO|TIMEZONE_MINUTE|  
 |CURRENT_PATH|Nessuno|TRAILING|  
 |CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
 |CURRENT_SCHEMA|NUMERIC|TRANSLATION|  
@@ -260,9 +260,9 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALORE|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|Parametro|VAR_SAMP|  
+|DEREF|PARAMETRO|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  

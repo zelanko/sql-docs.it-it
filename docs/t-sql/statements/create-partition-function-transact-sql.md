@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912610"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67912610"
 
   Crea una funzione nel database corrente che esegue il mapping delle righe di una tabella o di un indice in partizioni in base ai valori della colonna specificata. L'utilizzo di CREATE PARTITION FUNCTION rappresenta il primo passaggio per la creazione di una tabella o di un indice partizionato. In una tabella o indice di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] possono essere presenti al massimo 15.000 partizioni.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,7 +75,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  Specifica il lato (sinistro o destro) di ogni intervallo di valori limite a cui appartiene *boundary_value* [ **,** _...n_ ] quando i valori dell'intervallo vengono ordinati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in ordine crescente da sinistra a destra. Se omesso, il valore predefinito è LEFT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'ambito di una funzione di partizione è limitato al database in cui la funzione viene creata. All'interno del database le funzioni di partizione si trovano in uno spazio dei nomi separato rispetto alle funzioni.  
   
  Tutte le righe la cui colonna di partizionamento contiene valori NULL vengono inserite nella prima partizione a sinistra, a meno che non sia specificato NULL come valore limite e indicato RIGHT. In questo caso la prima partizione a sinistra sarà una partizione vuota e i valori NULL verranno inseriti nella partizione successiva.  
@@ -91,7 +91,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 ##  <a name="BKMK_examples"></a> Esempi  
   
-### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Creazione di una funzione di partizione RANGE LEFT in una colonna int  
+### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>R. Creazione di una funzione di partizione RANGE LEFT in una colonna int  
  La funzione di partizione seguente crea quattro partizioni in una tabella o un indice.  
   
 ```sql  

@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296193"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestori eventi di Integration Services (SSIS)
@@ -75,7 +75,7 @@ ms.locfileid: "71296193"
 ## <a name="run-time-events"></a>Eventi di run-time  
  Nella tabella seguente vengono elencati i gestori di eventi disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e vengono descritti gli eventi di run-time che ne provocano l'esecuzione.  
   
-|Gestore di evento|Evento|  
+|Gestore di evento|Event|  
 |-------------------|-----------|  
 |**OnError**|Gestore di evento per l'evento **OnError** . Questo evento viene generato da un eseguibile quando si verifica un errore.|  
 |**OnExecStatusChanged**|Gestore di evento per l'evento **OnExecStatusChanged** . Questo evento viene generato da un eseguibile quando cambia il suo stato di esecuzione.|  
@@ -109,7 +109,7 @@ In fase di esecuzione contenitori e attività generano eventi. È possibile crea
   
 3.  Fare clic sulla scheda **Gestori eventi** .  
   
-     ![Screenshot dell'area di progettazione con gestore eventi](../integration-services/media/eventhandlers.gif "Screenshot dell'area di progettazione con gestore eventi")  
+     ![Screenshot dell'area di progettazione con gestore dell'evento](../integration-services/media/eventhandlers.gif "Screenshot dell'area di progettazione con gestore dell'evento")  
   
      La creazione del flusso di controllo e dei flussi di dati di un gestore dell'evento è analoga alla creazione del flusso di controllo e dei flussi di dati di un pacchetto. Per altre informazioni, vedere [Flusso di controllo](../integration-services/control-flow/control-flow.md) e [Flusso di dati](../integration-services/data-flow/data-flow.md).  
   

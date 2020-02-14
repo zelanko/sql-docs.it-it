@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68890071"
 ---
 # <a name="full-database-backups-sql-server"></a>Backup completo del database (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "68890071"
 ##  <a name="DbBuRMs"></a> Backup del database nel modello di recupero con registrazione minima  
  Se si utilizza il modello di recupero con registrazione minima, dopo ogni backup, il database è esposto al rischio di perdita di dati nel caso si verifichi un'emergenza. Questo rischio aumenta a ogni aggiornamento fino al backup successivo, quando il rischio torna a essere zero e inizia un nuovo ciclo. Il rischio di perdita dei dati cresce nel tempo che intercorre tra un backup e l'altro. Nella figura seguente viene illustrato il rischio di perdita di dati per una strategia di backup che utilizza solo backup completi di database.  
   
- ![Rischio di perdita di dati tra due backup del database](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Rischio di perdita di dati tra due backup del database")  
+ ![Rischio di perdita di lavoro tra due backup del database](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Rischio di perdita di lavoro tra due backup del database")  
   
 ### <a name="example--includetsqlincludestsql-mdmd"></a>Esempio ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  Nell'esempio seguente viene illustrato come creare un backup completo del database utilizzando WITH FORMAT per sovrascrivere eventuali backup esistenti e creare un nuovo set di supporti.  

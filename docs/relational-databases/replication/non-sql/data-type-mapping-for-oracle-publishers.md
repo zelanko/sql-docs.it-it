@@ -15,15 +15,15 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901126"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapping dei tipi di dati per i server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  I tipi di dati Oracle e i tipi di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sempre corrispondono in modo preciso. Se possibile, durante la pubblicazione di una tabella Oracle viene selezionato automaticamente il tipo di dati corrispondente. Nei casi in cui il mapping di un singolo tipo di dati non risulti chiaro, vengono forniti mapping di tipi di dati alternativi. Per informazioni sulla selezione di mapping alternativi, vedere la sezione "Specifica di mapping di tipi di dati alternativi" più avanti in questo argomento.  
+  I tipi di dati Oracle e i tipi di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sempre corrispondono in modo esatto. Se possibile, durante la pubblicazione di una tabella Oracle viene selezionato automaticamente il tipo di dati corrispondente. Nei casi in cui il mapping di un singolo tipo di dati non risulti chiaro, vengono forniti mapping di tipi di dati alternativi. Per informazioni sulla selezione di mapping alternativi, vedere la sezione "Specifica di mapping di tipi di dati alternativi" più avanti in questo argomento.  
   
  Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dati Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando i dati del server di pubblicazione Oracle vengono spostati nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La colonna Alternativi indica se sono disponibili mapping alternativi.  
   
@@ -34,30 +34,30 @@ ms.locfileid: "67901126"
 |CHAR([1-2000])|CHAR([1-2000])|Sì|  
 |CLOB|VARCHAR(MAX)|Sì|  
 |DATE|DATETIME|Sì|  
-|FLOAT|FLOAT|no|  
-|FLOAT([1-53])|FLOAT([1-53])|no|  
-|FLOAT([54-126])|FLOAT|no|  
+|FLOAT|FLOAT|No|  
+|FLOAT([1-53])|FLOAT([1-53])|No|  
+|FLOAT([54-126])|FLOAT|No|  
 |INT|NUMERIC(38)|Sì|  
 |INTERVAL|DATETIME|Sì|  
 |LONG|VARCHAR(MAX)|Sì|  
 |LONG RAW|IMAGE|Sì|  
-|NCHAR([1-1000])|NCHAR([1-1000])|no|  
+|NCHAR([1-1000])|NCHAR([1-1000])|No|  
 |NCLOB|NVARCHAR(MAX)|Sì|  
 |NUMBER|FLOAT|Sì|  
-|NUMBER([1-38])|NUMERIC([1-38])|no|  
+|NUMBER([1-38])|NUMERIC([1-38])|No|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sì|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|no|  
-|RAW([1-2000])|VARBINARY([1-2000])|no|  
-|real|FLOAT|no|  
-|ROWID|CHAR(18)|no|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
+|RAW([1-2000])|VARBINARY([1-2000])|No|  
+|real|FLOAT|No|  
+|ROWID|CHAR(18)|No|  
 |timestamp|DATETIME|Sì|  
 |TIMESTAMP(0-7)|DATETIME|Sì|  
 |TIMESTAMP(8-9)|DATETIME|Sì|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Sì|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|no|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|No|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Sì|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|no|  
-|UROWID|CHAR(18)|no|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|No|  
+|UROWID|CHAR(18)|No|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Sì|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Considerazioni sul mapping dei tipi di dati  
@@ -66,7 +66,7 @@ ms.locfileid: "67901126"
 ### <a name="unsupported-data-types"></a>Tipi di dati non supportati  
  I tipi di dati seguenti non sono supportati e pertanto non è possibile replicare le colonne che li contengono:  
   
--   Tipi di oggetti  
+-   Tipi di oggetto  
   
 -   Tipi XML  
   

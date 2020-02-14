@@ -17,10 +17,10 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294213"
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
@@ -96,7 +96,7 @@ ms.locfileid: "71294213"
   
  I tipi numerici includono **integer** (tranne **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**e **numeric**.  
   
- \*\* **image**, **text**, **XML**, **udt**e **variant** non sono supportati per profili diversi dal profilo del rapporto di valori di colonna Null.  
+ \*\***image**, **text**, **XML**, **udt** e **variant** non sono supportati per profili diversi dal profilo del rapporto di valori di colonna Null.  
   
 ### <a name="valid-tables-and-columns"></a>Tabelle e colonne valide  
  Se la tabella o la colonna è vuota, l'attività Profiling dati esegue le seguenti azioni:  
@@ -117,7 +117,7 @@ ms.locfileid: "71294213"
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
-|**DataProfilingTaskTrace**|Fornisce informazioni descrittive sullo stato dell'attività. I messaggi includono le informazioni seguenti:<br /><br /> Avvio elaborazione richieste<br /><br /> Inizio query<br /><br /> Query End<br /><br /> Fine calcolo richiesta|  
+|**DataProfilingTaskTrace**|Fornisce informazioni descrittive sullo stato dell'attività. I messaggi includono le informazioni seguenti:<br /><br /> Avvio elaborazione richieste<br /><br /> Inizio query<br /><br /> Fine query<br /><br /> Fine calcolo richiesta|  
   
 ## <a name="output-and-its-schema"></a>Output e relativo schema  
  L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all'indirizzo [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  

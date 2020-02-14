@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476297"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
@@ -89,14 +89,14 @@ ms.locfileid: "68476297"
  **Dimensione**  
  Consente di visualizzare il numero massimo di byte necessari per archiviare il tipo di dati della colonna. In caso di colonna spaziale o XML, il valore visualizzato è zero (0).  
   
- **Identity**  
+ **Identità**  
  Indica se la colonna che partecipa alla chiave dell'indice è una colonna Identity.  
   
  **Consenti valori Null**  
  Indica se la colonna che partecipa alla chiave dell'indice consente l'archiviazione di valori Null nella colonna della tabella o della vista.  
   
- **Aggiungi**  
- Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* che viene visualizzata facendo clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
+ **Aggiungere**  
+ Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* che viene visualizzata quando si fa clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
   
  **Rimuovi**  
  Consente di rimuovere la colonna selezionata dalla partecipazione alla chiave dell'indice.  
@@ -128,10 +128,10 @@ ms.locfileid: "68476297"
  **Byte**  
  Dimensioni in byte della colonna.  
   
- **Identity**  
+ **Identità**  
  Il valore indicato è **Sì** per le colonne Identity oppure **No** se la colonna non è di tipo Identity.  
   
- **Allow Nulls**  
+ **Consenti valori NULL**  
  Il valore indicato è **Sì** se la definizione della tabella consente valori Null per la colonna. oppure **No** se la definizione della tabella non consente valori Null per la colonna.  
 
 ##  <a name="Options"></a> Opzioni nella pagina Opzioni
@@ -296,7 +296,7 @@ Le pagine di livello intermedio vengono riempite poco al di sotto della capacit�
  Usare questa pagina per immettere il predicato del filtro per un indice filtrato. Per altre informazioni, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Espressione filtro**  
- Definisce le righe di dati da includere nell'indice filtrato. Ad esempio, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Definisce le righe di dati da includere nell'indice filtrato. Ad esempio, usare `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md)   

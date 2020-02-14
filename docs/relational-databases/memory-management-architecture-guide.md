@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115272"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
@@ -91,10 +91,10 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria è con
 |Tipo di allocazione di memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Allocazioni di singole pagine|Sì|Sì, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
-|Allocazioni di più pagine|no|Sì, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
-|Allocazioni CLR|no|Sì|
-|Memoria stack di thread|no|no|
-|Allocazioni dirette da Windows|no|no|
+|Allocazioni di più pagine|No|Sì, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
+|Allocazioni CLR|No|Sì|
+|Memoria stack di thread|No|No|
+|Allocazioni dirette da Windows|No|No|
 
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe allocare altra memoria rispetto al valore specificato nell'impostazione max server memory. Questo comportamento può verificarsi quando il valore **_Memoria totale server (KB)_** ha già raggiunto il valore dell'impostazione **_Memoria prevista server (KB)_** (come specificato da max server memory). Se la memoria contigua disponibile è insufficiente per soddisfare le richieste di più pagine di memoria (più di 8 KB) a causa della frammentazione della memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può eseguire l'overcommit anziché rifiutare la richiesta di memoria. 
 
@@ -107,7 +107,7 @@ Questo comportamento viene in genere osservato durante le operazioni seguenti:
 -  Operazioni di traccia che devono archiviare parametri di input di grandi dimensioni.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate a "memory_to_reserve" a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate a "memory_to_reserve" a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Nelle versioni precedenti di SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva parte dello spazio indirizzi virtuali del processo per l'**allocatore di più pagine**, l'**allocatore CLR**, le allocazioni di memoria per gli **stack di thread** nel processo di SQL Server e le **allocazioni di Windows dirette**. Questa parte dello spazio indirizzi virtuali è nota anche come area MemToLeave o "pool non di buffer".
 
 Lo spazio indirizzi virtuali riservato per queste allocazioni varia a seconda dell'opzione di configurazione _**memory\_to\_reserve**_ . Il valore predefinito usato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è 256 MB. Per sostituire il valore predefinito, usare il parametro di avvio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*.
@@ -118,7 +118,7 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria rientr
 
 |Tipo di allocazione di memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Allocazioni di singole pagine|no|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
+|Allocazioni di singole pagine|No|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
 |Allocazioni di più pagine|Sì|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
 |Allocazioni CLR|Sì|Sì|
 |Memoria stack di thread|Sì|Sì|
@@ -150,7 +150,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> La memoria per gli stack di thread<sup>1</sup>, CLR<sup>2</sup>, i file DLL di procedure estese, i provider OLE DB a cui fanno riferimento query distribuite, gli oggetti di automazione con riferimenti nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e qualsiasi allocazione di memoria eseguita da una DLL non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **non** sono controllate da max server memory.
+<a name="stacksizes"></a> La memoria per gli stack di thread<sup>1</sup>, CLR<sup>2</sup>, i file DLL di procedure estese, i provider OLE DB a cui fanno riferimento query distribuite, gli oggetti di automazione con riferimenti nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e qualsiasi allocazione di memoria eseguita da una DLL non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**non** sono controllate da max server memory.
 
 <sup>1</sup> Fare riferimento alla pagina della documentazione [Configurare l'opzione di configurazione del server max worker threads](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) per informazioni sui thread di lavoro predefiniti calcolati per un determinato numero di CPU per cui è stata impostata l'affinità nell'host corrente. Le dimensioni di stack di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono le seguenti:
 

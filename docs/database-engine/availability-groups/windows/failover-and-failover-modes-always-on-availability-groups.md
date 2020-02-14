@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949108"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
@@ -81,8 +81,8 @@ ms.locfileid: "67949108"
   
 ||Modalità commit asincrono|Modalità commit sincrono con modalità di failover manuale|Modalità commit sincrono con modalità di failover automatico|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Failover automatico|no|no|Sì|  
-|Failover manuale pianificato|no|Sì|Sì|  
+|Failover automatico|No|No|Sì|  
+|Failover manuale pianificato|No|Sì|Sì|  
 |failover forzato|Sì|Sì|Sì **&#42;**|  
   
  **&#42;** Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come per un failover manuale.  
@@ -107,9 +107,9 @@ ms.locfileid: "67949108"
   
 |Replica|Impostazioni delle modalità di disponibilità e di failover|  
 |-------------|--------------------------------------------------|  
-|Un|Commit sincrono con failover automatico|  
-|B|Commit sincrono con failover automatico|  
-|c|Commit sincrono solo con failover manuale pianificato|  
+|Una|Commit sincrono con failover automatico|  
+|b|Commit sincrono con failover automatico|  
+|C|Commit sincrono solo con failover manuale pianificato|  
 |D|Commit asincrono (solo con failover forzato)|  
   
  Il comportamento di failover di ogni replica secondaria dipende dalla replica di disponibilità che è attualmente la replica primaria. Fondamentalmente, per una determinata replica secondaria, il comportamento di failover è il caso peggiore data la replica primaria corrente. Nell'illustrazione seguente viene descritto come il comportamento del failover di repliche secondarie varia a seconda della replica primaria corrente e se è configurato per la modalità con commit asincrono (solo con failover forzato) o la modalità con commit sincrono (con o senza failover automatico).  
@@ -132,7 +132,7 @@ ms.locfileid: "67949108"
   
 -   Presenza di un set di failover automatico. Questo set è composto da una replica primaria e da una secondaria (la *destinazione del failover automatico*) entrambe configurate per la modalità con commit sincrono e impostate su AUTOMATIC per il failover. Se la replica primaria è impostata su MANUAL per il failover, il failover automatico non è supportato, anche se una replica secondaria è impostata su AUTOMATIC per il failover.  
   
-     Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+     Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 -   La destinazione del failover automatico deve avere uno stato di sincronizzazione integro ad indicare che ogni database secondario sulla destinazione del failover è sincronizzato con il database primario corrispondente.  
   
@@ -258,9 +258,9 @@ ms.locfileid: "67949108"
   
 |Modalità di disponibilità della replica secondaria|Il database è sincronizzato?|È possibile che si verifichi una perdita dei dati?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|Sì|no|  
-|Synchronous-commit|no|Sì|  
-|Asynchronous-commit|no|Sì|  
+|Synchronous-commit|Sì|No|  
+|Synchronous-commit|No|Sì|  
+|Asynchronous-commit|No|Sì|  
   
  I database secondari registrano solo due fork di recupero, pertanto se si eseguono più failover forzati, qualsiasi database secondario che abbia dato inizio alla sincronizzazione dati con il failover forzato precedente non potrà essere ripreso. In questo caso, i database secondari che non possono essere ripresi dovranno essere rimossi dal gruppo di disponibilità, ripristinati fino al momento corretto e nuovamente aggiunti al gruppo di disponibilità. È possibile osservare l'errore 1408 con stato 103 in questo scenario (errore: 1408, gravità: 16, stato: 103). Un ripristino non funziona tra più fork di recupero, pertanto, assicurarsi di eseguire un backup del log dopo avere eseguito più failover forzati.  
   
@@ -334,7 +334,7 @@ ms.locfileid: "67949108"
   
 -   [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Utilizzare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Gestione di account di accesso e processi per i database di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)  
   
@@ -350,12 +350,12 @@ ms.locfileid: "67949108"
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On Team Blog: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
- [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  

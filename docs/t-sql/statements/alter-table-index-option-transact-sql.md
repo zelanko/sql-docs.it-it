@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982010"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -72,7 +72,7 @@ ms.locfileid: "73982010"
   
  Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  La percentuale di spazio disponibile specificata in FILLFACTOR viene applicata alle pagine di livello intermedio dell'indice.  
   
  OFF o *fillfactor* non è specificato  
@@ -89,7 +89,7 @@ ms.locfileid: "73982010"
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
  Specifica il tipo di risposta quando un'operazione di inserimento tenta di inserire valori di chiave duplicati in un indice univoco. L'opzione IGNORE_DUP_KEY viene applicata solo alle operazioni di inserimento eseguite dopo la creazione o la ricompilazione dell'indice. L'opzione non ha alcun effetto se si esegue [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  Viene visualizzato un messaggio di avviso quando in un indice univoco vengono inseriti valori chiave duplicati. Vengono considerate errate solo le righe che violano il vincolo di unicità.  
   
  OFF  
@@ -104,7 +104,7 @@ ms.locfileid: "73982010"
  STATISTICS_NORECOMPUTE **=** { ON | **OFF** }  
  Specifica se vengono ricalcolate le statistiche. Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  Le statistiche non aggiornate non vengono ricalcolate automaticamente.  
   
  OFF  
@@ -115,7 +115,7 @@ ms.locfileid: "73982010"
   
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
- ON  
+ ATTIVA  
  I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.  
   
  OFF  
@@ -126,7 +126,7 @@ ms.locfileid: "73982010"
   
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
- ON  
+ ATTIVA  
  I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF  
@@ -143,7 +143,7 @@ Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell
   
  Specifica se archiviare i risultati dell'ordinamento in **tempdb**. Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF  
@@ -157,7 +157,7 @@ Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell
 > [!NOTE]  
 >  Non è possibile creare online indici non cluster univoci, tra cui gli indici creati a causa di un vincolo UNIQUE o PRIMARY KEY.  
   
- ON  
+ ATTIVA  
  I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. in modo da consentire l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un periodo molto breve. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, in caso di creazione di un indice non cluster. In caso di creazione o di eliminazione di un indice cluster online o di ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). Sebbene i blocchi sull'indice online siano blocchi di metadati brevi, soprattutto il blocco Sch-M deve attendere il completamento di tutte le transazioni bloccanti su questa tabella. Durante il tempo di attesa il blocco Sch-M impedisce tutte le altre transazioni in attesa dietro il blocco stesso per l'accesso alla stessa tabella. L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.  
   
 > [!NOTE]  
@@ -185,12 +185,12 @@ Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell
  Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  DATA_COMPRESSION  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
- Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Sono disponibili le opzioni seguenti:  
+ Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. descritte di seguito:  
   
  Nessuno  
  La tabella o le partizioni specificate non vengono compresse. Si applica solo alle tabelle rowstore, non si applica alle tabelle columnstore.  
@@ -254,7 +254,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
 **low_priority_lock_wait**  
  **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.  
   
- Un'operazione **SWITCH** o di ricompilazione dell'indice online viene completata appena non esistono operazioni di blocco per questa tabella. *WAIT_AT_LOW_PRIORITY* indica che, se l'operazione **SWITCH** o di ricompilazione dell'indice online non può essere completata immediatamente, resta in attesa. L'operazione conserva i blocchi con priorità bassa, consentendo ad altre operazioni con blocchi in conflitto con l'istruzione DDL di continuare. L'omissione dell'opzione **WAIT AT LOW PRIORITY`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` equivale a** .  
+ Un'operazione **SWITCH** o di ricompilazione dell'indice online viene completata appena non esistono operazioni di blocco per questa tabella. *WAIT_AT_LOW_PRIORITY* indica che, se l'operazione **SWITCH** o di ricompilazione dell'indice online non può essere completata immediatamente, resta in attesa. L'operazione conserva i blocchi con priorità bassa, consentendo ad altre operazioni con blocchi in conflitto con l'istruzione DDL di continuare. L'omissione dell'opzione **WAIT AT LOW PRIORITY** equivale a `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
 MAX_DURATION = *time* [**MINUTES** ]  
  Tempo (valore intero specificato in minuti) di attesa del blocco dell'operazione **SWITCH** o di ricompilazione dell'indice online che deve essere acquisito durante l'esecuzione del comando DDL. L'operazione SWITCH o di ricompilazione dell'indice online tenta il completamento immediato. Se l'operazione viene bloccata per il tempo specificato in **MAX_DURATION**, una delle azioni **ABORT_AFTER_WAIT** viene eseguita. Il tempo **MAX_DURATION** è sempre espresso in minuti e la parola **MINUTES** può essere omessa.  
@@ -270,7 +270,7 @@ BLOCKERS
  Termina tutte le transazioni utente che attualmente bloccano l'operazione **SWITCH** o DDL di ricompilazione dell'indice online in modo da poter continuare l'operazione.  
  Per BLOCKERS è richiesta l'autorizzazione **ALTER ANY CONNECTION**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per una descrizione completa delle opzioni per gli indici, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  

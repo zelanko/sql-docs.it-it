@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287772"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Sviluppo di un'interfaccia utente per un componente del flusso di dati
@@ -93,7 +93,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Utilizzo dei servizi di Progettazione SSIS  
  Il parametro **IServiceProvider** del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fornisce l'accesso ai servizi seguenti di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|Servizio|Descrizione|  
+|Service|Descrizione|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Viene utilizzato per determinare se il componente è stato generato come parte di un'operazione Copia/Incolla o Taglia/Incolla.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Viene utilizzato per accedere alle connessioni esistenti o per creare nuove connessioni nel pacchetto.|  

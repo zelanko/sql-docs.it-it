@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298021"
 ---
 # <a name="audit-transformation"></a>Controllo - trasformazione
@@ -78,7 +78,7 @@ ms.locfileid: "71298021"
 |**ID versione**|Consente di specificare il GUID che identifica in modo univoco la versione del pacchetto.|  
 |**Ora di inizio esecuzione**|Consente di specificare l'ora di inizio dell'esecuzione del pacchetto.|  
 |**Nome computer**|Consente di specificare il nome del computer sul quale è stato avviato il pacchetto.|  
-|**User name**|Consente di specificare il nome dell'account di accesso dell'utente che ha avviato il pacchetto.|  
+|**Nome utente**|Consente di specificare il nome dell'account di accesso dell'utente che ha avviato il pacchetto.|  
 |**Nome attività**|Consente di specificare il nome dell'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
 |**ID attività**|Consente di specificare il GUID che identifica in modo univoco l'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
   

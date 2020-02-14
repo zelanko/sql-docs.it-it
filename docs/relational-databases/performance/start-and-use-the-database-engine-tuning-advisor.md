@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983274"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
@@ -42,7 +42,7 @@ ms.locfileid: "73983274"
  Esistono diverse modalità per avviare l'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database e supportare l'ottimizzazione dei database in vari scenari. Ottimizzazione guidata motore di database può essere avviato: dal menu **Start** , dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dall'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e dal menu **Strumenti** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Quando Ottimizzazione guidata motore di database viene avviato per la prima volta, viene visualizzata la finestra di dialogo **Connetti al server** in cui è possibile specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si desidera connettersi.  
   
 > [!WARNING]  
->  Non avviare Ottimizzazione guidata motore di database quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in modalità utente singolo. Se l'applicazione viene avviata mentre il server è in modalità utente singolo, verrà restituito un errore e Ottimizzazione guidata motore di database non verrà avviata. Per altre informazioni sulla modalità utente singolo, vedere [Avviare SQL Server in modalità utente singolo](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).  
+>  Non avviare Ottimizzazione guidata motore di database quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in modalità utente singolo. Se l'applicazione viene avviata mentre il server è in modalità utente singolo, verrà restituito un errore e Ottimizzazione guidata motore di database non verrà avviata. Per altre informazioni sulla modalità utente singolo, vedere [Avvio di SQL Server in modalità utente singolo](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).  
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Per avviare Ottimizzazione guidata motore di database dal menu Start di Windows  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73983274"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Per avviare Ottimizzazione guidata motore di database in SQL Server Management Studio  
   
-1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Strumenti** Strumenti **Ottimizzazione guidata motore di database**.  
+1.  Scegliere **Ottimizzazione guidata motore di database** dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Per avviare Ottimizzazione guidata motore di database dall'Editor di query di SQL Server Management Studio  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73983274"
   
     -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **SQL Server Profiler** dal menu **Strumenti**.  
   
-2.  Creare un file o una tabella di traccia come descritto nelle procedure seguenti in cui viene utilizzato il modello di ottimizzazione [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **di** :  
+2.  Creare un file o una tabella di traccia come descritto nelle procedure seguenti in cui viene usato il modello **Tuning** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
     -   [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -185,7 +185,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
   
 2.  Creare un carico di lavoro. Per ulteriori informazioni, vedere [Creare un carico di lavoro](#Create) più indietro in questo argomento.  
   
-3.  Avviare Ottimizzazione guidata motore di database e accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Avviare Ottimizzazione guidata motore di database](#Start) più indietro in questo argomento.  
+3.  Avviare l'Ottimizzazione guidata motore di database e accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Avviare Ottimizzazione guidata motore di database](#Start) più indietro in questo argomento.  
   
 4.  Nella scheda **Generale** digitare un nome in **Nome sessione** per creare una nuova sessione di ottimizzazione.  
   
@@ -308,7 +308,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
 ##  <a name="XMLInput"></a> Creare un file di input XML  
  Gli sviluppatori XML esperti possono creare file XML utilizzabili per l'ottimizzazione dei carichi di lavoro tramite Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Per creare questi file XML, utilizzare gli strumenti XML desiderati per modificare un file di esempio o per generare un'istanza in base all'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- L'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è disponibile nella directory di installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel percorso seguente:  
+ Lo schema XML dell'Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è disponibile nella directory di installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel percorso seguente:  
   
  C:\Programmi\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -506,10 +506,10 @@ database_name.owner_name.table_name
  **Azione**  
  Visualizza i passaggi in esecuzione.  
   
- **Stato**  
+ **Status**  
  Visualizza lo stato del passaggio dell'azione.  
   
- **Message**  
+ **Messaggio**  
  Include gli eventuali messaggi restituiti dai passaggi dell'azione.  
   
  **Log di ottimizzazione**  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [Utilità dta](../../tools/dta/dta-utility.md)  
   
   

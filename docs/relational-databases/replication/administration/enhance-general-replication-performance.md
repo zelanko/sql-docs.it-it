@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768812"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288189"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "68768812"
   
      Le modifiche possono essere partizionate pubblicando subset di dati in ogni Sottoscrittore oppure facendo in modo che un'applicazione indirizzi le modifiche relative a una specifica riga a uno determinato nodo:  
   
-    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La replica transazionale supporta la pubblicazione dei subset di dati utilizzando filtri statici con più pubblicazioni. Per altre informazioni, vedere [Filtrare i dati pubblicati](../../../relational-databases/replication/publish/filter-published-data.md).  
   

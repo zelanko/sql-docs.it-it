@@ -18,10 +18,10 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296237"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilità con le versioni precedenti di Integration Services
@@ -29,7 +29,7 @@ ms.locfileid: "71296237"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Questa sezione descrive le differenze tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vengono illustrate caratteristiche che non sono più disponibili o che verranno rimosse a partire da una delle prossime versioni. Vengono inoltre descritte le modifiche apportate al prodotto che interromperanno il funzionamento o influiranno sul comportamento di un'applicazione esistente che include la funzionalità di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Questo argomento descrive le differenze tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vengono illustrate caratteristiche che non sono più disponibili o che verranno rimosse a partire da una delle prossime versioni. Vengono inoltre descritte le modifiche apportate al prodotto che interromperanno il funzionamento o influiranno sul comportamento di un'applicazione esistente che include la funzionalità di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>Funzionalità deprecate di Integration Services in SQL Server 2016
 
@@ -51,6 +51,6 @@ Questa sezione descrive le modifiche di rilievo introdotte in [!INCLUDE[ssISnove
 
 ## <a name="behavior-changes-to-integration-services-features-in-sql-server-2016"></a>Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016
 
-In questa sezione vengono descritte le modifiche nel comportamento introdotte in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Tali modifiche influiscono sulle modalità di uso o di interazione delle funzionalità nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+In questa sezione vengono descritte le modifiche nel comportamento introdotte in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Tali modifiche influiscono sulle modalità d'uso o di interazione delle funzionalità nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 Non sono presenti differenze di funzionamento delle funzionalità di Integration Services [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

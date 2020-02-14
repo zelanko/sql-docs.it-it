@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558680"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831802"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,25 +104,19 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
   
 ## <a name="links-to-specific-tasks"></a>Collegamenti a specifiche attività 
 
- - [Archiviare i criteri della gestione basata su criteri](policy-based-management-storage.md)|  
- - [Configurare avvisi per notificare agli amministratori eventuali errori dei criteri](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [Creare una nuova condizione della gestione basata su criteri](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [Archiviare i criteri della gestione basata su criteri](policy-based-management-storage.md)
+ - [Configurare avvisi per notificare agli amministratori eventuali errori dei criteri](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)
+ - [Creare una nuova condizione della gestione basata su criteri](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)
  - [Eliminare una condizione della gestione basata su criteri](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
- - [Visualizzare o modificare le proprietà di una condizione della gestione basata su criteri](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+ - [Visualizzare o modificare le proprietà di una condizione della gestione basata su criteri](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)
  - [Esportare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
- - [Importare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
+ - [Importare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)
  - [Valutare i criteri della gestione basata su criteri da un oggetto](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
- - [Usare i facet della gestione basata su criteri](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
+ - [Usare i facet della gestione basata su criteri](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
-
 
 ## <a name="see-also"></a>Vedere anche  
  
  - [Esercitazione: Creare e applicare criteri Disattivata per impostazione predefinita](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Esercitazione: Creare e applicare criteri per gli standard di denominazione](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
- 
-
- 
-  
-  

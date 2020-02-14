@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024897"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
@@ -56,7 +56,7 @@ ms.locfileid: "68024897"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare una tabella o un indice partizionato tramite:**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68024897"
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database in cui si vuole creare una tabella partizionata e scegliere **Proprietà**.  
   
-2.  Nella finestra di dialogo **Proprietà database -** *nome_database* selezionare **Filegroup**in **Selezione pagina**.  
+2.  Nella finestra di dialogo **Proprietà database -** *nome_database* selezionare **Filegroup** in **Selezione pagina**.  
   
 3.  In **Righe**fare clic su **Aggiungi**. Nella nuova riga immettere il nome del filegroup.  
   
@@ -235,10 +235,10 @@ ms.locfileid: "68024897"
      **Azione**  
      Specifica il tipo e il nome di ciascuna azione.  
   
-     **Stato**  
+     **Status**  
      Indica se l'intera azione della procedura guidata ha restituito il valore **Esito positivo** o **Esito negativo**.  
   
-     **Message**  
+     **Messaggio**  
      Fornisce tutti i messaggi di errore o di avviso restituiti dal processo.  
   
      **Report**  

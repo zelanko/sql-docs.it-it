@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866078"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909751"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ Le clausole di query seguenti sono inoltre senza parametri. Si noti che in quest
 
 * <select_list> di qualsiasi istruzione `SELECT`. Ciò include elenchi `SELECT` delle sottoquery ed elenchi `SELECT` all'interno delle istruzioni `INSERT`.
 * Istruzioni `SELECT` delle sottoquery incluse in un'istruzione `IF` .
-* Clausole `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`o `FOR XM`L di una query.
+* Clausole `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` o `FOR XML` di una query.
 * Argomenti, diretti o sottoespressioni, a `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`o qualsiasi operatore `FULLTEXT` .
 * Argomenti pattern ed escape_character di una clausola `LIKE` .
 * Argomento style di una clausola `CONVERT` .
 * Costante integer all'interno di una clausola `IDENTITY` .
 * Costanti specificate utilizzando la sintassi delle estensioni ODBC.
-* Espressioni per le quali è possibile eseguire l'elaborazione delle costanti in fase di compilazione che rappresentano argomenti degli operatori +, -, \*, / e %. Quando viene valutata l'idoneità per la parametrizzazione forzata, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un'espressione viene considerata come idonea per l'elaborazione delle costanti in fase di compilazione quando si verificano le condizioni seguenti:  
+* Espressioni per le quali è possibile eseguire l'elaborazione delle costanti in fase di compilazione che rappresentano argomenti degli operatori `+`, `-`, `*`, `/` e `%`. Quando viene valutata l'idoneità per la parametrizzazione forzata, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un'espressione viene considerata come idonea per l'elaborazione delle costanti in fase di compilazione quando si verificano le condizioni seguenti:  
   * Nell'espressione non è inclusa alcuna colonna, variabile o subquery.  
   * L'espressione contiene una clausola `CASE` .  
-* Argomenti delle clausole degli hint per le query. Sono inclusi l'argomento `number_of_rows` dell'hint per la query `FAST` , l'argomento `number_of_processors` dell'hint per la query `MAXDOP` e l'argomento del numero dell'hint della query `MAXRECURSION` .
+* Argomenti delle clausole degli hint per le query. Sono inclusi l'argomento *number_of_rows* dell'hint per la query `FAST`, l'argomento *number_of_processors* dell'hint per la query `MAXDOP` e l'argomento *number* dell'hint per la query `MAXRECURSION`.
 
 La parametrizzazione viene eseguita a livello di singole istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)]. In altri termini, vengono parametrizzate le singole istruzioni presenti in un batch. In seguito alla compilazione, una query con parametri viene eseguita nel contesto del batch in cui è stata inviata originariamente. Se un piano di esecuzione per una query viene memorizzato nella cache, è possibile determinare se è stata eseguita la parametrizzazione della query facendo riferimento alla colonna sql della vista a gestione dinamica sys.syscacheobjects. Se è stata eseguita la parametrizzazione di una query, i nomi e i tipi di dati dei parametri precedono il testo del batch inviato nella colonna, ad esempio \@1 tinyint.
 

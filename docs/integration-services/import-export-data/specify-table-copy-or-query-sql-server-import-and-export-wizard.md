@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296247"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server)
@@ -77,7 +77,7 @@ Dopo aver fatto clic **Avanti**, specificare un'istruzione SQL per impostare le 
     
 -   Se è stata selezionata l'opzione **Copia i dati da una o più tabelle o viste**, la pagina successiva è **Seleziona tabelle e viste di origine**per la maggior parte delle destinazioni. In questa pagina è possibile selezionare le tabelle e le viste esistenti da copiare nella destinazione dall'origine dati. Per altre informazioni, vedere [Selezione tabelle e viste di origine](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).    
     
--   Se è stata selezionata l'opzione **Copia i dati da una o più tabelle o viste** e la destinazione è un file flat, la pagina successiva è **Configurare la destinazione del file flat**. In questa pagina è possibile specificare le opzioni di formattazione per il file flat di destinazione (quindi, dopo aver configurato il file flat, la pagina successiva sarà **Seleziona tabelle e viste di origine**). Per altre informazioni, vedere [Configurazione destinazione file flat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).    
+-   Se è stata selezionata l'opzione **Copia i dati da una o più tabelle o viste** e la destinazione è un file flat, la pagina successiva è **Configurare la destinazione del file flat**. In questa pagina è possibile specificare le opzioni di formattazione per il file flat di destinazione. (quindi, dopo aver configurato il file flat, la pagina successiva sarà **Seleziona tabelle e viste di origine**). Per altre informazioni, vedere [Configurazione destinazione file flat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).    
     
 -   Se è stata selezionata l'opzione **Scrivi una query per specificare i dati da trasferire**, la pagina successiva è **Impostazione query di origine**. In questa pagina è necessario scrivere e testare l'istruzione SQL che seleziona i dati da copiare nella destinazione dall'origine dati (quindi, dopo aver impostato la query, la pagina successiva sarà **Seleziona tabelle e viste di origine**). Per altre informazioni, vedere [Impostazione query di origine](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).
 

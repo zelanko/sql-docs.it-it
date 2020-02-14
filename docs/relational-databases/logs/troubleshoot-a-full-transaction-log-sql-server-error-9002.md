@@ -19,17 +19,17 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056067"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento vengono illustrate le risposte possibili a un log delle transazioni pieno e viene spiegato come evitare tale situazione in futuro. 
   
-  Quando il log delle transazioni è pieno, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **errore 9002**. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, quest'ultimo rimane online anche se potrà soltanto essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  
+  Quando il log delle transazioni è pieno, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **errore 9002**. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, il database rimane online, ma può solo essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Risposta a un log delle transazioni completo  
  La risposta appropriata a un log delle transazioni pieno dipende in parte dalla condizione o dalle condizioni che hanno causato il riempimento del log. 

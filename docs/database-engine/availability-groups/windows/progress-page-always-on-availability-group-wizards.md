@@ -16,10 +16,10 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014467"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>Pagina Stato (procedure guidate gruppi di disponibilità Always On)
@@ -34,14 +34,14 @@ ms.locfileid: "68014467"
  **Nome**  
  Visualizza una frase che descrive un passaggio specifico.  
   
- **Stato**  
+ **Status**  
  Indica il risultato dei passaggi completati e la percentuale di completamento del passaggio corrente, come segue:  
   
 |Risultato|Descrizione|  
 |------------|-----------------|  
-|**Errore**|Indica che si è verificato un errore nell'operazione relativa a questo passaggio. Fare clic sul collegamento per visualizzare una finestra di dialogo del messaggio in cui viene descritto l'errore.|  
+|**Error (Errore) (Error (Errore)e)**|Indica che si è verificato un errore nell'operazione relativa a questo passaggio. Fare clic sul collegamento per visualizzare una finestra di dialogo del messaggio in cui viene descritto l'errore.|  
 |**In corso (** *percentuale di completamento* **)**|Indica che l'operazione è in corso e stima la percentuale di completamento di questo passaggio.|  
-|**Esito positivo**|Indica che l'operazione per questo passaggio è stata completata.|  
+|**Success**|Indica che l'operazione per questo passaggio è stata completata.|  
   
  **Meno dettagli**  
  Fare clic per nascondere la griglia dello stato di avanzamento.  

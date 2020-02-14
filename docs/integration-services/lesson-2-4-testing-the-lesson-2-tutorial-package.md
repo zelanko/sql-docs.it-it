@@ -11,10 +11,10 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283559"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lezione 2-4: Testare il pacchetto creato nella lezione 2 dell'esercitazione
@@ -47,7 +47,7 @@ Prima di testare il pacchetto, verificare che il flusso di controllo e il flusso
   
 2.  Al termine dell'esecuzione del pacchetto, selezionare **Arresta debug** dal menu **Debug**.  
   
-## <a name="go-to-next-lesson"></a>Esecuzione del passaggio successivo  
+## <a name="go-to-next-lesson"></a>Passare alla lezione successiva  
 [Lezione 3: Aggiungere la registrazione con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
 ## <a name="see-also"></a>Vedere anche  

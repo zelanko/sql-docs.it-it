@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946991"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
@@ -102,7 +102,7 @@ WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
 GO
 ```  
  
-Oppure, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+In alternativa, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -196,7 +196,7 @@ Di seguito sono indicate alcune operazioni da eseguire per stabilire se una dell
   
     -   **Numero stimato di righe**.  
   
-    -   **Costo I/O stimato** *Stimato* simili che riguardano le prestazioni effettive anziché le previsioni del numero di righe.  
+    -   **Costo I/O stimato***Stimato* simili che riguardano le prestazioni effettive anziché le previsioni del numero di righe.  
   
     -   **Operazione logica** e **Operazione fisica**. *Parallelismo* è un valore adeguato.  
   
@@ -291,7 +291,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)  
+ [Ottimizzazione dei piani di query con la funzionalità di stima di cardinalità di SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)    (Hint per la query)  
  [Hint per le query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           

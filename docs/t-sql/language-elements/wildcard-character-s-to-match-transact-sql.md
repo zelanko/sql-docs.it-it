@@ -23,18 +23,19 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa9c7a4ea14154315ef30ae8b193360b34ffda9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 82876d2f0e749163ced821bdc24797a6f71b6e7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257038"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831583"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Caratteri jolly per la corrispondenza) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Rileva la corrispondenza con uno dei caratteri inclusi nell'intervallo o set racchiuso tra parentesi quadre `[ ]`. È possibile usare i caratteri jolly nei confronti di stringhe che prevedono l'uso di criteri di ricerca, ad esempio `LIKE` e `PATINDEX`.  
-  
+
+ 
 ## <a name="examples"></a>Esempi  
 ### <a name="a-simple-example"></a>A: Esempio semplice   
 L'esempio seguente restituisce i nomi che iniziano con la lettera `m`. `[n-z]` specifica che la seconda lettera deve essere inclusa nell'intervallo tra `n` e `z`. Il carattere jolly percentuale `%` indica che il terzo carattere può essere qualsiasi o nessuno. I database `model` e `msdb` soddisfano questi criteri. Il database `master` non soddisfa i criteri e viene escluso dal set di risultati.
@@ -68,7 +69,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- Di seguito viene indicato il set di risultati:  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  
@@ -76,8 +77,26 @@ EmployeeID      FirstName      LastName      PostalCode
 290             Lynn           Tsoflias      3000  
 ```  
 
+### <a name="c-using-a-set-that-combines-ranges-and-single-characters"></a>C: Uso di un set che combina intervalli e caratteri singoli
 
+Un set di caratteri jolly può includere sia caratteri singoli sia intervalli. Nell'esempio seguente viene usato l'operatore [] per trovare una stringa che inizia con un numero o una serie di caratteri speciali.
 
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[0-9!@#$.,;_]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name                         name  column_id
+---------     -----------                         ----  ---------
+615673241     vSalesPersonSalesByFiscalYears      2002  5
+615673241     vSalesPersonSalesByFiscalYears      2003  6
+615673241     vSalesPersonSalesByFiscalYears      2004  7
+1591676718    JunkTable                           _xyz  1
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

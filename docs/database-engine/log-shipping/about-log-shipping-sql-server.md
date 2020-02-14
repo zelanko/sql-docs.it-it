@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057901"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informazioni sul log shipping (SQL Server)
@@ -126,7 +126,7 @@ ms.locfileid: "68057901"
   
  Tramite le istanze dei server primario e secondario vengono inviati la propria cronologia e il proprio stato all'istanza del server di monitoraggio.  
   
- ![Configurazione che include processi di backup, copia ripristino](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configurazione che include processi di backup, copia ripristino")  
+ ![Configurazione che include processi di backup, copia e ripristino](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configurazione che include processi di backup, copia e ripristino")  
   
 ##  <a name="Interoperability"></a> Interoperabilità  
  Il log shipping può essere utilizzato con le funzionalità o i componenti seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -163,6 +163,6 @@ ms.locfileid: "68057901"
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

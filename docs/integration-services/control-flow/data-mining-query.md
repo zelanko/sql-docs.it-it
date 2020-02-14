@@ -13,10 +13,10 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298313"
 ---
 # <a name="data-mining-query"></a>Query di data mining
@@ -54,7 +54,7 @@ ms.locfileid: "71298313"
  **Alias**  
  Il nome della colonna restituito dal server.  
   
- **Visualizza**  
+ **Mostra**  
  Selezionare questa opzione per restituire la colonna o per utilizzarla solo nella clausola WHERE.  
   
  **Gruppo**  
@@ -68,6 +68,6 @@ ms.locfileid: "71298313"
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006412"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
@@ -34,7 +34,7 @@ ms.locfileid: "68006412"
 -   Gli ultimi ruoli noti di ogni partner (principale o mirror)  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per monitorare il mirroring del database, è necessario essere membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **dbm_monitor** nel database **msdb** nell'istanza del server. Se l'utente è membro di **sysadmin** o di **dbm_monitor** su una sola delle istanze del server partner, il monitoraggio può connettersi solo a tale partner e non riesce a recuperare informazioni dall'altro partner.  
+ Per monitorare il mirroring del database, è necessario essere membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **dbm_monitor** nel database **msdb** nell'istanza del server. Se l'utente è membro di **sysadmin** o di **dbm_monitor** in una sola delle istanze del server partner, il monitoraggio può connettersi solo a tale partner e non è in grado di recuperare informazioni dall'altro partner.  
   
  Se l'utente è membro solo di **dbm_monitor** su un'istanza del server, disporrà di autorizzazioni limitate su tale istanza. L'utente sarà in grado di visualizzare esclusivamente la riga di stato più recente. Se l'utente si connette a un'istanza del server usando le autorizzazioni per **dbm_monitor** , Monitoraggio mirroring del database avvisa che l'utente ha autorizzazioni limitate.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68006412"
   
  Per ogni database registrato sono visualizzate le informazioni seguenti:  
   
- _<Nome_database>_ **(** _\<Stato>_ **,** _<SERVER_PRINCIPALE>_ **->** _<SERVER_MIRROR>_ **)**  
+ _<Nome_database>_ **(** _\<Stato>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Nome_database>*  
  Nome di un database con mirroring registrato in Monitoraggio mirroring del database.  
@@ -57,8 +57,8 @@ ms.locfileid: "68006412"
 |Icona|Stato|Descrizione|  
 |----------|------------|-----------------|  
 |Icona avviso|**Unknown**|Il monitoraggio non è connesso ad alcun partner. Le uniche informazioni disponibili sono relative agli elementi memorizzati nella cache dal monitoraggio.|  
-|Icona avviso|**Sincronizzazione in corso**|La posizione del contenuto del database mirror precede quella del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward.<br /><br /> All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.|  
-|Cilindro del database standard|**Sincronizzato**|Quando il server mirror è sufficientemente aggiornato rispetto al server principale, lo stato del database diventa **Sincronizzato**. Il database resta in questo stato fino a quando il server principale continua a inviare modifiche al server mirror e quest'ultimo continua ad applicare le modifiche al database mirror.<br /><br /> Per la modalità a protezione elevata, il failover automatico e quello manuale sono entrambi possibili, senza perdita di dati.<br /><br /> In modalità a prestazioni elevate è possibile che si verifichi la perdita di dati anche nello stato **Sincronizzato** .|  
+|Icona avviso|**Sincronizzazione in corso**|Il contenuto del database mirror è in ritardo rispetto a quello del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward.<br /><br /> All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.|  
+|Cilindro del database standard|**Identità sincronizzate**|Quando il server mirror è sufficientemente aggiornato rispetto al server principale, lo stato del database diventa **Sincronizzato**. Il database resta in questo stato fino a quando il server principale continua a inviare modifiche al server mirror e quest'ultimo continua ad applicare le modifiche al database mirror.<br /><br /> Per la modalità a protezione elevata, il failover automatico e quello manuale sono entrambi possibili, senza perdita di dati.<br /><br /> In modalità a prestazioni elevate è possibile che si verifichi la perdita di dati anche nello stato **Sincronizzato** .|  
 |Icona avviso|**Sospeso**|Il database principale è disponibile, ma non viene inviato alcun log al server mirror.|  
 |Icona Errori|**Disconnesso**|L'istanza del server non può connettersi al proprio partner.|  
   
@@ -101,10 +101,10 @@ ms.locfileid: "68006412"
   
  **Per monitorare il mirroring del database tramite SQL Server Management Studio**  
   
--   [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

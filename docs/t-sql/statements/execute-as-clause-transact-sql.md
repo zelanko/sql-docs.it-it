@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155054"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clausola EXECUTE AS (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "70155054"
   
  Specificando il contesto in cui viene eseguito il modulo, è possibile controllare quale account utente viene utilizzato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per convalidare le autorizzazioni per gli oggetti a cui viene fatto riferimento dal modulo. Ciò consente maggiore flessibilità e controllo nella gestione delle autorizzazioni all'interno della catena di oggetti esistente tra i moduli definiti dall'utente e gli oggetti cui viene fatto riferimento da tali moduli. È necessario concedere agli utenti le autorizzazioni solo nel modulo stesso, senza dover concedere loro le autorizzazioni esplicite per gli oggetti a cui viene fatto riferimento. Solo l'account utente con il quale viene eseguito il modulo deve disporre delle autorizzazioni per gli oggetti a cui ha accesso il modulo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -105,7 +105,7 @@ DDL Triggers with Database Scope
   
  *login_name* non può essere un gruppo, un ruolo, un certificato, una chiave o un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La modalità in cui [!INCLUDE[ssDE](../../includes/ssde-md.md)] valuta le autorizzazioni per gli oggetti cui viene fatto riferimento nel modulo dipende dalla catena di proprietà esistente tra gli oggetti chiamanti e gli oggetti cui viene fatto riferimento. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la concatenazione della proprietà rappresenta l'unico metodo disponibile per evitare di dover concedere all'utente chiamante l'accesso a tutti gli oggetti a cui viene fatto riferimento.  
   
  La concatenazione della proprietà presenta le limitazioni seguenti:  

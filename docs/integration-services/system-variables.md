@@ -17,10 +17,10 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296729"
 ---
 # <a name="system-variables"></a>Variabili di sistema
@@ -38,25 +38,25 @@ ms.locfileid: "71296729"
 |Variabile di sistema|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Handle di un oggetto Eventi di Windows che l'attività può segnalare per indicare che l'attività deve essere arrestata.|  
-|**ContainerStartTime**|DateTime|Ora di inizio del contenitore.|  
-|**CreationDate**|DateTime|Data di creazione del pacchetto.|  
-|**CreatorComputerName**|String|Computer in cui è stato creato il pacchetto.|  
-|**CreatorName**|String|Nome dell'utente che ha compilato il pacchetto.|  
-|**ExecutionInstanceGUID**|String|Identificatore univoco dell'istanza di esecuzione di un pacchetto.|  
-|**FailedConfigurations**|String|Nomi di configurazioni di pacchetti non riuscite.|  
+|**ContainerStartTime**|Datetime|Ora di inizio del contenitore.|  
+|**CreationDate**|Datetime|Data di creazione del pacchetto.|  
+|**CreatorComputerName**|string|Computer in cui è stato creato il pacchetto.|  
+|**CreatorName**|string|Nome dell'utente che ha compilato il pacchetto.|  
+|**ExecutionInstanceGUID**|string|Identificatore univoco dell'istanza di esecuzione di un pacchetto.|  
+|**FailedConfigurations**|string|Nomi di configurazioni di pacchetti non riuscite.|  
 |**IgnoreConfigurationsOnLoad**|Boolean|Indica se le configurazioni di pacchetti vengono ignorate in fase di caricamento del pacchetto.|  
 |**InteractiveMode**|Boolean|Indica se il pacchetto viene eseguito in modalità interattiva. Se un pacchetto viene eseguito in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , questa proprietà viene impostata su **True**. Se un pacchetto viene eseguito con l'utilità del prompt dei comandi **DTExec** , la proprietà viene impostata su **False**.|  
 |**LocaleId**|Int32|Impostazioni locali utilizzate dal pacchetto.|  
-|**MachineName**|String|Nome del computer in cui viene eseguito il pacchetto.|  
+|**MachineName**|string|Nome del computer in cui viene eseguito il pacchetto.|  
 |**OfflineMode**|Boolean|Indica se il pacchetto è in modalità offline. La modalità offline non acquisisce connessioni a origini dei dati.|  
-|**PackageID**|String|Identificatore univoco del pacchetto.|  
-|**PackageName**|String|Nome del pacchetto.|  
-|**StartTime**|DateTime|Data e ora di inizio dell'esecuzione del pacchetto.|  
+|**PackageID**|string|Identificatore univoco del pacchetto.|  
+|**PackageName**|string|Nome del pacchetto.|  
+|**StartTime**|Datetime|Data e ora di inizio dell'esecuzione del pacchetto.|  
 |**ServerExecutionID**|Int64|ID dell'esecuzione per il pacchetto eseguito nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> Il valore predefinito è zero. Il valore viene modificato solo se il pacchetto viene eseguito da ISServerExec sul server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Quando è presente un pacchetto figlio, il valore viene passato dal pacchetto padre a quello figlio.|  
-|**UserName**|String|Nome dell'account dell'utente che ha avviato il pacchetto. Il nome utente è qualificato dal nome del dominio.|  
+|**UserName**|string|Nome dell'account dell'utente che ha avviato il pacchetto. Il nome utente è qualificato dal nome del dominio.|  
 |**VersionBuild**|Int32|Versione del pacchetto.|  
-|**VersionComment**|String|Commenti sulla versione del pacchetto.|  
-|**VersionGUID**|String|Identificatore univoco della versione.|  
+|**VersionComment**|string|Commenti sulla versione del pacchetto.|  
+|**VersionGUID**|string|Identificatore univoco della versione.|  
 |**VersionMajor**|Int32|Versione principale del pacchetto.|  
 |**VersionMinor**|Int32|Versione secondaria del pacchetto.|  
   
@@ -72,10 +72,10 @@ ms.locfileid: "71296729"
   
 |Variabile di sistema|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|String|Nome dell'attività.|  
+|**CreationName**|string|Nome dell'attività.|  
 |**LocaleId**|Int32|Impostazioni locali utilizzate dall'attività.|  
-|**TaskID**|String|Identificativo univoco di un'istanza dell'attività.|  
-|**TaskName**|String|Nome dell'istanza dell'attività.|  
+|**TaskID**|string|Identificativo univoco di un'istanza dell'attività.|  
+|**TaskName**|string|Nome dell'istanza dell'attività.|  
 |**TaskTransactionOption**|Int32|Opzioni di transazione utilizzate dall'attività.|  
   
 ## <a name="system-variables-for-event-handlers"></a>Variabili di sistema per i gestori di eventi  
@@ -85,20 +85,20 @@ ms.locfileid: "71296729"
 |---------------------|---------------|-----------------|-------------------|  
 |**Annulla**|Boolean|Indica se l'esecuzione del gestore di evento viene arrestata in caso di errore, avviso o annullamento della query.|Gestore dell'evento OnError<br /><br /> Gestore dell'evento OnWarning<br /><br /> Gestore dell'evento OnQueryCancel|  
 |**ErrorCode**|Int32|Identificatore dell'errore.|Gestore dell'evento OnError<br /><br /> Gestore dell'evento OnInformation<br /><br /> Gestore dell'evento OnWarning|  
-|**ErrorDescription**|String|Descrizione dell'errore.|Gestore dell'evento OnError<br /><br /> Gestore dell'evento OnInformation<br /><br /> Gestore dell'evento OnWarning|  
+|**ErrorDescription**|string|Descrizione dell'errore.|Gestore dell'evento OnError<br /><br /> Gestore dell'evento OnInformation<br /><br /> Gestore dell'evento OnWarning|  
 |**ExecutionStatus**|Boolean|Stato di esecuzione corrente.|Gestore dell'evento OnExecStatusChanged|  
 |**ExecutionValue**|DBNull|Valore di esecuzione.|Gestore dell'evento OnTaskFailed|  
 |**LocaleId**|Int32|Impostazioni locali utilizzate dal gestore di evento.|Tutti i gestori di eventi|  
 |**PercentComplete**|Int32|Percentuale di avanzamento dell'operazione.|Gestore dell'evento OnProgress|  
 |**ProgressCountHigh**|Int32|Parte più significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
 |**ProgressCountLow**|Int32|Parte meno significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
-|**ProgressDescription**|String|Descrizione dell'avanzamento.|Gestore dell'evento OnProgress|  
+|**ProgressDescription**|string|Descrizione dell'avanzamento.|Gestore dell'evento OnProgress|  
 |**Propagate**|Boolean|Indica se l'evento viene propagato a un gestore di evento di livello superiore.<br /><br /> Nota: il valore della variabile **Propagate** viene ignorato durante la convalida del pacchetto. Se si imposta **Propagate** su **False** in un pacchetto figlio, ciò non impedisce la propagazione di un evento fino al pacchetto padre.|Tutti i gestori di eventi|  
-|**SourceDescription**|String|Descrizione dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
-|**SourceID**|String|Identificatore univoco dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
-|**SourceName**|String|Nome dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
-|**VariableDescription**|String|Descrizione della variabile.|Gestore dell'evento OnVariableValueChanged|  
-|**VariableID**|String|Identificatore univoco della variabile.|Gestore dell'evento OnVariableValueChanged|  
+|**SourceDescription**|string|Descrizione dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
+|**SourceID**|string|Identificatore univoco dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
+|**SourceName**|string|Nome dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
+|**VariableDescription**|string|Descrizione della variabile.|Gestore dell'evento OnVariableValueChanged|  
+|**VariableID**|string|Identificatore univoco della variabile.|Gestore dell'evento OnVariableValueChanged|  
   
 ## <a name="system-variables-in-parameter-bindings"></a>Variabili di sistema nelle associazioni di parametro  
  È spesso consigliabile salvare in tabelle i valori delle variabili di sistema dopo l'esecuzione di un pacchetto. Si consideri ad esempio un pacchetto che crea dinamicamente una tabella e scrive in una colonna della tabella il GUID dell'istanza di esecuzione del pacchetto che ha creato la tabella.  

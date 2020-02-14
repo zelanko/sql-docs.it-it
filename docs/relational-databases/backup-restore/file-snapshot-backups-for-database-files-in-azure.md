@@ -11,19 +11,19 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086277"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backup di snapshot di file per i file di database in Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il backup di snapshot di file usa gli snapshot di Azure per offrire backup quasi istantanei e ripristini più veloci per i file di database archiviati usando il servizio di archiviazione BLOB di Azure. Questa funzionalità consente di semplificare i criteri di backup e ripristino. Per una dimostrazione dal vivo, vedere la [demo del ripristino temporizzato](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Per altre informazioni sull'archiviazione dei file di database con il servizio di archiviazione BLOB di Azure, vedere [File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
- ![diagramma dell'architettura del backup di snapshot](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagramma dell'architettura del backup di snapshot")  
+ ![diagramma dell'architettura per il backup di snapshot](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagramma dell'architettura per il backup di snapshot")  
   
- **Scarica**  
+ **Scaricare**  
   
 -   Per scaricare [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68086277"
 ### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>Che cos'è un backup di snapshot di file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Un backup di snapshot di file è costituito da un set di snapshot di Azure dei BLOB che contengono i file di database e da un file di backup che contiene puntatori a tali snapshot di file. Ogni snapshot di file viene archiviato nel contenitore con il BLOB di base. È possibile specificare che il file di backup stesso venga scritto su URL, disco o nastro. È consigliabile eseguire il backup su URL. Per altre informazioni sul backup, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Per altre informazioni sul backup nell'URL, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
- ![architettura della funzionalità di snapshot](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architettura della funzionalità di snapshot")  
+ ![architettura della funzionalità relativa agli snapshot](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architettura della funzionalità relativa agli snapshot")  
   
  Se si elimina il BLOB il set di backup non sarà più valido e non è possibile eliminare un BLOB che contiene i file di snapshot (a meno che non si sia scelto espressamente di eliminare un BLOB con tutti i relativi snapshot di file). Inoltre, l'eliminazione di un database o di un file di dati non elimina il BLOB di base o uno qualsiasi dei relativi snapshot di file e l'eliminazione del file di backup non elimina alcuno degli snapshot di file nel set di backup. Per eliminare un set di backup di snapshot di file, usare la stored procedure di sistema **sys.sp_delete_backup** .  
   
@@ -148,7 +148,7 @@ GO
 ```  
   
 ## <a name="viewing-database-backup-file-snapshots"></a>Visualizzazione di snapshot di file di backup del database  
- Per visualizzare snapshot di file di un BLOB di base per ogni file di database, usare la funzione di sistema **sys.fn_db_backup_file_snapshots** , che consente di visualizzare tutti gli snapshot di file di backup di ogni BLOB di base per un database archiviato usando il servizio di archiviazione BLOB di Azure. Un caso d'utilizzo primario per questa funzione prevede l'identificazione degli snapshot di file di backup di un database che rimangono quando il file di backup per un set di backup di snapshot di file viene eliminato usando un meccanismo diverso dalla stored procedure di sistema **sys.sp_delete_backup** . Per determinare gli snapshot di file di backup che fanno parte di set di backup intatti e quelli che non ne fanno parte, usare la stored procedure di sistema **RESTORE FILELISTONLY** per elencare gli snapshot di file che appartengono a ogni file di backup. Per altre informazioni, vedere [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) e [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Per visualizzare snapshot di file di un BLOB di base per ogni file di database, usare la funzione di sistema **sys.fn_db_backup_file_snapshots** , che consente di visualizzare tutti gli snapshot di file di backup di ogni BLOB di base per un database archiviato usando il servizio di archiviazione BLOB di Azure. Un caso d'utilizzo primario per questa funzione prevede l'identificazione degli snapshot di file di backup di un database che rimangono quando il file di backup per un set di backup di snapshot di file viene eliminato usando un meccanismo diverso dalla stored procedure di sistema **sys.sp_delete_backup** . Per determinare gli snapshot di file di backup che fanno parte di set di backup intatti e quelli che non ne fanno parte, usare la stored procedure di sistema **RESTORE FILELISTONLY**  per elencare gli snapshot di file che appartengono a ogni file di backup. Per altre informazioni, vedere [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) e [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  L'esempio seguente restituisce l'elenco di tutti gli snapshot di file di backup per il database specificato.  
   
@@ -163,7 +163,7 @@ GO
 ```  
   
 ## <a name="deleting-an-individual-database-backup-file-snapshot"></a>Eliminazione di un singolo snapshot di file di backup di database  
- Per eliminare un singolo snapshot di file di backup di un BLOB di base di un database, usare la stored procedure di sistema **sys.sp_delete_backup_file_snapshot** . Un caso d'utilizzo primario per questa stored procedure di sistema prevede l'eliminazione dei file di snapshot di file orfani che rimangono dopo aver eliminato un file di backup con un metodo diverso dalla stored procedure di sistema **sys.sp_delete_backup**. Per altre informazioni, vedere [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
+ Per eliminare un singolo snapshot di file di backup di un BLOB di base di un database, usare la stored procedure di sistema **sys.sp_delete_backup_file_snapshot** . Un caso d'utilizzo primario per questa stored procedure di sistema prevede l'eliminazione dei file di snapshot di file orfani che rimangono dopo aver eliminato un file di backup con un metodo diverso dalla stored procedure di sistema **sys.sp_delete_backup** . Per altre informazioni, vedere [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
   
 > [!WARNING]  
 >  L'eliminazione di un singolo snapshot di file che fa parte di un set di backup di snapshot di file invalida il set di backup.  

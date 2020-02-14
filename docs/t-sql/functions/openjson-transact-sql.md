@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632135"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -60,7 +60,7 @@ La funzione con valori di tabella **OPENJSON** analizza *jsonExpression* specifi
 
 Per impostazione predefinita, la funzione con valori di tabella **OPENJSON** restituisce tre colonne che contengono il nome della chiave, il valore e il tipo di ogni coppia {chiave:valore} trovato in *jsonExpression*. In alternativa, è possibile specificare in modo esplicito lo schema del set di risultati che **OPENJSON** restituisce fornendo *with_clause*.
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
 ![Sintassi per la clausola WITH in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "Sintassi di OPENJSON WITH")
 
@@ -91,7 +91,7 @@ SELECT * FROM OpenJson(@json);
 
 **Risultati:**
 
-| Key                                | Valore                 | Tipo |
+| Key                                | Valore                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
@@ -109,7 +109,7 @@ SELECT * FROM OpenJson(@json);
 
 Espressione di percorso JSON facoltativa che fa riferimento a un oggetto o a una matrice all'interno di *jsonExpression*. **OPENJSON** esegue la ricerca nel testo JSON nella posizione specificata e analizza solo il frammento cui viene fatto riferimento. Per altre informazioni, vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
+In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
   
 L'esempio seguente restituisce un oggetto nidificato tramite la specifica di *path*:  
 
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **Risultati**  
   
-|Key|valore|  
+|Chiave|valore|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -140,7 +140,7 @@ Quando **OPENJSON** analizza una matrice JSON, la funzione restituisce gli indic
 
 Il confronto usato per la ricerca delle corrispondenze dei passaggi di percorso con le proprietà dell'espressione JSON fa distinzione tra maiuscole e minuscole e non considera le regole di confronto (ovvero è un confronto BIN2). 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 Definisce in modo esplicito lo schema di output che deve essere restituito dalla funzione **OPENJSON**. *with_clause* può contenere gli elementi seguenti:
 
@@ -214,7 +214,7 @@ WITH (
   
 **Risultati**
   
-|Number|date|Customer|Quantity|JSON|  
+|Number|Data|Customer|Quantità|JSON|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -229,12 +229,12 @@ Le colonne restituite dalla funzione OPENJSON dipendono dall'opzione WITH.
   
         |Valore della colonna Type|Tipo di dati JSON|  
         |------------------------------|--------------------|  
-        |0|null|  
+        |0|Null|  
         |1|string|  
         |2|INT|  
         |3|true/false|  
         |4|array|  
-        |5|oggetto|  
+        |5|object|  
   
      Vengono restituite solo le proprietà di primo livello. L'istruzione ha esito negativo se il testo JSON non è formattato correttamente.  
 
@@ -243,7 +243,7 @@ Le colonne restituite dalla funzione OPENJSON dipendono dall'opzione WITH.
 > [!NOTE]  
 > Le colonne **Key**, **Value** e **Type** vengono restituite solo quando si usa OPENJSON con lo schema predefinito e non sono disponibili con uno schema esplicito.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 
 *json_path* usato nel secondo argomento di **OPENJSON** o in *with_clause* può iniziare con la parola chiave **lax** o **strict**.
 

@@ -15,10 +15,10 @@ ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084089"
 ---
 # <a name="log-file-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore file di log
@@ -27,29 +27,29 @@ ms.locfileid: "68084089"
   
  I log disponibili dipendono dalla modalità di apertura del Visualizzatore file di log. Per altre informazioni, vedere [Aprire il visualizzatore file di log](../../relational-databases/logs/open-log-file-viewer.md).  
   
- Il numero di righe visualizzate per i log di controllo può essere configurato nella pagina **Esplora oggetti di SQL Server/Comandi** della finestra di dialogo **Strumenti/Opzioni**. Per le descrizioni delle colonne visualizzate per i log di controllo, vedere [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
+ Il numero di righe visualizzate per i log di controllo può essere configurato nella pagina **Esplora oggetti di SQL Server/Comandi** della finestra di dialogo **Strumenti/Opzioni** . Per le descrizioni delle colonne visualizzate per i log di controllo, vedere [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
   
 ## <a name="options"></a>Opzioni  
  **Carica log**  
  Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
   
- **Esportazione**  
+ **Export**  
  Consente di aprire una finestra di dialogo in cui è possibile esportare in un file di testo le informazioni visualizzate nella griglia **Riepilogo file di log** .  
   
  **Aggiorna**  
  Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
- **Filtra**  
+ **Filter**  
  Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
   
- **Cerca**  
+ **Ricerca**  
  Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
  **Riepilogo file di log**  
- Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo **Filtra voci del log in cui:** \<criteri di filtro>.  
+ Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo seguente: **Filtra voci del log in cui:** \<criteri di filtro>.  
   
  **Dettagli riga selezionata**  
  Consente di selezionare una riga di evento nella parte inferiore della pagina per visualizzare dettagli aggiuntivi sulla riga. È possibile riordinare le colonne trascinandole su nuove posizioni all'interno della griglia. Le colonne possono inoltre essere ridimensionate trascinando verso destra o verso sinistra le corrispondenti barre di separazione nell'intestazione della griglia. Per adattare automaticamente le dimensioni della colonna al contenuto, fare doppio clic sulle barre di separazione nell'intestazione della griglia.  
@@ -64,7 +64,7 @@ ms.locfileid: "68084089"
  **Origine**  
  Consente di visualizzare la funzionalità di origine da cui è stato creato l'evento, ad esempio il nome del servizio, come MSSQLSERVER. Questa opzione non viene visualizzata per tutti i tipi di log.  
   
- **Message**  
+ **Messaggio**  
  Consente di visualizzare i messaggi associati all'evento.  
   
  **Tipo log**  

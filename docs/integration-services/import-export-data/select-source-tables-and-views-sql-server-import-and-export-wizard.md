@@ -12,10 +12,10 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285138"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
@@ -33,14 +33,14 @@ ms.locfileid: "71285138"
  
 In questo esempio, l'elenco **Origine** contiene tutte le tabelle nel database di esempio AdventureWorks. La riga selezionata illustra che l'utente vuole copiare la tabella **Sales.Customer** dall'origine nella nuova tabella **Sales.CustomerNew** di destinazione. 
    
- ![Pagina Selezione tabelle dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/select-tables1.png "Pagina Selezione tabelle dell'Importazione/Esportazione guidata")
+ ![Pagina per la selezione di tabelle dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/select-tables1.png "Pagina per la selezione di tabelle dell'Importazione/Esportazione guidata")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>Screenshot: se si specifica una query  
  Lo screenshot seguente illustra un esempio della pagina **Selezione tabelle e viste di origine** della procedura guidata dopo che è stata selezionata l'opzione **Scrivi una query per specificare i dati da trasferire** nella pagina **Impostazione copia tabella o query**. L'elenco **Origine** contiene un'unica riga, in cui l'elemento denominato `[Query]` rappresenta la query specificata nella pagina **Impostazione query di origine**.
  
 In questo esempio, l'utente vuole copiare i risultati della query dall'origine dati nella tabella **Sales.CustomerNew** di destinazione.  
     
- ![Pagina Selezione tabelle dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/select-tables2.png "Pagina Selezione tabelle dell'Importazione/Esportazione guidata")  
+ ![Pagina per la selezione di tabelle dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/media/select-tables2.png "Pagina per la selezione di tabelle dell'Importazione/Esportazione guidata")  
 
 ## <a name="select-source-and-destination-tables"></a>Selezionare le tabelle di origine e di destinazione 
 **Origine**  
@@ -89,7 +89,7 @@ Se si esportano dati in Excel, è possibile specificare la destinazione in uno d
 > Quando si usa Excel come origine o destinazione, è consigliabile fare clic su **Modifica mapping** e rivedere i mapping dei tipi di dati nella pagina **Mapping colonne** . 
 
 ## <a name="whats-next"></a>Quali sono le operazioni successive?  
- Dopo aver selezionato le tabelle e le viste esistenti da copiare e sottoporre a mapping nelle rispettive destinazioni, la pagina successiva è **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare il pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creato dalla procedura guidata per personalizzarlo e usarlo di nuovo in seguito. Per altre informazioni, vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+ Dopo aver selezionato le tabelle e le viste esistenti da copiare e sottoporre a mapping nelle rispettive destinazioni, la pagina successiva è **Salvare ed eseguire il pacchetto**. In questa pagina specificare se eseguire immediatamente l'operazione di copia. A seconda della configurazione, è anche possibile salvare il pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creato dalla procedura guidata per personalizzarlo e usarlo di nuovo in seguito. Per altre informazioni, vedere [Salvare ed eseguire il pacchetto](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Vedere anche
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  

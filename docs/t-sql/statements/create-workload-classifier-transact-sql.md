@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056488"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831616"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -129,14 +129,17 @@ Specifica l'importanza relativa di una richiesta.  I possibili valori di importa
 
 Se l'importanza non è specificata, viene usata l'impostazione di importanza del gruppo di carico di lavoro.  L'importanza del gruppo di carico di lavoro predefinita corrisponde a normal.  L'importanza ha effetti sull'ordine in cui le richieste vengono pianificate, offrendo quindi un accesso prioritario a risorse e blocchi.
 
-## <a name="classification-parameter-precedence"></a>Precedenza dei parametri di classificazione
+## <a name="classification-parameter-weighting"></a>Ponderazione dei parametri di classificazione
 
-Una richiesta può essere confrontata con più classificatori.  Esiste una precedenza nei parametri del classificatore.  Per assegnare il gruppo di carico di lavoro e l'importanza, viene usato per primo il classificatore con precedenza maggiore.  La precedenza è stabilita come segue:
-1. Utente
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+Una richiesta può essere confrontata con più classificatori.  Per i parametri di classificatore viene effettuata una ponderazione.  Per assegnare un gruppo del carico di lavoro e una priorità, viene usato il classificatore con il valore di corrispondenza ponderata più alto.  La ponderazione è basata sui criteri seguenti:
+
+|Parametro di classificatore |Peso   |
+|---------------------|---------|
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 Considerare le configurazioni dei classificatori seguenti.
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-L'utente `userloginA` è configurato per entrambi i classificatori.  Se userloginA esegue una query con un'etichetta uguale a `salesreport` tra le 18.00 e le 07.00 UTC, la richiesta viene classificata nel gruppo del carico di lavoro wgDashboards con priorità HIGH (alta).  Ci si potrebbe aspettare di dover classificare la richiesta in wgUserQueries con priorità LOW (bassa) per la generazione di report in orari di minore attività, ma la precedenza di WLM_LABEL è maggiore di quella di START_TIME/END_TIME.  In questo caso, è possibile aggiungere START_TIME/END_TIME a classiferA.
+L'utente `userloginA` è configurato per entrambi i classificatori.  Se userloginA esegue una query con un'etichetta uguale a `salesreport` tra le 18.00 e le 07.00 UTC, la richiesta viene classificata nel gruppo del carico di lavoro wgDashboards con priorità HIGH (alta).  Ci si potrebbe aspettare di dover classificare la richiesta in wgUserQueries con priorità LOW (bassa) per la generazione di report in orari di minore attività, ma il valore di ponderazione di WLM_LABEL è maggiore di quello di START_TIME/END_TIME.  Il valore di ponderazione di classiferA è 80 (64 per utente, più 16 per WLM_LABEL).  Il valore di ponderazione di classifierB è 68 (64 per utente, 4 per START_TIME/END_TIME).  In questo caso, è possibile aggiungere WLM_LABEL a classiferB.
 
- Per altre informazioni, vedere [Classificazione del carico di lavoro](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+ Per altre informazioni, vedere [Classificazione del carico di lavoro](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## <a name="permissions"></a>Autorizzazioni
 

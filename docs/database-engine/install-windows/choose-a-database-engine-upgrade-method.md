@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056748"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941156"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
   
  ![Albero delle decisioni per il metodo di aggiornamento del motore di database](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Albero delle decisioni per il metodo di aggiornamento del motore di database")  
   
- **Scarica**  
+ **Scaricare**  
   
 -   Per scaricare [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
@@ -66,7 +66,7 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
   
 -   **Oggetti di sistema:** Alcune applicazioni dipendono da informazioni, entità e/o oggetti esterni all'ambito di un database in modalità a utente singolo. Un'applicazione include in genere dipendenze nei database master e msdb, nonché nel database utente. Qualsiasi elemento archiviato all'esterno di un database utente necessario per il corretto funzionamento di tale database deve essere reso disponibile nell'istanza del server di destinazione. Ad esempio, gli account di accesso per un'applicazione vengono archiviati come metadati nel database master e devono essere ricreati nel server di destinazione. Se il piano di manutenzione di un'applicazione o un database dipende da processi di SQL Server Agent i cui metadati sono archiviati nel database msdb, è necessario ricreare tali processi nell'istanza del server di destinazione. Analogamente, i metadati per un trigger a livello di server vengono archiviati nel database master.  
  
-   Quando il database per un'applicazione viene spostato in un'altra istanza del server, è necessario ricreare tutti i metadati delle entità e degli oggetti dipendenti nei database master e msdb dell'istanza del server di destinazione. Ad esempio, se un'applicazione del database utilizza trigger a livello di server, non è sufficiente collegare o ripristinare il database nel nuovo sistema. Il database non funzionerà come previsto a meno che non si ricreino manualmente i metadati per tali trigger nel database master. Per informazioni dettagliate, vedere [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
+   Quando il database per un'applicazione viene spostato in un'altra istanza del server, è necessario creare di nuovo tutti i metadati delle entità e degli oggetti dipendenti nei database master e msdb dell'istanza del server di destinazione. Ad esempio, se un'applicazione del database utilizza trigger a livello di server, non è sufficiente collegare o ripristinare il database nel nuovo sistema. Il database non funzionerà come previsto a meno che non si ricreino manualmente i metadati per tali trigger nel database master. Per informazioni dettagliate, vedere [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 -   **Pacchetti di Integration Services archiviati in MSDB:** se i pacchetti vengono archiviati nel database MSDB, è necessario inserire i pacchetti nello script usando [dtutil Utility](../../integration-services/dtutil-utility.md) o ridistribuendoli sul nuovo server. Prima di usare i pacchetti nel nuovo server, è necessario aggiornarli a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   

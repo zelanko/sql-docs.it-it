@@ -20,10 +20,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290833"
 ---
 # <a name="xml-source"></a>Origine XML
@@ -72,7 +72,7 @@ ms.locfileid: "71290833"
 ## <a name="configuration-of-the-xml-source"></a>Configurazione dell'origine XML  
  L'origine XML supporta tre diverse modalità di accesso ai dati. è possibile specificare il percorso del file di dati XML, la variabile che contiene il percorso del file oppure la variabile che contiene i dati XML.  
   
- L'origine XML include le proprietà personalizzate **XMLData** e **XMLSchemaDefinition**, che possono essere aggiornate da espressioni di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate dell'origine XML](../../integration-services/data-flow/xml-source-custom-properties.md).  
+ L'origine XML include le proprietà personalizzate **XMLData** e **XMLSchemaDefinition** , che possono essere aggiornate da espressioni di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate dell'origine XML](../../integration-services/data-flow/xml-source-custom-properties.md).  
   
  L'origine XML supporta più output regolari e più output degli errori.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "71290833"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine XML**.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  

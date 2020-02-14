@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294958"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
@@ -53,7 +53,7 @@ ms.locfileid: "71294958"
 >   
 >  Se si verifica un failover delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte del failover di un cluster, i pacchetti in esecuzione non vengono riavviati. È possibile usare i checkpoint per riavviare i pacchetti. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
-## <a name="features-and-capabilities"></a>Tecnologie e funzionalità  
+## <a name="features-and-capabilities"></a>Funzionalità e caratteristiche  
   
 -   [Identificatori dell'oggetto catalogo](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71294958"
   
 -   [Progetti e pacchetti](../../integration-services/catalog/ssis-catalog.md#ProjectsAndPackages)  
   
--   [Parametri](../../integration-services/catalog/ssis-catalog.md#Parameters)  
+-   [Parameters](../../integration-services/catalog/ssis-catalog.md#Parameters)  
   
 -   [Ambienti server, variabili del server e riferimenti all'ambiente del server](../../integration-services/catalog/ssis-catalog.md#ServerEnvironments)  
   
@@ -76,9 +76,9 @@ ms.locfileid: "71294958"
   
 -   Cartella  
   
--   Progetto  
+-   Project  
   
--   Ambiente  
+-   Environment  
   
 -   Parametro  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71294958"
   
 -   La lunghezza del nome deve essere maggiore di 0 e minore o uguale a 128.  
   
-###  <a name="Parameter"></a> Parametro  
+###  <a name="Parameter"></a>Parametro  
  Quando si rinomina un parametro, considerare le regole seguenti:  
   
 -   Il primo carattere del nome deve essere una lettera, come definito nello standard Unicode 2.0, o un carattere di sottolineatura (_).  
@@ -135,7 +135,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
  **Periodo di memorizzazione (giorni)**  
  Definisce la validità massima di dati di operazioni consentiti (in giorni). I dati più obsoleti vengono rimossi.  
   
- Il valore minimo è 1 giorno. Il valore massimo è limitato solo dal valore massimo dei dati **int** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni su questo tipo di dati, vedere [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+ Il valore minimo è 1 giorno. Il valore massimo è limitato al valore massimo dei dati **int** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni su questo tipo di dati, vedere [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
   
  **Rimuovi periodicamente versioni precedenti**  
  Il passaggio del processo per la pulizia della versione del progetto viene eseguito quando questa proprietà è impostata su **True**.  
@@ -164,7 +164,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
  La modifica dell'algoritmo di crittografia è un'operazione che richiede molto tempo. Innanzitutto, nel server deve essere usato l'algoritmo specificato in precedenza per decrittografare tutti i valori di configurazione. Successivamente, deve essere usato il nuovo algoritmo per crittografare nuovamente i valori. Durante questa fase, nel server non è possibile eseguire altre operazioni usando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pertanto, per consentire il funzionamento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza interruzioni, l'algoritmo di crittografia è un valore di sola lettura nella finestra di dialogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Per modificare l'impostazione della proprietà **Algoritmo di crittografia** , impostare il database **SSISDB** sulla modalità utente singolo e quindi chiamare la stored procedure catalog.configure_catalog. Usare ENCRYPTION_ALGORITHM per l'argomento *property_name*. Per i valori di proprietà supportati, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Per altre informazioni sulla stored procedure, vedere [catalog.configure_catalog &#40;Database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ Per modificare l'impostazione della proprietà **Algoritmo di crittografia** , impostare il database **SSISDB** sulla modalità utente singolo e quindi chiamare la stored procedure catalog.configure_catalog. Usare ENCRYPTION_ALGORITHM per l'argomento *property_name* . Per i valori di proprietà supportati, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Per altre informazioni sulla stored procedure, vedere [catalog.configure_catalog &#40;Database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  Per altre informazioni sulla modalità utente singolo, vedere [Impostare un database in modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Per informazioni sulla crittografia e sui relativi algoritmi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere gli argomenti della sezione [Crittografia di SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -319,7 +319,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
 2.  Connettersi al motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  In Esplora oggetti espandere il nodo del server, fare clic con il pulsante destro del mouse sul nodo **Cataloghi di Integration Services** , quindi fare clic su **Creazione catalogo**.  
+3.  In Esplora oggetti espandere il nodo del server, fare clic con il pulsante destro del mouse sul nodo **Cataloghi di Integration Services** e quindi fare clic su **Creazione catalogo**.  
   
 4.  Fare clic su **Abilitazione integrazione con CLR**.  
   
@@ -335,7 +335,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Per creare il catalogo SSISDB a livello di programmazione  
   
-1.  Eseguire il seguente script di PowerShell:  
+1.  Eseguire lo script di PowerShell seguente:  
   
     ```  
     # Load the IntegrationServices Assembly  
@@ -407,7 +407,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
      Per altre informazioni sull'istruzione, vedere [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md).  
   
-     Nell'esempio seguente la chiave master viene esportata nel file `c:\temp directory\RCTestInstKey`. Per crittografare la chiave master viene utilizzata la password `LS2Setup!` .  
+     Nell'esempio seguente la chiave master viene esportata nel file `c:\temp directory\RCTestInstKey` . Per crittografare la chiave master viene utilizzata la password `LS2Setup!` .  
   
     ```  
     backup master key to file = 'c:\temp\RCTestInstKey'  
@@ -419,7 +419,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
 4.  Generare lo script CREATE LOGIN per ##MS_SSISServerCleanupJobLogin##, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
-    1.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere il nodo **Sicurezza**, quindi espandere il nodo **Account di accesso**.  
+    1.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il nodo **Sicurezza** , quindi espandere il nodo **Account di accesso** .  
   
     2.  Fare clic con il pulsante destro del mouse su **##MS_SSISServerCleanupJobLogin##** , quindi fare clic su **Crea script per account di accesso** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**.  
   
@@ -555,13 +555,13 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
      Selezionare la casella di controllo per indicare che è stato eseguito il backup del database SSISDB prima della procedura guidata.  
   
-     ![Selezionare il server nell'aggiornamento guidato di SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Selezionare il server nell'aggiornamento guidato di SSISDB")  
+     ![Selezionare il server nell'Aggiornamento guidato SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Selezionare il server nell'Aggiornamento guidato SSISDB")  
   
 5.  Selezionare **Aggiorna** per aggiornare il database del catalogo SSIS.  
   
 6.  Nella pagina **Risultato** esaminare i risultati.  
   
-     ![Esaminare i risultati nell'aggiornamento guidato di SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Esaminare i risultati nell'aggiornamento guidato di SSISDB")  
+     ![Rivedere i risultati nell'Aggiornamento guidato SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Rivedere i risultati nell'Aggiornamento guidato SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On per il catalogo SSIS (SSISDB)
   I gruppi di disponibilità Always On sono una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Un gruppo di disponibilità supporta un ambiente di failover per un set discreto di database utente, noto come database di disponibilità, il cui failover avviene contemporaneamente. Per altre informazioni, vedere [Gruppi di disponibilità AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  

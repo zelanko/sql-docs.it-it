@@ -23,10 +23,10 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298599"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
@@ -44,7 +44,7 @@ ms.locfileid: "71298599"
  Se, dopo avere aggiunto e configurato l'origine file flat che utilizza la gestione connessione, si modifica la lunghezza delle colonne nella gestione connessione file flat, non sarà necessario ridimensionare manualmente le colonne di output nell'origine file flat. Nella finestra di dialogo **Origine file flat** è disponibile un'opzione che consente di sincronizzare i metadati delle colonne per l'origine file flat.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configurazione della gestione connessione file flat  
- Quando si aggiunge una gestione connessione file flat a un pacchetto, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene creata una gestione connessione che, in fase di esecuzione, verrà risolta in una connessione file flat, vengono impostate le proprietà della connessione file flat e viene aggiunta la gestione connessione file flat alla raccolta **Connessioni** del pacchetto.  
+ Quando si aggiunge una gestione connessione file flat a un pacchetto, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene creata una gestione connessione che, in fase di esecuzione, verrà risolta in una connessione file flat, vengono impostate le proprietà della connessione file flat e viene aggiunta la gestione connessione file flat alla raccolta **Connections** del pacchetto.  
   
  La proprietà **ConnectionManagerType** della gestione connessione viene impostata su **FLATFILE**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "71298599"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
-|A larghezza fissa|Le colonne hanno una larghezza fissa.|  
+|File a larghezza fissa|Le colonne hanno una larghezza fissa.|  
 |Non allineato a destra|I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa, ad eccezione dell'ultima. L'ultima colonna è delimitata dal delimitatore di riga.|  
   
  **Qualificatore di testo**  
@@ -262,7 +262,7 @@ ms.locfileid: "71298599"
 |**DataPrecision**|Consente di specificare la precisione dei dati numerici. Per precisione si intende il numero di cifre. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|  
   
- **Nuova**  
+ **Nuovo**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
   
 |valore|Descrizione|  

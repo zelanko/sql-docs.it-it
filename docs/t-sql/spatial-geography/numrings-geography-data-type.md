@@ -18,16 +18,16 @@ ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e47aebb82c0cc3149dae7de697e92c965903a753
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101789"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il numero totale di anelli in un'istanza **Polygon**. Nel tipo **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli anelli esterni e interni non vengono distinti poiché qualsiasi anello può essere considerato come l'anello esterno.  
+  Restituisce il numero totale di anelli in un'istanza **Polygon**. Nel tipo **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli anelli esterni e interni non vengono distinti poiché qualsiasi anello può essere considerato come esterno.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68101789"
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituirà Null se l'istanza non è **Polygon** e restituirà 0 se l'istanza è vuota. Il metodo è preciso.  
   
 ## <a name="examples"></a>Esempi  

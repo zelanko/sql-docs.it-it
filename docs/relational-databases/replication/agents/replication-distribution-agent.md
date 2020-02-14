@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770755"
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
@@ -166,7 +166,7 @@ distrib [-?]
  **-FtpPort** _ftp_port_  
  Numero di porta del servizio FTP per il database di distribuzione. Quando non è specificato, viene utilizzato il numero di porta predefinito per il servizio FTP, ovvero 21.  
   
- **-FtpUserName**  _nome_utente_ftp_  
+ **-FtpUserName**  _ftp_user_name_  
  Nome utente utilizzato per la connessione al servizio FTP. Quando non è specificato, viene utilizzato **anonymous** .  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
@@ -224,7 +224,7 @@ distrib [-?]
  **-ProfileName** _profile_name_  
  Specifica un profilo agente da utilizzare per i parametri dell'agente. Se **ProfileName** è NULL, il profilo agente è disabilitato. Se **ProfileName** non viene specificato, viene utilizzato il profilo predefinito per il tipo di agente. Per altre informazioni, vedere [Profili degli agenti di replica](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publication**  _pubblicazione_  
+ **-Publication**  _publication_  
  Nome della pubblicazione. Questo parametro è valido solo se la pubblicazione è configurata in modo che sia sempre disponibile uno snapshot per le sottoscrizioni nuove o reinizializzate.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -287,7 +287,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  Se specificato, consente l'associazione di dati BLOB (Binary Large Object) come flusso. Usare **-OledbStreamThreshold** per specificare la dimensione, in byte, oltre la quale verrà usato un flusso. **UseOledbStreaming** è abilitato per impostazione predefinita. **UseOledbStreaming** esegue le operazioni di scrittura nella cartella **C:\Programmi\Microsoft SQL Server\\<versione\>\COM**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!IMPORTANT]  
 >  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è stato installato per l'esecuzione con un account di sistema locale anziché un account utente di dominio (impostazione predefinita), il servizio può accedere solo al computer locale. Se l'agente di distribuzione in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è configurato per l'utilizzo della modalità di autenticazione di Windows durante l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'agente di distribuzione si interrompe. L'impostazione predefinita prevede l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per informazioni sulla modifica degli account di sicurezza, vedere [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  

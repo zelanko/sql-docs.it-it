@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909294"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
@@ -126,7 +126,7 @@ ms.locfileid: "72909294"
  Lo schema a mosaico GEOMETRY_AUTO_GRID è lo schema a mosaico predefinito per il tipo di dati **geometry** per [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] e versioni successive.  Lo schema a mosaico GEOMETRY_GRID è l'unico schema a mosaico disponibile per il tipo di dati geometry in [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. In questa sezione vengono trattati alcuni aspetti della suddivisione a mosaico per la griglia di geometria che sono rilevanti per l'utilizzo di indici spaziali, ovvero i metodi e i rettangoli di selezione supportati.  
   
 > [!NOTE]  
->  È possibile specificare in modo esplicito questo schema a mosaico con la clausola USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) dell'istruzione [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  È possibile specificare in modo esplicito questo schema a mosaico con la clausola USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) dell'istruzione [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>Riquadro  
  I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definito da quattro coordinate, **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** , che sono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
@@ -140,7 +140,7 @@ ms.locfileid: "72909294"
 -   *y-max* è la coordinata y dell'angolo superiore destro.  
   
 > [!NOTE]  
->  Queste coordinate sono specificate dalla clausola BOUNDING_BOX dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  Queste coordinate sono specificate dalla clausola BOUNDING_BOX dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)][CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
  Le coordinate **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** determinano la posizione e le dimensioni del rettangolo di selezione. Lo spazio al di fuori del riquadro viene considerato come una cella unica numerata con 0.  
   

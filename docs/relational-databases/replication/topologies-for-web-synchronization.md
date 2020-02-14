@@ -14,17 +14,17 @@ ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129814"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologie per la sincronizzazione tramite il Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   È possibile scegliere tra diverse topologie di replica di sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il Web. Le modalità comuni di configurazione della sincronizzazione tramite il Web includono:  
   
--   Server unico  
+-   Server singolo  
   
 -   Due server  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68129814"
  ![Sincronizzazione Web con ripubblicazione](../../relational-databases/replication/media/web-sync05.gif "Sincronizzazione Web con ripubblicazione")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare la sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Sincronizzazione Web per la replica di tipo merge](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769798"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287563"
 ---
 # <a name="replication-publishing-model-overview"></a>Panoramica del modello di pubblicazione della replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Nella replica viene utilizzata una metafora basata sul settore dell'editoria per rappresentare i componenti di una topologia di replica: server di pubblicazione, server di distribuzione, sottoscrittori, pubblicazioni, articoli e sottoscrizioni. È opportuno considerare la replica in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando come riferimento una rivista:  
+  Nella replica viene utilizzata una metafora basata sul settore dell'editoria per rappresentare i componenti di una topologia di replica: server di pubblicazione, server di distribuzione, sottoscrittori, pubblicazioni, articoli e sottoscrizioni. Il processo di replica in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è paragonabile a quello di pubblicazione e distribuzione di una rivista:  
   
 -   Un editore di riviste produce una o più pubblicazioni  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68769798"
   
  ![Componenti e flusso di dati per la replica](../../../relational-databases/replication/publish/media/replintro1.gif "Componenti e flusso di dati per la replica")  
   
-## <a name="publisher"></a>Server di pubblicazione  
+## <a name="publisher"></a>Editore  
  Il server di pubblicazione è un'istanza di database che rende i dati disponibili in altre posizioni tramite la replica. Può disporre di una o più pubblicazioni, ognuna delle quali definisce un set logicamente correlato di dati e oggetti da replicare.  
   
 ## <a name="distributor"></a>Database di distribuzione  
@@ -63,12 +63,12 @@ ms.locfileid: "68769798"
 ## <a name="publication"></a>Pubblicazione  
  Una pubblicazione è una raccolta di uno o più articoli di un database. Il raggruppamento di più articoli in una pubblicazione semplifica la selezione di un set logicamente correlato di dati e oggetti di database replicati come unità.  
   
-## <a name="subscription"></a>Sottoscrizione  
+## <a name="subscription"></a>Subscription  
  Una sottoscrizione è una richiesta di recapito di una copia di una pubblicazione a un Sottoscrittore. Una sottoscrizione definisce la pubblicazione che verrà ricevuta, insieme alla posizione e al momento in cui l'operazione verrà eseguita. Esistono due tipi di sottoscrizioni: push e pull. Per altre informazioni sulle sottoscrizioni push e pull, vedere [Sottoscrizione delle pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica degli agenti di replica](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Tipi di replica](../../../relational-databases/replication/types-of-replication.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [Configurare la replica per i gruppi di disponibilità AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [Gestione di un database di pubblicazione AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

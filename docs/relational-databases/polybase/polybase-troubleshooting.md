@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710496"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909631"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Monitorare e risolvere i problemi relativi a PolyBase
 
@@ -33,12 +33,12 @@ Usare le viste del catalogo elencate di seguito per gestire le operazioni di Pol
 
 |||  
 |-|-|  
-|Vista|Descrizione|  
+|Visualizza|Descrizione|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifica le tabelle esterne.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifica le origini dati esterne.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifica i formati di file esterni.|  
 
-## <a name="dynamic-management-views"></a>DMV  
+## <a name="dynamic-management-views"></a>DMV (Dynamic Management View)  
 
 |||  
 |-|-|  
@@ -142,7 +142,7 @@ Per eseguire il monitoraggio e risolvere i problemi relativi alle query di PolyB
 
 3. Fare clic con il pulsante destro del mouse sull' **operatore Remote Query** e selezionare **Proprietà**.
 
-4. Copiare e incollare il valore di Remote Query in un editor di testo per visualizzare il piano di query remota XML. Di seguito è riportato un esempio.
+4. Copiare e incollare il valore di Remote Query in un editor di testo per visualizzare il piano di query remota XML. Di seguito è illustrato un esempio.
 
    ```xml  
 

@@ -22,10 +22,10 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067548"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68067548"
 
   Inserisce o elimina una parola non significativa nell'elenco di parole non significative full-text predefinito del database corrente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,10 +63,10 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  È possibile specificare *language_term* come valore stringa, intero o esadecimale corrispondente all'identificatore delle impostazioni locali (LCID) della lingua, come indicato di seguito:  
   
-|Formato|Descrizione|  
+|Format|Descrizione|  
 |------------|-----------------|  
-|String|*language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'** .|  
-|Valore intero|*language_term* è l'identificatore LCID della lingua.|  
+|string|*language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'** .|  
+|Integer|*language_term* è l'identificatore LCID della lingua.|  
 |Valore esadecimale|*language_term* corrisponde a 0x seguito dal valore esadecimale dell'identificatore LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali. Se il valore è in formato DBCS (Double-Byte Character Set), verrà convertito in Unicode da SQL Server.|  
   
  ADD **'***stopword***'** LANGUAGE *language_term*  
@@ -86,7 +86,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
  ALL  
  Elimina tutte le parole non significative dall'elenco di parole non significative.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  CREATE FULLTEXT STOPLIST è supportato solo per il livello di compatibilità 100 e superiore. Per i livelli di compatibilità 80 e 90, l'elenco di parole non significative di sistema viene sempre assegnato al database.  
   
 ## <a name="permissions"></a>Autorizzazioni  

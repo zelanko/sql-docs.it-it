@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946862"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Visualizzazione del piano di esecuzione stimato
@@ -41,11 +41,11 @@ ms.locfileid: "67946862"
   
 3.  Scegliere **Visualizza piano di esecuzione stimato** dal menu **Query** oppure fare clic sul pulsante **Visualizza piano di esecuzione stimato** della barra degli strumenti. Il piano di esecuzione stimato verrà visualizzato nel riquadro Risultati della scheda **Piano di esecuzione** . 
 
-    ![Pulsante del piano di esecuzione stimato nella barra degli strumenti](../../relational-databases/performance/media/estimatedexecplantoolbar.png "Pulsante del piano di esecuzione stimato nella barra degli strumenti")    
+    ![Pulsante del piano di esecuzione stimato sulla barra degli strumenti](../../relational-databases/performance/media/estimatedexecplantoolbar.png "Pulsante del piano di esecuzione stimato sulla barra degli strumenti")    
 
     Per visualizzare informazioni aggiuntive, posizionare il mouse sulle icone degli operatori logici e fisici e visualizzare la descrizione e le proprietà dell'operatore nella descrizione comando. In alternativa, è possibile visualizzare le proprietà dell'operatore nella finestra Proprietà. Se tale finestra non è visibile, fare clic con il pulsante destro del mouse su un operatore e scegliere **Proprietà**. Selezionare un operatore e visualizzare le relative proprietà.  
 
-    ![Fare clic con il pulsante destro del mouse sull'operatore del piano per visualizzarne le proprietà](../../relational-databases/performance/media/planproperties.png "Fare clic con il pulsante destro del mouse sull'operatore del piano per visualizzarne le proprietà")    
+    ![Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano](../../relational-databases/performance/media/planproperties.png "Fare clic con il pulsante destro del mouse su Proprietà nell'operatore del piano")    
   
 4.  Per modificare la visualizzazione del piano di esecuzione, fare clic con il pulsante destro del mouse sul piano di esecuzione e scegliere **Zoom avanti**, **Zoom indietro**, **Personalizza zoom**o **Adatta alla finestra**. **Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire o ridurre il piano di esecuzione in base a valori di percentuale predefiniti. **Personalizza zoom** consente di definire un ingrandimento personalizzato per la visualizzazione, ad esempio 80 percento. **Adatta alla finestra** consente di ingrandire il piano di esecuzione per adattarlo al riquadro Risultati. In alternativa, usare una combinazione di tasto CTRL e rotellina del mouse per attivare lo **zoom dinamico**.  
 

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062556"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
@@ -84,7 +84,7 @@ ms.locfileid: "68062556"
         >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Linee guida per l'utilizzo dei caratteri di terminazione  
- In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Esempio:  
+ In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Ad esempio:  
   
 -   Per una colonna di dati che contiene un valore null in un file di dati da importare in un programma che non riconosce le informazioni sulla lunghezza del prefisso.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68062556"
 
 ### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>Specifica di `\n` come carattere di terminazione di riga per l'esportazione bulk
 
-Quando si specifica `\n` come carattere di terminazione di riga per l'esportazione bulk o si usa in modo implicito il terminatore di riga predefinito, bcp restituisce una combinazione di ritorno a capo-avanzamento riga (CRLF) come carattere di terminazione di riga. Se si vuole usare solo un carattere di avanzamento riga (LF) come terminazione di riga, come avviene in genere nei computer Unix e Linux, usare la notazione esadecimale per specificare il carattere di terminazione di riga LF. Esempio:
+Quando si specifica `\n` come carattere di terminazione di riga per l'esportazione bulk o si usa in modo implicito il terminatore di riga predefinito, bcp restituisce una combinazione di ritorno a capo-avanzamento riga (CRLF) come carattere di terminazione di riga. Se si vuole usare solo un carattere di avanzamento riga (LF) come terminazione di riga, come avviene in genere nei computer Unix e Linux, usare la notazione esadecimale per specificare il carattere di terminazione di riga LF. Ad esempio:
 
 ```cmd
 bcp -r '0x0A'
@@ -171,7 +171,7 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. Utilizzo del comando bcp per l'impostazione interattiva dei caratteri di terminazione  
+#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>R. Utilizzo del comando bcp per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un comando `bcp` . Per questo comando sono disponibili le stesse opzioni del comando di esportazione bulk. Per ulteriori informazioni, vedere "Impostazione dei caratteri di terminazione per l'esportazione bulk", più indietro in questo argomento.  
   
  Al prompt dei comandi di Windows digitare:  
@@ -183,7 +183,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
-|Opzione|attribute|  
+|Opzione|Attributo|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |FIELDTERMINATOR **='** `,` **'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  
@@ -204,10 +204,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Definizione della lunghezza di campo tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
+ [Specificare la lunghezza del campo tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
  [Specificare la lunghezza del prefisso nei file di dati tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
  [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   

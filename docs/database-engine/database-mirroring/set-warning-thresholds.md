@@ -13,10 +13,10 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025208"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
@@ -35,14 +35,14 @@ ms.locfileid: "68025208"
   
  Il campo indica inoltre se il monitoraggio è attualmente connesso all'istanza del server. I possibili stati di connessione sono i seguenti:  
   
--   **Non connesso a**  *nome_istanza_server*  
+-   **Non connesso a** *nome_istanza_server*  
   
--   **Tentativo di connessione a**  *nome_istanza_server*  
+-   **Tentativo di connessione a** *nome_istanza_server* in corso  
   
--   **Connesso a**  *nome_istanza_server*  
+-   **Connesso a** *nome_istanza_server*  
   
     > [!NOTE]  
-    >  Se non si è membri del ruolo predefinito del server **sysadmin** , lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)** .  
+    >  In caso di non appartenenza al ruolo predefinito del server **sysadmin**, lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)** .  
   
  Il nome di ogni istanza del server partner è visualizzato in un campo *Istanza del server e relativo stato di connessione* separato. Il campo in alto indica il server principale all'avvio dell'esecuzione del monitoraggio.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68025208"
  **Abilitato su '** *\<istanza server>* **'**  
  Una casella di controllo deselezionata indica che l'avviso è attualmente disabilitato sull'istanza del server. Per abilitare un avviso, selezionare la relativa casella di controllo.  
   
- **Valore di soglia su '** *\<istanza server>* **'**  
+ **Valore soglia su '** *\<<istanza server>* **'**  
  Quando un avviso è abilitato, impostare la soglia nella parte sinistra della colonna. Un evento si verifica se la soglia specificata viene raggiunta all'aggiornamento della tabella dello stato. Se si disabilita una soglia dopo aver configurato un valore, il valore configurato rimane nel campo e verrà utilizzato in caso di riabilitazione dell'avviso.  
   
  Quando un avviso non è abilitato, il campo non è attivo.  
@@ -84,7 +84,7 @@ ms.locfileid: "68025208"
  **OK**  
  Se si fa clic su **OK** , questa finestra di dialogo viene chiusa e vengono visualizzati i valori attualmente specificati per le soglie degli avvisi nella griglia **Valori di soglia** della pagina a schede **Avvisi**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Una soglia è applicabile solo a un partner per volta, ma è consigliabile impostare una soglia per un determinato evento su entrambi i partner per assicurare che l'avviso venga mantenuto in caso di failover del database. La soglia appropriata per ogni partner dipende dalle capacità in termini di prestazioni del sistema di tale partner.  
   
  Un evento viene scritto nel log eventi per una prestazione solo se il relativo valore è uguale o superiore alla relativa soglia quando la tabella dello stato è in fase di aggiornamento. Se un valore di picco raggiunge la soglia solo temporaneamente tra gli aggiornamenti di stato, tale picco non viene segnalato.  
@@ -92,6 +92,6 @@ ms.locfileid: "68025208"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

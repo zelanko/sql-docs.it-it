@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283019"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lezione 6-4: Distribuire il pacchetto della lezione 6
@@ -66,7 +66,7 @@ In questa attività:
   
 6.  Nella finestra di dialogo **Sfoglia cartella** passare alla cartella contenente il progetto SSIS Tutorial, quindi selezionare **OK**.  
   
-7.  Fare clic su **Avanti**.  
+7.  Selezionare **Avanti**.  
   
 8.  Nella pagina Seleziona pacchetti vengono visualizzati tutti e sei i pacchetti di SSIS Tutorial. Nell'elenco **Pacchetti** selezionare **Lesson 6.dtsx**, quindi selezionare **Avanti**.  
   
@@ -80,7 +80,7 @@ In questa attività:
   
 Quando si chiude la Conversione guidata progetto di Integration Services, SSIS visualizza la Distribuzione guidata Integration Services. Usare questa procedura guidata per distribuire il pacchetto della lezione 6.  
   
-1.  Nella **pagina introduttiva** della **Distribuzione guidata Integration Services** verificare i passaggi per la distribuzione del progetto e selezionare **Avanti**.  
+1.  Nella **pagina introduttiva** della **Distribuzione guidata Integration Services** verificare i passaggi per la distribuzione del progetto e quindi selezionare **Avanti**.  
   
 2.  Nella pagina **Seleziona destinazione** verificare che il nome del server sia l'istanza di SQL Server che contiene il catalogo SSISDB e che il percorso indichi **SSIS Tutorial Deployment**, quindi selezionare **Avanti**.  
   

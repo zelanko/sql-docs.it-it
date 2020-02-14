@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: feabed59f397f2a12ca3697e5938e0540fcad228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770586"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288135"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitoraggio delle prestazioni con Monitoraggio replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Monitoraggio replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di monitorare le prestazioni della replica transazionale e della replica di tipo merge nei modi seguenti:  
+  Monitoraggio replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di monitorare le prestazioni della replica transazionale e della replica di tipo merge nei modi seguenti:  
   
 -   Impostazione di avvisi e soglie  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68770586"
  Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
 ## <a name="view-performance-measurements"></a>Visualizzazione delle misurazioni delle prestazioni  
- In Monitoraggio replica vengono visualizzati i valori relativi alla qualità delle prestazioni per repliche transazionali e di tipo merge nelle colonne **Prestazioni medie correnti** e **Prestazioni peggiori correnti** per le pubblicazioni e nella colonna **Prestazioni** per le sottoscrizioni. Le prestazioni possono risultare:  
+ In Monitoraggio replica vengono visualizzati i valori relativi alla qualità delle prestazioni per repliche transazionali e di tipo merge nelle colonne **Prestazioni medie correnti** e **Prestazioni peggiori correnti** per le pubblicazioni e nella colonna **Prestazioni** per le sottoscrizioni. I valori possibili sono:  
   
 -   Eccellenti  
   

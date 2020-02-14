@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558466"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909901"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault
 
@@ -33,7 +33,7 @@ Per le prime 8 ore, se il problema sottostante di accesso alla chiave di Azure K
 
 Se un database inaccessibile non è più necessario, è possibile eliminarlo immediatamente per evitare l'addebito di costi. Tutte le altre azioni sul database non sono consentite fino a quando non viene ripristinato l'accesso alla chiave di Azure Key Vault e il database non è di nuovo online. Quando un database crittografato con chiavi gestite dal cliente non è accessibile, non è nemmeno possibile modificare l'opzione TDE da chiavi gestite dal cliente a chiavi gestite dal servizio nel server. Questo vincolo è necessario per proteggere i dati da accessi non autorizzati mentre le autorizzazioni alla tecnologia di protezione TDE sono state revocate. 
 
-Quando un database rimane inaccessibile per più di 8 ore, non verrà più eseguita la riparazione automatica. Se l'accesso alla chiave di Azure Key Vault richiesta viene ripristinato dopo tale periodo, è necessario riconvalidare manualmente l'accesso per riportare online il database. Il ripristino dello stato online del database in questo caso può richiedere una notevole quantità di tempo a seconda delle dimensioni del database e attualmente richiede un ticket di supporto. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il collegamento geografico se è stato configurato il ripristino di emergenza geografico, la cronologia del recupero temporizzato e i tag, andranno perse. È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) che consenta di venire a conoscenza della situazione e di risolvere quanto prima i problemi di accesso sottostanti relativi all'insieme di credenziali delle chiavi. 
+Quando un database rimane inaccessibile per più di 8 ore, non verrà più eseguita la riparazione automatica. Se l'accesso alla chiave di Azure Key Vault richiesta viene ripristinato dopo tale periodo, è necessario riconvalidare manualmente l'accesso alla chiave per riportare online il database. Il ripristino dello stato online del database in questo caso può richiedere una notevole quantità di tempo a seconda delle dimensioni del database. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il [gruppo di failover](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), la cronologia del recupero temporizzato e i tag, **andranno perse**. È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) che consenta di venire a conoscenza della situazione e di risolvere quanto prima i problemi di accesso sottostanti relativi all'insieme di credenziali delle chiavi. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errori comuni che causano l'inaccessibilità dei database
 

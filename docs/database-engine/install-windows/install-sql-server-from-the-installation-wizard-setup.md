@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75259036"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934197"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 
@@ -67,9 +67,9 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
    Per continuare, selezionare **Avanti**.
 
 1. Nella pagina **Condizioni di licenza** leggere il contratto di licenza. Per accettare, selezionare la casella di controllo **Accetto le condizioni di licenza** e quindi selezionare **Avanti**.  
-
-   >[!NOTE]
-   > SQL Server trasmette le informazioni sull'esperienza di installazione, nonché altri dati sull'utilizzo e le prestazioni per aiutare Microsoft a migliorare il prodotto. Per altre informazioni sull'elaborazione dei dati e i controlli sulla privacy di SQL Server, vedere l'[informativa sulla privacy](https://privacy.microsoft.com/privacystatement) e [Configurare SQL Server per inviare commenti e suggerimenti a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+    
+   > [!NOTE]
+   > SQL Server trasmette le informazioni sull'esperienza di installazione, nonché altri dati sull'utilizzo e le prestazioni per aiutare Microsoft a migliorare il prodotto. Per altre informazioni sull'elaborazione dei dati e i controlli sulla privacy di SQL Server, vedere l'[informativa sulla privacy](https://privacy.microsoft.com/privacystatement) e [Configurare SQL Server per inviare commenti e suggerimenti a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. Nella pagina **Regole globali** la procedura di installazione passerà automaticamente alla pagina **Aggiornamenti prodotti** se non vi sono errori delle regole.  
   
@@ -227,15 +227,17 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
   
 1. L'Installazione guidata esegue Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per creare una nuova installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare **Installazione** nell'area di navigazione sinistra, quindi selezionare **Nuova installazione autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o aggiunta di funzionalità a un'installazione esistente**.  
 
-1. Nella pagina relativa al **codice Product Key** selezionare un'opzione per indicare se si intende installare un'edizione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versione di produzione con una chiave PID. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+1. Nella pagina relativa al **codice Product Key** selezionare un'opzione per indicare se si intende installare un'edizione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versione di produzione con una chiave PID. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
    Per continuare, selezionare **Avanti**.
-
   
 1. Nella pagina **Condizioni di licenza** leggere il contratto di licenza. Per accettare, selezionare la casella di controllo **Accetto le condizioni di licenza e [l'informativa sulla privacy](https://privacy.microsoft.com/privacystatement)** e quindi selezionare **Avanti**.  
 
-   >[!NOTE]
-   > SQL Server trasmette le informazioni sull'esperienza di installazione, nonché altri dati sull'utilizzo e le prestazioni per aiutare Microsoft a migliorare il prodotto. Per altre informazioni sull'elaborazione dei dati e i controlli sulla privacy di SQL Server, vedere l'[informativa sulla privacy](https://privacy.microsoft.com/privacystatement) e [Configurare SQL Server per inviare commenti e suggerimenti a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+   > [!NOTE]
+   > Se viene immesso un codice Product Key per una licenza CAL di Enterprise Server e il computer ha più di 20 core fisici o 40 core logici quando Hyper-Threading è abilitato, viene visualizzato un avviso durante l'installazione. È comunque possibile continuare l'installazione selezionando la casella di controllo **Selezionare questa casella per confermare questa limitazione per continuare o fare clic su Indietro/Annulla per inserire una licenza di prodotto Enterprise Core che supporta fino al massimo consentito dal sistema operativo** oppure fare clic su **Indietro** e immettere un codice di licenza che supporti il numero massimo di processori del sistema operativo.
+
+   > [!NOTE]
+   > SQL Server trasmette le informazioni sull'esperienza di installazione, nonché altri dati sull'utilizzo e le prestazioni per aiutare Microsoft a migliorare il prodotto. Per altre informazioni sull'elaborazione dei dati e i controlli sulla privacy di SQL Server, vedere l'[informativa sulla privacy](https://privacy.microsoft.com/privacystatement) e [Configurare SQL Server per inviare commenti e suggerimenti a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. Nella pagina **Regole globali** la procedura di installazione passerà automaticamente alla pagina **Aggiornamenti prodotti** se non vi sono errori delle regole.  
   

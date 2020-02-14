@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5c52b80601f7b1e8e73cffe0a6cad255d91ff82
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72172976"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
@@ -64,7 +64,7 @@ PERCENTILE_CONT ( numeric_literal )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-basic-syntax-example"></a>A. Esempio della sintassi di base  
+### <a name="a-basic-syntax-example"></a>R. Esempio della sintassi di base  
  Nell'esempio seguente vengono utilizzate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio del dipendente in ogni reparto. È possibile che queste funzioni non restituiscano lo stesso valore. PERCENTILE_CONT esegue l'interpolazione del valore appropriato, che può esistere o meno nel set di dati, mentre PERCENTILE_DISC restituisce sempre un valore effettivo dal set.  
   
 ```  

@@ -13,10 +13,10 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297732"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
@@ -64,7 +64,7 @@ ms.locfileid: "71297732"
   
     3.  Inserire due record con i dati seguenti.  
   
-        |ID|Nome|Cognome|  
+        |ID|FIRSTNAME|LASTNAME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -96,17 +96,17 @@ ms.locfileid: "71297732"
   
 2.  Fare clic su **Avanti** nella pagina **Introduzione** .  
   
-     ![Pubblicazione guidata feed di dati - Pagina Introduzione](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Pubblicazione guidata feed di dati - Pagina Introduzione")  
+     ![Pubblicazione guidata di feed di dati - Pagina Introduzione](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Pubblicazione guidata di feed di dati - Pagina Introduzione")  
   
 3.  Nella pagina **Impostazioni del pacchetto** effettuare le seguenti operazioni:  
   
     1.  Digitare il **nome** dell'istanza di SQL Server che contiene il catalogo SSIS o fare clic su **Sfoglia** per selezionare il server.  
   
-         ![Pubblicazione guidata feed di dati - Pagina Impostazioni pacchetto](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Pubblicazione guidata feed di dati - Pagina Impostazioni pacchetto")  
+         ![Pubblicazione guidata di feed di dati - Pagina Impostazioni del pacchetto](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Pubblicazione guidata di feed di dati - Pagina Impostazioni del pacchetto")  
   
     2.  Fare clic su **Sfoglia** accanto al campo Percorso, selezionare il catalogo SSIS, selezionare il pacchetto SSIS da pubblicare (ad esempio: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) e quindi fare clic su **OK**.  
   
-         ![Pubblicazione guidata feed di dati - Cerca pacchetto](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Pubblicazione guidata feed di dati - Cerca pacchetto")  
+         ![Pubblicazione guidata di feed di dati - Ricerca del pacchetto](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Pubblicazione guidata di feed di dati - Ricerca del pacchetto")  
   
     3.  Usando le schede Parametri del pacchetto, Parametri del progetto e Gestioni connessioni nella parte inferiore della pagina, immettere i valori per i parametri di pacchetto, i parametri del progetto o le impostazioni di gestione connessione per il pacchetto. È anche possibile indicare un riferimento all'ambiente da usare per l'esecuzione del pacchetto e associare i parametri di progetto o del pacchetto alle variabili di ambiente.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71297732"
   
     1.  Selezionare il **database** per la vista da creare.  
   
-         ![Pubblicazione guidata feed di dati - Pagina Impostazioni di pubblicazione](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Pubblicazione guidata feed di dati - Pagina Impostazioni di pubblicazione")  
+         ![Pubblicazione guidata di feed di dati - Pagina Impostazioni di pubblicazione](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Pubblicazione guidata di feed di dati - Pagina Impostazioni di pubblicazione")  
   
     2.  Digitare un **nome** per la **vista**. È anche possibile selezionare una vista esistente dall'elenco a discesa.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71297732"
   
 5.  Nella pagina **Convalida** esaminare i risultati della convalida dei valori per tutte le impostazioni. Nell'esempio seguente è visualizzato un **avviso** relativo all'esistenza del server collegato perché il server collegato non esiste nell'istanza di SQL Server selezionata. Se viene visualizzato **Errore** come **Risultato**, posizionare il mouse su **Errore** per visualizzare i relativi dettagli. Ad esempio, se non è stata abilitata l'opzione Consenti in-process per il provider SSISOLEDB, verrà visualizzato un errore relativo all'azione di configurazione del server collegato.  
   
-     ![Pubblicazione guidata feed di dati - Pagina Convalida](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Pubblicazione guidata feed di dati - Pagina Convalida")  
+     ![Pubblicazione guidata di feed di dati - Pagina Convalida](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Pubblicazione guidata di feed di dati - Pagina Convalida")  
   
 6.  Per salvare questo report come file XML, fare clic su Salva report.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "71297732"
   
 8.  Verificare le selezioni nella pagina **Riepilogo** e fare clic su **Pubblica** per avviare il processo di pubblicazione, che creerà il server collegato se non esiste già nel server e quindi creare la vista usando il server collegato.  
   
-     ![Pubblicazione guidata feed di dati - Pagina Riepilogo](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Pubblicazione guidata feed di dati - Pagina Riepilogo")  
+     ![Pubblicazione guidata di feed di dati - Pagina Riepilogo](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Pubblicazione guidata di feed di dati - Pagina Riepilogo")  
   
      Ora è possibile eseguire query sui dati di output del pacchetto usando l'istruzione SQL seguente sul database TestDB: SELECT * FROM [SSISPackageView].  
   
@@ -271,6 +271,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione flusso di dati](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configurare Destinazione flusso di dati](../../integration-services/data-flow/configure-data-streaming-destination.md)  
+ [Configurare la destinazione flusso di dati](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   

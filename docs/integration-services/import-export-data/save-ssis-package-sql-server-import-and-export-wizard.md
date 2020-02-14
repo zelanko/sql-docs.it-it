@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296253"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
@@ -64,7 +64,7 @@ Connettersi al server tramite l'autenticazione integrata di Windows. Questo è i
  **Usa autenticazione di SQL Server**  
 Connettersi al server tramite l'autenticazione di SQL Server.  
   
- **User name**  
+ **Nome utente**  
 Se è stata specificata l'autenticazione di SQL Server, immettere il nome utente.  
   
  **Password**  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8993d0512f4809302b2d4ac8193971decc2e0566
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769685"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287382"
 ---
 # <a name="replication-monitor"></a>Monitoraggio replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "68769685"
   
 -   [Agente snapshot](../../relational-databases/replication/snapshot-agent.md)  
   
--   [Impostazioni filtro](../../relational-databases/replication/filter-settings.md)  
+-   [Impostazioni dei filtri](../../relational-databases/replication/filter-settings.md)  
   
 -   [Ordina colonne](../../relational-databases/replication/sort-columns.md)  
   
