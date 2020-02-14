@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69072514931e7e449893124a8f192043b2bf87d7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908334"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287128"
 ---
 # <a name="specify-synchronization-schedules"></a>Impostazione di pianificazioni della sincronizzazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "72908334"
   
  Se si specificano le pianificazioni dalla cartella **Processi** , utilizzare la tabella seguente per determinare il nome del processo dell'agente.  
   
-|Agent|Nome processo|  
+|Agente|Nome processo|  
 |-----------|--------------|  
 |Agente di merge per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<intero>**|  
 |Agente di merge per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
@@ -98,7 +98,7 @@ ms.locfileid: "72908334"
   
 #### <a name="to-modify-a-synchronization-schedule-for-a-push-subscription-in-management-studio"></a>Per modificare una pianificazione della sincronizzazione per una sottoscrizione push in Management Studio  
   
-1.  Connettersi al server di distribuzione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.  
+1.  Connettersi al database di distribuzione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **SQL Server Agent** e quindi la cartella **Processi** .  
   
@@ -197,7 +197,7 @@ ms.locfileid: "72908334"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>Per definire una pianificazione dell'agente di replica quando si crea una sottoscrizione push di una pubblicazione transazionale  
   
-1.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription> per la sottoscrizione da creare. Per altre informazioni, vedere [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription> per la sottoscrizione da creare. Per altre informazioni, vedere [Creazione di una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md).  
   
 2.  Prima di chiamare <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, impostare uno o più dei seguenti campi della proprietà <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
   
@@ -290,7 +290,7 @@ ms.locfileid: "72908334"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>Per definire una pianificazione dell'agente di replica quando si crea una sottoscrizione push di una pubblicazione di tipo merge  
   
-1.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> per la sottoscrizione da creare. Per altre informazioni, vedere [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> per la sottoscrizione da creare. Per altre informazioni, vedere [Creazione di una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md).  
   
 2.  Prima di chiamare <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, impostare uno o più dei seguenti campi della proprietà <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
   

@@ -13,10 +13,10 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294123"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
@@ -24,7 +24,7 @@ ms.locfileid: "71294123"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
+  Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'output dell'attività Profiling dati richiede in genere un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
   
  Tuttavia, una volta stabiliti i criteri per la qualità dei dati, è possibile automatizzare operazioni periodiche di analisi e pulizia dell'origine dati. Considerare gli scenari seguenti:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294123"
   
  Quando si incorpora l'attività Profiling dati nel flusso di lavoro di un pacchetto, tenere presenti queste due caratteristiche dell'attività:  
   
--   **Output dell'attività**. L'output dell'attività Profiling dati viene scritto in un file o in una variabile del pacchetto in formato XML in base allo schema DataProfile.xsd. Pertanto, è necessario eseguire una query sull'output XML se si desidera utilizzare i risultati del profilo nel flusso di lavoro condizionale di un pacchetto. A tale scopo, è possibile utilizzare il linguaggio di query Xpath. Per esaminare la struttura di questo output XML, è possibile aprire un file di output di esempio o lo schema stesso. Per aprire il file di output o lo schema, è possibile utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], un altro editor XML o un editor di testo, ad esempio Blocco note.  
+-   **Output dell'attività**. L'output dell'attività Profiling dati viene scritto in un file o in una variabile del pacchetto in formato XML in base allo schema DataProfile.xsd. Pertanto, è necessario eseguire una query sull'output XML se si desidera utilizzare i risultati del profilo nel flusso di lavoro condizionale di un pacchetto. A tale scopo, è possibile utilizzare il linguaggio di query Xpath. Per esaminare la struttura di questo output XML, è possibile aprire un file di output di esempio o lo schema stesso. Per aprire il file di output o lo schema, è possibile usare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], un altro editor XML o un editor di testo, ad esempio il Blocco note.  
   
     > [!NOTE]  
     >  Alcuni risultati del profilo visualizzati nel Visualizzatore profilo dati sono valori calcolati che non si trovano direttamente nell'output. Ad esempio, l'output del profilo Rapporto di valori Null nella colonna contiene il numero complessivo di righe e il numero di righe che contengono valori Null. È necessario eseguire una query su questi due valori, quindi calcolare la percentuale di righe che contengono valori Null per ottenere il rapporto di valori Null nella colonna.  

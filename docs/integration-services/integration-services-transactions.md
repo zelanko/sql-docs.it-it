@@ -16,10 +16,10 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90855baaa61e242488a7fb6a91a52e34d77e5f48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284406"
 ---
 # <a name="integration-services-transactions"></a>Transazioni di Integration Services
@@ -84,7 +84,7 @@ Quando si configura un pacchetto per l'utilizzo di transazioni, sono disponibili
   
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
-4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo e quindi scegliere **Proprietà**.  
+4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
   
 5.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su **Supported**.  
   
@@ -159,7 +159,7 @@ Un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] potre
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Intervento nel blog [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783) sul sito Web all'indirizzo www.mssqltips.com  
+-   Intervento nel blog [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783)sul sito Web all'indirizzo www.mssqltips.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Transazioni ereditate](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   

@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014685"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
@@ -24,11 +24,11 @@ ms.locfileid: "68014685"
 ##  <a name="data-synchronization-process"></a>Processo di sincronizzazione dei dati  
  Per stimare il tempo di sincronizzazione completa e identificare il collo di bottiglia, è necessario conoscere il processo di sincronizzazione. Un collo di bottiglia delle prestazioni può verificarsi in punto qualsiasi del processo. Se si individua il punto del collo di bottiglia è possibile analizzare in modo approfondito i problemi sottostanti. La figura e la tabella seguenti illustrano il processo di sincronizzazione dei dati:  
   
- ![Sincronizzazione dei dati del gruppo di disponibilità](media/always-onag-datasynchronization.gif "Sincronizzazione dei dati del gruppo di disponibilità")  
+ ![Sincronizzazione dei dati dei gruppi di disponibilità](media/always-onag-datasynchronization.gif "Sincronizzazione dei dati dei gruppi di disponibilità")  
   
 |||||  
 |-|-|-|-|  
-|**Sequence**|**Descrizione passaggio**|**Commenti**|**Metrica utile**|  
+|**Sequenza**|**Descrizione passaggio**|**Commenti**|**Metrica utile**|  
 |1|Generazione log|I dati del log vengono scaricati su disco. Il log deve essere replicato nelle repliche secondarie. I record del log immettono la coda di invii.|[SQL Server:Database > Byte/sec scaricamento log](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Acquisizione|I log di ogni database vengono acquisiti e inviati alla coda del partner corrispondente (uno per ogni coppia di replica/database). Il processo di acquisizione viene eseguito in modo continuo purché la replica di disponibilità sia connessa e lo spostamento dei dati non sia per qualche motivo sospeso. La coppia replica/database avrò lo stato Sincronizzazione in corso o Sincronizzato. Se il processo di acquisizione non esegue l'analisi e accoda i messaggi a una velocità sufficiente, si crea la coda di invii del log.|[SQL Server: Replica di disponibilità> Byte inviati alla replica/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), vale a dire un'aggregazione della somma di tutti i messaggi di database accodati per tale replica di disponibilità.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/sec) nella replica primaria.|  
 |3|Send|I messaggi di ogni coda della replica/database vengono rimossi dalla coda e inviati in rete alla rispettiva replica secondaria.|[SQL Server:Replica di disponibilità > Byte inviati al trasporto/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -44,7 +44,7 @@ ms.locfileid: "68014685"
 |||||  
 |-|-|-|-|  
 |**Level**|**Numero di controlli**|**Numero di messaggi**|**Metrica utile**|  
-|Trasferimento|1 per replica di disponibilità|8192|Evento esteso **database_transport_flow_control_action**|  
+|Trasporto|1 per replica di disponibilità|8192|Evento esteso **database_transport_flow_control_action**|  
 |Database|1 per database di disponibilità|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Evento esteso **hadron_database_flow_control_action**|  
   
  Dopo che uno dei controlli ha raggiunto la soglia dei messaggi, i messaggi di log non vengono più inviati a una replica specifica o per un database specifico. È possibile inviare i messaggi quando vengono ricevuti i messaggi di acknowledgement per i messaggi inviati in modo che il numero di messaggi inviati sia al di sotto della soglia.  
@@ -65,7 +65,7 @@ ms.locfileid: "68014685"
   
  Per poter eseguire il failover, la replica secondaria deve solo aggiornarsi alla fine del log per il rollforward. Il tempo di rollforward (Tredo) viene calcolato usando la formula seguente:  
   
- ![Calcolo tempo di rollforward dei gruppi di disponibilità](media/always-on-redo.gif "Calcolo tempo di rollforward dei gruppi di disponibilità")  
+ ![Calcolo del tempo di rollforward dei gruppi di disponibilità](media/always-on-redo.gif "Calcolo del tempo di rollforward dei gruppi di disponibilità")  
   
  dove *redo_queue* è il valore in [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) e *redo_rate* è il valore in [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).  
   
@@ -441,9 +441,9 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
 |Scenario|Descrizione|  
 |--------------|-----------------|  
-|[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO](troubleshoot-availability-group-exceeded-rto.md)|Dopo un failover automatico o un failover manuale pianificato senza perdita di dati, il tempo di failover supera l'obiettivo RTO. Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico), si scopre che supera l'obiettivo RTO.|  
-|[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Dopo aver eseguito un failover manuale forzato, la perdita di dati è maggiore dell'obiettivo RPO. In alternativa, quando si calcola la potenziale perdita di dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
-|[Risoluzione dei problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
+|[Risolvere i problemi: Il gruppo di disponibilità ha superato la soglia RTO](troubleshoot-availability-group-exceeded-rto.md)|Dopo un failover automatico o un failover manuale pianificato senza perdita di dati, il tempo di failover supera l'obiettivo RTO. Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico), si scopre che supera l'obiettivo RTO.|  
+|[Risolvere i problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Dopo aver eseguito un failover manuale forzato, la perdita di dati è maggiore dell'obiettivo RPO. In alternativa, quando si calcola la potenziale perdita di dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
+|[Risolvere i problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Eventi estesi utili  
  Gli eventi estesi seguenti sono utili quando vengono risolti i problemi delle repliche che hanno lo stato **Sincronizzazione in corso**.  

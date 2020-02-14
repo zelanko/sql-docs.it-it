@@ -22,16 +22,16 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983324"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Modifica la definizione di un trigger DML, DDL o LOGON precedentemente creato dall'istruzione CREATE TRIGGER. I trigger vengono creati tramite l'istruzione CREATE TRIGGER. Possono essere creati direttamente dalle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o dai metodi di assembly creati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) e caricati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sui parametri usati nell'istruzione ALTER TRIGGER, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+  Modifica la definizione di un trigger DML, DDL o LOGON precedentemente creato dall'istruzione CREATE TRIGGER. I trigger vengono creati tramite l'istruzione CREATE TRIGGER. Possono essere creati direttamente dalle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o dai metodi di assembly creati in Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e caricati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sui parametri usati nell'istruzione ALTER TRIGGER, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -216,7 +216,7 @@ AS { sql_statement
   
  Specifica il metodo di un'assembly da associare al trigger. Il metodo non deve accettare nessun argomento e restituire void. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly con visibilità dell'assembly. La classe non può essere nidificata.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per altre informazioni su ALTER TRIGGER, vedere la sezione Osservazioni in [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  

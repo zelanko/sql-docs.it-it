@@ -15,19 +15,19 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 45cc5e8c2ca3e311704ffd4eb6577d2e934d484a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140716"
 ---
 # <a name="merge-agent-security"></a>Sicurezza agente di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La finestra di dialogo **Sicurezza agente di merge** consente di specificare l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] con cui viene eseguito l'agente di merge. L'agente di merge viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
   
--   Se si accede alla finestra di dialogo dalla Creazione guidata nuova sottoscrizione, è inoltre possibile specificare il contesto in cui l'agente di merge stabilisce le connessioni al Sottoscrittore (per le sottoscrizioni push) o ai server di pubblicazione e di distribuzione (per le sottoscrizioni pull). È possibile stabilire la connessione utilizzando l'account di Windows oppure nel contesto di un account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato dall'utente.  
+-   Se si accede alla finestra di dialogo dalla Creazione guidata nuova sottoscrizione, è inoltre possibile specificare il contesto in cui l'agente di merge stabilisce le connessioni al Sottoscrittore (per le sottoscrizioni push) o ai server di pubblicazione e di distribuzione (per le sottoscrizioni pull). È possibile stabilire la connessione usando l'account di Windows oppure nel contesto di un account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato dall'utente.  
   
--   Se si accede alla finestra di dialogo dalla finestra di dialogo **Proprietà sottoscrizione** , specificare il contesto in cui l'agente di merge stabilisce le connessioni facendo clic sul pulsante delle proprietà ( **...** ) nella riga **Connessione al Sottoscrittore** o **Connessione al server di pubblicazione** della finestra di dialogo. Per altre informazioni sull'accesso alla finestra di dialogo **Proprietà delle sottoscrizioni**, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Se si accede alla finestra di dialogo dalla finestra di dialogo **Proprietà sottoscrizione** , specificare il contesto in cui l'agente di merge stabilisce le connessioni facendo clic sul pulsante delle proprietà ( **...** ) nella riga **Connessione al Sottoscrittore** o **Connessione al server di pubblicazione** della finestra di dialogo. Per altre informazioni sull'accesso alla finestra di dialogo **Proprietà sottoscrizione**, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Tutti gli account devono essere validi e per ogni account deve essere stata specificata la password corretta. Gli account e le password vengono convalidati solo dopo l'avvio dell'esecuzione di un agente.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68140716"
   
  Sono necessarie autorizzazioni aggiuntive nel caso in cui l'account di processo sia rappresentato durante l'attivazione delle connessioni. Vedere le sezioni **Connetti al server di pubblicazione e al server di distribuzione** e **Connetti al Sottoscrittore** riportate di seguito.  
   
- Non è possibile specificare **l'account di processo** per le sottoscrizioni pull di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], in quanto l'agente di merge non viene eseguito nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ Non è possibile specificare l'**account di processo** per le sottoscrizioni pull di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], in quanto l'agente di merge non viene eseguito nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Password** e **Conferma password**  
  Immettere la password per l'account di Windows.  

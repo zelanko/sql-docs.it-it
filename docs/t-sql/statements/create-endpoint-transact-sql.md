@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902831"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "67902831"
   
 > **NOTA** I servizi Web XML nativi (endpoint SOAP/HTTP) sono stati rimossi in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Per le opzioni specifiche per SERVICE_BROKER, vedere "Opzioni di SERVICE_BROKER" di seguito in questo argomento. Per le opzioni specifiche per DATABASE_MIRRORING, vedere "Opzioni di DATABASE_MIRRORING" di seguito in questo argomento.  
   
- AUTHENTICATION **=** \<authentication_options> Specifica i requisiti di autenticazione TCP/IP per le connessioni per questo endpoint. Il valore predefinito è WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Specifica i requisiti di autenticazione TCP/IP relativi alle connessioni per questo endpoint. Il valore predefinito è WINDOWS.  
   
  I metodi di autenticazione supportati includono NTLM o Kerberos oppure entrambi.  
   
@@ -169,7 +169,7 @@ FOR DATABASE_MIRRORING (
  **\<authentication_options> ::=**  
   
  **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
- Specifica che l'endpoint deve connettersi utilizzando il protocollo di autenticazione di Windows per autenticare gli endpoint Impostazione predefinita.  
+ Specifica che l'endpoint deve connettersi utilizzando il protocollo di autenticazione di Windows per autenticare gli endpoint Questa è la modalità predefinita.  
   
  Se si specifica un metodo di autenticazione (NTLM o KERBEROS), il metodo specificato viene utilizzato sempre come protocollo di autenticazione. Il valore predefinito NEGOTIATE imposta l'utilizzo da parte dell'endpoint di uno dei protocolli di negoziazione di Windows (NTLM o Kerberos).  
   
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
  Inoltra i messaggi se è disponibile un indirizzo di inoltro.  
   
  DISABLED  
- Cancella i messaggi per i servizi ubicati altrove. Impostazione predefinita.  
+ Cancella i messaggi per i servizi ubicati altrove. Questa è la modalità predefinita.  
   
  MESSAGE_FORWARD_SIZE **=** _forward_size_  
  Specifica lo spazio di archiviazione massimo espresso in MB da allocare per l'endpoint durante l'archiviazione dei messaggi da inoltrare.  
@@ -256,7 +256,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Non esiste alcuna porta predefinita per DATABASE_MIRRORING.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Non è possibile eseguire le istruzioni ENDPOINT DDL all'interno di una transazione utente. Le istruzioni ENDPOINT DDL non avranno esito negativo anche in presenza di una transazione attiva a livello di isolamento dello snapshot che utilizza l'endpoint in fase di modifica.  
   
  Le richieste possono essere eseguite su ENDPOINT da:  

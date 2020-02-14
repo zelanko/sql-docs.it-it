@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816709"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
@@ -51,7 +51,7 @@ ms.locfileid: "71816709"
     
  Gli indici columnstore riducono le operazioni I/O e ottimizzano le operazioni in memoria grazie all'elevata compressione dei dati, all'eliminazione di columnstore, all'eliminazione di rowgroup e all'elaborazione batch.    
     
-### <a name="data-compression"></a>Compressione dati    
+### <a name="data-compression"></a>Compressione dei dati    
  Gli indici columnstore raggiungono una compressione dei dati 10 volte superiore a quella degli indici rowstore. Ciò riduce significativamente le operazioni I/O richieste per eseguire query di analisi e di conseguenza migliora le prestazioni delle query.    
     
 -   Gli indici columnstore leggono i dati compressi dal disco, quindi il numero di byte che deve essere letto nella memoria risulta ridotto.    
@@ -106,7 +106,7 @@ ms.locfileid: "71816709"
 |Nested Loops||no|no|no||    
 |Query a thread singolo in esecuzione in MAXDOP 1||no|no|sì||    
 |Query a thread singolo con un piano di query seriale||no|no|sì||    
-|Sort|Ordinare per clausola in SCAN con l'indice columnstore.|no|no|sì||    
+|sort|Ordinare per clausola in SCAN con l'indice columnstore.|no|no|sì||    
 |Top Sort||no|no|sì||    
 |Window Aggregates||ND|ND|sì|Nuovo operatore in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
@@ -127,7 +127,7 @@ ms.locfileid: "71816709"
     
  La distribuzione dell'aggregazione viene ulteriormente accelerata da un'aggregazione efficiente dei dati compressi/codificati durante un'esecuzione di facile integrazione con la cache e sfruttando SIMD    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![distribuzione dell'aggregazione](../../relational-databases/indexes/media/aggregate-pushdown.jpg "Distribuzione dell'aggregazione")    
     
 Ad esempio, la distribuzione dell'aggregazione viene eseguita in entrambe le query seguenti:    
     

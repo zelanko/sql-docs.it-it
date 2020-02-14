@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981001"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287838"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "73981001"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Account di accesso  
+ LOGIN  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Specifica che il contesto di esecuzione da rappresentare è un account di accesso. L'ambito di rappresentazione è a livello di server.  
@@ -63,7 +63,7 @@ ms.locfileid: "73981001"
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure o in Azure SQL Data Warehouse.  
   
- Utente  
+ USER  
  Specifica che il contesto da rappresentare è un utente nel database corrente. L'ambito di rappresentazione è limitato al database corrente. Un cambio di contesto a un utente del database non eredita le autorizzazioni a livello di server di tale utente.  
   
 > [!IMPORTANT]  
@@ -96,7 +96,7 @@ Se utilizzato all'esterno di un modulo, l'istruzione non esegue alcuna azione.
  > [!NOTE]  
 >  Questa opzione non è disponibile in SQL Data Warehouse.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il cambio di contesto di esecuzione rimane valido finché non si verifica una delle situazioni seguenti:  
   
 -   Viene eseguita un'altra istruzione EXECUTE AS.  
@@ -129,9 +129,9 @@ Se l'utente è reso orfano, ovvero se l'accesso associato non esiste più, e non
 ## <a name="using-with-no-revert"></a>Utilizzo di WITH NO REVERT  
  Se l'istruzione EXECUTE AS include la clausola facoltativa WITH NO REVERT, il contesto di esecuzione di una sessione non può essere ripristinato tramite REVERT oppure tramite l'esecuzione di un'altra istruzione EXECUTE AS. Il contesto impostato dall'istruzione rimane valido fino all'eliminazione della sessione.  
   
- Quando la clausola WITH NO REVERT COOKIE = @*varbinary_variabl*e è specificata, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene lo stesso valore *@varbinary_variable* .  
+ Quando la clausola WITH NO REVERT COOKIE = @*varbinary_variabl*e è specificata, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente solo se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene lo stesso valore di *\@varbinary_variable*.  
   
- Questa opzione risulta utile in un ambiente in cui vengono utilizzati i pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni in un server applicazioni. Poiché il valore passato a *@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS, il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato da altri.  
+ Questa opzione risulta utile in un ambiente in cui vengono utilizzati i pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni in un server applicazioni. Poiché il valore passato a *\@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS, il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato da altri.  
   
 ## <a name="determining-the-original-login"></a>Determinazione dell'account di accesso originale  
  Usare la funzione [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) per restituire il nome dell'account di accesso connesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare questa funzione per restituire l'identità dell'account di accesso originale in sessioni in cui si verificano numerosi cambi di contesto espliciti o impliciti.  

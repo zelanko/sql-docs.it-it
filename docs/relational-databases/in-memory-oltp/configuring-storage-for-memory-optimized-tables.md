@@ -1,7 +1,7 @@
 ---
 title: Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 10/25/2017
+ms.date: 1/15/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: d1d0848a1399c533162799fd9a4404955bb542dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634573"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76125007"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,18 +34,20 @@ Un buon punto di partenza per ridimensionare le risorse di archiviazione per que
   
 -   Quando si esegue la migrazione delle tabelle basate su disco nelle tabelle ottimizzate per la memoria, verificare che il log delle transazioni sia in un supporto di archiviazione che supporti l'attività aumentata del log delle transazioni. Ad esempio, se il supporto di archiviazione supporta le operazioni del log delle transazioni a 100 MB/sec e le tabelle ottimizzate per la memoria restituiscono prestazioni cinque volte superiori, anche il supporto di archiviazione del log delle transazioni deve essere in grado di supportare un incremento di cinque volte delle prestazioni, per impedire all'attività del log delle transazioni di diventare un collo di bottiglia.  
   
--   Le tabelle ottimizzate per la memoria sono persistenti nei file di checkpoint distribuiti in uno o più contenitori. In genere è necessario eseguire il mapping di ogni contenitore al relativo dispositivo di archiviazione, che consente di aumentare la capacità di archiviazione e migliorare gli IOPS. È necessario assicurarsi che le operazioni di IOPS sequenziali del supporto di archiviazione possano supportare fino a 3 volte la velocità effettiva del log delle transazioni. Le operazioni di scrittura nei file di checkpoint sono di 256 KB per i file di dati e di 4 KB per file differenziali.
+-   Le tabelle ottimizzate per la memoria sono persistenti nei file di checkpoint distribuiti in uno o più contenitori. In genere è necessario eseguire il mapping di ogni contenitore al relativo dispositivo di archiviazione, che consente di aumentare la capacità di archiviazione e migliorare gli IOPS. È necessario assicurarsi che le operazioni di IOPS sequenziali del supporto di archiviazione possano supportare fino a 3 volte la velocità effettiva del log delle transazioni. Le operazioni di scrittura nei file di checkpoint sono di 256 kB per i file di dati e di 4 kB per i file differenziali.
   
-     - Ad esempio, se le tabelle ottimizzate per la memoria generano 500 MB/sec di attività nel log delle transazioni, l'archiviazione per le tabelle ottimizzate per la memoria deve supportare IOPS da 1,5 GB/sec. La necessità di supportare fino a 3 volte la velocità effettiva del log delle transazioni deriva dall'analisi che le coppie di file di dati e differenziali vengono prima scritti con dati iniziali e quindi devono essere letti e riscritti come parte di un'operazione di merge.  
+     - Se, ad esempio, le tabelle ottimizzate per la memoria generano 500 MB/sec di attività nel log delle transazioni, l'archiviazione per le tabelle ottimizzate per la memoria deve supportare IOPS da 1,5 GB/sec. La necessità di supportare fino a 3 volte la velocità effettiva del log delle transazioni deriva dall'analisi che le coppie di file di dati e differenziali vengono prima scritti con dati iniziali e quindi devono essere letti e riscritti come parte di un'operazione di merge.  
   
 - Un altro fattore per stimare gli IOPS per l'archiviazione è il tempo di recupero per le tabelle ottimizzate per la memoria. I dati delle tabelle durevoli devono essere letti in memoria prima che un database viene reso disponibile alle applicazioni. In genere, il caricamento dei dati nelle tabelle ottimizzate per la memoria può essere eseguito alla velocità delle operazioni di IOPS. Pertanto se l'archiviazione totale per le tabelle ottimizzate per la memoria durevoli è di 60 GB e si desidera essere in grado di caricare i dati in 1 minuto, le operazioni di IOPS per l'archiviazione devono essere impostati su 1 GB/sec.  
   
 -   I file di checkpoint vengono in genere distribuiti in modo uniforme in tutti i contenitori, se lo spazio disponibile lo consente. Con SQL Server 2014 è necessario eseguire il provisioning di un numero dispari di contenitori per ottenere una distribuzione uniforme. A partire dalla versione 2016, sia un numero pari che un numero dispari di contenitori permette una distribuzione uniforme.
   
 ## <a name="encryption"></a>Crittografia  
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]lo spazio di archiviazione per le tabelle ottimizzate per la memoria viene crittografato come parte dell'abilitazione di Transparent Data Encryption nel database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] i file di checkpoint non vengono crittografati, anche se TDE è abilitata nel database.
+ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive l'archiviazione per le tabelle ottimizzate per la memoria verrà crittografata quando inattive come parte dell'abilitazione di Transparent Data Encryption (TDE) nel database. Per altre informazioni, vedere [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] i file di checkpoint non vengono crittografati, anche se TDE è abilitata nel database.
+
+ I dati nelle tabelle ottimizzate per la memoria [non durevoli](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) non vengono mai scritti su disco. Di conseguenza, TDE non si applica a tali tabelle.
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

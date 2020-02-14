@@ -26,12 +26,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843565"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315621"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ SYSTEM_USER
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la funzione SYSTEM_USER in combinazione con i vincoli DEFAULT nelle istruzioni CREATE TABLE e ALTER TABLE, nonché come qualsiasi funzione standard.  
   
  Se il nome utente e il nome dell'account di accesso sono diversi, SYSTEM_USER restituisce il nome dell'account di accesso.  
@@ -57,10 +57,12 @@ SYSTEM_USER
  Se l'utente corrente ha eseguito l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, SYSTEM_USER restituisce il nome di identificazione dell'account di accesso Windows nel formato: *DOMAIN*\\*nome_account_utente*. Se l'utente invece è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di SQL Server, SYSTEM_USER restituisce il nome dell'identificazione dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `WillisJo` per un utente connesso come `WillisJo`.  
   
  SYSTEM_USER restituisce il nome del contesto di esecuzione corrente. Se l'istruzione EXECUTE AS è stata utilizzata per cambiare contesto, SYSTEM_USER restituirà il nome del contesto rappresentato.  
-  
+
+ Non è possibile usare EXECUTE AS per SYSTEM_USER.
+
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. Utilizzo di SYSTEM_USER per recuperare il nome utente di sistema corrente  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>R. Utilizzo di SYSTEM_USER per recuperare il nome utente di sistema corrente  
  Nell'esempio seguente viene dichiarata una variabile `char`, il valore corrente di `SYSTEM_USER` viene archiviato nella variabile, quindi viene visualizzato il valore archiviato nella variabile.  
   
 ```  

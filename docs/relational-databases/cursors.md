@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140806"
 ---
 # <a name="cursors"></a>Cursori
@@ -88,8 +88,8 @@ Nel cursore non vengono riportate né le modifiche al database che hanno effetto
 ### <a name="keyset"></a>Keyset  
 L'appartenenza e l'ordine delle righe di un cursore gestito da keyset vengono fissati al momento dell'apertura del cursore. I cursori gestiti da keyset vengono controllati da un set di identificatori univoci, ovvero chiavi, noti come keyset. Le chiavi sono costituite da un set di colonne che identificano in modo univoco le righe del set di risultati. Il keyset corrisponde al set di valori chiave di tutte le righe risultanti dall'istruzione `SELECT` al momento dell'apertura del cursore. Il keyset di un cursore gestito da keyset viene compilato nel database **tempdb** all'apertura del cursore.  
   
-### <a name="dynamic"></a>Dynamic  
-I cursori dinamici sono l'opposto dei cursori statici. Quando si scorre un cursore dinamico vengono visualizzate tutte le modifiche apportate alle righe del set di risultati corrispondente. I valori di dati, l'ordine e l'appartenenza delle righe del set di risultati possono variare a ogni operazione di recupero. I risultati delle istruzioni `UPDATE`, `INSERT` e `DELETE` eseguite da tutti gli utenti sono visibili tramite il cursore. Gli aggiornamenti sono visibili immediatamente se eseguiti tramite il cursore con una funzione API quale **SQLSetPos** o la clausola [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF`. Gli aggiornamenti eseguiti all'esterno del cursore risultano visibili solo dopo l'operazione di commit, a meno che il livello di isolamento della transazione non sia impostato su read uncommitted. Per altre informazioni sui livelli di isolamento, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
+### <a name="dynamic"></a>Dinamico  
+I cursori dinamici sono l'opposto dei cursori statici. Quando si scorre un cursore dinamico vengono visualizzate tutte le modifiche apportate alle righe del set di risultati corrispondente. I valori di dati, l'ordine e l'appartenenza delle righe del set di risultati possono variare a ogni operazione di recupero. I risultati delle istruzioni `UPDATE`, `INSERT` e `DELETE` eseguite da tutti gli utenti sono visibili tramite il cursore. Gli aggiornamenti sono visibili immediatamente se eseguiti tramite il cursore con una funzione API quale **SQLSetPos** o la clausola `WHERE CURRENT OF` di [!INCLUDE[tsql](../includes/tsql-md.md)]. Gli aggiornamenti eseguiti all'esterno del cursore risultano visibili solo dopo l'operazione di commit, a meno che il livello di isolamento della transazione non sia impostato su read uncommitted. Per altre informazioni sui livelli di isolamento, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
  
 > [!NOTE]
 > I piani dinamici del cursore non usano mai indici spaziali.  

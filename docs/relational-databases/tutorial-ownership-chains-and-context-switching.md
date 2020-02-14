@@ -14,10 +14,10 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0c5b79da02f8b78601db8691c83e6782f83b8b0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095672"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Esercitazione: Catene di proprietà e cambio di contesto
@@ -52,7 +52,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 Per istruzioni su come ripristinare un database in SQL Server Management Studio, vedere [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
-Utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice seguente per aprire il database `AdventureWorks2017` e utilizzare l'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` per controllare che come contesto venga visualizzato l'utente dbo.  
+Usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice seguente per aprire il database `AdventureWorks2017` e usare l'istruzione `CURRENT_USER` di [!INCLUDE[tsql](../includes/tsql-md.md)] per controllare che come contesto venga visualizzato l'utente dbo.  
   
 ```sql
 USE AdventureWorks2017;  
@@ -332,7 +332,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

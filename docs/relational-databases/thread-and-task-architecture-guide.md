@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305193"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
@@ -36,7 +36,7 @@ Nell'ambito di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], una **ric
 
 Un'**attività** rappresenta l'unità di lavoro che deve essere completata per soddisfare la richiesta. È possibile assegnare una o più attività a una singola richiesta. Le richieste parallele avranno diverse attività attive che vengono eseguite simultaneamente anziché in serie. Una richiesta che viene eseguita in serie avrà una sola attività attiva in un determinato momento. Le attività esistono in vari stati per tutta la loro durata. Per altre informazioni sugli stati delle attività, vedere [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Le attività in stato SOSPESO sono in attesa delle risorse necessarie per eseguire l'attività e diventare disponibili. Per altre informazioni sulle attività in attesa, vedere [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **thread di lavoro**, noto anche come ruolo di lavoro o thread, è una rappresentazione logica di un thread del sistema operativo. Quando si eseguono le richieste in serie, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] genera un ruolo di lavoro per eseguire l'attività attiva. Se si eseguono richieste parallele in [modalità riga](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna un ruolo di lavoro per coordinare i ruoli di lavoro figlio responsabili del completamento delle attività ad essi assegnate. Il numero di thread di lavoro generati per ogni attività dipende da:
+Un **thread di lavoro** di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], definito anche ruolo di lavoro o semplicemente thread, è una rappresentazione logica di un thread del sistema operativo. Quando si eseguono le richieste in serie, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] genera un ruolo di lavoro per eseguire l'attività attiva. Se si eseguono richieste parallele in [modalità riga](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna un ruolo di lavoro per coordinare i ruoli di lavoro figlio responsabili del completamento delle attività ad essi assegnate. Il numero di thread di lavoro generati per ogni attività dipende da:
 -   Se la richiesta era idonea per il parallelismo secondo quanto determinato da Query Optimizer.
 -   Qual è [grado di parallelismo (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) effettivamente disponibile nel sistema in base al carico corrente. Il valore può essere diverso dal DOP stimato, che si basa sulla configurazione del server per l'opzione MAXDOP (max degree of parallelism). Ad esempio, la configurazione del server per MAXDOP può essere 8 ma il DOP disponibile al momento dell'esecuzione può essere solo 2 e questo influisce negativamente sulle prestazioni delle query. 
 
@@ -46,7 +46,7 @@ Un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **thread di lavoro**, 
 Un'**utilità di pianificazione**, nota anche come utilità di pianificazione SOS, gestisce i thread di lavoro che richiedono tempo di elaborazione per svolgere il lavoro per conto delle attività. Ogni utilità di pianificazione viene mappata a un singolo processore (CPU). Il tempo in cui un ruolo di lavoro può rimanere attivo in un'utilità di pianificazione è denominato quantum del sistema operativo, con un massimo di 4 ms. Scaduto il tempo del quantum, un ruolo di lavoro cede il proprio tempo ad altri ruoli di lavoro che devono accedere alle risorse della CPU e modifica il proprio stato. Questa cooperazione tra ruoli di lavoro per ottimizzare l'accesso alle risorse della CPU è denominata **pianificazione cooperativa**, nota anche come pianificazione non preemptive. A sua volta, la modifica dello stato del ruolo di lavoro viene propagata all'attività associata a tale ruolo e alla richiesta associata all'attività. Per altre informazioni sugli stati dei ruoli di lavoro, vedere [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Per altre informazioni sulle utilità di pianificazione, vedere [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Allocazione di thread a una CPU
-Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avvia un singolo thread e il sistema operativo distribuisce i thread delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra i processori (CPU) di un computer in base al carico. Se è stata abilitata l'affinità del processo a livello di sistema operativo, il sistema operativo assegna ogni thread a una CPU specifica. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna invece [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **thread di lavoro** alle **utilità di pianificazione** che distribuiscono uniformemente i thread fra le CPU.
+Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avvia un singolo thread e il sistema operativo distribuisce i thread delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra i processori (CPU) di un computer in base al carico. Se è stata abilitata l'affinità del processo a livello di sistema operativo, il sistema operativo assegna ogni thread a una CPU specifica. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna invece **thread di lavoro** di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle **utilità di pianificazione** che distribuiscono uniformemente i thread fra le CPU.
     
 Per eseguire il multitasking, ad esempio quando più applicazioni accedono allo stesso gruppo di CPU, in certi casi il sistema operativo distribuisce i thread di lavoro tra CPU diverse. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. L'assegnazione di CPU a thread specifici consente di migliorare le prestazioni, poiché le operazioni di ricaricamento dei processori vengono eliminate e si riduce la migrazione dei thread tra CPU, limitando lo scambio di contesto. Questo tipo di associazione tra un thread e un processore è definito "affinità processori". Se è stata abilitata l'affinità, il sistema operativo assegna ogni thread a una CPU specifica. 
 
@@ -131,11 +131,11 @@ La tabella seguente elenca i componenti di [!INCLUDE[ssNoVersion](../includes/ss
 |Nome del processo   |Programma eseguibile |Utilizza più di 64 CPU |  
 |----------|----------|----------|  
 |Motore di database di SQL Server |Sqlserver.exe  |Sì |  
-|Reporting Services |Rs.exe |no |  
-|Analysis Services  |As.exe |no |  
-|Integration Services   |Is.exe |no |  
-|Service Broker |Sb.exe |no |  
-|Ricerca full-text   |Fts.exe    |no |  
-|SQL Server Agent   |Sqlagent.exe   |no |  
-|SQL Server Management Studio   |Ssms.exe   |no |  
-|Installazione di SQL Server   |Setup.exe  |no |  
+|Reporting Services |Rs.exe |No |  
+|Analysis Services  |As.exe |No |  
+|Integration Services   |Is.exe |No |  
+|Broker di servizio |Sb.exe |No |  
+|Ricerca full-text   |Fts.exe    |No |  
+|SQL Server Agent   |Sqlagent.exe   |No |  
+|SQL Server Management Studio   |Ssms.exe   |No |  
+|Installazione di SQL Server   |Setup.exe  |No |  

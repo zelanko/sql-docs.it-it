@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065824"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Mirroring del database ALTER DATABASE (Transact-SQL)
@@ -38,7 +38,7 @@ Controlla il mirroring del database per un database. I valori specificati per le
 
 Per le opzioni di ALTER DATABASE, vedere [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Per le opzioni di ALTER DATABASE SET, vedere [Opzioni di ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -185,11 +185,11 @@ In un'istruzione SET WITNESS **='** _witness_server_ **'** la sintassi di *witne
 
 OFF rimuove il server di controllo del mirroring da una sessione di mirroring del database. L'impostazione del server di controllo del mirroring su OFF disabilita il failover automatico. Se per il database l'opzione SAFETY è impostata su FULL e il server di controllo del mirroring è impostato su OFF, in caso di errore nel server mirror, il server principale rende il database non disponibile.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Creazione di una sessione di mirroring del database con un server di controllo del mirroring
+### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>R. Creazione di una sessione di mirroring del database con un server di controllo del mirroring
 
 Per configurare il mirroring del database con un server di controllo del mirroring, è necessario configurare la sicurezza e preparare il database mirror, nonché utilizzare l'istruzione ALTER DATABASE per l'impostazione dei partner. Per un esempio del processo di configurazione completo, vedere [Impostazione del mirroring del database](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 

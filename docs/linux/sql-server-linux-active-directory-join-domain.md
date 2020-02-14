@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224510"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761875"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Aggiungere un host di SQL Server in Linux a un dominio di Active Directory
 
@@ -27,7 +27,7 @@ Questo articolo fornisce indicazioni generali su come aggiungere un computer hos
 Prima di configurare l'autenticazione di Active Directory, è necessario configurare un controller di dominio Active Directory, Windows, nella rete. Aggiungere quindi l'host di SQL Server in Linux a un dominio di Active Directory.
 
 > [!IMPORTANT]
-> Le procedure di esempio descritte in questo articolo sono puramente indicative. Le procedure effettive possono essere leggermente diverse in base alla configurazione dell'ambiente generale. Coinvolgere gli amministratori di sistema e di dominio dell'ambiente per le attività specifiche di configurazione e personalizzazione e per l'eventuale risoluzione dei problemi.
+> Le procedure di esempio descritte in questo articolo sono puramente indicative e fanno riferimento ai sistemi operativi Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x e SUSE Enterprise Linux (SLES) 12. Le procedure effettive possono essere leggermente diverse a seconda della configurazione dell'ambiente generale e della versione del sistema operativo. Ad esempio, Ubuntu 18.04 usa netplan, mentre Red Hat Enterprise Linux (RHEL) 8.x usa nmcli tra gli altri strumenti per gestire e configurare la rete. È consigliabile coinvolgere gli amministratori di sistema e di dominio dell'ambiente per le attività specifiche di installazione degli strumenti, configurazione e personalizzazione e per l'eventuale risoluzione dei problemi.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>Controllare la connessione a un controller di dominio
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 Se la verifica di uno di questi nomi non riesce, aggiornare l'elenco di ricerca del dominio. Le sezioni seguenti forniscono istruzioni per Ubuntu, Red Hat Enterprise Linux (RHEL) e SUSE Linux Enterprise Server (SLES) rispettivamente.
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. Modificare il file **/etc/network/interfaces** in modo che il dominio di Active Directory sia incluso nell'elenco di ricerca del dominio:
 
@@ -71,7 +71,7 @@ Se la verifica di uno di questi nomi non riesce, aggiornare l'elenco di ricerca 
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. Modificare il file **/etc/sysconfig/network-scripts/ifcfg-eth0** in modo che il dominio di Active Directory sia incluso nell'elenco di ricerca del dominio. In alternativa, modificare un altro file di configurazione dell'interfaccia nel modo appropriato:
 
@@ -100,7 +100,7 @@ Se la verifica di uno di questi nomi non riesce, aggiornare l'elenco di ricerca 
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. Modificare il file **/etc/sysconfig/network/config** in modo che l'indirizzo IP del controller di dominio Active Directory venga usato per le query DNS e che il dominio di Active Directory sia incluso nell'elenco di ricerca del dominio:
 
@@ -178,7 +178,7 @@ Per aggiungere un host di SQL Server a un dominio di Active Directory, seguire q
 
    SQL Server usa SSSD e NSS per il mapping degli account utente e dei gruppi agli ID di sicurezza (SID). SSSD deve essere configurato e in esecuzione affinché SQL Server possa creare correttamente gli account di accesso di Active Directory. **realmd** in genere esegue questa operazione automaticamente nell'ambito dell'aggiunta del dominio, ma in alcuni casi è necessario eseguirla separatamente.
 
-   Per altre informazioni, vedere gli articoli che spiegano come [configurare SSSD manualmente](https://access.redhat.com/articles/3023951) e come [configurare NSS per l'uso con SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Per altre informazioni, vedere gli articoli che spiegano come [configurare SSSD manualmente](https://access.redhat.com/articles/3023951) e come [configurare NSS per l'uso con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Verificare che sia ora possibile raccogliere informazioni su un utente dal dominio e che sia possibile acquisire un ticket Kerberos come tale utente. A questo scopo, l'esempio seguente usa i comandi **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) e [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html).
 

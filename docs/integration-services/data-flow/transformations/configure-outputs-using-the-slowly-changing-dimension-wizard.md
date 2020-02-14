@@ -15,10 +15,10 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291653"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta
@@ -84,6 +84,6 @@ ms.locfileid: "71291653"
  Il modo più semplice per aggiornare la configurazione degli output della trasformazione Dimensione a modifica lenta consiste nell'eseguire nuovamente Configurazione guidata dimensioni a modifica lenta e modificare le proprietà nelle pagine della procedura guidata. È possibile aggiornare la trasformazione Dimensione a modifica lenta anche usando la finestra di dialogo **Editor avanzato** oppure a livello di codice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [Trasformazione Dimensione a modifica lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929059"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifica la priorità relativa della sessione corrente nel caso in cui venga coinvolta in un deadlock con un'altra sessione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  Variabile di tipo integer che specifica la priorità del deadlock. La variabile deve essere impostata su un valore intero compreso nell'intervallo (da -10 a 10).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il deadlock si verifica quando due sessioni sono entrambe in attesa di accedere a risorse bloccate dall'altra sessione. Quando un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rileva che due sessioni sono coinvolte in un deadlock, risolve il deadlock scegliendo una delle sessioni come vittima del deadlock. Viene eseguito il rollback della transazione corrente della sessione vittima del deadlock e al client viene restituito il messaggio di errore relativo al deadlock 1205. In questo modo tutti i blocchi della sessione vengono rilasciati e l'altra sessione può proseguire.  
   
  La scelta della sessione che sarà vittima del deadlock dipende dalla priorità di deadlock delle sessioni:  

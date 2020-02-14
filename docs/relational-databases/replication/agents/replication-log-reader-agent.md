@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6c71ce5c804a25123ce18e010585e038f41a2ebf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5c6ed8c51ea7b471f69a462cee06d5ffd0560973
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770722"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288108"
 ---
 # <a name="replication-log-reader-agent"></a>Agente lettura log repliche
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ logread [-?]
 > [!NOTE]
 >  Questo parametro viene ignorato per le pubblicazioni non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere la sezione "Configurazione del processo del set di transazioni" in [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
   
- **-MessageInterval** _intervallo_messaggi_  
+ **-MessageInterval** _message_interval_  
  Intervallo di tempo utilizzato per la registrazione della cronologia. Un evento della cronologia viene registrato quando viene raggiunto il valore di **MessageInterval** dopo la registrazione dell'ultimo evento della cronologia.  
   
  Se nell'origine non vi sono transazioni replicate disponibili, tramite l'agente viene inviato al server di distribuzione un messaggio che segnala l'assenza di transazioni. Questa opzione specifica per quanto tempo l'agente aspetta prima di inviare un altro messaggio di assenza di transazioni. Gli agenti inviano sempre un messaggio di assenza di transazioni quando rilevano che nell'origine non vi sono transazioni disponibili dopo aver elaborato in precedenza transazioni replicate. Il valore predefinito è 60 secondi.  
@@ -189,7 +189,7 @@ logread [-?]
  **-RecoverFromDataErrors**  
  Specifica che l'esecuzione dell'agente di lettura continua anche nel caso in cui vengano rilevati errori nei dati di colonna pubblicati da un server di pubblicazione non SQL Server. Per impostazione predefinita, tali errori comportano l'interruzione dell'agente di lettura log. Quando si utilizza **-RecoverFromDataErrors**, i dati di colonna erronei vengono replicati come NULL o come valore non Null appropriato e i messaggi di avviso vengono registrati nella tabella [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) . Questo parametro è supportato solo per i server di pubblicazione Oracle.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!IMPORTANT]  
 >  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è stato installato per l'esecuzione con un account di sistema locale anziché un account utente di dominio (impostazione predefinita), il servizio può accedere solo al computer locale. Se l'agente di lettura log in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è configurato per l'utilizzo della modalità di autenticazione di Windows durante l'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'agente di lettura log si interrompe. L'impostazione predefinita prevede l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per informazioni sulla modifica degli account di sicurezza, vedere [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  

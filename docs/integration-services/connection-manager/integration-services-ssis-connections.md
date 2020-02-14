@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294426"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
@@ -35,7 +35,7 @@ ms.locfileid: "71294426"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
+  I pacchetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usano le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
   
 -   Connessione ad archivi dati di origine e destinazione, ad esempio file di testo, file XML, cartelle di lavoro di Excel e database relazionali, per l'estrazione e il caricamento dei dati.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71294426"
   
  In un pacchetto è possibile utilizzare più istanze di un determinato tipo di gestione connessione ed è possibile impostare proprietà specifiche per ogni istanza. In fase di esecuzione ogni istanza di un determinato tipo di gestione connessione crea una connessione con attributi diversi.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentono di stabilire connessioni tra i pacchetti e un'ampia gamma di server e origini dati:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre diversi tipi di gestioni connessioni che consentono di stabilire connessioni tra i pacchetti e un'ampia gamma di server e origini dati:  
   
 -   Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]vengono installate le gestioni connessioni predefinite.  
   
@@ -81,9 +81,9 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
 >  Per altre informazioni sui due modelli e sulla conversione di un progetto nel modello di distribuzione del progetto, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### <a name="built-in-connection-managers"></a>Gestioni connessioni predefinite  
- Nella tabella seguente sono elencati i tipi di gestione connessione disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Nella tabella seguente sono elencati i tipi di gestione connessione disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Tipo|Descrizione|Argomento|  
+|Type|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
 |ADO|Consente di connettersi a oggetti ADO (ActiveX Data Objects).|[Gestione connessione ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Consente di connettersi a un'origine dei dati tramite un provider .NET.|[Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -95,7 +95,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
 |FTP|Consente di connettersi a un server FTP.|[Gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|Consente di connettersi a un server Web.|[Gestione connessione HTTP](../../integration-services/connection-manager/http-connection-manager.md)|  
 |MSMQ|Consente di connettersi a una coda di messaggi.|[Gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|  
-|MSOLAP100|Consente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MSOLAP100|Consente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
 |MULTIFILE|Consente di connettersi a più file e cartelle.|[Gestione connessione per più file](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Consente di connettersi a più file e cartelle di dati.|[Gestione connessione per più file flat](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
 |OLEDB|Consente di connettersi a un'origine dei dati tramite un provider OLE DB.|[Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -111,7 +111,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
 > [!IMPORTANT]  
 >  Le gestioni connessioni elencate nella tabella seguente funzionano unicamente con [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Tipo|Descrizione|Argomento|  
+|Type|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
 |ORACLE|Consente di connettersi a un server Oracle \<informazioni versione\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
@@ -134,7 +134,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
  Nella figura seguente viene illustrata l'area **Gestioni connessioni** della scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
- ![Schermata della finestra di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "Schermata della finestra di progettazione del flusso di controllo con pacchetto")    
+ ![Screenshot della finestra di progettazione del flusso di controllo con pacchetto](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot della finestra di progettazione del flusso di controllo con pacchetto")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>Provider a 32 e 64 bit per le gestioni connessioni  
  Molti dei provider utilizzati dalle gestioni connessioni sono disponibili sia in versione a 32 bit che in versione a 64 bit. Poiché l'ambiente di progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è a 32 bit, durante la progettazione dei pacchetti in tale ambiente sono disponibili solo provider a 32 bit. Pertanto è possibile solo configurare una gestione connessione in modo da utilizzare uno specifico provider a 64 bit, se nel computer è installata anche la versione a 32 bit dello stesso provider.  
@@ -162,7 +162,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
     -   Fare clic sul tipo di gestione connessione da aggiungere al pacchetto.  
   
-         oppure  
+         -oppure-  
   
     -   Se il tipo desiderato non è incluso nell'elenco, fare clic su **Nuova connessione** . Verrà visualizzata la finestra di dialogo **Aggiungi gestione connessione SSIS** . Selezionare un tipo di gestione connessione, quindi fare clic su **OK**.  
   
@@ -240,7 +240,7 @@ Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per sel
  **Tipo gestione connessione**  
  Selezionare un tipo di connessione e quindi fare clic su **Aggiungi**oppure fare doppio clic su un tipo di connessione per specificare le proprietà della connessione usando l'editor specifico per ogni tipo di connessione.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di specificare le proprietà della connessione utilizzando l'editor per ogni tipo di connessione.  
    
 ##  <a name="parameter"></a> Creare un parametro per una proprietà della gestione connessione  
@@ -309,7 +309,7 @@ Tutti i tipi di gestione connessione possono essere configurati nella finestra *
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
-3.  In Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] fare clic sulla scheda **Flusso di controllo** , **Flusso di dati** o **Gestori eventi** in modo da rendere disponibile l'area **Gestioni connessioni** .  
+3.  In Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] fare clic sulla scheda **Flusso di controllo** , **Flusso di dati** o **Gestore evento** in modo da rendere disponibile l'area **Gestioni connessioni** .  
   
 4.  Nell'area **Gestioni connessioni** fare doppio clic sulla gestione connessione desiderata. Verrà visualizzata la finestra di dialogo **Gestione connessione** . Per informazioni su tipi di gestione connessione specifici e sulle opzioni disponibili per ogni tipo di gestione connessione, vedere la tabella seguente.  
   
@@ -345,6 +345,6 @@ Tutti i tipi di gestione connessione possono essere configurati nella finestra *
   
 -   Articolo tecnico relativo all' [estrazione e al caricamento dei dati SharePoint in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826)sul sito Web msdn.microsoft.com.  
   
--   Articolo tecnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696) (Visualizzazione del messaggio di errore "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" quando si utilizza la gestione connessione Oracle in SSIS) sul sito support.microsoft.com.  
+-   Articolo tecnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)(Visualizzazione del messaggio di errore "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" quando si utilizza la gestione connessione Oracle in SSIS) sul sito support.microsoft.com.  
   
   

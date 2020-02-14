@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 keywords:
-- Raccolta dati
+- Raccolta di dati
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140753"
 ---
-# <a name="data-collection"></a>Raccolta dati
+# <a name="data-collection"></a>Raccolta di dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'agente di raccolta dati è un componente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "68140753"
   
 -   Processo  
   
--   Passaggio processo  
+-   Passaggio del processo  
   
 -   Pianificazioni processo  
   
--   Sottosistema  
+-   Subsystem  
   
 -   Account proxy  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68140753"
  Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="terminology"></a>Terminologia  
- **destinazione**  
+ **target**  
  Istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta la raccolta dati. Per altre informazioni sulle edizioni supportate, vedere la sezione sulla gestibilità in [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Una *radice di destinazione* definisce un sottoalbero nella gerarchia di destinazione. Un *set di destinazioni* è il gruppo di destinazioni risultante dell'applicazione di un filtro a un sottoalbero definito da una radice di destinazione. Una radice di destinazione può essere un database, un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un'istanza del computer.  
@@ -113,7 +113,7 @@ ms.locfileid: "68140753"
   
 |Descrizione|Argomento|  
 |----------------------|-----------|  
-|Gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.|[Gestire la raccolta dati](../../relational-databases/data-collection/manage-data-collection.md)|  
+|Gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.|[Gestire raccolta dati](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Usare questi report per ottenere informazioni per il monitoraggio della capacità del sistema e la risoluzione dei problemi relativi alle prestazioni.|[Report per i set di raccolta dati di sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Usare il data warehouse di gestione per la raccolta di dati da un server che costituisce una destinazione di raccolta dati.|[Data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |Sfruttare le funzionalità di traccia sul lato server di SQL Server Profiler per esportare una definizione della traccia da usare per creare un set di raccolta che usa il tipo di agente di raccolta Traccia SQL generico.| [Usare SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)

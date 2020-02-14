@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 72ed98492db592ecd86d1c0490c652e604dcb589
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907976"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287238"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Visualizzazione e modifica delle impostazioni di sicurezza della replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72907976"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare e modificare le impostazioni di sicurezza della replica, utilizzando:**  
   
@@ -64,13 +64,13 @@ ms.locfileid: "72907976"
   
 1.  La finestra di dialogo **Aggiorna password di replica** , disponibile nella cartella **Replica** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se si modifica la password di un account [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Windows su un server di una topologia di replica, utilizzare questa finestra di dialogo anziché aggiornare la password per ogni agente che utilizza l'account. Se gli agenti di più server utilizzano lo stesso account, è necessario connettersi a ogni server e modificare la password. La password viene aggiornata in tutte le posizioni in cui viene utilizzata per la replica ma non viene aggiornata in altre posizioni, come i server collegati.  
   
-2.  La pagina **Sicurezza agente** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+2.  La pagina **Sicurezza agente** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  La finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzazione e modifica delle proprietà delle sottoscrizioni push](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [Visualizzazione e modifica delle proprietà delle sottoscrizioni pulls](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+3.  La finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
-4.  Le finestre di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** e **Proprietà database di distribuzione - \<Database>** . Per ulteriori informazioni sull'accesso a queste finestre di dialogo, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+4.  Le finestre di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** e **Proprietà database di distribuzione - \<Database>** . Per ulteriori informazioni sull'accesso a queste finestre di dialogo, vedere [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  La finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, [Visualizzazione e modifica delle proprietà del server di pubblicazione e del database di distribuzione](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  La finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Per modificare la password di un account utilizzato da uno o più agenti  
   
@@ -250,7 +250,7 @@ ms.locfileid: "72907976"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>Per modificare tutte le istanze di una password archiviate in un server di replica  
   
-1.  Nel database master in un server della topologia di replica eseguire [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md). Specificare l'account di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows o il nome di accesso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per cui modificare la password per `@login` e la nuova password per l'account o il nome di accesso per `@password`. In questo modo viene modificata ogni istanza della password utilizzata da tutti gli agenti nel server quando si connettono ad altri server della topologia.  
+1.  Nel database master in un server della topologia di replica eseguire [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md). Specificare l'account di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows o l'account di accesso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per cui modificare la password per `@login` e la nuova password per l'account o l'account di accesso per `@password`. In questo modo viene modificata ogni istanza della password utilizzata da tutti gli agenti nel server quando si connettono ad altri server della topologia.  
   
     > [!NOTE]  
     >  Per modificare l'account di accesso e la password solo per una connessione a un determinato server della topologia, ad esempio il server di distribuzione o il Sottoscrittore, specificare il nome di tale server per `@server`.  
@@ -445,7 +445,7 @@ ms.locfileid: "72907976"
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 3.  Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>e <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> per la sottoscrizione, quindi impostare la connessione creata nel passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -468,7 +468,7 @@ ms.locfileid: "72907976"
   
 1.  Creare una connessione al Sottoscrittore tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 3.  Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> per la sottoscrizione, quindi impostare la connessione creata nel passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -491,7 +491,7 @@ ms.locfileid: "72907976"
   
 1.  Creare una connessione al Sottoscrittore tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 3.  Impostare le proprietà <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> per la sottoscrizione, quindi impostare la connessione creata nel passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
@@ -518,7 +518,7 @@ ms.locfileid: "72907976"
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 3.  Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>e <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> per la sottoscrizione, quindi impostare la connessione creata nel passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   

@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096000"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Query distribuite di Microsoft SQL Server: Connettività OLE DB
@@ -25,7 +25,7 @@ Questo articolo descrive il modo in cui il processore di query di Microsoft SQL 
 
  In Microsoft SQL Server le query distribuite consentono agli utenti SQL Server di accedere ai dati all'esterno di un server basato su SQL Server, all'interno di altri server che eseguono SQL Server o di altre origini dati che espongono un'interfaccia OLE DB. OLE DB consente di accedere in modo uniforme ai dati tabulari da origini dati eterogenee.
 
-Ai fini di questo articolo, una query distribuita è costituita da un'istruzione `SELECT` `INSERT`, `UPDATE` o `DELETE` che fa riferimento a tabelle e set di righe da una o più origini dati OLE DB esterne.
+Ai fini di questo articolo, una query distribuita è costituita da un'istruzione `SELECT``INSERT`, `UPDATE` o `DELETE` che fa riferimento a tabelle e set di righe da una o più origini dati OLE DB esterne.
 
 Una tabella remota è una tabella archiviata in un'origine dati OLE DB ed esterna al server che esegue SQL Server in cui è in esecuzione la query. Una query distribuita accede a una o più tabelle remote.
 
@@ -98,7 +98,7 @@ I cursori snapshot vengono popolati al momento dell'apertura del cursore e il se
 
 I cursori keyset vengono popolati al momento dell'apertura del cursore e il set di risultati rimane invariato per tutta la durata del cursore. Tuttavia, gli aggiornamenti e le eliminazioni nelle tabelle sottostanti sono visibili nel cursore mentre vengono visitate le righe. Gli inserimenti nelle tabelle sottostanti che potrebbero influire sull'appartenenza ai cursori non sono visibili.
 
-È possibile aggiornare o eliminare una tabella remota tramite un cursore definito in una query distribuita e che fa riferimento alla tabella remota se il provider soddisfa le condizioni per gli aggiornamenti e le eliminazioni nella tabella remota, ad esempio table `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. Per altre informazioni, vedere \"Istruzioni UPDATE e DELETE\" più avanti in questo articolo.
+È possibile aggiornare o eliminare una tabella remota tramite un cursore definito in una query distribuita e che fa riferimento alla tabella remota se il provider soddisfa le condizioni per gli aggiornamenti e le eliminazioni nella tabella remota, ad esempio table `UPDATE`\| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. Per altre informazioni, vedere \"Istruzioni UPDATE e DELETE\" più avanti in questo articolo.
 
 #### <a name="keyset-cursor-support-requirements"></a>Requisiti per il supporto dei cursori keyset
 
@@ -110,9 +110,9 @@ Un cursore keyset è supportato in una query distribuita se vengono soddisfatti 
 
 I cursori keyset non sono supportati nelle query distribuite che includono la funzione *OpenQuery*.
 
-#### <a name="updatable-keyset-cursor-requirements"></a>Requisiti per i cursori keyset aggiornabili
+#### <a name="updatable-keyset-cursor-requirements"></a>Requisiti per cursori keyset aggiornabili
 
-È possibile aggiornare o eliminare una tabella remota tramite un cursore keyset definito in una query distribuita, ad esempio `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. I cursori aggiornabili sono consentiti nelle query distribuite quando si verificano le condizioni seguenti:
+È possibile aggiornare o eliminare una tabella remota tramite un cursore keyset definito in una query distribuita, ad esempio `UPDATE`\| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. I cursori aggiornabili sono utilizzabili nelle query distribuite se vengono soddisfatti i requisiti seguenti:
 
 - I cursori aggiornabili sono consentiti se il provider soddisfa anche le condizioni per gli aggiornamenti e le eliminazioni nella tabella remota. Per altre informazioni, vedere \"Istruzioni UPDATE e DELETE\" più avanti in questo articolo.
 
@@ -190,26 +190,26 @@ Questi sono i passaggi di alto livello che SQL Server esegue quando si connette 
 
    SQL Server raccoglie diverse proprietà del provider che vengono usate nella valutazione delle query distribuite. Queste proprietà vengono recuperate tramite una chiamata a `IDBProperties::GetProperties`. Tutte queste proprietà sono facoltative. Tuttavia, il supporto di tutte le proprietà rilevanti consente a SQL Server di sfruttare al meglio le funzionalità del provider. Ad esempio, `DBPROP_SQLSUPPORT` è necessaria per determinare se SQL Server può inviare query al provider. Se questa proprietà non è supportata, SQL Server non usa il provider remoto come provider di comandi SQL, anche nel caso in cui il provider sia un provider di comandi SQL. Nella tabella seguente la colonna Valore predefinito indica il valore usato da SQL Server se il provider non supporta la proprietà.
 
-Proprietà| Valore predefinito| Utilizzare |
+Proprietà| Valore predefinito| Uso |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|None|Usata per i messaggi di errore.|
-|`DBPROP_DBMSVER` |None|Usata per i messaggi di errore.|
-|`DBPROP_PROVIDERNAME`|None|Usata per i messaggi di errore.|
+|`DBPROP_DBMSNAME`|nessuno|Usata per i messaggi di errore.|
+|`DBPROP_DBMSVER` |nessuno|Usata per i messaggi di errore.|
+|`DBPROP_PROVIDERNAME`|nessuno|Usata per i messaggi di errore.|
 |`DBPROP_PROVIDEROLEDBVER1`|1.5|Usata per determinare la disponibilità delle funzionalità 2.0.
-|`DBPROP_CONCATNULLBEHAVIOR`|None|Usata per determinare se il comportamento di concatenazione `NULL` del provider corrisponde a quello di SQL Server.|
-|`DBPROP_NULLCOLLATION`|None|Consente l'utilizzo dell'ordinamento/indice solo se `NULLCOLLATION` corrisponde al comportamento delle regole di confronto Null dell'istanza di SQL Server.|
-|`DBPROP_OLEOBJECTS`|None|Determina se il provider supporta interfacce di archiviazione strutturate per colonne di oggetti dati di grandi dimensioni.|
-|`DBPROP_STRUCTUREDSTORAGE`|None|Determina le interfacce di archiviazione strutturate supportate per i tipi di oggetti di grandi dimensioni (tra `ILockBytes`, `Istream`e `ISequentialStream`).|
+|`DBPROP_CONCATNULLBEHAVIOR`|nessuno|Usata per determinare se il comportamento di concatenazione `NULL` del provider corrisponde a quello di SQL Server.|
+|`DBPROP_NULLCOLLATION`|nessuno|Consente l'utilizzo dell'ordinamento/indice solo se `NULLCOLLATION` corrisponde al comportamento delle regole di confronto Null dell'istanza di SQL Server.|
+|`DBPROP_OLEOBJECTS`|nessuno|Determina se il provider supporta interfacce di archiviazione strutturate per colonne di oggetti dati di grandi dimensioni.|
+|`DBPROP_STRUCTUREDSTORAGE`|nessuno|Determina le interfacce di archiviazione strutturate supportate per i tipi di oggetti di grandi dimensioni (tra `ILockBytes`, `Istream`e `ISequentialStream`).|
 |`DBPROP_MULTIPLESTORAGEOBJECTS`|False|Determina se è possibile aprire più di una colonna di oggetti di grandi dimensioni nello stesso momento.|
-|`DBPROP_SQLSUPPORT`|None|Determina se le query SQL possono essere inviate al provider.|
+|`DBPROP_SQLSUPPORT`|nessuno|Determina se le query SQL possono essere inviate al provider.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|Usata per costruire nomi di tabella multipart.
 |`SQLPROP_DYNAMICSQL`|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che i marcatori di parametro `?` sono supportati per l'esecuzione di query con parametri.
 |`SQLPROP_NESTEDQUERIES`|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta le istruzioni `SELECT` nidificate nella clausola `FROM`.
 |`SQLPROP_GROUPBY`|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta la clausola GROUP BY nell'istruzione `SELECT` come specificato dallo standard SQL-92.
 |`SQLPROP_DATELITERALS `|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta i valori letterali datetime in base alla sintassi Transact-SQL di SQL Server.
 |`SQLPROP_ANSILIKE `|False|Proprietà specifica di SQL Server: questa proprietà è adatta ai provider che supportano il livello SQL-Minimum e supporta l'operatore `LIKE` in base al livello SQL-92 (\'%\' e \'_\' come caratteri jolly).
-|`SQLPROP_SUBQUERIES `|False|Proprietà di SQL Server: questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. La proprietà indica che il provider supporta le sottoquery in base al livello SQL-92. Sono incluse le sottoquery nell'elenco `SELECT` e nella clausola `WHERE` con supporto per le sottoquery correlate e gli operatori `IN`, `EXISTS`, `ALL` e `ANY`.
-|`SQLPROP_INNERJOIN`|False|Proprietà specifica di SQL Server: questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. Questa proprietà indica il supporto per i join con più tabelle nella clausola `FROM`. ------ ---
+|`SQLPROP_SUBQUERIES `|False|Proprietà di SQL Server: Questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. La proprietà indica che il provider supporta le sottoquery in base al livello SQL-92. Sono incluse le sottoquery nell'elenco `SELECT` e nella clausola `WHERE` con supporto per le sottoquery correlate e gli operatori `IN`, `EXISTS`, `ALL` e `ANY`.
+|`SQLPROP_INNERJOIN`|False|Proprietà specifica di SQL Server: Questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. Questa proprietà indica il supporto per i join con più tabelle nella clausola `FROM`. ------ ---
 
 I tre valori letterali seguenti vengono recuperati da `IDBInfo::GetLiteralInfo`: `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR` (per costruire un nome di oggetto completo con le parti del nome catalogo, schema e oggetto) e `DBLITERAL_QUOTE` (per delimitare i nomi degli identificatori in una query SQL inviata al provider).
 
@@ -323,7 +323,7 @@ Tabella di mapping dei tipi di dati SQL Server e OLE DB.
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>o Gestione configurazione<br> Lunghezza massima > 4000 caratteri|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>o<br> Lunghezza massima > 4000 caratteri|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
 |`DBTYPE_IDISPATCH`| |Errore|
@@ -332,16 +332,16 @@ Tabella di mapping dei tipi di dati SQL Server e OLE DB.
 |`DBTYPE_VARIANT`*| |NVARCHAR|
 |`DBTYPE_IUNKNOWN`| |Errore|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>o Gestione configurazione<br> Lunghezza massima > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, Dimensione colonna = 8 <br>o Gestione configurazione<br> Lunghezza massima non indicata. | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>o<br> Lunghezza massima > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, Dimensione colonna = 8 <br>o<br> Lunghezza massima non indicata. | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o Gestione configurazione<br> Lunghezza massima > 8000 caratteri <br>o Gestione configurazione<br>   Lunghezza massima non indicata. | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o<br> Lunghezza massima > 8000 caratteri <br>o<br>   Lunghezza massima non indicata. | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o Gestione configurazione<br> Lunghezza massima > 4000 caratteri <br>o Gestione configurazione<br>   Lunghezza massima non indicata. | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o<br> Lunghezza massima > 4000 caratteri <br>o<br>   Lunghezza massima non indicata. | `ntext`|
 |`DBTYPE_UDT`| |Errore|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (conversione esplicita obbligatoria)|
@@ -616,24 +616,24 @@ Nella tabella seguente sono elencate tutte le interfacce OLE DB usate da SQL Ser
 
 Nel caso delle interfacce facoltative, la colonna Scenari indica uno o più dei sei scenari in cui viene usata l'interfaccia specificata. Ad esempio, l'interfaccia `IRowsetChange` nei set di righe della tabella di base è un'interfaccia facoltativa. Questa interfaccia viene usata negli scenari delle istruzioni `UPDATE` e DELETE e dell'istruzione `INSERT`. Se l'interfaccia non è supportata, le istruzioni UPDATE, DELETE e `INSERT` non possono essere supportate nel provider. Per alcune delle altre interfacce facoltative è indicato \"prestazioni\" nella colonna Scenari a indicare che l'interfaccia produce prestazioni generali migliori. Ad esempio, se l'interfaccia `IDBSchemaRowset` non è supportata, SQL Server deve aprire il set di righe due volte: una volta per i metadati e una volta per l'esecuzione della query. Grazie al supporto di `IDBSchemaRowset`, le prestazioni di SQL Server risultano migliorate.
 
-|Object|Interfaccia|Obbligatorio|Commenti|Scenari|
+|Oggetto|Interfaccia|Obbligatoria|Commenti|Scenari|
 |:-----|:-----|:-----|:-----|:-----|
 |Oggetto origine dati|`IDBInitialize`|Sì|Inizializzare e impostare il contesto dei dati e di sicurezza.| |
 | |`IDBCreateSession`|Sì|Creare un oggetto sessione database.| |
 | |`IDBProperties`|Sì|Ottenere informazioni sulle capacità del provider, impostare le proprietà di inizializzazione, proprietà obbligatoria: DBPROP_INIT_TIMEOUT.| |
-| |`IDBInfo`|no|Ottenere valore letterale di delimitazione, catalogo, nome, parte, separatore, carattere e così via.|Query remota.|
-|Oggetto sessione database|`IDBSchemaRowset`|no|Ottenere i metadati della tabella/colonna. Set di righe necessari: `TABLES`, `COLUMNS`, `PROVIDER_TYPES`; altri set di righe usati se disponibili: `INDEXES`, `TABLE_STATISTICS`.|Prestazioni, accesso indicizzato.|
+| |`IDBInfo`|No|Ottenere valore letterale di delimitazione, catalogo, nome, parte, separatore, carattere e così via.|Query remota.|
+|Oggetto sessione database|`IDBSchemaRowset`|No|Ottenere i metadati della tabella/colonna. Set di righe necessari: `TABLES`, `COLUMNS`, `PROVIDER_TYPES`; altri set di righe usati se disponibili: `INDEXES`, `TABLE_STATISTICS`.|Prestazioni, accesso indicizzato.|
 | |`IOpenRowset`|Sì|Aprire un set di righe in una tabella, indice o istogramma.| |
 | |`IGetDataSource`|Sì|Usare per tornare all'oggetto di origine dati (DSO) da un oggetto sessione di database.| |
-| |`IDBCreateCommand`|no|Usare per creare un oggetto comando (query) per i provider che supportano l'esecuzione di query.|Query remota, query pass-through.|
-| |`ITransactionLocal`|no|Usare per gli aggiornamenti in transazioni.|Istruzioni `UPDATE`, `DELETE` e `INSERT`.|
-| |`ITransactionJoin`|no|Usare per il supporto di transazioni distribuite.|Istruzioni `UPDATE`, `DELETE` e `INSERT` se in una transazione utente.|
+| |`IDBCreateCommand`|No|Usare per creare un oggetto comando (query) per i provider che supportano l'esecuzione di query.|Query remota, query pass-through.|
+| |`ITransactionLocal`|No|Usare per gli aggiornamenti in transazioni.|Istruzioni `UPDATE`, `DELETE` e `INSERT`.|
+| |`ITransactionJoin`|No|Usare per il supporto di transazioni distribuite.|Istruzioni `UPDATE`, `DELETE` e `INSERT` se in una transazione utente.|
 |Oggetto set di righe|IRowset|Sì|Eseguire la scansione delle righe.| |
 | |`IAccessor`|Sì|Associare alle colonne di un set di righe.| |
 | |`IColumnsInfo`|Sì|Ottenere informazioni sulle colonne di un set di righe.| |
 | |`IRowsetInfo`|Sì|Ottenere informazioni sulle proprietà di un set di righe.| |
-| |`IRowsetLocate`|no|Necessaria per le operazioni `UPDATE`/`DELETE` e per eseguire ricerche basate su indice; usata per ricercare le righe in base a segnalibri.|Accesso indicizzati, istruzioni `UPDATE` e `DELETE`.|
-| |`IRowsetChange`|no|Necessaria per `INSERTS`/`UPDATES`/ `DELETES` in un set di righe. I set di righe nelle tabelle di base devono supportare questa interfaccia per le istruzioni `INSERT`, `UPDATE` e `DELETE`.|Istruzioni `UPDATE`, `DELETE` e `INSERT`.|
+| |`IRowsetLocate`|No|Necessaria per le operazioni `UPDATE`/`DELETE` e per eseguire ricerche basate su indice; usata per ricercare le righe in base a segnalibri.|Accesso indicizzati, istruzioni `UPDATE` e `DELETE`.|
+| |`IRowsetChange`|No|Necessaria per `INSERTS`/`UPDATES`/ `DELETES` in un set di righe. I set di righe nelle tabelle di base devono supportare questa interfaccia per le istruzioni `INSERT`, `UPDATE` e `DELETE`.|Istruzioni `UPDATE`, `DELETE` e `INSERT`.|
 | |`IConvertType`|Sì|Usare per verificare se il set di righe supporta le conversioni di tipi di dati specifici nelle colonne.| |
 |Indice|`IRowset`|Sì|Eseguire la scansione delle righe.|Accesso indicizzato, prestazioni.|
 | |`IAccessor`|Sì|Associare alle colonne di un set di righe.|Accesso indicizzato, prestazioni.|
@@ -644,11 +644,11 @@ Nel caso delle interfacce facoltative, la colonna Scenari indica uno o più dei 
 | |`ICommandText`|Sì|Usare per la definizione del testo delle query.|Query remota, query pass-through.|
 | |`IColumnsInfo`|Sì|Usare per ottenere i metadati delle colonne per i risultati della query.|Query remota, query pass-through.|
 | |`ICommandProperties`|Sì|Usare per specificare le proprietà obbligatorie nei set di righe restituiti dal comando.|Query remota, query pass-through.|
-| |`ICommandWithParameters`|no|Usare per l'esecuzione di query con parametri.|Query remota, prestazioni.|
-| |`ICommandPrepare`|no|Usare per preparare un comando per ottenere i metadati (usata nelle query pass-through, se disponibili).|Query remota, prestazioni.|
+| |`ICommandWithParameters`|No|Usare per l'esecuzione di query con parametri.|Query remota, prestazioni.|
+| |`ICommandPrepare`|No|Usare per preparare un comando per ottenere i metadati (usata nelle query pass-through, se disponibili).|Query remota, prestazioni.|
 |Oggetto errore|`IErrorRecords`|Sì|Usare per ottenere un puntatore a un'interfaccia `IErrorInfo` corrispondente a un singolo record di errore.| |
 | |`IErrorInfo`|Sì|Usare per ottenere un puntatore a un'interfaccia `IErrorInfo` corrispondente a un singolo record di errore.| |
-|Qualsiasi oggetto|`ISupportErrorInfo`|no|Usare per verificare se una determinata interfaccia supporta gli oggetti errore.| |
+|Qualsiasi oggetto|`ISupportErrorInfo`|No|Usare per verificare se una determinata interfaccia supporta gli oggetti errore.| |
 |  |  |  |  |  |
 
 >[!NOTE]

@@ -21,10 +21,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948227"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67948227"
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare i tipi di dati per valori di grandi dimensioni e la clausola **.** WRITE dell'istruzione [UPDATE](../../t-sql/queries/update-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -83,7 +83,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  Il valore *scr_text_ptr* non deve essere identico al valore *dest_text_ptr*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I dati inseriti possono essere una singola costante *inserted_data*, un nome di tabella o di colonna oppure un puntatore di testo.  
   
 |Operazione di aggiornamento|Parametri di UPDATETEXT|  

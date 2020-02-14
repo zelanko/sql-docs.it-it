@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73660788"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
@@ -84,7 +84,7 @@ Per informazioni dettagliate, vedere la [sezione degli argomenti](https://msdn.m
 
 <a name="column-options-bk"></a>
 
-### <a name="column-options"></a>Opzioni delle colonne
+### <a name="column-options"></a>Opzioni colonne
 `column_name` [ ,...`n` ]   
  I nomi di colonna non consentono le [opzioni delle colonne](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) menzionate in CREATE TABLE.  In alternativa, è possibile specificare un elenco facoltativo di uno o più nomi di colonna per la nuova tabella. Le colonne della nuova tabella useranno i nomi specificati. Quando si specificano nomi di colonna, il numero di colonne nell'elenco di colonne deve corrispondere al numero di colonne nei risultati di SELECT. Se non si specificano nomi di colonna, la nuova tabella di destinazione userà i nomi di colonna indicati nei risultati dell'istruzione SELECT. 
   
@@ -166,7 +166,7 @@ Per evitare spostamenti di dati nelle query successive, è possibile specificare
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>A. Usare CTAS per copiare una tabella 
+### <a name="a-use-ctas-to-copy-a-table"></a>R. Usare CTAS per copiare una tabella 
 Si applica a: Azure SQL Data Warehouse e Parallel Data Warehouse
 
 Forse uno degli usi più comuni di `CTAS` è creare una copia di una tabella in modo che sia possibile modificare l'istruzione DDL. Se ad esempio originariamente la tabella è stata creata come `ROUND_ROBIN` e si vuole trasformarla in una tabella distribuita per una colonna, `CTAS` è come deve essere cambiata la colonna di distribuzione. Si può inoltre usare `CTAS` per modificare il partizionamento, l'indicizzazione o i tipi di colonna.
@@ -423,7 +423,7 @@ OPTION ( HASH JOIN );
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. Usare CTAS per importare dati dall'archivio BLOB di Azure  
 Si applica a: Azure SQL Data Warehouse e Parallel Data Warehouse  
 
-Per importare dati da una tabella esterna, usare CREATE TABLE AS SELECT per selezionare i dati dalla tabella esterna. La sintassi per selezionare i dati da una tabella esterna e inserirli in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] è uguale alla sintassi usata per selezionare i dati da una normale tabella.  
+Per importare dati da una tabella esterna, usare CREATE TABLE AS SELECT per selezionare i dati dalla tabella esterna. La sintassi per selezionare i dati da una tabella esterna e inserirli in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] è la stessa usata per selezionare i dati da una normale tabella.  
   
  L'esempio seguente definisce una tabella esterna per i dati di un account di archiviazione BLOB di Azure. Usa quindi CREATE TABLE AS SELECT per selezionare dati dalla tabella esterna. I dati vengono importati dai file di testo delimitato dell'archiviazione BLOB di Azure e archiviati in una nuova tabella [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
@@ -456,7 +456,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-import-Hadoop-bk"></a>
   
 ### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. Usare CTAS per importare dati Hadoop da una tabella esterna  
-Si applica a: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Applicabile a: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 Per importare dati da una tabella esterna, usare CREATE TABLE AS SELECT per selezionare i dati dalla tabella esterna. La sintassi per selezionare i dati da una tabella esterna e inserirli in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] è la stessa usata per selezionare i dati da una normale tabella.  
   
@@ -679,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Dichiarare in modo esplicito il tipo di dati e il supporto dei valori Null dell'output  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. dichiarare in modo esplicito il tipo di dati e il supporto dei valori Null di output  
 Si applica a: Azure SQL Data Warehouse e Parallel Data Warehouse  
 
 Durante la migrazione del codice di SQL Server a SQL Data Warehouse è possibile incontrare questo tipo di modello di codifica:
@@ -750,7 +750,7 @@ AS
 SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
-Si noti quanto segue:
+Tenere presente quanto segue:
 - CAST o CONVERT avrebbero potuto essere usati
 - ISNULL viene usato per non unire il supporto dei valori Null
 - ISNULL è la funzione più esterna

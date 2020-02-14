@@ -29,10 +29,10 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055965"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68055965"
 
   Aggiunge nuovi componenti di schema a una raccolta di XML Schema esistente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  **'** *Schema Component* **'**  
  Componente dello schema da inserire.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare ALTER XML SCHEMA COLLECTION per aggiungere nuovi XML Schema i cui spazi dei nomi non sono già nella raccolta di XML Schema, oppure per aggiungere nuovi componenti a spazi dei nomi esistenti nella raccolta.  
   
  Nell'esempio seguente viene aggiunto un nuovo \<elemento> allo spazio dei nomi esistente `https://MySchema/test_xml_schema` nella raccolta `MyColl`.  
@@ -93,7 +93,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. Creazione di una raccolta di XML Schema nel database  
+### <a name="a-creating-xml-schema-collection-in-the-database"></a>R. Creazione di una raccolta di XML Schema nel database  
  Nell'esempio corrente viene creata la raccolta di XML Schema `ManuInstructionsSchemaCollection`. La raccolta ha solo uno spazio dei nomi di schema.  
   
 ```  
@@ -187,7 +187,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
  L'istruzione CREATE XML SCHEMA COLLECTION archivia solo i componenti dello schema riconosciuti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non tutti gli elementi contenuti in XML Schema vengono archiviati nel database. Pertanto, se si desidera una copia esatta della raccolta di XML Schema, è consigliabile salvare gli XML Schema in una colonna di database o in un'altra cartella nel computer.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Specifica di spazi dei nomi relativi a più schemi in una raccolta di schemi  
- È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Esempio:  
+ È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Ad esempio:  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

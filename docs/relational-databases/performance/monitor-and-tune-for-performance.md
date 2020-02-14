@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020255"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitoraggio e ottimizzazione delle prestazioni
@@ -43,7 +43,7 @@ ms.locfileid: "68020255"
  La valutazione continuativa delle prestazioni del database consente di ridurre al minimo i tempi di risposta e di aumentare al massimo la velocità effettiva, ottimizzando pertanto le prestazioni. Traffico di rete, operazioni di I/O su disco e utilizzo della CPU efficienti sono fattori fondamentali per ottenere prestazioni ottimali. È necessario analizzare accuratamente i requisiti delle applicazioni, comprendere la struttura logica e fisica dei dati, valutare l'utilizzo del database e raggiungere compromessi adeguati tra tipi di utilizzo in conflitto, ad esempio elaborazione delle transazioni online (OLTP) e supporto decisionale.  
   
 ## <a name="monitoring-and-tuning-databases-for-performance"></a>Monitoraggio e ottimizzazione del database per le prestazioni  
- In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel sistema operativo Microsoft Windows sono disponibili utilità che consentono di visualizzare la condizione corrente del database e di tenere traccia delle prestazioni in caso di variazioni. È disponibile una vasta gamma di strumenti e di tecniche per il monitoraggio di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di eseguire queste operazioni:  
+ In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel sistema operativo Microsoft Windows sono disponibili utilità che consentono di visualizzare la condizione corrente del database e di tenere traccia delle prestazioni in caso di variazioni. Per il monitoraggio di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile una vasta gamma di strumenti e tecniche. Il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di eseguire queste operazioni:  
   
 -   Determinare se è possibile migliorare le prestazioni. Il monitoraggio dei tempi di risposta delle query più frequenti consente, ad esempio, di determinare se sono necessarie modifiche alle query o agli indici nelle tabelle.  
   

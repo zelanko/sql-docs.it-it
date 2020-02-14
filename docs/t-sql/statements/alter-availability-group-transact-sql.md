@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874526"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "70874526"
 
   Modifica un gruppo di disponibilità AlwaysOn esistente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La maggior parte degli argomenti ALTER AVAILABILITY GROUP sono supportati solo nella replica primaria corrente. Tuttavia gli argomenti JOIN, FAILOVER e FORCE_FAILOVER_ALLOW_DATA_LOSS sono supportati solo in repliche secondarie.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -221,7 +221,7 @@ ALTER AVAILABILITY GROUP group_name
  DB_FAILOVER  **=** { ON | OFF }  
  Specifica la risposta da accettare quando un database nella replica primaria è offline. Se impostata su ON, qualsiasi stato diverso da ONLINE per un database del gruppo di disponibilità attiva un failover automatico. Se l'opzione è impostata su OFF, viene usata solo l'integrità dell'istanza per attivare il failover automatico.  
  
- Per altre informazioni su questa impostazione, vedere l'[opzione di rilevamento dell'integrità a livello di database](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
+ Per altre informazioni su questa impostazione, vedere [Opzione di failover di rilevamento dell'integrità a livello di database](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
 DTC_SUPPORT  **=** { PER_DB | NONE }  
 Specifica se le transazioni distribuite sono abilitate per questo gruppo di disponibilità. Le transazioni distribuite sono supportate solo per i database del gruppo di disponibilità a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e le transazioni tra database sono supportate solo a partire da [!INCLUDE[ssSQL16](../../includes/sssql15-md.md)] SP2. `PER_DB` crea il gruppo di disponibilità con il supporto per queste transazioni e alzerà automaticamente di livello le transazioni tra database che implicano il coinvolgimento dei database del gruppo di disponibilità in transazioni distribuite. `NONE` impedisce l'innalzamento di livello automatico delle transazioni tra database per le transazioni distribuite e non registra il database con un RMID stabile in DTC. Le transazioni distribuite non vengono impedite quando si usa l'impostazione `NONE`, ma il failover del database e il ripristino automatico possono non riuscire in alcune circostanze. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
@@ -353,7 +353,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  ALLOW_CONNECTIONS **=** { NO | READ_ONLY | ALL }  
  Specifica se i database di una determinata replica di disponibilità che esegue il ruolo secondario, ovvero che funge da replica secondaria, possono accettare connessioni dai client, ovvero:  
   
- No  
+ NO  
  Non sono consentite connessioni utente ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Questo è il comportamento predefinito.  
   
  READ_ONLY  
@@ -383,7 +383,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  Specifica il tipo di connessione che i database di una determinata replica di disponibilità che esegue il ruolo primario, ovvero che funge da replica primaria, possono accettare dai client, tra cui:  
   
  READ_WRITE  
- Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **Sola lettura** .  Se la proprietà Finalità dell'applicazione è impostata su **Lettura/Scrittura** o se tale proprietà non è impostata, la connessione è consentita. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **ReadOnly** .  Se la proprietà Finalità dell'applicazione è impostata su **Lettura/Scrittura** o se tale proprietà non è impostata, la connessione è consentita. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  ALL  
  Sono consentite tutte le connessioni ai database nella replica primaria. Questo è il comportamento predefinito.  
@@ -548,25 +548,25 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
 > [!IMPORTANT]  
 >  Non è consigliabile utilizzare DHCP negli ambienti di produzione. Se si verifica un periodo di inattività e il lease IP DHCP scade, è necessario del tempo aggiuntivo per registrare il nuovo indirizzo IP della rete DHCP che è associato al nome DNS del listener e influisce sulla connettività client. DHCP può essere tranquillamente usato per la configurazione dell'ambiente di sviluppo e test per verificare le funzioni di base di gruppi di disponibilità e per l'integrazione con le applicazioni.  
   
- Esempio:  
+ Ad esempio:  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Specifica che, anziché usare DHCP, nel listener del gruppo di disponibilità saranno usati uno o più indirizzi IP statici. Per creare un gruppo di disponibilità tra più subnet, viene richiesto un indirizzo IP statico nella configurazione del listener per ogni subnet. Per una determinata subnet, l'indirizzo IP statico può essere un indirizzo IPv4 o IPv6. Contattare l'amministratore di rete per ottenere un indirizzo IP statico per ogni subnet in cui verrà ospitata una replica di disponibilità per il nuovo gruppo di disponibilità.  
   
- Esempio:  
+ Ad esempio:  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ipv4_address*  
- Specifica un indirizzo IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio, `10.120.19.155`.  
+ Specifica un indirizzo IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio: `10.120.19.155`.  
   
  *ipv4_mask*  
- Specifica una maschera IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio, `255.255.254.0`.  
+ Specifica una maschera IPv4 in quattro parti per un listener del gruppo di disponibilità, Ad esempio: `255.255.254.0`.  
   
  *ipv6_address*  
- Specifica un indirizzo IPv6 per un listener del gruppo di disponibilità, Ad esempio, `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
+ Specifica un indirizzo IPv6 per un listener del gruppo di disponibilità, Ad esempio: `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
  PORT **=** *listener_port*  
  Specifica il numero di porta, *listener_port*, che deve essere usato da un listener del gruppo di disponibilità specificato usando una clausola WITH IP. PORT è facoltativo.  

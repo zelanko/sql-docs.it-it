@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
 ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710586"
 ---
 # <a name="what-is-polybase"></a>Che cos'è PolyBase?
@@ -34,7 +34,7 @@ ms.locfileid: "71710586"
 
 PolyBase consente all'istanza di SQL Server 2016 di elaborare query Transact-SQL che leggono i dati da Hadoop. La stessa query può anche accedere a tabelle relazionali in SQL Server. PolyBase consente anche alla stessa query di creare un join per dati da Hadoop e SQL Server. In SQL Server, una [tabella esterna](../../t-sql/statements/create-external-table-transact-sql.md) oppure un'[origine dati esterna](../../t-sql/statements/create-external-data-source-transact-sql.md) fornisce la connessione a Hadoop.
 
-![Logica PolyBase](../../relational-databases/polybase/media/polybase-logical.png "Logica PolyBase")
+![Logica di PolyBase](../../relational-databases/polybase/media/polybase-logical.png "Logica di PolyBase")
 
 PolyBase esegue il push di alcuni calcoli sul nodo Hadoop per ottimizzare la query complessiva. Tuttavia, l'accesso esterno di PolyBase non è limitato a Hadoop. Sono supportate anche altre tabelle non relazionali non strutturate, ad esempio i file di testo delimitato.
 

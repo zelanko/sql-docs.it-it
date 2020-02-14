@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908019"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
@@ -30,7 +30,7 @@ ms.locfileid: "72908019"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Visualizzare le proprietà delle statistiche tramite:**  
   
@@ -77,10 +77,10 @@ ms.locfileid: "72908019"
      **Nome**  
      Nome dell'oggetto statistiche.  
   
-     **Updated**  
+     **Aggiornato**  
      Data e ora dell'ultimo aggiornamento delle statistiche.  
   
-     **Righe**  
+     **prime righe**  
      Numero totale di righe della tabella o della vista indicizzata al momento dell'ultimo aggiornamento delle statistiche. Se le statistiche vengono filtrate o corrispondono a un indice filtrato, il numero di righe potrebbe essere inferiore al numero di righe della tabella.  
   
      **Rows Sampled**  

@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116785"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
@@ -37,7 +37,7 @@ ms.locfileid: "68116785"
   
  I ruoli predefiniti del server vengono forniti per motivi di praticità e compatibilità con le versioni precedenti. Laddove possibile, assegnare autorizzazioni più specifiche.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce nove ruoli predefiniti del server. Le autorizzazioni concesse ai ruoli predefiniti del server (ad eccezione di **publica**)non possono essere modificate. A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile creare ruoli del server definiti dall'utente e aggiungere autorizzazioni a livello di server a tali ruoli.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce nove ruoli predefiniti del server. Le autorizzazioni concesse ai ruoli predefiniti del server (ad eccezione di **pubblico**) non possono essere modificate. A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile creare ruoli del server definiti dall'utente e aggiungere autorizzazioni a livello di server a tali ruoli.  
   
  È possibile aggiungere entità di livello server, ad esempio account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], account di Windows e gruppi di Windows, nei ruoli a livello di server. Tutti i membri di un ruolo predefinito del server possono aggiungere altri account di accesso allo stesso ruolo. I membri dei ruoli del server definiti dall'utente non possono aggiungere altre entità del server al ruolo.  
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "68116785"
 |**bulkadmin**|I membri del ruolo predefinito del server **bulkadmin** sono autorizzati a eseguire l'istruzione `BULK INSERT`.|  
 |**diskadmin**|Il ruolo predefinito del server **diskadmin** consente di gestire i file su disco.|  
 |**dbcreator**|I membri del ruolo predefinito del server **dbcreator** sono autorizzati a creare, modificare, eliminare e ripristinare qualsiasi database.|  
-|**pubblico**|Ogni accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartiene al ruolo del server **pubblico**. Quando a un'entità del server non sono state concesse o sono state negate autorizzazioni specifiche per un oggetto a protezione diretta, l'utente eredita le autorizzazioni concesse a public su tale oggetto. Assegnare le autorizzazioni public per un oggetto solo quando si desidera che l'oggetto sia disponibile a tutti gli utenti. Non è possibile modificare l'appartenenza a public.<br /><br /> **Nota:** il ruolo **pubblico** viene implementato in modo diverso rispetto agli altri ruoli, e le autorizzazioni possono essere concesse, negate o revocate dai ruoli predefiniti del server pubblico.|  
+|**pubblico**|Ogni accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartiene al ruolo del server **pubblico**. Quando a un'entità del server non sono state concesse o sono state negate autorizzazioni specifiche per un oggetto a protezione diretta, l'utente eredita le autorizzazioni concesse a public su tale oggetto. Assegnare le autorizzazioni public per un oggetto solo quando si desidera che l'oggetto sia disponibile a tutti gli utenti. Non è possibile modificare l'appartenenza a public.<br /><br /> **Nota:** il ruolo **pubblico** viene implementato in modo diverso rispetto agli altri ruoli e le autorizzazioni possono essere concesse, negate o revocate dai ruoli predefiniti del server pubblico.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Autorizzazioni dei ruoli predefiniti del server  
  A ogni ruolo predefinito del server vengono assegnate autorizzazioni specifiche. La figura seguente mostra le autorizzazioni assegnate ai ruoli del server.   
@@ -77,15 +77,15 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Lavorare con i ruoli a livello di server.  
  Nella tabella seguente vengono illustrati i comandi, le viste e le funzioni che consentono di utilizzare ruoli a livello di server.  
   
-|Funzionalità|Tipo|Descrizione|  
+|Funzionalità|Type|Descrizione|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadati|Restituisce un elenco di ruoli a livello di server.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadati|Restituisce informazioni sui membri di un ruolo a livello di server.|  
 |[sp_srvrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)|Metadati|Visualizza le autorizzazioni di un ruolo a livello di server.|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Metadati|Indica se un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è un membro del ruolo a livello di server specificato.|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|Metadati|Restituisce una riga per ogni membro di ogni ruolo a livello di server.|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Comando|Aggiunge un account di accesso come membro di un ruolo a livello di server. Caratteristica deprecata. Usare [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) .|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Comando|Rimuove un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un utente o un gruppo di Windows da un ruolo a livello di server. Caratteristica deprecata. Usare [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) .|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Comando|Aggiunge un account di accesso come membro di un ruolo a livello di server. Operazione deprecata. Usare [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) .|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Comando|Rimuove un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un utente o un gruppo di Windows da un ruolo a livello di server. Operazione deprecata. Usare [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) .|  
 |[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|Comando|Crea un ruolo del server definito dall'utente.|  
 |[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|Comando|Modifica l'appartenenza di un ruolo del server o il nome di un ruolo del server definito dall'utente.|  
 |[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|Comando|Rimuove un ruolo del server definito dall'utente.|  

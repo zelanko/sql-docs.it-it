@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926035"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -31,7 +31,7 @@ Local DB di Microsoft SQL Server Express è una funzionalità di [SQL Server Exp
 
 Con l'installazione di Local DB viene copiato un set di file minimo necessario per avviare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una volta installato LocalDB, è possibile avviare una connessione tramite una stringa di connessione speciale. Durante la connessione, l'infrastruttura [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessaria viene creata automaticamente e avviata, consentendo all'applicazione di usare il database senza attività di configurazione complesse. Con Developer Tools gli sviluppatori dispongono di un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che consente di scrivere e verificare il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] senza dover gestire un'istanza del server completa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-## <a name="try-it-out"></a>Per provarlo: 
+## <a name="try-it-out"></a>provarlo, 
 
 - Per scaricare e installare Local DB di SQL Server Express, passare ai **[download di SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB è una funzionalità selezionabile durante l'installazione ed è disponibile quando si scarica il supporto. Se si scarica il supporto, scegliere **Express Advanced** o il pacchetto Local DB. Nel **programma di installazione di Visual Studio**, è possibile installare SQL Server Express Local DB nel contesto del carico di lavoro **Sviluppo per desktop .NET** o come componente singolo.
 
@@ -50,7 +50,7 @@ Un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Local DB vie
 
 ## <a name="description"></a>Descrizione
 
-Il programma di installazione di Local DB usa il programma `SqlLocalDB.msi` per installare i file necessari nel computer. Una volta installato, Local DB è un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con cui è possibile creare e aprire database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I file del database di sistema per il database sono archiviati nel percorso locale AppData che generalmente è nascosto. Ad esempio, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. I file del database utente sono archiviati nel percorso indicato dall'utente, in genere nella cartella `C:\Users\<user>\Documents\`.
+Il programma di installazione di Local DB usa il programma `SqlLocalDB.msi` per installare i file necessari nel computer. Una volta installato, Local DB è un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con cui è possibile creare e aprire database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I file del database di sistema per il database sono archiviati nel percorso locale AppData che generalmente è nascosto. Ad esempio: `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. I file del database utente sono archiviati nel percorso indicato dall'utente, in genere nella cartella `C:\Users\<user>\Documents\`.
 
 Per altre informazioni sull'inclusione di Local DB in un'applicazione, vedere [Cenni preliminari sui dati locali](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)) per [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e [Creare un database e aggiungere tabelle in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
 
@@ -60,7 +60,7 @@ Con l'utilità `SqlLocalDb` è possibile creare nuove istanze di Local DB, avvia
 
 Le regole di confronto dell'istanza per Local DB sono impostate su `SQL_Latin1_General_CP1_CI_AS` e non possono essere modificate. Le regole di confronto a livello di database, di colonna e di espressione sono supportate normalmente. Ai database indipendenti vengono applicate le regole di confronto dei metadati e di `tempdb` definite da [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md).
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>Restrizioni
 
 - Local DB non può essere un Sottoscrittore della replica di tipo merge.
 
@@ -116,8 +116,8 @@ REM Gather information about the instance of LocalDB
 |Versione|\<Versione corrente>|
 |Nome condiviso|""|
 |Proprietario|"\<utente di Windows>"|
-|Creazione automatica|no|
-|State|esecuzione|
+|Creazione automatica|No|
+|State|in esecuzione|
 |Ultima ora inizio|\<Data e ora>|
 |Nome pipe dell'istanza|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 

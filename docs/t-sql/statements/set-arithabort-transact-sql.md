@@ -27,19 +27,19 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064613"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516252"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Interrompe una query quando si verifica un errore di divisione per zero o di overflow durante l'esecuzione della query stessa.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,7 +55,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Impostare sempre ARITHABORT su ON nelle sessioni di accesso. L'impostazione di ARITHABORT su OFF può influire negativamente sull'ottimizzazione delle query causando problemi di prestazioni.  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ Quando SET ARITHABORT e SET ANSI WARNINGS sono impostate su OFF e si verifica un
 > [!NOTE]  
 >  Se entrambe le opzioni SET ARITHABORT e SET ARITHIGNORE non sono impostate su ON, dopo l'esecuzione della query [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL e un messaggio di avviso.  
   
-Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata esplicitamente su ON.  
+Quando ANSI_WARNINGS ha un valore ON e il livello di compatibilità del database è impostato su 90 o su un valore superiore, ARITHABORT è implicitamente ON indipendentemente dall'impostazione del valore. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata esplicitamente su ON.  
   
 Per la valutazione dell'espressione, se SET ARITHABORT è impostata su OFF e un'istruzione INSERT, UPDATE o DELETE rileva un errore aritmetico, di overflow, di divisione per zero o di dominio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserisce o aggiorna un valore NULL. Se la colonna di destinazione non ammette valori Null, l'operazione di inserimento o aggiornamento ha esito negativo e viene generato un errore per l'utente.  
   

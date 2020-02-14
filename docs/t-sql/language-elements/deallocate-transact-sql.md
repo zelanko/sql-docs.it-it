@@ -22,10 +22,10 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894897"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67894897"
 
   Rimuove un riferimento a un cursore. Dopo che l'ultimo riferimento al cursore è stato deallocato, le strutture di dati che includono il cursore vengono rilasciate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  @*cursor_variable_name*  
  Nome di una variabile di **cursore**. @*cursor_variable_name* deve essere di tipo **cursor**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Le istruzioni che hanno effetto sui cursori utilizzano un nome di cursore o una variabile di cursore per fare riferimento al cursore. L'istruzione `DEALLOCATE` elimina l'associazione tra un cursore e il nome di cursore o la variabile di cursore. Se il nome o la variabile è l'ultimo riferimento al cursore, il cursore viene deallocato e le risorse da esso utilizzate vengono rilasciate. I blocchi di scorrimento utilizzati per proteggere l'isolamento delle operazioni di recupero vengono rilasciati dall'istruzione `DEALLOCATE`. I blocchi a livello di transazione utilizzati per proteggere gli aggiornamenti, inclusi gli aggiornamenti posizionati eseguiti con il cursore, vengono mantenuti attivi fino al termine della transazione.  
   
 L'istruzione `DECLARE CURSOR` consente di allocare un cursore e di associarlo a un nome di cursore.  

@@ -13,10 +13,10 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710821"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
@@ -25,17 +25,17 @@ ms.locfileid: "71710821"
   
  Nella figura seguente sono illustrate tutte le possibili connessioni, anche se è possibile che alcune di esse non siano necessarie in determinate topologie. Una connessione a un server FTP, ad esempio, è necessaria solo se lo snapshot viene recapitato tramite FTP.  
   
- ![Componenti e connessioni nella sincronizzazione Web](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Componenti e connessioni nella sincronizzazione Web")  
+ ![Componenti e connessioni usati nella sincronizzazione Web](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Componenti e connessioni usati nella sincronizzazione Web")  
   
  Nella tabella seguente vengono descritti i componenti e le connessioni illustrati nella figura.  
   
-## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>A. Utente di Windows utilizzato per l'esecuzione dell'agente di merge  
+## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>R. Utente di Windows utilizzato per l'esecuzione dell'agente di merge  
  Durante la sincronizzazione, l'agente di merge (A) viene avviato come Sottoscrittore. L'agente di merge può essere avviato da un passaggio del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent o da un'applicazione personalizzata autonoma. Se viene avviato da un passaggio del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, l'agente di merge verrà eseguito nel contesto di un utente di Windows specificato. Se non viene specificato un utente di Windows, l'agente di merge verrà eseguito nel contesto dell'account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
   
 |Tipo di account|Posizione in cui viene specificato l'account|  
 |---------------------|------------------------------------|  
 |Utente di Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: parametri `@job_login` e `@job_password` di [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects): proprietà <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> per <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gestione configurazione[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Gestione configurazione|  
 |Applicazione autonoma|L'agente di merge viene eseguito nel contesto dell'utente di Windows che esegue l'applicazione.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Connessione al Sottoscrittore  

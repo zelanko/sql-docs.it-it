@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056410"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Preparare i dati per l'importazione o l'esportazione bulk
@@ -58,11 +58,11 @@ ms.locfileid: "74056410"
 -   È necessario che ogni campo del file di dati sia compatibile con la colonna corrispondente della tabella di destinazione. Non è ad esempio possibile caricare un campo **int** in una colonna **datetime** . Per altre informazioni, vedere [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md) e [Specificare i formati di dati per la compatibilità con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
-    >  Per specificare un subset di righe da importare da un file di dati anziché l'intero file, è possibile usare un comando **bcp** con l'opzione **-F** *first_row* e/o l'opzione **-L** *last_row*. Per altre informazioni, vedere [bcp Utility](../../tools/bcp-utility.md).  
+    >  Per specificare un subset di righe da importare da un file di dati invece dell'intero file, è possibile usare un comando **bcp** con l'opzione **-F** *first_row* e/o l'opzione **-L** *last_row*. Per altre informazioni, vedere [bcp Utility](../../tools/bcp-utility.md).  
   
 -   Per importare dati da file di dati con campi a lunghezza o a larghezza fissa, usare un file di formato. Per altre informazioni, vedere [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   I file con valori delimitati da virgole (CSV) non sono supportati nelle operazioni di importazione bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In alcuni casi, tuttavia, è possibile usare un file CSV come file di dati per un'importazione bulk di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si noti che il carattere di terminazione del campo di un file CSV non può essere una virgola. Per poter essere usato come file di dati per l'importazione bulk, un file CSV deve essere conforme alle restrizioni seguenti:  
+-   I file con valori delimitati da virgole (CSV) non sono supportati nelle operazioni di importazione bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In alcuni casi, tuttavia, è possibile usare un file CSV come file di dati per un'importazione bulk di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si noti che il carattere di terminazione del campo di un file CSV non può essere una virgola. Per poter essere usato come file di dati per l'importazione bulk, un file CSV deve essere conforme alle restrizioni seguenti:  
   
     -   I campi dati non possono mai contenere il carattere di terminazione del campo.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74056410"
 |Aggiunta di informazioni sull'utilizzo del provider OLE DB per Jet per importare dati CSV.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   

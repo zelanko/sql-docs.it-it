@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 202baede7eed746a581a11d165fe6d7b0fb5afdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903598"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento **Audit Addlogin** viene generata quando viene aggiunto o rimosso un account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  La classe di evento **Audit Addlogin** viene generata quando viene aggiunto o rimosso un account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Se si impostano altre proprietà, ad esempio il database predefinito, mentre si aggiunge l'account di accesso le informazioni relative a queste proprietà saranno disponibili nella colonna **TextData** dell'evento. Se le proprietà vengono impostate mentre si aggiunge un account di accesso, l'evento **Audit Login Change Property** non si verificherà.  
   
  Questo evento di controllo è relativo alle stored procedure **sp_addlogin** e **sp_droplogin** .  
   
- Questa classe di evento verrà probabilmente rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si consiglia di usare, invece, la classe di evento **Audit Server Principal Management** .  
+ Questa classe di evento verrà probabilmente rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile utilizzare al suo posto la classe di evento **Audit Server Principal Management** .  
   
 ## <a name="audit-addlogin-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Addlogin  
   
@@ -37,8 +37,8 @@ ms.locfileid: "67903598"
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**EventClass**|**int**|Tipo di evento = 104.|27|no|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|**EventClass**|**int**|Tipo di evento = 104.|27|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Aggiungi<br /><br /> 2=Elimina|21|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
@@ -47,11 +47,11 @@ ms.locfileid: "67903598"
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |**SessionLoginName**|**Nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Esito positivo**|**int**|1 = esito positivo. 0 = esito negativo. Ad esempio, il valore 1 indica che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
+|**Success**|**int**|1 = esito positivo. 0 = esito negativo. Ad esempio, il valore 1 indica che il controllo delle autorizzazioni ha avuto esito positivo e il valore 0 che il controllo ha avuto esito negativo.|23|Sì|  
 |**TargetLoginName**|**nvarchar**|Nome dell'account di accesso da aggiungere o eliminare.|42|Sì|  
 |**TargetLoginSid**|**image**|ID di sicurezza (SID) dell'account di accesso interessato dall'azione riguardante un account di accesso (se viene passato come parametro).|43|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  

@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843430"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761646"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,7 +129,7 @@ Quando si convertono dati di tipo **smalldatetime** in dati di tipo carattere, g
 Quando si esegue la conversione di dati di tipo carattere in **datetimeoffset** usando uno stile che include un'ora, al risultato viene aggiunta una differenza di fuso orario.
   
 ## <a name="float-and-real-styles"></a>Stili float e real
-Se il tipo di dati di **expression** è **float** o *real*, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
+Se il tipo di dati di *expression* è **float** o **real**, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
   
 |valore|Output|  
 |---|---|
@@ -140,7 +140,7 @@ Se il tipo di dati di **expression** è **float** o *real*, *style* può avere u
 |**126, 128, 129**|Incluso per motivi di compatibilità con le versioni precedenti. Questi valori potrebbero essere deprecati in una versione futura.|  
   
 ## <a name="money-and-smallmoney-styles"></a>Stili money e smallmoney
-Se il tipo di dati di **expression** è **money** o *smallmoney*, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
+Se il tipo di dati di *expression* è **money** o **smallmoney**, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
   
 |valore|Output|  
 |---|---|
@@ -150,7 +150,7 @@ Se il tipo di dati di **expression** è **money** o *smallmoney*, *style* può a
 |**126**|Equivalente allo stile 2 in caso di conversione in char(n) o varchar(n)|  
   
 ## <a name="xml-styles"></a>Stili xml
-Se il tipo di dati di **expression** è *xml*, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
+Se il tipo di dati di *expression* è **xml**, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0.
   
 |valore|Output|  
 |---|---|
@@ -160,12 +160,12 @@ Se il tipo di dati di **expression** è *xml*, *style* può avere uno dei valori
 |**3**|Mantiene gli spazi non significativi e consente l'elaborazione limitata di subset DTD interni.|  
   
 ## <a name="binary-styles"></a>Stili binary
-Se il tipo di dati di **expression** è **binary(n)** , **char(n)** , **varbinary(n)** o *varchar(n)* , *style* può avere uno dei valori indicati nella tabella seguente. I valori dello stile non indicati nella tabella restituiscono un errore.
+Se il tipo di dati di *expression* è **binary(n)** , **char(n)** , **varbinary(n)** o **varchar(n)** , *style* può avere uno dei valori indicati nella tabella seguente. I valori dello stile non indicati nella tabella restituiscono un errore.
   
 |valore|Output|  
 |---|---|
 |**0** (predefinito)|Converte caratteri ASCII in byte binari e viceversa. Ogni carattere o byte viene convertito in base allo schema 1:1.<br /><br /> Se *data-type* è binario, a sinistra del risultato vengono aggiunti i caratteri 0x.|  
-|**1**, **2**|Se *data_tye* è binario, l'espressione deve essere un'espressione di caratteri. *expression* deve includere un numero **pari** di cifre esadecimali (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Se *style* è impostato su 1, i primi due caratteri devono essere 0x. Se l'espressione contiene un numero di caratteri dispari o se un carattere qualsiasi non è valido, viene generato un errore.<br /><br /> Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> A *data_type* a lunghezza fissa maggiori del risultato convertito vengono aggiunti zeri a destra del risultato.<br /><br /> Un *data_type* di tipo carattere richiede un'espressione binaria. Ogni carattere binario viene convertito in due caratteri esadecimali. Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> Se *data_type* è un tipo di carattere di dimensioni fisse e la lunghezza del risultato convertito è inferiore a quella di *data_type*, a destra dell'espressione convertita vengono aggiunti spazi per mantenere un numero pari di cifre esadecimali.<br /><br /> Se *style* è uguale a 1, a sinistra del risultato convertito verranno aggiunti i caratteri 0x.|  
+|**1**, **2**|Se *data_tye* è binario, l'espressione deve essere un'espressione di caratteri. *expression* deve includere un numero **pari** di cifre esadecimali (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Se *style* è impostato su 1, i primi due caratteri dell'espressione devono essere 0x. Se l'espressione contiene un numero di caratteri dispari o se un carattere qualsiasi non è valido, viene generato un errore.<br /><br /> Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> A *data_type* a lunghezza fissa maggiori del risultato convertito vengono aggiunti zeri a destra del risultato.<br /><br /> Un *data_type* di tipo carattere richiede un'espressione binaria. Ogni carattere binario viene convertito in due caratteri esadecimali. Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> Se *data_type* è un tipo di carattere di dimensioni fisse e la lunghezza del risultato convertito è inferiore a quella di *data_type*, a destra dell'espressione convertita vengono aggiunti spazi per mantenere un numero pari di cifre esadecimali.<br /><br /> Se *style* è uguale a 1, a sinistra del risultato convertito verranno aggiunti i caratteri 0x.|  
   
 ## <a name="implicit-conversions"></a>Conversioni implicite
 Per le conversioni implicite non è necessario specificare la funzione CAST o la funzione CONVERT. Per le conversioni esplicite è necessario specificare la funzione CAST o la funzione CONVERT. Nella figura seguente vengono illustrate le conversioni di tipi di dati esplicite e implicite consentite per i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi includono **bigint**, **sql_variant** e **xml**. Non è possibile eseguire una conversione implicita in un'assegnazione dal tipo di dati **sql_variant**, ma è possibile eseguire una conversione implicita verso il tipo di dati **sql_variant**.
@@ -208,7 +208,7 @@ I tipi di dati **text** e **image** non supportano la conversione automatica del
 ## <a name="output-collation"></a>Regole di confronto per l'output  
 Quando l'output delle funzioni CAST o CONVERT è una stringa di caratteri e le funzioni ricevono come input una stringa di caratteri, l'output e l'input hanno le stesse regole di confronto e le stesse etichette delle regole di confronto. Se l'input non è una stringa di caratteri, all'output sono associate le regole di confronto predefinite del database e un'etichetta delle regole di confronto a cui possono essere assegnati valori predefiniti. Per altre informazioni, vedere [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
   
-Per assegnare all'output regole di confronto diverse, applicare la clausola COLLATE all'espressione risultante della funzione CAST o CONVERT. Esempio:
+Per assegnare all'output regole di confronto diverse, applicare la clausola COLLATE all'espressione risultante della funzione CAST o CONVERT. Ad esempio:
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -269,17 +269,17 @@ Gail        Erickson      Ms.    *
   
 Quando si convertono tipi di dati con un numero di cifre decimali diverso, in alcuni casi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un valore troncato e in altri restituisce un valore arrotondato. La tabella che segue illustra questo comportamento.
   
-|From|Per|Comportamento|  
+|From|A|Comportamento|  
 |---|---|---|
-|**numeric**|**numeric**|Arrotondamento|  
-|**numeric**|**int**|Troncamento|  
-|**numeric**|**money**|Arrotondamento|  
-|**money**|**int**|Arrotondamento|  
-|**money**|**numeric**|Arrotondamento|  
-|**float**|**int**|Troncamento|  
-|**float**|**numeric**|Arrotondamento<br /><br /> La conversione dei valori **float** che usano come notazione scientifica **decimal** o **numeric** è limitata ai soli valori con precisione a 17 cifre. Tutti i valori con precisione maggiore di 17 vengono arrotondati a zero.|  
-|**float**|**datetime**|Arrotondamento|  
-|**datetime**|**int**|Arrotondamento|  
+|**numeric**|**numeric**|Round|  
+|**numeric**|**int**|Truncate|  
+|**numeric**|**money**|Round|  
+|**money**|**int**|Round|  
+|**money**|**numeric**|Round|  
+|**float**|**int**|Truncate|  
+|**float**|**numeric**|Round<br /><br /> La conversione dei valori **float** che usano come notazione scientifica **decimal** o **numeric** è limitata ai soli valori con precisione a 17 cifre. Tutti i valori con precisione maggiore di 17 vengono arrotondati a zero.|  
+|**float**|**datetime**|Round|  
+|**datetime**|**int**|Round|  
   
 Ad esempio, i valori 10.6496 e -10.6496 potrebbero essere troncati o arrotondati durante la conversione nei tipi **int** o **numeric**:
   
@@ -340,7 +340,7 @@ L'aggiornamento del database al livello di compatibilità 110 e superiore non co
   
 ## <a name="BKMK_examples"></a> Esempi  
   
-### <a name="a-using-both-cast-and-convert"></a>A. Utilizzo delle funzioni CAST e CONVERT  
+### <a name="a-using-both-cast-and-convert"></a>R. Utilizzo delle funzioni CAST e CONVERT  
 In questi esempi vengono recuperati i nomi dei prodotti il cui prezzo contiene un `3` come prima cifra e i relativi valori di `ListPrice` vengono convertiti nel tipo `int`.
   
 ```sql

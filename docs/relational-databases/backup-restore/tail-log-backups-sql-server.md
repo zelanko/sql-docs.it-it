@@ -18,10 +18,10 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041346"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backup della parte finale del log [SQL Server]
@@ -35,7 +35,7 @@ ms.locfileid: "68041346"
    ##  <a name="TailLogScenarios"></a> Scenari in cui è necessario un backup della parte finale del log  
  È consigliabile eseguire un backup della parte finale del log negli scenari seguenti:  
   
--   Se il database è online e si intende eseguire un'operazione di ripristino sul database, iniziare eseguendo il backup della parte finale del log. Per evitare un errore per un database online, è necessario usare... Opzione WITH NORECOVERY dell'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Se il database è online e si intende eseguire un'operazione di ripristino sul database, iniziare eseguendo il backup della parte finale del log. Per evitare un errore per un database online, è necessario usare... Opzione WITH NORECOVERY dell'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Se il database è offline e non si avvia e risulta necessario eseguire un'operazione di ripristino, iniziare eseguendo il backup della parte finale del log. Dato che in questo momento non può avvenire alcuna transazione, l'utilizzo di WITH NORECOVERY è facoltativo.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "68041346"
 ##  <a name="IncompleteMetadata"></a> Backup della parte finale del log con metadati di backup incompleti  
  I backup della parte finale del log consentono di acquisire la parte finale del log anche quando il database è offline, è danneggiato oppure è privo di alcuni file di dati. Questo può causare metadati incompleti nei comandi di ripristino delle informazioni e in **msdb**. Tuttavia, solo i metadati sono incompleti. Il log acquisito è completo e utilizzabile.  
   
- Se un backup della parte finale del log include metadati incompleti, nella tabella [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) **has_incomplete_metadata** è impostato su **1**. Inoltre, nell'output di [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), **HasIncompleteMetadata** è impostato su **1**.  
+ Se un backup della parte finale del log include metadati incompleti, nella tabella [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)**has_incomplete_metadata** è impostato su **1**. Inoltre, nell'output di [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), **HasIncompleteMetadata** è impostato su **1**.  
   
  Se i metadati in un backup della parte finale del log sono incompleti, nella tabella [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) mancheranno la maggioranza delle informazioni sui filegroup al momento dell'esecuzione del backup della parte finale del log. La maggioranza delle colonne della tabella **backupfilegroup** sono NULL. Le uniche colonne significative sono le seguenti:  
   
 -   **backup_set_id**  
 -   **filegroup_id**  
--   **tipo**  
+-   **type**  
 -   **type_desc**  
 -   **is_readonly**  
   

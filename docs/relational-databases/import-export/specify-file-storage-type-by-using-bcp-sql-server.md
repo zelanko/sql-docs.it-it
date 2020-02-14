@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056383"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Specificare il tipo di archiviazione di file tramite bcp (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "74056383"
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
-    |**data**|**de**|  
+    |**date**|**de**|  
     |**datetime2**|**d2**|  
     |**datetimeoffset**|**do**|  
     |**decimal**|**n**|  

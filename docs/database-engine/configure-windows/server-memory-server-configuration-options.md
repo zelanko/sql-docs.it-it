@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028743"
 ---
 # <a name="server-memory-configuration-options"></a>Opzioni di configurazione server memory
@@ -55,7 +55,7 @@ Le opzioni per la memoria **min server memory** e **max server memory** possono 
 
 <a name="max_server_memory"></a> Usare **max server memory** per garantire che il sistema operativo non subisca un pregiudizievole utilizzo elevato di memoria. Per impostare la configurazione di max server memory, monitorare il consumo complessivo del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per determinare i requisiti di memoria. Per ottenere calcoli più precisi per una singola istanza:
 - Dalla memoria totale del sistema operativo riservare 1-4 GB al sistema operativo stesso.
-- Sottrarre quindi l'equivalente delle allocazioni di memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenziali dal controllo **max server memory** costituito da **stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>** . Il valore restante dovrebbe corrispondere all'impostazione di max server memory per la configurazione di una singola istanza.
+- Sottrarre quindi l'equivalente delle potenziali allocazioni di memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal controllo **max server memory** costituito da **stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>** . Il valore restante dovrebbe corrispondere all'impostazione di max server memory per la configurazione di una singola istanza.
 
 <sup>1</sup> Fare riferimento alla [Guida sull'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md#stacksizes) per informazioni sulle dimensioni degli stack di thread per ogni architettura.
 

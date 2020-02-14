@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113376"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Riduzione del carico di ottimizzazione del server di produzione
@@ -59,7 +59,7 @@ ms.locfileid: "68113376"
   
  Nella seguente figura viene illustrato lo scenario relativo al server di prova e al server di produzione:  
   
- ![Uso del server di prova con Ottimizzazione guidata motore di database](../../relational-databases/performance/media/testsvr.gif "Uso del server di prova con Ottimizzazione guidata motore di database")  
+ ![Utilizzo del server di prova con Ottimizzazione guidata motore di database](../../relational-databases/performance/media/testsvr.gif "Utilizzo del server di prova con Ottimizzazione guidata motore di database")  
   
 > [!NOTE]  
 >  La funzionalità di ottimizzazione del server di prova non è supportata nell'interfaccia utente grafica (GUI) di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -96,6 +96,6 @@ ms.locfileid: "68113376"
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni relative all'utilizzo di server di prova](../../relational-databases/performance/considerations-for-using-test-servers.md)   
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a06374e2803a5e482e6d5a7a665756e38cb7f2f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292439"
 ---
 # <a name="hdfs-file-source"></a>Origine file HDFS
@@ -37,7 +37,7 @@ ms.locfileid: "71292439"
 |-----------|-----------------|  
 |**Connessione Hadoop**|Specificare un'istanza esistente di Gestione connessione Hadoop o crearne una nuova. Questa istanza di Gestione connessione indica dove sono ospitati i file HDFS.|  
 |**Percorso file**|Specificare il nome del file HDFS.|  
-|**Formato del file**|Specificare il formato del file HDFS. Le opzioni disponibili sono Testo e Avro. Le origini ORC non sono supportate.|  
+|**Formato file**|Specificare il formato del file HDFS. Le opzioni disponibili sono Testo e Avro. Le origini ORC non sono supportate.|  
 |**Carattere delimitatore di colonna**|Se si seleziona il formato testo, specificare il carattere delimitatore di colonna.|  
 |**Nomi di colonna nella prima riga di dati**|Se si seleziona il formato testo, indicare se la prima riga del file contiene i nomi delle colonne.|  
   

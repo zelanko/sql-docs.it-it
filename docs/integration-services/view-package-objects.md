@@ -20,10 +20,10 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28393d15ade12562dbcaa4af457bf0de0e51948b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295015"
 ---
 # <a name="view-package-objects"></a>Visualizzazione di oggetti di pacchetto
@@ -41,7 +41,7 @@ ms.locfileid: "71295015"
   
  Nella figura seguente viene illustrata l'albero di un semplice pacchetto.  
   
- ![Schermata della scheda Esplora pacchetti](../integration-services/media/packageexplorer.gif "Schermata della scheda Esplora pacchetti")  
+ ![Screenshot della scheda Esplora pacchetti](../integration-services/media/packageexplorer.gif "Screenshot della scheda Esplora pacchetti")  
   
 ## <a name="view-the-package-structure-and-content"></a>Visualizzare la struttura e il contenuto di un pacchetto  
   

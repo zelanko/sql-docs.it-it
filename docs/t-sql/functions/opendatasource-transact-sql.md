@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342065"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71342065"
 
   Restituisce informazioni sulla connessione ad hoc all'interno di un nome di oggetto in quattro parti, senza utilizzare il nome di un server collegato.  
 
- ![icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,14 +51,14 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
  > Il provider Microsoft OLE DB per SQL Server (SQLOLEDB) e il provider OLE DB SQL Server Native Client (SQLNCLI) precedenti rimangono deprecati e non è consigliabile usarli per nuovi progetti di sviluppo. Usare invece il nuovo [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità server più recenti.
  
  '*init_string*'  
- Stringa di connessione passata all'interfaccia IDataInitialize del provider di destinazione. La sintassi della stringa del provider si basa su coppie chiave/valore separate da punti e virgola, ad esempio: **'** _keyword1_=_value_ **;** _keyword2_=_value_ **'** .  
+ Stringa di connessione passata all'interfaccia IDataInitialize del provider di destinazione. La sintassi della stringa del provider si basa su coppie chiave/valore separate da punti e virgola, ad esempio: **'** _chiave1_=_valore_ **;** _chiave2_=_valore_ **'** .  
   
  Per informazioni sulle coppie parola chiave/valore specifiche supportate nel provider, vedere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. In questa documentazione è definita la sintassi di base. Nella tabella seguente sono elencate le parole chiave di più frequente utilizzo nell'argomento *init_string*.  
   
 |Parola chiave|Proprietà OLE DB|Valori validi e descrizione|  
 |-------------|---------------------|----------------------------------|  
 |origine dati|DBPROP_INIT_DATASOURCE|Nome dell'origine dei dati a cui connettersi. Viene interpretato in modo diverso nei vari provider. Per il provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, indica il nome del server. Per il provider OLE DB di Jet indica il percorso completo del file mdb o xls.|  
-|Percorso|DBPROP_INIT_LOCATION|Posizione del database a cui connettersi.|  
+|Location|DBPROP_INIT_LOCATION|Posizione del database a cui connettersi.|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|Stringa di connessione specifica del provider.|  
 |Connect timeout|DBPROP_INIT_TIMEOUT|Valore di timeout trascorso il quale il tentativo di connessione viene considerato non riuscito.|  
 |ID utente|DBPROP_AUTH_USERID|ID utente da utilizzare per la connessione.|  
@@ -66,7 +66,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Catalogo|DBPROP_INIT_CATALOG|Nome del catalogo iniziale o predefinito nella connessione all'origine dei dati.|  
 |Sicurezza integrata|DBPROP_AUTH_INTEGRATED|SSPI per specificare l'autenticazione di Windows.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `OPENROWSET` eredita sempre le regole di confronto dell'istanza, indipendentemente dalle regole di confronto impostate per le colonne.
 
 È possibile usare `OPENDATASOURCE` per accedere ai dati remoti da origini dati OLE DB solo se l'opzione del Registro di sistema DisallowAdhocAccess è impostata esplicitamente su 0 per il provider specificato e l'opzione di configurazione avanzata Ad Hoc Distributed Queries è abilitata. Quando queste opzioni non vengono impostate, il comportamento predefinito non consente l'accesso ad hoc.  
@@ -87,7 +87,7 @@ Qualsiasi chiamata a `OPENDATASOURCE`, `OPENQUERY` r `OPENROWSET` nella clausola
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. Uso di OPENDATASOURCE con SELECT e OLE DB Driver per SQL Server  
+### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>R. Uso di OPENDATASOURCE con SELECT e OLE DB Driver per SQL Server  
  L'esempio seguente usa il provider [Microsoft OLE DB Driver per SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) per accedere alla tabella `HumanResources.Department` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nel server remoto `Seattle1`. Viene usata un'istruzione `SELECT` per definire il set di righe restituito. La stringa del provider contiene le parole chiave `Server` e `Trusted_Connection`. Queste parole chiave sono riconosciute da OLE DB Driver per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

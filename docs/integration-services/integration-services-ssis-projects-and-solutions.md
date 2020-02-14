@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680978"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Progetti e soluzioni di Integration Services (SSIS)
@@ -91,7 +91,7 @@ I pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] risied
   
  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione** selezionare la proprietà **TargetServerVersion** e quindi scegliere SQL Server 2017, SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
- ![Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto")  
+ ![Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto")  
 
 ## <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services  
   
@@ -109,7 +109,7 @@ I pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] risied
   
      Il nome della soluzione viene aggiornato automaticamente in moda da corrispondere al nome del progetto.  
   
-5.  Per creare una cartella distinta per il file della soluzione, selezionare **Crea directory per soluzione**. Si tratta dell'opzione predefinita.  
+5.  Per creare una cartella distinta per il file della soluzione, selezionare **Crea directory per soluzione**. Questa è l'opzione predefinita.  
   
 6.  Se nel computer è installato software per il controllo del codice sorgente, selezionare **Aggiungi al controllo del codice sorgente** per associare il progetto al controllo del codice sorgente.  
   

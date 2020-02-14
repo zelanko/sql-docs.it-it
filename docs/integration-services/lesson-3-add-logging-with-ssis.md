@@ -11,10 +11,10 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296016"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Lezione 3: Aggiungere la registrazione con SSIS
@@ -40,7 +40,7 @@ I provider di log creano i log. Ogni provider di log è in grado di scrivere le 
 In questa lezione vengono illustrate le procedure per la creazione di una copia del pacchetto creato nella [Lezione 2: Aggiungere cicli con SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Usando questo nuovo pacchetto, vengono aggiunte e configurate funzionalità di registrazione per monitorare eventi specifici durante l'esecuzione del pacchetto. Se non è stata completata una delle lezioni precedenti, è anche possibile copiare il pacchetto della lezione 2 completato incluso nell'esercitazione.  
 
 > [!NOTE]
-> Se non è ancora stato fatto, vedere la [Lezione 1: Prerequisiti](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+> Se non è ancora stato fatto, vedere [Lezione 1: Prerequisiti](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
 
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  

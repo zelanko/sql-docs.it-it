@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530947"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
@@ -63,7 +63,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 ||||
 |-|-|-|
-|**\*_ SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -440,7 +440,7 @@ In tutti gli esempi si presuppone che sia stato eseguito un backup completo del 
 
 Sono disponibili gli esempi seguenti per l'istruzione RESTORE:
 
-- A. [Ripristino di un database completo](#restoring_full_db)
+- R. [Ripristino di un database completo](#restoring_full_db)
 - B. [Ripristino di backup completi e differenziali del database](#restoring_full_n_differential_db_backups)
 - C. [Ripristino di un database con la sintassi RESTART](#restoring_db_using_RESTART)
 - D. [Ripristino di un database e spostamento dei file](#restoring_db_n_move_files)
@@ -735,7 +735,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di database SQL di Azure
+## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
 
 Questo comando consente di ripristinare un intero database da un backup completo del database (ripristino completo) dall'account di archiviazione BLOB di Azure.
 
@@ -975,12 +975,12 @@ In questa sezione, per appliance di origine si intende l'appliance da cui è sta
 - È possibile ripristinare un backup del database solo in un'appliance di destinazione [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] con un numero di nodi di calcolo uguale o maggiore a quello dell'appliance di origine. L'appliance di destinazione non può avere un numero di nodi di calcolo minore dell'appliance di origine.
 - Non è possibile ripristinare un backup creato in un'appliance con hardware SQL Server 2012 PDW in un'appliance con hardware SQL Server 2008 R2. Ciò vale anche se l'appliance è stata originariamente acquistata con hardware SQL Server 2008 R2 PDW e ora esegue software SQL Server 2012 PDW.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 Acquisisce un blocco esclusivo per l'oggetto DATABASE.
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-simple-restore-examples"></a>A. Esempi di RESTORE semplici
+### <a name="a-simple-restore-examples"></a>R. Esempi di RESTORE semplici
 
 L'esempio seguente ripristina un backup completo nel database `SalesInvoices2013`. I file di backup vengono archiviati nella directory `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Nell'appliance di destinazione non può essere già presente un database SalesInvoices2013. In caso contrario, questo comando avrà esito negativo e genererà un errore.
 

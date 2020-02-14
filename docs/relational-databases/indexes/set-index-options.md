@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909553"
 ---
 # <a name="set-index-options"></a>Impostare le opzioni di indice
@@ -44,7 +44,7 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 
    [Limitazioni e restrizioni](#Restrictions)
 
-   [Security](#Security)
+   [Sicurezza](#Security)
 
 - **Per modificare le proprietà di un indice utilizzando:**
 
@@ -75,8 +75,8 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 4. Scegliere **Indici/chiavi** nel menu **Progettazione tabelle**.
 5. Selezionare l'indice che si desidera modificare. Le relative proprietà saranno visualizzate nella griglia principale.
 6. Modificare le impostazioni di tutte le proprietà per personalizzare l'indice.
-7. Scegliere **Chiudi**.
-8. Scegliere **Salva** nome_tabella **dal menu**_File_.
+7. Fare clic su **Close**.
+8. Selezionare **Salva** table_name **dal menu**_File_.
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Per modificare le proprietà di un indice in Esplora oggetti
 
@@ -87,7 +87,7 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 5. Fare clic con il pulsante destro del mouse sull'indice di cui si vogliono modificare le proprietà e scegliere **Proprietà**.
 6. In **Selezione pagina**selezionare **Opzioni**.
 7. Modificare le impostazioni di tutte le proprietà per personalizzare l'indice.
-8. Per aggiungere, rimuovere o modificare la posizione di una colonna dell'indice, selezionare la pagina **Generale** della finestra di dialogo **Proprietà indice -** _nome_indice_ . Per altre informazioni, vedere [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
+8. Per aggiungere, rimuovere o modificare la posizione di una colonna dell'indice, selezionare la pagina **Generale** della finestra di dialogo **Proprietà indice -** _nome_indice_. Per altre informazioni, vedere [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
 ## <a name="TsqlProcedure"></a> Uso di Transact-SQL
 

@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983258"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
@@ -51,7 +51,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |sysadmin|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> pubblico|  
+|diskadmin|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> public|  
 |processadmin||  
   
  **'** *login* **'**  
@@ -66,7 +66,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |1|*login* è membro di *role*.|  
 |NULL|*role* o *login* non è valido o non si è autorizzati a visualizzare l'appartenenza al ruolo.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Usare IS_SRVROLEMEMBER per determinare se l'utente corrente è in grado di eseguire un'azione che richiede le autorizzazioni del ruolo del server.  
   
  Se per *login* viene specificato un account di accesso di Windows, ad esempio Contoso\Mary5, **IS_SRVROLEMEMBER** restituisce **NULL**, a meno che all'account di accesso non sia stato concesso o negato l'accesso diretto a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

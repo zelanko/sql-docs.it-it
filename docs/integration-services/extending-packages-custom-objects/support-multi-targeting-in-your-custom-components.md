@@ -11,10 +11,10 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287223"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Supportare più destinazioni in componenti personalizzati
@@ -26,7 +26,7 @@ ms.locfileid: "71287223"
 
  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto. Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
    
- ![Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto](../../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto")  
+ ![Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto](../../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto")  
  
  ## <a name="multiple-version-support-and-multi-targeting-for-custom-components"></a>Supporto di più versioni e destinazioni per i componenti personalizzati
  
@@ -37,7 +37,7 @@ Tutti e cinque i tipi di estensioni personalizzate di SSIS supportano più desti
 -   Provider di log
 -   Componenti del flusso di dati
 
-Per le estensioni gestite, la finestra di progettazione SSIS carica la versione dell'estensione per la versione di destinazione specificata. Esempio:
+Per le estensioni gestite, la finestra di progettazione SSIS carica la versione dell'estensione per la versione di destinazione specificata. Ad esempio:
 -   Quando la versione di destinazione è SQL Server 2012, la finestra di progettazione carica la versione 2012 dell'estensione.
 -   Quando la versione di destinazione è SQL Server 2016, la finestra di progettazione carica la versione 2016 dell'estensione.
 

@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909153"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
@@ -31,7 +31,7 @@ Di seguito sono riportati alcuni scenari comuni relativi alle prestazioni rileva
 
 ## <a name="CEUpgrade"></a> Regressioni delle query dovute a modifiche della versione CE
 
-**Si applica a:** migrazione da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Si applica a: migrazione da**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quando si esegue la migrazione da una versione precedente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versioni successive e si aggiorna il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) alla versione più recente disponibile, un carico di lavoro può essere esposto al rischio di regressione delle prestazioni.
 
@@ -165,7 +165,7 @@ Le funzioni con valori di tabella restituiscono un tipo di dati tabella che può
 ##  <a name="Additional_Reading"></a> Ulteriori informazioni
 
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Funzioni definite dall'utente](../relational-databases/user-defined-functions/user-defined-functions.md)  
 [Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/) (Variabili di tabella e stime delle righe: parte 1)  
 [Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/) (Variabili di tabella e stime delle righe: parte 2)  

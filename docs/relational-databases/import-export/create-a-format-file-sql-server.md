@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035823"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "68035823"
  In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML.  
   
 > [!NOTE]  
->  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** non può leggere un file di formato versione 11.0 generato dall'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
+>  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità **bcp** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] può leggere un file di formato versione 10.0 generato dall'utilità **bcp** di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ma l'utilità **bcp** di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non può leggere un file di formato versione 11.0 generato dall'utilità **bcp** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata ( **-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Creazione di un file di formato non XML  
  Per usare un comando **bcp** per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati. L'opzione **format** richiede anche l'opzione **-f** , come nell'esempio seguente:  
   
- **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
+ **bcp** _tabella_o_vista_ **format** nul **-f**_nome_file_formato_  
   
 > [!NOTE]  
 > Per distinguere un file di formato non XML, è consigliabile utilizzare l'estensione fmt, ad esempio MyTable.fmt.  
@@ -46,7 +46,7 @@ ms.locfileid: "68035823"
 ### <a name="examples"></a>Esempi  
  Questa sezione contiene gli esempi seguenti che illustrano come usare i comandi **bcp** per creare un file di formato non XML:  
   
--   A. Creazione di un file di formato non XML per dati nativi  
+-   R. Creazione di un file di formato non XML per dati nativi  
   
 -   B. Creazione di un file di formato non XML per dati di tipo carattere  
   
@@ -58,16 +58,16 @@ ms.locfileid: "68035823"
   
  Negli esempi viene utilizzata la tabella `HumanResources.Department` del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabella `HumanResources.Department` contiene quattro colonne, ovvero `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
-#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. Creazione di un file di formato non XML per dati nativi  
+#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>R. Creazione di un file di formato non XML per dati nativi  
  Nell'esempio seguente viene creato un file di formato XML, `Department-n.xml`, per la tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Nel file di formato vengono utilizzati tipi di dati nativi. Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Specifica il file di formato non XML.|  
+|**formatnul-f** _file_formato_|Specifica il file di formato non XML.|  
 |**-n**|Specifica i tipi di dati nativi.|  
-|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
+|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
   
@@ -95,9 +95,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_|Specifica un file di formato non XML.|  
+|**formatnul-f** _file_formato_|Specifica un file di formato non XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
-|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
+|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
   
@@ -168,7 +168,7 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
 ## <a name="creating-an-xml-format-file"></a>Creazione di un file di formato XML  
  Per usare un comando **bcp** per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati. L'opzione **format** richiede sempre l'opzione **-f** e per creare un file di formato XML è necessario anche specificare l'opzione **-x** , come nell'esempio seguente:  
   
- **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
+ **bcp** _tabella_o_vista_ **format nul-f** _nome_file_formato_ **-x**  
   
 > [!NOTE]  
 > Per distinguere un file di formato XML, è consigliabile utilizzare l'estensione xml, ad esempio MyTable.xml.  
@@ -178,7 +178,7 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
 ### <a name="examples"></a>Esempi  
  Questa sezione contiene gli esempi seguenti che illustrano come usare i comandi **bcp** per creare un file di formato XML:  
   
--   A. Creazione di un file di formato XML per dati di tipo carattere  
+-   R. Creazione di un file di formato XML per dati di tipo carattere  
 -   B. Creazione di un file di formato XML per dati nativi  
   
  Negli esempi viene utilizzata la tabella `HumanResources.Department` del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabella `HumanResources.Department` contiene quattro colonne, ovvero `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
@@ -186,17 +186,17 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
   
-#### <a name="a-creating-an-xml-format-file-for-character-data"></a>A. Creazione di un file di formato XML per dati di tipo carattere  
+#### <a name="a-creating-an-xml-format-file-for-character-data"></a>R. Creazione di un file di formato XML per dati di tipo carattere  
  Nell'esempio seguente viene creato un file di formato XML, `Department.xml`, per la tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Nel file di formato vengono utilizzati formati di dati di tipo carattere e un carattere di terminazione del campo non predefinito (`,`). Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Specifica il file di formato XML.|  
+|**formatnul-f** _file_formato_ **-x**|Specifica il file di formato XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
 |**-t** `,`|Specifica la virgola ( **,** ) come carattere di terminazione del campo.<br /><br /> Nota: se il file di dati usa il carattere di terminazione del campo predefinito (`\t`), l'opzione **-t** non è necessaria.|  
-|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
+|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
   
@@ -233,9 +233,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
-|**formatnul-f** _format_file_ **-x**|Specifica il file di formato XML.|  
+|**formatnul-f** _file_formato_ **-x**|Specifica il file di formato XML.|  
 |**-n**|Specifica i tipi di dati nativi.|  
-|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
+|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
   

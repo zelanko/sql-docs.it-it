@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136971"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronizzazione Web per la replica di tipo merge
@@ -30,7 +30,7 @@ ms.locfileid: "68136971"
   
 -   Sincronizzazione di dati da utenti mobili su Internet.  
   
--   Sincronizzazione di dati tra database [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attraverso un firewall aziendale.  
+-   Sincronizzazione di dati tra database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attraverso un firewall aziendale.  
   
  Tale funzionalità può essere ad esempio utilizzata dai rappresentanti in trasferta, come nel caso dei rappresentanti della società [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]in visita a diversi magazzini e fornitori nelle rispettive aree. In occasione di viaggi di lunga durata essi alloggiano in alberghi e hanno bisogno di uno strumento di semplice utilizzo per caricare i dati delle vendite e scaricare eventuali aggiornamenti dei prodotti alla fine di ogni giornata.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "68136971"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Topologie per la sincronizzazione tramite il Web](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

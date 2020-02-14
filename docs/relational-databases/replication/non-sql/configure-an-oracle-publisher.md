@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907191"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurazione di un server di pubblicazione Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "72907191"
   
 2.  Concedere direttamente (invece che con un ruolo) all'utente di amministrazione di Oracle creato nel passaggio 1 l'autorizzazione SELECT per ogni tabella pubblicata.  
   
-3.  Installare il software client Oracle e il provider OLE DB nel server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi arrestare e riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se il server di distribuzione viene eseguito su una piattaforma a 64 bit è necessario usare la versione a 64 bit del provider OLE DB Oracle.  
+3.  Installare il software client Oracle e il provider OLE DB nel server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi arrestare e riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se il server di distribuzione viene eseguito su una piattaforma a 64 bit è necessario usare la versione a 64 bit del provider OLE DB Oracle.  
   
 4.  Configurare il database Oracle come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
@@ -40,7 +40,7 @@ ms.locfileid: "72907191"
   | |2016 o versioni precedenti |2017 o versioni successive |
   |-------|-------|--------|
   |Replica da Oracle |Supporta solo Oracle 10g o versioni precedenti |Supporta solo Oracle 10g o versioni precedenti |
-  |Replica verso Oracle |Fino a Oracle 12c |Non supportato |
+  |Replica verso Oracle |Fino a Oracle 12c |Non supportate |
 
  La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
 
@@ -75,7 +75,7 @@ ms.locfileid: "72907191"
   
 -   CREATE ANY TRIGGER. È obbligatorio solo in caso di replica transazionale e snapshot.  
   
--   CREATE TABLE  
+-   CREA TABELLA  
   
 -   CREATE VIEW  
   
@@ -145,7 +145,7 @@ ms.locfileid: "72907191"
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni amministrative per i server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Mapping dei tipi di dati per i server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Glossario dei termini per la pubblicazione Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Panoramica della pubblicazione Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

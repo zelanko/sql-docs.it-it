@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252042"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72252042"
 
   Consente di generare un messaggio di errore e di inizializzare l'elaborazione dell'errore per la sessione. RAISERROR può fare riferimento a un messaggio definito dall'utente archiviato nella vista del catalogo sys.messages oppure compilare un messaggio in modo dinamico. Il messaggio viene restituito come messaggio di errore del server all'applicazione chiamante o a un blocco CATCH associato di un costrutto TRY...CATCH. Per le nuove applicazioni è invece necessario usare [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -82,7 +82,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Codice che determina la spaziatura e l'allineamento del valore sostituito.  
   
-|codice|Prefisso o allineamento|Descrizione|  
+|Codice|Prefisso o allineamento|Descrizione|  
 |----------|-----------------------------|-----------------|  
 |- (meno)|Allineamento a sinistra|Allinea a sinistra il valore dell'argomento entro la larghezza dei campi specificata.|  
 |+ (più)|Segno (prefisso)|Inserisce il segno più (+) o meno (–) all'inizio del valore dell'argomento se il valore è di tipo con segno.|  
@@ -112,7 +112,7 @@ RAISERROR ( { msg_str | @local_variable }
 |------------------------|----------------|  
 |d o i|Intero con segno|  
 |o|Ottale senza segno|  
-|s|String|  
+|s|string|  
 |u|Intero senza segno|  
 |x o X|Valori esadecimali senza segno|  
   
@@ -163,7 +163,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
 |NOWAIT|Invia i messaggi direttamente al client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Imposta i valori di @@ERROR e di ERROR_NUMBER su *msg_id* o 50000, indipendentemente dal livello di gravità.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Gli errori generati da RAISERROR hanno le stesse caratteristiche degli errori generati dal codice di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I valori specificati da RAISERROR sono restituiti dalle funzioni di sistema ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE e @@ERROR. Se si esegue RAISERROR con un livello di gravità maggiore o uguale a 11 in un blocco TRY, il controllo viene trasferito al blocco CATCH associato. L'errore viene restituito al chiamante se RAISERROR viene eseguito:  
   
 -   All'esterno dell'ambito di qualsiasi blocco TRY.  
@@ -213,7 +213,7 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-error-information-from-a-catch-block"></a>A. Restituzione delle informazioni sull'errore da un blocco CATCH  
+### <a name="a-returning-error-information-from-a-catch-block"></a>R. Restituzione delle informazioni sull'errore da un blocco CATCH  
  Nell'esempio di codice seguente viene illustrato come utilizzare `RAISERROR` all'interno di un blocco `TRY` per definire il passaggio dell'esecuzione al blocco `CATCH` associato. Viene inoltre illustrato come utilizzare `RAISERROR` per restituire le informazioni sull'errore che ha richiamato il blocco `CATCH`.  
   
 > [!NOTE]  

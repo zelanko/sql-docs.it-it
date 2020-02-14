@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982166"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -108,7 +108,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
 ## <a name="arguments"></a>Argomenti  
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Rimuove in modo condizionale l'indice solo se esiste già.  
   
@@ -162,7 +162,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  Specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF.  
   
- ON  
+ ATTIVA  
  I blocchi di tabella a lungo termine non vengono mantenuti. Ciò consente il proseguimento delle query o degli aggiornamenti nella tabella sottostante.  
   
  OFF  
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]** . Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si elimina un indice non cluster, la definizione dell'indice viene rimossa dai metadati e le pagine dei dati dell'indice (albero B) vengono rimosse dai file del database. Quando viene eliminato un indice cluster, la definizione dell'indice viene rimossa dai metadati e le righe di dati precedentemente archiviate nel livello foglia dell'indice cluster vengono archiviate nella tabella non ordinata risultante, o heap. Tutto lo spazio occupato in precedenza dall'indice viene recuperato, e può essere quindi utilizzato per qualsiasi oggetto di database.  
   
  Non è possibile eliminare un indice se il filegroup in cui si trova è offline oppure è in sola lettura.  
@@ -268,7 +268,7 @@ Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-an-index"></a>A. Eliminazione di un indice  
+### <a name="a-dropping-an-index"></a>R. Eliminazione di un indice  
  Nell'esempio seguente viene eliminato l'indice `IX_ProductVendor_VendorID` nella tabella `ProductVendor` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

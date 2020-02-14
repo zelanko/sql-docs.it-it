@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059290"
 ---
 # <a name="create-a-push-subscription"></a>Creare una sottoscrizione push
@@ -58,7 +58,7 @@ Creare una sottoscrizione push nel server di pubblicazione o nel Sottoscrittore 
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>Per creare una sottoscrizione push dal server di pubblicazione  
   
-1. Connettersi al server di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
+1. Connettersi al server di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi espandere il nodo del server.  
   
 2. Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .  
   
@@ -177,7 +177,7 @@ Creare una sottoscrizione push nel server di pubblicazione o nel Sottoscrittore 
   
 5. Se il database di sottoscrizione non esiste, crearlo utilizzando la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Per altre informazioni, vedere [Creazione, modifica e rimozione di database](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 7. Impostare le proprietà seguenti per la sottoscrizione:  
   
@@ -217,7 +217,7 @@ Creare una sottoscrizione push nel server di pubblicazione o nel Sottoscrittore 
   
 5. Se il database di sottoscrizione non esiste, crearlo utilizzando la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Per altre informazioni, vedere [Creazione, modifica e rimozione di database](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+6. Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 7. Impostare le proprietà seguenti per la sottoscrizione:  
   

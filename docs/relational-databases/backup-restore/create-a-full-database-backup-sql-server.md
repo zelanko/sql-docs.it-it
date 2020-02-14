@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710316"
 ---
 # <a name="create-a-full-database-backup"></a>Creazione di un backup completo del database
@@ -58,9 +58,9 @@ Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` vengono assegnate per imposta
 ## <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
 
 > [!NOTE]
-> Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente facendo clic sul pulsante **Script** e selezionando una destinazione per lo script.
+> Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente di [!INCLUDE[tsql](../../includes/tsql-md.md)] facendo clic sul pulsante **Script** e selezionando una destinazione per lo script.
 
-1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
+1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
 
 1. Espandere **Database**e selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.
 
@@ -132,11 +132,11 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-full-back-up-to-disk-to-default-location"></a>A. Eseguire il backup completo su disco nel percorso predefinito
+#### <a name="a-full-back-up-to-disk-to-default-location"></a>R. Eseguire il backup completo su disco nel percorso predefinito
 
 In questo esempio verrà eseguito il backup su disco del database `SQLTestDB` nel percorso di backup predefinito.
 
-1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
+1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
 
 1. Espandere i **database**, fare clic con il pulsante destro del mouse su `SQLTestDB`, scegliere **Attività**, quindi fare clic su **Backup...** .
 
@@ -150,7 +150,7 @@ In questo esempio verrà eseguito il backup su disco del database `SQLTestDB` ne
 
 In questo esempio verrà eseguito il backup su disco del database `SQLTestDB` nel percorso prescelto.
 
-1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
+1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
 
 1. Espandere i **database**, fare clic con il pulsante destro del mouse su `SQLTestDB`, scegliere **Attività**, quindi fare clic su **Backup...** .
 
@@ -172,7 +172,7 @@ In questo esempio verrà eseguito il backup su disco del database `SQLTestDB` ne
 
 In questo esempio verrà eseguito il backup con crittografia del database `SQLTestDB` nel percorso di backup predefinito.
 
-1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
+1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
 
 1. Espandere **Database**, espandere **Database di sistema**, fare clic con il pulsante destro del mouse su `master` e scegliere **Nuova query** per aprire una finestra di query con una connessione al database `SQLTestDB`.
 
@@ -200,7 +200,7 @@ In questo esempio verrà eseguito il backup con crittografia del database `SQLTe
 
 1. Nell'elenco a discesa **Certificato o chiave asimmetrica** selezionare `MyCertificate`.
 
-1. Fare clic su **OK**.
+1. Selezionare **OK**.
 
 ![Backup crittografato](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
@@ -210,7 +210,7 @@ L'esempio esegue un backup completo del database di `SQLTestDB` nel servizio Arc
 
 Se non è disponibile un contenitore BLOB di Azure in un account di archiviazione, crearne uno prima di continuare. Per altre informazioni, vedere [Creare un account di archiviazione per utilizzo generico](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) e [Creare un contenitore](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
+1. Dopo essersi connessi all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)], in **Esplora oggetti** espandere l'albero del server.
 
 1. Espandere i **database**, fare clic con il pulsante destro del mouse su `SQLTestDB`, scegliere **Attività**, quindi fare clic su **Backup...** .
 
@@ -254,7 +254,7 @@ La sintassi di base dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 |Opzione|Descrizione|
 |------------|-----------------|
 |*database*|Corrisponde al database di cui eseguire il backup.|
-|*dispositivo_backup* [ **,** ...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=** _nome\_dispositivo\_fisico\_backup_<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|
+|*backup_device* [ **,** ...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=** _nome\_dispositivo\_fisico\_backup_<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|
 |WITH *con_opzioni* [ **,** ...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, *o*. Per informazioni su alcune opzioni WITH di base, vedere il passaggio 2.|
 |||
 
@@ -312,7 +312,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-back-up-to-a-disk-device"></a>A. Backup su un dispositivo disco
+#### <a name="a-back-up-to-a-disk-device"></a>R. Backup su un dispositivo disco
 
 Nell'esempio riportato di seguito viene eseguito il backup su disco del database `SQLTestDB` completo, utilizzando `FORMAT` per creare un nuovo set di supporti.
 
@@ -375,7 +375,7 @@ Usare il cmdlet **Backup-SqlDatabase** . Per indicare in modo esplicito che si t
 
 ### <a name="examples"></a>Esempi
 
-#### <a name="a-full-backup-local"></a>A. Backup completo (locale)
+#### <a name="a-full-backup-local"></a>R. Backup completo (locale)
 
 L'esempio seguente consente di creare un backup di database completo del database di `<myDatabase>` nel percorso di backup predefinito dell'istanza del server `Computer\Instance`. Facoltativamente, questo esempio specifica **-BackupAction Database**.
 
@@ -406,7 +406,7 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 
 - [Eseguire il backup di un database (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)
-- [Ripristinare un backup del database tramite SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
+- [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 - [Ripristinare un backup del database nel modello di recupero con registrazione minima &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)
 - [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)
 - [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: f6ac23553500fbf3092d9450b6f5a222863dc1dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065918"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
@@ -56,7 +56,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Database SQL di Azure supporta solo le identità Azure Key Vault e di firma di accesso condiviso. Le identità utente di Windows non sono supportate.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si modifica una credenziale, i valori di *identity_name* e *secret* vengono reimpostati. Se l'argomento facoltativo SECRET viene omesso, il valore del segreto archiviato verrà impostato su NULL.  
   
  Il segreto viene crittografato tramite la chiave master del servizio. Se la chiave master del servizio viene rigenerata, il segreto verrà crittografato nuovamente tramite la nuova chiave master del servizio.  
@@ -68,7 +68,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-password-of-a-credential"></a>A. Modifica della password di una credenziale  
+### <a name="a-changing-the-password-of-a-credential"></a>R. Modifica della password di una credenziale  
  Nell'esempio seguente viene modificato il segreto archiviato nella credenziale denominata `Saddles`. La credenziale include l'account di accesso di Windows `RettigB` e la relativa password. La nuova password viene aggiunta alla credenziale tramite la clausola SECRET.  
   
 ```  

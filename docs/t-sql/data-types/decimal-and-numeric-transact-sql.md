@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682101"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
@@ -48,7 +48,7 @@ Numero massimo totale di cifre decimali da archiviare. Include le cifre sia a de
 *s* (scala)  
 Numero massimo di cifre decimali che da archiviare a destra del separatore decimale. Questo numero viene sottratto da *p* per determinare il numero massimo di cifre a sinistra del separatore decimale. La scala deve essere un valore compreso tra 0 e *p* e può essere specificato solo se viene specificata la precisione. La scala predefinita è 0. Di conseguenza, 0 <= *s* \<= *p*. Le dimensioni massime di archiviazione variano a seconda della precisione.
   
-|Precisione|Byte per l'archiviazione|  
+|Precision|Byte per l'archiviazione|  
 |---|---|
 |1 - 9|5|  
 |10-19|9|  

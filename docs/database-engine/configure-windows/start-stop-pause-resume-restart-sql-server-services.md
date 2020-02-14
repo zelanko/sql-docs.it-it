@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038835"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server
@@ -58,7 +58,7 @@ ms.locfileid: "68038835"
   
     -   [Informazioni aggiuntive](#MoreInformation)  
   
-    -   [Security](#Security)  
+    -   [Sicurezza](#Security)  
   
 -   **Istruzioni relative all'utilizzo di:**  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68038835"
 3.  Se viene richiesto di eseguire l'azione, fare clic su **Sì**.  
   
 ##  <a name="CommandPrompt"></a> Utilizzo dei comandi net dalla finestra del prompt dei comandi  
- I servizi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere avviati, arrestati o sospesi usando i comandi [!INCLUDE[msCoName](../../includes/msconame-md.md)] di **di** Windows.  
+ I servizi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere avviati, arrestati o sospesi usando i comandi **net** di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ###  <a name="dbDefault"></a> Per avviare l'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -195,7 +195,7 @@ ms.locfileid: "68038835"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     oppure  
+     -oppure-  
   
      **net start MSSQLSERVER**  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68038835"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     oppure  
+     -oppure-  
   
      **net start MSSQL$** *instancename*  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68038835"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     oppure  
+     -oppure-  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68038835"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     oppure  
+     -oppure-  
   
      **net start SQLSERVERAGENT**  
   
@@ -238,7 +238,7 @@ ms.locfileid: "68038835"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     oppure  
+     -oppure-  
   
      **net start SQLAgent$** *instancename*  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68038835"
   
      **net start "SQL Server Browser"**  
   
-     oppure  
+     -oppure-  
   
      **net start SQLBrowser**  
   

@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048713"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
@@ -56,7 +56,7 @@ ms.locfileid: "68048713"
   
 7.  Per specificare la colonna spaziale che si vuole indicizzare, fare clic su **Aggiungi**.  
   
-8.  Nella finestra di dialogo **Seleziona colonne da** *\<<nome tabella>* selezionare una colonna di tipo **geometry** o **geography** facendo clic sulla casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
+8.  Nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* selezionare una colonna di tipo **geometry** o **geography** facendo clic sulla casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
   
 9. Verificare la selezione della colonna nella griglia **Colonne chiave indice** .  
   

@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321835"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76536647"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
@@ -390,7 +390,7 @@ Le linee guida per il numero di file sono descritte nella tabella seguente. Una 
 Non è necessario dividere i file Parquet e ORC perché il comando COPY dividerà automaticamente i file. Per ottenere prestazioni ottimali, i file Parquet e ORC nell'account di archiviazione di Azure devono avere dimensioni minime pari a 256 MB. 
 
 ### <a name="when-will-the-copy-command-be-generally-available"></a>Quando sarà disponibile a livello generale il comando COPY?
-Il comando COPY sarà disponibile a livello generale all'inizio del prossimo anno di calendario (2020). 
+Il comando COPY sarà disponibile a livello generale entro la fine di quest'anno di calendario (2020). 
 
 ### <a name="are-there-any-known-issues-with-the-copy-command"></a>Esistono problemi noti del comando COPY?
 

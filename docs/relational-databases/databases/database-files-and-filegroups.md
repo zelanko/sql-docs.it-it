@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037589"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315601"
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ I file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno due tipi 
 > I dati e i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere memorizzati sia in file system FAT che NTFS. Nei sistemi Windows è consigliabile utilizzare il file system NTFS per i vantaggi di sicurezza intrinseci di NTFS. 
 
 > [!WARNING]
-> I file di log e i filegroup di dati di lettura/scrittura possono essere memorizzati in un file system compresso NTFS. Solo i database e i filegroup secondari di sola lettura possono essere memorizzati in un file system compresso NTFS.
+> I file di log e i filegroup di dati di lettura/scrittura non sono supportati in un file system compresso NTFS. Solo i database e i filegroup secondari di sola lettura possono essere memorizzati in un file system compresso NTFS.
 > Per un risparmio di spazio, è consigliabile utilizzare la [compressione dei dati](../../relational-databases/data-compression/data-compression.md) anziché la compressione del file system.
 
 Se nello stesso computer sono in esecuzione più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a ogni istanza viene assegnata una directory predefinita specifica in cui verranno archiviati i file dei database creati nell'istanza. Per altre informazioni, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
@@ -106,7 +106,7 @@ La forma del file utilizzato da uno snapshot del database per archiviare i propr
 |Primaria|Il filegroup che contiene il file primario. Tutte le tabelle di sistema vengono allocate al filegroup primario.|  
 |Dati ottimizzati per la memoria|Un filegroup ottimizzato per la memoria è basato sul filegroup FileStream|  
 |Filestream||    
-|Definita dall'utente|Qualsiasi filegroup creato specificamente dall'utente in fase di creazione o di successiva modifica del database.|  
+|Route definite dall'utente|Qualsiasi filegroup creato specificamente dall'utente in fase di creazione o di successiva modifica del database.|  
   
 ### <a name="default-primary-filegroup"></a>Filegroup predefinito (PRIMARY)  
  Gli oggetti di database creati senza specificare un filegroup di appartenenza vengono assegnati al filegroup predefinito. Viene designato sempre e solo un filegroup predefinito. I file nel filegroup predefinito devono essere di dimensioni sufficienti a contenere tutti i nuovi oggetti non allocati ad altri filegroup.  

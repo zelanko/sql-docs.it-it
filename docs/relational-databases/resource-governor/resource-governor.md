@@ -13,15 +13,15 @@ ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912048"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La funzionalità Resource Governor consente di gestire il carico di lavoro e l'utilizzo delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor permette di specificare i limiti sulla quantità di CPU, I/O fisico e memoria che le richieste dell'applicazione in ingresso possono utilizzare.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La funzionalità Resource Governor consente di gestire il carico di lavoro e l'utilizzo delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor consente di specificare i limiti sulla quantità di CPU, I/O fisici e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  
   
 ## <a name="benefits-of-resource-governor"></a>Vantaggi di Resource Governor  
  Resource Governor consente di gestire i carichi di lavoro e le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificando limiti relativi all'utilizzo delle risorse da parte delle richieste in entrata. Nel contesto di Resource Governor il carico di lavoro è un set di richieste o query con dimensioni simili che può o deve essere considerato come singola entità. Sebbene non si tratti di un requisito obbligatorio, utilizzando in modo uniforme le risorse di un carico di lavoro è possibile sfruttare al massimo i vantaggi offerti da Resource Governor. I limiti delle risorse possono essere riconfigurati in tempo reale con un minimo impatto sui carichi di lavoro in esecuzione.  
@@ -86,7 +86,7 @@ ms.locfileid: "67912048"
 |Viene descritto come creare, modificare ed eliminare un pool di risorse.|[Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
 |Viene descritto come creare, modificare, spostare ed eliminare un gruppo di carico di lavoro.|[Gruppo di carico di lavoro di Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  
 |Viene descritto come creare e verificare una funzione di classificazione definita dall'utente.|[Funzione di classificazione di Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
-|Viene descritto come configurare Resource Governor utilizzando un modello.|[Configurare Resource Governor utilizzando un modello](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
+|Viene descritto come configurare Resource Governor utilizzando un modello.|[Configurare Resource Governor usando un modello](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |Viene illustrata la procedura per visualizzare le proprietà di Resource Governor.|[Visualizzare proprietà di Resource Governor](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

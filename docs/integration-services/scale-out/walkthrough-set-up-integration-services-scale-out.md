@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896128"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procedura dettagliata: Installare Integration Services (SSIS) Scale Out
@@ -105,7 +105,7 @@ Per installare la funzionalità Scale Out Worker, usare l'installazione guidata 
 
 2.  Nella pagina **Configurazione server** selezionare l'account per l'esecuzione del **servizio Ruolo di lavoro di scalabilità orizzontale di SQL Server Integration Services** e selezionare **Tipo di avvio**.
 
-    ![Configurazione server 2](media/server-config-2.PNG "Configurazione Server 2")
+    ![Configurazione Server 2](media/server-config-2.PNG "Configurazione Server 2")
 
 3.  Nella pagina **Configurazione del ruolo di lavoro di scalabilità orizzontale di Integration Services** specificare l'endpoint per la connessione al master di scalabilità orizzontale. 
 
@@ -165,7 +165,7 @@ Se il tipo di avvio dei servizi non è stato impostato su **Automatico** durante
 
 ## <a name="EnableMaster"></a> Abilitare il master di scalabilità orizzontale
 
-Quando si crea il catalogo SSISDB in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], fare clic su **Abilita questo server come SSIS Scale Out Master** nella finestra di dialogo **Crea catalogo**.
+Quando si crea il catalogo SSISDB in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], selezionare **Abilita questo server come SSIS Scale Out Master** nella finestra di dialogo **Creazione catalogo**.
 
 Dopo aver creato il catalogo, è possibile abilitare Scale Out Master con [Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 

@@ -20,10 +20,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294413"
 ---
 # <a name="http-connection-manager"></a>gestione connessione HTTP
@@ -31,7 +31,7 @@ ms.locfileid: "71294413"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file. L'attività Servizio Web inclusa in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa questa gestione connessione.  
+  Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file. Questa gestione connessione viene usata dall'attività Servizio Web inclusa in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Quando si aggiunge una gestione connessione HTTP a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione HTTP, imposta le proprietà della gestione connessione e quindi la aggiunge alla raccolta **Connections** del pacchetto.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71294413"
  Per ulteriori informazioni sulla gestione connessione HTTP, vedere [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Per ulteriori informazioni su uno scenario di utilizzo comune della gestione connessione HTTP, vedere [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
 ### <a name="options"></a>Opzioni  
- **URL server**  
+ **URL del server**  
  Digitare l'URL per il server.  
   
  Se si intende utilizzare il pulsante **Scarica WSDL** nella pagina **Generale** di **Editor attività Servizio Web** per scaricare un file WSDL, digitare l'URL del file WSDL. L'URL termina con "?wsdl".  
@@ -72,7 +72,7 @@ ms.locfileid: "71294413"
  **Usa credenziali**  
  Consente di specificare se si desidera che per la gestione connessione HTTP vengano utilizzate le credenziali di sicurezza dell'utente per l'autenticazione.  
   
- **User name**  
+ **Nome utente**  
  Se per la gestione connessione HTTP è stato impostato l'utilizzo di credenziali, è necessario specificare nome utente, password e dominio.  
   
  **Password**  
@@ -84,7 +84,7 @@ ms.locfileid: "71294413"
  **Usa certificato client**  
  Consente di specificare se si desidera che per la gestione connessione HTTP venga utilizzato un certificato client per l'autenticazione.  
   
- **Certificato**  
+ **Certificate**  
  Consente di selezionare un certificato nell'elenco usando la finestra di dialogo **Seleziona certificato** . Nella casella di testo viene visualizzato il nome associato al certificato.  
   
  **Timeout (in secondi)**  
@@ -114,7 +114,7 @@ ms.locfileid: "71294413"
  **Usa credenziali**  
  Consente di specificare se per la gestione connessione HTTP è necessario utilizzare le credenziali di sicurezza per il server proxy.  
   
- **User name**  
+ **Nome utente**  
  Se per la gestione connessione HTTP è stato impostato l'utilizzo di credenziali, è necessario specificare nome utente, password e dominio.  
   
  **Password**  
@@ -126,7 +126,7 @@ ms.locfileid: "71294413"
  **Elenco proxy da ignorare**  
  Elenco degli indirizzi per i quali si desidera ignorare il server proxy.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di digitare un indirizzo per il quale si desidera ignorare il server proxy.  
   
  **Rimuovi**  

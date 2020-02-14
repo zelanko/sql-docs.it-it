@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892579"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Aggiornare Power Pivot per SharePoint
@@ -48,7 +48,7 @@ ms.locfileid: "68892579"
   
  [Attività di verifica post-aggiornamento](#verify)  
   
-## <a name="background"></a>Informazioni preliminari  
+## <a name="background"></a>Background  
   
 -   Se viene eseguito l'aggiornamento di una farm SharePoint 2010 multiserver in cui sono incluse due o più istanze di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , è necessario eseguire l'aggiornamento completo di ciascun server **prima** di procedere con il server successivo. Un aggiornamento completo include l'esecuzione del programma di installazione di SQL Server per aggiornare i file di programma di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , quindi azioni di aggiornamento di SharePoint per la configurazione dei servizi aggiornati. La disponibilità dei server sarà limitata finché non verranno eseguite le azioni di aggiornamento nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] appropriato o in Windows PowerShell.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "68892579"
   
  **SQL Server:**  
   
--   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è richiesto [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è necessario [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2).  
   
--   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è richiesto [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Se l'installazione esistente di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è necessario [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1).  
   
  **SharePoint 2010:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68892579"
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Aggiornare una farm SharePoint 2013 esistente  
  Per aggiornare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] distribuito in SharePoint 2013, effettuare le operazioni seguenti:  
   
- ![Aggiornamento di PowerPivot per SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "Aggiornamento di PowerPivot per SharePoint 2013")  
+ ![aggiornamento di PowerPivot per SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "aggiornamento di PowerPivot per SharePoint 2013")  
   
 1.  Eseguire il programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nei server back-end che eseguono [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint. Se il server ospita più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], aggiornare almeno l'istanza di **POWERPIVOT** . Nell'elenco seguente vengono riepilogati i passaggi dell'Installazione guidata correlati a un aggiornamento di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
@@ -94,13 +94,13 @@ ms.locfileid: "68892579"
   
 3.  Eseguire il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint (**spPowerPivot.msi**) in ogni server nella farm SharePoint 2013 per installare i provider di dati. Fanno eccezione i server in cui è stata eseguita l'Installazione guidata di SQL Server, che aggiorna anche i provider di dati. Per altre informazioni, vedere [Scaricare Microsoft SQL Server 2014 Power Pivot per Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) e [Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-4.  **Eseguire il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013** in uno dei server applicazioni di SharePoint per configurare la farm SharePoint con i file della soluzione aggiornati, installati dal componente aggiuntivo. Non è possibile utilizzare Amministrazione centrale SharePoint per questo passaggio. Per ulteriori informazioni, vedere quanto segue:  
+4.  **Eseguire il componente aggiuntivo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013** in uno dei server applicazioni di SharePoint per configurare la farm SharePoint con i file della soluzione aggiornati, installati dal componente aggiuntivo. Non è possibile utilizzare Amministrazione centrale SharePoint per questo passaggio. Per altre informazioni, vedere gli argomenti seguenti:  
   
     1.  Nella pagina iniziale di Windows digitare **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** e, nei risultati di ricerca, fare clic su **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013**. Si noti che la ricerca può restituire entrambe le versioni dello strumento di configurazione.  
   
-         ![Due strumenti di configurazione PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "Due strumenti di configurazione PowerPivot")  
+         ![due strumenti di configurazione PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "due strumenti di configurazione PowerPivot")  
   
-         e  
+         Oppure  
   
          Dal menu **Start** scegliere **Tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e successivamente selezionare **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013**. Si noti che lo strumento è elencato solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "68892579"
   
     8.  Per continuare, scegliere **Sì** .  
   
-    9. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo di tempo, le richieste di connessione ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **avranno esito negativo** con errori di tipo "**Impossibile aggiornare i dati**" o "**Errore durante il tentativo di eseguire l'azione richiesta. Riprovare**". Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
+    9. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo di tempo, le richieste di connessione ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**avranno esito negativo** con errori di tipo "**Impossibile aggiornare i dati**" o "**Errore durante il tentativo di eseguire l'azione richiesta. Riprovare**". Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
   
-     Per ulteriori informazioni, vedere quanto segue:  
+     Per altre informazioni, vedere gli argomenti seguenti:  
   
     -   [Strumenti di configurazione di Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892579"
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Aggiornare una farm SharePoint 2010 esistente  
  Per aggiornare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] distribuito in SharePoint 2010, effettuare le operazioni seguenti:  
   
- ![Aggiornamento di PowerPivot per SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Aggiornamento di PowerPivot per SharePoint 2010")  
+ ![aggiornamento di PowerPivot per SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "aggiornamento di PowerPivot per SharePoint 2010")  
   
 1.  Scaricare [Service Pack 2 per Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) e applicarlo a tutti i server nella farm. Verificare che l'installazione di SharePoint SP2 sia completata. Nella pagina Aggiornamento e migrazione di Amministrazione centrale aprire la pagina Controlla stato installazione prodotti e patch per visualizzare i messaggi di stato correlati a SP2.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68892579"
   
 9. Verificare che l'aggiornamento sia stato completato correttamente eseguendo i passaggi di post-aggiornamento e controllando la versione dei server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella farm. Per altre informazioni, vedere [Attività di verifica post-aggiornamento](#verify) in questo articolo e la sezione seguente.  
   
-10. **Risoluzione degli errori**  
+10. **Risoluzione dei problemi**  
   
      È possibile visualizzare informazioni sull'errore nel riquadro Parametri per ciascuna azione.  
   
@@ -258,7 +258,7 @@ Get-PowerPivotSystemService
   
 2.  Fare clic con il pulsante destro del mouse su `msmdsrv.exe`e selezionare **Proprietà**.  
   
-3.  Scegliere **Dettagli**.  
+3.  Fare clic su **Dettagli**.  
   
 4.  La versione del file [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve essere 13.00.\<build principale>.\<build secondaria>.  
   

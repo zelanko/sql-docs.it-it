@@ -21,10 +21,10 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 588883a254b465cfe1fa9b9b1ea9567e421fb8d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287560"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Generazione e definizione di eventi in un componente del flusso di dati

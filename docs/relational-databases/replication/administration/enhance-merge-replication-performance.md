@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939207"
 ---
 # <a name="enhance-merge-replication-performance"></a>Miglioramento delle prestazioni della replica di tipo merge
@@ -34,7 +34,7 @@ ms.locfileid: "67939207"
   
 -   Colonne di indice utilizzate in filtri di riga e filtri join.  
   
-     Se si applica un filtro di riga a un articolo pubblicato, è necessario creare un indice per ogni colonna specificata nella clausola WHERE del filtro. In assenza dell'indice, ogni riga della tabella deve essere letta da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per determinare se debba essere inclusa o meno nella partizione. In presenza dell'indice, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in grado di individuare rapidamente le righe da includere. L'elaborazione più rapida si ottiene quando tramite la replica è possibile risolvere completamente la clausola WHERE del filtro solo in base all'indice.  
+     Se si applica un filtro di riga a un articolo pubblicato, è necessario creare un indice per ogni colonna specificata nella clausola WHERE del filtro. In assenza di un indice, ogni riga della tabella deve essere letta da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per determinare se debba essere inclusa o meno nella partizione. In presenza dell'indice, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in grado di individuare rapidamente le righe da includere. L'elaborazione più rapida si ottiene quando tramite la replica è possibile risolvere completamente la clausola WHERE del filtro solo in base all'indice.  
   
      È inoltre importante indicizzare tutte le colonne utilizzate nei filtri join. A ogni esecuzione dell'agente di merge viene eseguita la ricerca della tabella di base per determinare quali righe della tabella padre e delle tabelle correlate sono incluse in una partizione. La creazione di un indice delle colonne unite in join consente di evitare la lettura di ogni riga della tabella da parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a ogni esecuzione dell'agente di merge.  
   

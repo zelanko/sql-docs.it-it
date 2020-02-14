@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066543"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo di dati geography)
@@ -61,7 +61,7 @@ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geo
   
 Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Questo metodo genera un'eccezione **ArgumentException** se _distance_ non è un numero (NAN, Not-a-Number) o se _distance_ è un valore infinito positivo o negativo.  Questo metodo genera inoltre un'eccezione **ArgumentException** se _tolerance_ è zero (0), non un numero, un valore negativo o un valore infinito positivo o negativo.  
   
 `STBuffer()` restituisce un'istanza **FullGlobe** in determinati casi; ad esempio, `STBuffer()` restituisce un'istanza **FullGlobe** su due poli quando la distanza del buffer è maggiore della distanza dall'equatore ai poli.  

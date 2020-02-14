@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285937"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapping colonne (Importazione/Esportazione guidata SQL Server)
@@ -108,7 +108,7 @@ L'elenco **Mapping** contiene le colonne seguenti.
 -    **Precisione**  
     Specificare la precisione dei dati numerici nella colonna di destinazione, ovvero il numero di cifre, se applicabile.  
   
- -   **Scala**  
+ -   **Ridimensionare**  
     Specificare la scala dei dati numerici nella colonna di destinazione, ovvero il numero di cifre decimali, se applicabile.  
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?  

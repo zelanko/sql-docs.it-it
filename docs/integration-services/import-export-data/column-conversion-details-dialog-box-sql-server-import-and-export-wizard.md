@@ -12,10 +12,10 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296344"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Dettagli conversione colonna (Importazione/Esportazione guidata SQL Server)
@@ -43,4 +43,4 @@ Questo esempio mostra quanto segue:
  Dopo aver esaminato i dettagli di conversione della colonna e aver fatto doppio clic su **OK**, dalla finestra di dialogo **Dettagli conversione colonna** si passa nuovamente alla pagina **Verifica mapping tra i tipi di dati** . Per altre informazioni, vedere [Verifica mapping tra i tipi di dati](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Vedere anche
-[Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+[Mapping dei tipi di dati nell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

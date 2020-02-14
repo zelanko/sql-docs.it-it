@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133236"
 ---
 # <a name="sql-trace"></a>Traccia SQL
@@ -32,13 +32,13 @@ In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disp
 ## <a name="sql-trace-architecture"></a>Architettura di Traccia SQL  
 L'origine di un evento può essere qualsiasi origine che genera l'evento di traccia, ad esempio batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quali i deadlock. Per altre informazioni sulle classi degli eventi, vedere [Guida di riferimento alla classe di evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md). Dopo che è stato generato un evento, se la classe di evento è stata inclusa in una definizione di traccia, le informazioni relative all'evento verranno raccolte dalla traccia. Se nella definizione di traccia sono stati definiti filtri per la classe di evento, tali filtri verranno applicati e le informazioni sull'evento di traccia verranno passate a una coda. Le informazioni di traccia verranno quindi scritte in un file o potranno essere utilizzate da SMO nelle applicazioni, ad esempio [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Nella figura seguente viene illustrata la modalità di raccolta degli eventi in Traccia SQL durante la creazione di una traccia.  
   
-![Processo di traccia degli eventi del motore di database](../../relational-databases/sql-trace/media/tracarch.gif "Processo di traccia degli eventi del motore di database")  
+![Processo di analisi eventi del Motore di database](../../relational-databases/sql-trace/media/tracarch.gif "Processo di analisi eventi del Motore di database")  
   
 ## <a name="sql-trace-terminology"></a>Terminologia relativa a Traccia SQL  
 Di seguito vengono definiti i concetti fondamentali di Traccia SQL.  
   
- **Evento**  
- L'occorrenza di un'azione con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ **Event**  
+ L'occorrenza di un'azione con un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  **Colonna di dati**  
  Attributo di un evento.  
@@ -46,7 +46,7 @@ Di seguito vengono definiti i concetti fondamentali di Traccia SQL.
  **Classe di evento**  
  Tipo di evento che è possibile tracciare. La classe di evento contiene tutte le colonne di dati che possono essere restituite da un evento.  
   
- **Categoria di eventi**  
+ **Categoria evento**  
  Gruppo di classi di evento correlate.  
   
  **Traccia** (sostantivo)  
@@ -73,7 +73,7 @@ Di seguito vengono definiti i concetti fondamentali di Traccia SQL.
 ## <a name="use-data-columns-to-describe-returned-events"></a>Utilizzare le colonne di dati per descrivere gli eventi restituiti  
 Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gli eventi restituiti quando viene eseguita la traccia. Nella tabella seguente vengono descritte le colonne di dati di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] che sono le stesse utilizzate da Traccia SQL e vengono indicate le colonne selezionate per impostazione predefinita.  
   
-|Colonna di dati|Numero colonna|Descrizione|  
+|Colonna di dati|Numero di colonna|Descrizione|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName**|10|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|  
 |**BigintData1**|52|Valore (tipo di dati**bigint** ) che dipende dalla classe di evento specificata nella traccia.|  
@@ -85,9 +85,9 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
 |**ID database**|3|ID del database specificato nell'istruzione USE *nome_database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *nome_database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|  
 |**DatabaseName**|35|Nome del database in cui viene eseguita l'istruzione dell'utente.|  
 |**DBUserName**|40|Nome utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del client.|  
-|**Durata**|13|Durata dell'evento in microsecondi.<br /><br /> Il server indica la durata di un evento in microsecondi (un milionesimo o 10<sup>-6</sup>di secondo) e la quantità di tempo della CPU usato dall'evento in millisecondi (un millesimo o 10<sup>-3</sup>di secondo). Nell'interfaccia utente grafica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] il valore della colonna **Duration** viene visualizzato in millisecondi. Tuttavia, quando si salva una traccia in un file o in una tabella di database, il valore della colonna **Duration** viene scritto in microsecondi.|  
+|**Duration**|13|Durata dell'evento in microsecondi.<br /><br /> Il server indica la durata di un evento in microsecondi (un milionesimo o 10<sup>-6</sup>di secondo) e la quantità di tempo della CPU usato dall'evento in millisecondi (un millesimo o 10<sup>-3</sup>di secondo). Nell'interfaccia utente grafica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] il valore della colonna **Duration** viene visualizzato in millisecondi. Tuttavia, quando si salva una traccia in un file o in una tabella di database, il valore della colonna **Duration** viene scritto in microsecondi.|  
 |**EndTime**|15|Ora di fine dell'evento. Questa colonna non viene popolata per le classi di evento che fanno riferimento all'avvio di un evento, quali **SQL:BatchStarting** o **SP:Starting**.|  
-|**Errore**|31|Numero di errore di un determinato evento. In genere corrisponde al numero di errore archiviato in **sysmessages**.|  
+|**Error (Errore) (Error (Errore)e)**|31|Numero di errore di un determinato evento. In genere corrisponde al numero di errore archiviato in **sysmessages**.|  
 |**EventClass**|27|Tipo di classe di evento acquisita.|  
 |**EventSequence**|51|Numero di sequenza dell'evento.|  
 |**EventSubClass**|21|Tipo di sottoclasse di evento, che offre informazioni aggiuntive su ogni classe di evento. Ad esempio, i valori della sottoclasse della classe di evento **Execution Warning** rappresentano il tipo di avviso di esecuzione:<br /><br /> **1** = attesa della query. Tempo di attesa delle risorse, ad esempio della memoria, prima dell'esecuzione della query.<br /><br /> **2** = timeout della query. Timeout della query durante l'attesa delle risorse necessarie per l'esecuzione. Questa colonna di dati non viene popolata per tutte le classi di evento.|  
@@ -104,7 +104,7 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
 |**LoginName**|11|Nome dell'account di accesso dell'utente (account di sicurezza di SQL Server o credenziali di accesso di Windows nel formato DOMINIO\Nomeutente).|  
 |**LoginSid**|41|ID di sicurezza (SID) dell'utente connesso. Tali informazioni sono disponibili nella vista **sys.server_principals** del database **master** . L'ID è univoco per ogni account di accesso al server.|  
 |**MethodName**|47|Nome del metodo OLE DB.|  
-|**Mode**|32|Valore intero utilizzato da vari eventi per descrivere uno stato richiesto o ricevuto dall'evento.|  
+|**Modalità**|32|Valore intero utilizzato da vari eventi per descrivere uno stato richiesto o ricevuto dall'evento.|  
 |**NestLevel**|29|Valore intero che rappresenta i dati restituiti da @@NESTLEVEL.|  
 |**NTDomainName**|7|Dominio di Windows a cui appartiene l'utente.|  
 |**NTUserName**|6|Nome utente di Windows.|  
@@ -129,8 +129,8 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
 |**SPID**|12|ID del processo server (SPID) che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna al processo associato al client.|  
 |**SqlHandle**|63|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
 |**StartTime**|14|Ora di inizio dell'evento, se disponibile.|  
-|**State**|30|Codice dello stato di errore.|  
-|**Esito positivo**|23|Indica l'esito dell'evento. I possibili valori sono:<br /><br /> **1** = esito positivo.<br /><br /> **0** = esito negativo<br /><br /> Ad esempio, **1** indica l'esito positivo di un controllo delle autorizzazioni e **0** indica l'esito negativo di tale controllo.|  
+|**State**|30|Codice di stato dell'errore.|  
+|**Success**|23|Indica l'esito dell'evento. I possibili valori sono:<br /><br /> **1** = esito positivo.<br /><br /> **0** = esito negativo<br /><br /> Ad esempio, **1** indica l'esito positivo di un controllo delle autorizzazioni e **0** indica l'esito negativo di tale controllo.|  
 |**TargetLoginName**|42|Per le azioni relative a un account di accesso, ad esempio l'aggiunta di un nuovo account di accesso, il nome dell'account di accesso specifico.|  
 |**TargetLoginSid**|43|Per le azioni relative a un account di accesso, ad esempio l'aggiunta di un nuovo account di accesso, il SID dell'account di accesso specifico.|  
 |**TargetUserName**|39|Per le azioni relative a un utente del database, ad esempio la concessione di un'autorizzazione a un utente, il nome di tale utente.|  

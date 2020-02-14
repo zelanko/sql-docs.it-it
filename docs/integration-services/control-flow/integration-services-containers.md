@@ -17,10 +17,10 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294055"
 ---
 # <a name="integration-services-containers"></a>Contenitori in Integration Services
@@ -95,7 +95,7 @@ ms.locfileid: "71294055"
 ### <a name="event-handlers"></a>Gestori di eventi  
  I gestori di eventi a livello di contenitore rispondono agli eventi generati dal contenitore o dagli altri oggetti inclusi al suo interno. Per altre informazioni, vedere [Gestori eventi di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### <a name="variables"></a>Variabili  
+### <a name="variables"></a>variables  
  Nelle variabili usate nei contenitori sono incluse le variabili di sistema a livello di contenitore disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e le variabili definite dall'utente usate dal contenitore. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="break-points"></a>Punti di interruzione  

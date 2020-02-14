@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729870"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -187,7 +187,7 @@ Per una tabella delle conversioni di tipi di dati, vedere la sezione relativa al
  `datetime2` [ ( *n* ) ]  
 Come per `datetime`, ad eccezione del fatto che è possibile specificare il numero di secondi frazionari. Il valore predefinito di *n* è `7`.  
   
-|Valore *n*|Precisione|Scala|  
+|Valore *n*|Precision|Scalabilità|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,7 +213,7 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
  `float` [ ( *n* ) ]  
  Tipo di dati numerici approssimati da usare con dati numerici a virgola mobile. I dati a virgola mobile sono approssimati, ovvero non tutti i valori nell'intervallo del tipo di dati possono essere rappresentati in modo esatto. *n* specifica il numero di bit usati per archiviare la mantissa di `float` in notazione scientifica. *n* determina la precisione e la dimensione dello spazio di archiviazione. Se si specifica *n*, il valore deve essere compreso tra `1` e `53`. Il valore predefinito di *n* è `53`.  
   
-| Valore *n* | Precisione | Dimensioni dello spazio di archiviazione |  
+| Valore *n* | Precision | Dimensioni dello spazio di archiviazione |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 cifre  | 4 byte      |  
 | 25-53  | 15 cifre | 8 byte      |  
@@ -231,10 +231,10 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
  *precisione*  
  Numero massimo totale di cifre decimali che è possibile archiviare, sia a destra che a sinistra del separatore decimale. La precisione deve essere un valore compreso tra `1` e la precisione massima di `38`. La precisione predefinita è `18`.  
   
- *scala*  
+ *scale*  
  Numero massimo di cifre decimali che è possibile archiviare a destra del separatore decimale. *Scale* deve essere un valore compreso tra `0` e *precision*. È possibile specificare *scale* solo se *precision* è specificato. La scalabilità predefinita è `0` e quindi `0` <= *scale* <= *precision*. Le dimensioni massime di archiviazione variano a seconda della precisione.  
   
-| Precisione | Byte per l'archiviazione  |  
+| Precision | Byte per l'archiviazione  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10-19      |             9 |  
@@ -317,7 +317,7 @@ Una tabella columnstore è una tabella archiviata in ordine colonna per colonna.
 
 Per modificare una tabella rowstore in una tabella columnstore, eliminare tutti gli indici esistenti dalla tabella e creare un indice columnstore cluster. Per un esempio, vedere [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
-Per altre informazioni, vedere gli articoli seguenti:
+Per altre informazioni, vedere questi articoli:
 - [Riepilogo delle funzionalità con versione degli indici columnstore](https://msdn.microsoft.com/library/dn934994/)
 - [Indicizzazione di tabelle in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Guida agli indici columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 

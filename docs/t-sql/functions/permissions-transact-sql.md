@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843627"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -51,13 +51,13 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  *objectid*  
  ID di un'entità a sicurezza diretta. Se *objectid* viene omesso, il valore della mappa di bit include le autorizzazioni per le istruzioni dell'utente corrente. In caso contrario, la mappa di bit include le autorizzazioni per l'entità a protezione diretta dell'utente corrente. L'entità a sicurezza diretta specificata deve essere inclusa nel database corrente. Usare la funzione [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) per determinare il valore di *objectid*.  
   
- **'** *colonna* **'**  
+ **'** *column* **'**  
  Nome facoltativo di una colonna di cui si desidera ottenere informazioni sulle autorizzazioni. Il nome della colonna deve essere valido nella tabella specificata da *objectid*.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare l'istruzione PERMISSIONS per determinare se l'utente corrente dispone delle autorizzazioni necessarie per eseguire un'istruzione o per concedere un'autorizzazione a un altro utente.  
   
  Le informazioni restituite sono mappe di 32 bit.  
@@ -73,7 +73,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |Bit (dec)|Bit (hex)|Autorizzazione per le istruzioni|  
 |-----------------|-----------------|--------------------------|  
 |1|0x1|CREATE DATABASE (solo per il database master)|  
-|2|0x2|CREATE TABLE|  
+|2|0x2|CREA TABELLA|  
 |4|0x4|CREATE PROCEDURE|  
 |8|0x8|CREATE VIEW|  
 |16|0x10|CREATE RULE|  
@@ -112,7 +112,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. Utilizzo della funzione PERMISSIONS con le autorizzazioni per le istruzioni  
+### <a name="a-using-the-permissions-function-with-statement-permissions"></a>R. Utilizzo della funzione PERMISSIONS con le autorizzazioni per le istruzioni  
  Nell'esempio seguente si determina se l'utente corrente può eseguire l'istruzione `CREATE TABLE`.  
   
 ```  

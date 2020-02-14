@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70304845"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover di un gruppo di disponibilità Always On in Linux
@@ -64,7 +64,7 @@ Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità
 
 #### <a name="removeLocConstraint"> </a> Passaggio 2. Rimuovere il vincolo di posizione
 
-Durante un failover manuale, il comando `pcs` `move` o il comando `crm` `migrate` aggiunge un vincolo di posizione per consentire il posizionamento della risorsa nel nuovo nodo di destinazione. Per visualizzare il nuovo vincolo, eseguire il comando seguente dopo aver spostato manualmente la risorsa:
+Durante un failover manuale, il comando `pcs``move` o il comando `crm``migrate` aggiunge un vincolo di posizione per consentire il posizionamento della risorsa nel nuovo nodo di destinazione. Per visualizzare il nuovo vincolo, eseguire il comando seguente dopo aver spostato manualmente la risorsa:
 
 - **Esempio di RHEL/Ubuntu**
 
@@ -102,7 +102,7 @@ Ecco un esempio di vincolo creato per effetto di un failover manuale.
 >[!NOTE]
 >Il failover automatico non comporta l'aggiunta di un vincolo di posizione, quindi non è necessaria alcuna operazione di pulizia. 
 
-Per ulteriori informazioni:
+Per altre informazioni:
 - [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Red Hat - Gestione di risorse cluster)
 - [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
   (Pacemaker - Spostare manualmente le risorse) [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) (Guida all'amministrazione di SLES - Risorse) 
@@ -117,13 +117,13 @@ La procedura per forzare il failover illustrata di seguito è specifica di SQL S
 
 1. Verificare che la risorsa del gruppo di disponibilità non sia più gestita dal cluster. 
 
-      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala all'agente di arrestare il monitoraggio e la gestione della risorsa. Esempio: 
+      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala all'agente di arrestare il monitoraggio e la gestione della risorsa. Ad esempio: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - Se il tentativo di impostare la risorsa in modalità non gestita non riesce, eliminare la risorsa. Esempio:
+      - Se il tentativo di impostare la risorsa in modalità non gestita non riesce, eliminare la risorsa. Ad esempio:
 
       ```bash
       sudo pcs resource delete <resourceName>

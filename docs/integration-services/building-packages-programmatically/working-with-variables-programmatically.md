@@ -23,10 +23,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299072"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
@@ -50,7 +50,7 @@ ms.locfileid: "71299072"
   
 -   È possibile creare variabili personalizzate per tutti i tipi di contenitori, ovvero pacchetti, contenitori **Ciclo Foreach**, contenitori **Ciclo For**, contenitori **Sequenza**, TaskHost e gestori di eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## <a name="scope"></a>Ambito  
+## <a name="scope"></a>Scope  
  Ogni contenitore dispone di una propria raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Ogni nuova variabile creata si trova nell'ambito del relativo contenitore padre. Poiché il contenitore del pacchetto costituisce il livello principale della gerarchia dei contenitori, le variabili con ambito pacchetto sono variabili globali e sono visibili a tutti i contenitori del pacchetto. Alla raccolta di variabili per il contenitore possono accedere anche gli elementi figlio del contenitore tramite la raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, utilizzando il nome della variabile o il relativo indice nella raccolta.  
   
  Poiché la visibilità di una variabile ha un ambito dall'alto in basso, le variabili dichiarate a livello di pacchetto sono visibili a tutti i contenitori nel pacchetto. Pertanto, la raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables> in un contenitore include tutte le variabili che appartengono al relativo oggetto padre in aggiunta alle proprie variabili.  
@@ -234,6 +234,6 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Uso di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

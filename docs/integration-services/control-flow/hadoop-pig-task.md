@@ -13,10 +13,10 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294090"
 ---
 # <a name="hadoop-pig-task"></a>Attività Pig Hadoop

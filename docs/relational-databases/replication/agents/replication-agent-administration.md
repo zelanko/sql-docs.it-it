@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768218"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288157"
 ---
 # <a name="replication-agent-administration"></a>Amministrazione dell'agente di replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "68768218"
   
  I file dell'agente di replica si trovano in [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]\COM. Nella tabella seguente vengono riportati gli eseguibili di replica disponibili insieme al nome di file corrispondente. Fare clic sul collegamento corrispondente a ogni agente per visualizzarne i parametri di riferimento.  
   
-|Eseguibile agente|Nome file|  
+|Eseguibile agente|File Name|  
 |----------------------|---------------|  
-|[Agente snapshot repliche](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Agente lettura log repliche](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[Agente di lettura coda repliche](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  

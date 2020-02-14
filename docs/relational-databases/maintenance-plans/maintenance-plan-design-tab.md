@@ -15,10 +15,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115735"
 ---
 # <a name="maintenance-plan-design-tab"></a>Piano di manutenzione (scheda Progettazione)
@@ -41,7 +41,7 @@ ms.locfileid: "68115735"
  **Rimuovi pianificazione**  
  Consente di rimuovere una pianificazione dal sottopiano selezionato.  
   
- **Gestisci connessioni**  
+ **Gestire le connessioni**  
  Visualizza la finestra di dialogo **Gestisci connessioni** . Questa finestra di dialogo viene utilizzata per aggiungere ulteriori connessioni a istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al piano di manutenzione. Le attività di manutenzione nell'editor sottopiani possono utilizzare una qualsiasi di queste connessioni. Durante l'esecuzione, il piano di manutenzione stabilisce una connessione dal server del piano di manutenzione ai server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificati utilizzando le credenziali di connessione.  
   
  **Report e registrazione**  
@@ -69,7 +69,7 @@ ms.locfileid: "68115735"
   
  Dopo aver posizionato un'attività di manutenzione sull'area di progettazione, sarà possibile modificarne le proprietà in base alle esigenze. Ad esempio, il database specifico di cui eseguire il backup in un'Attività Backup database viene specificato dopo aver aggiunto l'attività al piano. Le attività non correttamente configurate presenti sull'area di progettazione contengono un'icona rossa con una X bianca.  
   
- Per aggiungere un'attività di manutenzione a un piano, trascinare l'icona dell'attività dalla casella degli strumenti **Attività piano di manutenzione** all'area di progettazione del piano oppure fare doppio clic sull'attività nella casella degli strumenti per aggiungere l'attività all'area di progettazione attiva. Se la casella degli strumenti **Attività piano di manutenzione** non è visualizzata, scegliere **Casella degli strumenti** dal menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **View** menu. Espandere il nodo **Attività piano di manutenzione** nel riquadro **Casella degli strumenti** .  
+ Per aggiungere un'attività di manutenzione a un piano, trascinare l'icona dell'attività dalla casella degli strumenti **Attività piano di manutenzione** all'area di progettazione del piano oppure fare doppio clic sull'attività nella casella degli strumenti per aggiungere l'attività all'area di progettazione attiva. Se la casella degli strumenti **Attività piano di manutenzione** non è visualizzata, scegliere **Casella degli strumenti** dal menu **Visualizza** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Espandere il nodo **Attività piano di manutenzione** nel riquadro **Casella degli strumenti** .  
   
  Per rimuovere un'attività da un piano, selezionare l'attività nell'area di progettazione e premere **CANC** oppure fare clic con il pulsante destro del mouse sull'attività e quindi scegliere **Elimina**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68115735"
  **Disable**  
  Gli oggetti non saranno quindi temporaneamente disponibili.  
   
- **Abilita**  
+ **Abilitazione**  
  Consente di ripristinare un'attività disabilitata.  
   
  **Gruppo**  
@@ -105,7 +105,7 @@ ms.locfileid: "68115735"
  **Ridimensiona automaticamente**  
  Consente di impostare le dimensioni di ogni attività sulle dimensioni ottimali per l'attività specifica.  
   
- **Comprimi**  
+ **Collapse**  
  Consente di nascondere attività all'interno di un gruppo.  
   
  **Espandi**  

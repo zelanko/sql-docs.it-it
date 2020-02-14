@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909788"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvataggio di un piano di esecuzione in formato XML
@@ -68,7 +68,7 @@ ms.locfileid: "72909788"
   
 4.  Nel riquadro **Risultati** fare clic con il pulsante destro del mouse sullo **Showplan XML di Microsoft SQL Server** che contiene il piano di query e quindi fare clic su **Salva risultati con nome**.  
   
-5.  Nella finestra di dialogo **Salva** risultati **\<griglia o testo>** , nella casella **Salva come tipo** fare clic su **Tutti i file (\*.\*)** .  
+5.  Nella finestra di dialogo **Salva** **risultati** \<griglia o testo>, fare clic su **Tutti i file (\*.\*)** nella casella **Salva come tipo**.  
   
 6.  Nella casella **Nome file** immettere un nome nel formato \<nome **>.sqlplan** e quindi fare clic su **Salva**.  
 
@@ -78,7 +78,7 @@ ms.locfileid: "72909788"
   
 2.  Nella scheda **Piano di esecuzione** del riquadro dei risultati fare clic con il pulsante destro del mouse sul piano di esecuzione grafico e scegliere **Salva piano di esecuzione con nome**.  
   
-     In alternativa, scegliere **Salva piano di esecuzione con nome** dal menu **File**.  
+     In alternativa, scegliere **Salva piano di esecuzione con nome** dal menu **File** .  
   
 3.  Nella finestra di dialogo **Salva con nome** assicurarsi che **Salva come** sia impostato su **File piano di esecuzione (\*.sqlplan)** .  
   
@@ -86,7 +86,7 @@ ms.locfileid: "72909788"
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Per aprire un piano di query XML salvato in SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scegliere **Apri** dal menu **File** e quindi fare clic su **File**.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **Apri** dal menu **File**e quindi fare clic su **File**.  
   
 2.  Nella finestra di dialogo **Apri file** impostare **Tipo file** su **File piano di esecuzione (\*.sqlplan)** per generare un elenco filtrato dei file dei piani di query XML salvati.  
   

@@ -15,15 +15,15 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048755"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Il tipo di dati spaziali geografici, **geography**, rappresenta i dati in un sistema di coordinate terrestri. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è implementato come tipo di dati CLR (Common Language Runtime) .NET. Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  Il tipo di dati spaziali geografici, **geography**, rappresenta i dati in un sistema di coordinate terrestri. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è implementato come tipo di dati CLR (Common Language Runtime) .NET. Il tipo di dati **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di archiviare dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
   
  Il tipo **geography** è predefinito e disponibile in ogni database. È possibile creare colonne di tabella di tipo **geography** e usare dati **geography** nello stesso modo in cui vengono usati gli altri tipi forniti dal sistema.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68048755"
  [STIsEmpty &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> Chiusura  
- Un'istanza **geography** _chiusa_ è una figura i cui punti di inizio e di fine corrispondono. Le istanze**Polygon** sono considerate chiuse. Le istanze**Point** non sono considerate chiuse.  
+ Un'istanza **geography**_chiusa_ è una figura i cui punti di inizio e di fine corrispondono. Le istanze**Polygon** sono considerate chiuse. Le istanze**Point** non sono considerate chiuse.  
   
  Un anello è un'istanza **LineString** semplice chiusa.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "68048755"
 Negli esempi seguenti viene illustrato come aggiungere ed eseguire query su dati geography.  
   
 ### <a name="example-a"></a>Esempio A. 
-In questo esempio viene creata una tabella con una colonna di identità e una colonna `geography` `GeogCol1`. Una terza colonna effettua il rendering della colonna `geography` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()` . Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geography`e in una seconda è contenuta un'istanza `Polygon` .  
+In questo esempio viene creata una tabella con una colonna di identità e una colonna `geography``GeogCol1`. Una terza colonna effettua il rendering della colonna `geography` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()` . Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geography`e in una seconda è contenuta un'istanza `Polygon` .  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

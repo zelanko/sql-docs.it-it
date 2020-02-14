@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907864"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizzazione di una sottoscrizione push
@@ -31,7 +31,7 @@ ms.locfileid: "72907864"
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Le sottoscrizioni vengono sincronizzate dall'agente di distribuzione, per la replica snapshot e transazionale, o dall'agente di merge, per la replica di tipo merge. Gli agenti possono essere in esecuzione continuamente, essere in esecuzione su richiesta o essere in esecuzione su una pianificazione. Per altre informazioni sull'impostazione delle pianificazioni della sincronizzazione, vedere [Specificare le pianificazioni della sincronizzazione](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
- Una sottoscrizione può essere sincronizzata su richiesta dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e the **Tutte le sottoscrizioni** in Monitoraggio replica. Le sottoscrizioni a pubblicazioni Oracle non possono essere sincronizzate su richiesta dal Sottoscrittore. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Una sottoscrizione può essere sincronizzata su richiesta dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e dalla scheda **Tutte le sottoscrizioni** in Monitoraggio replica. Le sottoscrizioni a pubblicazioni Oracle non possono essere sincronizzate su richiesta dal Sottoscrittore. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>Per sincronizzare una sottoscrizione push su richiesta in Management Studio (nel server di pubblicazione)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72907864"
   
 5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
-6.  Scegliere **Chiudi**.  
+6.  Fare clic su **Close**.  
 
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Per sincronizzare una sottoscrizione push su richiesta in Management Studio (nel Sottoscrittore)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72907864"
   
 5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
-6.  Scegliere **Chiudi**.  
+6.  Fare clic su **Close**.  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>Per sincronizzare una sottoscrizione push su richiesta in Monitoraggio replica  
   
@@ -276,7 +276,7 @@ REM -- The following command must be supplied without line breaks.
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti di base relativi a RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063137"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
@@ -39,7 +39,7 @@ Esistono alcuni scenari in cui è utile calcolare le dimensioni della riga e del
 
 Una tabella ottimizzata per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
   
-![Tabella ottimizzata per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabella ottimizzata per la memoria.")  
+![Tabella con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabella con ottimizzazione per la memoria.")  
 Tabella con ottimizzazione per la memoria, costituita da indici e righe.  
 
 ##  <a name="bkmk_TableSize"></a> Calcolo delle dimensioni di una tabella
@@ -99,14 +99,14 @@ Un timestamp di fine ∞ (infinito) indica che si tratta della versione attualme
   
 Per un'ora maggiore di 200, la tabella contiene le righe seguenti:  
   
-|nome|Città|  
+|Nome|city|  
 |----------|----------|  
 |John|Pechino|  
 |Jane|Praga|  
   
 Tuttavia, le eventuali transazioni attive con un'ora di inizio 100 rileveranno la seguente versione della tabella:  
   
-|nome|Città|  
+|Nome|city|  
 |----------|----------|  
 |John|Parigi|  
 |Jane|Praga|  
@@ -131,7 +131,7 @@ Nella tabella seguente viene descritto il calcolo delle dimensioni del corpo del
 |Matrice di offset delle colonne di tipo approfondito|I valori possibili sono:<br /><br /> 0 se non sono disponibili colonne di tipo approfondito<br /><br /> 2 + 2 * [number of deep type columns] in caso contrario|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Matrice NULL|[number of nullable columns] / 8, arrotondato per eccesso ai byte completi.|La matrice dispone di un bit per ogni colonna che ammette i valori Null. Il valore viene arrotondato per eccesso ai byte completi.|  
 |Riempimento della matrice NULL|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni della matrice NULL sono un numero dispari di byte.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
-|Spaziatura interna|Se non sono disponibili colonne di tipo approfondito: 0<br /><br /> Se sono disponibili colonne di tipo approfondito, vengono aggiunti 0-7 byte di riempimento, in base al maggiore allineamento richiesto da una colonna superficiale. Ogni colonna superficiale richiede un allineamento uguale alle sue dimensioni, come descritto in precedenza, ad eccezione delle colonne GUID che richiedono l'allineamento di 1 byte (non 16) e delle colonne numeriche che richiedono sempre l'allineamento di 8 byte (mai 16). Viene utilizzato il requisito di maggiore allineamento tra tutte le colonne superficiali e vengono aggiunti 0-7 byte di riempimento in modo tale che le dimensioni totali fino a questo punto (senza le colonne di tipo approfondito) siano un multiplo dell'allineamento richiesto.|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Riempimento|Se non sono disponibili colonne di tipo approfondito: 0<br /><br /> Se sono disponibili colonne di tipo approfondito, vengono aggiunti 0-7 byte di riempimento, in base al maggiore allineamento richiesto da una colonna superficiale. Ogni colonna superficiale richiede un allineamento uguale alle sue dimensioni, come descritto in precedenza, ad eccezione delle colonne GUID che richiedono l'allineamento di 1 byte (non 16) e delle colonne numeriche che richiedono sempre l'allineamento di 8 byte (mai 16). Viene utilizzato il requisito di maggiore allineamento tra tutte le colonne superficiali e vengono aggiunti 0-7 byte di riempimento in modo tale che le dimensioni totali fino a questo punto (senza le colonne di tipo approfondito) siano un multiplo dell'allineamento richiesto.|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
 |Colonne di tipo approfondito a lunghezza fissa|SUM(*size of fixed length deep type columns*)<br /><br /> Le dimensioni di ogni colonna sono le seguenti:<br /><br /> i per char(i) e binary(i).<br /><br /> 2 * i per nchar(i)|Le colonne di tipo approfondito a lunghezza fissa sono le colonne di tipo char(i), nchar(i) o binary(i).|  
 |Colonne di tipo approfondito a lunghezza variabile *computed size*|SUM(*computed size of variable length deep type columns*)<br /><br /> Le dimensioni calcolate di ogni colonna sono le seguenti:<br /><br /> i per varchar(i) e varbinary(i)<br /><br /> 2 * i per nvarchar(i)|Questa riga si riferiva solo a *computed row body size*.<br /><br /> Le colonne di tipo approfondito a lunghezza variabile sono le colonne di tipo varchar(i), nvarchar(i) o varbinary(i). Le dimensioni calcolate sono determinate dalla lunghezza massima (i) della colonna.|  
 |Colonne di tipo approfondito a lunghezza variabile *actual size*|SUM(*actual size of variable length deep type columns*)<br /><br /> Le dimensioni effettive di ogni colonna sono le seguenti:<br /><br /> n, dove n è il numero di caratteri archiviato nella colonna, per varchar(i).<br /><br /> 2 * n, dove n è il numero di caratteri archiviato nella colonna, per nvarchar(i).<br /><br /> n, dove n è il numero di byte archiviato nella colonna, per varbinary(i).|Questa riga si riferiva solo a *actual row body size*.<br /><br /> Le dimensioni effettive sono determinate dai dati archiviati nelle colonne della riga.|   
@@ -194,7 +194,7 @@ Si calcoli quindi [actual row body size]:
   
 -   Riempimento matrice NULL = 1, in quanto le dimensioni della matrice NULL sono un numero dispari ed è presente una colonna di tipo approfondito.  
   
--   Spaziatura interna  
+-   Riempimento  
   
     -   8 è il requisito di allineamento maggiore.  
   
@@ -240,6 +240,6 @@ where object_id = object_id('dbo.Orders')
 Il post di blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (Novità di OLTP in memoria in SQL Server 2016 a partire da CTP3) spiega nel dettaglio alcuni di questi aspetti complessi.   
  
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f79996ca171fa6c77daaf4c25bc3c1a8da9420d9
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 8c4c252de5a9d23ecfbaee06ca6322f3b08b275f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165980"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761885"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "74165980"
   
  È possibile sostituire le funzionalità di parametrizzazione di un database nei modi seguenti:  
   
--   Quando l'opzione di database PARAMETERIZATION è impostata su SIMPLE, è possibile specificare che la parametrizzazione forzata venga tentata su una determinata classe di query. A tale scopo, è necessario creare una guida di piano TEMPLATE nel formato con parametri della query e specificare l'hint per la query PARAMETERIZATION FORCED nella stored procedure [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) . È possibile considerare questo tipo di guida di piano come uno strumento per abilitare la parametrizzazione forzata solo su una determinata classe di query, anziché su tutte le query.  
+-   Quando l'opzione di database PARAMETERIZATION è impostata su SIMPLE, è possibile specificare che la parametrizzazione forzata venga tentata su una determinata classe di query. A tale scopo, è necessario creare una guida di piano TEMPLATE nel formato con parametri della query e specificare l'hint per la query PARAMETERIZATION FORCED nella stored procedure [sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) . È possibile considerare questo tipo di guida di piano come uno strumento per abilitare la parametrizzazione forzata solo su una determinata classe di query, anziché su tutte le query. Per altre informazioni sulla parametrizzazione semplice, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
--   Quando l'opzione di database PARAMETERIZATION è impostata su FORCED, è possibile specificare che venga tentata solo la parametrizzazione semplice, anziché forzata, su una determinata classe di query. A tale scopo, è necessario creare una guida di piano TEMPLATE nel formato di query force-parametrized e specificare l'hint per la query PARAMETERIZATION SIMPLE nella stored procedure **sp_create_plan_guide**.  
+-   Quando l'opzione di database PARAMETERIZATION è impostata su FORCED, è possibile specificare che venga tentata solo la parametrizzazione semplice, anziché forzata, su una determinata classe di query. A tale scopo, è necessario creare una guida di piano TEMPLATE nel formato di query force-parametrized e specificare l'hint per la query PARAMETERIZATION SIMPLE nella stored procedure **sp_create_plan_guide**.  Per altre informazioni sulla parametrizzazione forzata, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ForcedParam). 
   
  Si consideri la query seguente sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
-```  
+```sql  
 SELECT pi.ProductID, SUM(pi.Quantity) AS Total  
 FROM Production.ProductModel AS pm   
     INNER JOIN Production.ProductInventory AS pi   
@@ -57,7 +57,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 
 Lo script seguente può essere utilizzato sia per ottenere la query con parametri che per creare in seguito una guida di piano basata su tale query.  
   
-```  
+```sql  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   

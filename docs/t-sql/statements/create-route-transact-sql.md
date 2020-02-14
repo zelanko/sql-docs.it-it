@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006511"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68006511"
 
   Aggiunge una nuova route alla tabella di routing per il database corrente. Per i messaggi in uscita, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina il routing controllando la tabella di routing nel database locale. Per i messaggi in conversazioni che hanno origine in un'altra istanza, inclusi i messaggi da inoltrare, in [!INCLUDE[ssSB](../../includes/sssb-md.md)] vengono controllate le route nel database **msdb**.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ WITH
  AUTHORIZATION *owner_name*  
  Imposta il proprietario della route sull'utente o il ruolo di database specificato. Per *owner_name* è possibile specificare il nome di qualsiasi utente o ruolo valido se l'utente corrente è un membro del ruolo predefinito del database **db_owner** o del ruolo predefinito del server **sysadmin**. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente. Se la clausola viene omessa, la route appartiene all'utente corrente.  
   
- con  
+ WITH  
  Introduce le clausole per la definizione della nuova route creata.  
   
  SERVICE_NAME = **'** _service\_name_ **'**  
@@ -123,7 +123,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Se si specifica MIRROR_ADDRESS, la route deve specificare la clausola SERVICE_NAME e la clausola BROKER_INSTANCE. Per una route con valore **'LOCAL'** o **'TRANSPORT'** per il parametro *next_hop_address* non è necessario specificare un indirizzo mirror.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La tabella di routing in cui sono archiviate le route è una tabella di metadati che può essere letta tramite la vista del catalogo **sys.routes**. È possibile aggiornare questa vista del catalogo solo tramite le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  Per impostazione predefinita, la tabella di routing in ogni database utente contiene una sola route. Tale route è denominata **AutoCreatedLocal**. La route è impostata con il valore **'LOCAL'** per il parametro *next_hop_address* e corrisponde a qualsiasi nome di servizio e identificatore di istanza di Service Broker.  
@@ -141,7 +141,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. Creazione di una route TCP/IP utilizzando un nome DNS  
+### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>R. Creazione di una route TCP/IP utilizzando un nome DNS  
  Nell'esempio seguente viene creata una route per il servizio `//Adventure-Works.com/Expenses`. La route specifica che i messaggi per questo servizio verranno trasmessi tramite TCP alla porta `1234` nell'host identificato dal nome DNS `www.Adventure-Works.com`. All'arrivo, i messaggi verranno recapitati dal server di destinazione all'istanza di Service Broker identificata dall'ID univoco `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  

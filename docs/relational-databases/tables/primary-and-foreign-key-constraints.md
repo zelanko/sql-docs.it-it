@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999442"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Vincoli di chiavi primarie ed esterne
@@ -123,14 +123,14 @@ ms.locfileid: "67999442"
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Viene descritto come creare una chiave primaria.|[Creazione di chiavi primarie](../../relational-databases/tables/create-primary-keys.md)|  
-|Si descrive come eliminare una chiave primaria.|[Eliminazione di chiavi primarie](../../relational-databases/tables/delete-primary-keys.md)|  
-|Si descrive come modificare una chiave primaria.|[Modifica di chiavi primarie](../../relational-databases/tables/modify-primary-keys.md)|  
+|Viene descritto come creare una chiave primaria.|[Creare chiavi primarie](../../relational-databases/tables/create-primary-keys.md)|  
+|Si descrive come eliminare una chiave primaria.|[Eliminare chiavi primarie](../../relational-databases/tables/delete-primary-keys.md)|  
+|Si descrive come modificare una chiave primaria.|[Modificare chiavi primarie](../../relational-databases/tables/modify-primary-keys.md)|  
 |Si descrive come creare relazioni di chiave esterna|[Creare relazioni di chiave esterna](../../relational-databases/tables/create-foreign-key-relationships.md)|  
-|Si descrive come modificare relazioni di chiave esterna.|[Modifica di relazioni di chiave esterna](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
-|Si descrive come eliminare relazioni di chiave esterna.|[Eliminazione di relazioni di chiave esterna](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
-|Viene descritto come visualizzare le proprietà di chiave esterna.|[Visualizzare Proprietà di chiave esterna](../../relational-databases/tables/view-foreign-key-properties.md)|  
+|Si descrive come modificare relazioni di chiave esterna.|[Modificare relazioni di chiave esterna](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
+|Si descrive come eliminare relazioni di chiave esterna.|[Eliminare relazioni di chiave esterna](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
+|Viene descritto come visualizzare le proprietà di chiave esterna.|[Visualizzare proprietà di chiave esterna](../../relational-databases/tables/view-foreign-key-properties.md)|  
 |Viene descritto come disabilitare vincoli di chiave esterna per la replica.|[Disabilitare i vincoli di chiave esterna per la replica](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
-|Viene descritto come disabilitare un vincolo di chiave esterna durante l'istruzione INSERT o UPDATE.|[Disabilitazione di vincoli di chiave esterna con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
+|Viene descritto come disabilitare un vincolo di chiave esterna durante l'istruzione INSERT o UPDATE.|[Disabilitare i vincoli di chiave esterna con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   

@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286548"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codifica e debug del componente script
@@ -38,7 +38,7 @@ ms.locfileid: "71286548"
 ## <a name="writing-the-script-in-code-design-mode"></a>Scrittura dello script in modalità di progettazione codice  
   
 ### <a name="script-component-development-environment"></a>Ambiente di sviluppo del componente script  
- Per scrivere lo script, fare clic su **Modifica script** nella pagina **Script** dell'**Editor trasformazione Script** per aprire l'ambiente IDE di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA). L'IDE di VSTA include tutte le funzionalità standard dell'ambiente [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET, come l'editor di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con codifica a colori, la tecnologia IntelliSense e il Visualizzatore oggetti.  
+ Per scrivere lo script, fare clic su **Modifica script** nella pagina **Script** dell'**Editor trasformazione Script** per aprire l'ambiente IDE di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA). L'IDE di VSTA include tutte le funzionalità standard dell'ambiente [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET, come l'editor di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con codifica a colori, la tecnologia IntelliSense e il Visualizzatore oggetti.  
   
  Il codice di script viene scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Il linguaggio di scripting viene specificato mediante l'impostazione della proprietà **ScriptLanguage** nell'**Editor trasformazione Script**. Per utilizzare un altro linguaggio di programmazione, è possibile sviluppare un assembly personalizzato nel linguaggio desiderato e chiamarne la funzionalità dal codice nel componente script.  
   
@@ -172,7 +172,7 @@ public class ScriptMain : UserComponent
   
 |Funzionalità del pacchetto|Metodo di accesso|  
 |---------------------|-------------------|  
-|Variabili|Usare le proprietà delle funzioni di accesso denominate e tipizzate nella classe della raccolta **Variables** nell'elemento di progetto **ComponentWrapper**, esposto tramite la proprietà **Variables** della classe **ScriptMain**.<br /><br /> Il metodo **PreExecute** può accedere unicamente a variabili di sola lettura. Il metodo **PostExecute** può accedere sia a variabili di sola lettura sia a variabili di lettura/scrittura.|  
+|variables|Usare le proprietà delle funzioni di accesso denominate e tipizzate nella classe della raccolta **Variables** nell'elemento di progetto **ComponentWrapper**, esposto tramite la proprietà **Variables** della classe **ScriptMain**.<br /><br /> Il metodo **PreExecute** può accedere unicamente a variabili di sola lettura. Il metodo **PostExecute** può accedere sia a variabili di sola lettura sia a variabili di lettura/scrittura.|  
 |Connessioni|Usare le proprietà delle funzioni di accesso denominate e tipizzate nella classe della raccolta **Connections** nell'elemento di progetto **ComponentWrapper**, esposto tramite la proprietà **Connections** della classe **ScriptMain**.|  
 |Eventi|Generare eventi tramite la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> della classe **ScriptMain** e i metodi **Fire\<X>** dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.|  
 |Registrazione|Eseguire la registrazione tramite il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> della classe **ScriptMain**.|  

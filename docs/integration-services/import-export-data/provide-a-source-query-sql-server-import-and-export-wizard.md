@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285123"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Impostazione query di origine (Importazione/Esportazione guidata SQL Server)

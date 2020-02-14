@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47f7ec984eed0ae86d031aa18a52c91a94f41a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67897536"
 ---
 # <a name="audit-login-event-class"></a>Audit Login - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento **Audit Login** indica che un utente è riuscito ad accedere correttamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli eventi di questa classe vengono attivati da nuove connessioni o da connessioni riutilizzate da un pool di connessioni.  
+  La classe di evento **Audit Login** indica che un utente è riuscito ad accedere correttamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli eventi di questa classe vengono attivati da nuove connessioni o da connessioni riutilizzate da un pool di connessioni.  
   
 ## <a name="audit-login-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Login  
   
@@ -32,8 +32,8 @@ ms.locfileid: "67897536"
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**EventClass**|**int**|Tipo di evento = 14.|27|no|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|**EventClass**|**int**|Tipo di evento = 14.|27|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di connessione utilizzato dall'account di accesso. 1 = Non in pool, 2 = In pool.|21|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IntegerData**|**int**|Dimensioni del pacchetto di rete utilizzate.|25|Sì|  
@@ -43,11 +43,11 @@ ms.locfileid: "67897536"
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Esito positivo**|**int**|1 = esito positivo. 0 = esito negativo. Per l'evento verrà sempre indicato un esito positivo.|23|Sì|  
+|**Success**|**int**|1 = esito positivo. 0 = esito negativo. Per l'evento verrà sempre indicato un esito positivo.|23|Sì|  
 |**TextData**|**ntext**|Elenco delimitato da punto e virgola di tutte le opzioni impostate.|1|Sì|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
   

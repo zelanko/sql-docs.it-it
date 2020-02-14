@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091458"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utilizzare il formato Unicode nativo per importare o esportare dati (SQL Server)
@@ -33,7 +33,7 @@ Il formato Unicode nativo risulta particolarmente utile quando è necessario cop
 |---|
 |[Opzioni di comando per il formato nativo Unicode](#command_options)|
 |[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)|
-|[Esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo Unicode per l'esportazione di dati](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo Unicode per l'importazione di dati senza un file di formato](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo Unicode per l'importazione di dati con un file di formato non XML](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo Unicode senza un file di formato](#bulk_widenative)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo Unicode con un file di formato non XML](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato nativo Unicode con un file di formato non XML](#openrowset_widenative_fmt)|
+|[esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo Unicode per l'esportazione di dati](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo Unicode per l'importazione di dati senza un file di formato](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo Unicode per l'importazione di dati con un file di formato non XML](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo Unicode senza un file di formato](#bulk_widenative)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo Unicode con un file di formato non XML](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato nativo Unicode con un file di formato non XML](#openrowset_widenative_fmt)|
 |[Attività correlate](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
 ## Opzioni di comando per il formato nativo Unicode<a name="command_options"></a>  
@@ -182,10 +182,10 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
   
 -   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

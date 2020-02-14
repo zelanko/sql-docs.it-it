@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296191"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
@@ -32,7 +32,7 @@ ms.locfileid: "71296191"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oppure compilati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
+  Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oppure creati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
   
  Al momento della creazione un pacchetto è un oggetto vuoto, privo di funzionalità. Per aggiungere funzionalità a un pacchetto è necessario aggiungervi un flusso di controllo e, facoltativamente, uno o più flussi di dati.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71296191"
 ### <a name="logging-and-log-providers"></a>Registrazione e provider di log  
  Un log è una raccolta di informazioni sul pacchetto che vengono raccolte quando il pacchetto viene eseguito. Un log può ad esempio indicare l'ora di inizio e di fine dell'esecuzione di un pacchetto. Un provider di log definisce il tipo di destinazione e il formato che il pacchetto e i relativi contenitori e attività possono utilizzare per la registrazione delle informazioni in fase di esecuzione. I log sono associati a un pacchetto, ma le attività e i contenitori nel pacchetto possono registrare informazioni in qualsiasi log di pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile una varietà di provider di log predefiniti per la registrazione. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ad esempio provider di log per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e file di testo. È inoltre possibile creare provider di log personalizzati e utilizzarli per la registrazione. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
-### <a name="variables"></a>Variabili  
+### <a name="variables"></a>variables  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta variabili di sistema e variabili definite dall'utente. Le variabili di sistema contengono informazioni utili sugli oggetti del pacchetto in fase di esecuzione, mentre le variabili definite dall'utente consentono la gestione di scenari personalizzati. Entrambi i tipi di variabili possono essere utilizzati in espressioni, script e configurazioni.  
   
  Le variabili a livello di pacchetto includono le variabili di sistema predefinite e le variabili definite dall'utente con ambito pacchetto. Per altre informazioni, vedere [Variabili di Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md).  

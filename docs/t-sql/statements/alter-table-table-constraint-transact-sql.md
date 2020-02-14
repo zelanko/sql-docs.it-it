@@ -17,10 +17,10 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981998"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
@@ -153,7 +153,7 @@ ms.locfileid: "73981998"
   
  Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ad esempio, la tabella **ProductVendor** ha una relazione referenziale con la tabella **Vendor**. La chiave esterna **ProductVendor.VendorID** fa riferimento alla chiave primaria **Vendor.VendorID**.  
   
- Se viene eseguita un'istruzione UPDATE in una riga della tabella **Vendor** e viene specificata un'azione ON UPDATE CASCADE per **ProductVendor.VendorID**, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se esistono una o più righe dipendenti nella tabella **ProductVendor**. L'eventuale riga dipendente individuata nella tabella **ProductVendor** viene aggiornata insieme alla riga a cui viene fatto riferimento nella tabella **Vendor**.  
+ Se viene eseguita un'istruzione UPDATE per una riga della tabella **Vendor** e viene specificata un'azione ON UPDATE CASCADE per **ProductVendor.VendorID**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se esistono una o più righe dipendenti nella tabella **ProductVendor**. L'eventuale riga dipendente individuata nella tabella **ProductVendor** viene aggiornata insieme alla riga a cui viene fatto riferimento nella tabella **Vendor**.  
   
  Al contrario, se si specifica NO ACTION, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene generato un errore e viene eseguito il rollback dell'azione di aggiornamento per la riga **Vendor** quando esiste almeno una riga nella tabella **ProductVendor** che fa riferimento a essa.  
   
@@ -183,7 +183,7 @@ Se viene usata quando non viene aggiunta anche la colonna correlata, non ha alcu
  *logical_expression*  
  Espressione logica utilizzata in un vincolo CHECK che restituisce TRUE o FALSE. Se usata con vincoli CHECK, *logical_expression* non può fare riferimento a un'altra tabella ma può fare riferimento ad altre colonne nella stessa tabella per la stessa riga. L'espressione non può fare riferimento a un tipo di dati alias.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si aggiungono vincoli FOREIGN KEY o CHECK, in tutti i dati esistenti viene verificata la presenza di eventuali violazioni dei vincoli, a meno che non venga specificata l'opzione WITH NOCHECK. Se si verificano violazioni, l'istruzione ALTER TABLE ha esito negativo e viene restituito un errore. Quando si aggiunge un nuovo vincolo PRIMARY KEY o UNIQUE a colonne esistenti, i dati delle colonne devono essere univoci. Se vengono individuati valori duplicati, l'istruzione ALTER TABLE ha esito negativo. L'opzione WITH NOCHECK non ha alcun effetto quando si aggiungono vincoli PRIMARY KEY o UNIQUE.  
   
  Ogni vincolo PRIMARY KEY e UNIQUE genera un indice. Il numero di vincoli UNIQUE e PRIMARY KEY non deve generare un numero di indici della tabella maggiore di 999 nel caso di indici non cluster e maggiore di 1 nel caso di indici cluster. I vincoli di chiave esterna non generano automaticamente un indice. Le colonne chiave esterna, tuttavia, vengono in genere utilizzate in criteri di join nelle query confrontando le colonne nel vincolo di chiave esterna di una tabella con le colonne chiave primaria o univoca nell'altra tabella. Un indice nelle colonne chiave esterna consente a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di trovare rapidamente i dati correlati nella tabella della chiave esterna.  

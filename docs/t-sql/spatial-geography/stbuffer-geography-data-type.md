@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042534"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo di dati geography)
@@ -49,7 +49,7 @@ ms.locfileid: "68042534"
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  STBuffer() calcola un buffer in modo analogo a [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), specificando *tolerance* = abs(distance) \* 0,001 e *relative* = **false**.  
   
  Un buffer negativo consente di rimuovere tutti i punti all'interno della distanza specificata del limite dell'istanza **geography**.  

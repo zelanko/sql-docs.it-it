@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062527"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Definizione della lunghezza di campo tramite bcp (SQL Server)
@@ -33,10 +33,10 @@ ms.locfileid: "68062527"
   
  `Enter length of field <field_name> [<default>]:`  
   
- Per un esempio contestualizzato di tale richiesta, vedere [Specificare i formati di dati per la compatibilità mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+ Per un esempio contestualizzato di tale richiesta, vedere [Impostazione dei formati di dati per la compatibilità mediante &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
->  Dopo aver specificato in modo interattivo tutti i campi in un comando **bcp**, viene chiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
+>  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
  La richiesta o meno della lunghezza del campo da parte del comando **bcp** dipende da diversi fattori, ad esempio:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68062527"
 |**ntext**|0|  
 |**varbinary(max)**|0|  
 |**nvarchar(max)**|0|  
-|UDT (tipo definito dall'utente)|Lunghezza della colonna UDT|  
+|UDT|Lunghezza della colonna UDT|  
 |XML|0|  
   
  \*Per altre informazioni sui tipi di dati **decimal** e **numeric**, vedere [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  

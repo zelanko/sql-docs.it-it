@@ -19,10 +19,10 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294334"
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
@@ -112,7 +112,7 @@ ms.locfileid: "71294334"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(Possibile visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo account utente abilitato) nel sito support.microsoft.com.  
+-   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](https://go.microsoft.com/fwlink/?LinkId=233693)sul sito support.microsoft.com.  
   
 -   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71294334"
  Per altre informazioni sulle operazioni di inserimento bulk, vedere [Attività Inserimento bulk](../../integration-services/control-flow/bulk-insert-task.md) e [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ### <a name="options"></a>Opzioni  
- **Connessione**  
+ **Connection**  
  Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...** > per creare una nuova connessione.  
   
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -179,7 +179,7 @@ ms.locfileid: "71294334"
  Consente di digitare una descrizione dell'attività Inserimento bulk.  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>Editor attività Inserimento bulk (pagina Opzioni)
-  Utilizzare la pagina **Opzioni** della finestra di dialogo **Editor attività Inserimento bulk** per impostare le proprietà relative all'operazione di inserimento bulk. L'attività Inserimento bulk consente di copiare grandi quantità di dati all'interno di una vista o tabella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilizzare la pagina **Opzioni** della finestra di dialogo **Editor attività Inserimento bulk** per impostare le proprietà relative all'operazione di inserimento bulk. L'attività Inserimento bulk consente di copiare grandi quantità di dati all'interno di una vista o tabella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per altre informazioni sull'uso degli inserimenti di massa, vedere [Attività Inserimento bulk](../../integration-services/control-flow/bulk-insert-task.md) e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -200,7 +200,7 @@ ms.locfileid: "71294334"
  Consente di specificare la riga dalla quale iniziare la copia.  
   
  **Opzioni**  
- |Nome|Definizione|  
+ |Termine|Definizione|  
 |----------|----------------|  
 |**Vincoli CHECK**|Selezionare questa opzione per verificare i vincoli di colonna e tabella.|  
 |**Mantieni valori Null**|Selezionare questa opzione per mantenere i valori Null durante l'operazione di inserimento bulk anziché inserire tutti i valori predefiniti per le colonne vuote.|  

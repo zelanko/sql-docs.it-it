@@ -22,18 +22,18 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040328"
 ---
-# <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
+# <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Questa funzione restituisce le informazioni relative alla possibilità o meno di concedere un blocco per una risorsa dell'applicazione specifica a un proprietario di blocchi specifico senza acquisire il blocco stesso. APPLOCK_TEST è una funzione di blocco a livello di applicazione che viene eseguita nel database corrente. L'ambito dei blocchi a livello di applicazione è il database.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   

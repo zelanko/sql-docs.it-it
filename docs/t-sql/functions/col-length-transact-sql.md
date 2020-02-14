@@ -21,18 +21,18 @@ ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bf23672374db7d8348154e95ca6228723934aa5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064735"
 ---
-# <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
+# <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 La funzione restituisce la lunghezza di una colonna, definita in byte.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ COL_LENGTH ( 'table' , 'column' )
 **'** *table* **'**  
 Nome della tabella per cui si vuole ottenere informazioni sulla lunghezza delle colonne. *table* è un'espressione di tipo **nvarchar**.
   
-**'** *colonna* **'**  
+**'** *column* **'**  
 Nome della colonna di cui si vuole determinare la lunghezza. *column* è un'espressione di tipo **nvarchar**.
   
 ## <a name="return-type"></a>Tipo restituito
@@ -55,7 +55,7 @@ Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione cor
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a protezione diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come COL_LENGTH possono restituire NULL se l'utente non ha l'autorizzazione corretta per l'oggetto. Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Per le colonne di tipo **varchar** dichiarate con l'identificatore **max** (**varchar(max)** ), COL_LENGTH restituisce il valore -1.
   
 ## <a name="examples"></a>Esempi  

@@ -34,13 +34,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116476"
 ---
-# <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+# <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS consente di visualizzare le statistiche relative all'ottimizzazione delle query correnti per una tabella o una vista indicizzata. L'utilizzo delle statistiche consente a Query Optimizer di stimare la cardinalità o il numero di righe nel risultato di una query e di creare un piano di query di qualità elevata. Query Optimizer potrebbe ad esempio utilizzare le stime relative alla cardinalità per scegliere l'operatore Index Seek anziché l'operatore Index Scan nel piano di query, evitando un'operazione di analisi dell'indice che utilizza un numero elevato di risorse e migliorando di conseguenza le prestazioni delle query.
@@ -49,9 +49,9 @@ Query Optimizer archivia le statistiche relative a una tabella oppure a una vist
   
 DBCC SHOW_STATISTICS consente di visualizzare l'intestazione, l'istogramma e il vettore di densità in base ai dati archiviati nell'oggetto statistiche. La sintassi consente inoltre di specificare una tabella o una vista indicizzata con un nome di colonna, un nome di statistiche o un nome di indice di destinazione. In questo argomento vengono descritte le modalità di visualizzazione delle statistiche e di interpretazione dei risultati visualizzati.
   
-Per altre informazioni, vedere [Statistics](../../relational-databases/statistics/statistics.md).
+Per altre informazioni, vedere l'articolo relativo alle [statistiche](../../relational-databases/statistics/statistics.md).
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -79,7 +79,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  *table_name*  
  Nome della tabella contenente la statistica da visualizzare. La tabella non può essere una tabella esterna.  
   
- *destinazione*  
+ *target*  
  Nome dell'indice, delle statistiche o della colonna per cui visualizzare le informazioni statistiche. L'oggetto *target* è racchiuso tra parentesi quadre, virgolette singole, virgolette doppie o viene inserito senza virgolette. Se l'oggetto *target* è il nome di un indice o di statistiche esistenti in una tabella o in una vista indicizzata, vengono restituite le relative informazioni statistiche. Se *target* è il nome di una colonna esistente e per tale colonna sono presenti statistiche create automaticamente, vengono restituite le informazioni relative a tali statistiche. Se per una colonna specificata in target non sono presenti statistiche create automaticamente, viene restituito il messaggio di errore 2767.  
  In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *target* non può essere un nome di colonna.  
   
@@ -96,12 +96,12 @@ Nella tabella seguente vengono descritte le colonne restituite nel set di risult
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|nome|Nome dell'oggetto statistiche.|  
+|Nome|Nome dell'oggetto statistiche.|  
 |Updated|Data e ora dell'ultimo aggiornamento delle statistiche. La funzione [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) rappresenta un metodo alternativo per il recupero di queste informazioni. Per altre informazioni, vedere la sezione [Osservazioni](#Remarks) più avanti nella pagina.|  
 |Righe|Numero totale di righe della tabella o della vista indicizzata al momento dell'ultimo aggiornamento delle statistiche. Se le statistiche vengono filtrate o corrispondono a un indice filtrato, il numero di righe potrebbe essere inferiore al numero di righe della tabella. Per altre informazioni, vedere [Statistiche](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Numero totale di righe campionate per i calcoli statistici. Se Rows Sampled < Rows, l'istogramma e i risultati relativi alla densità visualizzati vengono stimati in base alle righe campionate.|  
 |Passaggi|Numero di intervalli nell'istogramma. Ogni intervallo comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Gli intervalli dell'istogramma vengono definiti nella prima colonna chiave delle statistiche. Il numero massimo di intervalli è 200.|  
-|Density|Valore calcolato come 1/ *valori distinct* per tutti i valori nella prima colonna chiave dell'oggetto statistiche, ad eccezione dei valori limite dell'istogramma. Tale valore Density non viene utilizzato da Query Optimizer e viene visualizzato per compatibilità con le versioni precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|Densità|Valore calcolato come 1/ *valori distinct* per tutti i valori nella prima colonna chiave dell'oggetto statistiche, ad eccezione dei valori limite dell'istogramma. Tale valore Density non viene utilizzato da Query Optimizer e viene visualizzato per compatibilità con le versioni precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |Average Key Length|Numero medio di byte per valore per tutte le colonne chiave nell'oggetto statistiche.|  
 |String Index|Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** o **ntext**.|  
 |Espressione filtro|Predicato per il subset di righe della tabella incluso nell'oggetto statistiche. NULL = statistiche non filtrate. Per altre informazioni sui predicati di filtro, vedere [Creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md). Per altre informazioni sulle statistiche filtrate, vedere [Statistiche](../../relational-databases/statistics/statistics.md).|  
@@ -155,7 +155,7 @@ Per ottimizzare le stime relative alla cardinalità per query che restituiscono 
 |(CustomerId, ItemId)|Righe con valori corrispondenti per CustomerId e ItemId|  
 |(CustomerId, ItemId, Price)|Righe con valori corrispondenti per CustomerId, ItemId e Price|  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  DBCC SHOW_STATISTICS non fornisce statistiche per gli indici spaziali o columnstore ottimizzati in memoria xVelocity.  
   
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Autorizzazioni per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
@@ -180,7 +180,7 @@ DBCC SHOW_STATISTICS consente di visualizzare le statistiche archiviate nel data
 DBCC SHOW_STATISTICS non è supportato per le tabelle esterne.
   
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Esempi: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-### <a name="a-returning-all-statistics-information"></a>A. Restituzione di tutte le informazioni statistiche  
+### <a name="a-returning-all-statistics-information"></a>R. Restituzione di tutte le informazioni statistiche  
 Nell'esempio seguente vengono visualizzate tutte le informazioni statistiche per l'indice `AK_Address_rowguid` della tabella `Person.Address` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql

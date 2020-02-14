@@ -15,10 +15,10 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710995"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Recapito di snapshot tramite FTP
@@ -53,7 +53,7 @@ Per impostazione predefinita, gli snapshot vengono archiviati in cartelle defini
   
 1.  Nella finestra di dialogo **Proprietà pubblicazione - \<Publication>** selezionare **I Sottoscrittori possono scaricare i file di snapshot utilizzando FTP (File Transfer Protocol)** da una delle pagine seguenti:  
   
-    -   La pagina **Snapshot FTP** , per le pubblicazioni di snapshot e transazionali e le pubblicazioni di tipo merge per i server di pubblicazione in cui sono in esecuzione versioni precedenti a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+    -   La pagina **Snapshot FTP**, per le pubblicazioni di snapshot e transazionali e le pubblicazioni di tipo merge per i server di pubblicazione che eseguono versioni precedenti a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
     -   La pagina **Snapshot FTP e Internet** , per le pubblicazioni di tipo merge provenienti dai server di pubblicazione in cui è in esecuzione [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versione successiva.  
   

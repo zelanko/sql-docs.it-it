@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292759"
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
@@ -69,7 +69,7 @@ Usare la finestra di dialogo **Configura output errori** per configurare le opzi
  **Colonna**  
  Consente di visualizzare le colonne di output selezionate nella finestra di dialogo dell'editor trasformazione.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Se applicabile, consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  

@@ -27,13 +27,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914858"
 ---
-# <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
+# <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il numero di identificazione di oggetto di database di un oggetto con ambito schema.  
@@ -41,7 +41,7 @@ ms.locfileid: "67914858"
 > [!IMPORTANT]  
 >  Gli oggetti senza ambito schema, ad esempio i trigger DDL, non possono essere soggetti a query tramite OBJECT_ID. Per gli oggetti che non si trovano nella visualizzazione del catalogo [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md), ottenere i numeri di identificazione dell'oggetto eseguendo una query sulla vista del catalogo appropriata. Ad esempio, per restituire il numero di identificazione oggetto di un trigger DDL, usare `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come OBJECT_ID possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se il parametro per una funzione di sistema è facoltativo, vengono utilizzati il database, il computer host, l'utente del server o l'utente del database correnti. Le funzioni predefinite devono essere sempre seguite da parentesi.  
   
  Quando si specifica il nome di una tabella temporanea, questo deve essere preceduto dal nome del database, a meno che il database corrente sia **tempdb**. Ad esempio: `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
@@ -76,7 +76,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-object-id-for-a-specified-object"></a>A. Restituzione dell'ID oggetto per un oggetto specificato  
+### <a name="a-returning-the-object-id-for-a-specified-object"></a>R. Restituzione dell'ID oggetto per un oggetto specificato  
  Nell'esempio seguente viene restituito l'ID oggetto per la tabella `Production.WorkOrder` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -97,7 +97,7 @@ DROP TABLE dbo.AWBuildVersion;
 GO  
 ```  
   
-### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilizzo di OBJECT_ID per specificare il valore di un parametro di una funzione di sistema  
+### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilizzo di OBJECT_ID per specificare il valore di un parametro di una funzione di sistema  
  Nell'esempio seguente vengono restituite informazioni per tutti gli indici e le partizioni della tabella `Person.Address` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] usando la funzione [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
 > [!IMPORTANT]  

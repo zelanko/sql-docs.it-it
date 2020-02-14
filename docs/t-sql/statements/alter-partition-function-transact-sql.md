@@ -26,10 +26,10 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071252"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
@@ -40,7 +40,7 @@ Modifica una funzione di partizione mediante la suddivisione o l'unione dei rela
 > [!CAUTION]  
 >  La stessa funzione di partizione può essere utilizzata da più tabelle o indici. L'istruzione ALTER PARTITION FUNCTION viene applicata a tutti gli elementi in un'unica transazione.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -111,7 +111,7 @@ Per eseguire l'istruzione ALTER PARTITION FUNCTION, è necessario utilizzare le 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. Suddivisione in due partizioni di una partizione di una tabella o un indice partizionato  
+### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>R. Suddivisione in due partizioni di una partizione di una tabella o un indice partizionato  
 Nell'esempio seguente viene creata una funzione di partizione per suddividere una tabella o indice in quattro partizioni. `ALTER PARTITION FUNCTION` suddivide una delle partizioni in due per creare un totale di cinque partizioni.  
   
 ```sql  

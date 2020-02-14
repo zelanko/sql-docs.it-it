@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006339"
 ---
 # <a name="database-mirroring-sql-server"></a>Mirroring del database (SQL Server)
@@ -57,7 +57,7 @@ ms.locfileid: "68006339"
   
 -   Migliore disponibilità del database di produzione durante gli aggiornamenti.  
   
-     Per contenere il tempo di inattività di un database con mirroring, è possibile aggiornare in sequenza le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospitano i partner di failover. Ciò genererà il tempo di inattività di un solo failover. Questa modalità di aggiornamento è noto come *aggiornamento in sequenza*. Per altre informazioni, vedere [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)(Aggiornamento di istanze con mirroring).  
+     Per contenere il tempo di inattività di un database con mirroring, è possibile aggiornare in sequenza le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospitano i partner di failover. Ciò genererà il tempo di inattività di un solo failover. Questa modalità di aggiornamento è noto come *aggiornamento in sequenza*. Per altre informazioni, vedere [Aggiornamento di istanze con mirroring](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Termini e definizioni del mirroring del database  
@@ -188,7 +188,7 @@ ms.locfileid: "68006339"
   
      Il ruolo del server di controllo del mirroring consiste nel verificare il funzionamento di un determinato server partner. Se il server mirror perde la connessione al server principale, ma il server di controllo del mirroring è ancora connesso al server principale, il server non avvierà il failover. Per altre informazioni, vedere [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
--   *Manual failover*  
+-   *Failover manuale*  
   
      Richiede la modalità a protezione elevata. I partner devono essere connessi tra loro e il database deve essere già sincronizzato.  
   
@@ -287,13 +287,13 @@ ms.locfileid: "68006339"
 ### <a name="configuration-tasks"></a>Attività di configurazione  
  **Utilizzo di SQL Server Management Studio**  
   
--   [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+-   [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
  **Utilizzo di Transact-SQL**  
   
--   [Concedere l'accesso alla rete a un endpoint per il mirroring del database usando l'autenticazione di Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   
 -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
@@ -305,13 +305,13 @@ ms.locfileid: "68006339"
   
 -   [Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [Impostare un database mirror per l'uso della proprietà Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+-   [Impostazione di un database mirror per l'utilizzo della proprietà Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
  **Utilizzo di Transact-SQL o SQL Server Management Studio**  
   
 -   [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
   
--   [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
   
 ### <a name="administrative-tasks"></a>Attività amministrative  
@@ -331,9 +331,9 @@ ms.locfileid: "68006339"
   
  **SQL Server Management Studio**  
   
--   [Aggiungere o sostituire un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Eseguire il failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+-   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
 -   [Sospendere o riprendere una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
@@ -348,7 +348,7 @@ ms.locfileid: "68006339"
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Mirroring del database: interoperabilità e coesistenza &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Prerequisiti restrizioni e indicazioni per il mirroring del database](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

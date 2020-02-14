@@ -15,15 +15,15 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025477"
 ---
 # <a name="server-properties---general-page"></a>Proprietà server (pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Usare questa pagina per visualizzare informazioni di sola lettura sull'installazione corrente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Usare questa pagina per visualizzare informazioni di sola lettura sull'installazione corrente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Griglia proprietà  
  Consente di visualizzare le proprietà del server selezionato, ad esempio il nome, il sistema operativo e il numero di processori del server.  
@@ -31,7 +31,7 @@ ms.locfileid: "68025477"
  **Nome**  
  Visualizza visualizzare il nome dell'istanza del server.  
   
- **Product**  
+ **Prodotto**  
  Visualizza l'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente in esecuzione.  
   
  **Sistema operativo**  
@@ -40,7 +40,7 @@ ms.locfileid: "68025477"
  **Piattaforma**  
  Descrive il sistema operativo e l'hardware su cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Version**  
+ **Versione**  
  Visualizza il numero di versione dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente in esecuzione.  
   
  **Lingua**  

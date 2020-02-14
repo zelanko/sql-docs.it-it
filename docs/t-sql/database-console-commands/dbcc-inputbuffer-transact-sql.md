@@ -24,10 +24,10 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039102"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68039102"
 
 Visualizza l'ultima istruzione inviata da un client a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ SELECT request_id
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
-con  
+WITH  
 Consente di specificare opzioni.  
   
 NO_INFOMSGS  
@@ -69,7 +69,7 @@ L'istruzione DBCC INPUTBUFFER restituisce un set di righe che include le colonne
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Tipo di evento. Può corrispondere a **RPC Event** o **Language Event**. Se non viene rilevato un ultimo evento, l'output sarà **No Event**.|  
-|**Parametri**|**smallint**|0 = Testo<br /><br /> 1- *n* = Parametri|  
+|**Parameters**|**smallint**|0 = Testo<br /><br /> 1- *n* = Parametri|  
 |**EventInfo**|**nvarchar(4000)**|Se il valore della colonna **EventType** è RPC Event, **EventInfo** contiene solo il nome della procedura. Se **EventType** corrisponde a Language Event, vengono visualizzati solo i primi 4000 caratteri dell'evento.|  
   
 Se, ad esempio, l'ultimo evento del buffer è DBCC INPUTBUFFER(11), DBCC INPUTBUFFER restituisce il set di risultati seguente.

@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768848"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286895"
 ---
 # <a name="add-publisher"></a>Aggiungi server di pubblicazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La finestra di dialogo **Aggiungi server di pubblicazione** consente di aggiungere uno o più server di pubblicazione al riquadro sinistro di Monitoraggio replica. Dopo l'aggiunta di un server di pubblicazione, selezionare il server nel riquadro sinistro per visualizzare le informazioni relative nel riquadro destro.  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questo pulsante per selezionare un tipo di server di pubblicazione da aggiungere. Verrà visualizzata la finestra di dialogo **Connetti al server** . Le opzioni disponibili sono le seguenti:  
   
 -   **Aggiungi server di pubblicazione SQL Server**  
@@ -36,7 +36,7 @@ ms.locfileid: "68768848"
   
 -   **Aggiungi server di pubblicazione Oracle**  
   
-     Consente di connettersi al server di distribuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associato al server di pubblicazione Oracle utilizzando la finestra di dialogo **Connetti al server** .  
+     Consente di connettersi al server di distribuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associato al server di pubblicazione Oracle usando la finestra di dialogo **Connetti al server**.  
   
 -   **Specificare un server di distribuzione e aggiungere i relativi server di pubblicazione**  
   

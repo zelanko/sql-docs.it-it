@@ -13,10 +13,10 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940929"
 ---
 # <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
@@ -26,7 +26,7 @@ ms.locfileid: "67940929"
  Per altre informazioni di base sui backup di database, vedere [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente facendo clic sul pulsante **Script** e selezionando una destinazione per lo script.  
+>  Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente di [!INCLUDE[tsql](../../includes/tsql-md.md)] facendo clic sul pulsante **Script** e selezionando una destinazione per lo script.  
   
  **Per utilizzare SQL Server Management Studio per la creazione di un backup**  
   
@@ -39,11 +39,11 @@ ms.locfileid: "67940929"
   
  **Per creare un backup parziale**  
   
--   Per un backup parziale, è necessario utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) con l'opzione PARTIAL.  
+-   Per un backup parziale, è necessario usare l'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] con l'opzione PARTIAL.  
   
 ## <a name="options"></a>Opzioni  
   
-### <a name="source"></a>Origine  
+### <a name="source"></a>Source (Sorgente)  
  Le opzioni del pannello **Origine** identificano il database e specificano il tipo di backup e il componente per l'operazione di backup.  
   
  **Database**  
@@ -55,7 +55,7 @@ ms.locfileid: "67940929"
  **Tipo di backup**  
  È possibile selezionare il tipo di backup che si desidera eseguire per il database specificato.  
   
-|Tipo di backup|Disponibile per|Restrictions|  
+|Tipo di backup|Disponibile per|Restrizioni|  
 |-----------------|-------------------|------------------|  
 |Full|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Differenziale|Database, file e filegroup|Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
@@ -94,7 +94,7 @@ ms.locfileid: "67940929"
   
  Il set successivo di opzioni visualizzate dipende dal tipo di destinazione selezionata. Se si seleziona Disco o Nastro, vengono visualizzate le opzioni riportate di seguito.  
   
- **Aggiungi**  
+ **Aggiungere**  
  È possibile aggiungere un file o un dispositivo all'elenco **Backup su** . È possibile eseguire il backup su 64 dispositivi contemporaneamente su un disco locale o remoto. Per specificare un file su un disco remoto, utilizzare il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
  
  
@@ -102,7 +102,7 @@ ms.locfileid: "67940929"
  **Rimuovi**  
  È possibile rimuovere uno o più dispositivi attualmente selezionati dall'elenco **Backup su** .  
   
- **Sommario**  
+ **Contents**  
 È possibile visualizzare il contenuto dei supporti per il dispositivo selezionato, se esistente.  Il pulsante non esegue una funzione se viene specificato un **URL** . 
    
 Finestra di dialogo**Seleziona destinazione di backup** La finestra di dialogo **Seleziona destinazione di backup** viene visualizzata dopo aver selezionato **Aggiungi**.   Il set di opzioni visualizzate dipende dal tipo di destinazione selezionata. 
@@ -134,7 +134,7 @@ Usato per registrare un contenitore esistente per il quale non si ha una firma d
  [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   

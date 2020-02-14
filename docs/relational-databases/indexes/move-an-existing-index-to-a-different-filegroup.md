@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906375"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Spostare un indice esistente in un filegroup diverso
@@ -34,7 +34,7 @@ ms.locfileid: "72906375"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per spostare un indice esistente in un filegroup diverso tramite:**  
   
@@ -73,9 +73,9 @@ ms.locfileid: "72906375"
   
 7.  Selezionare **Nome filegroup o schema di partizione** e selezionare dall'elenco il filegroup o lo schema di partizione in cui si desidera spostare l'indice.  
   
-8.  Scegliere **Chiudi**.  
+8.  Fare clic su **Close**.  
   
-9. Selezionare **Salva** nome_tabella **dal menu**_File_.  
+9. Selezionare **Salva** table_name **dal menu**_File_.  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Per spostare un indice esistente in un filegroup diverso in Esplora oggetti  
   

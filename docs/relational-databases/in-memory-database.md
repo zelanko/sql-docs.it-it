@@ -1,39 +1,47 @@
 ---
-title: Database in memoria | Microsoft Docs
-ms.date: 05/22/2019
+title: Funzionalità e tecnologie dei sistemi di database in memoria
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- in-memory database
-- feature, in-memory database
+- in-memory systems
+- in-memory technologies
+- in-memory features
+- database, in-memory database
+- system, in-memory system
+- features, in-memory features
 - in-memory
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: d61ea85f5c1d7784faaf1d094e2fa858bffcd8c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255415"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831590"
 ---
-# <a name="in-memory-database"></a>Database in memoria
+# <a name="in-memory-database-systems-and-technologies"></a>Tecnologie e sistemi di database in memoria
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Database in memoria è un termine generico per le funzionalità in SQL Server che consentono di sfruttare le tecnologie basate sulla memoria. Questa pagina continuerà a essere aggiornata a mano a mano che verranno sviluppate nuove funzionalità basate sulla memoria.
+Questa pagina è stata progettata come documento di riferimento per le tecnologie e le funzionalità in memoria disponibili in SQL Server. Il concetto di sistema di database in memoria si riferisce a un sistema di database progettato per sfruttare le maggiori capacità di memoria disponibili nei sistemi di database moderni. Un database in memoria può essere di natura relazionale o non relazionale.
+
+Si presuppone spesso che i vantaggi delle prestazioni di un sistema di database in memoria dipendono dalla maggiore velocità di accesso ai dati residenti in memoria rispetto ai dati presenti anche nei più veloci sottosistemi disco disponibili (in base a diversi ordini di grandezza). Molti carichi di lavoro di SQL Server, tuttavia, possono adattarsi all'intero working set nella memoria disponibile. Molti sistemi di database in memoria possono salvare in modo permanente i dati su disco e potrebbero non essere sempre in grado di adattare l'intero set di dati alla memoria disponibile.
+
+Una cache volatile veloce di fronte a un supporto notevolmente più lento ma durevole ha un'importanza predominante per i carichi di lavoro dei database relazionali. Questa cache richiede particolari approcci alla gestione del carico di lavoro. Le opportunità offerte da velocità di trasferimento della memoria superiori, maggiore capacità o persino memoria persistente facilitano lo sviluppo di nuove funzionalità e tecnologie che possono stimolare l'adozione di nuovi approcci alla gestione del carico di lavoro del database relazionale.
 
 ## <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md) consente al motore di database di accedere direttamente alle pagine di dati nei file di database archiviati nei dispositivi con memoria persistente.
+Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md) espande il pool di buffer per i file di database che risiedono in dispositivi di archiviazione con memoria persistente indirizzabili a byte per entrambe le piattaforme Windows e Linux con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="memory-optimized-tempdb-metadata"></a>Metadati tempdb ottimizzati per la memoria
+## <a name="memory-optimized-tempdb-metadata"></a>Metadati `tempdb` ottimizzati per la memoria
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -43,14 +51,16 @@ Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-po
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[OLTP in memoria](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) è la principale tecnologia disponibile in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../includes/sssds-md.md)] per ottimizzare le prestazioni di elaborazione delle transazioni, l'inserimento di dati, il caricamento di dati e gli scenari di dati temporanei.
+[OLTP in memoria](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) è una tecnologia di database disponibile in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../includes/sssds-md.md)] per ottimizzare le prestazioni di elaborazione delle transazioni, l'inserimento di dati, il caricamento di dati e gli scenari di dati temporanei.
 
-**Si applica a:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-## <a name="persistent-memory-support-for-linux"></a>Supporto della memoria persistente per Linux
+## <a name="configuring-persistent-memory-support-for-linux"></a>Configurazione del supporto della memoria persistente per Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] aggiunge il supporto per i dispositivi con memoria persistente per Linux, offrendo il riconoscimento completo dei file di dati e dei log delle transazioni all'interno della [memoria persistente](../linux/sql-server-linux-configure-pmem.md).
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] descrive come configurare la memoria persistente (PMEM) usando la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) dell'utilità `ndctl`.
 
-**Si applica a:** [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+## <a name="persisted-log-buffer"></a>Buffer di log persistente
+
+Il Service Pack 1 di [!INCLUDE[ssSQL16](../includes/sssql16-md.md)] ha introdotto un'ottimizzazione delle prestazioni per i carichi di lavoro a elevato utilizzo di scrittura vincolati dalle attese di WRITELOG. Per archiviare il buffer di log viene usata la memoria persistente. Questo buffer, di dimensioni ridotte (20 MB per database utente), deve essere scaricato su disco per garantire la finalizzazione delle transazioni scritte nel log. Per i carichi di lavoro OLTP a elevato utilizzo di scrittura, questo meccanismo di scaricamento può diventare un collo di bottiglia. Con il buffer di log nella memoria persistente, il numero di operazioni necessarie per finalizzare il log viene ridotto, migliorando i tempi complessivi delle transazioni e aumentando le prestazioni del carico di lavoro. Questo processo è stato inizialmente definito [memorizzazione nella cache della coda del log]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Questo nome, tuttavia, appariva in conflitto con il [backup della coda del log](./backup-restore/tail-log-backups-sql-server.md) e la nozione classica in base alla quale la coda del log è la parte finalizzata, ma non ancora sottoposta a backup, del log delle transazioni. È stato quindi usato il nome ufficiale di questa funzionalità, ovvero "buffer di log persistente".
+
+Vedere [Aggiungere un buffer di log persistente a un database](./databases/add-persisted-log-buffer.md).

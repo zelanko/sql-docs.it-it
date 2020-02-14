@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064678"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Viene specificata la priorità da assegnare a qualsiasi endpoint di conversazione in cui vengono utilizzati i contratti e i servizi specificati nella priorità di conversazione. *PriorityValue* deve essere un valore letterale intero compreso tra 1 (priorità più bassa) e 10 (priorità più elevata). Il valore predefinito è 5.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] assegna i livelli di priorità agli endpoint di conversazione. I livelli di priorità controllano la priorità delle operazioni associate all'endpoint. Ciascuna conversazione presenta due endpoint di conversazione:  
   
 -   L'endpoint di conversazione dell'initiator associa un lato della conversazione al servizio Initiator e alla coda dell'initiator. L'endpoint di conversazione dell'Initiator viene creato quando l'istruzione BEGIN DIALOG viene eseguita. Le operazioni associate all'endpoint di conversazione dell'initiator includono:  
@@ -163,7 +163,7 @@ FOR CONVERSATION
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. Assegnazione di un livello di priorità a entrambe le direzioni di una conversazione.  
+### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>R. Assegnazione di un livello di priorità a entrambe le direzioni di una conversazione.  
  Queste due priorità di conversazione assicurano che a tutte le operazioni che utilizzano `SimpleContract` tra `TargetService` e `InitiatorAService` venga assegnato il livello di priorità 3.  
   
 ```  

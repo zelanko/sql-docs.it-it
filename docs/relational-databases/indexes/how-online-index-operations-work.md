@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909749"
 ---
 # <a name="how-online-index-operations-work"></a>Funzionamento delle operazioni sugli indici online
@@ -62,7 +62,7 @@ ms.locfileid: "67909749"
 |Fase|Attività di origine|Blocchi di origine|  
 |-----------|---------------------|------------------|  
 |Preparazione<br /><br /> Fase breve|Preparazione dei metadati di sistema per la creazione della nuova struttura vuota dell'indice.<br /><br /> Viene definito uno snapshot della tabella, ovvero viene utilizzato il controllo delle versioni delle righe per garantire la consistenza in lettura a livello di transazione.<br /><br /> Le operazioni di scrittura di utenti simultanei sull'origine vengono bloccate per un breve periodo di tempo.<br /><br /> Non sono consentite operazioni DDL simultanee, ad eccezione della creazione di più indici non cluster.|S (condiviso) nella tabella*<br /><br /> IS (preventivo condiviso)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilazione<br /><br /> Fase principale|I dati vengono sottoposti ad analisi, ordinati, uniti e inseriti nella destinazione in operazioni di caricamento bulk.<br /><br /> Le operazioni di selezione, inserimento, aggiornamento ed eliminazione di utenti simultanei vengono applicate agli indici preesistenti e ai nuovi indici compilati.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Compilare<br /><br /> Fase principale|I dati vengono sottoposti ad analisi, ordinati, uniti e inseriti nella destinazione in operazioni di caricamento bulk.<br /><br /> Le operazioni di selezione, inserimento, aggiornamento ed eliminazione di utenti simultanei vengono applicate agli indici preesistenti e ai nuovi indici compilati.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Finale<br /><br /> Fase breve|Prima dell'avvio di questa fase, è necessario che tutte le transazioni di aggiornamento di cui non è stato eseguito il commit vengano completate. A seconda del blocco acquisito, tutte le nuove transazioni utente di lettura o di scrittura vengono bloccate per un breve periodo di tempo finché questa fase non viene completata.<br /><br /> I metadati di sistema vengono aggiornati per sostituire l'origine con la destinazione.<br /><br /> Se necessario, l'origine viene eliminata, ad esempio dopo la ricompilazione o l'eliminazione di un indice cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S nella tabella se viene creato un indice non cluster.\*<br /><br /> SCH-M (modifica dello schema) se viene eliminata la struttura di origine (indice o tabella).\*|  
   
  \* L'operazione sull'indice attende il completamento delle transazioni di aggiornamento di cui non è stato eseguito il commit prima di acquisire il blocco S o SCH-M nella tabella.  
@@ -77,8 +77,8 @@ ms.locfileid: "67909749"
 |Fase|Attività di destinazione|Blocchi di destinazione|  
 |-----------|---------------------|------------------|  
 |Preparazione|Il nuovo indice viene creato e impostato in sola scrittura.|IS|  
-|Compilazione|Vengono inseriti i dati dall'origine.<br /><br /> Vengono applicate le modifiche utente (inserimenti, aggiornamenti, eliminazioni) apportate all'origine.<br /><br /> Questa attività è visibile all'utente.|IS|  
-|Finale|Vengono aggiornati i metadati dell'indice.<br /><br /> Viene impostato lo stato lettura/scrittura per l'indice.|S<br /><br /> o Gestione configurazione<br /><br /> SCH-M|  
+|Compilare|Vengono inseriti i dati dall'origine.<br /><br /> Vengono applicate le modifiche utente (inserimenti, aggiornamenti, eliminazioni) apportate all'origine.<br /><br /> Questa attività è visibile all'utente.|IS|  
+|Finale|Vengono aggiornati i metadati dell'indice.<br /><br /> Viene impostato lo stato lettura/scrittura per l'indice.|S<br /><br /> o<br /><br /> SCH-M|  
   
  Con le istruzioni SELECT eseguite dall'utente non è possibile accedere alla destinazione finché l'operazione sull'indice non è stata completata.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "67909749"
 ## <a name="related-content"></a>Contenuto correlato  
  [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md)  
   
- [Linee guida per operazioni di indice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
+ [Linee guida per le operazioni sugli indici online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   

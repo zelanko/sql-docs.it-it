@@ -14,16 +14,16 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0234987ec9bdb6e71348e98d3096505a36e31743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138536"
 ---
 # <a name="create-clr-functions"></a>Creare funzioni CLR
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  È possibile creare un oggetto di database all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmata in un assembly creato in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR). Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  
+  È possibile creare un oggetto di database all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmata in un assembly creato in Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  
   
  La creazione di una funzione CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede i seguenti passaggi:  
   

@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344604"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
@@ -57,7 +57,7 @@ ms.locfileid: "68344604"
 - Ruolo applicazione
   
 ## <a name="sa-login"></a>sa Login  
- L'account di accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` è un'entità a livello di server. Per impostazione predefinita, questo account viene creato durante l'installazione di un'istanza. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il database predefinito di sa è il database master. diversamente da quanto consentito nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'account di accesso `sa` è un membro del ruolo predefinito a livello di server `sysadmin`. L'account di accesso `sa` dispone di tutte le autorizzazioni per il server e non può essere limitato. L'account di accesso `sa` non può essere eliminato, ma può essere disabilitato in modo da impedirne l'uso.
+ L'account di accesso `sa` di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è un'entità a livello di server. Per impostazione predefinita, questo account viene creato durante l'installazione di un'istanza. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il database predefinito di sa è il database master. diversamente da quanto consentito nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'account di accesso `sa` è un membro del ruolo predefinito a livello di server `sysadmin`. L'account di accesso `sa` dispone di tutte le autorizzazioni per il server e non può essere limitato. L'account di accesso `sa` non può essere eliminato, ma può essere disabilitato in modo da impedirne l'uso.
 
 ## <a name="dbo-user-and-dbo-schema"></a>Utente dbo e schema dbo
 
@@ -67,7 +67,7 @@ L'utente `dbo` è proprietario dello schema `dbo`. Lo schema `dbo` è lo schema 
 ## <a name="public-server-role-and-database-role"></a>Ruolo del server public e ruolo del database  
 Ogni account di accesso appartiene al ruolo predefinito del server `public` e ogni utente del database appartiene al ruolo del database `public`. Quando a un account di accesso o a un utente non sono state concesse o negate autorizzazioni specifiche per un'entità a protezione diretta, l'account di accesso o l'utente eredita le autorizzazioni concesse al ruolo public su tale entità a protezione diretta. Il ruolo predefinito del server `public` e il ruolo predefinito del database `public` non possono essere eliminati. Tuttavia è possibile revocare le autorizzazioni dei ruoli `public`. Esistono numerose autorizzazioni assegnate per impostazione predefinita ai ruoli `public`. La maggior parte di queste autorizzazioni è necessaria per le operazioni di routine nel database, ovvero quelle operazioni che tutti gli utenti devono essere in grado di eseguire. Prestare attenzione durante la revoca delle autorizzazioni dell'account di accesso public o dell'utente perché questa operazione ha ripercussioni su tutti gli account di accesso e su tutti gli utenti. In genere non è consigliabile negare le autorizzazioni all'account di accesso public perché l'istruzione deny esegue l'override di qualsiasi istruzione grant che è possibile eseguire sui singoli utenti. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA e utenti e schemi sys 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA e utenti e schemi sys 
  Ogni database include due entità visualizzate come utenti nelle viste del catalogo: `INFORMATION_SCHEMA` e `sys`. Queste entità sono richieste internamente dal motore di database. Pertanto non possono essere modificate o eliminate.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Account di accesso basati su certificati di SQL Server  

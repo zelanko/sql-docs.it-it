@@ -24,10 +24,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948107"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67948107"
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare i tipi di dati per valori di grandi dimensioni e la clausola **.** WRITE dell'istruzione [UPDATE](../../t-sql/queries/update-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  Dati **text**, **ntext** o **image** effettivi da archiviare. *data* può essere un valore letterale o un parametro. La lunghezza massima consentita per il testo che è possibile inserire in modo interattivo tramite WRITETEXT è di circa 120 KB per i dati di tipo **text**, **ntext** e **image**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Usare WRITETEXT per sostituire i dati di tipo **text**, **ntext** e **image** e UPDATETEXT per modificare i dati di tipo **text**, **ntext** e **image**. UPDATETEXT risulta più flessibile poiché modifica solo una parte della colonna di tipo **text**, **ntext** o **image** anziché l'intera colonna.  
   
  Per ottimizzare le prestazioni, è consigliabile inserire o aggiornare i dati di tipo **text**, **ntext** e **image** in blocchi con dimensioni multiple di 8040 byte.  

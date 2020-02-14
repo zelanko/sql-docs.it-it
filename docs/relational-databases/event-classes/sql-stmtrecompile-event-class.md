@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 214b2e4cc7f72fd34b500a1cefb4fca07bc9b27b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043358"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile - classe di evento
@@ -31,7 +31,7 @@ ms.locfileid: "68043358"
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se il client fornisce l'ID del processo.|9|Sì|  
 |DatabaseID|**int**|ID del database nel quale viene eseguita la stored procedure. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita la stored procedure.|35|Sì|  
-|EventSequence|**int**|Sequenza di un evento nella richiesta.|51|no|  
+|EventSequence|**int**|Sequenza di un evento nella richiesta.|51|No|  
 |EventSubClass|**int**|Indica il motivo della ricompilazione:<br /><br /> 1 = Schema modificato<br /><br /> 2 = Statistiche modificate<br /><br /> 3 = Compilazione posticipata<br /><br /> 4 = Opzione impostata modificata<br /><br /> 5 = Tabella temporanea modificata<br /><br /> 6 = Set di righe remoto modificato<br /><br /> 7 = Autorizzazioni FOR BROWSE modificate<br /><br /> 8 = Ambiente di notifica query modificato<br /><br /> 9 = Vista partizionata modificata<br /><br /> 10 = Opzioni cursore modificate<br /><br /> 11 = Opzione (RECOMPILE) richiesta|21|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui è in esecuzione il client che ha inviato l'istruzione. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
@@ -48,10 +48,10 @@ ms.locfileid: "68043358"
 |ObjectType|**int**|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Per altre informazioni, vedere [Colonna ObjectType per gli eventi di traccia](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sì|  
 |Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch che ha provocato la ricompilazione.|61|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
-|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|**int**|ID del processo server della connessione.|12|Sì|  
-|SqlHandle|**varbinary**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a sys.dm_exec_sql_text per recuperare il testo SQL associato.|63|no|  
+|SqlHandle|**varbinary**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a sys.dm_exec_sql_text per recuperare il testo SQL associato.|63|No|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|**ntext**|Testo dell'istruzione Transact-SQL ricompilata|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  

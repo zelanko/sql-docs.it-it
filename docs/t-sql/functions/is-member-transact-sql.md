@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982917"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -60,7 +60,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  IS_MEMBER restituisce i valori seguenti.  
   
 |Valore restituito|Descrizione|  

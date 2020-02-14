@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024493"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
@@ -120,14 +120,14 @@ ms.locfileid: "68024493"
   Le informazioni incluse nella vista Applicazioni livello dati distribuite di Gestione Utilità forniscono dati di utilizzo relativi a singole applicazioni livello dati, cronologia dell'utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di applicazione del livello dati per utilizzo della CPU, file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per le singole applicazioni di livello dati.  
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- Visualizzazione Elenco  
+ Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati sulle singole applicazioni di livello dati. Le icone di stato di integrità forniscono lo stato riepilogativo per ogni applicazione del livello dati in base alle categorie di utilizzo:  
   
--   Segno di spunta verde ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia verde rivolta verso il basso ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): le risorse sono sottoutilizzate.  
+-   Freccia in giù verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
   
--   Freccia rossa rivolta verso l'alto ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): le risorse sono sovrautilizzate.  
+-   Freccia in su rossa - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
@@ -260,16 +260,16 @@ ms.locfileid: "68024493"
  Le informazioni incluse nella vista Istanze gestite di Esplora utilità forniscono dati di utilizzo per singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cronologia di utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di volumi di archiviazione e a livello di istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un computer e per file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per singole istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- Visualizzazione Elenco  
+ Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati relativi a singole stanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elencate nelle righe per NomeComputer/NomeIstanza.  
   
  Le icone di stato di integrità forniscono lo stato riepilogativo per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base alla categoria di utilizzo:  
   
--   Segno di spunta verde ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): numero di istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Numero di istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia verde rivolta verso il basso ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): le risorse sono sottoutilizzate.  
+-   Freccia in giù verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
   
--   Freccia rossa rivolta verso l'alto ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): le risorse sono sovrautilizzate.  
+-   Freccia in su rossa - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
@@ -315,7 +315,7 @@ ms.locfileid: "68024493"
   
 -   Distinzione maiuscole/minuscole: (True o False)  
   
--   Lingua:  
+-   Language:  
   
 -   Ultima ora registrata: questa colonna restituisce la data e l'ora locale del punto di controllo utilità usando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
@@ -412,7 +412,7 @@ ms.locfileid: "68024493"
   
 -   Distinzione maiuscole/minuscole: (True o False)  
   
--   Lingua:  
+-   Language:  
 
 ## <a name="utility-administration-sql-server-utility"></a>Amministrazione utilità (Utilità SQL Server)
 Utilizzare le schede Amministrazione utilità per gestire le impostazioni di criteri, sicurezza e data warehouse per un'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sui concetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -480,7 +480,7 @@ Utilizzare le schede Amministrazione utilità per gestire le impostazioni di cri
  
 Scheda **Data warehouse** - Consente di visualizzare i dettagli relativi alla configurazione per il data warehouse di gestione dell'utilità.  
   
- Mantenimento dei dati  
+ Conservazione dei dati  
  Specifica il periodo di mantenimento dei dati per informazioni sull'utilizzo raccolte per istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il periodo di mantenimento predefinito è di 1 anno. Il valore minimo è di 1 mese. Il valore massimo supportato è 2 anni.  
   
  Informazioni di configurazione data warehouse dell'utilità  
@@ -492,13 +492,13 @@ Scheda **Data warehouse** - Consente di visualizzare i dettagli relativi alla co
   
  La directory dell'utilità UMDW è configurabile: \<Unità di sistema>:\Programmi\Microsoft SQL Server\MSSQL10_50.<Nome_UCP>\MSSQL\Data\\, dove \<Unità di sistema> è in genere l'unità C:\. Il file di log UMDW_\<GUID>_LOG si trova nella stessa directory.  
   
-> **NOTA:** È possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw utilizzando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **NOTA** È possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw utilizzando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Ritorna ai valori predefiniti  
  Per ripristinare i valori predefiniti delle impostazioni in questa scheda, fare clic sul pulsante **Ripristina impostazioni predefinite** , quindi fare clic su **Applica**.  
  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Effettuare la connessione a Utilità SQL Server.](../../relational-databases/manage/connect-to-a-sql-server-utility.md)  

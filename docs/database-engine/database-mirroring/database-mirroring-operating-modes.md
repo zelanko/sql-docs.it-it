@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006353"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
@@ -54,7 +54,7 @@ ms.locfileid: "68006353"
   
  Nella figura seguente viene illustrata la configurazione di una sessione con l'utilizzo della modalità a prestazioni elevate.  
   
- ![Configurazione dei partner per una sessione](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Configurazione dei partner per una sessione")  
+ ![Configurazione di una sessione per soli partner](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Configurazione di una sessione per soli partner")  
   
  In modalità a prestazioni elevate, non appena il server principale invia il log per una transazione al server mirror, il server principale invia una conferma al client, senza attendere un acknowledgement dal server mirror. Il commit delle transazioni viene eseguito senza attendere la scrittura su disco del log da parte del server mirror. L'operazione asincrona consente l'esecuzione del server principale con una latenza minima per le transazioni.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68006353"
   
 -   Se il server principale non è più disponibile in base alle condizioni precedenti, si verifica il failover automatico. Il server mirror assume il ruolo di server principale e il relativo database diventa il database principale.  
   
--   Se il server principale diventa non disponibile quando queste condizioni non sono soddisfatte, si potrebbe riuscire a forzare il servizio, con una possibile perdita di dati. Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+-   Se il server principale diventa non disponibile quando queste condizioni non sono soddisfatte, si potrebbe riuscire a forzare il servizio, con una possibile perdita di dati. Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).  
   
 -   Se solo il server mirror non è più disponibile, le attività nel server principale e nel server di controllo del mirroring continueranno.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "68006353"
  In questa sezione viene descritta una sessione di mirroring del database in termini di impostazioni ALTER DATABASE e degli stati del database con mirroring e del server di controllo del mirroring, se presente. Le informazioni di questa sezione sono rivolte agli utenti che gestiscono il mirroring del database utilizzando principalmente o esclusivamente [!INCLUDE[tsql](../../includes/tsql-md.md)]anziché [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  In alternativa a [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile controllare la modalità operativa di una sessione in Esplora oggetti mediante la pagina **Mirroring** della finestra di dialogo **Proprietà database** . Per ulteriori informazioni, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+>  In alternativa a [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile controllare la modalità operativa di una sessione in Esplora oggetti mediante la pagina **Mirroring** della finestra di dialogo **Proprietà database** . Per altre informazioni, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
  **Contenuto della sezione**  
   
@@ -281,7 +281,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Rimuovere il server di controllo del mirroring da una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [Modifica della protezione delle transazioni in una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+-   [Modificare la sicurezza delle transazioni in una sessione di mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   

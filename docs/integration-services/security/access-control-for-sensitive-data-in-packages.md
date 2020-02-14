@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281978"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
@@ -91,7 +91,7 @@ ms.locfileid: "71281978"
   
  Per informazioni generali sulle funzionalità di sicurezza in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Panoramica della sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
- Le procedure presenti in questo argomento descrivono come usare [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o l'utilità della riga di comando dtutil per modificare la proprietà **ProtectionLevel**.  
+ Le procedure presenti in questo argomento descrivono come usare [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o l'utilità della riga di comando dtutil per modificare la proprietà **ProtectionLevel** .  
   
 > [!NOTE]  
 >  Oltre alle procedure di questo argomento, è in genere possibile impostare o modificare la proprietà **ProtectionLevel** di un pacchetto quando si importa o esporta il pacchetto. È anche possibile modificare la proprietà **ProtectionLevel** di un pacchetto quando si usa l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per salvare un pacchetto.  
@@ -118,7 +118,7 @@ ms.locfileid: "71281978"
   
 2.  Controllare i mapping per l'opzione **Encrypt** nell'argomento [Utilità dtutil](../../integration-services/dtutil-utility.md)e determinare il valore intero appropriato da usare come valore della proprietà **ProtectionLevel** selezionata.  
   
-3.  Aprire la finestra del prompt dei comandi.  
+3.  Aprire una finestra del prompt dei comandi.  
   
 4.  Al prompt dei comandi, passare alla cartella contenente il pacchetto o i pacchetti per cui si vuole impostare la proprietà **ProtectionLevel** .  
   
@@ -142,7 +142,7 @@ ms.locfileid: "71281978"
  Per comprendere i requisiti e le opzioni relative alla sicurezza dei pacchetti, vedere [Panoramica della sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
 ### <a name="options"></a>Opzioni  
- **Package protection level**  
+ **Livello di protezione pacchetto**  
  Selezionare un livello di protezione dall'elenco.  
   
  **Password**  

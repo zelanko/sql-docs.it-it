@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981768"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
@@ -127,7 +127,7 @@ Con alcune eccezioni, gli hint di tabella sono supportati nella clausola FROM so
 > [!IMPORTANT]  
 > L'omissione della parola chiave WITH è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Gli hint di tabella seguenti sono supportati con e senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Esempio:  
+Gli hint di tabella seguenti sono supportati con e senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -354,7 +354,7 @@ Quando è specificato UPDLOCK, gli hint del livello di isolamento READCOMMITTED 
 XLOCK  
 Specifica che devono essere acquisiti blocchi esclusivi, i quali dovranno essere mantenuti attivi fino al completamento della transazione. Se specificato in combinazione con ROWLOCK, PAGLOCK o TABLOCK, i blocchi esclusivi vengono applicati al livello di granularità appropriato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Gli hint di tabella vengono ignorati se il piano di query non accede alla tabella. Ciò si verifica se Query Optimizer non accede esplicitamente alla tabella oppure perché viene invece eseguito l'accesso a una vista indicizzata. In questo secondo caso è possibile impedire l'accesso a una vista indicizzata utilizzando l'hint per la query OPTION (EXPAND VIEWS).  
   
 Tutti gli hint di blocco vengono propagati a tutte le tabelle e viste a cui accede il piano di query, incluse tabelle e viste di riferimento in una vista. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue inoltre le relative verifiche di consistenza dei blocchi.  
@@ -416,7 +416,7 @@ Tuttavia, affinché Query Optimizer utilizzi le viste indicizzate oppure una vis
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Utilizzo dell'hint TABLOCK per specificare un metodo di blocco  
+### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>R. Utilizzo dell'hint TABLOCK per specificare un metodo di blocco  
  Nell'esempio seguente viene specificata l'acquisizione di un blocco condiviso sulla tabella `Production.Product` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che viene mantenuto fino alla fine dell'istruzione UPDATE.  
   
 ```sql  

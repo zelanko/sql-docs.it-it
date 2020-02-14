@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710346"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
@@ -85,7 +85,7 @@ snapshot [ -?]
  **-Publisher**  _server_name_[ **\\** _instance\_name_]  
  Nome del server di pubblicazione. Specificare server_name per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server\_name_ **\\** _instance\_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
- **-Publication** _pubblicazione_  
+ **-Publication** _publication_  
  Nome della pubblicazione. Questo parametro è valido solo se la pubblicazione è configurata in modo che sia sempre disponibile uno snapshot per le sottoscrizioni nuove o reinizializzate.  
   
  **-70Subscribers**  
@@ -234,7 +234,7 @@ snapshot [ -?]
  **-PublisherLogin** _publisher_login_  
  Account di accesso utilizzato per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-PublisherPassword**  _password_server_pubblicazione_  
+ **-PublisherPassword**  _publisher_password_  
  Password utilizzata per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -255,7 +255,7 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Questo parametro è deprecato ed è ancora supportato solo per garantire la compatibilità con le versioni precedenti.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!IMPORTANT]  
 >  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è stato installato per l'esecuzione con un account di sistema locale anziché un account utente di dominio (impostazione predefinita), il servizio può accedere solo al computer locale. Se l'agente snapshot in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è configurato per l'utilizzo della modalità di autenticazione di Windows durante l'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'agente snapshot si interrompe. L'impostazione predefinita prevede l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

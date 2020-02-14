@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063159"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararsi all'importazione bulk dei dati (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "68063159"
   
 -   Ottenere le autorizzazioni necessarie per l'account utente in uso.  
   
-     L'account utente usato per l'esecuzione dell'utilità **bcp**, dell'istruzione BULK INSERT oppure dell'istruzione INSERT ... L'istruzione SELECT * FROM OPENROWSET(BULK...) deve disporre delle autorizzazioni necessarie per la tabella, che vengono assegnate dal proprietario della tabella. Per altre informazioni sulle autorizzazioni necessarie per ogni metodo, vedere [Utilità bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md) e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     L'account utente usato per l'esecuzione dell'utilità **bcp**, dell'istruzione BULK INSERT oppure dell'istruzione INSERT ... L'istruzione SELECT * FROM OPENROWSET(BULK...) deve disporre delle autorizzazioni necessarie per la tabella, che vengono assegnate dal proprietario della tabella. Per altre informazioni sulle autorizzazioni necessarie per ogni metodo, vedere [Utilità bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Utilizzare il modello di recupero con registrazione minima delle operazioni bulk.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "68063159"
   
 ## <a name="see-also"></a>Vedere anche  
  [Importare ed esportare dati per operazioni bulk usando l'utilità bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [Importazione di dati per operazioni bulk utilizzando BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
- [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Formati di dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)  
   
   

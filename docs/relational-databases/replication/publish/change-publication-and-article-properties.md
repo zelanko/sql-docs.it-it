@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710965"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286640"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "71710965"
 |Modifica della compressione dello snapshot.|**sp_changepublication**|**compress_snapshot**|Nuovo snapshot.|  
 |Modifica delle opzioni dello snapshot FTP (File Transfer Protocol).|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Nuovo snapshot.|  
 |Modifica della posizione dello script pre- o post-snapshot.|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nuovo snapshot (necessario anche se si modifica il contenuto dello script).<br /><br /> È necessario eseguire la reinizializzazione per applicare il nuovo script al Sottoscrittore.|  
-|Abilitazione o disabilitazione del supporto per Sottoscrittori non[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|**sp_changepublication**|**is_enabled_for_het_sub**|Nuovo snapshot.|  
+|Abilitazione o disabilitazione del supporto per Sottoscrittori non [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Nuovo snapshot.|  
 |Modifica del report sui conflitti per le sottoscrizioni ad aggiornamento in coda.|**sp_changepublication**|**centralized_conflicts**|È possibile modificare questa proprietà solo se non esiste alcuna sottoscrizione attiva.|  
 |Modifica dei criteri di risoluzione dei conflitti per le sottoscrizioni ad aggiornamento in coda.|**sp_changepublication**|**conflict_policy**|È possibile modificare questa proprietà solo se non esiste alcuna sottoscrizione attiva.|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71710965"
 |Modifica di un filtro di riga.|**sp_changearticle**|**filter**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica delle opzioni dello schema.|**sp_changearticle**|**schema_option**|Nuovo snapshot.|  
 |Modifica della modalità di gestione delle tabelle nel Sottoscrittore prima dell'applicazione dello snapshot.|**sp_changearticle**|**pre_creation_cmd**|Nuovo snapshot.|  
-|Modifica dello stato degli articoli.|**sp_changearticle**|**status**|Nuovo snapshot.|  
+|Modifica dello stato degli articoli.|**sp_changearticle**|**Stato**|Nuovo snapshot.|  
 |Modifica dei comandi INSERT, UPDATE o DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del nome della tabella di destinazione.|**sp_changearticle**|**dest_table**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del proprietario della tabella di destinazione (schema).|**sp_changearticle**|**destination_owner**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
@@ -72,16 +72,16 @@ ms.locfileid: "71710965"
 |Modifica della posizione degli script pre- o post-snapshot.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nuovo snapshot (necessario anche se si modifica il contenuto dello script).<br /><br /> È necessario eseguire la reinizializzazione per applicare il nuovo script al Sottoscrittore.|  
 |Aggiunta di un filtro join o di un record logico.|**sp_addmergefilter**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Eliminazione di un filtro join o di un record logico.|**sp_dropmergefilter**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
-|Modifica di un filtro join o di un record logico.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Modifica di un filtro join o di un record logico.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Nuovo snapshot<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Disabilitazione dell'utilizzo di filtri con parametri (per l'abilitazione dei filtri con parametri non sono necessarie particolari azioni).|**sp_changemergepublication**|Impostazione del valore **false** per **dynamic_filters**.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Abilitazione o disabilitazione dell'utilizzo di partizioni pre-calcolate.|**sp_changemergepublication**|**use_partition_groups**|Nuovo snapshot.|  
-|Abilitazione o disabilitazione dell'ottimizzazione delle partizioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] .|**sp_changemergepublication**|**keep_partition_changes**|Reinizializzazione delle sottoscrizioni.|  
+|Abilitazione o disabilitazione dell'ottimizzazione delle partizioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|**sp_changemergepublication**|**keep_partition_changes**|Reinizializzazione delle sottoscrizioni.|  
 |Abilitazione o disabilitazione della convalida delle partizioni del Sottoscrittore.|**sp_changemergepublication**|**validate_subscriber_info**|Reinizializzazione delle sottoscrizioni.|  
 |Modifica del livello di compatibilità della pubblicazione a 80sp3 o inferiore.|**sp_changemergepublication**|**publication_compatibility_level**|Nuovo snapshot.|  
   
 ## <a name="article-properties-for-merge-replication"></a>Proprietà degli articoli per la replica di tipo merge  
   
-|Descrizione|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored Procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Eliminazione di un articolo al quale è associato l'ultimo filtro con parametri nella pubblicazione.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Eliminazione di un articolo padre in un filtro join o in un record logico con l'effetto collaterale di eliminare il join correlato.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  

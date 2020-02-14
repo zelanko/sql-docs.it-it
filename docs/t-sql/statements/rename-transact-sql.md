@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141266"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -91,13 +91,13 @@ Quando si rinomina un database, tutte le viste che usano il nome precedente non 
 
 Quando si rinomina una tabella, le viste non vengono aggiornate in modo che facciano riferimento al nuovo nome di tabella. Tutte le viste, all'interno o all'esterno del database, che fanno riferimento al nome di tabella precedente non sono più valide. Per risolvere questo problema, è possibile aggiornare ogni vista in modo che faccia riferimento al nuovo nome della tabella.
 
-## <a name="locking"></a>Utilizzo di blocchi
+## <a name="locking"></a>Blocco
 
 La ridenominazione di una tabella acquisisce un blocco condiviso per l'oggetto DATABASE, un blocco condiviso per l'oggetto SCHEMA e un blocco esclusivo per la tabella.
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-rename-a-database"></a>A. Rinominare un database
+### <a name="a-rename-a-database"></a>R. Rinominare un database
 
 **SI APPLICA A:** solo [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

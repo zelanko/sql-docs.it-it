@@ -21,20 +21,20 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68329296"
 ---
-# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
+# <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Questa funzione restituisce il numero (sotto forma di valore big integer con segno) di limiti di *datepart* specificati sovrapposti tra gli elementi *startdate* ed *enddate* indicati.
   
 Vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) per una panoramica di tutti i tipi di dati e delle funzioni di data e ora di [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,7 +72,7 @@ Questa tabella elenca i nomi e le abbreviazioni di tutti gli argomenti *datepart
 *startdate*  
 Espressione che può risolversi in uno dei valori seguenti:
 
-+ **data**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -103,7 +103,7 @@ Se a una variabile di tipo data viene assegnato solo il valore dell'ora, `DATEDI
 Se i valori *startdate* ed *enddate* sono di tipi data diversi e uno di questi comprende un numero maggiore di parti di ora o offre una precisione in secondi frazionari maggiore, `DATEDIFF_BIG` imposta le parti mancanti dell'altro valore su 0.
   
 ## <a name="datepart-boundaries"></a>Limiti di datepart
-Le istruzioni seguenti hanno gli stessi valori *startdate* ed *enddate*. Queste date sono adiacenti e differiscono di un microsecondo (0,0000001 secondi). La differenza tra *startdate* e *enddate* in ogni istruzione oltrepassa un limite di calendario o di ora del rispettivo valore *datepart*. Ciascuna istruzione restituisce 1. Se *startdate* ed *enddate* hanno valori di anno diversi ma gli stessi valori di settimana di calendario, `DATEDIFF_BIG` restituisce 0 per il parametro di *datepart*  **week**.
+Le istruzioni seguenti hanno gli stessi valori *startdate* ed *enddate*. Queste date sono adiacenti e differiscono di un microsecondo (0,0000001 secondi). La differenza tra *startdate* e *enddate* in ogni istruzione oltrepassa un limite di calendario o di ora del rispettivo valore *datepart*. Ciascuna istruzione restituisce 1. Se *startdate* ed *enddate* hanno valori di anno diversi, ma gli stessi valori di settimana di calendario, `DATEDIFF_BIG` restituirà 0 per *datepart* **week**.
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -118,7 +118,7 @@ SELECT DATEDIFF_BIG(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare `DATEDIFF_BIG` nelle clausole `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` e `ORDER BY`.
   
 `DATEDIFF_BIG` consente di eseguire in modo implicito il cast di valori letterali stringa come tipo di dati **datetime2**. `DATEDIFF_BIG`, pertanto, non supporta il formato AGM se la data viene passata come stringa. Per usare il formato AGM è necessario eseguire il cast della stringa in modo esplicito in un tipo **datetime** o **smalldatetime**.

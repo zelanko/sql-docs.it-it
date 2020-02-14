@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68212746"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Gestione dei certificati (Gestione configurazione SQL Server)
@@ -45,7 +45,7 @@ I certificati SSL/TLS sono molto usati per proteggere l'accesso a SQL Server. Co
   
 1. Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server**.  
   
-2. Fare clic con il pulsante destro del mouse su **Protocolli per** *&lt;nome istanza&gt;* quindi selezionare **Proprietà**.  
+2. Fare clic con il pulsante destro del mouse su **Protocolli per** *&lt;nome istanza&gt;* e quindi scegliere **Proprietà**.  
   
 3. Scegliere la scheda **Certificato** e quindi selezionare **Importa**.  
   
@@ -58,7 +58,7 @@ I certificati SSL/TLS sono molto usati per proteggere l'accesso a SQL Server. Co
   
 1. Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server**.
   
-2. Fare clic con il pulsante destro del mouse su **Protocolli per** *&lt;nome istanza&gt;* quindi scegliere **Proprietà**. 
+2. Fare clic con il pulsante destro del mouse su **Protocolli per** *&lt;nome istanza&gt;* e quindi scegliere **Proprietà**. 
 
 3. Scegliere la scheda **Certificato** e quindi selezionare **Importa**.
 
@@ -81,7 +81,7 @@ I certificati SSL/TLS sono molto usati per proteggere l'accesso a SQL Server. Co
   
 1. Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server**.
   
-2. Fare clic con il pulsante destro del mouse su **Protocolli per** *&lt;nome istanza&gt;* quindi selezionare **Proprietà**.  
+2. Fare clic con il pulsante destro del mouse su **Protocolli per** *&lt;nome istanza&gt;* e quindi scegliere **Proprietà**.  
   
 3. Scegliere la scheda **Certificato** e quindi selezionare **Importa**.  
   

@@ -16,10 +16,10 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 70c8f2e18838ade1d5a2e98fd327c86e95a34a80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297042"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Rilevamento di un file flat vuoto con l'attività Script
@@ -33,7 +33,7 @@ ms.locfileid: "71297042"
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Descrizione  
- L'esempio seguente usa i metodi dello spazio dei nomi **System.IO** per testare il file flat specificato in una gestione connessione file flat per determinare se il file è vuoto o se contiene solo le righe non di dati previste, ad esempio intestazioni di colonna o una riga vuota. Lo script prima controlla la dimensione del file. Se la dimensione è pari a zero byte, significa che il file è vuoto. Se la dimensione del file è superiore a zero, lo script legge le righe dal file finché non sussistono più righe o finché il numero di righe supera il numero previsto di righe non di dati. Se il numero di righe nel file è minore o uguale al numero previsto di righe non di dati, il file è considerato vuoto. Il risultato viene restituito come valore booleano in una variabile dell'utente, il cui valore può essere utilizzato per la diramazione nel flusso di controllo del pacchetto. Anche il metodo **FireInformation** visualizza il risultato nella finestra **Output** di[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+ L'esempio seguente usa i metodi dello spazio dei nomi **System.IO** per testare il file flat specificato in una gestione connessione file flat per determinare se il file è vuoto o se contiene solo le righe non di dati previste, ad esempio intestazioni di colonna o una riga vuota. Lo script prima controlla la dimensione del file. Se la dimensione è pari a zero byte, significa che il file è vuoto. Se la dimensione del file è superiore a zero, lo script legge le righe dal file finché non sussistono più righe o finché il numero di righe supera il numero previsto di righe non di dati. Se il numero di righe nel file è minore o uguale al numero previsto di righe non di dati, il file è considerato vuoto. Il risultato viene restituito come valore booleano in una variabile dell'utente, il cui valore può essere utilizzato per la diramazione nel flusso di controllo del pacchetto. Anche il metodo **FireInformation** visualizza il risultato nella finestra **Output** di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71297042"
   
  Se si scorrono i file con un enumeratore Foreach File, anziché utilizzare una sola gestione connessione file flat, sarà necessario modificare il codice di esempio seguente per ottenere il nome e il percorso del file dalla variabile nella quale il valore enumerato è archiviato anziché dalla gestione connessione.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```vb  
 Public Sub Main()  

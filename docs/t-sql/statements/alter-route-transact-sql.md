@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927182"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927182"
   Modifica le informazioni relative a una route esistente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ WITH
  *route_name*  
  Nome della route da modificare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
- con  
+ WITH  
  Introduce le clausole che definiscono la route da modificare.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La tabella di routing in cui sono archiviate le route è una tabella di metadati che può essere letta tramite la vista del catalogo **sys.routes**. e aggiornata esclusivamente utilizzando le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  Le clausole che non sono specificate nel comando ALTER ROUTE rimangono invariate. Non è possibile pertanto eseguire il comando ALTER per specificare che la route non scade, che corrisponde a un nome di servizio o che corrisponde a un'istanza di Service Broker. Per modificare queste caratteristiche di una route è necessario eliminare la route esistente e creare una nuova route con le nuove informazioni.  
@@ -144,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-service-for-a-route"></a>A. Modifica del servizio per una route  
+### <a name="a-changing-the-service-for-a-route"></a>R. Modifica del servizio per una route  
  Nell'esempio seguente viene modificata la route `ExpenseRoute` in modo da puntare al servizio remoto `//Adventure-Works.com/Expenses`.  
   
 ```  

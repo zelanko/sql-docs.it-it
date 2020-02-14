@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113736"
 ---
 # <a name="data-types-transact-sql"></a>Tipi di dati (Transact-SQL)
@@ -75,7 +75,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a seconda delle ca
   
 |||  
 |-|-|  
-|[data](../../t-sql/data-types/date-transact-sql.md)|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|  
+|[date](../../t-sql/data-types/date-transact-sql.md)|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|[time](../../t-sql/data-types/time-transact-sql.md)|  
   
@@ -108,7 +108,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a seconda delle ca
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
 |[Tipi di geometria spaziale](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Tipi di geografia spaziale](../../t-sql/spatial-geography/spatial-types-geography.md)|  
-|[table](../../t-sql/data-types/table-transact-sql.md) | |
+|[tabella](../../t-sql/data-types/table-transact-sql.md) | |
   
 ## <a name="see-also"></a>Vedere anche
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  

@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72930277"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
@@ -27,10 +27,10 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFu
 ## <a name="basic-tasks"></a>Attività di base
 Questo argomento offre una panoramica della ricerca full-text e descrive i componenti e l'architettura di questa funzionalità. Per iniziare subito, ecco le attività di base.
 -   [Introduzione alla ricerca full-text](../../relational-databases/search/get-started-with-full-text-search.md)
--   [Creazione e gestione dei cataloghi full-text](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
+-   [Creare e gestire cataloghi full-text](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
 -   [Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)
 -   [Popolamento degli indici full-text](../../relational-databases/search/populate-full-text-indexes.md)
--   [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md)
+-   [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)
 
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se non è stata selezionata l'opzione Ricerca full-text durante l'installazione di SQL Server, eseguire di nuovo il programma di installazione di SQL Server per aggiungerla.
@@ -57,7 +57,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  Per le query di ricerca full-text non viene fatta distinzione tra maiuscole e minuscole. Ad esempio, dalla ricerca di "Alluminio" o "alluminio" vengono restituiti gli stessi risultati.  
   
- Nelle query full-text viene utilizzato un set ridotto di predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Tuttavia, gli obiettivi di ricerca di un determinato scenario aziendale influiscono sulla struttura delle query full-text. Esempio:  
+ Nelle query full-text viene utilizzato un set ridotto di predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Tuttavia, gli obiettivi di ricerca di un determinato scenario aziendale influiscono sulla struttura delle query full-text. Ad esempio:  
   
 -   Commercio elettronico: ricerca di un prodotto in un sito Web  
   
@@ -78,8 +78,8 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md).  
   
-##  <a name="like"> </a> Query di ricerca full-text a confronto con il predicato LIKE
- Contrariamente alla ricerca full-text, il predicato [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] funziona unicamente con i modelli di caratteri. Non è inoltre possibile utilizzare il predicato LIKE per eseguire query su dati binari formattati. Inoltre, l'esecuzione di una query LIKE su una grande quantità di dati di testo non strutturati è molto più lenta dell'esecuzione di una query full-text equivalente sugli stessi dati. Una query LIKE eseguita su milioni di righe di dati di testo può richiedere diversi minuti, mentre per una query full-text sugli stessi dati possono essere necessari al massimo pochi secondi, a seconda del numero di righe restituite.  
+##  <a name="like"></a> Query di ricerca full-text a confronto con il predicato LIKE
+ Contrariamente alla ricerca full-text, il predicato [LIKE](../../t-sql/language-elements/like-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] funziona unicamente con i modelli di caratteri. Non è inoltre possibile utilizzare il predicato LIKE per eseguire query su dati binari formattati. Inoltre, l'esecuzione di una query LIKE su una grande quantità di dati di testo non strutturati è molto più lenta dell'esecuzione di una query full-text equivalente sugli stessi dati. Una query LIKE eseguita su milioni di righe di dati di testo può richiedere diversi minuti, mentre per una query full-text sugli stessi dati possono essere necessari al massimo pochi secondi, a seconda del numero di righe restituite.  
   
 ##  <a name="architecture"></a> Architettura della ricerca full-text
  L'architettura della ricerca full-text è costituita dai processi seguenti:  
@@ -156,7 +156,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  In questo esempio si suppone che nella colonna **Title** sia stato creato un indice full-text.  
   
-|DocumentID|Title|  
+|DocumentID|Titolo|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -175,7 +175,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Maintenance|1|1|5|  
+|Manutenzione|1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -198,7 +198,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
 ###  <a name="fragments"></a> Frammenti di indice full-text  
  L'indice full-text logico viene in genere suddiviso tra più tabelle interne. Ogni tabella interna viene definita un frammento di indice full-text. Alcuni di questi frammenti potrebbero contenere dati più recenti di altri. Ad esempio, se un utente aggiorna la riga seguente il cui DocId è 3 e per la tabella è impostato il rilevamento automatico delle modifiche, viene creato un nuovo frammento.  
   
-|DocumentID|Title|  
+|DocumentID|Titolo|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -220,7 +220,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Maintenance|1|1|5|  
+|Manutenzione|1|1|5|  
 |Front|1|2|1|  
 |Rear|1|3|1|  
 |Reflector|1|2|2|  

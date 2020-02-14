@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077814"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money e smallmoney (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68077814"
 
 Tipi di dati che rappresentano valori monetari o valutari.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
-|Tipo di dati|Intervallo|Archiviazione|  
+|Tipo di dati|Range|Archiviazione|  
 |---|---|---|
 |**money**|Da -922.337.203.685.477,5808 a 922.337.203.685.477,5807 (da -922.337.203.685.477,58<br />a 922.337.203.685.477,58 per Informatica.  Informatica supporta solo due posizioni decimali e non quattro).|8 byte|  
 |**smallmoney**|Da -214.748,3648 a 214.748,3647|4 byte|  

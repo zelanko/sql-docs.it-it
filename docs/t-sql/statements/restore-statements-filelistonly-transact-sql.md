@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742985"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Istruzioni RESTORE - FILELISTONLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68742985"
 > [!NOTE]  
 >  Per le descrizioni degli argomenti, vedere [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -90,7 +90,7 @@ FROM <backup_device>
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Nome logico del file.|  
 |PhysicalName|**nvarchar(260)**|Nome fisico o del sistema operativo del file.|  
-|Tipo|**char(1)**|Tipo di file. I tipi possibili sono:<br /><br /> **L** = File di log di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** =  file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **F** = catalogo full text<br /><br /> **S** = contenitore FileStream, FileTable o [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
+|Type|**char(1)**|Tipo di file. I tipi possibili sono:<br /><br /> **L** = File di log di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** =  file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **F** = catalogo full text<br /><br /> **S** = contenitore FileStream, FileTable o [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
 |FileGroupName|**nvarchar(128)** NULL|Nome del filegroup che contiene il file.|  
 |Dimensione|**numeric(20,0)**|Dimensioni correnti in byte.|  
 |MaxSize|**numeric(20,0)**|Dimensioni massime consentite in byte.|  

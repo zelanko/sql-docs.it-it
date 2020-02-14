@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909813"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
@@ -26,7 +26,7 @@ ms.locfileid: "72909813"
   Archivio query può essere usato in diversi scenari in cui è fondamentale rilevare e garantire prestazioni prevedibili del carico di lavoro. Di seguito sono riportati alcuni esempi:  
   
 -   Individuare e risolvere le query con regressioni nella scelta del piano  
--   Identificare e ottimizzare le prime query per consumo di risorse  
+-   Identificare e ottimizzare le query che hanno il maggior consumo di risorse  
 -   Test A/B  
 -   Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 -   Identificare e migliorare i carichi di lavoro ad hoc  
@@ -46,7 +46,7 @@ ms.locfileid: "72909813"
   
  Per una descrizione dettagliata dello scenario fare riferimento al blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Query Store: la scatola nera del database).  
   
-## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificare e ottimizzare le prime query per consumo di risorse  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificare e ottimizzare le query che hanno il maggior consumo di risorse  
  Anche se il carico di lavoro può generare migliaia di query, nella pratica la gran parte delle risorse di sistema viene usata solo da poche query che, di conseguenza, richiedono attenzione. Tra le prime query per consumo di risorse si rilevano in genere quelle regredite o quelle che possono essere migliorate con un'ottimizzazione aggiuntiva.  
   
  Il modo più facile per iniziare l'esplorazione consiste nell'aprire **Prime query per consumo di risorse** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L'interfaccia utente viene suddivisa in tre riquadri: un istogramma che rappresenta le prime query per consumo di risorse (a sinistra), un riepilogo del piano per la query selezionata (a destra) e un piano di query visivo per il piano selezionato (in basso). Fare clic sul pulsante **Configura** per controllare il numero di query da analizzare e l'intervallo di tempo di interesse. È anche possibile scegliere tra diverse dimensioni di consumo delle risorse (durata, CPU, memoria, operazioni I/O, numero di esecuzione) e la baseline (Media, Min, Max, Totale, Deviazione standard).  
@@ -61,7 +61,7 @@ Quando si identifica una query con prestazioni non ottimali, l'azione correttiva
   
 2.  Verificare se Query Optimizer rileva indici mancanti nel piano XML. In caso affermativo, creare l'indice mancante e usare Archivio query per valutare le prestazioni delle query dopo la creazione dell'indice  
   
-3.  Verificare che le statistiche siano aggiornate per le tabelle sottostanti usate dalla query.  
+3.  Assicurarsi che le statistiche siano aggiornate per le tabelle sottostanti usate dalla query.  
   
 4.  Verificare che gli indici usati dalla query siano deframmentati.  
   
@@ -74,7 +74,7 @@ Quando si identifica una query con prestazioni non ottimali, l'azione correttiva
   
 -   Aggiunta di nuovo hardware al server.  
   
--   Creazione degli indici mancanti nelle tabelle a cui fanno riferimento le query con costo elevato.  
+-   Creazione di indici mancanti nelle tabelle a cui fanno riferimento query con costo elevato.  
   
 -   Applicazione di un criterio di filtro per la sicurezza a livello di riga. Per altre informazioni, vedere [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Ottimizzazione della sicurezza a livello di riga con Query Store).  
   
@@ -127,12 +127,12 @@ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tutte le modifich
   
 5.  Usare Query Store per le correzioni di analisi e regressioni: nella maggior parte dei casi, le nuove modifiche di Query Optimizer genereranno piani migliori. Query Store offre comunque un modo semplice per identificare le regressioni di scelta del piano e risolverle usando un meccanismo che forza il piano. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)],quando si usa la funzionalità di [correzione automatica del piano](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) questo passaggio è automatico.  
 
-    A.  Per i casi in cui sono presenti regressioni, forzare il piano considerato migliore in precedenza in Query Store.  
+    a.  Per i casi in cui sono presenti regressioni, forzare il piano considerato migliore in precedenza in Query Store.  
   
-    B.  Se non è possibile forzare i piani di query o se le prestazioni non sono ancora sufficienti, è consigliabile ripristinare l'impostazione precedente del [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) e contattare il supporto tecnico Microsoft.  
+    b.  Se non è possibile forzare i piani di query o se le prestazioni non sono ancora sufficienti, è consigliabile ripristinare l'impostazione precedente del [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) e contattare il supporto tecnico Microsoft.  
     
 > [!TIP]
-> Usare l'attività [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Aggiorna database* per aggiornare il [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) del database. Per informazioni dettagliate, vedere [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
+> Usare l'attività *Aggiorna database* di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per aggiornare il [livello di compatibilità](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) del database. Per informazioni dettagliate, vedere [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificare e migliorare i carichi di lavoro ad hoc  
 Alcuni carichi di lavoro non includono query dominanti che è possibile ottimizzare per migliorare le prestazioni complessive dell'applicazione. In genere, questi carichi di lavoro sono caratterizzati da un numero relativamente elevato di query diverse, ognuna delle quali utilizza una parte delle risorse di sistema. Essendo univoche, queste query vengono eseguite raramente, (di solito una sola volta, quindi si consiglia di assegnare un nome ad hoc), di conseguenza il consumo di runtime non è critico. D'altra parte, dato che l'applicazione genera continuamente nuove query, una parte significativa delle risorse di sistema viene impiegata per la compilazione di query, il che non rappresenta uno scenario ottimale. Questa situazione non è ideale per Archivio query perché un numero elevato di query e piani ne occupa lo spazio riservato e causa probabilmente il passaggio in tempi molto rapidi alla modalità di sola lettura di Archivio query. Se è attivato **Modalità di pulizia basata sulle dimensioni** , un'opzione[fortemente consigliata](best-practice-with-the-query-store.md) per mantenere Archivio query sempre attivo e in esecuzione, il processo in background esegue costantemente la pulizia delle strutture di Archivio query assorbendo molto spesso notevoli risorse di sistema.  
