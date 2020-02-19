@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +20,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753819"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77213966"
 ---
 # <a name="clr-stored-procedures"></a>Stored procedure CLR
   Le stored procedure sono routine che non possono essere utilizzate in espressioni scalari. Diversamente dalle funzioni scalari, possono restituire risultati tabulari e messaggi al client, richiamare istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language) e restituire parametri di output. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito [!INCLUDE[tsql](../../includes/tsql-md.md)]e, vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
@@ -49,9 +48,9 @@ ms.locfileid: "62753819"
  Le informazioni possono essere restituite in diversi modi dalle stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ad esempio come parametri di output, risultati tabulari e messaggi.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Parametri di output e stored procedure CLR  
- Analogamente alle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], le informazioni possono essere restituite dalle stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilizzando parametri OUTPUT. La sintassi DML di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per la creazione di stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è la stessa utilizzata per la creazione di stored procedure scritte in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il parametro corrispondente nel codice di implementazione nella classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve utilizzare un parametro di passaggio per riferimento come argomento. Si noti che Visual Basic non supporta parametri di output nello stesso modo in cui tali parametri sono supportati in Visual C#. È necessario specificare il parametro per riferimento e applicare l' \<attributo out () > per rappresentare un parametro di output, come nell'esempio seguente:  
+ Analogamente alle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], le informazioni possono essere restituite dalle stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilizzando parametri OUTPUT. La sintassi DML di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per la creazione di stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è la stessa utilizzata per la creazione di stored procedure scritte in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il parametro corrispondente nel codice di implementazione nella classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve utilizzare un parametro di passaggio per riferimento come argomento. Si noti che Visual Basic non supporta i parametri di output nello stesso modo in cui avviene in C#. È necessario specificare il parametro per riferimento e applicare l' \<attributo out () > per rappresentare un parametro di output, come nell'esempio seguente:  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -59,9 +58,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  Nell'esempio seguente viene illustrata una stored procedure che restituisce informazioni tramite un parametro OUTPUT:  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -91,9 +88,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -129,7 +124,7 @@ End Class
   
  Dopo che l'assembly contenente il stored procedure CLR precedente è stato compilato e creato nel server, per creare [!INCLUDE[tsql](../../includes/tsql-md.md)] la stored procedure nel database viene utilizzato il codice seguente e viene specificato *Sum* come parametro di output.  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -150,9 +145,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>Restituzione di risultati tabulari  
  Per inviare i risultati di una query direttamente al client, utilizzare uno degli overload del metodo `Execute` sull'oggetto `SqlPipe`. Si tratta della soluzione più efficiente per restituire risultati al client, in quanto i dati vengono trasferiti ai buffer di rete senza essere copiati nella memoria gestita. Ad esempio:  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -177,9 +170,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -230,10 +221,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -287,9 +276,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -339,9 +326,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -372,7 +357,7 @@ End Class
   
  Si noti che questi esempi vengono forniti esclusivamente a scopo illustrativo. Le funzioni CLR sono più appropriate rispetto alle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] semplici per le applicazioni che richiedono un elevato carico di elaborazione. Una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] quasi equivalente all'esempio precedente è la seguente:  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -385,13 +370,13 @@ END;
   
  Se il codice di Visual C# precedente viene salvato in un file MyFirstUdp.cs e compilato con:  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  O se il codice di Visual Basic precedente viene salvato in un file MyFirstUdp.cs e compilato con:  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -400,7 +385,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  L'assembly risultante può essere registrato e il punto di ingresso richiamato utilizzando l'istruzione DDL seguente:  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  

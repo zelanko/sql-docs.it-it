@@ -38,7 +38,7 @@
         - name: Creare un report tabella semplice (esercitazione su SSRS)
           href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
           items:
-            - name: 'Lezione 1: Creazione di un progetto server report'
+            - name: 'Lezione 1: Creazione di un progetto server di report'
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
             - name: 'Lezione 2: Specifica delle informazioni di connessione'
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
@@ -46,18 +46,18 @@
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
             - name: 'Lezione 4: Aggiunta di una tabella al report'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lesson 5: Formatting a Report'
+            - name: 'Lezione 5: Formattazione di un report'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lesson 6: Adding Grouping and Totals'
+            - name: 'Lezione 6: Aggiunta di raggruppamenti e totali'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
             - name: 'Lezione 1: Creazione di un database di esempio del Sottoscrittore'
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'Lesson 2: Modifying the Report Data Source Properties'
+            - name: 'Lezione 2: Modifica delle proprietà dell''origine dati del report'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lesson 3: Defining a Data-Driven Subscription'
+            - name: 'Lezione 3: Definizione di una sottoscrizione guidata dai dati'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: Creare un report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -78,7 +78,7 @@
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
             - name: 'Lezione 8: Creare un filtro di dati'
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lesson 9: Build and Run the Application'
+            - name: 'Lezione 9: Compilare ed eseguire l''applicazione'
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Esercitazioni di Generatore report
       href: ../reporting-services/report-builder-tutorials.md
@@ -89,13 +89,13 @@
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Modalità alternative di acquisizione di una connessione dati (Generatore report)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'Esercitazione: Creazione di un report tabella semplice'
+        - name: 'Esercitazione: Creazione di un report tabella di base'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
         - name: 'Esercitazione: Creazione di un report matrice'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
         - name: 'Esercitazione: Creazione di un report in formato libero'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'Esercitazione: Formattazione di testo (Generatore report)'
+        - name: 'Esercitazione: Formattazione del testo (Generatore report)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
         - name: 'Esercitazione: Aggiungere un istogramma al report (Generatore report)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
@@ -105,7 +105,7 @@
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
         - name: 'Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report'
+        - name: 'Esercitazione: Aggiunta di un indicatore KPI al report'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
         - name: 'Esercitazione: Report mappa'
           href: ../reporting-services/tutorial-map-report-report-builder.md
@@ -145,53 +145,53 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: Ospitare un database del server di report in un cluster di failover di SQL Server
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-        - name: Gestione configurazione Reporting Services (modalità nativa)
-          href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    - name: Gestione configurazione Reporting Services (modalità nativa)
+      href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
+          href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: Configurare gli URL del server di report (Gestione configurazione SSRS)
+          href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
-              href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-            - name: Configurare gli URL del server di report (Gestione configurazione SSRS)
-              href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
-              items:
-                - name: Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
-                  href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-                - name: Configurare un URL (Gestione configurazione SSRS)
-                  href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-                - name: Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
-                  href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-                - name: URL nei file di configurazione (Gestione configurazione SSRS)
-                  href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-                - name: Prenotazioni URL per le distribuzioni di più istanze del server di report (Gestione configurazione SSRS)
-                  href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-            - name: Creare un database
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
-            - name: Creare un database in modalità nativa
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-            - name: Configurare una connessione del database del server di report
-              href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-            - name: Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)
-              href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-            - name: Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
-              href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-            - name: Chiavi di crittografia SSRS - Gestire le chiavi di crittografia
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-              items:
-                - name: Chiavi di crittografia SSRS - Inizializzare un server di report
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-                - name: Chiavi di crittografia SSRS - Archiviare dati crittografati del server di report
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-                - name: Chiavi di crittografia SSRS - Eseguire il backup e il ripristino
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-                - name: Chiavi di crittografia SSRS - Eliminare e ricreare
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-                - name: Chiavi di crittografia SSRS - Aggiungere e rimuovere per una distribuzione con scalabilità orizzontale
-                  href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-            - name: Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione)
-              href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-            - name: Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa (Gestione configurazione SSRS)
-              href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-            - name: Integrazione di Power BI
-              href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+            - name: Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
+              href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+            - name: Configurare un URL (Gestione configurazione SSRS)
+              href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+            - name: Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
+              href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+            - name: URL nei file di configurazione (Gestione configurazione SSRS)
+              href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+            - name: Prenotazioni URL per le distribuzioni di più istanze del server di report (Gestione configurazione SSRS)
+              href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+        - name: Creare un database
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+        - name: Creare un database in modalità nativa
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: Configurare una connessione del database del server di report
+          href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)
+          href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
+          href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: Chiavi di crittografia SSRS - Gestire le chiavi di crittografia
+          href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+          items:
+            - name: Chiavi di crittografia SSRS - Inizializzare un server di report
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+            - name: Chiavi di crittografia SSRS - Archiviare dati crittografati del server di report
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+            - name: Chiavi di crittografia SSRS - Eseguire il backup e il ripristino
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+            - name: Chiavi di crittografia SSRS - Eliminare e ricreare
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+            - name: Chiavi di crittografia SSRS - Aggiungere e rimuovere per una distribuzione con scalabilità orizzontale
+              href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione)
+          href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+        - name: Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa (Gestione configurazione SSRS)
+          href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Integrazione di Power BI
+          href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
     - name: Installare la modalità SharePoint di Reporting Services 2016
       href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
       items:
@@ -411,25 +411,25 @@
           href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
         - name: Impostare le opzioni di elaborazione
           href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
-    - name: Web part Visualizzatore di report in un sito di SharePoint
-      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
-      items:
-        - name: Distribuire la web part Visualizzatore report
-          href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
-        - name: Aggiungere la web part Visualizzatore report a una pagina Web
-          href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
-        - name: Connettere una web part Filtro o Documenti
-          href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
-        - name: Personalizzare la web part Visualizzatore report
-          href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
-        - name: Impostazioni del sito di SharePoint per la Web part del Visualizzatore di report
-          href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
     - name: Disponibilità elevata
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: Abilitare e disabilitare la funzionalità RDL Sandboxing
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
     - name: Configurare Reporting Services per usare un nome alternativo del soggetto
       href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: Web part Visualizzatore di report in un sito di SharePoint
+  href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+  items:
+    - name: Distribuire la web part Visualizzatore report
+      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+    - name: Aggiungere la web part Visualizzatore report a una pagina Web
+      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+    - name: Connettere una web part Filtro o Documenti
+      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+    - name: Personalizzare la web part Visualizzatore report
+      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+    - name: Impostazioni del sito di SharePoint per la Web part del Visualizzatore di report
+      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: Aggiungi a Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
 - name: Generatore report in Reporting Services (SSRS)
@@ -704,7 +704,7 @@
           href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
         - name: Aggiungere percorsi personalizzati a una mappa
           href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-        - name: 'Risoluzione dei problemi dei report: report mappa'
+        - name: 'Risoluzione dei problemi dei report: Report mappa'
           href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
     - name: 'Immagini, caselle di testo, rettangoli e linee'
       href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
@@ -1904,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: Elementi dei report personalizzati
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: 'Procedura: Distribuzione di un elemento del report personalizzato'
+    - name: 'Procedura: Distribuire un elemento del report personalizzato'
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: Accesso agli assembly personalizzati tramite espressioni
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1912,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: Distribuzione di un assembly personalizzato
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: 'Procedura: Debug di assembly personalizzati'
+    - name: 'Procedura: Eseguire il debug di assembly personalizzati'
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: Inizializzazione di oggetti assembly personalizzati
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

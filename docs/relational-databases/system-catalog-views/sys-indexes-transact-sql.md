@@ -1,7 +1,7 @@
 ---
 title: sys. Indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74761480"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179292"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74761480"
 |**allow_row_locks**|**bit**|1 = L'indice consente blocchi di riga.<br /><br /> 0 = L'indice non consente blocchi di riga.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
 |**allow_page_locks**|**bit**|1 = L'indice consente blocchi di pagina.<br /><br /> 0 = L'indice non consente blocchi di pagina.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
 |**has_filter**|**bit**|1 = L'indice dispone di un filtro e contiene solo righe che soddisfanno la definizione del filtro.<br /><br /> 0 = L'indice non dispone di un filtro.|  
-|**filter_definition**|**nvarchar(max)**|Espressione per il subset di righe incluso nell'indice filtrato.<br /><br /> NULL per l'heap o l'indice non filtrato.|  
+|**filter_definition**|**nvarchar(max)**|Espressione per il subset di righe incluso nell'indice filtrato.<br /><br /> NULL per heap, indice non filtrato o autorizzazioni insufficienti per la tabella.|  
 |**auto_created**|**bit**|1 = l'indice è stato creato dall'ottimizzazione automatica.<br /><br />0 = l'indice è stato creato dall'utente.
 |**optimize_for_sequential_key**|**bit**|1 = nell'indice è abilitata l'ottimizzazione dell'inserimento dell'ultima pagina.<br><br>0 = valore predefinito. Nell'indice è stata disabilitata l'ottimizzazione dell'inserimento dell'ultima pagina.|
 
