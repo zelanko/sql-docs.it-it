@@ -19,7 +19,7 @@
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
         - name: 'Passaggio 2: Creare un database SQL per lo sviluppo ADO.NET'
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: 'Passaggio 3: Modello di verifica per la connessione a SQL con ADO.NET'
+        - name: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite ADO.NET'
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
         - name: 'Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET'
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
@@ -2630,6 +2630,9 @@
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
         - name: Utilizzo di Always Encrypted con il JDBC Driver
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+          items:
+            - name: Always Encrypted con enclave sicuri
+              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
         - name: Articoli guida
           items:
             - name: Utilizzo di istruzioni SQL
@@ -2755,11 +2758,11 @@
   items:
     - name: Driver Node.js per SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo Node.js'
+    - name: 'Passaggio 1:  Configurare l''ambiente di sviluppo per lo sviluppo Node.js'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
     - name: 'Passaggio 2: Creare un database SQL per lo sviluppo Node.js'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 'Passaggio 3: Modello di verifica per la connessione a SQL con Node.js'
+    - name: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite Node.js'
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -3986,7 +3989,7 @@
                 - name: Appendici ODBC
                   href: ../odbc/reference/appendixes/odbc-appendixes.md
                   items:
-                    - name: 'Appendice A: codici di errore ODBC'
+                    - name: 'Appendice A: Codici di errore ODBC'
                       href: ../odbc/reference/appendixes/appendix-a-odbc-error-codes.md
                     - name: 'Appendice B: Tabelle della transizione di stato ODBC'
                       href: ../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md
@@ -4110,23 +4113,23 @@
                         - name: Conversione di dati da SQL ai tipi di dati C
                           href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
                           items:
-                            - name: 'Da SQL a C: dati binari'
+                            - name: 'Da SQL a C: Binary'
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
                             - name: 'Da SQL a C: bit'
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
-                            - name: 'Da SQL a C: carattere'
+                            - name: 'Da SQL a C: Carattere'
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 'Da SQL a C: data'
+                            - name: 'Da SQL a C: Data'
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
-                            - name: 'Da SQL a C: intervalli di tempo'
+                            - name: 'Da SQL a C: intervalli di data/ora'
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
                             - name: 'Da SQL a C: GUID'
                               href: ../odbc/reference/appendixes/sql-to-c-guid.md
-                            - name: 'Da SQL a C: dati numerici'
+                            - name: 'Da SQL a C: Numeric'
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
-                            - name: 'Da SQL a C: timestamp'
+                            - name: 'Da SQL a C: Timestamp'
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
-                            - name: 'Da SQL a C: ora'
+                            - name: 'Da SQL a C: Tempo'
                               href: ../odbc/reference/appendixes/sql-to-c-time.md
                             - name: 'Da SQL a C: intervalli anno-mese'
                               href: ../odbc/reference/appendixes/sql-to-c-year-month-intervals.md
@@ -4135,23 +4138,23 @@
                         - name: Conversione di dati da C ai tipi di dati SQL
                           href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
                           items:
-                            - name: 'Da C a SQL: dati binari'
+                            - name: 'Da C a SQL: Binary'
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
                             - name: 'Da C a SQL: bit'
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
-                            - name: 'Da C a SQL: carattere'
+                            - name: 'Da C a SQL: Carattere'
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 'Da C a SQL: data'
+                            - name: 'Da C a SQL: Data'
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
                             - name: 'Da C a SQL: intervalli di data/ora'
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
                             - name: 'Da C a SQL: GUID'
                               href: ../odbc/reference/appendixes/c-to-sql-guid.md
-                            - name: 'Da C a SQL: dati numerici'
+                            - name: 'Da C a SQL: Numeric'
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
-                            - name: 'Da C a SQL: timestamp'
+                            - name: 'Da C a SQL: Timestamp'
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
-                            - name: 'Da C a SQL: ora'
+                            - name: 'Da C a SQL: Tempo'
                               href: ../odbc/reference/appendixes/c-to-sql-time.md
                             - name: 'Da C a SQL: intervalli anno-mese'
                               href: ../odbc/reference/appendixes/c-to-sql-year-month-intervals.md
@@ -4261,7 +4264,7 @@
                                   href: ../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md
                         - name: Codici di errore della libreria di cursori ODBC
                           href: ../odbc/reference/appendixes/odbc-cursor-library-error-codes.md
-                    - name: 'Appendice G: Indicazioni per la compatibilità con le versioni precedenti dei driver'
+                    - name: 'Appendice G: Linee guida per la compatibilità con le versioni precedenti dei driver'
                       href: ../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md
                       items:
                         - name: 'Cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti'
@@ -4600,7 +4603,7 @@
                           href: ../odbc/microsoft/create-index-statement.md
                         - name: Aritmetica delle date
                           href: ../odbc/microsoft/date-arithmetic.md
-                        - name: 'Jet: valori letterali data, ora e timestamp'
+                        - name: 'Jet: Valori letterali data, ora e timestamp'
                           href: ../odbc/microsoft/jet-date-time-and-timestamp-literals.md
                         - name: Istruzione DROP INDEX
                           href: ../odbc/microsoft/drop-index-statement.md
@@ -4612,7 +4615,7 @@
                           href: ../odbc/microsoft/order-by-expression-list.md
                         - name: ORDER BY con GROUP BY
                           href: ../odbc/microsoft/order-by-with-group-by.md
-                        - name: 'Jet: outer join'
+                        - name: 'Jet: Outer join'
                           href: ../odbc/microsoft/jet-outer-joins.md
                         - name: Funzioni scalari
                           href: ../odbc/microsoft/scalar-functions.md
@@ -5485,13 +5488,13 @@
         - name: Connessione al server
           href: ../connect/php/connecting-to-the-server.md
           items:
-            - name: 'Procedura: Connessione con l''autenticazione di Windows'
+            - name: 'Procedura: Connettersi con l''autenticazione di Windows'
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 'Procedura: Connessione con l''autenticazione di SQL Server'
+            - name: 'Procedura: Connettersi con l''autenticazione di SQL Server'
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: 'Procedura: Connessione con l''autenticazione di Azure Active Directory'
               href: ../connect/php/azure-active-directory.md
-            - name: 'Procedura: Connessione a una porta specifica'
+            - name: 'Procedura: Connettersi a una porta specificata'
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: Pool di connessioni
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
@@ -5519,7 +5522,7 @@
               items:
                 - name: Tipi di dati con supporto di flusso tramite il driver SQLSRV
                   href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-                - name: 'Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV'
+                - name: 'Procedura: Recuperare dati di tipo carattere come flusso usando il driver SQLSRV'
                   href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
                 - name: 'Procedura: Recuperare dati binari come flusso usando il driver SQLSRV'
                   href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
@@ -5567,7 +5570,7 @@
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
             - name: 'Procedura: Specificare i tipi di dati PHP'
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: 'Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8'
+            - name: 'Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8'
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
             - name: 'Procedura: Inviare e recuperare dati ASCII in Linux e macOS'
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
@@ -5582,6 +5585,10 @@
           href: ../connect/php/logging-activity.md
         - name: Uso di Always Encrypted con i driver PHP per SQL Server
           href: ../connect/php/using-always-encrypted-php-drivers.md
+        - name: Always Encrypted con enclave sicure con i driver PHP per SQL Server
+          href: ../connect/php/always-encrypted-secure-enclaves.md
+        - name: Impostazioni locali non di sistema
+          href: ../connect/php/non-system-locale-settings.md
         - name: Costanti (driver Microsoft per PHP per SQL Server)
           href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
         - name: Riferimento all'API del driver SQLSRV
@@ -5886,7 +5893,7 @@
             - name: Modalità batch
               href: ../ado/guide/data/batch-mode.md
               items:
-                - name: 'Invio di aggiornamenti: metodo UpdateBatch'
+                - name: 'Invio di aggiornamenti: Metodo UpdateBatch'
                   href: ../ado/guide/data/sending-the-updates-updatebatch-method.md
                 - name: Filtro per i record aggiornati
                   href: ../ado/guide/data/filtering-for-updated-records.md
@@ -6217,7 +6224,7 @@
               href: ../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md
             - name: Riduzione al minimo dell'utilizzo dello spazio per il file di log
               href: ../ado/guide/remote-data-service/minimizing-log-file-space-usage.md
-    - name: 'Appendice A: Provider'
+    - name: 'Appendice A: Providers'
       href: ../ado/guide/appendixes/appendix-a-providers.md
       items:
         - name: Microsoft Cursor Service per OLE DB
@@ -7554,7 +7561,7 @@
               href: ../ado/reference/adox-api/indexnulls-property-example-vb.md
             - name: 'Esempio del metodo Append di Keys, di Type di Key e delle proprietà RelatedColumn, RelatedTable e UpdateRule (VB)'
               href: ../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
-            - name: 'Esempio di codice ADOX: esempio delle proprietà NumericScale e Precision (VB)'
+            - name: 'Esempi di codice ADOX: Esempio delle proprietà NumericScale e Precision (VB)'
               href: ../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md
             - name: 'Raccolta Parameters: esempio della proprietà Command (VB)'
               href: ../ado/reference/adox-api/parameters-collection-command-property-example-vb.md
@@ -7623,7 +7630,7 @@
               href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
             - name: Esempio delle proprietà PrimaryKey e Unique (VC++)
               href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-    - name: 'Deprecato: Informazioni di riferimento sull''API Servizi Desktop remoto'
+    - name: 'Deprecato: Informazioni di riferimento per l''API RDS'
       href: ../ado/reference/rds-api/rds-api-reference.md
     - name: Oggetti di Servizi Desktop remoto
       href: ../ado/reference/rds-api/rds-objects.md
