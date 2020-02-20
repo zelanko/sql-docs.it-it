@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/30/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: MightyPen
+ms.reviewer: v-jizho2
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-makouz
+author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173141"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911200"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 
@@ -35,6 +35,17 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="175-january-2020"></a>17.5, gennaio 2020
+
+| Funzionalità aggiunta | Dettagli |
+| :------------ | :------ |
+| Attributo di connessione SQL_COPT_SS_SPID per recuperare SPID senza round trip al server | Vedere [Parole chiave e attributi per stringhe di connessione e DSN](../dsn-connection-string-attribute.md). |
+| Supporto per l'indicazione dell'accettazione del contratto di licenza tramite `debconf` in Debian e Ubuntu | Vedere[Installazione del driver](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
+| Nuove distribuzioni supportate. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, ottobre 2019
 
 | Funzionalità aggiunta | Dettagli |
@@ -46,7 +57,7 @@ GeneMi.  2019/04/03.
 
 **Problema noto:**
 
-Quando si usa Always Encrypted con le enclave sicure e Azure Key Vault, le lunghezze del percorso della chiave dispari possono causare errori di verifica della firma CMK. Se si verifica questo problema, provare a modificare la lunghezza del percorso del tasto di scelta per un carattere rinominando la chiave AKV.
+Quando si usa Always Encrypted con enclave sicuri e Azure Key Vault, i percorsi delle chiavi con lunghezza dispari possono causare errori di verifica della firma CMK. Se si verifica questo problema, provare a modificare di un carattere la lunghezza del percorso della chiave rinominando la chiave Azure Key Vault.
 
 ## <a name="174-august-2019"></a>Versione 17.4, agosto 2019
 
@@ -54,7 +65,7 @@ Quando si usa Always Encrypted con le enclave sicure e Azure Key Vault, le lungh
 | :------------ | :------ |
 | Always Encrypted con enclave sicuri. | Vedere [Uso di Always Encrypted con il driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
 | Caricamento dinamico di OpenSSL | Vedere [Linee guida per la programmazione](programming-guidelines.md#bkmk-openssl). |
-| Impostazioni Keep-alive TCP configurabili. | Vedere [Connessione a SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
+| Impostazioni keep-alive TCP configurabili. | Vedere [Connessione a SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -77,7 +88,7 @@ Quando si usa Always Encrypted con le enclave sicure e Azure Key Vault, le lungh
 | Supporto della codifica server UTF-8. | &nbsp; |
 | `SQLBrowseConnect` | &nbsp; |
 | Dipendenza dinamica da `libcurl`. | A partire da questa versione, il pacchetto `libcurl` non è una dipendenza esplicita.<br/>Il pacchetto `libcurl` per OpenSSL o NSS è necessario quando si usa Azure Key Vault o l'autenticazione di Azure Active Directory.<br/>Se si verifica un errore relativo a `libcurl`, verificare che sia installato. |
-| Resilienza delle connessioni inattive con parole chiave ConnectRetryCount e ConnectRetryInterval nella stringa di connessione. | &bull; &nbsp; &nbsp; Usare `SQL_COPT_SS_CONNECT_RETRY_COUNT`(sola lettura) per recuperare il numero di tentativi ripetuti di connessione.<br/><br/>&bull; &nbsp; &nbsp; Usare `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(sola lettura) per recuperare la durata dell'intervallo dei tentativi ripetuti di connessione.<br/><br/>Vedere [Resilienza di connessione nel driver ODBC di Windows](../windows/connection-resiliency-in-the-windows-odbc-driver.md). |
+| Resilienza delle connessioni inattive con parole chiave ConnectRetryCount e ConnectRetryInterval nella stringa di connessione. | &bull; &nbsp; &nbsp; Usare `SQL_COPT_SS_CONNECT_RETRY_COUNT`(sola lettura) per recuperare il numero di nuovi tentativi di connessione.<br/><br/>&bull; &nbsp; &nbsp; Usare `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(sola lettura) per recuperare la durata dell'intervallo dei tentativi di connessione.<br/><br/>Vedere [Resilienza di connessione nel driver ODBC di Windows](../windows/connection-resiliency-in-the-windows-odbc-driver.md). |
 | Correzioni di bug. | [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -85,7 +96,7 @@ Quando si usa Always Encrypted con le enclave sicure e Azure Key Vault, le lungh
 
 | Nuovo elemento | Dettagli |
 | :------- | :------ |
-| Supporto per gli attributi di connessione `SQL_COPT_SS_CEKCACHETTL` e `SQL_COPT_SS_TRUSTEDCMKPATHS`. | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` consente di controllare l'ora in cui è presente la cache locale delle chiavi di crittografia di colonna e di svuotarla.<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` consente all'applicazione di limitare le operazioni Always Encrypted in modo che usino solo l'elenco specificato di chiavi master della colonna.<br/><br/>Vedere [Uso di Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Supporto degli attributi di connessione `SQL_COPT_SS_CEKCACHETTL` e `SQL_COPT_SS_TRUSTEDCMKPATHS`. | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` consente di controllare l'ora in cui è presente la cache locale delle chiavi di crittografia della colonna e di scaricarla.<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` consente all'applicazione di limitare le operazioni Always Encrypted in modo che usino solo l'elenco specificato di chiavi master della colonna.<br/><br/>Vedere [Uso di Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Supporto per il caricamento di `.rll` dalla posizione predefinita. | Vedere la [sezione relativa al caricamento di file nel documento di installazione](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading). |
 | Correzioni di bug. | [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
@@ -98,13 +109,13 @@ Quando si usa Always Encrypted con le enclave sicure e Azure Key Vault, le lungh
 
 **Funzionalità aggiunte**:
 
-Supporto di Always Encrypted per l'API BCP
+Supporto per Always Encrypted per l'API BCP
 
 Il nuovo attributo della stringa di connessione UseFMTOnly fa in modo che i driver usino metadati legacy in casi particolari che richiedono tabelle temporanee.
 
 Supporto per l'istanza gestita di database SQL di Azure (anteprima privata estesa). 
 > [!NOTE]
-> Quando si usa l'istanza gestita vi sono molte differenze:
+> Esistono molte differenze nell'uso di Istanza gestita:
 > -   FILESTREAM non è supportato 
 > -   L'accesso al file system locale non è supportato, ma è obbligatorio per elementi come i file di traccia 
 > -   La creazione di tipi definiti dall'utente dal percorso locale non è supportata 
@@ -116,17 +127,17 @@ Supporto per l'istanza gestita di database SQL di Azure (anteprima privata estes
 > -   Non è supportato ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]
 > -   I messaggi di errore vengono sempre visualizzati in inglese, indipendentemente dalle impostazioni della lingua (come in Azure) 
 
-## <a name="131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos-may-2017"></a>13.1, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS, maggio 2017
+## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>13.1, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS, maggio 2017
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiunge il supporto per Always Encrypted e Azure Active Directory quando viene usato in combinazione con Microsoft SQL Server 2016.
 
 **Nuove distribuzioni supportate**: sono supportati OS X 10.11 e macOS 10.12 nella prima versione del driver ODBC in macOS. È ora supportato anche Ubuntu 16.10 insieme a Red Hat 6, 7 e SUSE 12. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e la configurazione.  Per le istruzioni di installazione, vedere l'articolo relativo all'[installazione del driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-**Modifiche del supporto di Gestione driver unixODBC 2.3.1**: il driver ODBC non dipende più dai pacchetti personalizzati per Gestione driver unixODBC (tranne su RedHat 6) e si basa invece sulla gestione dei pacchetti di distribuzione per risolvere la dipendenza UnixODBC dai repository di distribuzione.
+**Modifiche al supporto di Gestione driver unixODBC 2.3.1**: il driver ODBC non dipende più dai pacchetti personalizzati per Gestione driver unixODBC (tranne in RedHat 6) e si basa invece sulla gestione dei pacchetti di distribuzione per risolvere la dipendenza UnixODBC dai repository di distribuzione.
 
-**Supporto per l'API BCP**: il driver ODBC per Linux e macOS supporta ora l'uso delle [funzioni API BCP (**bcp_init** e così via.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
+**Supporto per l'API BCP**: il driver ODBC per Linux e macOS supporta ora l'uso delle [funzioni dell'API BCP (**bcp_init** e così via)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md).
 
-## <a name="130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>13.0, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux
+## <a name="130-for-ssnoversion-on-linux"></a>13.0, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux
 
 Con Microsoft ODBC Driver 13.0 for SQL Server, sono ora supportati anche SQL Server 2014 e SQL Server 2016.  
 
@@ -134,18 +145,18 @@ Con Microsoft ODBC Driver 13.0 for SQL Server, sono ora supportati anche SQL Ser
 
 Ubuntu è ora supportato, insieme a Red Hat e SUSE. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e la configurazione.  Per le istruzioni di installazione, vedere l'articolo relativo all'[installazione del driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-**Supporto di gestione Driver unixODBC 2.3.1**: oltre a una versione più recente di Gestione driver, è disponibile un pacchetto per l'installazione di questa dipendenza che semplifica l'installazione e la configurazione.  
+**Supporto di Gestione driver unixODBC 2.3.1**: oltre a una versione più recente di Gestione driver, è disponibile un pacchetto per l'installazione di questa dipendenza che semplifica l'installazione e la configurazione.  
 
 **Risoluzione dell'IP di rete trasparente**: Risoluzione dell'IP di rete trasparente è una revisione della funzionalità di failover su più subnet esistente che interessa la sequenza di connessione del driver nel caso in cui il primo indirizzo IP risolto del nome host non risponda e siano presenti più indirizzi IP associati al nome host.
 
 **Supporto di TLS 1.2**: Microsoft ODBC Driver 13.0 for SQL Server in Linux supporta ora TLS 1.2 quando vengono usate le comunicazioni protette con SQL Server.
 
-## <a name="11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>11, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux
+## <a name="11-for-ssnoversion-on-linux"></a>11, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux
 
 Il driver ODBC in SUSE Linux (anteprima) supporta SUSE Linux Enterprise 11 Service Pack 2 a 64 bit. Per altre informazioni, vedere [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md).  
 
 Il driver ODBC in Linux supporta [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per altre informazioni, vedere [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md) (Supporto del driver ODBC in Linux per disponibilità elevata e ripristino di emergenza).  
 
-Il driver ODBC in Linux supporta le connessioni al database SQL di Microsoft Azure. Per altre informazioni, vedere la pagina relativa alla [procedura di connessione al database SQL di Azure usando ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Il driver ODBC in Linux supporta le connessioni al database SQL di Microsoft Azure. Per altre informazioni, vedere [Procedura: stabilire la connessione al database SQL di Azure tramite ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 L'opzione `-l` (timeout di accesso) è stata aggiunta a `bcp`. Per altre informazioni, vedere [Connessione a **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

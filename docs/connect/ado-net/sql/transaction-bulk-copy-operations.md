@@ -1,6 +1,6 @@
 ---
 title: Transazioni e operazioni di copia bulk
-description: Viene descritto come eseguire un'operazione di copia bulk all'interno di una transazione, inclusa la modalità di commit o rollback della transazione.
+description: Viene descritto come eseguire un'operazione di copia bulk all'interno di una transazione e come eseguire il commit o il ripristino dello stato precedente della transazione.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c2e855407edd6b2af51ae5710cd6601e9aa25654
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 465870aa05b97b841a23c0ca1843e3de395a0b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451913"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233803"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transazioni e operazioni di copia bulk
 
@@ -40,14 +40,14 @@ L'operazione di copia bulk viene eseguita con la proprietà <xref:Microsoft.Data
 [!code-csharp[DataWorks SqlBulkCopyOpeions_Default#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
   
 ## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>Esecuzione di un'operazione di copia bulk dedicata in una transazione  
-Per impostazione predefinita, un'operazione di copia bulk costituisce la propria transazione. Quando si desidera eseguire un'operazione di copia bulk dedicata, creare una nuova istanza di <xref:Microsoft.Data.SqlClient.SqlBulkCopy> con una stringa di connessione oppure utilizzare un oggetto <xref:Microsoft.Data.SqlClient.SqlConnection> esistente senza una transazione attiva. In questo scenario, l'operazione di copia bulk crea e quindi esegue il commit o il rollback della transazione.  
+Per impostazione predefinita, un'operazione di copia bulk costituisce la propria transazione. Quando si vuole eseguire un'operazione di copia bulk dedicata, creare una nuova istanza di <xref:Microsoft.Data.SqlClient.SqlBulkCopy> con una stringa di connessione oppure usare un oggetto <xref:Microsoft.Data.SqlClient.SqlConnection> esistente senza una transazione attiva. In questo scenario, l'operazione di copia bulk crea e quindi esegue il commit o il rollback della transazione.  
   
 È possibile specificare esplicitamente l'opzione <xref:Microsoft.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> nel costruttore della classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy> per fare in modo che un'operazione di copia bulk venga eseguita nella propria transazione, determinando l'esecuzione di ogni batch dell'operazione di copia bulk all'interno di una transazione distinta.  
   
 > [!NOTE]
 >  Poiché i diversi batch vengono eseguiti in diverse transazioni, se si verifica un errore durante l'operazione di copia bulk, verrà eseguito il rollback di tutte le righe nel batch corrente, ma le righe dei batch precedenti rimarranno nel database.  
   
-L'applicazione console seguente è simile all'esempio precedente, con una sola eccezione: in questo esempio l'operazione di copia bulk gestisce le proprie transazioni. Viene eseguito il commit di tutti i batch copiati fino al punto dell'errore. Viene eseguito il rollback del batch che contiene la chiave duplicata e l'operazione di copia bulk viene interrotta prima dell'elaborazione di altri batch.  
+L' applicazione console seguente è analoga all'esempio precedente, con una sola eccezione: In questo esempio l'operazione di copia bulk gestisce le proprie transazioni. Viene eseguito il commit di tutti i batch copiati fino al punto dell'errore. Viene eseguito il rollback del batch che contiene la chiave duplicata e l'operazione di copia bulk viene interrotta prima dell'elaborazione di altri batch.  
   
 > [!IMPORTANT]
 >  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Installazione di esempio della copia bulk](bulk-copy-example-setup.md). Il codice viene fornito solo per illustrare la sintassi relativa all'uso di **SqlBulkCopy**. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL `INSERT … SELECT` per copiare i dati.  
@@ -55,9 +55,9 @@ L'applicazione console seguente è simile all'esempio precedente, con una sola e
 [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
   
 ## <a name="using-existing-transactions"></a>Utilizzo di transazioni esistenti  
-È possibile specificare un oggetto <xref:Microsoft.Data.SqlClient.SqlTransaction> esistente come parametro in un costruttore <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. In questo caso, l'operazione di copia bulk viene eseguita in una transazione esistente e non viene apportata alcuna modifica allo stato della transazione (ovvero, non ne viene eseguito il commit, né viene interrotta). Questo consente a un'applicazione di includere l'operazione di copia bulk in una transazione con altre operazioni sul database. Tuttavia, se non si specifica un oggetto <xref:Microsoft.Data.SqlClient.SqlTransaction> e si passa un riferimento null e la connessione ha una transazione attiva, viene generata un'eccezione.  
+È possibile specificare un oggetto <xref:Microsoft.Data.SqlClient.SqlTransaction> esistente come parametro in un costruttore <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. In questo caso, l'operazione di copia bulk viene eseguita in una transazione esistente e non viene apportata alcuna modifica allo stato della transazione (ovvero, non ne viene eseguito il commit, né viene interrotta). Questo consente a un'applicazione di includere l'operazione di copia bulk in una transazione con altre operazioni sul database. Se tuttavia non si specifica un oggetto <xref:Microsoft.Data.SqlClient.SqlTransaction>, si passa un riferimento null e la connessione ha una transazione attiva, viene generata un'eccezione.  
   
-Se è necessario eseguire il rollback dell'intera operazione di copia bulk perché si verifica un errore o se la copia bulk deve essere eseguita come parte di un processo di dimensioni maggiori di cui è possibile eseguire il rollback, è possibile fornire un oggetto <xref:Microsoft.Data.SqlClient.SqlTransaction> al costruttore di <xref:Microsoft.Data.SqlClient.SqlBulkCopy>.  
+Se è necessario eseguire il rollback dell'intera copia bulk perché si verifica un errore o se la copia bulk deve essere eseguita come parte di un processo più ampio di cui è possibile eseguire il rollback, è possibile aggiungere un oggetto <xref:Microsoft.Data.SqlClient.SqlTransaction> al costruttore <xref:Microsoft.Data.SqlClient.SqlBulkCopy>.  
   
 L'applicazione console seguente è simile al primo esempio (non transazionale), con una sola eccezione: in questo esempio, l'operazione di copia bulk è inclusa in una transazione esterna di maggiori dimensioni. Quando si verifica l'errore di violazione della chiave primaria, viene eseguito il rollback dell'intera transazione e non vengono aggiunte righe alla tabella di destinazione.  
   

@@ -1,5 +1,5 @@
 ---
-title: Note sulla versione di DacFx e SqlPackage | Microsoft Docs
+title: Note sulla versione di DacFx e SqlPackage
 description: Note sulla versione per sqlpackage Microsoft.
 ms.custom: tools|sos
 ms.date: 02/02/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 11e10f4a29b15efbd2b0ee513080a2000ae7e2f1
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73033045"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241221"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -34,13 +34,28 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1
+
+|Piattaforma|Download|Data di rilascio|Versione|Compilare
+|:---|:---|:---|:---|:---|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2113703)|13 dicembre 2019|18.4.1|15.0.4630.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113705)|13 dicembre 2019| 18.4.1|15.0.4630.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113331)|13 dicembre 2019| 18.4.1|15.0.4630.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113704)|13 dicembre 2019| 18.4.1|15.0.4630.1|
+
+### <a name="fixes"></a>Correzioni
+| Fix | Dettagli |
+| :-- | :------ |
+| ScriptDom |  Nella versione 18.3.1 è stata introdotta una regressione di analisi ScriptDom che considera erroneamente 'RENAME' come token di primo livello, causando l'esito negativo dell'analisi.
+| &nbsp; | &nbsp; |
+
 
 ## <a name="184-sqlpackage"></a>sqlpackage 18.4
 
-|Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
+|Piattaforma|Download|Data di rilascio|Versione|Compilare
 |:---|:---|:---|:---|:---|
 |Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2108813)|29 ottobre 2019|18.4|15.0.4573.2|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108815)|29 ottobre 2019| 18,4|15.0.4573.2|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108815)|29 ottobre 2019| 18.4|15.0.4573.2|
 |Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108814)|29 ottobre 2019| 18.4|15.0.4573.2|
 |Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2109019)|29 ottobre 2019| 18.4|15.0.4573.2|
 
@@ -48,35 +63,35 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Distribuzione | Aggiungere il supporto per la distribuzione a Azure SQL Data Warehouse (GA). | 
-| Piattaforma | SqlPackage .NET Core GA per macOS, Linux e Windows. | 
+| Distribuzione | Aggiungere il supporto per la distribuzione in Azure SQL Data Warehouse (GA). | 
+| Piattaforma | Versione GA di sqlpackage per .NET Core per macOS, Linux e Windows. | 
 | Security | Rimuovere la firma del codice SHA1. |
-| Distribuzione | Aggiungere il supporto per le nuove edizioni di database di Azure: GeneralPurpose, BusinessCritical, iperscale |
-| Distribuzione | Aggiungere il supporto Istanza gestita per utenti e gruppi di AAD. |
-| Distribuzione | Supportare il parametro/AccessToken per SqlPackage in .NET Core. |
+| Distribuzione | Aggiungere il supporto per le nuove edizioni del database di Azure: GeneralPurpose, BusinessCritical, Hyperscale |
+| Distribuzione | Aggiungere il supporto di Istanza gestita per utenti e gruppi di AAD. |
+| Distribuzione | Supportare il parametro/AccessToken per sqlpackage in .NET Core. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti 
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| ScriptDom |  Una regressione di analisi di ScriptDom è stata introdotta in 18.3.1, in cui ' RENAME ' viene erroneamente considerato come un token di primo livello, provocando un errore di analisi. Questo problema verrà risolto nella versione successiva di SqlPackage. | 
+| ScriptDom |  Nella versione 18.3.1 è stata introdotta una regressione di analisi ScriptDom che considera erroneamente 'RENAME' come token di primo livello, causando l'esito negativo dell'analisi. Questo problema verrà risolto nella prossima versione di sqlpackage. | 
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues-for-net-core"></a>Problemi noti per .NET Core
 
 | Funzionalità | Dettagli |
 | :------ | :------ |
-| Importa |  Per i file con estensione bacpac con file compressi di dimensioni superiori a 4 GB, potrebbe essere necessario usare la versione .NET Core di SqlPackage per eseguire l'importazione.  Questo comportamento è dovuto al modo in cui .NET Core genera intestazioni zip, che anche se valide, non sono leggibili dalla versione .NET Framework completa di SqlPackage. | 
-| Distribuzione | Il parametro/p: Storage = file non è supportato. In .NET Core è supportata solo la memoria. | 
-| Always Encrypted | SqlPackage .NET Core non supporta le colonne Always Encrypted. | 
-| Security | SqlPackage .NET Core non supporta il parametro/UA per l'autenticazione a più fattori. | 
+| Importa |  Per i file con estensione bacpac con file compressi di dimensioni superiori a 4 GB, può essere necessario eseguire l'importazione con la versione di sqlpackage per .NET Core.  Questo comportamento è dovuto al modo in cui .NET Core genera le intestazioni dei file zip, che, anche se valide, non sono leggibili per la versione di sqlpackage per .NET Full Framework. | 
+| Distribuzione | Il parametro /p:Storage=File non è supportato. In .NET Core è supportato solo il parametro Memory. | 
+| Always Encrypted | sqlpackage per .NET Core non supporta le colonne Always Encrypted. | 
+| Security | sqlpackage per .NET Core non supporta il parametro /ua per l'autenticazione a più fattori. | 
 | Distribuzione | Non sono supportati i file con estensione dacpac e bacpac V2 meno recenti che usano la serializzazione dei dati JSON. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1831-sqlpackage"></a>sqlpackage 18.3.1
 
-|Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
+|Piattaforma|Download|Data di rilascio|Versione|Compilare
 |:---|:---|:---|:---|:---|
 |Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 settembre 2019|18.3.1|15.0.4538.1|
 |macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|13 settembre 2019| 18.3.1|15.0.4538.1|
@@ -88,10 +103,10 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Funzionalità | Dettagli |
 | :------ | :------ |
 | Distribuzione | Aggiungere il supporto per la distribuzione in Azure SQL Data Warehouse (anteprima). | 
-| Distribuzione | Aggiungere il parametro/p: DatabaseLockTimeout = (INT32 '60 ') a SqlPackage. | 
-| Distribuzione | Aggiungere il parametro/p: LongRunningCommandTimeout = (INT32) a SqlPackage. |
-| Esportazione/estrazione | Aggiungere il parametro/p: TempDirectoryForTableData = (STRING) a SqlPackage. |
-| Distribuzione | Consente di caricare i collaboratori della distribuzione da percorsi aggiuntivi. I collaboratori alla distribuzione verranno caricati dalla stessa directory di target. dacpac da distribuire, dalla directory Extensions rispetto al file binario SqlPackage. exe e dal parametro/p: AdditionalDeploymentContributorPaths = (STRING) aggiunto a SqlPackage dove è possibile specificare ulteriori percorsi di directory. |
+| Distribuzione | Aggiungere il parametro /p:DatabaseLockTimeout=(INT32 '60') a sqlpackage. | 
+| Distribuzione | Aggiungere il parametro /p:LongRunningCommandTimeout=(INT32) a sqlpackage. |
+| Esportazione/estrazione | Aggiungere il parametro /p:TempDirectoryForTableData=(STRING) a sqlpackage. |
+| Distribuzione | Consente di caricare collaboratori alla distribuzione da percorsi aggiuntivi. I collaboratori alla distribuzione verranno caricati dalla stessa directory dei file con estensione dacpac di destinazione in corso di distribuzione, dalla directory delle estensioni relativa al file binario sqlpackage.exe e dal parametro /p:AdditionalDeploymentContributorPaths=(STRING) aggiunto a sqlpackage, in cui è possibile specificare percorsi di directory aggiuntivi. |
 | Distribuzione | Aggiungere il supporto per OPTIMIZE_FOR_SEQUENTIAL_KEY. |
 | &nbsp; | &nbsp; |
 
@@ -99,20 +114,20 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | Dettagli |
 | :-- | :------ |
-| Distribuzione | Correzione per ignorare gli indici automatici in modo che non vengano eliminati durante la distribuzione. | 
-| Always Encrypted | Correzione per la gestione di Always Encrypted colonne varchar. | 
-| Compilazione/Distribuzione | Correzione per risolvere il metodo nodes () per i set di colonne XML.| 
-| ScriptDom | Correggere altri casi in cui la stringa ' URL ' è stata interpretata come token di primo livello. | 
-| Grafico | Correzione del TSQL generato per i riferimenti pseudo colonna nei vincoli.  | 
-| Esportazione | Generare password casuali che soddisfino i requisiti di complessità. | 
-| Distribuzione | Correzione per rispettare i timeout dei comandi durante il recupero dei vincoli. | 
+| Distribuzione | Correzione che consente di ignorare gli indici automatici, in modo che non vengano rimossi durante la distribuzione. | 
+| Always Encrypted | Correzione per la gestione delle colonne varchar Always Encrypted. | 
+| Compilazione/Distribuzione | Correzione che risolve il problema del metodo node () per i set di colonne XML.| 
+| ScriptDom | Correzione dei casi aggiuntivi in cui la stringa 'URL' veniva interpretata come un token di primo livello. | 
+| Grafico | Codice TSQL generato dalla correzione per i riferimenti a pseudocolonne nei vincoli.  | 
+| Esportazione | Generazione di password casuali che soddisfano i requisiti di complessità. | 
+| Distribuzione | Correzione che consente di rispettare i timeout dei comandi durante il recupero di vincoli. | 
 | .NET Core (anteprima) | Correzione della registrazione diagnostica in un file. | 
-| .NET Core (anteprima) | Usare il flusso per esportare i dati della tabella per supportare tabelle di grandi dimensioni. | 
+| .NET Core (anteprima) | Uso del flusso per l'esportazione dei dati delle tabelle per il supporto di tabelle di grandi dimensioni. | 
 | &nbsp; | &nbsp; |
 
 ## <a name="182-sqlpackage"></a>sqlpackage 18.2
 
-|Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
+|Piattaforma|Download|Data di rilascio|Versione|Compilare
 |:---|:---|:---|:---|:---|
 |Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 aprile 2019|18.2|15.0.4384.2|
 |macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087247)|15 aprile 2019 | 18.2 |15.0.4384.2|
@@ -139,7 +154,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ## <a name="181-sqlpackage"></a>sqlpackage 18.1
 
-Data di rilascio: &nbsp; 1 febbraio 2019  
+Data di rilascio: &nbsp; 1° febbraio 2019  
 Build: &nbsp; 15.0.4316.1  
 Versione di anteprima.
 
@@ -242,7 +257,7 @@ Build: &nbsp; 14.0.3917.1
 | :-- | :------ |
 | Importa | Sono stati corretti gli errori causati dal _mancato supporto delle chiavi master di database senza password in questa versione di SQL Server_. Tali errori si presentavano al momento dell'importazione di un file con estensione bacpac del database SQL di Azure in un'istanza locale. |
 | Grafico | Correzione di un errore di pseudo-colonna non risolta per le tabelle grafo. |
-| Confronto schema | Correzione dell'autenticazione SQL per confrontare gli schemi. | 
+| Confronto schema | Correzione dell'autenticazione SQL per il confronto di schemi. | 
 | &nbsp; | &nbsp; |
 
 ## <a name="1740-sqlpackage"></a>sqlpackage 17.4.0

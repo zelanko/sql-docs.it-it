@@ -1,6 +1,6 @@
 ---
-title: Utilità sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Utilità sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -27,36 +27,36 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d57369af9e621b9b2700104aff9050fda43593fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065478"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306683"
 ---
-# <a name="sqlcmd-utility"></a>sqlcmd
+# <a name="sqlcmd-utility"></a>Utilità sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> Per SQL Server 2014 e versioni precedenti, [vedere utilità](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-> )sqlcmd.
+> Per SQL Server 2014 e versioni precedenti, vedere l'[utilità sqlcmd](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+> ).
 > 
-> Per l'uso di sqlcmd in Linux, vedere [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
+> Per l'uso di sqlcmd in Linux, vedere le [istruzioni per l'installazione di sqlcmd e bcp in Linux](../linux/sql-server-linux-setup-tools.md).
 
- L'utilità **SQLCMD** consente di immettere istruzioni Transact-SQL, procedure di sistema e file di script tramite diverse modalità disponibili:
+ L'utilità **sqlcmd** consente di immettere istruzioni Transact-SQL, procedure di sistema e file di script usando diverse modalità disponibili:
 
 - Al prompt dei comandi.
-- Nell' **editor di query** in modalità sqlcmd.
-- In un file di script Windows.
-- In un passaggio di processo del sistema operativo (cmd. exe) di un processo di SQL Server Agent.
+- Nell'**editor di query** in modalità SQLCMD.
+- In un file di script di Windows.
+- In un passaggio del processo del sistema operativo (Cmd. exe) di un processo di SQL Server Agent.
 
-L'utilità USA ODBC per eseguire batch Transact-SQL.
+L'utilità usa ODBC per eseguire batch Transact-SQL.
 
-## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Scaricare la versione più recente dell'utilità sqlcmd
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Scaricare la versione più recente della utilità sqlcmd
 
 **[![download](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15.0.x per SQL Server (x64) (2,6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
 <br>**[![download](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15.0.x per SQL Server (x86) (2,3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
-Gli strumenti da riga di comando sono disponibili a livello generale (GA), ma vengono rilasciati con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]il pacchetto di installazione per.
+Gli strumenti da riga di comando dipendono dalla disponibilità generale (GA), ma vengono rilasciati con il pacchetto di installazione per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 **Informazioni sulla versione**
 
@@ -64,19 +64,19 @@ Numero di versione: 15.0 <br>
 Numero di build: 15.0.1300.359<br>
 Data di rilascio: 13 marzo 2019
 
-La nuova versione di SQLCMD supporta Azure AD autenticazione, incluso il supporto dell'autenticazione a più fattori (multi-factor authentication) per le funzionalità di database SQL, SQL Data Warehouse e Always Encrypted.
-Il nuovo BCP supporta Azure AD autenticazione, incluso il supporto dell'autenticazione a più fattori (multi-factor authentication) per il database SQL e SQL Data Warehouse.
+La nuova versione di SQLCMD supporta l'autenticazione di Azure AD, incluso il supporto di Multi-Factor Authentication (MFA) per le funzionalità database SQL, SQL Data Warehouse e Always Encrypted.
+Il nuovo BCP supporta l'autenticazione di Azure AD, incluso il supporto di Multi-Factor Authentication (MFA) per il database SQL e SQL Data Warehouse.
 
-**Requisiti di sistema** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 questo componente richiede sia [Windows Installer 4,5](https://www.microsoft.com/download/details.aspx?id=8483) che [Microsoft ODBC driver 17.3.1.1 per SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+**Requisiti di sistema** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2. Questo componente richiede [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) e [Microsoft ODBC driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
  
-Per controllare il comando sqlcmd Version `sqlcmd -?` Execute e verificare che sia in uso la versione 15.0.1300.359 o successiva.
+Per controllare la versione di SQLCMD, eseguire il comando `sqlcmd -?` e verificare che la versione in uso sia 15.0.1300.359 o successiva.
 
 
 
 > [!NOTE]
-> È necessaria la versione 13,1 o una versione successiva per`-g`supportare always Encrypted () e`-G`l'autenticazione Azure Active Directory (). Nel computer potrebbero essere installate diverse versioni di sqlcmd.exe. Assicurarsi di usare la versione corretta. Per determinare la versione, eseguire `sqlcmd -?`.
+> Per supportare la funzionalità Always Encrypted (`-g`) e l'autenticazione di Azure Active Directory (`-G`) è necessaria la versione 13.1 o successiva. Nel computer potrebbero essere installate diverse versioni di sqlcmd.exe. Assicurarsi di usare la versione corretta. Per determinare la versione, eseguire `sqlcmd -?`.
 
-È possibile provare l'utilità sqlcmd da Azure Cloud Shell perché è preinstallata per impostazione predefinita: [ ![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch cloud Shell")](https://shell.azure.com)
+È possibile provare l'utilità sqlcmd da Azure Cloud Shell poiché è preinstallata per impostazione predefinita: [![Avviare Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Avviare Cloud Shell")](https://shell.azure.com)
 
   Per eseguire istruzioni sqlcmd in SSMS, selezionare la modalità SQLCMD dal menu a discesa Query nella parte superiore della struttura di navigazione.  
   
@@ -145,7 +145,7 @@ sqlcmd
 ## <a name="command-line-options"></a>Opzioni della riga di comando  
  **Opzioni correlate all'account di accesso**  
   **-A**  
- Consente di accedere a SQL Server tramite una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Questo tipo di connessione viene utilizzato per eseguire la risoluzione dei problemi a livello di server Questa connessione funziona solo con i computer server che supportano l'applicazione livello dati. Se la connessione DAC non è disponibile, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa. Per altre informazioni sulle connessioni DAC, vedere [Connessione di diagnostica per gli amministratori di database](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L'opzione-A non è supportata con l'opzione-G. Quando ci si connette al database SQL tramite-A, è necessario essere un amministratore di SQL Server. L'applicazione livello dati non è disponibile per un amministratore Azure Active Directory.
+ Consente di accedere a SQL Server tramite una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Questo tipo di connessione viene utilizzato per eseguire la risoluzione dei problemi a livello di server Questa connessione funziona solo in computer server che supportano l'applicazione livello dati. Se la connessione DAC non è disponibile, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa. Per altre informazioni sulle connessioni DAC, vedere [Connessione di diagnostica per gli amministratori di database](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L'opzione -A non è supportata con l'opzione -G. Per eseguire la connessione al database SQL con -A, è necessario essere un amministratore di SQL Server. L'applicazione livello dati non è disponibile per un amministratore Azure Active Directory.
   
  **-C**  
  Questa opzione viene utilizzata dal client per configurare l'attendibilità implicita del certificato del server senza necessità di convalida ed equivale all'opzione ADO.NET `TRUSTSERVERCERTIFICATE = true`.  
@@ -165,7 +165,7 @@ sqlcmd
 Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vedere [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Sono supportate solo le chiavi master presenti nell'archivio certificati Windows. L'opzione -g richiede almeno **sqlcmd** versione [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire `sqlcmd -?`.
 
  **-G**  
- Questa opzione viene usata dal client durante la connessione al database SQL o a SQL Data Warehouse per specificare che l'utente venga autenticato tramite l'autenticazione di Azure Active Directory. Questa opzione imposta la variabile di scripting SQLCMDUSEAAD = true di **sqlcmd** . L'opzione -G richiede almeno **sqlcmd** versione [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire `sqlcmd -?`. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L'opzione-A non è supportata con l'opzione-G.
+ Questa opzione viene usata dal client durante la connessione al database SQL o a SQL Data Warehouse per specificare che l'utente venga autenticato tramite l'autenticazione di Azure Active Directory. Questa opzione imposta la variabile di scripting SQLCMDUSEAAD = true di **sqlcmd** . L'opzione -G richiede almeno **sqlcmd** versione [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire `sqlcmd -?`. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L'opzione -A non è supportata con l'opzione -G.
 
 > [!IMPORTANT]
 > L'opzione `-G` si applica solo al database SQL di Azure e ad Azure Data Warehouse.
@@ -178,7 +178,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    Il parametro-G genera la seguente stringa di connessione nel back-end: 
+    Il parametro -G genera la seguente stringa di connessione nel back-end: 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -187,7 +187,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 - **Integrazione con Azure Active Directory** 
  
    Per l'autenticazione integrata di Azure Active Directory, fornire l'opzione **-G** senza nome utente o password.
-   *L'autenticazione integrata di AAD non è attualmente supportata in Linux o MacOS*.
+   *L'autenticazione integrata di AAD non è attualmente supportata in Linux o macOS*.
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -205,15 +205,15 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 
 - **Azure Active Directory Interactive**  
  
-   Il Azure AD l'autenticazione interattiva per il database SQL di Azure e SQL Data Warehouse, consente di usare un metodo interattivo che supporta l'autenticazione a più fattori. Per ulteriori informazioni, vedere [Active Directory autenticazione interattiva](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+   L'autenticazione interattiva di Azure AD per il database SQL di Azure e SQL Data Warehouse consente di usare un metodo interattivo che supporta l'autenticazione a più fattori. Per altre informazioni, vedere [Autenticazione interattiva di Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Azure AD Interactive richiede **SQLCMD** [versione 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) o successiva, nonché [ODBC versione 17,2 o successiva](https://www.microsoft.com/download/details.aspx?id=56567).  
+   La modalità interattiva di Azure AD richiede **sqlcmd** [versione 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) o successiva, nonché [ODBC 17.2 o versioni successive](https://www.microsoft.com/download/details.aspx?id=56567).  
 
-   Per abilitare l'autenticazione interattiva, specificare l'opzione-G solo con il nome utente (-U) senza una password.
+   Per abilitare l'autenticazione interattiva, specificare l'opzione -G solo con il nome utente (-U) senza una password.
 
-   Nell'esempio seguente vengono esportati i dati usando Azure AD modalità interattiva che indica il nome utente in cui l'utente rappresenta un account AAD. Si tratta dello stesso esempio usato nella sezione precedente: *Azure Active Directory nome utente e la password*.  
+   Nell'esempio seguente vengono esportati i dati usando la modalità interattiva di Azure AD e indicando il nome utente che rappresenta un account AAD. Si tratta dello stesso esempio usato nella sezione precedente: *Nome utente e password di Azure Active Directory*.  
 
-   Per la modalità interattiva è necessario immettere manualmente una password o per gli account con multi-factor authentication abilitata, completare il metodo di autenticazione a più fattori configurato.
+   Per la modalità interattiva è necessario immettere manualmente una password o, per gli account con l'autenticazione a più fattori abilitata, completare il metodo di autenticazione a più fattori configurato.
 
    ``` 
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
@@ -225,16 +225,16 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
    ```
 
-   Se un utente Azure ad è un utente federato del dominio utilizzando un account di Windows, il nome utente richiesto nella riga di comando contiene il relativo account di dominio (ad esempio joe@contoso.com , vedere di seguito):
+   Se un utente di Azure AD fa parte di un dominio federato che usa un account Windows, il nome utente richiesto nella riga di comando contiene il relativo account di dominio, ad esempio joe@contoso.com, vedere di seguito:
 
    ```
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   Se gli utenti Guest sono presenti in un Azure AD specifico e fanno parte di un gruppo presente nel database SQL che dispone delle autorizzazioni di database per eseguire il comando sqlcmd, viene usato l'alias utente Guest, *keith0@adventureworks.com* ad esempio.
+   Se in un'istanza specifica di Azure AD esistono utenti guest che fanno parte di un gruppo presente nel database SQL con autorizzazioni di database che consentono di eseguire il comando sqlcmd, viene usato l'alias utente guest, ad esempio *keith0@adventureworks.com* .
 
   >[!IMPORTANT]
-  >Si verifica un problema noto quando si utilizza `-G` l' `-U` opzione e con sqlcmd, in cui `-U` l'opzione prima `-G` dell'opzione potrebbe causare l'esito negativo dell'autenticazione. Iniziare sempre con l' `-G` opzione seguita `-U` dall'opzione.
+  >Quando si usa `-G` e `-U` con SQLCMD l'autenticazione può avere esito negativo se si specifica l'opzione `-U` prima dell'opzione `-G`. Iniziare sempre con l'opzione `-G` seguita dall'opzione `-U`.
 
     
  **-H** _workstation_name_  
@@ -244,7 +244,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 **-j** Visualizza sullo schermo messaggi di errore non elaborati.
   
  **-K** _application_intent_  
- Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili (Gruppi di disponibilità AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
  Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di SQL Server o a un'istanza del cluster di failover di SQL Server. Tramite **-M** viene fornito un rilevamento più veloce di una connessione al server attualmente attivo. Se non si specifica **-M**, significa che l'opzione **-M** è disattivata. Per altre informazioni, vedere [Listener, connettività client e failover dell'applicazione](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) e [Repliche secondarie attive: Repliche secondarie leggibili (Gruppi di disponibilità AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx). 
@@ -253,13 +253,13 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
  Questa opzione viene utilizzata dal client per richiedere una connessione crittografata.  
   
  **-P** _password_  
- Password specificata dall'utente. Per le password viene fatta distinzione tra maiuscole e minuscole. Se si usa l'opzione -U omettendo l'opzione **-P** e la variabile di ambiente SQLCMDPASSWORD non è stata impostata, **sqlcmd** chiede all'utente di immettere una password. Non è consigliabile usare la password null, ma è possibile specificare la password null usando una coppia di virgolette doppie contigue per il valore del parametro:
+ Password specificata dall'utente. Per le password viene fatta distinzione tra maiuscole e minuscole. Se si usa l'opzione -U omettendo l'opzione **-P** e la variabile di ambiente SQLCMDPASSWORD non è stata impostata, **sqlcmd** chiede all'utente di immettere una password. Non è consigliabile usare la password Null, ma è possibile specificarla usando una coppia di virgolette doppie contigue per il valore del parametro:
 
 - **-P ""**
 
-Si consiglia di usare una password complessa.
+È consigliabile usare una password complessa.
  
-#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**Usare una password complessa.** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**Usare una password complessa.** ](../relational-databases/security/strong-passwords.md)
   
   
  La richiesta della password viene visualizzata mediante la stampa nella console, come indicato di seguito: `Password:`  
@@ -277,7 +277,7 @@ Si consiglia di usare una password complessa.
   
  Se la combinazione di nome utente e password non è corretta, viene generato un messaggio di errore.  
   
-**NOTA**  La variabile di ambiente OSQLPASSWORD è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDPASSWORD ha la precedenza sulla variabile di ambiente OSQLPASSWORD. Ora che OSQLPASSWORD non è più condiviso, le utilità **SQLCMD** e **osql** possono essere usate l'una accanto all'altra senza interferenze. Gli script precedenti continueranno a funzionare.  
+**NOTA**  La variabile di ambiente OSQLPASSWORD è disponibile per motivi di compatibilità con le versioni precedenti. La variabile di ambiente SQLCMDPASSWORD ha la priorità rispetto alla variabile di ambiente OSQLPASSWORD. Ora che OSQLPASSWORD non è più condivisa, è possibile usare le utilità **sqlcmd** e **osql** l'una accanto all'altra senza interferenze. Gli script usati in precedenza continueranno a funzionare.  
   
  Se si usa l'opzione **-P** in combinazione con l'opzione **-E** , viene generato un messaggio di errore.  
   
@@ -349,7 +349,7 @@ Si consiglia di usare una password complessa.
  **-o** _output_file_  
  Identifica il file che riceve l'output di **sqlcmd**.  
   
- Se si specifica **-u** , *output_file* viene archiviato in formato Unicode. Se il nome file non è valido, viene generato un messaggio di errore e l'utilità **sqlcmd** viene chiusa. **sqlcmd** non supporta la scrittura simultanea di più processi **sqlcmd** nello stesso file. L'output del file risulterà danneggiato o non corretto. Vedere l'opzione **-f** è pertinente anche per i formati di file. Se il file non esiste, verrà creato. Un file con lo stesso nome di una sessione di **sqlcmd** precedente verrà sovrascritto. Il file specificato in questa posizione non corrisponde al file **stdout** . Se viene specificato un file **stdout**, questo file non verrà usato.  
+ Se si specifica **-u** , *output_file* viene archiviato in formato Unicode. Se il nome file non è valido, viene generato un messaggio di errore e l'utilità **sqlcmd** viene chiusa. **sqlcmd** non supporta la scrittura simultanea di più processi **sqlcmd** nello stesso file. L'output del file risulterà danneggiato o non corretto. L'opzione **-f** è pertinente anche per i formati di file. Se questo file non esiste, viene creato automaticamente. Un file con lo stesso nome di una sessione di **sqlcmd** precedente verrà sovrascritto. Il file specificato in questa posizione non corrisponde al file **stdout** . Se viene specificato un file **stdout**, questo file non verrà usato.  
   
  Percorsi di esempio:  
 
@@ -376,7 +376,7 @@ Si consiglia di usare una password complessa.
  **-I**  
  Imposta l'opzione di connessione SET QUOTED_IDENTIFIER su ON. Per impostazione predefinita, l'opzione è impostata su OFF. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- **-q "** _query riga di comando_ **"**  
+ **-q "** _cmdline query_ **"**  
  Esegue una query all'avvio di **sqlcmd** senza chiudere **sqlcmd** al termine dell'esecuzione della query. È possibile eseguire più query delimitandole con punti e virgola. Racchiudere la query tra virgolette come illustrato nell'esempio seguente.  
   
  Al prompt dei comandi digitare:  
@@ -390,7 +390,7 @@ Si consiglia di usare una password complessa.
   
  Se insieme a questa opzione si specifica **-b** , l'utilità **sqlcmd** viene chiusa in caso di errore. L'opzione **-b** è descritta più avanti in questo articolo.  
   
- **-Q "** _query riga di comando_ **"**  
+ **-Q "** _cmdline query_ **"**  
  Esegue una query all'avvio di **sqlcmd** e quindi chiude immediatamente **sqlcmd**. È possibile eseguire più query delimitandole con punti e virgola.  
   
  Racchiudere la query tra virgolette come illustrato nell'esempio seguente.  
@@ -506,7 +506,7 @@ Si consiglia di usare una password complessa.
 > [!NOTE]  
 >  A causa della natura delle trasmissioni in rete, è possibile che **sqlcmd** non riceva una risposta tempestiva da tutti i server e pertanto che l'elenco di server restituito sia diverso per ogni chiamata di questa opzione.  
   
- Se si specifica il parametro facoltativo **c** , l'output viene visualizzato senza la riga di intestazione **Servers:** e ogni riga del server viene elencata senza spazi iniziali. Questa presentazione viene definita output pulito. L'output pulito consente di migliorare le prestazioni di elaborazione dei linguaggi di scripting.  
+ Se si specifica il parametro facoltativo **c** , l'output viene visualizzato senza la riga di intestazione **Servers:** e ogni riga del server viene elencata senza spazi iniziali. Questa presentazione è definita output pulito. L'output pulito consente di migliorare le prestazioni di elaborazione dei linguaggi di scripting.  
   
  **-p**[**1**]  
  Stampa le statistiche delle prestazioni per ogni set di risultati. Di seguito è riportato un esempio del formato delle statistiche delle prestazioni:  
@@ -538,14 +538,14 @@ Si consiglia di usare una password complessa.
   
 -   **ED**  
   
--   **!!** _comando_  
+-   **!!** _command_  
   
  Se si specifica l'opzione **-X** , le variabili di ambiente non vengono passate a **sqlcmd**. Questa opzione impedisce inoltre che venga eseguito lo script di avvio specificato utilizzando la variabile di scripting SQLCMDINI. Per altre informazioni sulle variabili di scripting di **sqlcmd** , vedere [Utilizzo di sqlcmd con variabili di scripting](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  **-?**  
  Visualizza la versione di **sqlcmd** e il riepilogo della sintassi delle opzioni di **sqlcmd** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le opzioni non devono essere necessariamente utilizzate nell'ordine illustrato nella sezione della sintassi.  
   
  Se vengono restituiti più risultati, **sqlcmd** stampa una riga vuota tra ogni set di risultati in un batch. Inoltre, il messaggio `<x> rows affected` non viene visualizzato se non si applica all'istruzione eseguita.  
@@ -574,7 +574,7 @@ Si consiglia di usare una password complessa.
   
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
   
-|Variabile|Opzione correlata|L/S|Default|  
+|Variabile|Opzione correlata|L/S|Predefinito|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -584,9 +584,9 @@ Si consiglia di usare una password complessa.
 |SQLCMDLOGINTIMEOUT|-l|L/S|"8" (secondi)|  
 |SQLCMDSTATTIMEOUT|-T|L/S|"0" = attesa illimitata|  
 |SQLCMDHEADERS|-H|L/S|"0"|  
-|SQLCMDCOLSEP|-S|L/S|" ".|  
+|SQLCMDCOLSEP|-S|L/S|" "|  
 |SQLCMDCOLWIDTH|-w|L/S|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|L/S|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|L/S|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|L/S|"0" = numero illimitato|  
@@ -701,7 +701,7 @@ Si consiglia di usare una password complessa.
   
  Se si specifica l'opzione **exit** , l'utilità **sqlcmd** viene chiusa con il valore di errore appropriato.  
   
- Se viene usata l'opzione **ignore** , **sqlcmd** ignora l'errore e continua l'esecuzione del batch o dello script. Per impostazione predefinita, viene visualizzato un messaggio di errore.  
+ Se viene usata l'opzione **ignore** , **sqlcmd** ignora l'errore e continua l'esecuzione del batch o dello script. Per impostazione predefinita viene stampato un messaggio di errore.  
   
  [ **:** ] **QUIT**  
  Provoca la chiusura di **sqlcmd** .  
@@ -711,7 +711,7 @@ Si consiglia di usare una password complessa.
   
  `:EXIT(query)`  
   
- Esempio:  
+ Ad esempio:  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -737,7 +737,7 @@ Si consiglia di usare una password complessa.
   
  L'utilità esegue il batch in cui è inclusa la query e quindi viene chiusa dopo aver restituito i risultati della query.  
   
- Se in uno script **sqlcmd** si usa RAISERROR e si verifica una condizione con stato 127, l'utilità **sqlcmd** viene chiusa e restituisce al client l'ID di messaggio. Esempio:  
+ Se in uno script **sqlcmd** si usa RAISERROR e si verifica una condizione con stato 127, l'utilità **sqlcmd** viene chiusa e restituisce al client l'ID di messaggio. Ad esempio:  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -752,7 +752,7 @@ Si consiglia di usare una password complessa.
 |-102|Si è verificato un errore di conversione durante la selezione del valore restituito.|  
   
  **GO** [*count*]  
- GO indica sia la fine di un batch che l'esecuzione di eventuali istruzioni Transact-SQL memorizzate nella cache. Il batch viene eseguito più volte come batch distinti. Non è possibile dichiarare una variabile più volte in un singolo batch.
+ GO indica sia la fine di un batch che l'esecuzione di eventuali istruzioni Transact-SQL memorizzate nella cache. Il batch viene eseguito più volte in batch separati. Non è possibile dichiarare una variabile più di una volta in un singolo batch.
   
  **Comandi vari**  
   **:r \<** _filename_ **>**  
@@ -798,7 +798,7 @@ Si consiglia di usare una password complessa.
  `:connect $(myservername) $(myusername)`  
   
  [ **:** ] **!!** < *comando*>  
- Esegue i comandi del sistema operativo. Per eseguire un comando del sistema operativo, digitare due punti esclamativi all'inizio della riga ( **!!** ) seguiti dal comando del sistema operativo. Esempio:  
+ Esegue i comandi del sistema operativo. Per eseguire un comando del sistema operativo, digitare due punti esclamativi all'inizio della riga ( **!!** ) seguiti dal comando del sistema operativo. Ad esempio:  
   
  `:!! Dir`  
   
@@ -814,7 +814,7 @@ Si consiglia di usare una password complessa.
 ### <a name="sqlcmd-file-names"></a>Nomi di file per sqlcmd  
  È possibile specificare i file di input di**sqlcmd** con l'opzione **-i** o il comando **:r** . I file di output possono essere specificati con l'opzione **-o** oppure con i comandi **:Error**, **:Out** e **:Perftrace** . Di seguito vengono illustrate alcune linee guida per l'utilizzo di tali file:  
   
--   In **:Error**, **:Out** e **:Perftrace** è consigliabile usare valori **\<** _filename_ **>** distinti. Se viene usato lo stesso valore **\<** _filename_ **>** , è possibile che gli input di tali comandi vengano confusi.  
+-   **:Error**, **:Out** e **:Perftrace** è consigliabile usare valori **\<** _filename_ **>** distinti. Se viene usato lo stesso valore **\<** _filename_ **>** , è possibile che gli input di tali comandi vengano confusi.  
   
 -   Se un file di input che si trova in un server remoto viene chiamato da **sqlcmd** in un computer locale e contiene un percorso di file con unità come :Out c:\OutputFile.txt, il file di output viene creato nel computer locale e non nel server remoto.  
   
@@ -836,7 +836,7 @@ Al prompt di sqlcmd digitare:
 
 `GO`
 
-Se si preme INVIO, verrà stampato il messaggio informativo seguente: "Il contesto di database è stato sostituito con 'AdventureWorks2012'".  
+Quando si preme INVIO, viene visualizzato il messaggio informativo seguente: "Il contesto di database è stato sostituito con 'AdventureWorks2012'."  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Formato di output delle query Transact-SQL  
  **sqlcmd** stampa prima di tutto un'intestazione di colonna contenente i nomi delle colonne specificati nell'elenco di selezione. I nomi di colonna sono delimitati tramite il carattere specificato da SQLCMDCOLSEP. Per impostazione predefinita, viene utilizzato uno spazio. Se la lunghezza del nome di colonna è minore della larghezza della colonna, nell'output vengono inseriti caratteri di riempimento fino alla colonna successiva.  
@@ -924,7 +924,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 
 ## <a name="feedback"></a>Commenti e suggerimenti
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum per gli strumenti client di SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

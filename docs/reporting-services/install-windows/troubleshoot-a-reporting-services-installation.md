@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889692"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Risolvere i problemi di installazione di Reporting Services
@@ -46,7 +46,7 @@ ms.locfileid: "68889692"
   
 -   Nella cartella System32 deve essere presente il file Authz.dll.  
   
- Il programma di impostazione non verifica più la presenza di Internet Information Services (IIS) o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede MDAC 2.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0, che verranno installati automaticamente se non sono già presenti.  
+ Il programma di impostazione non verifica più la presenza di Internet Information Services (IIS) o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede MDAC 2.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0, che verranno installati se non sono già presenti.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -70,11 +70,11 @@ ms.locfileid: "68889692"
 
 ### <a name="bkmk_configmanager_notstart"></a> Impossibile avviare Gestione configurazione Reporting Services
 
- **Descrizione:** questo è un problema che si verifica per motivi strutturali in SQL Server 2012 e nelle versioni successive. Reporting Services è progettato per l'architettura del servizio SharePoint. Gestione configurazione non è più necessario per la configurazione e l'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.  
+ **Descrizione:** è un problema che si verifica per motivi strutturali in SQL Server 2012 e nelle versioni successive. Reporting Services è progettato per l'architettura del servizio SharePoint. Gestione configurazione non è più necessario per la configurazione e l'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.  
   
- **Soluzione alternativa:** utilizzare Amministrazione centrale SharePoint per configurare un server di report in modalità SharePoint. Per altre informazioni, vedere [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+ **Soluzione alternativa:** Utilizzare Amministrazione centrale SharePoint per configurare un server di report in modalità SharePoint. Per altre informazioni, vedere [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> Il servizio SQL Server Reporting Services in Amministrazione centrale SharePoint non viene visualizzato dopo l'installazione di SQL Server 2016 SSRS in modalità SharePoint  
  **Descrizione:** se dopo l'installazione di SQL Server 2016 Reporting Services in modalità SharePoint e del componente aggiuntivo di SQL Server 2016 Reporting Services per SharePoint 2013/2016 non viene visualizzato "SQL Server Reporting Services" nei due menu seguenti, il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è stato registrato:  
@@ -83,7 +83,7 @@ ms.locfileid: "68889692"
   
 -   Amministrazione centrale SharePoint 2013/2016 -> "Gestione applicazioni" -> "Gestisci applicazioni di servizio" -> menu "Nuovo"  
   
- **Soluzione alternativa:** per registrare e avviare SharePoint Services per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], completare i passaggi seguenti riportati di seguito:  
+ **Soluzione alternativa:** per registrare e avviare SharePoint Services per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], completare i passaggi seguenti:  
   
 1.  Sul computer che esegue Amministrazione centrale SharePoint 2013/2016  
   
@@ -101,16 +101,16 @@ ms.locfileid: "68889692"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Verificare che lo stato del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia "**Avviato**" nella pagina Amministrazione centrale SharePoint 2013/2016 -> "**Gestione applicazioni**" -> "**Gestisci servizi nel server**"  
+2.  Verificare che il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] riporti lo stato "**Avviato**" nella pagina: Amministrazione centrale SharePoint 2013/2016 -> "**Gestione applicazioni**" -> "**Gestisci servizi nel server**"  
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> I cmdlet di PowerShell per Reporting Services non sono disponibili e i comandi non sono riconosciuti  
- **Descrizione**: quando si tenta di eseguire un cmdlet di PowerShell per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione:** quando si tenta di eseguire un cmdlet di PowerShell per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  
   
--   Termine 'Install-SPRSServiceInstall-SPRSService' **non riconosciuto** come nome di cmdlet, funzione, programma eseguibile o file script. Verificare l'ortografia del nome, che il percorso sia incluso e corretto, quindi riprovare. At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   Termine 'Install-SPRSServiceInstall-SPRSService' **non riconosciuto** come nome di cmdlet, funzione, programma eseguibile o file script. Verificare l'ortografia del nome, che il percorso sia incluso e corretto, quindi riprovare. Alla riga:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
- **Soluzione alternativa:** completare una delle operazioni seguenti:  
+ **Soluzione alternativa:** Completare una delle azioni seguenti:  
   
 -   Eseguire il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. **rssharepoint.msi**.  
   
@@ -118,16 +118,16 @@ ms.locfileid: "68889692"
   
  Se la **Shell di gestione di SharePoint 2013/2016** è aperta quando viene completata una delle soluzioni alternative, chiuderla e riaprirla.  
   
- Per ulteriori informazioni, vedere gli articoli seguenti:  
+ Per altre informazioni, vedere gli articoli seguenti:  
   
 -   [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
 -   [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Viene visualizzato un messaggio di errore nel quale è indicato che l'URL non è configurato  
- **Descrizione**: viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione:** viene visualizzato un messaggio di errore simile al seguente:  
   
  Questa funzionalità di SQL Server Reporting Services (SSRS) non è supportata. Usare Amministrazione centrale per verificare e correggere uno o più dei seguenti problemi:
  
@@ -137,9 +137,9 @@ ms.locfileid: "68889692"
  
  - Non è stato eseguito il mapping dell'applicazione del servizio SSRS a questa applicazione Web. Utilizzare le pagine relative all'applicazione del servizio SSRS per associare il proxy dell'applicazione del servizio Web al gruppo di proxy dell'applicazione per questa applicazione Web. 
   
- **Soluzione alternativa:** nel messaggio di errore sono contenuti tre passaggi suggeriti per correggere questo problema. Il primo suggerimento nel messaggio 'Un URL del server di report non è configurato...' è pertinente per l'integrazione con la versione del server di report anteriore a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configurazione di SharePoint per le versioni del server di report precedenti viene completata nella pagina **Impostazioni generali applicazione** usando **SQL Server Reporting Services (2008 e 2008 R2)** .  
+ **Soluzione alternativa:** il messaggio di errore contiene tre passaggi suggeriti per correggere il problema. Il primo suggerimento nel messaggio 'Un URL del server di report non è configurato...' è pertinente per l'integrazione con la versione del server di report anteriore a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configurazione di SharePoint per le versioni del server di report precedenti viene completata nella pagina **Impostazioni generali applicazione** usando **SQL Server Reporting Services (2008 e 2008 R2)** .  
   
- **Ulteriori informazioni:** questo messaggio di errore verrà visualizzato quando si tenta di utilizzare qualsiasi funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che richiede una connessione al servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio:  
+ **Altre informazioni:** questo messaggio di errore viene visualizzato quando si tenta di usare una funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che richiede una connessione al servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. ad esempio:  
   
 -   Apertura di Generatore report di SQL Server da una raccolta documenti di SharePoint.  
   
@@ -147,23 +147,23 @@ ms.locfileid: "68889692"
   
 -   Gestione di un'applicazione di servizio  
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> La configurazione non riesce in un computer con SharePoint installato ma non configurato  
- **Descrizione:** se si sceglie di installare la modalità SharePoint di Reporting Services in un computer con SharePoint installato ma non configurato, verrà visualizzato un messaggio simile al seguente e l'installazione viene arrestata:  
+ **Descrizione:** se si sceglie di installare la modalità SharePoint per Reporting Services in un computer con SharePoint installato ma non configurato, verrà visualizzato un messaggio simile al seguente e l'installazione verrà arrestata:  
   
  L'installazione di SQL Server ha smesso di funzionare  
   
- **Soluzione alternativa:** configurare SharePoint ed eseguire l'installazione di SQL Server.  
+ **Soluzione alternativa:** configurare SharePoint, quindi eseguire l'installazione di SQL Server.  
   
- **Ulteriori informazioni:** quando si installa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un'installazione di SharePoint, il programma di installazione tenta di installare e avviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. L'installazione del servizio non riesce se SharePoint non è configurato.  
+ **Altre informazioni:** quando si installa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un'installazione di SharePoint esistente, il programma di installazione tenta di installare e avviare il servizio SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'installazione del servizio non riesce se SharePoint non è configurato.  
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> La pagina Amministrazione centrale SharePoint è vuota  
  **Descrizione:** SharePoint 2013/2016 è stato installato senza errori. Tuttavia quando si passa ad Amministrazione centrale, viene visualizzata una pagina vuota.  
   
- **Soluzione alternativa:** questo non è un problema specifico di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ma è relativo alla configurazione delle autorizzazioni nell'installazione generale di SharePoint. Di seguito sono riportati alcuni suggerimenti:  
+ **Soluzione alternativa:** non è un problema specifico di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ma è relativo alla configurazione delle autorizzazioni nell'installazione generale di SharePoint. Di seguito sono riportati alcuni suggerimenti:  
   
 -   Leggere l'argomento relativo a SharePoint negli ambienti di sviluppo. [Configurare un ambiente di sviluppo generale per SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
@@ -171,25 +171,25 @@ ms.locfileid: "68889692"
   
 -   L'account del servizio che si sta usando per i servizi SharePoint, ad esempio il servizio Amministrazione centrale SharePoint 2013/2016, deve disporre dei privilegi amministrativi nel sistema operativo locale.  
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> Viene visualizzato un messaggio di errore quando si tenta di creare un nuovo report di Generatore report  
- **Descrizione:** viene visualizzato un messaggio di errore simile al seguente quando si tenta di creare un report di Generatore report in una libreria di documenti:  
+ **Descrizione:** viene visualizzato un messaggio di errore simile al seguente quando si tenta di creare un report di Generatore report in una raccolta documenti:  
   
  Questa funzionalità non è supportata perché non esiste un'applicazione del servizio SQL Server Reporting Services o non è stato configurato un URL del server di report in Amministrazione centrale.  
   
- **Soluzione alternativa:** verificare che l'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia disponibile e configurata correttamente. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+ **Soluzione alternativa:** verificare che l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia disponibile e configurata correttamente. Per altre informazioni, vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Viene visualizzato un messaggio di errore in cui è indicato che RS_SHP non è supportato con PREPAREIMAGE  
  **Descrizione:** quando si tenta di eseguire PREPAREIMAGE per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  
   
  "Funzionalità specificata 'RS_SHP' non supportata durante l'esecuzione dell'azione PREPAREIMAGE perché l'utilità SysPrep non è supportata. Rimuovere le funzionalità non compatibili con SysPrep ed eseguire nuovamente l'installazione".  
   
- **Soluzione alternativa**: non esistono soluzioni alternative. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP.  
+ **Soluzione alternativa:** Non esistono soluzioni alternative. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP.  
   
- ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona a forma di freccia usata con il collegamento Torna all'inizio") [Risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icona a forma di freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Risoluzione dei problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   

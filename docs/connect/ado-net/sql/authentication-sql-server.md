@@ -1,6 +1,6 @@
 ---
 title: Autenticazione in SQL Server
-description: Vengono descritti gli account di accesso e l'autenticazione in SQL Server e vengono forniti collegamenti a risorse aggiuntive.
+description: Vengono descritti gli account di accesso e l'autenticazione in SQL Server e vengono specificati collegamenti a risorse aggiuntive.
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eb528eb1045788469b0eb31491fd654997831468
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 115b4810fbe890862dfb63e278a583b3e12dbf54
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452318"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250891"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticazione in SQL Server
 
@@ -25,12 +25,12 @@ ms.locfileid: "72452318"
 
 SQL Server supporta due modalità di autenticazione: la modalità di autenticazione di Windows e la modalità mista.  
   
-- L'autenticazione di Windows è l'impostazione predefinita e viene spesso definita sicurezza integrata perché questo modello di sicurezza di SQL Server è strettamente integrato con Windows. Gli account utente e di gruppo di Windows specifici sono attendibili per accedere a SQL Server. Gli utenti di Windows che sono già stati autenticati non devono presentare credenziali aggiuntive.  
+- L'autenticazione di Windows è l'impostazione predefinita e viene spesso definita sicurezza integrata perché questo modello di sicurezza di SQL Server è strettamente integrato con Windows. Vi sono account utente e di gruppo di Windows specifici considerati attendibili per accedere a SQL Server. Gli utenti di Windows che sono già stati autenticati non devono presentare credenziali aggiuntive.  
   
 - La modalità mista supporta l'autenticazione di Windows e quella di SQL Server. Le coppie di nome utente e password vengono mantenute in SQL Server.  
   
 > [!IMPORTANT]
-> Quando possibile, è consigliabile usare l'autenticazione di Windows. Questa modalità usa una serie di messaggi crittografati per autenticare gli utenti in SQL Server. Quando vengono usati gli account di accesso di SQL Server, i nomi e le password vengono passati attraverso la rete, riducendone la sicurezza.  
+> È consigliabile usare l'autenticazione di Windows, se possibile. Questa modalità usa una serie di messaggi crittografati per autenticare gli utenti in SQL Server. Quando vengono usati gli account di accesso di SQL Server, i nomi e le password vengono passati attraverso la rete, riducendone la sicurezza.  
   
 Con l'autenticazione di Windows, gli utenti sono già connessi a Windows e non devono eseguire separatamente l'accesso a SQL Server. L'oggetto `SqlConnection.ConnectionString` seguente specifica l'autenticazione di Windows senza richiedere agli utenti di immettere nome utente o password.  
   
@@ -39,34 +39,34 @@ Con l'autenticazione di Windows, gli utenti sono già connessi a Windows e non d
 ```  
   
 > [!NOTE]
-> Gli account di accesso sono distinti dagli utenti del database. È necessario eseguire il mapping di account di accesso o gruppi di Windows a utenti o ruoli del database in un'operazione separata. È quindi possibile concedere le autorizzazioni a utenti o ruoli per accedere agli oggetti di database.  
+> Gli account di accesso sono distinti dagli utenti del database. È necessario eseguire il mapping degli account di accesso o dei gruppi di Windows a utenti o ruoli del database in un'operazione separata. È quindi possibile concedere le autorizzazioni a utenti o ruoli per accedere agli oggetti del database.  
   
 ## <a name="authentication-scenarios"></a>Scenari di autenticazione  
 L'autenticazione di Windows è in genere la scelta migliore nelle situazioni seguenti:  
   
-- È presente un controller di dominio.  
+- Presenza di un controller di dominio.  
   
 - L'applicazione e il database si trovano nello stesso computer.  
   
 - Si usa un'istanza di SQL Server Express o Local DB.  
   
-Gli account di accesso SQL Server vengono spesso utilizzati nelle situazioni seguenti:  
+Gli account di accesso SQL Server vengono spesso usati nelle situazioni seguenti:  
   
-- Se si dispone di un gruppo di lavoro.  
+- È presente un gruppo di lavoro.  
   
-- Gli utenti si connettono da domini diversi non trusted.  
+- Gli utenti si connettono da domini diversi non attendibili.  
   
-- Applicazioni Internet, ad esempio ASP.NET.  
+- Uso di applicazioni Internet, come ad esempio ASP.NET.  
   
 > [!NOTE]
 > Se si specifica l'autenticazione di Windows, gli account di accesso di SQL Server non vengono disabilitati. Usare l'istruzione Transact-SQL ALTER LOGIN DISABLE per disabilitare gli account di accesso di SQL Server con privilegi elevati.  
   
-## <a name="login-types"></a>Tipi di accesso  
+## <a name="login-types"></a>Tipi di account di accesso  
 SQL Server supporta tre tipi di account di accesso:  
   
-- Un account utente locale di Windows o un account di dominio trusted. SQL Server si affida a Windows per l'autenticazione degli account utente di Windows.  
+- Un account utente locale di Windows o un account di dominio attendibile. SQL Server si affida a Windows per l'autenticazione degli account utente di Windows.  
   
-- Gruppo di Windows. La concessione dell'accesso a un gruppo di Windows concede l'accesso a tutti gli account di accesso utente di Windows che sono membri del gruppo.  
+- Gruppo di Windows. La concessione dell'accesso a un gruppo di Windows concede l'accesso a tutti gli account utente di Windows che sono membri del gruppo.  
   
 - Account di accesso di SQL Server. SQL Server archivia sia il nome utente che un hash della password nel database master, usando metodi di autenticazione interni per verificare i tentativi di accesso.  
   
@@ -77,10 +77,10 @@ SQL Server supporta tre tipi di account di accesso:
 Se è necessario usare l'autenticazione in modalità mista, occorre creare account di accesso di SQL Server, che vengono archiviati in SQL Server. È quindi necessario specificare il nome utente e la password di SQL Server in fase di esecuzione.  
   
 > [!IMPORTANT]
-> SQL Server viene installato con un account di accesso SQL Server denominato `sa` (un'abbreviazione di "System Administrator"). Assegnare una password complessa all'account di accesso `sa` e non usare l'account di accesso `sa` nell'applicazione. L'account di accesso `sa` viene mappato al ruolo predefinito del server `sysadmin`, che dispone di credenziali amministrative irrevocabili sull'intero server. Se un utente malintenzionato ottiene l'accesso come amministratore di sistema, non vi sono limiti ai danni potenziali. Per impostazione predefinita, tutti i membri del gruppo `BUILTIN\Administrators` di Windows (il gruppo di amministratori locali) sono membri del ruolo `sysadmin`, ma possono essere rimossi da tale ruolo.  
+> SQL Server viene installato con un account di accesso di SQL Server denominato `sa` (abbreviazione di "system administrator", amministratore di sistema). Assegnare una password complessa all'account di accesso `sa` e non usare l'account di accesso `sa` nell'applicazione. L'account di accesso `sa` viene mappato al ruolo predefinito del server `sysadmin`, che ha credenziali amministrative irrevocabili per l'intero server. Se un utente malintenzionato ottiene l'accesso come amministratore di sistema, non vi sono limiti ai danni potenziali che potrebbe creare. Per impostazione predefinita, tutti i membri del gruppo `BUILTIN\Administrators` di Windows (il gruppo di amministratori locali) sono membri del ruolo `sysadmin`, ma possono essere rimossi da tale ruolo.  
   
 > [!IMPORTANT]
-> La concatenazione di stringhe di connessione dall'input dell'utente può lasciare vulnerabile a un attacco injection per la stringa di connessione. Utilizzare il <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. 
+> La concatenazione di stringhe di connessione dall'input dell'utente può rendere vulnerabili a un attacco injection alla stringa di connessione. Usare <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. 
   
 ## <a name="external-resources"></a>Risorse esterne  
 Per ulteriori informazioni, vedere le risorse seguenti.  

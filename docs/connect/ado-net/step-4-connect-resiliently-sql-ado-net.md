@@ -1,24 +1,24 @@
 ---
-title: 'Passaggio 4: connettersi in modo resiliente a SQL con ADO.NET | Microsoft Docs'
-description: Viene descritto come connettersi a reciliently a SQL
+title: 'Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET | Microsoft Docs'
+description: Viene descritto come connettersi in modo resiliente a SQL
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 62ec2eb775ef5fba76b402d1871afe6c87bcc606
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c323880153939b4f7229e5f04cf4b9a9ed16b99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451806"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253318"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET
 
@@ -27,47 +27,47 @@ ms.locfileid: "72451806"
 - Articolo precedente:&nbsp;&nbsp;&nbsp;[Passaggio 3: Modello di verifica per la connessione a SQL con ADO.NET](step-3-connect-sql-ado-net.md)  
 
   
-In questo argomento viene fornito un esempio di codice C# che illustra una logica di ripetizione dei tentativi personalizzata. La logica di ripetizione dei tentativi garantisce affidabilità. La logica di ripetizione dei tentativi è progettata per elaborare normalmente errori *temporanei o errori temporanei* che tendono a scomparire se il programma attende diversi secondi e nuovi tentativi.  
+In questo argomento viene fornito un esempio di codice C# che illustra una logica di ripetizione dei tentativi personalizzata. La logica di ripetizione dei tentativi garantisce affidabilità. È progettata per elaborare correttamente gli errori o *guasti temporanei* che tendono a risolversi se il programma attende qualche secondo ed effettua un nuovo tentativo.  
   
-Le origini degli errori temporanei includono:  
+L'origine di un errore temporaneo può essere:  
   
-- Un breve errore della rete che supporta Internet.  
-- Un sistema cloud potrebbe bilanciare il carico delle risorse al momento dell'invio della query.  
+- Un errore di breve durata della rete che supporta Internet.  
+- Il bilanciamento del carico delle risorse di un sistema cloud al momento dell'invio della query.  
   
   
-Le classi ADO.NET per la connessione all'istanza locale di Microsoft SQL Server possono anche connettersi al database SQL di Azure. Tuttavia, le classi ADO.NET non possono fornire tutta la solidità e l'affidabilità necessarie per l'uso in produzione. Il programma client può rilevare errori temporanei da cui deve essere ripristinato in modo invisibile all'utente e continuarsi autonomamente.  
+Le classi ADO.NET per la connessione all'istanza locale di Microsoft SQL Server possono anche connettersi al database SQL di Azure. Tuttavia, le classi ADO.NET non forniscono autonomamente tutta la solidità e l’affidabilità necessarie per l’uso in un ambiente di produzione. Il programma client può incorrere in guasti temporanei da cui deve poter eseguire un ripristino automatico e continuare a funzionare.  
   
-## <a name="step-1-identify-transient-errors"></a>Passaggio 1: identificare gli errori temporanei  
+## <a name="step-1-identify-transient-errors"></a>Passaggio 1: Identificare gli errori temporanei  
   
-Il programma deve distinguere tra gli errori temporanei e gli errori persistenti. Gli errori temporanei sono condizioni di errore che possono risultare evidenti entro un breve periodo di tempo, ad esempio problemi di rete temporanei.  Un esempio di errore persistente è che, se il programma ha un errore di ortografia del nome del database di destinazione, in questo caso l'errore "nessun database di questo tipo è stato trovato" e non è possibile cancellarlo entro un breve periodo di tempo.  
+Il programma deve distinguere gli errori temporanei dagli errori persistenti. Gli errori temporanei sono condizioni di errore che possono scomparire entro un breve periodo di tempo, ad esempio problemi momentanei della rete.  Un esempio di errore persistente può essere l'uso da parte del programma di un nome scritto in modo errato per il database di destinazione: in questo caso l'errore "Database non trovato" è persistente e non è possibile cancellarlo entro un breve periodo di tempo.  
   
-L'elenco dei numeri di errore categorizzati come errori temporanei è disponibile nei [messaggi di errore per le applicazioni client del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+L'elenco dei numeri di errore classificati come errori temporanei è disponibile nell'elenco dei [messaggi di errore per le applicazioni client del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
-## <a name="step-2-create-and-run-sample-application"></a>Passaggio 2: creare ed eseguire un'applicazione di esempio  
+## <a name="step-2-create-and-run-sample-application"></a>Passaggio 2: Creare ed eseguire un'applicazione di esempio  
   
-In questo esempio si presuppone che sia installato .NET Framework 4.5.1 o versione successiva.  L' C# esempio di codice è costituito da un file denominato Program.cs. Il codice è disponibile nella sezione successiva.  
+In questo esempio si presuppone che sia installato .NET Framework 4.5.1 o versione successiva.  L'esempio di codice C# è costituito da un file denominato Program.cs. Il relativo codice viene specificato nella sezione successiva.  
   
-### <a name="step-2a-capture-and-compile-the-code-sample"></a>Passaggio 2. a: acquisire e compilare l'esempio di codice  
+### <a name="step-2a-capture-and-compile-the-code-sample"></a>Passaggio 2.a: Acquisire e compilare il codice di esempio  
   
 È possibile compilare l'esempio con i passaggi seguenti:  
   
-1. Nell' [edizione gratuita di Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)creare un nuovo progetto dal modello di C# applicazione console.  
-    - File > nuovo progetto > > installato > modelli > applicazione C# console > desktop classico > Visual > Windows  
-    - Denominare il progetto **RetryAdo2**.  
+1. Nell’ [edizione gratuita Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs), creare un nuovo progetto dal modello di applicazione Console C#.  
+    - File > Nuovo > Progetto > Installati > Modelli > Visual C# > Windows > Desktop classico > Applicazione console  
+    - Assegnare al progetto il nome **RetryAdo2**.  
 2. Aprire il riquadro Esplora soluzioni.  
-    - Vedere il nome del progetto.  
-    - Vedere il nome del file Program.cs.  
+    - Visualizzare il nome del progetto.  
+    - Visualizzare il nome del file Program.cs.  
 3. Aprire il file Program.cs.  
 4. Sostituire completamente il contenuto del file Program.cs con il codice nel blocco di codice seguente.  
-5. Fare clic sul menu Compila > Compila soluzione.  
+5. Fare clic sul menu Compilazione > Compila soluzione.  
   
-### <a name="step-2b-copy-and-paste-sample-code"></a>Passaggio 2. b: copiare e incollare il codice di esempio  
+### <a name="step-2b-copy-and-paste-sample-code"></a>Passaggio 2.b: Copiare e incollare il codice di esempio  
   
 Incollare questo codice nel file **Program.cs** .  
   
-È quindi necessario modificare le stringhe per nome server, password e così via. È possibile trovare queste stringhe nel metodo denominato **GetSqlConnectionStringBuilder**.  
+È necessario modificare le stringhe per nome del server, password e così via. È possibile trovare queste stringhe nel metodo denominato **GetSqlConnectionStringBuilder**.  
   
-Nota: la stringa di connessione per il nome del server è orientata al database SQL di Azure, perché include il prefisso di quattro caratteri **TCP:** . È tuttavia possibile modificare la stringa del server per connettersi al Microsoft SQL Server.  
+NOTA:  La stringa di connessione per il nome del server è pensata per il database SQL di Azure, perché include il prefisso di quattro caratteri di **tcp:** , ma è possibile modificare la stringa del server per connettersi a Microsoft SQL Server.  
   
   
 ```csharp
@@ -244,13 +244,13 @@ SELECT TOP 3
 }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>Passaggio 2. c: eseguire il programma  
+###  <a name="step-2c-run-the-program"></a>Passaggio 2.c: Eseguire il programma  
   
   
-L'eseguibile **RetryAdo2. exe** non immette parametri. Per eseguire il file con estensione exe:  
+L’eseguibile **RetryAdo2.exe** non invia parametri. Per eseguire il file EXE:  
   
-1. Aprire una finestra della console in cui è stato compilato il file binario RetryAdo2. exe.  
-2. Eseguire RetryAdo2. exe senza parametri di input.  
+1. Aprire una finestra della console in cui è stato compilato il file binario RetryAdo2.exe.  
+2. Eseguire RetryAdo2.exe senza parametri di input.  
   
   
   
@@ -262,19 +262,19 @@ filetable_updates_2105058535    2105058535
   
   
   
-## <a name="step-3-ways-to-test-your-retry-logic"></a>Passaggio 3: modi per testare la logica di ripetizione dei tentativi  
+## <a name="step-3-ways-to-test-your-retry-logic"></a>Passaggio 3: Come testare la logica di ripetizione dei tentativi  
   
-Esistono diversi modi per simulare un errore temporaneo per testare la logica di ripetizione dei tentativi.  
+Per testare la logica di ripetizione dei tentativi è possibile simulare un errore temporaneo in diversi modi.  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>Passaggio 3. a: generare un'eccezione di test  
+###  <a name="step-3a-throw-a-test-exception"></a>Passaggio 3.a: Generare un'eccezione di test  
   
 L'esempio di codice include:  
   
-- Una piccola classe secondaria denominata **TestSqlException**con una proprietà denominata **Number**.  
-- `//throw new TestSqlException(4060);`, da cui è possibile rimuovere il commento.  
+- Una piccola seconda classe denominata **TestSqlException**, con la proprietà **Number**.  
+- `//throw new TestSqlException(4060);` , da cui è possibile rimuovere il commento.  
   
-Se si rimuove il commento dall'istruzione throw e si ricompila, l'esecuzione successiva di **RetryAdo2. exe** restituisce un risultato simile al seguente.  
+Se si rimuove il commento dall'istruzione throw e si ricompila, l'esecuzione successiva di **RetryAdo2.exe** restituisce un output simile al seguente.  
   
 ```  
 [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -292,31 +292,31 @@ ERROR: Unable to access the database!
 >>  
 ```  
   
-###  <a name="step-3b-retest-with-a-persistent-error"></a>Passaggio 3. b: eseguire nuovamente il test con un errore persistente  
+###  <a name="step-3b-retest-with-a-persistent-error"></a>Passaggio 3.b: Eseguire nuovamente il test con un errore persistente  
   
-Per dimostrare che il codice gestisce correttamente gli errori persistenti, eseguire di nuovo il test precedente eccetto non usare il numero di un errore temporaneo reale, ad esempio 4060. Usare invece il numero non sensato 7654321. Il programma deve considerarlo come un errore persistente e deve ignorare eventuali tentativi.  
+Per verificare se il codice gestisce correttamente gli errori persistenti, rieseguire il test precedente facendo attenzione a non usare il numero di un errore temporaneo effettivo, come 4060. Usare invece il numero fittizio 7654321. Il programma deve trattarlo come un errore persistente e ignorare qualsiasi ripetizione dei tentativi.  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>Passaggio 3. c: disconnettersi dalla rete  
+###  <a name="step-3c-disconnect-from-the-network"></a>Passaggio 3.c: Disconnettersi dalla rete  
   
 1. Disconnettere il computer client dalla rete.  
-    - Per un desktop, scollegare il cavo di rete.  
-    - Per un portatile, premere la funzione combinazione di tasti per disattivare la scheda di rete.  
-2. Avviare RetryAdo2. exe e attendere che la console visualizzi il primo errore temporaneo, probabilmente 11001.  
-3. Riconnettersi alla rete, mentre RetryAdo2. exe continua a essere eseguito.  
-4. Controllare la riuscita della console per un nuovo tentativo.  
+    - In un computer desktop scollegare il cavo di rete.  
+    - In un computer portatile premere la combinazione di tasti funzione che disattiva la scheda di rete.  
+2. Avviare RetryAdo2.exe e attendere che venga visualizzato il primo errore temporaneo, probabilmente il numero 11001.  
+3. Riconnettersi alla rete mentre RetryAdo2.exe è ancora in esecuzione.  
+4. La console segnalerà l'esito positivo di un tentativo successivo.  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Passaggio 2. d: digitazione temporanea del nome del server  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Passaggio 2.d: Specificare temporaneamente il nome del server in modo errato  
   
-1. Aggiungere temporaneamente 40615 come numero di errore diverso a **TransientErrorNumbers**e ricompilare.  
-2. Imposta un punto di interruzione nella riga: `new QC.SqlConnectionStringBuilder()`.  
-3. Usare la funzionalità *modifica e continuazione* per definire in modo errato il nome del server, un paio di righe sotto.  
+1. Aggiungere temporaneamente il numero di errore 40615 a **TransientErrorNumbers**e ricompilare.  
+2. Impostare un punto di interruzione sulla riga `new QC.SqlConnectionStringBuilder()`.  
+3. Usare la funzionalità *Modifica e continuazione* per specificare intenzionalmente in modo errato il nome del server un paio di righe più in basso.  
     - Consentire l'esecuzione del programma e tornare al punto di interruzione.  
-    - Si è verificato l'errore 40615.  
+    - Si verifica l'errore 40615.  
 4. Correggere l'errore di ortografia.  
-5. Consente di eseguire il programma e di completarlo correttamente.  
-6. Rimuovere 40615 e ricompilare.  
+5. Consentire l'esecuzione e il completamento del programma.  
+6. Rimuovere il numero 40615 e ricompilare.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
-Per esplorare le procedure consigliate e le linee guida di progettazione, vedere [connessione al database SQL: collegamenti, procedure consigliate e linee guida per la progettazione](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Per esplorare altre procedure consigliate e linee guida per la progettazione, vedere [Connessione al database SQL: collegamenti, procedure consigliate e linee guida per la progettazione](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

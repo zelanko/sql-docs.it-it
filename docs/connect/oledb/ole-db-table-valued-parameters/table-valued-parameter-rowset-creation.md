@@ -1,5 +1,5 @@
 ---
-title: Creazione di set di righe di parametri con valori di tabella | Microsoft Docs
+title: Creazione di un set di righe di parametri con valori di tabella | Microsoft Docs
 description: Creazione di set di righe di parametri con valori di tabella statici e dinamici
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994111"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creazione di un set di righe di parametri con valori di tabella
@@ -29,11 +29,11 @@ ms.locfileid: "67994111"
  Gli oggetti set di righe di parametri con valori di tabella vengono creati in modo esplicito dal consumer per i parametri di input tramite più interfacce a livello di sessione. Esiste una sola istanza di un oggetto set di righe di parametri con valori di tabella per parametro con valori di tabella. Il consumer può creare gli oggetti set di righe di parametri con valori di tabella fornendo le informazioni sui metadati già note (scenario statico) o individuandole tramite le interfacce del provider (scenario dinamico). Nelle sezioni seguenti vengono descritti questi due scenari.  
   
 ## <a name="static-scenario"></a>Scenario statico  
- Quando le informazioni sul tipo sono note, il consumer utilizza ITableDefinitionWithConstraints:: CreateTableWithConstraints per creare un'istanza di un oggetto set di righe di parametri con valori di tabella che corrisponde a un parametro con valori di tabella.  
+ Quando le informazioni sul tipo sono note, il consumer usa ITableDefinitionWithConstraints::CreateTableWithConstraints per creare un'istanza dell'oggetto set di righe di parametri con valori di tabella che corrisponde a un parametro con valori di tabella.  
   
- Il campo *GUID* (parametro*pTableID* ) contiene il GUID speciale (CLSID_ROWSET_TVP). Il membro *pwszName* contiene il nome del tipo di parametro con valori di tabella di cui il consumer intende creare un'istanza. Il campo *eKind* sarà impostato su DBKIND_GUID_NAME. Questo nome è necessario quando si tratta di un'istruzione SQL ad hoc; il nome è facoltativo se è una chiamata di procedura.  
+ Il campo *guid* (parametro *pTableID*) contiene il GUID speciale (CLSID_ROWSET_TVP). Il membro *pwszName* contiene il nome del tipo di parametro con valori di tabella di cui il consumer intende creare un'istanza. Il campo *eKind* sarà impostato su DBKIND_GUID_NAME. Questo nome è necessario quando si tratta di un'istruzione SQL ad hoc; il nome è facoltativo se è una chiamata di procedura.  
   
- Per l'aggregazione, il consumer passa il parametro *pUnkOuter* con il controllo IUnknown.  
+ Per l'aggregazione il consumer passa il parametro *pUnkOuter* con IUnknown per il controllo.  
   
  Le proprietà dell'oggetto set di righe di parametri con valori di tabella sono di sola lettura, pertanto il consumer non deve impostare alcuna proprietà in *rgPropertySets*.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "67994111"
   
  Per recuperare le informazioni corrispondenti da un oggetto set di righe di parametri con valori di tabella, il consumer usa IRowsetInfo::GetProperties.  
   
- Per recuperare informazioni sullo stato null, univoco, calcolato e di aggiornamento di ogni colonna, il consumer può utilizzare IColumnsRowset:: GetColumnsRowset o IColumnsInfo:: GetColumnInfo. Questi metodi forniscono informazioni dettagliate su ogni colonna del set di righe di parametri con valori di tabella.  
+ Per recuperare informazioni sullo stato null, univoco, calcolato e di aggiornamento di ogni colonna, il consumer può usare IColumnsRowset::GetColumnsRowset o IColumnsInfo::GetColumnInfo. Questi metodi forniscono informazioni dettagliate su ogni colonna del set di righe di parametri con valori di tabella.  
   
- Il consumer specifica il tipo di ogni colonna del parametro con valori di tabella, analogamente al modo in cui vengono specificate le colonne quando viene creata una tabella in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il consumer ottiene un oggetto set di righe di parametri con valori di tabella dal driver OLE DB per SQL Server tramite il parametro di output *ppRowset* .  
+ Il consumer specifica il tipo di ogni colonna del parametro con valori di tabella, analogamente al modo in cui vengono specificate le colonne quando viene creata una tabella in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il consumer ottiene un oggetto set di righe di parametri con valori di tabella da OLE DB Driver per SQL Server tramite il parametro di output *ppRowset*.  
   
 ## <a name="dynamic-scenario"></a>Scenario dinamico  
- Quando il consumer non dispone di informazioni sul tipo, deve utilizzare IOpenRowset:: OpenRowset per creare un'istanza di oggetti set di righe di parametri con valori di tabella. L'unica informazione che il consumer deve fornire al provider è il nome del tipo.  
+ Quando il consumer non dispone di informazioni sul tipo, deve usare IOpenRowset::OpenRowset per creare un'istanza degli oggetti set di righe di parametri con valori di tabella. L'unica informazione che il consumer deve fornire al provider è il nome del tipo.  
   
  In questo scenario, il provider ottiene le informazioni sul tipo relative a un oggetto set di righe di parametri con valori di tabella dal server per conto del consumer.  
   

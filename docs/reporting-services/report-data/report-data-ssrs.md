@@ -1,5 +1,5 @@
 ---
-title: Dati del report
+title: Introduzione ai dati del report in SQL Server Reporting Services (SSRS)
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -8,28 +8,44 @@ ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: f3aa702eef414fdc92670a51b8d374627797fe3d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 11/18/2019
+ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265563"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190726"
 ---
-# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Dati del report in SQL Server Reporting Services (SSRS)
+# <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Introduzione ai dati del report in SQL Server Reporting Services (SSRS)
 
   I dati del report possono provenire da più origini dei dati dell'organizzazione. Il primo passaggio nella progettazione di un report consiste nel creare le origini dati e i set di dati che rappresentano i dati del report sottostanti. Ogni origine dati include le informazioni sulle connessione dati. Ogni set di dati include un comando di query che consente di definire il set di campi da utilizzare come dati di un'origine dati. Per visualizzare i dati di ogni set di dati, aggiungere un'area dati, ad esempio una tabella, una matrice, un grafico o una mappa. Durante l'elaborazione del report, le query vengono eseguite sull'origine dati e ogni area dati viene espansa in base alle esigenze per visualizzare i risultati della query per il set di dati.  
 
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
+
+## <a name="data-in-ssrbnoversion"></a>Dati in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="BkMk_ReportDataTerms"></a> Termini  
+1.  **Origini dati nel riquadro dei dati del report** Un'origine dati viene visualizzata nel riquadro dei dati del report in seguito alla creazione di un'origine dati incorporata o all'aggiunta di un'origine dati condivisa.  
+  
+2.  **Finestra di dialogo Connessione** Usare la finestra di dialogo Connessione per compilare o incollare una stringa di connessione.  
+  
+3.  **Informazioni sulla connessione dati** La stringa di connessione viene passata all'estensione per i dati.  
+  
+4.  **Credenziali** Le credenziali vengono gestite separatamente dalla stringa di connessione.  
+  
+5.  **Estensione per i dati/Provider di dati** La connessione ai dati può avvenire attraverso più livelli di accesso ai dati.  
+  
+6.  **Origini dati esterne** È possibile recuperare i dati da database relazionali, database multidimensionali, elenchi SharePoint o servizi Web.  
+
+
+##  <a name="BkMk_ReportDataTerms"></a> Definizione di termini  
   
 - **Connessione dati.** Nota anche come *origine dati*. In una connessione dati sono inclusi un nome e le proprietà di connessione che dipendono dal tipo di connessione. In base alle caratteristiche di progettazione, in una connessione dati non sono incluse le credenziali. Una connessione dati non consente di specificare i dati da recuperare dall'origine dati esterna. A tale scopo, è necessario specificare una query durante la creazione di un set di dati.  
   
-- **Definizione dell'origine dati.** File che contiene la rappresentazione XML di un'origine dati del report. Quando viene pubblicato un report, le relative origini dati vengono salvate nel server di report o in un sito di SharePoint come definizioni dell'origine dati, indipendentemente dalla definizione del report. Ad esempio, un amministratore del server di report potrebbe aggiornare la stringa di connessione o le credenziali. In un server di report nativo, il tipo di file è con estensione rds. In un sito di SharePoint, il tipo di file è con estensione rsds.  
+- **Definizione dell'origine dati.** File che contiene la rappresentazione XML di un'origine dati del report. Quando si pubblica un report, le relative origini dati vengono salvate nel server di report o in un sito di SharePoint come definizioni dell'origine dati, indipendentemente dalla definizione del report. Ad esempio, un amministratore del server di report potrebbe aggiornare la stringa di connessione o le credenziali. In un server di report nativo, il tipo di file è con estensione rds. In un sito di SharePoint, il tipo di file è con estensione rsds.  
   
-- **Stringa di connessione.** Una stringa di connessione è una versione della stringa delle proprietà di connessione che sono necessarie per la connessione a un'origine dati. Le proprietà di connessione variano in base al tipo di connessione dati. Per gli esempi, vedere [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+- **Stringa di connessione.** Una stringa di connessione è una versione della stringa delle proprietà di connessione che sono necessarie per la connessione a un'origine dati. Le proprietà di connessione variano in base al tipo di connessione dati. Per esempi, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 - **Origine dati condivisa.** Un'origine dati condivisa è disponibile in un server di report o in un sito di SharePoint per essere usata da più report.  
   
@@ -47,11 +63,11 @@ ms.locfileid: "68265563"
   
 - **Dati utilizzati dalle parti del report** Le parti del report possono includere i dati dai quali dipendono. Per altre informazioni sulle parti del report, vedere [Parti del report in Progettazione Report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-- **Filtro di dati** I dati del report possono essere filtrati nella query o nel report. È possibile utilizzare i set di dati e le variabili di query per creare parametri di propagazione e consentire all'utente di ridurre migliaia di scelte possibili a un numero più gestibile. È possibile filtrare i dati in una tabella o in un grafico in base ai valori dei parametri o ad altri valori specificati.  
+- **Filtro di dati** I dati del report possono essere filtrati nella query o nel report. È possibile usare i set di dati e le variabili di query per creare parametri a cascata. Con i parametri a cascata, gli utenti possono limitare le scelte da migliaia di selezioni a un numero più gestibile. È possibile filtrare i dati in una tabella o in un grafico in base ai valori dei parametri o ad altri valori specificati.  
   
-- **Parametri** I comandi di query dei set di dati che includono variabili di query consentono di creare automaticamente i parametri del report corrispondenti. È inoltre possibile creare i parametri manualmente. Quando si visualizza un report, i parametri vengono visualizzati nella relativa barra degli strumenti. Gli utenti possono selezionare i valori per controllare i dati o l'aspetto del report. Per personalizzare i dati del report per gruppi di destinatari specifici, è possibile creare set di parametri del report con valori predefiniti diversi collegati alla stessa definizione di report oppure usare il campo **ID utente** predefinito. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+- **Parametri** I comandi di query dei set di dati che includono variabili di query consentono di creare automaticamente i parametri del report corrispondenti. È inoltre possibile creare i parametri manualmente. Quando si visualizza un report, i parametri vengono visualizzati nella relativa barra degli strumenti. Gli utenti possono selezionare i valori per controllare i dati o l'aspetto del report. Per personalizzare i dati del report per gruppi di destinatari specifici, è possibile creare set di parametri del report con valori predefiniti diversi collegati alla stessa definizione di report oppure è possibile usare il campo **UserID** predefinito per personalizzare i dati per destinatari diversi. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
-- **Avvisi dati** Dopo la pubblicazione di un report è possibile creare avvisi basati sui dati del report e ricevere messaggi di posta elettronica quando tale report soddisfa le regole specificate.  
+- **Avvisi dati** Dopo la pubblicazione di un report, è possibile creare avvisi basati sui dati del report. Si ricevono quindi messaggi di posta elettronica quando il report soddisfa le regole specificate.  
   
 - **Raggruppamento e aggregazione di dati** I dati del report possono essere raggruppati o aggregati nella query o nel report. Se si aggregano i valori nella query, è possibile continuare a combinare i valori nel report sulla base di ciò che è significativo.  Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) e [Funzione Aggregate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
@@ -71,7 +87,7 @@ ms.locfileid: "68265563"
   
 - Comprendere le architetture e gli strumenti client/server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio, in Progettazione report è possibile creare report in un computer client in cui vengono utilizzati tipi di origini dati predefiniti. Quando si pubblica un report, è necessario che i tipi di origini dati siano supportati nel server di report o nel sito di SharePoint.  Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-- Le origini dati e i set di dati vengono creati in un report e pubblicati in un server di report o in un sito di SharePoint da uno strumento client di creazione. Le origini dati possono essere create direttamente nel server di report. Una volta pubblicate, le credenziali e altre proprietà possono essere configurate nel server di report. Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
+- Le origini dati e i set di dati vengono creati in un report e pubblicati in un server di report o in un sito di SharePoint da uno strumento client di creazione. Le origini dati possono essere create direttamente nel server di report. Una volta pubblicate, le credenziali e altre proprietà possono essere configurate nel server di report. Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
 - Le origini dati che è possibile utilizzare dipendono dalle estensioni per i dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installate. Il supporto per le origini dati può variare in base allo strumento client di creazione, alla versione del server di report e alla piattaforma di quest'ultimo. Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -84,7 +100,7 @@ ms.locfileid: "68265563"
 |||  
 |-|-|  
 |**Attività comuni**|**Collegamenti**|  
-|Creare connessioni dati|[Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|Creare connessioni dati|[Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Creare set di dati e query|[Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Gestire origini dati dopo che sono state pubblicate|[Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |Gestire origini dati condivise dopo che sono state pubblicate|[Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)|  

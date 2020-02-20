@@ -1,21 +1,21 @@
 ---
 title: Notifiche di query in SQL Server
-description: Viene descritto in che modo le applicazioni .NET possono richiedere una notifica da SQL Server quando i dati sono stati modificati.
+description: Viene descritto in che modo le applicazioni .NET possono richiedere una notifica da SQL Server in seguito a modifiche dei dati.
 ms.date: 08/15/2019
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d47241e3656e3ca7b4f5ea0eebe9f2cc8b571bf6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 9bcce207ed8427343e739959c9e91b988d9675cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452078"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251187"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifiche di query in SQL Server
 
@@ -25,17 +25,17 @@ Basate sull'infrastruttura di Service Broker, tali notifiche consentono di comun
   
 Esistono tre modi per implementare le notifiche delle query tramite ADO.NET:  
   
-- L'implementazione di basso livello viene fornita dalla classe `SqlNotificationRequest` che espone la funzionalità lato server, consentendo di eseguire un comando con una richiesta di notifica.  
+- L'implementazione di basso livello viene offerta dalla classe `SqlNotificationRequest` che espone la funzionalità lato server, consentendo di eseguire un comando con una richiesta di notifica.  
   
-- L'implementazione di alto livello viene fornita dalla classe `SqlDependency`, ovvero una classe che fornisce un'astrazione di alto livello della funzionalità di notifica tra l'applicazione di origine e SQL Server, consentendo di utilizzare una dipendenza per rilevare le modifiche nel server. Nella maggior parte dei casi si tratta del modo più semplice ed efficace per sfruttare la funzionalità di notifica di SQL Server in applicazioni client gestite, usando il provider di dati Microsoft SqlClient per SQL Server.  
+- L'implementazione di alto livello viene offerta dalla classe `SqlDependency`, ovvero una classe che offre un'astrazione di alto livello della funzionalità di notifica tra l'applicazione di origine e SQL Server, consentendo di usare una dipendenza per rilevare le modifiche nel server. Nella maggior parte dei casi si tratta del modo più semplice ed efficace per sfruttare la funzionalità di notifica di SQL Server in applicazioni client gestite, usando il provider di dati Microsoft SqlClient per SQL Server.  
   
 - Inoltre, nelle applicazioni Web create con ASP.NET 2.0 o versioni successive è possibile usare le classi helper `SqlCacheDependency`.  
   
-Le notifiche delle query vengono utilizzate per le applicazioni che devono aggiornare le visualizzazioni o le cache in risposta alle modifiche apportate ai dati sottostanti. Microsoft SQL Server consente ad applicazioni .NET di inviare un comando a SQL Server e di richiedere che venga generata una notifica se l'esecuzione dello stesso produrrebbe set di risultati diversi da quelli recuperati inizialmente. Le notifiche generate nel server vengono inviate tramite code in modo da essere elaborate in un secondo momento.  
+Le notifiche delle query sono utili per applicazioni che richiedono l'aggiornamento delle visualizzazioni o delle cache in seguito a modifiche dei dati sottostanti. Microsoft SQL Server consente ad applicazioni .NET di inviare un comando a SQL Server e di richiedere che venga generata una notifica se l'esecuzione dello stesso produrrebbe set di risultati diversi da quelli recuperati inizialmente. Le notifiche generate nel server vengono inviate tramite code in modo da essere elaborate in un secondo momento.  
   
-È possibile impostare le notifiche per le istruzioni SELECT ed EXECUTE. Quando si utilizza un'istruzione EXECUTE, SQL Server registra una notifica per il comando eseguito anziché l'istruzione EXECUTE stessa. Il comando deve soddisfare i requisiti e le limitazioni per un'istruzione SELECT. Se un comando che registra una notifica contiene più istruzioni, il motore di database crea una notifica per ogni istruzione del batch.  
+È possibile impostare le notifiche per le istruzioni SELECT e EXECUTE. Quando si usa un'istruzione EXECUTE, SQL Server registra una notifica del comando eseguito anziché l'istruzione EXECUTE stessa. Il comando deve soddisfare i requisiti e le limitazioni per un'istruzione SELECT. Se un comando che registra una notifica contiene più istruzioni, il motore di database crea una notifica per ogni istruzione del batch.  
   
-Se si sviluppa un'applicazione in cui sono necessarie notifiche in frazioni di secondo affidabili quando i dati vengono modificati, vedere le sezioni **Pianificazione di una strategia delle notifiche delle query efficiente** e **Alternative alle notifiche delle query** nell'argomento [Pianificazione delle notifiche](https://go.microsoft.com/fwlink/?LinkId=211984) nella documentazione online di SQL Server. Per ulteriori informazioni sulle notifiche di query e SQL Server Service Broker, vedere i collegamenti seguenti agli argomenti di documentazione online di SQL Server.  
+Se si sviluppa un'applicazione in cui sono necessarie notifiche in frazioni di secondo affidabili quando i dati vengono modificati, vedere le sezioni **Pianificazione di una strategia delle notifiche delle query efficiente** e **Alternative alle notifiche delle query** nell'argomento [Pianificazione delle notifiche](https://go.microsoft.com/fwlink/?LinkId=211984) nella documentazione online di SQL Server. Per altre informazioni sulle notifiche delle query e su SQL Server Service Broker, vedere i collegamenti seguenti agli argomenti della documentazione online di SQL Server.  
   
 **Documentazione di SQL Server**  
   
@@ -51,18 +51,18 @@ Se si sviluppa un'applicazione in cui sono necessarie notifiche in frazioni di s
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 [Abilitazione di notifiche di query](enable-query-notifications.md)  
-Viene illustrato come utilizzare le notifiche delle query, inclusi i requisiti per l'abilitazione e l'utilizzo.  
+Illustra come usare le notifiche delle query, inclusi i requisiti per abilitarle e usarle.  
   
 [SqlDependency in un'applicazione ASP.NET](sqldependency-aspnet-app.md)  
-Viene illustrato come usare le notifiche di query da un'applicazione ASP.NET.  
+Illustra l'uso delle notifiche delle query da un'applicazione ASP.NET.  
   
 [Rilevamento di modifiche con SqlDependency](detect-changes-sqldependency.md)  
-Viene illustrato come rilevare quando i risultati della query saranno diversi da quelli ricevuti originariamente.  
+Illustra come rilevare i casi in cui i risultati della query si differenziano da quelli ricevuti in origine.  
   
 [Esecuzione di SqlCommand con SqlNotificationRequest](sqlcommand-execution-sqlnotificationrequest.md)  
-Viene illustrata la configurazione di un oggetto <xref:Microsoft.Data.SqlClient.SqlCommand> per l'utilizzo di una notifica di query.  
+Illustra la configurazione di un oggetto <xref:Microsoft.Data.SqlClient.SqlCommand> da usare con una notifica delle query.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
 <xref:Microsoft.Data.Sql.SqlNotificationRequest>  
 Descrive la classe <xref:Microsoft.Data.Sql.SqlNotificationRequest> e tutti i relativi membri.  
   

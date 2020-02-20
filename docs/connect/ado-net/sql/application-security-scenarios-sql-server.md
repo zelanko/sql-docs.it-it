@@ -7,47 +7,47 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 711086e881951d9e82fd34851c451e5472e49d7e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 2173a6aaf0f07ffaa50d87ed7563dca8022ceebc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452347"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250968"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenari di sicurezza delle applicazioni in SQL Server
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Non esiste un unico modo corretto per creare un'applicazione client SQL Server sicura. Ogni applicazione è univoca in base ai requisiti, all'ambiente di distribuzione e alla popolazione di utenti. Un'applicazione ragionevolmente protetta quando viene distribuita inizialmente può diventare meno sicura nel corso del tempo. Non è possibile prevedere con precisione le minacce che potrebbero emergere in futuro.  
+Non esiste un unico modo corretto per creare un'applicazione client SQL Server sicura. Ogni applicazione è unica per requisiti, ambiente di distribuzione e popolazione di utenti. Un'applicazione ragionevolmente sicura quando viene distribuita inizialmente può diventare meno sicura nel corso del tempo. Non è possibile prevedere con precisione le minacce che potrebbero emergere in futuro.  
   
-SQL Server, come prodotto, si è evoluto in molte versioni per incorporare le più recenti funzionalità di sicurezza che consentono agli sviluppatori di creare applicazioni di database protette. Tuttavia, la protezione non viene rifinita. richiede il monitoraggio e l'aggiornamento continui.  
+SQL Server, come prodotto, si è evoluto versione dopo versione per incorporare le funzionalità di sicurezza più recenti che consentono agli sviluppatori di creare applicazioni di database sicure. Tuttavia, la sicurezza non è un prodotto preconfezionato, richiede monitoraggio e aggiornamento continui.  
   
 ## <a name="common-threats"></a>Minacce comuni  
-Gli sviluppatori devono comprendere le minacce per la sicurezza, gli strumenti forniti per contrastarli e come evitare buchi di sicurezza autoinflitti. La sicurezza può essere considerata come una catena, in cui un'interruzioni in un solo collegamento compromette la forza dell'intero. Nell'elenco seguente sono incluse alcune minacce di sicurezza comuni che vengono discusse più dettagliatamente negli argomenti in questa sezione.  
+Gli sviluppatori devono comprendere le minacce per la sicurezza, gli strumenti disponibili per contrastarle e come evitare di creare loro stessi problemi di sicurezza. La sicurezza può essere considerata come una catena, in cui la rottura di un solo elemento compromette la forza dell'intero sistema. Nell'elenco seguente sono incluse alcune minacce di sicurezza comuni che vengono discusse più dettagliatamente negli argomenti in questa sezione.  
   
 ### <a name="sql-injection"></a>attacco intrusivo nel codice SQL  
-SQL injection è il processo mediante il quale un utente malintenzionato immette istruzioni Transact-SQL anziché un input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o distrugga i dati. Per contrastare gli attacchi SQL injection è possibile usare stored procedure e comandi con parametri, evitando SQL dinamico e limitando le autorizzazioni per tutti gli utenti.  
+L'attacco SQL injection è il processo con cui un utente malintenzionato immette istruzioni Transact-SQL anziché un input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o distrugga i dati. Per contrastare gli attacchi SQL injection è possibile usare stored procedure e comandi con parametri, evitando SQL dinamico e limitando le autorizzazioni per tutti gli utenti.  
   
 ### <a name="elevation-of-privilege"></a>Elevazione dei privilegi  
-Gli attacchi di elevazione dei privilegi si verificano quando un utente è in grado di assumere i privilegi di un account attendibile, ad esempio un proprietario o un amministratore. Eseguire sempre con account utente con privilegi minimi e assegnare solo le autorizzazioni necessarie. Evitare l'utilizzo di account amministrativi o proprietari per l'esecuzione del codice. Questo limita la quantità di danni che possono verificarsi in caso di esito positivo di un attacco. Quando si eseguono attività che richiedono autorizzazioni aggiuntive, utilizzare la firma delle procedure o la rappresentazione solo per la durata dell'attività. È possibile firmare le stored procedure con certificati o usare la rappresentazione per assegnare autorizzazioni temporanee.  
+Gli attacchi di elevazione dei privilegi si verificano quando un utente può assumere i privilegi di un account attendibile, ad esempio un proprietario o un amministratore. Usare sempre account utente con privilegi minimi e assegnare solo le autorizzazioni necessarie. Evitare di usare account amministrativi o proprietari per l'esecuzione del codice. Questo limita la quantità di danni che possono verificarsi in caso di esito positivo di un attacco. Quando si eseguono attività che richiedono autorizzazioni aggiuntive, usare la firma delle stored procedure o la rappresentazione solo per la durata dell'attività. È possibile firmare le stored procedure con certificati o usare la rappresentazione per assegnare autorizzazioni temporanee.  
   
-### <a name="probing-and-intelligent-observation"></a>Probe e osservazione intelligente  
-Un attacco di sondaggio può usare i messaggi di errore generati da un'applicazione per cercare vulnerabilità di sicurezza. Implementare la gestione degli errori in tutto il codice procedurale per impedire che SQL Server informazioni sugli errori vengano restituite all'utente finale.  
+### <a name="probing-and-intelligent-observation"></a>Probing e osservazione intelligente  
+Un attacco di tipo probing può usare i messaggi di errore generati da un'applicazione per cercare vulnerabilità di sicurezza. Implementare la gestione degli errori in tutto il codice procedurale per evitare che le informazioni sugli errori SQL Server vengano restituite all'utente finale.  
   
-### <a name="authentication"></a>Autenticazione  
-Un attacco intrusivo nella stringa di connessione può verificarsi quando si usa SQL Server account di accesso se una stringa di connessione basata sull'input dell'utente viene costruita in fase di esecuzione. Se non viene verificata la presenza di coppie di parole chiave valide per la stringa di connessione, un utente malintenzionato può inserire caratteri aggiuntivi, accedendo potenzialmente ai dati sensibili o ad altre risorse sul server. Se possibile, usare l'autenticazione di Windows. Se è necessario utilizzare SQL Server account di accesso, utilizzare la <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> per creare e convalidare le stringhe di connessione in fase di esecuzione.  
+### <a name="authentication"></a>Authentication  
+Quando si usano account di accesso di SQL Server può verificarsi un attacco injection alla stringa di connessione se una stringa di connessione basata sull'input dell'utente viene costruita in fase di esecuzione. Se non viene verificata la presenza di coppie di parole chiave valide per la stringa di connessione, un utente malintenzionato può inserire caratteri aggiuntivi, accedendo potenzialmente a dati sensibili o ad altre risorse nel server. Se possibile, usare l'autenticazione di Windows. Se è necessario usare account di accesso di SQL Server, usare <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> per creare e convalidare le stringhe di connessione in fase di esecuzione.  
   
 ### <a name="passwords"></a>Password  
-Molti attacchi hanno esito positivo perché un intruso è stato in grado di ottenere o indovinare una password per un utente con privilegi. Le password rappresentano la prima linea di difesa contro eventuali intrusi, pertanto l'impostazione di password complesse costituisce una misura di sicurezza fondamentale per la sicurezza del sistema. Creare e applicare criteri password per l'autenticazione in modalità mista.  
+Molti attacchi hanno esito positivo perché un intruso è riuscito a ottenere o indovinare la password di un utente con privilegi. Le password rappresentano la prima linea di difesa contro eventuali intrusi, pertanto l'impostazione di password complesse costituisce una misura di sicurezza fondamentale per la sicurezza del sistema. Creare e applicare criteri password per l'autenticazione in modalità mista.  
   
 Assegnare sempre una password complessa all'account `sa`, anche quando si usa l'autenticazione di Windows.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 [Scrittura di istruzioni SQL dinamiche protette in SQL Server](writing-secure-dynamic-sql.md)  
-Vengono descritte le tecniche per la scrittura di codice SQL dinamico sicuro tramite stored procedure.  
+Vengono descritte le tecniche per la scrittura di istruzioni SQL dinamiche protette usando le stored procedure.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 - [Sicurezza di SQL Server](sql-server-security.md)

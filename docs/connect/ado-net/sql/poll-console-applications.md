@@ -1,6 +1,6 @@
 ---
 title: Polling in applicazioni console
-description: Viene fornito un esempio che illustra l'uso del polling per attendere il completamento dell'esecuzione di un comando asincrono da un'applicazione console. Questa tecnica è valida anche in una libreria di classi o in un'altra applicazione senza interfaccia utente.
+description: È disponibile un esempio che illustra l'uso del polling per attendere il completamento dell'esecuzione di un comando asincrono da un'applicazione console. Questa tecnica è valida anche in una libreria di classi o in un'altra applicazione senza interfaccia utente.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452108"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247684"
 ---
 # <a name="polling-in-console-applications"></a>Polling in applicazioni console
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Le operazioni asincrone in ADO.NET consentono di avviare operazioni di database che richiedono molto tempo in un thread durante l'esecuzione di altre attività in un altro thread. Nella maggior parte degli scenari, tuttavia, verrà raggiunto un punto in cui l'applicazione non deve continuare fino al completamento dell'operazione del database. Per questi casi, è utile eseguire il polling dell'operazione asincrona per determinare se l'operazione è stata completata o meno.  
+Le operazioni asincrone in ADO.NET consentono di avviare operazioni di database che richiedono molto tempo in un thread durante l'esecuzione di altre attività in un altro thread. Nella maggior parte degli scenari, tuttavia, verrà raggiunto un punto in cui l'applicazione non deve continuare finché non viene completata l'operazione del database. In questi casi è utile eseguire il polling dell'operazione asincrona per determinare se l'operazione è stata completata o meno.  
   
-È possibile utilizzare la proprietà <xref:System.IAsyncResult.IsCompleted%2A> per verificare se l'operazione è stata completata o meno.  
+È possibile usare la proprietà <xref:System.IAsyncResult.IsCompleted%2A> per verificare se l'operazione è stata completata o meno.  
   
 ## <a name="example"></a>Esempio  
-L'applicazione console seguente consente di aggiornare in modo asincrono i dati contenuti nel database di esempio **AdventureWorks**. Per emulare un processo a esecuzione prolungata, in questo esempio viene inserita un'istruzione ASPETTER nel testo del comando. In genere, non si tenta di rallentare l'esecuzione dei comandi, ma in questo caso è più semplice dimostrare il comportamento asincrono.  
+L'applicazione console seguente consente di aggiornare in modo asincrono i dati contenuti nel database di esempio **AdventureWorks**. Per emulare un processo con esecuzione prolungata, in questo esempio viene inserita un'istruzione WAITFOR nel testo del comando. In genere non si tenta di rallentare l'esecuzione dei comandi, ma in questo caso diventa più semplice dimostrare il comportamento asincrono.  
   
 ```csharp  
 using System;  

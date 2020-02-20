@@ -1,5 +1,5 @@
 ---
-title: Note sulla versione per SQL Server Data Tools (SSDT) | Microsoft Docs
+title: Note sulla versione per SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,16 +7,17 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874897"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688783"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -43,6 +44,40 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; SSDT per VS 2017
+
+_Data di rilascio:_ &nbsp; 3 gennaio 2020  
+_Numero di build:_ &nbsp; 14.0.16203.0  
+_SSDT per Visual Studio 2017._
+
+### <a name="whats-new"></a>Novità
+
+| Nuovo elemento | Dettagli |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | È stato rimosso il componente della posta in arrivo Origine Power Query per SQL Server 2017. È stato annunciato Origine Power Query per SQL Server 2017 e 2019 come componente predefinito. È possibile scaricarlo [qui](https://www.microsoft.com/en-us/download/details.aspx?id=100619). |
+| Integration Services (SSIS) | È stato rimosso il componente della posta in arrivo Microsoft Connector per Oracle per SQL Server 2019. È stato annunciato Microsoft Connector per Oracle per SQL Server 2019 come componente predefinito. È possibile scaricarlo [qui](https://www.microsoft.com/en-us/download/details.aspx?id=58228). |
+| Integration Services (SSIS) | È stato risolto un problema che impediva occasionalmente l'avvio del debugger SSIS a causa della mancata registrazione dell'interfaccia IDtsHost se la versione del server di destinazione era SQL Server 2017 o 2019. |
+| Integration Services (SSIS) | Sono stati corretti gravi problemi di layout dell'interfaccia utente nella modalità con valori DPI alti. |
+| Integration Services (SSIS) | È stato eseguito l'aggiornamento a .NET Framework 4.7 per attività o componenti di script quando la versione del server di destinazione è SQL Server 2019. |
+| Integration Services (SSIS) | È stata aggiunta la proprietà ConnectByProxy alla gestione connessione ODBC, per consentire il supporto dell'abilitazione del runtime di integrazione self-hosted come proxy all'interno della gestione connessione ODBC stessa. |
+| Integration Services (SSIS) | È stato corretto un problema per cui gli utenti non potevano aggiungere nuove origini dati in modalità di distribuzione del pacchetto. |
+| Integration Services (SSIS) | È stato corretto un problema per cui gli utenti non potevano eseguire il debug di attività o componenti di script se il codice usava una nuova sintassi introdotta dopo .NET 4.5. |
+| Integration Services (SSIS) | È stato corretto un problema per cui la creazione della prima data factory in una sottoscrizione di Azure tramite la Creazione guidata di Integration Runtime poteva non riuscire a causa della mancata registrazione del provider di risorse della data factory. |
+| Integration Services (SSIS) | È stato corretto un problema a causa del quale la Connessione guidata di SSIS in ADF non poteva visualizzare correttamente l'elenco di account di archiviazione di Azure quando nella sottoscrizione era presente un account di archiviazione solo file. |
+| Integration Services (SSIS) | È stato corretto un problema per cui l'esecuzione in Azure non funzionava se il pacchetto includeva un contenitore. |
+| Integration Services (SSIS) | È stato corretto un problema per cui il mapping di char (n char) e varchar2 (n char) veniva eseguito a tipi DTS non corretti nel connettore Oracle. |
+
+### <a name="known-issues"></a>Problemi noti
+
+| Problema noto | Dettagli |
+| :---------- | :------ |
+| L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente. |
+| Le versioni di SSDT per Visual Studio 2017 superiori alla versione 15.8 non supportano la progettazione di pacchetti contenenti un'origine o una destinazione Teradata. | Usare SSDT per Visual Studio 2017 (15.8). |
+| L'origine Power Query può non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
+| L'origine Power Query può non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
+| L'origine Power Query non è localizzata | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT per VS 2017
 
@@ -116,7 +151,7 @@ _SSDT per Visual Studio 2017._
 | Integration Services (SSIS) | Aggiunta l'origine Power Query (anteprima) per SSIS in ADF 2017. |
 | Integration Services (SSIS) | Aggiunto di nuovo il supporto per SQL Server 2012. |
 | Integration Services (SSIS) | Aggiunte origine e destinazione Oracle per SQL Server 2019. |
-| Integration Services (SSIS) | La funzionalità per la selezione di origine e destinazione Oracle per SQL Server 2019 è già inclusa nell'installazione di SQL Server Data Tools (SSDT). <br/></br> Per progettare pacchetti destinati alla versione 2017 o precedente del server, scaricare la versione del connettore Oracle corrispondente dal sito di download Microsoft e installarla nel computer di SSDT. <br/></br> [Connettore Microsoft versione 5.0 per Oracle di Attunity per SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Connettore Microsoft versione 4.0 per Oracle di Attunity per SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Connettore Microsoft versione 3.0 per Oracle di Attunity per SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Connettore Microsoft versione 2.0 per Oracle di Attunity per SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | La funzionalità per la selezione di origine e destinazione Oracle per SQL Server 2019 è già inclusa nell'installazione di SQL Server Data Tools (SSDT). <br/></br> Per progettare pacchetti destinati alla versione 2017 o precedente del server, scaricare la versione del connettore Oracle corrispondente dal sito di download Microsoft e installarla nel computer di SSDT. <br/></br> [Connettore Microsoft versione 5.0 per Oracle di Attunity per SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Connettore Microsoft versione 4.0 per Oracle di Attunity per SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Connettore Microsoft versione 3.0 per Oracle di Attunity per SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Connettore Microsoft versione 2.0 per Oracle di Attunity per SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Integration Services (SSIS) | Risolto il problema dell'impossibilità di caricare un'attività Script o un componente di script durante la migrazione da versioni di SSIS precedenti. |
 | Integration Services (SSIS) | Risolto il problema del mancato funzionamento del visualizzatore dati in Windows 7 SP1 e in Windows 8.1. |
 | Integration Services (SSIS) | Risolto il problema dell'arresto anomalo di Visual Studio, in alcuni casi, durante il salvataggio del pacchetto. |
@@ -660,17 +695,17 @@ _Supporto fino a SQL Server 2017._
 - È stato risolto il problema della priorità dei modelli per i progetti BI in modo che non vengano visualizzati nella parte più alta delle categorie dei nuovi progetti in Visual Studio
 - È stato risolto il problema di arresto anomalo di Visual Studio che si verifica in rare circostanze all'apertura di una soluzione SSIS, SSAS o SSRS
 - Tabulare: vari miglioramenti e correzioni delle prestazioni per l'analisi DAX e la barra della formula.
-- Progetti tabulari: Esplora modelli tabulari sarà visibile solo se ci sono progetti tabulari di SSAS aperti.
+- Tabulare: Esplora modelli tabulari sarà visibile solo se ci sono progetti tabulari di SSAS aperti.
 - Progetti multidimensionali: è stato risolto un problema a causa del quale la finestra di dialogo di elaborazione era inutilizzabile in computer con valori DPI alti.
-- Progetti tabulari: è stato risolto un problema a causa del quale si verifica un errore in SSDT all'apertura di qualsiasi progetto BI quando SSMS è già aperto. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabulare: è stato risolto un problema a causa del quale si verifica un errore in SSDT all'apertura di qualsiasi progetto BI quando SSMS è già aperto. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabulare: è stato risolto un problema a causa del quale le gerarchie non venivano salvate correttamente nel file bim in un modello 1103. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabulare: è stato risolto un problema a causa del quale la modalità area di lavoro integrata era consentita nei computer a 32 bit anche se non è supportata.
-- Progetti tabulari: è stato risolto un problema a causa del quale il clic su qualsiasi elemento in modalità di semiselezione (ad esempio, digitazione di un'espressione DAX ma clic su una misura) può causare l'arresti anomalo del sistema.
-- Progetti tabulari: è stato risolto un problema a causa del quale la distribuzione guidata reimposta la proprietà .Name del modello su "Model". [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
-- Progetti tabulari: è stato risolto un problema a causa del quale la selezione di una gerarchia in Esplora modelli tabulari comporta la visualizzazione delle proprietà anche se non è selezionata la vista diagramma.
-- Progetti tabulari: è stato risolto un problema a causa del quale quando si incolla contenuto nella barra della formula DAX vengono incollati immagini o altri contenuti invece del testo, se il contenuto da incollare proviene da determinate applicazioni.
-- Progetti tabulari: è stato risolto un problema a causa del quale alcuni vecchi modelli nel livello 1103 non potevano essere aperti a causa della presenza di misure con una definizione specifica.
-- Progetti tabulari: è stato risolto un problema a causa del quale non era possibile eliminare sessioni XEvent.
+- Tabulare: è stato risolto un problema a causa del quale il clic su qualsiasi elemento in modalità di semiselezione (ad esempio, digitazione di un'espressione DAX ma clic su una misura) può causare l'arresti anomalo del sistema.
+- Tabulare: è stato risolto un problema a causa del quale la distribuzione guidata reimposta la proprietà .Name del modello su "Model". [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabulare: è stato risolto un problema a causa del quale la selezione di una gerarchia in Esplora modelli tabulari comporta la visualizzazione delle proprietà anche se non è selezionata la vista diagramma.
+- Tabulare: è stato risolto un problema a causa del quale quando si incolla contenuto nella barra della formula DAX vengono incollati immagini o altri contenuti invece del testo, se il contenuto da incollare proviene da determinate applicazioni.
+- Tabulare: è stato risolto un problema a causa del quale alcuni vecchi modelli nel livello 1103 non potevano essere aperti a causa della presenza di misure con una definizione specifica.
+- Tabulare: è stato risolto un problema a causa del quale non era possibile eliminare sessioni XEvent.
 - È stato risolto un problema a causa del quale ogni tentativo di compilare file "smproj" di AS con devenv.com aveva esito negativo
 - È stato risolto un problema a causa del quale le modifiche di testo venivano finalizzate con una frequenza eccessiva quando si usava l'IME coreano nei titoli delle schede dei fogli nei modelli tabulari AS
 - È stato risolto un problema per cui la funzionalità Intellisense per DAX Related() impediva la corretta visualizzazione delle colonne provenienti da altre tabelle

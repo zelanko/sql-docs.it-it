@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742794"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911190"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -64,7 +64,7 @@ Le funzionalità seguenti non sono disponibili in questa versione del driver ODB
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect (prima della versione 17,2)
+-   SQLBrowseConnect (prima della versione 17.2)
 -   I tipi di intervallo C, ad esempio SQL_C_INTERVAL_YEAR_TO_MONTH (documentati nell'articolo relativo a [identificatori e descrittori del tipo di dati](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)) non sono attualmente supportati
 -   Valore SQL_CUR_USE_ODBC dell'attributo SQL_ATTR_ODBC_CURSORS della funzione SQLSetConnectAttr.
 
@@ -74,7 +74,12 @@ Per ODBC Driver 13 e 13.1 i dati SQLCHAR devono essere in formato UTF-8. Non son
 
 Per ODBC Driver 17 sono supportati i dati SQLCHAR in uno dei seguenti set/codifiche di caratteri:
 
-|nome|Descrizione|
+> [!NOTE]  
+> A causa delle differenze di `iconv` in `musl` e `glibc`, molte di queste impostazioni locali non sono supportate in Alpine Linux.
+>
+> Per altre informazioni, vedere [Functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html) (Differenze funzionali da glibc)
+
+|Nome|Descrizione|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS Latino US|
@@ -118,10 +123,13 @@ Esistono alcune differenze di conversione della codifica tra Windows e varie ver
 In ODBC Driver 13 e 13.1, quando caratteri multibyte UTF-8 o caratteri sostitutivi UTF-16 vengono suddivisi tra buffer SQLPutData, i dati vengono danneggiati. Usare i buffer per i flussi SQLPutData che non terminano con la codifica parziale di caratteri. Questa restrizione è stata eliminata con ODBC Driver 17.
 
 ## <a name="bkmk-openssl"></a>OpenSSL
-A partire dalla versione 17,4, il driver carica OpenSSL in modo dinamico, consentendo l'esecuzione in sistemi con versione 1,0 o 1,1 senza necessità di file di driver distinti. Quando sono presenti più versioni di OpenSSL, il driver tenterà di caricare quello più recente. Il driver supporta attualmente OpenSSL 1.0. x e 1.1. x
+A partire dalla versione 17.4, il driver carica OpenSSL in modo dinamico, consentendone l'esecuzione all'interno di sistemi dotati della versione 1.0 o 1.1 senza che siano necessari file di driver distinti. Quando sono presenti più versioni di OpenSSL, il driver tenta di caricare quello più recente. Il driver supporta attualmente OpenSSL 1.0.x e 1.1.x
 
 > [!NOTE]  
-> Un potenziale conflitto può verificarsi se l'applicazione che usa il driver (o uno dei suoi componenti) è collegata o carica dinamicamente una versione diversa di OpenSSL. Se nel sistema sono presenti diverse versioni di OpenSSL e l'applicazione la USA, è consigliabile eseguire un'operazione molto attenta per assicurarsi che la versione caricata dall'applicazione e il driver non corrispondano, poiché gli errori potrebbero causare la danneggiamento della memoria e pertanto non si manifesterà necessariamente in modi evidenti o coerenti.
+> Può verificarsi un conflitto se l'applicazione che usa il driver (o uno dei suoi componenti) è collegata a una versione diversa di OpenSSL o la carica in modo dinamico. Se nel sistema sono presenti diverse versioni di OpenSSL e l'applicazione usa OpenSSL, è consigliabile prestare particolare attenzione affinché la versione caricata dall'applicazione e il driver corrispondano. In caso contrario, infatti, gli errori possono danneggiare la memoria e non presentarsi necessariamente in modo ovvio o coerente.
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+Al momento della stesura di questo articolo, la dimensione predefinita dello stack in MUSL è 128 KB, sufficiente per le funzionalità di base del driver ODBC. A seconda delle operazioni svolte dall'applicazione, tuttavia, non è difficile superare questo limite, soprattutto quando si chiama il driver da più thread. È consigliabile compilare un'applicazione ODBC in Alpine Linux con `-Wl,-z,stack-size=<VALUE IN BYTES>` per aumentare la dimensione dello stack. Per riferimento, la dimensione predefinita dello stack nella maggior parte dei sistemi GLIBC è di 2 MB.
 
 ## <a name="additional-notes"></a>Note aggiuntive  
 
@@ -136,7 +144,7 @@ A partire dalla versione 17,4, il driver carica OpenSSL in modo dinamico, consen
     
 2.  Gestione driver UnixODBC restituisce "Identificatore di opzione o di attributo non valido" per tutti gli attributi di istruzione quando questi vengono passati tramite SQLSetConnectAttr. In Windows, quando SQLSetConnectAttr riceve il valore di un attributo di istruzione, il driver imposta questo valore in tutte le istruzioni attive figlio dell'handle di connessione.  
 
-3.  Quando si usa il driver con applicazioni a multithreading, la convalida dell'handle di unixODBC può diventare un collo di bottiglia delle prestazioni. In questi scenari, è possibile ottenere prestazioni significativamente maggiori compilando unixODBC con l' `--enable-fastvalidate` opzione. Tuttavia, tenere presente che ciò potrebbe causare l'arresto anomalo di applicazioni che passano handle non validi alle `SQL_INVALID_HANDLE` API ODBC anziché restituire errori.
+3.  Quando si usa il driver con applicazioni a elevato multithreading, la convalida degli handle di unixODBC può diventare un collo di bottiglia per le prestazioni. In questi scenari è possibile ottenere prestazioni significativamente maggiori compilando unixODBC con l'opzione `--enable-fastvalidate`. Tenere presente, tuttavia, che a causa di ciò le applicazioni che passano handle non validi alle API ODBC possono subire un arresto anomalo anziché restituire errori `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Vedere anche  
 [Domande frequenti](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

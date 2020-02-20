@@ -11,56 +11,56 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028118"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Questo articolo fornisce informazioni su come sviluppare applicazioni Java per usare la funzionalità di autenticazione di Azure Active Directory con Microsoft JDBC Driver for SQL Server.
+Questo articolo offre informazioni su come sviluppare applicazioni Java per usare la funzionalità di autenticazione di Azure Active Directory con Microsoft JDBC Driver per SQL Server.
 
-È possibile usare l'autenticazione di Azure Active Directory (AAD), che è un meccanismo di connessione alla versione 12 del database SQL di Azure usando le identità in Azure Active Directory. Usare l'autenticazione di Azure Active Directory per gestire centralmente le identità degli utenti del database e come alternativa all'autenticazione di SQL Server. Il driver JDBC consente di specificare le credenziali di Azure Active Directory nella stringa di connessione JDBC per connettersi al database SQL di Azure. Per informazioni su come configurare Azure Active Directory autenticazione, vedere [connessione al database SQL tramite l'autenticazione Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+È possibile usare l'autenticazione di Azure Active Directory (AAD) che è un meccanismo di connessione al database SQL di Azure v12 tramite identità in Azure Active Directory. Usare l'autenticazione di Azure Active Directory per gestire centralmente le identità degli utenti del database e come alternativa all'autenticazione di SQL Server. Il driver JDBC consente di specificare le credenziali di Azure Active Directory nella stringa di connessione JDBC per connettersi al database SQL di Azure. Per informazioni su come configurare l'autenticazione di Azure Active Directory, vedere [Connessione al database SQL usando l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
-Le proprietà di connessione per supportare l'autenticazione Azure Active Directory in Microsoft JDBC driver per SQL Server sono:
-*   **Authentication**: usare questa proprietà per indicare quale metodo di autenticazione SQL usare per la connessione. I valori possibili sono: 
+Le proprietà di connessione per supportare l'autenticazione di Azure Active Directory in Microsoft JDBC Driver per SQL Server sono le seguenti:
+*   **authentication**:  usare questa proprietà per specificare il metodo di autenticazione SQL da usare per la connessione. I valori possibili sono: 
     * **ActiveDirectoryMSI**
-        * Supportato a partire dalla versione **7.2**del `authentication=ActiveDirectoryMSI` driver, può essere usato per connettersi a un database SQL di Azure/Data warehouse dall'interno di una risorsa di Azure con il supporto "Identity" abilitato. Facoltativamente, è possibile specificare **msiClientId** anche nelle proprietà Connection/DataSource insieme a questa modalità di autenticazione, che deve contenere l'ID client di un identità del servizio gestita da usare per acquisire il **AccessToken** per la definizione connessione.
+        * Supportato a partire dalla versione del driver **v7.2**, `authentication=ActiveDirectoryMSI` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse dall'interno di una risorsa di Azure con il supporto di identità abilitato. Facoltativamente, è possibile specificare insieme a questa modalità di autenticazione anche **msiClientId** nelle proprietà Connection/DataSource che devono includere l'ID client dell'identità di un servizio gestito da usare per acquisire **accessToken** per stabilire la connessione.
     * **ActiveDirectoryIntegrated**
-        * Supportato a partire dalla versione **6.0**del `authentication=ActiveDirectoryIntegrated` driver, può essere usato per connettersi a un database SQL di Azure/Data Warehouse usando l'autenticazione integrata. Per utilizzare questa modalità di autenticazione, è necessario federare il Active Directory Federation Services locale (ADFS) con Azure Active Directory nel cloud. Una volta configurato, è possibile connettersi aggiungendo la libreria nativa ' sqljdbc_auth. dll ' al percorso della classe dell'applicazione nel sistema operativo Windows o impostando un ticket Kerberos per il supporto dell'autenticazione multipiattaforma. È possibile accedere al database SQL di Azure/DW senza che vengano richieste le credenziali quando si è connessi a un computer aggiunto al dominio.
+        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryIntegrated` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando l'autenticazione integrata. Per usare questa modalità di autenticazione, è necessaria la federazione di Active Directory Federation Services (ADFS) locale con Azure Active Directory nel cloud. Al termine della configurazione, è possibile connettersi aggiungendo la libreria nativa 'sqljdbc_auth.dll' al percorso della classe dell'applicazione nel sistema operativo Windows o impostando un ticket Kerberos per il supporto dell'autenticazione multipiattaforma. È possibile accedere al database SQL di Azure o ad Azure SQL Data Warehouse senza che vengano richieste le credenziali quando si è connessi a un computer aggiunto al dominio.
     * **ActiveDirectoryPassword**
-        * Supportato a partire dalla versione **6.0**del `authentication=ActiveDirectoryPassword` driver, può essere usato per connettersi a un database SQL di Azure/Data Warehouse usando un nome di Azure ad principale e una password.
+        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryPassword` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando il nome di un'entità di sicurezza e la password.
     * **SqlPassword**
-        * Usare `authentication=SqlPassword` per connettersi a un SQL Server usando le proprietà Username/user e password.
+        * Usare `authentication=SqlPassword` per connettersi a SQL Server usando le proprietà userName/user e password.
     * **NotSpecified**
-        * Usare `authentication=NotSpecified` o lasciare il valore predefinito quando non è necessario nessuno di questi metodi di autenticazione.
+        * Usare `authentication=NotSpecified` o lasciare l'impostazione predefinita quando nessuno di questi metodi di autenticazione è necessario.
 
-*   **AccessToken**: usare questa proprietà di connessione per connettersi a un database SQL usando un token di accesso. accessToken può essere impostato solo usando il parametro Properties del metodo GetConnection () nella classe DriverManager. Non può essere usato nell'URL di connessione.  
+*   **accessToken**: usare questa proprietà di connessione per connettersi a un database SQL usando un token di accesso. accessToken può essere impostato solo usando il parametro Properties del metodo getConnection() nella classe DriverManager. Non può essere usato nell'URL di connessione.  
 
-Per ulteriori informazioni, vedere la proprietà Authentication nell' [impostazione della pagina Proprietà connessione](../../connect/jdbc/setting-the-connection-properties.md) .  
+Per altre informazioni, vedere la proprietà di autenticazione nella pagina [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md).  
 
 
-## <a name="client-setup-requirements"></a>Requisiti di configurazione client
-Per l'autenticazione **ActiveDirectoryMSI** , i componenti seguenti devono essere installati nel computer client:
+## <a name="client-setup-requirements"></a>Requisiti di installazione del client
+Per l'autenticazione **ActiveDirectoryMSI**, è necessario installare nel computer client i componenti seguenti:
 * Java 8 o versione successiva
-* Microsoft JDBC driver 7,2 (o versione successiva) per SQL Server
-* L'ambiente client deve essere una risorsa di Azure e deve essere abilitato il supporto della funzionalità "Identity".
-* Un utente del database indipendente che rappresenta l'identità gestita assegnata al sistema della risorsa di Azure o l'identità gestita assegnata dall'utente o uno dei gruppi a cui appartiene il file MSI deve esistere nel database di destinazione e deve disporre dell'autorizzazione CONNECT.
+* Microsoft JDBC Driver 7.2 (o versione successiva) per SQL Server
+* L'ambiente client deve essere una risorsa di Azure e deve avere il supporto della funzionalità di identità abilitato.
+* È necessario che nel database di destinazione sia presente un utente del database indipendente che rappresenta l'identità gestita assegnata dal sistema o l'identità gestita assegnata dall'utente della risorsa di Azure o uno dei gruppi a cui appartiene il file MSI e deve avere l'autorizzazione CONNECT.
 
-Per altre modalità di autenticazione, è necessario che i componenti seguenti siano installati nel computer client:
+Per le altre modalità di autenticazione, è necessario installare nel computer client i componenti seguenti:
 * Java 7 o versione successiva
-* Microsoft JDBC Driver 6,0 (o versione successiva) per SQL Server
-* Se si usa la modalità di autenticazione basata su token di accesso, è necessario [Azure-ActiveDirectory-Library-for-Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze per eseguire gli esempi di questo articolo. Per ulteriori informazioni, vedere la sezione **connessione utilizzando il token di accesso** .
-* Se si usa la modalità di autenticazione **ActiveDirectoryPassword** , sono necessari [Azure-ActiveDirectory-Library-for-Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze. Per ulteriori informazioni, vedere la sezione **connessione mediante la modalità di autenticazione ActiveDirectoryPassword** .
-* Se si usa la modalità **ActiveDirectoryIntegrated** , sono necessari Azure-ActiveDirectory-Library-for-Java e le relative dipendenze. Per ulteriori informazioni, vedere la sezione **connessione mediante la modalità di autenticazione ActiveDirectoryIntegrated** .
+* Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server
+* Se si usa la modalità di autenticazione basata su token di accesso, è necessario avere [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze per eseguire gli esempi di questo articolo. Per altre informazioni, vedere la sezione **Connessione tramite token di accesso**.
+* Se si utilizza la modalità di autenticazione **ActiveDirectoryPassword**, è necessario avere [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze. Per altre informazioni, vedere la sezione **Connessione tramite la modalità di autenticazione ActiveDirectoryPassword**.
+* Se si usa la modalità **ActiveDirectoryIntegrated**, è necessario avere azure-activedirectory-library-for-java e le relative dipendenze. Per altre informazioni, vedere la sezione **Connessione tramite la modalità di autenticazione ActiveDirectoryIntegrated**.
 
 ## <a name="connecting-using-activedirectorymsi-authentication-mode"></a>Connessione tramite la modalità di autenticazione ActiveDirectoryMSI
-L'esempio seguente illustra come usare la modalità `authentication=ActiveDirectoryMSI`. Eseguire questo esempio dall'interno di una risorsa di Azure, e, g una macchina virtuale di Azure, un servizio app o un app per le funzioni federato con Azure Active Directory.
+L'esempio seguente illustra come usare la modalità `authentication=ActiveDirectoryMSI`. Eseguire questo esempio dall'interno di una risorsa di Azure, ad esempio una macchina virtuale di Azure, un servizio app o un'app per le funzioni federata con Azure Active Directory.
 
-Prima di eseguire l'esempio, sostituire il nome del server o del database con il nome del server o del database nelle righe seguenti:
+Prima di eseguire l'esempio, sostituire il nome del server o database con il nome del proprio server o database nelle righe seguenti:
 
 ```java
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
@@ -99,24 +99,24 @@ public class AAD_MSI {
 }
 ```
 
-Eseguendo questo esempio in una macchina virtuale di Azure, viene recuperato un token di accesso dall'identità gestita assegnata dal _sistema_ o dall'identità _gestita assegnata dall'utente_ (se **msiClientId** è specificato) e viene stabilita una connessione tramite l'accesso recuperato. token. Se viene stabilita una connessione, verrà visualizzato il messaggio seguente:
+L'esecuzione di questo esempio in una macchina virtuale di Azure recupera un token di accesso dall'_identità gestita assegnata dal sistema_ o dall'_identità gestita assegnata dall'utente_ (se **msiClientId** è specificato) e stabilisce una connessione con il token di accesso recuperato. Se viene stabilita una connessione, verrà visualizzato il messaggio seguente:
 
 ```bash
 You have successfully logged on as: <your MSI username>
 ```
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Connessione tramite la modalità di autenticazione ActiveDirectoryIntegrated
-Con la versione 6,4, Microsoft JDBC driver aggiunge il supporto per l'autenticazione ActiveDirectoryIntegrated usando un ticket Kerberos su più piattaforme (Windows, Linux e macOS).
-Per altre informazioni, vedere [impostare un ticket Kerberos per Windows, Linux e Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) . In alternativa, in Windows sqljdbc_auth. dll può essere utilizzato anche per l'autenticazione ActiveDirectoryIntegrated con il driver JDBC.
+Con la versione 6.4, Microsoft JDBC Driver aggiunge il supporto dell'autenticazione ActiveDirectoryIntegrated usando un ticket Kerberos su più piattaforme (Windows, Linux e macOS).
+Per altre informazioni, vedere [Impostare un ticket Kerberos in Windows, Linux e Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). In alternativa, in Windows è anche possibile usare sqljdbc_auth.dll per l'autenticazione ActiveDirectoryIntegrated con un driver JDBC.
 
 > [!NOTE]
->  Se si utilizza una versione precedente del driver, selezionare questo [collegamento](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) per le rispettive dipendenze necessarie per utilizzare questa modalità di autenticazione. 
+>  Se si usa una versione precedente del driver, cercare in questo [collegamento](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) le relative dipendenze necessarie per usare questa modalità di autenticazione. 
 
-L'esempio seguente illustra come usare la modalità `authentication=ActiveDirectoryIntegrated`. Eseguire questo esempio in un computer aggiunto a un dominio federato con Azure Active Directory. Un utente del database indipendente che rappresenta il Azure AD entità o uno dei gruppi a cui si appartiene deve esistere nel database e deve disporre dell'autorizzazione CONNECT. 
+L'esempio seguente illustra come usare la modalità `authentication=ActiveDirectoryIntegrated`. Eseguire questo esempio in un computer aggiunto a un dominio federato con Azure Active Directory. È necessario che nel database di destinazione sia presente un utente del database indipendente che rappresenta l'entità di sicurezza di Azure AD o uno dei gruppi cui si appartiene e deve avere l'autorizzazione CONNECT. 
 
-Prima di compilare ed eseguire l'esempio, nel computer client in cui si vuole eseguire l'esempio, scaricare la [libreria Azure-ActiveDirectory-Library-for-Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze e includerle nel percorso di compilazione Java
+Prima di compilare ed eseguire l'esempio, nel computer client in cui si vuole eseguire l'esempio scaricare il [file di libreria azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze e includerli nel percorso di compilazione Java
 
-Prima di eseguire l'esempio, sostituire il nome del server o del database con il nome del server o del database nelle righe seguenti:
+Prima di eseguire l'esempio, sostituire il nome del server o database con il nome del proprio server o database nelle righe seguenti:
 
 ```java
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
@@ -150,48 +150,48 @@ public class AADIntegrated {
 }
 ```
 
-L'esecuzione di questo esempio in un computer client usa automaticamente il ticket Kerberos e non è richiesta alcuna password. Se viene stabilita una connessione, verrà visualizzato il messaggio seguente:
+Se si esegue questo esempio in un computer client, viene usato automaticamente il ticket Kerberos e non viene richiesta alcuna password. Se viene stabilita una connessione, verrà visualizzato il messaggio seguente:
 
 ```
 You have successfully logged on as: <your domain user name>
 ```
 
-### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>Imposta ticket Kerberos in Windows, Linux e Mac
+### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>Impostare un ticket Kerberos in Windows, Linux e Mac
 
 È necessario configurare un ticket Kerberos che collega l'utente corrente a un account di dominio di Windows. Di seguito è riportato un riepilogo dei passaggi principali.
 
 #### <a name="windows"></a>Windows
-JDK viene fornita `kinit`con, che è possibile usare per ottenere un TGT da centro distribuzione chiavi (KDC) in un computer aggiunto al dominio che è federato con Azure Active Directory.
+JDK include `kinit` che consente di ottenere un ticket di concessione ticket dal Centro distribuzione chiavi (KDC) in un computer aggiunto al dominio che è federato con Azure Active Directory.
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Passaggio 1: ticket che concede il recupero di ticket
-- **Esegui in**: Windows
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Passaggio 1: Recupero del ticket di concessione ticket
+- **Eseguire in**: Windows
 - **Azione**:
-  - Usare il comando `kinit username@DOMAIN.COMPANY.COM` per ottenere un TGT da KDC, quindi verrà richiesta la password del dominio.
-  - Usare `klist` per visualizzare i ticket disponibili. Se il kinit ha avuto esito positivo, verrà visualizzato un ticket da krbtgt/DOMAIN. COMPANY. COM @ DOMAIN.COMPANY.COM.
+  - Usare il comando `kinit username@DOMAIN.COMPANY.COM` per ottenere un ticket di concessione ticket (TGT) dal Centro distribuzione chiavi (KDC). Verrà quindi richiesta la password del dominio.
+  - Usare `klist` per visualizzare i ticket disponibili. Se kinit ha avuto esito positivo, verrà visualizzato un ticket proveniente da krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 > [!NOTE]
->  Potrebbe essere necessario specificare un `.ini` file con `-Djava.security.krb5.conf` l'applicazione per individuare il KDC.
+>  Potrebbe essere necessario specificare un file `.ini` con `-Djava.security.krb5.conf` per consentire all'applicazione di individuare il Centro distribuzione chiavi (KDC).
 
 #### <a name="linux-and-mac"></a>Linux e Mac
 
 ##### <a name="requirements"></a>Requisiti
 Accesso a un computer aggiunto a un dominio di Windows per eseguire una query sul controller di dominio Kerberos.
 
-##### <a name="step-1-find-kerberos-kdc"></a>Passaggio 1: trovare il KDC Kerberos
-- **Esegui in**: riga di comando di Windows
-- **Azione**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (dove "Domain.Company.com" esegue il mapping al nome del dominio)
-- **Esempio di output**
+##### <a name="step-1-find-kerberos-kdc"></a>Passaggio 1: Trovare il Centro distribuzione chiavi (KDC) Kerberos
+- **Eseguire in**: Riga di comando di Windows
+- **Azione**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (dove "DOMAIN.COMPANY.COM" viene mappato al nome del dominio)
+- **Output di esempio**
   ```
   DC: \\co1-red-dc-33.domain.company.com
   Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
   ...
   The command completed successfully
   ```
-- **Informazioni da estrarre** Nome del controller di dominio, in questo caso`co1-red-dc-33.domain.company.com`
+- **Informazioni da estrarre** Il nome DC, in questo caso `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Passaggio 2: configurazione di KDC in krb5. conf
-- **Esegui in**: Linux/Mac
-- **Azione**: modificare il/etc/krb5.conf in un editor di propria scelta. Configurare le chiavi seguenti
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Passaggio 2: Configurare il Centro distribuzione chiavi (KDC) in krb5.conf
+- **Eseguire in**: Linux/Mac
+- **Azione**: Modificare il file /etc/krb5.conf in un editor di propria scelta. Configurare le chiavi seguenti
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -206,23 +206,23 @@ Accesso a un computer aggiunto a un dominio di Windows per eseguire una query su
 > [!NOTE]
 >  Il dominio deve essere in lettere MAIUSCOLE.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Passaggio 3: test del recupero del Ticket Granting Ticket
-- **Esegui in**: Linux/Mac
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Passaggio 3: Test del recupero del ticket di concessione ticket
+- **Eseguire in**: Linux/Mac
 - **Azione**:
-  - Usare il comando `kinit username@DOMAIN.COMPANY.COM` per ottenere un TGT da KDC, quindi verrà richiesta la password del dominio.
-  - Usare `klist` per visualizzare i ticket disponibili. Se il kinit ha avuto esito positivo, verrà visualizzato un ticket da krbtgt/DOMAIN. COMPANY. COM @ DOMAIN.COMPANY.COM.
+  - Usare il comando `kinit username@DOMAIN.COMPANY.COM` per ottenere un ticket di concessione ticket (TGT) dal Centro distribuzione chiavi (KDC). Verrà quindi richiesta la password del dominio.
+  - Usare `klist` per visualizzare i ticket disponibili. Se kinit ha avuto esito positivo, verrà visualizzato un ticket proveniente da krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 ## <a name="connecting-using-activedirectorypassword-authentication-mode"></a>Connessione tramite la modalità di autenticazione ActiveDirectoryPassword
 L'esempio seguente illustra come usare la modalità `authentication=ActiveDirectoryPassword`.
 
 Prima di compilare ed eseguire l'esempio:
-1.  Nel computer client in cui si vuole eseguire l'esempio, scaricare la [libreria Azure-ActiveDirectory-Library-for-Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze e includerle nel percorso di compilazione Java
-2.  Individuare le righe di codice seguenti e sostituire il nome del server/database con il nome del server o del database.
+1.  Nel computer client in cui si vuole eseguire l'esempio scaricare il [file di libreria azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze e includerli nel percorso di compilazione Java
+2.  Individuare le righe di codice seguenti e sostituire il nome del server o database con il nome del proprio server o database.
     ```java
     ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
-3.  Individuare le righe di codice seguenti e sostituire nome utente con il nome dell'utente di AAD a cui si vuole connettersi.
+3.  Individuare le righe di codice seguenti e sostituire il nome utente con il nome dell'utente di AAD con cui si vuole connettersi.
     ```java
     ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
     ds.setPassword("password");     // replace with your password
@@ -257,44 +257,44 @@ public class AADUserPassword {
     }
 }
 ```
-Se viene stabilita la connessione, verrà visualizzato il messaggio seguente come output:
+Se viene stabilita la connessione, verrà visualizzato il messaggio seguente:
 ```
 You have successfully logged on as: <your user name>
 ```
 
 > [!NOTE]  
-> Un database utente indipendente deve esistere e un utente del database indipendente che rappresenta l'utente Azure AD specificato o uno dei gruppi, l'utente Azure AD specificato appartiene a, deve esistere nel database e deve disporre dell'autorizzazione CONNECT (ad eccezione di Azure Active Directory amministratore del server o gruppo)
+> È necessario che nel database sia presente un utente del database indipendente che rappresenta l'utente di Azure AD specificato o uno dei gruppi a cui appartiene l'utente e deve avere l'autorizzazione CONNECT (ad eccezione dell'amministratore del server o del gruppo di Azure Active Directory)
 
-## <a name="connecting-using-access-token"></a>Connessione tramite il token di accesso
-Le applicazioni e i servizi possono recuperare un token di accesso dal Azure Active Directory e usarlo per connettersi al database SQL di Azure/data warehouse.
+## <a name="connecting-using-access-token"></a>Connessione tramite token di accesso
+Le applicazioni e i servizi possono recuperare un token di accesso da Azure Active Directory e usarlo per connettersi al database SQL di Azure o ad Azure Data Warehouse.
 
 > [!NOTE] 
-> **AccessToken** può essere impostato solo usando il parametro Properties del metodo GetConnection () nella classe DriverManager. Non può essere usato nella stringa di connessione.
+> **accessToken** può essere impostato solo usando il parametro Properties del metodo getConnection() nella classe DriverManager. Non può essere usato nella stringa di connessione.
 
-L'esempio seguente contiene una semplice applicazione Java che si connette al database SQL di Azure/data warehouse usando l'autenticazione basata su token di accesso. Prima di compilare ed eseguire l'esempio, seguire questa procedura:
+L'esempio seguente contiene un'applicazione Java semplice che si connette al database SQL di Azure o ad Azure Data Warehouse usando l'autenticazione basata su token di accesso. Prima di compilare ed eseguire l'esempio, seguire questa procedura:
 1.  Creare un account dell'applicazione in Azure Active Directory per il servizio.
     1. Accedere al portale di Azure.
-    2. Fare clic su Azure Active Directory nel percorso di spostamento a sinistra.
-    3. Fare clic sulla scheda "Registrazioni app".
-    4. Nel cassetto fare clic su "registrazione nuova applicazione".
-    5. Immettere mytokentest come nome descrittivo per l'applicazione e selezionare "app Web/API".
-    6. L'URL di accesso non è necessario. Basta fornire qualsiasi elemento: https://mytokentest"".
-    7. Fare clic su "Crea" nella parte inferiore.
-    9. Sempre nella portale di Azure fare clic sulla scheda "Impostazioni" dell'applicazione e aprire la scheda "proprietà".
-    10. Trovare il valore "ID applicazione" (noto anche come ID client) e copiarlo a parte. questa operazione è necessaria in un secondo momento durante la configurazione dell'applicazione (ad esempio, 1846943b-ad04-4808-aa13-4702d908b5c1). Vedere gli snapshot seguenti.
-    11. Nella sezione "chiavi" creare una chiave compilando il campo nome, selezionando la durata della chiave e salvando la configurazione (lasciare vuoto il campo valore). Dopo il salvataggio, il campo del valore deve essere compilato automaticamente, copiare il valore generato. Questo è il segreto client.
-    12. Fare clic su Azure Active Directory nel pannello sul lato sinistro. In "registrazioni per l'app" trovare la scheda "endpoint punti". Copiare l'URL in "GIURAmento 2,0 TOKEN ENDPOINT", ovvero l'URL STS.
+    2. Nel riquadro di spostamento a sinistra fare clic su Azure Active Directory.
+    3. Fare clic su "Registrazioni app".
+    4. Nel menu di spostamento fare clic su "Registrazione nuova applicazione".
+    5. Immettere mytokentest come nome descrittivo per l'applicazione e selezionare "App Web/API".
+    6. L'URL di accesso non è necessario. Specificare ad esempio "https://mytokentest".
+    7. Fare clic su "Crea" nella parte inferiore della schermata.
+    9. Sempre nel portale di Azure fare clic sulla scheda "Impostazioni" dell'applicazione e aprire la scheda "Proprietà".
+    10. Trovare il valore "ID applicazione" (ID client AKA) e copiarlo. L'ID sarà necessario successivamente durante la configurazione dell'applicazione (ad esempio, 1846943b-ad04-4808-aa13-4702d908b5c1). Vedere lo snapshot seguente.
+    11. Nella sezione "Chiavi" creare una chiave specificando un valore nel campo nome, selezionando la durata della chiave e salvando la configurazione (lasciare vuoto il campo valore). Dopo il salvataggio, il campo valore viene specificato automaticamente. Copiare il valore generato. Questo è il segreto client.
+    12. Nel pannello di sinistra fare clic su Azure Active Directory. In "Registrazioni app" trovare la scheda "Endpoint". Copiare l'URL in "OATH 2.0 TOKEN ENDPOINT". Si tratta dell'URL STS.
     
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
-2. Accedere al database utente di Azure SQL Server come amministratore Azure Active Directory e usare un comando T-SQL effettuare il provisioning di un utente di database indipendente per l'entità applicazione. Per ulteriori informazioni su come creare un amministratore Azure Active Directory e un utente del database indipendente, vedere la pagina relativa alla [connessione al database SQL o SQL data warehouse tramite l'autenticazione Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) .
+2. Accedere al database utente del server SQL Azure come amministratore di Azure Active Directory e usando un comando T-SQL effettuare il provisioning di un utente di database indipendente per l'entità di sicurezza dell'applicazione. Per altre informazioni su come creare un amministratore di Azure Active Directory e un utente di database indipendente, vedere [Connessione al database o al data warehouse SQL tramite l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  Nel computer client in cui si vuole eseguire l'esempio, scaricare la libreria [Azure-ActiveDirectory-Library-for-Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze e includerle nel percorso di compilazione Java. Si noti che Azure-ActiveDirectory-Library-for-Java è necessario solo per eseguire questo esempio specifico. L'esempio usa le API di questa libreria per recuperare il token di accesso da Azure AAD. Se si dispone già di un token di accesso, è possibile ignorare questo passaggio. Si noti che è necessario anche rimuovere la sezione nell'esempio che recupera il token di accesso.
+3.  Nel computer client in cui si vuole eseguire l'esempio scaricare il file di libreria [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e le relative dipendenze e includerli nel percorso di compilazione Java Si noti che azure-activedirectory-library-for-java è necessario solo per eseguire questo esempio specifico. L'esempio usa le API di questa libreria per recuperare il token di accesso da Azure AAD. Se si ha già un token di accesso, ignorare questo passaggio. Si noti che è necessario anche rimuovere dall'esempio la sezione che recupera il token di accesso.
 
-Nell'esempio seguente sostituire l'URL del servizio token di identità, l'ID client, il segreto client, il nome del server e del database con i valori.
+Nell'esempio seguente sostituire l'URL STS, l'ID client, il segreto client, il nome del server e del database con i propri valori.
 
 ```java
 import java.sql.Connection;
@@ -345,7 +345,7 @@ public class AADTokenBased {
 }
 ``` 
 
-Se la connessione ha esito positivo, verrà visualizzato il messaggio seguente come output:
+Se la connessione viene stabilita correttamente, verrà visualizzato il messaggio seguente:
 
 ```bash
 Access Token: <your access token>

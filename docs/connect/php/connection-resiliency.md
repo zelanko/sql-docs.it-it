@@ -10,44 +10,44 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265173"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienza delle connessioni inattive
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-La resilienza della [connessione](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) è il principio che è possibile ristabilire una connessione inattiva interruppe, entro determinati vincoli. Se una connessione a Microsoft SQL Server ha esito negativo, la resilienza della connessione consente al client di provare automaticamente a ristabilire la connessione. La resilienza della connessione è una proprietà dell'origine dati. solo SQL Server 2014 e versioni successive e il database SQL di Azure supportano la resilienza della connessione.
+[La resilienza della connessione](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) è il principio in base al quale è possibile ristabilire una connessione interrotta inattiva con determinati vincoli. Se una connessione a Microsoft SQL Server non riesce, la resilienza della connessione consente al client di provare automaticamente a ristabilire la connessione. La resilienza della connessione è una proprietà dell'origine dati supportata solo da SQL Server 2014 e versioni successive e dal database SQL di Azure.
 
-La resilienza della connessione viene implementata con due parole chiave di connessione che è possibile aggiungere alle stringhe di connessione: **ConnectRetryCount** e **ConnectRetryInterval**.
+Viene implementata con due parole chiave di connessione che possono essere aggiunte alle stringhe di connessione: **ConnectRetryCount** e **ConnectRetryInterval**.
 
-|Parola chiave|Valori|Default|Descrizione|
+|Parola chiave|Valori|Predefinito|Descrizione|
 |-|-|-|-|
-|**ConnectRetryCount**| Numero intero compreso tra 0 e 255 inclusi|1|Numero massimo di tentativi di ristabilire una connessione interruppe prima di rinunciare. Per impostazione predefinita, viene eseguito un singolo tentativo di ristabilire una connessione in caso di interruzione. Il valore 0 indica che non verrà tentata alcuna riconnessione.|
-|**ConnectRetryInterval**| Numero intero compreso tra 1 e 60 inclusi|1| Tempo, in secondi, tra i tentativi di ristabilire una connessione. L'applicazione tenterà di riconnettersi immediatamente al rilevamento di una connessione interruppe e attenderà **ConnectRetryInterval** secondi prima di riprovare. Questa parola chiave viene ignorata se **ConnectRetryCount** è uguale a 0.
+|**ConnectRetryCount**| Numero intero compreso tra 0 e 255 inclusi|1|Numero massimo di tentativi di ristabilire una connessione interrotta prima di rinunciare. Per impostazione predefinita, viene fatto un solo tentativo di ristabilire una connessione interrotta. Il valore 0 indica che non verrà tentata alcuna riconnessione.|
+|**ConnectRetryInterval**| Numero intero compreso tra 1 e 60 inclusi|1| Tempo, in secondi, tra i tentativi di ristabilire una connessione. L'applicazione tenterà di riconnettersi immediatamente dopo aver rilevato una connessione interrotta e attenderà **ConnectRetryInterval** secondi prima di riprovare. Questa parola chiave viene ignorata se **ConnectRetryCount** è uguale a 0.
 
-Se il prodotto di **ConnectRetryCount** moltiplicato per **ConnectRetryInterval** è maggiore di **LoginTimeout**, il client smette di tentare di connettersi una volta raggiunto **LoginTimeout** ; in caso contrario, continuerà a tentare di riconnettersi fino a quando non viene raggiunto **ConnectRetryCount** .
+Se il prodotto di **ConnectRetryCount** moltiplicato per **ConnectRetryInterval** è maggiore di **LoginTimeout**, il client smette di tentare di connettersi quando viene raggiunto **LoginTimeout**, in caso contrario, continuerà a tentare di riconnettersi finché non viene raggiunto **ConnectRetryCount**.
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Osservazioni
 
-La resilienza della connessione si applica quando la connessione è inattiva. Gli errori che si verificano durante l'esecuzione di una transazione, ad esempio, non attiverà i tentativi di riconnessione. questi avranno esito negativo come previsto altrimenti. Nelle situazioni seguenti, note come stati di sessione non ripristinabili, i tentativi di riconnessione non vengono attivati:
+La resilienza della connessione si applica quando la connessione è inattiva. Gli errori che si verificano durante l'esecuzione di una transazione, ad esempio, non attivano i tentativi di riconnessione e determinano un esito negativo come previsto. Nelle situazioni seguenti, note come stati irreversibili della sessione, i tentativi di riconnessione non vengono attivati:
 
 * Tabelle temporanee
 * Cursori globali e locali
 * Blocchi delle transazioni a livello di sessione e di contesto di transazione
 * Blocchi a livello di applicazione
-* Esegui come/Ripristina contesto di sicurezza
-* Handle di automazione OLE
+* Contesto di protezione EXECUTE AS/REVERT
+* Handle dell'automazione OLE
 * Handle XML preparati
 * Flag di traccia
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente consente di connettersi a un database ed eseguire una query. La connessione viene interrotta terminando la sessione e viene tentata una nuova query utilizzando la connessione interrotta. Questo esempio usa il database di esempio [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
+Il codice seguente consente di connettersi a un database e di eseguire una query. La connessione viene interrotta terminando la sessione e viene tentata una nuova query utilizzando la connessione interrotta. Questo esempio usa il database di esempio [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
 
-In questo esempio viene specificato un cursore memorizzato nel buffer prima di suddividere la connessione. Se non si specifica un cursore memorizzato nel buffer, la connessione non verrà ristabilita perché è presente un cursore sul lato server attivo e pertanto la connessione non sarà inattiva quando viene interrotta. In tal caso, tuttavia, è possibile chiamare sqlsrv_free_stmt () prima di suddividere la connessione per liberare il cursore e la connessione viene ristabilita correttamente.
+In questo esempio viene specificato un cursore con buffer prima di interrompere la connessione. Se non si specifica un cursore con buffer, la connessione non viene ristabilita perché è presente un cursore attivo sul lato server e quindi la connessione non sarebbe inattiva se venisse interrotta. In questo caso è tuttavia possibile chiamare sqlsrv_free_stmt() prima di interrompere la connessione per lasciare libero il cursore e la connessione verrebbe ristabilita correttamente.
 
 ```php
 <?php

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di tipi di dati di base | Microsoft Docs
+title: Uso di tipi di dati di base | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026515"
 ---
 # <a name="using-basic-data-types"></a>Uso di tipi di dati di base
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa i tipi di dati JDBC di base per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java e viceversa. Il driver JDBC fornisce supporto per l'API JDBC 4,0, che include il tipo di dati **SQLXML** e i tipi di dati nazionali (Unicode), ad esempio **nchar**, **nvarchar**, **LONGNVARCHAR**e **NCLOB**.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa i tipi di dati JDBC di base per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java e viceversa. Il driver JDBC offre supporto per l'API di JDBC 4.0, che include il tipo di dati **SQLXML** e i tipi di dati National (Unicode) come **NCHAR**, **NVARCHAR**, **LONGNVARCHAR** e **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Mapping di tipi di dati
 
@@ -29,46 +29,46 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
   
 | Tipi di SQL Server   | Tipi JDBC (java.sql.Types)                        | Tipi del linguaggio Java          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
-| BIGINT             | bigint                                             | long                         |
+| bigint             | bigint                                             | long                         |
 | BINARY             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | boolean                      |
-| char               | CHAR                                               | String                       |
+| char               | CHAR                                               | string                       |
 | Data               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
+| Datetime           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
-| Decimal            | DECIMAL                                            | java.math.BigDecimal         |
-| FLOAT              | DOUBLE                                             | double                       |
+| decimal            | DECIMAL                                            | java.math.BigDecimal         |
+| float              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
 | INT                | INTEGER                                            | INT                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
-| NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
-| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
+| NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | string                       |
+| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | string                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
-| NVARCHAR           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
-| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
-| REAL               | real                                               | FLOAT                        |
+| NVARCHAR           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | string                       |
+| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | string                       |
+| real               | real                                               | float                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
 | SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
-| text               | LONGVARCHAR                                        | String                       |
+| text               | LONGVARCHAR                                        | string                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
-| TIMESTAMP          | BINARY                                             | byte[]                       |
+| timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
-| UNIQUEIDENTIFIER   | CHAR                                               | String                       |
+| UNIQUEIDENTIFIER   | CHAR                                               | string                       |
 | varbinary          | VARBINARY                                          | byte[]                       |
 | varbinary(max)     | VARBINARY                                          | byte[]                       |
-| varchar            | VARCHAR                                            | String                       |
-| ntext       | VARCHAR                                            | String                       |
-| xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
-| sqlvariant         | SQLVARIANT                                         | Object                       |
+| varchar            | VARCHAR                                            | string                       |
+| ntext       | VARCHAR                                            | string                       |
+| Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | string<br /><br /> SQLXML    |
+| sqlvariant         | SQLVARIANT                                         | Oggetto                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
 (1) Per usare java.sql.Time con il tipo time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario impostare la proprietà di connessione **sendTimeAsDatetime** su false.  
   
-(2) è possibile accedere a livello di codice ai valori di **DateTimeOffset** con la [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) È possibile accedere a livello di codice ai valori di **datetimeoffset** con la [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati di base. Per un esempio più dettagliato dell'utilizzo dei tipi di dati di base in un'applicazione Java, vedere [Esempio di tipi di dati di base](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -85,11 +85,11 @@ Se è necessario recuperare dati di cui si conosce il tipo da un'origine dati, u
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> I metodi getUnicodeStream e getBigDecimal con scale sono deprecati e non sono supportati dal driver JDBC.
+> I metodi con scala getUnicodeStream e getBigDecimal sono deprecati e non sono supportati dal driver JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Aggiornamento di dati per tipo di dati
 
-Se è necessario aggiornare il valore di un campo in un'origine dati, utilizzare uno dei tipi di aggiornamento\<> metodi della classe SQLServerResultSet. Nell'esempio seguente il metodo [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) viene usato insieme al metodo [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) per aggiornare i dati nell'origine dati:  
+Se è necessario aggiornare il valore di un campo in un'origine dati, usare uno dei metodi update\<Type> della classe SQLServerResultSet. Nell'esempio seguente il metodo [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) viene usato insieme al metodo [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) per aggiornare i dati nell'origine dati:  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -102,7 +102,7 @@ Se è necessario aggiornare dati in un'origine dati usando una query con paramet
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-Per ulteriori informazioni sulle query con parametri, vedere [utilizzo di un'istruzione SQL con parametri](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Per altre informazioni sulle query con parametri, vedere [Uso di istruzioni SQL con parametri](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Passaggio di parametri a una stored procedure
 
@@ -113,7 +113,7 @@ Se è necessario passare parametri tipizzati in una stored procedure, è possibi
 > [!NOTE]  
 > In questo esempio viene restituito un set di risultati con i risultati dell'esecuzione della stored procedure.
 
-Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di input, vedere [utilizzo di un stored procedure con parametri di input](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Per altre informazioni sull'uso del driver JDBC con stored procedure e parametri di input, vedere [Uso di una stored procedure con parametri di input](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Recupero di parametri da una stored procedure
 
@@ -124,7 +124,7 @@ Se è necessario recuperare parametri da una stored procedure, occorre innanzitu
 > [!NOTE]  
 > Oltre al parametro out, può essere restituito anche un set di risultati con i risultati dell'esecuzione della stored procedure.  
   
-Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di output, vedere [utilizzo di un stored procedure con i parametri di output](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Per altre informazioni sull'uso del driver JDBC con stored procedure e parametri di output, vedere [Uso di una stored procedure con parametri di output](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
 ## <a name="see-also"></a>Vedere anche
 

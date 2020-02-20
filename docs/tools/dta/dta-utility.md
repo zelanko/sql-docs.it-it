@@ -1,10 +1,7 @@
 ---
-title: Utilità dta | Microsoft Docs
-ms.custom: ''
-ms.date: 01/09/2017
+title: dta - utilità
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,18 +17,24 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/09/2017
+ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981800"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258281"
 ---
 # <a name="dta-utility"></a>dta - utilità
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  L'utilità **dta** è la versione per il prompt dei comandi dello strumento Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
-  
- In modo analogo a Ottimizzazione guidata motore di database, l'utilità **dta** analizza il carico di lavoro e propone strutture di progettazione fisica per ottimizzare le prestazioni a livello di server per il carico di lavoro specifico. Il carico di lavoro può essere una cache dei piani, un file o una tabella di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le strutture di progettazione fisica includono indici, viste indicizzate e schemi di partizionamento. Dopo aver analizzato un carico di lavoro, l'utilità **dta** visualizza un'indicazione di progettazione fisica dei database e quindi genera lo script necessario per implementare tale indicazione. I carichi di lavoro possono essere specificati dal prompt dei comandi con gli argomenti **-if** o **-it** . È anche possibile specificare un file di input XML dal prompt dei comandi con l'argomento **-ix** . In quest'ultimo caso, il carico di lavoro viene specificato nel file di input XML.  
+
+L'utilità **dta** è la versione per il prompt dei comandi dello strumento Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
+
+In modo analogo a Ottimizzazione guidata motore di database, l'utilità **dta** analizza il carico di lavoro e propone strutture di progettazione fisica per ottimizzare le prestazioni a livello di server per il carico di lavoro specifico. Il carico di lavoro può essere una cache dei piani, un file o una tabella di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le strutture di progettazione fisica includono indici, viste indicizzate e schemi di partizionamento. Dopo aver analizzato un carico di lavoro, l'utilità **dta** visualizza un'indicazione di progettazione fisica dei database e quindi genera lo script necessario per implementare tale indicazione. I carichi di lavoro possono essere specificati dal prompt dei comandi con gli argomenti **-if** o **-it** . È anche possibile specificare un file di input XML dal prompt dei comandi con l'argomento **-ix** . In quest'ultimo caso, il carico di lavoro viene specificato nel file di input XML.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -129,7 +132,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** _database_name_  
- Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Esempio:  
+ Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Ad esempio:  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -153,7 +156,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* specificato con l'opzione **-D**||  
 |*owner_name*|**dbo**|*owner_name* deve essere **dbo**. Se si specifica un qualsiasi altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.|  
-|*table_name*|None||  
+|*table_name*|nessuno||  
   
  Se si utilizza un file, specificare l'estensione xml, ad esempio TuningLog.xml.  
   
@@ -214,14 +217,13 @@ dta -d AdventureWorks2012 ...
   
  **-ip**  
  Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  
- 
+
 **-iq**  
- Specifica che il Query Store essere utilizzato come carico di lavoro. Verranno analizzati i primi 1.000 eventi del Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Specifica che Query Store deve essere usato come carico di lavoro. Vengono analizzati i primi 1.000 eventi di Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
      
-  
  **-if** _workload_file_  
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
@@ -234,14 +236,20 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|*database_name* specificato con l'opzione **-D**.|  
 |*owner_name*|**dbo**|  
-|*table_name*|Nessuna.|  
+|*table_name*|No.|  
   
 > [!NOTE]  
 >  *owner_name* deve essere **dbo**. Se viene specificato un altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore. È inoltre necessario specificare una tabella o un file del carico di lavoro.  
   
  **-ix** _input_XML_file_name_  
  Specifica il nome del file XML contenente le informazioni di input di **dta** . Tale file deve essere un documento XML valido conforme a DTASchema.xsd. Gli argomenti in conflitto specificati nel prompt dei comandi per le opzioni di ottimizzazione hanno la priorità sul valore corrispondente incluso in questo file XML. L'unica eccezione è rappresentata dal caso in cui una configurazione definita dall'utente venga specificata in modalità di valutazione nel file di input XML. Se, ad esempio, si specifica una configurazione nell'elemento **Configuration** del file di input XML e si specifica anche l'elemento **EvaluateConfiguration** come una delle opzioni di ottimizzazione, le opzioni di ottimizzazione specificate nel file di input XML avranno la priorità su qualsiasi opzione di ottimizzazione specificata nel prompt dei comandi.  
-  
+
+ **-k** _maxtotalindexes_  
+ Numero massimo di indici nella raccomandazione.  
+
+ **-K** _maxtotalindexes_  
+ Numero massimo di indici per tabella.
+
  **-m** _minimum_improvement_  
  Specifica la percentuale minima di miglioramento che la configurazione consigliata deve soddisfare.  
   
@@ -251,7 +259,7 @@ dta -d AdventureWorks2012 ...
 |valore|Descrizione|  
 |-----------|-----------------|  
 |OFF|Le strutture di progettazione fisica indicate non possono essere create online.|  
-|ON|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
+|ATTIVA|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
 |MIXED|Ottimizzazione guidata motore di database indica le strutture di progettazione fisica che possono essere create online quando possibile.|  
   
  Se gli indici vengono creati online, ONLINE = ON viene aggiunto alla relativa definizione di oggetto.  
@@ -266,11 +274,11 @@ dta -n number_of_events -A 0
  In questo caso, è importante specificare un tempo di ottimizzazione illimitato (`-A 0`). In caso contrario, Ottimizzazione guidata motore di database utilizza il tempo di ottimizzazione predefinito pari a 8 ore.
  
  **-I** _time_window_in_hours_   
-   Specifica l'intervallo di tempo (in ore) in cui una query deve essere eseguita per essere considerata da DTA per l'ottimizzazione quando si usa l'opzione **-IQ** (carico di lavoro di query Store). 
+   Specifica l'intervallo di tempo (in ore) in cui una query deve essere eseguita per essere considerata da DTA per l'ottimizzazione quando si usa l'opzione **-iq** (carico di lavoro da Query Store). 
 ```  
 dta -iq -I 48  
 ```  
-In questo caso DTA utilizzerà Query Store come origine del carico di lavoro e considererà solo le query eseguite con le ultime 48 ore.  
+In questo caso DTA userà Query Store come origine del carico di lavoro e considererà solo le query eseguite nelle ultime 48 ore.  
   ||  
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
@@ -361,7 +369,7 @@ In questo caso DTA utilizzerà Query Store come origine del carico di lavoro e c
  **-x**  
  Avvia la sessione di ottimizzazione e chiude l'utilità.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Premere CTRL+C una volta per arrestare la sessione di ottimizzazione e generare le indicazioni in base all'analisi completata da **dta** fino a quel momento. Verrà richiesto di decidere se generare le indicazioni o meno. Premere nuovamente CTRL+C per arrestare la sessione di ottimizzazione senza generare le indicazioni.  
   
 ## <a name="examples"></a>Esempi  
@@ -390,33 +398,32 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 ```  
   
  **D. Ottimizzazione di tabelle specifiche elencate in un file**  
-  
+
  Questo esempio mostra l'utilizzo di *table_list_file* , ovvero l'argomento **-Tf** . Il contenuto del file table_list.txt è riportato di seguito.  
-  
-```  
+
+```
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
-```  
+```
+
+Il contenuto di table_list.txt determina quanto segue:  
+
+- Verranno ottimizzate solo le tabelle **Customer**, **Store**e **Product** .  
   
- Il contenuto di table_list.txt determina quanto segue:  
+- Si presuppone che il numero di righe delle tabelle **Customer** e **Product** sia rispettivamente 100.000 e 2.000.000.  
   
--   Verranno ottimizzate solo le tabelle **Customer**, **Store**e **Product** .  
-  
--   Si presuppone che il numero di righe delle tabelle **Customer** e **Product** sia rispettivamente 100.000 e 2.000.000.  
-  
--   Si presuppone inoltre che il numero di righe della tabella **Store** sia il numero corrente di righe di questa tabella.  
-  
- Possono essere presenti uno o più spazi tra il numero totale delle righe e il nome precedente della tabella in *table_list_file*.  
-  
- La durata dell'ottimizzazione è pari a 2 ore (`-A 120`) e l'output viene scritto in un file XML (`-ox XMLTune.xml`).  
-  
-```  
+- Si presuppone inoltre che il numero di righe della tabella **Store** sia il numero corrente di righe di questa tabella.  
+
+    Possono essere presenti uno o più spazi tra il numero totale delle righe e il nome precedente della tabella in *table_list_file*.  
+    
+    La durata dell'ottimizzazione è pari a 2 ore (`-A 120`) e l'output viene scritto in un file XML (`-ox XMLTune.xml`).  
+
+``` 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
-  
+``` 
+
+## <a name="see-also"></a>Vedere anche
+
+- [Guida di riferimento alle utilità del prompt dei comandi &#40;motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

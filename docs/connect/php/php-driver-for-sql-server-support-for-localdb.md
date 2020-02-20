@@ -1,5 +1,5 @@
 ---
-title: Supporto per local DB | Microsoft Docs
+title: Supporto di Local DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,29 +10,29 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6da7f1aed956c8b2f5c71496c9c121f6006eabb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935953"
 ---
 # <a name="support-for-localdb"></a>Supporto per LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Il database locale è una versione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] leggera di, disponibile a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]partire da. In questo argomento viene discussa la modalità di connessione a un database in un'istanza del database locale.
+Local DB è una versione leggera di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In questo argomento viene discussa la modalità di connessione a un database in un'istanza del database locale.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni sul database locale, inclusa la modalità di installazione del database locale e la configurazione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza del database locale [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , vedere l'argomento della documentazione online su Express local DB.
+Per altre informazioni su Local DB, inclusa la procedura per l'installazione di Local DB e la configurazione dell'istanza di Local DB, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB.
 
-In breve, il database locale consente di:
+In breve, Local DB consente di:
 
--   Utilizzare **SqlLocalDB. exe** i per individuare il nome dell'istanza predefinita.
+-   Usare **sqllocaldb.exe** per individuare il nome dell'istanza predefinita.
 
 -   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza di Local DB quando l'applicazione viene chiusa.
 
--   Specificare un'istanza di Local DB nella stringa di connessione. Ad esempio, di seguito è riportato un esempio di stringa di connessione SQLSRV:
+-   Specificare un'istanza di Local DB nella stringa di connessione. Di seguito è riportata una stringa di connessione SQLSRV di esempio:
 
     ```php
     $conn = sqlsrv_connect( '(localdb)\\v11.0',
@@ -45,7 +45,7 @@ In breve, il database locale consente di:
         array('AttachDBFileName'=>'c:\\myData.MDF'));
     ```
 
-    Di seguito è illustrata una stringa di connessione PDO_SQLSRV di esempio:  
+    Di seguito è riportata una stringa di connessione PDO_SQLSRV di esempio:  
 
     ```php
     $conn = new PDO( 'sqlsrv:server=(localdb)\\v11.0;'
@@ -59,23 +59,23 @@ In breve, il database locale consente di:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio, `sqlcmd -S (localdb)\v11.0`. Quando è in esecuzione in IIS, è necessario eseguire con l'account corretto per ottenere gli stessi risultati di quando si esegue dalla riga di comando. per ulteriori informazioni [, vedere Utilizzo del database locale con IIS completo, parte 2: proprietà dell'istanza](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) .
+Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio: `sqlcmd -S (localdb)\v11.0`. Durante l'esecuzione in IIS, è necessario usare l'account corretto per ottenere gli stessi risultati dell'esecuzione dalla riga di comando. Per altre informazioni, vedere [Using LocalDB with Full IIS, Part 2: Instance Ownership](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx).
 
-Di seguito sono riportate le stringhe di connessione di esempio che utilizzano il driver SQLSRV che si connettono a un database in un'istanza denominata di locale denominata istanza:
+Di seguito sono riportate le stringhe di connessione di esempio che usano il driver SQLSRV che si connettono a un database in un'istanza denominata di Local DB denominata myInstance:
 
 ```php
 $conn = sqlsrv_connect( '(localdb)\\myInstance',
     array( 'Database'=>'myData'));
 ```
 
-Di seguito sono riportate le stringhe di connessione di esempio che utilizzano il driver PDO_SQLSRV che si connettono a un database in un'istanza denominata di locale denominata istanza:  
+Di seguito sono riportate le stringhe di connessione di esempio che usano il driver PDO_SQLSRV che si connettono a un database in un'istanza denominata di Local DB denominata myInstance:  
   
 ```php
 $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Per istruzioni sull'installazione del database locale, vedere la [documentazione del database locale](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Se si utilizza sqlcmd. exe per modificare i dati nell'istanza del database locale, sarà necessaria l' [utilità sqlcmd](../../tools/sqlcmd-utility.md).
+Per istruzioni sull'installazione di Local DB, vedere la [documentazione di Local DB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Se si usa sqlcmd.exe per modificare i dati nell'istanza di Local DB, è necessaria l'[utilità sqlcmd](../../tools/sqlcmd-utility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

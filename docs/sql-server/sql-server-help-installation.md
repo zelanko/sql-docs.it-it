@@ -1,7 +1,7 @@
 ---
 title: Contenuto della Guida e Help Viewer per SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4be5552c60a6a401d9333976402088c7fa199f52
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ad4d98af834e482005e354b2dcd5ce2c52f2fd42
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049919"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251462"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Guida offline di SQL Server e Help Viewer
 
@@ -33,21 +33,25 @@ Esistono due versioni principali di Microsoft Help Viewer,  le versioni 1.x e 2.
 
 |**Set di contenuti**|**Strumenti che installano Help Viewer**|**Versione di Help Viewer**|
 |-|-|-|
-|SQL Server 2019 (anteprima) <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools per Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>v2.2|
-|SQL Server 2014<br>SQL Server 2012|Installazione di SQL Server 2016 (2)<br>SQL Server 2014 Management Studio<br>Installazione di SQL Server 2014 (2)<br>SQL Server Management Studio 2012<br>Installazione di SQL Server 2012 (2)| v1.x|
+|SQL Server 2019 <br><br><br>SQL Server 2017 <br>SQL Server 2016 | [Visual Studio 2019 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791) <br>[SQL Server Data Tools per Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | v2.3 <br><br><br>v2.2 |
+|SQL Server 2014<br>SQL Server 2012|Installazione di SQL Server 2016 (\*2)<br>SQL Server 2014 Management Studio<br>Installazione di SQL Server 2014 (\*2)<br>SQL Server Management Studio 2012<br>Installazione di SQL Server 2012 (\*2)| v1.x|
 | | | |
 
-(1) Per installare Help Viewer con Visual Studio 2019 o 2017, nella scheda Singoli componenti del programma di installazione di Visual Studio selezionare **Help Viewer** in Strumenti per il codice e quindi fare clic su **Installa**.
+(\*1) Per installare Help Viewer con Visual Studio 2019 o 2017, nella scheda **Singoli componenti** nel Programma di installazione di Visual Studio selezionare **Strumenti per il codice** \> **Help Viewer** \> **Installa**.
 
-(2) indica l'opzione "Componenti della documentazione" nel programma di installazione di SQL Server.
+(\*2) Indica l'opzione **Componenti della documentazione** nel programma di installazione di SQL Server.
 
 >[!NOTE]
-> - SQL Server 2016 installa Help Viewer 1.1, che non supporta la Guida di SQL Server 2016. Per altre informazioni, vedere le [Note sulla versione di SQL Server 2016](sql-server-2016-release-notes.md).  Per visualizzare il contenuto di SQL Server 2016 è necessaria la versione v2.x di Help Viewer. 
-> - A partire da SQL Server 2017 Help Viewer non può essere installato dal programma di installazione di SQL Server.
+> - SQL Server 2016 installa Help Viewer 1.1, che non supporta la Guida di SQL Server 2016. Per visualizzare il contenuto di SQL Server 2016 è necessaria la versione v2.x di Help Viewer. Per altre informazioni, vedere le [Note sulla versione di SQL Server 2016](sql-server-2016-release-notes.md).
+> - Help Viewer 2.x consente di visualizzare la documentazione di SQL Server versioni 2014-2019.
+> - Per ottenere Help Viewer 2.3 o versioni successive in modo semplice, è possibile scaricare prima di tutto la versione gratuita più recente di `SSMS.exe`. Quindi usare il menu della **Guida** di SSMS.
+> - A partire da SQL Server 2017, Help Viewer non può essere installato dal programma di installazione di SQL Server.
 
 ## <a name="use-help-viewer-v2x"></a>Usare Help Viewer v2.x
 
-**Per scaricare e installare il contenuto della Guida offline con Help Viewer v2.x**
+Per questo approccio, è consigliabile usare Help Viewer 2.3 o versione successiva. Il menu della **Guida** nella [versione più recente di SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md) offre la versione 2.3 o versione successiva.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v2x"></a>Per scaricare e installare il contenuto della Guida offline con Help Viewer v2.x
 
 1. In SQL Server Management Studio o Visual Studio fare clic su **Aggiungi e rimuovi contenuto della Guida** nel menu ?. 
 
@@ -84,7 +88,7 @@ Esistono due versioni principali di Microsoft Help Viewer,  le versioni 1.x e 2.
 |*|Guida di riferimento a Data Analysis Expressions (DAX) | Guida di riferimento a Data Analysis Expressions (DAX)|
 |*|Guida di riferimento a DMX (Data Mining Extensions) | Guida di riferimento a DMX (Data Mining Extensions)|
 |*|Introduzione al Machine Learning in SQL Server | Microsoft Machine Learning Services|
-|*|Guida di riferimento di Power Query M | Guida di riferimento di Power Query M|
+|*|Riferimento M di Power Query | Riferimento M di Power Query|
 ||Documentazione di SQL Server 2016 | Documentazione di SQL Server 2016|
 ||Documentazione di SQL Server 2017| Documentazione di SQL Server 2017|
 |*|Guide per sviluppatori per SQL Server | Guida di riferimento per sviluppatori per SQL Server|
@@ -95,11 +99,12 @@ Esistono due versioni principali di Microsoft Help Viewer,  le versioni 1.x e 2.
 |*|Strumenti e utilità per database SQL di Azure | Strumenti di SQL Server|
 |*|Guida di riferimento a Transact-SQL (Motore di database) | Riferimento all'istruzione Transact-SQL|
 |*|Riferimento al linguaggio XQuery (SQL Server) | Riferimento al linguaggio XQuery (SQL Server)|
+| &nbsp; | &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Se Help Viewer si blocca mentre aggiunge il contenuto, modificare la riga Cache LastRefreshed="\<mm/gg/aaaa> 00:00:00" nel file %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings usando una data futura. Per altre informazioni su questo problema, vedere [Il visualizzatore della Guida di Visual Studio si blocca](/visualstudio/welcome-to-visual-studio).
 
-**Per visualizzare il contenuto della Guida offline in SSMS con Help Viewer v2.x**
+### <a name="to-view-offline-help-content-in-ssms-with-help-viewer-v2x"></a>Per visualizzare il contenuto della Guida offline in SSMS con Help Viewer v2.x
 
 Per visualizzare la Guida installata in SQL Server Management Studio, premere CTRL + ALT + F1 oppure scegliere **Aggiungi o rimuovi contenuto** dal menu ? per avviare Help Viewer. 
 
@@ -111,7 +116,7 @@ Help Viewer si apre con la scheda Gestisci contenuto visualizzata, con il sommar
 
    ![Help Viewer v2.x con contenuto](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
-**Per visualizzare il contenuto della Guida offline in VS con Help Viewer v2.x**
+### <a name="to-view-offline-help-content-in-vs-with-help-viewer-v2x"></a>Per visualizzare il contenuto della Guida offline in VS con Help Viewer v2.x
 
 Per visualizzare la Guida installata in Visual Studio:
 1. Selezionare **Imposta preferenza Guida** dal menu ? e scegliere **Avvia in Help Viewer**. 
@@ -126,56 +131,67 @@ Per visualizzare la Guida installata in Visual Studio:
   
 ## <a name="use-help-viewer-v1x"></a>Usare Help Viewer v1.x
 
-Le versioni precedenti di SSMS e Visual Studio usano Help Viewer 1.x, che supporta il contenuto della Guida di SQL Server 2014 e 2012. 
+In questa sezione vengono eseguiti i passaggi generali seguenti:
 
-**Per scaricare e installare il contenuto della Guida offline con Help Viewer v1.x**
+- Scaricare manualmente la documentazione offline di SQL Server 2014, suddivisa in quattro parti.
+- Usare il menu della **Guida** di SSMS o VS per avviare Help Viewer.
+- Infine, specificare in Help Viewer la posizione del file `*.msha` di SQL Server 2014 nel disco rigido locale.
+
+Le versioni precedenti di SSMS e VS offrivano le versioni 1.x di Help Viewer. La versione 1.x consente di visualizzare la documentazione offline di SQL Server versioni 2012 e 2014. La versione 1.x, tuttavia, non consente di visualizzare la documentazione offline di SQL Server 2016 o versioni successive.
+
+Help Viewer 2.3 consente anche di visualizzare la documentazione offline di SQL Server 2014, dopo averla scaricata nel disco rigido locale.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v1x"></a>Per scaricare e installare il contenuto della Guida offline con Help Viewer v1.x
 
 Questa procedura usa Help Viewer 1.x per scaricare la Guida di SQL Server 2014 da Microsoft Download Center e installarla nel computer in uso.
 
-1. Passare al sito di download della [documentazione del prodotto per Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) e fare clic su **Scarica**.  
-2. Fare clic su **Salva** nella finestra del messaggio per salvare il file *SQLServer2014Documentation\_\*.exe* nel computer.  
-   
-   >[!NOTE]
-   >Per ambienti protetti da firewall e proxy, salvare il download in un'unità USB o in un altro supporto portatile che possa essere usato nell'ambiente.   
-   
-3. Fare doppio clic sul file EXE per decomprimere il file del contenuto della Guida e salvarlo in una cartella locale o condivisa.  
-4. Aprire **Gestione librerie della Guida** avviando SSMS o VS e scegliendo **Gestione impostazioni della Guida** dal menu ?.  
-5. Fare clic su **Installa contenuto da disco** e passare alla cartella in cui è stato decompresso il file del contenuto della Guida.  
-   
+1. Passare al sito di download della [documentazione del prodotto per Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) e fare clic su **Scarica**.
+
+2. Fare clic su **Salva** nella finestra del messaggio per salvare il file *SQLServer2014Documentation\_\*.exe* nel computer.
+
+   > [!NOTE]
+   > Per ambienti protetti da firewall e proxy, salvare il download in un'unità USB o in un altro supporto portatile che possa essere usato nell'ambiente.
+
+3. Fare doppio clic sul file EXE per decomprimere il file del contenuto della Guida e salvarlo in una cartella locale o condivisa.
+
+4. Aprire **Gestione librerie della Guida** avviando SSMS o VS e scegliendo **Gestione impostazioni della Guida** dal menu ?.
+
+5. Fare clic su **Installa contenuto da disco** e passare alla cartella in cui è stato decompresso il file del contenuto della Guida.
+
    ![HelpLibraryManager_MainPage_InstallFromDisk](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-installfromdisk.png)
-   
+
    ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog1.png)
-   
+
    > [!IMPORTANT]
-   > Per evitare di installare contenuto della Guida locale, che include solo un sommario parziale, è necessario usare l'opzione **Installa contenuto da disco** in **Gestione librerie della Guida**.  Se si usa l'opzione **Installa contenuto da online** e Help Viewer visualizza un sommario parziale, vedere questo [post di blog](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) per i passaggi di risoluzione del problema. 
-   
-8. Selezionare il file HelpContentSetup.msha, fare clic su **Apri** e quindi su **Avanti**.  
-9. Fare clic su **Aggiungi** accanto alla documentazione che si vuole installare e quindi su **Aggiorna**.  
-   
-   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)  
-   
-10. Fare clic su **Fine**, quindi fare clic su **Esci**.
+   > Per evitare di installare contenuto della Guida locale, che include solo un sommario parziale, è necessario usare l'opzione **Installa contenuto da disco** in **Gestione librerie della Guida**.  Se si usa l'opzione **Installa contenuto da online** e Help Viewer visualizza un sommario parziale, vedere questo [post di blog](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) per i passaggi di risoluzione del problema.
 
-**Per visualizzare il contenuto della Guida offline con Help Viewer v1.x**
+6. Fare clic sul file `HelpContentSetup.msha`, fare clic su **Apri** e quindi su **Avanti**.
 
-11. Per visualizzare la Guida installata, aprire **Gestione librerie della Guida**, fare clic su **Scegliere di utilizzare la Guida online o locale** e quindi scegliere la **Guida locale**.
-12. Aprire Help Viewer per visualizzare il contenuto facendo clic su **Visualizza Guida** nel menu **?** . Il contenuto installato è indicato nel riquadro a sinistra.  
-   
+7. Fare clic su **Aggiungi** accanto alla documentazione che si vuole installare e quindi su **Aggiorna**.
+
+   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)
+
+8. Fare clic su **Fine**, quindi fare clic su **Esci**.
+
+### <a name="to-view-offline-help-content-with-help-viewer-v1x"></a>Per visualizzare il contenuto della Guida offline con Help Viewer v1.x
+
+1. Per visualizzare la Guida installata, aprire **Gestione librerie della Guida**, fare clic su **Scegliere di utilizzare la Guida online o locale** e quindi scegliere la **Guida locale**.
+
+2. Aprire Help Viewer per visualizzare il contenuto facendo clic su **Visualizza Guida** nel menu **?** . Il contenuto installato è indicato nel riquadro a sinistra.
+
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
-   
-
 
 ## <a name="view-online-help"></a>Visualizzare la Guida online
 
 Nella Guida appare sempre il contenuto più aggiornato. 
 
-**Per visualizzare la Guida online di SQL Server in SSMS 17.x**
+### <a name="to-view-sql-server-online-help-in-ssms-17x"></a>Per visualizzare la Guida online di SQL Server in SSMS 17.x
 
 - Fare clic su **Visualizza Guida** nel menu **?** . La documentazione di SQL Server 2016/2017 più recente da [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) viene visualizzata nel browser.
 
    ![Visualizza Guida](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-**Per visualizzare la Guida online di Visual Studio in Visual Studio**
+### <a name="to-view-visual-studio-online-help-in-visual-studio"></a>Per visualizzare la Guida online di Visual Studio in Visual Studio
 
 1. Selezionare **Imposta preferenza Guida** dal menu ? e scegliere **Avvia nel browser** o **Avvia in Help Viewer**. 
 2. Fare clic su **Visualizza Guida** nel menu ?. La Guida più recente di Visual Studio viene visualizzata nell'ambiente selezionato. 
@@ -197,7 +213,7 @@ Nella Guida appare sempre il contenuto più aggiornato.
 
 Quando si preme F1 o si fa clic su **Guida** o **?** in una finestra di dialogo in SSMS o VS, nel browser o in Help Viewer viene visualizzato un articolo della Guida online sensibile al contesto.
 
-**Per visualizzare la Guida sensibile al contesto**
+### <a name="to-view-f1-help"></a>Per visualizzare la Guida in linea (F1)
 
 1. Nel menu della Guida fare clic su **Imposta preferenza Guida** e scegliere **Avvia nel browser** o **Avvia in Help Viewer**.
 2. Premere F1 o fare clic su **Guida** oppure fare clic su **?** nelle finestre di dialogo in cui sono disponibili per visualizzare gli articoli online sensibili al contesto nell'ambiente selezionato.

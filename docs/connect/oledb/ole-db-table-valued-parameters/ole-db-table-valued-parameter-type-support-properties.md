@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d53abd4dc5d4a233e7b517fc9b5fecaa64185e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015287"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
@@ -36,7 +36,7 @@ ms.locfileid: "68015287"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|L/S: Sola lettura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: i segnalibri non sono consentiti negli oggetti set di righe di parametri con valori di tabella.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W (L/S): Sola lettura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: i segnalibri non sono consentiti negli oggetti set di righe di parametri con valori di tabella.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -77,25 +77,25 @@ ms.locfileid: "68015287"
 ## <a name="property-sets"></a>Set di proprietà  
  I set di proprietà seguenti supportano i parametri con valori di tabella.  
   
-### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Questa proprietà viene utilizzata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella utilizzando ITableDefinitionWithConstraints:: CreateTableWithConstraints per ogni colonna tramite la struttura DBCOLUMNDESC, se necessario.  
+### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
+ Questa proprietà viene usata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella tramite ITableDefinitionWithConstraints::CreateTableWithConstraints per ogni colonna della struttura DBCOLUMNDESC, se necessario.  
   
 |ID proprietà|Valore proprietà|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrizione: se impostata su VARIANT_TRUE, indica che la colonna è una colonna calcolata. VARIANT_FALSE indica che non si tratta di una colonna calcolata.|  
+|SSPROP_COL_COMPUTED|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Digitare: VT_BOOL<br /><br /> Descrizione: se impostata su VARIANT_TRUE, indica che la colonna è una colonna calcolata. VARIANT_FALSE indica che non si tratta di una colonna calcolata.|  
   
-### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Queste proprietà vengono lette dal consumer durante l'individuazione delle informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParameters:: GetParameterProperties e impostate dall'utente durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella. tramite ISSCommandWithParameters:: SetParameterProperties.  
+### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
+ Queste proprietà vengono lette dal consumer durante l'individuazione delle informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParameters::GetParameterProperties e vengono impostate dal consumer durante l'impostazione di proprietà specifiche relative al parametro con valori di tabella tramite ISSCommandWithParameters::SetParameterProperties.  
   
  Tali proprietà vengono descritte in modo dettagliato nella tabella seguente.  
   
 |ID proprietà|Valore proprietà|  
 |-----------------|--------------------|  
-|SSPROP_PARAM_TYPE_TYPENAME|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descrizione: i consumer utilizzano questa proprietà per ottenere o impostare il nome del tipo di parametro con valori di tabella.<br /><br /> Questa proprietà può essere utilizzata anche con i tipi CLR definiti dall'utente.<br /><br /> Questa proprietà può essere specificata facoltativamente per fornire un nome del tipo di tabella per un parametro con valori di tabella (in caso di comando della sintassi di ODBC). Questa proprietà è obbligatoria per le query SQL ad hoc con parametri.|  
-|SSPROP_PARAM_TYPE_SCHEMANAME|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descrizione: i consumer utilizzano questa proprietà per ottenere o impostare il nome dello schema del tipo di parametro con valori di tabella.<br /><br /> Questa proprietà può essere utilizzata anche con i tipi CLR definiti dall'utente.|  
-|SSPROP_PARAM_TYPE_CATALOGNAME|L/S: Sola lettura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descrizione: i consumer utilizzano questa proprietà per ottenere il nome del catalogo del tipo di parametro con valori di tabella.<br /><br /> Questa proprietà può essere utilizzata anche con i tipi CLR definiti dall'utente. Non è corretto impostare questa proprietà, in quanto i tipi definiti dall'utente devono essere inclusi nello stesso database in cui si trovano i parametri con valori di tabella che li utilizzano.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrizione: i consumer utilizzano questa proprietà per specificare quale set di colonne nel set di righe deve essere considerato quello predefinito. Per tali colonne non verrà inviato alcun valore. Durante il recupero di dati dall'oggetto set di righe del consumer, il provider non richiede un'associazione per tali colonne.<br /><br /> Ogni elemento della matrice deve essere un numero ordinale di una colonna nell'oggetto set di righe. Numeri ordinali non validi producono errori in fase di esecuzione del comando.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrizione: questa proprietà viene utilizzata dal consumer per fornire un hint al server per indicare il tipo di ordinamento dei dati della colonna. Il provider non esegue alcuna convalida e presuppone che il consumer sia conforme alla specifica fornita. Il server utilizza questa proprietà per eseguire ottimizzazioni.<br /><br /> Le informazioni sull'ordine delle colonne per ogni colonna vengono rappresentate da una coppia di elementi nella matrice. Il primo elemento nella coppia è il numero della colonna. Il secondo elemento nella coppia sarà 1 per l'ordine crescente o 2 per l'ordine decrescente.|  
+|SSPROP_PARAM_TYPE_TYPENAME|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VT_EMPTY<br /><br /> Digitare: VT_BSTR<br /><br /> Descrizione: i consumer usano questa proprietà per ottenere o impostare il nome del tipo di parametro con valori di tabella.<br /><br /> Questa proprietà può essere utilizzata anche con i tipi CLR definiti dall'utente.<br /><br /> Questa proprietà può essere specificata facoltativamente per fornire un nome del tipo di tabella per un parametro con valori di tabella (in caso di comando della sintassi di ODBC). Questa proprietà è obbligatoria per le query SQL ad hoc con parametri.|  
+|SSPROP_PARAM_TYPE_SCHEMANAME|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VT_EMPTY<br /><br /> Digitare: VT_BSTR<br /><br /> Descrizione: i consumer usano questa proprietà per ottenere o impostare il nome del tipo di parametro con valori di tabella.<br /><br /> Questa proprietà può essere utilizzata anche con i tipi CLR definiti dall'utente.|  
+|SSPROP_PARAM_TYPE_CATALOGNAME|R/W (L/S): Sola lettura<br /><br /> Predefinito: VT_EMPTY<br /><br /> Digitare: VT_BSTR<br /><br /> Descrizione: i consumer usano questa proprietà per ottenere il nome del catalogo del tipo di parametro con valori di tabella.<br /><br /> Questa proprietà può essere utilizzata anche con i tipi CLR definiti dall'utente. Non è corretto impostare questa proprietà, in quanto i tipi definiti dall'utente devono essere inclusi nello stesso database in cui si trovano i parametri con valori di tabella che li utilizzano.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VT_EMPTY<br /><br /> Digitare: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrizione: i consumer usano questa proprietà per specificare quale set di colonne nel set di righe deve essere considerato quello predefinito. Per tali colonne non verrà inviato alcun valore. Durante il recupero di dati dall'oggetto set di righe del consumer, il provider non richiede un'associazione per tali colonne.<br /><br /> Ogni elemento della matrice deve essere un numero ordinale di una colonna nell'oggetto set di righe. Numeri ordinali non validi producono errori in fase di esecuzione del comando.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VT_EMPTY<br /><br /> Digitare: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrizione: questa proprietà viene usata dal consumer per fornire un hint al server per indicare il tipo di ordinamento dei dati della colonna. Il provider non esegue alcuna convalida e presuppone che il consumer sia conforme alla specifica fornita. Il server utilizza questa proprietà per eseguire ottimizzazioni.<br /><br /> Le informazioni sull'ordine delle colonne per ogni colonna vengono rappresentate da una coppia di elementi nella matrice. Il primo elemento nella coppia è il numero della colonna. Il secondo elemento nella coppia sarà 1 per l'ordine crescente o 2 per l'ordine decrescente.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto dei tipi di parametri con valori di tabella OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   

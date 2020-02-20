@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155105"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connessione a un database SQL di Azure
@@ -25,14 +25,14 @@ In questo argomento vengono illustrati i problemi dell'uso di [!INCLUDE[jdbcNoVe
   
 - [Database SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Procedura: Connettersi a SQL Azure mediante JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Procedura: Connettersi a SQL Azure tramite JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connessione tramite autenticazione di Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Dettagli
 
-Quando ci si connette [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]a, è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.** getCatalogs.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.** getCatalogs usa la vista sys. databases per ottenere i cataloghi. Vedere la discussione sulle autorizzazioni in [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] [sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per comprendere il comportamento di **SQLServerDatabaseMetaData.** getCatalogs su.  
+Per la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases per ottenere i cataloghi. Vedere la discussione relativa alle autorizzazioni in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per comprendere il comportamento di **SQLServerDatabaseMetaData.getCatalogs** in un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Connessioni eliminate
 
@@ -46,9 +46,9 @@ Per evitare l'eliminazione di connessioni inattive da un componente di rete, è 
   
 |Impostazione del Registro di sistema|Valore consigliato|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\TcpMaxDataRetransmissions|10|  
   
 Riavviare il computer per attivare le impostazioni del Registro di sistema.  
 
@@ -76,13 +76,13 @@ shutdown /r /t 1
 
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>Accodamento del nome del server all'ID utente nella stringa di connessione  
 
-Prima della versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], durante la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] veniva richiesto l'accodamento del nome del server all'ID utente nella stringa di connessione. Ad esempio, user@servername. A partire dalla versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] l'accodamento di @servername all'ID utente nella stringa di connessione non è più necessario.  
+Prima della versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], durante la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] veniva richiesto l'accodamento del nome del server all'ID utente nella stringa di connessione. Ad esempio: user@servername. A partire dalla versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] l'accodamento di @servername all'ID utente nella stringa di connessione non è più necessario.  
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Impostazione di hostNameInCertificate obbligatoria per l'uso della crittografia
 
-Prima della versione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 di, quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **Encrypt = True** (se il nome del server nella stringa di connessione è *ShortName*. *NomeDominio*, impostare la proprietà **hostNameInCertificate** su \*. *NomeDominio*.). Questa proprietà è facoltativa a partire dalla versione 7,2 del driver.
+Nelle versioni di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] precedenti alla 7.2, quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] è necessario specificare **hostNameInCertificate** se si specifica **encrypt=true** (se il nome server nella stringa di connessione è *shortName*.*domainName*, impostare la proprietà **hostNameInCertificate** su \*.*domainName*). Questa proprietà è facoltativa a partire dalla versione 7.2 del driver.
 
-Esempio:
+Ad esempio:
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;

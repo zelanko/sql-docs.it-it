@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 10/30/2019
-ms.openlocfilehash: 0fea81e009d4d281c36d1882ac41835af609294b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
-ms.translationtype: MTE75
+ms.date: 12/05/2019
+ms.openlocfilehash: 5ea40e80ddd378cfee73b932d9f5a1de2e7749a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536277"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831709"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novità di SQL Server Reporting Services (SSRS)
 
@@ -28,33 +28,37 @@ Per informazioni su Server di report di Power BI, vedere [Che cos'è Server di r
 
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-![Scarica](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download") **download**
+**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
-[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) è disponibile per il download dall'area download Microsoft.
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) è disponibile per il download nell'Area download Microsoft.
 
 ### <a name="azure-sql-managed-instance-support"></a>Supporto per Istanza gestita di database SQL di Azure
 
-È ora possibile ospitare un catalogo di database usato per SQL Server Reporting Services (SSRS) in una Istanza gestita SQL di Azure (MI) ospitata in una macchina virtuale o nel data center. Il supporto è limitato all'utilizzo di credenziali di database per la connessione a SQL MI.
+È ora possibile ospitare un catalogo di database usato per SQL Server Reporting Services (SSRS) in un'istanza gestita SQL di Azure (MI) ospitata in una macchina virtuale o nel data center. Il supporto è limitato all'utilizzo delle credenziali del database per la connessione all'istanza gestita SQL.
 
 ### <a name="power-bi-premium-dataset-support"></a>Supporto del set di dati Power BI Premium
 
-È possibile connettersi a Power BI DataSet utilizzando Microsoft Generatore report o SQL Server Data Tools (SSDT). È quindi possibile pubblicare i report in SSRS 2019 usando SQL Server Analysis Services connettività. Per abilitare lo scenario, gli utenti devono utilizzare un nome utente e una password archiviati di Windows.
+È possibile connettersi ai set di dati di Power BI usando il Generatore report Microsoft o SQL Server Data Tools (SSDT). È quindi possibile pubblicare i report in SSRS 2019 usando la connettività di SQL Server Analysis Services. Per abilitare lo scenario, gli utenti devono usare un nome utente e una password di Windows archiviati.
 
 ### <a name="alttext-alternative-text-support-for-report-elements"></a>Supporto di AltText (testo alternativo) per gli elementi del report
 
-Quando si creano report, è possibile utilizzare le descrizioni comandi per specificare il testo per ogni elemento nel report. La tecnologia per la lettura dello schermo identifica queste descrizioni comandi in modo corretto.
+Quando si creano report, è possibile usare le descrizioni comando per specificare il testo per ogni elemento nel report. La tecnologia per la lettura dello schermo identifica queste descrizioni comando in modo corretto.
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Supporto per Azure Active Directory Application Proxy
 
 Con Azure Active Directory Application Proxy, non è più necessario gestire il proxy applicazione Web per consentire l'accesso sicuro tramite le app Web o per dispositivi mobili.
 
+### <a name="custom-headers"></a>Intestazioni personalizzate
+
+Imposta i valori di intestazione per tutti gli URL che corrispondono al criterio regex specificato. Gli utenti possono aggiornare il valore dell'intestazione personalizzata con un XML valido per impostare i valori di intestazione per gli URL di richiesta selezionati. Gli amministratori possono aggiungere un numero qualsiasi di intestazioni in XML. Per informazioni dettagliate, vedere [Intestazioni personalizzate](tools/server-properties-advanced-page-reporting-services.md#customheaders) nell'articolo **Pagina Avanzate delle proprietà del server**.
+
 ### <a name="transparent-database-encryption"></a>Crittografia trasparente del database
 
-SQL Server 2019 supporta ora la crittografia trasparente del database per il database di catalogo di SSRS per le edizioni Enterprise e standard. 
+SQL Server 2019 supporta ora la crittografia TDE (Transparent Database Encryption) per il database di catalogo di SSRS per le edizioni Enterprise e Standard. 
 
 ### <a name="microsoft-report-builder-update"></a>Aggiornamento di Generatore report Microsoft
 
-La nuova versione rilasciata di Generatore report è completamente compatibile con le versioni 2016, 2017 e 2019 di Reporting Services. È compatibile anche con tutte le versioni rilasciate e supportate di Server di report di Power BI.
+La nuova versione rilasciata del Generatore report è completamente compatibile con le versioni 2016, 2017 e 2019 di Reporting Services. È compatibile anche con tutte le versioni rilasciate e supportate del server di report di Power BI.
 
 ::: moniker-end
 
@@ -62,7 +66,7 @@ La nuova versione rilasciata di Generatore report è completamente compatibile c
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
 
-![Scarica](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download") **download**
+**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 Per scaricare SQL Server 2017 Reporting Services, accedere all' **[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -80,7 +84,7 @@ Nelle versioni più recenti di Generatore Report e SQL Server Data Tools è poss
 
 ### <a name="rest-api-support"></a>Supporto delle API REST
 
-Per consentire lo sviluppo di applicazioni e personalizzazioni moderne, SQL Server Reporting Services ora supporta completamente un'API RESTful conforme a OpenAPI. La documentazione e le specifiche complete dell'API sono ora disponibili in [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+Per consentire lo sviluppo di applicazioni e personalizzazioni moderne, SQL Server Reporting Services ora supporta completamente un'API RESTful conforme a OpenAPI. La documentazione e le specifiche complete dell'API sono ora disponibili in [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Supporto della progettazione query per DAX in Generatore Report ed SQL Server Data Tools
 
@@ -97,13 +101,13 @@ Altre informazioni nel [blog di Reporting Services](https://blogs.msdn.microsoft
 
 ## <a name="ssrs-2016"></a>SSRS 2016
 
-### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### <a name="reporting-services-ssrswebportal-non-markdown"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-È disponibile un nuovo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. Il portale Web aggiornato include
+È disponibile un nuovo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]. Il portale Web aggiornato include
 - KPI
 - Report per dispositivi mobili
 - Report impaginati
-- file di Excel
+- file Excel
 - File di Power BI Desktop
 
 Il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] sostituisce Gestione Report delle versioni precedenti.
@@ -114,19 +118,19 @@ Per altre informazioni sul [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssr
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
-#### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Personalizzazione del [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+#### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>Personalizzazione del [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 È possibile personalizzare il [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] con il logo e i colori dell'organizzazione mediante un pacchetto di personalizzazione.  
 
 Per altre informazioni sulla personalizzazione, vedere [Personalizzazione del portale Web](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
 
-#### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Indicatori di prestazioni chiave (KPI) nel [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+#### <a name="key-performance-indicators-kpi-in-the-ssrswebportal-non-markdown"></a>Indicatori di prestazioni chiave (KPI) nel [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 Nel [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] è possibile creare direttamente indicatori KPI contestuali alla cartella corrente. Durante la creazione di indicatori KPI, è possibile scegliere i campi del set di dati e riepilogare i relativi valori. È anche possibile selezionare il contenuto correlato per eseguire il drill-through ed esporre ulteriori dettagli.
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
-Per altre informazioni, vedere [Utilizzo degli indicatori KPI nel portale Web](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
+Per altre informazioni, vedere [Usare gli indicatori KPI in Reporting Services](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
 
 ### <a name="mobile-reports"></a>Report per dispositivi mobili
 
@@ -139,9 +143,9 @@ I report per dispositivi mobili di Reporting Services sono report dedicati, otti
 
 #### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
 
-[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]consente di creare e pubblicare report per dispositivi mobili di SQL Server nel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
+[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] consente di creare e pubblicare report per dispositivi mobili di SQL Server in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
 
-![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "|::ref4::|")  
+![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
 
 Per altre informazioni, vedere [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
@@ -149,7 +153,7 @@ Per altre informazioni, vedere [Creare report per dispositivi mobili con SQL Ser
 
 L'app Power BI per dispositivi mobili per iOS su iPad e iPhone può ora visualizzare i report per dispositivi mobili di SQL Server ospitati nel server di report locale.  
 
-![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "|::ref5::|")  
+![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
 
 Non è possibile connettersi per impostazione predefinita senza modificare la configurazione. Per altre informazioni su come consentire all'app per dispositivi mobili di Power BI di connettersi al server di report, vedere [Abilitare un server di report per l'accesso a Power BI per dispositivi mobili](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
 
@@ -175,13 +179,13 @@ Per altre informazioni, vedere:
 
 Per altre informazioni sul supporto dei browser, vedere [Supporto browser per Reporting Services e Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Report impaginati moderni:** è possibile progettare report impaginati moderni e accattivanti con nuovi stili attuali per grafici, misuratori, mappe e altre visualizzazioni dei dati.
+**Report moderni impaginati:** è possibile progettare report impaginati moderni accattivanti con nuovi stili attuali per grafici, misuratori, mappe e altre visualizzazioni dei dati.
 
-**Mappa ad albero e grafici radiali:** è possibile ottimizzare i report con mappe ad albero ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "|::ref6::|") e grafici radiali ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "|::ref7::|"), strumenti eccezionali per la visualizzazione di dati gerarchici. Per altre informazioni, vedere [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Mappa ad albero e grafici radiali:** ottimizzare i report con mappe ad albero ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e grafici radiali ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), strumenti eccezionali per la visualizzazione di dati gerarchici. Per altre informazioni, vedere [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Incorporamento di report:** è ora possibile incorporare report per dispositivi mobili e report impaginati in altre pagine Web e applicazioni usando un iframe e i parametri URL.  
 
-**Aggiunta di elementi di un report a un dashboard di Power BI:** quando si visualizza un report nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], è possibile selezionare elementi del report e aggiungerli a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Gli elementi che è possibile aggiungere sono i grafici, i pannelli dei misuratori, le mappe e le immagini. È possibile effettuare le operazioni seguenti:
+**Aggiungere elementi di un report a un dashboard di Power BI:** quando si visualizza un report nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], è possibile selezionare elementi del report e aggiungerli a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].   Gli elementi che è possibile aggiungere sono i grafici, i pannelli dei misuratori, le mappe e le immagini. È possibile:
 
 1. Selezionare il gruppo contenente il dashboard a cui si vogliono aggiungere gli elementi.
 2. Selezionare il dashboard a cui si vuole aggiungere l'elemento.
@@ -193,7 +197,7 @@ Per altre informazioni sul supporto dei browser, vedere [Supporto browser per Re
 
 Per altre informazioni, vedere [Integrazione del server di report di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [Aggiungere elementi di Reporting Services ai dashboard di Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**Rendering ed esportazione in PowerPoint:** il formato Microsoft PowerPoint (PPTX) è una nuova estensione per il rendering di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . È possibile esportare report in formato PPTX dalle applicazioni consuete, ovvero Generatore report, Progettazione report (in SSDT) e dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. L'immagine seguente mostra ad esempio il menu per l'esportazione dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**Rendering ed esportazione in PowerPoint:** il formato Microsoft PowerPoint (PPTX) è una nuova estensione per il rendering di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. È possibile esportare report in formato PPTX dalle applicazioni consuete, ovvero Generatore report, Progettazione report (in SSDT) e dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. L'immagine seguente mostra ad esempio il menu per l'esportazione dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -222,22 +226,22 @@ Per altre informazioni, vedere [Abilitare e disabilitare la stampa sul lato clie
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-La nuova versione di SSDT include i modelli di progetto per [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], ovvero Creazione guidata progetto server di report e Progetto server di report. Per informazioni sul download di SSDT, vedere [SQL Server Data Tools per Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+La nuova versione di SSDT include i modelli di progetto per [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Creazione guidata progetto server di report e Progetto server di report. Per informazioni sul download di SSDT, vedere [SQL Server Data Tools per Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Miglioramenti di Generatore report
 
-**Nuova interfaccia utente di Generatore report:** l'interfaccia utente di base di [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ha ora un aspetto moderno grazie a elementi semplificati.  
+**Nuova interfaccia utente di Generatore report:** l'interfaccia utente di base di [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ha ora un aspetto moderno grazie a elementi semplificati per l'interfaccia utente.  
 
 |||  
 |-|-|  
 |Nuovo|Previous|  
-|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "|::ref9::|")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "|::ref10::|")|  
+|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Riquadro Parametri personalizzato:** è ora possibile personalizzare il riquadro Parametri. Usando l'area di progettazione in Generatore report, è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro. Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Personalizzazione del riquadro Parametri:** è ora possibile personalizzare il riquadro Parametri. Usando l'area di progettazione in Generatore report, è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro. Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
-![Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "|::ref11::|")  
+![Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri")  
 
-**Supporto per valori DPI alti:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supporta il ridimensionamento e i dispositivi con valori DPI alti.  Per altre informazioni sui valori DPI alti, vedere le pagine seguenti:  
+**Supporto per valori DPI elevati:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] supporta il ridimensionamento e i dispositivi con valori DPI elevati.  Per altre informazioni sui valori DPI alti, vedere le pagine seguenti:  
 
 - [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 

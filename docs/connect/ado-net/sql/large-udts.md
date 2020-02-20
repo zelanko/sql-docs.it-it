@@ -1,6 +1,6 @@
 ---
 title: Tipi definiti dall'utente di grandi dimensioni
-description: Viene illustrato come recuperare dati da UDT con valori di grandi dimensioni introdotti in SQL Server 2008.
+description: Viene illustrato come recuperare i dati dai tipi definiti dall'utente con valori di grandi dimensioni introdotti in SQL Server 2008.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 4ea2c0002ceb01606cdf51f04246abcdc74429e0
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: af8402a7ff58e5d5b90d655547abcaf159bb67b4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452149"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247716"
 ---
 # <a name="large-udts"></a>Tipi definiti dall'utente di grandi dimensioni
 
@@ -27,13 +27,13 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
   
 In precedenza, i tipi definiti dall'utente erano limitati a una dimensione massima di 8 kilobyte. In SQL Server 2008 questa limitazione è stata rimossa per i tipi definiti dall'utente con il formato <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>.  
   
-Per la documentazione completa per i tipi definiti dall'utente, vedere [tipi CLR definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98366) da documentazione online di SQL Server.
+Per la documentazione completa relativa ai tipi definiti dall'utente, vedere [Tipi CLR definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98366) nella documentazione online di SQL Server.
   
-## <a name="retrieving-udt-schemas-using-getschema"></a>Recupero di schemi UDT tramite GetSchema  
+## <a name="retrieving-udt-schemas-using-getschema"></a>Recupero di schemi UDT con GetSchema  
 Il metodo <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:Microsoft.Data.SqlClient.SqlConnection> restituisce le informazioni sullo schema del database in un <xref:System.Data.DataTable>.
   
-### <a name="getschematable-column-values-for-udts"></a>GetSchemaTable valori della colonna per i tipi definiti dall'utente  
-Il metodo <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di un <xref:Microsoft.Data.SqlClient.SqlDataReader> restituisce un <xref:System.Data.DataTable> che descrive i metadati della colonna. Nella tabella seguente vengono descritte le differenze tra i metadati delle colonne per i tipi definiti dall'utente di grandi dimensioni tra SQL Server 2005 e SQL Server 2008.  
+### <a name="getschematable-column-values-for-udts"></a>Valori colonna GetSchemaTable per i tipi definiti dall'utente  
+Il metodo <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di un <xref:Microsoft.Data.SqlClient.SqlDataReader> restituisce un <xref:System.Data.DataTable> che descrive i metadati della colonna. Nella tabella seguente vengono descritte le differenze tra SQL Server 2005 e SQL Server 2008 riguardo ai metadati delle colonne per i tipi definiti dall'utente di grandi dimensioni.  
   
 |Colonna SqlDataReader|SQL Server 2005|SQL Server 2008 e versioni successive|  
 |--------------------------|---------------------|-------------------------------|  
@@ -48,9 +48,9 @@ Il metodo <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di un 
 |`IsLong`|Variabile|Variabile|  
   
 ## <a name="sqldatareader-considerations"></a>Considerazioni su SqlDataReader  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> è stato esteso a partire da SQL Server 2008 per supportare il recupero di valori UDT di grandi dimensioni. La modalità di elaborazione dei valori UDT di grandi dimensioni da parte di un <xref:Microsoft.Data.SqlClient.SqlDataReader> dipende dalla versione di SQL Server in uso, nonché dalla `Type System Version` specificata nella stringa di connessione. Per altre informazioni, vedere <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+<xref:Microsoft.Data.SqlClient.SqlDataReader> è stato esteso a partire da SQL Server 2008 per supportare il recupero di valori UDT di grandi dimensioni. La modalità di elaborazione dei valori UDT di grandi dimensioni da parte di un <xref:Microsoft.Data.SqlClient.SqlDataReader> dipende dalla versione di SQL Server in uso, nonché dall'elemento `Type System Version` specificato nella stringa di connessione. Per altre informazioni, vedere <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
-I metodi seguenti di <xref:Microsoft.Data.SqlClient.SqlDataReader> restituiranno un <xref:System.Data.SqlTypes.SqlBinary> anziché un tipo definito dall'utente quando il `Type System Version` è impostato su SQL Server 2005:  
+I metodi seguenti di <xref:Microsoft.Data.SqlClient.SqlDataReader> restituiranno un <xref:System.Data.SqlTypes.SqlBinary> anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -62,7 +62,7 @@ I metodi seguenti di <xref:Microsoft.Data.SqlClient.SqlDataReader> restituiranno
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
-I metodi seguenti restituiranno una matrice di `Byte[]` anziché un tipo definito dall'utente quando il `Type System Version` è impostato su SQL Server 2005:  
+I metodi seguenti restituiranno una matrice di `Byte[]` anziché un tipo definito dall'utente quando `Type System Version` è impostato su SQL Server 2005:  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
@@ -70,17 +70,17 @@ I metodi seguenti restituiranno una matrice di `Byte[]` anziché un tipo definit
   
 Si noti che non viene eseguita alcuna conversione per la versione corrente di ADO.NET.  
   
-## <a name="specifying-sqlparameters"></a>Specifica di SqlParameters  
-Le proprietà <xref:Microsoft.Data.SqlClient.SqlParameter> seguenti sono state estese per funzionare con tipi definiti dall'utente di grandi dimensioni.  
+## <a name="specifying-sqlparameters"></a>Specifica di SqlParameter  
+Le proprietà <xref:Microsoft.Data.SqlClient.SqlParameter> seguenti sono state estese per funzionare con i tipi definiti dall'utente di grandi dimensioni.  
   
-|SqlParameter (proprietà)|Descrizione|  
+|Proprietà SqlParameter|Descrizione|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. Il valore predefinito è Null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.SqlValue%2A>|Ottiene o imposta un oggetto che rappresenta il valore del parametro. Il valore predefinito è Null. La proprietà può essere `SqlBinary`, `Byte[]` o un oggetto gestito.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>|Ottiene o imposta la dimensione del valore del parametro da risolvere. Il valore predefinito è 0. La proprietà può essere un numero intero che rappresenta la dimensione del valore del parametro. Per gli UDT di grandi dimensioni, può trattarsi delle dimensioni effettive dell'UDT oppure di -1 per i tipi sconosciuti.|  
   
-## <a name="retrieving-data-example"></a>Esempio di recupero di dati  
-Nel frammento di codice seguente viene illustrato come recuperare dati UDT di grandi dimensioni. La variabile `connectionString` presuppone una connessione valida a un database SQL Server e la variabile `commandString` presuppone un'istruzione SELECT valida con la colonna chiave primaria elencata per prima.  
+## <a name="retrieving-data-example"></a>Esempio di recupero dati  
+Il frammento di codice seguente illustra come recuperare dati UDT di grandi dimensioni. La variabile `connectionString` presuppone una connessione valida a un database SQL Server e la variabile `commandString` presuppone un'istruzione SELECT valida con la colonna chiave primaria elencata per prima.  
   
 ```csharp  
 using (SqlConnection connection = new SqlConnection(   

@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68329367"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
@@ -59,9 +59,9 @@ Verrà visualizzata la schermata **Nuovo indicatore KPI** .
 | Obiettivo | Usato come confronto con un valore numerico e visualizzato come differenza della percentuale. |
 | Stato | Valore numerico usato per determinare il colore del riquadro dell'indicatore KPI. Sono valori validi 1 (verde), 0 (ambra) e -1 (rosso). |
 | Set di tendenze | Valori numerici delimitati da virgole usati per le visualizzazioni dei grafici. Può essere impostato su una colonna di un set di dati con valori che rappresentano la tendenza. |
-| Contenuto correlato | Possibilità di impostare un collegamento drill-through. Questo collegamento può essere un report per dispositivi mobili pubblicato nel portale o un URL personalizzato. |
+| Contenuti correlati | Possibilità di impostare un collegamento drill-through. Questo collegamento può essere un report per dispositivi mobili pubblicato nel portale o un URL personalizzato. |
   
-> **Avviso**: sebbene in fase di progettazione sia possibile usare il valore in lettere per il campo **Stato** , per l'aggiornamento del set di dati è necessario usare il valore numerico. Aggiornando il set di dati con il valore letterale invece che numerico, l'indicatore KPI nel server potrebbe essere danneggiato.  
+> **Avviso**: anche se in fase di progettazione è possibile usare il valore in lettere del campo **Stato**, per l'aggiornamento del set di dati è necessario usare il valore numerico. Aggiornando il set di dati con il valore letterale invece che numerico, l'indicatore KPI nel server potrebbe essere danneggiato.  
 >
 > **Nota**: per i campi **Valore**, **Obiettivo** e **Stato** è possono scegliere solo un valore nella prima riga del risultato di un set di dati. Per il campo **Set di tendenze** è invece possibile scegliere la colonna che riflette la tendenza.  
   
@@ -77,7 +77,7 @@ Per usare i dati di un nuovo set di dati condiviso, è possibile seguire questa 
   
 3. Selezionare il set di dati contenente i dati da visualizzare.  
   
-4. Scegliere il campo da usare. Fare clic su **OK**.  
+4. Scegliere il campo da usare. Selezionare **OK**.  
   
     ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
   
@@ -91,19 +91,19 @@ Per usare i dati di un nuovo set di dati condiviso, è possibile seguire questa 
 
 ## <a name="configuring-related-content"></a>Configurazione del contenuto correlato
 
-Quando si sceglie **report per dispositivi mobili**, è possibile scegliere la destinazione in una finestra di dialogo.
+Quando si sceglie **Report per dispositivi mobili**, è possibile scegliere la destinazione in una finestra di dialogo.
 
    ![Report per dispositivi mobili](media/rscreatekpi-related-content-mobile-report.png)
 
-Quando si fa clic sull'indicatore KPI nel portale, un'anteprima del report per dispositivi mobili viene visualizzata nell'elenco a discesa contenuto correlato. Facendo clic su questa anteprima è possibile passare direttamente a questo report.
+Quando si fa clic sull'indicatore KPI nel portale, un'anteprima del report per dispositivi mobili viene visualizzata nell'elenco a discesa del contenuto correlato. Facendo clic su questa anteprima è possibile passare direttamente al report.
 
-È anche possibile specificare un URL personalizzato. Questa attività può essere qualsiasi: un sito Web, un sito di SharePoint, un URL di un report SSRS, che consente di passare parametri hardcoded.
+È anche possibile specificare un URL personalizzato. L'attività può essere un sito Web, un sito di SharePoint, un URL di un report SSRS che consente di passare parametri hardcoded.
 
 ![URL personalizzato](media/rscreatekpi-related-content-custom-url.png)
 
-Quando si fa clic sull'indicatore KPI, l'URL viene visualizzato in contenuto correlato.
+Quando si fa clic sull'indicatore KPI, l'URL viene visualizzato nel contenuto correlato.
 
-È possibile aggiungere un solo report per dispositivi mobili o un URL personalizzato.
+È possibile aggiungere solo un report per dispositivi mobili o un URL personalizzato.
   
 ## <a name="removing-a-kpi"></a>Rimozione di un indicatore KPI  
   

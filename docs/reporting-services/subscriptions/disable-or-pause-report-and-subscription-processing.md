@@ -20,14 +20,14 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893419"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Disabilitare o sospendere l'elaborazione di report e sottoscrizioni  
-Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo articolo vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono possibili con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entrambe le modalità server. Nelle tabelle seguenti vengono riepilogati i metodi e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le modalità server supportate:  
+Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo articolo vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono possibili con entrambe le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le tabelle seguenti riassumono i metodi e le modalità di server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supportate:  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'articolo  
   
@@ -43,13 +43,13 @@ Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report
 ##  <a name="bkmk_disable_subscription"></a>Abilitare e disabilitare le sottoscrizioni  
   
 >[!TIP]  
->Novità di SQL 2016 Reporting Services, *abilitare e disabilitare le sottoscrizioni*. Sono disponibili nuove opzioni dell'interfaccia utente che consentono di abilitare e disabilitare rapidamente le sottoscrizioni. Le sottoscrizioni disabilitate mantengono le rispettive proprietà di configurazione, ad esempio la pianificazione, e possono essere riabilitate con facilità. È possibile abilitare e disabilitare le sottoscrizioni o controllare le sottoscrizioni disabilitate anche a livello di codice.  
+>Novità di SQL 2016 Reporting Services: *abilitare e disabilitare le sottoscrizioni*. Sono disponibili nuove opzioni dell'interfaccia utente che consentono di abilitare e disabilitare rapidamente le sottoscrizioni. Le sottoscrizioni disabilitate mantengono le rispettive proprietà di configurazione, ad esempio la pianificazione, e possono essere riabilitate con facilità. È possibile abilitare e disabilitare le sottoscrizioni o controllare le sottoscrizioni disabilitate anche a livello di codice.  
   
-  ![Pulsanti Abilita e Disabilita della pagina sottoscrizioni ](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
+  ![Pulsanti Abilita e Disabilita nella pagina Sottoscrizioni ](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
   
-Nel portale Web passare alla sottoscrizione dalla pagina **sottoscrizioni personali** o sottoscrizioni di una singola **sottoscrizione**. Selezionare una o più sottoscrizioni e quindi fare clic sul pulsante Disabilita o sul pulsante Abilita sulla barra multifunzione (vedere l'immagine precedente). La colonna stato cambierà rispettivamente con "disabled" o "Enabled".  
+Nel portale Web passare alla sottoscrizione dalla pagina **Sottoscrizioni personali** o **Sottoscrizioni** di una singola sottoscrizione. Selezionare una o più sottoscrizioni e quindi fare clic sul pulsante Disabilita o sul pulsante Abilita sulla barra multifunzione (vedere l'immagine precedente). La colonna dello stato cambierà rispettivamente in "Disabilitato" o "Abilitato".  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]scrive una riga nel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log quando una sottoscrizione è abilitata o disabilitata. Ad esempio, nel file di log del server di report:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scrive una riga nel log di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quando una sottoscrizione viene abilitata o disabilitata. Ad esempio, nel file di log del server di report:  
   
  `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles\RSPortal_2019_06_20_00_49_22.log`  
   
@@ -59,7 +59,7 @@ Nel portale Web passare alla sottoscrizione dalla pagina **sottoscrizioni person
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per disabilitare una singola sottoscrizione:** usare lo script di PowerShell seguente per disabilitare una sottoscrizione specifica. Aggiornare il nome del server e l'ID della sottoscrizione nello script.  
+![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell"): **usare Windows PowerShell per disabilitare una singola sottoscrizione:** Usare lo script di PowerShell seguente per disabilitare una sottoscrizione specifica. Aggiornare il nome del server e l'ID della sottoscrizione nello script.  
   
 ```PS  
 #disable specific subscription  
@@ -79,7 +79,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per elencare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per elencare tutte le sottoscrizioni disabilitate nel server di report in modalità nativa corrente. Aggiornare il nome del server.  
+ ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **usare Windows PowerShell per elencare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per elencare tutte le sottoscrizioni disabilitate nel server di report in modalità nativa corrente. Aggiornare il nome del server.  
   
 ```  
 #list all disabled subscriptions  
@@ -90,7 +90,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per abilitare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per abilitare tutte le sottoscrizioni attualmente disabilitate. Aggiornare il nome del server.  
+ ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **usare Windows PowerShell per abilitare tutte le sottoscrizioni disabilitate:** usare lo script di PowerShell seguente per abilitare tutte le sottoscrizioni attualmente disabilitate. Aggiornare il nome del server.  
   
 ```  
 #enable all subscriptions  
@@ -104,7 +104,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **Usare Windows PowerShell per DISABILITARE tutte le sottoscrizioni:** usare lo script di PowerShell seguente per disabilitare **TUTTE** le sottoscrizioni.  
+ ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") **usare Windows PowerShell per DISABILITARE tutte le sottoscrizioni:** Usare lo script di PowerShell seguente per elencare **TUTTE** le sottoscrizioni disabilitate.  
   
 ```  
 #DISABLE all subscriptions  
@@ -120,23 +120,23 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> Sospendere una pianificazione condivisa  
  Se una sottoscrizione o un report viene eseguito in base a una pianificazione condivisa, è possibile sospendere la pianificazione per impedire l'elaborazione del report o della sottoscrizione. Tutte le operazioni di elaborazione del report o della sottoscrizione eseguite in base alla pianificazione verranno posticipate fino a quando verrà ripresa la pianificazione.  
   
--   **Modalità SharePoint:** ![Impostazioni SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni SharePoint") in **Impostazioni sito** selezionare **Gestisci pianificazioni condivise**. Selezionare la pianificazione e fare clic su **Sospendi pianificazioni selezionate**.  
+-   **Modalità SharePoint:** ![Impostazioni di SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint") in **Impostazioni sito** selezionare **Gestione di pianificazioni condivise**. Selezionare la pianificazione e fare clic su **Sospendi pianificazioni selezionate**.  
   
--   **Modalità nativa:** Nel portale Web, selezionare il pulsante **Settings** ![(impostazioni](media/ssrs-portal-settings-gear.png) ) nella barra dei menu nella parte superiore della schermata del portale Web e selezionare **Impostazioni sito** dal menu a discesa. Selezionare la scheda **pianificazioni** per visualizzare la pagina Pianificazioni. Selezionare le caselle di controllo accanto alle pianificazioni che si desidera abilitare o disabilitare, quindi selezionare il pulsante **Abilita** o **Disabilita** rispettivamente per eseguire l'azione desiderata. La colonna stato viene aggiornata a "disabled" o "Enabled" di conseguenza.  
+-   **Modalità nativa:** nel portale Web selezionare il pulsante **Impostazioni** ![pulsante Impostazioni](media/ssrs-portal-settings-gear.png) dalla barra dei menu nella parte superiore della schermata del portale Web e selezionare **Impostazioni sito** dal menu a discesa. Selezionare la scheda **Pianificazioni** per visualizzare la pagina Pianificazioni. Selezionare le caselle di controllo accanto alle pianificazioni da abilitare o disabilitare, quindi selezionare il pulsante **Abilita** o **Disabilita** rispettivamente per eseguire l'azione desiderata. La colonna dello stato sarà aggiornata con "Disabilitato" o Abilitato" rispettivamente.  
   
 ##  <a name="bkmk_disable_shared_datasource"></a> Disabilitare un'origine dati condivisa  
  Uno dei vantaggi dell'utilizzo di origini dei dati condivise è rappresentato dalla possibilità di disabilitarle per impedire l'esecuzione di un report o di una sottoscrizione guidata dai dati. Quando si disabilita un'origine dei dati condivisa, il report viene disconnesso dalla relativa origine dei dati esterna. Dopo la disabilitazione l'origine dei dati non sarà più disponibile per tutti i report e le sottoscrizioni che la utilizzano.  
   
  Si noti che il report viene caricato anche se la relativa origine dati non è disponibile. Il report non conterrà dati, ma gli utenti con le autorizzazioni appropriate potranno accedere alle pagine delle proprietà, alle impostazioni di sicurezza, alla cronologia e alle informazioni di sottoscrizione associate al report.  
   
--   **Modalità SharePoint** : per disabilitare un'origine dati condivisa in un server di report in modalità SharePoint, passare alla raccolta documenti che contiene l'origine dati. ![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona di origine dati condivisa") Fare clic sull'origine dati e quindi deselezionare la casella di controllo **Abilita questa origine dati**.  
+-   **Modalità SharePoint:** per disabilitare un'origine dati condivisa in un server di report in modalità SharePoint, passare alla raccolta documenti che contiene l'origine dati. ![Icona Origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona Origine dati condivisa") Fare clic sull'origine dati, quindi deselezionare la casella di controllo **Abilita questa origine dati**.  
   
 -   **Modalità nativa:** per disabilitare un'origine dati condivisa in un server di report in modalità nativa, aprire l'origine dati nel portale Web e deselezionare la casella di controllo **Abilita questa origine dati**.  
   
 ##  <a name="bkmk_modify_role_assignment"></a> Modificare le assegnazioni di ruolo per impedire l'accesso a un report (modalità nativa)  
 Un modo per rendere non disponibile un report consiste nel rimuovere temporaneamente l'assegnazione di ruolo che consente l'accesso al report. Questa strategia può essere utilizzata con tutti i report, indipendentemente dalla modalità di connessione all'origine dei dati. L'operazione ha effetto solo sul report in questione, non su altri report o elementi.  
   
- Per rimuovere l'assegnazione di ruolo, aprire la pagina **sicurezza** del report nel portale Web. Se il report eredita la sicurezza da un elemento padre, è possibile selezionare **Personalizza sicurezza** e quindi selezionare **Conferma** nella finestra di dialogo **Modifica sicurezza elemento** per creare criteri di sicurezza restrittivi privi di assegnazioni di ruolo che consentono l'accesso a numerosi utenti. È possibile, ad esempio, rimuovere un'assegnazione di ruolo che consente l'accesso al gruppo Everyone e mantenere l'assegnazione di ruolo che consente l'accesso a un gruppo ristretto di utenti, ad esempio Administrators.  
+ Per rimuovere l'assegnazione di ruolo, aprire la pagina **Sicurezza** del report nel portale Web. Se il report eredita la sicurezza da un elemento padre, è possibile selezionare **Personalizza sicurezza** e quindi selezionare **Conferma** nella finestra di dialogo **Modifica sicurezza elemento** per creare criteri di sicurezza restrittivi privi di assegnazioni di ruolo che consentono l'accesso a numerosi utenti. È possibile, ad esempio, rimuovere un'assegnazione di ruolo che consente l'accesso al gruppo Everyone e mantenere l'assegnazione di ruolo che consente l'accesso a un gruppo ristretto di utenti, ad esempio Administrators.  
   
 ##  <a name="bkmk_remove_manage_subscriptions_permission"></a> Rimuovere le autorizzazioni per la gestione della sottoscrizione dal ruolo (modalità nativa)  
  Per impedire agli utenti di creare sottoscrizioni, deselezionare l'attività **Gestione di sottoscrizioni individuali** per il ruolo. Se si rimuove questa attività, le pagine per le sottoscrizioni non saranno disponibili. Nel portale Web la pagina Sottoscrizioni personali risulta vuota e non può essere eliminata, anche se in precedenza conteneva sottoscrizioni. La rimozione di attività relative alle sottoscrizioni impedisce agli utenti di creare e modificare sottoscrizioni, ma non comporta l'eliminazione delle sottoscrizioni esistenti che continuano a essere eseguite finché non vengono eliminate. Per rimuovere l'autorizzazione:  
@@ -147,11 +147,11 @@ Un modo per rendere non disponibile un report consiste nel rimuovere temporaneam
   
 3.  Espandere il nodo **Sicurezza** .  
   
-4.  Espandere il nodo **ruoli** e selezionare il ruolo desiderato.  
+4.  Espandere il nodo **Ruoli** e selezionare il ruolo desiderato.  
   
 5.  Fare clic con il pulsante destro del mouse sul ruolo, quindi scegliere **Proprietà**.  
   
-6.  Deselezionare le **attività Gestisci** sottoscrizioni **individuali e Gestisci tutte le sottoscrizioni** .  
+6.  Deselezionare le attività **Gestione di sottoscrizioni individuali** e **Gestione di tutte le sottoscrizioni**.  
   
 7.  Selezionare **OK** per applicare le modifiche.
 
@@ -163,9 +163,9 @@ Un modo per rendere non disponibile un report consiste nel rimuovere temporaneam
   
 -   Raccolta di SharePoint (disponibile solo da un sito di SharePoint con un server di report in modalità integrata SharePoint)  
   
- Prima che sia possibile utilizzare l'estensione per il recapito tramite posta elettronica, è necessario configurarla. In caso contrario, l'estensione non sarà disponibile. Per ulteriori informazioni, vedere [Impostazioni posta elettronica-Reporting Services modalità nativa (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
+ Prima che sia possibile utilizzare l'estensione per il recapito tramite posta elettronica, è necessario configurarla. In caso contrario, l'estensione non sarà disponibile. Per altre informazioni, vedere [Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
- Per disattivare estensioni specifiche, è possibile rimuovere voci dell'estensione nel file **RSReportServer.config** . Per ulteriori informazioni, vedere [Reporting Services file di configurazione](../../reporting-services/report-server/reporting-services-configuration-files.md) e [Impostazioni posta elettronica-Reporting Services modalità nativa (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
+ Per disattivare estensioni specifiche, è possibile rimuovere voci dell'estensione nel file **RSReportServer.config** . Per altre informazioni, vedere [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) e [Impostazioni posta elettronica - Modalità nativa di Reporting Services (Gestione configurazione)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  Dopo avere rimosso un'estensione per il recapito, questa non sarà più disponibile nel portale Web o in un sito di Share Point. Se si rimuove un'estensione per il recapito, alcune sottoscrizioni potrebbero diventare inattive. Assicurarsi di eliminare le sottoscrizioni o di configurarle per l'utilizzo di un'estensione per il recapito diversa prima di rimuovere un'estensione.  
   

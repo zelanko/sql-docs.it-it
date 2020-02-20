@@ -1,5 +1,5 @@
 ---
-title: Uso di MARS (Multiple Active Result Sets) | Microsoft Docs
+title: Uso di MARS (Multiple Active Result Set) | Microsoft Docs
 description: Utilizzo di MARS (Multiple Active Result Set)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8174333abc11b47d62c154171726afebee24824f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988807"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizzo di MARS (Multiple Active Result Set)
@@ -50,9 +50,9 @@ ms.locfileid: "67988807"
 -   In MARS la rappresentazione con ambito sessione non è consentita durante l'esecuzione di batch simultanei.  
   
 > [!NOTE]  
->  Per impostazione predefinita, la funzionalità MARS non è abilitata. Per usare Mars quando ci si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connette a con OLE DB driver per SQL Server, è necessario abilitarlo in modo specifico all'interno di una stringa di connessione. Per ulteriori informazioni, vedere le sezioni driver OLE DB per SQL Server più avanti in questo argomento.  
+>  Per impostazione predefinita, la funzionalità MARS non è abilitata. Per usare MARS quando ci si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con OLE DB Driver per SQL Server, è necessario abilitarlo in modo specifico all'interno di una stringa di connessione. Per altre informazioni, vedere le sezioni relative a OLE DB Driver per SQL Server più avanti in questo argomento.  
   
- OLE DB driver per SQL Server non limita il numero di istruzioni attive in una connessione.  
+ OLE DB Driver per SQL Server non limita il numero di istruzioni attive in una connessione.  
   
  Le applicazioni tipiche che non devono eseguire contemporaneamente più stored procedure o più batch costituiti da più istruzioni trarranno vantaggio da MARS senza dovere comprendere il modo in cui MARS viene implementato, mentre le applicazioni con requisiti più complessi dovranno necessariamente comprenderne il funzionamento.  
   
@@ -73,51 +73,51 @@ ms.locfileid: "67988807"
  Per evitare problemi, utilizzare le chiamate API anziché le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] per gestire lo stato della connessione (SET, USE) e le transazioni (BEGIN TRAN, COMMIT, ROLLBACK) senza includere queste istruzioni nei batch costituiti da più istruzioni contenenti inoltre specifici punti e serializzando l'esecuzione di tali batch utilizzando o cancellando tutti i risultati.  
   
 > [!NOTE]  
->  Un batch o una stored procedure che avvia una transazione manuale o implicita quando MARS è abilitato deve completare la transazione prima di poter uscire dal batch. In caso contrario, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue il rollback di tutte le modifiche apportate dalla transazione al termine del batch. Tale transazione è gestita da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come transazione con ambito batch. Si tratta di un nuovo tipo di transazione introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] per consentire l'utilizzo delle stored procedure esistenti ben progettate quando MARS è abilitato. Per ulteriori informazioni sulle transazioni con ambito batch, vedere [istruzioni &#40;Transact-SQL&#41;](../../../t-sql/statements/statements.md)per le transazioni.  
+>  Un batch o una stored procedure che avvia una transazione manuale o implicita quando MARS è abilitato deve completare la transazione prima di poter uscire dal batch. In caso contrario, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue il rollback di tutte le modifiche apportate dalla transazione al termine del batch. Tale transazione è gestita da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come transazione con ambito batch. Si tratta di un nuovo tipo di transazione introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] per consentire l'utilizzo delle stored procedure esistenti ben progettate quando MARS è abilitato. Per altre informazioni sulle transazioni con ambito batch, vedere [Istruzioni Transaction &#40;Transact-SQL&#41;](../../../t-sql/statements/statements.md).  
   
- Per un esempio dell'uso di MARS da ADO, vedere [uso di ADO con OLE DB driver per SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
+ Per un esempio dell'uso di MARS da ADO, vedere [Uso di ADO con OLE DB Driver per SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="in-memory-oltp"></a>OLTP in memoria  
- OLTP in memoria supporta MARS usando le query e le stored procedure compilate in modo nativo. MARS consente la richiesta di dati da più query senza la necessità di recuperare completamente ogni set di risultati prima di inviare una richiesta di recupero delle righe da un nuovo set di risultati. Per leggere correttamente da più set di risultati aperti, è necessario utilizzare una connessione MARS Enabled.  
+ OLTP in memoria supporta MARS con query e stored procedure compilate in modo nativo. MARS consente la richiesta di dati restituiti da più query senza la necessità di recuperare completamente ogni set di risultati prima di inviare una richiesta di recupero delle righe di un nuovo set di risultati. Per leggere correttamente i dati di più set di risultati aperti, è necessario usare una connessione abilitata per MARS.  
   
- Mars è disabilitato per impostazione predefinita, pertanto è necessario abilitarlo in `MultipleActiveResultSets=True` modo esplicito aggiungendo a una stringa di connessione. Nell'esempio seguente viene illustrato come connettersi a un'istanza di SQL Server e specificare che MARS è abilitato:  
+ Per impostazione predefinita, MARS è disabilitato. È pertanto necessario abilitarlo in modo esplicito aggiungendo `MultipleActiveResultSets=True` a una stringa di connessione. L'esempio seguente illustra come connettersi a un'istanza di SQL Server e specificare che MARS è abilitato:  
   
 ```  
 Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; MultipleActiveResultSets=True  
 ```  
   
- MARS con OLTP in memoria è essenzialmente lo stesso di MARS nel resto del motore SQL. Di seguito sono elencate le differenze quando si usa MARS in tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo.  
+ MARS con OLTP in memoria è essenzialmente uguale a MARS nel resto del motore SQL. Di seguito sono elencate le differenze nell'uso di MARS nelle tabelle ottimizzate per la memoria e nelle stored procedure compilate in modo nativo.  
   
- **MARS e tabelle con ottimizzazione per la memoria**  
+ **MARS e tabelle ottimizzate per la memoria**  
   
  Di seguito sono riportate le differenze tra le tabelle basate su disco e quelle ottimizzate per la memoria quando si usa una connessione abilitata per MARS:  
   
--   Due istruzioni possono modificare i dati nello stesso oggetto di destinazione, ma se entrambi tentano di modificare lo stesso record un conflitto di scrittura-scrittura provocherà l'esito negativo della nuova operazione. Tuttavia, se entrambe le operazioni modificano record diversi, le operazioni vengono eseguite correttamente.  
+-   Due istruzioni possono modificare i dati nello stesso oggetto di destinazione, ma se entrambe tentano di modificare lo stesso record, la nuova operazione non riuscirà a causa di un conflitto di scrittura-scrittura. Tuttavia, se entrambe le operazioni modificano record diversi, le operazioni riusciranno.  
   
--   Ogni istruzione viene eseguita con l'isolamento dello SNAPSHOT, pertanto le nuove operazioni non possono visualizzare le modifiche apportate dalle istruzioni esistenti. Anche se le istruzioni simultanee vengono eseguite nella stessa transazione, il motore SQL crea transazioni con ambito batch per ogni istruzione che sono isolate l'una dall'altra. Tuttavia, le transazioni con ambito batch sono ancora associate insieme, quindi il rollback di una transazione con ambito batch influiscono su altri nello stesso batch.  
+-   Ogni istruzione viene eseguita in isolamento SNAPSHOT, quindi le nuove operazioni non possono vedere le modifiche apportate dalle istruzioni esistenti. Anche se le istruzioni simultanee vengono eseguite nella stessa transazione, il motore SQL crea transazioni con ambito batch isolate l'una dall'altra per ogni istruzione. Le transazioni con ambito batch rimangono tuttavia associate tra loro. Di conseguenza, il rollback di una transazione con ambito batch influisce sulle altre nello stesso batch.  
   
--   Le operazioni DDL non sono consentite nelle transazioni utente, pertanto avranno immediatamente esito negativo.  
+-   Le operazioni DDL non sono consentite nelle transazioni utente e avranno esito negativo immediato.  
   
  **MARS e stored procedure compilate in modo nativo**  
   
- Le stored procedure compilate in modo nativo possono essere eseguite in connessioni MARS abilitate e possono cedere l'esecuzione a un'altra istruzione solo quando viene rilevato un punto di produzione. Un punto di produzione richiede un'istruzione SELECT, che è l'unica istruzione all'interno di una stored procedure compilata in modo nativo che può restituire l'esecuzione a un'altra istruzione. Se un'istruzione SELECT non è presente nella procedura, non verrà restituita, verrà eseguita fino al completamento prima dell'inizio di altre istruzioni.  
+ Le stored procedure compilate in modo nativo possono essere eseguite in connessioni abilitate per MARS e possono cedere il controllo dell'esecuzione a un'altra istruzione solo quando viene rilevato un punto specifico. Per un punto specifico è necessaria un'istruzione SELECT, ovvero l'unica all'interno di una stored procedure compilata in modo nativo che può cedere il controllo dell'esecuzione a un'altra istruzione. Se nella procedura non è presente un'istruzione SELECT, il controllo dell'esecuzione non verrà ceduto e la procedura continuerà fino al completamento prima che vengano avviate altre istruzioni.  
   
  **MARS e transazioni OLTP in memoria**  
   
- Le modifiche apportate dalle istruzioni e dai blocchi atomici con interfoliazione sono isolate l'una dall'altra. Se, ad esempio, un'istruzione o un blocco atomico apporta alcune modifiche e quindi restituisce l'esecuzione a un'altra istruzione, la nuova istruzione non visualizzerà le modifiche apportate dalla prima istruzione. Inoltre, quando la prima istruzione riprende l'esecuzione, non verrà visualizzata alcuna modifica apportata da altre istruzioni. Nelle istruzioni verranno visualizzate solo le modifiche completate e salvate prima dell'avvio dell'istruzione.  
+ Le modifiche apportate dalle istruzioni e dai blocchi ATOMIC interleaved sono isolate l'una dall'altra. Se, ad esempio, un'istruzione o un blocco ATOMIC apporta alcune modifiche e quindi cede il controllo dell'esecuzione a un'altra istruzione, la nuova istruzione non vedrà le modifiche apportate dalla prima istruzione. Inoltre, quando la prima istruzione riprende l'esecuzione, non vedrà le modifiche apportate da altre istruzioni. Le istruzioni vedranno solo le modifiche completate e di cui è stato eseguito il commit prima dell'avvio dell'istruzione.  
   
- È possibile avviare una nuova transazione utente all'interno della transazione utente corrente usando l'istruzione BEGIN TRANSACTION. questa operazione è supportata solo in modalità di interoperabilità, in modo che il BEGIN TRANSACTION possa essere chiamato solo da un'istruzione T-SQL e non dall'interno di un archiviato compilato in modo nativo procedura. È possibile creare un punto di salvataggio in una transazione usando SAVE TRANSACTION o una chiamata API to Transaction. Salvare (save_point_name) per eseguire il rollback in salvataggio. Questa funzionalità è abilitata anche solo dalle istruzioni T-SQL e non dalle stored procedure compilate in modo nativo.  
+ È possibile avviare una nuova transazione utente all'interno della transazione utente corrente usando l'istruzione BEGIN TRANSACTION. Questa operazione è supportata solo in modalità di interoperabilità. BEGIN TRANSACTION può pertanto essere chiamata solo da un'istruzione T-SQL e non dall'interno di una stored procedure compilata in modo nativo. È possibile creare un punto di salvataggio in una transazione usando SAVE TRANSACTION o una chiamata API a transaction.Save(save_point_name) per eseguire il rollback al punto di salvataggio. Anche questa funzionalità è abilitata solo da istruzioni T-SQL e non dall'interno di stored procedure compilate in modo nativo.  
   
- **Indici MARS e columnstore**  
+ **MARS e indici columnstore**  
   
- SQL Server (a partire da 2016) supporta MARS con indici columnstore. SQL Server 2014 usa MARS per le connessioni di sola lettura alle tabelle con un indice columnstore.    Tuttavia, SQL Server 2014 non supporta MARS per le operazioni simultanee di Data Manipulation Language (DML) su una tabella con indice columnstore. Quando questo si verifica, SQL Server termina le connessioni e interrompe le transazioni.   SQL Server 2012 include indici columnstore di sola lettura e MARS non si applica ad essi.  
+ SQL Server (a partire dalla versione 2016) supporta MARS con indici columnstore. SQL Server 2014 usa MARS per le connessioni di sola lettura alle tabelle con un indice columnstore.    Tuttavia, SQL Server 2014 non supporta MARS per le operazioni simultanee di Data Manipulation Language (DML) su una tabella con indice columnstore. Quando questo si verifica, SQL Server termina le connessioni e interrompe le transazioni.   SQL Server 2012 include indici columnstore di sola lettura e MARS non è applicabile.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server  
- Il driver OLE DB per SQL Server supporta MARS tramite l'aggiunta della proprietà di inizializzazione dell'origine dati SSPROP_INIT_MARSCONNECTION, implementata nel set di proprietà DBPROPSET_SQLSERVERDBINIT. È stata aggiunta anche una nuova parola chiave, **MarsConn**, per la stringa di connessione. Accetta valori **true** o **false** ; il valore predefinito è **false** .  
+ Il driver OLE DB per SQL Server supporta MARS tramite l'aggiunta della proprietà di inizializzazione dell'origine dati SSPROP_INIT_MARSCONNECTION, implementata nel set di proprietà DBPROPSET_SQLSERVERDBINIT. È stata aggiunta anche una nuova parola chiave, **MarsConn**, per la stringa di connessione. Accetta valori **true** o **false**; **false** è l'impostazione predefinita.  
   
  Il valore predefinito della proprietà dell'origine dati DBPROP_MULTIPLECONNECTIONS è VARIANT_TRUE. Ciò significa che il provider distribuirà più connessioni in modo da supportare più oggetti comando e set di righe simultanei. Quando MARS è abilitato, il driver OLE DB per SQL Server può supportare più oggetti comando e set di righe in una singola connessione, pertanto MULTIPLE_CONNECTIONS è impostato su VARIANT_FALSE per impostazione predefinita.  
   
- Per ulteriori informazioni sui miglioramenti apportati al set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e di autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per altre informazioni sui miglioramenti apportati al set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [Proprietà di inizializzazione e di autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="ole-db-driver-for-sql-server-example"></a>Esempio del driver OLE DB per SQL Server  
  In questo esempio viene creato un oggetto origine dati usando il driver OLE DB per SQL Server e viene abilitato MARS usando il set di proprietà DBPROPSET_SQLSERVERDBINIT prima che venga creato l'oggetto della sessione.  

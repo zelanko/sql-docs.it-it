@@ -1,6 +1,6 @@
 ---
 title: Applicazioni Windows tramite callback
-description: Viene fornito un esempio che illustra come eseguire un comando asincrono in modo sicuro, gestendo correttamente l'interazione con un modulo e il relativo contenuto da un thread separato.
+description: Viene reso disponibile un esempio che illustra come eseguire un comando asincrono in modo sicuro, gestendo correttamente l'interazione con un modulo e il relativo contenuto da un thread separato.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5c2d46e3f2b26a8106e75f2bb116907e2f27a7b9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451907"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253378"
 ---
 # <a name="windows-applications-using-callbacks"></a>Applicazioni Windows tramite callback
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Nella maggior parte degli scenari di elaborazione asincrona si desidera avviare un'operazione di database e continuare a eseguire altri processi senza attendere il completamento dell'operazione di database. Tuttavia, in molti scenari è necessario eseguire un'operazione una volta terminata l'operazione di database. In un'applicazione Windows, ad esempio, può essere necessario delegare l'operazione a esecuzione prolungata a un thread in background, consentendo al thread dell'interfaccia utente di rimanere attivo. Tuttavia, al termine dell'operazione sul database, si desidera utilizzare i risultati per popolare il form. Questo tipo di scenario viene implementato in modo ottimale con un callback.  
+Nella maggior parte degli scenari di elaborazione asincrona la procedura ideale è avviare un'operazione di database e continuare a eseguire altri processi senza attendere il completamento dell'operazione di database. Tuttavia, in molti scenari è necessario eseguire un'operazione al termine dell'operazione di database. In un'applicazione Windows, ad esempio, può essere opportuno delegare l'operazione con esecuzione prolungata a un thread in background, consentendo al thread dell'interfaccia utente di rimanere reattivo. Tuttavia, al termine dell'operazione di database, si devono usare i risultati per popolare il modulo. Questo tipo di scenario si implementa in modo ottimale con un callback.  
   
-Per definire un callback, è necessario specificare un delegato <xref:System.AsyncCallback> nel metodo <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Il delegato viene chiamato al termine dell'operazione. È possibile passare al delegato un riferimento al <xref:Microsoft.Data.SqlClient.SqlCommand> stesso, semplificando l'accesso all'oggetto <xref:Microsoft.Data.SqlClient.SqlCommand> e chiamando il metodo `End` appropriato senza dover usare una variabile globale.  
+Per definire un callback, specificare un delegato <xref:System.AsyncCallback> nel metodo <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Il delegato viene chiamato al completamento dell'operazione. È possibile passare al delegato un riferimento allo stesso oggetto <xref:Microsoft.Data.SqlClient.SqlCommand>, semplificando l'accesso all'oggetto <xref:Microsoft.Data.SqlClient.SqlCommand>, e chiamare il metodo `End` appropriato senza dover usare una variabile globale.  
   
 ## <a name="example"></a>Esempio  
-Nell'applicazione Windows seguente viene illustrato l'utilizzo del metodo <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, eseguendo un'istruzione Transact-SQL che include un ritardo di pochi secondi (emulando un comando con esecuzione prolungata).  
+Nell'applicazione Windows seguente viene illustrato l'uso del metodo <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, eseguendo un'istruzione Transact-SQL che include un ritardo di pochi secondi (emulando un comando con esecuzione prolungata).  
   
-Questo esempio illustra una serie di tecniche importanti, tra cui la chiamata di un metodo che interagisce con il form da un thread separato. In questo esempio viene inoltre illustrato come impedire agli utenti di eseguire simultaneamente un comando più volte e come è necessario assicurarsi che il form non venga chiuso prima che venga chiamata la procedura di callback.  
+Questo esempio illustra una serie di tecniche importanti, tra cui la chiamata di un metodo che interagisce con il modulo da un thread separato. In questo esempio viene inoltre illustrato come impedire agli utenti di eseguire simultaneamente un comando più volte e spiegato perché è necessario assicurarsi che il modulo non venga chiuso prima della chiamata della procedura di callback.  
   
-Per impostare questo esempio, creare una nuova applicazione Windows. Inserire un controllo <xref:System.Windows.Forms.Button> e due controlli <xref:System.Windows.Forms.Label> sul form (accettando il nome predefinito per ogni controllo). Aggiungere il codice seguente alla classe del form, modificando la stringa di connessione in base alle esigenze dell'ambiente.  
+Per impostare questo esempio, creare una nuova applicazione Windows. Inserire un controllo <xref:System.Windows.Forms.Button> e due controlli <xref:System.Windows.Forms.Label> nel modulo, accettando il nome predefinito per ogni controllo. Aggiungere il codice seguente alla classe del modulo, modificando la stringa di connessione in base alle esigenze dell'ambiente.  
   
 ```csharp  
 // Add these to the top of the class, if they're not already there:  

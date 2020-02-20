@@ -9,10 +9,10 @@ ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492859"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creare, eliminare o modificare una cartella - Reporting Services
@@ -74,39 +74,39 @@ ms.locfileid: "67492859"
   
 1. Aprire [il portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2. Passare alla sottocartella in cui si desidera posizionare la nuova cartella o cartelle. Selezionare il **Home** cartella selezionando il **Sfoglia** pulsante sulla barra degli strumenti nella parte superiore sinistra della pagina per crearlo nella parte superiore della gerarchia di cartelle.  
+2. Passare alla cartella o alla sottocartella in cui si vuole individuare la nuova cartella. Selezionare la cartella **Home** facendo clic sul pulsante **Sfoglia** sulla barra degli strumenti in alto a sinistra nella pagina per crearla in cima alla gerarchia di cartelle.  
   
-3. Selezionare il **New** pulsante in alto a destra della barra degli strumenti server di report e quindi seleziona **cartella** dal menu di riepilogo a discesa.  
+3. Fare clic sul pulsante **Nuovo** in alto a destra nella barra degli strumenti del server di report, quindi selezionare **Cartella** dal menu a discesa.  
   
-4. Nel **creare una nuova cartella (nome della cartella corrente)** finestra di dialogo immettere il nome della nuova cartella da creare. I nomi di cartella possono includere spazi, ma non caratteri riservati usati per la codifica degli URL: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Non è neppure possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
+4. Nella finestra di dialogo **Creare una nuova cartella in (nome cartella corrente)** immettere il nome della nuova cartella da creare. I nomi di cartella possono includere spazi, ma non caratteri riservati usati per la codifica degli URL: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Non è neppure possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
   
-5. Selezionare **Create** per completare l'azione.  
+5. Selezionare **Crea** per completare l'azione.  
   
 ## <a name="to-delete-a-folder"></a>Per eliminare una cartella  
   
-1. Nel portale web, esplorare la gerarchia di cartelle e individuare la cartella che si desidera eliminare.  
+1. Nel portale Web esplorare la gerarchia di cartelle e individuare la cartella che si vuole eliminare.  
   
-2. Right-click-la cartella e selezionare **Elimina** dal menu di riepilogo a discesa.  
+2. Fare clic con il pulsante destro del mouse sulla cartella e scegliere **Elimina** dal menu a discesa.  
   
-3. Selezionare il **eliminare** pulsante il **eliminare <foldername>**  finestra di dialogo per confermare l'eliminazione.  
+3. Selezionare il pulsante **Elimina** nella finestra di dialogo **Elimina <foldername>** per confermare l'eliminazione.  
   
-## <a name="to-modify-a-folders-properties"></a>Per modificare le proprietà della cartella  
+## <a name="to-modify-a-folders-properties"></a>Per modificare le proprietà di una cartella  
   
-1. Nel portale web, esplorare la gerarchia di cartelle e individuare la cartella che si desidera eliminare.  
+1. Nel portale Web esplorare la gerarchia di cartelle e individuare la cartella che si vuole eliminare.  
   
-2. Right-click-la cartella e selezionare **Elimina** dal menu di riepilogo a discesa.  
+2. Fare clic con il pulsante destro del mouse sulla cartella e scegliere **Elimina** dal menu a discesa.  
   
-3. Selezionare il **proprietà** scheda. Il **proprietà** pagina viene visualizzata per impostazione predefinita.  
+3. Fare clic sulla scheda **Proprietà**. Viene visualizzata la pagina **Proprietà** per impostazione predefinita.  
   
-4. È possibile modificare il nome della cartella nella finestra di *nome** nella casella di testo.  
+4. È possibile modificare il nome della cartella nella casella di testo *Nome**.  
   
-5. È possibile aggiungere o modificare la descrizione della cartella nella finestra di *descrizione** nella casella di testo.  
+5. È possibile aggiungere o modificare la descrizione della cartella nella casella di testo *Descrizione**.  
   
-6. È possibile nascondere o annullare la Nascondi cartella selezionando o deselezionando le **Nascondi questo elemento** checkbox rispettivamente.  
+6. È possibile nascondere o visualizzare la cartella selezionando o deselezionando la casella di controllo **Nascondi questo elemento**.  
   
-7. Selezionare **applica** per salvare le modifiche di proprietà.  
+7. Selezionare **Applica** per salvare le modifiche alle proprietà.  
   
-8. Facoltativamente, è possibile spostare o eliminare la cartella selezionando il **spostare** o **eliminare** pulsanti nella parte superiore della **proprietà** pagina. Vedere le [spostare o eliminare un elemento (portale web)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) per altre informazioni.  
+8. Facoltativamente, è possibile spostare o eliminare la cartella selezionando i pulsanti **Sposta** o **Elimina** nella parte superiore della pagina **Proprietà**. Per altre informazioni, vedere l'articolo [Spostare o eliminare un elemento (portale Web)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, eliminare o modificare una cartella (portale Web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   

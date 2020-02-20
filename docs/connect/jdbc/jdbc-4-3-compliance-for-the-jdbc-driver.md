@@ -1,5 +1,5 @@
 ---
-title: Conformità con JDBC 4,3 per il driver JDBC | Microsoft Docs
+title: Conformità con JDBC 4.3 per il driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ed9b10ad9e9a927789505c7d7327c6cf4d1ff3c
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027937"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Conformità con JDBC 4.3 per il driver JDBC
@@ -24,11 +24,11 @@ ms.locfileid: "69027937"
 > [!NOTE]  
 > Le versioni precedenti a Microsoft JDBC Driver 6.4 per SQL Server sono compatibili solo con le specifiche Java Database Connectivity (JDBC) API 4.2. Questa sezione non è applicabile per la versione 6.4 e versioni precedenti.
 
-A partire dalla versione 6,4, Microsoft JDBC Driver for SQL Server è compatibile con Java 9 `SQLFeatureNotSupportedException` e genera per le nuove API JDBC 4,3 con metodi non implementati.
+A partire dalla versione 6.4, Microsoft JDBC Driver per SQL Server è compatibile con JAVA 9 e genera `SQLFeatureNotSupportedException` per le nuove API JDBC 4.3 con metodi non implementati.
 
-Con Microsoft JDBC driver 7,0 per SQL Server versione, il driver è ora compatibile con JAVA 10 e supporta le API indicate di seguito. Il driver genera `SQLFeatureNotSupportedException` per altri metodi non implementati dalle specifiche JDBC 4,3.
+Con la versione 7.0 di Microsoft JDBC driver per SQL Server, il driver è ora compatibile con JAVA 10 e supporta le API indicate di seguito. Il driver genera `SQLFeatureNotSupportedException` per altri metodi non implementati dalle specifiche JDBC 4.3.
 
 |Nuova API|Descrizione|Implementazione significativa|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|Suggerisce al driver che una richiesta, un'unità di lavoro indipendente, sta iniziando da questa connessione. Per altre informazioni, vedere [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Salva i valori dei campi di connessione modificabili tramite metodi API pubblici: `databaseAutoCommitMode`, `disableStatementPooling` `serverPreparedStatementDiscardThreshold` `statementPoolingCacheSize` `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`,,,, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
-|void java.sql.connection.endRequest()|Suggerisce al driver che una richiesta, un'unità di lavoro indipendente, è stata completata. Per altre informazioni, vedere [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Chiude le istruzioni create durante l'unità di lavoro ed esegue il rollback di tutte le transazioni aperte. Il metodo ripristina inoltre le modifiche apportate ai campi di connessione elencati in precedenza.|
+|void java.sql.connection.beginRequest()|Indica al driver che una richiesta, un'unità di lavoro indipendente, sta iniziando in questa connessione. Per altre informazioni, vedere [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Salva i valori dei campi di connessione modificabili tramite metodi API pubblici: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
+|void java.sql.connection.endRequest()|Indica al driver che una richiesta, un'unità di lavoro indipendente, è stata completata. Per altre informazioni, vedere [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Chiude le istruzioni create durante l'unità di lavoro ed esegue il rollback di tutte le transazioni aperte. Il metodo ripristina anche le modifiche apportate ai campi di connessione elencati in precedenza.|

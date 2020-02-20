@@ -12,26 +12,26 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264571"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Procedura: Recuperare i tipi di data e ora come oggetti DateTime PHP usando il driver PDO_SQLSRV
+# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Procedura: Recuperare i tipi di data e ora come oggetti Datetime PHP usando il driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Questa funzionalità, aggiunta nella versione 5.6.0, è valida solo quando si usa il driver PDO_SQLSRV per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
+Questa funzionalità, aggiunta nella versione 5.6.0, è valida solo quando si usa il driver SQLSRV per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
 ### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Per recuperare i tipi di data e ora come oggetti DateTime
 
-Quando si usano PDO_SQLSRV, i tipi di data e ora (**smalldatetime**, **DateTime**, **date**, **Time**, **datetime2**e **DateTimeOffset**) vengono restituiti per impostazione predefinita come stringhe. Né l'attributo DOP:: ATTR_STRINGIFY_FETCHES né l'attributo DOP:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE hanno alcun effetto. Per recuperare i tipi di data e ora come oggetti [DateTime php](http://php.net/manual/en/class.datetime.php) , impostare l'attributo `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` Connection o Statement su **true** (è **false** per impostazione predefinita).
+Quando si usa PDO_SQLSRV, i tipi di data e ora (**smalldatetime**, **DateTime**, **date**, **Time**, **datetime2** e **DateTimeOffset**) vengono restituiti per impostazione predefinita come stringhe. Né l'attributo DOP::ATTR_STRINGIFY_FETCHES né l'attributo DOP::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE hanno alcun effetto. Per recuperare i tipi di data e ora come oggetti [PHP DateTime](http://php.net/manual/en/class.datetime.php), impostare l'attributo di connessione o di istruzione `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` su **true** (è **false** per impostazione predefinita).
 
 > [!NOTE]
-> Questo attributo di connessione o di istruzione si applica solo al recupero regolare dei tipi di data e ora perché non è possibile specificare oggetti DateTime come parametri di output.
+> Questo attributo di connessione o di istruzione si applica solo al recupero regolare dei tipi di data e ora perché gli oggetti DateTime non possono essere specificati come parametri di output.
 
-## <a name="example---use-the-connection-attribute"></a>Esempio: usare l'attributo Connection
-Negli esempi seguenti viene omesso il controllo degli errori per maggiore chiarezza. Questo Mostra come impostare l'attributo di connessione:
+## <a name="example---use-the-connection-attribute"></a>Esempio: usare l'attributo di connessione
+Negli esempi seguenti viene omesso il controllo degli errori per chiarezza. In questo esempio viene illustrato come impostare l'attributo di connessione:
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>Esempio: usare l'attributo Statement
-Questo esempio illustra come impostare l'attributo Statement:
+## <a name="example---use-the-statement-attribute"></a>Esempio: usare l'attributo di istruzione
+In questo esempio viene illustrato come impostare l'attributo di istruzione:
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>Esempio: usare l'opzione Statement
-In alternativa, è possibile impostare l'attributo Statement come opzione:
+## <a name="example---use-the-statement-option"></a>Esempio: usare l'opzione dell'istruzione
+In alternativa, è possibile impostare l'attributo di istruzione come opzione:
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>Esempio: recuperare i tipi DateTime come stringhe
-Nell'esempio seguente viene illustrato come ottenere l'oggetto opposto, che non è realmente necessario perché è false per impostazione predefinita:
+## <a name="example---retrieve-datetime-types-as-strings"></a>Esempio: recuperare i tipi di data e ora come stringhe
+Nell'esempio seguente viene illustrato come ottenere il contrario, che non è effettivamente necessario essendo false per impostazione predefinita:
 
 ```php
 <?php

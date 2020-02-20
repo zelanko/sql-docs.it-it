@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68891860"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
@@ -51,7 +51,7 @@ ms.locfileid: "68891860"
   
 4.  Nell'elenco **Tipo di origine dati** selezionare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. L'esempio seguente illustra una stringa di connessione usata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -79,7 +79,7 @@ ms.locfileid: "68891860"
   
 4.  Nell'elenco **Tipo di origine dati** selezionare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. L'esempio seguente illustra una stringa di connessione usata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -93,7 +93,7 @@ ms.locfileid: "68891860"
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
      ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "68891860"
   
 4.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
   
-     Nell'esempio riportato di seguito viene illustrata una stringa di connessione utilizzata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
+     Nell'esempio riportato di seguito viene illustrata una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -125,7 +125,7 @@ ms.locfileid: "68891860"
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configurare le credenziali archiviate per un'origine dati condivisa (modalità SharePoint)  
   
-1.  Nella raccolta documenti passare all'origine dei dati condivisa.![Icona dell'origine dei dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona dell'origine dei dati condivisa")  
+1.  Nella raccolta documenti passare all'origine dei dati condivisa.![Icona dell'origine dei dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona dell'origine dati condivisa")  
   
 2.  Fare clic sul menu di scelta rapida ![menu di scelta rapida della raccolta documenti per gli elementi ssrs](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs") e quindi sul secondo menu di scelta rapida ![menu di scelta rapida della raccolta documenti per gli elementi ssrs](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs").  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68891860"
   
 5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
   
-     Nell'esempio riportato di seguito viene illustrata una stringa di connessione utilizzata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
+     Nell'esempio riportato di seguito viene illustrata una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -147,7 +147,7 @@ ms.locfileid: "68891860"
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
      ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   

@@ -1,20 +1,20 @@
 ---
 title: 'Esercitazione su Python: Noleggi di sci'
-description: In questa esercitazione si useranno Python e la regressione lineare in Machine Learning Services per SQL Server per stimare il numero di noleggi di sci.
+description: Nella terza parte di questa serie di esercitazioni in quattro parti si compilerà un modello di regressione lineare in Python per stimare il noleggio di sci con Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 927816988be8882d4149115f6d4aee38dd3a8f3f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fe8a0c9af06d39ce183677adb86f30d9fc197d67
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75681748"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Esercitazione su Python: Stimare il noleggio di sci con la regressione lineare in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,32 +44,24 @@ Nella [quarta parte](python-ski-rental-linear-regression-deploy-model.md) si app
 
     È anche possibile usare il proprio ambiente di sviluppo integrato di Python, ad esempio un notebook Jupyter o [Visual Studio Code](https://code.visualstudio.com/docs) con l'[estensione Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) e l'[estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
 
-* Pacchetto [revoscalepy](../python/ref-py-revoscalepy.md): il pacchetto **revoscalepy** è incluso in Machine Learning Services per SQL Server. Per usare il pacchetto in un computer client, vedere [Configurare un client di data science per lo sviluppo Python](../python/setup-python-client-tools-sql.md) per le opzioni di installazione locale del pacchetto.
-
-    Se si usa un notebook Python in Azure Data Studio, seguire questa procedura aggiuntiva per usare **revoscalepy**:
-
-    1. Aprire Azure Data Studio
-    1. Scegliere **Preferenze** dal menu **File** e quindi selezionare **Impostazioni**
-    1. Espandere **Estensioni** e selezionare **Notebook configuration** (Configurazione notebook)
-    1. In **Percorso Python** immettere il percorso in cui sono state installate le librerie (ad esempio `C:\path-to-python-for-mls`)
-    1. Assicurarsi che **Use Existing Python** (Usa Python esistente) sia selezionato
-    1. Riavviare Azure Data Studio
-
-    Se si usa un IDE di Python diverso, seguire una procedura simile per il proprio IDE.
-
 * Strumento di query SQL: questa esercitazione presuppone che si usi [Azure Data Studio](../../azure-data-studio/what-is.md). È possibile usare anche [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-* Pacchetti Python aggiuntivi: gli esempi in questa serie di esercitazioni usano pacchetti Python che potrebbero essere installati o meno. Usare i comandi **pip** seguenti per installare questi pacchetti, se necessario.
+* Pacchetti Python aggiuntivi: gli esempi in questa serie di esercitazioni usano i seguenti pacchetti Python, che potrebbero essere installati o meno per impostazione predefinita:
 
-    ```console
-    pip install pandas
-    pip install sklearn
-    pip install pickle
-    ```
+  * pandas
+  * pyodbc
+  * sklearn
+
+  Per installare questi pacchetti:
+  1. In Azure Data Studio selezionare **Gestisci pacchetti**.
+  2. Nel riquadro **Gestisci pacchetti** selezionare la scheda **Aggiungi nuovo**.
+  3. Per ognuno dei seguenti pacchetti immettere il nome del pacchetto, fare clic su **Cerca**, quindi fare clic su **Installa**.
+
+  In alternativa è possibile aprire un **prompt dei comandi**, passare al percorso di installazione della versione di Python usata in Azure Data Studio (ad esempio `cd %LocalAppData%\Programs\Python\Python37-32`), quindi eseguire `pip install` per ogni pacchetto.
 
 ## <a name="restore-the-sample-database"></a>Ripristinare il database di esempio
 
-Il set di dati di esempio usato in questa esercitazione è stato salvato in un file di backup del database con estensione **bak** che è possibile scaricare e usare.
+Il database di esempio usato in questa esercitazione è stato salvato in un file di backup del database con estensione **bak** che è possibile scaricare e usare.
 
 1. Scaricare il file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
@@ -78,12 +70,19 @@ Il set di dati di esempio usato in questa esercitazione è stato salvato in un f
    * Importare i dati dal file **TutorialDB.bak** scaricato
    * Assegnare al database di destinazione il nome "TutorialDB"
 
-1. È possibile verificare che il set di dati esista dopo il ripristino del database eseguendo una query sulla tabella **dbo.rental_data**:
+1. È possibile verificare che il database ripristinato esista eseguendo una query sulla tabella **dbo.rental_data**:
 
-    ```sql
-    USE TutorialDB;
-    SELECT * FROM [dbo].[rental_data];
-    ```
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+
+Abilitare gli script esterni eseguendo i comandi SQL seguenti:
+
+  ```sql
+  sp_configure 'external scripts enabled', 1;
+  RECONFIGURE WITH override;
+  ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -14,19 +14,19 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fa39cd11f70a661de5c284e56f2ccc0f7a5777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008818"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traccia di accesso ai dati con il driver ODBC in Linux e macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Gestione driver unixODBC in macOS e Linux supporta la traccia delle chiamate all'API ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]l'ingresso e l'uscita del driver ODBC.
+Gestione driver unixODBC in macOS e Linux supporta la traccia delle chiamate all'API ODBC in ingresso e in uscita di ODBC Driver per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-Per tracciare il comportamento ODBC dell'applicazione, modificare `odbcinst.ini` la `[ODBC]` sezione del file per impostare i `Trace=Yes` valori `TraceFile` e sul percorso del file che deve contenere l'output di traccia, ad esempio:
+Per tracciare il comportamento ODBC dell'applicazione, modificare la sezione `[ODBC]` del file `odbcinst.ini` per impostare i valori `Trace=Yes` e `TraceFile` sul percorso del file che deve contenere l'output di traccia, ad esempio:
 
 ```ini
 [ODBC]
@@ -34,21 +34,21 @@ Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```
 
-(È anche possibile usare `/dev/stdout` o qualsiasi altro nome di dispositivo per inviare l'output di traccia invece di un file persistente). Con le impostazioni precedenti, ogni volta che un'applicazione carica Gestione driver unixODBC, registrerà tutte le chiamate API ODBC eseguite nel file di output.
+È anche possibile usare `/dev/stdout` o un qualsiasi altro nome di dispositivo per inviare l'output di traccia invece di usare un file persistente. Con le impostazioni precedenti, ogni volta che un'applicazione carica Gestione driver unixODBC, vengono registrate tutte le chiamate all'API ODBC eseguite nel file di output.
 
-Al termine della traccia dell'applicazione, rimuovere `Trace=Yes` `odbcinst.ini` dal file per evitare la riduzione delle prestazioni della traccia e verificare che i file di traccia non necessari vengano rimossi.
+Dopo aver completato la traccia dell'applicazione, rimuovere `Trace=Yes` dal file `odbcinst.ini` per evitare la riduzione delle prestazioni e controllare che tutti i file di traccia non necessari siano rimossi.
 
-La traccia si applica a tutte le applicazioni che usano il driver in `odbcinst.ini`. Per non tracciare tutte le applicazioni, ad esempio per evitare di rivelare informazioni riservate dei singoli utenti, è possibile tracciare una singola istanza dell'applicazione specificando il percorso di un file `odbcinst.ini` privato tramite la variabile di ambiente `ODBCSYSINI`. Esempio:
+La traccia si applica a tutte le applicazioni che usano il driver in `odbcinst.ini`. Per non tracciare tutte le applicazioni, ad esempio per evitare di rivelare informazioni riservate dei singoli utenti, è possibile tracciare una singola istanza dell'applicazione specificando il percorso di un file `odbcinst.ini` privato tramite la variabile di ambiente `ODBCSYSINI`. Ad esempio:
 
 ```bash
 $ ODBCSYSINI=/home/myappuser myapp
 ```
 
-In questo caso, è possibile aggiungere `Trace=Yes` `[ODBC Driver 13 for SQL Server]` alla sezione di `/home/myappuser/odbcinst.ini`.
+In questo caso è possibile aggiungere `Trace=Yes` alla sezione `[ODBC Driver 13 for SQL Server]` di `/home/myappuser/odbcinst.ini`.
 
 ## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Individuazione del file odbc.ini usato dal driver
 
-I driver ODBC Linux e MacOS non sanno quale `odbc.ini` sia in uso o il percorso `odbc.ini` del file. Tuttavia, le informazioni sul `odbc.ini` file in uso sono disponibili negli strumenti `odbc_config` unixODBC e `odbcinst`nella documentazione di gestione driver unixodbc.
+I driver ODBC in Linux e macOS non conoscono il file `odbc.ini` in uso o il percorso del file `odbc.ini`. Informazioni sul file `odbc.ini` in uso sono tuttavia disponibili negli strumenti unixODBC `odbc_config` e `odbcinst` nella documentazione di Gestione driver unixODBC.
 
 Ad esempio, il comando seguente stampa tra le altre informazioni il percorso dei file `odbc.ini` di sistema e dell'utente che contengono rispettivamente il DSN di sistema e dell'utente:
 
@@ -64,11 +64,11 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-La [documentazione di unixODBC](http://www.unixodbc.org/doc/UserManual/) illustra le differenze tra i DSN utente e di sistema. In breve:
+La [documentazione di unixODBC](http://www.unixodbc.org/doc/UserManual/) spiega le differenze tra i DSN utente e i DSN di sistema. In sintesi:
 
-- I DSN utente---sono DSN disponibili solo per un utente specifico. Gli utenti possono connettersi usando, aggiungono, modificano e rimuovono i propri DSN utente. I DSN utente vengono archiviati in un file nella home directory dell'utente o in una sottodirectory.
+- DSN utente: sono DSN disponibili solo per un utente specifico. Gli utenti possono usarli per la connessione e possono aggiungere, modificare e rimuovere i propri DSN utente. I DSN utente sono archiviati in un file nella home directory dell'utente o in una sua sottodirectory.
 
-- I DSN di sistema---questi DSN sono disponibili per ogni utente del sistema per la connessione utilizzandoli, ma possono essere aggiunti, modificati e rimossi solo da un amministratore di sistema. Se un utente dispone di un DSN utente con lo stesso nome di un DSN di sistema, il DSN utente verrà usato al momento delle connessioni da tale utente.
+- DSN di sistema: sono DSN disponibili per ogni utente del sistema per la connessione, ma possono essere aggiunti, modificati e rimossi solo da un amministratore di sistema. Se un utente dispone di un DSN utente con lo stesso nome di un DSN di sistema, il DSN utente verrà usato per le connessioni da tale utente.
 
 ## <a name="see-also"></a>Vedere anche
 

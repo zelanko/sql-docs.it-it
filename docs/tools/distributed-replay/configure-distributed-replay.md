@@ -1,7 +1,6 @@
 ---
-title: Configurare Riesecuzione distribuita | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Configurare la Riesecuzione distribuita
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,18 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023776"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307041"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  I dettagli relativi alla configurazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay sono specificati in file XML in Distributed Replay Controller, nei client e nelle posizioni in cui è installato lo strumento di amministrazione. ovvero i file seguenti:  
+  I dettagli relativi alla configurazione della Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono specificati in file XML nel controller della Riesecuzione distribuita, nei client e nella posizione in cui è installato lo strumento di amministrazione, ovvero i file seguenti:  
   
 -   [File di configurazione del controller](#DReplayController)  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68023776"
   
  Nel livello di registrazione specificato nel file di configurazione del controller è inclusa la seguente impostazione:  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatoria|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Livello di registrazione|`<LoggingLevel>`|Specifica il livello di registrazione per il servizio controller.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|No. Per impostazione predefinita, il valore è `CRITICAL`.|  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68023776"
   
  Di seguito vengono indicate le impostazioni specificate nel file di configurazione del client:  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatoria|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Specifica il nome computer del controller. Il client tenterà di registrarsi nell'ambiente Distributed Replay contattando il controller.|È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.|No. Per impostazione predefinita, viene effettuato un tentativo di registrazione del client nell'istanza del controller eseguita in locale ("`.`"), se presente.|  
 |Directory di lavoro client|`<WorkingDirectory>`|Percorso locale nel client in cui vengono salvati i file di recapito.<br /><br /> I file inclusi in questa directory vengono sovrascritti alla riproduzione successiva.|Nome di directory completo, che inizia con la lettera di unità.|No. Se non è specificato alcun valore, i file di recapito verranno salvati nello stesso percorso del file di configurazione del client predefinito. Se viene specificato un valore e la cartella non esiste nel client, il servizio client non verrà avviato.|  
@@ -86,9 +87,9 @@ ms.locfileid: "68023776"
   
  **\<percorso installazione strumento di amministrazione>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
- Le impostazioni di configurazione della pre-elaborazione vengono specificate in elementi XML figli dell'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione. Sono incluse le seguenti impostazioni:  
+ Le impostazioni di configurazione della pre-elaborazione vengono specificate in elementi XML figli dell'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione. Tali impostazioni includono quanto segue:  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatoria|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Inclusione delle attività della sessione di sistema|`<IncSystemSession>`|Indica se le attività della sessione di sistema eseguite durante l'acquisizione verranno incluse durante la riproduzione.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  
 |Tempo massimo di inattività|`<MaxIdleTime>`|Fissa il tempo di inattività su un numero assoluto (in secondi).|Numero intero >= -1.<br /><br /> `-1` indica nessuna modifica rispetto al valore originale nel file di traccia originale.<br /><br /> `0` indica che sono in corso una o più attività in un momento specificato.|No. Per impostazione predefinita, il valore è `-1`.|  
@@ -117,10 +118,10 @@ ms.locfileid: "68023776"
   
  Le impostazioni di configurazione della riproduzione vengono specificate in elementi XML figli degli elementi `<ReplayOptions>` e `<OutputOptions>` del file di configurazione della riproduzione.  
   
-### <a name="replayoptions-element"></a>\<Elemento > ReplayOptions  
+### <a name="replayoptions-element"></a>Elemento \<ReplayOptions>  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<ReplayOptions>` :  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatoria|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server di prova)|`<Server>`|Specifica il nome del server e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.|*server_name*[\\*instance_name*]<br /><br /> Non è possibile utilizzare "`localhost`" o "`.`" per rappresentare l'host locale.|No, se il nome del server è già specificato con il parametro **-s**_target server_ con l'opzione **replay** dello strumento di amministrazione.|  
 |Modalità di sequenza|`<SequencingMode>`|Specifica la modalità utilizzata per la pianificazione degli eventi.|`synchronization` &#124; `stress`|No. Per impostazione predefinita, il valore è `stress`.|  
@@ -132,10 +133,10 @@ ms.locfileid: "68023776"
 |Timeout query|`<QueryTimeout>`|Specifica il valore di timeout query in secondi. Questo valore è valido solo fino a quando non viene restituita la prima riga.|Numero intero >= 1<br /><br /> (`-1` per disabilitare l'impostazione)|No. Per impostazione predefinita, il valore è `3600`.|  
 |Thread per client|`<ThreadsPerClient>`|Specifica il numero di thread di riproduzione da utilizzare per ogni client di riproduzione.|Numero intero compreso tra `1` e `512`.|No. Se non è specificata, in Distributed Replay verrà utilizzato il valore `255`.|  
   
-### <a name="outputoptions-element"></a>\<Elemento > OutputOptions  
+### <a name="outputoptions-element"></a>Elemento \<OutputOptions>  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<OutputOptions>` :  
   
-|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatoria|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Registrazione del conteggio delle righe|`<RecordRowCount>`|Indica se deve essere registrato il conteggio delle righe per ogni set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `Yes`.|  
 |Registrazione del set di risultati|`<RecordResultSet>`|Indica se deve essere registrato il contenuto di tutti i set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  
@@ -164,16 +165,16 @@ ms.locfileid: "68023776"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possibile problema durante l'esecuzione con la modalità di sequenziazione della sincronizzazione
- È possibile riscontrare un sintomo in cui la funzionalità di riproduzione sembra "stallo" o riprodurre gli eventi molto lentamente. Questo fenomeno può verificarsi se la traccia da riprodurre si basa su dati e/o eventi che non esistono nel database di destinazione ripristinato. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possibile problema durante l'esecuzione con la modalità di sequenza della sincronizzazione
+ È possibile che si verifichi un problema per cui la funzionalità di riesecuzione appare bloccata o riesegue gli eventi molto lentamente. Questo problema può verificarsi se la traccia da rieseguire è basata su dati e/o eventi che non esistono nel database di destinazione ripristinato. 
  
- Un esempio è un carico di lavoro acquisito che usa il valore di ASPETTER, ad esempio nell'istruzione di ricezione ASPETTER di Service Broker. Quando si utilizza la modalità di sequenziazione della sincronizzazione, i batch vengono riprodotti in serie. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'avvio della traccia di acquisizione di riproduzione, la ricezione Wait eseguita durante la riproduzione potrebbe dover attendere l'intera durata del periodo di attesa. Gli eventi impostati per la riproduzione dopo il blocco della ricezione di ASPETTER saranno bloccati. Ciò può comportare il contatore di monitoraggio delle prestazioni richieste batch/sec per la destinazione del database di riproduzione che si sta rilasciando a zero fino al completamento dell'attesa. 
+ Un esempio è rappresentato da un carico di lavoro che usa WAITFOR, come nell'istruzione WAITFOR RECEIVE di Service Broker. Quando viene usata la modalità di sequenza della sincronizzazione, i batch vengono rieseguiti in serie. Se viene eseguito INSERT nel database di origine dopo il backup del database ma prima dell'avvio della traccia di acquisizione della riesecuzione, è possibile che WAITFOR RECEIVE inviato durante la riesecuzione debba attendere per l'intera durata di WAITFOR. Gli eventi impostati per essere rieseguiti dopo WAITFOR RECEIVE verranno bloccati. Ciò può comportare l'azzeramento del contatore Richieste batch/sec di Performance Monitor per la destinazione del database di riesecuzione fino al completamento di WAITFOR. 
  
- Se è necessario utilizzare la modalità di sincronizzazione e si desidera evitare questo comportamento, è necessario eseguire le operazioni seguenti:
+ Se è necessario usare la modalità di sincronizzazione e si vuole evitare questo comportamento, è necessario eseguire le operazioni seguenti:
  
-1.  Mettere in stato i database che verranno utilizzati come destinazioni di riproduzione.
+1.  Disattivare i database che verranno usati come destinazioni di riesecuzione.
 
-2.  Consentire il completamento di tutte le attività in sospeso.
+2.  Consentire il completamento di tutte le richieste in sospeso.
 
 3.  Eseguire il backup dei database e consentire il completamento dei backup.
 
@@ -181,7 +182,7 @@ ms.locfileid: "68023776"
  
  
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Forum di SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Using Distributed Replay to Load Test Your SQL Server - Part 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  

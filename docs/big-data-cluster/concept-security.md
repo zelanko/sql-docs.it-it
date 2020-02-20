@@ -9,24 +9,29 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532365"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253118"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Concetti relativi alla sicurezza per i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="security-concepts-for-big-data-clusters-2019"></a>Concetti relativi alla sicurezza per i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo presenta i concetti principali relativi alla sicurezza nel cluster Big Data
 
-I [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] forniscono autorizzazione e autenticazione coerenti. Un cluster Big Data può essere integrato con Active Directory tramite una distribuzione completamente automatizzata dell'integrazione di Active Directory in un dominio esistente. Dopo aver configurato un cluster Big Data con l'integrazione di Active Directory, è possibile sfruttare le identità e i gruppi di utenti esistenti per l'accesso unificato in tutti gli endpoint. Inoltre, dopo avere creato tabelle esterne in SQL Server, è possibile controllare l'accesso alle origini dati concedendo l'accesso alle tabelle esterne a utenti e gruppi di Active Directory, centralizzando in questo modo i criteri di accesso ai dati in un'unica posizione.
+I [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] forniscono autorizzazione e autenticazione coerenti. Un cluster Big Data può essere integrato con Active Directory (AD) usando una distribuzione completamente automatizzata dell'integrazione di AD in un dominio esistente. Dopo aver configurato un cluster Big Data con l'integrazione di AD, è possibile sfruttare le identità e i gruppi di utenti esistenti per l'accesso unificato in tutti gli endpoint. Inoltre, dopo avere creato tabelle esterne in SQL Server, è possibile controllare l'accesso alle origini dati concedendo l'accesso alle tabelle esterne a utenti e gruppi di AD, centralizzando in questo modo i criteri di accesso ai dati in un'unica posizione.
 
-## <a name="authentication"></a>Autenticazione
+Questo video di 14 minuti offre una panoramica della sicurezza dei cluster Big Data:
 
-Gli endpoint del cluster esterni supportano l'autenticazione di Active Directory. Questo significa che è possibile usare l'identità di Active Directory per l'autenticazione nel cluster Big Data.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
+
+## <a name="authentication"></a>Authentication
+
+Gli endpoint del cluster esterni supportano l'autenticazione di AD. Usare l'identità di AD per l'autenticazione nel cluster Big Data.
 
 ### <a name="cluster-endpoints"></a>Endpoint del cluster
 
@@ -34,7 +39,7 @@ Esistono cinque punti di ingresso al cluster Big Data
 
 * Istanza master: endpoint TDS per l'accesso all'istanza master di SQL Server nel cluster, tramite strumenti di database e applicazioni come SSMS o Azure Data Studio. Quando si usano HDFS o comandi di SQL Server da azdata, lo strumento si connette agli altri endpoint, a seconda dell'operazione.
 
-* Gateway per l'accesso a file HDFS, Spark (Knox): endpoint basato su HTTPS. Questo endpoint viene usato per accedere a servizi come webHDFS e Spark.
+* Gateway per l'accesso ai file HDFS, Spark (Knox) - endpoint HTTPS per l'accesso ad alcuni servizi, ad esempio webHDFS e Spark.
 
 * Endpoint del servizio di gestione del cluster (controller): servizio di gestione del cluster Big Data che espone API REST per la gestione del cluster. Lo strumento azdata richiede la connessione a questo endpoint.
 
@@ -48,7 +53,7 @@ Attualmente non è possibile aprire porte aggiuntive per accedere al cluster dal
 
 ## <a name="authorization"></a>Autorizzazione
 
-In tutto il cluster la sicurezza integrata tra diversi componenti permette di passare l'identità dell'utente originale durante l'invio di query da Spark e SQL Server, fino ad HDFS. Come indicato sopra, i diversi endpoint del cluster esterni supportano l'autenticazione di Active Directory.
+In tutto il cluster la sicurezza integrata tra diversi componenti consente di passare l'identità dell'utente originale durante l'esecuzione di query da Spark e SQL Server, fino a HDFS. Come indicato sopra, i diversi endpoint del cluster esterni supportano l'autenticazione di Active Directory.
 
 Esistono due livelli di controllo delle autorizzazioni nel cluster per la gestione dell'accesso ai dati. L'autorizzazione nel contesto dei Big Data viene eseguita in SQL Server, usando le autorizzazioni di SQL Server tradizionali per gli oggetti, e in HDFS con elenchi di controllo (ACL), che associano le identità utente ad autorizzazioni specifiche.
 
@@ -64,15 +69,14 @@ Tutte le comunicazioni da SQL Server a SQL Server, ad esempio la comunicazione d
 
 ## <a name="basic-administrator-login"></a>Account di accesso amministratore di base
 
-È possibile scegliere di distribuire il cluster in modalità Active Directory o solo con l'account di accesso amministratore di base. L'uso del solo account di accesso amministratore di base non è una modalità di sicurezza supportata per la produzione e questo account è adatto principalmente alla valutazione del prodotto.
+È possibile scegliere di distribuire il cluster in modalità AD o usando solo l'account di accesso amministratore di base. L'uso del solo account di accesso amministratore di base non è una modalità di sicurezza supportata per la produzione ed è destinata alla valutazione del prodotto.
 
-Anche se si sceglie la modalità Active Directory, per l'amministratore del cluster vengono comunque creati account di accesso di base. Questo approccio fornisce un'alternativa quando la connettività ad Active Directory non è disponibile.
+Anche se si sceglie la modalità Active Directory, per l'amministratore del cluster vengono comunque creati account di accesso di base. Questa funzionalità offre un accesso alternativo, nel caso in cui la connettività di AD non sia attiva.
 
-A questo account di accesso di base vengono concesse le autorizzazioni di amministratore nel cluster in fase di distribuzione. Questo significa che l'utente sarà un amministratore di sistema nell'istanza master di SQL Server e un amministratore nel controller del cluster.
+A questo account di accesso di base vengono concesse le autorizzazioni di amministratore nel cluster in fase di distribuzione. L'utente dell'account di accesso sarà un amministratore di sistema nell'istanza master di SQL Server e un amministratore nel controller del cluster.
 I componenti Hadoop non supportano l'autenticazione in modalità mista e di conseguenza non è possibile usare un account di accesso amministratore di base per l'autenticazione nel gateway (Knox).
 
-
-Queste sono le credenziali di accesso che è necessario definire in fase di distribuzione.
+Le credenziali di accesso che è necessario definire durante la distribuzione includono:
 
 Nome utente dell'amministratore del cluster:
  + `AZDATA_USERNAME=<username>`

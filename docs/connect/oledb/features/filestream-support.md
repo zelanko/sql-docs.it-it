@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: da67f050eba24ecf040124533c9d98c3f3f6bfec
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74056735"
 ---
 # <a name="filestream-support"></a>Supporto FILESTREAM
@@ -25,9 +25,9 @@ ms.locfileid: "74056735"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], OLE DB driver per SQL Server supporta la funzionalità FILESTREAM avanzata. Per esempi, vedere [FileStream e OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
+A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] OLE DB Driver per SQL Server supporta la funzionalità avanzata FILESTREAM. Per gli esempi, vedere [FILESTREAM e OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
 
-FILESTREAM consente di archiviare e accedere a valori binari di grandi dimensioni mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o accesso diretto al file system di Windows. Un valore binario di grandi dimensioni è un valore superiore a 2 gigabyte (GB). Per ulteriori informazioni sul supporto FILESTREAM migliorato, vedere [SQL Server &#40;&#41;FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md).  
+FILESTREAM consente di archiviare e accedere a valori binari di grandi dimensioni mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o accesso diretto al file system di Windows. Un valore binario di grandi dimensioni è un valore superiore a 2 gigabyte (GB). Per altre informazioni sul supporto FILESTREAM avanzato, vedere [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
 Quando si apre una connessione al database, per impostazione predefinita **\@\@TEXTSIZE** verrà impostato su -1 (senza limiti).  
   
@@ -54,16 +54,16 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilità con le versioni precedenti  
-Se il client è stato compilato utilizzando OLE DB driver per SQL Server e l'applicazione si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), il comportamento **varbinary (max)** sarà compatibile con il comportamento introdotto da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verrà eseguito un troncamento e restituito l'avviso "Troncamento a destra dei dati della stringa". 
+Se il client è stato compilato usando OLE DB Driver per SQL Server e l'applicazione si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] via [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), il comportamento di **varbinary(max)** sarà compatibile con il comportamento introdotto da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verrà eseguito un troncamento e restituito l'avviso "Troncamento a destra dei dati della stringa". 
   
 Quando la compatibilità con il tipo di dati è impostata su 80, il comportamento client sarà coerente con il comportamento del client legacy.  
   
 Per i client che utilizzano SQLOLEDB o altri provider rilasciati prima di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], verrà eseguito il mapping di **varbinary(max)** all'immagine.  
   
 ## <a name="comments"></a>Commenti
-- Per inviare e ricevere valori **varbinary (max)** maggiori di 2 GB, un'applicazione utilizza **DBTYPE_IUNKNOWN** nelle associazioni di parametri e risultati. Per i parametri, il provider deve chiamare IUnknown:: QueryInterface per ISequentialStream e per i risultati che restituiscono ISequentialStream.  
+- Per inviare e ricevere valori **varbinary(max)** maggiori di 2 GB, un'applicazione usa **DBTYPE_IUNKNOWN** in associazioni di parametri e di risultati. Per i parametri il provider deve chiamare IUnknown::QueryInterface per ISequentialStream e per i risultati che restituiscono ISequentialStream.  
 
--  Per OLE DB, il controllo relativo ai valori ISequentialStream verrà rilassato. Quando *wType* è **DBTYPE_IUNKNOWN** nello struct **DBBINDING** , il controllo della lunghezza può essere disabilitato omettendo **DBPART_LENGTH** da *dwPart* o impostando la lunghezza dei dati (in corrispondenza dell'offset *obLength* nel buffer di dati) su ~ 0. In questo caso, il provider non controllerà la lunghezza del valore e richiederà e restituirà tutti i dati disponibili tramite il flusso. Questa modifica verrà applicata a tutti i tipi LOB (Large Object) e XML, ma solo in caso di connessione a server [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva. In questo modo, gli sviluppatori disporranno di maggiore flessibilità, mantenendo la coerenza e la compatibilità con le versioni precedenti per applicazioni esistenti e server legacy.  Questa modifica ha effetto su tutte le interfacce che trasferiscono i dati, principalmente IRowset:: GetData, ICommand:: Execute e IRowsetFastLoad:: InsertRow.
+-  Per OLE DB il controllo relativo ai valori ISequentialStream diventa meno rigido. Se *wType* è **DBTYPE_IUNKNOWN** nello struct **DBBINDING**, il controllo della lunghezza può essere disabilitato omettendo **DBPART_LENGTH** in *dwPart* o impostando la lunghezza dei dati (in corrispondenza dell'offset *obLength* nel buffer dei dati) su ~0. In questo caso, il provider non controllerà la lunghezza del valore e richiederà e restituirà tutti i dati disponibili tramite il flusso. Questa modifica verrà applicata a tutti i tipi LOB (Large Object) e XML, ma solo in caso di connessione a server [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva. In questo modo, gli sviluppatori disporranno di maggiore flessibilità, mantenendo la coerenza e la compatibilità con le versioni precedenti per applicazioni esistenti e server legacy.  Questa modifica ha effetto su tutte le interfacce che trasferiscono dati, principalmente IRowset::GetData, ICommand::Execute e IRowsetFastLoad::InsertRow.
  
 
 ## <a name="see-also"></a>Vedere anche  

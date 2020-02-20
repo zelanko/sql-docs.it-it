@@ -1,5 +1,5 @@
 ---
-title: Aggiungere uno snapshot alla cronologia del report-Reporting Services | Microsoft Docs
+title: Aggiungere uno snapshot alla cronologia del report - Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -9,10 +9,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
 ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251934"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Aggiungere uno snapshot alla cronologia del report
@@ -31,7 +31,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 3. Fare clic su **Nuovo snapshot**. Verrà creato un nuovo snapshot nella colonna **Data ultima esecuzione** .  
     > [!NOTE]
-    > Per abilitare la creazione di snapshot, l'amministratore deve configurare la cronologia del report in modo da consentire la creazione **manuale della cronologia**. Per altre informazioni, vedere [Limitare la cronologia dei report &#40;Gestione report&#41;](../reports/limit-report-history-report-manager.md).
+    > Per abilitare la creazione degli snapshot, è necessario che l'amministratore configuri la cronologia del report su **Consenti creazione manuale della cronologia del report**. Per altre informazioni, vedere [Limitare la cronologia dei report &#40;Gestione report&#41;](../reports/limit-report-history-report-manager.md).
 
 4. Fare clic su **Applica**.
   
@@ -57,7 +57,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 3. Fare clic su **Opzioni snapshot**.  
   
-4. Selezionare la casella di controllo **Usa la pianificazione seguente per aggiungere snapshot alla cronologia del report**. Eseguire una delle operazioni seguenti:  
+4. Selezionare la casella di controllo **Usa la pianificazione seguente per aggiungere snapshot alla cronologia del report**. selezionare uno degli elementi seguenti:  
   
     - Selezionare **Pianificazione in base al report**. Compilare i dettagli della pianificazione, selezionare le date di inizio e fine e quindi fare clic su **OK**.  
 
@@ -78,39 +78,39 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Per aggiungere manualmente snapshot alla cronologia del report
   
-1. Nel portale Web, passare all'elemento per il quale si desidera visualizzare la cronologia e fare clic con il pulsante destro del mouse su di esso.  
+1. Nel portale Web passare all'elemento di cui si vuole visualizzare la cronologia e fare clic con il pulsante destro del mouse.  
   
 2. Nel menu a discesa selezionare **Gestisci**.  
   
-3. Selezionare la scheda **snapshot della cronologia** .  
+3. Selezionare la scheda **Snapshot della cronologia**.  
   
-4. Nella pagina **snapshot della cronologia** selezionare il **nuovo snapshot della cronologia**. Viene creato un nuovo snapshot che viene visualizzato sotto con la data e l'ora correnti della colonna **creata** .  
+4. Nella pagina **Snapshot della cronologia** selezionare **Nuovo snapshot della cronologia**. Verrà creato un nuovo snapshot che sarà visualizzato sotto con la data e l'ora correnti nella colonna **Creato**.  
   
     > [!NOTE]
-    > Per abilitare la creazione di snapshot, l'amministratore deve configurare la cronologia del report in modo da consentire la creazione **manuale della cronologia**. Per altre informazioni, vedere [limitare la cronologia dei report (portale Web)](../../reporting-services/reports/limit-report-history-report-manager.md).
+    > Per abilitare la creazione degli snapshot, è necessario che l'amministratore configuri la cronologia del report su **Consenti creazione manuale della cronologia del report**. Per altre informazioni, vedere [Limitare la cronologia del report (portale Web)](../../reporting-services/reports/limit-report-history-report-manager.md).
 
-## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>Per aggiungere snapshot tramite una pianificazione alla cronologia del report
+## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>Per aggiungere gli snapshot tramite una pianificazione alla cronologia del report
 
-1. Nel portale Web, passare all'elemento per il quale si desidera visualizzare la cronologia e fare clic con il pulsante destro del mouse su di esso.  
+1. Nel portale Web passare all'elemento di cui si vuole visualizzare la cronologia e fare clic con il pulsante destro del mouse.  
   
 2. Nel menu a discesa selezionare **Gestisci**.  
   
-3. Selezionare la scheda **snapshot della cronologia** .  
+3. Selezionare la scheda **Snapshot della cronologia**.  
   
-4. Nella pagina **snapshot cronologia** selezionare il pulsante **pianificazione e impostazioni** .  
+4. Nella pagina **Snapshot della cronologia** selezionare il pulsante **Pianificazione e impostazioni**.  
   
-5. Nella sezione **pianificazione** selezionare una o entrambe le opzioni seguenti se non è già selezionata almeno una scelta:
+5. Nella sezione **Pianificazione** selezionare una o entrambe le opzioni seguenti se non è già selezionata almeno un'opzione:
     - **Creare gli snapshot della cronologia in base a una pianificazione**.  
     - **Consentire agli utenti di creare gli snapshot manualmente**.  
   
-6. Nella sezione **Avanzate** selezionare **Mantieni tutti gli snapshot della cronologia**.  
+6. Nella sezione **Avanzate** selezionare **Conservare tutti gli snapshot della cronologia**.  
   
-7. Facoltativamente, selezionare la casella di controllo **Salva snapshot cache anche nella cronologia del report**.  
+7. Facoltativamente, selezionare la casella di controllo **Salvare anche gli snapshot della cache nella cronologia del report**.  
   
 8.  Selezionare **Applica** per salvare le impostazioni.  
 
     > [!NOTE]  
-    > Per abilitare la creazione di snapshot, l'amministratore deve configurare la cronologia del report in modo da consentire la creazione **manuale della cronologia**. Per altre informazioni, vedere [limitare la cronologia dei report (portale Web)](../../reporting-services/reports/limit-report-history-report-manager.md).
+    > Per abilitare la creazione degli snapshot, è necessario che l'amministratore configuri la cronologia del report su **Consenti creazione manuale della cronologia del report**. Per altre informazioni, vedere [Limitare la cronologia del report (portale Web)](../../reporting-services/reports/limit-report-history-report-manager.md).
 
 9.  Fare clic su **Applica**.
 
@@ -118,35 +118,35 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 1. Per un report già configurato per essere eseguito come snapshot dell'esecuzione del report, è possibile impostare proprietà aggiuntive per salvare una copia dello snapshot nella cronologia del report ogni volta che lo snapshot viene aggiornato.  
   
-2. Nel portale Web, passare all'elemento per il quale si desidera visualizzare la cronologia e fare clic con il pulsante destro del mouse su di esso.  
+2. Nel portale Web passare all'elemento di cui si vuole visualizzare la cronologia e fare clic con il pulsante destro del mouse.  
   
 3. Nel menu a discesa selezionare **Gestisci**.  
   
-4. Selezionare la scheda **snapshot della cronologia** .  
+4. Selezionare la scheda **Snapshot della cronologia**.  
   
-5. Nella pagina **snapshot cronologia** selezionare il pulsante **pianificazione e impostazioni** .  
+5. Nella pagina **Snapshot della cronologia** selezionare il pulsante **Pianificazione e impostazioni**.  
   
-6. Nella sezione **pianificazione** selezionare una o entrambe le opzioni seguenti se non è già selezionata almeno una scelta:
+6. Nella sezione **Pianificazione** selezionare una o entrambe le opzioni seguenti se non è già selezionata almeno un'opzione:
     - **Creare gli snapshot della cronologia in base a una pianificazione**.  
     - **Consentire agli utenti di creare gli snapshot manualmente**.  
   
-7. Nella sezione **Avanzate** selezionare **Mantieni tutti gli snapshot della cronologia**.  
+7. Nella sezione **Avanzate** selezionare **Conservare tutti gli snapshot della cronologia**.  
   
-8. Facoltativamente, selezionare la casella di controllo **Salva snapshot cache anche nella cronologia del report**.  
+8. Facoltativamente, selezionare la casella di controllo **Salvare anche gli snapshot della cache nella cronologia del report**.  
   
 9. Selezionare **Applica** per salvare le impostazioni.  
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>Per aggiungere automaticamente snapshot alla cronologia del report in base a una pianificazione  
   
-1. Nel portale Web, passare all'elemento per il quale si desidera visualizzare la cronologia e fare clic con il pulsante destro del mouse su di esso.  
+1. Nel portale Web passare all'elemento di cui si vuole visualizzare la cronologia e fare clic con il pulsante destro del mouse.  
   
 2. Nel menu a discesa selezionare **Gestisci**.  
   
-3. Selezionare la scheda **snapshot della cronologia** .  
+3. Selezionare la scheda **Snapshot della cronologia**.  
   
-4. Nella pagina **snapshot cronologia** selezionare il pulsante **pianificazione e impostazioni** .  
+4. Nella pagina **Snapshot della cronologia** selezionare il pulsante **Pianificazione e impostazioni**.  
   
-5. Selezionare la casella di controllo **Usa la pianificazione seguente per aggiungere snapshot alla cronologia del report**. Eseguire una delle operazioni seguenti:  
+5. Selezionare la casella di controllo **Usa la pianificazione seguente per aggiungere snapshot alla cronologia del report**. selezionare uno degli elementi seguenti:  
   
     - Selezionare **Pianificazione in base al report**. Compilare i dettagli della pianificazione, selezionare le date di inizio e fine e quindi fare clic su **OK**.  
 

@@ -12,23 +12,23 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027866"
 ---
 # <a name="parsing-the-results"></a>Analisi dei risultati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Questo articolo descrive il modo in cui SQL Server prevede che gli utenti elaborino completamente i risultati restituiti da qualsiasi query.
+Questo articolo descrive come SQL Server preveda l'elaborazione completa dei risultati restituiti da qualsiasi query da parte degli utenti.
 
-## <a name="update-counts-and-result-sets"></a>Conteggio aggiornamenti e set di risultati
+## <a name="update-counts-and-result-sets"></a>Conteggi aggiornamenti e set di risultati
 
-In questa sezione vengono illustrati i due risultati più comuni restituiti da SQL Server: conteggio aggiornamenti e ResultSet. In generale, qualsiasi query eseguita da un utente provocherà la restituzione di uno di questi risultati. si prevede che gli utenti gestiscano entrambi durante l'elaborazione dei risultati.
+Questa sezione illustra i due risultati più comuni restituiti da SQL Server: il conteggio aggiornamenti e il set di risultati. In generale, le query eseguite dagli utenti determinano la restituzione di uno di questi risultati. Gli utenti devono gestirli entrambi durante l'elaborazione dei risultati.
 
-Il codice seguente è un esempio di come un utente può scorrere tutti i risultati dal server:
+Il codice seguente è un esempio di come un utente può eseguire l'iterazione di tutti i risultati restituiti dal server:
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -48,7 +48,7 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## <a name="exceptions"></a>Eccezioni
-Quando si esegue un'istruzione che restituisce un errore o un messaggio informativo, SQL Server risponderà in modo diverso a seconda che sia in grado di generare un piano di esecuzione. Il messaggio di errore può essere generato immediatamente dopo l'esecuzione dell'istruzione o potrebbe richiedere un set di risultati distinto. Nel secondo caso, è necessario che le applicazioni analizzino il set di risultati per recuperare l'eccezione.
+Quando si esegue un'istruzione che restituisce un errore o un messaggio informativo, SQL Server risponderà in modo diverso a seconda del fatto che sia in grado o meno di generare un piano di esecuzione. Il messaggio di errore può essere generato immediatamente dopo l'esecuzione dell'istruzione oppure può richiedere un set di risultati distinto. Nel secondo caso, è necessario che le applicazioni analizzino il set di risultati per recuperare l'eccezione.
 
 Quando SQL Server non è in grado di generare un piano di esecuzione, l'eccezione viene generata immediatamente.
 
@@ -61,7 +61,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Quando SQL Server restituisce un messaggio di errore in un set di risultati, è necessario elaborare il set di risultati per recuperare l'eccezione.
+Quando SQL Server restituisce un messaggio di errore in un set di risultati, quest'ultimo deve essere elaborato per recuperare l'eccezione.
 
 ```java
 String SQL = "SELECT 1/0;";
@@ -78,7 +78,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Se l'esecuzione dell'istruzione genera più set di risultati, ogni set di risultati deve essere elaborato finché non viene raggiunto quello con l'eccezione.
+Se l'esecuzione dell'istruzione genera più set di risultati, è necessario elaborare ogni set di risultati fino a raggiungere quello con l'eccezione.
 
 ```java
 String SQL = "SELECT 1; SELECT * FROM nonexistentTable;";
@@ -99,9 +99,9 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Nel caso di `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, l'eccezione viene generata `execute()` immediatamente e `SELECT 1` non viene eseguita affatto.
+Nel caso di `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, l'eccezione viene generata immediatamente in `execute()` e `SELECT 1` non viene eseguito affatto.
 
-Se l'errore da SQL Server presenta la gravità `0` a `9`, viene considerato come un messaggio informativo e restituito come `SQLWarning`.
+Se l'errore restituito da SQL Server ha una gravità compresa tra `0` e `9`, viene considerato come un messaggio informativo e restituito come `SQLWarning`.
 
 ```java
 String SQL = "RAISERROR ('WarningLevel5', 5, 2);";

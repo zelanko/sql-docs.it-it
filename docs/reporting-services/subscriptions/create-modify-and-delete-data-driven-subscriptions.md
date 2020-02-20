@@ -14,16 +14,16 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140264"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati è una sottoscrizione basata su query che recupera i valori dei dati utilizzati per l'elaborazione della sottoscrizione in fase di esecuzione. Quando la sottoscrizione viene attivata, viene elaborata una query per recuperare informazioni aggiornate su destinatari, opzioni di recapito di report, formati di rendering e impostazioni dei parametri. I risultati della query vengono combinati con la definizione della sottoscrizione per creare una sottoscrizione dinamica che utilizza i dati già gestiti dall'utente in un database dei dipendenti, un database dei clienti o altri database contenenti informazioni che possono essere utilizzate come dati del sottoscrittore.  
   
- Per creare una nuova sottoscrizione guidata dai dati o modificare una sottoscrizione esistente, usare il **Manage** > **sottoscrizioni** pagina nel portale web. Il **sottoscrizioni** pagina illustra ogni passaggio di creazione o modifica di una sottoscrizione. Per accedere a una sottoscrizione dopo averla creata, usare la pagina **Sottoscrizioni personali** o l'elenco delle sottoscrizioni di un report. Per informazioni su come creare una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Per creare una nuova sottoscrizione guidata dai dati o modificarne una esistente, usare la pagina **Gestisci** > **Sottoscrizioni** nel portale Web. La pagina **Sottoscrizioni** consente di eseguire in modo semplice i vari passaggi per la creazione o la modifica di una sottoscrizione. Per accedere a una sottoscrizione dopo averla creata, usare la pagina **Sottoscrizioni personali** o l'elenco delle sottoscrizioni di un report. Per informazioni su come creare una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  Contenuto dell'articolo:  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140264"
 -   [Esecuzione della sottoscrizione](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a>Gestione ed eliminazione di una sottoscrizione guidata dai dati  
- Una sottoscrizione guidata dai dati che è in corso non può essere arrestata o eliminata tramite il portale web. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Una sottoscrizione guidata dai dati in corso non può essere arrestata o eliminata tramite il portale Web. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Per eliminare una sottoscrizione guidata dai dati, selezionare la casella di controllo accanto al report nel **abbonamenti** pagina e quindi selezionare **eliminare**.  
+ Per eliminare una sottoscrizione guidata dai dati selezionare la casella di controllo accanto al report nella pagina **Sottoscrizioni**, quindi selezionare **Elimina**.  
   
  Per istruzioni sull'annullamento di una sottoscrizione guidata dai dati, vedere [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -47,11 +47,11 @@ ms.locfileid: "67140264"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>Per creare una sottoscrizione guidata dai dati (modalità nativa)  
   
-1. Nel portale web, passare alla cartella che contiene il report, fare doppio clic su report e selezionare **Gestisci** nel menu a discesa.  
+1. Nel portale Web passare alla cartella che contiene il report, fare clic con il pulsante destro del mouse sul report e selezionare **Gestisci** dal menu a discesa.  
   
 2. Selezionare la scheda **Sottoscrizioni** .  
   
-3. Selezionare **+ nuova sottoscrizione** nel **sottoscrizioni** pagina.  
+3. Selezionare **+ Nuova sottoscrizione** nella pagina **Sottoscrizioni**.  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>Per creare una sottoscrizione guidata dai dati (modalità SharePoint)  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67140264"
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>Per modificare una sottoscrizione guidata dai dati esistente (modalità nativa)  
   
-1. Nel portale web, passare alla cartella che contiene il report, fare doppio clic su report e selezionare **Gestisci** nel menu a discesa.  
+1. Nel portale Web passare alla cartella che contiene il report, fare clic con il pulsante destro del mouse sul report e selezionare **Gestisci** dal menu a discesa.  
   
 2. Selezionare la scheda **Sottoscrizioni** .  
   
-3. Selezionare la casella di controllo accanto alla sottoscrizione che si desidera modificare e quindi selezionare **modifica**. Sottoscrizioni guidate dai dati avranno il valore "basate sui dati" nel **tipo** colonna.  
+3. Selezionare la casella di controllo accanto alla sottoscrizione che si vuole modificare e selezionare **Modifica**. Le sottoscrizioni guidate dai dati visualizzano il valore "Guidato dai dati" nella colonna **Tipo**.  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Per modificare una sottoscrizione guidata dai dati esistente (modalità SharePoint)  
   
@@ -103,5 +103,5 @@ ms.locfileid: "67140264"
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Utilizzo delle sottoscrizioni (portale web)](../../reporting-services/working-with-subscriptions-web-portal.md) [usare sottoscrizioni personali (Server di Report in modalità nativa)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Uso delle sottoscrizioni (portale Web)](../../reporting-services/working-with-subscriptions-web-portal.md) [Uso delle sottoscrizioni personali (server di report in modalità nativa)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  
