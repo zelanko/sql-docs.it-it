@@ -1,6 +1,6 @@
 ---
 title: Installazione di esempio della copia bulk
-description: Descrive le tabelle utilizzate negli esempi di copia bulk e fornisce script SQL per la creazione delle tabelle nel database AdventureWorks.
+description: Descrive le tabelle usate negli esempi di copia bulk e fornisce script SQL per la creazione delle tabelle nel database AdventureWorks.
 ms.date: 09/30/2019
 dev_langs:
 - sql
@@ -9,21 +9,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 68a453efa165d73df521bc2ce3a00984f843f4fd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 129dc64fc9bac2111cd0bc5cb61f3ce7f1d98ee1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452303"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247870"
 ---
 # <a name="bulk-copy-example-setup"></a>Installazione di esempio della copia bulk
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-La classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy> può essere utilizzata per scrivere dati solo in tabelle di SQL Server. Negli esempi di codice illustrati in questo argomento viene usato il database di esempio di SQL Server, **AdventureWorks**. Per evitare di modificare le tabelle esistenti, gli esempi di codice scrivono i dati in tabelle che è prima necessario creare.  
+La classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy> può essere usata per scrivere dati solo in tabelle di SQL Server. Negli esempi di codice illustrati in questo argomento viene usato il database di esempio di SQL Server, **AdventureWorks**. Per evitare di modificare le tabelle esistenti, gli esempi di codice scrivono i dati in tabelle che è prima necessario creare.  
   
 Le tabelle **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** sono entrambe basate sulla tabella **Production.Products** di **AdventureWorks**. Negli esempi di codice che usano queste tabelle, i dati vengono aggiunti dalla tabella **Production.Products** a una di queste tabelle di esempio. La tabella **BulkCopyDemoDifferentColumns** viene usata quando l'esempio illustra come eseguire il mapping delle colonne dall'origine dati alla tabella di destinazione. **BulkCopyDemoMatchingColumns** viene usata per la maggior parte degli altri esempi.  
   

@@ -16,10 +16,10 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 75cda38839aa4ee8a32eb65595b0f8df204983b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580216"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicatori (Generatore report e SSRS)
@@ -41,10 +41,10 @@ ms.locfileid: "65580216"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include set e icone di indicatori predefiniti che possono essere usati così come sono oppure personalizzati in base alle specifiche esigenze.  
   
- Per altre informazioni sull'uso degli indicatori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Per altre informazioni sull'utilizzo degli indicatori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
->  È possibile pubblicare indicatori separatamente da un report come parti del report. Altre informazioni sulle [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  È possibile pubblicare indicatori separatamente da un report come parti del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ##  <a name="ComparingIndicatorsToGauges"></a> Confronto tra indicatori e misuratori  
  Anche se sembrano molto diversi, gli indicatori sono semplici misuratori. Sia negli indicatori sia nei misuratori viene visualizzato un solo valore di dati. La differenza principale consiste nel fatto che i misuratori dispongono di elementi quali frame e indicatori di misura, mentre gli indicatori dispongono solo di stati, icone e (facoltativamente) etichette. Gli stati degli indicatori sono simili agli intervalli dei misuratori.  
@@ -140,7 +140,7 @@ ms.locfileid: "65580216"
   
 |Sequenza stato|Valore iniziale|Valore finale|  
 |--------------------|-----------------|---------------|  
-|Red|0|3500|  
+|Rosso|0|3500|  
 |Giallo|3500|5000|  
 |Green|5000|10000|  
   
@@ -150,14 +150,14 @@ ms.locfileid: "65580216"
 |--------------------|-----------------|---------------|  
 |Green|5000|10000|  
 |Giallo|3500|5000|  
-|Red|0|3500|  
+|Rosso|0|3500|  
   
  La freccia orizzontale gialla raffigura il valore 3500 e la freccia SU verde il valore 5000.  
   
 |Sequenza stato|Valore iniziale|Valore finale|  
 |--------------------|-----------------|---------------|  
 |Green|5000|10000|  
-|Red|0|3500|  
+|Rosso|0|3500|  
 |Giallo|3500|5000|  
   
  La freccia GIÙ rossa raffigura il valore 3500 e la freccia SU verde il valore 5000.  
@@ -165,7 +165,7 @@ ms.locfileid: "65580216"
 |Sequenza stato|Valore iniziale|Valore finale|  
 |--------------------|-----------------|---------------|  
 |Giallo|3500|5000|  
-|Red|0|3500|  
+|Rosso|0|3500|  
 |Green|5000|10000|  
   
  La freccia GIÙ gialla raffigura ora entrambi i valori 3500 e 5000.  

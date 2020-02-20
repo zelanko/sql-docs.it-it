@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 77b0899d6bc0a73db5e0cfa7794209ab74ed25ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936151"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918649"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,16 +34,16 @@ $*parameter*: identificatore del parametro (misto). Per un'istruzione che usa se
   
 &$*variable*: nome (misto) della variabile PHP da associare al parametro dell'istruzione SQL.  
   
-$*data_type*: costante (intero) PDO::PARAM_* facoltativa. Il valore predefinito è PDO::PARAM_STR.  
+$*data_type*: costante PDO::PARAM_* (Integer) facoltativa. Il valore predefinito è PDO::PARAM_STR.  
   
-$*length*: lunghezza (intero) facoltativa del tipo di dati. È possibile specificare PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE per indicare le dimensioni predefinite quando si usa PDO::PARAM_INT o PDO::PARAM_BOOL in $*data_type*.  
+$*length*: lunghezza (Integer) facoltativa del tipo di dati. È possibile specificare PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE per indicare le dimensioni predefinite quando si usa PDO::PARAM_INT o PDO::PARAM_BOOL in $*data_type*.  
   
-$*driver_options*: opzioni specifiche del driver (misto) facoltative. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
+$*driver_options*: opzioni specifiche del driver (miste) facoltative. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
   
 ## <a name="return-value"></a>Valore restituito  
 TRUE in caso di esito positivo; in caso contrario, FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Quando si associano dati Null alle colonne del server di tipo varbinary, binary o varbinary(max), è consigliabile specificare la codifica binaria (PDO::SQLSRV_ENCODING_BINARY) usando $*driver_options*. Per altre informazioni sulle costanti di codifica, vedere [Costanti](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
@@ -99,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Quando si associa un parametro di output a un tipo bigint, se il valore può finire al di fuori dell'intervallo di un [Integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l'uso di dop::P ARAM_INT con DOP:: SQLSRV_PARAM_OUT_DEFAULT_SIZE può comportare un'eccezione "valore non compreso nell'intervallo". Quindi, usare invece il valore predefinito DOP::P ARAM_STR e specificare la dimensione della stringa risultante, che è al massimo 21. È il numero massimo di cifre, incluso il segno negativo, di qualsiasi valore bigint. 
+> Quando si associa un parametro di output a un tipo bigint, se esiste la possibilità che il valore venga escluso dall'intervallo di un [Integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l'uso di PDO::PARAM_INT con PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE può generare un'eccezione "Valore esterno all'intervallo consentito". Usare invece il valore PDO::PARAM_STR predefinito e specificare le dimensioni della stringa risultante, che sono al massimo pari a 21, ovvero il numero massimo di cifre, incluso il segno meno, di qualsiasi valore bigint. 
 
 ## <a name="example"></a>Esempio  
 In questo esempio di codice viene illustrato come usare un parametro di input/output.  
@@ -133,7 +133,7 @@ $server = "(local)";
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
 
 // Assume TestTable exists with a decimal field 
-$input = 9223372036854.80000;
+$input = "9223372036854.80000";
 $stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified

@@ -17,10 +17,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893030"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novità di SQL Server 2016
@@ -55,7 +55,7 @@ Questa pagina include informazioni di riepilogo e collegamenti a informazioni pi
 Vedere [Motore di database](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services offre prestazioni migliori, funzionalità di creazione, gestione di database, filtraggio, elaborazione e molto altro per i database con modello tabulare basati sul **livello di compatibilità 1200**.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)**  integra in SQL Server il linguaggio di programmazione R, usato per l'analisi statistica. 
+- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integra in SQL Server il linguaggio di programmazione R, usato per l'analisi statistica. 
 - La nuova funzionalità di **verifica di coerenza del database (DBCC)** viene eseguita internamente per rilevare possibili problemi di danneggiamento dei dati.
 - La funzionalità **query diretta**, che consente di eseguire query su dati esterni dinamici invece di importarli in primo luogo, ora supporta più origini dati, tra le quali SQL Azure, Oracle e Teradata. 
 - Sono disponibili numerose nuove **funzioni DAX (Data Access Expressions)** .

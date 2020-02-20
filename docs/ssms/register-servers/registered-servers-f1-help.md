@@ -1,6 +1,6 @@
 ---
-title: Guida sensibile al contesto di Server registrati | Microsoft Docs
-ms.custom: ''
+title: Guida sensibile al contesto di Server registrati
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266140"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256233"
 ---
 # <a name="registered-servers-f1-help"></a>Guida sensibile al contesto di Server registrati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "68266140"
  Per accedere a questa pagina, in Server registrati fare clic su **Reporting Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, ad esempio **Reporting Services**, scegliere **Nuovo**e quindi fare clic su **Nuova registrazione server**.  
   
 ### <a name="options"></a>Opzioni  
- **Tipo server**  
+ **Tipo di server**  
  Quando si esegue la registrazione di un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato nel riquadro **Server registrati** . Per registrare un tipo diverso di server, selezionare il server desiderato dalla barra degli strumenti **Server registrati** prima di iniziare la registrazione del nuovo server.  
   
  **Nome server**  
  Consente di selezionare l'istanza del server di report a cui connettersi. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]è possibile accedere a un server di report tramite il nome della relativa istanza. È possibile disporre di un'istanza del server di report per ogni istanza di SQL Server installata Se si utilizza l'istanza predefinita, digitare il nome dell'istanza di SQL Server. Se si utilizza un'istanza denominata, indicarla nel formato MSSQL$instancename per la connessione al server di report.  
   
- **Autenticazione**  
+ **autenticazione**  
  Il processo di autenticazione a un server di report viene eseguito tramite Internet Information Services (IIS). Selezionare una delle modalità di autenticazione disponibili seguenti per la connessione a Reporting Services:  
   
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
@@ -58,12 +58,12 @@ ms.locfileid: "68266140"
  Immettere il nome account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
  **Password**  
- Immettere la password associata al nome utente. Questa opzione può essere modificata solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
+ Immettere il nome utente e la password Questa opzione può essere modificata solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
  **Memorizza password**  
  Consente di archiviare la password immessa. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
-> **NOTA:** Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e quindi fare clic su **Salva**.  
+> **NOTA** Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e quindi fare clic su **Salva**.  
   
  **Nome server registrato**  
  Nome che si desidera venga visualizzato nel componente Server registrati. Non è necessario che questo nome corrisponda a quello indicato nella casella **Nome server** .  
@@ -82,16 +82,16 @@ ms.locfileid: "68266140"
  Per accedere a questa pagina, in Server registrati fare clic su **Analysis Services** sulla barra degli strumenti Server registrati, fare clic con il pulsante destro del mouse su un gruppo di server registrati, ad esempio **Analysis Services**, scegliere **Nuovo**e quindi fare clic su **Registrazione server**.  
   
 ### <a name="options"></a>Opzioni  
- **Tipo server**  
+ **Tipo di server**  
  Quando si esegue la registrazione di un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato nel riquadro Server registrati. Per registrare un tipo diverso di server, selezionare il server desiderato dalla barra degli strumenti **Server registrati** prima di iniziare la registrazione del nuovo server.  
   
  **Nome server**  
  Consente di selezionare l'istanza del server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
- **Autenticazione**  
+ **autenticazione**  
  L'autenticazione di Windows consente a un utente di connettersi utilizzando le credenziali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, come utente di Windows o come membro di un gruppo di Windows.  
   
- **User name**  
+ **Nome utente**  
  Questa opzione non è disponibile in questa versione.  
   
  **Password**  
@@ -116,16 +116,16 @@ ms.locfileid: "68266140"
  Per accedere a questa pagina, in Server registrati fare clic su **Integration Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, scegliere **Nuovo**e quindi fare clic su **Registrazione server**.  
   
 ### <a name="options"></a>Opzioni  
- **Tipo server**  
- Quando si registra un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato in Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**o **Integration Services** sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
+ **Tipo di server**  
+ Quando si registra un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato in Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** o **Integration Services** sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
   
  **Nome server**  
  Consente di selezionare il server a cui connettersi. Viene visualizzato per impostazione predefinita l'ultimo server a cui ci si è connessi.  
   
- **Autenticazione**  
+ **autenticazione**  
  La modalità di autenticazione di Windows consente all'utente di utilizzare un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per la connessione.  
   
- **User name**  
+ **Nome utente**  
  Questa opzione non è disponibile in questa versione.  
   
  **Password**  

@@ -1,6 +1,6 @@
 ---
 title: Modificare dati SQL con RevoScaleR
-description: Esercitazione dettagliata su come modificare ed eseguire query sui dati usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 3: Come eseguire query sui dati e modificare i dati con il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 48802f815515948c957c718e4bf666b0d7133670
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727190"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947075"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Modificare ed eseguire query sui dati di SQL Server (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 3 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Nella lezione precedente sono stati caricati i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo passaggio è possibile esplorare e modificare i dati usando **RevoScaleR**:
+Nell'esercitazione precedente sono stati caricati i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questa esercitazione è possibile esplorare e modificare i dati usando **RevoScaleR**:
 
 > [!div class="checklist"]
 > * Restituire informazioni di base sulle variabili

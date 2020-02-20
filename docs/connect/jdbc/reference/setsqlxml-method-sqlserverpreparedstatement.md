@@ -1,5 +1,5 @@
 ---
-title: Metodo sesqlxml (SQLServerPreparedStatement) | Microsoft Docs
+title: Metodo setSQLXML (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2a1af43238d2f0da19c65535f3c6f84fa0e434f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972805"
 ---
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>Metodo setSQLXML (SQLServerPreparedStatement)
@@ -42,7 +42,7 @@ public final void setSQLXML(int parameterIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo setSQLXML viene specificato dal metodo setSQLXML nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,6 +1,6 @@
 ---
-title: Proprietà - Analysis Server (scheda Servizio) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - Analysis Server (scheda Servizio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cb509ac18a22c755a6c349932aa2eab0c4077e98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b5520bb39a8e8e856030781b7739a55fd88fccaf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010356"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306551"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Proprietà - Analysis Server (scheda Servizio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68010356"
  Visualizza il numero usato da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per tenere traccia dei processi di questo programma.  
   
  **Tipo di servizio SQL Server**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  

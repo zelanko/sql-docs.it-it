@@ -11,10 +11,10 @@ ms.assetid: 1db3a975-c108-45d1-8c0d-14a094f391bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1b69d4f4e1845b4ec86297c06298c1302becea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985379"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream"></a>Metodo updateBinaryStream (int, java.io.InputStream)
@@ -42,10 +42,10 @@ public void updateBinaryStream(int columnIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo updateBinaryStream viene specificato dal metodo updateBinaryStream nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo updateBinaryStream viene specificato dal metodo updateBinaryStream nell'interfaccia java.sql.ResultSet.  
   
- L'utilizzo di questo metodo per i tipi di dati **Image**, **Text**e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può compromettere le prestazioni.  
+ L'uso di questo metodo per i tipi di dati **image**, **text** e **ntext** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può influire sulle prestazioni.  
   
  Questo metodo passa byte da un oggetto InputStream a colonne binarie di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selezionate, ad esempio binary, varbinary, varbinary(max), image, xml e udt. L'aggiornamento delle colonne di tipo carattere non è supportato con questo metodo. Per aggiornare le colonne di tipo carattere con un InputStream, usare il metodo [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

@@ -16,10 +16,10 @@ ms.assetid: 7c85d021-d466-4732-85f9-53903d297041
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecff900e23021bf04d2f9c8c10d7e8ab310cd1c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982086"
 ---
 # <a name="getmaxindexlength-method-sqlserverdatabasemetadata"></a>Metodo getMaxIndexLength (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxIndexLength()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getMaxIndexLength viene specificato dal metodo getMaxIndexLength nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getMaxIndexLength viene specificato dal metodo getMaxIndexLength nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

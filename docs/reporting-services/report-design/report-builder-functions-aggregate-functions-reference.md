@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893765"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funzioni di Generatore report - Informazioni di riferimento sulle funzioni di aggregazione
@@ -53,7 +53,7 @@ ms.locfileid: "68893765"
 |**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|Restituisce la media di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.|  
-|[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|Restituisce il conteggio dei valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.|  
+|[Numero](../../reporting-services/report-design/report-builder-functions-count-function.md)|Restituisce il conteggio dei valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.|  
 |[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)|Restituisce un conteggio di tutti i distinti valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.|  
 |[Max](../../reporting-services/report-design/report-builder-functions-max-function.md)|Restituisce il valore massimo di tutti i valori numerici non Null specificati dall'espressione, nel contesto dell'ambito specificato. È possibile utilizzare questa funzione per specificare il valore massimo di un asse del grafico per controllare la scala.|  
 |[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)|Restituisce il valore minimo di tutti i valori numerici non Null specificati dall'espressione, nel contesto dell'ambito specificato. È possibile utilizzare questa funzione per specificare il valore minimo di un asse del grafico per controllare la scala.|  
@@ -69,21 +69,21 @@ ms.locfileid: "68893765"
 ##  <a name="Restrictions"></a> Restrizioni relative a campi, raccolte e funzioni di aggregazione predefiniti  
  Nella tabella seguente sono riepilogate le restrizioni nei percorsi del report in cui è possibile aggiungere espressioni contenenti riferimenti alle raccolte predefinite globali.  
   
-|Percorso nel report|Campi|Parametri|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variabili|RenderFormat|  
+|Percorso nel report|Campi|Parametri|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Intestazione di pagina<br /><br /> Piè di pagina|Sì|Sì|Al massimo uno<br /><br /> Nota 1|Sì|Sì|Sì|Sì|  
-|Corpo|Sì<br /><br /> Nota 2|Sì|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|no|Sì|Sì|Sì|  
-|Parametro del report|no|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|no|no|no|no|no|  
-|Campo|Sì|Sì|no|no|no|no|no|  
-|Parametro della query|no|Sì|no|no|no|no|no|  
-|Espressione di raggruppamento|Sì|Sì|no|no|Sì|no|no|  
-|Espressione di ordinamento|Sì|Sì|no|no|Sì|Sì<br /><br /> Nota 5|no|  
-|Espressione filtro|Sì|Sì|no|no|Sì|Sì<br /><br /> Nota 6|no|  
-|codice|no|Sì<br /><br /> Nota 7|no|no|no|no|no|  
-|Lingua del report|no|Sì|no|no|no|no|no|  
-|Variabili|Sì|Sì|no|no|Sì|Ambito corrente o contenitore|no|  
-|Aggregazioni|Sì|Sì|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Sì|no|no|  
-|Funzioni di ricerca|Sì|Sì|Sì|no|Sì|no|no|  
+|Corpo|Sì<br /><br /> Nota 2|Sì|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|No|Sì|Sì|Sì|  
+|Parametro del report|No|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|No|No|No|No|No|  
+|Campo|Sì|Sì|No|No|No|No|No|  
+|Parametro della query|No|Sì|No|No|No|No|No|  
+|Espressione di raggruppamento|Sì|Sì|No|No|Sì|No|No|  
+|Espressione di ordinamento|Sì|Sì|No|No|Sì|Sì<br /><br /> Nota 5|No|  
+|Espressione filtro|Sì|Sì|No|No|Sì|Sì<br /><br /> Nota 6|No|  
+|Codice|No|Sì<br /><br /> Nota 7|No|No|No|No|No|  
+|Lingua del report|No|Sì|No|No|No|No|No|  
+|variables|Sì|Sì|No|No|Sì|Ambito corrente o contenitore|No|  
+|Aggregazioni|Sì|Sì|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Sì|No|No|  
+|Funzioni di ricerca|Sì|Sì|Sì|No|Sì|No|No|  
   
 -   **Nota 1.** ReportItems deve essere incluso nella pagina del report visualizzabile; in caso contrario, il relativo valore è Null. Se la visibilità di un elemento del report dipende da un'espressione che restituisce False, l'elemento del report non sarà presente nella pagina.  
   
@@ -106,15 +106,15 @@ ms.locfileid: "68893765"
 ##  <a name="NestedRestrictions"></a> Restrizioni relative alle aggregazioni nidificate  
  Nella tabella seguente vengono riepilogate le restrizioni sulle funzioni di aggregazione che consentono la specifica di altre funzioni di aggregazione come aggregazioni nidificate.  
   
-|Contesto|RunningValue|RowNumber|Primo<br /><br /> Ultimo|Previous|Sum e altre funzioni di ordinamento preliminare|Aggregazioni ReportItem|Funzioni di ricerca|Funzione di aggregazione|  
+|Context|RunningValue|RowNumber|First (Primo)<br /><br /> Last (Ultimo)|Previous|Sum e altre funzioni di ordinamento preliminare|Aggregazioni ReportItem|Funzioni di ricerca|Funzione di aggregazione|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valore corrente|no|no|no|no|Sì|no|Sì|no|  
-|Primo<br /><br /> Ultimo|no|no|no|no|Sì|no|no|no|  
-|Previous|Sì|Sì|Sì|no|Sì|no|Sì|no|  
-|Sum e altre funzioni di ordinamento preliminare|no|no|no|no|Sì|no|Sì|no|  
-|Aggregazioni ReportItem|no|no|no|no|no|no|no|no|  
-|Funzioni di ricerca|Sì|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|no|no|  
-|Funzione di aggregazione|no|no|no|no|no|no|no|no|  
+|Valore corrente|No|No|No|No|Sì|No|Sì|No|  
+|First (Primo)<br /><br /> Last (Ultimo)|No|No|No|No|Sì|No|No|No|  
+|Previous|Sì|Sì|Sì|No|Sì|No|Sì|No|  
+|Sum e altre funzioni di ordinamento preliminare|No|No|No|No|Sì|No|Sì|No|  
+|Aggregazioni ReportItem|No|No|No|No|No|No|No|No|  
+|Funzioni di ricerca|Sì|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|No|No|  
+|Funzione di aggregazione|No|No|No|No|No|No|No|No|  
   
 -   **Nota 1.** Le funzioni di aggregazione sono consentite solo all'interno dell'espressione *Source* di una funzione di ricerca se tale funzione non è contenuta in un'aggregazione. Le funzioni di aggregazione non sono consentite all'interno di espressioni *Destination* o *Result* di una funzione di ricerca.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68893765"
 |------------------|---------------------|  
 |[Primo](../../reporting-services/report-design/report-builder-functions-first-function.md)|Restituisce il primo valore nell'ambito specificato dell'espressione specificata.|  
 |[Ultimo](../../reporting-services/report-design/report-builder-functions-last-function.md)|Restituisce l'ultimo valore nell'ambito specificato dell'espressione specificata.|  
-|[Previous](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.|  
+|[Indietro](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.|  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68893765"
   
 |**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
-|[Aggregate](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Restituisce un'aggregazione personalizzata dell'espressione specificata, secondo quanto definito dal provider di dati.|  
+|[Aggregata](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Restituisce un'aggregazione personalizzata dell'espressione specificata, secondo quanto definito dal provider di dati.|  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   

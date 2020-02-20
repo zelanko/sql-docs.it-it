@@ -11,10 +11,10 @@ ms.assetid: 7ec1d24d-f732-44f3-9608-734ce2df4489
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 051ed3bd89ee2addae12460101221443b7ff54d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973671"
 ---
 # <a name="setnclob-method-sqlserverpreparedstatement"></a>Metodo setNClob (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67973671"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo setNClob &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-sql-nclob.md)|Imposta il parametro designato sull'oggetto java.sql.NClob specificato.|  
 |[Metodo setNClob &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|Imposta il parametro designato sull'oggetto java.io.Reader specificato.|  

@@ -9,16 +9,16 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d3eccb52c9a7164285627063f23dbb790b6dfa3c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594062"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244565"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo di connessione a SQL Azure (SSRS)
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] è un database relazionale ospitato e basato sul cloud, creato con le tecnologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per includere dati da un'origine dati esterna [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] è un database relazionale ospitato e basato sul cloud, creato con le tecnologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per includere dati da un'origine dati esterna [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 Questa estensione per i dati supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.  
   
@@ -43,7 +43,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 Viene inoltre usata la finestra di dialogo **Proprietà origini dati** per fornire credenziali quale il nome utente e la password. Le opzioni `User Id` e `Password` vengono aggiunte automaticamente alla stringa di connessione; non è necessario digitarle come parte della stringa di connessione.  
   
-Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+Per altre informazioni ed esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="Credentials"></a> Credenziali
 
@@ -57,7 +57,7 @@ Da un client di creazione di report sono disponibili le opzioni seguenti per la 
   
 - Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
+Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> Query
 
@@ -160,7 +160,7 @@ Per altre informazioni sulle piattaforme e le versioni supportate, vedere [Origi
 
 Questo scenario è supportato quando vengono configurati correttamente gli elementi seguenti:
 
-- [Active Directory Authentication Library per SQL Server (ADALSQL)](https://www.microsoft.com/en-us/download/details.aspx?id=48742) è installato nel server di report.
+- [Active Directory Authentication Library per SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) è installato nel server di report.
 - [Active Directory Federation Services (AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) è configurato per la federazione tra Active Directory (AD) locale e AAD.
 - [La delega vincolata Kerberos (KDC)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) è configurata dal server di report al server AD FS.
 - Configurare il report/l'origine dati per eseguire l'autenticazione al [database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) come l'utente che visualizza il report.
@@ -184,7 +184,7 @@ In queste sezioni della documentazione sono incluse informazioni concettuali app
 [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Viene fornita una panoramica sull'accesso ai dati del report.  
   
-[Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
 [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

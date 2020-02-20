@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980748"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Metodo getProcedureColumns (SQLServerDatabaseMetaData)
@@ -60,41 +60,41 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getProcedureColumns viene specificato dal metodo getProcedureColumns nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getProcedureColumns viene specificato dal metodo getProcedureColumns nell'interfaccia java.sql.DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getProcedureColumns conterrà le informazioni seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**String**|Nome del database in cui si trova la stored procedure specificata.|  
-|PROCEDURE_SCHEM|**String**|Schema per la stored procedure.|  
-|PROCEDURE_NAME|**String**|Nome della stored procedure.|  
-|COLUMN_NAME|**String**|Nome della colonna.|  
+|PROCEDURE_CAT|**Stringa**|Nome del database in cui si trova la stored procedure specificata.|  
+|PROCEDURE_SCHEM|**Stringa**|Schema per la stored procedure.|  
+|PROCEDURE_NAME|**Stringa**|Nome della stored procedure.|  
+|COLUMN_NAME|**Stringa**|Nome della colonna.|  
 |COLUMN_TYPE|**short**|Tipo di colonna. Può essere uno dei valori seguenti:<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|Tipo di dati SQL da java.sql.Types.|  
-|TYPE_NAME|**String**|Nome del tipo di dati.|  
+|TYPE_NAME|**Stringa**|Nome del tipo di dati.|  
 |PRECISION|**int**|Numero totale di cifre significative.|  
 |LENGTH|**int**|Lunghezza dei dati in byte.|  
 |SCALE|**short**|Numero di cifre a destra del separatore decimale.|  
 |RADIX|**short**|Base per i tipi numerici.|  
 |NULLABLE|**short**|Indica se la colonna può contenere un valore Null. Può essere uno dei valori seguenti:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**String**|Descrizione della colonna della procedura.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non restituisce un valore per questa colonna.|  
-|COLUMN_DEF|**String**|Valore predefinito della colonna.|  
+|REMARKS|**Stringa**|Descrizione della colonna della procedura.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non restituisce un valore per questa colonna.|  
+|COLUMN_DEF|**Stringa**|Valore predefinito della colonna.|  
 |SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**.|  
-|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **DateTime** e ISO **Interval**, questa colonna è null.|  
+|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **datetime** e **ISO interval**, questa colonna è NULL.|  
 |CHAR_OCTET_LENGTH|**int**|Numero massimo di byte nella colonna.|  
 |ORDINAL_POSITION|**int**|Indice della colonna all'interno della tabella.|  
-|IS_NULLABLE|**String**|Indica se la colonna ammette valori Null.|  
-|SS_TYPE_CATALOG_NAME|**String**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
-|SS_TYPE_SCHEMA_NAME|**String**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
-|SS_UDT_CATALOG_NAME|**String**|Tipo definito dall'utente (UDT) del nome completo.|  
-|SS_UDT_SCHEMA_NAME|**String**|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, viene visualizzata una stringa vuota.|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Nome di una raccolta di XML Schema. Se non è possibile trovare il nome, viene visualizzata una stringa vuota.|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
-|SS_XML_SCHEMACOLLECTION_NAME|**String**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
-|SS_DATA_TYPE|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usato in stored procedure estese.<br /><br /> <br /><br /> **Nota**: per altre informazioni sui tipi di dati restituiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere "Tipi di dati (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|IS_NULLABLE|**Stringa**|Indica se la colonna ammette valori Null.|  
+|SS_TYPE_CATALOG_NAME|**Stringa**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
+|SS_TYPE_SCHEMA_NAME|**Stringa**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
+|SS_UDT_CATALOG_NAME|**Stringa**|Tipo definito dall'utente (UDT) del nome completo.|  
+|SS_UDT_SCHEMA_NAME|**Stringa**|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**Stringa**|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, viene visualizzata una stringa vuota.|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**Stringa**|Nome di una raccolta di XML Schema. Se non è possibile trovare il nome, viene visualizzata una stringa vuota.|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**Stringa**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
+|SS_XML_SCHEMACOLLECTION_NAME|**Stringa**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
+|SS_DATA_TYPE|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usato in stored procedure estese.<br /><br /> <br /><br /> **Nota:** per altre informazioni sui tipi di dati restituiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere "Tipi di dati (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
 >  Per altre informazioni sui dati restituiti dal metodo getProcedureColumns, vedere "sp_sproc_columns (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

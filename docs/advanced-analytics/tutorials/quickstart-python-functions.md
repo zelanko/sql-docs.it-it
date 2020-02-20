@@ -1,27 +1,26 @@
 ---
-title: 'Avvio rapido: Scrivere funzioni Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Questo argomento di avvio rapido illustra come scrivere una funzione Python per il calcolo statistico avanzato con Machine Learning Services per SQL Server.
+title: 'Avvio rapido: Funzioni Python'
+description: Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità Python con Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727005"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831399"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>Avvio rapido: Scrivere funzioni Python avanzate con Machine Learning Services per SQL Server
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Avvio rapido: Funzioni Python con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo argomento di avvio rapido descrive come incorporate funzioni matematiche e di utilità Python in una stored procedure SQL con Machine Learning Services per SQL Server. Le funzioni statistiche avanzate complesse da implementare in T-SQL possono essere eseguite in Python con una singola riga di codice.
+Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità Python con Machine Learning Services per SQL Server. Le funzioni statistiche sono spesso complesse da implementare in T-SQL, ma possono essere eseguite in Python con poche righe di codice.
 
 ## <a name="prerequisites"></a>Prerequisites
 

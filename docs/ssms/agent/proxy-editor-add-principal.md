@@ -1,10 +1,7 @@
 ---
-title: Editor proxy - Aggiungi entità | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Editor proxy - Aggiungi entità
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,26 @@ f1_keywords:
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17f528cb340e42d6445e6ef0d54fc33901061fe6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 17811051ed091d3c091a9e6c354afdb38759ebb4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263098"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247365"
 ---
 # <a name="proxy-editor---add-principal"></a>Editor proxy - Aggiungi entità
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilizzare questa pagina per concedere alle entità del server l'accesso a un account proxy di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+Usare questa pagina per concedere alle entità di sicurezza del server l'accesso a un account proxy di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opzioni  
 **Tipo di entità**  

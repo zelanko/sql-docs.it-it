@@ -1,5 +1,5 @@
 ---
-title: Funzionalità non più supportate
+title: Funzionalità non più supportate in SQL Server 2016 Reporting Services (SSRS)
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,20 +9,20 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
-ms.openlocfilehash: 80ebf7b4857d5814f33f62d3f7d5d61be63a7e10
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: a34b37a2e970c0f7a1a873947d9f8432c0b9733c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262955"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74317848"
 ---
-# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Funzionalità non più supportate in SQL Server Reporting Services (SSRS)
+# <a name="discontinued-functionality-in-sql-server-2016-reporting-services-ssrs"></a>Funzionalità non più supportate in SQL Server 2016 Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-In questo argomento vengono descritte funzionalità di SQL Server Reporting Services che non sono più disponibili in SQL Server 2016. Non sono inclusi avvisi relativi al supporto non più disponibile per versioni specifiche del sistema operativo o per Microsoft Internet Information Services (IIS). Per altre informazioni su questi prerequisiti di sistema, vedere [Requisiti hardware e software per l'installazione di SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+Questo articolo descrive le funzionalità di SQL Server Reporting Services che non sono più disponibili in SQL Server 2016. Non sono inclusi avvisi relativi al supporto non più disponibile per versioni specifiche del sistema operativo o per Microsoft Internet Information Services (IIS). Per altre informazioni su questi prerequisiti di sistema, vedere [Requisiti hardware e software per l'installazione di SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 Una *funzionalità non più disponibile* non è più supportata. Potrebbe anche essere stata fisicamente rimossa dal prodotto. Di seguito sono descritte le funzionalità non più disponibili.
 

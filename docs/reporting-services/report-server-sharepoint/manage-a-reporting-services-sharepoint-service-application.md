@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580083"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
@@ -34,7 +34,7 @@ ms.locfileid: "65580083"
   
 2.  Fare clic accanto al nome dell'applicazione di servizio oppure sulla colonna **Tipo** per selezionare l'intera riga, quindi fare clic su **Proprietà** sulla barra multifunzione di SharePoint.  
   
- Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+ Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [Passaggio 3: Creare un'applicazione di servizio Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 ## <a name="open-service-application-management-pages"></a>Aprire le pagine di gestione delle applicazioni di servizio
 
@@ -97,11 +97,11 @@ ms.locfileid: "65580083"
 |Modifica timeout sessione|Il valore predefinito è 7200 secondi.|  
 |Modifica limite cache di sessione|Il valore predefinito è 5.|  
   
-## <a name="manage-jobs"></a>Gestisci processi
+## <a name="manage-jobs"></a>Gestire i processi
 
  È possibile visualizzare ed eliminare i processi in esecuzione, ad esempio i processi creati dalle sottoscrizioni del report e da quelle guidate dai dati. La pagina non viene utilizzata per gestire le sottoscrizioni, bensì i processi attivati da una sottoscrizione. Ad esempio, tramite una sottoscrizione pianificata per essere eseguita una volta ogni ora verrà generato un processo una volta ogni ora che verrà visualizzato nella pagina **Gestione processi** .  
   
- ![gestire processi in esecuzione](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gestire processi in esecuzione")  
+ ![Gestire i processi in esecuzione](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "Gestire i processi in esecuzione")  
   
 ## <a name="key-management"></a>Gestione delle chiavi
  Nella tabella seguente sono riepilogate le pagine Gestione chiavi  
@@ -130,7 +130,7 @@ ms.locfileid: "65580083"
 
  È possibile utilizzare qualsiasi account utente di Windows. Per ottenere risultati ottimali, scegliere un account che disponga delle autorizzazioni di lettera e di accesso alla rete per supportare le connessioni ad altri computer. Deve disporre di autorizzazioni di lettura per qualsiasi immagine o file di dati esterno da utilizzare in un report. Non specificare un account locale se tutte le origini dati e tutte le immagini esterne per i report non sono archiviate sul computer del server di report. Utilizzare l'account solo per l'elaborazione automatica dei report.  
 
- ### <a name="powershell-command"></a>Comandi di PowerShell
+ ### <a name="powershell-command"></a>Comando di PowerShell
 
  Di seguito è riportato un esempio del comando PowerShell per restituire l'elenco delle applicazioni di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la proprietà UEAccount:  
 
@@ -152,7 +152,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Digitare la password.  
   
  **Conferma password**  
- Immettere nuovamente la password.  
+ digitare nuovamente la password.  
 
 ## <a name="e-mail-settings"></a>Impostazioni posta elettronica
 

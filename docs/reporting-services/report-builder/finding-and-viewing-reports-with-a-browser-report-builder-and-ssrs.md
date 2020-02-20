@@ -9,10 +9,10 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594001"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report con un browser (Generatore report e SSRS)
@@ -28,7 +28,7 @@ Cartelle visualizzate in un browser
 > [!NOTE]  
 >  Se si accede a un report tramite un dispositivo palmare, per aprire il report sarà necessario utilizzare un browser. Gestione report non è supportato nei dispositivi palmari.  
   
- Per ulteriori informazioni sui tipi di browser che è possibile utilizzare, vedere [supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+ Per altre informazioni sui tipi di browser che è possibile usare, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

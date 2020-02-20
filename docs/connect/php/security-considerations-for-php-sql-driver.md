@@ -13,16 +13,16 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992894"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Considerazioni sulla sicurezza per i driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento vengono descritte considerazioni sulla sicurezza specifiche per lo sviluppo, la distribuzione e l'esecuzione di applicazioni che usano [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Per informazioni più dettagliate su SQL Server sicurezza, vedere [Panoramica di SQL Server sicurezza](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
+In questo argomento vengono descritte considerazioni sulla sicurezza specifiche per lo sviluppo, la distribuzione e l'esecuzione di applicazioni che usano [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Per informazioni più dettagliate sulla sicurezza di SQL Server, vedere [Cenni preliminari sulla sicurezza in SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
   
 ## <a name="connect-using-windows-authentication"></a>Connettersi con l'autenticazione di Windows  
 L'autenticazione di Windows deve essere usata per connettersi a SQL Server ogni volta che è possibile per i motivi seguenti:  
@@ -31,7 +31,7 @@ L'autenticazione di Windows deve essere usata per connettersi a SQL Server ogni 
   
 -   **Gli utenti sono soggetti a una gestione centralizzata degli account.** Vengono applicati criteri di sicurezza, ad esempio i periodi di scadenza delle password, la lunghezza minima delle password e il blocco degli account dopo più richieste di accesso non valide.  
   
-Per informazioni su come connettersi a un server con l'autenticazione di Windows, vedere [Procedura: Connessione con l'autenticazione di Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
+Per informazioni su come connettersi a un server con l'autenticazione di Windows, vedere [Procedura: Connettersi con l'autenticazione di Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
 Quando ci si connette tramite l'autenticazione di Windows, è consigliabile configurare l'ambiente in modo che SQL Server possa usare il protocollo di autenticazione Kerberos. Per altre informazioni, vedere [Come assicurarsi che si utilizza l'autenticazione Kerberos quando si crea una connessione remota a un'istanza di SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) o [Autenticazione Kerberos e SQL Server](https://msdn.microsoft.com/library/cc280744.aspx).  
   
@@ -39,7 +39,7 @@ Quando ci si connette tramite l'autenticazione di Windows, è consigliabile conf
 È necessario usare connessioni crittografate ogni volta che si inviano o si recuperano dati sensibili da SQL Server. Per informazioni su come abilitare connessioni crittografate, vedere [Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Per stabilire una connessione protetta con [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], usare l'attributo di connessione Encrypt durante la connessione al server. Per altre informazioni sugli attributi di connessione, vedere [Connection Options](../../connect/php/connection-options.md).  
   
 ## <a name="use-parameterized-queries"></a>Usare query con parametri  
-Per ridurre il rischio di attacchi intrusivi nel codice SQL, usare query con parametri. Per esempi di esecuzione di query con parametri, vedere [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md).  
+Per ridurre il rischio di attacchi intrusivi nel codice SQL, usare query con parametri. Per esempi di esecuzione di query con parametri, vedere [Procedura: Eseguire query con parametri](../../connect/php/how-to-perform-parameterized-queries.md).  
   
 Per altre informazioni sugli attacchi intrusivi nel codice SQL e considerazioni di sicurezza correlate, vedere [Attacco intrusivo nel codice SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
   

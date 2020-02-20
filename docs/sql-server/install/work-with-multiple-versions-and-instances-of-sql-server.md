@@ -1,7 +1,7 @@
 ---
-title: Usare più versioni e istanze di SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: Usare più versioni e istanze
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba5e4fdaab769fca0443f6395536dc31207b1374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045664"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258974"
 ---
-# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Utilizzare più versioni e istanze di SQL Server
+# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Usare più versioni e istanze di SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -60,13 +60,13 @@ Gli elementi seguenti correlati a SQL Server sono compatibili con l'installazion
   
  In ogni versione principale o secondaria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il numero di versione viene aumentato per differenziarlo dalle versioni precedenti. Questa modifica alla versione viene utilizzata per diversi scopi. Ciò include la visualizzazione delle informazioni sulla versione nell'interfaccia utente, il controllo della modalità di sostituzione dei file durante l'aggiornamento, l'applicazione di Service Pack e un meccanismo per una differenziazione funzionale tra le versioni successive.
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Componenti condivisi da tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-by-all-versions-of-ssnoversion"></a>Componenti condivisi da tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  Alcuni componenti sono condivisi da tutte le istanze di tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installate. Quando si esegue l'installazione affiancata di versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer, questi componenti vengono aggiornati automaticamente alla versione più recente. Tali componenti in genere vengono disinstallati automaticamente quando viene disinstallata l'ultima istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
  Esempi: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser e Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Componenti condivisi da tutte le istanze della stessa versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Componenti condivisi da tutte le istanze della stessa versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le versioni con la stessa versione principale condividono alcuni componenti in tutte le istanze. Se i componenti condivisi vengono selezionati durante l'aggiornamento, i componenti esistenti vengono aggiornati alla versione più recente.
   
@@ -78,13 +78,13 @@ Esempi: documentazione online di: [!INCLUDE[ssISnoversion](../../includes/ssisno
   
 Esempio: File di supporto per l'installazione.
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Componenti specifici di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Componenti specifici di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Alcuni componenti o servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono specifici di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essi sono anche noti come specifici dell'istanza. Condividono la stessa versione dell'istanza che li ospita e vengono utilizzati esclusivamente per quell'istanza.
   
 Esempi: [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Componenti indipendenti dalle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-that-are-independent-of-the-ssnoversion-versions"></a>Componenti indipendenti dalle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Alcuni componenti vengono installati durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma sono indipendenti dalle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essi possono essere condivisi dalle versioni principali o da tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
@@ -92,7 +92,7 @@ Esempi: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 Per altre informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, vedere [Installare SQL Server 2016 dall'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Per altre informazioni su come disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insieme a versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insieme a versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui sono già in esecuzione istanze di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se nel computer è già presente un'istanza predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere installato come istanza denominata.  
   
@@ -115,7 +115,7 @@ Nella tabella seguente viene descritto il supporto per installazioni side-by-sid
 
 ## <a name="preventing-ip-address-conflicts"></a>Metodi per evitare conflitti di indirizzi IP
 
-Quando si esegue un'installazione side-by-side di un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un'istanza autonoma del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], prestare attenzione per evitare conflitti del numero di porta TCP negli indirizzi IP. Di solito i conflitti si verificano quando due istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sono entrambe configurate per utilizzare la porta TCP predefinita (1433). Per evitare conflitti, configurare un'istanza in modo che venga utilizzata una porta fissa non predefinita. La configurazione di una porta fissa è di solito più facile nell'istanza autonoma. Configurare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] in modo che vengano usate porte diverse per evitare un conflitto di indirizzo IP o di porta TCP non previsto che blocca l'avvio di un'istanza quando si verifica un errore dell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nodo di standby.
+Quando si esegue un'installazione side-by-side di un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un'istanza autonoma del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], prestare attenzione per evitare conflitti del numero di porta TCP negli indirizzi IP. Di solito i conflitti si verificano quando due istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sono entrambe configurate per utilizzare la porta TCP predefinita (1433). Per evitare conflitti, configurare un'istanza in modo che venga utilizzata una porta fissa non predefinita. La configurazione di una porta fissa è di solito più facile nell'istanza autonoma. Configurare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] in modo che vengano utilizzate porte diverse per evitare un conflitto di indirizzo IP o di porta TCP non previsto che blocca l'avvio di un'istanza quando si verifica un errore dell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nodo di standby.
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,10 +11,10 @@ ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc966b97231f491a5f3c2cdb71c457f0324a8df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974856"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>Metodo setCharacterStream (SQLServerNClob)
@@ -40,8 +40,8 @@ public java.io.Writer setCharacterStream(long pos)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia java. SQL. NClob.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia java.sql.NClob.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

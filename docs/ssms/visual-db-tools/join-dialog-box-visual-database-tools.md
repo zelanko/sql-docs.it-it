@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Join (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Join
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 484be726624b4f6d1177435e7b68b6afc8eef98e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: cff110d8eccc22ac9c6705420c845713bfffdb74
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224670"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Finestra di dialogo Join (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ Per altre informazioni sull'unione delle tabelle, vedere [Esecuzione di query co
   
 ## <a name="options"></a>Opzioni  
   
-|**Nome**|**Definizione**|  
+|**Termine**|**Definizione**|  
 |------------|------------------|  
 |**Tabella**|I nomi delle tabelle o degli oggetti con valori di tabella coinvolti nel join. Non è possibile modificare i nomi delle tabelle in questa casella. Tali nomi vengono visualizzati solo a scopo informativo.|  
 |**Colonna**|I nomi delle colonne utilizzate per l'unione delle tabelle. L'operatore nell'elenco degli operatori specifica la relazione fra i dati nelle colonne. Non è possibile modificare i nomi delle colonne in questa casella. Tali nomi vengono visualizzati solo a scopo informativo.|  
@@ -46,6 +47,6 @@ Quando si seleziona un'opzione per creare un outer join, l'immagine a rombo nell
 > Le parole "left" e "right" non corrispondono necessariamente alla posizione delle tabelle nel riquadro Diagramma. "Left" fa riferimento alla tabella il cui nome viene visualizzato a sinistra della parola chiave JOIN nell'istruzione SQL, mentre "right" fa riferimento alla tabella il cui nome viene visualizzato a destra della parola chiave JOIN. Lo spostamento delle tabelle nel riquadro **Diagramma** pertanto non incide in alcun modo su quale sia la tabella di sinistra o di destra.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Eseguire query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

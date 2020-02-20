@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0f7dd8b90b59c95121f9924f0fbb077521b0670f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571212"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190785"
 ---
 # <a name="query-design-tools-ssrs"></a>Strumenti di progettazione query (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include svariati strumenti per la progettazione di query che è possibile usare per creare query sui set di dati in Progettazione report. Alcuni strumenti di progettazione query offrono modalità alternative che consentono di scegliere se lavorare in modalità visiva o direttamente nel linguaggio query. In questo argomento si illustrano tutti gli strumenti disponibili e si descrivono i tipi di origine dei dati supportati da ognuno di essi. Vengono quindi descritti gli strumenti seguenti:  
@@ -54,7 +54,7 @@ ms.locfileid: "65571212"
   
 -   **In base alla differenza nel linguaggio di query.** Un linguaggio di query come [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, può presentare differenze nella sintassi a seconda del tipo di origine dati, mentre la sintassi dei linguaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] e Oracle SQL presenta alcune differenze in un comando di query.  
   
--   **In base al supporto per la parte indicante lo schema di un nome di oggetto di database.** Se un'origine dei dati prevede l'utilizzo degli schemi negli identificatori di oggetto di database, è necessario specificare il nome dello schema nella query per gli eventuali nomi che non utilizzano lo schema predefinito. Ad esempio, `SELECT FirstName, LastName FROM [Person].[Person]`.  
+-   **In base al supporto per la parte indicante lo schema di un nome di oggetto di database.** Se un'origine dei dati prevede l'utilizzo degli schemi negli identificatori di oggetto di database, è necessario specificare il nome dello schema nella query per gli eventuali nomi che non utilizzano lo schema predefinito. Ad esempio: `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
 -   **In base al supporto per i parametri di query.** Il supporto dei parametri varia a seconda del provider di dati. Alcuni provider di dati supportano i parametri denominati, ad esempio `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Altri supportano invece i parametri senza nome, ad esempio `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. L'identificatore di parametro può variare a seconda del provider di dati. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene ad esempio usato il simbolo @, mentre in Oracle vengono usati due punti (:). Alcuni provider di dati non supportano parametri.  
   
@@ -77,21 +77,21 @@ ms.locfileid: "65571212"
 ##  <a name="Model"></a> Progettazione query modelli di report  
  Lo strumento Progettazione query modelli di report viene utilizzato per creare o modificare query eseguite su un modello di report SMDL pubblicato in un server di report. I report eseguiti sulla base di modelli supportano l'esplorazione dei dati click-through. La query determina il percorso di questa esplorazione in fase di esecuzione. Nella figura seguente viene illustrato lo strumento Progettazione query modelli di report.  
   
- ![Interfaccia utente della finestra Progettazione query del modello semantico](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Interfaccia utente della finestra Progettazione query del modello semantico")  
+ ![Interfaccia di progettazione query modelli semantici](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Interfaccia di progettazione query modelli semantici")  
   
  Per utilizzare Progettazione query modelli di report, è necessario definire un'origine dei dati che punti a un modello pubblicato. Quando si definisce un set di dati per l'origine dei dati, è possibile aprire la query del set di dati nella finestra Progettazione query modelli di report. La finestra Progettazione query modelli di report può essere utilizzata in modalità grafica o basata su testo. È possibile fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti per passare dalla finestra Progettazione query con interfaccia grafica alla finestra Progettazione query basata su testo e viceversa. Per altre informazioni, vedere [Interfaccia utente della finestra Progettazione query del modello di report](../../reporting-services/report-data/report-model-query-designer-user-interface.md).  
   
 ##  <a name="MDX"></a> Progettazione query MDX  
  La finestra Progettazione query MDX (Multidimensional Expression) consente di creare o modificare query eseguite su un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con cubi multidimensionali. Nella figura seguente viene illustrato lo strumento Progettazione query MDX dopo che la query e il filtro sono stati definiti.  
   
- ![Progettazione query MDX di Analysis Services in visualizzazione Progettazione](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services in visualizzazione Progettazione")  
+ ![Progettazione query MDX di Analysis Services, visualizzazione progettazione](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services, visualizzazione progettazione")  
   
  Per utilizzare questa finestra, è necessario definire un'origine dei dati che contenga un cubo di Analysis Services valido ed elaborato. Quando si definisce un set di dati per l'origine dei dati, è possibile aprire la query nella finestra Progettazione query MDX. Se necessario, utilizzare i pulsanti MDX e DMX sulla barra degli strumenti per passare dalla modalità MDX a DMX e viceversa. Per altre informazioni, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
   
 ##  <a name="DMX"></a> Progettazione query DMX  
  La finestra Progettazione query DMX (Data Mining Prediction Expression) consente di creare o modificare query in esecuzione su un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con modelli di data mining. Nella figura seguente viene illustrato lo strumento Progettazione query DMX dopo che il modello e le tabelle di input sono state selezionate.  
   
- ![Progettazione query DMX di Analysis Services in visualizzazione Progettazione](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Progettazione query DMX di Analysis Services in visualizzazione Progettazione")  
+ ![Progettazione query DMX di Analysis Services, visualizzazione progettazione](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Progettazione query DMX di Analysis Services, visualizzazione progettazione")  
   
  Per utilizzare la Progettazione query DMX, è necessario definire un'origine dei dati che includa un modello di data mining valido e disponibile. Quando si definisce un set di dati per l'origine dei dati, è possibile aprire la query nella finestra Progettazione query DMX. Se necessario, utilizzare i pulsanti MDX e DMX sulla barra degli strumenti per passare dalla modalità MDX a DMX e viceversa. Dopo aver selezionato il modello, è possibile creare query di stima di data mining che forniscano dati a un report. Per altre informazioni, vedere [Interfaccia utente di Progettazione query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "65571212"
 ##  <a name="Hyperion"></a> Progettazione query Hyperion Essbase [Reporting Services]  
  Progettazione query [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] consente di recuperare dati da un database e applicazioni di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Nella figura seguente viene illustrato lo strumento Progettazione query [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
- ![Progettazione query per l'origine dati Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Progettazione Query per l'origine dati Hyperion Essbase")  
+ ![Progettazione query per origini dati Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Progettazione query per origini dati Hyperion Essbase")  
   
  Per utilizzarla, è necessario disporre di un'origine dei dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] che disponga di almeno un database.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "65571212"
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Creare un'origine dati incorporata o condivisa &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

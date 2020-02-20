@@ -1,6 +1,6 @@
 ---
 title: Statistiche di riepilogo in RevoScaleR
-description: Esercitazione dettagliata su come calcolare statistiche di riepilogo usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 5: Come calcolare statistiche di riepilogo usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 43745602fc099f1b992eb1d76622ff3d7e6d0916
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727301"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947279"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Elaborare statistiche di riepilogo in R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 5 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Usa le origini dati prestabilite e i contesti di calcolo creati nelle lezioni precedenti per eseguire script R ad alta potenza. In questa lezione si useranno contesti di calcolo di server locali e remoti per le attività seguenti:
+In questa esercitazione vengono usati le origini dati prestabilite e i contesti di calcolo creati nelle esercitazioni precedenti per eseguire script R ad alta potenza. In questa esercitazione si useranno contesti di calcolo di server locali e remoti per le attività seguenti:
 
 > [!div class="checklist"]
 > * Impostare il contesto di calcolo su SQL Server
 > * Ottenere statistiche di riepilogo sui Remote Data Object
 > * Elaborare un riepilogo locale
 
-Se sono state completate le lezioni precedenti, dovrebbero essere disponibili i contesti di elaborazione seguenti: sqlcompute e sqlComputeTrace. Nelle lezioni seguenti si userà sqlCompute e il contesto di calcolo locale.
+Se sono state completate le esercitazioni precedenti, dovrebbero essere disponibili i contesti di calcolo remoti seguenti: sqlCompute e sqlComputeTrace. Il contesto di calcolo sqlCompute e il contesto di calcolo locale verranno usati nelle esercitazioni successive.
 
-In questa lezione usare un'IDE R o **Rgui** per eseguire lo script R.
+In questa esercitazione usare un'IDE R o **Rgui** per eseguire lo script R.
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>Calcolare statistiche di riepilogo sui dati remoti
 
@@ -38,9 +38,9 @@ Prima di eseguire qualsiasi codice R in remoto, è necessario specificare il con
 
 Un contesto di calcolo resta attivo fino a quando non lo si modifica. Tuttavia, qualsiasi script R *non* eseguibile in un contesto server remoto verrà automaticamente eseguito in locale.
 
-Per vedere come funziona un contesto di calcolo, generare statistiche di riepilogo sull'origine dati sqlFraudDS nell'istanza remota di SQL Server. Questo oggetto origine dati è stato creato nella [lezione due](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) e rappresenta la tabella ccFraudSmall del database RevoDeepDive. 
+Per vedere come funziona un contesto di calcolo, generare statistiche di riepilogo sull'origine dati sqlFraudDS nell'istanza remota di SQL Server. Questo oggetto origine dati è stato creato nell'[esercitazione 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) e rappresenta la tabella ccFraudSmall del database RevoDeepDive. 
 
-1. Impostare il contesto di calcolo sul parametro sqlCompute creato nella lezione precedente:
+1. Impostare il contesto di calcolo sul contesto sqlCompute creato nell'esercitazione precedente:
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -111,7 +111,7 @@ Number of valid observations: 10000
   
    I risultati effettivi devono corrispondere a quelli ottenuti con l'esecuzione di **rxSummary** nel contesto del computer con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'operazione potrebbe tuttavia essere più veloce o più lenta a seconda del tipo di connessione al database. Per essere analizzati, i dati vengono infatti trasferiti nel computer locale.
 
-4. Tornare al contesto di calcolo remoto per affrontare le lezioni successive.
+4. Tornare al contesto di calcolo remoto per affrontare le esercitazioni successive.
 
     ```R
     rxSetComputeContext(sqlCompute)

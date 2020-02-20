@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e377fc94559600a98ee2cd03daadd59a5f3c2eb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
-ms.translationtype: MTE75
+ms.openlocfilehash: 31e191772d7c58d5dc1573f941d6744ffa08aefe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500082"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190673"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo di connessione SAP NetWeaver BI (SSRS)
   Per includere dati da un'origine dati esterna SAP NetWeaver® Business Intelligence nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Questo tipo di origine dati incorporata si basa sull'estensione per i dati per il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 per [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "66500082"
 DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altri esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenziali  
@@ -37,7 +37,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oppure [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -81,15 +81,15 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
 |**Proprietà**|**Tipo**|**Descrizione o valore previsto**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Oggetto**|Specifica il valore dei dati del campo.|  
+|**Valore**|**Object**|Specifica il valore dei dati del campo.|  
 |**IsMissing**|**Boolean**|Indica se il campo è stato trovato nel set di dati risultante.|  
-|**FormattedValue**|**String**|Restituisce un valore formattato per una cifra chiave.|  
-|**BackgroundColor**|**String**|Restituisce il colore di sfondo definito nel database per il campo.|  
-|**Colore**|**String**|Restituisce il colore di primo piano definito nel database per l'elemento.|  
-|**Key**|**Oggetto**|Restituisce la chiave per un livello.|  
+|**FormattedValue**|**Stringa**|Restituisce un valore formattato per una cifra chiave.|  
+|**BackgroundColor**|**Stringa**|Restituisce il colore di sfondo definito nel database per il campo.|  
+|**Color**|**Stringa**|Restituisce il colore di primo piano definito nel database per l'elemento.|  
+|**Chiave**|**Object**|Restituisce la chiave per un livello.|  
 |**LevelNumber**|**Integer**|Per gerarchie padre-figlio, questa proprietà restituisce il numero del livello o della dimensione.|  
-|**ParentUniqueName**|**String**|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  
-|**UniqueName**|**String**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** di un dipendente potrebbe essere *[0D_Azienda]. [ 10D_Reparto]. [11]* .|  
+|**ParentUniqueName**|**Stringa**|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  
+|**UniqueName**|**Stringa**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** di un dipendente potrebbe essere *[0D_Azienda]. [ 10D_Reparto]. [11]* .|  
   
  Per altre informazioni sull'utilizzo di campi e proprietà di campo in un'espressione, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -116,7 +116,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

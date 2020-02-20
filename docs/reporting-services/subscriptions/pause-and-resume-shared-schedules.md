@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578172"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -37,7 +37,7 @@ ms.locfileid: "65578172"
 -   [Sospendere e riprendere le pianificazioni condivise (modalità SharePoint)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> Sospendere e riprendere le pianificazioni condivise (modalità nativa)  
- Per sospendere e riprendere una pianificazione condivisa, utilizzare la pagina Pianificazioni in Gestione report. Non è possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]poiché non dispone delle opzioni di sospensione e ripresa delle pianificazioni. Per altre informazioni, vedere [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
+ Per sospendere e riprendere una pianificazione condivisa, utilizzare la pagina Pianificazioni in Gestione report. Non è possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] perché non ha le opzioni di sospensione e ripresa delle pianificazioni. Per altre informazioni, vedere [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Per sospendere o riprendere una pianificazione condivisa  
   

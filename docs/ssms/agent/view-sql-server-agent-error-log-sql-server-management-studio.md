@@ -1,10 +1,7 @@
 ---
-title: Visualizzare il log degli errori di SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Visualizzare il log degli errori di SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08ddb38c46c565e45f4112718d5c7ca48d340aa4
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9166b647ec2921efb460add27ae75a00ea6cb4eb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552104"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257548"
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log"></a>Visualizzare il log degli errori di SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,9 +41,9 @@ Nel Visualizzatore file di log sono visualizzate informazioni sui log relativi a
 ### <a name="Restrictions"></a>Limitazioni e restrizioni  
 In Esplora oggetti viene visualizzato il nodo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent solo se si dispone dell'autorizzazione per utilizzarlo.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Per la corretta esecuzione delle funzioni, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia configurato per utilizzare le credenziali di un account membro del ruolo predefinito del server **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'account deve disporre delle autorizzazioni di Windows seguenti:  
   
 -   Accesso come servizio (SeServiceLogonRight)  
@@ -56,7 +58,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Per visualizzare il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-view-the-ssnoversion-agent-error-log"></a>Per visualizzare il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che contiene il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da visualizzare.  
   
@@ -71,19 +73,19 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
     **Carica log**  
     Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
   
-    **Esportazione**  
+    **Export**  
     Consente di aprire una finestra di dialogo in cui è possibile esportare in un file di testo le informazioni visualizzate nella griglia **Riepilogo file di log** .  
   
     **Aggiorna**  
     Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
-    **Filtra**  
+    **Filter**  
     Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
   
-    **Cerca**  
+    **Ricerca**  
     Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
   
-    **Arresta**  
+    **Stop**  
     Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
     **Riepilogo file di log**  
@@ -101,7 +103,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
     **Origine**  
     Consente di visualizzare la funzionalità di origine da cui è stato creato l'evento, ad esempio il nome del servizio, come MSSQLSERVER. Questa opzione non viene visualizzata per tutti i tipi di log.  
   
-    **Message**  
+    **Messaggio**  
     Consente di visualizzare i messaggi associati all'evento.  
   
     **Tipo log**  

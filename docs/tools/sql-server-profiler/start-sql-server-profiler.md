@@ -1,32 +1,28 @@
 ---
-title: Eseguire SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2017
+title: Eseguire SQL Server Profiler
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], starting
-- SQL Server Profiler, starting
-- starting SQL Server Profiler
-- Profiler [SQL Server Profiler], running
-- SQL Server Profiler, running
-- running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 697905061bb60e91884d8844a103ba1302c5c4ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/07/2017
+ms.openlocfilehash: 89089c07a3b13ee7764770df3d582ba449b65f53
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059623"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307789"
 ---
 # <a name="run-sql-server-profiler"></a>Eseguire SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  È possibile eseguire [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in modi diversi per supportare la raccolta dell'output di traccia in svariati scenari. È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dal menu **Start** di Windows 10, dal menu **Strumenti** in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da diversi punti all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+
+È possibile eseguire [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in modi diversi per supportare la raccolta dell'output di traccia in svariati scenari. È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dal menu **Start** di Windows 10, dal menu **Strumenti** in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da diversi punti all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Quando si avvia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la prima volta e si sceglie **Nuova traccia** dal menu **File **, l'applicazione visualizza la finestra di dialogo** Connetti al server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è possibile specificare l'istanza di**  a cui connettersi.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Per avviare SQL Server Profiler dal menu Start di Windows 10  
@@ -38,7 +34,7 @@ Quando si avvia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pe
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Avviare SQL Server Profiler in SQL Server Management Studio  
  È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] da diverse posizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene avviato, carica il contesto di connessione, il modello di traccia e il contesto del filtro del punto di avvio. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Avvia ogni sessione di SQL Server Profiler nella rispettiva istanza e Profiler continua a essere eseguito se si arresta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Per avviare SQL Server Profiler dal menu Strumenti  
--  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Tools** menu, click **SQL Server Profiler**.  
+-  Dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scegliere **SQL Server Profiler**.  
 
 ### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>Per avviare SQL Server Profiler dall'editor di query  
 - In Editor di query fare clic con il pulsante destro del mouse e scegliere **Traccia query in SQL Server Profiler**.  

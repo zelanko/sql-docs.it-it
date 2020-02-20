@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576522"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS)
@@ -99,7 +99,7 @@ ms.locfileid: "65576522"
 ### <a name="groups-and-scope-in-data-regions"></a>Gruppi e ambito in aree dati  
  Per fornire più viste dei dati dallo stesso set di dati, è possibile specificare le stesse espressioni di raggruppamento per ogni area dati. È ad esempio possibile visualizzare dati suddivisi in categorie in una tabella per mostrare tutti i dati di dettaglio sotto forma di grafico a torta, in modo da visualizzare le aggregazioni e ogni categoria in relazione all'intero set di dati. Per altre informazioni, vedere [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
- Quando si nidifica un'area dati in una cella di una tabella, una matrice o un elenco, viene definito automaticamente l'ambito dei dati nelle appartenenze ai gruppi più interni della cella. Si supponga, ad esempio, di aggiungere un grafico a una cella presente sia in un gruppo di righe che in un gruppo di colonne. In fase di esecuzione i dati disponibili per il grafico avranno come ambito l'istanza del gruppo di righe più interno e l'istanza del gruppo di colonne più interno. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Quando si nidifica un'area dati in una cella di una tabella, una matrice o un elenco, viene definito automaticamente l'ambito dei dati nelle appartenenze ai gruppi più interni della cella. Si supponga, ad esempio, di aggiungere un grafico a una cella presente sia in un gruppo di righe che in un gruppo di colonne. In fase di esecuzione i dati disponibili per il grafico avranno come ambito l'istanza del gruppo di righe più interno e l'istanza del gruppo di colonne più interno. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
   
   
 ##  <a name="Sorting"></a> Ordinamento di dati nel report  
@@ -107,7 +107,7 @@ ms.locfileid: "65576522"
   
  Tutti e tre i tipi di ordinamento possono essere combinati nello stesso report. Per impostazione predefinita, l'ordinamento è determinato dall'ordine in cui i dati vengono restituiti dalla query del set di dati. Le espressioni di ordinamento vengono applicate nell'area dati e nel gruppo di aree dati. Gli ordinamenti interattivi vengono applicati dopo le espressioni di ordinamento.  
   
- Per le espressioni contenenti funzioni di aggregazione, la maggior parte dei risultati non è interessata dall'ordinamento. I valori restituiti per le funzioni di aggregazione seguenti sono interessati dall'ordinamento:: First, Last e Previous. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Per le espressioni contenenti funzioni di aggregazione, la maggior parte dei risultati non è interessata dall'ordinamento. I valori restituiti per le funzioni di aggregazione seguenti sono interessati dall'ordinamento: First, Last e Previous. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Ordinamento dei dati di una query del set di dati  
  Includere l'ordinamento nella query del set di dati per eseguire un preordinamento dei dati prima che vengano recuperati per un report. Quando si ordinano i dati nella query, l'operazione di ordinamento viene eseguita dall'origine dati anziché dal componente Elaborazione report.  
@@ -166,7 +166,7 @@ FROM Production.Product
   
   
 ##  <a name="HowTo"></a> Procedure  
- [Mantenere visibili le intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Visualizzazione delle intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
  [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   

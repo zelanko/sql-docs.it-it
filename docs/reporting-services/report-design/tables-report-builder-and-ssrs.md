@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574723"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelle (Generatore report e SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65574723"
    
  È possibile raggruppare i dati per un solo campo, per più campi o scrivendo un'espressione personalizzata. È inoltre possibile creare gruppi nidificati, indipendenti o adiacenti. Per visualizzare valori aggregati per dati raggruppati, aggiungere i totali ai gruppi. Formattare le righe e le colonne in modo da evidenziare i dati sui quali concentrarsi. È possibile nascondere inizialmente i dati di dettaglio o raggruppati e includere elementi Toggle di drill-down per consentire agli utenti di scegliere in modo interattivo la quantità di dati da visualizzare.  
   
- Per una rapida introduzione alle tabelle, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ Per una rapida introduzione alle tabelle, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Creare un report tabella semplice &#40;Esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare tabelle separatamente da un report come parti del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -79,11 +79,11 @@ ms.locfileid: "65574723"
 ### <a name="adding-totals-to-row-groups"></a>Aggiunta dei totali ai gruppi di righe  
  Per visualizzare i totali per un gruppo, è possibile usare il comando sensibile al contesto **Aggiungi totale** . Per un gruppo di righe, il comando Aggiungi totale inserisce una riga all'esterno del gruppo in modo che venga ripetuta una sola volta in relazione al gruppo. Per i gruppi nidificati, la riga del totale relativa al gruppo figlio è esterna a quest'ultimo ma interna al gruppo padre. Per questo motivo può essere utile impostare il colore di sfondo della riga del totale per il gruppo figlio in modo da distinguerla dalle righe di dettaglio. È anche possibile usare un colore di sfondo differente per distinguere le righe di intestazione dalle righe dei piè di pagina della tabella. Nella figura seguente è illustrata la tabella con una riga del totale aggiunta per il gruppo in base ai numeri di ordine.  
   
- ![Visualizzazione Progettazione, aggiunta di righe del totale a un gruppo e una tabella](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Visualizzazione Progettazione, aggiunta di righe del totale a un gruppo e una tabella")  
+ ![Visualizzazione Progettazione, aggiunta delle righe dei totali a un gruppo e a una tabella](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Visualizzazione Progettazione, aggiunta delle righe dei totali a un gruppo e a una tabella")  
   
  Quando si visualizza il report, la riga in cui sono riportati i subtotali degli ordini viene ripetuta una volta per ogni numero di ordine. Nel piè di pagina della tabella sono riportati i totali per tutte le date. Nelle ultime righe della figura seguente sono illustrate le ultime tre righe di dettaglio, il subtotale per l'ultimo ordine numero SO71952 e i totali per tutte le date riportate nella tabella.  
   
- ![Anteprima, tabella con totali per il gruppo, ultime righe](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Anteprima, tabella con totali per il gruppo, ultime righe")  
+ ![Anteprima, tabella con totali dei gruppi, ultime righe](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Anteprima, tabella con totali dei gruppi, ultime righe")  
   
  Per altre informazioni, vedere [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   

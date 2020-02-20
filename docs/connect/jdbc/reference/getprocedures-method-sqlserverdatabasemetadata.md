@@ -16,10 +16,10 @@ ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980747"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Metodo getProcedures (SQLServerDatabaseMetaData)
@@ -55,20 +55,20 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getProcedures viene specificato dal metodo getProcedures nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getProcedures viene specificato dal metodo getProcedures nell'interfaccia java.sql.DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getProcedures conterrà le informazioni seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**String**|Nome del database in cui si trova la stored procedure specificata.|  
-|PROCEDURE_SCHEM|**String**|Schema per la stored procedure.|  
-|PROCEDURE_NAME|**String**|Nome della stored procedure.|  
+|PROCEDURE_CAT|**Stringa**|Nome del database in cui si trova la stored procedure specificata.|  
+|PROCEDURE_SCHEM|**Stringa**|Schema per la stored procedure.|  
+|PROCEDURE_NAME|**Stringa**|Nome della stored procedure.|  
 |NUM_INPUT_PARAMS|**int**|Riservato per utilizzi futuri, attualmente restituisce un valore pari a -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Riservato per utilizzi futuri, attualmente restituisce un valore pari a -1.|  
 |NUM_RESULT_SETS|**int**|Riservato per utilizzi futuri, attualmente restituisce un valore pari a -1.|  
-|REMARKS|**String**|Descrizione della colonna della procedura.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non restituisce un valore per questa colonna.|  
+|REMARKS|**Stringa**|Descrizione della colonna della procedura.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non restituisce un valore per questa colonna.|  
 |PROCEDURE_TYPE|**smallint**|Tipo di stored procedure. Può essere uno dei valori seguenti:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  

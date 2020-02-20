@@ -1,39 +1,33 @@
 ---
-title: Visualizzare e analizzare le tracce con SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Visualizzare e analizzare le tracce
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], viewing traces
-- SQL Server Profiler, viewing traces
-- traces [SQL Server], viewing
-- SQL Server Profiler, troubleshooting
-- troubleshooting [SQL Server], traces
-- events [SQL Server], finding inside trace
-- Profiler [SQL Server Profiler], troubleshooting
-- traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02c30e9b80611753db7194b4114b967f4a286c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059638"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307785"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Visualizzare e analizzare le tracce con SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per visualizzare i dati eventi acquisiti in una traccia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di visualizzare i dati in base alle proprietà definite della traccia. Per analizzare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile copiarli in un altro programma, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Se la colonna di dati **Text** è inclusa nella traccia, in Ottimizzazione guidata è possibile usare un file di traccia contenente eventi correlati a batch SQL e RPC (Remote Procedure Call). Per assicurarsi di acquisire gli eventi e le colonne corretti da utilizzare con Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilizzare il modello di ottimizzazione predefinito disponibile in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per visualizzare i dati eventi acquisiti in una traccia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di visualizzare i dati in base alle proprietà definite della traccia. Per analizzare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile copiarli in un altro programma, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Se la colonna di dati **Text** è inclusa nella traccia, in Ottimizzazione guidata è possibile usare un file di traccia contenente eventi correlati a batch SQL e RPC (Remote Procedure Call). Per assicurarsi di acquisire gli eventi e le colonne corretti da utilizzare con Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilizzare il modello di ottimizzazione predefinito disponibile in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Quando si apre una traccia utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], non è necessario specificare l'estensione di file trc per il file di traccia, se tale file è stato creato da stored procedure sistema di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o di Traccia SQL.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente inoltre di leggere file log di Traccia SQL e file script SQL generici. Per l'apertura di un file log di Traccia SQL senza estensione log, ad esempio trace.txt, specificare **SQLTrace_Log** come formato del file.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è anche in grado di leggere file con estensione log di Traccia SQL e file script SQL generici. Per l'apertura di un file log di Traccia SQL senza estensione log, ad esempio trace.txt, specificare **SQLTrace_Log** come formato del file.  
   
  È possibile configurare il formato di visualizzazione della data e dell'ora di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per semplificare l'analisi delle tracce.  
   
@@ -62,9 +56,9 @@ AND     CPU < (Duration * 1000)
   
 1.  Creare la traccia.  
   
-    -   Nella definizione della traccia includere le colonne di dati **Event Class**, **ClientProcessID** e **Start Time** oltre alle altre colonne di dati che si desidera acquisire. Per altre informazioni, vedere [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md).  
+    -   Nella definizione della traccia includere le colonne di dati **Event Class**, **ClientProcessID**e **Start Time** oltre alle altre colonne di dati che si desidera acquisire. Per altre informazioni, vedere [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md).  
   
-    -   Raggruppare i dati acquisiti in base alla colonna di dati **Event Class** e salvare la traccia in un file o in una tabella. Per raggruppare i dati acquisiti, fare clic su **Organizza colonne** nella scheda **Selezione eventi** della finestra di dialogo Proprietà traccia. Per altre informazioni, vedere [Organizzare le colonne visualizzate in una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md).  
+    -   Raggruppare i dati acquisiti in base alla colonna di dati **Event Class**e salvare la traccia in un file o in una tabella. Per raggruppare i dati acquisiti, fare clic su **Organizza colonne** nella scheda **Selezione eventi** della finestra di dialogo Proprietà traccia. Per altre informazioni, vedere [Organizzare le colonne visualizzate in una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md).  
   
     -   Avviare la traccia e quindi arrestarla quando è trascorso l'intervallo di tempo appropriato o dopo l'acquisizione di un determinato numero di eventi.  
   

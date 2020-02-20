@@ -16,10 +16,10 @@ ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e86c1964a4ece26115116b8e21c763caaab797b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572222"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>Metodo di ConfigurationSetting - DeleteEncryptedInformation
@@ -45,7 +45,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando viene richiamato questo metodo, i seguenti dati vengono eliminati:  
   
 -   Informazioni sulle origini dati crittografate, tra cui nome utente e password.  

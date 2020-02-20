@@ -1,7 +1,6 @@
 ---
-title: Opzione replay (strumento di amministrazione Riesecuzione distribuita) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Opzione replay nello strumento di amministrazione
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,20 +9,24 @@ ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75fb9df87b432dc4b1357901e740ed83d628509e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: b1db107bc9d426036f5831ad8f49f5fc5f7edddc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949961"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306990"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opzione replay (strumento di amministrazione Distributed Replay)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Lo strumento di amministrazione Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **DReplay.exe**, è uno strumento da riga di comando che consente di comunicare con il controller di Riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **replay** e la sintassi corrispondente.  
+
+Lo strumento di amministrazione Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **DReplay.exe**, è uno strumento da riga di comando che consente di comunicare con il controller di Riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **replay** e la sintassi corrispondente.  
   
  L'opzione **replay** avvia la fase di riproduzione dell'evento, in cui il controller recapita i dati di riproduzione ai client specificati, avvia la riesecuzione distribuita e sincronizza i client. Ogni client che partecipa alla riproduzione può eventualmente registrare l'attività di riproduzione e salvare in locale un file di traccia dei risultati.  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento")Per altre informazioni sulle convenzioni relative alla sintassi dello strumento di amministrazione, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") Per altre informazioni sulle convenzioni relative alla sintassi dello strumento di amministrazione, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +38,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>Parametri  
- **Controller** _-m_  
+ **-m** _controller_  
  Specifica il nome computer del controller. È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.  
   
  Se il parametro **-m** non è specificato, viene usato il computer locale.  
@@ -78,7 +81,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Il parametro **-c** non è obbligatorio se si vuole usare i valori predefiniti del file di configurazione della riproduzione `DReplay.exe.replay.config`.  
   
- _intervallo_stato_ **-f**  
+ **-f** _status_interval_  
  Specifica la frequenza in secondi in base alla quale visualizzare lo stato.  
   
  Se **-f** non è specificato, l'intervallo predefinito è 30 secondi.  
@@ -90,7 +93,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Il parametro **-d** specifica il percorso del file intermedio nel controller, `c:\WorkingDir`.  
   
--   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile utilizzare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
+-   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile usare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
   
 -   Il parametro **-w** specifica che i computer compresi tra `client1` e `client4` partecipano come client alla riesecuzione distribuita.  
   
@@ -157,9 +160,9 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
 ## <a name="see-also"></a>Vedere anche  
  [Riproduzione di dati di traccia](../../tools/distributed-replay/replay-trace-data.md)   
- [Controllo dei risultati della riproduzione](../../tools/distributed-replay/review-the-replay-results.md)   
+ [Esaminare i risultati di riproduzione](../../tools/distributed-replay/review-the-replay-results.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
+ [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)   
  [Forum di SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Using Distributed Replay to Load Test Your SQL Server - Part 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  
  [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  

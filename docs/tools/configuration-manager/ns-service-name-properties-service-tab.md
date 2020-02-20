@@ -1,6 +1,6 @@
 ---
-title: Proprietà NS&lt;$ nome&gt; servizio (scheda servizio) | Microsoft Docs
-ms.custom: ''
+title: Proprietà NS$&lt;nome servizio&gt; (scheda Servizio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85cc46ae4f3d75493edc59f0376de625cebf4fdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 80f6d926dbe1380bf0f44b8b841d79b2bd66afc7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306390"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Proprietà NS$&lt;nome servizio&gt; (scheda Servizio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
+  Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]. I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  

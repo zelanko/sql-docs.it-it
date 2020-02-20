@@ -11,10 +11,10 @@ ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979322"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>Metodo getSubString (SQLServerNClob)
@@ -45,7 +45,7 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getSubString viene specificato dal metodo getSubString nell'interfaccia java.sql.NClob.  
   
  Se si tenta di ottenere zero caratteri da un oggetto NCLOB Null o di lunghezza zero, viene restituita una stringa vuota. Se si tenta di ottenere un numero qualsiasi di caratteri in qualsiasi posizione diversa dalla posizione 1 in un oggetto NCLOB di lunghezza zero, verrà generata un'eccezione di posizione.  

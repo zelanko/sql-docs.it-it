@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati permanente | Microsoft Docs
+title: Oggetti di origine dati persistenti | Microsoft Docs
 description: Oggetti origine dati persistenti
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015946"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
@@ -27,7 +27,7 @@ ms.locfileid: "68015946"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il driver OLE DB per SQL Server supporta gli oggetti origine dati salvati in permanenza con l'interfaccia **IPersistFile** .  
+  OLE DB Driver per SQL Server supporta gli oggetti di origine dati persistenti con l'interfaccia **IPersistFile**.  
   
 ## <a name="examples"></a>Esempi  
  **A. Rendere persistente l'inizializzazione dell'origine dati:**  
@@ -232,6 +232,6 @@ HRESULT InitFromPersistedDS
  Il metodo **IPersistFile::Save** può essere chiamato prima o dopo la chiamata al metodo **IDBInitialize::Initialize**. Se si chiama il metodo al termine del completamento di **IDBInitialize::Initialize** viene resa persistente una specifica di origine dati valida.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti &#40;origine dati OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Oggetti di origine dati &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

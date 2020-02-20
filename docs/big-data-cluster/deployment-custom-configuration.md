@@ -9,18 +9,22 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532035"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558316"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per risorse e servizi cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Partendo da un set predefinito di profili di configurazione integrati nello strumento di gestione `azdata`, è possibile modificare facilmente le impostazioni predefinite per soddisfare al meglio i requisiti del carico di lavoro del cluster Big Data. La struttura dei file di configurazione permette di aggiornare in modo granulare le impostazioni per ogni servizio della risorsa.
+
+Guardare questo video di 13 minuti per una panoramica della configurazione di cluster Big Data:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
 > Per informazioni dettagliate su come distribuire servizi a disponibilità elevata, fare riferimento agli articoli su come configurare la **disponibilità elevata** per componenti cruciali come l'[istanza master di SQL Server](deployment-high-availability.md) o il nodo [NameNode di HDFS](deployment-high-availability-hdfs-spark.md).
@@ -448,12 +452,12 @@ Aggiornare quindi i file di configurazione della distribuzione del cluster in mo
 
 ```bash
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
-azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.nodeLabel=bdc-shared"
 
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
-azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
 
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"

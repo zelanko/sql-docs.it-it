@@ -1,6 +1,6 @@
 ---
-title: Proprietà-protocolli client (scheda ordine) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - Protocolli client (scheda Ordine)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbf7795da30f2a274201ce51e9774390b7611b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 59ffc1332b52d95221541a45ba90fe3e22a89caa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010247"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306525"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Proprietà - Protocolli client (scheda Ordine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,17 +26,17 @@ ms.locfileid: "68010247"
   
  Fare clic su un protocollo e quindi su **Abilita** o **Disabilita** per spostare il protocollo selezionato nell'elenco **Protocolli disabilitati** o **Protocolli abilitati** .  
   
- I protocolli vengono utilizzati nell'ordine dell'elenco, ovvero viene effettuato un tentativo di connessione con il primo protocollo, quindi con il secondo e così via. Per spostare un protocollo verso l'alto o verso il basso nell'elenco **Protocolli abilitati**, fare clic sui pulsanti freccia. Se ci si connette a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un client installato nello stesso computer, verrà sempre eseguito un primo tentativo di connessione con il protocollo di **memoria condivisa**, se abilitato.  
+ I protocolli vengono utilizzati nell'ordine dell'elenco, ovvero viene effettuato un tentativo di connessione con il primo protocollo, quindi con il secondo e così via. Per spostare un protocollo verso l'alto o verso il basso nell'elenco **Protocolli abilitati**, fare clic sui pulsanti freccia. Se ci si connette a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un client installato nello stesso computer, verrà sempre eseguito un primo tentativo di connessione con il protocollo **Shared Memory**, se abilitato.  
   
 > [!NOTE]  
 >  Queste impostazioni non vengono usate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient. L'ordine dei protocolli per .NET SqlClient è TCP, quindi named pipe e non può essere modificato.  
   
 ## <a name="options"></a>Opzioni  
  **Protocolli disabilitati**  
- Elenca i protocolli installati ma non attualmente in uso.  
+ Include un elenco dei protocolli installati ma non in uso.  
   
  **Protocolli abilitati**  
- Elenca i protocolli disponibili per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i client in questo computer.  
+ Include un elenco dei protocolli disponibili per i client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer corrente.  
   
  **>**  
  Abilita il protocollo selezionato nella casella **Protocolli disabilitati** , spostandolo nella casella **Protocolli abilitati** .  

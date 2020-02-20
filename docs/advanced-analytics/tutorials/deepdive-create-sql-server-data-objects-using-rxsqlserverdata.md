@@ -1,6 +1,6 @@
 ---
 title: Creare oggetti RxSqlServerData
-description: Esercitazione dettagliata su come creare oggetti dati usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 2: Come creare oggetti dati usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb6c88c5ce53a072d8cd9611d80cbe621c0fa485
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7869fc3fc67cb24542223c2300cd7b6ebcf1eb41
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727253"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922568"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Creare oggetti dati di SQL Server usando RxSqlServerData (esercitazione di SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 2 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-La seconda lezione è una continuazione della lezione sulla creazione del database: aggiunta di tabelle e caricamento dei dati. Se un amministratore di database ha creato il database e l'accesso alla [lezione uno](deepdive-work-with-sql-server-data-using-r.md), è possibile aggiungere tabelle usando un IDE R come RStudio o uno strumento integrato come **Rgui**.
+Questa esercitazione è una continuazione di quella sulla creazione del database: aggiunta di tabelle e caricamento dei dati. Se un amministratore di database ha creato il database e l'account di accesso nell'[esercitazione 2](deepdive-work-with-sql-server-data-using-r.md), è possibile aggiungere tabelle usando un IDE R come RStudio o uno strumento integrato come **Rgui**.
 
 Da R, connettersi a SQL Server e usare le funzioni di **RevoScaleR** per eseguire le attività seguenti:
 

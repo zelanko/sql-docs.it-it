@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989245"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Uso di ADO con il driver OLE DB per SQL Server
@@ -29,12 +29,12 @@ ms.locfileid: "67989245"
 
   Per sfruttare le nuove caratteristiche introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], come MARS (Multiple Active Result Set), notifiche delle query, tipi definiti dall'utente (UDT) o il nuovo tipo di dati **xml**, è necessario che nelle applicazioni esistenti che usano ADO (ActiveX Data Objects) come provider di accesso ai dati venga usato il driver OLE DB per SQL Server.  
   
- Per consentire l'uso in ADO delle nuove funzionalità delle ultime versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], al driver OLE DB per SQL Server sono stati apportati alcuni miglioramenti che estendono le funzionalità principali di OLE DB. Questi miglioramenti consentono l'uso nelle applicazioni ADO delle più recenti funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e di due tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** e **udt**. Consentono inoltre di sfruttare i miglioramenti ai tipi di dati **varchar**, **nvarchar** e **varbinary**. Nel driver OLE DB per SQL Server viene aggiunta la proprietà di inizializzazione SSPROP_INIT_DATATYPECOMPATIBILITY al set di proprietà DBPROPSET_SQLSERVERDBINIT per consentirne l'uso nelle applicazioni ADO, in modo che i nuovi tipi di dati siano esposti in modo compatibile con ADO. Inoltre, il driver OLE DB per SQL Server definisce anche una nuova parola chiave della stringa di connessione denominata **DataTypeCompatibility** impostata nella stringa di connessione.  
+ Per consentire l'uso in ADO delle nuove funzionalità delle ultime versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], al driver OLE DB per SQL Server sono stati apportati alcuni miglioramenti che estendono le funzionalità principali di OLE DB. Questi miglioramenti consentono l'uso nelle applicazioni ADO delle più recenti funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e di due tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** e **udt**. Consentono inoltre di sfruttare i miglioramenti ai tipi di dati **varchar**, **nvarchar** e **varbinary**. Nel driver OLE DB per SQL Server viene aggiunta la proprietà di inizializzazione SSPROP_INIT_DATATYPECOMPATIBILITY al set di proprietà DBPROPSET_SQLSERVERDBINIT per consentirne l'uso nelle applicazioni ADO, in modo che i nuovi tipi di dati siano esposti in modo compatibile con ADO. OLE DB Driver per SQL Server definisce anche una nuova parola chiave della stringa di connessione, denominata **DataTypeCompatibility**, impostata nella stringa di connessione.  
 
 > [!NOTE]  
->  Le applicazioni ADO esistenti possono accedere a valori XML, UDT, nonché di campi binari e di testo valore di grandi dimensioni ed eseguirne l'aggiornamento utilizzando il provider SQLOLEDB. I nuovi tipi di dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** di grandi dimensioni vengono restituiti rispettivamente come i tipi ADO **adLongVarChar**, **adLongVarWChar** e **adLongVarBinary**. Le colonne XML vengono restituite come **adLongVarChar**, mentre le colonne con tipo definito dall'utente vengono restituite come **adVarBinary**. Tuttavia, se si usa il driver OLE DB per SQL Server (MSOLEDBSQL) anziché SQLOLEDB, è necessario assicurarsi di impostare la parola chiave **DataTypeCompatibility** su "80" in modo che i nuovi tipi di dati vengano mappati correttamente ai tipi di dati ADO.  
+>  Le applicazioni ADO esistenti possono accedere a valori XML, UDT, nonché di campi binari e di testo valore di grandi dimensioni ed eseguirne l'aggiornamento utilizzando il provider SQLOLEDB. I nuovi tipi di dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** di grandi dimensioni vengono restituiti rispettivamente come i tipi ADO **adLongVarChar**, **adLongVarWChar** e **adLongVarBinary**. Le colonne XML vengono restituite come **adLongVarChar**, mentre le colonne con tipo definito dall'utente vengono restituite come **adVarBinary**. Se tuttavia, si usa OLE DB Driver per SQL Server (MSOLEDBSQL) invece di SQLOLEDB, è necessario assicurarsi di impostare la parola chiave **DataTypeCompatibility** su "80" in modo da consentire la corretta esecuzione del mapping dei nuovi tipi di dati ai tipi di dati ADO.  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Abilitazione di OLE DB driver per SQL Server da ADO  
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Abilitazione di OLE DB Driver per SQL Server da ADO  
  Per abilitare l'uso del driver OLE DB per SQL Server, è necessario che nelle stringhe di connessione delle applicazioni ADO vengano implementate le parole chiave seguenti:  
 
 -   `Provider=MSOLEDBSQL`  
@@ -58,10 +58,10 @@ con.Open
 ```  
 
 ## <a name="examples"></a>Esempi  
- Nelle sezioni seguenti vengono forniti esempi di come è possibile utilizzare ADO con il driver OLE DB per SQL Server.  
+ Le sezioni seguenti forniscono esempi di come è possibile usare ADO con OLE DB Driver per SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Recupero dei dati delle colonne XML  
- In questo esempio viene usato un recordset per recuperare e visualizzare i dati da una colonna XML nel database di esempio **AdventureWorks** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ In questo esempio viene usato un recordset per recuperare e visualizzare i dati da una colonna XML nel database di esempio **AdventureWorks** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ```  
 Dim con As New ADODB.Connection  

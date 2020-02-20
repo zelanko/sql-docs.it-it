@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 64a4a7b539f3c8bc6170eb9f1bdb1e6af35b4285
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 9895582db682497dd272010466d05f0bebd93b1a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251125"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190909"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Compilare una query in Progettazione query relazionale (Generatore report e SSRS)
 
@@ -23,7 +23,7 @@ Una finestra Progettazione query consente di specificare i dati da recuperare da
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Un set di dati è basato su un'origine dati. Il tipo di origine dati e l'ambiente di creazione determinano la finestra Progettazione query da visualizzare quando si definisce la query del set di dati. Le funzionalità di Progettazione query variano in base all'origine dati sottostante. Per altre informazioni sui livelli di dati, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
+ Un set di dati è basato su un'origine dati. Il tipo di origine dati e l'ambiente di creazione determinano la finestra Progettazione query da visualizzare quando si definisce la query del set di dati. Le funzionalità di Progettazione query variano in base all'origine dati sottostante. Per altre informazioni sui livelli dei dati, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
 
  È possibile utilizzare una finestra Progettazione query per le attività seguenti:  
   

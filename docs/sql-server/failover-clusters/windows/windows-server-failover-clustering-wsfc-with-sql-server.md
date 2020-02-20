@@ -1,6 +1,7 @@
 ---
-title: Windows Server Failover Clustering con SQL Server | Microsoft Docs
-ms.custom: ''
+title: Windows Server Failover Cluster con SQL Server
+description: Informazioni sull'uso del servizio Windows Server Failover Cluster con SQL Server e le istanze del cluster di failover.
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b602c83e87c10a1f7ceca9bd874adbfd441370b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff0be356ef5567bb2ef8dbb0c9e14e63c8a9e2fa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904916"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242866"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server Failover Clustering con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "67904916"
 ##  <a name="TermsAndDefs"></a> Termini e definizioni  
  Windows Server Failover Clustering (WSFC)  Un cluster di failover WSFC è un gruppo di server indipendenti usati congiuntamente per aumentare la disponibilità di applicazioni e servizi.  
   
- Node  
+ Nodo  
  Un server che fa parte di un cluster WSFC.
   
  Risorsa cluster  
  Entità fisica o logica che può essere di proprietà di un nodo e che è possibile portare online e offline, spostare tra nodi e gestire come oggetto cluster. Una risorsa cluster può essere solo di proprietà di un nodo singolo in qualsiasi punto nel tempo.  
   
- Role  
+ Ruolo  
  Raccolta di risorse cluster gestita come singolo oggetto cluster per offrire funzionalità specifiche. Per SQL Server, un ruolo sarà un gruppo di disponibilità Always On (AG) o un'istanza di cluster di failover Always On (FCI). Un ruolo contiene tutte le risorse cluster necessarie per un gruppo di disponibilità o un'istanza di cluster di failover. Failover e failback vengono sempre eseguiti in un contesto di ruoli. Per un'istanza FCI, il ruolo conterrà una risorsa indirizzo IP, una risorsa nome di rete e le risorse di SQL Server. Un ruolo AG conterrà la risorsa gruppo di disponibilità e, se un è configurato un listener, un nome rete e una risorsa IP. 
 
  Risorsa nome di rete  
@@ -68,14 +69,14 @@ ms.locfileid: "67904916"
   
 -   **Gestione delle risorse.** I singoli nodi del cluster WSFC possono rendere disponibili risorse fisiche, ad esempio l'archiviazione a collegamento diretto, le interfacce di rete e l'accesso all'archiviazione su dischi condivisi. Le applicazioni ospitate effettuano la registrazione come risorse cluster e possono configurare dipendenze di avvio e integrità su altre risorse.  
   
--   **Monitoraggio dello stato.** Il rilevamento dello stato del nodo primario e tra nodi viene effettuato tramite una combinazione di comunicazioni di rete di tipo heartbeat e di monitoraggio delle risorse. Lo stato complessivo del cluster WSFC è determinato dai voti di un quorum di nodi nel cluster.  
+-   **Il monitoraggio dell'integrità.** Il rilevamento dello stato del nodo primario e tra nodi viene effettuato tramite una combinazione di comunicazioni di rete di tipo heartbeat e di monitoraggio delle risorse. Lo stato complessivo del cluster WSFC è determinato dai voti di un quorum di nodi nel cluster.  
   
 -   **Coordinamento del failover.** Ogni risorsa è configurata per essere ospitata su un nodo primario e può essere trasferita automaticamente o manualmente a uno o più nodi secondari. I criteri di failover basati sull'integrità controllano il trasferimento automatico della proprietà della risorsa tra i nodi. Quando si verifica il failover, viene inviata una notifica ai nodi e alle applicazioni ospitate affinché siano in grado di reagire nel modo appropriato.  
   
  Per altre informazioni, vedere: [Panoramica del clustering di failover: Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> Tecnologie AlwaysOn e WSFC di SQL Server  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* è una nuova soluzione per la disponibilità elevata e il ripristino di emergenza basata su WSFC. Le funzionalità Always On offrono soluzioni integrate e flessibili che aumentano la disponibilità delle applicazioni, garantiscono un migliore rendimento degli investimenti in componenti hardware e semplifica la distribuzione e la gestione della disponibilità elevata.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* è una nuova soluzione per la disponibilità elevata e il ripristino di emergenza basata su WSFC. Le funzionalità Always On offrono soluzioni integrate e flessibili che aumentano la disponibilità delle applicazioni, garantiscono un migliore rendimento degli investimenti in componenti hardware e semplifica la distribuzione e la gestione della disponibilità elevata.  
   
  Per le istanze di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e del cluster di failover AlwaysOn viene utilizzata la tecnologia della piattaforma WSFC che prevede la registrazione dei componenti come risorse cluster WSFC.  Le risorse correlate vengono combinate in un *ruolo*, che può essere reso dipendente dalle altre risorse del cluster WSFC. Il cluster WSFC può quindi rilevare e segnalare la necessità di riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di eseguirne automaticamente il failover a un altro nodo server del cluster WSFC.  
   
@@ -88,11 +89,11 @@ ms.locfileid: "67904916"
   
  In caso di failover, la proprietà delle risorse di un'istanza viene trasferita dal servizio WSFC a un nodo di failover definito. L'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene quindi riavviata sul nodo di failover e i database vengono recuperati nel modo consueto. In un qualsiasi momento specifico, solo un nodo singolo nel cluster può ospitare l'istanza del cluster di failover e le risorse sottostanti.  
   
-> **NOTA:**  un'istanza del cluster di failover AlwaysOn richiede l'archiviazione su disco condiviso simmetrica, ad esempio una rete di archiviazione (SAN, Storage Area Network) o una condivisione file SMB.  I volumi dell'archiviazione su disco condiviso devono essere disponibili a tutti i nodi di failover potenziali nel cluster WSFC.  
+> **NOTA**  un'istanza del cluster di failover AlwaysOn richiede l'archiviazione su disco condiviso simmetrica, ad esempio una rete di archiviazione (SAN, Storage Area Network) o una condivisione file SMB.  I volumi dell'archiviazione su disco condiviso devono essere disponibili a tutti i nodi di failover potenziali nel cluster WSFC.  
   
  Per altre informazioni, vedere: [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
-### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>Disponibilità elevata a livello di database con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
+### <a name="database-level-high-availability-with-sshadr"></a>Disponibilità elevata a livello di database con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  Un *gruppo di disponibilità* Always On è costituito da uno o più database utente il cui failover viene eseguito contemporaneamente. Un gruppo di disponibilità è costituito da una *replica di disponibilità primaria* e da una a quattro repliche secondarie gestite tramite lo spostamento dati basato su log di SQL Server per la protezione dei dati senza la necessità di archiviazione condivisa. Ogni replica è ospitata da un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un nodo diverso del cluster WSFC. Il gruppo di disponibilità e un nome di rete virtuale corrispondente sono registrati come risorse nel cluster WSFC.  
   
  Tramite un *listener del gruppo di disponibilità* sul nodo della replica primaria si risponde alle richieste client in ingresso per connettersi al nome di rete virtuale e, in base agli attributi nella stringa di connessione, si indirizza ogni richiesta all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appropriata.  
@@ -178,7 +179,7 @@ ms.locfileid: "67904916"
 
 -   [Cluster di failover in Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
--   [Visualizzare eventi e registri per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   

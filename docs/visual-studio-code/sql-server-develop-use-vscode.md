@@ -1,6 +1,5 @@
 ---
-title: Usare l'estensione mssql di Visual Studio Code per SQL Server
-titleSuffix: SQL Server
+title: Usare l'estensione mssql di Visual Studio Code
 description: Usare l'estensione mssql per Visual Studio Code per modificare ed eseguire script Transact-SQL per SQL Server in Linux.
 ms.topic: conceptual
 ms.prod: sql
@@ -9,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 91cc06b4d0d2791f91a26ecc1800859713267d9b
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73588985"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558456"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Usare Visual Studio Code per creare ed eseguire script Transact-SQL
 
@@ -88,7 +87,7 @@ Seguire questa procedura per creare un profilo di connessione e connettersi a un
    | **Server name or ADO connection string** (Nome del server o stringa di connessione ADO) | Specificare il nome dell'istanza di SQL Server. Usare *localhost* per connettersi a un'istanza di SQL Server nel computer locale. Per connettersi a un'istanza di SQL Server remota, immettere il nome o l'indirizzo IP dell'istanza di SQL Server di destinazione. Per connettersi a un contenitore di SQL Server, specificare l'indirizzo IP del computer host del contenitore. Se è necessario specificare una porta, usare una virgola per separarla dal nome. Per un server in ascolto sulla porta 1401, ad esempio, immettere `<servername or IP>,1401`.<br/><br/>In alternativa, è possibile immettere qui la stringa di connessione ADO per il database. |
    | **Nome di database** (facoltativo) | Database che si vuole usare. Per connettersi al database predefinito, non specificare un nome di database. |
    | **Tipo di autenticazione** | Scegliere **Integrata** o **Account di accesso SQL**. |
-   | **User name** | Se si è selezionato **Account di accesso SQL**, immettere il nome di un utente con accesso a un database nel server. |
+   | **Nome utente** | Se si è selezionato **Account di accesso SQL**, immettere il nome di un utente con accesso a un database nel server. |
    | **Password** | Immettere la password per l'utente specificato. |
    | **Salva password** | Premere **INVIO** per selezionare **Sì** e salvare la password. Selezionare **No** per fare in modo che la password venga chiesta ogni volta che si usa il profilo di connessione. |
    | **Nome profilo** (facoltativo) | Digitare un nome per il profilo di connessione, ad esempio *localhost profile*. |

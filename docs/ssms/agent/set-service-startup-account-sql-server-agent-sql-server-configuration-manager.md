@@ -1,10 +1,7 @@
 ---
-title: Impostare l'account di avvio del servizio SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Impostare l'account di avvio del servizio
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +11,20 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22dd09dceaf111429ae37be4aa28bc063a87df6c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 536bba3034dc4aa80d0e0588e382aae085941b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552575"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75239209"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -38,9 +40,9 @@ L'account di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 -   In Esplora oggetti viene visualizzato il nodo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent solo se si dispone dell'autorizzazione per utilizzarlo.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Per la corretta esecuzione delle funzioni, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia configurato per utilizzare le credenziali di un account membro del ruolo predefinito del server **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'account deve disporre delle autorizzazioni di Windows seguenti:  
   
 -   Accesso come servizio (SeServiceLogonRight)  

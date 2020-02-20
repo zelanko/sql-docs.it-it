@@ -9,10 +9,10 @@ ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1d0c5a6501caf8d36e75deb1ae0b90d7ff3a7ea0
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037886"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Concetti relativi ai parametri di report (Generatore report e SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "67037886"
  Se si intende creare snapshot, cronologie o sottoscrizioni di report in un report pubblicato, è necessario capire come i parametri del report influiscono sui requisiti di progettazione per il report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti (SSRS) Reporting Services](../reporting-services-concepts-ssrs.md) [set di dati condivisi e incorporati del Report &#40;Report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Concetti relativi a Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

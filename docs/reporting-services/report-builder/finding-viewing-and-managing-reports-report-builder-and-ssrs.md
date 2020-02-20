@@ -1,6 +1,7 @@
 ---
-title: Ricerca, visualizzazione e gestione dei report (Generatore report SSRS) | Microsoft Docs
-ms.date: 05/20/2019
+title: Trovare, visualizzare e gestire i report (Generatore report e SSRS) | Microsoft Docs
+description: In Generatore report e Progettazione report è possibile cercare report impaginati, origini dati condivise, modelli e altri elementi del report correlati.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492862"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258098"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
-  In Generatore report è possibile esplorare le cartelle di un server di report o di un sito di SharePoint per trovare report, origini dati condivise, modelli e altri elementi del report correlati, nonché esplorare il computer per individuare i report locali. Per semplificare la ricerca dei report, in Generatore report viene mantenuto un elenco dei server e dei siti utilizzati recentemente e fornito un accesso diretto alle cartelle Desktop, Documenti e Risorse del computer nel file system del computer.  
+  In Generatore report è possibile esplorare le cartelle di un server di report o di un sito di SharePoint per trovare report impaginati, origini dati condivise, modelli e altri elementi del report correlati, nonché esplorare il computer per trovare i report locali. Per semplificare la ricerca dei report, in Generatore report viene mantenuto un elenco dei server e dei siti utilizzati recentemente e fornito un accesso diretto alle cartelle Desktop, Documenti e Risorse del computer nel file system del computer.  
   
- In Progettazione report è possibile esplorare anche il computer per trovare report locali. Dopo aver distribuito report in un server di report o in un sito di SharePoint, è possibile esplorare il server di report tramite il portale Web o eseguire ricerche nel sito di SharePoint per trovare report. I report e gli elementi correlati rimangono disponibili in locale dopo la distribuzione.  
+ In Progettazione report è possibile esplorare anche il computer per trovare report impaginati locali. Dopo aver distribuito report in un server di report o in un sito di SharePoint, è possibile esplorare il server di report tramite il portale Web o eseguire ricerche nel sito di SharePoint per trovare report. I report e gli elementi correlati rimangono disponibili in locale dopo la distribuzione.  
   
 > [!NOTE]  
 > È possibile utilizzare Generatore report in modalità locale o in connessione a un server di report. Se non si dispone di una connessione attiva a un server di report, vengono applicate determinate limitazioni.  
@@ -115,7 +116,7 @@ Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad es
 ### <a name="managing-items-through-actions"></a>Gestione di elementi tramite azioni  
  Le attività di gestione vengono supportate tramite azioni disponibili in un menu a discesa associato a ogni elemento. A seconda delle autorizzazioni concesse all'utente, per ogni elemento sono disponibili azioni comuni quali**Visualizza proprietà** e **Modifica proprietà** , che sono standard per tutti gli elementi archiviati in una raccolta di SharePoint, oltre ad azioni personalizzate, che forniscono funzionalità di gestione specifiche dell'elemento. Nella figura seguente vengono illustrate le azioni disponibili per una definizione di report. Per una definizione di report sono disponibili azioni personalizzate quali **Gestisci sottoscrizioni** e **Gestisci opzioni elaborazione**.  
   
- ![Comandi di menu per elementi del server di report](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Comandi di menu per elementi del server di report")  
+ ![Comandi di menu per gli elementi del server di report](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Comandi di menu per gli elementi del server di report")  
   
   
 ##  <a name="DeskTop"></a> Visualizzazione di report in un'applicazione desktop  

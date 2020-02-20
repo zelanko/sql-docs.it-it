@@ -1,34 +1,30 @@
 ---
-title: Modelli di SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Modelli
+titleSuffix: SQl Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- default SQL Server Profiler templates
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- predefined templates [SQL Server Profiler]
-- SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d73ecd7342f870e9645c86e714bd0420200b61c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059685"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307848"
 ---
 # <a name="sql-server-profiler-templates"></a>Modelli di SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  È possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per creare modelli per la definizione delle classi di evento e delle colonne di dati da includere nelle tracce. Dopo aver definito e salvato il modello, è possibile eseguire una traccia per la registrazione dei dati relativi a ogni classe di evento selezionata. È possibile utilizzare un modello per più tracce. Il modello non viene eseguito direttamente.  
-  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] offre modelli di tracce predefiniti che consentono di configurare facilmente le classi di eventi che saranno probabilmente necessarie per tracce specifiche. Il modello Standard, ad esempio, consente di creare una traccia generica per la registrazione degli accessi, delle disconnessioni, dei batch completati e delle informazioni per la connessione. È possibile utilizzare questo modello per l'esecuzione di tracce senza modifiche oppure come punto di partenza per modelli aggiuntivi con configurazioni di evento diverse.  
+
+È possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per creare modelli per la definizione delle classi di evento e delle colonne di dati da includere nelle tracce. Dopo aver definito e salvato il modello, è possibile eseguire una traccia per la registrazione dei dati relativi a ogni classe di evento selezionata. È possibile utilizzare un modello per più tracce. Il modello non viene eseguito direttamente.  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] offre modelli di tracce predefiniti che consentono di configurare facilmente le classi di eventi che saranno probabilmente necessarie per tracce specifiche. Il modello Standard, ad esempio, consente di creare una traccia generica per la registrazione degli accessi, delle disconnessioni, dei batch completati e delle informazioni per la connessione. È possibile utilizzare questo modello per l'esecuzione di tracce senza modifiche oppure come punto di partenza per modelli aggiuntivi con configurazioni di evento diverse.  
   
 > [!NOTE]  
 >  Oltre che da modelli predefiniti, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente inoltre di creare le tracce da un modello vuoto, che per impostazione predefinita non include classi di eventi. L'utilizzo di un modello di traccia vuoto può essere utile quando una traccia pianificata non somiglia alle configurazioni di nessuno dei modelli predefiniti.  
@@ -48,22 +44,22 @@ ms.locfileid: "68059685"
 |TSQL_Locks|Acquisisce tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] inviate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dai client insieme a eventi del blocco insoliti. Utilizzabile per risolvere eventi di deadlock, di timeout di blocco e di escalation blocchi.|**Blocked Process Report**<br /><br /> **SP:StmtCompleted**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:StmtCompleted**<br /><br /> **SQL:StmtStarting**<br /><br /> **Deadlock Graph**<br /><br /> **Lock:Cancel**<br /><br /> **Lock:Deadlock**<br /><br /> **Lock:Deadlock Chain**<br /><br /> **Lock:Escalation**<br /><br /> **Lock:Timeout (timeout>0)**|  
 |TSQL_Replay|Acquisisce informazioni dettagliate sulle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] necessarie per l'eventuale riproduzione della traccia. Utilizzabile per eseguire l'ottimizzazione iterativa, ad esempio per test di benchmark.|**CursorClose**<br /><br /> **CursorExecute**<br /><br /> **CursorOpen**<br /><br /> **CursorPrepare**<br /><br /> **CursorUnprepare**<br /><br /> **Audit Login**<br /><br /> **Audit Logout**<br /><br /> **Existing Connection**<br /><br /> **RPC Output Parameter**<br /><br /> **RPC:Completed**<br /><br /> **RPC:Starting**<br /><br /> **Exec Prepared SQL**<br /><br /> **Prepare SQL**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_SPs|Acquisisce informazioni dettagliate relative a tutte le stored procedure in esecuzione. Utilizzabile per analizzare i passaggi dei componenti delle stored procedure. Aggiungere l'evento **SP:Recompile** se si ritiene che le stored procedure vengano ricompilate.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SP:Completed**<br /><br /> **SP:Starting**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:BatchStarting**|  
-|Tuning|Acquisisce informazioni sulle stored procedure e l'esecuzione dei batch [!INCLUDE[tsql](../../includes/tsql-md.md)] . Consente di generare un output di traccia utilizzabile in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] come carico di lavoro per l'ottimizzazione dei database.|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
+|Ottimizzazione|Acquisisce informazioni sulle stored procedure e l'esecuzione dei batch [!INCLUDE[tsql](../../includes/tsql-md.md)] . Consente di generare un output di traccia utilizzabile in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] come carico di lavoro per l'ottimizzazione dei database.|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
   
  Per informazioni sulle classi di evento, vedere [Guida di riferimento alle classi di evento di SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 ## <a name="default-template"></a>Modello predefinito  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] specifica automaticamente il modello **Standard** come modello predefinito applicato a qualsiasi nuova traccia. Tuttavia è possibile modificare il modello predefinito in qualsiasi altro modello, predefinito o definito dall'utente. Per modificare il modello predefinito, selezionare la casella di controllo **Usa come modello predefinito per il tipo di server selezionato** quando si crea o modifica un modello utilizzando la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** .  
   
- Per passare alla finestra di dialogo **Proprietà modello di traccia** scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, choose **Templates**, and then click **New Template** or **Edit Template**.  
+ Per spostarsi alla finestra di dialogo **Proprietà modello di traccia**, scegliere **Modelli** dal menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e quindi fare clic su **Nuovo modello** o su **Modifica modello**.  
   
 > [!NOTE]  
 >  Il modello predefinito è specifico per un determinato tipo di server. La modifica del modello predefinito per un tipo di server non ha effetto sul modello predefinito per gli altri tipi. Per altre informazioni sull'impostazione di un modello predefinito per un server specifico, vedere [Impostare i valori predefiniti per una definizione di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modificare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Modificare modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
- [Importare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
+ [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

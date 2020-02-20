@@ -1,10 +1,7 @@
 ---
-title: Utilità osql | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: Utilità osql
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105753"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307367"
 ---
 # <a name="osql-utility"></a>Utilità osql
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  L'utilità **osql** consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , procedure di sistema e file script. Questa utilità comunica con il server tramite ODBC.  
+
+L'utilità **osql** consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , procedure di sistema e file script. Questa utilità comunica con il server tramite ODBC.  
   
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa nelle versioni future di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarla in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente utilizzano questa funzionalità. In alternativa, usare **sqlcmd** . Per altre informazioni, vedere [sqlcmd Utility](../tools/sqlcmd-utility.md).  
@@ -138,7 +141,7 @@ C:\>osql
  Specifica il carattere di terminazione del comando. Per impostazione predefinita, i comandi vengono terminati e inviati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite l'immissione di GO su una riga a sé stante. Se si reimposta il carattere di terminazione del comando, non utilizzare parole riservate di [!INCLUDE[tsql](../includes/tsql-md.md)] o caratteri con un significato speciale per il sistema operativo, indipendentemente dal fatto che siano preceduti da una barra rovesciata.  
   
  **-q "** _query_ **"**  
- Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Esempio:  
+ Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Ad esempio:  
   
 ```  
 SET table=sys.objects  
@@ -193,7 +196,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  Le opzioni **-n**, **-O** e **-D** non sono più supportate da **osql**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'utilità **osql** viene avviata direttamente dal sistema operativo con le opzioni elencate di seguito per le quali la distinzione tra maiuscole e minuscole è rilevante. Dopo l'avvio, **osql**accetta istruzioni SQL e le invia a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modo interattivo. I risultati vengono formattati e visualizzati sullo schermo (**stdout**). Per uscire da **osql**usare QUIT o EXIT.  
   
  Se all'avvio di **osql**non si specifica un nome utente, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verifica le variabili di ambiente e usa tali valori, ad esempio **osqluser=(** _utente_ **)** o **osqlserver=(** _server_ **)** . Se non sono state impostate variabili di ambiente, viene utilizzato il nome utente della workstation. Se non si specifica un server, viene utilizzato il nome della workstation.  
@@ -270,13 +273,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- È inoltre possibile includere il parametro EXIT in un file batch. Esempio:  
+ È inoltre possibile includere il parametro EXIT in un file batch. Ad esempio:  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -304,7 +307,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR con stato 127.  
   
 > [!NOTE]  
->  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Esempio:  
+>  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Ad esempio:  
   
 ```  
 RAISERROR(50001, 10, 127)  
@@ -338,7 +341,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Commento &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [-- &#40;commento&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   

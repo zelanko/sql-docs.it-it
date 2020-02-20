@@ -11,10 +11,10 @@ ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935794"
 ---
 # <a name="using-directional-parameters"></a>Uso dei parametri direzionali

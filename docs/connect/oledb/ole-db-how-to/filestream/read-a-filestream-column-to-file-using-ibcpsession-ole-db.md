@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015603"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leggere una colonna FILESTREAM in un file utilizzando IBCPSession (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "68015603"
 
   In questo esempio viene letta una colonna FILESTREAM in un file utilizzando l'interfaccia IBCPSession e viene scritto un file di formato.  
   
- Per ulteriori informazioni sulla funzionalità FILESTREAM, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Per altre informazioni sulla funzionalità FileStream, vedere [Supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Esempio  
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  

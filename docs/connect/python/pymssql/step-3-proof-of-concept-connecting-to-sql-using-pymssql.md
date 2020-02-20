@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 27b56a20a0456bef04553c614432bde270d8e98d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c1dfce515eeadbdbaf1fd96e6dcf1a08cd536ab5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200453"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Passaggio 3: Modello di verifica per la connessione a SQL con pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-Questo esempio deve essere considerato solo un modello di prova.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
+Questo esempio deve essere considerato solo un modello di verifica.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
   
-## <a name="step-1--connect"></a>Passaggio 1: connettersi  
+## <a name="step-1--connect"></a>Passaggio 1:  Connessione  
   
-Per la connessione al database SQL viene usata la funzione [pymssql. Connect](https://pymssql.org/en/latest/ref/pymssql.html) .  
+Per connettersi al database SQL viene usata la funzione [pymssql.connect](https://pypi.org/project/pymssql/) .  
   
 ```python
     import pymssql  
@@ -32,9 +32,9 @@ Per la connessione al database SQL viene usata la funzione [pymssql. Connect](ht
 ```  
   
   
-## <a name="step-2--execute-query"></a>Passaggio 2: eseguire la query  
+## <a name="step-2--execute-query"></a>Passaggio 2:  Eseguire la query  
   
-È possibile utilizzare la funzione [Cursor. Execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) per recuperare un set di risultati da una query sul database SQL. Questa funzione accetta essenzialmente qualsiasi query e restituisce un set di risultati su cui è possibile eseguire l'iterazione con l'uso di [Cursor. fetchOne ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Per recuperare un set di risultati di una query sul database SQL è possibile usare la funzione [cursor.execute](https://pypi.org/project/pymssql/) . Questa funzione accetta essenzialmente qualsiasi query e restituisce un set di risultati su cui è possibile eseguire l'iterazione mediante [cursor.fetchone()](https://pypi.org/project/pymssql/).  
   
   
 ```python
@@ -48,9 +48,9 @@ Per la connessione al database SQL viene usata la funzione [pymssql. Connect](ht
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Passaggio 3: inserire una riga  
+## <a name="step-3--insert-a-row"></a>Passaggio 3:  Inserire una riga  
   
-In questo esempio si vedrà come eseguire un'istruzione [Insert](../../../t-sql/statements/insert-transact-sql.md) in modo sicuro, passare i parametri che proteggono l'applicazione da un valore [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+Questo esempio illustra come eseguire un'istruzione [INSERT](../../../t-sql/statements/insert-transact-sql.md) in modo sicuro e come passare i parametri che proteggono l'applicazione da attacchi [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```python
@@ -66,13 +66,13 @@ In questo esempio si vedrà come eseguire un'istruzione [Insert](../../../t-sql/
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Passaggio 4: eseguire il rollback di una transazione  
+## <a name="step-4--rollback-a-transaction"></a>Passaggio 4:  Eseguire il rollback di una transazione  
   
-In questo esempio di codice viene illustrato l'utilizzo delle transazioni in cui è possibile:  
+Questo esempio di codice illustra l'uso di transazioni con le operazioni seguenti:  
   
-* Inizia una transazione  
-* Inserire una riga di dati  
-* Eseguire il rollback della transazione per annullare l'inserimento  
+* Avvio di una transazione  
+* Inserimento di una riga di dati  
+* Rollback della transazione per annullare l'inserimento  
   
 ```python
     import pymssql  
@@ -86,4 +86,4 @@ In questo esempio di codice viene illustrato l'utilizzo delle transazioni in cui
     
   ## <a name="next-steps"></a>Passaggi successivi  
   
-Per ulteriori informazioni, vedere il [centro per sviluppatori Python](https://azure.microsoft.com/develop/python/).
+Per ulteriori informazioni, vedere il [Centro per sviluppatori di Python](https://azure.microsoft.com/develop/python/).

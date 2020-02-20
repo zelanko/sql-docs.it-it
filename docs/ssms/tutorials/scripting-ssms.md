@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creare script per oggetti in SQL Server Management Studio'
+title: Oggetti dello script SSMS
 description: Esercitazione per lo scripting di oggetti in SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, Script, Scripting
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988413"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247302"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Creare script per oggetti in SQL Server Management Studio
 
@@ -115,7 +115,7 @@ Nella sezione seguente viene illustrato come generare uno script per un database
 
 6. Selezionare **Replace All** (Sostituisci tutto) per sostituire tutte le istanze di *AdventureWorks2016* con *AdventureWorks2016a*. 
 
-    ![Trovare e sostituire](media/scripting-ssms/findandreplace.png)
+    ![Ricerca e sostituzione](media/scripting-ssms/findandreplace.png)
 
 7. Selezionare **Esegui** per eseguire la query e creare un nuovo database AdventureWorks2016a. 
 
@@ -135,9 +135,9 @@ Nella sezione seguente viene illustrato come generare uno script per un database
 
 5. Selezionare **Avanti** per aprire la pagina **Imposta opzioni di generazione script**, in cui è possibile configurare la posizione in cui salvare lo script e alcune altre opzioni avanzate. 
 
-    A. Selezionare **Salva in una nuova finestra Query**.
+    a. Selezionare **Salva in una nuova finestra Query**.
 
-    B. Selezionare **Avanzate** e verificare che le opzioni seguenti siano impostate come segue:
+    b. Selezionare **Avanzate** e verificare che le opzioni seguenti siano impostate come segue:
 
       * **Script per statistiche** impostato su *Genera script per statistiche*.
       * **Tipi di dati per cui generare lo script** impostato su *Solo schema*.
@@ -148,7 +148,7 @@ Nella sezione seguente viene illustrato come generare uno script per un database
    > [!NOTE]
    > È possibile creare lo script di dati per il database quando si seleziona *Schema e dati* per l'opzione **Tipi di dati per cui generare lo script**. Non è tuttavia l'ideale con database di grandi dimensioni perché può richiedere più memoria di quanta ne possa essere allocata da SSMS. Questa limitazione è accettabile per i database di piccole dimensioni. Per spostare i dati per un database di dimensioni maggiori, usare l[Importazione/Esportazione guidata](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-6. Selezionare **OK**e quindi selezionare **Avanti**.
+6. Selezionare **OK**, quindi **Avanti**.
 
 7. Selezionare **Avanti** nel **riepilogo**, quindi selezionare nuovamente **Avanti** per generare lo script in una finestra **Nuova query**.
 

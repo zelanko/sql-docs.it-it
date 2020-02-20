@@ -1,22 +1,22 @@
 ---
-title: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
+title: Connettersi a un'istanza di SQL Server ed eseguire query
 description: Esercitazione per la connessione a un'istanza di SQL Server tramite SQL Server Management Studio e l'esecuzione di query T-SQL di base.
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708336"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162650"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
 
@@ -195,11 +195,16 @@ I risultati di una query vengono visualizzati sotto la finestra di testo della q
     > [!NOTE]
     > Questa azione modifica solo il server al quale è connessa la finestra di query e non il server usato da Esplora oggetti.
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+È anche possibile connettersi ed eseguire query di [SQL Server](../../azure-data-studio/quickstart-sql-server.md), di un [database SQL di Azure](../../azure-data-studio/quickstart-sql-database.md) e di [Azure SQL Data Warehouse](../../azure-data-studio/quickstart-sql-dw.md) usando Azure Data Studio.
+
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questi articoli illustrano le varie funzionalità disponibili in SSMS.  Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
+Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questi articoli illustrano le varie funzionalità disponibili in SSMS. Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
 
 * [Scripting](scripting-ssms.md)
 * [Uso di modelli in SSMS](../template/templates-ssms.md)
 * [Configurazione di SSMS](ssms-configuration.md)
 * [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

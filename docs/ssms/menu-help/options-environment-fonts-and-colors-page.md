@@ -1,6 +1,6 @@
 ---
-title: Opzioni (Ambiente - pagina Tipi di carattere e colori) | Microsoft Docs
-ms.custom: ''
+title: Opzioni (Ambiente- pagina Tipi di carattere e colori)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7270a67f9f040f986b58ee0bb9d0d5366fe05169
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265946"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245732"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opzioni (Ambiente- pagina Tipi di carattere e colori)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,15 +27,15 @@ Le modifiche apportate alla combinazione colori non diventano effettive durante 
 **Mostra impostazioni per**  
 Consente di visualizzare l'elenco di tutti gli elementi dell'interfaccia utente per i quali è possibile modificare le combinazioni colori e i tipi di carattere. Dopo aver selezionato un elemento da questo elenco, è possibile personalizzare le impostazioni dei colori per l'elemento selezionato in **Elementi visualizzati**.  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |--------|--------------|  
 |Editor di testo|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere dell'editor di testo influiscono sull'aspetto del testo nell'editor predefinito. I documenti aperti in un editor di testo all'esterno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non verranno influenzati da queste impostazioni.|  
 |Stampante|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore della stampante influiscono sull'aspetto del testo nei documenti stampati.<br /><br />Nota: è possibile selezionare un tipo di carattere predefinito per la stampa diverso da quello usato per la visualizzazione nell'editor di testo. Questa operazione può essere utile quando si esegue la stampa di codice contenente sia caratteri SBCS sia caratteri DBCS.|  
 |[Tutte le finestre degli strumenti di testo **]**|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre degli strumenti contenenti riquadri di output in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio la finestra di output, la finestra Risultati in formato testo e così via.<br /><br />Nota: le modifiche apportate al testo degli elementi di [Tutte le finestre degli strumenti di testo] non diventano effettive durante la sessione in cui vengono eseguite. Per valutare tali modifiche, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Finestra Risultati ricerca|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra Risultati ricerca.|  
-|Finestra Output|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra di output.|  
+|Finestra di output|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra di output.|  
 |Risultati in formato griglia|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nell'area **Risultati in formato griglia** della finestra Query.|  
-|Piano di esecuzione|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo in Piano di esecuzione delle query di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssEW](../../includes/ssew-md.md)] .|  
+|Piano di esecuzione|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo in Piano di esecuzione delle query di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |Risultati in formato testo|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nell'area **Risultati in formato testo** della finestra Query.|  
 |Finestre di progettazione Business Intelligence|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre di Progettazione di Business Intelligence .|  
   
@@ -63,7 +63,7 @@ Alcuni elementi di visualizzazione includono:
 **Primo piano elemento**  
 Visualizza l'elenco dei colori disponibili che è possibile scegliere per il primo piano dell'elemento selezionato in **Elementi visualizzati**. Poiché alcuni elementi sono correlati, deve essere mantenuto uno schema di visualizzazione coerente. La modifica del colore di primo piano del testo, ad esempio, modifica anche il colore di primo piano di elementi come Stringa.  
   
-**Custom**  
+**Impostazione personalizzata**  
 Visualizza la finestra di dialogo **Colore** , in cui è possibile impostare un colore personalizzato per l'elemento selezionato nell'elenco **Elementi visualizzati** .  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ Visualizza la finestra di dialogo **Colore** , in cui è possibile impostare un 
 **Sfondo elemento**  
 Visualizza una tavolozza di colori in cui è possibile scegliere un colore di sfondo per l'elemento selezionato in **Elementi visualizzati**. Poiché alcuni elementi sono correlati, deve essere mantenuto uno schema di visualizzazione coerente. La modifica del colore di sfondo del testo, ad esempio, modifica anche il colore di sfondo degli elementi come Stringa SQL.  
   
-**Custom**  
+**Impostazione personalizzata**  
 Visualizza la finestra di dialogo **Colore** , in cui è possibile impostare un colore personalizzato per l'elemento selezionato nell'elenco **Elementi visualizzati** .  
   
 **Grassetto**  

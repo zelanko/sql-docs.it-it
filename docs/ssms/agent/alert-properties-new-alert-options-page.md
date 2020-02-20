@@ -1,10 +1,9 @@
 ---
-title: Proprietà avviso - Nuovo avviso (pagina Opzioni) | Microsoft Docs
-ms.custom: ''
+title: Proprietà avviso - Nuovo avviso (pagina Opzioni)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f3196b227b630e446e4dfa2565469b9666e71fb
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 89404b754b51edfbe5a1bd36b7f4e5999f50fb39
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383478"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254516"
 ---
 # <a name="alert-properties---new-alert-options-page"></a>Proprietà avviso - Nuovo avviso (pagina Opzioni)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "70383478"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Usare questa pagina per visualizzare e modificare opzioni per gli avvisi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+Usare questa pagina per visualizzare e modificare le opzioni per gli avvisi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
 ## <a name="options"></a>Opzioni  
 **Posta elettronica**  

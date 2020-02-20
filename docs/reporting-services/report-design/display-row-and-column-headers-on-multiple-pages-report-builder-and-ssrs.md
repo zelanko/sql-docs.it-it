@@ -1,18 +1,19 @@
 ---
-title: Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report e SSRS) | Microsoft Docs
+title: Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report) | Microsoft Docs
+description: È possibile specificare se ripetere le intestazioni di riga e di colonna in ogni pagina di report impaginato di Reporting Services per un'area dati Tablix (tabella, matrice o elenco) che si estende su più pagine.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.date: 03/01/2017
-ms.openlocfilehash: 1f1ae9d45e98cc847a89562c93040c4465e51efe
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 12/09/2019
+ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263334"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254587"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report e SSRS)
 
@@ -20,7 +21,7 @@ ms.locfileid: "68263334"
   
  La modalità di controllo di righe e colonne dipende dalla presenza o meno delle intestazioni di gruppo nell'area dati Tablix. Quando si fa clic in un'area dati Tablix che dispone di intestazioni di gruppo, una linea punteggiata indica le aree Tablix, come illustrato nella figura seguente:  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Aree dell'area dati Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Aree dell'area dati Tablix")  
   
  Le intestazioni dei gruppi di righe e di colonne vengono create automaticamente quando si aggiungono gruppi tramite la procedura guidata Nuova tabella o matrice o Nuovo grafico, aggiungendo campi al riquadro Raggruppamento o tramite i menu di scelta rapida. Se nell'area dati Tablix è presente solo un'area del corpo della Tablix ma non sono disponibili intestazioni di gruppo, le righe e le colonne sono membri Tablix.  
   

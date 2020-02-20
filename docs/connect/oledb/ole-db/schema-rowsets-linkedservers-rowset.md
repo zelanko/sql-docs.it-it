@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993889"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Set di righe dello schema - Set di righe LINKEDSERVERS

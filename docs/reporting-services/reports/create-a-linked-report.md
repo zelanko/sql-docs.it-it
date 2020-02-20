@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492820"
 ---
 # <a name="create-a-linked-report"></a>Creare un report collegato
@@ -28,17 +28,17 @@ ms.locfileid: "67492820"
   
 ## <a name="to-create-a-linked-report"></a>Per creare un report collegato  
   
-1. Nel portale web, passare al report desiderato, fare doppio clic su di esso e selezionare **Gestisci** dal menu a discesa.
+1. Nel portale Web passare al report desiderato, fare clic con il pulsante destro del mouse su di esso e scegliere **Gestisci** dal menu a discesa.
 
-2. Nel **Manage <reportname>**  pagina, selezionare **Crea report collegato**.  
+2. Nella pagina **Gestisci <reportname>** selezionare **Crea report collegato**.  
   
 3. Immettere un nome per il nuovo report collegato. Immettere facoltativamente una descrizione.  
   
-4. Per selezionare una cartella diversa per il report, selezionare il pulsante con puntini di sospensione (...) a destra della ***posizione***.  Passare alla nuova cartella per il report, quindi scegliere **seleziona**. Se non si seleziona una cartella diversa, il report collegato viene creato nella cartella corrente.  
+4. Per selezionare una cartella diversa per il report, selezionare pulsante con i puntini di sospensione (...) a destra di ***Percorso***.  Passare alla nuova cartella per il report e selezionare **Seleziona**. Se non è stata selezionata una cartella diversa, il report collegato viene creato nella cartella corrente.  
   
-5. Selezionare **Crea**. Il report collegato viene creato.  
+5. Selezionare **Create** (Crea). Verrà creato il report collegato.  
 
-6. Sotto **avanzate**, selezionare una diversa **timeout Report** valore se si desidera, quindi selezionare **Apply** per salvare le modifiche.
+6. In **Avanzate** selezionare un valore **Timeout report** diverso, se desiderato, e selezionare **Applica** per salvare le modifiche.
   
      L'icona di un report collegato è diversa da quella di altri elementi gestiti da un server di report. L'icona seguente indica un report collegato:  
   

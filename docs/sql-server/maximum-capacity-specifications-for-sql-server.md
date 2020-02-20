@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008443"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
@@ -40,12 +40,12 @@ ms.locfileid: "72008443"
   
  [Oggetti di replica di SQL Server](#Replication)  
   
-##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] Oggetti  
+##  Oggetti <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)]  
  La tabella seguente indica le dimensioni e i numeri massimi dei diversi oggetti definiti nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a cui si fa riferimento nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] oggetto||Quantità/dimensioni massime [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bit)|Informazioni aggiuntive|  
+|Oggetto [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Quantità/dimensioni massime [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bit)|Informazioni aggiuntive|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
-|Dimensioni batch||65.536 * dimensioni del pacchetto di rete|Dimensioni pacchetto di rete corrisponde alle dimensioni dei pacchetti del flusso TDS (Tabular Data Stream) usati per le comunicazioni tra applicazioni e [!INCLUDE[ssDE](../includes/ssde-md.md)]relazionale. La dimensione predefinita del pacchetto è 4 KB e viene controllata dall'opzione di configurazione delle dimensioni del pacchetto di rete.|  
+|Dimensioni dei batch||65.536 * dimensioni del pacchetto di rete|Dimensioni pacchetto di rete corrisponde alle dimensioni dei pacchetti del flusso TDS (Tabular Data Stream) usati per le comunicazioni tra applicazioni e [!INCLUDE[ssDE](../includes/ssde-md.md)]relazionale. La dimensione predefinita del pacchetto è 4 KB e viene controllata dall'opzione di configurazione delle dimensioni del pacchetto di rete.|  
 |Byte per ogni colonna di stringhe brevi||8\.000||  
 |Byte per ogni clausola GROUP BY, ORDER BY||8\.060||  
 |Byte per ogni chiave di indice||900 byte per un indice cluster. 1700 per un indice non cluster.|Il numero massimo di byte in una chiave di indice cluster non può essere maggiore di 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per una chiave di indice non cluster, il valore massimo è 1700 byte.<br /><br /> È possibile definire una chiave usando colonne a lunghezza variabile le cui dimensioni massime superano il limite. Tuttavia, le dimensioni combinate dei dati di tali colonne non possono mai superare il limite.<br /><br /> In un indice non cluster, è possibile includere colonne non chiave aggiuntive che non vengono incluse nel conteggio per il limite di dimensioni della chiave. Le colonne non chiave potrebbero migliorare le prestazioni di alcune query.|  
@@ -68,7 +68,7 @@ ms.locfileid: "72008443"
 |Colonne per ogni istruzione `UPDATE`||4\.096|Ai [set di colonne di tipo sparse](../relational-databases/tables/use-column-sets.md) vengono applicati limiti diversi.|  
 |Colonne per ogni vista||1\.024||  
 |Connessioni per ogni client||Valore massimo delle connessioni configurate||  
-|Dimensioni di database||524.272 terabytes||  
+|Dimensioni del database||524.272 terabytes||  
 |Database per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
 |Filegroup per ogni database||32.767||  
 |Filegroup per ogni database per dati ottimizzati per la memoria||1||  
@@ -103,7 +103,7 @@ ms.locfileid: "72008443"
 |Connessioni utente||32.767||  
 |Indici XML||249||  
   
-##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Oggetti Utilità  
+##  Oggetti Utilità <a name="Utility"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Dimensioni e numeri massimi dei vari oggetti testati nell'Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Oggetto Utilità||Quantità/dimensioni massime [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bit)|  
@@ -120,7 +120,7 @@ ms.locfileid: "72008443"
   
  *Il numero massimo di istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportate da Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può variare in base alla configurazione hardware del server. Per informazioni introduttive, vedere [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è disponibile in tutte le edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
-##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Oggetti applicazione livello dati (DAC)  
+##  Oggetti applicazione livello dati <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Dimensioni e numeri massimi di oggetti diversi testati nelle applicazioni livello dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Oggetto applicazione livello dati||Quantità/dimensioni massime [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bit)|  

@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61263520f5d519c2b908c753b72c1d5ec7f67e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580136"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Visualizzazione delle intestazioni durante lo scorrimento di un report (Generatore report e SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65580136"
   
 3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   
-     ![Proprietà membri Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Proprietà membri Tablix")  
+     ![Proprietà Membro Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Proprietà Membro Tablix")  
   
 4.  Nel riquadro Proprietà impostare **FixedData** su **True**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65580136"
   
 ## <a name="see-also"></a>Vedere anche  
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Visualizzare le intestazioni di riga e colonna in più pagine &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   

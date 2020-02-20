@@ -1,5 +1,5 @@
 ---
-title: Suggerimenti e consigli per l'uso di SQL Server Management Studio (SSMS)
+title: Suggerimenti e consigli per l'uso di SSMS
 description: Scoprire come aggiungere e rimuovere un commento nel codice, impostare un rientro per il testo, filtrare gli oggetti in Esplora oggetti, accedere ai log degli errori di SQL Server e trovare il nome dell'istanza di SQL Server usando SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: d5b52a35bce720e3985a8191335491c50e43c50e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267576"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245513"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Suggerimenti e consigli per l'uso di SQL Server Management Studio (SSMS)
 
@@ -146,7 +146,7 @@ Nei database con molti oggetti è possibile usare i filtri per cercare tabelle o
 
 3. Fare clic con il pulsante destro del mouse su **Tabelle** e quindi selezionare **Filtro** > **Impostazioni filtro**:
 
-    ![Impostazioni filtro](media/ssms-tricks/filtersettings.png)
+    ![Impostazioni dei filtri](media/ssms-tricks/filtersettings.png)
 
 4. Nella finestra **Impostazioni filtro** è possibile modificare alcune delle impostazioni di filtro seguenti:
     * Filtra per nome: 

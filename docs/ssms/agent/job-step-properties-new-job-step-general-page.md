@@ -1,10 +1,7 @@
 ---
-title: Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Proprietà del nuovo passaggio di processo (pagina Generale)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,26 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 173f317ba66a9b05bfa6d99bf28f60ecf518ae19
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7c8c707e8a1916041b32a2509e54d6150ea8df9a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267569"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242216"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per definirne uno nuovo.  
+Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o per definirne uno nuovo.  
   
 Per passare a questa pagina, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, fare clic con il pulsante destro del mouse su **Processi**, scegliere **Nuovo processo**, selezionare la pagina **Passaggi** e scegliere **Nuovo**. È anche possibile passare a questa pagina facendo clic con il pulsante destro del mouse su un processo in Esplora oggetti, scegliendo **Proprietà**, selezionando la pagina **Passaggi** e scegliendo **Nuovo**, **Inserisci**o **Modifica**.  
   
@@ -43,11 +45,11 @@ Consente di impostare l'account proxy per il passaggio del processo. I membri de
 **Database**  
 Imposta il database in cui viene eseguito il passaggio di processo. Questa opzione non è disponibile per tutti i tipi di passaggio di processo.  
   
-**Command**  
+**Comando**  
 Consente di impostare il comando eseguito dal passaggio del processo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opzioni per i passaggi del processo Transact-SQL  
-**Aprire**  
+**Apri**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -73,10 +75,10 @@ Consente di specificare [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visu
 **JScript**  
 Consente di specificare JScript come linguaggio per i passaggi del processo.  
   
-**Altro**  
+**Altri**  
 Consente di digitare il nome del linguaggio per i passaggi del processo scritti in un altro linguaggio di scripting.  
   
-**Aprire**  
+**Apri**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -92,7 +94,7 @@ Consente di incollare il contenuto degli Appunti.
 **Elabora codice di uscita di un comando eseguito correttamente**  
 Consente di digitare il codice di uscita restituito dal comando per indicare il corretto completamento.  
   
-**Aprire**  
+**Apri**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -105,7 +107,7 @@ Consente di copiare il testo selezionato.
 Consente di incollare il contenuto degli Appunti.  
   
 ## <a name="options-for-powershell-job-steps"></a>Opzioni per i passaggi di processo di PowerShell  
-**Aprire**  
+**Apri**  
 Consente di caricare lo script da un file.  
   
 **Seleziona tutto**  
@@ -174,7 +176,7 @@ Consente di incollare il contenuto degli Appunti.
 **Server**  
 Consente di selezionare il server in cui viene eseguito il passaggio del processo.  
   
-**Apertura**  
+**Apri**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -193,7 +195,7 @@ Consente di selezionare il server in cui viene eseguito il passaggio del process
 **Database**  
 Database da utilizzare per il passaggio del processo.  
   
-**Aprire**  
+**Apri**  
 Consente di caricare il comando da un file.  
   
 **Seleziona tutto**  
@@ -243,7 +245,7 @@ Consente di specificare le opzioni di configurazione per il pacchetto [!INCLUDE[
 **File di configurazione**  
 Consente di elencare i file di configurazione per il pacchetto.  
   
-**Aggiungi**  
+**Aggiungere**  
 Consente di aggiungere un file di configurazione per il pacchetto.  
   
 **Rimuovi**  
@@ -261,7 +263,7 @@ Consente di selezionare i file di comando per il pacchetto. I file di comando ve
 **File di comando**  
 Consente di elencare i file di comando per il pacchetto.  
   
-**Aggiungi**  
+**Aggiungere**  
 Consente di aggiungere un file di comando.  
   
 **Rimuovi**  
@@ -330,7 +332,7 @@ Consente di visualizzare o modificare i valori delle proprietà per il pacchetto
 **Percorso proprietà**  
 Consente di visualizzare o modificare il percorso per la proprietà.  
   
-**Value**  
+**Valore**  
 Consente di visualizzare o modificare il valore della proprietà.  
   
 **Rimuovi**  
@@ -345,7 +347,7 @@ Consente di eseguire solo i pacchetti firmati. Se questa opzione è selezionata,
 **Verifica build pacchetto**  
 Consente di eseguire solo i pacchetti con un numero di build specifico. Se questa opzione è selezionata, il passaggio del processo viene interrotto se il pacchetto non dispone del numero di build specifico.  
   
-**Compilazione**  
+**Build**  
 Consente di digitare il numero di build del pacchetto.  
   
 **Verifica ID pacchetto**  

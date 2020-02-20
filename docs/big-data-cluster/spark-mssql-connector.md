@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844223"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831179"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL
 
@@ -78,10 +78,10 @@ Il connettore usa le API di scrittura bulk di SQL Server. I parametri di scrittu
 
 Per illustrare l'uso del connettore Spark MSSQL con questi dati, è possibile scaricare un notebook di esempio, aprirlo in Azure Data Studio ed eseguire ogni blocco di codice. Per altre informazioni sull'uso dei notebook, vedere [Come usare i notebook in SQL Server](notebooks-guidance.md).
 
-1. Da una riga di comando di PowerShell o della shell Bash, eseguire il comando seguente per scaricare il notebook di esempio **mssql_spark_connector.ipynb**:
+1. Da una riga di comando di PowerShell o dalla shell Bash, eseguire il comando seguente per scaricare il notebook di esempio **mssql_spark_connector_non_ad_pyspark.ipynb**:
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
    ```
 
 1. In Azure Data Studio aprire il file del notebook di esempio. Verificare che sia connesso al gateway HDFS/Spark per il cluster Big Data.

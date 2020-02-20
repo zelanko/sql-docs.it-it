@@ -1,6 +1,7 @@
 ---
-title: Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server | Microsoft Docs
-ms.custom: ''
+title: Utilizzo del controllo locale e raccolta di dati di diagnostica
+description: Informazioni sul controllo locale usato da SQL Server per raccogliere e inviare dati di utilizzo e di diagnostica a Microsoft.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984772"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558052"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server (Analisi utilizzo software)
 
@@ -30,7 +31,7 @@ Microsoft SQL Server include funzionalità che supportano Internet e sono in gra
 
 In SQL Server 2016 CU2 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server e Analysis Services (SSAS). In SQL Server 2016 CU4 e SQL Server 2016 SP1 il controllo locale è abilitato anche per SQL Server Integration Services (SSIS). Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati di diagnostica e utilizzo non è disponibile.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
  - La rimozione o la disabilitazione del servizio Analisi utilizzo software di SQL non è supportata. 
  - La rimozione di risorse di Analisi utilizzo software di SQL dal gruppo di cluster non è supportata. 
@@ -77,7 +78,7 @@ Creare una nuova cartella (directory del controllo locale) in cui scrivere i log
   >[!NOTE] 
   >Configurare il percorso di directory per il controllo locale all'esterno del percorso di installazione di SQL Server, per evitare che la funzionalità di controllo e l'applicazione di patch possano causare problemi a SQL Server.
 
-  ||Decisione di progettazione|Consiglio|  
+  ||Decisione di progettazione|Recommendation|  
   |------|-----------------|----------|  
   |![Casella di controllo](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Pianificare la disponibilità di spazio |Per un carico di lavoro moderato con circa 10 database, prevedere circa 2 MB di spazio su disco per ogni database e ogni istanza.|  
 |![Casella di controllo](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Definire directory separate | Creare una directory per ogni istanza. Ad esempio, usare *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* per un'istanza di SQL Server denominata `MSSQLSERVER`. Ciò semplifica la gestione dei file.
@@ -111,19 +112,22 @@ Creare una nuova cartella (directory del controllo locale) in cui scrivere i log
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Nome-istanza*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Nome-istanza*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Nome-istanza*\\CPE |
    | &nbsp; | &nbsp; |
 
    | Versione | ***Analysis Services*** - Chiave del Registro di sistema |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Nome-istanza*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Nome-istanza*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Nome-istanza*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Versione | ***Integration Services*** - Chiave del Registro di sistema |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Versione | ***Integration Services*** - Chiave del Registro di sistema |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. Fare clic con il pulsante destro del mouse sul percorso di CPE e scegliere **Nuovo**. Selezionare **Valore stringa**.
 
@@ -156,6 +160,7 @@ Analisi utilizzo software di SQL Server dovrebbe riconoscere immediatamente l'im
     - Per Integration Services, 
         - Per SQL 2016 usare *Servizio Analisi utilizzo software di SQL Server Integration Services 13.0*.
         - Per SQL 2017 usare *Servizio Analisi utilizzo software di SQL Server Integration Services 14.0*.
+    - Per SQL 2019 usare *Servizio Analisi utilizzo software di SQL Server Integration Services 15.0*.
 
 1. Fare clic con il pulsante destro del mouse sul servizio e scegliere Riavvia. 
 
@@ -188,15 +193,15 @@ La funzionalità di controllo locale genererà un file di log al giorno. Ai file
 | Intestazione | emitTime, schemaVersion 
 | Computer | operatingSystem 
 | Istanza | instanceUniqueID, correlationID, clientVersion 
-| Sessione | sessionID, traceName 
+| sessione | sessionID, traceName 
 | Query | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  data 
+| Data |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definizione di coppie nome/valore ed esempi 
 
 Le colonne elencate di seguito rappresentano l'ordinamento dell'output dei file del controllo locale. Per rendere anonimi i valori per alcune delle colonne seguenti viene usato un hash unidirezionale con SHA 256.  
 
-| nome | Descrizione | Valori di esempio
+| Nome | Descrizione | Valori di esempio
 |-------|--------| ----------|
 |instanceUniqueID| Identificatore dell'istanza reso anonimo | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| Versione dello schema di SQLCEIP |  3 
@@ -210,7 +215,7 @@ Le colonne elencate di seguito rappresentano l'ordinamento dell'output dei file 
 |traceName | Categorie di tracce: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Identificatore della query | SQLServerProperties.002 
 |data   | Output delle informazioni raccolte su queryIdentifier come output della query T-SQL, della sessione XE o dell'applicazione |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Query| Se applicabile, definizione di query T-SQL correlata all'elemento queryIdentifier che genera i dati.        Questo componente non viene caricato dal servizio Analisi utilizzo software di SQL Server. È incluso nel controllo locale solo come riferimento per i clienti.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|query| Se applicabile, definizione di query T-SQL correlata all'elemento queryIdentifier che genera i dati.        Questo componente non viene caricato dal servizio Analisi utilizzo software di SQL Server. È incluso nel controllo locale solo come riferimento per i clienti.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | Tempo impiegato per l'esecuzione della query con la categoria di traccia seguente: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Categorie di traccia 

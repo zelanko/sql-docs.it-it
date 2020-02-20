@@ -1,6 +1,6 @@
 ---
 title: Aggiungere elementi del report impaginato ai dashboard di Power BI - Reporting Services | Microsoft Docs
-ms.date: 12/05/2018
+ms.date: 01/14/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891995"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75952477"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Aggiungere elementi del report impaginato di Reporting Services ai dashboard in Power BI
 
@@ -56,7 +56,7 @@ ms.locfileid: "68891995"
   
 ##  <a name="bkmk_to_pin"></a> Per aggiungere un elemento del report  
   
-1. Verificare di aver eseguito l'accesso a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).
+1. Verificare di aver eseguito l'accesso a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] selezionare la voce di menu **Impostazioni personali** ed eseguire l'accesso. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -96,38 +96,40 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
   
 ##  <a name="bkmk-troubleshoot"></a> Risolvere eventuali problemi  
   
--   **Nessun pulsante di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] nella barra degli strumenti di Visualizzatore report**: questo indica che il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Nessun pulsante di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] nella barra degli strumenti del Visualizzatore report:**  questo messaggio indica che il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **Impossibile eseguire l'aggiunta**: quando si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. Vedere la sezione [Elementi che è possibile aggiungere](#bkmk_supported_items).  
+- **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente: Vedere la sezione [Elementi che è possibile aggiungere](#bkmk_supported_items).  
   
-      Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    "Impossibile eseguire l'aggiunta: in questa pagina non sono presenti elementi del report da poter aggiungere a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]".  
   
 -   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato aggiornato per un periodo di tempo.  Il token delle credenziali utente è scaduto ed è necessario eseguire nuovamente l'accesso.  La registrazione delle credenziali utente con Azure e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] è valida per 90 giorni. Nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] fare clic su **Impostazioni personali**. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
 -   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato mai aggiornato.  Il problema è che il report non è configurato per usare le credenziali archiviate. Un report deve usare le credenziali archiviate perché l'azione di aggiunta di un elemento del report crea una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire la pianificazione dell'aggiornamento dei riquadri. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] richiedono credenziali archiviate. Se si esamina la pagina **Sottoscrizioni personali**, viene visualizzato un messaggio di errore simile al seguente:  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    "Errore di recapito di Power BI: dashboard: Elementi SSRS, oggetto visivo: Image3, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente non sono archiviate nel database del server di report oppure l'origine dati utente è configurata per non richiedere credenziali, ma l'account di esecuzione automatica non è specificato. (rsInvalidDataSourceCredentialSetting)"
   
 -   **Credenziali di Power BI scadute:**  se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. In [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali** e, nella pagina Impostazioni personali, fare clic su **Accedi**. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
-        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    "Impossibile eseguire l'aggiunta: Errore server imprevisto: Le credenziali di Power BI mancano, non sono valide o sono scadute".  
   
--   **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento a un dashboard in uno stato di sola lettura, verrà visualizzato un messaggio di errore simile a questo:  
+-   **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento a un dashboard in uno stato di sola lettura, verrà visualizzato un messaggio di errore simile al seguente:  
   
-        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
+    "Errore del server: impossibile trovare l'elemento "Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0". (rsItemNotFound)"  
+
+-   **I riquadri nelle app Power BI mostrano dati non aggiornati:** Se si aggiunge un elemento del report di Reporting Services a un dashboard e quindi si distribuisce il dashboard in un'app, l'elemento del report aggiunto in tale dashboard non verrà aggiornato. 
+
 ##  <a name="bkmk_subscription_management"></a> Gestione delle sottoscrizioni  
  Oltre ai problemi relativi alle sottoscrizioni descritti nella sezione sulla risoluzione dei problemi, le informazioni seguenti aiuteranno a mantenere le sottoscrizioni relative a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
 -   **Nome dell'elemento modificato:** se un elemento del report aggiunto viene rinominato o eliminato, il riquadro di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] non verrà più aggiornato e verrà visualizzato un messaggio di errore simile al seguente.  Se si ripristina il nome originale dell'elemento, la sottoscrizione inizierà a funzionare di nuovo e il riquadro verrà aggiornato nella pianificazione delle sottoscrizioni.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    "Errore di recapito di Power BI: dashboard: Elementi SSRS, oggetto visivo: Image1, errore: Errore: impossibile trovare l'elemento del report "Image1"".  
   
-     È inoltre possibile modificare le proprietà della sottoscrizione e cambiare il **nome dell'elemento visivo del report** con il nome dell'elemento del report appropriato. ![modificare la visualizzazione usata per l'aggiornamento di Power BI](../reporting-services/media/ssrs-powerbi-subscription-visual.png "modificare la visualizzazione usata per l'aggiornamento di Power BI")  
+    È inoltre possibile modificare le proprietà della sottoscrizione e cambiare il **nome dell'elemento visivo del report** con il nome dell'elemento del report appropriato. ![modificare l'oggetto visivo usato per l'aggiornamento di Power BI](../reporting-services/media/ssrs-powerbi-subscription-visual.png "modificare l'oggetto visivo usato per l'aggiornamento di Power BI")  
   
--   **Eliminare un riquadro**. Se si elimina un riquadro in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], la sottoscrizione associata non viene eliminata in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e nella pagina **Sottoscrizioni personali**viene visualizzato un errore simile al seguente. È possibile eliminare la sottoscrizione.  
+-   **Eliminare un riquadro**. Se si elimina un riquadro in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], la sottoscrizione associata non viene eliminata in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e nella pagina **Sottoscrizioni personali** viene visualizzato un errore simile al seguente. È possibile eliminare la sottoscrizione.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    "Errore di recapito di Power BI: dashboard: Elementi SSRS, oggetto visivo: Image3, errore: Impossibile trovare l'elemento "Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f"".  
 
 ## <a name="video"></a>Video
 

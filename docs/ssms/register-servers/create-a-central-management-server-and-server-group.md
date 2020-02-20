@@ -1,10 +1,7 @@
 ---
-title: Creare un server di gestione centrale e un gruppo di server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Creare un server di gestione centrale
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +9,22 @@ helpviewer_keywords:
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3247e98b4ae2894d80e42bfd824aea44eb0127f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 67bc366117bd7dfd172a34458b05c94a8410965e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267790"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258927"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Creare un server di gestione centrale e un gruppo di server
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come server di gestione centrale in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nei server di gestione centrale è archiviato un elenco di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] organizzato in uno o più gruppi di server di gestione centrale. Le azioni effettuate utilizzando un gruppo di server di gestione centrale hanno effetto su tutti i server inclusi nel gruppo. Tali azioni includono la connessione ai server tramite Esplora oggetti e l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e criteri della gestione basata su criteri in più server contemporaneamente.  
+
+In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come server di gestione centrale in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nei server di gestione centrale è archiviato un elenco di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] organizzato in uno o più gruppi di server di gestione centrale. Le azioni effettuate utilizzando un gruppo di server di gestione centrale hanno effetto su tutti i server inclusi nel gruppo. Tali azioni includono la connessione ai server tramite Esplora oggetti e l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e criteri della gestione basata su criteri in più server contemporaneamente.  
   
 > [!NOTE]  
 >  Le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non possono essere definite come server di gestione centrale.  
@@ -30,7 +33,7 @@ ms.locfileid: "68267790"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un server di gestione centrale e un gruppo di server utilizzando:**  
   

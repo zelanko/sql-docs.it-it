@@ -1,10 +1,9 @@
 ---
-title: Annullare le modifiche apportate alle query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Annullare le modifiche apportate alle query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5db1e50e23772219bd7cd822d8e04615b13a29
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1739a1a7d3fa42ccd0df4ba80bf6961b4e58ca08
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263765"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254643"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Annullamento di modifiche apportate alle query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,8 +38,8 @@ ms.locfileid: "68263765"
     La definizione della query verrà riportata allo stato in cui era al momento dell'ultimo salvataggio.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Salvataggio di query (Visual Database Tools)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Procedure per la progettazione di query e viste (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Eseguire operazioni di base con le query (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Salvare le query](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Procedure per la progettazione di query e viste](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Eseguire operazioni di base con le query](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Utilizzare i dati nel riquadro Risultati](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

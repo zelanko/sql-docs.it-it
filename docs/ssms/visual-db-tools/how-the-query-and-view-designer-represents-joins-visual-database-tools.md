@@ -1,10 +1,9 @@
 ---
-title: Rappresentazione di join in Progettazione query e Progettazione viste | Microsoft Docs
-ms.custom: ''
+title: Rappresentazione di join in Progettazione query e Progettazione visualizzazioni
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,21 +13,23 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6318dfe2cc886e3ea2ea10d089023325ff074c95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7e0d4b8ff645ad918cea32cbbed3eade62017254
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254437"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255873"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Se due o più tabelle sono unite tramite join, in [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) il join verrà rappresentato in forma grafica all'interno del [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) e mediante la sintassi SQL all'interno del [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="diagram-pane"></a>riquadro Diagramma  
+## <a name="diagram-pane"></a>Riquadro Diagramma  
 Nel riquadro Diagramma verrà visualizzata una linea di join fra le colonne di dati coinvolte nel join. In Progettazione query e Progettazione viste verrà visualizzata una linea di join per ogni condizione di join. La seguente figura mostra, ad esempio, una linea di join fra due tabelle unite in join:  
   
-![Linea di join che mostra la relazione tra due tabelle](../../ssms/visual-db-tools/media/dv3wbig.gif "Linea di join che mostra la relazione tra due tabelle")  
+![Linea di join che illustra la relazione tra le due tabelle](../../ssms/visual-db-tools/media/dv3wbig.gif "Linea di join che illustra la relazione tra le due tabelle")  
   
 Se le tabelle sono unite da più condizioni di join, verranno visualizzate più linee di join, come nel seguente esempio:  
   

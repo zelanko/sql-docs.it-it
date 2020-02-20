@@ -14,10 +14,10 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67688519"
 ---
 # <a name="report-builder-in-sql-server"></a>Generatore report in SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "67688519"
   
 -   **Avviare la procedura guidata di tabella, matrice o grafico**. Scegliere una connessione all'origine dati, trascinare campi per creare una query del set dei dati, selezionare un layout e uno stile e personalizzare il report.  
   
--   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati di una mappa possono essere dati spaziali di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] o di un file di forma ESRI (Environmental Systems Research Institute, Inc.) . È inoltre possibile aggiungere un sfondo a tessera mappa di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing.  
+-   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati di una mappa possono essere dati spaziali di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] o di un file di forma ESRI (Environmental Systems Research Institute, Inc.). È inoltre possibile aggiungere un sfondo a tessera mappa di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing.  
   
 -   **Iniziare il report con le parti del report**. Le parti di report sono elementi di report che sono stati pubblicati separatamente in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint e possono essere riusati in altri report. È possibile pubblicare elementi di report quali tabelle, matrici, grafici e immagini come parti di report.  
   

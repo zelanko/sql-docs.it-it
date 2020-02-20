@@ -1,6 +1,6 @@
 ---
 title: Modelli di soluzioni di data science
-description: Questo articolo descrive i modelli che illustrano le procedure consigliate e possono essere usati per implementare rapidamente una soluzione. Ogni modello è progettato per risolvere un determinato problema, per un settore specifico o verticale.
+description: Questo articolo descrive i modelli specifici del settore che illustrano le procedure consigliate e rendono disponibili gli elementi fondamentali per agevolare l'implementazione di una soluzione di Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727275"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947280"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di data science e modelli di soluzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-I modelli sono soluzioni di esempio che illustrano le procedure consigliate e possono essere usati per implementare rapidamente una soluzione. Ogni modello è progettato per risolvere un determinato problema, per un settore specifico o verticale. Le attività incluse in ogni modello vanno dalla preparazione dei dati alla progettazione della funzionalità fino al training e alla valutazione del modello. Usare questi modelli per informazioni sul funzionamento di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. I modelli possono essere personalizzati in base allo scenario in uso per creare una soluzione personalizzata. 
+Questo articolo descrive una serie di modelli di soluzioni di Machine Learning di SQL Server. Questi modelli illustrano le procedure consigliate e rendono disponibili gli elementi fondamentali che consentono di implementare rapidamente una soluzione di Machine Learning. Ogni modello è progettato per risolvere un determinato problema di data science, per un settore specifico o verticale.
+Le attività incluse in ogni modello vanno dalla preparazione dei dati alla progettazione della funzionalità fino al training e alla valutazione del modello. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Usare questi modelli per informazioni sul funzionamento di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. I modelli possono essere personalizzati in base allo scenario in uso per creare una soluzione personalizzata.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Usare questi modelli per informazioni sul funzionamento di Machine Learning Services per SQL Server. I modelli possono essere personalizzati in base allo scenario in uso per creare una soluzione personalizzata.
+::: moniker-end
 
 Ogni soluzione include dati di esempio, codice R o codice Python e stored procedure SQL, se applicabili. Il codice può essere eseguito nell'ambiente di sviluppo R o Python preferito, con calcoli eseguiti in SQL Server. In alcuni casi è possibile eseguire il codice direttamente usando T-SQL e uno strumento client SQL qualsiasi, come SQL Server Management Studio.
 
@@ -29,7 +38,7 @@ Ogni soluzione include dati di esempio, codice R o codice Python e stored proced
 
 + Per istruzioni sul download e la configurazione, vedere [Come usare i modelli](#bkmk_HowTo).
 
-## <a name="fraud-detection"></a>Rilevamento di frodi
+## <a name="fraud-detection"></a>Rilevamento delle frodi
 
 [Modello per il rilevamento di frodi online (R Services per SQL Server)](https://github.com/Microsoft/r-server-fraud-detection)
 

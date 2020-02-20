@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 599059c2820bd55132ed98525a60fa9ba6baeec7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594027"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190483"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -48,7 +48,7 @@ ms.locfileid: "73594027"
   
  Credenziali archiviate e credenziali fornite dall'utente non sono supportate. Se la sicurezza integrata di Windows è disabilitata, non è possibile utilizzarla per recuperare dati. Se si specificano credenziali archiviate o fornite dall'utente, si verificherà un errore in fase di esecuzione.  
   
- Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="Query"></a> Query  
  Una query consente di specificare quali dati recuperare per un set di dati del report. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. In un report viene elaborato solo il primo set di risultati recuperato da una query.  
@@ -113,9 +113,9 @@ ms.locfileid: "73594027"
   
          `<ElementPath IgnoreNamespaces="true">`  *element path*  `</ElementPath>`  
   
- Per ulteriori informazioni sulla sintassi di query, vedere [XML query sintassi per i dati &#40;del&#41;report XML SSRS](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
+ Per altre informazioni sulla sintassi delle query, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Per gli esempi, vedere [Reporting Services: uso di origini dati XML e servizio Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisiti per il recupero di dati del servizio Web XML  
  Lo schema non viene rilevato automaticamente dall'estensione per l'elaborazione dati XML. È pertanto necessario essere in grado di individuare i metodi SOAP tramite i quali verranno recuperati i dati desiderati. È inoltre necessario comprendere lo spazio dei nomi o lo schema di indirizzamento che il servizio Web utilizza per i dati.  
@@ -156,7 +156,7 @@ ms.locfileid: "73594027"
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

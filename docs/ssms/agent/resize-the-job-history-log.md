@@ -1,10 +1,9 @@
 ---
-title: Modificare le dimensioni del log di cronologia processi | Microsoft Docs
-ms.custom: ''
+title: Modificare le dimensioni del log di cronologia processi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5dea3b0a7eb9076bb778a14a4c8ab1834df0b93e
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 45f53291d70d08fa75ab158db3911c058fdba5c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995847"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253529"
 ---
 # <a name="resize-the-job-history-log"></a>Modificare le dimensioni del log di cronologia processi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +32,11 @@ ms.locfileid: "68995847"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Questo argomento descrive come impostare le dimensioni massime per i log di cronologia dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Questo argomento descrive come impostare le dimensioni massime per i log di cronologia processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
 -   **Prima di iniziare:**  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per impostare le dimensioni massime dei log della cronologia dei processi utilizzando:**  
   
@@ -43,7 +44,7 @@ Questo argomento descrive come impostare le dimensioni massime per i log di cron
   
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  

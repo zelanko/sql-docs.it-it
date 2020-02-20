@@ -1,7 +1,6 @@
 ---
-title: Opzione preprocess (strumento di amministrazione Riesecuzione distribuita) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Opzione preprocess
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,20 +9,22 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 712da846443a95909746c741cee71d22d4554622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 1b003bf2441e3cffc2e21557497695f92df50135
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949971"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307026"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opzione preprocess (strumento di amministrazione Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Lo strumento di amministrazione Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **DReplay.exe**, è uno strumento da riga di comando che consente di comunicare con il controller di Riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **preprocess** e la sintassi corrispondente.  
+  Lo strumento di amministrazione Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **DReplay.exe**, è uno strumento da riga di comando che consente di comunicare con il controller di Riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **preprocess** e la sintassi corrispondente.  
   
  L'opzione **preprocess** avvia la fase di pre-elaborazione. Durante questa fase il controller prepara i dati di traccia di input per la riproduzione sul server di destinazione.  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento all'argomento")Per altre informazioni sulle convenzioni relative alla sintassi dello strumento di amministrazione, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") Per altre informazioni sulle convenzioni relative alla sintassi dello strumento di amministrazione, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +35,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>Parametri  
- **Controller** _-m_  
+ **-m** _controller_  
  Specifica il nome computer del controller. È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.  
   
  Se il parametro **-m** non è specificato, viene usato il computer locale.  
@@ -65,9 +66,9 @@ dreplay preprocess [-m controller] -i input_trace_file
   
  Il parametro **-c** non è obbligatorio se non è necessario applicare filtri o non si vuole modificare il tempo massimo di inattività.  
   
- Senza il parametro **-c**, viene usato il file di configurazione della pre-elaborazione predefinito, ovvero `DReplay.exe.preprocess.config`.  
+ Senza il parametro **-c** , viene usato il file di configurazione della pre-elaborazione predefinito, ovvero `DReplay.exe.preprocess.config`.  
   
- _intervallo_stato_ **-f**  
+ **-f** _status_interval_  
  Specifica la frequenza in secondi in base alla quale visualizzare messaggi di stato.  
   
  Se **-f** non è specificato, l'intervallo predefinito è 30 secondi.  
@@ -79,7 +80,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- In questo esempio viene avviata la fase di pre-elaborazione e viene specificato un file di configurazione della pre-elaborazione modificato. A differenza dell'esempio precedente, il parametro **-c** viene usato per puntare al file di configurazione modificato, se è stato archiviato in un percorso diverso. Esempio:  
+ In questo esempio viene avviata la fase di pre-elaborazione e viene specificato un file di configurazione della pre-elaborazione modificato. A differenza dell'esempio precedente, il parametro **-c** viene usato per puntare al file di configurazione modificato, se è stato archiviato in un percorso diverso. Ad esempio:  
   
 ```  
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  

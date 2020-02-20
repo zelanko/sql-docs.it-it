@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580274"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
@@ -178,7 +178,7 @@ ms.locfileid: "65580274"
   
  ![Diagramma degli elementi del misuratore](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramma degli elementi del misuratore")  
   
- Per altre informazioni sull'uso dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Per ulteriori informazioni sull'utilizzo dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare misuratori separatamente da un report come parti del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -204,7 +204,7 @@ ms.locfileid: "65580274"
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opzioni del misuratore lineare: Orizzontale, Verticale, Più indicatori di misura a barre, Due scale, Intervallo a tre colori, Logaritmico, Termometro, Termometro Fahrenheit/Celcius e Grafico bullet.  
+ Opzioni del misuratore lineare: Orizzontale, Verticale, Più indicatori di misura a barre, Due scale, Intervallo a tre colori, Logaritmico, Termometro, Termometro Fahrenheit/Celcius e Grafico a bullet.  
   
 ##  <a name="AddingData"></a> Aggiunta di dati a un misuratore  
  Dopo avere aggiunto un misuratore all'area di progettazione, trascinare un campo del set di dati nel riquadro dei dati del misuratore. I valori del campo vengono tutti aggregati per impostazione predefinita a un unico valore visualizzato sul misuratore. Tale valore è collegato all'indicatore di misura tramite la proprietà Value. A seconda del tipo di dati del campo, nel misuratore viene usata l'aggregazione SUM o COUNT. Quando si usano dati numerici, appropriati per l'aggiunta, nel misuratore viene usata la funzione SUM. In caso contrario, viene usata l'aggregazione COUNT. Il valore dell'indicatore di misura può usare un'aggregazione diversa o nessuna aggregazione.  
@@ -282,7 +282,7 @@ ms.locfileid: "65580274"
   
 -   [Impostare un valore minimo o massimo su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Impostazione di un intervallo di blocco su un misuratore (Generatore report e SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
+-   [Impostare un intervallo di blocco su un misuratore (Generatore report e SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
   
 -   [Specificare un'immagine come indicatore di misura su un misuratore (Generatore report e SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
@@ -291,8 +291,8 @@ ms.locfileid: "65580274"
   
 |||  
 |-|-|  
-|Nome|Definizione|  
-|[Formattazione di scale su un misuratore &#40;Generatore report e SSRSSSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione delle scale dei misuratori e informazioni dettagliate sulle opzioni di formattazione per le scale dei misuratori radiali e lineari.|  
+|Termine|Definizione|  
+|[Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione delle scale dei misuratori e informazioni dettagliate sulle opzioni di formattazione per le scale dei misuratori radiali e lineari.|  
 |[Formattazione degli indicatori di misura su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione degli indicatori di misura dei misuratori e informazioni dettagliate sulle opzioni di formattazione per gli stili degli indicatori di misura dei misuratori radiali e lineari.|  
 |[Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41; (Formattazione di intervalli su un misuratore &#40;Generatore report e SSRS&#41;)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla formattazione degli intervalli dei misuratori per indicare un'importante sottosezione di valori del misuratore o per indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori.|  
   

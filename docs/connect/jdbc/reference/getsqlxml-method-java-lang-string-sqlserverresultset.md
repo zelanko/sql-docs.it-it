@@ -11,10 +11,10 @@ ms.assetid: ab9c7b10-026f-4a51-8d60-e6871d1abd02
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecf5030c4722f2e5681cb199993a48fea0e22462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979687"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>Metodo getSQLXML (java.lang.String) (SQLServerResultSet)
@@ -35,12 +35,12 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
  Valore **String** che indica l'etichetta della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- ASQLXMLobject.  
+ Oggetto SQLXML.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getSQLXML viene specificato dal metodo getSQLXML nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,6 +1,6 @@
 ---
-title: Applicazione sqlservr | Microsoft Docs
-ms.custom: ''
+title: Applicazione sqlservr
+ms.custom: seo-lt-2019
 ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028969"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305779"
 ---
 # <a name="sqlservr-application"></a>Applicazione sqlservr
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-L'applicazione **sqlservr** avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi.
+L'applicazione **sqlservr** avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] al prompt dei comandi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,7 +45,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 ## <a name="arguments"></a>Argomenti
 
-**-s** *instance_name* Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a cui connettersi. Se non si specifica un'istanza denominata, **sqlservr** avvia l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**-s** *instance_name* Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Se non si specifica un'istanza denominata, **sqlservr** avvia l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]
 >Per l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare l'applicazione **sqlservr** nella directory appropriata per l'istanza. Nel caso dell'istanza predefinita, eseguire **sqlservr** dalla directory \MSSQL\Binn. Nel caso dell'istanza denominata, eseguire **sqlservr** dalla directory \MSSQL$\*nome_istanza* \Binn.
@@ -70,22 +70,22 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 **-T** *trace#* Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#* ) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 >[!IMPORTANT]
->Quando si specifica un flag di traccia, indicarne il numero usando **-T**. La lettera minuscola t ( **-t**) è accettata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma **-t** imposta altri flag di traccia interni necessari per i tecnici del supporto tecnico per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
+>Quando si specifica un flag di traccia, indicarne il numero usando **-T** . La lettera minuscola t ( **-t**) è accettata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma **-t** imposta altri flag di traccia interni necessari per i tecnici del supporto tecnico per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
 
 **-v** Visualizza il numero di versione del server.
 
 **-x** Disabilita la registrazione delle statistiche relative al tempo CPU e alla frequenza di accesso alla cache. Consente l'ottimizzazione delle prestazioni.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Nella maggior parte dei casi il programma sqlservr.exe viene utilizzato solo per la risoluzione dei problemi o interventi di manutenzione ordinaria. Se si avvia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi con sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene avviato come servizio. Quindi, non sarà possibile arrestare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando i comandi **net** . Gli utenti possono connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma gli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indicano lo stato del servizio. Di conseguenza, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indica correttamente che il servizio è stato arrestato. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] può connettersi al server anche se indica che il servizio è stato arrestato.
 
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità
-I parametri seguenti sono obsoleti e non sono [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]supportati in.
+I parametri seguenti sono obsoleti e non sono supportati in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 |Parametro | Ulteriori informazioni|
 |:-----|:-----|
-|**-h** | In versioni precedenti di istanze a 32 bit di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questo parametro è stato usatao per riservare spazio di indirizzi della memoria virtuale per metadati della memoria a caldo quando AWE è abilitato. Supportato tramite [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Per ulteriori informazioni, vedere [Funzionalità di SQL Server obsolete in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
-|**-g** | *memory_to_reserve*<br/><br>Si applica alle versioni precedenti delle istanze a 32 bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]di. Supportato tramite [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Specifica un numero intero di megabyte (MB) di memoria che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva per le allocazioni di memoria all'interno del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ma esternamente al pool di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [la documentazione di SQL Server 2014 relativa alle opzioni di configurazione della memoria del server](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-h** | In versioni precedenti di istanze a 32 bit di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questo parametro è stato usatao per riservare spazio di indirizzi della memoria virtuale per metadati della memoria a caldo quando AWE è abilitato. Supportato in [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Per ulteriori informazioni, vedere [Funzionalità di SQL Server obsolete in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-g** | *memory_to_reserve*<br/><br>Si applica alle versioni precedenti delle istanze a 32 bit di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Supportato in [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Specifica un numero intero di megabyte (MB) di memoria che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva per le allocazioni di memoria all'interno del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ma esternamente al pool di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [la documentazione di SQL Server 2014 sulle opzioni di configurazione di Server Memory](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Vedere anche

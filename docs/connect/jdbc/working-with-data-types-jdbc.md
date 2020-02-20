@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei tipi di dati (JDBC) | Microsoft Docs
+title: Uso dei tipi di dati (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025705"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934437"
 ---
 # <a name="working-with-data-types-jdbc"></a>Uso dei tipi di dati (JDBC)
 
@@ -36,7 +36,7 @@ Negli argomenti di questa sezione viene descritto come usare i tipi di dati del 
 |-----------|-----------------|  
 |[Esempio di tipi di dati di base](../../connect/jdbc/basic-data-types-sample.md)|Viene descritto come usare i metodi di richiamo del set di risultati per recuperare i valori dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e in che modo usare i metodi di aggiornamento del set di risultati per aggiornare tali valori.|  
 |[Esempio di tipo di dati SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Viene descritto come archiviare dati XML in un database relazionale, come recuperare i dati XML da un database e come analizzare i dati XML con il tipo di dati Java **SQLXML**.|  
-|[Esempio di tipi di dati spaziali](../../connect/jdbc/spatial-data-types-sample.md)|Viene descritto come archiviare e recuperare i dati con i tipi di dati spaziali ' Geometry ' è Geography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' del database con i tipi Java **Geometry** e **geography** definiti da Microsoft JDBC driver.|
+|[Esempio di tipi di dati spaziali](../../connect/jdbc/spatial-data-types-sample.md)|Viene descritto come archiviare e recuperare dati con i tipi di dati spaziali 'Geometry' e 'Geography' del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i tipi Java **Geometry** e **Geography** definiti dal driver Microsoft JDBC.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -16,10 +16,10 @@ ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982076"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>Metodo getMaxRows (SQLServerStatement)
@@ -40,8 +40,8 @@ public final int getMaxRows()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getMaxRows viene specificato dal metodo getMaxRows nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getMaxRows viene specificato dal metodo getMaxRows nell'interfaccia java.sql.Statement.  
   
  Questo metodo getMaxRows restituisce sempre 0 per i cursori scorrevoli dinamici.  
   
