@@ -9,10 +9,10 @@ ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71923792"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report nel portale Web (Generatore report e SSRS)
@@ -53,6 +53,6 @@ Barra multifunzione di Gestione report
 -   Per cercare testo specifico all'interno di un report, utilizzare la barra degli strumenti nella parte superiore del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

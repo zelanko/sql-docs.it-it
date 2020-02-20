@@ -15,10 +15,10 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619604"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Concedere l'accesso utente a un server di report
@@ -27,7 +27,7 @@ ms.locfileid: "65619604"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la sicurezza basata sui ruoli per concedere agli utenti l'accesso a un server di report. In una nuova installazione del server di report, solo gli utenti che appartengono al gruppo Administrators locale dispongono delle autorizzazioni per accedere al contenuto ed eseguire operazioni sul server di report. Per rendere disponibile il server di report agli altri utenti, è necessario creare assegnazioni di ruolo che associano gli account utente o gli account di gruppo a un ruolo predefinito che specifica una raccolta di attività.
 
- **Server di report in modalità SharePoint** : per un server di report configurato per la modalità integrata SharePoint, l'accesso da un sito di SharePoint viene configurato mediante le autorizzazioni relative. I livelli di autorizzazione sul sito di SharePoint determinano l'accesso al contenuto e alle operazioni del server di report. Per concedere le autorizzazioni a un sito di SharePoint, è necessario disporre dei privilegi di amministratore. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
+ **Server di report in modalità SharePoint:** per un server di report configurato per la modalità integrata SharePoint, l'accesso da un sito di SharePoint viene configurato usando le autorizzazioni di SharePoint. I livelli di autorizzazione sul sito di SharePoint determinano l'accesso al contenuto e alle operazioni del server di report. Per concedere le autorizzazioni a un sito di SharePoint, è necessario disporre dei privilegi di amministratore. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
  **Server di report in modalità nativa:** questo articolo riguarda un server di report configurato per la modalità nativa e l'uso del portale Web per l'assegnazione di utenti a un ruolo. Sono disponibili due tipi di ruoli:
 
@@ -45,7 +45,7 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 - Per delegare questa attività ad altri utenti, creare assegnazioni di ruolo che eseguono il mapping degli account utente ai ruoli Gestione contenuto e Amministratore sistema. Gli utenti che dispongono di queste autorizzazioni possono aggiungere utenti a un server di report.
 
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]visualizzare i ruoli predefiniti per i ruoli a livello di sistema e i ruoli utente, in modo da acquisire familiarità con i tipi di attività previsti da ogni ruolo. Poiché le descrizioni dell'attività non sono visibili nel portale Web, è necessario conoscere i ruoli prima di iniziare ad aggiungere utenti.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizzare i ruoli predefiniti per i ruoli a livello di sistema e i ruoli utente, in modo da acquisire familiarità con i tipi di attività previsti da ogni ruolo. Poiché le descrizioni dell'attività non sono visibili nel portale Web, è necessario conoscere i ruoli prima di iniziare ad aggiungere utenti.
 
 - Facoltativamente, personalizzare i ruoli o definire ruoli aggiuntivi per includere la raccolta di attività necessarie. Se ad esempio si intende utilizzare impostazioni di sicurezza personalizzate per elementi singoli, è necessario creare una nuova definizione di ruolo che consenta di visualizzare le cartelle.
 
@@ -57,7 +57,7 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
     ![Icona a forma di ingranaggio del portale Web del server di report e menu a discesa](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-3. Selezionare **Sicurezza**.
+3. Scegliere **Sicurezza**.
 
 4. Fare clic su **Aggiungi gruppo o utente**.
 
@@ -80,7 +80,7 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 3. Nel menu a discesa selezionare **Gestisci**.
 
-4. Selezionare **Sicurezza**.
+4. Scegliere **Sicurezza**.
 
 5. Fare clic su **Aggiungi gruppo o utente**.
 

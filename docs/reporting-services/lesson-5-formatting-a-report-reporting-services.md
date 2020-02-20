@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 5: Formatting a Report (Reporting Services) (Lezione 5: Formattazione di un report (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 5: Formattazione di un report (Reporting Services) | Microsoft Docs'
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65105932"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lezione 5: Formattazione di un report (Reporting Services)
@@ -57,7 +57,7 @@ L'espressione del campo LineTotal visualizza un numero generico. È possibile fo
 
 3. Selezionare la riga contenente le etichette di intestazione di colonna e scegliere **Carattere** > **Grassetto** dal menu **Formato**.
 
-4. Visualizzare l'anteprima del report. L'aspetto dovrebbe essere il seguente:
+4. Visualizzare in anteprima il report. L'aspetto dovrebbe essere il seguente:
 
     ![Anteprima della tabella con intestazioni di colonna in grassetto](media/rs-basictabledetailsformattedpreview.png "Anteprima della tabella con intestazioni di colonna in grassetto")  
 
@@ -65,7 +65,7 @@ L'espressione del campo LineTotal visualizza un numero generico. È possibile fo
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa lezione sono state formattate le intestazioni di colonna e le espressioni dei campi. Verranno ora aggiunti raggruppamenti e totali al report. Passare a [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+In questa lezione sono state formattate le intestazioni di colonna e le espressioni dei campi. Verranno ora aggiunti raggruppamenti e totali al report. Procedere a [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 ## <a name="see-also"></a>Vedere anche
 

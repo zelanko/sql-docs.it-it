@@ -26,16 +26,16 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3306bc4f093a3f05c3caf37d212a8e585ac201c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581663"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Legenda del grafico - Formattazione (Generatore report)
   Nella legenda del grafico sono contenute le descrizioni per ogni categoria del grafico. In una legenda sono contenuti sempre uno o più elementi, ciascuno dei quali è costituito da una casella colorata che rappresenta la serie e da una stringa di testo che la descrive, come indicato nell'illustrazione seguente.  
   
- ![Legenda del grafico](../../reporting-services/report-design/media/rs-legenddiagram.gif "Legenda del grafico")  
+ ![Diagramma della legenda di un grafico](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagramma della legenda di un grafico")  
   
  Un elemento della legenda è collegato a una singola serie nel grafico, ad eccezione dei grafici con forme in cui la legenda è collegata a punti dati singoli. Nel grafico vengono aggiunti automaticamente elementi alla legenda in base alla serie generata dai dati inseriti dall'utente.  
   

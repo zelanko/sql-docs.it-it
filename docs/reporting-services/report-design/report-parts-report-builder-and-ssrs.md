@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576716"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)

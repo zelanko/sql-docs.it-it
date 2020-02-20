@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Eseguire unit test di SQL Server da Team Foundation Build | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Eseguire unit test di SQL Server da Team Foundation Build
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035087"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244286"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
+
 È possibile usare Team Foundation Build per eseguire gli unit test di SQL Server come parte di un test di verifica della compilazione (BVT). È possibile configurare gli unit test per distribuire il database, generare dati di test e quindi eseguire i test selezionati. Se non si ha familiarità con Team Foundation Build, è consigliabile esaminare le informazioni riportate di seguito prima di applicare le procedure descritte in questo argomento:  
   
 -   [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -166,7 +167,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 9. In Esplora soluzioni fare doppio clic sul file app.config.  
   
-10. Nell'editor aggiungere `AllowConfigurationOverride="true"` per ogni nodo \<SqlUnitTesting_*VSVersion*>. Esempio:  
+10. Nell'editor aggiungere `AllowConfigurationOverride="true"` per ogni nodo \<SqlUnitTesting_*VSVersion*>. Ad esempio:  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  
@@ -198,7 +199,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 6.  Fare clic su **Applica**.  
   
-7.  Scegliere **Chiudi**.  
+7.  Fare clic su **Close**.  
   
 8.  Scegliere **Salva tutti** dal menu **File**.  
   

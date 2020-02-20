@@ -1,10 +1,9 @@
 ---
-title: Creare un operatore | Microsoft Docs
-ms.custom: ''
+title: Create an Operator
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27f99081b3af76448732ae887fb6f6059628fd4a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 65c9940c130dbaf27d5b50b73d11b22adb11664e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553053"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258767"
 ---
 # <a name="create-an-operator"></a>Create an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "69553053"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questo argomento viene illustrato come configurare un utente per la ricezione di notifiche relative ai processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Questo argomento descrive come configurare un utente per la ricezione di notifiche relative ai processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
@@ -43,9 +44,9 @@ In questo argomento viene illustrato come configurare un utente per la ricezione
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Solo i membri del ruolo predefinito del server **sysadmin** possono creare gli operatori.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
@@ -63,7 +64,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono creare gli o
     **Nome**  
     Consente di modificare il nome dell'operatore.  
   
-    **Abilitata**  
+    **Enabled**  
     Consente di abilitare l'operatore. Se non è abilitato, all'operatore non verranno inviate notifiche.  
   
     **Indirizzo posta elettronica**  
@@ -107,7 +108,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono creare gli o
     **Cercapersone**  
     Inviare una notifica all'operatore tramite un messaggio di posta elettronica all'indirizzo del cercapersone.  
   
-    **Net send**  
+    **Net Send**  
     Notificare questo operatore tramite **Net Send**.  
   
 4.  Al termine della creazione del nuovo operatore, fare clic su **OK**.  

@@ -1,6 +1,7 @@
 ---
-title: Ripristino di emergenza WSFC tramite quorum forzato (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Ripristino di emergenza tramite quorum forzato
+description: Il ripristino da un errore del quorum richiede un intervento manuale. Questo articolo descrive come forzare il quorum in caso di emergenza di un'istanza del cluster di failover di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904949"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821987"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Ripristino di emergenza WSFC tramite quorum forzato (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ ms.locfileid: "67904949"
     > [!NOTE]  
     >  Se si esegue la Convalida guidata configurazione di WSFC quando nel cluster WSFC è presente un listener del gruppo di disponibilità, tramite la procedura guidata verrà generato il seguente messaggio di avviso non corretto:  
     >   
-    >  "La proprietà RegisterAllProviderIP per il nome di rete 'Nome:<nome_rete>' è impostata su 1. Per la configurazione corrente del cluster tale valore dovrebbe essere impostato su 0".  
+    >  "La proprietà RegisterAllProviderIP per il nome di rete 'Nome:<nome_rete>' è impostata su 1. Per la configurazione corrente del cluster tale valore dovrebbe essere impostato su 0."  
     >   
     >  Ignorare tale messaggio.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "67904949"
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [forzatura dell'avvio di un cluster WSFC senza quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Forzare l'avvio di un cluster WSFC senza un quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 -   [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
@@ -122,6 +123,6 @@ ms.locfileid: "67904949"
 -   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

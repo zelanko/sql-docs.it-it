@@ -1,6 +1,6 @@
 ---
-title: Documentazione per gli utenti in SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Documentazione per gli utenti in SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263387"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252210"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazi
 Uso della Guida (Guida di [!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) collega gli utenti alla documentazione relativa alla visualizzatore della Guida, ma gli argomenti sono raccolti separatamente dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e community di SQL Server  
-Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile effettuare le operazioni seguenti:  
+Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile:  
   
 -   Accedere alle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dalla pagina Ricerca per categorie.  
   
@@ -58,7 +58,7 @@ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../inclu
   
 1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?** .  
   
-2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Ricerca per categorie** . Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
+2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Ricerca per categorie**. Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
   
     > [!NOTE]  
     > Il computer su cui viene eseguito [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve essere dotato di una connessione diretta a Internet.  

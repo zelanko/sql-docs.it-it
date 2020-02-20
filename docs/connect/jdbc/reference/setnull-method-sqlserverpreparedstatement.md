@@ -1,5 +1,5 @@
 ---
-title: Metodo IsNullable (SQLServerPreparedStatement) | Microsoft Docs
+title: Metodo setNull (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bcfa1d8b17cf663130e617304ac0bdda46d9cac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973490"
 ---
 # <a name="setnull-method-sqlserverpreparedstatement"></a>Metodo setNull (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67973490"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[setNull (int, int)](../../../connect/jdbc/reference/setnull-method-int-int.md)|Imposta il parametro designato su un valore Null, in base al tipo di parametro da impostare.|  
 |[setNull (int, int, java.lang.String)](../../../connect/jdbc/reference/setnull-method-int-int-java-lang-string.md)|Imposta il parametro designato su un valore Null, in base al tipo e al nome del parametro da impostare.|  

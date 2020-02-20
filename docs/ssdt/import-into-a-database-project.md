@@ -1,11 +1,7 @@
 ---
-title: Eseguire l'importazione in un progetto di database | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Eseguire l'importazione in un progetto di database
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119840"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246446"
 ---
 # <a name="import-into-a-database-project"></a>Eseguire l'importazione in un progetto di database
+
 È possibile utilizzare l'opzione Importa per popolare un progetto con nuovi oggetti da un database attivo o da un file con estensione dacpac o per aggiornare oggetti esistenti con una definizione da uno script. Nei tre percorsi sono presenti differenze di comportamento che vengono descritte di seguito.  
   
 **Menu Importa**  
@@ -45,7 +46,7 @@ Se contenuti nell'origine di importazione, script di pre-distribuzione o di post
   
 **Cartella Ignorato durante l'importazione**  
   
-![Cartella Ignorato durante l'importazione SSDT](../ssdt/media/ssdt-ignoredonimport.gif "Cartella Ignorato durante l'importazione SSDT")  
+![Cartella di elementi ignorati durante l'importazione di SSDT](../ssdt/media/ssdt-ignoredonimport.gif "Cartella di elementi ignorati durante l'importazione di SSDT")  
   
 ## <a name="bkmk_import_source_script"></a>Origine di importazione: script (*.sql)  
 Tutti gli oggetti dell'origine di importazione che *non* esistono già nel progetto verranno aggiunti, mentre tutti quelli che *esistono già* nel progetto verranno sovrascritti dalla definizione di oggetto nel progetto.  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381727"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401529"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Note sulla versione per il driver Microsoft OLE DB per SQL Server
 
@@ -38,14 +38,14 @@ Ottobre 2019
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
 | Supporto dell'autenticazione di Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Uso di Azure Active Directory](features/using-azure-active-directory.md). |
-| Supporto per Active Directory Authentication Library incorporato (ADAL). | Un'installazione separata di ADAL non è più necessaria per l'uso di determinati metodi di autenticazione. |
+| Includere Azure Active Directory Authentication Library (adal.dll) nel programma di installazione | Ora inclusa nell'installazione del driver di base, verranno così aggiornate le installazioni esistenti di Microsoft Active Directory Authentication Library per SQL Server, rimuovendo l'applicazione dall'elenco delle applicazioni installate in Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Bug risolti
 
 | Bug risolto | Dettagli |
 | :-------- | :------ |
-| Correzione della logica di eliminazione degli indici in [IIndexDefinition::D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448). | Le versioni precedenti del driver OLE DB non possono eliminare un indice di chiave primaria se l'ID dello schema e l'ID utente del proprietario dell'indice non sono uguali. |
+| Correzione della logica di eliminazione degli indici in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Le versioni precedenti del driver OLE DB non possono eliminare un indice di chiave primaria se l'ID schema e l'ID utente del proprietario dell'indice non sono uguali. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1823"></a>18.2.3
@@ -56,7 +56,7 @@ Giugno 2019
 
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
-| Supporto per gli aggiornamenti dei driver dal SQL Server supporto rimovibile. | Questo miglioramento consente l'aggiornamento dei driver direttamente dal SQL Server supporto rimovibile. |
+| Supporto per gli aggiornamenti del driver dai supporti rimovibili di SQL Server. | Questo miglioramento consente gli aggiornamenti dei driver direttamente dai supporti rimovibili di SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -90,7 +90,7 @@ Luglio 2018
 
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
-| Supporto per la parola chiave della stringa di connessione `UseFMTONLY` e per la proprietà di inizializzazione `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controlla la modalità di recupero dei metadati durante la connessione a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br/><br/>Per ulteriori informazioni, vedere [utilizzo delle parole chiave della stringa di connessione con il Driver OLE DB per SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Supporto per la parola chiave della stringa di connessione `UseFMTONLY` e per la proprietà di inizializzazione `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controlla la modalità di recupero dei metadati durante la connessione a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br/><br/>Per altre informazioni, vedere: [Uso delle parole chiave delle stringhe di connessione con OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Bug risolti

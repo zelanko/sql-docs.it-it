@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044796"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Risoluzione dei problemi relativi al clustering di failover
@@ -88,11 +88,11 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
  **Soluzione 1**: usare l'opzione **/qb** anziché l'opzione **/qn**. Se si usa l'opzione **/qb** , per ogni passaggio verrà visualizzata l'interfaccia utente di base, inclusi i messaggi di errore.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server non riesce ad accedere alla rete dopo la migrazione in un altro nodo  
- **Problema 1** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono in grado di contattare un controller di dominio.  
+ **Problema 1:** gli account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non riescono a contattare un controller di dominio.  
   
  **Soluzione 1**: controllare la presenza di problemi di rete, ad esempio errori della scheda o problemi DNS, nei log eventi. Verificare che sia possibile effettuare il ping del controller di dominio.  
   
- **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono identiche in tutti i nodi del cluster oppure il nodo non è in grado di riavviare un servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di cui è stata eseguita la migrazione da un nodo bloccato.  
+ **Problema 2:** le password degli account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono identiche in tutti i nodi del cluster oppure il nodo non riavvia un servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di cui è stata eseguita la migrazione da un nodo con errori.  
   
  **Soluzione 2:** cambiare le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In caso contrario, se si modificano le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un nodo, sarà necessario modificare le password anche in tutti gli altri nodi. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -106,12 +106,12 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
  **Soluzione 2:** le lettere di unità disco dei dischi del cluster devono essere identiche in entrambi i server. In caso contrario, modificare l'installazione originale del sistema operativo e del servizio cluster (MSCS, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service).  
   
 ### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>Problema: failover causato da un errore di un servizio SQL Server  
- **Soluzione:** per evitare che un errore di servizi specifici determini il failover del gruppo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], configurare tali servizi tramite Amministrazione cluster in Windows, come descritto di seguito:  
+ **Risoluzione:** per evitare che un errore di servizi specifici determini il failover del gruppo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], configurare tali servizi tramite Amministrazione cluster in Windows, come descritto di seguito:  
   
 -   Deselezionare la casella di controllo **Influisce sul gruppo** nella scheda **Avanzate** della finestra di dialogo **Proprietà full-text** . Se tuttavia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] causa un failover, il servizio Ricerca full-text verrà riavviato.  
   
 ### <a name="problem-sql-server-does-not-start-automatically"></a>Problema: SQL Server non si avvia automaticamente  
- **Soluzione:** per avviare automaticamente un cluster di failover, usare Amministrazione cluster in MSCS. Impostare il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'avvio manuale. Configurare inoltre Amministrazione cluster in MSCS per l'avvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Gestione dei servizi](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
+ **Risoluzione:** per avviare automaticamente un cluster di failover, usare Amministrazione cluster in MSCS. Impostare il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'avvio manuale. Configurare inoltre Amministrazione cluster in MSCS per l'avvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Gestione dei servizi](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
   
 ### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>Problema: il nome rete è offline e non è possibile connettersi a SQL Server tramite TCP/IP  
  **Problema 1:** DNS non è disponibile e la risorsa cluster è impostata in modo da richiedere DNS.  
@@ -141,12 +141,12 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problema: impossibile installare SQL Server in un cluster. Errore 11001  
  **Problema:** chiave orfana del Registro di sistema in [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
   
- **Soluzione:** assicurarsi che l'hive del Registro di sistema MSSQL.X non sia in uso e quindi eliminare la chiave relativa al cluster.  
+ **Risoluzione:** assicurarsi che l'hive del Registro di sistema MSSQL.X non sia in uso e quindi eliminare la chiave relativa al cluster.  
   
 ### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Problema: errore di installazione del cluster: "Privilegi insufficienti per accedere alla directory: \<unità>\Microsoft SQL Server. Accedere come amministratore oppure contattare l'amministratore del sistema"  
  **Problema:** questo errore è causato da un'unità condivisa SCSI non partizionata correttamente.  
   
- **Soluzione:** usare la procedura seguente per ricreare un'unica partizione nel disco condiviso:  
+ **Risoluzione:** usare la procedura seguente per ricreare un'unica partizione nel disco condiviso:  
   
 1.  Eliminare la risorsa disco dal cluster.  
   
@@ -163,7 +163,7 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
 ### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problema: le applicazioni non riescono a integrare le risorse di SQL Server in una transazione distribuita  
  **Problema:** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) non è completamente configurato in Windows. È quindi possibile che le applicazioni non riescano a visualizzare l'elenco delle risorse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in una transazione distribuita. Questo problema può interessare server collegati, query distribuite e stored procedure remote che utilizzano transazioni distribuite. Per ulteriori informazioni sulla configurazione di MS DTC, vedere [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
- **Soluzione:** per evitare problemi di questo tipo, è necessario abilitare completamente i servizi MS DTC nei server in cui è installato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e MS DTC è configurato.  
+ **Risoluzione:** per evitare problemi di questo tipo, è necessario abilitare completamente i servizi MS DTC nei server in cui è installato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e MS DTC è configurato.  
   
  Per abilitare completamente MS DTC, effettuare le operazioni seguenti:  
   

@@ -1,27 +1,26 @@
 ---
 title: 'Avvio rapido: Eseguire il training di un modello in Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Creare un modello predittivo semplice in Python usando Machine Learning Services per SQL Server, quindi stimare un risultato usando nuovi dati.
+description: Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/14/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcf43d57488578020eed09080668156fb926d1b0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727001"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831760"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare e assegnare i punteggi a un modello predittivo in Python con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questo argomento di avvio rapido si creerà un modello predittivo con Python, si eseguirà il training del modello, si salverà il modello in una tabella nell'istanza di SQL Server, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md).
+Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md).
 
 Si creeranno due stored procedure che verranno eseguite in SQL. La prima usa il classico set di dati Iris e genera un modello Naïve Bayes per stimare una specie di iris in base alle caratteristiche del fiore. La seconda stored procedure, per l'assegnazione dei punteggi, chiama il modello generato nella prima stored procedure per restituire un set di stime basate sui nuovi dati. Inserendo il codice Python in una stored procedure SQL, le operazioni sono contenute in SQL, sono riutilizzabili e possono essere chiamate da altre stored procedure e applicazioni client.
 

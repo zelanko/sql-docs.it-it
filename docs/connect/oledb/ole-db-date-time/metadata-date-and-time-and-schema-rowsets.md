@@ -1,5 +1,5 @@
 ---
-title: Data e ora e set di righe dello schema | Microsoft Docs
+title: Set di righe dello schema e dei tipi Date e Time | Microsoft Docs
 description: Set di righe dello schema e dei tipi Date e Time
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015696"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - Set di righe dello schema e di data e ora
@@ -32,11 +32,11 @@ ms.locfileid: "68015696"
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |Data|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|Impostare|0..7|  
+|time|DBTYPE_DBTIME2|Set|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Impostare|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Impostare|0..7|  
+|Datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  In COLUMN_FLAGS il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   
@@ -60,17 +60,17 @@ ms.locfileid: "68015696"
   
  DBCOLUMNFLAGS_SS_ISVARIABLESCALE è valido solo quando si è connessi a un server [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versioni successive). DBCOLUMNFLAGS_SS_ISFIXEDSCALE non è definito quando si è connessi a server legacy.  
   
-## <a name="procedureparameters-rowset"></a>Set di righe PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Set di righe PROCEDURE_PARAMETERS  
  DATA_TYPE contiene gli stessi valori del set di righe dello schema COLUMNS e TYPE_NAME contiene il tipo di server.  
   
  Una nuova colonna, SS_DATETIME_PRECISION, è stata aggiunta per restituire la precisione del tipo come nella colonna DATETIME_PRECISION, in modo analogo al set di righe COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Set di righe PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Set di righe PROVIDER_TYPES  
  Per i tipi di data/ora vengono restituite le righe seguenti:  
   
-|Tipo -><br /><br /> colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Colonna|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -82,7 +82,7 @@ ms.locfileid: "68015696"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -95,6 +95,6 @@ ms.locfileid: "68015696"
  Poiché OLE DB definisce solo MINIMUM_SCALE e MAXIMUM_SCALE per i tipi numerici e decimali, l'uso da parte del driver OLE DB per SQL Server di queste colonne per time, datetime2 e datetimeoffset è di tipo non standard.  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLE DB &#40;metadati&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [Metadati &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

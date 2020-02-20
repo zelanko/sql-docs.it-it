@@ -15,10 +15,10 @@ ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee084e9d85a1bee21db3994be8b9473daefc7c0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62992242"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Introduzione alla gestione delle eccezioni in Reporting Services

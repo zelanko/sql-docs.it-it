@@ -1,20 +1,20 @@
 ---
-title: Installare pacchetti Python con pip
+title: Installare pacchetti Python con sqlmlutils
 description: Informazioni su come usare lo strumento pip di Python per installare nuovi pacchetti Python in un'istanza di Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542154"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929893"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installare pacchetti Python con sqlmlutils
 
@@ -25,7 +25,7 @@ Questo articolo descrive come usare le funzioni incluse in [**sqlmlutils**](http
 Per altre informazioni sulla posizione dei pacchetti e sui percorsi di installazione, vedere [Ottenere informazioni sui pacchetti Python](../package-management/python-package-information.md).
 
 > [!NOTE]
-> Per aggiungere pacchetti Python in SQL Server non è consigliabile usare il comando `pip install` standard di Python. In alternativa, usare **sqlmlutils**, come descritto in questo articolo.
+> Per aggiungere pacchetti Python in SQL Server 2019 non è consigliabile usare il comando `pip install` standard di Python. In alternativa, usare **sqlmlutils**, come descritto in questo articolo.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -56,14 +56,15 @@ Per altre informazioni sulla posizione dei pacchetti e sui percorsi di installaz
 
 ## <a name="install-sqlmlutils-on-the-client-computer"></a>Installare sqlmlutils nel computer client
 
-Prima di usare **sqlmlutils**, è necessario installarlo nel computer client usato per connettersi a SQL Server.
+Prima di usare **sqlmlutils**, è necessario installarlo nel computer client usato per connettersi a SQL Server. Assicurarsi di aver `pip` installato. Vedere [Installazione di pip](https://pip.pypa.io/en/stable/installing/) per altre informazioni.
 
 1. Scaricare la versione più recente del file ZIP di **sqlmlutils** da https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist nel computer client. Non decomprimere il file.
 
-1. Aprire un **prompt dei comandi** ed eseguire il comando seguente per installare il pacchetto **sqlmlutils**. Sostituire il percorso completo del file ZIP di **sqlmlutils** scaricato. In questo esempio si presuppone che il file scaricato sia `c:\temp\sqlmlutils_0.6.0.zip`.
+1. Aprire un **prompt dei comandi** ed eseguire i comandi seguenti per installare il pacchetto **sqlmlutils**. Sostituire il percorso completo del file ZIP di **sqlmlutils** scaricato. In questo esempio si presuppone che il file scaricato sia `c:\temp\sqlmlutils_0.7.2.zip`.
 
    ```console
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
+   pip install "pymssql<3.0"
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>Aggiungere un pacchetto Python in SQL Server
@@ -114,7 +115,7 @@ sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/te
 
 ## <a name="use-the-package-in-sql-server"></a>Usare il pacchetto in SQL Server
 
-È ora possibile usare il pacchetto in uno script Python in SQL Server. Esempio:
+È ora possibile usare il pacchetto in uno script Python in SQL Server. Ad esempio:
 
 ```python
 EXECUTE sp_execute_external_script

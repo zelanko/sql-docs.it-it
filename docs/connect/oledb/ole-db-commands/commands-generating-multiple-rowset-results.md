@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016061"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
@@ -29,14 +29,14 @@ ms.locfileid: "68016061"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il driver OLE DB per SQL Server può restituire più set di righe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dalle istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
+  OLE DB Driver for SQL Server può restituire più set di righe dalle istruzioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
   
 -   Le istruzioni SQL in batch vengono inviate come singolo comando.  
   
 -   Le stored procedure consentono di implementare un batch di istruzioni SQL.  
   
 ## <a name="batches"></a>Batch  
- Il driver OLE DB per SQL Server riconosce il carattere punto e virgola come delimitatore di batch per le istruzioni SQL:  
+ OLE DB Driver per SQL Server consente di riconoscere il carattere del punto e virgola come delimitatore di batch per le istruzioni SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

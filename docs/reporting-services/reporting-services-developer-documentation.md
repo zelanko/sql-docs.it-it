@@ -12,10 +12,10 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.date: 03/17/2017
 ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259609"
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentazione per gli sviluppatori di Reporting Services

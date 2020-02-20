@@ -1,6 +1,6 @@
 ---
-title: Esecuzione di operazioni asincrone | Microsoft Docs
-description: Esecuzione di operazioni asincrone con OLE DB driver per SQL Server
+title: Esecuzione di operazioni asincrone |Microsoft Docs
+description: Esecuzione di operazioni asincrone con OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989022"
 ---
 # <a name="performing-asynchronous-operations"></a>Esecuzione di operazioni asincrone
@@ -52,7 +52,7 @@ ms.locfileid: "67989022"
 ## <a name="execution-and-rowset-initialization"></a>Esecuzione e inizializzazione del set di righe  
  Le applicazioni progettate per aprire in modo asincrono il risultato dall'esecuzione di un comando possono impostare il bit DBPROPVAL_ASYNCH_INITIALIZE nella proprietà DBPROP_ROWSET_ASYNCH. Quando questo bit viene impostato prima di chiamare **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** o **IMultipleResults::GetResult**, l'argomento *riid* deve essere impostato su IID_IDBAsynchStatus, IID_ISSAsynchStatus o IID_IUnknown.  
   
- Il metodo restituisce immediatamente S_OK se l'inizializzazione del set di righe viene completata immediatamente oppure DB_S_ASYNCHRONOUS se il set di righe continua a essere inizializzato in modo asincrono, con *ppRowset* impostato sull'interfaccia richiesta nel set di righe. Per il driver OLE DB per SQL Server, questa interfaccia può essere solo **IDBAsynchStatus** o **ISSAsynchStatus**. Finché il set di righe non è completamente inizializzato, l'interfaccia si comporta come se fosse in stato sospeso e la chiamata a **QueryInterface** per le interfacce diverse da **IID_IDBAsynchStatus** o **IID_ISSAsynchStatus**  può restituire E_NOINTERFACE. A meno che il consumer non richieda in modo esplicito l'elaborazione asincrona, il set di righe viene inizializzato in modo sincrono. Tutte le interfacce richieste sono disponibili quando **IDBAsynchStaus::GetStatus** o **ISSAsynchStatus::WaitForAsynchCompletion** restituisce l'indicazione che l'operazione asincrona è completa. Ciò non significa necessariamente che il set di righe è completamente popolato, ma che è completo e del tutto funzionale.  
+ Il metodo restituisce immediatamente S_OK se l'inizializzazione del set di righe viene completata immediatamente oppure DB_S_ASYNCHRONOUS se il set di righe continua a essere inizializzato in modo asincrono, con *ppRowset* impostato sull'interfaccia richiesta nel set di righe. Per OLE DB Driver per SQL Server, questa interfaccia può essere solo **IDBAsynchStatus** o **ISSAsynchStatus**. Finché il set di righe non è completamente inizializzato, l'interfaccia si comporta come se fosse in stato sospeso e la chiamata a **QueryInterface** per le interfacce diverse da **IID_IDBAsynchStatus** o **IID_ISSAsynchStatus**  può restituire E_NOINTERFACE. A meno che il consumer non richieda in modo esplicito l'elaborazione asincrona, il set di righe viene inizializzato in modo sincrono. Tutte le interfacce richieste sono disponibili quando **IDBAsynchStaus::GetStatus** o **ISSAsynchStatus::WaitForAsynchCompletion** restituisce l'indicazione che l'operazione asincrona è completa. Ciò non significa necessariamente che il set di righe è completamente popolato, ma che è completo e del tutto funzionale.  
   
  Se il comando eseguito non restituisce un set di righe, restituisce comunque immediatamente un oggetto che supporta **IDBAsynchStatus**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67989022"
   
  Le interfacce **IDBAsynchStatus** e **ISSAsynchStatus** possono quindi essere ottenute eseguendo una query sull'interfaccia con più risultati con **QueryInterface**.  
   
- Al termine dell'esecuzione del comando, è possibile usare **IMultipleResults** normalmente, con un'eccezione dal caso sincrono: può essere restituito DB_S_ASYNCHRONOUS. In tal caso, è possibile usare **IDBAsynchStatus** o **ISSAsynchStatus** per determinare il momento in cui l'operazione è completata.  
+ Al termine dell'esecuzione del comando, è possibile usare **IMultipleResults** come di consueto, con un'eccezione rispetto al caso sincrono: è possibile che venga restituito DB_S_ASYNCHRONOUS. In tal caso, è possibile usare **IDBAsynchStatus** o **ISSAsynchStatus** per determinare quando l'operazione viene completata.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'applicazione chiama un metodo non bloccante, esegue altre attività di elaborazione e quindi torna a elaborare i risultati. **ISSAsynchStatus::WaitForAsynchCompletion** resta in attesa dell'oggetto evento interno fino al completamento dell'operazione di esecuzione asincrona o allo scadere della quantità di tempo specificata da *dwMilisecTimeOut*.  
@@ -191,6 +191,6 @@ if (hr == DB_S_ASYNCHRONOUS)
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per funzionalità di SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Proprietà e comportamenti dei set di righe](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [OLE DB &#40;ISSAsynchStatus&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

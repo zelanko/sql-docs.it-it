@@ -15,10 +15,10 @@ ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573304"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Caricare un file o un report nel server di report
@@ -34,7 +34,7 @@ Il portale Web del server di report include una caratteristica di caricamento ch
   
 4.  Passare al file da caricare. È possibile caricare un file di definizione del report, un'immagine, un documento o qualsiasi altro file che si desidera rendere disponibile nel server di report.  
   
-5.  Digitare un nome per il nuovo elemento. Il nome di un elemento può includere spazi ma non i seguenti caratteri riservati: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|.  
+5.  Digitare un nome per il nuovo elemento. Il nome di un elemento può includere spazi, ma non i seguenti caratteri riservati: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|.  
   
 6.  Se si desidera sostituire un elemento esistente con il nuovo elemento, selezionare **Sovrascrivi se esistente**.  
   

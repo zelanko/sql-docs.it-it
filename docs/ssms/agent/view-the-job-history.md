@@ -1,10 +1,9 @@
 ---
-title: Visualizzare la cronologia processi | Microsoft Docs
-ms.custom: ''
+title: Visualizzare la cronologia processi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5d55ffda10b6595cdb5767f35cc813dd093e6e4a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f1166e7cd5034f8b5737a6e0839a148a23148ee9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267667"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257558"
 ---
 # <a name="view-the-job-history"></a>Visualizzare la cronologia processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,11 +31,11 @@ ms.locfileid: "68267667"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questo argomento viene descritto come visualizzare il log della cronologia processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects.  
+Questo argomento descrive come visualizzare il log della cronologia processo di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
   
 -   **Prima di iniziare:**  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per visualizzare il log cronologia processi utilizzando:**  
   
@@ -46,7 +47,7 @@ In questo argomento viene descritto come visualizzare il log della cronologia pr
   
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  

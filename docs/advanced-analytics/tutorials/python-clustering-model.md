@@ -1,22 +1,22 @@
 ---
 title: 'Esercitazione su Python: Categorizzare gli utenti'
-description: In questa serie di esercitazioni in quattro parti si eseguirà il clustering dei clienti usando l'algoritmo K-Means in un database SQL usando Python con Machine Learning Services per SQL Server.
+description: In questa serie di esercitazioni in quattro parti si eseguirà il clustering dei clienti tramite K-Means in un database SQL usando Python con Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 245a1566bfbbf19821323d0b474669eaba1d2e6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: f5d1254c6b5c478c7bcad63da0902f21f4db70a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727079"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306585"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>Esercitazione: Categorizzazione dei clienti tramite clustering K-Means con Machine Learning Services per SQL Server
 
@@ -46,27 +46,19 @@ Nella [quarta parte](python-clustering-model-deploy.md) si apprenderà come crea
 
 * [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md) con l'opzione del linguaggio Python: seguire le istruzioni di installazione nella [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o nella [guida all'installazione di Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
 
-* IDE Python: questa esercitazione usa un notebook Python in [Azure Data Studio](../../azure-data-studio/what-is.md). Per altre informazioni, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md). È anche possibile usare il proprio ambiente di sviluppo integrato di Python, ad esempio un notebook Jupyter o [Visual Studio Code](https://code.visualstudio.com/docs) con l'[estensione Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) e l'[estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+* [Azure Data Studio](../../azure-data-studio/what-is.md). Si userà un notebook in Azure Data Studio sia per Python che per SQL. Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
-* Pacchetto [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package): il pacchetto **revoscalepy** è incluso in Machine Learning Services per SQL Server. Per usare il pacchetto in un computer client, vedere [Configurare un client di data science per lo sviluppo Python](../python/setup-python-client-tools-sql.md) per le opzioni di installazione locale del pacchetto.
+  * Python - È anche possibile usare il proprio ambiente di sviluppo integrato di Python, ad esempio un notebook Jupyter o [Visual Studio Code](https://code.visualstudio.com/docs) con l'[estensione Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) e l'[estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+  * SQL - È anche possibile usare [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-  Se si usa un notebook Python in Azure Data Studio, seguire questa procedura aggiuntiva per usare **revoscalepy**:
+* Pacchetti Python aggiuntivi: gli esempi in questa serie di esercitazioni usano pacchetti Python che potrebbero essere installati o meno.
 
-  1. Aprire Azure Data Studio
-  1. Scegliere **Preferenze** dal menu **File** e quindi selezionare **Impostazioni**
-  1. Espandere **Estensioni** e selezionare **Notebook configuration** (Configurazione notebook)
-  1. In **Percorso Python** immettere il percorso in cui sono state installate le librerie (ad esempio `C:\path-to-python-for-mls`)
-  1. Assicurarsi che **Use Existing Python** (Usa Python esistente) sia selezionato
-  1. Riavviare Azure Data Studio
-
-  Se si usa un IDE di Python diverso, seguire una procedura simile per il proprio IDE.
-
-* Strumento di query SQL: questa esercitazione presuppone che si usi [Azure Data Studio](../../azure-data-studio/what-is.md). È possibile usare anche [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
-
-* Pacchetti Python aggiuntivi: gli esempi in questa serie di esercitazioni usano pacchetti Python che potrebbero essere installati o meno. Usare i comandi **pip** seguenti per installare questi pacchetti, se necessario.
+  Aprire un **prompt dei comandi** e passare al percorso di installazione per la versione di Python usata in Azure Data Studio. Ad esempio: `cd %LocalAppData%\Programs\Python\Python37-32`. Eseguire quindi i comandi seguenti per installare uno di questi pacchetti non ancora installati.
 
   ```console
   pip install matplotlib
+  pip install pandas
+  pip install pyodbc
   pip install scipy
   pip install sklearn
   ```

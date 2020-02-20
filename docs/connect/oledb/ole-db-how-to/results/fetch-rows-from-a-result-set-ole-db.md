@@ -1,6 +1,6 @@
 ---
 title: Recuperare righe da un set di risultati (OLE DB) | Microsoft Docs
-description: Recuperare righe da un set di risultati utilizzando OLE DB driver per SQL Server
+description: Recuperare righe da un set di risultati usando OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015558"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Recuperare righe da un set di risultati (OLE DB)
@@ -36,7 +36,7 @@ ms.locfileid: "68015558"
 ### <a name="description"></a>Descrizione  
  Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

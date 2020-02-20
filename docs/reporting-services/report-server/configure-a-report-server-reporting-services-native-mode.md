@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67313973"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurare un server di report (modalità nativa di Reporting Services)
@@ -27,9 +27,9 @@ ms.locfileid: "67313973"
   
 -   Un database del server di report che archivia i dati dell'applicazione, i report e altri elementi.  
   
- Durante l'installazione vengono configurate le impostazioni minime se si seleziona una delle modalità di installazione seguenti: configurazione predefinita in modalità nativa o configurazione predefinita in modalità di integrazione con SharePoint. Se il server di report è stato installato in modalità "solo file", ovvero è stata selezionata l'opzione **Installa senza configurare il server di report** nell'Installazione guidata, viene configurato solo l'account del servizio. L'URL del servizio Web e il database del server di report devono essere configurati al termine dell'installazione.  
+ Il programma di installazione configura le impostazioni minime se si seleziona una delle opzioni di installazione seguenti: Configurazione predefinita in modalità nativa o configurazione predefinita in modalità integrata SharePoint. Se il server di report è stato installato in modalità "solo file", ovvero è stata selezionata l'opzione **Installa senza configurare il server di report** nell'Installazione guidata, viene configurato solo l'account del servizio. L'URL del servizio Web e il database del server di report devono essere configurati al termine dell'installazione.  
   
-È consigliabile configurare il portale web in modo che è possibile concedere l'accesso utente al server di report e gestire contenuto del server di report. Se il server di report è distribuito in modalità integrata SharePoint, usare il front-end Web di un server di SharePoint per concedere l'accesso.  
+È consigliabile configurare il portale Web in modo che sia possibile concedere l'accesso utente al server di report e gestire il contenuto del server di report. Se il server di report è distribuito in modalità integrata SharePoint, usare il front-end Web di un server di SharePoint per concedere l'accesso.  
   
  Se necessario, è possibile configurare caratteristiche aggiuntive come ad esempio la posta elettronica e l'account di esecuzione automatica del server di report. Per altre informazioni, vedere [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
@@ -47,8 +47,8 @@ ms.locfileid: "67313973"
   
 5.  Seguire le istruzioni riportate nella sezione "Passaggi successivi" per completare la distribuzione.  
   
-## <a name="next-steps"></a>Next Steps  
- Per completare la distribuzione, configurare il portale Web o l'integrazione con SharePoint. Per altre informazioni, vedere [configurare il portale web](../../reporting-services/report-server/configure-web-portal.md).  
+## <a name="next-steps"></a>Passaggi successivi  
+ Per completare la distribuzione, configurare il portale Web o l'integrazione con SharePoint. Per altre informazioni, vedere [Configurare il portale Web](../../reporting-services/report-server/configure-web-portal.md).  
   
  Se Windows Firewall è abilitato, la porta configurata per l'utilizzo da parte del server di report è probabilmente chiusa. La visualizzazione di una pagina vuota quando si tenta di aprire il portale Web da un computer client remoto indica che una porta potrebbe essere chiusa. Per informazioni sulla configurazione del firewall, vedere [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67313973"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  

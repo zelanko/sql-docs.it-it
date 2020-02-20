@@ -1,18 +1,19 @@
 ---
-title: Configurare l'account del servizio del server di report (Gestione configurazione SSRS) | Microsoft Docs
+title: Configurare l'account del servizio del server di report (Gestione configurazione) | Microsoft Docs
+description: Reporting Services viene implementato come singolo servizio contenente un servizio Web ReportServer, il portale Web e un'applicazione di elaborazione in background usata per l'elaborazione pianificata di report e il recapito di sottoscrizioni.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 12/10/2018
-ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594087"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866024"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
 
@@ -34,9 +35,9 @@ ms.locfileid: "73594087"
   
 - Aggiunta automatica del nuovo account al gruppo di server di report creato nel computer locale. Questo gruppo è specificato negli elenchi di controllo di accesso (ACL) utilizzati per la protezione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Aggiornamento automatico delle autorizzazioni di accesso nell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance used to host the report server database. Il nuovo account verrà aggiunto a **RSExecRole**.  
+- Aggiornamento automatico delle autorizzazioni di accesso nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per ospitare il database del server di report. Il nuovo account verrà aggiunto a **RSExecRole**.  
   
-     L'account di accesso al database per l'account precedente non viene rimosso automaticamente. Assicurarsi di rimuovere gli account non più in uso. Per altre informazioni, vedere [amministrare un database &#40;del server di report&#41;modalità nativa SSRS](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
+     L'account di accesso al database per l'account precedente non viene rimosso automaticamente. Assicurarsi di rimuovere gli account non più in uso. Per altre informazioni, vedere [Amministrare un database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
   
      Al nuovo account del servizio vengono concesse autorizzazioni per il database solo se la connessione al database del server di report è stata configurata fin dall'inizio per l'uso dell'account del servizio. Se la connessione al database del server di report è stata configurata per l'utilizzo di un account utente di dominio o di un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'aggiornamento dell'account del servizio non influisce sulle informazioni di connessione.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "73594087"
   
 5. Quando viene richiesto di eseguire il backup della chiave simmetrica, digitare un nome di file e un percorso per la copia di backup della chiave simmetrica, digitare una password per bloccare e sbloccare il file, quindi scegliere **OK**.  
   
-6. Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione vengono aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
+6. Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione vengono aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo **Connessione al database** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere credenziali con l'autorizzazione necessaria per connettersi al database, quindi fare clic su **OK**.  
   
 7. Quando viene richiesto di ripristinare la chiave simmetrica, digitare la password specificata al passaggio 5, quindi scegliere **OK**.  
   
@@ -71,8 +72,8 @@ ms.locfileid: "73594087"
   
 |Account|Spiegazione|  
 |-------------|-----------------|  
-|Account utente di dominio|Se si possiede un account utente di dominio di Windows che dispone delle autorizzazioni minime necessarie per operazioni sul server di report, è consigliabile utilizzarlo.<br /><br /> Un account utente di dominio rappresenta la scelta consigliata, in quanto isola il servizio del server di report dalle altre applicazioni. L'esecuzione di più applicazioni tramite un account condiviso, ad esempio Servizio di rete, aumenta il rischio di esporre il server di report al controllo da parte di utenti malintenzionati, in quanto una violazione della sicurezza di una delle applicazioni può facilmente estendersi a tutte le applicazioni eseguite utilizzando lo stesso account.<br /><br /> Se si utilizza un account utente di dominio, è necessario modificare periodicamente la password se l'organizzazione applica criteri di scadenza delle password. Potrebbe inoltre essere necessario registrare il servizio con l'account utente. Per altre informazioni, vedere [Registrazione di un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evitare di utilizzare un account utente locale di Windows. Gli account locali non dispongono in genere di autorizzazioni sufficienti per accedere alle risorse in altri computer. Per altre informazioni sulle limitazioni imposte alle funzionalità del server di report quando si utilizza un account locale, vedere [Considerazioni sull'utilizzo di account locali](#localaccounts) in questo argomento.|  
-|**account Servizio virtuale**|L'**account Servizio virtuale** rappresenta il servizio di Windows. È un account predefinito con privilegi minimi che dispone di autorizzazioni di accesso alla rete. Tale account è consigliato se non si dispone di un account utente di dominio o se si desidera evitare le possibili interruzioni del servizio provocate dall'applicazione di criteri di scadenza delle password.|  
+|Account utente di dominio|Se si possiede un account utente di dominio di Windows che dispone delle autorizzazioni minime necessarie per operazioni sul server di report, è consigliabile utilizzarlo.<br /><br /> Un account utente di dominio rappresenta la scelta consigliata, in quanto isola il servizio del server di report dalle altre applicazioni. L'esecuzione di più applicazioni tramite un account condiviso, ad esempio Servizio di rete, aumenta il rischio di esporre il server di report al controllo da parte di utenti malintenzionati, in quanto una violazione della sicurezza di una delle applicazioni può facilmente estendersi a tutte le applicazioni eseguite utilizzando lo stesso account.<br /><br /> Se si utilizza un account utente di dominio, è necessario modificare periodicamente la password se l'organizzazione applica criteri di scadenza delle password. Potrebbe inoltre essere necessario registrare il servizio con l'account utente. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evitare di utilizzare un account utente locale di Windows. Gli account locali non dispongono in genere di autorizzazioni sufficienti per accedere alle risorse in altri computer. Per altre informazioni sulle limitazioni imposte alle funzionalità del server di report quando si utilizza un account locale, vedere [Considerazioni sull'utilizzo di account locali](#localaccounts) in questo argomento.|  
+|**Account del servizio virtuale**|L'**account Servizio virtuale** rappresenta il servizio di Windows. È un account predefinito con privilegi minimi che dispone di autorizzazioni di accesso alla rete. Tale account è consigliato se non si dispone di un account utente di dominio o se si desidera evitare le possibili interruzioni del servizio provocate dall'applicazione di criteri di scadenza delle password.|  
 |**Servizio di rete**|**Servizio di rete** è un account predefinito con privilegi minimi che dispone di autorizzazioni di accesso alla rete. <br /><br /> Se si seleziona **Servizio di rete**, tentare di ridurre al minimo il numero degli altri servizi eseguiti con lo stesso account. Una violazione della sicurezza di una delle applicazioni pregiudica la sicurezza di tutte le altre applicazioni eseguite con lo stesso account.|  
 |**Servizio locale**|**Servizio locale** è un account predefinito simile a un account utente locale di Windows autenticato. I servizi eseguiti tramite l'account **Servizio locale** possono accedere alle risorse di rete come sessione Null senza credenziali. Questo account non è adatto per scenari di distribuzione Intranet in cui il server di report deve connettersi a un database del server di report remoto o a un controller di dominio di rete per autenticare un utente prima dell'apertura di un report o dell'elaborazione di una sottoscrizione.|  
 |**Sistema locale**|**Sistema locale** è un account con privilegi elevati, non necessario per l'esecuzione di un server di report. Non utilizzare questo account per le installazioni dei server di report. Scegliere piuttosto un account di dominio o l'account **Servizio di rete** .|  
@@ -111,7 +112,7 @@ Per la scelta dell'approccio ottimale per la propria distribuzione, è possibile
   
 - Quando si aggiorna l'account del servizio, possono verificarsi errori relativi alle prenotazioni URL. Ogni prenotazione URL include un descrittore di sicurezza che include a sua volta un elenco di controllo di accesso discrezionale che concede all'account del servizio l'autorizzazione necessaria per accettare richieste nell'URL. Quando si aggiorna l'account, è necessario ricreare l'URL per aggiornare l'elenco di controllo di accesso discrezionale con le nuove informazioni sull'account. Se non è possibile ricreare la prenotazione URL e si è certi della validità dell'account, provare a riavviare il computer. Se l'errore persiste, provare a utilizzare un account diverso.  
   
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

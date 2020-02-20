@@ -1,6 +1,6 @@
 ---
-title: Eliminazione di una tabella SQL Server | Microsoft Docs
-description: Eliminazione di una tabella SQL Server utilizzando OLE DB driver per SQL Server
+title: Eliminazione di una tabella di SQL Server | Microsoft Docs
+description: Eliminazione di una tabella di SQL Server tramite OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5c5b241af215c04a72bf389079a4a0299d7496b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994000"
 ---
 # <a name="dropping-a-sql-server-table"></a>Eliminazione di una tabella di SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "67994000"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il driver OLE DB per SQL Server espone la funzione **ITableDefinition::D roptable** per rimuovere una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella da un database.  
+  OLE DB Driver per SQL Server espone la funzione **ITableDefinition::DropTable** per rimuovere una tabella di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da un database.  
   
  Specificare il nome della tabella come stringa di caratteri Unicode nel membro *pwszName* dell'unione *uName* nel parametro *pTableID*. Il membro *eKind* di*pTableID* deve essere DBKIND_NAME.  
   

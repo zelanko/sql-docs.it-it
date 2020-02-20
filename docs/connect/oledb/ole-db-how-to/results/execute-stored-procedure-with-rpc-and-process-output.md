@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994732"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Eseguire la stored procedure con RPC e l'output del processo
@@ -38,13 +38,13 @@ ms.locfileid: "67994732"
   
 3.  Creare un set di associazioni (uno per ogni creatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-4.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor:: CreateAccessor** . **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
+4.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor::CreateAccessor**. **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
   
 5.  Completare la struttura DBPARAMS.  
   
 6.  Chiamare il comando **Execute**, rappresentato in questo caso da una chiamata a una stored procedure.  
   
-7.  Elaborare il set di righe e rilasciarlo utilizzando il metodo **IRowset:: Release** .  
+7.  Elaborare il set di righe e rilasciarlo usando il metodo **IRowset::Release**.  
   
 8.  Elaborare il codice restituito e i valori del parametro di output ricevuti dalla stored procedure.  
   

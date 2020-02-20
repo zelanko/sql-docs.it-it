@@ -1,6 +1,7 @@
 ---
-title: Gestione e manutenzione dell'istanza del cluster di failover | Microsoft Docs
-ms.custom: ''
+title: Gestione e manutenzione delle istanze del cluster di failover
+description: Informazioni sulla gestione e sulla manutenzione delle istanze del cluster di failover di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002485"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230073"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Gestione e manutenzione dell'istanza del cluster di failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +57,15 @@ ms.locfileid: "68002485"
   
 |Descrizione dell'attività|Collegamento all'argomento|  
 |----------------------|----------------|  
-|Viene descritto come aggiungere dipendenze a una risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Aggiunta di dipendenze a una risorsa di SQL Server](../../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)|  
+|Viene descritto come aggiungere dipendenze a una risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Aggiungere dipendenze a una risorsa di SQL Server](../../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)|  
 |Kerberos è un protocollo di autenticazione di rete progettato per fornire un'autenticazione avanzata alle applicazioni client/server. Oltre a offrire un'infrastruttura di interoperabilità, il protocollo Kerberos contribuisce ad aumentare la sicurezza dell'autenticazione estesa all'intera azienda. È possibile usare l'autenticazione Kerberos con le istanze autonome di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o con le istanze FCI AlwaysOn.|[Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Vengono forniti i collegamenti a contenuti che descrivono come abilitare l'autenticazione Kerberos||  
 |Viene descritta la procedura utilizzata per recuperare da un errore di un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperare da un errore dell'istanza del cluster di failover](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
-|Descrivere la procedura utilizzata per modificare la risorsa indirizzo IP per un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modifica dell'indirizzo IP di un'istanza del cluster di failover](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
+|Descrivere la procedura utilizzata per modificare la risorsa indirizzo IP per un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modificare l'indirizzo IP di un'istanza del cluster di failover](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione delle impostazioni HealthCheckTimeout](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
  [Configurare le impostazioni della proprietà FailureConditionLevel](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
- [Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
+ [Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
   
   

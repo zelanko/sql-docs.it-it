@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994381"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -44,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Argomenti  
  *hChapter*[in]  
- Handle del capitolo. Se l'oggetto di cui è stato eseguito il polling non è un oggetto set di righe o l'operazione non è applicabile a un capitolo, deve essere impostata su DB_NULL_HCHAPTER, che viene ignorato dal provider.  
+ Handle del capitolo. Se l'oggetto sottoposto a polling non è un oggetto set di righe o l'operazione non è applicabile a un capitolo, deve essere impostato sul valore DB_NULL_HCHAPTER, che viene ignorato dal provider.  
   
  *eOperation*[in]  
- Operazione per la quale viene richiesto lo stato asincrono. Usare il valore seguente:  
+ Operazione per la quale viene richiesto lo stato asincrono. Deve essere usato il valore seguente:  
   
  DBASYNCHOP_OPEN: il consumer richiede informazioni sull'apertura o sul popolamento asincrono di un set di righe o sull'inizializzazione asincrona di un oggetto origine dati. Se il provider è un provider conforme a OLE DB 2.5 che supporta l'associazione URL diretta, il consumer richiede informazioni sull'inizializzazione o sul popolamento asincrono di un oggetto origine dati, set di righe, riga o flusso.  
   
@@ -81,7 +81,7 @@ HRESULT GetStatus(
   
  Se *ppwszStatusText* è Null nell'input, non viene restituita alcuna stringa di stato e il provider restituisce informazioni sugli elementi dell'operazione o sull'operazione in generale.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  S_OK  
  Il metodo è stato restituito correttamente.  
   
@@ -109,7 +109,7 @@ HRESULT GetStatus(
  E_FAIL  
  Si è verificato un errore specifico del provider.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il comportamento del metodo **ISSAsynchStatus::GetStatus** è identico a quello del metodo **IDBAsynchStatus::GetStatus** con l'eccezione che se viene interrotta l'inizializzazione di un oggetto origine dati, viene restituito E_UNEXPECTED anziché DB_E_CANCELED (anche se [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) restituirà DB_E_CANCELED). Ciò accade perché l'oggetto origine dati non rimane nello stato non valido in seguito a un'interruzione, allo scopo di consentire altri tentativi di inizializzazione.  
   
  Se il set di righe viene inizializzato o popolato in modo asincrono, deve supportare questo metodo.  
@@ -126,6 +126,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)   
- [OLE DB &#40;ISSAsynchStatus&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

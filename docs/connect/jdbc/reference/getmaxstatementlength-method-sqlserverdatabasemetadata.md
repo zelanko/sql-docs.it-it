@@ -16,10 +16,10 @@ ms.assetid: f45fcf45-b9e7-4d14-a90a-ebc542ac7755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 205b939a870ede1a5a4a02fec81d73ea8dba073d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981980"
 ---
 # <a name="getmaxstatementlength-method-sqlserverdatabasemetadata"></a>Metodo getMaxStatementLength (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxStatementLength()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getMaxStatementLength viene specificato dal metodo getMaxStatementLength nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getMaxStatementLength viene specificato dal metodo getMaxStatementLength nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

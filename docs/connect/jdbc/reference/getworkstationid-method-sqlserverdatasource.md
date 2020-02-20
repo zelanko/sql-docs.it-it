@@ -16,10 +16,10 @@ ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98cde4953d60f13d1768b06dbfab9ada6ea8af55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978053"
 ---
 # <a name="getworkstationid-method-sqlserverdatasource"></a>Metodo getWorkstationID (SQLServerDataSource)
@@ -37,8 +37,8 @@ public java.lang.String getWorkstationID()
 ## <a name="return-value"></a>Valore restituito  
  Valore **String** contenente il nome del computer client.  
   
-## <a name="remarks"></a>Remarks  
- L'oggetto workstationID è il nome del computer o della workstation client. Se la proprietà workstationID non è impostata, il valore predefinito viene costruito chiamando il metodo InetAddress. getLocalHost (). GetHostName (). Se GetHostName restituisce un valore vuoto, viene chiamato il metodo getHostAddress (). ToString ().  
+## <a name="remarks"></a>Osservazioni  
+ L'oggetto workstationID è il nome del computer o della workstation client. Se la proprietà workstationID non è impostata, il valore predefinito viene costruito chiamando il metodo InetAddress.getLocalHost().getHostName(). Se getHostName restituisce un valore vuoto, viene chiamato il metodo getHostAddress().toString().  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

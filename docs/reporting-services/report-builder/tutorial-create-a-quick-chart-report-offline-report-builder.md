@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Create a Quick Chart Report Offline (Report Builder) (Esercitazione: Creare un report grafico rapido offline (Generatore report)) | Microsoft Docs'
+title: 'Esercitazione: Creare un report grafico rapido offline (Generatore report) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,10 +13,10 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037966"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
@@ -41,7 +41,7 @@ ms.locfileid: "67037966"
   
  [Creare il grafico a torta con dati XML](#CreatePieChartXML)  
   
-### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Uso di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] contenente dati per l'esercitazione  
+### <a name="using-a-tsql-query-that-contains-data-for-this-tutorial"></a>Uso di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] contenente dati per l'esercitazione  
  È possibile copiare una query contenente dati da questo argomento e incollarla nella procedura guidata. Sarà necessario avere il nome di un'istanza di SQL Server e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. Per la query del set di dati dell'esercitazione vengono usati dati letterali, ma è necessario elaborare la query da un'istanza di SQL Server per restituire i metadati richiesti per un set di dati del report.  
   
  Il vantaggio dell'uso della query [!INCLUDE[tsql](../../includes/tsql-md.md)] è dato dal fatto che in tutte le altre esercitazioni di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] viene usato lo stesso metodo, pertanto durante le altre esercitazioni si conosceranno già le azioni da eseguire.  
@@ -56,7 +56,7 @@ ms.locfileid: "67037966"
   
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
-     ![Attività iniziale Generatore report](../../reporting-services/media/rb-getstarted.png "Attività iniziale Generatore report")  
+     ![Riquadro attività iniziale di Generatore report](../../reporting-services/media/rb-getstarted.png "Riquadro attività iniziale di Generatore report")  
   
      Se la finestra di dialogo **Riquadro attività iniziale** non viene visualizzata, fare clic su **File** >**Nuovo**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
   
@@ -107,9 +107,9 @@ ms.locfileid: "67037966"
   
 11. (Facoltativo) Fare clic sul pulsante **Esegui** ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
-     ![Query di progettazione di Generatore report](../../reporting-services/report-builder/media/rb-designquery.png "Query di progettazione di Generatore report")  
+     ![Progetta query in Generatore report](../../reporting-services/report-builder/media/rb-designquery.png "Progetta query in Generatore report")  
   
-12. Scegliere **Avanti**.  
+12. Fare clic su **Avanti**.  
   
 13. Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**.  
   
@@ -117,23 +117,23 @@ ms.locfileid: "67037966"
   
      Il campo verrà spostato automaticamente nella casella **Valori** perché rappresenta un valore numerico.  
   
-     ![Procedura guidata disposizione campi di Generatore report](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Procedura guidata disposizione campi di Generatore report")  
+     ![Disposizione dei campi nella procedura guidata di Generatore report](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Disposizione dei campi nella procedura guidata di Generatore report")  
   
 15. Trascinare il campo **FullName** dalla casella **Campi disponibili** alla casella **Categorie**. In alternativa è possibile fare doppio clic sul campo per spostarlo nella casella **Categorie**. Al termine fare clic su **Avanti**.  
   
      La pagina di anteprima mostra il nuovo grafico a torta con dati rappresentativi. Nella legenda sono riportate le diciture Full Name 1, Full Name 2 e così via, anziché i nomi dei venditori, e le dimensioni delle sezioni della torta non sono precise. L'esempio serve solo per dare un'idea generale dell'aspetto del report.  
   
-     ![Anteprima nuovo grafico di Generatore report](../../reporting-services/report-builder/media/rb-newchartpreview.png "Anteprima nuovo grafico di Generatore report")  
+     ![Anteprima del nuovo grafico in Generatore report](../../reporting-services/report-builder/media/rb-newchartpreview.png "Anteprima del nuovo grafico in Generatore report")  
   
 16. Fare clic su **Fine**.  
   
      È ora possibile visualizzare il nuovo report con grafico a torta nella visualizzazione Progettazione, sempre con dati rappresentativi.  
   
-     ![Nuovo grafico a torta nella visualizzazione Progettazione di Generatore report](../../reporting-services/report-builder/media/rb-newpiedesign.png "Nuovo grafico a torta nella visualizzazione Progettazione di Generatore report")  
+     ![Nuovo grafico a torta di Generatore report nella visualizzazione progettazione](../../reporting-services/report-builder/media/rb-newpiedesign.png "Nuovo grafico a torta di Generatore report nella visualizzazione progettazione")  
   
 17. Per visualizzare il grafico a torta effettivo, fare clic su **Esegui** nella scheda **Home** della barra multifunzione.  
   
-     ![Anteprima nuovo grafico di Generatore report](../../reporting-services/report-builder/media/rb-newchartrun.png "Anteprima nuovo grafico di Generatore report")  
+     ![Esecuzione del nuovo grafico in Generatore report](../../reporting-services/report-builder/media/rb-newchartrun.png "Esecuzione del nuovo grafico in Generatore report")  
   
 18. Per continuare la modifica del grafico a torta, vedere [Al termine della procedura guidata](#AfterWizard) in questo articolo.  
   
@@ -169,9 +169,9 @@ ms.locfileid: "67037966"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 10. Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**.  
   
@@ -220,7 +220,7 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> Operazioni successive  
- Al termine della creazione del primo report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], è necessario disporre dell'autorizzazione per accedere alle origini dati, ad esempio i database, con una *stringa di connessione*che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
+ Al termine della creazione del primo report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è necessario avere l'autorizzazione di accesso alle origini dati, ad esempio ai database, con una *stringa di connessione*che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
   
  Per eseguire le altre esercitazioni, è necessario avere il nome di un'istanza di SQL Server e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  
   

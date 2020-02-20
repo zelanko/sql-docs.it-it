@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66174996"
 ---
 # <a name="preload-the-cache"></a>Precaricare la cache  
@@ -23,7 +23,7 @@ ms.locfileid: "66174996"
   
  Di seguito vengono indicate le due modalità di precaricamento della cache.  
   
-1.  Creazione di un piano di aggiornamento della cache per il report Questo è il metodo consigliato.  
+1.  Creazione di un piano di aggiornamento della cache per il report Questo è il metodo preferito.  
   
 2.  Utilizzo di una sottoscrizione guidata dai dati per il precaricamento della cache con istanze di report con parametri. Questo metodo consente di precaricare la cache solo in versioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precedenti a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Per altre informazioni, vedere [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66174996"
   
 ## <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Per precaricare la cache creando un piano di aggiornamento della cache  
   
-1. Avviare il [portale Web di un server di report](../../reporting-services/web-portal-ssrs-native-mode.md "Portale web di un server di report").  
+1. Avviare il [portale Web di un server di report](../../reporting-services/web-portal-ssrs-native-mode.md "Portale Web di un server di report").  
   
 2. Selezionare **Esplora** dalla schermata iniziale e spostarsi nella gerarchia di cartelle per individuare l'elemento che si vuole memorizzare nella cache.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "66174996"
 5. Per attivare la memorizzazione nella cache per un set di dati, selezionare il pulsante di opzione **Memorizzare nella cache copie di questo set di dati e usarle quando disponibili**. Verrà visualizzata la sezione **Scadenza della cache** al di sotto. Selezionare uno dei pulsanti di opzione seguenti:
 
     - **Scadenza della cache dopo x minuti** (immettere il numero desiderato di minuti per x).
-    - **Scadenza della cache in base a una pianificazione**.  Reporting Services rende disponibili pianificazioni condivise e pianificazioni specifiche dei report per controllare l'elaborazione, la coerenza dei contenuti e le prestazioni della distribuzione dei report. Per altre informazioni, vedere [Creare, modificare ed eliminare pianificazioni](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Creare, modificare ed eliminare pianificazioni"). Sono disponibili diverse opzioni per creare una pianificazione, in questo caso per la scadenza della cache: selezionare una delle due opzioni di pianificazione seguenti:  
-      - Pulsante di opzione **Pianificazione condivisa** e quindi selezionare una pianificazione nella casella di testo a discesa **Selezionare una pianificazione condivisa**. Per altre informazioni, vedere [Pianificazioni](../../reporting-services/subscriptions/schedules.md "Pianificazioni").  
+    - **Scadenza della cache in base a una pianificazione**.  Reporting Services rende disponibili pianificazioni condivise e pianificazioni specifiche dei report per controllare l'elaborazione, la coerenza dei contenuti e le prestazioni della distribuzione dei report. Per altre informazioni, vedere [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Sono disponibili diverse opzioni per creare una pianificazione, in questo caso per la scadenza della cache: Selezionare una delle due opzioni di pianificazione seguenti:  
+      - Pulsante di opzione **Pianificazione condivisa** e quindi selezionare una pianificazione nella casella di testo a discesa **Selezionare una pianificazione condivisa**. Per altre informazioni, vedere [Schedules](../../reporting-services/subscriptions/schedules.md "Pianificazioni").  
       - Pulsante di opzione **Pianificazione in base al report**, quindi selezionare il collegamento **Modifica pianificazione** se necessario per visualizzare la pagina *Dettagli pianificazione*.  
 
-         ![Pagina dei dettagli della pianificazione della scadenza della cache del portale Web per i set di dati](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Pagina dei dettagli della pianificazione della cache per i set di dati")
+         ![Pagina dei dettagli della pianificazione della scadenza della cache del portale Web per i set di dati](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Pagina dei dettagli della pianificazione della cache del set di dati")
 
           In questa pagina è possibile selezionare:
          - Il tipo di pianificazione:
            - **Ora** - Esegui la pianificazione ogni: specificare ore e minuti e l'ora di inizio.
            - **Giorno** - Selezionare una delle tre opzioni seguenti:  
-              - **Nei giorni seguenti**: (lun, mar, mer, gio, ven, sab, dom).
+              - **Nei giorni seguenti**: (Dom, Lun, Mar, Mer, Gio, Ven, Sat).
               - **Ogni giorno feriale**
               - **Ripeti dopo il numero di giorni seguente** - Specificare un numero.  
            - **Settimana** - Specificare entrambe le opzioni seguenti:
@@ -94,7 +94,7 @@ ms.locfileid: "66174996"
   
 ## <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Per precaricare la cache con un report specifico dell'utente tramite una sottoscrizione guidata dai dati
 
-1. Avviare il [portale Web di un server di report](../../reporting-services/web-portal-ssrs-native-mode.md "Portale web di un server di report").  
+1. Avviare il [portale Web di un server di report](../../reporting-services/web-portal-ssrs-native-mode.md "Portale Web di un server di report").  
 2. Selezionare **Esplora** dalla schermata iniziale e spostarsi nella gerarchia di cartelle per individuare il report che si vuole sottoscrivere.  
 3. Fare clic con il pulsante destro del mouse sul report e scegliere **Sottoscrivi** dal menu a discesa. Verrà visualizzata la pagina **Nuove sottoscrizioni**.  
 4. Immettere una descrizione per la sottoscrizione nella casella di testo **Descrizione**.  
@@ -118,7 +118,7 @@ ms.locfileid: "66174996"
    data source=<servername>;initial catalog=Subscribers  
    ```
   
-10. Nella sezione **Query** specificare la query che recupera i dati del sottoscrittore desiderato.  Esempio:  
+10. Nella sezione **Query** specificare la query che recupera i dati del sottoscrittore desiderato.  Ad esempio:  
   
     ```T-SQL  
     Select * from RptSubscribers  
@@ -132,14 +132,14 @@ ms.locfileid: "66174996"
 
 13. Selezionare **Crea sottoscrizione**.  
   
-14. Verrà visualizzata la pagina **Sottoscrizioni** che mostra la nuova sottoscrizione guidata dai dati. Da questa pagina è possibile abilitare la sottoscrizione quando si è pronti selezionando la casella di controllo alla sua sinistra e selezionando poi il pulsante **Abilita**. ![Pulsante Abilita nella pagina Sottoscrizioni](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "Pulsante Abilita nella pagina Sottoscrizioni")
+14. Verrà visualizzata la pagina **Sottoscrizioni** che mostra la nuova sottoscrizione guidata dai dati. Da questa pagina è possibile abilitare la sottoscrizione quando si è pronti selezionando la casella di controllo alla sua sinistra e selezionando poi il pulsante **Abilita**. ![Pulsante Abilita della pagina Sottoscrizioni](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "Pulsante Abilita nella pagina Sottoscrizioni")
 
 15. Specificare quando viene elaborata la sottoscrizione. Non scegliere **Quando i dati del report vengono aggiornati nel server di report**. Questa impostazione è solo per gli snapshot. Se si vuole usare una pianificazione preesistente, selezionare **In base a una pianificazione condivisa**.  
   
      In alternativa, per creare una pianificazione personalizzata selezionare **In base a una pianificazione creata per questa sottoscrizione** e quindi selezionare **Avanti**. Configurare la pianificazione e quindi selezionare **Fine**.  
   
     > [!NOTE]  
-    > Perché i sottoscrittori possano ricevere il report più recente, è necessario che la pianificazione configurata dall'utente sia coerente con la pianificazione di recapito del report che è stata definita per i sottoscrittori. Per altre informazioni, vedere [Portale Web di un server di report ](../../reporting-services/web-portal-ssrs-native-mode.md  "Portale Web di un server di report ").  
+    > Perché i sottoscrittori possano ricevere il report più recente, è necessario che la pianificazione configurata dall'utente sia coerente con la pianificazione di recapito del report che è stata definita per i sottoscrittori. Per altre informazioni, vedere [Portale Web di un server di report](../../reporting-services/web-portal-ssrs-native-mode.md  "Portale Web di un server di report").  
   
 16. Configurare le opzioni di esecuzione del report come segue. Nella pagina del report selezionare la scheda **Proprietà**.  
   

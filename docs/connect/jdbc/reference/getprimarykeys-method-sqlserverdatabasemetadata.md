@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980760"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Metodo getPrimaryKeys (SQLServerDatabaseMetaData)
@@ -45,7 +45,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
   
  Valore **String** contenente il nome dello schema.  
   
- *table*  
+ *tabella*  
   
  Valore **String** contenente il nome della tabella.  
   
@@ -55,19 +55,19 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getPrimaryKeys viene specificato dal metodo getPrimaryKeys nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getPrimaryKeys viene specificato dal metodo getPrimaryKeys nell'interfaccia java.sql.DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getPrimaryKeys conterrà le informazioni seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|TABLE_CAT|String|Nome del database contenente la tabella specificata.|  
-|TABLE_SCHEM|String|Schema della tabella.|  
-|TABLE_NAME|String|Nome della tabella.|  
-|COLUMN_NAME|String|Nome della colonna.|  
+|TABLE_CAT|string|Nome del database contenente la tabella specificata.|  
+|TABLE_SCHEM|string|Schema della tabella.|  
+|TABLE_NAME|string|Nome della tabella.|  
+|COLUMN_NAME|string|Nome della colonna.|  
 |KEY_SEQ|short|Numero di sequenza della colonna in una chiave primaria a più colonne.|  
-|PK_NAME|String|Nome della chiave primaria.|  
+|PK_NAME|string|Nome della chiave primaria.|  
   
 > [!NOTE]  
 >  Per altre informazioni sui dati restituiti dal metodo getPrimaryKeys, vedere "sp_pkeys (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

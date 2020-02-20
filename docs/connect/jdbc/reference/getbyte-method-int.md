@@ -1,5 +1,5 @@
 ---
-title: Metodo GetByte (int) | Microsoft Docs
+title: Metodo getByte (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cff3ad26-0b6c-4d98-8deb-e89217486d79
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a2f61961808d63a66d5dd29c8b9387f51a688c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953476"
 ---
 # <a name="getbyte-method-int"></a>Metodo getByte (int)
@@ -45,7 +45,7 @@ public byte getByte(int index)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getByte viene specificato dal metodo getByte nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

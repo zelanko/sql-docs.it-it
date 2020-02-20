@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706353"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831395"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usare uno script Python per distribuire un cluster Big Data di SQL Server nel servizio Azure Kubernetes
 
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Eseguire lo script di distribuzione
 
-Usare la procedura seguente per eseguire lo script di distribuzione. Questo script creerà un servizio Azure Kubernetes in Azure e quindi distribuirà un cluster Big Data di SQL Server 2019 nel servizio Azure Kubernetes. È anche possibile modificare lo script con altre [variabili di ambiente](deployment-guidance.md#configfile) per creare una distribuzione personalizzata.
+Usare la procedura seguente per eseguire lo script di distribuzione in un prompt di PowerShell per Windows o di Bash per Linux. Questo script creerà un servizio Azure Kubernetes in Azure e quindi distribuirà un cluster Big Data di SQL Server 2019 nel servizio Azure Kubernetes. È anche possibile modificare lo script con altre [variabili di ambiente](deployment-guidance.md#configfile) per creare una distribuzione personalizzata.
 
 1. Eseguire lo script con il comando seguente:
 
@@ -88,8 +88,6 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
    > Durante la distribuzione di cluster Big Data, l'account `sa` di SQL Server è disabilitato. Viene eseguito il provisioning di un nuovo account di accesso sysadmin nell'istanza master di SQL Server usando lo stesso nome specificato per l'input **Nome utente** e la password corrispondente all'input **Password**. Gli stessi valori di **Nome utente** e **Password** vengono usati anche per il provisioning di un utente amministratore del controller. Solo l'utente supportato per il gateway (Knox) è la **radice** e la password è identica a quella indicata in precedenza.
 
 1. Lo script si avvierà creando un cluster del servizio Azure Kubernetes con i parametri specificati. Questo passaggio richiede alcuni minuti.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>Monitorare lo stato
 

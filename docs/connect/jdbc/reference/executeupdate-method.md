@@ -16,10 +16,10 @@ ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eae73888b97b8511a23ba3387e2674bff40643c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954589"
 ---
 # <a name="executeupdate-method-"></a>Metodo executeUpdate ()
@@ -40,7 +40,7 @@ public int executeUpdate()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo executeUpdate viene specificato dal metodo executeUpdate nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

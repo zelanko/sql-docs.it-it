@@ -1,8 +1,7 @@
 ---
-title: Modificare i server di destinazione per un processo | Microsoft Docs
+title: Modifica dei server di destinazione di un processo
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +11,17 @@ helpviewer_keywords:
 ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fa21b76a802497a00baada62c27d9492bb732e14
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: a5300935cdbffc501996c7e68ba44b73b2964fa4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552830"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252382"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modifica dei server di destinazione di un processo
 
@@ -29,14 +30,14 @@ ms.locfileid: "69552830"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questo argomento viene illustrato come modificare i server di destinazione per i processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Questo argomento descrive come modificare i server di destinazione per i processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
-Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server sysadmin. Gli altri utenti devono appartenere a uno dei seguenti ruoli predefiniti del database di SQL Server Agent nel database msdb:  
+#### <a name="Permissions"></a>Autorizzazioni  
+Per impostazione predefinita, i membri del ruolo predefinito del server sysadmin possono eseguire questa stored procedure. Gli altri utenti devono appartenere a uno dei seguenti ruoli predefiniti del database di SQL Server Agent nel database msdb:  
   
 1.  **SQLAgentUserRole**  
   

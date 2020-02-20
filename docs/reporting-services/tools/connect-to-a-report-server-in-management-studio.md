@@ -19,10 +19,10 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574103"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio

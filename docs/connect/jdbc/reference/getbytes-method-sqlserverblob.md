@@ -1,5 +1,5 @@
 ---
-title: Metodo GetBytes (SQLServerBlob) | Microsoft Docs
+title: Metodo getBytes (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4c7891c6d7454e0397406f9391fdfb60d0f0fc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213714"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>Metodo getBytes (SQLServerBlob)
@@ -50,7 +50,7 @@ public byte[] getBytes(long pos,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getBytes viene specificato dal metodo getBytes nell'interfaccia java.sql.Blob.  
   
  Se è presente un BLOB Null o di lunghezza zero e si prova a ottenere esattamente zero byte in corrispondenza della posizione 1, viene restituita una matrice di **byte** vuota (matrice di byte di lunghezza 0).  

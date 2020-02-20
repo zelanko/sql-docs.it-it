@@ -16,10 +16,10 @@ ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977014"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>Metodo isWritable (SQLServerResultSetMetaData)
@@ -40,13 +40,13 @@ public boolean isWritable(int column)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se le Scritture riusciranno sulla colonna. In caso contrario, **false**.  
+ **true** se le scritture riusciranno sulla colonna. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo scrivibile viene specificato dal metodo scrivibile nell'interfaccia java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo isWritable viene specificato dal metodo isWritable nell'interfaccia java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

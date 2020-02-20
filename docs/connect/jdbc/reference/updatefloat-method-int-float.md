@@ -16,10 +16,10 @@ ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1257ced0c69a461913d9c3a9ae147fffcf72cea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998954"
 ---
 # <a name="updatefloat-method-int-float"></a>Metodo updateFloat (int, float)
@@ -42,12 +42,12 @@ public void updateFloat(int index,
   
  *x*  
   
- Valore **float** .  
+ Valore **float**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateFloat viene specificato dal metodo updateFloat nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -16,10 +16,10 @@ ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9c94e0c69bd528f1c579f41319a4db18b7d4d3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982567"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>Metodo getLockTimeout (SQLServerDataSource)
@@ -37,7 +37,7 @@ public int getLockTimeout()
 ## <a name="return-value"></a>Valore restituito  
  Valore **int** contenente il numero di millisecondi di attesa del database.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il timeout di blocco è il numero di millisecondi di attesa prima che venga segnalato un timeout di blocco per il database. Il valore predefinito -1 indica un'attesa illimitata. Se specificato, questo valore diventerà l'impostazione predefinita per tutte le istruzioni sulla connessione.  
   
 > [!NOTE]  

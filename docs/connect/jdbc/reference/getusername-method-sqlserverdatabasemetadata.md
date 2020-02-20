@@ -1,5 +1,5 @@
 ---
-title: Metodo GetUserName (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Metodo getUserName (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1ae81034-5de3-4f4a-b3f2-7d9d198a73af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38da8d6666337c464d7a828952b025977336d373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978147"
 ---
 # <a name="getusername-method-sqlserverdatabasemetadata"></a>Metodo getUserName (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.lang.String getUserName()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getUserName viene specificato dal metodo getUserName nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

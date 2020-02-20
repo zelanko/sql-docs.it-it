@@ -1,10 +1,9 @@
 ---
-title: Definire le opzioni del passaggio di processo Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Definire le opzioni del passaggio di processo Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c16a6829f55ef2d1a76a26306484ba19ca00ae53
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 8dffd043dcd03d73dda9964ee050fcb262dc2b07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553020"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242516"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Definire le opzioni del passaggio di processo Transact-SQL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,11 +29,11 @@ ms.locfileid: "69553020"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questo argomento viene descritto come definire le opzioni per i passaggi del processo [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o SQL Server Management Objects.  
+Questo argomento descrive come definire le opzioni per i passaggi del processo [!INCLUDE[tsql](../../includes/tsql-md.md)] di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o SQL Server Management Objects.  
   
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
@@ -66,5 +67,5 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
 ## <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 **Per definire le opzioni del passaggio di processo Transact-SQL**  
   
-Usare la classe **JobStep** con un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell.  
+Usare la classe **JobStep** tramite un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell.  
   

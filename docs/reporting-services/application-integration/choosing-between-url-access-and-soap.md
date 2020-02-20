@@ -1,21 +1,23 @@
 ---
-title: Scelta tra accesso con URL e SOAP in Reporting Services | Microsoft Docs
+title: Scegliere tra accesso con URL e SOAP
+description: 'È possibile integrare Reporting Services nelle applicazioni personalizzate in due modi: accesso con URL e API SOAP di Reporting Services. La modalità da utilizzare dipende da diversi fattori.'
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a9c28c2e0eeae14dbc25db3c78c3962ddebd89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704067"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796917"
 ---
-# <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Scelta tra accesso con URL e SOAP in Reporting Services
+# <a name="choose-between-url-access-and-soap-in-reporting-services"></a>Scegliere tra accesso con URL e SOAP in Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -24,7 +26,7 @@ L'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
 > [!NOTE]
 > A partire da SQL Server 2017 Reporting Services, è disponibile l'accesso all'API REST per lo sviluppo di soluzioni. L'accesso all'API SOAP è stato deprecato. Per altre informazioni, vedere [Sviluppare con le API REST per Reporting Services](../developer/rest-api.md).
   
- È possibile integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate in due modi, ovvero tramite l'accesso con URL e l'API SOAP di Reporting Services. La modalità da utilizzare dipende da diversi fattori. In alcuni casi, l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni aziendali personalizzate richiede l'uso dell'accesso con URL e di SOAP. È necessario porsi le domande seguenti:  
+ È possibile integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate in due modi: accesso con URL e API SOAP di Reporting Services. La modalità da utilizzare dipende da diversi fattori. In alcuni casi, l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni aziendali personalizzate richiede l'uso dell'accesso con URL e di SOAP. È necessario porsi le domande seguenti:  
   
 -   Quali tipi di funzionalità di creazione di report aziendali sono necessari? È necessario disporre di un modo semplice per avviare e navigare tra i report oppure sono necessarie caratteristiche di gestione del server di report più avanzate per la soluzione aziendale personalizzata?  
   

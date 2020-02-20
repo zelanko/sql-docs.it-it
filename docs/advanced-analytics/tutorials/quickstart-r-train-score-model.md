@@ -1,27 +1,26 @@
 ---
 title: 'Avvio rapido: Eseguire il training di un modello in R'
-titleSuffix: SQL Server Machine Learning Services
-description: Creare un modello predittivo semplice in R usando Machine Learning Services per SQL Server, quindi stimare un risultato usando nuovi dati.
+description: In questo argomento di avvio rapido si creerà ed eseguirà il training di un modello predittivo con T. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726513"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831728"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare un modello predittivo e assegnare punteggi in R con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questo argomento di avvio rapido si creerà un modello predittivo con R, si eseguirà il training del modello, si salverà il modello in una tabella nell'istanza di SQL Server, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md).
+In questo argomento di avvio rapido si creerà ed eseguirà il training di un modello predittivo con T. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md).
 
 Si creeranno due stored procedure che verranno eseguite in SQL. La prima usa il set di dati **mtcars** incluso in R e genera un modello lineare generalizzato (GLM, Generalized Linear Model) semplice che stima la probabilità che un veicolo sia dotato di trasmissione manuale. La seconda stored procedure, per l'assegnazione dei punteggi, chiama il modello generato nella prima stored procedure per restituire un set di stime basate sui nuovi dati. Inserendo il codice R in una stored procedure SQL, le operazioni sono contenute in SQL, sono riutilizzabili e possono essere chiamate da altre stored procedure e applicazioni client.
 
@@ -80,7 +79,7 @@ Per creare il modello, è necessario creare i dati di origine per il training, c
    ```
 
    > [!TIP]
-   > Nel runtime R sono inclusi diversi set di dati di piccole e grandi dimensioni. Per ottenere un elenco dei set di dati installati con R, digitare `library(help="datasets")` da un prompt dei comandi R.
+   > Molti set di dati di piccole e grandi dimensioni sono inclusi con il runtime di R. Per ottenere un elenco dei set di dati installati con R, digitare `library(help="datasets")` da un prompt dei comandi R.
 
 ### <a name="create-and-train-the-model"></a>Creare il modello ed eseguirne il training
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - Il primo argomento di `glm` è il parametro *formula*, che definisce `am` come dipendente da `hp + wt`.
-- I dati di input vengono archiviati nella variabile `MTCarsData`, popolata dalla query SQL. Se non si assegna un nome specifico ai dati di input, il nome predefinito della variabile sarà _InputDataSet_.
+- I dati di input vengono archiviati nella variabile `MTCarsData`, che viene popolata dalla query SQL. Se non si assegna un nome specifico ai dati di input, il nome predefinito della variabile è _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Archiviare il modello nel database SQL
 
@@ -132,7 +131,7 @@ Archiviare quindi il modello in un database SQL per poterlo usare per la stima o
    ```
 
    > [!TIP]
-   > Se si esegue questo codice una seconda volta, si otterrà questo errore: "Violazione del vincolo PRIMARY KEY...Impossibile inserire la chiave duplicata nell'oggetto dbo.stopping_distance_models". Un modo per evitare questo errore consiste nell'aggiornare il nome di ogni nuovo modello. È ad esempio possibile sostituire il nome con uno più descrittivo e includere il tipo di modello, il giorno della creazione e così via.
+   > Se si esegue questo codice una seconda volta, si otterrà questo errore: "Violazione del vincolo PRIMARY KEY...Impossibile inserire la chiave duplicata nell'oggetto dbo.stopping_distance_models". Un modo per evitare questo errore consiste nell'aggiornare il nome per ogni nuovo modello. Ad esempio, si può modificare il nome scegliendone uno più descrittivo e includere il tipo di modello, il giorno di creazione e così via.
 
      ```sql
      UPDATE GLM_models
@@ -202,11 +201,11 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 Lo script precedente esegue i passaggi seguenti:
 
-- Usare un'istruzione SELECT per ottenere un singolo modello dalla tabella e passarlo come parametro di input.
+- Usa un'istruzione SELECT per ottenere un singolo modello dalla tabella e passarlo come parametro di input.
 
-- Dopo avere recuperato il modello dalla tabella, chiamare la funzione `unserialize` nel modello.
+- Dopo aver recuperato il modello dalla tabella, chiama la funzione `unserialize` sul modello.
 
-- Applicare la funzione `predict` con gli argomenti appropriati al modello e fornire i nuovi dati di input.
+- Applica la funzione `predict` con gli argomenti appropriati al modello e fornisce i nuovi dati di input.
 
 > [!NOTE]
 > Nell'esempio la funzione `str` viene aggiunta durante la fase di test per controllare lo schema di dati restituito da R. È sempre possibile rimuovere l'istruzione in un secondo momento.

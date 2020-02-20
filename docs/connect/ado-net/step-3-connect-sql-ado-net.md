@@ -1,24 +1,24 @@
 ---
 title: 'Passaggio 3: Modello di verifica per la connessione a SQL con ADO.NET | Microsoft Docs'
-description: Contiene C# esempi di codice per la connessione a SQL Server, l'esecuzione di una query e l'inserimento di una riga.
+description: Contiene esempi di codice C# per la connessione a SQL Server, l'esecuzione di una query e l'inserimento di una riga.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451811"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247521"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Passaggio 3: Modello di verifica per la connessione a SQL con ADO.NET
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite ADO.NET
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Scaricare ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -26,11 +26,11 @@ ms.locfileid: "72451811"
 - Articolo successivo:&nbsp;&nbsp;&nbsp;[Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
 
   
-Questo C# esempio di codice deve essere considerato solo un modello di prova. Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
+Questo esempio di codice C# deve essere considerato solo un modello di verifica. Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
   
-## <a name="step-1-connect"></a>Passaggio 1: connettersi
+## <a name="step-1-connect"></a>Passaggio 1: Connessione
   
-Il metodo **SqlConnection. Open** viene usato per connettersi al database SQL.  
+Il metodo **SqlConnection.Open** viene usato per connettersi al database SQL.  
 
 
 ```csharp
@@ -69,9 +69,9 @@ Press any key to finish...
 
 ## <a name="step-2-execute-a-query"></a>Passaggio 2: Eseguire una query  
   
-Il metodo SqlCommand. ExecuteReader:  
+Il metodo SqlCommand.ExecuteReader:  
   
-- Rilascia l'istruzione SQL SELECT al sistema SQL.  
+- Esegue l'istruzione SQL SELECT nel sistema SQL.  
 - Restituisce un'istanza di SqlDataReader per fornire l'accesso alle righe di risultati.  
   
   
@@ -153,7 +153,7 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>Passaggio 3: inserire una riga  
+## <a name="step-3-insert-a-row"></a>Passaggio 3: Inserire una riga  
   
   
 Questo esempio illustra come:  

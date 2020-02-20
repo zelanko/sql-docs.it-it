@@ -16,10 +16,10 @@ ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01c9bfaadfee95369fb0101140c03d35fc777420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969439"
 ---
 # <a name="supportsexpressionsinorderby-method-sqlserverdatabasemetadata"></a>Metodo supportsExpressionsInOrderBy (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsExpressionsInOrderBy()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo supportsExpressionsInOrderBy viene specificato dal metodo supportsExpressionsInOrderBy nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo supportsExpressionsInOrderBy viene specificato dal metodo supportsExpressionsInOrderBy nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

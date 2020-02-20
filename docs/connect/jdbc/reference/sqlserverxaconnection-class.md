@@ -11,10 +11,10 @@ ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970316"
 ---
 # <a name="sqlserverxaconnection-class"></a>Classe SQLServerXAConnection
@@ -35,8 +35,8 @@ ms.locfileid: "67970316"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Un oggetto SQLServerXAConnection può essere integrato in una transazione distribuita tramite un oggetto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md). Una gestione transazioni, in genere parte di un server di livello intermedio, gestisce un oggetto SQLServerXAConnection tramite l'oggetto SQLServerXAResource.  
+## <a name="remarks"></a>Osservazioni  
+ Un oggetto SQLServerXAConnection può essere integrato in una transazione distribuita tramite un oggetto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md). Lo strumento di gestione delle transazioni, generalmente parte di un server di livello intermedio, gestisce un oggetto SQLServerXAConnection tramite l'oggetto SQLServerXAResource.  
   
 > [!NOTE]  
 >  I programmatori di applicazioni in genere non utilizzano direttamente questa interfaccia. Viene utilizzata principalmente da un responsabile transazioni che utilizza il server di livello intermedio.  

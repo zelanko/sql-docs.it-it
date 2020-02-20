@@ -16,10 +16,10 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953459"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Metodo getCatalogs (SQLServerDatabaseMetaData)
@@ -40,20 +40,20 @@ public java.sql.ResultSet getCatalogs()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getCatalogs viene specificato dal metodo getCatalogs nell'interfaccia java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  In SQL Azure, è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.** getCatalogs. SQL Azure non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.** getCatalogs usa la vista sys. databases per ottenere i cataloghi. Vedere la discussione sulle autorizzazioni in [sys. database_usage (database SQL di Azure)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) per comprendere il comportamento di **SQLServerDatabaseMetaData.** getcatalogs in SQL Azure.  
+>  In SQL Azure è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases per ottenere i cataloghi. Per informazioni sul comportamento **SQLServerDatabaseMetaData.getCatalogs** in SQL Azure, vedere la discussione sulle autorizzazioni in [sys.database_usage (database SQL di Azure)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md).  
   
  Il set di risultati restituito dal metodo getCatalogs conterrà le informazioni seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nome del catalogo, inclusi i database di sistema di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|TABLE_CAT|**Stringa**|Nome del catalogo, inclusi i database di sistema in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente illustra come usare il metodo getCatalogs per restituire i nomi di tutti i database contenuti in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], inclusi i database di sistema.  
+ L'esempio seguente dimostra come usare il metodo getCatalogs per restituire i nomi di tutti i database contenuti in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], inclusi i database di sistema.  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  

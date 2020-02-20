@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577767"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Abilitare e disabilitare RDL Sandboxing per Reporting Services in modalità integrata SharePoint
@@ -67,16 +67,16 @@ La funzionalità RDL (Report Definition Language) Sandboxing consente di rilevar
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Numero massimo di caratteri consentiti nelle espressioni RDL.<br /><br /> Valore predefinito: 1000|  
-|**MaxResourceSize**|Numero massimo di KB consentiti per una risorsa esterna.<br /><br /> Valore predefinito: 100|  
-|**MaxStringResultLength**|Numero massimo di caratteri consentiti in un valore restituito per un'espressione RDL.<br /><br /> Valore predefinito: 1000|  
-|**MaxArrayResultLength**|Numero massimo di elementi consentiti in un valore restituito della matrice per un'espressione RDL.<br /><br /> Valore predefinito: 100|  
+|**MaxExpressionLength**|Numero massimo di caratteri consentiti nelle espressioni RDL.<br /><br /> Predefinito: 1000|  
+|**MaxResourceSize**|Numero massimo di KB consentiti per una risorsa esterna.<br /><br /> Predefinito: 100|  
+|**MaxStringResultLength**|Numero massimo di caratteri consentiti in un valore restituito per un'espressione RDL.<br /><br /> Predefinito: 1000|  
+|**MaxArrayResultLength**|Numero massimo di elementi consentiti in un valore restituito della matrice per un'espressione RDL.<br /><br /> Predefinito: 100|  
 |**Tipi**|Elenco di membri da consentire nelle espressioni RDL.|  
-|**Allow**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
-|**Namespace**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
+|**Consenti**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
+|**Spazio dei nomi**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
 |**AllowNew**|Attributo booleano per **Allow** che controlla se le nuove istanze del tipo possono essere create in espressioni RDL o in un elemento RDL **\<Class>** .<br /><br /> Quando **RDLSandboxing** è abilitato non è possibile creare nuove matrici in espressioni RDL, indipendentemente dall'impostazione di **AllowNew**.|  
-|**Value**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
-|**Membri**|Per l'elenco dei tipi inclusi nell'elemento **\<Types>** , l'elenco dei nomi membro non consentiti nelle espressioni RDL.|  
+|**Valore**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
+|**Members**|Per l'elenco dei tipi inclusi nell'elemento **\<Types>** , l'elenco dei nomi membro non consentiti nelle espressioni RDL.|  
 |**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Quando per un membro è specificato **Deny** non è consentito nessun membro con questo nome per nessun tipo.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Uso delle espressioni con RDL Sandboxing abilitato
@@ -104,7 +104,7 @@ La funzionalità RDL (Report Definition Language) Sandboxing consente di rilevar
   
 -   Membri statici di un tipo.  
   
--   Metodo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** method.  
+-   Metodo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]**New**.  
   
 -   Elemento **\<Classes>** nella definizione del report.  
   

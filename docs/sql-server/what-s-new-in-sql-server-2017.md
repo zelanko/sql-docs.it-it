@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874819"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
@@ -77,7 +77,7 @@ Per altre informazioni, vedere [What's New in Integration Services in SQL Server
 - Sono state migliorate le prestazioni quando si espande la cartella **Entità** nella pagina **Gestisci gruppi** per assegnare le autorizzazioni del modello. La pagina **Gestisci gruppi** si trova nella sezione **Sicurezza** dell'applicazione Web. Per altre informazioni sui miglioramenti per le prestazioni, vedere [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Per altre informazioni sull'assegnazione di autorizzazioni, vedere [Assegnare autorizzazioni per oggetti modello (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
-SQL Server Analysis Services 2017 include numerosi miglioramenti per i modelli tabulari. tra cui:
+SQL Server Analysis Services 2017 include numerosi miglioramenti per i modelli tabulari. incluse le seguenti:
 - Modalità tabulare come opzione di installazione predefinita per Analysis Services. (CTP 2.0)
 - Sicurezza a livello di oggetto per la protezione dei metadati dei modelli tabulari. (CTP 2.0)
 - Relazioni di date per creare facilmente relazioni basate sui campi data. (CTP 2.0)

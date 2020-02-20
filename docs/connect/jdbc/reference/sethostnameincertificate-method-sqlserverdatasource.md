@@ -16,10 +16,10 @@ ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: deeab57c573311db36eabdbad60c3cb2fbda9a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974220"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>Metodo setHostNameInCertificate (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
   
  Valore **String** contenente il nome host.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore di hostNameInCertificate viene usato per la convalida del certificato SSL di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando il livello di comunicazione è crittografato tramite SSL. Il valore predefinito è null.  
   
  Se la proprietà hostNameInCertificate è impostata su Null o non è specificata, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] usa il valore della proprietà serverName per la convalida del certificato SSL di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la proprietà hostNameInCertificate è impostata su una stringa o una stringa vuota "", tale valore verrà utilizzato dal driver per la convalida del certificato SSL server.  

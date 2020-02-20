@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: specificare i tipi di dati PHP | Microsoft Docs'
+title: 'Procedura: Specificare i tipi di dati PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936391"
 ---
 # <a name="how-to-specify-php-data-types"></a>Procedura: Specificare i tipi di dati PHP

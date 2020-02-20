@@ -1,23 +1,24 @@
 ---
-title: Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Personalizzare le distribuzioni del database usando i collaboratori alla compilazione
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110568"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256246"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione
+
 Visual Studio fornisce punti di estendibilità che è possibile utilizzare per modificare il comportamento delle azioni di compilazione e distribuzione per i progetti di database.  
   
 ## <a name="available-extensibility-points"></a>Punti di estendibilità disponibili  
@@ -25,9 +26,9 @@ Visual Studio fornisce punti di estendibilità che è possibile utilizzare per m
   
 |**Azione**|**Tipo di collaboratore**|**Note**|  
 |--------------|------------------------|-------------|  
-|Compilazione|BuildContributor|Questo tipo di estensione viene eseguito quando il progetto SQL viene compilato dopo che il modello di progetto è stato completamente convalidato. Il collaboratore alla compilazione può accedere al modello completato, oltre a tutte le proprietà dell'attività di compilazione e a qualsiasi argomento personalizzato.|  
-|Distribuzione|DeploymentPlanModifier|Questo tipo di estensione viene eseguito quando il progetto SQL viene distribuito, come parte della pipeline di distribuzione, dopo che il piano di distribuzione è stato generato ma prima che venga eseguito. È possibile utilizzare DeploymentPlanModifier per modificare il piano di distribuzione aggiungendo o rimuovendo passaggi. I collaboratori alla distribuzione possono accedere al piano di distribuzione, ai risultati del confronto e ai modelli di origine e destinazione.|  
-|Distribuzione|DeploymentPlanExecutor|Questo tipo di estensione viene eseguito quando il piano di distribuzione viene eseguito e fornisce accesso in sola lettura al piano di distribuzione. DeploymentPlanExectutor esegue azioni in base al piano di distribuzione.|  
+|Compilare|BuildContributor|Questo tipo di estensione viene eseguito quando il progetto SQL viene compilato dopo che il modello di progetto è stato completamente convalidato. Il collaboratore alla compilazione può accedere al modello completato, oltre a tutte le proprietà dell'attività di compilazione e a qualsiasi argomento personalizzato.|  
+|Distribuire|DeploymentPlanModifier|Questo tipo di estensione viene eseguito quando il progetto SQL viene distribuito, come parte della pipeline di distribuzione, dopo che il piano di distribuzione è stato generato ma prima che venga eseguito. È possibile utilizzare DeploymentPlanModifier per modificare il piano di distribuzione aggiungendo o rimuovendo passaggi. I collaboratori alla distribuzione possono accedere al piano di distribuzione, ai risultati del confronto e ai modelli di origine e destinazione.|  
+|Distribuire|DeploymentPlanExecutor|Questo tipo di estensione viene eseguito quando il piano di distribuzione viene eseguito e fornisce accesso in sola lettura al piano di distribuzione. DeploymentPlanExectutor esegue azioni in base al piano di distribuzione.|  
   
 ### <a name="supported-extensibility-scenarios"></a>Scenari di estendibilità supportati  
 È possibile implementare i collaboratori alla compilazione o distribuzione per consentire gli scenari di esempio seguenti:  

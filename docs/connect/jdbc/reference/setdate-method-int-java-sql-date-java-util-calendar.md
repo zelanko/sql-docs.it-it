@@ -1,5 +1,5 @@
 ---
-title: Metodo sedate to date e Calendar-int | Microsoft Docs
+title: Metodo setDate per data e calendario - int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2c46f694-6dc4-429f-a037-a3bad369a7c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04cd1f41909cdd5088548eebdd15e2246ae64cd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974471"
 ---
 # <a name="setdate-method-int-javasqldate-javautilcalendar"></a>Metodo setDate (int, java.sql.Date, java.util.Calendar)
@@ -43,7 +43,7 @@ public final void setDate(int n,
   
  *x*  
   
- Oggetto Data.  
+ Oggetto Date.  
   
  *cal*  
   
@@ -52,7 +52,7 @@ public final void setDate(int n,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo setDate viene specificato dal metodo setDate nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

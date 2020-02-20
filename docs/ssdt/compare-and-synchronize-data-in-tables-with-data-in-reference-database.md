@@ -1,23 +1,24 @@
 ---
-title: Confrontare e sincronizzare i dati in una o più tabelle e i dati di un database di riferimento | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Confrontare e sincronizzare i dati in tabelle e i dati di un database di riferimento
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984673"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241703"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Confrontare e sincronizzare i dati in una o più tabelle e i dati di un database di riferimento
+
 È possibile confrontare i dati in un database di *origine* e in un database di *destinazione* e specificare quali tabelle confrontare. È possibile rivedere i dati e decidere quali modifiche sincronizzare. È quindi possibile aggiornare la destinazione per sincronizzare i database o esportare lo script di aggiornamento nell'editor Transact\-SQL o in un file.  
   
 Ad esempio, è possibile sincronizzare i database per aggiornare un server temporaneo con una copia dei dati di produzione. È inoltre possibile sincronizzare una o più tabelle per popolarle con dati di riferimento da un altro database. Inoltre, è possibile confrontare i dati prima e dopo l'esecuzione dei test come forma di verifica aggiuntiva.  
@@ -55,9 +56,9 @@ In questa sezione sono riportate le descrizioni delle attività comuni che suppo
 ## <a name="UnderstandingDataCompareResults"></a>Informazioni sui risultati del confronto  
 Nella tabella seguente vengono descritte le cinque colonne nella finestra **Confronto dati**.  
   
-|colonna|Note|  
+|Colonna|Note|  
 |----------|---------|  
-|Object|Visualizza il nome della tabella o della vista e una casella di controllo che indica se la destinazione deve essere sincronizzata quando si scrivono gli aggiornamenti o quando si esporta lo script di aggiornamento. La casella di controllo non è disponibile per le tabelle o le viste che non contengono dati.|  
+|Oggetto|Visualizza il nome della tabella o della vista e una casella di controllo che indica se la destinazione deve essere sincronizzata quando si scrivono gli aggiornamenti o quando si esporta lo script di aggiornamento. La casella di controllo non è disponibile per le tabelle o le viste che non contengono dati.|  
 |Record diversi|Visualizza il numero di record nella destinazione che presentano la stessa chiave, ma non gli stessi dati dell'origine. Tra parentesi è riportato il numero di record contrassegnati per essere aggiornati quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
 |Solo nell'origine|Visualizza il numero di record nell'origine che non sono presenti nella destinazione. Tra parentesi è riportato il numero di record contrassegnati per essere aggiunti quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
 |Solo nella destinazione|Visualizza il numero di record nella destinazione che non sono presenti nell'origine. Tra parentesi è riportato il numero di record contrassegnati per essere eliminati quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  

@@ -1,21 +1,23 @@
 ---
 title: Installare o disinstallare il componente aggiuntivo di Reporting Services per SharePoint | Microsoft Docs
-ms.date: 08/17/2017
+description: Informazioni su come eseguire il pacchetto di installazione del componente aggiuntivo Microsoft SQL Server Reporting Services per prodotti SharePoint (rsSharePoint.msi) in server SharePoint, per abilitare le funzionalità di Reporting Services in una distribuzione di SharePoint.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893369"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866364"
 ---
-# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -73,7 +75,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     o Gestione configurazione  
+     o  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
@@ -144,7 +146,7 @@ Rssharepoint.msi /?
   
  La disinstallazione del componente aggiuntivo non comporterà la rimozione degli elementi seguenti:  
   
--   Account di accesso creati per l'account del servizio del server di report utilizzato per accedere ai database di configurazione e del contenuto di SharePoint. È necessario eliminare tutti gli account di accesso per l'account del servizio del server di report dall'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare i database di SharePoint.  
+-   Account di accesso creati per l'account del servizio del server di report utilizzato per accedere ai database di configurazione e del contenuto di SharePoint. È necessario eliminare tutti gli account di accesso per l'account del servizio del server di report dall'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usata per ospitare i database di SharePoint.  
   
 -   Autorizzazioni o gruppi creati per gli utenti dei report. Se sono stati creati livelli di autorizzazione personalizzati o gruppi di SharePoint per consentire l'accesso alle funzionalità del server di report, sarà necessario revocare tutte le autorizzazioni non più necessarie.  
   
@@ -161,7 +163,7 @@ Rssharepoint.msi /?
   
 3.  Scegliere **Rimuovi**.  
   
-### <a name="uninstall-from-the-command-line"></a>Disinstallazione dalla riga di comando  
+### <a name="uninstall-from-the-command-line"></a>Eseguire la disinstallazione dalla riga di comando  
  Per disinstallare il componente aggiuntivo dalla riga di comando:  
   
 1.  Aprire un prompt dei comandi **con autorizzazioni di amministratore**.  
@@ -172,7 +174,7 @@ Rssharepoint.msi /?
     msiexec.exe /uninstall rsSharePoint.msi  
     ```  
   
-3.  Verrà visualizzata una finestra di messaggio di conferma. Scegliere **Sì**.  
+3.  Verrà visualizzata una finestra di messaggio di conferma. Fare clic su **Sì**.  
   
 ### <a name="uninstall-the-add-in-from-the-local-server-only"></a>Disinstallare il componente aggiuntivo solo dal server locale  
  Con metodi di disinstallazione del componente aggiuntivo illustrati sarà possibile rimuovere le funzionalità e l'oggetto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dalla farm. Se si dispone di una farm multiserver e si desidera disinstallare il componente aggiuntivo solo dal computer locale lasciando la farm di SharePoint in uno stato funzionale, completare i passaggi seguenti:  

@@ -16,10 +16,10 @@ ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 766c09aca5256d369ebad98cb1c002f4498dda7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968948"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>Metodo supportsResultSetHoldability (SQLServerDatabaseMetaData)
@@ -49,8 +49,8 @@ public boolean supportsResultSetHoldability(int holdability)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo supportsResultSetHoldability viene specificato dal metodo supportsResultSetHoldability nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo supportsResultSetHoldability viene specificato dal metodo supportsResultSetHoldability nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

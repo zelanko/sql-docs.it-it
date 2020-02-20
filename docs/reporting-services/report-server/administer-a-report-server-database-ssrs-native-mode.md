@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593761"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Amministrare un database del server di report (modalità nativa SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "73593761"
  Questo errore si verifica perché il nome ReportServerTempdb viene archiviato internamente e viene utilizzato dalle stored procedure per l'esecuzione di operazioni interne. Rinominare il database temporaneo impedisce pertanto il corretto funzionamento delle stored procedure.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Attivazione dell'isolamento dello snapshot nel database del server di report  
- Nel database del server di report non è possibile attivare l'isolamento dello snapshot. Se l'isolamento dello snapshot è attivato, verrà visualizzato l'errore seguente: "Il report selezionato non è pronto per la visualizzazione. Il rendering del report è ancora in corso oppure non è disponibile uno snapshot del report".  
+ Nel database del server di report non è possibile attivare l'isolamento dello snapshot. Se è attivato l'isolamento dello snapshot, si verificherà l'errore seguente: "Il report selezionato non è pronto per la visualizzazione. Il rendering del report è ancora in corso oppure non è disponibile uno snapshot del report".  
   
  Se non si attiva intenzionalmente l'isolamento dello snapshot, è probabile che l'attributo sia stato impostato da un'altra applicazione o che per il database **modello** sia stato attivato l'isolamento dello snapshot, facendo in modo che tutti i nuovi database ereditino l'impostazione.  
   

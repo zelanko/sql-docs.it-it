@@ -1,6 +1,6 @@
 ---
 title: Usare i contesti di calcolo di RevoScaleR
-description: Esercitazione dettagliata su come definire un contesto di calcolo usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 4: Come definire un contesto di calcolo usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ae3f3ac7747410730cb91cf56733130ab9f0abb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c90c935f85584f8886ae112d5cfc03759c0a129a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727195"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947222"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>Definire e usare i contesti di calcolo (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 4 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Nella lezione precedente sono state usate le funzioni di **RevoScaleR** per esaminare gli oggetti dati. In questa lezione viene presentata la funzione [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), che consente di definire un contesto di calcolo per un computer SQL Server remoto. Con un contesto di calcolo remoto è possibile spostare l'esecuzione di R da una sessione locale a una sessione remota sul server. 
+Nell'esercitazione precedente sono state usate le funzioni di **RevoScaleR** per esaminare gli oggetti dati. In questa esercitazione viene presentata la funzione [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), che consente di definire un contesto di calcolo per un computer SQL Server remoto. Con un contesto di calcolo remoto è possibile spostare l'esecuzione di R da una sessione locale a una sessione remota sul server. 
 
 > [!div class="checklist"]
 > * Apprendere gli elementi di un contesto di calcolo di SQL Server remoto
@@ -108,7 +108,7 @@ Questa sezione illustra nel dettaglio ogni parte.
     rxGetComputeContext()
     ```
 
-7. Reimpostare il contesto di calcolo sul computer locale specificando la parola chiave "local" (la lezione successiva illustra l'uso del contesto di calcolo remoto).
+7. Reimpostare il contesto di calcolo sul computer locale specificando la parola chiave "local" (l'esercitazione successiva illustra l'uso del contesto di calcolo remoto).
 
     ```R
     rxSetComputeContext("local")

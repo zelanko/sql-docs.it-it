@@ -1,5 +1,5 @@
 ---
-title: Procedure per OLE DB | Microsoft Docs
+title: Procedure relative a OLE DB | Microsoft Docs
 description: Procedure relative a OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015624"
 ---
 # <a name="ole-db-how-to-topics"></a>Procedure per l'utilizzo di OLE DB
@@ -30,7 +30,7 @@ ms.locfileid: "68015624"
   
 -   [Procedure relative all'elaborazione dei risultati &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Imposta OLE DB dati &#40;di grandi dimensioni&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Impostare dati di grandi dimensioni &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Enumerare origini dati OLE DB &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68015624"
   
 -   [Inviare dati BLOB a SQL Server usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Usare i tipi definiti &#40;dall'utente CLR di grandi dimensioni OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Usare tipi definiti dall'utente (UDT) CLR di grandi dimensioni &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977018"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>Metodo isWrapperFor (SQLServerXADataSource)
@@ -32,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parametri  
  *iface*  
   
- **Classe** che definisce un'interfaccia.  
+ Valore **class** che definisce un'interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
  **true** se questo oggetto implementa l'interfaccia o esegue il wrapping di un oggetto che implementa l'interfaccia. In caso contrario, **false**.  
@@ -40,15 +40,15 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md) e il metodo [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) sono definiti dall'interfaccia java.sql.Wrapper, introdotta nella specifica JDBC 4.0.  
   
  Se questo metodo restituisce true, la chiamata a [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) con lo stesso argomento avrà esito positivo.  
   
- Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per altre informazioni, vedere [Wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo &#40;Unwrap SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
+ [Metodo unwrap &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
  [Metodi di SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [Membri di SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [Classe SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

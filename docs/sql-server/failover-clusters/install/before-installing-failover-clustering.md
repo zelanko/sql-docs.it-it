@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517938"
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover
@@ -39,13 +39,13 @@ ms.locfileid: "72517938"
   
 ##  <a name="BestPractices"></a> Procedure consigliate  
   
--   Vedere le [Note sulla versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Vedere le [Note sulla versione](https://go.microsoft.com/fwlink/?LinkId=296445) di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
   
 -   Installare i prerequisiti software. Prima di eseguire il programma di installazione per installare o effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], installare i prerequisiti riportati di seguito per ridurre il tempo di installazione. È possibile installare il software necessario in ogni nodo del cluster di failover, quindi riavviare i nodi prima di eseguire il programma di installazione.  
   
     -   Windows PowerShell non viene installato più dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Windows PowerShell è un prerequisito per l'installazione dei componenti di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se Windows PowerShell non è installato nel computer, è possibile abilitarlo seguendo le istruzioni disponibili nella pagina [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) .  
   
-    -   .NET Framework 3.5 SP1 non viene più installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia può essere richiesto durante l'istallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in sistemi operativi Windows meno recenti. Per altre informazioni, vedere [Note sulla versione di](https://go.microsoft.com/fwlink/?LinkId=296445) [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+    -   .NET Framework 3.5 SP1 non viene più installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia può essere richiesto durante l'istallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in sistemi operativi Windows meno recenti. Per altre informazioni, vedere [Note sulla versione di](https://go.microsoft.com/fwlink/?LinkId=296445)[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
     -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Pacchetto di aggiornamento:** Per evitare il riavvio del computer dovuto all'installazione di .NET Framework 4 durante il processo di installazione, è necessario che nel computer sia installato un aggiornamento di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per eseguire il programma di installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  Se si installa [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in Windows 7 SP1 o in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, tale aggiornamento è incluso. Se si sta eseguendo l'installazione in un sistema operativo Windows precedente, scaricarlo da [Microsoft Update per .NET Framework 4.0 in Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72517938"
   
     -   La formattazione di un'unità dopo il montaggio di unità aggiuntive non è supportata.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo per l'installazione dei file tempdb. Assicurarsi che il percorso specificato per i file di dati tempdb e di log sia valido su tutti i nodi del cluster. Durante il failover, se le directory tempdb non sono disponibili nel nodo di destinazione del failover, la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà riportata online. Per altre informazioni, vedere [Tipi di archiviazione per i file di dati](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) e [Configurazione Motore di database - Directory dati](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+-   Il disco locale è supportato nell'installazione del cluster di failover di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo per l'installazione dei file tempdb. Assicurarsi che il percorso specificato per i file di dati tempdb e di log sia valido su tutti i nodi del cluster. Durante il failover, se le directory tempdb non sono disponibili nel nodo di destinazione del failover, la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà riportata online. Per altre informazioni, vedere [Tipi di archiviazione per i file di dati](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) e [Configurazione Motore di database - Directory dati](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
 -   Se si distribuisce un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in componenti con tecnologia iSCSI, è consigliabile adottare precauzioni appropriate. Per altre informazioni, vedere [Supporto per SQL Server sui componenti della tecnologia iSCSI](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -186,7 +186,7 @@ ms.locfileid: "72517938"
 ##  <a name="OS_Support"></a> Verificare il sistema operativo in uso  
  Assicurarsi che il sistema operativo sia installato correttamente e sia configurato per il supporto del clustering di failover. Nella tabella seguente vengono elencate le edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i sistemi operativi in cui sono supportati.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
+|Edizione di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 bit) x64*|Sì|Sì|Sì**|Sì**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 bit)|Sì|Sì|||  
@@ -202,7 +202,7 @@ ms.locfileid: "72517938"
 ##  <a name="MultiSubnet"></a> Considerazioni aggiuntive per le configurazioni di più subnet  
  Nelle sezioni seguenti si descrivono i requisiti da ricordare in caso di installazione di un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Una configurazione di più subnet comporta clustering attraverso più subnet, pertanto comporta utilizzando più indirizzi IP e viene modificata nelle dipendenze della risorsa indirizzo IP.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considerazioni sul sistema operativo e sull'edizione  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considerazioni sul sistema operativo e sull'edizione  
   
 -   Per informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che supportano in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover in più subnet, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517938"
 > [!IMPORTANT]  
 >  Se l'istanza di MSDTC installata nel gruppo cluster locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ha esito negativo, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non viene effettuato automaticamente il tentativo di utilizzare l'istanza cluster predefinita o l'istanza del computer locale di MSDTC. Sarebbe necessario rimuovere completamente l'istanza con errori di MSDTC dal gruppo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per utilizzare un'altra istanza di MSDTC. Analogamente, se si crea un mapping per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'istanza di cui è stato eseguito il mapping di MSDTC ha esito negativo, anche le transazioni distribuite non riusciranno. Se si desidera che in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga utilizzata un'istanza diversa di MSDTC, è necessario aggiungere un'istanza di MSDTC al gruppo cluster locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o eliminare il mapping.  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Configurare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>Configurare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
  Dopo l'installazione del sistema operativo e la configurazione del cluster è necessario configurare MSDTC per il funzionamento in un cluster, utilizzando Amministrazione cluster. Se non si configura MSDTC per il clustering, l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà bloccata, ma una configurazione non corretta di MSDTC può influire sulla funzionalità dell'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580780"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
@@ -109,11 +109,11 @@ ms.locfileid: "65580780"
 ### <a name="report-row-groups-and-column-groups"></a>Gruppi di righe e di colonne del report  
  I report che includono gruppi di righe o di colonne contengono celle vuote quando vengono esportati in Excel. Si immagini un report che raggruppa righe in distanza dal lavoro. Ogni distanza dal lavoro può contenere più di un cliente. Nell'immagine seguente viene illustrato il report.  
   
- ![Report nel portale Web di Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report nel portale Web di Reporting Services")  
+ ![Portale Web di Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Portale Web di Reporting Services")  
   
  Quando il report viene esportato in Excel,la distanza dal lavoro viene visualizzata solo in una cella della colonna Distanza dal lavoro. A seconda dell'allineamento del testo nel report (in alto, al centro o in basso), il valore si trova nella prima cella, in quella centrale o nell'ultima. Le altre celle sono vuote. La colonna Nome, contenente i nomi dei clienti, non presenta celle vuote. Nell'immagine seguente viene mostrato il report dopo la relativa esportazione in Excel. I bordi rossi della cella sono stati aggiunti per metterla in risalto. Le caselle di colore grigio sono le celle vuote. Le righe rosse e le caselle di colore grigio non fanno parte del report esportato.  
   
- ![Report esportato in Excel, con linee](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report esportato in Excel, con linee")  
+ ![Report esportato in Excel, con righe](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report esportato in Excel, con righe")  
   
  Pertanto i report con gruppi di righe o di colonne devono essere modificati dopo la relativa esportazione in Excel e prima di poter visualizzare i dati esportati in una tabella pivot. Il valore del gruppo deve essere aggiunto alle celle in cui non è disponibile per rendere il foglio di lavoro una tabella bidimensionale con valori in tutte le celle. L'immagine seguente illustra il foglio di lavoro di aggiornamento.  
   
@@ -168,10 +168,10 @@ ms.locfileid: "65580780"
   
 |Proprietà|Excel 2003|Excel corrente|  
 |--------------|----------------|-------------------|  
-|Numero massimo di colonne per foglio di lavoro|256|16,384|  
-|Numero massimo di righe per foglio di lavoro|65,536|1\.048.576|  
+|Numero massimo di colonne per foglio di lavoro|256|16.384|  
+|Numero massimo di righe per foglio di lavoro|65,536|1,048,576|  
 |Numero di colori consentito in un foglio di lavoro|56 (tavolozza)<br /><br /> Se nel report vengono usati più di 56 colori, l'estensione per il rendering abbina il colore desiderato a uno dei 56 colori già disponibili nella tavolozza personalizzata.|Circa 16 milioni (colore a 24 bit)|  
-|File compressi ZIP|None|Compressione ZIP|  
+|File compressi ZIP|nessuno|Compressione ZIP|  
 |Famiglia di caratteri predefinita|Arial|Calibri|  
 |Dimensioni del carattere predefinite|10pt|11pt|  
 |Altezza della riga predefinita|12,75 pt|15 pt|  
@@ -204,9 +204,9 @@ ms.locfileid: "65580780"
 ##  <a name="DocumentProperties"></a> Proprietà del documento  
  Il renderer di Excel scrive i metadati seguenti nel file di Excel.  
   
-|Proprietà degli elementi del report|Description|  
+|Proprietà degli elementi del report|Descrizione|  
 |-------------------------------|-----------------|  
-|Data creazione|Data e ora di esecuzione del report espresse come valore data/ora ISO.|  
+|Data di creazione|Data e ora di esecuzione del report espresse come valore data/ora ISO.|  
 |Autore|Report.Author|  
 |Descrizione|Report.Description|  
 |LastSaved|Data e ora di esecuzione del report espresse come valore data/ora ISO.|  

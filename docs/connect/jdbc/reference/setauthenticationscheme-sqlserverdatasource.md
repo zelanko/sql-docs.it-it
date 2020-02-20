@@ -11,10 +11,10 @@ ms.assetid: b942f78e-7ce1-44ef-923d-a7c3d7c76b83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c728bd32a0aff2549d9e572955c8fb6d889e127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975280"
 ---
 # <a name="setauthenticationscheme-sqlserverdatasource"></a>setAuthenticationScheme (SQLServerDataSource)

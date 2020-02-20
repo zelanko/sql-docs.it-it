@@ -1,10 +1,9 @@
 ---
-title: Creare un avviso usando un numero di errore | Microsoft Docs
-ms.custom: ''
+title: Creazione di un avviso utilizzando un numero di errore
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d1a701712ef879e17aaf2a91ff8d81b6c91e8b96
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: c1f5c25baafa804de88417127514f11d8603572e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846807"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258482"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Creazione di un avviso utilizzando un numero di errore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "70846807"
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In questo argomento viene descritto come creare un avviso di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che viene generato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando si verifica un erroe a cui è associato un numero specifico tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Questo argomento descrive come creare un avviso di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che viene generato quando si verifica un errore a cui è associato un numero specifico tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
@@ -38,9 +39,9 @@ In questo argomento viene descritto come creare un avviso di [!INCLUDE[msCoName]
   
 -   Gli eventi generati con la stored procedure **xp_logevent** si verificano nel database master. Pertanto, **xp_logevent** genera un avviso solo se **\@database_name** per l'avviso è **'master'** o NULL.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Per impostazione predefinita, solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_alert**.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  

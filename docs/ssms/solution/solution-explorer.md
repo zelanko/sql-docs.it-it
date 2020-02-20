@@ -1,5 +1,5 @@
 ---
-title: Esplora soluzioni | Microsoft Docs
+title: Esplora soluzioni
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,14 +15,14 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a0e2a3512528bdddc62d89e182a6f074b05bdc75
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988131"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242836"
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
 

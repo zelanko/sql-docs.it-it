@@ -11,16 +11,16 @@ ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027867"
 ---
 # <a name="national-character-set-support"></a>Supporto per set di caratteri nazionali
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Il driver JDBC supporta l'API di JDBC 4.0, che include nuovi metodi API per la conversione dei set di caratteri nazionali. Questo supporto include nuovi metodi di impostazione, richiamo e aggiornamento per i tipi JDBC **nchar**, **nvarchar**, **LONGNVARCHAR**e **NCLOB** .  
+  Il driver JDBC supporta l'API di JDBC 4.0, che include nuovi metodi API per la conversione dei set di caratteri nazionali. Questo supporto include nuovi metodi setter, getter e updater per i tipi JDBC **NCHAR**, **NVARCHAR**, **LONGNVARCHAR** e **NCLOB**.  
   
  Di seguito sono elencati i nuovi metodi di richiamo, impostazione e aggiornamento per supportare la conversione dei set di caratteri nazionali:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69027867"
 > [!NOTE]  
 >  Per utilizzare questi metodi nell'applicazione, è necessario impostare il classpath per includere il file sqljdbc4.jar.  
   
- Per inviare parametri String al server in formato Unicode, le applicazioni devono usare i nuovi metodi per caratteri nazionali di JDBC 4.0 oppure impostare la proprietà di connessione **sendStringParametersAsUnicode** su "**true**" quando vengono usati metodi per caratteri non nazionali. Laddove possibile, è consigliabile utilizzare i nuovi metodi per caratteri nazionali di JDBC 4.0. Per ulteriori informazioni sulla proprietà di connessione **sendStringParametersAsUnicode** , vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
+ Per inviare parametri String al server in formato Unicode, le applicazioni devono usare i nuovi metodi per caratteri nazionali di JDBC 4.0 oppure impostare la proprietà di connessione **sendStringParametersAsUnicode** su "**true**" quando vengono usati metodi per caratteri non nazionali. Laddove possibile, è consigliabile utilizzare i nuovi metodi per caratteri nazionali di JDBC 4.0. Per altre informazioni sulla proprietà di connessione **sendStringParametersAsUnicode**, vedere [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

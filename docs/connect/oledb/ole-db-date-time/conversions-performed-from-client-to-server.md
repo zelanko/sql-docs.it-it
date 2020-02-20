@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995142"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversioni eseguite da client a server
@@ -29,7 +29,7 @@ ms.locfileid: "67995142"
 ## <a name="conversions"></a>Conversioni  
  In questo articolo vengono descritte le conversioni eseguite sul client. Se il client specifica una precisione frazionaria dei secondi per un parametro che differisce da quella definita nel server, la conversione client potrebbe comportare un errore nei casi in cui il server consentirebbe l'esecuzione dell'operazione. In particolare, il client tratta come errore qualsiasi troncamento dei secondi frazionari, mentre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arrotonda valori al secondo intero più vicino.  
   
- Se ICommandWithParameters:: separameterinfo non viene chiamato, le associazioni DBTYPE_DBTIMESTAMP vengono convertite come se fossero **datetime2**.  
+ Se ICommandWithParameters::SetParameterInfo non viene chiamato, le associazioni DBTYPE_DBTIMESTAMP vengono convertite come se fossero **datetime2**.  
   
 |A -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "67995142"
   
 |Simbolo|Significato|  
 |------------|-------------|  
-|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidata quando viene chiamato IAccessor:: CreateAccessor, viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
+|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidata quando viene chiamato IAccessor::CreateAccessor, viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
 |N/D|Non applicabile.|  
 |1|Se i dati forniti non sono validi, viene impostato DBSTATUS_E_CANTCONVERTVALUE. I dati di input vengono convalidati prima che vengano applicate le conversioni, pertanto quando un componente verrà ignorato da una conversione successiva, dovrà ancora essere valido per consentire la conversione.|  
 |2|I campi relativi all'ora vengono ignorati.|  
@@ -61,7 +61,7 @@ ms.locfileid: "67995142"
 |6|L'ora è impostata su zero.|  
 |7|La data viene impostata sulla data corrente.|  
 |8|L'ora viene convertita in formato UTC. Se si verifica un errore durante questa conversione, viene impostato DBSTATUS_E_CANTCONVERTVALUE.|  
-|9|La stringa viene analizzata come valore letterale ISO e convertita nel tipo di destinazione. Se l'operazione non riesce, la stringa viene analizzata come valore letterale data OLE (che presenta anche componenti di ora) e convertita da data OLE (DBTYPE_DATE) nel tipo di destinazione.<br /><br /> Se il tipo di destinazione è DBTIMESTAMP, **smalldatetime**, **DateTime**o **datetime2**, la stringa deve essere conforme alla sintassi per i valori letterali data, ora o **datetime2** oppure la sintassi riconosciuta da OLE. Se la stringa è un valore letterale data, tutti i componenti di ora vengono impostati su zero. Se la stringa è un valore letterale ora, la data viene impostata sul valore corrente.<br /><br /> Per tutti gli altri tipi di destinazione, la stringa deve essere conforme alla sintassi per i valori letterali del tipo di destinazione.|  
+|9|La stringa viene analizzata come valore letterale ISO e convertita nel tipo di destinazione. Se l'operazione non riesce, la stringa viene analizzata come valore letterale data OLE (che presenta anche componenti di ora) e convertita da data OLE (DBTYPE_DATE) nel tipo di destinazione.<br /><br /> Se il tipo di destinazione è DBTIMESTAMP, **smalldatetime**, **datetime** o **datetime2**, la stringa deve essere conforme alla sintassi per i valori letterali date, time o **datetime2** oppure alla sintassi riconosciuta da OLE. Se la stringa è un valore letterale data, tutti i componenti di ora vengono impostati su zero. Se la stringa è un valore letterale ora, la data viene impostata sul valore corrente.<br /><br /> Per tutti gli altri tipi di destinazione, la stringa deve essere conforme alla sintassi per i valori letterali del tipo di destinazione.|  
 |10|In caso di troncamento dei secondi frazionari con perdita di dati, viene impostato DBSTATUS_E_DATAOVERFLOW. Per le conversioni di stringhe, il controllo dell'overflow è possibile solo quando la stringa è conforme alla sintassi ISO. Se la stringa è un valore letterale data OLE, i secondi frazionari vengono arrotondati.<br /><br /> Per le conversioni di dati di tipo DBTIMESTAMP (datetime) in dati di tipo smalldatetime, nel driver OLE DB per SQL Server viene troncato automaticamente il valore dei secondi anziché generare l'errore DBSTATUS_E_DATAOVERFLOW.|  
 |11|Il numero di cifre per i secondi frazionari (scala) è determinato dalla dimensione della colonna di destinazione in base alla tabella riportata di seguito. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> Se tuttavia il tipo di origine è DBTIMESTAMP e i secondi frazionari corrispondono a zero, non vengono generati alcuna cifra per i secondi frazionari né il separatore decimale. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando provider OLE DB meno recenti.<br /><br /> Una dimensione di colonna pari a ~ 0 implica una dimensione illimitata in OLE DB (9 cifre, a meno che non si applichi la regola delle 3 cifre per DBTIMESTAMP).|  
 |12|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] per DBTYPE_DATE. I secondi frazionari vengono troncati in corrispondenza di zero.|  
@@ -72,7 +72,7 @@ ms.locfileid: "67995142"
   
 ||||  
 |-|-|-|  
-|Tipo|Lunghezza (in caratteri)|Scala|  
+|Type|Lunghezza (in caratteri)|Scalabilità|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

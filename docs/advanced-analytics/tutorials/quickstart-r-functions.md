@@ -1,27 +1,26 @@
 ---
-title: 'Avvio rapido: Scrivere funzioni R'
-titleSuffix: SQL Server Machine Learning Services
-description: Questo argomento di avvio rapido illustra come scrivere una funzione R per il calcolo statistico avanzato con Machine Learning Services per SQL Server.
+title: 'Avvio rapido: Funzioni R'
+description: Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e725282aaacde748b43a37a317037b5471efd009
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726889"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831770"
 ---
-# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Avvio rapido: Scrivere funzioni R avanzate con Machine Learning Services per SQL Server
+# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Avvio rapido: Funzioni R con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo argomento di avvio rapido descrive come incorporate funzioni matematiche e di utilità R in una stored procedure SQL con Machine Learning Services per SQL Server. Le funzioni statistiche avanzate complesse da implementare in T-SQL possono essere eseguite in R con una singola riga di codice.
+Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con Machine Learning Services per SQL Server. Le funzioni statistiche sono spesso complesse da implementare in T-SQL, ma possono essere eseguite in R con poche righe di codice.
 
 ## <a name="prerequisites"></a>Prerequisites
 

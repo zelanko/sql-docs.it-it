@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 205a93fe5ce57a8b4c10fffb8648a1ef4c7b6506
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015465"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
@@ -22,7 +22,7 @@ ms.locfileid: "68015465"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  I miglioramenti apportati al motore [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] di database a partire da consentono a ICommandWithParameters:: GetParameterInfo di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da CommandWithParameters:: GetParameterInfo nelle versioni precedenti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]di. Per altre informazioni, vedere [Metadata Discovery](../../oledb/features/metadata-discovery.md).  
+  I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] consentono a ICommandWithParameters::GetParameterInfo di ottenere descrizioni più accurate dei risultati previsti. È possibile che questi risultati più accurati differiscano dai valori restituiti da CommandWithParameters::GetParameterInfo nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../../oledb/features/metadata-discovery.md).  
   
  A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], inoltre, quando si chiama ICommandWithParameters::SetParameterInfo, il valore passato al parametro *pwszName* deve essere un identificatore valido. Per altre informazioni, vedere [Identificatori del database](../../../relational-databases/databases/database-identifiers.md).  
   

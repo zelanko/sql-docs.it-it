@@ -16,10 +16,10 @@ ms.assetid: 936ec140-2597-44e6-82d3-3994a676ee35
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5388b0f162373ba6fb933ff20182ae819963bdba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969878"
 ---
 # <a name="storesuppercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>Metodo storesUpperCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean storesUpperCaseQuotedIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se gli identificatori sono archiviati in lettere maiuscole. In caso contrario, **false**.  
+ **true** se gli identificatori vengono archiviati con lettere maiuscole. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo storesUpperCaseQuotedIdentifiers viene specificato dal metodo storesUpperCaseQuotedIdentifiers nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo storesUpperCaseQuotedIdentifiers viene specificato dal metodo storesUpperCaseQuotedIdentifiers nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

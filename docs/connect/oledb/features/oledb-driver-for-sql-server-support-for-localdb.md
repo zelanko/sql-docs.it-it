@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 64f39be7193fdbfc72b009f58b4fe0047eceef1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989036"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Supporto del driver OLE DB per SQL Server per Local DB
@@ -24,7 +24,7 @@ ms.locfileid: "67989036"
 
   A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], sarà disponibile una versione lightweight di SQL Server, chiamato Database locale. In questo argomento viene discussa la modalità di connessione a un database in un'istanza del database locale.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per ulteriori informazioni sul database locale inclusa la modalità di installazione del database locale e di configurazione della relativa istanza, vedere:  
   
 -   [Riferimento al database locale di SQL Server Express](../../../relational-databases/sql-server-express-localdb-reference.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "67989036"
   
  Riepilogando, il database locale consente di:  
   
--   Utilizzare **SqlLocalDB. exe** i per individuare il nome dell'istanza predefinita.  
+-   Usare **sqllocaldb.exe i** per individuare il nome dell'istanza predefinita.  
   
 -   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza di Local DB quando l'applicazione viene chiusa.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67989036"
 SERVER=(localdb)\v11.0  
 ```  
   
- Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio **SQLCMD-S (locale) \v11.0**.  
+ Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio, **sqlcmd -S (localdb)\v11.0**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per funzionalità di SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  

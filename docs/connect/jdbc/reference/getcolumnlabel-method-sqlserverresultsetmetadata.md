@@ -16,10 +16,10 @@ ms.assetid: cf67692c-24aa-49e6-8e88-a47d4e8c021c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9784c4aa2dd892473e4ac0ef46f0e8f62d359c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952950"
 ---
 # <a name="getcolumnlabel-method-sqlserverresultsetmetadata"></a>Metodo getColumnLabel (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public java.lang.String getColumnLabel(int column)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getColumnLabel viene specificato dal metodo getColumnLabel nell'interfaccia java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getColumnLabel viene specificato dal metodo getColumnLabel nell'interfaccia java.sql.ResultSetMetaData.  
   
  Questo metodo restituisce l'alias della colonna. Se non è disponibile, questo metodo restituisce il nome della colonna.  
   

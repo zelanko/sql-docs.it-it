@@ -11,10 +11,10 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570753"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Metodo di ConfigurationSetting - CreateSSLCertificateBinding
@@ -51,7 +51,7 @@ public void CreateSSLCertificateBinding(string application,
  *LCID*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
- *Errore*  
+ *Error (Errore) (Error (Errore)e)*  
  [out] Descrizione degli errori che si sono verificati.  
   
  *HRESULT*  
@@ -60,7 +60,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo aggiunge un'associazione a rsreportserver.config per l'applicazione. Se in HTTP.SYS non esiste già un'associazione, questa viene creata.  
   
  Prima di creare l'associazione, la chiamata al metodo esamina le prenotazioni dell'URL affinché l'applicazione specificata determini se l'associazione certificato SSL è valida.  

@@ -1,20 +1,21 @@
 ---
-title: Eseguire processi Spark con Spark & Hive Tools per VS Code nel cluster Big Data di SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Eseguire i processi: Spark & Hive Tools per VS Code'
+titleSuffix: SQL Server Big Data Clusters
 description: Inviare processi Spark con Spark & Hive Tools per Visual Studio Code nel cluster Big Data di SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653721"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255923"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Inviare processi Spark nel cluster Big Data di SQL Server in Visual Studio Code
 
@@ -146,7 +147,7 @@ Prima di poter inviare script ai cluster da Visual Studio Code, è necessario co
 
    ![Finestra di Python interattivo per PySpark interattivo](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. Immettere **"%%info"** e quindi premere **MAIUSC+INVIO** per visualizzare le informazioni sul processo. (Facoltativo)
+6. Immettere **"%%info"** e quindi premere **MAIUSC+INVIO** per visualizzare le informazioni sul processo. Facoltativa
 
    ![Visualizzare le informazioni sul processo](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
@@ -200,7 +201,7 @@ Inviare un file e osservare che la cartella `.vscode` viene aggiunta automaticam
 
 **Corpo della richiesta**
 
-| NAME | description | Tipo |
+| name | description | type |
 | :- | :- | :- |
 | file | File contenente l'applicazione da eseguire | Percorso (obbligatorio) |
 | proxyUser | Utente da rappresentare quando si esegue il processo | string |
@@ -216,17 +217,17 @@ Inviare un file e osservare che la cartella `.vscode` viene aggiunta automaticam
 | numExecutors | Numero di executor da avviare per questa sessione | INT |
 | archives | Archivi da usare in questa sessione | Elenco di stringhe |
 | coda | Nome della coda YARN dove è stato eseguito l'invio | string |
-| NAME | Nome della sessione | string |
+| name | Nome della sessione | string |
 | conf | Proprietà di configurazione Spark | Mappa di chiave=valore |
 
 #### <a name="response-body"></a>Corpo della risposta
 
 Oggetto batch creato.
 
-| NAME | description | Tipo |
+| name | description | type |
 | :- | :- | :- |
 | id | ID della sessione | INT |
-| appId | ID applicazione della sessione | String |
+| appId | ID applicazione della sessione | string |
 | appInfo | Informazioni dettagliate sull'applicazione | Mappa di chiave=valore |
 | log | Righe di log | Elenco di stringhe |
 | state | Stato del batch | string |

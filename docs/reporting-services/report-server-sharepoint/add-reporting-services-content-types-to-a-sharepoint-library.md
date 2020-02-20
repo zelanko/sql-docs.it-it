@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68887743"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint
@@ -113,7 +113,7 @@ ms.locfileid: "68887743"
 8.  Dopo l'aggiunta dei tipi di contenuto, scegliere **OK**.  
   
     > [!NOTE]  
-    >  Se il gruppo dei tipi di contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Tipi di contenuto SQL Server Reporting Services** non è visibile nella pagina **Aggiungi tipi di contenuto** , viene soddisfatta una delle condizioni seguenti:  
+    >  Se il gruppo dei tipi di contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Tipi di contenuto SQL Server Reporting Services** non è visibile nella pagina **Aggiungi tipi di contenuto** , viene soddisfatta una delle condizioni seguenti:  
   
     -   Il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint non è stato installato. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Questo argomento include informazioni sull'installazione del componente aggiuntivo e sull'esecuzione passaggio per passaggio di un'installazione di tipo "solo file" del componente aggiuntivo per risolvere i problemi.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68887743"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Per abilitare la gestione dei tipi di contenuto per una singola raccolta documenti (SharePoint 2010)  
   
-1.  Aprire la raccolta per cui si desidera abilitare più tipi di contenuto. Sulla barra dei menu della raccolta vengono visualizzati i menu seguenti: **Nuovo**, **Carica**, **Azioni**e **Impostazioni**. Se il menu **Impostazioni**non viene visualizzato, non si dispone delle autorizzazioni necessarie per l'aggiunta di un tipo di contenuto.  
+1.  Aprire la raccolta per cui si desidera abilitare più tipi di contenuto. Sulla barra dei menu della raccolta vengono visualizzati i menu seguenti: **Nuovo**, **Carica**, **Azioni** e **Impostazioni**. Se il menu **Impostazioni**non viene visualizzato, non si dispone delle autorizzazioni necessarie per l'aggiunta di un tipo di contenuto.  
   
 2.  Sulla barra multifunzione **Strumenti raccolta** fare clic su **Raccolta**.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "68887743"
   
      ![rs_general_app_settings_old_integrations](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   

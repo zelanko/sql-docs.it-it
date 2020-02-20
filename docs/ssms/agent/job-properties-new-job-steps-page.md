@@ -1,10 +1,9 @@
 ---
-title: Proprietà processo - Nuovo processo (pagina Passaggi) | Microsoft Docs
-ms.custom: ''
+title: Proprietà processo - Nuovo processo (pagina Passaggi)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 214374ee87b1896ec6683827eaecff7484e3d922
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b4994a7398b038ce8b99d38b2584da6e95d7e552
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262334"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242266"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Proprietà processo - Nuovo processo (pagina Passaggi)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,10 +39,10 @@ Consente di spostare un passaggio verso l'alto o verso il basso nell'elenco.
 **Passaggio di avvio**  
 Consente di selezionare il passaggio avviato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent all'inizio del processo.  
   
-**Nuova**  
+**Nuovo**  
 Consente di creare un nuovo passaggio del processo sotto al passaggio selezionato.  
   
-**Insert**  
+**Inserimento**  
 Consente di creare un nuovo passaggio del processo sopra il passaggio selezionato.  
   
 **Modifica**  

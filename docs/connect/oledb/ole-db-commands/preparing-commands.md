@@ -1,6 +1,6 @@
 ---
-title: Preparazione di comandi | Microsoft Docs
-description: Preparazione dei comandi con OLE DB driver per SQL Server
+title: Preparazione dei comandi | Microsoft Docs
+description: Preparazione dei comandi con OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d4242f987820b384ab5bfed1bd74066a54fc09ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016056"
 ---
 # <a name="preparing-commands"></a>Preparazione dei comandi

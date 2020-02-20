@@ -9,10 +9,10 @@ ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577788"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
@@ -29,7 +29,7 @@ ms.locfileid: "65577788"
   
 2.  Fare clic con il pulsante destro del mouse sulla riga dei dati nella tabella, quindi scegliere **Aggiungi gruppo** > **Gruppo padre** per aggiungere un gruppo di tabelle esterno.  
   
-     ![Selezionare Gruppo padre](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Selezionare Gruppo padre")  
+     ![Selezionare il gruppo padre](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Selezionare il gruppo padre")  
   
 3.  Immettere la formula seguente nella casella dell'espressione **Raggruppa per** , quindi fare clic su **OK** per aggiungere il gruppo padre.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65577788"
   
 4.  Per eliminare la colonna di gruppo, fare clic con il pulsante destro del mouse sull'intestazione di colonna, fare clic su **Elimina colonne**, selezionare **Elimina solo colonne**, quindi scegliere **OK**.  
   
-     ![Eliminare una colonna del gruppo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Eliminare una colonna del gruppo")  
+     ![Eliminare una colonna di gruppo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Eliminare una colonna di gruppo")  
   
 5.  Fare clic con il pulsante destro del mouse su **Gruppo 1** nella sezione **Gruppi di righe** , quindi scegliere **Proprietà gruppo**.  
   

@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015311"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Supporto del tipo di parametro con valori di tabella OLE DB
@@ -27,7 +27,7 @@ ms.locfileid: "68015311"
   In questo articolo viene descritto il supporto del tipo OLE DB per i parametri con valori di tabella.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Oggetto set di righe di parametri con valori di tabella  
- È possibile creare un oggetto set di righe specifico per i parametri con valori di tabella. Per creare l'oggetto set di righe di parametri con valori di tabella, utilizzare ITableDefinitionWithConstraints:: CreateTableWithConstraints o IOpenRowset:: OpenRowset. A questo scopo, impostare il membro *eKind* del parametro *pTableID* su DBKIND_GUID_NAME e specificare CLSID_ROWSET_INMEMORY come membro *guid*. Il nome del tipo di server per il parametro con valori di tabella deve essere specificato nel membro *pwszName* di *pTableID* quando si usa IOpenRowset:: OPENROWSET. L'oggetto set di righe di parametri con valori di tabella si comporta come un normale driver di OLE DB per SQL Server oggetto.  
+ È possibile creare un oggetto set di righe specifico per i parametri con valori di tabella. Per creare l'oggetto set di righe per i parametri con valori di tabella, usare ITableDefinitionWithConstraints::CreateTableWithConstraints o IOpenRowset::OpenRowset. A questo scopo, impostare il membro *eKind* del parametro *pTableID* su DBKIND_GUID_NAME e specificare CLSID_ROWSET_INMEMORY come membro *guid*. Il nome del tipo di server per il parametro con valori di tabella deve essere specificato nel membro *pwszName* di *pTableID* quando si usa IOpenRowset::OpenRowset. L'oggetto set di righe per i parametri con valori di tabella si comporta come un normale oggetto di OLE DB Driver per SQL Server.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -46,7 +46,7 @@ CoType RowsetTVP
 };  
 ```  
   
-## <a name="dbtypetable"></a>DBTYPE_TABLE  
+## <a name="dbtype_table"></a>DBTYPE_TABLE  
  Un nuovo tipo, DBTYPE_TABLE, rappresenta un tipo di tabella. Tale tipo specifica i parametri con valori di tabella nelle varie interfacce OLE DB in cui è richiesto un oggetto DBTYPE.  
   
 ```  
@@ -58,10 +58,10 @@ CoType RowsetTVP
  Le conversioni da e verso DBTYPE_TABLE per altri tipi non sono supportate. IConvertType::CanConvert restituisce S_FALSE per la conversione non supportata per tutte le richieste diverse dalla conversione da DBTYPE_TABLE a DBTYPE_TABLE. In questa situazione si presuppone l'uso di DBCONVERTFLAGS_PARAMETER sull'oggetto Command.  
   
 ## <a name="methods"></a>Metodi  
- Per informazioni sui metodi di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB metodi&#41;di supporto &#40;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)per i tipi di parametro con valori di tabella.  
+ Per informazioni sui metodi di OLE DB che supportano i parametri con valori di tabella, vedere [Supporto dei tipi di parametri con valori di tabella OLE DB &#40;metodi&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Proprietà  
- Per informazioni sulle proprietà di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB proprietà&#41;di supporto &#40;del tipo di parametro con valori di tabella](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Per informazioni sulle proprietà di OLE DB che supportano i parametri con valori di tabella, vedere [Supporto dei tipi di parametri con valori di tabella OLE DB &#40;proprietà&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

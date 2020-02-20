@@ -16,10 +16,10 @@ ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 559c025a5fcb7d27f4520cea0868761b449107a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955920"
 ---
 # <a name="allproceduresarecallable-method-sqlserverdatabasemetadata"></a>Metodo allProceduresAreCallable (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean allProceduresAreCallable()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se l'utente dispone delle autorizzazioni per chiamare tutte le routine. In caso contrario, **false**.  
+ **true** se l'utente ha le autorizzazioni per chiamare tutte le procedure. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo allProceduresAreCallable viene specificato dal metodo allProceduresAreCallable nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo allProceduresAreCallable viene specificato dal metodo allProceduresAreCallable nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,10 +1,7 @@
 ---
-title: Finestra di dialogo Aggiungi tabella (Progettazione query e Progettazione viste) (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Finestra di dialogo Aggiungi tabella (Progettazione query e Progettazione visualizzazioni)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89058296254f4aae6d8e27a214416cb76c1f03f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 167b1e86c28a56c9d3159a4e01fe337ba428e1b7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263737"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253402"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Finestra di dialogo Aggiungi tabella (Progettazione query e Progettazione viste) (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questa finestra di dialogo consente di aggiungere tabelle, viste, funzioni definite dall'utente o sinonimi a una query o a una vista.  
   
@@ -31,7 +33,7 @@ Questa finestra di dialogo consente di aggiungere tabelle, viste, funzioni defin
 **Tabelle**  
 Elenca le tabelle che è possibile aggiungere al riquadro **Diagramma** . Per aggiungere una tabella, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più tabelle, selezionarle e fare clic su **Aggiungi**.  
   
-**Viste**  
+**Visualizzazioni**  
 Elenca le viste che è possibile aggiungere al riquadro **Diagramma** . Per aggiungere una vista, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più viste, selezionarle e fare clic su **Aggiungi**.  
   
 **Funzioni**  
@@ -43,7 +45,7 @@ Elenca i sinonimi che è possibile aggiungere al riquadro **Diagramma** . Per ag
 **Aggiorna**  
 Aggiorna l'elenco includendo tutte le modifiche apportate al database da quando l'elenco è stato recuperato l'ultima volta.  
   
-**Aggiungi**  
+**Aggiungere**  
 Aggiunge l'elemento o gli elementi selezionati.  
   
 ## <a name="see-also"></a>Vedere anche  

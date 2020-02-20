@@ -16,10 +16,10 @@ ms.assetid: d93c9b70-18c2-44bb-a6de-70a7e940d806
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac7f8ba3b20ba8678891aeb3b14555a1123f06d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980955"
 ---
 # <a name="getparametermode-method-sqlserverparametermetadata"></a>Metodo getParameterMode (SQLServerParameterMetaData)
@@ -53,8 +53,8 @@ public int getParameterMode(int param)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getParameterMode viene specificato dal metodo getParameterMode nell'interfaccia java. SQL. ParameterMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getParameterMode viene specificato dal metodo getParameterMode nell'interfaccia java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

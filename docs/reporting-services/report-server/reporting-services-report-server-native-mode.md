@@ -13,16 +13,16 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826898"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Un server di report configurato per la modalità nativa viene eseguito come server applicazioni che fornisce tutte le funzionalità di elaborazione e gestione esclusivamente tramite i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o il portale web per gestire [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i report. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
+ È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o il portale Web per gestire i report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
   
  Se il server di report è configurato per la modalità SharePoint, è necessario utilizzare le pagine di gestione contenuto nel sito di SharePoint per gestire report, origini dati condivise e altri elementi del server di report.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66826898"
   
 -   Bilanciamento delle richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
- Le autorizzazioni per eseguire le attività di gestione vengono fornite in due ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per altre informazioni su questi ruoli predefiniti, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Le autorizzazioni per eseguire le attività di gestione vengono fornite in due ruoli predefiniti: **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per altre informazioni su questi ruoli predefiniti, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o il portale Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Il portale Web consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e usare report e altri tipi di contenuto, nonché visualizzare e usare tutti gli elementi condivisi e le funzionalità di distribuzione del report.  
   
@@ -84,12 +84,12 @@ ms.locfileid: "66826898"
   
  Per aggiungere una risorsa a un server di report, caricare o pubblicare un file:  
   
-|Operazione|Tipo di file|  
+|Operazione|Tipo file|  
 |---------------|---------------|  
 |Caricamento|Tutti i file vengono caricati come risorse ad eccezioni dei file di definizione del report (con estensione rdl) e del modello di report (con estensione smdl).<br /><br /> Per caricare una risorsa, è necessario usare il portale Web se il server di report è in esecuzione in modalità nativa o una pagina di applicazione in un sito di SharePoint se il server è in esecuzione in modalità integrata SharePoint. Per altre informazioni, vedere [Caricare un file o un report nel server di report](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) o [Caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
-|Pubblicazione|Tutti i file in un progetto vengono caricati come risorse, ad eccezione dei file dell'origine dati con estensione rdl, smdl e rds. Per pubblicare una risorsa, aggiungere un elemento esistente a un progetto in Progettazione report, quindi pubblicare il progetto in un server di report.|  
+|Pubblica|Tutti i file in un progetto vengono caricati come risorse, ad eccezione dei file dell'origine dati con estensione rdl, smdl e rds. Per pubblicare una risorsa, aggiungere un elemento esistente a un progetto in Progettazione report, quindi pubblicare il progetto in un server di report.|  
   
- Tutte le risorse provengono da file presenti nel file system, caricati successivamente in un server di report. Non sono presenti restrizioni sui tipi di file è possibile caricare, file con dimensioni fino a 1 GB. Alcuni tipi di file risultano tuttavia più adatti di altri con tipo MIME equivalente per la pubblicazione in un server di report come risorse. Ad esempio, le risorse basate su file HTML e JPG vengono aperte in una finestra del browser quando l'utente fa clic sulla risorsa. In tal modo i file HTML vengono visualizzati come pagine Web e i file JPG come immagini visibili all'utente. Al contrario le risorse con tipi MIME non equivalenti, ad esempio file di applicazioni desktop, non vengono visualizzate in alcun modo nella finestra del browser.  
+ Tutte le risorse provengono da file presenti nel file system, caricati successivamente in un server di report. Non sono previste restrizioni per i tipi di file che è possibile caricare. Le dimensioni del file massime consentite sono pari a 1 GB. Alcuni tipi di file risultano tuttavia più adatti di altri con tipo MIME equivalente per la pubblicazione in un server di report come risorse. Ad esempio, le risorse basate su file HTML e JPG vengono aperte in una finestra del browser quando l'utente fa clic sulla risorsa. In tal modo i file HTML vengono visualizzati come pagine Web e i file JPG come immagini visibili all'utente. Al contrario le risorse con tipi MIME non equivalenti, ad esempio file di applicazioni desktop, non vengono visualizzate in alcun modo nella finestra del browser.  
   
  Il fatto che una risorsa risulti visibile agli utenti di un report dipende dalle funzionalità del browser in uso. Poiché le risorse non vengono elaborate dal server di report, il browser deve fornire la funzionalità di visualizzazione per eseguire il rendering di un tipo MIME specifico. Se il browser non è in grado di eseguire il rendering del contenuto, gli utenti che visualizzeranno la risorsa ne vedranno esclusivamente le proprietà generali.  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo setClob (int, Java. io. Reader) | Microsoft Docs
+title: Metodo setClob (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f21a5e3a6d4c09ace79538ea5a5dceadf26479c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974574"
 ---
 # <a name="setclob-method-int-javaioreader"></a>Metodo setClob (int, java.io.Reader)
@@ -42,7 +42,7 @@ public final void setClob(int parameterIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo setClob viene specificato dal metodo setClob nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

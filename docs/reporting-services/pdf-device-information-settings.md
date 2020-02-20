@@ -12,10 +12,10 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70911322"
 ---
 # <a name="pdf-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo PDF
@@ -28,7 +28,7 @@ ms.locfileid: "70911322"
 |**ColumnSpacing**|Spaziatura delle colonne da impostare per il report. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**DpiX**|Risoluzione del dispositivo di output nella direzione x.|  
 |**DpiY**|Risoluzione del dispositivo di output nella direzione y.|  
-|**EmbedFonts**|Indica se incorporare i tipi di carattere nel file PDF, dimensioni maggiori, ma il rendering dei tipi di carattere del report verrà eseguito correttamente per tutti i client. Il valore **None** Disabilita l'incorporamento dei tipi di carattere.|  
+|**EmbedFonts**|Indica se incorporare i tipi di carattere nel file PDF, che è di dimensioni maggiori, ma in questo modo il rendering dei tipi di carattere del report verrà eseguito correttamente per tutti i client. Il valore **None** disabilita l'incorporamento tipi di carattere.|  
 |**EndPage**|Ultima pagina del report di cui eseguire il rendering. Il valore predefinito è il valore di **StartPage**.|  
 |**HumanReadablePDF**|Indica se eseguire il rendering di un file PDF non compresso, di dimensioni maggiori ma più leggibile per gli utenti in un editor di testo normale. Il valore predefinito è **false**.|  
 |**MarginBottom**|Valore in pollici del margine inferiore da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio 1in. Questo valore ha la priorità sulle impostazioni originali del report.|  
@@ -41,7 +41,7 @@ ms.locfileid: "70911322"
   
 ## <a name="see-also"></a>Vedere anche  
  [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

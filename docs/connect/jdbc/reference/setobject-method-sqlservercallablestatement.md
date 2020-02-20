@@ -1,5 +1,5 @@
 ---
-title: Metodo seobject (SQLServerCallableStatement) | Microsoft Docs
+title: Metodo setObject (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdd1912a04c503b59064a0e39859a5845c4c6b0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973298"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>Metodo setObject (SQLServerCallableStatement)
@@ -27,13 +27,13 @@ ms.locfileid: "67973298"
 
   Imposta il valore del parametro designato tramite l'oggetto specificato.  
   
- A partire dal driver JDBC 3,0, il comportamento di questo metodo viene modificato dalla proprietà di connessione **sendTimeAsDatetime** ([impostazione delle proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md)) e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ A partire dal driver JDBC 3.0 di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il comportamento di questo metodo viene modificato dalla proprietà di connessione **sendTimeAsDatetime** ([Impostazione delle proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md)) e [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Per ulteriori informazioni, vedere [configurazione della modalità di invio dei valori java. SQL. Time al server](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Per altre informazioni, vedere [Configurazione della modalità di invio dei valori java.sql.Time al server](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[setObject (java.lang.String, java.lang.Object)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object.md)|Imposta il valore del parametro designato tramite l'oggetto specificato.|  
 |[setObject (java.lang.String, java.lang.Object, int)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object-int.md)|Imposta il valore del parametro designato tramite l'oggetto e il tipo di destinazione specificati.|  

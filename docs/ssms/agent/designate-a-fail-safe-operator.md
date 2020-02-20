@@ -1,10 +1,9 @@
 ---
-title: Impostare un operatore alternativo | Microsoft Docs
-ms.custom: ''
+title: Impostazione di un operatore alternativo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29a61389b6f09f3393f53114c7e822824a0aa2d7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 1c56acaa84b26192d766097294a5ab2bfd31ab8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552963"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242445"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Impostazione di un operatore alternativo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,9 +42,9 @@ Un operatore alternativo è un utente che riceve l'avviso nel caso in cui l'oper
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Solo i membri del ruolo predefinito del server **sysadmin** possono definire operatori alternativi.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  

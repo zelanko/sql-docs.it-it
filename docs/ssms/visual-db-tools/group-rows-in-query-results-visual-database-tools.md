@@ -1,10 +1,7 @@
 ---
-title: Raggruppare righe nei risultati di una query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Raggruppare righe nei risultati di una query
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247203"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Raggruppare righe nei risultati di una query (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Se si desidera creare dei subtotali o visualizzare altre informazioni riepilogative per i subset di una tabella, è possibile utilizzare una query di aggregazione. Ciascun gruppo creato riepiloga i dati per tutte le righe della tabella con lo stesso valore.  
   
@@ -55,7 +56,7 @@ L'output risultante può essere analogo al seguente:
   
 1.  Iniziare la query aggiungendo le tabelle da riepilogare nel riquadro Diagramma.  
   
-2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma, quindi scegliere **Aggiungi raggruppamento** dal menu di scelta rapida. In Progettazione query e Progettazione viste verrà aggiunta una colonna **Group By** alla griglia nel riquadro Criteri.  
+2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma e scegliere **Aggiungi raggruppamento** dal menu di scelta rapida. In Progettazione query e Progettazione viste verrà aggiunta una colonna **Group By** alla griglia nel riquadro Criteri.  
   
 3.  Aggiungere al riquadro Criteri la colonna o la combinazione di colonne da raggruppare. Per visualizzare la colonna nell'output della query, assicurarsi che la colonna **Output** sia selezionata per l'output.  
   
@@ -71,7 +72,7 @@ L'output risultante può essere analogo al seguente:
   
 5.  Nella cella della griglia **Group By** per la colonna da aggregare, selezionare la funzione di aggregazione appropriata.  
   
-    Verrà assegnato automaticamente un alias di colonna alla colonna di cui si effettua il riepilogo. Tale alias generato automaticamente può essere sostituito con un alias più significativo. Per altre informazioni dettagliate, vedere [Creazione di alias di colonna (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+    Verrà assegnato automaticamente un alias di colonna alla colonna di cui si effettua il riepilogo. Tale alias generato automaticamente può essere sostituito con un alias più significativo. Per altre informazioni dettagliate, vedere [Creare alias di colonna](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
     ![Aggiunta di un alias di colonna al set di risultati della query](../../ssms/visual-db-tools/media/dv3w9e3.gif "Aggiunta di un alias di colonna al set di risultati della query")  
   
@@ -84,5 +85,5 @@ L'output risultante può essere analogo al seguente:
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Ordinare e raggruppare i risultati delle query (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Ordinare e raggruppare i risultati delle query](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

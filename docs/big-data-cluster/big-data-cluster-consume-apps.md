@@ -5,18 +5,19 @@ description: Usare un'applicazione distribuita in un cluster Big Data di SQL Ser
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707172"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721406"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Usare un'app distribuita in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] tramite un servizio Web RESTful
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Usare un'app distribuita in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] tramite un servizio Web RESTful
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -90,7 +91,16 @@ In alternativa, è possibile trovare questa informazione facendo clic con il pul
 
 ## <a name="generate-a-jwt-access-token"></a>Generare un token di accesso JWT
 
-Per accedere al servizio Web RESTful per l'app distribuita, prima di tutto è necessario generare un token di accesso JWT. Aprire l'URL `https://[IP]:[PORT]/docs/swagger.json` nel browser usando l'indirizzo IP e la porta recuperati prima eseguendo il comando `describe`. Sarà necessario accedere con le stesse credenziali usate per `azdata login`.
+Per accedere al servizio Web RESTful per l'app distribuita, prima di tutto è necessario generare un token di accesso JWT. L'URL per il token di accesso dipende dalla versione del cluster Big Data. 
+
+|Versione |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 e versioni successive| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> Per informazioni sulle versioni, vedere [Cronologia delle versioni](release-notes-big-data-cluster.md#release-history).
+
+Aprire l'URL appropriato nel browser usando l'indirizzo IP e la porta recuperati eseguendo il comando [`describe`](#retrieve-the-endpoint) in precedenza. Accedere con le stesse credenziali usate per `azdata login`.
 
 Incollare il contenuto di `swagger.json` in [Swagger Editor](https://editor.swagger.io) per determinare i metodi disponibili:
 

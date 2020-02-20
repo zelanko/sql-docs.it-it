@@ -16,10 +16,10 @@ ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73cbbaf8d1a3b3e6bc5e5ba7cd4b43df01c0f7f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969591"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>Metodo supportsCoreSQLGrammar (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsCoreSQLGrammar()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo supportsCoreSQLGrammer viene specificato dal metodo supportsCoreSQLGrammer nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo supportsCoreSQLGrammer viene specificato dal metodo supportsCoreSQLGrammer nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

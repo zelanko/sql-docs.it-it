@@ -16,10 +16,10 @@ ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979330"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Metodo getSubString (SQLServerClob)
@@ -50,8 +50,8 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getSubString viene specificato dal Metodo getSubString nell'interfaccia java. SQL. Clob.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getSubString viene specificato dal metodo getSubString nell'interfaccia java.sql.Clob.  
   
  Se si tenta di ottenere zero caratteri da un oggetto CLOB Null o di lunghezza zero, viene restituita una stringa vuota. Se si tenta di ottenere un numero qualsiasi di caratteri in qualsiasi posizione diversa da 1 in un oggetto CLOB di lunghezza zero, verrà generata un'eccezione di posizione.  
   

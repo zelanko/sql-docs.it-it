@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136476"
 ---
 # <a name="sql-server-2017-release-notes"></a>Note sulla versione di SQL Server 2017
@@ -53,14 +53,14 @@ Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017.
   - Amazon Redshift
   - IBM Netezza
   - Impala
-- **Soluzione alternativa:** Nessuna.   
+- **Soluzione alternativa:** No.   
 
 - **Problema e impatto per i clienti:** i modelli di query diretta al livello di compatibilità 1400 con prospettive possono avere esito negativo nell'esecuzione di query o nell'individuazione dei metadati.
 - **Soluzione alternativa:** rimuovere le prospettive ed eseguire di nuovo la distribuzione.
 
 ### <a name="tools"></a>Strumenti
 - **Problema e impatto per i clienti:** l'esecuzione *DReplay* ha esito negativo con il messaggio seguente: "Errore DReplay Si è verificato un errore imprevisto".
-- **Soluzione alternativa:** Nessuna.
+- **Soluzione alternativa:** No.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2, agosto 2017)
@@ -131,7 +131,7 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 - **Problema e impatto per i clienti:** la documentazione per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è limitata e il contenuto è incluso nel set di documentazione di [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)].  Il contenuto di articoli specifici di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è indicato con **Si applica a**. 
 - **Problema e impatto per i clienti:** non è disponibile contenuto offline per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
-### <a name="always-on-availability-groups"></a>Gruppi di disponibilità Always On
+### <a name="always-on-availability-groups"></a>Gruppi di disponibilità AlwaysOn
 
 - **Problema e impatto per i clienti:** si verifica un arresto anomalo di un'istanza di SQL Server che ospita una replica secondaria del gruppo di disponibilità se la versione principale di SQL Server è di livello inferiore rispetto all'istanza che ospita la replica primaria. Ciò influisce sugli aggiornamenti di tutte le versioni supportate di SQL Server che ospitano i gruppi di disponibilità per SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. Il problema si verifica nelle condizioni seguenti. 
 

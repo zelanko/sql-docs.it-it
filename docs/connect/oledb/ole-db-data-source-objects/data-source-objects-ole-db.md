@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati (OLE DB) | Microsoft Docs
+title: Oggetti di origine dati (OLE DB) | Microsoft Docs
 description: Oggetti origine dati (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015920"
 ---
 # <a name="data-source-objects-ole-db"></a>Oggetti origine dati (OLE DB)
@@ -30,15 +30,15 @@ ms.locfileid: "68015920"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il driver OLE DB per SQL Server usa il termine origine dati per il set di interfacce OLE DB usate per stabilire un collegamento a un archivio dati, ad esempio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La creazione di un'istanza dell'oggetto origine dati del provider è la prima attività di un driver OLE DB per SQL Server consumer.  
+  Il driver OLE DB per SQL Server usa il termine origine dati per il set di interfacce OLE DB usate per stabilire un collegamento a un archivio dati, ad esempio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La creazione di un'istanza dell'oggetto di origine dati del provider è la prima attività di un consumer di OLE DB Driver per SQL Server.  
   
- Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. Il CLSID per il driver OLE DB per SQL Server è il CLSID_MSOLEDBSQL CC++ /GUID (il simbolo MSOLEDBSQL_CLSID verrà risolto nel ProgID corretto nel file MSOLEDBSQL. h a cui si fa riferimento). Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
+ Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. L'identificatore CLSID per OLE DB Driver per SQL Server è il GUID C/C++ CLSID_MSOLEDBSQL. Il simbolo MSOLEDBSQL_CLSID restituirà il progid corretto nel file msoledbsql.h a cui si fa riferimento. Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
   
- OLE DB driver per SQL Server è un server in-process. Le istanze degli oggetti del driver OLE DB per SQL Server vengono create usando la macro CLSCTX_INPROC_SERVER per indicare il contesto di esecuzione.  
+ OLE DB Driver per SQL Server è un server in-process. Le istanze degli oggetti del driver OLE DB per SQL Server vengono create usando la macro CLSCTX_INPROC_SERVER per indicare il contesto di esecuzione.  
   
  L'oggetto origine dati del driver OLE DB per SQL Server espone le interfacce di inizializzazione OLE DB che consentono al consumer di connettersi ai database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistenti.  
   
- Ogni connessione effettuata tramite il driver OLE DB per SQL Server imposta automaticamente queste opzioni:  
+ Ogni connessione eseguita tramite OLE DB Driver per SQL Server imposta automaticamente queste opzioni:  
   
 -   SET ANSI_WARNINGS ON  
   

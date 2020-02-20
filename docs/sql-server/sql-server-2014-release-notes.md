@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155693"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -94,7 +94,7 @@ SQL Server 2014 SP1 contiene correzioni disponibili nell'aggiornamento cumulativ
 2.  L'installazione side-by-side di SQL Server 2014 CTP 1 e SQL Server 2014 RTM NON è supportata.  
 3.  Il collegamento o il ripristino di un database SQL Server 2014 CTP 1 a SQL Server 2014 RTM NON è supportato.  
 
-**Soluzione alternativa:** Nessuna.
+**Soluzione alternativa:** No.
 
 #### <a name="upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm"></a>Aggiornamento da SQL Server 2014 CTP 2 a SQL Server RTM
 L'aggiornamento è completamente supportato. In particolare, è possibile:
@@ -128,7 +128,7 @@ Il contenuto di Generatore report e PowerPivot non è disponibile in alcune ling
   
 In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il contenuto è disponibile in un file CHM fornito con il prodotto in queste lingue. I file CHM non vengono più forniti con il prodotto e il contenuto di Generatore report è disponibile solo su MSDN. MSDN non supporta queste lingue. Generatore report è stato rimosso da TechNet e non è più disponibile nelle lingue supportate.  
   
-**Soluzione alternativa:** Nessuna.  
+**Soluzione alternativa:** No.  
   
 **Problema:** il contenuto di Power Pivot non è disponibile nelle lingue seguenti:
   
@@ -146,7 +146,7 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il contenuto è disponibile in 
   
 In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il contenuto era disponibile in TechNet ed era disponibile in queste lingue. Il contenuto è stato rimosso da TechNet e non è più disponibile in queste lingue supportate.  
   
-**Soluzione alternativa:** Nessuna.  
+**Soluzione alternativa:** No.  
   
 ### <a name="DBEngine"></a>Motore di database (RTM)
   
@@ -176,7 +176,7 @@ memory-optimized table DLLs.
 ```  
 In realtà si tratta di un messaggio informativo e non è richiesto alcun intervento da parte dell'utente.  
   
-**Soluzione alternativa:** Nessuna. È un messaggio informativo.  
+**Soluzione alternativa:** No. È un messaggio informativo.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>Nei dettagli sugli indici mancanti sono erroneamente segnalate colonne incluse per la tabella ottimizzata per la memoria  
 **Problema:** se SQL Server 2014 rileva un indice mancante per una query in una tabella ottimizzata per la memoria, segnala un indice mancante in SHOWPLAN_XML e nelle DMV dell'indice mancante, ad esempio sys.dm_db_missing_index_details. In alcuni casi, i dettagli sugli indici mancanti contengono le colonne incluse. Poiché tutte le colonne sono incluse in modo implicito in tutti gli indici nelle tabelle ottimizzate per la memoria, non è consentito specificare in modo esplicito le colonne incluse con gli indici ottimizzati per la memoria.  
@@ -211,7 +211,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>Nelle statistiche di esecuzione di stored procedure e query per le stored procedure compilate in modo nativo il tempo del processo viene registrato in multipli di 1000  
 **Problema:** dopo avere abilitato la raccolta delle statistiche di esecuzione di stored procedure o query per le stored procedure compilate in modo nativo usando sp_xtp_control_proc_exec_stats o sp_xtp_control_query_exec_stats, *_worker_time verrà visualizzato in multipli di 1000 nelle DMV sys.dm_exec_procedure_stats e sys.dm_exec_query_stats. Le esecuzioni di query con un tempo del processo inferiore a 500 microsecondi verranno segnalate con un valore worker_time pari a 0.  
   
-**Soluzione alternativa:** Nessuna. È opportuno non fare affidamento sul valore worker_time segnalato nelle DMV delle statistiche di esecuzione per le query con esecuzione rapida nelle stored procedure compilate in modo nativo.  
+**Soluzione alternativa:** No. È opportuno non fare affidamento sul valore worker_time segnalato nelle DMV delle statistiche di esecuzione per le query con esecuzione rapida nelle stored procedure compilate in modo nativo.  
   
 #### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Si verifica un errore con SHOWPLAN_XML per le stored procedure compilate in modo nativo che contengono espressioni lunghe  
 **Problema:** se una stored procedure compilata in modo nativo contiene un'espressione lunga, l'acquisizione di SHOWPLAN_XML per la stored procedure, tramite l'opzione T-SQL SET SHOWPLAN_XML ON o l'opzione "Visualizza piano di esecuzione stimato" in Management Studio, potrebbe causare l'errore seguente:  
@@ -233,7 +233,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 + @v1 + @v2 + ... + @v199  
     ```  
   
-    Scrivere:  
+    Scrittura:  
   
     ```  
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
@@ -245,7 +245,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1 +@v2 +...+@v199  
     ```  
   
-    Scrivere:  
+    Scrittura:  
   
     ```  
     SELECT @v0 +@v1  
@@ -254,7 +254,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>L'utilizzo di un parametro di stringa o di una variabile con DATEPART e funzioni correlate in una stored procedure compilata in modo nativo genera un errore  
 **Problema:** quando si usa una stored procedure compilata in modo nativo che usa un parametro o una variabile di stringa con le funzioni predefinite DATEPART, DAY, MONTH e YEAR, viene visualizzato un messaggio di errore che indica che il tipo di dati datetimeoffset non è supportato con le stored procedure compilate in modo nativo.  
   
-**Soluzione alternativa:** assegnare la variabile o il parametro di stringa a una nuova variabile di tipo datetime2 e usare tale variabile nella funzione DATEPART, DAY, MONTH o YEAR. Esempio:  
+**Soluzione alternativa:** assegnare la variabile o il parametro di stringa a una nuova variabile di tipo datetime2 e usare tale variabile nella funzione DATEPART, DAY, MONTH o YEAR. Ad esempio:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -264,7 +264,7 @@ DATEPART(weekday, @d)
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>Assistente compilazione nativa contrassegna in modo errato le clausole DELETE FROM  
 **Problema:** Assistente compilazione nativa contrassegna in modo errato le clausole DELETE FROM all'interno di una stored procedure come incompatibili.  
   
-**Soluzione alternativa:** Nessuna.  
+**Soluzione alternativa:** No.  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>La registrazione con SSMS aggiunge metadati DAC con ID istanza non corrispondenti  
 **Problema:** quando si esegue la registrazione o l'eliminazione di un pacchetto di applicazione livello dati (con estensione dacpac) tramite SQL Server Management Studio, le tabelle sysdac* non vengono aggiornate correttamente per consentire a un utente di eseguire query nella cronologia di dacpac per il database.  I valori id_instance per sysdac_history_internal e sysdac_instances_internal non corrispondono, quindi non è possibile creare un join.  
@@ -299,10 +299,10 @@ Se si è già verificato il problema relativo ai valori instance_id non corrispo
   
 La modalità nativa di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non può essere eseguita side-by-side in nessuna delle seguenti condizioni:  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Componente aggiuntivo per prodotti SharePoint    
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Servizio condiviso di SharePoint  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - Componente aggiuntivo per prodotti SharePoint    
+-   Servizio SharePoint Shared di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
-L'installazione side-by-side impedisce l'avvio del servizio Windows in modalità nativa di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nel log degli eventi di Windows saranno presenti messaggi di errore simili a quelli descritti qui:  
+L'installazione side-by-side impedisce l'avvio del servizio Windows in modalità nativa di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Nel log degli eventi di Windows saranno presenti messaggi di errore simili a quelli descritti qui:  
   
 ```  
 Log Name:   Application  

@@ -24,14 +24,14 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68661346"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
-Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Quando RDL Sandboxing è abilitato, al momento della pubblicazione del report nel testo dell'espressione è possibile utilizzare solo determinati tipi e membri. Per altre informazioni, vedere [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -62,11 +62,11 @@ Per esempi di espressioni per utilizzi specifici, vedere gli argomenti seguenti:
   
 Per altre informazioni sulle espressioni semplici e complesse, per sapere dove è possibile usare le espressioni e quali tipi di riferimenti è possibile includere in un'espressione, vedere gli argomenti contenuti in [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Per altre informazioni sul contesto in cui le espressioni vengono valutate per calcolare le aggregazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzati molti operatori e funzioni che si utilizzano anche per esempi di espressione in questo argomento, ma nel contesto di scrittura di un report, vedere [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Per altre informazioni su come scrivere espressioni in cui vengono utilizzati molti operatori e funzioni che si utilizzano anche per esempi di espressione in questo argomento, ma nel contesto di scrittura di un report, vedere [Esercitazione: Introduzione alle espressioni](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Funzioni  
- Molte espressioni incluse in un report contengono funzioni. Con queste funzioni è possibile formattare dati, applicare logica e accedere ai metadati del report. È possibile scrivere espressioni che usano funzioni della libreria run-time di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e degli spazi dei nomi <xref:System.Convert> e <xref:System.Math> . È possibile aggiungere riferimenti a funzioni da altri assembly o da codice personalizzato. È anche possibile usare classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], tra cui <xref:System.Text.RegularExpressions>.  
+ Molte espressioni incluse in un report contengono funzioni. Con queste funzioni è possibile formattare dati, applicare logica e accedere ai metadati del report. È possibile scrivere espressioni che usano funzioni della libreria run-time di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e degli spazi dei nomi <xref:System.Convert> e <xref:System.Math>. È possibile aggiungere riferimenti a funzioni da altri assembly o da codice personalizzato. È anche possibile usare classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], tra cui <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Funzioni di Visual Basic  
  È possibile utilizzare le funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per modificare i dati visualizzati nelle caselle di testo o utilizzati per parametri, proprietà o altre aree del report. In questa sezione vengono forniti esempi che illustrano alcune di queste funzioni. Per altre informazioni, vedere la pagina relativa ai [membri delle librerie di runtime di Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) in MSDN.  
@@ -120,7 +120,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   La funzione **Year** visualizza l'anno per una determinata data. È possibile utilizzare questa espressione per raggruppare date oppure per visualizzare l'anno come etichetta di un set di date. Questa espressione restituisce l'anno per un gruppo specifico di date di ordini di vendita. Per modificare le date è possibile utilizzare anche la funzione **Month** e altre funzioni. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   La funzione **Year** visualizza l'anno per una determinata data. È possibile utilizzare questa espressione per raggruppare date oppure per visualizzare l'anno come etichetta di un set di date. Questa espressione restituisce l'anno per un gruppo specifico di date di ordini di vendita. Per modificare le date è possibile utilizzare anche la funzione **Month** e altre funzioni. Per altre informazioni, vedere la documentazione di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -214,7 +214,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     L'espressione seguente restituisce lo stesso valore dell'espressione precedente, ma usando membri della classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> anziché funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] :  
+     L'espressione seguente restituisce lo stesso valore dell'espressione precedente, ma usando membri della classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> invece di funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -233,7 +233,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
   
     ```  
   
--   In **Regex** della classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sono utili per modificare il formato di stringhe esistenti, ad esempio per formattare un numero di telefono. L'espressione seguente usa la funzione **Replace** per modificare il formato di un numero telefonico di dieci cifre in un campo da "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn*-*nnnn*":  
+-   Le funzioni **Regex** della classe <xref:System.Text.RegularExpressions> di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono utili per modificare il formato di stringhe esistenti, ad esempio per formattare un numero di telefono. L'espressione seguente usa la funzione **Replace** per modificare il formato di un numero telefonico di dieci cifre in un campo da "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -426,7 +426,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
     =Iif(Fields!Profit.Value < 0, "Red", "Black")  
     ```  
   
-     È anche possibile utilizzare la variabile oggetto [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Me`. Questa variabile consente di fare riferimento in un altro modo al valore di una casella di testo.  
+     È anche possibile utilizzare la variabile oggetto [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Me`. Questa variabile consente di fare riferimento in un altro modo al valore di una casella di testo.  
   
      `=Iif(Me.Value < 0, "Red", "Black")`  
   

@@ -11,10 +11,10 @@ ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970639"
 ---
 # <a name="sqlserverresource-members"></a>Membri di SQLServerResource
@@ -24,22 +24,22 @@ ms.locfileid: "67970639"
   
 ## <a name="constructors"></a>Costruttori  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Inizializza una nuova istanza della classe [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md). Questo costruttore è solo per uso interno.|  
   
 ## <a name="fields"></a>Campi  
- Nessuna.  
+ No.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |java.util.ResourceBundle|padre|  
   
 ## <a name="methods"></a>Metodi  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|Recupera le informazioni sulle stringhe di errore. Questo metodo è destinato al solo uso interno.|  
   

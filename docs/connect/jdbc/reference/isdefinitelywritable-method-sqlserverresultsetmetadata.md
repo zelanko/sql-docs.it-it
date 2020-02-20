@@ -16,10 +16,10 @@ ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977642"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>Metodo isDefinitelyWritable (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public boolean isDefinitelyWritable(int column)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo isDefinitelyWritable viene specificato dal metodo isDefinitelyWritable nell'interfaccia java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo isDefinitelyWritable viene specificato dal metodo isDefinitelyWritable nell'interfaccia java.sql.ResultSetMetaData.  
   
 > [!NOTE]  
 >  Quando si usa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo metodo restituisce sempre false.  

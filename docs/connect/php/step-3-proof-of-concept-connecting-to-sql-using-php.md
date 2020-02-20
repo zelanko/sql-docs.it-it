@@ -11,19 +11,19 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014805"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>Passaggio 1: connettersi  
+## <a name="step-1--connect"></a>Passaggio 1:  Connessione  
   
   
-Questa funzione **OpenConnection** viene chiamata nella parte superiore di tutte le funzioni che seguono.  
+Questa funzione **OpenConnection** viene chiamata nella parte superiore in tutte le funzioni che seguono.  
   
   
 ```php 
@@ -45,9 +45,9 @@ Questa funzione **OpenConnection** viene chiamata nella parte superiore di tutte
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Passaggio 2: eseguire la query  
+## <a name="step-2--execute-query"></a>Passaggio 2:  Eseguire la query  
   
-La funzione [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) può essere utilizzata per recuperare un set di risultati da una query sul database SQL. Questa funzione accetta essenzialmente qualsiasi query e l'oggetto Connection e restituisce un set di risultati su cui è possibile eseguire l'iterazione con l'utilizzo di [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+Per recuperare un set di risultati di una query sul database SQL è possibile usare la funzione [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php). Questa funzione accetta essenzialmente qualsiasi query e l'oggetto connessione e restituisce un set di risultati su cui è possibile eseguire l'iterazione con l'uso di [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -77,9 +77,9 @@ La funzione [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.ph
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Passaggio 3: inserire una riga  
+## <a name="step-3--insert-a-row"></a>Passaggio 3:  Inserire una riga  
   
-In questo esempio si vedrà come eseguire un'istruzione [Insert](../../t-sql/statements/insert-transact-sql.md) in modo sicuro, passare i parametri che proteggono l'applicazione da un valore [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+Questo esempio illustra come eseguire un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) in modo sicuro e come passare i parametri che proteggono l'applicazione da attacchi [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```php 
@@ -109,16 +109,16 @@ In questo esempio si vedrà come eseguire un'istruzione [Insert](../../t-sql/sta
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Passaggio 4: eseguire il rollback di una transazione  
+## <a name="step-4--rollback-a-transaction"></a>Passaggio 4:  Eseguire il rollback di una transazione  
   
   
-In questo esempio di codice viene illustrato l'utilizzo delle transazioni in cui è possibile:  
+Questo esempio di codice illustra l'uso di transazioni con le operazioni seguenti:  
   
--Iniziare una transazione  
+-Avvio di una transazione  
   
--Inserire una riga di dati, aggiornare un'altra riga di dati  
+-Inserimento di una riga di dati, aggiornamento di un'altra riga di dati  
   
--Eseguire il commit della transazione se l'inserimento e l'aggiornamento hanno avuto esito positivo ed eseguire il rollback della transazione se una di esse non è stata  
+-Commit della transazione se l'inserimento e l'aggiornamento vengono eseguiti correttamente e il rollback della transazione se una di tali operazioni non è riuscita  
   
   
 ```php 

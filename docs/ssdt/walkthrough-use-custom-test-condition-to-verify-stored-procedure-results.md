@@ -1,23 +1,24 @@
 ---
-title: 'Procedura dettagliata: Uso di una condizione di test personalizzata per verificare i risultati di una stored procedure | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Condizione di test personalizzata per verificare i risultati di una stored procedure
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068986"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242662"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Uso di una condizione di test personalizzata per verificare i risultati di una stored procedure
+
 In questa procedura dettagliata dell'estensione di funzionalità verrà creata una condizione di test di cui ne verrà verificata la funzionalità tramite la creazione di uno unit test di SQL Server. Il processo include la creazione di un progetto libreria di classi per la condizione di test, nonché la firma e l'installazione della condizione di test. Se si dispone di una condizione di test da aggiornare, vedere [Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 Vengono illustrate le attività seguenti:  
@@ -63,7 +64,7 @@ Nella prossima esercitazione verrà illustrato come firmare il progetto.
   
 6.  Scegliere **Salva tutti** dal menu **File**.  
   
-7.  Scegliere **Compila soluzione** dal menu **Compila**.  
+7.  Nel menu **Compila** scegliere **Compila soluzione**.  
   
 Nella prossima esercitazione verrà illustrato come aggiungere i riferimenti necessari al progetto.  
   
@@ -344,7 +345,7 @@ namespace ColumnCountCondition
 Nella prossima esercitazione verrà illustrato come compilare il progetto.  
   
 ## <a name="xxx"></a> Compilazione del progetto e installazione della condizione di test  
-Scegliere **Compila soluzione** dal menu **Compila**.  
+Nel menu **Compila** scegliere **Compila soluzione**.  
   
 Nella prossima esercitazione verrà illustrato come copiare le informazioni sull'assembly nella directory Estensioni. Quando si avvia Visual Studio, le estensioni vengono identificate nella directory %Programmi%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions e relative sottodirectory, quindi vengono rese disponibili per l'utilizzo:  
   

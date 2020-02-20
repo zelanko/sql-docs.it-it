@@ -16,10 +16,10 @@ ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b261a0f02075ffea736899dfa941a4e9f5acfb86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982039"
 ---
 # <a name="getmaxrowsize-method-sqlserverdatabasemetadata"></a>Metodo getMaxRowSize (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxRowSize()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getMaxRowSize viene specificato dal metodo getMaxRowSize nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getMaxRowSize viene specificato dal metodo getMaxRowSize nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

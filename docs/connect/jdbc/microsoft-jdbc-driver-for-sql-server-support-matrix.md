@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027887"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice di supporto di Microsoft JDBC Driver per SQL Server
@@ -32,7 +32,7 @@ ms.locfileid: "69027887"
   
 |Nome del driver|Versione del pacchetto driver|JAR applicabili|Fine del supporto Mainstream|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.4 per SQL Server|7.4|MSSQL-JDBC-7.4.1. jre12. jar<br> MSSQL-JDBC-7.4.1. jre11. jar<br> MSSQL-JDBC-7.4.1. jre8. jar|2 agosto 2024|
+|Microsoft JDBC Driver 7.4 per SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 agosto 2024|
 |Microsoft JDBC Driver 7.2 per SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 aprile 2024|
 |Microsoft JDBC Driver 7.0 per SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 luglio 2023|  
 |Microsoft JDBC Driver 6.4 per SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 febbraio 2023|    
@@ -50,12 +50,12 @@ ms.locfileid: "69027887"
 |Microsoft SQL Server JDBC Driver 2.0|2.0|31 dicembre 2012|  
 |Driver JDBC 1.2 per Microsoft SQL Server 2005|1.2|25 giugno 2011|  
 |Microsoft SQL Server 2005 JDBC Driver 1.1|1.1|25 giugno 2011|  
-|Microsoft SQL Server 2005 JDBC Driver 1.0|1,0|25 giugno 2011|  
+|Microsoft SQL Server 2005 JDBC Driver 1.0|1.0|25 giugno 2011|  
 |Microsoft SQL Server 2000 JDBC Driver|2000|9 luglio 2010|  
   
 ## <a name="sql-version-compatibility"></a>Compatibilità tra versioni SQL  
   
-|Versione driver|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Database SQL di Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|Versione driver|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|database SQL di Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
 |7.4|N|N|S|S|S|S|S|S|S|
 |7.2|N|S|S|S|S|S|S|S|N| 
@@ -71,7 +71,7 @@ ms.locfileid: "69027887"
 |2.0|S<sup>3</sup>|S<sup>3</sup>|N|N|N|N|N|N|N|
 |1.2|S<sup>3</sup>|N|N|N|N|N|N|N|N|
 |1.1|N|N|N|N|N|N|N|N|N|  
-|1,0|N|N|N|N|N|N|N|N|N|  
+|1.0|N|N|N|N|N|N|N|N|N|  
 |2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver versione 3.0 può connettersi a SQL Server 2012 come client di livello inferiore.  
@@ -102,7 +102,7 @@ ms.locfileid: "69027887"
 |2.0|1.5, 1.6|3.0, 4.0|  
 |1.2|1.4, 1.5, 1.6|3.0|  
 |1.1|1.4|3.0|  
-|1,0|1.4|3.0|  
+|1.0|1.4|3.0|  
 |2000|1.4|3.0|  
   
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati  

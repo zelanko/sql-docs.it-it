@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di più set di risultati | Microsoft Docs
+title: Uso di più set di risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026269"
 ---
 # <a name="using-multiple-result-sets"></a>Uso di più set di risultati
@@ -28,7 +28,7 @@ Se il metodo execute restituisce **true**, l'istruzione eseguita ha restituito u
 Se il metodo execute restituisce **false**, l'istruzione eseguita ha restituito un valore di conteggio aggiornamenti che può essere recuperato chiamando il metodo [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md).
 
 > [!NOTE]  
-> Per ulteriori informazioni sui conteggi degli aggiornamenti, vedere [utilizzo di un stored procedure con un numero di aggiornamenti](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
+> Per altre informazioni sui conteggi di aggiornamento, vedere [Uso di una stored procedure con i conteggi di aggiornamento](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
 
 Nell'esempio seguente una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] è passata alla funzione e viene costruita un'istruzione SQL che, una volta eseguita, restituisce due set di risultati:
 
@@ -37,7 +37,7 @@ Nell'esempio seguente una connessione aperta al database di esempio [!INCLUDE[ss
 In questo caso il numero di set di risultati (pari a due) è noto. Tuttavia, il codice è scritto in modo tale che se fosse restituito un numero non noto di set di risultati, come, ad esempio, nelle chiamate a stored procedure, tutti i set verranno comunque elaborati. Per un esempio di chiamata a una stored procedure che restituisce più set di risultati oltre a valori di aggiornamento, vedere [Gestione delle istruzioni complesse](../../connect/jdbc/handling-complex-statements.md).
 
 > [!NOTE]  
-> Quando si effettua la chiamata al metodo getMoreResults della classe SQLServerStatement, il set di risultati restituito in precedenza viene chiuso in modo implicito.
+> Quando si esegue una chiamata al metodo getMoreResults della classe SQLServerStatement, il set di risultati restituito in precedenza viene implicitamente chiuso.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576791"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parti del report in Progettazione report (SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "65576791"
   
  In termini generali il funzionamento delle parti di report in Progettazione report e in Generatore report è identico. Per altre informazioni sulle funzionalità di base, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- Esistono differenze fondamentali nel modo in cui le parti di report funzionano in Progettazione report, quale ad esempio il flusso di lavoro. Generatore report consente di eseguire la creazione in collaborazione, vale a dire la creazione e la pubblicazione da parte di un utente di una parte di report che potrà essere riutilizzata, modificata e ripubblicata da un altro utente. In Progettazione report la pubblicazione è unidirezionale, cioè un utente può pubblicare una parte di report da Progettazione report e un altro può riutilizzarla. Tuttavia, il primo utente non può riutilizzare una parte di report esistente in un report disponibile in Progettazione report. In questo argomento, dopo una veloce panoramica delle parti di report, vengono illustrate queste differenze.  
+ Esistono differenze fondamentali nel modo in cui le parti di report funzionano in Progettazione report, quale ad esempio il flusso di lavoro. Generatore report consente di eseguire la creazione in collaborazione, vale a dire la creazione e la pubblicazione da parte di un utente di una parte di report che potrà essere riutilizzata, modificata e ripubblicata da un altro utente. In Progettazione report la pubblicazione è unidirezionale, vale a dire che un utente può pubblicare una parte di report da Progettazione report e un altro può riutilizzarla. Tuttavia, il primo utente non può riutilizzare una parte di report esistente in un report disponibile in Progettazione report. In questo argomento, dopo una veloce panoramica delle parti di report, vengono illustrate queste differenze.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo di vita della pubblicazione di una parte del report  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  

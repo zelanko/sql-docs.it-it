@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25d2741a8449875852c733aa763322011834a6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 05d33d719be8bc2e136e34ebb14da394d5d99db9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581273"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190406"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Finestra di dialogo Accesso a Reporting Services (SSRS)
   Utilizzare la finestra di dialogo **Accesso a Reporting Services** per specificare le credenziali per la pubblicazione di report nel server di report.  
@@ -24,16 +24,16 @@ ms.locfileid: "65581273"
   
 ## <a name="options"></a>Opzioni  
  **Server**  
- Indica il nome del server di report. Ad esempio, `https://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio, `https://localhost:81/reportserver`.  
+ Indica il nome del server di report. Ad esempio: `https://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio: `https://localhost:81/reportserver`.  
   
- **User name**  
+ **Nome utente**  
  Consente di digitare il nome utente da utilizzare per l'accesso al servizio Web.  
   
  **Password**  
  Consente di digitare la password da utilizzare per l'accesso al servizio Web.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Guida sensibile al contesto di Progettazione report](../../reporting-services/tools/report-designer-f1-help.md)  
   

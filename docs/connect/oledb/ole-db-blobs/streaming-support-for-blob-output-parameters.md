@@ -1,5 +1,5 @@
 ---
-title: Supporto dello streaming per i parametri di output BLOB | Microsoft Docs
+title: Supporto del flusso per parametri di output BLOB | Microsoft Docs
 description: Supporto del flusso per parametri di output BLOB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff6386f1d2f953b2e28641edf7330ba85b9a19d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936518"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Supporto del flusso per parametri di output BLOB
@@ -30,7 +30,7 @@ ms.locfileid: "67936518"
   
 ## <a name="example"></a>Esempio  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```cpp
 // blob_out_param.cpp  

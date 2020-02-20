@@ -1,8 +1,10 @@
 ---
-title: Configurare l'account di esecuzione automatica (Gestione configurazione SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+title: Configurare l'account di esecuzione automatica (Gestione configurazione) | Microsoft Docs
+description: Reporting Services offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593317"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866318"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete. L'account viene utilizzato nei modi seguenti:  
@@ -32,7 +34,7 @@ ms.locfileid: "73593317"
  L'esecuzione automatica del report si riferisce a qualsiasi processo di esecuzione del report avviato da un evento che può essere sia un evento determinato dalla pianificazione, sia un evento di aggiornamento dei dati, piuttosto che da una richiesta dell'utente. Il server di report utilizza l'account per l'esecuzione automatica del report per accedere al computer che ospita l'origine dei dati esterna. Tale account è necessario perché le credenziali dell'account del servizio del server di report non vengono mai utilizzate per la connessione ad altri computer.  
   
 > [!IMPORTANT]  
->  La configurazione di questo account è facoltativa. Se tuttavia si sceglie di non configurarlo, si disporrà di un minor numero di opzioni per la connessione ad alcune origini dei dati e potrebbe risultare impossibile recuperare file di immagine da computer remoti. Se si configura l'account, sarà necessario mantenerlo aggiornato. In particolare, se si consente la scadenza delle password oppure le informazioni dell'account vengono modificate in Active Directory, alla successiva elaborazione di un report verrà visualizzato l'errore seguente: "Accesso non riuscito (rsLogonFailed) Errore durante l'accesso: nome utente sconosciuto o password errata". La corretta manutenzione dell'account per l'elaborazione automatica dei report è essenziale, anche se non si intende recuperare immagini esterne o inviare richieste di connessione a computer esterni. Se si configura l'account ma successivamente ci si accorge che non viene utilizzato, sarà possibile eliminarlo per evitare di svolgere le attività di manutenzione di routine per gli account.  
+>  La configurazione di questo account è facoltativa. Se tuttavia si sceglie di non configurarlo, si disporrà di un minor numero di opzioni per la connessione ad alcune origini dei dati e potrebbe risultare impossibile recuperare file di immagine da computer remoti. Se si configura l'account, sarà necessario mantenerlo aggiornato. In particolare, se si consente la scadenza di una password o se si modificano le informazioni sull'account in Active Directory, si verificherà l'errore seguente alla successiva elaborazione di un report: "Accesso non riuscito (rsLogonFailed). Errore di accesso: nome utente sconosciuto o password non valida". La corretta manutenzione dell'account per l'elaborazione automatica dei report è essenziale, anche se non si intende recuperare immagini esterne o inviare richieste di connessione a computer esterni. Se si configura l'account ma successivamente ci si accorge che non viene utilizzato, sarà possibile eliminarlo per evitare di svolgere le attività di manutenzione di routine per gli account.  
   
 ## <a name="how-to-configure-the-account"></a>Come configurare l'account  
  È necessario utilizzare un account utente di dominio. Affinché possa essere utilizzato per lo scopo previsto, questo account deve essere diverso da quello utilizzato per l'esecuzione del servizio del server di report. Utilizzare un account con autorizzazioni minime (è sufficiente l'accesso in sola lettura con autorizzazioni di connessione di rete) e accesso limitato ai soli computer in cui risiedono le origini dati e le risorse utilizzate dal server di report.  
@@ -50,7 +52,7 @@ ms.locfileid: "73593317"
   
 1.  Creare o selezionare un account di dominio che abbia accesso ai computer e ai server che forniscono dati o servizi a un server di report. È consigliabile utilizzare un account che disponga di autorizzazioni limitate, ad esempio autorizzazioni di sola lettura.  
   
-2.  Aprire un prompt dei comandi: nel menu **Start** scegliere **Esegui**, digitare **cmd**e quindi fare clic su **OK**.  
+2.  Aprire il prompt dei comandi: nel menu **Start** scegliere **Esegui**, digitare **cmd** e quindi fare clic su **OK**.  
   
 3.  Digitare il comando seguente per configurare l'account su un'istanza del server di report locale:  
   

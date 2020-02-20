@@ -1,5 +1,5 @@
 ---
-title: Compilazione dell'URL di connessione | Microsoft Docs
+title: Costruzione dell'URL della connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028450"
 ---
 # <a name="building-the-connection-url"></a>Costruzione dell'URL della connessione
@@ -40,7 +40,7 @@ ms.locfileid: "69028450"
 -   **property** (facoltativo) indica una o più proprietà della connessione. Per altre informazioni, vedere [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md). È possibile specificare qualsiasi proprietà presente nell'elenco. Le proprietà, tuttavia, possono essere delimitate solo usando il carattere di punto e virgola (';') e non possono essere duplicate.  
   
 > [!CAUTION]  
->  Per garantire maggiore sicurezza, si consiglia di evitare di costruire l'URL della connessione sulla base dei dati inseriti dall'utente. Nell'URL dovrebbero essere specificati solo il nome del server e il driver. Per i valori relativi a nome utente e password, utilizzare le raccolte delle proprietà della connessione. Per ulteriori informazioni sulla sicurezza delle applicazioni JDBC, vedere la pagina relativa alla protezione delle [applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
+>  Per garantire maggiore sicurezza, si consiglia di evitare di costruire l'URL della connessione sulla base dei dati inseriti dall'utente. Nell'URL dovrebbero essere specificati solo il nome del server e il driver. Per i valori relativi a nome utente e password, utilizzare le raccolte delle proprietà della connessione. Per altre informazioni sulla sicurezza nelle applicazioni JDBC, vedere [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
 ## <a name="connection-examples"></a>Esempi di connessioni  
  Connessione al database predefinito sul computer locale utilizzando un nome utente e la password:  
@@ -98,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<*directory di installazione*>\<\sqljdbc_*Version*>\\<*Language>* \auth\  
   
- Per qualsiasi sistema operativo supportato da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vedere uso dell' [autenticazione integrata Kerberos per connettersi a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) per una descrizione di una funzionalità aggiunta in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] che consente a un'applicazione di connettersi a un database usando Integrated autenticazione con tipo 4 Kerberos.  
+ Per i sistemi operativi supportati da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vedere [Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) per una descrizione di una funzionalità aggiunta in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] che consente a un'applicazione di connettersi a un database tramite l'autenticazione integrata Kerberos di tipo 4.  
   
 > [!NOTE]  
 >  Se si esegue Java Virtual Machine (JVM) a 32 bit, utilizzare il file sqljdbc_auth.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, utilizzare il file sqljdbc_auth.dll nella cartella x64.  

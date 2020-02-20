@@ -1,6 +1,7 @@
 ---
-title: Risoluzione dei problemi di IntelliSense (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Identificare i problemi di IntelliSense (SSMS)
+description: Informazioni su come risolvere e identificare i problemi di IntelliSense con SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,14 +16,14 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dcff5c71d8093f4049983393ee7a10622f57f5b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de4491bdeecdc635d12dca7cb0a51426524bdd67
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253112"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558677"
 ---
-# <a name="troubleshooting-intellisense"></a>Risoluzione dei problemi di IntelliSense
+# <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identificare i problemi di IntelliSense - SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   In alcuni casi le opzioni di IntelliSense potrebbero non funzionare nel modo previsto.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68253112"
   
      Per impostazione predefinita, molte caratteristiche di IntelliSense operano automaticamente ma possono essere disabilitate.  
   
-     È possibile utilizzarle anche se il completamento automatico delle istruzioni è disabilitato. Per altre informazioni, vedere [Configurazione di IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md).  
+     È possibile utilizzarle anche se il completamento automatico delle istruzioni è disabilitato. Per altre informazioni, vedere [Configurare IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md).  
   
 ## <a name="database-engine-query-intellisense"></a>Funzionalità IntelliSense in query del Motore di database  
  I problemi descritti di seguito sono relativi all'editor di query del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] :  

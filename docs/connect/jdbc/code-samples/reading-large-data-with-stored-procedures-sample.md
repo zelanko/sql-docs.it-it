@@ -11,10 +11,10 @@ ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 924bcf388ddf74f3be3f4bb13f83e00789fb8777
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028301"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>Esempio di lettura di dati di grandi dimensioni con una stored procedure
@@ -31,7 +31,7 @@ Il file di codice per questo esempio è denominato ExecuteStoredProcedure.java e
 
 ## <a name="requirements"></a>Requisiti
 
-Per eseguire questa applicazione di esempio, è necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)], Impostare anche il classpath in modo da includere il file con estensione mssql-jdbc jar. Per ulteriori informazioni su come impostare il classpath, vedere [utilizzo del driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+Per eseguire questa applicazione di esempio, è necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)], Impostare anche il classpath in modo da includere il file con estensione mssql-jdbc jar. Per altre informazioni su come impostare il classpath, vedere [Uso del driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > Con [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni su quale file JAR scegliere, vedere [Requisiti di sistema per il driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).

@@ -1,5 +1,5 @@
 ---
-title: Metodo updateBytes (Java. lang. String, byte) | Microsoft Docs
+title: Metodo updateBytes (java.lang.String, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996897"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>Metodo updateBytes (java.lang.String, byte)
@@ -42,15 +42,15 @@ public void updateBytes(java.lang.String columnName,
   
  *x*  
   
- Matrice di valori di **byte** .  
+ Matrice di valori **byte**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateBytes viene specificato dal metodo updateBytes nell'interfaccia java.sql.ResultSet.  
   
- In una versione precedente di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] era possibile usare SQLServerResultSet.updateBytes per convertire valori tra matrici di byte e i tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** e **datetimeoffset**. In questa versione l'utilizzo del metodo con questi tipi di dati provoca un'eccezione indicante che la conversione non è supportata.  
+ In una versione precedente di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] era possibile usare SQLServerResultSet.updateBytes per convertire valori tra matrici di byte e i tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**date**, **time**, **datetime2** e **datetimeoffset**. In questa versione l'utilizzo del metodo con questi tipi di dati provoca un'eccezione indicante che la conversione non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateBytes &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)   

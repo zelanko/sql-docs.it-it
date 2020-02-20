@@ -1,5 +1,5 @@
 ---
-title: Metodo getDate (Java. util. Calendar), colonna | Microsoft Docs
+title: Metodo getDate (java.util.Calendar) per colonna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3fa2a72a-7499-44ec-8f76-a8e646e0190c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c1a84fe690760d6eeda6b43fb59a5d0268696c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984001"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Metodo getDate (java.lang.String, java.util.Calendar) (SQLServerResultSet)
@@ -45,12 +45,12 @@ public java.sql.Date getDate(java.lang.String colName,
  Oggetto Calendar.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto Data.  
+ Oggetto Date.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getDate viene specificato dal metodo getDate nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce una parte della data valida di un tipo di dati datetime o smalldatetime di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte dell'ora impostata sull'ora di base 00.00 (mezzanotte) di Java nel fuso orario del calendario.  

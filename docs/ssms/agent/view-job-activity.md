@@ -1,10 +1,9 @@
 ---
-title: Visualizzare l'attività dei processi | Microsoft Docs
-ms.custom: ''
+title: Visualizza attività processi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c710f4162786982d232728ef79d0e01ee25cb3e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 817e09e25695f985de8397bca5436da817deda2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552330"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254754"
 ---
 # <a name="view-job-activity"></a>Visualizza attività processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ All'avvio di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoV
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904305"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831619"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guida all'esplorazione della documentazione di SQL Server 
 
@@ -37,7 +37,7 @@ Se si vuole creare un file PDF, fare clic sul collegamento **Scarica PDF** dispo
 
 ![Scarica PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>Suggerimenti per gli spostamenti nel sommario
+## <a name="toc-symbols"></a>Simboli del sommario 
 
 Le voci del sommario che terminano con `>` indicano che l'utente verrà indirizzato a contenuto della documentazione tecnica con un sommario diverso. 
 
@@ -51,12 +51,12 @@ Se si passa a una di queste pagine, è possibile tornare alla pagina principale 
 
 ![Tornare al sommario SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>Suggerimento per la ricerca nel sommario
+## <a name="toc-search"></a>Ricerca nel sommario 
 In docs.microsoft.com è possibile cercare contenuto nel sommario usando la casella di ricerca di filtro nella parte superiore: 
 
 ![Usare la casella di filtro](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
 
-## <a name="version-filter"></a>Filtro della versione
+## <a name="version-filter"></a>Filtro versione
 La documentazione tecnica di SQL Server include contenuto per diverse versioni ed edizioni supportate di SQL Server. Le funzionalità possono variare nelle diverse versioni di SQL Server e, di conseguenza, anche il contenuto può a volte variare. 
 
 È possibile usare il [filtro della versione](versioning-system-monikers-ui-sql-server.md) per assicurarsi di visualizzare il contenuto per la versione appropriata di SQL Server: 
@@ -70,7 +70,6 @@ Se si seleziona **All SQL** \> **Hide nothing** (Tutto SQL > Visualizza tutto), 
 È possibile trovare i percorsi di navigazione sotto l'intestazione e sopra il sommario e tali percorsi indicano la posizione dell'articolo corrente nel sommario.  Queste informazioni non solo consentono di verificare il contesto del tipo di contenuto che si sta leggendo, ma anche di ripercorrere all'indietro l'albero del sommario:
 
 ![Percorsi di navigazione di SQL Docs](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>Spostamenti tra le sezioni dell'articolo
 
@@ -95,4 +94,4 @@ Se si riscontra un errore all'interno di un articolo, è possibile inviare comme
 
 - Iniziare a usare la [documentazione tecnica di SQL Server](index.yml).
 - Per altre informazioni sull'invio di commenti o suggerimenti o su come ottenere assistenza per SQL Server, vedere la pagina [Guida e commenti di SQL Server](sql-server-get-help.md). 
-- Per accedere rapidamente a tutti gli articoli di avvio rapido e alle esercitazioni, passare a [SQL Server: Centro formazione](../lp/sql-server/sql-education-center.md).
+- Per accedere rapidamente a tutti gli articoli di avvio rapido e alle esercitazioni, vedere [Risorse SQL per la formazione](../sql-server/educational-sql-resources.yml).

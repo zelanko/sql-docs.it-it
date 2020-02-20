@@ -1,6 +1,6 @@
 ---
 title: Assegnazione dei punteggi ai dati con RevoScaleR
-description: Esercitazione dettagliata su come assegnare punteggi ai dati usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 8: Come assegnare un punteggio ai dati usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727181"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947194"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Assegnare punteggi ai nuovi dati (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 8 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questo passaggio si usa il modello di regressione logistica creato nella lezione precedente per assegnare punteggi a un altro set di dati che usa le stesse variabili indipendenti come input.
+In questa esercitazione si userà il modello di regressione logistica creato nell'esercitazione precedente per assegnare punteggi a un altro set di dati che usa le stesse variabili indipendenti come input.
 
 > [!div class="checklist"]
 > * Assegnare un punteggio ai nuovi dati
@@ -32,7 +32,7 @@ In questo passaggio si usa il modello di regressione logistica creato nella lezi
 
 ## <a name="generate-and-save-scores"></a>Generare e salvare i punteggi
   
-1. Aggiornare l'origine dati sqlScoreDS (creata nella [lezione due](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) per usare le informazioni sulle colonne generate nella lezione precedente.
+1. Aggiornare l'origine dati sqlScoreDS (creata nell'[esercitazione due](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) per usare le informazioni sulle colonne generate nell'esercitazione precedente.
   
     ```R
     sqlScoreDS <- RxSqlServerData(

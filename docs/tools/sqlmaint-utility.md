@@ -1,6 +1,6 @@
 ---
-title: Utilità sqlmaint | Microsoft Docs
-ms.custom: ''
+title: utilità sqlmaint
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecc0a38acd6ea00656e67e9f582a55c05ca15583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986291"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306967"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  L'utilità **sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
+  L'utilità**sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Usare invece la funzionalità di pianificazione della manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni sui piani di manutenzione, vedere [Piani di manutenzione](../relational-databases/maintenance-plans/maintenance-plans.md).  
@@ -206,7 +206,7 @@ dbname_log_yyyymmddhhmm.BAK
  Per i backup su disco, specifica la creazione di una sottodirectory nella directory [*backup_path*] o nella directory di backup predefinita, se si usa anche **-UseDefDir** . Il nome della sottodirectory viene generato in base al nome del database specificato in **-D**. **-CrBkSubDir** consente di memorizzare in modo semplice tutti i backup di database diversi in sottodirectory separate senza dover modificare il parametro *backup_path* .  
   
  **-UseDefDir**  
- Per i backup su disco, specifica la creazione del file di backup nella directory di backup predefinita. Se sono specificati entrambi,**UseDefDir** è prioritario rispetto a *backup_path* . Nel caso di un'installazione predefinita di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , la directory di backup predefinita è C:\Programmi\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
+ Per i backup su disco, specifica la creazione del file di backup nella directory di backup predefinita. Se sono specificati entrambi,**UseDefDir** è prioritario rispetto a *backup_path* . Nel caso di un'installazione predefinita di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la directory di backup predefinita è C:\Programmi\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup.  
   
  **TAPE**  
  Indica che il supporto di backup è un nastro.  
@@ -228,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Se si specifica solo *number* , l'unità di tempo predefinita è **weeks**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'utilità **sqlmaint** consente di eseguire operazioni di manutenzione in uno o più database. Se è specificato **-D** , le operazioni indicate nelle altre opzioni vengono eseguite solo nel database specificato. Se si specifica **-PlanName** o **-PlanID** , **sqlmaint** recupera dal piano di manutenzione solo l'elenco dei database. Tutte le operazioni specificate negli altri parametri di **sqlmaint** vengono eseguite in tutti i database dell'elenco ottenuto dal piano. L'utilità **sqlmaint** di per sé non esegue nessuna delle attività di manutenzione definite nel piano.  
   
  Se l'esecuzione riesce, l'utilità **sqlmaint** restituisce 0, in caso contrario 1. L'esito negativo viene segnalato se:  
@@ -246,7 +246,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-performing-dbcc-checks-on-a-database"></a>A. Esecuzione di controlli DBCC in un database  
+### <a name="a-performing-dbcc-checks-on-a-database"></a>R. Esecuzione di controlli DBCC in un database  
   
 ```  
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  

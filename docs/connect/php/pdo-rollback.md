@@ -1,5 +1,5 @@
 ---
-title: 'DOP:: rollback | Microsoft Docs'
+title: PDO::rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d37145856da6c4b3ff6def1620de443b20faebfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936190"
 ---
 # <a name="pdorollback"></a>PDO::rollback
@@ -32,7 +32,7 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>Valore restituito  
 true se la chiamata al metodo ha avuto esito positivo; in caso contrario, false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 PDO::rollback non è influenzato e non influisce sul valore di PDO::ATTR_AUTOCOMMIT.  
   
 Per un esempio d'uso di PDO::rollback, vedere [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) .  
