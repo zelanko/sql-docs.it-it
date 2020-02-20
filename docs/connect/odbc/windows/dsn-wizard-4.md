@@ -1,5 +1,5 @@
 ---
-title: Schermata 4 della creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
+title: Schermata 4 di Creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989461"
 ---
 # <a name="data-source-wizard-screen-4"></a>Creazione guidata origine dati - Schermata 4
@@ -33,7 +33,7 @@ Se questa opzione è selezionata, i dati passati tramite connessioni stabilite u
 
 ### <a name="trust-server-certificate"></a>Certificato server attendibile
 
-Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati** . Quando questa opzione è selezionata, il certificato del server non viene convalidato in modo da avere il nome host corretto del server ed essere emesso da un'autorità di certificazione attendibile. 
+Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati**. Se selezionato, il certificato del server non viene convalidato per avere il nome host corretto del server e deve essere emesso da un'autorità di certificazione attendibile. 
 
 ### <a name="perform-translation-for-character-data"></a>Converti dati caratteri
 
@@ -65,15 +65,15 @@ Specifica il numero di tentativi di connessione non riusciti.
 
 ### <a name="connect-retry-interval-seconds"></a>Intervallo tentativi di connessione (secondi)
 
-Specifica il numero di secondi tra i tentativi di connessione. Per ulteriori informazioni sul funzionamento di questo e sulle opzioni di **conteggio dei tentativi** di connessione, vedere resilienza delle [connessioni nel driver ODBC di Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Consente di specificare il numero di secondi che deve intercorrere tra ogni tentativo di connessione. Per ulteriori informazioni sul funzionamento di questa operazione e sulle opzioni **Conteggio tentativi di connessione**, vedere [Resilienza di connessione nel driver ODBC di Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Indietro
 
 Fare clic su questo pulsante per tornare alla pagina precedente della procedura guidata.
 
-### <a name="finish"></a>Fine
+### <a name="finish"></a>Finish
 
-Se le informazioni specificate in questa schermata sono completate, è possibile fare clic su **fine**. Il DSN viene creato utilizzando tutti gli attributi specificati in questa e in altre schermate della procedura guidata e viene offerta la possibilità di testare il DSN appena creato.
+Se le informazioni specificate in questa schermata sono complete, è possibile fare clic su **Fine**. Il DSN viene creato usando tutti gli attributi specificati in questa e in altre schermate della procedura guidata e viene offerta la possibilità di testare il DSN appena creato.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

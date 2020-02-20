@@ -1,5 +1,5 @@
 ---
-title: Utilizzo del buffer adattivo | Microsoft Docs
+title: Uso del buffering adattivo | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026804"
 ---
 # <a name="using-adaptive-buffering"></a>Uso del buffer adattivo
@@ -27,9 +27,9 @@ In genere, quando [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 
 
 Per consentire alle applicazioni di gestire risultati di dimensioni molto grandi, in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è disponibile il buffering adattivo. Grazie al buffering adattivo, il driver può recuperare i risultati dell'esecuzione di istruzioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando questi sono necessari per l'applicazione e non tutti contemporaneamente. Quando l'applicazione non necessita più di accedere ai dati, questi vengono inoltre eliminati dal driver. Di seguito sono illustrati alcuni esempi di casi in cui il buffer adattivo può rivelarsi utile:
 
-- **La query produce un set di risultati di dimensioni molto grandi:** L'applicazione può eseguire un'istruzione SELECT che produce più righe di quelle che l'applicazione può archiviare in memoria. Nelle versioni precedenti era necessario che l'applicazione usasse un cursore server per evitare un errore di tipo OutOfMemoryError. Il buffer adattivo consente di passare in modalità forward-only di sola lettura un set di risultati anche molto grande senza che sia necessario un cursore server.
+- **La query produce un set di risultati di dimensioni molto grandi:** l'applicazione può eseguire un'istruzione SELECT che produce più righe di quante possano essere archiviate in memoria. Nelle versioni precedenti era necessario che l'applicazione usasse un cursore server per evitare un errore di tipo OutOfMemoryError. Il buffer adattivo consente di passare in modalità forward-only di sola lettura un set di risultati anche molto grande senza che sia necessario un cursore server.
 
-- **La query produce dimensioni molto grandi** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colonne o** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **Valori dei parametri out:** L'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per adattarsi interamente alla memoria dell'applicazione. Il buffer adattivo consente all'applicazione client di recuperare tale valore come flusso, usando i metodi getAsciiStream, getBinaryStream o getCharacterStream. L'applicazione recupera il valore da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] leggendolo dal flusso.
+- **La query produce valori delle colonne** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **o del parametro OUT di** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **di dimensioni molto grandi:** l'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per essere caricato interamente nella memoria dell'applicazione. Il buffering adattivo consente all'applicazione client di recuperare questo valore come flusso usando i metodi getAsciiStream, getBinaryStream o getCharacterStream. L'applicazione recupera il valore da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] leggendolo dal flusso.
 
 > [!NOTE]  
 > Con il buffer adattivo il driver JDBC memorizza nel buffer solo la quantità di dati necessaria e non fornisce alcun metodo pubblico per controllare o limitare le dimensioni del buffer.
@@ -40,15 +40,15 @@ A partire dalla versione 2.0 del driver JDBC, il comportamento predefinito del d
 
 Un'applicazione può richiedere l'utilizzo del buffer adattivo nell'esecuzione di un'istruzione in tre modi:
 
-- L'applicazione può impostare la proprietà di connessione **responseBuffering** su "Adaptive". Per ulteriori informazioni sull'impostazione delle proprietà di connessione, vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).
+- L'applicazione può impostare la proprietà di connessione **responseBuffering** su "adaptive". Per altre informazioni sull'impostazione delle proprietà di connessione, vedere [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md).
 
 - L'applicazione può usare il metodo [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) dell'oggetto [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) per impostare la modalità di memorizzazione delle risposte nel buffer per tutte le connessioni create tramite tale oggetto [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).
 
 - L'applicazione può usare il metodo [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) della classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) per impostare la modalità di memorizzazione delle risposte nel buffer per un oggetto istruzione specifico.
 
-Quando si usa la versione 1.2 del driver JDBC, le applicazioni devono eseguire il cast dell'oggetto istruzione in una classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) per applicare il metodo [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Gli esempi di codice nell'esempio di [lettura di dati di grandi dimensioni](../../connect/jdbc/reading-large-data-sample.md) e la [lettura di dati di grandi dimensioni con stored procedure](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) illustrano questo utilizzo obsoleto.
+Quando si usa la versione 1.2 del driver JDBC, le applicazioni devono eseguire il cast dell'oggetto istruzione in una classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) per applicare il metodo [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Questo tipo di utilizzo è illustrato negli esempi di codice descritti in [Esempio di lettura di dati di grandi dimensioni](../../connect/jdbc/reading-large-data-sample.md) e [Esempio di lettura di dati di grandi dimensioni con una stored procedure](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md).
 
-Con la versione 2.0 del driver JDBC, tuttavia, le applicazioni possono usare i metodi [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) e [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) per accedere a funzionalità specifiche del fornitore senza presupporre l'implementazione della gerarchia di classi. Per un esempio di codice, vedere l'argomento relativo all' [aggiornamento di dati di grandi dimensioni](../../connect/jdbc/updating-large-data-sample.md) .
+Con la versione 2.0 del driver JDBC, tuttavia, le applicazioni possono usare i metodi [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) e [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) per accedere a funzionalità specifiche del fornitore senza presupporre l'implementazione della gerarchia di classi. Per un codice di esempio, vedere l'argomento [Esempio di aggiornamento di dati di grandi dimensioni](../../connect/jdbc/updating-large-data-sample.md).
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recupero di dati di grandi dimensioni con il buffer adattivo
 
@@ -61,7 +61,7 @@ Quando si usano i metodi get[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 Quando l'applicazione usa il buffer adattivo, i valori recuperati dai metodi get\<Type>Stream possono essere recuperati una sola volta. Se si tenta di chiamare qualsiasi metodo get\<Type> method sulla stessa colonna o sullo stesso parametro dopo avere chiamato il metodo get\<Type>Stream dello stesso oggetto, verrà generata un'eccezione con il messaggio "Accesso ai dati eseguito. Dati non disponibili per questa colonna o questo parametro".
 
 > [!NOTE]
-> Una chiamata a ResultSet. Close () durante l'elaborazione di un ResultSet richiederebbe a Microsoft JDBC driver per SQL Server di leggere ed eliminare tutti i pacchetti rimanenti. Questa operazione può richiedere molto tempo se la query ha restituito un set di dati di grandi dimensioni e soprattutto se la connessione di rete è lenta.
+> Una chiamata a ResultSet.close() durante l'elaborazione di un oggetto ResultSet implica la lettura e la rimozione di tutti i pacchetti rimanenti da parte di Microsoft JDBC Driver per SQL Server. Questa operazione può richiedere molto tempo se la query ha restituito un set di dati di grandi dimensioni e soprattutto se la connessione di rete è lenta.
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>Linee guida per l'uso del buffer adattivo
 
@@ -69,7 +69,7 @@ Per ridurre al minimo l'utilizzo della memoria da parte dell'applicazione, gli s
 
 - Evitare di usare la proprietà della stringa di connessione **selectMethod=cursor** per consentire all'applicazione di elaborare un set di risultati di dimensioni molto grandi. La caratteristica di buffer adattivo consente alle applicazioni di elaborare set di risultati forward-only di sola lettura di dimensioni molto grandi senza utilizzare un cursore server. Si noti che l'impostazione di **selectMethod=cursor** influisce su tutti i set di risultati forward-only di sola lettura prodotti da tale connessione. In altre parole, se l'applicazione elabora regolarmente set di risultati brevi contenenti poche righe, per la creazione, la lettura e la chiusura di un cursore server per ogni set di risultati sia sul lato server che sul lato client verrà usato un maggior numero di risorse rispetto a quando **selectMethod** non è impostato su **cursor**.
 
-- Leggere i valori binari o di testo di grandi dimensioni come flussi usando i metodi getAsciiStream, getBinaryStream o getCharacterStream anziché i metodi GetBlob o getClob. A partire dalla versione 1.2, nella classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) sono disponibili nuovi metodi get\<Type>Stream da usare a questo scopo.
+- Leggere i valori binari o di testo di grandi dimensioni come flussi usando i metodi getAsciiStream, getBinaryStream o getCharacterStream anziché i metodi getBlob o getClob. A partire dalla versione 1.2, nella classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) sono disponibili nuovi metodi get\<Type>Stream da usare a questo scopo.
 
 - Assicurarsi che le colonne con valori potenzialmente grandi siano posizionate per ultime nell'elenco di colonne in un'istruzione SELECT e che i metodi \<Type>Stream di [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) vengano usati per accedere alle colonne nell'ordine in cui vengono selezionate.
 
@@ -77,9 +77,9 @@ Per ridurre al minimo l'utilizzo della memoria da parte dell'applicazione, gli s
 
 - Evitare di eseguire simultaneamente più di un'istruzione nella stessa connessione. Se viene eseguita un'altra istruzione prima dell'elaborazione dei risultati dell'istruzione precedente, i risultati non elaborati potrebbero venire memorizzati nel buffer della memoria dell'applicazione.
 
-- In alcuni casi, l'utilizzo di **SelectMethod = Cursor** anziché **responseBuffering = adaptive** è più vantaggioso, ad esempio:
+- Di seguito sono descritti alcuni casi in cui è più conveniente usare **selectMethod=cursor** anziché **responseBuffering=adaptive**:
 
-  - Se l'applicazione elabora lentamente un set di risultati di sola lettura, come la lettura di ogni riga dopo un input dell'utente, l'utilizzo di **SelectMethod = Cursor** anziché **responseBuffering = adaptive** potrebbe contribuire a ridurre l'utilizzo delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risorse da parte di .
+  - Se l'applicazione elabora lentamente un set di risultati forward-only di sola lettura, ad esempio leggendo ogni riga dopo un input utente, l'uso di **selectMethod=cursor** anziché **responseBuffering=adaptive** può contribuire a ridurre l'utilizzo di risorse da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
   - Se l'applicazione elabora due o più set di risultati forward-only di sola lettura contemporaneamente nella stessa connessione, l'uso di **selectMethod=cursor** anziché **responseBuffering=adaptive** può contribuire a ridurre la memoria richiesta dal driver durante l'elaborazione dei set di risultati.
 

@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028088"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server
@@ -36,7 +36,7 @@ Questo articolo elenca le librerie da cui dipende Microsoft JDBC Driver per SQL 
 
 I progetti specifici che richiedono una delle funzionalità elencate precedentemente devono dichiarare in modo esplicito le rispettive dipendenze nel relativo file POM.
 
-**Ad esempio:** quando si usa la funzionalità di autenticazione di Azure Active Directory, è necessario dichiarare di nuovo il `adal4j` dipendenza nel file POM del progetto. Vedere il frammento seguente:
+**Ad esempio:** quando si usa la funzionalità di autenticazione di Azure Active Directory, è necessario dichiarare di nuovo la dipendenza `adal4j` nel file POM del progetto. Vedere il frammento seguente:
 
 ```xml
 <dependency>
@@ -59,7 +59,7 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 </dependency>
 ```
 
-**Ad esempio:** quando si usa la funzionalità Azure Key Vault, è necessario dichiarare di nuovo il `azure-keyvault` dipendenza e `adal4j` dipendenza nel file POM del progetto. Vedere il frammento seguente:
+**Ad esempio:** quando si usa la funzionalità Azure Key Vault, è necessario dichiarare di nuovo la dipendenza `azure-keyvault` e la dipendenza `adal4j` nel file POM del progetto. Vedere il frammento seguente:
 
 ```xml
 <dependency>
@@ -93,11 +93,11 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 ### <a name="working-with-the-azure-key-vault-provider"></a>Uso del provider Azure Key Vault:
 
 - Versione del driver JDBC 7.4.1 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.1), Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versione del driver JDBC 7.2.2 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.0), Azure-Keyvault-Webkey (versione 1.2.0), Adal4j (versione 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versione del driver JDBC 7.0.0 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.6.0) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versione del driver JDBC 6.4.0 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.4.0) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Versione del driver JDBC 6.2.2 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.4.0) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Versione del driver JDBC 6.0.0 - Versioni delle dipendenze: Azure-Keyvault (versione 0.9.7), Adal4j (versione 1.3.0) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- Versione del driver JDBC 7.2.2 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.0), Azure-Keyvault-Webkey (versione 1.2.0), Adal4j (versione 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e le relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- Versione del driver JDBC 7.0.0 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.6.0) e le relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- Versione del driver JDBC 6.4.0 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.4.0) e le relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Versione del driver JDBC 6.2.2 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.4.0) e le relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Versione del driver JDBC 6.0.0 - Versioni delle dipendenze: Azure-Keyvault (versione 0.9.7), Adal4j (versione 1.3.0) e le relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > Con le versioni del driver 6.2.2 e 6.4.0, la dipendenza azure-keyvault-java era stata aggiornata alla versione 1.0.0. La nuova versione non era tuttavia compatibile con la versione precedente (0.9.7) e interrompe l'implementazione esistente nel driver. La nuova implementazione nel driver ha richiesto modifiche API, che a loro volta interrompono i programmi client che usano il provider Azure Key Vault.
@@ -106,11 +106,11 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Uso dell'autenticazione di Azure Active Directory:
 
-- Versione del driver JDBC 7.4.1 - Versioni delle dipendenze: Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e relative dipendenze
-- Versione del driver JDBC 7.2.2 - Versioni delle dipendenze: Adal4j (versione 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e relative dipendenze
-- Versione del driver JDBC 7.0.0 - Versioni delle dipendenze: Adal4j (versione 1.6.0) e relative dipendenze
-- Versione del driver JDBC 6.4.0 - Versioni delle dipendenze: Adal4j (versione 1.4.0) e relative dipendenze
-- Versione del driver JDBC 6.2.2 - Versioni delle dipendenze: Adal4j (versione 1.4.0) e relative dipendenze
+- Versione del driver JDBC 7.4.1 - Versioni delle dipendenze: Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e le relative dipendenze
+- Versione del driver JDBC 7.2.2 - Versioni delle dipendenze: Adal4j (versione 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e le relative dipendenze
+- Versione del driver JDBC 7.0.0 - Versioni delle dipendenze: Adal4j (versione 1.6.0) e le relative dipendenze
+- Versione del driver JDBC 6.4.0 - Versioni delle dipendenze: Adal4j (versione 1.4.0) e le relative dipendenze
+- Versione del driver JDBC 6.2.2 - Versioni delle dipendenze: Adal4j (versione 1.4.0) e le relative dipendenze
 - Versione del driver JDBC 6.0.0 - Versioni delle dipendenze: Adal4j (versione 1.3.0) e le relative dipendenze. In questa versione del driver è possibile connettersi tramite la modalità di autenticazione _ActiveDirectoryIntegrated_ solo in un sistema operativo Windows e usando sqljdbc_auth e Active Directory Authentication Library per SQL Server (ADALSQL. DLL).
 
 A partire dalla versione 6.4.0 del driver, le applicazioni non richiedono necessariamente l'uso di ADALSQL.DLL nei sistemi operativi Windows. Per i *sistemi operativi non Windows*, il driver richiede un ticket Kerberos per l'uso dell'autenticazione ActiveDirectoryIntegrated. Per altre informazioni su come connettersi ad Active Directory con Kerberos, vedere [Impostare i ticket Kerberos in Windows, Linux e Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).

@@ -1,5 +1,5 @@
 ---
-title: Uso dell'API per la copia bulk per l'operazione di inserimento batch per il driver JDBC per MSSQL | Microsoft Docs
+title: Uso dell'API di copia bulk per un'operazione di inserimento batch per JDBC Driver per MSSQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,66 +11,66 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027100"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso dell'API di copia bulk per un'operazione di inserimento batch
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC driver 7,0 per SQL Server supporta l'utilizzo dell'API per la copia bulk per le operazioni di inserimento batch per data warehouse di Azure. Questa funzionalità consente agli utenti di consentire al driver di eseguire l'operazione di copia bulk sottostanti durante l'esecuzione di operazioni di inserimento in batch. Il driver mira a migliorare le prestazioni e a inserire gli stessi dati del driver con operazioni di inserimento batch regolari. Il driver analizza la query SQL dell'utente, sfruttando l'API per la copia bulk invece della consueta operazione di inserimento batch. Di seguito sono riportati diversi modi per abilitare l'API per la copia bulk per la funzionalità di inserimento batch, nonché l'elenco delle relative limitazioni. Questa pagina contiene anche un piccolo codice di esempio che illustra un utilizzo e l'aumento delle prestazioni.
+Microsoft JDBC Driver 7.0 per SQL Server supporta l'uso dell'API di copia bulk per le operazioni di inserimento batch per Azure Data Warehouse. Con questa funzionalità gli utenti possono consentire al driver di eseguire l'operazione di copia bulk sottostante durante l'esecuzione di operazioni di inserimento batch. Il driver cerca di migliorare le prestazioni inserendo gli stessi dati che si avrebbero con una normale operazione di inserimento batch. Il driver analizza la query SQL dell'utente, sfruttando l'API di copia bulk invece della consueta operazione di inserimento batch. Di seguito sono illustrati diversi modi per abilitare l'API di copia bulk per la funzionalità di inserimento batch, nonché l'elenco delle relative limitazioni. Questa pagina contiene un piccolo codice di esempio che illustra un utilizzo e anche l'aumento delle prestazioni.
 
-Questa funzionalità è applicabile solo alle `executeBatch()` `executeLargeBatch()` API PreparedStatement e CallableStatement  &  .
+Questa funzionalità è applicabile solo alle API `executeBatch()` & `executeLargeBatch()` di PreparedStatement e CallableStatement.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Sono necessari due prerequisiti per abilitare l'API per la copia bulk per l'inserimento batch.
+L'abilitazione dell'API di copia bulk per l'inserimento batch presenta due prerequisiti.
 
-* Il server deve essere data warehouse di Azure.
-* La query deve essere una query Insert (la query può contenere commenti, ma la query deve iniziare con la parola chiave INSERT per applicare questa funzionalità).
+* Il server deve essere Azure Data Warehouse.
+* La query deve essere una query di inserimento (la query può contenere commenti, ma deve iniziare con la parola chiave INSERT perché questa funzionalità venga applicata).
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Abilitazione dell'API per la copia bulk per l'inserimento batch
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Abilitazione dell'API di copia bulk per l'inserimento batch
 
-Sono disponibili tre modi per abilitare l'API per la copia bulk per l'inserimento batch.
+Sono disponibili tre modi per abilitare l'API di copia bulk per l'inserimento batch.
 
 ### <a name="1-enabling-with-connection-property"></a>1. Abilitazione con proprietà di connessione
 
-L'aggiunta di **useBulkCopyForBatchInsert = true;** alla stringa di connessione Abilita questa funzionalità.
+L'aggiunta di **useBulkCopyForBatchInsert=true;** alla stringa di connessione consente di abilitare questa funzionalità.
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Abilitazione con il metodo setUseBulkCopyForBatchInsert () dall'oggetto SQLServerConnection
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Abilitazione con il metodo setUseBulkCopyForBatchInsert() dall'oggetto SQLServerConnection
 
-La chiamata a **SQLServerConnection. setUseBulkCopyForBatchInsert (true)** Abilita questa funzionalità.
+La chiamata di **SQLServerConnection. setUseBulkCopyForBatchInsert (true)** consente di abilitare questa funzionalità.
 
-**SQLServerConnection. getUseBulkCopyForBatchInsert ()** Recupera il valore corrente per la proprietà di connessione **useBulkCopyForBatchInsert** .
+**SQLServerConnection.getUseBulkCopyForBatchInsert()** consente di recuperare il valore corrente per la proprietà di connessione **useBulkCopyForBatchInsert**.
 
-Il valore di **useBulkCopyForBatchInsert** rimane costante per ogni PreparedStatement al momento dell'inizializzazione. Tutte le chiamate successive a **SQLServerConnection. setUseBulkCopyForBatchInsert ()** non influiscono sui PreparedStatement già creati per quanto riguarda il relativo valore.
+Il valore per **useBulkCopyForBatchInsert** rimane costante per ogni PreparedStatement al momento della sua inizializzazione. Qualsiasi chiamata successiva a **SQLServerConnection.setUseBulkCopyForBatchInsert()** non influirà sulla PreparedStatement già creata per quanto riguarda il relativo valore.
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Abilitazione con il metodo setUseBulkCopyForBatchInsert () da un oggetto SQLServerDataSource
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Abilitazione con il metodo setUseBulkCopyForBatchInsert() dall'oggetto SQLServerDataSource
 
-Simile a quanto sopra, ma usando SQLServerDataSource per creare un oggetto SQLServerConnection. Entrambi i metodi ottengono lo stesso risultato.
+Simile a quanto descritto sopra, ma con l'uso di SQLServerDataSource per creare un oggetto SQLServerConnection. Entrambi i metodi ottengono lo stesso risultato.
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-Attualmente sono presenti limitazioni che si applicano a questa funzionalità.
+Al momento, questa funzionalità è soggetta alle limitazioni seguenti.
 
-* Le query INSERT che contengono valori senza parametri (ad esempio, `INSERT INTO TABLE VALUES (?, 2`)) non sono supportate. I caratteri jolly (?) sono gli unici parametri supportati per questa funzione.
-* Le query INSERT che contengono espressioni INSERT-SELECT (ad esempio `INSERT INTO TABLE SELECT * FROM TABLE2`,) non sono supportate.
-* Le query INSERT che contengono più espressioni di valore (ad `INSERT INTO TABLE VALUES (1, 2) (3, 4)`esempio,) non sono supportate.
+* Le query di inserimento contenenti valori senza parametri (ad esempio `INSERT INTO TABLE VALUES (?, 2`)) non sono supportate. I caratteri jolly (?) sono gli unici parametri supportati per questa funzione.
+* Le query di inserimento contenenti espressioni INSERT-SELECT (ad esempio `INSERT INTO TABLE SELECT * FROM TABLE2`) non sono supportate.
+* Le query di inserimento contenenti più espressioni VALUE (ad esempio `INSERT INTO TABLE VALUES (1, 2) (3, 4)`) non sono supportate.
 * Le query di inserimento seguite dalla clausola OPTION, unite a più tabelle o seguite da un'altra query, non sono supportate.
-* A causa delle limitazioni dell'API per la copia `MONEY`bulk `SMALLMONEY`, `DATE` `GEOMETRY` `DATETIMEOFFSET` `SMALLDATETIME` `DATETIME`i tipi di dati `TIME`,,, `GEOGRAPHY` ,,,, e non sono attualmente supportati per questa funzionalità.
+* A causa delle limitazioni dell'API di copia bulk, i tipi di dati `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY` e `GEOGRAPHY` non sono al momento supportati per questa funzionalità.
 
 Se la query ha esito negativo a causa di errori non correlati a "SQL Server", il driver registrerà il messaggio di errore e il fallback alla logica originale per l'inserimento batch.
 
 ## <a name="example"></a>Esempio
 
-Di seguito è riportato un esempio di codice che illustra il caso d'uso per un'operazione di inserimento in batch in Azure DW di un migliaio di righe, per entrambi gli scenari (normali API per la copia bulk).
+Di seguito è riportato un esempio di codice che illustra il caso d'uso per un'operazione di inserimento in batch in Azure DW di un migliaio di righe, per entrambi gli scenari (normale e API di copia bulk).
 
 ```java
     public static void main(String[] args) throws Exception

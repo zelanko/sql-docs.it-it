@@ -5,24 +5,24 @@ description: Informazioni su come aggiornare un cluster Big Data di SQL Server i
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127446"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253113"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo descrive come distribuire un cluster Big Data di SQL Server 2019 in modalità di autenticazione di Active Directory, operazione in cui viene usato un dominio di Active Directory esistente per l'autenticazione.
 
-## <a name="background"></a>Informazioni preliminari
+## <a name="background"></a>Background
 
 Per abilitare l'autenticazione di Active Directory, il cluster Big Data crea automaticamente gli utenti, i gruppi, gli account computer e i nomi dell'entità servizio (SPN) necessari per i vari servizi nel cluster. Per assicurare una certa indipendenza per questi account e consentire autorizzazioni di ambito, durante la distribuzione indicare un'unità organizzativa in cui verranno creati tutti gli oggetti di Active Directory correlati al cluster Big Data. Creare questa unità organizzativa prima della distribuzione del cluster.
 
@@ -49,7 +49,7 @@ Questo utente verrà definito *account del servizio di dominio del cluster Big D
 
 ### <a name="creating-an-ou"></a>Creazione di un'unità organizzativa
 
-Nel controller di dominio aprire **Utenti e computer di Active Directory**. Nel pannello sinistro fare clic con il pulsante destro del mouse sulla directory in cui si vuole creare l'unità organizzativa e scegliere Nuovo -\> **Unità organizzativa** e quindi seguire le istruzioni della procedura guidata per creare l'unità organizzativa. In alternativa, è possibile creare un'unità organizzativa con PowerShell:
+Nel controller di dominio aprire **Utenti e computer di Active Directory**. Nel pannello di sinistra fare clic con il pulsante destro del mouse sulla directory in cui si vuole creare l'unità organizzativa e scegliere Nuovo -\> **Unità organizzativa**, quindi seguire le istruzioni della procedura guidata per creare l'unità organizzativa. In alternativa, è possibile creare un'unità organizzativa con PowerShell:
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -160,7 +160,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## <a name="provide-security-and-endpoint-parameters"></a>Fornire parametri di sicurezza e dell'endpoint
 
-Oltre alle variabili di ambiente per le credenziali, è necessario fornire anche le informazioni sulla sicurezza e sull'endpoint per il funzionamento dell'integrazione di Active Directory. I parametri necessari fanno automaticamente parte del [profilo di distribuzione](deployment-guidance.md#configfile) `kubeadm-prod`.
+Oltre alle variabili di ambiente per le credenziali, è necessario fornire anche le informazioni sulla sicurezza e sull'endpoint per il funzionamento dell'integrazione di Active Directory. I parametri necessari sono inclusi automaticamente nel `kubeadm-prod` [profilo di distribuzione](deployment-guidance.md#configfile).
 
 Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggiungere questi parametri ai file `control.json` e `bdc.json` usando i comandi `config replace` mostrati più avanti in questo articolo. Tutti gli esempi seguenti usano il dominio di esempio `contoso.local`.
 
@@ -170,17 +170,20 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 
 - `security.domainControllerFullyQualifiedDns`: elenco di nomi di dominio completi del controller di dominio. Il nome di dominio completo contiene il nome computer/host del controller di dominio. Se sono presenti più controller di dominio, è possibile fornirne un elenco qui. Esempio: `HOSTNAME.CONTOSO.LOCAL`
 
-- **Parametro facoltativo** `security.realm`: nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`.
+- `security.realm` **Parametro facoltativo**: nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`.
 
 - `security.domainDnsName`: Nome del dominio, ad esempio `contoso.local`.
 
-- `security.clusterAdmins`: questo parametro accetta *un* gruppo di Active Directory. I membri di questo gruppo otterranno autorizzazioni di amministratore nel cluster. Questo significa che avranno autorizzazioni sysadmin in SQL Server, autorizzazioni utente con privilegi avanzati in HDFS e autorizzazioni di amministratore nel controller.
+- `security.clusterAdmins`: questo parametro accetta **un solo gruppo di Active Directory**. I membri di questo gruppo otterranno autorizzazioni di amministratore nel cluster. Questo significa che avranno autorizzazioni di amministratore di sistema in SQL Server, autorizzazioni utente con privilegi avanzati in HDFS e autorizzazioni di amministratore nel controller. **Si noti che questo gruppo deve essere presente in Active Directory prima che venga avviata la distribuzione. Si noti anche che questo gruppo non può avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-- `security.clusterUsers`: elenco dei gruppi di Active Directory che sono utenti normali (senza autorizzazioni di amministratore) nel cluster Big Data.
+- `security.clusterUsers`: elenco dei gruppi di Active Directory che sono utenti normali (senza autorizzazioni di amministratore) nel cluster Big Data. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-- **Parametro facoltativo** `security.appOwners`: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione.
+- `security.appOwners` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-- **Parametro facoltativo** `security.appReaders`: elenco degli utenti o dei gruppi di Active Directory che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. 
+- `security.appReaders` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+
+**Come controllare l'ambito del gruppo AD:**
+[fare clic qui per istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) per verificare l'ambito di un gruppo di Active Directory, per determinare se è DomainLocal.
 
 Se il file di configurazione della distribuzione non è stato ancora inizializzato, è possibile eseguire questo comando per ottenere una copia della configurazione.
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 Oltre alle informazioni precedenti, è necessario fornire anche i nomi DNS per i diversi endpoint del cluster. In fase di distribuzione verranno automaticamente create le voci DNS che usano i nomi DNS specificati nel server DNS. Questi nomi verranno usati durante la connessione ai diversi endpoint del cluster. Se, ad esempio, il nome DNS per l'istanza master di SQL Server è `mastersql`, si userà `mastersql.contoso.local,31433` per connettersi all'istanza master dagli strumenti.
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - La modalità Active Directory sicura funziona attualmente solo negli ambienti di distribuzione `kubeadm` e non nel servizio Azure Kubernetes. Il profilo di distribuzione `kubeadm-prod` include le sezioni di sicurezza per impostazione predefinita.
 
 - Attualmente è consentito un solo cluster Big Data per dominio. L'abilitazione di più cluster Big Data per dominio verrà introdotta in una versione futura.
+
+- Nessuno dei gruppi AD specificati nelle configurazioni di sicurezza può avere l'ambito DomainLocal. È possibile controllare l'ambito di un gruppo di Active Directory seguendo [queste istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

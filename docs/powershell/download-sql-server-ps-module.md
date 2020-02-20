@@ -1,76 +1,154 @@
 ---
-title: Scaricare il modulo PowerShell di SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 01/31/2019
+title: Scaricare il modulo PowerShell di SQL Server
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
-keywords:
-- installare sql server powershell, scaricare sql server powershell
-ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82daddf2589970c415a53ca756599ac892be1a35
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.reviewer: carlrab
+ms.custom: ''
+ms.date: 01/23/2020
+ms.openlocfilehash: 99976a12ae76254da5b50c5467df9d9e42fdbbce
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713201"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920352"
 ---
-# <a name="install-sql-server-powershell-module"></a>Installare il modulo PowerShell SqlServer
+# <a name="install-the-sql-server-powershell-module"></a>Installare il modulo SQL Server PowerShell
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Questo articolo include indicazioni per l'installazione del modulo PowerShell **SqlServer**.
-> [!NOTE]
-> Esistono due moduli SQL Server PowerShell: 
-> * **SQLPS**: questo modulo è incluso nell'installazione di SQL Server (per la compatibilità con le versioni precedenti), ma non viene più aggiornato. Il modulo PowerShell più aggiornato è il modulo **SqlServer**.
-> * **SqlServer**: questo modulo include nuovi cmdlet per supportare le funzionalità più recenti di SQL. Il modulo contiene anche le versioni aggiornate dei cmdlet in **SQLPS**. 
 
-Le versioni precedenti del modulo **SqlServer** *erano* incluse con SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+## <a name="powershell-modules-for-sql-server"></a>Moduli PowerShell per SQL Server
 
-Versioni non definitive del modulo possono essere rese disponibili con una maggiore frequenza: vedere la sezione alla fine di questa pagina su come ottenere queste versioni del modulo.
+Esistono due moduli SQL Server PowerShell:
 
-Per installare il modulo **SqlServer** da PowerShell Gallery, avviare una sessione di [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) e usare i comandi seguenti. Se si verificano problemi durante l'installazione, vedere la [documentazione per l'installazione del modulo](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) e la [guida di riferimento per l'installazione del modulo](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
-
-Per installare il modulo **SqlServer**:
-
-```Install-Module -Name SqlServer```
-
-Se nel computer sono presenti versioni precedenti del modulo **SqlServer** può essere possibile usare `Update-Module` (descritto più avanti in questo articolo) o specificare il parametro `-AllowClobber`:  
-
-```Install-Module -Name SqlServer -AllowClobber```
-
-Se non è possibile eseguire la sessione di PowerShell come amministratore, è possibile eseguire l'installazione per l'utente corrente:
-
-```Install-Module -Name SqlServer -Scope CurrentUser```
-
-Quando sono disponibili versioni aggiornate del modulo **SqlServer**, è possibile aggiornare la versione usando `Update-Module`:
-
-```Update-Module -Name SqlServer```
-
-Per visualizzare le versioni del modulo installate:
-
-```Get-Module SqlServer -ListAvailable```
-
-Per usare una versione specifica del modulo è possibile importarlo con un numero di versione specifico, come indicato di seguito:
-
-```Import-Module SqlServer -Version 21.1.18080```
+- **SqlServer**: il modulo SqlServer include nuovi cmdlet per il supporto delle nuove funzionalità SQL. Il modulo contiene anche le versioni aggiornate dei cmdlet in **SQLPS**. Per scaricare il modulo SqlServer, passare al [modulo SqlServer in PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+- **SQLPS**: il modulo SQLPS è incluso nell'installazione di SQL Server (per compatibilità con le versioni precedenti), ma non viene più aggiornato. Il modulo PowerShell più aggiornato è il modulo **SqlServer**.
 
 > [!NOTE]
-> Versioni non definitive (o di "anteprima") del modulo possono essere disponibili in PowerShell Gallery. Possono essere rilevate e installate mediante i cmdlet aggiornati *Find-Module* e *Install-Module* incluse nel modulo [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) passando l'opzione *-AllowPrerelease*.
->
-> Per individuare la versione non definitiva/di anteprima del modulo, è possibile eseguire il comando seguente:
->
-> ```Find-Module SqlServer -AllowPrerelease```
->
-> Per installare una versione non definitiva/di anteprima specifica del modulo è possibile installarla con un numero di versione specifico, come indicato di seguito:
->
-> ```Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease```
-> 
+> Le versioni del modulo **SqlServer** disponibili in PowerShell Gallery supportano il controllo delle versioni e richiedono PowerShell versione 5.0 o successiva.
 
-Le versioni del modulo **SqlServer** disponibili in PowerShell Gallery supportano il controllo delle versioni e richiedono PowerShell versione 5.0 o successiva. 
+Per gli argomenti della Guida, vedere:
 
-* [Modulo SqlServer in PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver) 
-* [Cmdlet di SQL Server](https://docs.microsoft.com/powershell/module/sqlserver)
-* [Cmdlet di SQLPS](https://docs.microsoft.com/powershell/module/sqlps)
+- Cmdlet di [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver).
+- Cmdlet di [SQLPS](https://docs.microsoft.com/powershell/module/sqlps).
+
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio
+
+SQL Server Management Studio (SSMS), a partire dalla versione 17.0, non installa nessuno dei due moduli di PowerShell. Per usare PowerShell con SSMS, installare il modulo **SqlServer** da [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+
+> [!NOTE]
+> Con la versione 16.x di SSMS, una versione precedente del modulo **SqlServer** è inclusa in SQL Server Management Studio (SSMS)
+
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+Azure Data Studio non installa nessuno dei due moduli di PowerShell. Per usare PowerShell con Azure Data Studio, installare il modulo **SqlServer** da [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
+
+È possibile usare l'[estensione di PowerShell](../azure-data-studio/powershell-extension.md), che offre supporto avanzato per l'editor PowerShell in Azure Data Studio.
+
+## <a name="installing-or-updating-the-sqlserver-module"></a>Installazione o aggiornamento del modulo SqlServer
+
+Per installare il modulo **SqlServer** da PowerShell Gallery, avviare una sessione di [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) come amministratore. È anche possibile avviare Azure Data Studio come amministratore ed eseguire questi comandi in una sessione di PowerShell nel terminale integrato.
+
+### <a name="install-the-sqlserver-module"></a>Installare il modulo SqlServer
+
+Eseguire il comando seguente nella sessione di PowerShell per installare il modulo SqlServer per tutti gli utenti:
+
+```powershell
+Install-Module -Name SqlServer
+```
+
+### <a name="to-view-the-versions-of-the-sqlserver-module-installed"></a>Per visualizzare le versioni del modulo SqlServer installate
+
+Eseguire il comando seguente per visualizzare le versioni del modulo SqlServer installate
+
+```powershell
+Get-Module SqlServer -ListAvailable
+```
+
+### <a name="install-for-the-current-user-rather-than-as-an-administrator"></a>Installare per l'utente corrente anziché come amministratore
+
+Se non è possibile eseguire la sessione di PowerShell come amministratore, eseguire l'installazione per l'utente corrente usando il comando seguente:
+
+```powershell
+Install-Module -Name SqlServer -Scope CurrentUser
+```
+
+### <a name="to-overwrite-a-previous-version-of-the-sqlserver-module"></a>Per sovrascrivere una versione precedente del modulo SqlServer
+
+È anche possibile usare il comando `Install-Module` per sovrascrivere una versione precedente.
+
+```powershell
+Install-Module -Name SqlServer -AllowClobber
+```
+
+> [!Note]
+> PowerShell usa sempre il modulo più recente installato.
+
+### <a name="update-the-installed-version-of-the-sqlserver-module"></a>Aggiornare la versione installata del modulo SqlServer
+
+Quando sono disponibili versioni aggiornate del modulo **SqlServer**, è possibile installare la versione più recente usando il comando seguente:
+
+```powershell
+Install-Module -Name SqlServer -AllowClobber
+```
+
+È possibile usare il comando `Update-Module` per installare la versione più recente del modulo SQLServer di PowerShell, ma le versioni precedenti non vengono rimosse. La versione più recente viene installata affiancata per consentire di provare la versione più recente e mantenere installati i moduli precedenti.
+
+Tuttavia, se non si vuole mantenere le versioni precedenti del modulo, è possibile usare il comando `Uninstall-Module` per rimuovere le versioni precedenti.
+
+È possibile usare il comando seguente per verificare se è installata più di una versione:
+
+```powershell
+Get-Module SqlServer -ListAvailable
+```
+
+Per rimuovere le versioni precedenti, è possibile usare il comando seguente:
+
+```powershell
+Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -AllowClobber
+```
+
+### <a name="troubleshooting"></a>Risoluzione dei problemi
+
+Se si verificano problemi durante l'installazione, vedere la [documentazione per l'installazione del modulo](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) e la [guida di riferimento per l'installazione del modulo](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
+
+## <a name="using-a-specific-version-of-the-sqlserver-module"></a>Uso di una versione specifica del modulo SqlServer
+
+Per usare una versione specifica del modulo, importarlo con un numero di versione specifico con il comando seguente:
+
+```powershell
+Import-Module SqlServer -Version 21.1.18080
+```
+
+## <a name="pre-release-versions-of-the-sqlserver-module"></a>Versioni non definitive del modulo SqlServer
+
+Versioni non definitive (o di "anteprima") del modulo SqlServer possono essere disponibili in PowerShell Gallery.
+
+> [!IMPORTANT]
+> Queste versioni possono essere individuate e installate usando i cmdlet aggiornati *Find-Module* e *Install-Module* inclusi nel modulo [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) passando l'opzione *-AllowPrerelease*. Per usare questi cmdlet, installare il modulo PowerShellGet, quindi aprire una nuova sessione.
+
+### <a name="to-discover-pre-release-versions-of-the-sqlserver-module"></a>Per individuare le versioni non definitive del modulo SqlServer
+
+Per individuare la versione non definitiva (anteprima) del modulo SqlServer, eseguire il comando seguente:
+
+```powershell
+Find-Module SqlServer -AllowPrerelease
+```
+
+### <a name="to-install-a-specific-pre-release-version-of-the-sqlserver-module"></a>Per installare una specifica versione non definitiva del modulo SqlServer
+
+Per installare una specifica versione non definitiva del modulo, installarla con un numero di versione specifico.
+
+È possibile provare a usare il comando seguente:
+
+```powershell
+Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
+```
+
+## <a name="sql-server-powershell-on-linux"></a>SQL Server PowerShell in Linux
+
+Per informazioni su come installare SQL Server PowerShell in Linux, vedere [Gestire SQL Server in Linux con PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md).

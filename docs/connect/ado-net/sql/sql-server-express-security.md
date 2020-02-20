@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 9d6b711109f7d94e3bca8d9cf2bda6d2c124c798
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: ddf189bc9fead5c840ed46b638c31172b7699235
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452023"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244033"
 ---
 # <a name="sql-server-express-security"></a>Sicurezza di SQL Server Express
 
@@ -28,23 +28,23 @@ SQL Server Express viene in genere installato come istanza denominata. Il nome p
 ## <a name="network-access"></a>Accesso alla rete  
 Per motivi di sicurezza, i protocolli di rete sono disabilitati per impostazione predefinita in SQL Server Express. In questo modo si evitano gli attacchi provenienti da utenti esterni che potrebbero compromettere il computer che ospita l'istanza di SQL Server Express. È necessario abilitare in modo esplicito la connettività di rete e avviare il servizio SQL Server Browser per connettersi a un'istanza di SQL Server Express da un altro computer.  
   
-Una volta abilitata la connettività di rete, un'istanza di SQL Server Express presenta gli stessi requisiti di sicurezza delle altre edizioni di SQL Server.  
+Dopo aver abilitato la connettività di rete, un'istanza di SQL Server Express presenta gli stessi requisiti di sicurezza delle altre edizioni di SQL Server.  
   
 ## <a name="user-instances"></a>Istanze utente  
-Un'istanza utente è un'istanza separata del motore di database SQL Server Express generata da un'istanza padre di SQL Server Express. L'obiettivo principale di un'istanza utente è quello di consentire agli utenti che eseguono Windows con un account utente con privilegi minimi di disporre dei privilegi di amministratore di sistema (`sysadmin`) nell'istanza SQL Server Express sul computer locale. Le istanze utente non sono destinate agli utenti che sono amministratori di sistema nei propri computer.  
+Un'istanza utente è un'istanza separata del motore di database SQL Server Express generata da un'istanza padre di SQL Server Express. L'obiettivo principale di un'istanza utente è quello di consentire agli utenti che eseguono Windows con un account utente con privilegi minimi di avere i privilegi di amministratore di sistema (`sysadmin`) nell'istanza di SQL Server Express nel computer locale. Le istanze utente non sono destinate agli utenti che sono amministratori di sistema nei propri computer.  
   
-Un'istanza utente viene generata da un'istanza primaria di SQL Server o SQL Server Express per conto di un utente. Viene eseguita come processo utente nel contesto di sicurezza di Windows dell'utente, non come servizio. Gli account di accesso SQL Server non sono consentiti. sono supportati solo gli account di accesso di Windows. In questo modo si impedisce che il software in esecuzione in un'istanza utente debba apportare modifiche a livello di sistema che l'utente non dispone delle autorizzazioni necessarie. Un'istanza utente è nota anche come istanza figlio o client, a cui a volte viene fatto riferimento tramite l'acronimo di il nome "RunAs Normal User".  
+Un'istanza utente viene generata da un'istanza primaria di SQL Server o SQL Server Express per conto di un utente. L'istanza viene eseguita come processo utente nel contesto di protezione di Windows dell'utente, non come servizio. Gli account di accesso di SQL Server non sono consentiti. Sono supportati solo gli account di accesso di Windows. In questo modo si impedisce che il software eseguito in un'istanza utente apporti modifiche a livello di sistema per cui l'utente non ha le autorizzazioni necessarie. L'istanza utente è chiamata anche istanza figlio o client e a volte viene fatto riferimento all'istanza usando l'acronimo RANU (Run As Normal User).  
   
-Ogni istanza utente è isolata dalla relativa istanza padre e da altre istanze utente in esecuzione nello stesso computer. I database installati nelle istanze utente vengono aperti solo in modalità utente singolo; non è possibile connettersi a più utenti. La replica, le query distribuite e le connessioni remote sono disabilitate per le istanze utente. Quando si è connessi a un'istanza utente, gli utenti non dispongono di privilegi speciali per l'istanza di SQL Server Express padre.  
+Ogni istanza utente è isolata dall'istanza padre e da qualsiasi altra istanza utente eseguita nello stesso computer. I database installati nelle istanze utente vengono aperti solo in modalità utente singolo; non è possibile la connessione di più utenti. La replica, le query distribuite e le connessioni remote sono disabilitate per le istanze utente. Quando si è connessi a un'istanza utente, gli utenti non hanno privilegi speciali per l'istanza di SQL Server Express padre.  
   
 ## <a name="external-resources"></a>Risorse esterne  
-Per ulteriori informazioni su SQL Server Express, vedere le risorse seguenti.  
+Per altre informazioni su SQL Server Express, vedere le risorse seguenti.  
   
 |||  
 |-|-|  
-|[Documentazione online di Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentazione completa per SQL Server 2005 Express Edition.|  
-|[Istanze utente per non amministratori](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nella documentazione online di SQL Server|Viene descritto come creare e distribuire le istanze utente.|  
-|[Istanze utente di SQL Server Express](sql-server-express-user-instances.md)|Descrive le funzionalità dell'istanza utente in un'applicazione ADO.NET. Vengono fornite informazioni su come abilitare un'istanza utente, connettersi a un'istanza utente utilizzando una <xref:Microsoft.Data.SqlClient.SqlConnection>, la durata dell'istanza utente e gli scenari dell'istanza utente.|  
+|[Documentazione online di Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentazione completa di SQL Server 2005 Express Edition.|  
+|[Istanze utente per non amministratori](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nella documentazione online di SQL Server|Descrive come creare e distribuire le istanze utente.|  
+|[Istanze utente di SQL Server Express](sql-server-express-user-instances.md)|Descrive le funzionalità dell'istanza utente in un'applicazione ADO.NET. Offre informazioni su come abilitare un'istanza utente, su connettersi a un'istanza utente usando <xref:Microsoft.Data.SqlClient.SqlConnection>, sulla durata dell'istanza utente e sugli scenari dell'istanza utente.|  
   
 ## <a name="next-steps"></a>Passaggi successivi
 - [Sicurezza di SQL Server](sql-server-security.md)

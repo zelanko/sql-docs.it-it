@@ -5,53 +5,24 @@ description: Questo articolo descrive gli aggiornamenti più recenti e i problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc5928a7e3015545d36900b52ef01a42d9694cc0
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706170"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721677"
 ---
-# <a name="sql-server-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server
+# <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-È possibile ottenere informazioni dettagliate quasi in tempo reale da tutti i dati usando i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], che offrono un ambiente completo per la gestione di grandi set di dati, incluse funzionalità di Machine Learning e intelligenza artificiale.
+Le note sulla versione seguenti si applicano a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Questo articolo è suddiviso in sezioni corrispondenti a ogni versione. Ogni versione ha un collegamento a un articolo del supporto che descrive le modifiche CU, oltre ai collegamenti ai download dei pacchetti Linux. L'articolo elenca anche i [problemi noti](#known-issues) per le versioni più recenti dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-Questo articolo elenca gli aggiornamenti e i problemi noti per le versioni più recenti dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
-
-## <a id="rtm"></a> SQL Server 2019
-
-In [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] vengono introdotti i cluster Big Data di SQL Server.
-
-Usare i cluster Big Data di SQL Server per:
-
-- [Distribuire cluster scalabili](../big-data-cluster/deploy-get-started.md) di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes. 
-- Leggere, scrivere ed elaborare Big Data da Transact-SQL o Spark.
-- Combinare e analizzare con facilità dati relazionali di alto valore con volumi elevati di Big Data.
-- Eseguire query su origini dati esterne.
-- Archiviare Big Data in HDFS gestito da SQL Server.
-- Eseguire query sui dati da più origini dati esterne tramite il cluster.
-- Usare i dati per intelligenza artificiale, Machine Learning e altre attività di analisi.
-- [Distribuire ed eseguire applicazioni](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
-- Virtualizzare i dati con [PolyBase](../relational-databases/polybase/polybase-guide.md). Eseguire query sui dati da origini dati esterne SQL Server, Oracle, Teradata, MongoDB e ODBC con tabelle esterne.
-- Fornire disponibilità elevata per l'istanza master di SQL Server e tutti i database tramite una tecnologia basata su gruppi di disponibilità Always On.
-
-## <a name="sql-server-version"></a>Versione di SQL Server
-
-La versione corrente di SQL Server è `15.0.2070.34`.
-
-## <a name="image-tags"></a>Tag di immagine
-
-Il tag di immagine per questa versione è `2019-GDR1-ubuntu-16.04`.
-
-[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
-
-## <a name="supportability"></a>Facilità di supporto
+## <a name="supported-platforms"></a>Piattaforme supportate
 
 Questa sezione illustra le piattaforme supportate con i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
@@ -69,39 +40,154 @@ Questa sezione illustra le piattaforme supportate con i [!INCLUDE[big-data-clust
 |Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
 |Ubuntu|16.04|
 
-### <a name="tools"></a>Strumenti
-
-|Piattaforma|Versioni supportate|
-|---------|---------|
-|`azdata`|La versione secondaria deve corrispondere a quella del server (dell'istanza master di SQL Server).<br/>Eseguire `azdata –-version` per convalidare la versione. Attualmente, questa versione è `15.0.2070`.|
-|Azure Data Studio|Ottenere la build più recente di [Azure Data Studio](https://aka.ms/getazuredatastudio).|
-
 ### <a name="sql-server-editions"></a>Edizioni di SQL Server
 
 |Edizione|Note|
 |---------|---------|
 |Enterprise<br/>Standard<br/>Developer| L'edizione del cluster Big Data è determinata dall'edizione dell'istanza master di SQL Server. In fase di distribuzione, per impostazione predefinita viene distribuita l'edizione Developer. È possibile modificare l'edizione dopo la distribuzione. Vedere [Configurare l'istanza master di SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
 
+## <a name="tools"></a>Strumenti
+
+|Piattaforma|Versioni supportate|
+|---------|---------|
+|`azdata`|La versione secondaria deve corrispondere a quella del server (dell'istanza master di SQL Server).<br/>Eseguire `azdata –-version` per convalidare la versione. Attualmente, questa versione è `15.0.2070`.|
+|Azure Data Studio|Ottenere la build più recente di [Azure Data Studio](https://aka.ms/getazuredatastudio).|
+
+## <a name="release-history"></a>Cronologia delle versioni
+
+Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+
+| Versione               | Versione       | Data di rilascio |
+|-----------------------|---------------|--------------|
+| [CU1](#cu1)           | 15.0.4003.23   | 07 gennaio 2020   |
+| [GDR1](#rtm)            | 15.0.2070.34  | 4 novembre 2019   |
+
+## <a name="how-to-install-updates"></a>Come installare gli aggiornamenti
+
+Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu1"></a> CU1 (gennaio 2020)
+
+Versione Cumulative Update 1 (CU1) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4003.23.
+
+|Versione pacchetto | Tag dell'immagine |
+|-----|-----|
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
+
+## <a id="rtm"></a> GDR1 (novembre 2019)
+
+SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilità generale per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. La versione del motore di database di SQL Server per questa versione è 15.0.2070.34.
+
+|Versione pacchetto | Tag dell'immagine |
+|-----|-----|
+|15.0.2070.34|[2019-GDR1-ubuntu-16.04]
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
+
 ## <a name="known-issues"></a>Problemi noti
+
+### <a name="deployment-with-private-repository"></a>Distribuzione con repository privato
+
+- **Problema e impatto per i clienti**: L'aggiornamento da un repository privato presenta requisiti specifici
+
+- **Soluzione alternativa**: Se si usa un repository privato per eseguire preventivamente il pull delle immagini per la distribuzione o l'aggiornamento dei cluster Big Data, verificare che le immagini di compilazione correnti e le immagini di compilazione di destinazione si trovino nel repository privato. Questo consente di ripristinare correttamente lo stato precedente, se necessario. Se le credenziali del repository privato sono state modificate dopo la distribuzione originale, poi, aggiornare il segreto corrispondente in Kubernetes prima di eseguire l'aggiornamento. `azdata` non supporta l'aggiornamento delle credenziali tramite `AZDATA_PASSWORD` e le variabili di ambiente `AZDATA_USERNAME`. Aggiornare il segreto tramite [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+
+L'aggiornamento tramite repository diversi per le compilazioni correnti e di destinazione non è supportato.
+
+### <a name="upgrade-may-fail-due-to-timeout"></a>Possibile esito negativo dell'aggiornamento a causa di un timeout
+
+- **Problema e impatto per i clienti**: l'aggiornamento può avere esito negativo a causa di un timeout.
+
+   Il codice seguente illustra il possibile aspetto dell'errore:
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+   Questo errore si verifica con maggiore probabilità quando si aggiorna un cluster Big Data nel servizio Azure Kubernetes.
+
+- **Soluzione alternativa**: aumentare il timeout per l'aggiornamento. 
+
+   Per aumentare i timeout per un aggiornamento, modificare la mappa di configurazione dell'aggiornamento stesso. Per modificare la mappa di configurazione dell'aggiornamento:
+
+   1. Eseguire il comando seguente:
+
+      ```bash
+      kubectl edit configmap controller-upgrade-configmap
+      ```
+
+   2.   Modificare i campi seguenti:
+
+       **`controllerUpgradeTimeoutInMinutes`** Indica il numero di minuti di attesa del completamento dell'aggiornamento del controller o del database del controller. Il valore predefinito è 5. Per l'aggiornamento impostare almeno il valore 20.
+
+       **`totalUpgradeTimeoutInMinutes`** : Definisce la combinazione del tempo impiegato dal controller e il tempo impiegato dal database del controller per completare l'aggiornamento (aggiornamento controller + database del controller). Il valore predefinito è 10. Per l'aggiornamento impostare almeno il valore 40.
+
+       **`componentUpgradeTimeoutInMinutes`** : Definisce la quantità di tempo disponibile per il completamento di ogni fase successiva dell'aggiornamento.  L'impostazione predefinita è 30. Per l'aggiornamento impostare su 45.
+
+   3.   Salvare e uscire.
+
+   Lo script Python seguente rappresenta un altro metodo per l'impostazione del timeout:
+
+   ```python
+   from kubernetes import client, config
+   import json
+
+   def set_upgrade_timeouts(namespace, controller_timeout=20, controller_total_timeout=40, component_timeout=45):
+       """ Set the timeouts for upgrades
+
+       The timeout settings are as follows
+
+       controllerUpgradeTimeoutInMinutes: sets the max amount of time for the controller
+           or controllerdb to finish upgrading
+
+       totalUpgradeTimeoutInMinutes: sets the max amount of time to wait for both the
+           controller and controllerdb to complete their upgrade
+
+       componentUpgradeTimeoutInMinutes: sets the max amount of time allowed for
+           subsequent phases of the upgrade to complete
+       """
+       config.load_kube_config()
+
+       upgrade_config_map = client.CoreV1Api().read_namespaced_config_map("controller-upgrade-configmap", namespace)
+
+       upgrade_config = json.loads(upgrade_config_map.data["controller-upgrade"])
+
+       upgrade_config["controllerUpgradeTimeoutInMinutes"] = controller_timeout
+
+       upgrade_config["totalUpgradeTimeoutInMinutes"] = controller_total_timeout
+
+       upgrade_config["componentUpgradeTimeoutInMinutes"] = component_timeout
+
+       upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
+
+       client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
+   ```
 
 ### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>L'invio di un processo Livy da Azure Data Studio (ADS) o curl ha esito negativo con l'errore 500
 
-**Problema e impatto per i clienti**: in una configurazione a disponibilità elevata, le risorse condivise Spark (sparkhead) sono configurate con più repliche. In questo caso, è possibile che si verifichino errori durante l'invio di un processo Livy da Azure Data Studio (ADS) o `curl`. A scopo di verifica, quando si usa un comando `curl` per qualsiasi pod sparkhead la connessione viene rifiutata. Ad esempio, `curl https://sparkhead-0:8998/` o `curl https://sparkhead-1:8998` restituisce l'errore 500.
+- **Problema e impatto per i clienti**: in una configurazione a disponibilità elevata, le risorse condivise Spark `sparkhead` sono configurate con più repliche. In questo caso, è possibile che si verifichino errori durante l'invio di un processo Livy da Azure Data Studio (ADS) o `curl`. A scopo di verifica, se si usa il comando `curl` per qualsiasi pod `sparkhead`, la connessione viene rifiutata. Ad esempio, `curl https://sparkhead-0:8998/` o `curl https://sparkhead-1:8998` restituisce l'errore 500.
 
-Ciò accade negli scenari seguenti:
+   Ciò accade negli scenari seguenti:
 
-- I pod ZooKeeper o il processo per ogni istanza di ZooKeeper vengono riavviati alcune volte.
-- La connettività di rete non è affidabile tra il pod sparkhead e i pod ZooKeeper.
+   - I pod ZooKeeper o i processi per ogni istanza di ZooKeeper vengono riavviati alcune volte.
+   - La connettività di rete tra il pod `sparkhead` e i pod ZooKeeper non è affidabile.
 
-**Soluzione alternativa**: riavviare entrambi i server Livy.
+- **Soluzione alternativa**: riavviare entrambi i server Livy.
 
-```bash
-kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
-```bash
-kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
 ### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>Creare una tabella ottimizzata per la memoria quando l'istanza master si trova in un gruppo di disponibilità
 
@@ -119,6 +205,12 @@ kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisor
    ```
 
 - **Soluzione alternativa**: modificare la query in uno dei modi seguenti. Unire la tabella del pool di archiviazione a una tabella locale oppure eseguire prima l'inserimento nella tabella locale, quindi leggere dalla tabella locale per eseguire l'inserimento nel pool di dati.
+
+### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>Non è possibile usare le funzionalità Transparent Data Encryption con i database che fanno parte del gruppo di disponibilità nell'istanza master di SQL Server
+
+- **Problema e impatto per i clienti**: in una configurazione a disponibilità elevata, non è possibile usare database con crittografia abilitata dopo un failover, perché la chiave master usata per la crittografia è diversa per ogni replica. 
+
+- **Soluzione alternativa**: non è disponibile alcuna soluzione alternativa per questo problema. È consigliabile evitare di abilitare la crittografia in questa configurazione fino a quando non verrà resa disponibile una correzione.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

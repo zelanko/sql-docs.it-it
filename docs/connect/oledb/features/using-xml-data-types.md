@@ -1,6 +1,6 @@
 ---
-title: Utilizzo di tipi di dati XML | Microsoft Docs
-description: Utilizzo di tipi di dati XML con OLE DB driver per SQL Server
+title: Uso di tipi di dati XML | Microsoft Docs
+description: Uso di tipi di dati XML con OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -31,10 +31,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988795"
 ---
 # <a name="using-xml-data-types"></a>Utilizzo di tipi di dati XML
@@ -42,7 +42,7 @@ ms.locfileid: "67988795"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il tipo di dati **xml** che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il tipo di dati **xml** è un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è simile per alcuni aspetti ad altri tipi predefiniti, ad esempio **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro o tipo restituito dalla funzione oppure in funzioni CAST e CONVERT.  
+  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il tipo di dati **xml** che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro o tipo restituito dalla funzione oppure in funzioni CAST e CONVERT.  
   
 ## <a name="programming-considerations"></a>Considerazioni sulla programmazione  
  XML può essere autodescrittivo in quanto può eventualmente includere un'intestazione XML che specifica la codifica del documento, ad esempio:  
@@ -58,7 +58,7 @@ ms.locfileid: "67988795"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server 
- DBTYPE_XML è un nuovo tipo di dati specifico di XML nel driver OLE DB per SQL Server. È inoltre possibile accedere ai dati XML tramite i tipi OLE DB esistenti DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT e DBTYPE_IUNKNOWN. I dati archiviati in colonne di tipo XML possono essere recuperati da una colonna in un set di righe del driver OLE DB per SQL Server nei formati seguenti:  
+ DBTYPE_XML è un nuovo tipo di dati specifico di XML in OLE DB Driver per SQL Server. È inoltre possibile accedere ai dati XML tramite i tipi OLE DB esistenti DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT e DBTYPE_IUNKNOWN. I dati archiviati in colonne di tipo XML possono essere recuperati da una colonna in un set di righe del driver OLE DB per SQL Server nei formati seguenti:  
   
 -   Stringa di testo  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67988795"
 > [!NOTE]  
 >  Il driver OLE DB per SQL Server non include un lettore SAX, ma l'interfaccia **ISequentialStream** può essere passata in modo semplice a oggetti SAX e DOM in MSXML.  
   
- Per il recupero di documenti XML di dimensioni elevate, è necessario usare **ISequentialStream**. A XML si applicano le stesse tecniche utilizzate per altri tipi di valore di grandi dimensioni. Per ulteriori informazioni, vedere [utilizzo di tipi di valore di grandi dimensioni](../../oledb/features/using-large-value-types.md).  
+ Per il recupero di documenti XML di dimensioni elevate, è necessario usare **ISequentialStream**. A XML si applicano le stesse tecniche utilizzate per altri tipi di valore di grandi dimensioni. Per altre informazioni, vedere la sezione [Uso di tipi valore di grandi dimensioni](../../oledb/features/using-large-value-types.md).  
   
  I dati in colonne di tipo XML in un set di righe possono inoltre essere recuperati, inseriti o aggiornati da un'applicazione tramite le normali interfacce, ad esempio **IRow::GetColumns**, **IRowChange::SetColumns** e **ICommand::Execute**. Analogamente al caso del recupero, un'applicazione può passare una stringa di testo o un'interfaccia **ISequentialStream** al driver OLE DB per SQL Server.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "67988795"
  Se i dati XML di input vengono associati come DBTYPE_WSTR, l'applicazione deve verificare che i dati siano già codificati come Unicode per evitare qualsiasi rischio di danni dovuti a conversioni di dati indesiderate.  
   
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
- Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con il tipo di dati **xml** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si usano i tipi di dati elencati con il tipo di dati **xml** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 |Tipo di dati|Al server<br /><br /> **XML**|Al server<br /><br /> **Non XML**|Dal server<br /><br /> **XML**|Dal server<br /><br /> **Non XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -125,7 +125,7 @@ ms.locfileid: "67988795"
   
  Le conversioni dei dati fornite dai servizi OLE DB (**IDataConvert**) principali non sono applicabili a DBTYPE_XML.  
   
- La convalida viene eseguita durante l'invio dei dati al server. La convalida lato client e le modifiche di codifica devono essere gestite dall'applicazione. Si consiglia di non elaborare direttamente i dati XML, ma è consigliabile utilizzare invece un lettore DOM o SAX per elaborarli.  
+ La convalida viene eseguita durante l'invio dei dati al server. La convalida lato client e le modifiche di codifica devono essere gestite dall'applicazione. È consigliabile non elaborare direttamente i dati XML, ma di usare invece un lettore DOM o SAX per elaborarli.  
   
  DBTYPE_NULL e DBTYPE_EMPTY possono essere associati per i parametri di input ma non per i parametri di output o per i risultati. Se vengono associati per i parametri di input, lo stato deve essere impostato su DBSTATUS_S_ISNULL o DBSTATUS_S_DEFAULT.  
   
@@ -134,24 +134,24 @@ ms.locfileid: "67988795"
  Come illustrato nella tabella precedente, DBTYPE_IUNKNOWN è un'associazione supportata, ma non è disponibile alcuna conversione tra DBTYPE_XML e DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN non può essere utilizzato con DBTYPE_BYREF.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Aggiunte e modifiche ai set di righe OLE DB  
- OLE DB driver per SQL Server aggiunge nuovi valori o modifiche a molti dei set di righe dello schema OLE DB principali.  
+ In OLE DB Driver per SQL Server sono stati aggiunti nuovi valori o modifiche a molti set di righe dello schema OLE DB principale.  
   
-#### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS  
+#### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS  
  Tra le aggiunte ai set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS sono incluse le colonne seguenti:  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nome di un catalogo in cui viene definita una raccolta di XML Schema. NULL per una colonna non XML o una colonna XML non tipizzata.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nome di uno schema in cui viene definita una raccolta di XML Schema. NULL per una colonna non XML o una colonna XML non tipizzata.|  
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Nome della raccolta di XML Schema. NULL per una colonna non XML o una colonna XML non tipizzata.|  
   
-#### <a name="the-providertypes-schema-rowset"></a>Set di righe dello schema PROVIDER_TYPES  
+#### <a name="the-provider_types-schema-rowset"></a>Set di righe dello schema PROVIDER_TYPES  
  Nel set di righe dello schema PROVIDER_TYPES il valore di COLUMN_SIZE è 0 per il tipo di dati **xml** e DATA_TYPE è DBTYPE_XML.  
   
-#### <a name="the-ssxmlschema-schema-rowset"></a>Set di righe dello schema SS_XMLSCHEMA  
+#### <a name="the-ss_xmlschema-schema-rowset"></a>Set di righe dello schema SS_XMLSCHEMA  
  È stato introdotto un nuovo set di righe dello schema per i client, denominato SS_XMLSCHEMA, che consente il recupero di informazioni su XML Schema. Il set di righe SS_XMLSCHEMA contiene le colonne seguenti:  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogo cui appartiene una raccolta XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schema cui appartiene una raccolta XML.|  
@@ -166,21 +166,21 @@ ms.locfileid: "67988795"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Aggiunte e modifiche ai set di proprietà OLE DB  
- OLE DB driver per SQL Server aggiunge nuovi valori o modifiche a molti dei set di proprietà OLE DB principali.  
+ In OLE DB Driver per SQL Server sono stati aggiunti nuovi valori o modifiche a molti set di proprietà dello schema OLE DB principale.  
   
-#### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
+#### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
  Ai fini del supporto del tipo di dati **xml** tramite OLE DB, nel driver OLE DB per SQL Server è stato implementato il nuovo set di proprietà DBPROPSET_SQLSERVERPARAMETER, che contiene i valori seguenti.  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nome di un catalogo (database) in cui viene definita una raccolta di XML Schema. Una delle tre parti di cui è composto l'identificatore del nome SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nome di un elemento XML Schema all'interno della raccolta di schemi. Una delle tre parti di cui è composto l'identificatore del nome SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Nome della raccolta di XML Schema all'interno del catalogo. Una delle tre parti di cui è composto l'identificatore del nome SQL.|  
   
-#### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERCOLUMN  
+#### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERCOLUMN  
  Ai fini del supporto della creazione di tabelle nell'interfaccia **ITableDefinition**, nel driver OLE DB per SQL Server sono state aggiunte tre nuove colonne al set di proprietà DBPROPSET_SQLSERVERCOLUMN.  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Per le colonne XML tipizzate, questa proprietà è una stringa che specifica il nome del catalogo in cui viene archiviato l'elemento XML Schema. Per gli altri tipi di colonna questa proprietà restituisce una stringa vuota.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Per le colonne XML tipizzate, questa proprietà è una stringa che specifica il nome dell'elemento XML Schema che definisce la colonna.|  
@@ -189,7 +189,7 @@ ms.locfileid: "67988795"
  Analogamente ai valori di SSPROP_PARAM, tutte queste proprietà sono facoltative e non sono specificate per impostazione predefinita. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME e SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME possono essere specificate solo se si specifica SSPROP_COL_XML_SCHEMACOLLECTIONNAME. Se quando si passano dati XML al server questi valori sono inclusi, ne viene verificata l'esistenza (validità) rispetto al database corrente e i dati dell'istanza vengono controllati rispetto allo schema. In tutti i casi, per essere validi tali valori devono essere tutti vuoti o specificati.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Aggiunte e modifiche alle interfacce OLE DB  
- OLE DB driver per SQL Server aggiunge nuovi valori o modifiche a molte delle interfacce di OLE DB principali.  
+ In OLE DB Driver per SQL Server sono stati aggiunti nuovi valori o modifiche a molte interfacce dello schema OLE DB principale.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interfaccia ISSCommandWithParameters  
  Ai fini del supporto del tipo di dati **xml** tramite OLE DB, nel driver OLE DB per SQL Server sono state implementate alcune modifiche, ad esempio l'aggiunta dell'interfaccia [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md). Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames** e **SetParameterInfo**; **ISSCommandWithParameters** fornisce i metodi [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) e [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) usati per gestire i tipi di dati specifici del server.  
@@ -200,7 +200,7 @@ ms.locfileid: "67988795"
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
  Nel driver OLE DB per SQL Server sono state aggiunte le colonne specifiche di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seguenti al set di righe restituito dal metodo **IColumnRowset::GetColumnsRowset**. Tali colonne contengono il nome in tre parti di una raccolta di XML Schema. Per le colonne non XML o per le colonne XML non tipizzate, le tre colonne assumono tutte il valore predefinito NULL.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogo cui appartiene una raccolta di XML Schema.<br /><br /> In caso contrario, NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schema cui appartiene una raccolta di XML Schema. In caso contrario, NULL.|  
@@ -231,6 +231,6 @@ ms.locfileid: "67988795"
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per funzionalità di SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [OLE DB &#40;ISSCommandWithParameters&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

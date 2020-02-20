@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dell'autenticazione NTLM per la connessione a SQL Server | Microsoft Docs
+title: Uso dell'autenticazione NTLM per la connessione a SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -13,32 +13,32 @@ author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
 ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026097"
 ---
-# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Utilizzo dell'autenticazione NTLM per la connessione a SQL Server
+# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione NTLM per la connessione a SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Consente a un'applicazione di utilizzare la proprietà di connessione **authenticationScheme** per indicare che desidera connettersi a un database utilizzando l'autenticazione NTLM v2. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] consente a un'applicazione di usare la proprietà di connessione **authenticationScheme** per specificare una connessione a un database tramite l'autenticazione NTLM v2. 
 
-Per l'autenticazione NTLM vengono utilizzate anche le proprietà seguenti:
+Per l'autenticazione NTLM vengono usate anche le proprietà seguenti:
 
-- **dominio = DomainName** opzionale
-- **utente = nome utente**
+- **domain = domainName** (facoltativo)
+- **user = userName**
 - **password = password**
 - **integratedSecurity = true**
 
-Ad eccezione del **dominio**, le altre proprietà sono obbligatorie, il driver genererà un errore se mancante quando viene usata la proprietà authenticationScheme **NTLM** . 
+Ad eccezione di **domain**, le altre proprietà sono obbligatorie. Nel caso in cui non siano presenti, il driver genera un errore quando viene usata la proprietà authenticationScheme di **NTLM**. 
 
-Per ulteriori informazioni sulle proprietà di connessione, vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md). Per ulteriori informazioni sul protocollo Microsoft NTLM Authentication, vedere [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+Per altre informazioni sulle proprietà di connessione, vedere [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md). Per altre informazioni sul protocollo di autenticazione NTLM di Microsoft, vedere [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
-Vedere [sicurezza di rete: livello di autenticazione di LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) per la descrizione delle impostazioni di SQL Server, che controllano il comportamento dell'autenticazione NTLM. 
+Vedere [Sicurezza di rete: livello di autenticazione di LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) per la descrizione delle impostazioni di SQL Server, che controllano il comportamento dell'autenticazione NTLM. 
 
 ## <a name="logging"></a>Registrazione
 
@@ -46,7 +46,7 @@ Vedere [sicurezza di rete: livello di autenticazione di LAN Manager](https://doc
 
 ## <a name="datasource"></a>DataSource
 
-Quando si utilizza un'origine dati per creare connessioni, le proprietà NTLM possono essere impostate a livello di codice utilizzando **setAuthenticationScheme**, **sedomain** e (facoltativamente) **setServerSpn**.
+Quando si usa un'origine dati per creare connessioni, le proprietà NTLM possono essere impostate a livello di codice usando **setAuthenticationScheme**, **setDomain** e, facoltativamente, **setServerSpn**.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -72,9 +72,9 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Un nome dell'entità servizio (SPN) è il nome con cui un client identifica in modo univoco un'istanza di un servizio.
 
-È possibile specificare il nome dell'entità servizio usando la proprietà di connessione **serverSpn** o lasciare che sia il driver a crearlo automaticamente (impostazione predefinita). Questa proprietà usa il formato: "MSSQLSvc/fqdn:porta\@AREADIAUTENTICAZIONE", dove fqdn è il nome di dominio completo, porta è il numero di porta e AREADIAUTENTICAZIONE è l'area di autenticazione di SQL Server in lettere maiuscole. La parte area di autenticazione di questa proprietà è facoltativa perché l'area di autenticazione predefinita è la stessa dell'area di autenticazione del server.
+È possibile specificare il nome dell'entità servizio usando la proprietà di connessione **serverSpn** o lasciare che sia il driver a crearlo automaticamente (impostazione predefinita). Il formato della proprietà è: "MSSQLSvc/fqdn:porta\@AREADIAUTENTICAZIONE" dove fqdn è il nome di dominio completo, porta è il numero di porta e AREADIAUTENTICAZIONE è l'area di autenticazione di SQL Server in lettere maiuscole. La parte dell'area di autenticazione di questa proprietà è facoltativa perché l'area di autenticazione predefinita è la stessa di quella del server.
 
-Il nome SPN, ad esempio, potrebbe essere simile al seguente: "MSSQLSvc/some-server. zzz. Corp. contoso. com: 1433"
+Ad esempio, il nome dell'entità servizio potrebbe essere simile al seguente: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 
 Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:
 
@@ -83,24 +83,24 @@ Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:
 > [!NOTE]  
 > L'attributo di connessione serverSpn è supportato solo da Microsoft JDBC Driver 4.2 e versioni successive.
 
-> Prima della versione 6,2 del driver JDBC, è necessario impostare in modo esplicito **serverSpn**. A partire dalla versione 6,2, il driver sarà in grado di compilare **serverSpn** per impostazione predefinita, anche se è possibile usare **serverSpn** in modo esplicito.
+> Per le versioni precedenti alla 6.2 del driver JDBC, è necessario impostare **serverSpn** in modo esplicito. A partire dalla versione 6.2, il driver può compilare **serverSpn** per impostazione predefinita, sebbene sia possibile usare **serverSpn** in modo esplicito.
 
 ## <a name="security-risks"></a>Rischi per la sicurezza
 
-Il protocollo NTLM è un protocollo di autenticazione obsoleto con diverse vulnerabilità, che rappresentano un rischio per la sicurezza. Si basa su uno schema crittografico relativamente debole ed è vulnerabile a diversi attacchi. Viene sostituito con Kerberos, che è molto più sicuro e consigliato. L'autenticazione NTLM deve essere utilizzata solo in un ambiente attendibile sicuro oppure quando non è possibile utilizzare Kerberos.
+Il protocollo NTLM è un protocollo di autenticazione obsoleto con diverse vulnerabilità, che rappresentano un rischio per la sicurezza. Si basa su uno schema crittografico relativamente debole ed è vulnerabile a diversi attacchi. Viene sostituito con Kerberos, che è molto più sicuro e consigliato. L'autenticazione NTLM deve essere usata solo in un ambiente attendibile sicuro oppure quando non è possibile usare Kerberos.
 
-Supporta [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] solo NTLM v2, che offre alcuni miglioramenti per la sicurezza rispetto al protocollo v1 originale. It'ss consiglia inoltre di abilitare la protezione estesa o di utilizzare la crittografia SSL per una maggiore sicurezza. 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta solo NTLM v2, che offre alcuni miglioramenti per la sicurezza rispetto al protocollo v1 originale. È consigliabile anche abilitare la protezione estesa o usare la crittografia SSL per una maggiore sicurezza. 
 
-Per ulteriori informazioni su come abilitare la protezione estesa e, vedere:
+Per altre informazioni su come abilitare la protezione estesa, vedere:
 
 - [Connessione al motore di database mediante la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
 
-Per ulteriori informazioni sulla connessione con la crittografia SSL, vedere:
+Per altre informazioni sulla connessione con la crittografia SSL, vedere:
 
 - [Connessione tramite la crittografia SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
-> Per la versione 7,4, l' **abilitazione** della protezione estesa e della crittografia non è supportata.
+> Per la versione 7.4, l'abilitazione di **entrambe**, protezione estesa e crittografia, non è supportata.
 
 ## <a name="see-also"></a>Vedere anche
 

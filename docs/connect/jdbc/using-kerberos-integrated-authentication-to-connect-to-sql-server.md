@@ -11,17 +11,17 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026187"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], per un'applicazione è possibile usare la proprietà di connessione **authenticationScheme** per specificare una connessione a un database tramite l'autenticazione integrata Kerberos di tipo 4. Per ulteriori informazioni sulle proprietà di connessione, vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) . Per ulteriori informazioni su Kerberos, vedere [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
+A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], per un'applicazione è possibile usare la proprietà di connessione **authenticationScheme** per specificare una connessione a un database tramite l'autenticazione integrata Kerberos di tipo 4. Per altre informazioni sulle proprietà delle connessioni, vedere [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md). Per altre informazioni su Kerberos, vedere [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
 
 Quando si usa l'autenticazione integrata con il modulo Java **Krb5LoginModule**, è possibile configurare il modulo usando la [classe Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
@@ -35,17 +35,17 @@ Quando si usa l'autenticazione integrata con il modulo Java **Krb5LoginModule**,
 - **useTicketCache = true**
 - **doNotPrompt = true**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
-Nelle versioni [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]precedenti a, le applicazioni possono specificare l'autenticazione integrata (tramite Kerberos o NTLM, a seconda della disponibilità) utilizzando la proprietà di connessione **IntegratedSecurity** e facendo riferimento a **sqljdbc_auth. dll**, come descritto in [compilazione dell'URL di connessione](../../connect/jdbc/building-the-connection-url.md).
+Nelle versioni precedenti a [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], per le applicazioni è possibile specificare l'autenticazione integrata (tramite Kerberos o NTLM, a seconda dell'autenticazione disponibile) usando la proprietà di connessione **integratedSecurity** e facendo riferimento a **sqljdbc_auth.dll**, come descritto in [Compilazione dell'URL della connessione](../../connect/jdbc/building-the-connection-url.md).
 
 A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], per un'applicazione è possibile usare la proprietà di connessione **authenticationScheme** per specificare una connessione a un database tramite l'autenticazione integrata Kerberos e l'implementazione Kerberos Java pura:
 
-- Se si vuole usare l'autenticazione integrata con **Krb5LoginModule**, è comunque necessario specificare la proprietà di connessione **IntegratedSecurity = true** . Sarà quindi necessario specificare anche la proprietà di connessione **authenticationScheme = JavaKerberos** .
+- Se si vuole usare l'autenticazione integrata con **Krb5LoginModule**, è comunque necessario specificare la proprietà di connessione **integratedSecurity=true**. Sarà quindi necessario specificare anche la proprietà di connessione **authenticationScheme=JavaKerberos**.
 
-- Per continuare a utilizzare l'autenticazione integrata con **sqljdbc_auth. dll**, è sufficiente specificare **IntegratedSecurity = true** Connection Property (e facoltativamente **authenticationScheme = NativeAuthentication**).
+- Per continuare a usare l'autenticazione integrata con **sqljdbc_auth.dll**, è sufficiente specificare la proprietà di connessione **integratedSecurity=true** e, facoltativamente, **authenticationScheme=NativeAuthentication**.
 
-- Se si specifica **authenticationScheme = JavaKerberos** ma non si specifica anche **IntegratedSecurity = true**, il driver ignorerà la proprietà di connessione **authenticationScheme** e il nome utente e la password verranno trovati credenziali nella stringa di connessione.
+- Se si specifica **authenticationScheme=JavaKerberos**, ma senza specificare anche **integratedSecurity=true**, la proprietà di connessione **authenticationScheme** verrà ignorata dal driver che cercherà le credenziali di nome utente e password nella stringa di connessione.
 
 Quando si usa un'origine dati per creare connessioni, è possibile impostare a livello di codice lo schema di autenticazione usando **setAuthenticationScheme** e (facoltativamente) impostare il nome dell'entità servizio per le connessioni Kerberos usando **setServerSpn**.
 
@@ -53,7 +53,7 @@ Quando si usa un'origine dati per creare connessioni, è possibile impostare a l
 
 Le linee guida seguenti consentono di configurare Kerberos:
 
-1. Impostare **AllowTgtSessionKey** su 1 nel registro di sistema di Windows. Per altre informazioni, vedere [Voci del Registro di sistema del protocollo Kerberos e chiavi di configurazione KDC in Windows Server 2003](https://support.microsoft.com/kb/837361).
+1. Impostare **AllowTgtSessionKey** su 1 nel Registro di sistema di Windows. Per altre informazioni, vedere [Voci del Registro di sistema del protocollo Kerberos e chiavi di configurazione KDC in Windows Server 2003](https://support.microsoft.com/kb/837361).
 2. Assicurarsi che la configurazione di Kerberos (krb5.conf in ambienti UNIX) punti all'area di autenticazione e al servizio KDC corretti per l'ambiente.
 3. Inizializzare la cache TGT tramite kinit o accedendo al dominio.
 4. Quando un'applicazione in cui **authenticationScheme=JavaKerberos** viene eseguita nel sistema operativo Windows Vista o Windows 7, è consigliabile usare un account utente standard. Se tuttavia si usa un account amministratore, l'applicazione deve essere eseguita con privilegi di amministratore.
@@ -65,9 +65,9 @@ Le linee guida seguenti consentono di configurare Kerberos:
 
 Un nome dell'entità servizio (SPN) è il nome con cui un client identifica in modo univoco un'istanza di un servizio.
 
-È possibile specificare il nome dell'entità servizio usando la proprietà di connessione **serverSpn** o lasciare che sia il driver a crearlo automaticamente (impostazione predefinita). Questa proprietà usa il formato: "MSSQLSvc/fqdn:port\@REALM", dove fqdn è il nome di dominio completo, port è il numero di porta e REALM è l'area di autenticazione Kerberos di SQL Server in lettere maiuscole. La parte dell'area di autenticazione di questa proprietà è facoltativa se l'area di autenticazione predefinita della configurazione di Kerberos è la stessa area di autenticazione del server e non è inclusa per impostazione predefinita. Se si desidera supportare uno scenario di autenticazione tra diverse aree di autenticazione, in cui l'area di autenticazione predefinita nella configurazione di Kerberos è diversa dall'area di autenticazione del server, è necessario impostare il nome dell'entità servizio con la proprietà serverSpn.
+È possibile specificare il nome dell'entità servizio usando la proprietà di connessione **serverSpn** o lasciare che sia il driver a crearlo automaticamente (impostazione predefinita). Il formato della proprietà è: "MSSQLSvc/fqdn:porta\@AREADIAUTENTICAZIONE" dove fqdn è il nome di dominio completo, porta è il numero di porta e AREADIAUTENTICAZIONE è l'area di autenticazione Kerberos di SQL Server in lettere maiuscole. La parte dell'area di autenticazione di questa proprietà è facoltativa se l'area di autenticazione predefinita della configurazione di Kerberos è la stessa area di autenticazione del server e non è inclusa per impostazione predefinita. Se si desidera supportare uno scenario di autenticazione tra diverse aree di autenticazione, in cui l'area di autenticazione predefinita nella configurazione di Kerberos è diversa dall'area di autenticazione del server, è necessario impostare il nome dell'entità servizio con la proprietà serverSpn.
 
-Il nome SPN, ad esempio, potrebbe essere simile al seguente: "MSSQLSvc/some-server. zzz. Corp. contoso\@. com: 1433 zzzz. Corp. CONTOSO.COM "
+Ad esempio, il nome dell'entità servizio potrebbe essere simile al seguente: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ.CORP.CONTOSO.COM"
 
 Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:
 
@@ -76,9 +76,9 @@ Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:
 - [Utilizzo di Kerberos con SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
-> Prima della versione 6,2 del driver JDBC per l'uso corretto di Kerberos tra più aree, è necessario impostare in modo esplicito **serverSpn**.
+> Per le versioni precedenti alla 6.2 del driver JDBC, per un uso corretto di Kerberos tra diverse aree di autenticazione è necessario impostare **serverSpn** in modo esplicito.
 >
-> A partire dalla versione 6,2, il driver sarà in grado di compilare **serverSpn** per impostazione predefinita, anche quando si usa l'autenticazione a più aree Kerberos. Sebbene sia possibile usare **serverSpn** in modo esplicito.
+> A partire dalla versione 6.2, il driver può compilare **serverSpn** per impostazione predefinita, anche quando Kerberos viene usato tra diverse aree di autenticazione. È comunque possibile usare **serverSpn** in modo esplicito.
 
 ## <a name="creating-a-login-module-configuration-file"></a>Creazione di un file di configurazione del modulo di accesso
 
@@ -115,7 +115,7 @@ Tramite il driver verrà effettuato il tentativo di utilizzare credenziali esist
 
 Per altre informazioni, vedere le pagine Web relative al [file di configurazione di accesso JAAS](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html) e alla [classe Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
-A partire da Microsoft JDBC Driver 6,2, il nome del file di configurazione del modulo di accesso può facoltativamente `jaasConfigurationName`essere passato utilizzando la proprietà di connessione, in modo che ogni connessione disponga della propria configurazione di accesso.
+A partire da Microsoft JDBC Driver 6.2, il nome del file di configurazione del modulo di accesso può facoltativamente essere passato usando la proprietà di connessione `jaasConfigurationName`, in modo che ogni connessione abbia una propria configurazione di accesso.
 
 ## <a name="creating-a-kerberos-configuration-file"></a>Creazione di un file di configurazione Kerberos
 
@@ -150,7 +150,7 @@ forwardable = yes
 
 ## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>Abilitazione del file di configurazione del dominio e del file di configurazione del modulo di accesso
 
-È possibile abilitare un file di configurazione del dominio con -Djava.security.krb5.conf. È possibile abilitare un file di configurazione del modulo di accesso con **-Djava. Security. auth. login. config**.
+È possibile abilitare un file di configurazione del dominio con -Djava.security.krb5.conf. È possibile abilitare un file di configurazione del modulo di accesso con **-Djava.security.auth.login.config**.
 
 Ad esempio, è possibile usare il comando seguente per avviare l'applicazione:
 
@@ -171,7 +171,7 @@ Assicurarsi di disporre dell'autorizzazione necessaria per l'esecuzione della qu
 
 ## <a name="constrained-delegation"></a>Delega vincolata
 
-A partire da Microsoft JDBC Driver 6,2, il driver supporta la delega vincolata Kerberos. Le credenziali delegate possono essere passate come oggetto org. ietf. jgss. GSSCredential. queste credenziali vengono usate dal driver per stabilire la connessione.
+A partire da Microsoft JDBC Driver 6.2, il driver supporta la delega vincolata Kerberos. Le credenziali delegate possono essere passate come oggetto org.ietf.jgss.GSSCredential e usate dal driver per stabilire la connessione.
 
 ```java
 Properties driverProperties = new Properties();
@@ -182,19 +182,19 @@ driverProperties.put("gsscredential", impersonatedUserCredential);
 Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 ```
 
-## <a name="kerberos-connection-using-principal-names-and-password"></a>Connessione Kerberos con nomi di entità e password
+## <a name="kerberos-connection-using-principal-names-and-password"></a>Connessione Kerberos con nomi di entità utente e password
 
-A partire da Microsoft JDBC Driver 6,2, il driver può stabilire una connessione Kerberos usando il nome dell'entità utente e la password passati nella stringa di connessione.
+A partire da Microsoft JDBC Driver 6.2, il driver può stabilire una connessione Kerberos usando il nome dell'entità utente e la password passati nella stringa di connessione.
 
 ```java
 jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
 
-La proprietà UserName non richiede l'area di autenticazione se l'utente appartiene al set di default_realm nel file krb5. conf. Quando `userName` `integratedSecurity=true;` `authenticationScheme=JavaKerberos;` e `password` viene impostato insieme alla proprietà e, la connessione viene stabilita con il valore nome utente come entità Kerberos insieme alla password fornita.
+La proprietà nome utente non richiede l'area di autenticazione se l'utente appartiene a default_realm impostato nel file krb5.conf. Quando `userName` e `password` vengono impostati insieme alle proprietà `integratedSecurity=true;` e `authenticationScheme=JavaKerberos;`, la connessione viene stabilita con il valore nome utente come entità Kerberos insieme alla password specificata.
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Uso dell'autenticazione Kerberos da computer UNIX nello stesso dominio
 
-In questa guida si presuppone che esista già una configurazione Kerberos funzionante. Eseguire il codice seguente in un computer Windows con autenticazione Kerberos funzionante per verificare se il valore precedente è true. Se l'operazione ha esito positivo, nel codice viene stampato "schema di autenticazione: KERBEROS" sulla console. Non sono necessari flag di runtime, dipendenze o impostazioni del driver aggiuntivi al di fuori di quelli forniti. Lo stesso blocco di codice può essere eseguito in Linux per verificare le connessioni riuscite.
+In questa guida si presuppone che esista già una configurazione Kerberos funzionante. Eseguire il codice seguente in un computer Windows con autenticazione Kerberos funzionante per verificare quanto illustrato in precedenza. Il codice produrrà "Schema di autenticazione: KERBEROS "nella console, se l'operazione ha esito positivo. Non sono necessari flag di esecuzione, dipendenze o impostazioni del driver aggiuntivi al di fuori di quelli specificati. Lo stesso blocco di codice può essere eseguito in Linux per verificare le connessioni riuscite.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -212,10 +212,10 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 }
 ```
 
-1. Aggiunta al dominio del computer client allo stesso dominio del server.
-2. Opzionale Impostare il percorso predefinito del ticket Kerberos. Questa operazione viene eseguita più facilmente impostando la `KRB5CCNAME` variabile di ambiente.
-3. Ottenere il ticket Kerberos, generando uno nuovo o inserendone uno esistente nella posizione predefinita del ticket Kerberos. Per generare un ticket, è sufficiente usare un terminale e inizializzare il `kinit USER@DOMAIN.AD` ticket tramite where "User" e "Domain". AD "è rispettivamente l'entità e il dominio. Ad esempio: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. Il ticket verrà generato nel percorso predefinito del ticket o nel `KRB5CCNAME` percorso, se impostato.
-4. Il terminale richiederà una password. Immettere la password.
+1. Aggiungere il computer client allo stesso dominio del server.
+2. Impostare facoltativamente il percorso predefinito del ticket Kerberos. Questa operazione viene eseguita più facilmente impostando la variabile di ambiente `KRB5CCNAME`.
+3. Ottenere il ticket Kerberos, generandone uno nuovo o inserendone uno esistente nel percorso predefinito del ticket Kerberos. Per generare un ticket, è sufficiente usare un terminale e inizializzare il ticket tramite `kinit USER@DOMAIN.AD` dove "USER" e "DOMAIN.AD "sono rispettivamente l'entità utente e il dominio. Ad esempio: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. Il ticket verrà generato nel percorso predefinito del ticket o nel percorso di `KRB5CCNAME`, se impostato.
+4. Immettere la password richiesta dal terminale.
 5. Verificare le credenziali nel ticket tramite `klist` e verificare che le credenziali siano quelle che si intende usare per l'autenticazione.
 6. Eseguire il codice di esempio precedente e verificare che l'autenticazione Kerberos sia stata completata correttamente.
 
