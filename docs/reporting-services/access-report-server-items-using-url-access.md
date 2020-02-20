@@ -12,10 +12,10 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581253"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accesso agli elementi del server di report utilizzando l'accesso tramite URL
@@ -27,7 +27,7 @@ ms.locfileid: "65581253"
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
 ## <a name="access-a-report"></a>Accedere a report  
- Per visualizzare un report nel browser, usare il parametro *rs:Command*=*Render* . Esempio:  
+ Per visualizzare un report nel browser, usare il parametro *rs:Command*=*Render* . Ad esempio:  
   
  - **Nativo** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
@@ -43,7 +43,7 @@ ms.locfileid: "65581253"
 ## <a name="access-a-resource"></a>Accedere a una risorsa  
  Per accedere a una risorsa, usare il parametro *rs:Command*=*GetResourceContents* . Se la risorsa è compatibile con il browser, come accade per un'immagine, viene aperta nel browser. In caso contrario, verrà chiesto di aprire oppure salvare il file o la risorsa su disco.  
   
- **Nativo** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
+ **Native** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -52,9 +52,9 @@ ms.locfileid: "65581253"
 ::: moniker-end
   
 ## <a name="access-a-data-source"></a>Accedere a un'origine dati  
- Per accedere a un'origine dati, usare il parametro *rs:Command*=*GetDataSourceContents* . Se il browser supporta XML, la definizione dell'origine dati viene visualizzata se l'utente è autenticato con l'autorizzazione per la **lettura del contenuto** per l'origine dati. Esempio:  
+ Per accedere a un'origine dati, usare il parametro *rs:Command*=*GetDataSourceContents* . Se il browser supporta XML, la definizione dell'origine dati viene visualizzata se l'utente è autenticato con l'autorizzazione per la **lettura del contenuto** per l'origine dati. Ad esempio:  
   
- **Nativo** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -79,9 +79,9 @@ ms.locfileid: "65581253"
  La stringa di connessione viene restituita in base all'impostazione **SecureConnectionLevel** nel server di report. Per altre informazioni sull'impostazione **SecureConnectionLevel** , vedere [Uso di metodi del servizio Web protetti](../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Accedere ai contenuti di una cartella  
- Per accedere ai contenuti di una cartella, usare il parametro *rs:Command*=*GetChildren* . Viene restituita una pagina generica di navigazione della cartella che contiene collegamenti alle sottocartelle, alle origini dati, alle risorse e ai report inclusi nella cartella richiesta. Esempio:  
+ Per accedere ai contenuti di una cartella, usare il parametro *rs:Command*=*GetChildren* . Viene restituita una pagina generica di navigazione della cartella che contiene collegamenti alle sottocartelle, alle origini dati, alle risorse e ai report inclusi nella cartella richiesta. Ad esempio:  
   
- **Nativo** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
+ **Native** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
