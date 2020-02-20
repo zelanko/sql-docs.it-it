@@ -11,10 +11,10 @@ ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88bc977ae684351227017e81793cb48749b454e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579943"
 ---
 # <a name="configurationsetting-method---listinstalledsharepointversions"></a>Metodo di ConfigurationSetting - ListInstalledSharePointVersions
@@ -45,7 +45,7 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Ogni token restituito rappresenta una versione di [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] compatibile con il server di report attualmente installato. Se una particolare versione di SharePoint è compatibile con le versioni di SharePoint precedenti, vengono restituiti token per ogni versione di SharePoint compatibile.  
   
  Di seguito è riportata una tabella dei token di SharePoint restituiti.  

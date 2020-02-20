@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015398"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -45,10 +45,10 @@ HRESULT SetParameterProperties(
  *rgParamProperties*[in]  
  Matrice di strutture SSPARAMPROPS da impostare.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  Il metodo **ISSCommandWithParameters::SetParameterProperties** restituisce gli stessi codici di errore del metodo **ICommandProperties::SetProperties** OLE DB di base.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'impostazione delle proprietà del parametro con questo metodo è consentita per i singoli parametri in base al numero ordinale oppure con una sola chiamata a **ISSCommandWithParameters::SetParameterProperties** dopo che la struttura SSPARAMPROPS è stata compilata dalla matrice della proprietà.  
   
  Il metodo **SetParameterInfo** deve essere chiamato prima del metodo **ISSCommandWithParameters::SetParameterProperties**. Se si chiama `SetParameterProperties(0, NULL)`, si cancellano tutte le proprietà di parametro specificate, mentre se si chiama `SetParameterInfo(0,NULL,NULL)`, si cancellano tutte le informazioni di parametro che includono le proprietà che potrebbero essere associate a un parametro.  
@@ -73,7 +73,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- I miglioramenti apportati al motore [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] di database a partire da consentono a ISSCommandWithParameters:: SetParameterProperties di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da ISSCommandWithParameters:: SetParameterProperties nelle versioni precedenti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]di. Per altre informazioni, vedere [Metadata Discovery](../../oledb/features/metadata-discovery.md).  
+ I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] consentono a ISSCommandWithParameters::SetParameterProperties di ottenere descrizioni più accurate dei risultati previsti. È possibile che questi risultati più accurati differiscano dai valori restituiti da ISSCommandWithParameters::SetParameterProperties nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../../oledb/features/metadata-discovery.md).  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
@@ -82,6 +82,6 @@ HRESULT SetParameterProperties(
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLE DB &#40;ISSCommandWithParameters&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

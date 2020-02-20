@@ -1,10 +1,7 @@
 ---
-title: 'Lezione 2: Uso dello strumento Ottimizzazione guidata motore di database | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/01/2017
+title: Uso di Ottimizzazione guidata motore di database
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +9,21 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2f526510f69a91e3228431953f73717790246f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034734"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307630"
 ---
-# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Utilizzo dello strumento Ottimizzazione guidata motore di database
+# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Uso di Ottimizzazione guidata motore di database
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 Lo strumento Ottimizzazione guidata motore di database consente di ottimizzare i database, gestire le sessioni di ottimizzazione e visualizzare le indicazioni di ottimizzazione. Gli utenti esperti di strutture di progettazione fisica possono utilizzare questo strumento per analisi esplorative di ottimizzazione dei database. Gli utenti inesperti di ottimizzazione di database possono utilizzare lo strumento per individuare la migliore configurazione delle strutture di progettazione fisica per i carichi di lavoro che desiderano ottimizzare. Questa lezione illustra le tecniche di base per gli amministratori di database che non conoscono l'interfaccia utente grafica dello strumento Ottimizzazione guidata motore di database e per gli amministratori di sistema con una conoscenza limitata delle strutture di progettazione fisica.  
 
 ## <a name="prerequisites"></a>Prerequisites 
@@ -35,12 +38,12 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
-  > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e le attività di amministrazione del database di base. 
+  > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e con attività semplici di amministrazione del database. 
   
 ## <a name="tuning-a-workload"></a>Ottimizzazione di un carico di lavoro
 Per individuare la migliore struttura fisica di database per l'esecuzione di query sulle tabelle e i database selezionati per l'ottimizzazione, è possibile utilizzare Ottimizzazione guidata motore di database.  
 
-1.  Copiare un'istruzione [Select](../../t-sql/queries/select-examples-transact-sql.md) di esempio e incollare l'istruzione nell'editor di query [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]di. Salvare il file con il nome **MyScript.sql** in una directory in cui sia possibile individuarlo facilmente. Di seguito è riportato un esempio che funziona con il database AdventureWorks2017.  
+1.  Copiare un'istruzione [SELECT](../../t-sql/queries/select-examples-transact-sql.md) di esempio e incollare l'istruzione nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salvare il file con il nome **MyScript.sql** in una directory in cui sia possibile individuarlo facilmente. Di seguito è riportato un esempio che funziona con il database AdventureWorks2017.  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -60,19 +63,19 @@ Per individuare la migliore struttura fisica di database per l'esecuzione di que
  GO
  ```
 
-  ![Salva query SQL](media/dta-tutorials/dta-save-query.png)
+  ![Salvare la query SQL](media/dta-tutorials/dta-save-query.png)
   
-2.  Avviare Ottimizzazione guidata motore di database. Selezionare **Ottimizzazione guidata database** dal menu **strumenti** in SQL Server Management Studio (SSMS).  Per altre informazioni, vedere [Avviare Ottimizzazione guidata motore di database](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor). Connettersi al SQL Server nella finestra di dialogo **Connetti al server** .  
+2.  Avviare Ottimizzazione guidata motore di database. Selezionare **Ottimizzazione guidata di database** dal menu **Strumenti** in SQL Server Management Studio (SSMS).  Per altre informazioni, vedere [Avviare Ottimizzazione guidata motore di database](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor). Connettersi a SQL Server nella finestra di dialogo **Connetti a server**.  
   
 3.  Nella scheda **Generale** del riquadro destro dell'interfaccia utente grafica di Ottimizzazione guidata motore di database digitare **MySession** in **Nome sessione**. 
   
-4.  Selezionare **file** per il **carico di lavoro**e selezionare l'icona del binocolo per cercare **un file del carico di lavoro**. Individuare il file **script. SQL** salvato nel passaggio 1.  
+4.  Selezionare **File** per il **carico di lavoro** e selezionare l'icona a forma di binocolo che **consente di cercare un file di carico di lavoro**. Individuare il file **MyScript.sql** salvato nel passaggio 1.  
 
    ![Trovare lo script salvato in precedenza](media/dta-tutorials/dta-script.png)
   
 5.  Selezionare AdventureWorks2017 nell'elenco **Database per l'analisi del carico di lavoro**, selezionare AdventureWorks2017 nella griglia **Selezionare i database e le tabelle da ottimizzare** e selezionare **Salva log di ottimizzazione**. **Database per l'analisi del carico di lavoro** specifica il primo database al quale Ottimizzazione guidata motore di database si connette durante l'ottimizzazione di un carico di lavoro. Dopo l'inizio dell'ottimizzazione, Ottimizzazione guidata motore di database si connette ai database specificati dalle istruzioni `USE DATABASE` contenute nel carico di lavoro.  
 
-  ![Opzioni DTA per database](media/dta-tutorials/dta-select-db.png)
+  ![Opzioni di ottimizzazione guidata di database](media/dta-tutorials/dta-select-db.png)
   
 6.  Selezionare la scheda **Opzioni di ottimizzazione** . In questa esercitazione non verranno impostate le opzioni di ottimizzazione, tuttavia è utile analizzare brevemente le opzioni di ottimizzazione predefinite. Premere F1 per visualizzare la Guida relativa a questa pagina a schede. Fare clic su **Opzioni avanzate** per visualizzare le opzioni di ottimizzazione aggiuntive. Fare clic su **?** nella finestra di dialogo **Opzioni di ottimizzazione avanzate** per ottenere informazioni sulle opzioni di ottimizzazione visualizzate. Fare clic su **Annulla** per chiudere la finestra di dialogo **Opzioni di ottimizzazione avanzate** lasciando selezionate le opzioni predefinite.  
 
@@ -82,12 +85,12 @@ Per individuare la migliore struttura fisica di database per l'esecuzione di que
   
     Se viene visualizzato un errore relativo alla data e ora di arresto dell'ottimizzazione, controllare l'impostazione **Data e ora arresto** nella scheda principale **Opzioni di ottimizzazione** . Verificare che i valori **Data e ora arresto** siano successivi alla data e all'ora correnti e, se necessario, modificarli.  
 
-  ![Avviare l'analisi DTA](media/dta-tutorials/dta-start-analysis.png)
+  ![Avviare l'analisi di ottimizzazione guidata di database](media/dta-tutorials/dta-start-analysis.png)
 
   
 8.  Dopo aver completato l'analisi, salvare le indicazioni come script [!INCLUDE[tsql](../../includes/tsql-md.md)] scegliendo **Salva indicazioni** dal menu **Azioni** . Nella finestra di dialogo **Salva con nome** trovare la directory in cui si vuole salvare lo script delle indicazioni e digitare il nome file **MyRecommendations**.  
 
-  ![Salva le raccomandazioni DTA](media/dta-tutorials/dta-save-recommendations.png)
+  ![Salvare le raccomandazioni di ottimizzazione guidata di database](media/dta-tutorials/dta-save-recommendations.png)
 
 ## <a name="view-tuning-recommendations"></a>Visualizzazione delle indicazioni di ottimizzazione
   
@@ -95,7 +98,7 @@ Per individuare la migliore struttura fisica di database per l'esecuzione di que
   
     In caso di difficoltà nell'individuazione di una **Definizione** contenente un collegamento, deselezionare la casella di controllo **Mostra oggetti esistenti** nella parte inferiore della pagina a schede. In questo modo verrà ridotto il numero di righe visualizzate. Quando viene deselezionata questa casella di controllo, in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono visualizzati solo gli oggetti per i quali è stata generata un'indicazione. Selezionare la casella di controllo **Mostra oggetti esistenti** per visualizzare tutti gli oggetti di database attualmente esistenti nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Utilizzare la barra di scorrimento sul lato sinistro della pagina a schede per visualizzare tutti gli oggetti.
 
-  ![Raccomandazione per gli indici DTA](media/dta-tutorials/dta-recommendation.png)  
+  ![Raccomandazione sull'indice di ottimizzazione guidata di database](media/dta-tutorials/dta-recommendation.png)  
   
 2.  Fare clic con il pulsante destro del mouse sulla griglia nel riquadro **Indicazioni relative agli indici** . Il menu di scelta rapida consente di selezionare e deselezionare le indicazioni. Consente inoltre di modificare il carattere del testo utilizzato nella griglia.  
  
@@ -113,7 +116,7 @@ Per individuare la migliore struttura fisica di database per l'esecuzione di que
   
 6.  Digitare **EvaluateMySession** come nuovo **Nome sessione**e fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. È possibile ripetere i passaggi 2 e 3 per questa nuova sessione di ottimizzazione in modo da visualizzare le indicazioni.  
   
-### <a name="summary"></a>Riepilogo  
+### <a name="summary"></a>Summary  
 La valutazione di un subset di indicazioni può essere necessaria se le opzioni di ottimizzazione devono essere modificate dopo aver eseguito una sessione. Si supponga ad esempio di richiedere a Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] di considerare le viste indicizzate quando si specificano le opzioni di ottimizzazione per una sessione, ma che dopo la generazione dell'indicazione si decida di non utilizzare le viste indicizzate. In questo caso è possibile scegliere **Valuta indicazioni** dal menu **Azioni** per valutare nuovamente la sessione in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] senza tenere in considerazione le viste indicizzate. Quando viene utilizzata l'opzione **Valuta indicazioni** , le indicazioni generate precedentemente vengono applicate in maniera ipotetica alla progettazione fisica corrente per poi arrivare alla progettazione fisica per la seconda sessione di ottimizzazione.  
   
 Altre informazioni sui risultati delle ottimizzazioni sono disponibili nella scheda **Report** che verrà illustrata nell'attività successiva di questa lezione.  
@@ -122,14 +125,14 @@ Altre informazioni sui risultati delle ottimizzazioni sono disponibili nella sch
 Sebbene sia utile visualizzare gli script che è possibile usare per implementare i risultati dell'ottimizzazione, in Ottimizzazione guidata motore di database sono disponibili anche numerosi report utili. Tali report offrono informazioni sulle strutture di progettazione fisica esistenti nel database che si sta ottimizzando e sulle strutture consigliate. È possibile visualizzare i report di ottimizzazione facendo clic sulla scheda **Report** descritta nell'attività seguente.
 
 
-1. Selezionare la scheda **report** di ottimizzazione guidata motore di database. 
+1. Selezionare la scheda **Report** nell'ottimizzazione guidata di database. 
 2. Nel riquadro **Riepilogo ottimizzazione** è possibile visualizzare le informazioni sulla sessione di ottimizzazione. Utilizzare la barra di scorrimento per visualizzare tutto il contenuto del riquadro. Si notino i valori di **Miglioramento percentuale previsto** e **Spazio utilizzato seguendo le indicazioni**. È possibile limitare lo spazio utilizzato per le indicazioni quando si impostano le opzioni di ottimizzazione. Nella scheda **Opzioni di ottimizzazione** selezionare **Opzioni avanzate**. Selezionare **Spazio massimo per le indicazioni** e specificare lo spazio massimo in megabyte che può essere usato da una configurazione consigliata. Usare il pulsante **Indietro** nel visualizzatore della Guida per tornare a questa esercitazione. 
 
     ![Riepilogo ottimizzazione di Ottimizzazione guidata motore di database](media/dta-tutorials/dta-tuning-summary.png)
   
 3.  Nell'elenco **Selezionare il report** del riquadro **Report ottimizzazione** fare clic su **Report costo istruzioni** . Se è necessario più spazio per la visualizzazione del report, trascinare il bordo del riquadro **Monitoraggio sessione** verso sinistra. Ad ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita su una tabella del database è associato un costo delle prestazioni. Tale costo può essere ridotto creando indici efficaci sulle colonne di una tabella alle quali si accede di frequente. In questo report viene illustrato il miglioramento percentuale previsto tra il costo originale dell'esecuzione di un'istruzione del carico di lavoro e il costo previsto se viene implementata l'indicazione di ottimizzazione. Si noti che la quantità di informazioni contenute nel report dipende dalla lunghezza e dalla complessità del carico di lavoro.  
 
-    ![Rapporto DTA-costo istruzioni](media/dta-tutorials/dta-statement-cost.png)
+    ![Report di ottimizzazione guidata di database - Costo delle istruzioni](media/dta-tutorials/dta-statement-cost.png)
   
 4.  Fare clic con il pulsante destro del mouse sul riquadro **Report costo istruzioni** nell'area della griglia e quindi scegliere **Esporta in un file**. Salvare il report con il nome **MyReport**. L'estensione xml verrà aggiunta al nome del file automaticamente. Per visualizzare il contenuto del file MyReport.xml, è possibile aprire il report nell'editor XML preferito o in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
@@ -137,12 +140,12 @@ Sebbene sia utile visualizzare gli script che è possibile usare per implementar
   
 6.  Fare clic sugli altri report disponibili nell'elenco **Selezionare report** in modo da acquisire maggiore familiarità.  
   
-### <a name="summary"></a>Riepilogo  
+### <a name="summary"></a>Summary  
 A questo punto è stata esaminata la scheda **Report** dell'interfaccia utente grafica di Ottimizzazione guidata motore di database per la sessione di ottimizzazione di MySession. È possibile eseguire gli stessi passaggi per esplorare i report creati per la sessione di ottimizzazione di EvaluateMySession. Nel riquadro **Monitoraggio sessione** fare doppio clic su **EvaluateMySession** per iniziare.  
 
 
  ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 3: Uso dell'utilità del prompt dei comandi DTA](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lezione 3: Uso dell'utilità del prompt dei comandi di ottimizzazione guidata di database](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
    
   
   

@@ -16,10 +16,10 @@ ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20850d10352a583abd7e0a8bd9747b6346ec3aaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980829"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>Metodo getPortNumber (SQLServerDataSource)
@@ -37,11 +37,11 @@ public int getPortNumber()
 ## <a name="return-value"></a>Valore restituito  
  Valore **int** contenente il numero di porta corrente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il numero di porta è il numero di porta TCP/IP usato quando si apre una connessione socket a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la proprietà portNumber non è impostata, il metodo getPortNumber restituisce il valore predefinito 1433.  
   
 > [!NOTE]  
->  Il metodo [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) non esegue alcun controllo di intervallo sul valore di porta passato. È possibile passare numeri illeciti non validi, ad esempio 99999, senza generare un errore.  
+>  Il metodo [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) non esegue alcun controllo dell'intervallo sul valore di porta passato. È possibile passare numeri di porta non validi, ad esempio 99999, senza generare un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

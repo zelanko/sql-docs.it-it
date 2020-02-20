@@ -1,27 +1,26 @@
 ---
-title: 'Avvio rapido: Tipi di dati R'
-titleSuffix: SQL Server Machine Learning Services
-description: Questo argomento di avvio rapido illustra come usare tipi di dati e oggetti dati in R e SQL Server con Machine Learning Services per SQL Server.
+title: 'Avvio rapido: Strutture di dati, tipi di dati e oggetti R'
+description: In questo argomento di avvio rapido si scoprirà come usare le strutture di dati, i tipi di dati e gli oggetti quando si usa R in Machine Learning Services per SQL Server. Si apprenderà come trasferire i dati tra R e SQL Server e verranno illustrati i problemi comuni che potrebbero verificarsi.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726981"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916409"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Avvio rapido: Gestire tipi di dati e oggetti usando R in Machine Learning Services per SQL Server
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Avvio rapido: Strutture di dati, tipi di dati e oggetti quando si usa R in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questo argomento di avvio rapido verranno illustrati alcuni problemi comuni che si verificano quando si spostano i dati tra R e SQL Server. L'esperienza acquisita con questo esercizio fornisce informazioni di base essenziali per usare i dati in uno script personalizzato.
+In questo argomento di avvio rapido si scoprirà come usare le strutture di dati e i tipi di dati quando si usa R in Machine Learning Services per SQL Server. Si apprenderà come trasferire i dati tra R e SQL Server e verranno illustrati i problemi comuni che potrebbero verificarsi.
 
 I problemi comuni da tenere in considerazione includono:
 
@@ -186,7 +185,7 @@ Adesso R restituisce come risultato un valore singolo.
 |---|
 |1542|
 
-Per quale motivo? In questo caso, dal momento che i due argomenti possono essere gestiti come vettori della stessa lunghezza, R restituisce il prodotto interno come oggetto matrix.  Questo è il comportamento previsto in base alle regole dell'algebra lineare; tuttavia, potrebbe causare problemi se l'applicazione downstream prevede che lo schema di output non venga mai modificato.
+Perché? In questo caso, dal momento che i due argomenti possono essere gestiti come vettori della stessa lunghezza, R restituisce il prodotto interno come oggetto matrix.  Questo è il comportamento previsto in base alle regole dell'algebra lineare; tuttavia, potrebbe causare problemi se l'applicazione downstream prevede che lo schema di output non venga mai modificato.
 
 > [!TIP]
 > 
@@ -286,7 +285,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 - La colonna datetime è stata elaborata usando il tipo di dati R **POSIXct**.
 - La colonna di testo "ProductSeries" è stata identificata come **fattore**, vale a dire una variabile di categoria. Per impostazione predefinita, i valori stringa sono gestiti come fattori. Se si passa una stringa a R, viene convertita in un numero intero per uso interno e quindi rimappata alla stringa nell'output.
 
-### <a name="summary"></a>Riepilogo
+### <a name="summary"></a>Summary
 
 Da questi brevi esempi è possibile capire la necessità di controllare gli effetti della conversione dei dati quando si passano query SQL come input. Poiché alcuni tipi di dati di SQL Server non sono supportati da R, tenere in considerazione questi suggerimenti per evitare errori:
 

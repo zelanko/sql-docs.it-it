@@ -1,10 +1,9 @@
 ---
-title: Proprietà delle tabelle (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Table Properties
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261570"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242175"
 ---
 # <a name="table-properties-visual-database-tools"></a>Proprietà delle tabelle (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +63,7 @@ Visualizza la colonna utilizzata come colonna Identity della tabella. Per cambia
 **Is Indexable**  
 Indica se la tabella può essere indicizzata. Se la tabella non è indicizzabile, è possibile che non appartenga all'utente o che contenga colonne con tipi di dati text, ntext o image.  
   
-**Is Replicated**  
+**Replicato**  
 Indica se la tabella è replicata in un'altra posizione  
   
 **Categoria Specifica spazio dei dati regolare**  
@@ -84,5 +85,5 @@ Visualizza la colonna utilizzata da Microsoft SQL Server come colonna ROWGUID de
 Consente di selezionare nell'elenco a discesa il filegroup per le colonne con tipi di dati text o image. Se la tabella viene archiviata utilizzando uno schema di partizione, lasciare vuoto il campo.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Progettare tabelle (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Progettare tabelle](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

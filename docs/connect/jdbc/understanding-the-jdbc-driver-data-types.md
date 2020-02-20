@@ -11,10 +11,10 @@ ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027268"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Informazioni sui tipi di dati del driver JDBC

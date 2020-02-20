@@ -1,24 +1,26 @@
 ---
 title: Che cos'è la distribuzione di applicazioni?
-titleSuffix: Big Data Clusters for SQL Server 2019
+titleSuffix: SQL Server Big Data Clusters
 description: Questo articolo descrive la distribuzione delle applicazioni in un cluster Big Data per SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653001"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831574"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster Big Data di SQL Server 2019?
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster Big Data?
 
-La distribuzione di applicazioni consente di distribuire applicazioni nel cluster Big Data fornendo interfacce per la creazione, la gestione e l'esecuzione di applicazioni. Le applicazioni distribuite nel cluster Big Data traggono vantaggio dalla potenza di calcolo del cluster e possono accedere ai dati disponibili nel cluster. In questo modo, viene aumentata la scalabilità e le prestazioni delle applicazioni nel caso in cui le applicazioni gestite si trovino nella posizione in cui risiedono i dati.
+La distribuzione di applicazioni consente di distribuire applicazioni nel cluster Big Data fornendo interfacce per la creazione, la gestione e l'esecuzione di applicazioni. Le applicazioni distribuite nel cluster Big Data traggono vantaggio dalla potenza di calcolo del cluster e possono accedere ai dati disponibili nel cluster. In questo modo, viene aumentata la scalabilità e le prestazioni delle applicazioni nel caso in cui le applicazioni gestite si trovino nella posizione in cui risiedono i dati. I runtime dell'applicazione supportati nei cluster Big Data di SQL Server sono R, Python, SSIS e MLeap.
+
 Le sezioni seguenti descrivono l'architettura e le funzionalità della distribuzione di applicazioni.
 
 ## <a name="application-deployment-architecture"></a>Architettura della distribuzione di applicazioni

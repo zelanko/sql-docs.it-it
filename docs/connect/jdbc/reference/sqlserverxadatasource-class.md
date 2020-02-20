@@ -11,10 +11,10 @@ ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c456336170cd7d4ad7cf37a0eebc52637f0a070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970228"
 ---
 # <a name="sqlserverxadatasource-class"></a>Classe SQLServerXADataSource
@@ -35,10 +35,10 @@ ms.locfileid: "67970228"
 public class SQLServerXADataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un oggetto che implementa l'interfaccia SQLServerXADataSource viene generalmente registrato con un servizio di denominazione che usa l'interfaccia JNDI (Java Naming and Directory Interface).  
   
- La classe SQLServerXADataSource specifica connessioni di database da usare nelle transazioni distribuite (XA). La classe SQLServerXADataSource supporta anche il pool di connessioni fisiche. Le interfacce SQLServerXADataSource e SQLServerXAConnection, definite nel pacchetto javax. SQL, vengono implementate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ La classe SQLServerXADataSource specifica connessioni di database da usare nelle transazioni distribuite (XA). La classe SQLServerXADataSource supporta anche il pool di connessioni fisiche. Le interfacce SQLServerXADataSource e SQLServerXAConnection, definite nel pacchetto javax.sql, vengono implementate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Un oggetto SQLServerXAConnection è una connessione in pool che può partecipare a una transazione distribuita. Più precisamente, SQLServerXAConnection estende l'interfaccia SQLServerPooledConnection aggiungendo il metodo [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md). Questo metodo produce un oggetto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) che può essere usato da un gestore transazioni per coordinare le attività eseguite in questa connessione con gli altri partecipanti della transazione distribuita. Poiché estendono l'interfaccia SQLServerPooledConnection, gli oggetti SQLServerXAConnection supportano tutti i metodi degli oggetti SQLServerPooledConnection. Si tratta di connessioni fisiche riutilizzabili a un'origine dati sottostante che generano handle di connessioni logiche che possono essere passati nuovamente a un'applicazione JDBC.  
   

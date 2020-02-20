@@ -1,6 +1,6 @@
 ---
-title: Proprietà - Protocolli per MSSQLSERVER (scheda Certificato) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - Protocolli per MSSQLSERVER (scheda Certificato)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,16 +15,16 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1dd00a167765e80a67daa6e795330fdbcf04e3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b19b12a55f1afee35ed351ab6033179c17be89a8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058483"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306376"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Proprietà - Protocolli per MSSQLSERVER (scheda Certificato)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Utilizzare la scheda **Certificato** della finestra di dialogo **Proprietà - Protocolli per MSSQLSERVER** per selezionare un certificato per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o visualizzare le proprietà di un certificato. Tutti i campi sono vuoti se non è selezionato alcun certificato.  
+  Usare la scheda **Certificato** della finestra di dialogo **Proprietà - Protocolli per MSSQLSERVER** per selezionare un certificato per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o visualizzare le proprietà di un certificato. Tutti i campi sono vuoti se non è selezionato alcun certificato.  
   
  I certificati per gli utenti vengono archiviati nel computer locale. Per caricare un certificato da utilizzare con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario eseguire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con lo stesso account utente del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68058483"
  **Cancella**  
  Rimuove la selezione dalla casella **Certificato** .  
   
- **Certificato**  
+ **Certificate**  
  Nome del certificato come stabilito dal provider di sicurezza. Selezionare un certificato per visualizzarne i dettagli nella griglia delle proprietà.  
   
 ## <a name="options"></a>Opzioni  

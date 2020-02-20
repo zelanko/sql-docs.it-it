@@ -12,10 +12,10 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574801"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domini applicazione per applicazioni del server di report
@@ -36,7 +36,7 @@ ms.locfileid: "65574801"
   
  Nella tabella seguente viene riepilogato il comportamento del riciclo del dominio applicazione in risposta a questi eventi:  
   
-|Evento|Descrizione evento|Applicabile a|Configurabile|Descrizione dell'operazione di riciclo|  
+|Event|Descrizione evento|Si applica a|Configurabile|Descrizione dell'operazione di riciclo|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |Operazioni di riciclo pianificate eseguite a intervalli predefiniti|Per impostazione predefinita, i domini applicazione vengono riciclati ogni 12 ore.<br /><br /> Le operazioni di riciclo pianificate vengono in genere utilizzate per applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] che agevolano l'integrità complessiva del processo.|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|Sì. L'impostazione di configurazione**RecycleTime** nel file RSReportServer.config determina l'intervallo di riciclo.<br /><br /> **MaxAppDomainUnloadTime** consente di impostare il tempo di attesa durante il quale è possibile completare l'elaborazione in background.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .<br /><br /> Per l'applicazione di elaborazione in background, il server di report crea un nuovo dominio applicazione per i nuovi processi avviati in base alle pianificazioni. I processi già in corso possono essere completati nel dominio applicazione corrente entro la scadenza del tempo di attesa.|  
 |Modifiche alla configurazione sul server di report|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i domini applicazione verranno riciclati in risposta alle modifiche apportate al file RSReportServer.config.|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|No.|Non è possibile arrestare le operazioni di riciclo. Tuttavia, le operazioni di riciclo eseguite in risposta alle modifiche alla configurazione vengono gestite in modo analogo alle operazioni di riciclo pianificate. Per le nuove richieste vengono creati nuovi domini applicazione, mentre le richieste e i processi in corso vengono completati nel dominio applicazione corrente.|  
@@ -56,7 +56,7 @@ ms.locfileid: "65574801"
   
  I domini applicazione per il servizio Web ReportServer, Gestione report e l'applicazione di elaborazione in background potrebbero essere riciclati contemporaneamente o individualmente, in base alle circostanze che determinano il verificarsi del riciclo:  
   
--   Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] influiscono solo sulle applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , ovvero servizio Web ReportServer e Gestione report. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , i domini applicazione verranno riciclati. Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sono in genere indipendenti da quelle per l'applicazione di elaborazione in background.  
+-   Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] interessano solo le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]: servizio Web ReportServer e Gestione Report. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , i domini applicazione verranno riciclati. Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sono in genere indipendenti da quelle per l'applicazione di elaborazione in background.  
   
 -   Le operazioni di riciclo avviate dal server di report influiscono in genere sul servizio Web ReportServer, su Gestione report e sull'applicazione di elaborazione in background. Le operazioni di riciclo vengono eseguite in risposta alle modifiche alle impostazioni di configurazione e ai riavvii del servizio.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65574801"
   
  Nella tabella seguente vengono descritti questi elementi.  
   
-|Elemento|Applicabile a|Definizione|  
+|Elemento|Si applica a|Definizione|  
 |-------------|----------------|----------------|  
 |**RecycleTime**|Tutti i tre domini applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Specifica la frequenza di riciclo dei domini applicazione. La pianificazione predefinita per il riciclo è conforme al modello di 12 ore seguito in genere per il riciclo dei domini applicazione di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . All'ora pianificata, tutte le nuove richieste vengono inoltrate a una nuova istanza del dominio applicazione. Le richieste attualmente in corso nell'istanza originale possono proseguire fino al loro completamento. Dopo che tutti i processi sono stati completati, l'istanza originale viene eliminata e la nuova istanza diviene l'unica istanza del dominio applicazione attiva.<br /><br /> Il valore predefinito è 720 minuti.|  
 |**MaxAppDomainUnloadTime**|Solo dominio applicazione dell'elaborazione in background|Per impostazione predefinita, in un server di report viene allocato un tempo di attesa di 30 minuti durante il quale un dominio applicazione può essere arrestato nel corso di un'operazione di riciclo. Se non è possibile completare i processi attualmente in corso entro il tempo stabilito o se l'esecuzione di un processo richiede più tempo rispetto al tempo di attesa, l'istanza del dominio applicazione viene riavviata immediatamente. Tutti i processi non completati vengono terminati.<br /><br /> Per altre informazioni su come visualizzare lo stato o annullare i processi in esecuzione nel server di report, vedere [Annulla processi server di report &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md).|  

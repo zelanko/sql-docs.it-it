@@ -1,7 +1,7 @@
 ---
-title: Percorsi dei file per le istanze predefinite e denominate di SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: Percorsi dei file
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 033090c5650455b16e846200e8b8caf8a3940b48
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: da7f187cc388e08f4d1f0307ba6fae78c58e6489
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055199"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253484"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Percorsi dei file per le istanze predefinite e denominate di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "74055199"
 >   
 >  Non eliminare nessuna delle directory seguenti o il relativo contenuto: Binn, Data, Ftdata, HTML o 1033. Se necessario, è possibile eliminare altre directory; potrebbe non essere tuttavia possibile recuperare funzionalità o dati non più disponibili se prima non si disinstalla e quindi si reinstalla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non eliminare o modificare nessuno dei file htm disponibile nella directory HTML. Questi file sono necessari per il corretto funzionamento degli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>File condivisi per tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>File condivisi per tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  I file comuni usati da tutte le istanze in un singolo computer sono installati nella cartella [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*unità*> è la lettera corrispondente all'unità in cui sono installati i componenti. Il valore predefinito è in genere l'unità C. _nnn_ indica la versione. La tabella seguente indica le versioni per i percorsi. \{nn} è il valore della versione usato nell'ID istanza e nel percorso del Registro di sistema. 
 
 |Versione|\*nnn*|{nn}|

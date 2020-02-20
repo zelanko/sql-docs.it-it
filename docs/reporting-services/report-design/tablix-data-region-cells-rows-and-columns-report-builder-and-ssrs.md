@@ -1,6 +1,7 @@
 ---
-title: Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS) | Microsoft Docs
-ms.date: 03/07/2017
+title: Celle, righe e colonne in un'area dati Tablix | Microsoft Docs
+description: Per controllare come righe e colonne di un'area dati Tablix vengono visualizzate in un report impaginato di SQL Server Reporting Services, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -13,14 +14,15 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574720"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252403"
 ---
-# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
+# <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Celle, righe e colonne in un'area dati Tablix (Generatore report) e SSRS
+
   Per controllare la modalità di visualizzazione in un report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dei dati di righe e colonne di un'area dati Tablix, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali. Per visualizzare i dati, in molti casi è possibile utilizzare le strutture predefinite per una tabella, una matrice o un elenco. Per altre informazioni, vedere [Tabelle &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Creare una matrice (Generatore report e SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Creare le fatture e form con elenchi (Generatore report e SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  In un'area dati Tablix i dati di dettaglio sono visualizzati in righe e colonne di dettaglio e i dati raggruppati in righe e colonne di gruppo. Quando si aggiungono gruppi di righe e colonne a un'area dati Tablix, le righe e le colonne in cui visualizzare i dati vengono aggiunte automaticamente. È possibile aggiungerle e rimuoverle manualmente per personalizzare un'area dati Tablix e controllare la modalità di visualizzazione dei dati nel report.  
@@ -41,7 +43,7 @@ ms.locfileid: "65574720"
 |![Handle di riga con 3 linee parallele per la riga di dettaglio](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Handle di riga con 3 linee parallele per la riga di dettaglio")|Solo il gruppo di dettagli nella gerarchia dei gruppi di righe|  
 |![Handle di riga con riga di dettaglio e un gruppo esterno](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Handle di riga con riga di dettaglio e un gruppo esterno")|Un gruppo esterno e il gruppo di dettagli figlio|  
 |![Due parentesi parallele che indicano gruppi annidati](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "Due parentesi parallele che indicano gruppi annidati")|Un gruppo esterno, un gruppo interno. Nessun gruppo di dettagli|  
-|![Due parentesi e tre linee sovrapposte per gruppi annidati e gruppo di dettagli](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "Due parentesi e tre linee sovrapposte per gruppi annidati e gruppo di dettagli")|Un gruppo esterno, un gruppo interno e il gruppo di dettagli figlio|  
+|![2 parentesi e 3 linee in pila per un gruppo annidato di dettagli](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "2 parentesi e 3 linee in pila per un gruppo annidato di dettagli")|Un gruppo esterno, un gruppo interno e il gruppo di dettagli figlio|  
 |![Un gruppo esterno con riga di piè di pagina e un gruppo interno](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "Un gruppo esterno con riga di piè di pagina e un gruppo interno")|Un gruppo esterno con una riga di piè di pagina per i totali e un gruppo interno|  
 |![Parentesi del gruppo esterno, parentesi del gruppo interno, dettagli](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "Parentesi del gruppo esterno, parentesi del gruppo interno, dettagli")|Un gruppo esterno con una riga di piè di pagina per i totali, un gruppo interno con una riga piè di pagina per i totali e una riga dettagli|  
 |![Intestazione e piè di pagina padre e gruppo figlio](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "Intestazione e piè di pagina padre e gruppo figlio")|Un gruppo esterno con un'intestazione per le etichette e un piè di pagina per i totali e un gruppo interno. Nessun gruppo di dettagli|  
@@ -65,7 +67,7 @@ ms.locfileid: "65574720"
 ### <a name="grouping-pane"></a>Riquadro di raggruppamento  
  Nel riquadro di raggruppamento sono visualizzati i gruppi di righe e colonne per l'area dati Tablix attualmente selezionata nell'area di progettazione. Nella figura seguente viene illustrato il riquadro di raggruppamento per questa area dati Tablix.  
   
- ![Riquadro di raggruppamento per gruppi di righe e colonne annidate](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e colonne annidate")  
+ ![Riquadro di raggruppamento per gruppi di righe e di colonne annidati](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne annidati")  
   
  Il riquadro Gruppi di righe mostra il gruppo padre Category e il gruppo figlio Subcat. Il riquadro Gruppi di colonne mostra il gruppo padre Geography e il gruppo figlio CountryRegion, nonché il gruppo Year, ovvero un gruppo adiacente a Geography. Quando si seleziona il gruppo Subcat nel riquadro Gruppi di righe, il colore della barra del gruppo assume una sfumatura di arancione più scuro e la cella del membro del gruppo di righe corrispondente viene selezionata nell'area di progettazione.  
   
@@ -82,11 +84,11 @@ ms.locfileid: "65574720"
   
  Nella figura seguente viene illustrata un'area dati Tablix con gruppi di dettagli e gruppi di righe nidificati.  
   
- ![Visualizzazione Progettazione, aggiunta di righe del totale a un gruppo e una tabella](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Visualizzazione Progettazione, aggiunta di righe del totale a un gruppo e una tabella")  
+ ![Visualizzazione Progettazione, aggiunta delle righe dei totali a un gruppo e a una tabella](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Visualizzazione Progettazione, aggiunta delle righe dei totali a un gruppo e a una tabella")  
   
  Per un'area dati Tablix in cui sono visualizzati i dati di dettaglio, il gruppo di dettagli rappresenta il gruppo figlio più interno. Le righe aggiunte a un gruppo di dettagli si ripetono una volta per riga nel set di risultati della query relativa al set di dati collegato a questa area dati Tablix. Nella figura seguente viene illustrata l'ultima pagina del report visualizzabile in cui è possibile vedere le ultime righe di dettaglio e la riga del subtotale per l'ultimo ordine.  
   
- ![Anteprima, tabella con totali per il gruppo, ultime righe](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Anteprima, tabella con totali per il gruppo, ultime righe")  
+ ![Anteprima, tabella con totali dei gruppi, ultime righe](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Anteprima, tabella con totali dei gruppi, ultime righe")  
   
  Per ogni colonna in un'area dati Tablix, sono validi gli stessi principi. Ad esempio, una colonna può essere interna o esterna a ogni gruppo di colonne. Per visualizzare i totali, aggiungere una colonna all'esterno del gruppo.  
   

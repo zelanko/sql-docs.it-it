@@ -16,10 +16,10 @@ ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982857"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>Metodo getIdentifierQuoteString (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public java.lang.String getIdentifierQuoteString()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getIdentifierQuoteString viene specificato dal metodo getIdentifierQuoteString nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getIdentifierQuoteString viene specificato dal metodo getIdentifierQuoteString nell'interfaccia java.sql.DatabaseMetaData.  
   
  Quando si usa il driver JDBC di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] con un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo metodo restituisce le **virgolette** ("").  
   

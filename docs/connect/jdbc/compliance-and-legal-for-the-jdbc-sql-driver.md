@@ -1,5 +1,5 @@
 ---
-title: Conformità e diritto per il driver SQL JDBC | Microsoft Docs
+title: Conformità e note legali per il driver JDBC per SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 153f9c83699713c60eaa8d9020a86ca7fa415958
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028207"
 ---
 # <a name="jdbc-specification-compliance"></a>Conformità alla specifica JDBC

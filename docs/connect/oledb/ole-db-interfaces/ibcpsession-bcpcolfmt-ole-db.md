@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColFmt (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994574"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -43,7 +43,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo **BCPColFmt** viene usato per creare un'associazione tra i campi del file di dati BCP e le colonne di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Accetta come parametri la lunghezza, il tipo, il carattere di terminazione e la lunghezza del prefisso di una colonna e imposta ciascuna di queste proprietà per i singoli campi.  
   
  Se l'utente sceglie la modalità interattiva, questo metodo viene chiamato due volte, una volta per impostare il formato della colonna in base ai valori predefiniti (che dipendono dal tipo di colonna del server) e una volta per impostare il formato in base al tipo di client selezionato durante la modalità interattiva, per ogni colonna.  
@@ -64,7 +64,7 @@ HRESULT BCPColFmt(
   
 -   La lunghezza della sequenza di byte di terminazione facoltativa.  
   
- Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Per modificare ad esempio le impostazioni predefinite per tre campi in un file di dati dell'utente con cinque campi, chiamare prima `BCPColumns(5)` e quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e impostare *cbIndicator*, *cbUserData*e *cbUserDataTerm* su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
+ Ogni chiamata a **BCPColFmt** specifica il formato per un campo del file utente. Per modificare ad esempio le impostazioni predefinite per tre campi in un file di dati dell'utente con cinque campi, chiamare prima `BCPColumns(5)` e quindi chiamare **BCPColFmt** cinque volte, con tre di queste chiamate che impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su BCP_TYPE_DEFAULT e *cbIndicator*, *cbUserData* e *cbUserDataTerm* su 0, BCP_VARIABLE_LENGTH e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
   
 > [!NOTE]  
 >  Il metodo [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) deve essere chiamato prima di qualsiasi chiamata a **BCPColFmt**. È necessario chiamare **BCPColFmt** una volta per ogni colonna del file utente. Se **BCPColFmt** viene chiamato più di una volta per qualsiasi colonna del file utente, viene generato un errore.  
@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  Indice del campo nel file di dati dell'utente.  
   
  *eUserDataType*[in]  
- Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel driver OLE DB per il file di intestazione SQL Server (msoledbsql. h) con formato BCP_TYPE_XXX, ad esempio BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un file quando l'argomento **eUserDataType** è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
+ Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel file di intestazione di OLE DB Driver per SQL Server (msoledbsql.h) con il formato BCP_TYPE_XXX, ad esempio BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un file quando l'argomento **eUserDataType** è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
   
 -   Se la colonna di origine non è decimal o numeric, vengono utilizzate la precisione e la scala predefinite.  
   
@@ -113,7 +113,7 @@ HRESULT BCPColFmt(
  *idxServerCol*[in]  
  Posizione ordinale della colonna nella tabella del database. Il numero della prima colonna è 1. La posizione ordinale di una colonna viene indicata da **IColumnsInfo::GetColumnInfo** o da metodi simili. Se questo valore è 0, la copia bulk ignora il campo nel file di dati.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  S_OK  
  Il metodo è riuscito.  
   
@@ -130,7 +130,7 @@ HRESULT BCPColFmt(
  Errore di memoria insufficiente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLE DB &#40;IBCPSession&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

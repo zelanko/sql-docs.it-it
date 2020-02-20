@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578038"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -88,7 +88,7 @@ ms.locfileid: "65578038"
 ##  <a name="bkmk_standard_and_datadriven"></a> Sottoscrizioni standard e guidate dai dati  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta due tipi di sottoscrizione, vale a dire **standard** e **guidata dai dati**. Le sottoscrizioni standard vengono create e gestite da singoli utenti. Una sottoscrizione standard è costituita da valori statici, che non possono essere modificati durante l'elaborazione della sottoscrizione. Per ogni sottoscrizione standard esiste un solo set di opzioni di presentazione del report, opzioni di recapito e parametri del report.  
   
- Le sottoscrizioni guidate dai dati ottengono informazioni sulla sottoscrizione in fase di esecuzione eseguendo una query su un'origine dati esterna che fornisce valori utilizzati per specificare un destinatario, parametri del report o formato dell'applicazione. È possibile utilizzare le sottoscrizioni guidate dai dati se si dispone di un elenco di destinatari molto esteso o si desidera modificare l'output del report per ogni destinatario. Per utilizzare le sottoscrizioni guidate dai dati è necessario essere in grado di compilare query e sapere come vengono utilizzati i parametri. Le sottoscrizioni guidate dai dati vengono in genere create e gestite dagli amministratori dei server di report. Per ulteriori informazioni, vedere quanto segue:  
+ Le sottoscrizioni guidate dai dati ottengono informazioni sulla sottoscrizione in fase di esecuzione eseguendo una query su un'origine dati esterna che fornisce valori utilizzati per specificare un destinatario, parametri del report o formato dell'applicazione. È possibile utilizzare le sottoscrizioni guidate dai dati se si dispone di un elenco di destinatari molto esteso o si desidera modificare l'output del report per ogni destinatario. Per utilizzare le sottoscrizioni guidate dai dati è necessario essere in grado di compilare query e sapere come vengono utilizzati i parametri. Le sottoscrizioni guidate dai dati vengono in genere create e gestite dagli amministratori dei server di report. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3e00728af89cf85beb53ef667e91f4011b3fd9e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573553"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>Metodo di ConfigurationSetting - SetVirtualDirectory
@@ -43,7 +43,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  *lcid*  
  ID impostazioni locali della directory virtuale.  
   
- *Errore*  
+ *Error (Errore) (Error (Errore)e)*  
  [out] Descrizione dell'errore che si è verificato.  
   
  *HRESULT*  
@@ -52,7 +52,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un'applicazione può disporre di un solo nome della directory virtuale per tutte le prenotazioni URL.  
   
  VirtualDirectory deve essere conforme alle convenzioni di denominazione per le directory virtuali. VirtualDirectory non deve essere stringa vuota o spazio vuoto.  

@@ -1,6 +1,6 @@
 ---
 title: Database per le esercitazioni su RevoScaleR
-description: Esercitazione dettagliata su come creare un database SQL Server per le esercitazioni su R.
+description: 'Esercitazione di RevoScaleR 1: Come creare un database di SQL Server per le esercitazioni su R.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727127"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947209"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Creare un database e le autorizzazioni (esercitazioni su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 1 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Nella prima lezione viene descritta la configurazione di un database SQL Server e vengono illustrate le autorizzazioni necessarie per completare questa esercitazione. Usare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o a un altro editor di query per completare le attività seguenti:
+In questa esercitazione viene descritto come creare un database di SQL Server e impostare le autorizzazioni necessarie per completare le altre esercitazioni di questa serie. Usare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o a un altro editor di query per completare le attività seguenti:
 
 > [!div class="checklist"]
 > * Creare un nuovo database in cui archiviare i dati per il training e l'assegnazione dei punteggi di due modelli R
@@ -37,7 +37,6 @@ Per questa esercitazione è necessario un database per l'archiviazione di dati e
   
 2. Digitare un nome per il nuovo database: RevoDeepDive.
   
-
 ## <a name="create-a-login"></a>Crea un accesso
   
 1. Selezionare **Nuova query**e modificare il contesto del database sul database master.
@@ -115,7 +114,7 @@ In questa sezione sono elencati alcuni problemi comuni che possono verificarsi d
   
 - **Non ho privilegi DLL. Posso comunque seguire l'esercitazione**?
   
-    Sì, ma è necessario chiedere a un altro utente di precaricare i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e passare direttamente alla lezione successiva. In questa esercitazione le funzioni che richiedono privilegi DDL sono espressamente indicate (laddove possibile).
+    Sì, ma è necessario chiedere a un altro utente di precaricare i dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e passare direttamente all'esercitazione successiva. In questa esercitazione le funzioni che richiedono privilegi DDL sono espressamente indicate (laddove possibile).
 
     Chiedere inoltre all'amministratore di ricevere l'autorizzazione EXECUTE ANY EXTERNAL SCRIPT, necessaria per l'esecuzione dello script R, in remoto o tramite `sp_execute_external_script`.
 

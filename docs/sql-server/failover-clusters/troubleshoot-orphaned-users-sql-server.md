@@ -1,6 +1,7 @@
 ---
-title: Risolvere i problemi relativi agli utenti isolati (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Risolvere i problemi relativi agli utenti isolati
+description: Gli utenti isolati si verificano quando un account di accesso utente del database non esiste più nel database master. Questo argomento illustra come identificare e risolvere gli utenti isolati.
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063807"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822056"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68063807"
 > [!NOTE]  
 >  Per ridurre la creazione di utenti isolati, definire utenti del database indipendente per i database che potrebbero essere spostati. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-## <a name="background"></a>Informazioni preliminari  
+## <a name="background"></a>Background  
  Per connettersi a un database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un'entità di sicurezza (identità utente del database) basata su un account di accesso, l'entità deve avere un account di accesso valido nel database **master** . Tale account di accesso viene usato nel processo di autenticazione, che verifica l'identità dell'entità e determina se è autorizzata a connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server sono riportati nella vista del catalogo **sys.server_principals** e nella vista di compatibilità **sys.sql_logins** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di accedere a database singoli come "utente database", che viene mappato all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sono previste tre eccezioni a questa regola:  
@@ -55,7 +56,7 @@ ms.locfileid: "68063807"
   
  Un utente del database (basato su un account di accesso) il cui account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente non è definito o è definito in modo errato in un'istanza del server non potrà accedere a tale istanza. Questo utente viene definito *utente orfano* del database nell'istanza del server. È possibile che si verifichi l'isolamento se l'utente del database è mappato a un SID di accesso non presente nell'istanza di `master` . Un utente del database può diventare isolato dopo il ripristino o il collegamento del database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella quale non è mai stato creato l'account di accesso. Inoltre un utente del database può diventare isolato (orfano) se l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente viene rimosso. Anche se viene ricreato, l'account di accesso avrà un SID diverso, pertanto l'utente del database resterà isolato.  
   
-## <a name="to-detect-orphaned-users"></a>Per rilevare gli utenti isolati (orfani)  
+## <a name="detect-orphaned-users"></a>Rilevare gli utenti isolati  
 
 **Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e PDW**
 
@@ -95,7 +96,7 @@ La tabella `sys.server_principals` non è disponibile nel database SQL o in SQL 
 
 3. Confrontare i due elenchi per determinare se nella tabella `sys.database_principals` del database utente sono presenti SID utente privi di SID di accesso corrispondente nella tabella `sql_logins` del database master. 
   
-## <a name="to-resolve-an-orphaned-user"></a>Per risolvere un utente isolato (orfano)  
+## <a name="resolve-an-orphaned-user"></a>Risolvere un utente isolato  
 Nel database master usare l'istruzione [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) con l'opzione SID per ricreare un account di accesso mancante, fornendo il `SID` dell'utente database ottenuto nella sezione precedente:  
   
 ```  

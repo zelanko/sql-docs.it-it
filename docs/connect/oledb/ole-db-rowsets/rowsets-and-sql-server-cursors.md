@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994184"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
@@ -62,7 +62,7 @@ ms.locfileid: "67994184"
   
  I consumer possono richiedere comportamenti del cursore diversi in un set di righe attraverso l'impostazione di determinate proprietà specifiche del set di righe. Se il consumer non imposta alcuna proprietà del set di righe o le imposta tutte sui rispettivi valori predefiniti, il driver OLE DB per SQL Server implementa il set di righe usando un set di risultati predefinito. Se una di queste proprietà è impostata su un valore diverso da quello predefinito, il driver OLE DB per SQL Server implementa il set di righe usando un cursore del server.  
   
- Le seguenti proprietà del set di righe indirizzano il driver OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per SQL Server per l'utilizzo dei cursori. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
+ Le proprietà del set di righe seguenti indicano a OLE DB Driver per SQL Server di usare i cursori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
   
 |ID proprietà|valore|Comportamento del set di righe|  
 |-----------------|-----------|---------------------|  
@@ -93,7 +93,7 @@ ms.locfileid: "67994184"
   
  Per utilizzare un determinato tipo di modello di cursore, individuare la colonna che corrisponde al modello desiderato e trovare tutte le proprietà del set di righe con valore 'T' nella colonna. Impostare queste proprietà del set di righe su VARIANT_TRUE per utilizzare il modello di cursore specifico. Le proprietà del set di righe con '-' come valore possono essere impostate su VARIANT_TRUE o VARIANT_FALSE.  
   
-|Proprietà del set di righe/modelli di cursore|Default<br /><br /> result<br /><br /> set<br /><br /> (RO)|Veloce<br /><br /> forward-<br /><br /> only<br /><br /> (RO)|Statico<br /><br /> (RO)|Keyset<br /><br /> keyset<br /><br /> (RO)|  
+|Proprietà del set di righe/modelli di cursore|Predefinito<br /><br /> result<br /><br /> set<br /><br /> (RO)|Veloce<br /><br /> forward-<br /><br /> only<br /><br /> (RO)|Statico<br /><br /> (RO)|Keyset<br /><br /> keyset<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

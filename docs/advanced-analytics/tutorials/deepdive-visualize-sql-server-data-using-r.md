@@ -1,6 +1,6 @@
 ---
 title: Visualizzare i dati con RevoScaleR
-description: Esercitazione dettagliata su come visualizzare i dati usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 6: Come visualizzare i dati usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727116"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947364"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizzare i dati di SQL Server con R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 6 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa lezione si useranno le funzioni R per visualizzare la distribuzione dei valori nella colonna *creditLine* in base al sesso.
+In questa esercitazione si useranno le funzioni R per visualizzare la distribuzione dei valori nella colonna *creditLine* in base al sesso.
 
 > [!div class="checklist"]
 > * Creare variabili min-max per gli input dell'istogramma
 > * Visualizzare i dati in un istogramma usando la funzione **rxHistogram** di **RevoScaleR**
 > * Visualizzare i dati con i tracciati a dispersione usando la funzione **levelplot** del pacchetto **lattice** incluso nella distribuzione di R
 
-Come dimostra questa lezione, è possibile combinare funzioni open source e specifiche di Microsoft nello stesso script.
+Come dimostra questa esercitazione, è possibile combinare funzioni open source e specifiche di Microsoft nello stesso script.
 
 ## <a name="add-maximum-and-minimum-values"></a>Aggiungere valori minimi e massimi
 
-Le statistiche di riepilogo calcolate della lezione precedente hanno restituito informazioni utili sui dati che è possibile inserire nell'origine dati per ulteriori calcoli. Ad esempio, i valori minimo e massimo possono essere usati per calcolare istogrammi. In questo esercizio, aggiungere i valori minimo e massimo all'origine dati **RxSqlServerData**.
+Le statistiche di riepilogo calcolate nell'esercitazione precedente hanno restituito informazioni utili sui dati che è possibile inserire nell'origine dati per ulteriori calcoli. Ad esempio, i valori minimo e massimo possono essere usati per calcolare istogrammi. In questo esercizio, aggiungere i valori minimo e massimo all'origine dati **RxSqlServerData**.
 
 1. Per iniziare si configurano alcune variabili temporanee.
   
@@ -41,7 +41,7 @@ Le statistiche di riepilogo calcolate della lezione precedente hanno restituito 
     var <- sumDF$Name
     ```
   
-2. Usare la variabile *ccColInfo* creata nella lezione precedente per definire le colonne nell'origine dati.
+2. Usare la variabile *ccColInfo* creata nell'esercitazione precedente per definire le colonne nell'origine dati.
   
    Aggiungere nuove colonne calcolate (*numTrans*, *numIntlTrans*e *creditLine*) alla raccolta di colonne per eseguire l'override della definizione originale. Lo script seguente aggiunge fattori basati sui valori minimo e massimo, ottenuti da sumOut, che archivia l'output in memoria di **rxSummary**. 
   
@@ -124,7 +124,7 @@ I tracciati a dispersione vengono spesso usati durante l'esplorazione dei dati p
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    La funzione **rxCube** include l'argomento facoltativo *returnDataFrame* = **TRUE**, che può essere usato per convertire direttamente i risultati in un frame di dati. Esempio:
+    La funzione **rxCube** include l'argomento facoltativo *returnDataFrame* = **TRUE**, che può essere usato per convertire direttamente i risultati in un frame di dati. Ad esempio:
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

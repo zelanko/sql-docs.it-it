@@ -13,16 +13,16 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578070"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Recapito tramite la raccolta di SharePoint in Reporting Services
   In un server di report configurato per l'integrazione con SharePoint è disponibile un'estensione per il recapito che è possibile utili per inviare un report a una raccolta di SharePoint.  
   
- Per usare l'estensione per il recapito di SharePoint, è necessario creare una sottoscrizione da una pagina dell'applicazione in un sito di SharePoint, quindi selezionare **Raccolta documenti di SharePoint** come tipo di recapito. Non è possibile utilizzare l'estensione per il recapito di SharePoint per sottoscrizioni create in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o in Gestione report.  
+ Per usare l'estensione per il recapito di SharePoint, è necessario creare una sottoscrizione da una pagina dell'applicazione in un sito di SharePoint, quindi selezionare **Raccolta documenti di SharePoint** come tipo di recapito. Non è possibile usare l'estensione per il recapito di SharePoint per sottoscrizioni create in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o in Gestione report.  
   
 > [!NOTE]  
 >  L'estensione per il recapito non supporta l'invio di report a un sito di SharePoint se il server di report viene eseguito in modalità nativa. Se si cerca di chiamare l'estensione per il recapito a livello di programmazione per un server di report in modalità nativa, il server restituirà l'errore **rsDeliveryExtensionNotFound** e registrerà l'errore **rsOperationNotSupportedSharePointMode** nei file di log del server di report.  
@@ -68,10 +68,10 @@ ms.locfileid: "65578070"
  Nome ed estensione file  
  Specificare il nome e l'estensione file del report che si desidera visualizzare nella raccolta di destinazione. Se non si specifica un'estensione file, ne verrà creata una dal server di report in base al formato di output. Questo valore è obbligatorio. Il nome file non deve contenere i caratteri seguenti: : \ / * ? " < > | # { } %  
   
- Title  
+ Titolo  
  Specifica una proprietà **Title** facoltativa per il report nella raccolta di destinazione. Si tratta di una proprietà standard di tutti gli elementi archiviati in una raccolta. Gli utenti possono specificare se visualizzare o nascondere tale proprietà quando si visualizzano i contenuti della raccolta in un sito di SharePoint.  
   
- Percorso  
+ Path  
  Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio `https://mySharePointWeb/MySite/MyDocLib`, dove `https://mySharePointWeb` indica l'applicazione Web, "MySite" il sito di SharePoint e "MyDocLib" la raccolta di SharePoint a cui verrà recapitato il report.  
   
  Non è possibile specificare una pagina, un sito o un elenco. Il contenitore di destinazione deve essere una raccolta nello stesso sito o farm.  

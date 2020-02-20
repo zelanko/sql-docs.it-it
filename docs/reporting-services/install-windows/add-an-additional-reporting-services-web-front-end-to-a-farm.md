@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ec887dcd7d75ef2521258aaa4f37341b05467fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225602"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Aggiungere un ulteriore front-end Web di Reporting Services a una farm
@@ -41,7 +41,7 @@ ms.locfileid: "63225602"
   
 -   (4) Rappresenta una soluzione software o hardware di bilanciamento del carico di rete.  
   
- ![Aggiungere SSRS a un nuovo WFE di SharePoint](../../reporting-services/install-windows/media/rs-sharepointscale-wfe.gif "Aggiungere SSRS a un nuovo WFE di SharePoint")  
+ ![Aggiungere SSRS e un nuovo front-end Web di SharePoint](../../reporting-services/install-windows/media/rs-sharepointscale-wfe.gif "Aggiungere SSRS e un nuovo front-end Web di SharePoint")  
   
  Nei seguenti passaggi si presuppone che l'installazione e la configurazione del server vengano eseguite da un amministratore.  
   

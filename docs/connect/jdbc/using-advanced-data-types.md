@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di tipi di dati avanzati | Microsoft Docs
+title: Uso di tipi di dati avanzati | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027016"
 ---
 # <a name="using-advanced-data-types"></a>Uso di tipi di dati avanzati
@@ -23,7 +23,7 @@ ms.locfileid: "69027016"
 
 In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono usati i tipi di dati JDBC avanzati per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Nella tabella seguente sono riportati i mapping predefiniti tra i tipi di dati avanzati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC e del linguaggio di programmazione Java.  
   
@@ -32,13 +32,13 @@ Nella tabella seguente sono riportati i mapping predefiniti tra i tipi di dati a
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(default), Blob, InputStream, String|  
 |text<br /><br /> ntext|LONGVARCHAR|String (default), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
-|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
+|Xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (default), byte[], InputStream|  
-|sqlvariant|SQLVARIANT|Object|  
+|sqlvariant|SQLVARIANT|Oggetto|  
 |geometry<br /><br /> geography|VARBINARY|byte[]|  
 
 
-<sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'invio e il recupero di tipi definiti dall'utente (UDT) CLR come dati binari, ma non supporta la manipolazione dei metadati CLR.  
+<sup>1</sup>[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'invio e il recupero di tipi definiti dall'utente (UDT) CLR come dati binari, ma non supporta la manipolazione dei metadati CLR.  
   
 Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati avanzati.  
   
@@ -47,7 +47,7 @@ Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare i
 Nel driver JDBC sono implementati tutti i metodi delle interfacce java.sql.Blob, java.sql.Clob e java.sql.NClob.  
   
 > [!NOTE]  
-> I valori CLOB possono essere usati con i tipi di dati di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (o versioni successive) per valori di grandi dimensioni. In particolare, i tipi CLOB possono essere utilizzati con i tipi di dati **varchar (max)** e **nvarchar (max)** , i tipi di BLOB possono essere utilizzati con i tipi di dati **varbinary (max)** e **Image** e i tipi NCLOB possono essere utilizzati con **ntext** e **nvarchar (max )** .  
+> I valori CLOB possono essere usati con i tipi di dati di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (o versioni successive) per valori di grandi dimensioni. In particolare, i tipi CLOB possono essere usati con i tipi di dati **varchar(max)** e **nvarchar(max)** , i tipi di BLOB possono essere usati con i tipi di dati **varbinary(max)** e **image** e i tipi NCLOB possono essere usati con **ntext** e **nvarchar(max)** .  
 
 ## <a name="large-value-data-types"></a>Tipi di dati per valori di grandi dimensioni
 
@@ -66,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> Questo stesso approccio può essere utilizzato anche per i tipi di dati **Text**, **ntext**e **nvarchar (max)** .  
+> Questo stesso approccio può essere usato anche per i tipi di dati **text**, **ntext** e **nvarchar(max)** .  
 
 Quando si recupera un tipo di dati per valori di grandi dimensioni binario, ad esempio **varbinary(max)** , da un database, è possibile adottare diversi approcci. L'approccio più efficace consiste nel leggere i dati come flusso binario, come nell'esempio seguente:  
 
@@ -101,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> Questo approccio può essere utilizzato anche per valori archiviati in colonne di tipo **Text**, **ntext**e **nvarchar (max)** .  
+> Questo approccio può essere usato anche per valori archiviati in colonne **text**, **ntext** e **nvarchar(max)** .  
 
 Se nel server è presente una libreria di immagini ed è necessario caricare interi file di immagine binari in una colonna **varbinary(max)** , il modo più efficace per eseguire tale attività con il driver JDBC consiste nell'usare direttamente flussi, come nell'esempio seguente:  
 
@@ -148,7 +148,7 @@ Per ulteriori informazioni sui tipi per valori di grandi dimensioni, vedere la s
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile il tipo di dati **xml**, che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come accade con gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, come tipo di parametro o come tipo restituito da una funzione oppure nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST e CONVERT.  
   
-Nel driver JDBC, è possibile eseguire il mapping del tipo di dati **xml** come stringa, matrice di byte, flusso o oggetto CLOB, BLOB o SQLXML. Il mapping predefinito è come stringa. A partire da Microsoft JDBC Driver versione 2.0, il driver JDBC offre il supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il tipo di dati **SQLXML** viene mappato al tipo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dati **XML** . Per altre informazioni su come leggere e scrivere dati XML da e in un database relazionale con il tipo di dati Java **SQLXML**, vedere [Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md).  
+Nel driver JDBC, è possibile eseguire il mapping del tipo di dati **xml** come stringa, matrice di byte, flusso o oggetto CLOB, BLOB o SQLXML. Il mapping predefinito è come stringa. A partire da Microsoft JDBC Driver versione 2.0, il driver JDBC offre il supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il tipo di dati **SQLXML** corrisponde al tipo di dati **xml** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni su come leggere e scrivere dati XML da e in un database relazionale con il tipo di dati Java **SQLXML**, vedere [Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md).  
   
 L'implementazione del tipo di dati **xml** nel driver JDBC consente di supportare quanto segue:  
   
@@ -172,11 +172,11 @@ Per altre informazioni sui tipi di dati definiti dall'utente, vedere la sezione 
   
 ## <a name="sql_variant-data-type"></a>Tipo di dati sql_variant
 
-Per informazioni sul tipo di dati sql_variant, vedere [utilizzo del tipo di dati sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Per informazioni sul tipo di dati sql_variant, vedere [Uso del tipo di dati sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Tipi di dati spaziali
 
-Per informazioni sui tipi di dati spaziali, vedere Utilizzo di tipi di dati [spaziali](../../connect/jdbc/use-spatial-datatypes.md).  
+Per informazioni sui tipi di dati spaziali, vedere [Uso dei tipi di dati spaziali](../../connect/jdbc/use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>Vedere anche
 

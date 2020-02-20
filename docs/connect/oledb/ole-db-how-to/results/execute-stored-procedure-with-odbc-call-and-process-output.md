@@ -1,6 +1,6 @@
 ---
 title: Eseguire la stored procedure con ODBC CALL e l'output del processo | Microsoft Docs
-description: Elaborare i codici restituiti e i parametri di output usando OLE DB driver per SQL Server
+description: Elaborare i codici restituiti e i parametri di output usando OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015631"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Eseguire la stored procedure con la chiamata ODBC e l'output del processo
@@ -36,13 +36,13 @@ ms.locfileid: "68015631"
   
 2.  Creare un set di associazioni (uno per ogni marcatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-3.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor:: CreateAccessor** . **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
+3.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor::CreateAccessor**. **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
   
 4.  Completare la struttura DBPARAMS.  
   
 5.  Chiamare il comando **Execute**, rappresentato in questo caso da una chiamata a una stored procedure.  
   
-6.  Elaborare il set di righe e rilasciarlo utilizzando il metodo **IRowset:: Release** .  
+6.  Elaborare il set di righe e rilasciarlo usando il metodo **IRowset::Release**.  
   
 7.  Elaborare il codice restituito e i valori del parametro di output ricevuti dalla stored procedure.  
   

@@ -16,10 +16,10 @@ ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981729"
 ---
 # <a name="getmoreresults-method-"></a>Metodo getMoreResults ()
@@ -40,8 +40,8 @@ public final boolean getMoreResults()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getMoreResults viene specificato dal metodo getMoreResults nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getMoreResults viene specificato dal metodo getMoreResults nell'interfaccia java.sql.Statement.  
   
  La chiamata del metodo getMoreResults chiude in modo implicito tutti gli oggetti del set di risultati ottenuti con il metodo [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md).  
   

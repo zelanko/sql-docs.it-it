@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892988"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
@@ -28,12 +28,12 @@ ms.locfileid: "68892988"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|String|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Valore predefinito: Boolean|  
-|Valore intero|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
-|float|Valore predefinito: Double<br /><br /> Single, Decimal|  
-|Binario|Valore predefinito: Byte []|  
+|string|Predefinito: string<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Predefinito: Boolean|  
+|Integer|Predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Datetime|Predefinito: Datetime<br /><br /> DateTimeOffset|  
+|Float|Predefinito: Double<br /><br /> Single, Decimal|  
+|Binary|Predefinito: Byte[]|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  
@@ -106,7 +106,7 @@ ms.locfileid: "68892988"
   
  Per convertire questi dati in uno o più valori CLR, è possibile adottare una delle strategie seguenti:  
   
--   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Esempio:  
+-   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio:  
   
     -   Nell'espressione seguente solo la parte relativa all'ora della differenza di fuso orario dall'ora UTC viene prima estratta e poi convertita in minuti: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

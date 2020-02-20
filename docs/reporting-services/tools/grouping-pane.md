@@ -14,10 +14,10 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892556"
 ---
 # <a name="grouping-pane"></a>Riquadro di raggruppamento
@@ -31,16 +31,16 @@ Durante la progettazione di report di [!INCLUDE[ssRSnoversion_md](../../includes
   
 -   **Valore predefinito.** Utilizzare la modalità predefinita per aggiungere, modificare o eliminare gruppi. È possibile aggiungere gruppi padre, figlio e gruppi di dettagli trascinando campi dal riquadro dei dati del report e inserendoli nella gerarchia dei gruppi. Per aggiungere un gruppo adiacente, è necessario usare il collegamento **Aggiungi gruppo** . Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Avanzate**. Usare la **Modalità avanzata** per visualizzare tutti i membri dei gruppi di righe e di colonne e per impostare le proprietà per i membri statici. Quando si creano gruppi o si aggiungono totali, vengono impostate automaticamente le proprietà che controllano il rendering delle righe e delle colonne in ogni pagina del report nell'area dati Tablix. Per regolare manualmente queste proprietà, è necessario impostarle sul membro Tablix. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+-   **Avanzate**. Usare la **Modalità avanzata** per visualizzare tutti i membri dei gruppi di righe e di colonne e per impostare le proprietà sui membri statici. Quando si creano gruppi o si aggiungono totali, vengono impostate automaticamente le proprietà che controllano il rendering delle righe e delle colonne in ogni pagina del report nell'area dati Tablix. Per regolare manualmente queste proprietà, è necessario impostarle sul membro Tablix. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ## <a name="default-mode"></a>Modalità predefinita  
  Quando è attiva la modalità predefinita, nei riquadri Gruppi di righe e Gruppi di colonne è riportata una visualizzazione gerarchica di tutti i gruppi padre, i gruppi figlio e i gruppi adiacenti. Un gruppo figlio viene visualizzato in posizione rientrata rispetto al gruppo padre. Un gruppo adiacente viene visualizzato allo stesso livello di rientro dei gruppi di pari livello. Nella figura seguente viene illustrata un'area dati Tablix con gruppi di righe nidificati e gruppi di colonne nidificati e adiacenti.  
   
- ![Tablix, gruppi di righe e colonne annidate e adiacenti](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix, gruppi di righe e colonne annidate e adiacenti")  
+ ![Tablix, gruppi di righe e di colonne annidati e adiacenti](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix, gruppi di righe e di colonne annidati e adiacenti")  
   
  Nel riquadro di raggruppamento vengono visualizzati i gruppi di righe e di colonne corrispondenti. Nella figura seguente sono stati selezionati il gruppo basato sulla sottocategoria nel riquadro Gruppi di righe e la cella di raggruppamento [Subcat] nell'area dati Tablix:  
   
- ![Riquadro di raggruppamento per gruppi di righe e colonne annidate](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e colonne annidate")  
+ ![Riquadro di raggruppamento per gruppi di righe e di colonne annidati](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e di colonne annidati")  
   
  Nel riquadro Gruppi di righe il gruppo basato sulla sottocategoria è un figlio del gruppo basato sulla categoria. Nel riquadro Gruppi di colonne il gruppo Country/Region è un figlio del gruppo Geography. Il gruppo Year e i gruppi Country/Region sono gruppi adiacenti.  
   
@@ -67,7 +67,7 @@ Per modificare i valori predefiniti, è necessario selezionare il membro di grup
   
 -   **Hidden**. Proprietà di tipo Boolean. Indica se è necessario nascondere inizialmente la riga o la colonna.  
   
--   **ToggleItem.** Proprietà di tipo String. Il nome della casella di testo alla quale aggiungere l'immagine dell'elemento Toggle. La casella di testo deve trovarsi nello stesso ambito del gruppo o in un ambito contenitore.  
+-   **ToggleItem.** Stringa. Il nome della casella di testo alla quale aggiungere l'immagine dell'elemento Toggle. La casella di testo deve trovarsi nello stesso ambito del gruppo o in un ambito contenitore.  
   
  Per altre informazioni su come è possibile controllare questo comportamento in un'area data Tablix, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   

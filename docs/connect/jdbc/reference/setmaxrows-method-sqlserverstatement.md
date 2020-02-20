@@ -16,10 +16,10 @@ ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973977"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>Metodo setMaxRows (SQLServerStatement)
@@ -42,8 +42,8 @@ public final void setMaxRows(int max)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setMaxRows viene specificato dal metodo setMaxRows nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setMaxRows viene specificato dal metodo setMaxRows nell'interfaccia java.sql.Statement.  
   
  Questo metodo setMaxRows non ha effetto per i cursori scorrevoli dinamici. È consigliabile che l'applicazione utilizzi la sintassi SELECT TOP N SQL per limitare il numero di righe restituito da set di risultati di dimensioni potenzialmente grandi.  
   

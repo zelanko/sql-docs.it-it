@@ -16,10 +16,10 @@ ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1598bca994ae41ccee56ca68e12e74e8d18fd0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955794"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>Metodo cancelRowUpdates (SQLServerResultSet)
@@ -37,8 +37,8 @@ public void cancelRowUpdates()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo cancelRowUpdates viene specificato dal metodo cancelRowUpdates nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo cancelRowUpdates viene specificato dal metodo cancelRowUpdates nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo può essere chiamato dopo la chiamata di un metodo di aggiornamento e prima della chiamata del metodo [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) per eseguire il rollback degli aggiornamenti apportati a una riga. Se non è stato apportato alcun aggiornamento o il metodo updateRow è già stato chiamato, questo metodo non ha effetto.  
   

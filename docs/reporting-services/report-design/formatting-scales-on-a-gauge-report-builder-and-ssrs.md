@@ -9,16 +9,16 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580291"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formattazione di scale su un misuratore (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la scala misuratore è l'intervallo di numeri, limitati da un valore minimo e da un valore massimo, mostrato su un misuratore. Una scala di misuratore contiene generalmente segni di graduazione ed etichette che consentono una lettura accurata di quello che viene mostrato dall'indicatore di misura del misuratore ed è generalmente associata a una o più indicatori di misura del misuratore. Sullo stesso misuratore può essere presente più di una scala.  
   
- ![Panoramica degli elementi della scala di un misuratore](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Panoramica degli elementi della scala di un misuratore")  
+ ![Panoramica degli elementi in una scala del misuratore](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Panoramica degli elementi in una scala del misuratore")  
   
  A differenza del grafico in cui sono definiti più gruppi, il misuratore mostra un solo valore. È necessario definire i valori minimo e massimo della scala. I numeri dell'intervallo vengono calcolati automaticamente in base ai valori specificati per l'impostazione minima e massima.  
   

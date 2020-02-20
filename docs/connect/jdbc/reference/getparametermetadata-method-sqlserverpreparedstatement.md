@@ -16,10 +16,10 @@ ms.assetid: c2876dec-ce29-4b61-9d74-ec3173b8cba5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a24871c504be10e766bbbec59a8f03f98cb5e00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980981"
 ---
 # <a name="getparametermetadata-method-sqlserverpreparedstatement"></a>Metodo getParameterMetaData (SQLServerPreparedStatement)
@@ -40,8 +40,8 @@ public final java.sql.ParameterMetaData getParameterMetaData()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getParameterMetaData viene specificato dal metodo getParameterMetaData nell'interfaccia java. SQL. PreparedStatement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getParameterMetaData viene specificato dal metodo getParameterMetaData nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

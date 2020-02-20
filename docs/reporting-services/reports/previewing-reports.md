@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68267492"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Anteprima dei report in SQL Server Reporting Services (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "68267492"
   
 - Fare clic su **Avvia debug** dal menu **Debug** .  
   
-- Facendo clic sul pulsante **Avvia** sulla [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] barra degli strumenti standard ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
+- Facendo clic sul pulsante **Avvia** sulla barra degli strumenti standard di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
   
 - Premere **F5**.  
   

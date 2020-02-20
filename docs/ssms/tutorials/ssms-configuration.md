@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Componenti e configurazione di SQL Server Management Studio'
+title: Componenti e configurazione di SSMS
 description: Esercitazione che descrive i componenti e le opzioni di configurazione di base per l'ambiente di SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267084"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247286"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Componenti e configurazione di SQL Server Management Studio
 

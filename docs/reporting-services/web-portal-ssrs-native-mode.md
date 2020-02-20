@@ -10,10 +10,10 @@ ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874909"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Portale Web di un server di report (modalità nativa SSRS)

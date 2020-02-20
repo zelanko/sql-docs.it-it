@@ -1,5 +1,5 @@
 ---
-title: Metodo Recover (SQLServerXAResource) | Microsoft Docs
+title: Metodo recover (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976027"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>Metodo recover (SQLServerXAResource)
@@ -37,18 +37,18 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>Parametri  
  *flags*  
   
- Valore **int** che può assumere uno dei valori seguenti: XARESOURCE. TMSTARTRSCAN o XARESOURCE. TMENDRSCAN o XARESOURCE. TMNOFLAGS o XARESOURCE. TMSTARTTRSCAN | XAResource. TMENDRSCAN.  
+ Valore **int** che può accettare uno dei valori seguenti: XAResource.TMSTARTRSCAN o XAResource.TMENDRSCAN o XAResource.TMNOFLAGS o XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto XID.  
+ Oggetto Xid.  
   
 ## <a name="exceptions"></a>Eccezioni  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo recover viene specificato dal metodo recover nell'interfaccia javax.transaction.xa.XAResource.  
   
- Se il **flag** del parametro non è XARESOURCE. TMSTARTRSCAN o XARESOURCE. TMSTARTRSCAN | XAResource. TMENDRSCAN è necessario che sia in corso un'analisi del ripristino.  
+ Se il parametro **flag** non è XAResource.TMSTARTRSCAN o XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, deve essere in corso un'analisi di ripristino.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

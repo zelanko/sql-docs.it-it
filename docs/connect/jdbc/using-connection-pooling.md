@@ -11,10 +11,10 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026368"
 ---
 # <a name="using-connection-pooling"></a>Uso del pool di connessioni
@@ -26,7 +26,7 @@ ms.locfileid: "69026368"
 > [!NOTE]  
 > Sebbene il driver JDBC supporti il pool di connessioni Java EE, non è tuttavia in grado di fornire la propria implementazione del pool. Per la gestione delle connessioni, il driver si basa su server applicazioni Java di terze parti.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Le classi per l'implementazione del pool di connessioni sono le seguenti:  
   

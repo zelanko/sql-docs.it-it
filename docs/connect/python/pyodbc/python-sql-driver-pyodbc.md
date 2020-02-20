@@ -1,5 +1,5 @@
 ---
-title: Driver SQL Python-pyodbc | Microsoft Docs
+title: Driver SQL per Python - pyodbc | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca5946eb5c6450d55168f64dddbd0ca82d986be9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935743"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Driver SQL per Python - pyodbc
 
-![Download-FrecciaGIÙ-Circled](../../../ssdt/media/download.png)[per installare il driver SQL per Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Installazione del driver SQL per Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="getting-started"></a>Introduzione
 
@@ -29,4 +29,4 @@ ms.locfileid: "67935743"
 
 ## <a name="documentation"></a>Documentazione
 
-* [documentazione di pyodbc](https://mkleehammer.github.io/pyodbc/)  
+* [Documentazione di pyodbc](https://mkleehammer.github.io/pyodbc/)  

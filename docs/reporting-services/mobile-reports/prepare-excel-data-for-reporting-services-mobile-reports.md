@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499945"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparare i dati di Excel per i report per dispositivi mobili di Reporting Services
@@ -44,7 +44,7 @@ Quando si prepara un file di Excel come set di dati per un report per dispositiv
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
-## <a name="column-headers"></a>Intestazioni delle colonna  
+## <a name="column-headers"></a>Intestazioni di colonna  
   
 Come si può notare nell'esempio precedente, la prima riga contiene il nome della metrica della rispettiva colonna. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] consente di mantenere le intestazioni delle colonne per semplificarne la consultazione all'interno delle impostazioni dell'elemento della raccolta. Tuttavia, le intestazioni delle colonne non sono obbligatorie. In assenza, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera le intestazioni usando la convenzione di Excel A,B,C,...,AA,BB,...  
   
@@ -63,7 +63,7 @@ Se un foglio di lavoro contiene formule o celle calcolate, solo il valore di vis
   
 Non esistono restrizioni sul percorso di archiviazione dei file Excel da importare in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]. Tuttavia, se si sposta o si rinomina il file dopo l'importazione, non sarà possibile aggiornare i dati tramite il comando **Aggiorna tutti i dati** della visualizzazione dati.   
   
->**Nota**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] non aggiorna i dati di Excel in automatico. È possibile aggiornare i dati con il comando [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Aggiorna** , ma solo se il file non è stato spostato.  
+>**Nota**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] non aggiorna i dati di Excel in automatico. È possibile aggiornare i dati con il comando **Aggiorna** di [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], ma solo se il file non è stato spostato.  
   
 ## <a name="dates"></a>Date  
   

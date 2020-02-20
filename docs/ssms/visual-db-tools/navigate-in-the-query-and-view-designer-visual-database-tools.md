@@ -1,10 +1,9 @@
 ---
-title: Navigare all'interno di Progettazione query e Progettazione viste (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Spostarsi all'interno di Progettazione viste e Progettazione query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262298"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224595"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigazione all'interno di Progettazione viste e Progettazione query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68262298"
   
 ## <a name="any-pane"></a>Qualsiasi riquadro  
   
-|**Per**|**Premere**|**Fare clic**|  
+|**To**|**Premere**|**Fare clic**|  
 |----------|-------------|-------------|  
 |Spostarsi fra i riquadri di Progettazione query e Progettazione viste|F6, MAIUSC+F6|Su qualsiasi punto del riquadro di destinazione|  
   
@@ -37,7 +38,7 @@ ms.locfileid: "68262298"
   
 ## <a name="diagram-pane"></a>Riquadro Diagramma  
   
-|**Per**|**Premere**|**Fare clic**|  
+|**To**|**Premere**|**Fare clic**|  
 |----------|-------------|-------------|  
 |Spostarsi fra tabelle, altri oggetti strutturati a tabella (e su linee join, se disponibili)|TAB o MAIUSC+TAB|Sulla tabella, sull'oggetto strutturato a tabella o sulla linea join su cui spostarsi|  
 |Spostarsi fra colonne di una tabella o di un oggetto strutturato a tabella|Tasti di direzione|Sulla colonna in cui spostarsi|  
@@ -52,7 +53,7 @@ Per altre informazioni, vedere [Riquadro Diagramma &#40;Visual Database Tools&#4
   
 ## <a name="criteria-pane"></a>Riquadro Criteri  
   
-|Per|Premere|Fare clic|  
+|A|Premere|Fare clic su|  
 |------|---------|---------|  
 |Spostarsi tra le celle|Tasti di direzione o TAB o MAIUSC+TAB|Sulla cella di destinazione|  
 |Spostarsi sull'ultima riga della colonna selezionata|CTRL+FRECCIA GIÙ||  
@@ -60,7 +61,7 @@ Per altre informazioni, vedere [Riquadro Diagramma &#40;Visual Database Tools&#4
 |Spostarsi nella cella superiore sinistra della parte visibile della griglia|CTRL+HOME||  
 |Spostarsi nella cella inferiore destra|CTRL+FINE||  
 |Spostarsi in un elenco a discesa|Freccia GIÙ o freccia SU|Sul pulsante nella cella|  
-|Selezionare un'intera colonna della griglia|CTRL+BARRA SPAZIATRICE|Sull'intestazione della colonna|  
+|Selezionare un'intera colonna della griglia|CTRL+BARRA SPAZIATRICE|Intestazione di colonna|  
 |Passare dalla modalità di modifica alla modalità di selezione delle celle|F2||  
 |Copiare negli Appunti il testo selezionato nella cella (in modalità di modifica)|CTRL+C||  
 |Tagliare il testo selezionato nella cella e inserirlo negli Appunti (in modalità di modifica)|CTRL+X||  
@@ -87,7 +88,7 @@ Per altre informazioni, vedere [Riquadro SQL &#40;Visual Database Tools&#41;](..
   
 ## <a name="results-pane"></a>Riquadro Risultati  
   
-|**Per**|**Premere**|**Fare clic**|  
+|**To**|**Premere**|**Fare clic**|  
 |----------|-------------|-------------|  
 |Spostarsi tra le celle|Tasti di direzione o TAB o MAIUSC+TAB|Sulla cella di destinazione|  
 |Spostarsi sulla prima o sull'ultima cella della riga corrente|HOME o FINE||  

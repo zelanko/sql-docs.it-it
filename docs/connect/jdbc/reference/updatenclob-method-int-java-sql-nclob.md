@@ -1,5 +1,5 @@
 ---
-title: Metodo updateNClob (int, Java. SQL. NClob) | Microsoft Docs
+title: Metodo updateNClob (int, java.sql.NClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6e9bca18-f64e-46a4-8541-2c9c39b393b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 702b754750b5c42c96d7f5a8d35a7212d824c1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998630"
 ---
 # <a name="updatenclob-method-int-javasqlnclob"></a>Metodo updateNClob (int, java.sql.NClob)
@@ -42,10 +42,10 @@ public void updateNClob(int columnIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateNClob viene specificato dal metodo updateNClob nell'interfaccia java.sql.ResultSet.  
   
- Questo metodo è supportato solo in colonne **nvarchar (max)** , **ntext**e **XML** . L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
+ Questo metodo è supportato solo nelle colonne **nvarchar(max)** , **ntext** e **xml**. L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

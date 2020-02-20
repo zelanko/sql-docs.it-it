@@ -12,10 +12,10 @@ ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991564"
 ---
 # <a name="detail-property"></a>Proprietà Detail
@@ -31,7 +31,7 @@ ms.locfileid: "62991564"
  **HttpStatus**  
  Codice di stato HTTP.  
   
- **Message**  
+ **Messaggio**  
  Messaggio di errore e codice di errore assegnati dal server di report.  
   
  **HelpLink**  
@@ -44,7 +44,7 @@ ms.locfileid: "62991564"
  Nome del prodotto. Il valore predefinito è **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Versione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La lunghezza massima è di 15 caratteri. Il formato del numero di versione deve essere analogo a 8.00.0xxx.00.  
+ Versione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La lunghezza massima è di 15 caratteri. Il formato del numero di versione deve essere analogo a: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  ID delle impostazioni locali o della lingua della DLL INTL dell'applicazione (ad esempio, 0x41A).  
@@ -61,7 +61,7 @@ ms.locfileid: "62991564"
  **Origine**  
  Elemento figlio di **MoreInformation**. Indica l'origine dell'errore.  
   
- **Message**  
+ **Messaggio**  
  Elemento figlio di **MoreInformation**. Indica il messaggio di errore di un'eccezione nidificata. Questo elemento include gli attributi XML per **ErrorCode** e **HelpLink**.  
   
  **Avvisi**  

@@ -16,10 +16,10 @@ ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df27a5368dfea7f417fb84e2ebe38a8987165aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979976"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>Metodo getSendStringParametersAsUnicode (SQLServerDataSource)
@@ -37,10 +37,10 @@ public boolean getSendStringParametersAsUnicode()
 ## <a name="return-value"></a>Valore restituito  
  **true** se i parametri di stringa vengono inviati al server in formato UNICODE. In caso contrario, **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la proprietà sendStringParametersAsUnicode è impostata su **true**, che è il valore predefinito, i parametri di stringa vengono inviati al server in formato UNICODE. Se la proprietà sendStringParametersAsUnicode è impostata su **false**, i parametri di stringa vengono inviati al server in formato ASCII/MBCS e non UNICODE. Se la proprietà sendStringParametersAsUnicode non è impostata, getSendStringParametersAsUnicode restituisce il valore predefinito **true**.  
   
- Per ulteriori informazioni sulla proprietà di connessione sendStringParametersAsUnicode, vedere [impostazione delle proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Per altre informazioni sulla proprietà di connessione sendStringParametersAsUnicode, vedere [Impostazione delle proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,22 +1,23 @@
 ---
-title: Eseguire processi Spark in Azure Toolkit for IntelliJ nel cluster Big Data di SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Eseguire processi Spark: Toolkit di Azure per IntelliJ'
+titleSuffix: SQL Server Big Data Clusters
 description: Eseguire processi Spark nei cluster Big Data di SQL Server in Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653711"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244075"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Inviare processi Spark su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Inviare processi Spark su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -51,16 +52,16 @@ Uno degli scenari chiave per [!INCLUDE[big-data-clusters-2019](../includes/ssbig
 
 1. Avviare IntelliJ IDEA e creare un progetto. Nella finestra di dialogo **New Project** (Nuovo progetto) eseguire questa procedura: 
 
-   A. Selezionare **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Progetto Spark con esempi - Scala).
+   a. Selezionare **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Progetto Spark con esempi - Scala).
 
-   B. Nell'elenco **Build tool** (Strumento di compilazione) selezionare una delle opzioni seguenti in base alle esigenze:
+   b. Nell'elenco **Build tool** (Strumento di compilazione) selezionare una delle opzioni seguenti in base alle esigenze:
 
       * **Maven**, per il supporto della creazione guidata di un progetto Scala
       * **SBT**, per la gestione delle dipendenze e la compilazione per il progetto Scala
 
     ![Finestra di dialogo relativa al nuovo progetto](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
-2. Fare clic su **Avanti**.
+2. Selezionare **Avanti**.
 
 3. La creazione guidata di un progetto Scala rileva automaticamente se è stato installato il plug-in Scala. Selezionare **Installa**.
 
@@ -74,9 +75,9 @@ Uno degli scenari chiave per [!INCLUDE[big-data-clusters-2019](../includes/ssbig
 
     ![Selezione di Spark SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Immettere il nome e la posizione di un progetto.
+   a. Immettere il nome e la posizione di un progetto.
 
-   B. Nell'elenco a discesa **Project SDK** (SDK progetto) selezionare **Java 1.8** per il cluster Spark 2.x o **Java 1.7** per il cluster Spark 1.x.
+   b. Nell'elenco a discesa **Project SDK** (SDK progetto) selezionare **Java 1.8** per il cluster Spark 2.x o **Java 1.7** per il cluster Spark 1.x.
 
    c. Nell'elenco a discesa **Spark version** (Versione di Spark) la creazione guidata di un progetto Scala integra la versione corretta per Spark SDK e Scala SDK. Se la versione del cluster Spark è precedente alla 2.0, selezionare **Spark 1.x**. In caso contrario, selezionare **Spark2.x**. Questo esempio usa **Spark 2.0.2 (Scala 2.11.8)** .
 
@@ -84,9 +85,9 @@ Uno degli scenari chiave per [!INCLUDE[big-data-clusters-2019](../includes/ssbig
 
 7. Il progetto Spark crea automaticamente un artefatto. Per visualizzare l'artefatto, eseguire questa procedura:
 
-   A. Dal menu **File** scegliere **Project Structure** (Struttura progetto).
+   a. Dal menu **File** scegliere **Project Structure** (Struttura progetto).
 
-   B. Nella finestra di dialogo **Project Structure** (Struttura progetto) selezionare **Artifacts** (Artefatti) per visualizzare l'artefatto predefinito creato. È anche possibile creare un artefatto personalizzato selezionando il segno più ( **+** ).
+   b. Nella finestra di dialogo **Project Structure** (Struttura progetto) selezionare **Artifacts** (Artefatti) per visualizzare l'artefatto predefinito creato. È anche possibile creare un artefatto personalizzato selezionando il segno più ( **+** ).
 
       ![Informazioni sull'artefatto nella finestra di dialogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -106,13 +107,13 @@ Dopo aver collegato un cluster Big Data di SQL Server, è possibile inviare al c
 
     * Campo **Main class name** (Nome classe principale) - Il valore predefinito corrisponde alla classe principale del file selezionato. È possibile modificare la classe selezionando i puntini di sospensione ( **...** ) e scegliendo una classe diversa.   
 
-    * Campo **Job Configurations** (Configurazioni processo) -  I valori predefiniti sono impostati come nell'immagine precedente. È possibile modificare il valore o aggiungere una nuova coppia chiave/valore per l'invio del processo. Per ulteriori informazioni: [API REST di Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
+    * Campo **Job Configurations** (Configurazioni processo) -  I valori predefiniti sono impostati come nell'immagine precedente. È possibile modificare il valore o aggiungere una nuova coppia chiave/valore per l'invio del processo. Per altre informazioni: [API REST di Apache Livy](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
       ![Finestra di dialogo per l'invio Spark con la configurazione del processo](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
     * Campo **Command line arguments** (Argomenti della riga di comando) - È possibile immettere i valori degli argomenti separati da uno spazio per la classe principale, se necessario.
 
-    * Campi **Referenced Jars** (Jar di riferimento) e **Referenced Files** (File di riferimento) - È possibile immettere i percorsi per file e jar di riferimento, se presenti. Per ulteriori informazioni: [Configurazione di Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
+    * Campi **Referenced Jars** (Jar di riferimento) e **Referenced Files** (File di riferimento) - È possibile immettere i percorsi per file e jar di riferimento, se presenti. Per altre informazioni: [Configurazione di Apache Spark](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
 
       ![Finestra di dialogo per l'invio Spark con i file jar](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 

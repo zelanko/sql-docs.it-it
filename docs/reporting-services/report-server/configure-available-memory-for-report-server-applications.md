@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564032"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurare la memoria disponibile per applicazioni del server di report
@@ -36,9 +36,9 @@ ms.locfileid: "67564032"
   
  Se l'utilizzo di memoria nel sistema non è elevato, prima di ricevere le richieste ogni applicazione server richiede una parte di memoria all'avvio per garantire prestazioni ottimali in caso di ricezione delle richieste stesse. Man mano che l'utilizzo di memoria aumenta, il server di report regola il modello di processo come descritto nella tabella seguente.  
   
-|Utilizzo della memoria|Risposta del server|  
+|Utilizzo elevato della memoria|Risposta del server|  
 |---------------------|---------------------|  
-|Bassa|L'elaborazione delle richieste correnti continua e le nuove richieste vengono accettate quasi sempre. Alle richieste dirette all'applicazione di elaborazione in background viene assegnata una priorità più bassa rispetto a quella assegnata alle richieste dirette al servizio Web ReportServer.|  
+|Basso|L'elaborazione delle richieste correnti continua e le nuove richieste vengono accettate quasi sempre. Alle richieste dirette all'applicazione di elaborazione in background viene assegnata una priorità più bassa rispetto a quella assegnata alle richieste dirette al servizio Web ReportServer.|  
 |Media|L'elaborazione delle richieste correnti continua e le nuove richieste potrebbero essere accettate. Alle richieste dirette all'applicazione di elaborazione in background viene assegnata una priorità più bassa rispetto a quella assegnata alle richieste dirette al servizio Web ReportServer. Le allocazioni di memoria per le tre applicazioni server sono ridotte, con riduzioni relativamente maggiori per l'elaborazione in background in modo da aumentare la memoria disponibile per le richieste del servizio Web.|  
 |Alto|L'allocazione della memoria è ridotta ulteriormente. Le applicazioni server che richiedono una quantità maggiore di memoria vengono negate, le richieste correnti vengono rallentate e completate in un tempo più lungo, mentre le nuove richieste non sono accettate. Il server di report esegue lo swapping dei file di dati in memoria sul disco.<br /><br /> Se i vincoli relativi alla memoria aumentano e non è più disponibile memoria per gestire le nuove richieste, il server di report restituirà l'errore HTTP 503 relativo alla non disponibilità del server, mentre le richieste correnti verranno completate. In alcuni casi i domini applicazione potrebbero essere riciclati per ridurre immediatamente l'utilizzo della memoria.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67564032"
 |**MemorySafetyMargin**|Consente di specificare una percentuale di **WorkingSetMaximum** che definisce il limite tra scenari relativi a un utilizzo basso e medio della memoria. Tale valore rappresenta la percentuale di memoria disponibile riservata per il sistema e non può essere utilizzato per le operazioni del server di report. Il valore predefinito è 80.|  
   
 > [!NOTE]  
->  Le impostazioni**MemoryLimit** e **MaximumMemoryLimit** sono obsolete in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e later versions. Se è stata aggiornata un'installazione esistente o se si utilizza un file RSReportServer.config in cui sono contenute tali impostazioni, il server di report non consentirà di leggere più questi valori.  
+>  Le impostazioni **MemoryLimit** e **MaximumMemoryLimit** sono obsolete in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Se è stata aggiornata un'installazione esistente o se si utilizza un file RSReportServer.config in cui sono contenute tali impostazioni, il server di report non consentirà di leggere più questi valori.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Esempio di impostazioni di configurazione della memoria  
  Nell'esempio seguente vengono mostrate le impostazioni di configurazione per un computer server di report che utilizza valori di configurazione della memoria personalizzati. Se si desidera aggiungere **WorkingSetMaximum** o **WorkingSetMinimum**è necessario digitare gli elementi e i valori nel file RSReportServer.config. Entrambi i valori sono numeri interi espressi in KB di RAM allocati per le applicazioni server. Nell'esempio seguente si specifica che l'allocazione totale di memoria per le applicazioni del server di report non può superare i 4 GB. Se il valore predefinito per **WorkingSetMinimum** (60% di **WorkingSetMaximum**) è accettabile, è possibile ometterlo e specificare solo **WorkingSetMaximum** nel file RSReportServer. config. In questo esempio è stato incluso il valore **WorkingSetMinimum** per illustrarne la visualizzazione qualora si desiderasse aggiungerlo:  
@@ -86,7 +86,7 @@ ms.locfileid: "67564032"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>Informazioni sulle impostazioni di configurazione della memoria ASP.NET  
- Anche se 2016 e versioni successivo Report Server web e servizio portale Web sono applicazioni HTML5, le versioni precedenti sono [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] le applicazioni, nessuna applicazione risponde alle impostazioni di configurazione di memoria specificata nel **processModel**  sezione del file Machine. config per [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applicazioni in esecuzione in IIS 5.0 e versioni successive in modalità di compatibilità. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.  
+ Nonostante il servizio Web ReportServer 2016 e versioni successive e il portale Web siano applicazioni HTML5 e le versioni precedenti siano applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], nessuna applicazione risponde alle impostazioni di configurazione della memoria specificate nella sezione **processModel** di machine.config per le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] eseguite in modalità compatibilità IIS 5.0 e versioni successive. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

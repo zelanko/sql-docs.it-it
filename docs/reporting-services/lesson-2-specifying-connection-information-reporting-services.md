@@ -1,6 +1,7 @@
 ---
-title: 'Lesson 2: Specifying Connection Information (Reporting Services) (Lezione 2: Specifica delle informazioni di connessione (Reporting Services)) | Microsoft Docs'
-ms.date: 05/01/2019
+title: 'Lezione 2: Specificare le informazioni di connessione (Reporting Services) | Microsoft Docs'
+description: In questa lezione si definisce un'origine dati, ovvero si specificano le informazioni di connessione usate dal report per accedere ai dati di un database relazionale o altre origini.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106043"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258458"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specifica delle informazioni di connessione (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Definizione delle informazioni di connessione (Reporting Services)
 
 Nella lezione 1 è stato aggiunto un report impaginato [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] al progetto Tutorial.
   
@@ -46,7 +47,7 @@ Per questo report si aggiungerà il database di esempio AdventureWorks2016 come 
     > [!NOTE]
     > Questa stringa di connessione presuppone che [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il server di report e il database AdventureWorks2016 siano tutti installati nel computer locale.
     >
-    >Se non lo sono, modificare la stringa di connessione e sostituire "localhost" con il nome dell'istanza o del server di database. Se si usa [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] o un'istanza denominata di SQL Server, è necessario modificare la stringa di connessione in modo da includere le informazioni relative all'istanza. Esempio:
+    >Se non lo sono, modificare la stringa di connessione e sostituire "localhost" con il nome dell'istanza o del server di database. Se si usa [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] o un'istanza denominata di SQL Server, è necessario modificare la stringa di connessione in modo da includere le informazioni relative all'istanza. Ad esempio:
     >
     > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
     >
@@ -62,8 +63,8 @@ Progettazione report aggiungerà l'origine dati AdventureWorks2016 al riquadro *
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa lezione è stata definita una connessione al database di esempio AdventureWorks2016. Passare a [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) per definire un set di dati per il report.
+In questa lezione è stata definita una connessione al database di esempio AdventureWorks2016. Procedere a [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) per definire un set di dati per il report.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Connessioni dati, origini dati e stringhe di connessione in Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+[Creare stringhe di connessione dati - Generatore report e SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

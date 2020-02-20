@@ -1,5 +1,5 @@
 ---
-title: Utilizzare le funzionalità avanzate di data e ora (OLE DB) | Microsoft Docs
+title: Usare le funzionalità avanzate di data e ora (OLE DB) | Microsoft Docs
 description: Usare le funzionalità avanzate di data e ora (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015532"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usare le funzionalità avanzate di data e ora (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "68015532"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In questo viene illustrato come utilizzare le caratteristiche di data e ora introdotte in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Nell'esempio vengono utilizzati i quattro nuovi tipi di data e ora (**date**, **Time**, **datetime2**e **DateTimeOffset**) per eseguire i comandi con parametri e recuperare i risultati del set di righe.  
+  In questo viene illustrato come utilizzare le caratteristiche di data e ora introdotte in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. L'esempio usa i quattro nuovi tipi di dati relativi a data e ora, ovvero **date**, **time**, **datetime2** e **datetimeoffset**, per eseguire comandi con parametri e recuperare risultati di set di righe.  
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1aeae63d9fdec1b7afb876364b2fc36714e72479
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a9e401ab8fd48e6d1bbb487be3692897add2e225
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500485"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190877"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)
 È possibile usare i set di dati incorporati in un singolo report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . I set di dati condivisi in un server di report possono essere ustati da più report, sia per dispositivi mobili che impaginati. Per creare un set di dati, è necessaria un'origine dati incorporata o condivisa.  
@@ -116,7 +116,7 @@ Usare Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbide
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creare stringhe di connessione dati - Generatore report e SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

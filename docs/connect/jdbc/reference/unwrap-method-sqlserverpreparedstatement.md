@@ -1,5 +1,5 @@
 ---
-title: Metodo Unwrap (SQLServerPreparedStatement) | Microsoft Docs
+title: Metodo unwrap (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81e533e32504df219155259e9639c83c3be4c647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985597"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>Metodo unwrap (SQLServerPreparedStatement)
@@ -40,16 +40,16 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md) è definito dall'interfaccia java.sql.Wrapper, introdotta nella specifica JDBC 4.0.  
   
  È possibile che le applicazioni debbano accedere alle estensioni dell'API JDBC specifiche di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Il metodo unwrap supporta l'annullamento del wrapping nelle classi pubbliche estese dall'oggetto, se le classi espongono estensioni del fornitore.  
   
- Quando viene chiamato questo metodo, l'oggetto annulla il wrapping nelle classi seguenti: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) e [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
+ Quando viene chiamato questo metodo, l'oggetto esegue il wrapping nelle classi seguenti: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) e [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
- Per il codice di esempio, vedere [ &#40;Unwrap&#41;metodo SQLServerCallableStatement](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
+ Per un esempio di codice, vedere [Metodo unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
- Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per altre informazioni, vedere [Wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)   

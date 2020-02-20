@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Usare oggetti di Microsoft SQL Server 2012 nel progetto | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Oggetti di SQL Server 2012 nel progetto
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034984"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244247"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Usare oggetti di Microsoft SQL Server 2012 nel progetto
+
 In questo esempio, si aggiungerà un oggetto Sequence a un progetto di database per Microsoft SQL Server 2012.  
   
 Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze.  Per altre informazioni sugli oggetti Sequence, vedere [Numeri di sequenza](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Per informazioni sulle novità introdotte in Microsoft SQL Server 2012, vedere [Novità di SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
@@ -31,7 +32,7 @@ Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è 
   
 2.  Fare clic su **Programmazione** nel riquadro sinistro e selezionare **Sequenza**. Scegliere **Aggiungi** per aggiungere il nuovo oggetto al progetto.  
   
-3.  Sostituire il codice predefinito con quanto riportato di seguito.  
+3.  Sostituire il codice predefinito con il codice seguente.  
   
     ```  
     CREATE SEQUENCE [dbo].[Seq1]  

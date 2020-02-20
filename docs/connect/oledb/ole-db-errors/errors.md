@@ -1,6 +1,6 @@
 ---
 title: Errori | Microsoft Docs
-description: Errori
+description: Errors
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,13 +17,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9bf1985706cefc3007da56a9bf782a070e3b8edf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994962"
 ---
-# <a name="errors"></a>Errori
+# <a name="errors"></a>Errors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67994962"
   
  Il driver OLE DB per SQL Server espone le interfacce per oggetti errore seguenti: l'interfaccia OLE DB **IErrorInfo** ottimizzata per i record, l'interfaccia **IErrorRecords** personalizzata e l'interfaccia [ISQLErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) specifica del provider.  
   
- Per informazioni sulla traccia degli errori, vedere [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Traccia di accesso ai dati). Per informazioni sui miglioramenti alla traccia degli errori aggiunta in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vedere [accesso alle informazioni di diagnostica nel log degli eventi estesi](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Per informazioni sulla traccia degli errori, vedere [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Traccia di accesso ai dati). Per informazioni sui miglioramenti apportati alla traccia degli errori aggiunta in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vedere [Accesso alle informazioni di diagnostica nel log degli eventi estesi](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

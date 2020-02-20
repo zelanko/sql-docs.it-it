@@ -1,6 +1,6 @@
 ---
-title: '&lt;server&gt; server di report (Gestione configurazione SQL Server) | Microsoft Docs'
-ms.custom: ''
+title: '&lt;server&gt; server di report (Gestione configurazione SQL Server)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: ea939db1-ce97-4eea-8223-1ca6a82128d7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 78428b48229720a59b5b9cd31cdc2262759e03f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 91138812b31cee625d03d7d419135020b39125c0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058315"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306930"
 ---
 # <a name="report-server-ltservergt-sql-server-configuration-manager"></a>&lt;server&gt; server di report (Gestione configurazione SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

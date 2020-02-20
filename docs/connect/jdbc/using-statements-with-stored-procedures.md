@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di istruzioni con stored procedure | Microsoft Docs
+title: Uso delle istruzioni con le stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025857"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Uso delle istruzioni con le stored procedure
@@ -32,17 +32,17 @@ Una stored procedure è una procedura del database, simile alle procedure di alt
 > [!NOTE]  
 > Per altre informazioni sulle stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere "Informazioni sulle stored procedure" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Per gestire i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando una stored procedure, tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono fornite le classi [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). La classe da utilizzare dipende dall'eventuale richiesta della stored procedure dei parametri IN (input) o OUT (output). Se la stored procedure non richiede i parametri IN o OUT, è possibile usare la classe SQLServerStatement. Se la chiamata di stored procedure verrà eseguita più volte o vengono richiesti solo i parametri IN, è possibile usare la classe SQLServerPreparedStatement. Se il stored procedure richiede i parametri IN e OUT, è necessario usare la classe SQLServerCallableStatement. Solo quando la stored procedure richiede i parametri OUT sarà necessario l'overhead dell'utilizzo della classe SQLServerCallableStatement.  
+Per gestire i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando una stored procedure, tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono fornite le classi [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). La classe da utilizzare dipende dall'eventuale richiesta della stored procedure dei parametri IN (input) o OUT (output). Se la stored procedure non richiede i parametri IN o OUT, è possibile usare la classe SQLServerStatement. Se la chiamata di stored procedure verrà eseguita più volte o vengono richiesti solo i parametri IN, è possibile usare la classe SQLServerPreparedStatement. Se la stored procedure richiede entrambi i parametri IN e OUT, è consigliabile usare la classe SQLServerCallableStatement. Solo quando la stored procedure richiede i parametri OUT sarà necessario l'overhead dell'utilizzo della classe SQLServerCallableStatement.  
   
 > [!NOTE]  
-> Inoltre le stored procedure possono restituire conteggi di aggiornamento e più set di risultati. Per ulteriori informazioni, vedere [utilizzo di un stored procedure con un conteggio aggiornamenti](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [utilizzo di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md).  
+> Inoltre le stored procedure possono restituire conteggi di aggiornamento e più set di risultati. Per altre informazioni, vedere [Uso di una stored procedure con i conteggi di aggiornamento](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [Uso di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md).  
   
 Quando si chiama una stored procedure usando il driver JDBC, è necessario usare la sequenza di escape SQL `call` insieme al metodo [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La sintassi completa della sequenza di escape `call` è la seguente:  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
-> Per ulteriori informazioni su `call` e altre sequenze di escape SQL, vedere Utilizzo di sequenze di [escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+> Per altre informazioni su `call` e su altre sequenze di escape SQL, vedere [Uso delle sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
 Negli argomenti di questa sezione vengono descritti i possibili modi per chiamare le stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando il driver JDBC e la sequenza di escape SQL `call`.  
   

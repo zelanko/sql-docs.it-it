@@ -1,23 +1,24 @@
 ---
-title: Panoramica dell'estendibilità delle regole di analisi del codice del database | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Estendibilità delle regole di analisi del codice del database
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd64a7c3152941a88122543dc4b8b80045f175a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984485"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251970"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Panoramica dell'estendibilità delle regole di analisi del codice del database
+
 Le edizioni di Visual Studio contenenti SQL Server Data Tools includono regole di analisi del codice per segnalare avvisi relativi alla progettazione, alla denominazione e alle prestazioni di Transact\-SQL nel codice del database. Per altre informazioni, vedere [Analisi del codice di database per migliorare la qualità del codice](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  
   
 Se le regole di analisi del codice predefinite non coprono un problema di Transact\-SQL specifico che si vuole sia incluso, è possibile creare regole di analisi del codice del database personalizzate. Ad esempio, potrebbe essere necessario creare una regola personalizzata che eviti l'uso dell'istruzione WAITFOR DELAY, come illustrato in [Procedura dettagliata per la creazione di un assembly di regole personalizzate di analisi del codice statica per SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md). Per creare le regole di analisi del codice del database personalizzate, è possibile usare le classi nello spazio dei nomi [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx).  
@@ -31,7 +32,7 @@ La figura seguente illustra l'interazione tra i componenti delle regole di anali
   
 Quando si usa la funzionalità delle regole di analisi del codice del database, sia eseguendo direttamente l'analisi del codice statica (per altre informazioni, vedere [Procedura: Analizzare il codice Transact-SQL per trovare errori](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) che eseguendo una compilazione, tutte le regole vengono caricate e usate in base a come sono state configurate nel progetto. Per altre informazioni, vedere [Procedura: Abilitare e disabilitare regole specifiche relative all'analisi statica del codice del database](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Gestione estensioni caricherà inoltre qualsiasi assembly di regole personalizzate creato e registrato. Per altre informazioni, vedere [Procedura: Installare e gestire le estensioni delle funzionalità](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
-Una classe di regola di analisi del codice personalizzata eredita da [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). La classe di regole personalizzate può accedere a diversi oggetti utili tramite il relativo contesto di esecuzione della regola, tra cui:  
+Una classe di regola di analisi del codice personalizzata eredita da [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). La classe di regole personalizzate può accedere a diversi oggetti utili tramite il relativo contesto di esecuzione della regola, incluse le seguenti:  
   
 -   Metadati relativi alla regola stessa.  
   

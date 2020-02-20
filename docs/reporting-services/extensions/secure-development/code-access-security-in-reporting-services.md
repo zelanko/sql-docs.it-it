@@ -16,10 +16,10 @@ ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d629f820dfa2efd87e6460c1c85566e7b33cde8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193825"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sicurezza dall'accesso di codice in Reporting Services

@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573953"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Aree dell'area dati Tablix (Generatore report e SSRS)
@@ -26,7 +26,7 @@ Le celle di ogni area presentano una funzione distinta. L'aggiunta di celle all'
   
 Nell'area di progettazione le linee tratteggiate indicano le quattro aree di un'area dati Tablix selezionata. Nella figura seguente sono mostrate le aree di una Tablix con gruppi di righe nidificati in base a categoria e sottocategoria, gruppi di colonne nidificati in base a geografia e paese/regione e un gruppo di colonne adiacenti basato sull'anno.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Aree dell'area dati Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Aree dell'area dati Tablix")  
   
  Nell'elenco seguente vengono descritte le diverse aree.  
   
@@ -44,7 +44,7 @@ Nell'area di progettazione le linee tratteggiate indicano le quattro aree di un'
   
  ![Anteprima, angolo Tablix, gruppi di righe di colonne, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Anteprima, angolo Tablix, gruppi di righe di colonne, corpo")  
   
- Nell'area del gruppo di righe vengono visualizzate due istanze del gruppo di categorie relative a Clothing e Components. Il gruppo di colonne contiene un'istanza del gruppo geografia relativa al Nord America, con due istanze del gruppo paese/regione nidificate per Canada (CA) e Stati Uniti (US). Inoltre, nella colonna adiacente sono visualizzate due istanze del gruppo anno relative a 2003 e 2004. La riga della colonna Total contiene i totali delle righe. Nella riga dei totali che si ripete con il gruppo di categorie sono mostrati i totali delle sottocategorie mentre nella riga del totale complessivo sono visualizzati i totali delle categorie una volta per ogni area dati.  
+ Nell'area del gruppo di righe vengono visualizzate due istanze del gruppo di categorie relative a Clothing e Components. Il gruppo di colonne contiene un'istanza del gruppo geografia relativa al America del Nord, con due istanze del gruppo paese/regione nidificate per Canada (CA) e Stati Uniti (US). Inoltre, nella colonna adiacente sono visualizzate due istanze del gruppo anno relative a 2003 e 2004. La riga della colonna Total contiene i totali delle righe. Nella riga dei totali che si ripete con il gruppo di categorie sono mostrati i totali delle sottocategorie mentre nella riga del totale complessivo sono visualizzati i totali delle categorie una volta per ogni area dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

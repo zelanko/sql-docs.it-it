@@ -1,6 +1,6 @@
 ---
-title: Proprietà - SQL Server Integration Services (scheda Servizio) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - SQL Server Integration Services (scheda Servizio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d99dd32aa72d550db7aab32f0f4d9a4539d4251d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304948"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Proprietà - SQL Server Integration Services (scheda Servizio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Usare la scheda **Servizio**nella finestra di dialogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Proprietà** per visualizzare o specificare le opzioni seguenti.  
+  Usare la scheda **Servizio** nella finestra di dialogo **Proprietà** di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per visualizzare o specificare le opzioni seguenti.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  
@@ -42,7 +42,7 @@ ms.locfileid: "68024025"
  Visualizza l'ID di processo di Windows.  
   
  **Tipo di servizio SQL Server**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  

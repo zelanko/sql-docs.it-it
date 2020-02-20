@@ -11,13 +11,13 @@ ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571945"
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>Metodi di MSReportServer_Instance - GetReportServerUrls
+# <a name="msreportserver_instance-methods---getreportserverurls"></a>Metodi di MSReportServer_Instance - GetReportServerUrls
   Restituisce un elenco degli URL che è possibile usare per accedere al server di report e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  
   
 ## <a name="syntax"></a>Sintassi  
@@ -47,7 +47,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Valori restituiti  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I metodi esposti dagli oggetti di gestione WMI vengono chiamati tramite la funzione InvokeMethod. Per altre informazioni, vedere gli argomenti relativi all'esecuzione di metodi in oggetti di gestione all'interno della documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI.  
   
 ## <a name="requirements"></a>Requisiti  

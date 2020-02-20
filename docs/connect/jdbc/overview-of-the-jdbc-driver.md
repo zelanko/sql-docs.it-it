@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sul driver JDBC | Microsoft Docs
+title: Panoramica del driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049826"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Panoramica del driver JDBC
@@ -25,9 +25,9 @@ Microsoft JDBC Driver per SQL Server è un driver conforme a JDBC (Java Database
 
 ## <a name="redistribution"></a>Ridistribuzione
 
-Le versioni 6,0, 6,2, 6,4 e 7,0 del driver JDBC sono ridistribuibili. Esaminare la clausola _Codice distribuibile_ nei contratti di licenza.
+Le versioni 6.0, 6.2, 6.4 e 7.0 del driver JDBC sono ridistribuibili. Esaminare la clausola _Codice distribuibile_ nei contratti di licenza.
 
-Le versioni 4. x del driver JDBC sono obsolete e obsolete. Il supporto per 4. x è scaduto prima del 2018.
+Le versioni 4.x del driver JDBC sono obsolete. Il supporto per 4.x è scaduto prima del 2018.
 
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
@@ -43,7 +43,7 @@ Negli argomenti di questa sezione viene fornita una panoramica generale del driv
 |[Distribuzione del driver JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md)|Descrive come ridistribuire e distribuire Microsoft JDBC Driver nei sistemi Windows e Unix.|  
 |[Altre informazioni sul driver JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Descrive dove trovare risorse aggiuntive su Microsoft JDBC Driver, inclusi i collegamenti a risorse esterne.|  
 |[Matrice di supporto di Microsoft JDBC Driver per SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Criteri relativi al ciclo di vita e alla matrice del supporto di Microsoft JDBC Driver per SQL Server.|  
-|[Domande frequenti domande &#40;&#41; frequenti sul driver JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Domande frequenti su Microsoft JDBC Driver.|  
+|[Domande frequenti sul driver JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Domande frequenti su Microsoft JDBC Driver.|  
 |[Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server.|
 | &nbsp; | &nbsp; |
 

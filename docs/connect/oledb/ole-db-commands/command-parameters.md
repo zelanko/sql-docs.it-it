@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1ed49ebaffb46b8542247e67ff7c639cec1cca1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016111"
 ---
 # <a name="command-parameters"></a>Parametri dei comandi
@@ -34,7 +34,7 @@ ms.locfileid: "68016111"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- Per migliorare le prestazioni riducendo il traffico di rete, il driver OLE DB per SQL Server non deduce automaticamente le informazioni sui parametri, a meno che non venga chiamato **ICommandWithParameters::GetParameterInfo** o **ICommandPrepare::Prepare** prima di eseguire un comando. Ciò significa che il driver OLE DB per SQL Server non esegue automaticamente le operazioni seguenti:  
+ Per migliorare le prestazioni riducendo il traffico di rete, il driver OLE DB per SQL Server non deduce automaticamente le informazioni sui parametri, a meno che non venga chiamato **ICommandWithParameters::GetParameterInfo** o **ICommandPrepare::Prepare** prima di eseguire un comando. Ciò significa che OLE DB Driver per SQL Server non esegue automaticamente le operazioni seguenti:  
   
 -   Verificare la correttezza del tipo di dati specificato con **ICommandWithParameters::SetParameterInfo**.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "68016111"
 > [!NOTE]  
 >  Il provider non supporta la chiamata a **ICommandWithParameters::GetParameterInfo** per le istruzioni UPDATE o DELETE di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenenti una clausola FROM, per le istruzioni SQL dipendenti da una sottoquery contenente parametri, per le istruzioni SQL che contengono marcatori di parametro in entrambe le espressioni di un predicato di confronto, LIKE o quantificato oppure per le query in cui uno dei parametri è il parametro di una funzione. In caso di elaborazione di un batch di istruzioni SQL, il provider non supporta inoltre la chiamata a **ICommandWithParameters::GetParameterInfo** per i marcatori di parametro nelle istruzioni dopo la prima istruzione del batch. I commenti (/* \*/) non sono consentiti nel comando [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Il driver OLE DB per SQL Server supporta i parametri di input nei comandi dell'istruzione SQL. Nei comandi di chiamata di routine, il driver OLE DB per SQL Server supporta i parametri di input, output e input/output. I valori dei parametri di output vengono restituiti all'applicazione in fase di esecuzione (solo se non sono stati restituiti set di righe) o quando tutti i set di righe restituiti vengono esauriti dall'applicazione. Per assicurarsi che i valori restituiti siano validi, usare **IMultipleResults** per applicare l'utilizzo dei set di righe.  
+ OLE DB Driver per SQL Server supporta i parametri di input nei comandi delle istruzioni SQL. Nei comandi delle chiamate a procedure OLE DB Driver per SQL Server supporta parametri di input, di output e di input/output. I valori dei parametri di output vengono restituiti all'applicazione in fase di esecuzione (solo se non sono stati restituiti set di righe) o quando tutti i set di righe restituiti vengono esauriti dall'applicazione. Per assicurarsi che i valori restituiti siano validi, usare **IMultipleResults** per applicare l'utilizzo dei set di righe.  
   
  I nomi dei parametri delle stored procedure non devono essere specificati in una struttura DBPARAMBINDINFO. Usare NULL per il valore del membro *pwszName* per indicare che il driver OLE DB per SQL Server deve ignorare il nome del parametro e deve usare solo l'ordinale specificato nel membro *rgParamOrdinals* di **ICommandWithParameters::SetParameterInfo**. Se il testo del comando contiene parametri denominati e senza nome, tutti i parametri senza nome devono essere specificati prima di quelli denominati.  
   
- Se si specifica il nome del parametro di una stored procedure, il driver OLE DB per SQL Server ne verifica la validità. Il driver OLE DB per SQL Server restituisce un errore quando riceve un nome di parametro errato dal consumer.  
+ Se si specifica il nome del parametro di una stored procedure, il driver OLE DB per SQL Server ne verifica la validità. OLE DB Driver per SQL Server restituisce un errore quando riceve un nome di parametro errato dal consumer.  
   
 > [!NOTE]  
 >  Per esporre il supporto per i tipi definiti dall'utente e XML di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il driver OLE DB per SQL Server implementa una nuova interfaccia [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md).  

@@ -11,10 +11,10 @@ ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028037"
 ---
 # <a name="getting-the-driver-version"></a>Recupero della versione del driver

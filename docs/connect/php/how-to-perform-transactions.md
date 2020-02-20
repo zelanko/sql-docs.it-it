@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire transazioni | Microsoft Docs'
+title: 'Procedura: Eseguire le transazioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936431"
 ---
 # <a name="how-to-perform-transactions"></a>Procedura: Eseguire le transazioni
@@ -42,7 +42,7 @@ Per un esempio, vedere [PDO::beginTransaction](../../connect/php/pdo-begintransa
   
 Di seguito in questo argomento viene descritto come usare il driver SQLSRV per eseguire le transazioni.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 I passaggi principali per l'esecuzione di una transazione sono i seguenti:  
   
 1.  Avviare la transazione con **sqlsrv_begin_transaction**.  
@@ -72,7 +72,7 @@ Le query che seguono (eliminazione dell'ordine di vendita e aggiornamento delle 
   
 Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 <?php  
@@ -150,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Commenti  
-Per porre l'attenzione sul comportamento delle transazioni, una parte della gestione degli errori consigliata non è inclusa nell'esempio. Per un'applicazione di produzione, è consigliabile controllare qualsiasi chiamata a una funzione **sqlsrv** per individuare eventuali errori e gestirli di conseguenza.
+Per porre l'attenzione sul comportamento delle transazioni, una parte della gestione degli errori consigliata non è inclusa nell'esempio. Nel caso di un'applicazione di produzione è consigliabile cercare eventuali errori in tutte le chiamate a una funzione **sqlsrv** e gestirli di conseguenza.
   
 ## <a name="see-also"></a>Vedere anche  
 [Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

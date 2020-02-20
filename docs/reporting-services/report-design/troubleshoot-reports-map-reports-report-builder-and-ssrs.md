@@ -1,5 +1,5 @@
 ---
-title: 'Risolvere i problemi relativi ai report: i report mappa (Generatore report e SSRS) | Microsoft Docs'
+title: 'Risoluzione dei problemi dei report: Report mappa (Generatore report e SSRS) | Microsoft Docs'
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,18 +9,18 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594493"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report: report mappa (Generatore report e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi dei report: Report mappa (Generatore report e SSRS)
   È possibile che si verifichino problemi con le mappe in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.  
     
    ## <a name="need-more-help"></a>Per ulteriore assistenza  
    
-  Provare:  
+  Soluzione:  
  * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) su Stack Overflow  
  * Inserire un problema o un suggerimento in [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
 
@@ -187,7 +187,7 @@ ms.locfileid: "73594493"
   
 -   La proiezione della mappa deve essere **Mercator**.  
   
--   Per l'anteprima locale, è necessario disporre dell'accesso a Internet. Per un report che è in esecuzione dal server di report, quest'ultimo deve essere configurato per supportare lo sfondo a sezioni. Per ulteriori informazioni, vedere [pianificare un report mappa](plan-a-map-report-report-builder-and-ssrs.md).  
+-   Per l'anteprima locale, è necessario disporre dell'accesso a Internet. Per un report che è in esecuzione dal server di report, quest'ultimo deve essere configurato per supportare lo sfondo a sezioni. Per altre informazioni, vedere [Pianificare un report mappa](plan-a-map-report-report-builder-and-ssrs.md).  
   
  Per altre informazioni sull'aggiunta di un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

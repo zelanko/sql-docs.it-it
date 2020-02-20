@@ -1,9 +1,11 @@
 ---
-title: Utilizzo dell'API SOAP in un'applicazione Web - Reporting Services | Microsoft Docs
+title: Usare l'API SOAP nelle applicazioni Web
+description: È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
@@ -14,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d9b086f6ec5a57493c96e3a4d0462a44d9c2e3c
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: d7ae6c53033d1ea79a58d566bf57d8ed622e8f8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492780"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796831"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrazione di Reporting Services tramite SOAP - Applicazione Web
-  È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web ReportServer da un'applicazione Web nello stesso modo in cui si accede all'API SOAP da un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web ReportServer e consente di utilizzare un'infrastruttura e strumenti familiari per compilare applicazioni aziendali in tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web ReportServer da un'applicazione Web nello stesso modo in cui si accede all'API SOAP da un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web ReportServer e consente di usare un'infrastruttura e strumenti familiari per compilare applicazioni aziendali basate sulla tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  È possibile accedere alla funzionalità di gestione dei report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la stessa facilità da un'applicazione Web o da un'applicazione Windows. Da un'applicazione Web, è possibile aggiungere e rimuovere gli elementi al e dal database del server di report, impostare la sicurezza degli elementi, modificare gli elementi del database del server di report, gestire le pianificazione e il recapito e altro ancora.  
   
@@ -49,7 +51,7 @@ ms.locfileid: "67492780"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
- È inoltre possibile utilizzare l'applicazione Web per gestire un server di report e i relativi contenuti. Il portale web, incluso con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è riportato un esempio di un'applicazione Web che gestisce la maggior parte delle attività si eseguono in genere tramite Reporting Services. È possibile aggiungere le funzionalità di gestione report del portale Web alle applicazioni Web personalizzate. È ad esempio possibile fare in modo che venga restituito un elenco di report disponibili nel database del server di report e visualizzarli in un controllo [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** per consentire agli utenti di scegliere i report dall'elenco. Nel codice seguente viene eseguita la connessione al database del server di report e viene restituito un elenco di elementi disponibili nel database del server di report. I report disponibili vengono aggiunti quindi a un controllo ListBox, in cui viene visualizzato il percorso di ogni report.  
+ È inoltre possibile utilizzare l'applicazione Web per gestire un server di report e i relativi contenuti. Il portale Web, incluso in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è un esempio di applicazione Web che gestisce la maggior parte delle attività che in genere vengono eseguite usando Reporting Services. È possibile aggiungere le funzionalità di gestione report del portale Web alle applicazioni Web personalizzate. È ad esempio possibile fare in modo che venga restituito un elenco di report disponibili nel database del server di report e visualizzarli in un controllo [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** per consentire agli utenti di scegliere i report dall'elenco. Nel codice seguente viene eseguita la connessione al database del server di report e viene restituito un elenco di elementi disponibili nel database del server di report. I report disponibili vengono aggiunti quindi a un controllo ListBox, in cui viene visualizzato il percorso di ogni report.  
 
 ::: moniker-end
   

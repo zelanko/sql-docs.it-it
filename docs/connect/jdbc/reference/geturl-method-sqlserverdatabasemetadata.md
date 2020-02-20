@@ -16,10 +16,10 @@ ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978210"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>Metodo getURL (SQLServerDatabaseMetaData)
@@ -40,14 +40,14 @@ public java.lang.String getURL()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getURL viene specificato dal metodo getURL nell'interfaccia java.sql.DatabaseMetaData.  
   
  Quando si usa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo metodo restituisce un valore **String** contenente le informazioni seguenti:  
   
 -   Un valore URL di "jdbc:sqlserver://"  
   
--   Proprietà di connessione facoltative, ad esempio **nomeserver**, **NomeIstanza**e **NumeroPorta**  
+-   Proprietà di connessione facoltative, ad esempio **serverName**, **instanceName** e **portNumber**  
   
 -   Altre proprietà di connessione impostate dall'utente e tutte le proprietà di connessione con i valori predefiniti del driver non vuoti o non Null eccetto **userName**, **password** e **integratedSecurity**.  
   

@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513666"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Installare un server di report di Reporting Services 2016 in modalità nativa
@@ -86,7 +86,7 @@ Un server di report in modalità nativa di [!INCLUDE[ssRSnoversion](../../includ
 |----------|-----------------|  
 |Prefisso|Il prefisso predefinito è HTTP. Se in precedenza è stato installato un certificato SSL (Secure Sockets Layer), il programma di installazione tenterà di creare prenotazioni URL che utilizzano il prefisso HTTPS.|  
 |Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetta le richieste HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui `https://<computername>/reportserver`, `https://localhost/reportserver`, o `https://<IPAddress>/reportserver`.|  
-|Port|La porta predefinita è 80. Si noti che se si utilizza un numero di porta diverso da 80, sarà necessario aggiungerlo in modo esplicito all'URL quando si apre un'applicazione Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una finestra del browser.|  
+|Porta|La porta predefinita è 80. Si noti che se si utilizza un numero di porta diverso da 80, sarà necessario aggiungerlo in modo esplicito all'URL quando si apre un'applicazione Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una finestra del browser.|  
 |Directory virtuale|Per impostazione predefinita, le directory virtuali vengono create nel formato ReportServer_\<*nome_istanza*> per il servizio Web ReportServer e Reports_\<*nome_istanza*> per il [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Per il servizio Web ReportServer, la directory virtuale predefinita è **reportserver**. Per il [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], la directory virtuale predefinita è **reports**.|  
   
  Di seguito viene fornito un esempio di stringa dell'URL completa:  
@@ -116,7 +116,7 @@ Un server di report in modalità nativa di [!INCLUDE[ssRSnoversion](../../includ
   
 2.  Nella pagina **Impostazione ruolo** selezionare **Installazione funzionalità SQL Server**.  
   
-     ![Installazione di funzionalità di SQL Server per impostazione ruolo](../../reporting-services/install-windows/media/rs-setuprole.png "Installazione di funzionalità di SQL Server per impostazione ruolo")  
+     ![Installazione funzionalità SQL Server per il ruolo di installazione](../../reporting-services/install-windows/media/rs-setuprole.png "Installazione funzionalità SQL Server per il ruolo di installazione")  
   
 3.  Nella pagina **Selezione funzionalità** selezionare le opzioni seguenti:  
   
@@ -124,7 +124,7 @@ Un server di report in modalità nativa di [!INCLUDE[ssRSnoversion](../../includ
   
     -   (2) **Reporting Services - Nativo**.  
   
-     ![Selezionare la modalità nativa di SSRS nella selezione funzionalità](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "Selezionare la modalità nativa di SSRS nella selezione funzionalità")  
+     ![Selezione della modalità nativa SSRS in Selezione funzionalità](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "Selezione della modalità nativa SSRS in Selezione funzionalità")  
   
 4.  Esaminare le **regole delle funzionalità** passate.  
   
@@ -134,20 +134,20 @@ Un server di report in modalità nativa di [!INCLUDE[ssRSnoversion](../../includ
   
     -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **Configurazione server**: se si intende usare la funzionalità di sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , nella pagina **Configurazione server** è possibile verificare se SQL Server Agent è configurato per il tipo di avvio **Automatico** .   Il tipo predefinito è manuale.  
+6.  **Configurazione server**: se si intende usare la funzionalità di sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], nella pagina **Configurazione server** è possibile verificare se SQL Server Agent è configurato per il tipo di avvio **Automatico**.   Il tipo predefinito è manuale.  
   
 7.  Aggiungere gli amministratori di SQL Server nella pagina **Configurazione del motore di database** .  
   
 8.  Nella pagina **Configurazione di Reporting Services** selezionare **Installazione e configurazione**.  
   
-     ![Configurazione della modalità di SSRS](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "Configurazione della modalità nativa di SSRS")  
+     ![Configurazione modalità nativa SSRS](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "Configurazione modalità nativa SSRS")  
   
     > [!NOTE]  
     >  **Installazione e configurazione** non sarà disponibile a meno che non venga selezionata anche la funzionalità del database per l'installazione.  
   
 9. Regole di configurazione delle funzionalità: verificare le regole passate. L'installazione guidata passa automaticamente allo stato **Pronto per l'installazione** se passano tutte le regole.  Specifiche di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le regole verificano che il catalogo del server di report e il database del catalogo temporaneo non esistano già.  
   
-10. Nella pagina **Inizio installazione** prendere nota del percorso del file di configurazione perché sarà possibile farvi riferimento in un secondo momento per un riepilogo utile della configurazione iniziale dei server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusi i componenti installati, gli account del servizio e gli amministratori.  
+10. Nella pagina **Inizio installazione** prendere nota del percorso del file di configurazione perché sarà possibile farvi riferimento in un secondo momento per un riepilogo utile della configurazione iniziale dei server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusi i componenti installati, gli account del servizio e gli amministratori.  
   
 11. Al completamento dell'installazione guidata di SQL Server, verificare l'installazione della modalità nativa predefinita tramite i passaggi di base riportati di seguito.  
   
@@ -155,11 +155,11 @@ Un server di report in modalità nativa di [!INCLUDE[ssRSnoversion](../../includ
   
     -   Aprire il browser **con privilegi di amministratore** e connettersi al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], ad esempio `https://localhost/Reports`.  
   
-    -   Aprire il browser con i privilegi di amministratore e connettersi alla pagina del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio,  `https://localhost/ReportServer`  
+    -   Aprire il browser con i privilegi di amministratore e connettersi alla pagina del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio, `https://localhost/ReportServer`  
   
  Per ulteriori informazioni, vedere la sezione relativa alla modalità nativa dei due argomenti seguenti:  
   
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
+ [Verificare un'installazione di Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
  [Risoluzione dei problemi di installazione di Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   

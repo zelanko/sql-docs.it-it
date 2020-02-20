@@ -1,22 +1,24 @@
 ---
-title: Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione) | Microsoft Docs
-ms.date: 05/31/2016
+title: Impostazioni di sottoscrizione e account di condivisione file (Gestione configurazione) | Microsoft Docs
+description: Usare la pagina Impostazioni sottoscrizione di Gestione configurazione Reporting Services per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni di condivisione file.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651971"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866274"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione SSRS)
   Usare la pagina **Impostazioni sottoscrizione** di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni con recapito tramite condivisione file. L'account di condivisione file consente di usare un singolo set di credenziali in più sottoscrizioni che recapitano i report a una condivisione file. Quando è necessario modificare le credenziali, è possibile configurare la modifica per l'account di condivisione file e non è necessario aggiornare ogni sottoscrizione.  
   
  Sono disponibili due flussi di lavoro con le sottoscrizioni con recapito tramite condivisione dei file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -27,7 +29,7 @@ ms.locfileid: "62651971"
   
 -   È anche possibile combinare i due approcci e fare in modo che alcune sottoscrizioni con condivisioni file usino l'account di condivisione file centrale, mentre altre sottoscrizioni usano credenziali specifiche.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)] Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="specify-a-file-share-account"></a>Specificare un account di condivisione file  
  Se questa opzione è selezionata, sarà possibile fornire un account da usare per accedere alle condivisioni di file dal server di report. Se si configura l'account di condivisione file, tutti gli utenti possono selezionare l'account per tutte le sottoscrizioni configurate per il recapito dei report a una condivisione file. Se questa opzione non è selezionata, l'account di condivisione file **non** è disponibile in alcuna sottoscrizione.  
@@ -36,7 +38,7 @@ ms.locfileid: "62651971"
   
  L'immagine seguente illustra le opzioni visualizzate agli utenti per le sottoscrizioni configurate per il recapito tramite condivisione file. L'opzione **Usa l'account di condivisione file** è disabilitata se non è stato configurato un account di condivisione file.  
   
- ![account di condivisione file di Gestione configurazione](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "account di condivisione file di Gestione configurazione")  
+ ![Account di condivisione file di Configuration Manager](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "Account di condivisione file di Configuration Manager")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Evitare l'escalation dei privilegi o privilegi elevati  
   

@@ -11,10 +11,10 @@ ms.assetid: fc746413-bdbf-4109-aee0-385a1270c847
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ce089832227a9f44cd1adfd0a4682b53002a2fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998722"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>Metodo updateNCharacterStream (int, java.io.Reader)
@@ -42,10 +42,10 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo Metodo updateNCharacterStream viene specificato dal Metodo updateNCharacterStream nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo updateNCharacterStream viene specificato dal metodo updateNCharacterStream nell'interfaccia java.sql.ResultSet.  
   
- Questo metodo passa caratteri Unicode da un oggetto Reader alle colonne **nchar**, **nvarchar (max)** , **ntext** e **XML** selezionate. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
+ Questo metodo passa caratteri Unicode da un oggetto Reader alle colonne selezionate **nchar**, **nvarchar (max)** , **ntext** e **xml**. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

@@ -16,10 +16,10 @@ ms.assetid: ebe7ff0f-3cc0-408e-9503-4ca754c9c37f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7aa69ba016f7b50179becd73c7474c7dec91686
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980900"
 ---
 # <a name="getparametertypename-method-sqlserverparametermetadata"></a>Metodo getParameterTypeName (SQLServerParameterMetaData)
@@ -45,8 +45,8 @@ public java.lang.String getParameterTypeName(int param)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getParameterTypeName viene specificato dal metodo getParameterTypeName nell'interfaccia java. SQL. ParameterMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getParameterTypeName viene specificato dal metodo getParameterTypeName nell'interfaccia java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

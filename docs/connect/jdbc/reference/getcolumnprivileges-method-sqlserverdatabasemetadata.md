@@ -16,10 +16,10 @@ ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952870"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Metodo getColumnPrivileges (SQLServerDatabaseMetaData)
@@ -46,7 +46,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  Valore **String** contenente il nome dello schema.  
   
- *table*  
+ *tabella*  
   
  Valore **String** contenente il nome della tabella.  
   
@@ -60,21 +60,21 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getColumnPrivileges viene specificato dal metodo getColumnPrivileges nell'interfaccia java.sql.DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getColumnPrivileges conterrà le informazioni seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nome del catalogo.|  
-|TABLE_SCHEM|**String**|Nome dello schema della tabella.|  
-|TABLE_NAME|**String**|Il nome della tabella.|  
-|COLUMN_NAME|**String**|Nome della colonna.|  
-|GRANTOR|**String**|Oggetto che concede l'accesso.|  
-|GRANTEE|**String**|Oggetto a cui si concede l'accesso.|  
-|PRIVILEGE|**String**|Tipo di accesso concesso.|  
-|IS_GRANTABLE|**String**|Indica se l'utente autorizzato può concedere l'accesso agli altri utenti.|  
+|TABLE_CAT|**Stringa**|Nome del catalogo.|  
+|TABLE_SCHEM|**Stringa**|Nome dello schema della tabella.|  
+|TABLE_NAME|**Stringa**|Il nome della tabella.|  
+|COLUMN_NAME|**Stringa**|Nome della colonna.|  
+|GRANTOR|**Stringa**|Oggetto che concede l'accesso.|  
+|GRANTEE|**Stringa**|Oggetto a cui si concede l'accesso.|  
+|PRIVILEGE|**Stringa**|Tipo di accesso concesso.|  
+|IS_GRANTABLE|**Stringa**|Indica se l'utente autorizzato può concedere l'accesso agli altri utenti.|  
   
 > [!NOTE]  
 >  Per altre informazioni sui dati restituiti dal metodo getColumnPrivileges, vedere "sp_column_privileges (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

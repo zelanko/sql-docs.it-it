@@ -16,10 +16,10 @@ ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be54aea70e712d2209c04196d3e450bca488578b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972190"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Metodo setTrustStore (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  Una **stringa** contenente il percorso, nome file incluso, del file trustStore del certificato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando la proprietà trustStore non è specificata o è impostata su Null, per determinare l'archivio certificati da utilizzare in [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] vengono utilizzate le regole di ricerca della factory del responsabile dell'attendibilità. Tramite l'istanza predefinita di TrustManagerFactory SunX509 viene eseguito un tentativo di individuare il materiale attendibile nelle posizioni seguenti in base all'ordine indicato:  
   
 -   1. Un file specificato dalla proprietà di sistema JVM (Java Virtual Machine) "javax.net.ssl.trustStore".  

@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580093"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
@@ -22,7 +22,7 @@ ms.locfileid: "65580093"
  Per gestire le parti del report, è possibile usare il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per un server di report in modalità nativa o le pagine dell'applicazione per un server di report in modalità integrata SharePoint.  
   
 ### <a name="server-side-interaction-and-search"></a>Interazione e ricerca sul lato server  
- Le parti del report possono essere pubblicate in un server di report in modalità nativa o in modalità integrata SharePoint. Gli utenti possono trovare e aggiungere parti del report ai report in uso tramite la funzionalità di raccolta delle parti del report in un'applicazione di creazione di report, ad esempio Generatore report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando un utente cerca una parte del report, la ricerca viene effettuata nel catalogo del server di report indipendentemente dalla modalità di installazione del server.  
+ Le parti del report possono essere pubblicate in un server di report in modalità nativa o in modalità integrata SharePoint. Gli utenti possono trovare e aggiungere parti del report ai report in uso tramite la funzionalità di raccolta delle parti del report in un'applicazione di creazione di report, ad esempio Generatore report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un utente cerca una parte del report, la ricerca viene effettuata nel catalogo del server di report indipendentemente dalla modalità di installazione del server.  
   
  Quando le parti del report vengono pubblicate da un'applicazione di creazione di report come Generatore report in un server di report in modalità integrata SharePoint, viene aggiornato anche il catalogo del server di report e vengono eseguite ricerche nella raccolta per riflettere in maniera accurata la parte del report nuova o aggiornata.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65580093"
   
 |Proprietà|Descrizione|Parte del report<br /><br /> Criteri di ricerca nella raccolta|  
 |--------------|-----------------|---------------------------------------------|  
-|nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
+|Nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
 |Descrizione|Può essere necessario organizzare i nomi delle parti del report in modo da semplificare la ricerca nella raccolta. Ad esempio, è possibile cercare la descrizione che inizia con "Vendite>>" per trovare tutte le parti di report in cui sono presenti dati e presentazioni relativi alle vendite.|Sì|  
 |CreatedBy|ID dell'utente che ha aggiunto la parte del report al database del server di report. Il formato esatto dipende dal metodo di autenticazione. Alcuni metodi di autenticazione, ad esempio, consentono di visualizzare il nome di dominio\utente completo nei campi CreatedBy e ModifiedBy.|Sì|  
 |CreationDate|Data in cui è stata originariamente creata la parte del report.<br /><br /> Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
@@ -66,18 +66,18 @@ ms.locfileid: "65580093"
 |Azioni|Ruoli|  
 |-------------|-----------|  
 |Aggiunta, eliminazione, modifica delle proprietà dell'elemento, gestione della sicurezza e download di parti del report|Gestione contenuto<br /><br /> Report personali|  
-|Aggiunta, eliminazione e download di parti del report|Server di pubblicazione|  
+|Aggiunta, eliminazione e download di parti del report|Editore|  
 |Esecuzione di ricerche e riutilizzo|Browser<br /><br /> Generatore report|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Server in modalità integrata SharePoint  
   
-|Azioni|Role|  
+|Azioni|Ruolo|  
 |-------------|----------|  
 |Aggiunta, eliminazione, modifica delle proprietà dell'elemento, gestione della sicurezza e download di parti del report|Controllo completo|  
-|Aggiunta, eliminazione, modifica delle proprietà dell'elemento e download di parti del report|Progettazione<br /><br /> Collaborazione|  
-|Esecuzione di ricerche e riutilizzo|lettura<br /><br /> Solo visualizzazione|  
+|Aggiunta, eliminazione, modifica delle proprietà dell'elemento e download di parti del report|Progettazione<br /><br /> Contribuire|  
+|Esecuzione di ricerche e riutilizzo|Lettura<br /><br /> Solo visualizzazione|  
   
-### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
+### <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
   
 -   Quando vengono riutilizzate in un report, le definizioni delle parti del report vengono copiate completamente nella definizione del report insieme all'elemento ComponentID di identificazione. Se una parte del report viene aggiornata nel server, gli utenti possono scegliere di scaricare la parte del report aggiornata nel report in uso. Gli aggiornamenti sono inoltre copie complete della parte del report, poiché sostituiscono la versione esistente della parte del report presente nel report in uso.  
   

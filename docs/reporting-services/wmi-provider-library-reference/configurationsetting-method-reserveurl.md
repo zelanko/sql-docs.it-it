@@ -11,10 +11,10 @@ ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e16dbe378ddab0b04237509a9fc9865d08468bba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576699"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>Metodo ConfigurationSetting - ReserveURL
@@ -43,7 +43,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *lcid*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
- *Errore*  
+ *Error (Errore) (Error (Errore)e)*  
  [out] Descrizione dell'errore che si è verificato.  
   
  *HRESULT*  
@@ -52,7 +52,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  *UrlString* non include il nome della directory virtuale. A tal fine, viene fornito il metodo [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) .  
   
  Le prenotazioni URL vengono create per l'account del servizio Windows corrente. La modifica dell'account del servizio Windows richiede l'aggiornamento manuale di tutte le prenotazioni URL.  

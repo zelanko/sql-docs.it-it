@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche di testo con espressioni regolari | Microsoft Docs
-ms.custom: ''
+title: Testo di ricerca con espressioni regolari
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,17 +16,17 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dba6a77288a4bebba70372ecf6fbd7a1f05dda6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264167"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253683"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
+Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile usare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo **Trova e sostituisci** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-using-regular-expressions"></a>Per eseguire la ricerca usando espressioni regolari  
   
@@ -39,7 +39,7 @@ Le espressioni regolari costituiscono un metodo di notazione conciso e flessibil
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
-|Espressione|Sintassi|Descrizione|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Qualsiasi carattere|.|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
@@ -51,17 +51,17 @@ Le espressioni regolari costituiscono un metodo di notazione conciso e flessibil
 |Interruzione di riga|\n|Consente di ricercare un'interruzione di riga, indipendentemente dalla piattaforma. In un'espressione di sostituzione, inserisce un'interruzione di riga.|  
 |Qualsiasi carattere del set|[]|Consente di ricercare qualsiasi carattere racchiuso tra []. Per specificare un intervallo di caratteri, immettere il carattere iniziale e quello finale separati da un trattino (-), ad esempio [a-z].|  
 |Qualsiasi carattere esterno al set|[^...]|Consente di ricercare qualsiasi carattere non compreso nel set di caratteri che seguono il simbolo ^.|  
-|e|&#124;|Cerca l'espressione specificata prima o dopo il simbolo OR (&#124;). In genere viene utilizzata all'interno di un gruppo. Ad esempio, (caffè&#124;latte) macchiato corrisponde a "caffè macchiato" e "latte macchiato".|  
+|Oppure|&#124;|Cerca l'espressione specificata prima o dopo il simbolo OR (&#124;). In genere viene utilizzata all'interno di un gruppo. Ad esempio, (caffè&#124;latte) macchiato corrisponde a "caffè macchiato" e "latte macchiato".|  
 |Carattere speciale di escape|\|Cerca il carattere che segue la barra rovesciata (\\) come valore letterale. Ciò consente di trovare caratteri utilizzati nella notazione delle espressioni regolari, quali { e ^. Ad esempio, \\^ consente di cercare il carattere ^.|  
 |Espressione tag|{}|Consente di ricercare il testo con tag nell'espressione tra parentesi.|  
 |Identificatore C/C++|:i|Corrisponde all'espressione ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Stringa tra virgolette|:q|Cerca l'espressione (("[^"]*")&#124;('[^']\*')).|  
 |Spazio o tabulazione|:b|Consente di ricercare il carattere spazio o tabulazione.|  
-|Valore intero|:z|Corrisponde all'espressione ([0-9]+).|  
+|Integer|:z|Corrisponde all'espressione ([0-9]+).|  
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
-|Espressione|Sintassi|Descrizione|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
@@ -85,7 +85,7 @@ Le espressioni regolari costituiscono un metodo di notazione conciso e flessibil
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   
-|Espressione|Sintassi|Descrizione|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Lettera maiuscola|:Lu|Consente di ricercare una qualsiasi lettera maiuscola. Ad esempio, :Luli corrisponde a "Gli" ma non a "gli".|  
 |Lettera minuscola|:Ll|Consente di ricercare una qualsiasi lettera minuscola. Ad esempio, :Llli corrisponde a "gli" ma non a "Gli".|  
@@ -120,12 +120,12 @@ Le espressioni regolari costituiscono un metodo di notazione conciso e flessibil
   
  Oltre alle proprietà dei caratteri Unicode standard, è possibile specificare come parte di un set di caratteri le proprietà aggiuntive elencate di seguito.  
   
-|Espressione|Sintassi|Descrizione|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
-|Alpha|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
+|Alfa|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
 |Numeric|:Nu|Consente di ricercare un numero o una cifra.|  
 |Punteggiatura|:Pu|Consente di ricercare qualsiasi segno di punteggiatura, ad esempio ?, @, ' e così via.|  
-|Spazio|:Wh|Consente di ricercare tutti i tipi di spazi, inclusi gli spazi di impaginazione e quelli ideografici.|  
+|Spazi vuoti|:Wh|Consente di ricercare tutti i tipi di spazi, inclusi gli spazi di impaginazione e quelli ideografici.|  
 |Bidirezionale|:Bi|Consente di ricercare caratteri appartenenti a lingue con scrittura da destra a sinistra, come l'arabo e l'ebraico.|  
 |Hangul|:Ha|Consente di ricercare caratteri Hangul (coreano) e jamo combinati.|  
 |Hiragana|:Hi|Consente di ricercare caratteri hiragana.|  
@@ -134,4 +134,4 @@ Le espressioni regolari costituiscono un metodo di notazione conciso e flessibil
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)   
- [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)  
+ [Eseguire ricerche di testo con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)  

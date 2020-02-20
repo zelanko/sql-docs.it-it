@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140259"
 ---
 # <a name="process-large-reports"></a>Elaborare report di grandi dimensioni
@@ -36,7 +36,7 @@ ms.locfileid: "67140259"
 ## <a name="configuration-recommendations"></a>Raccomandazioni per la configurazione  
  Per l'esecuzione, il rendering e la visualizzazione dei report sono valide le indicazioni seguenti:  
   
--   Progettare il report in modo che supporti l'impaginazione. Il server di report invia infatti il report una pagina alla volta e se il report è suddiviso in più pagine sarà possibile regolare il flusso dei dati inviati al browser. Per altre informazioni, vedere [precaricare la Cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
+-   Progettare il report in modo che supporti l'impaginazione. Il server di report invia infatti il report una pagina alla volta e se il report è suddiviso in più pagine sarà possibile regolare il flusso dei dati inviati al browser. Per altre informazioni, vedere [Precaricare la cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   Configurare il report in modo che venga eseguito come snapshot del report pianificato per evitare che venga eseguito su richiesta. Non impostare un valore di timeout per l'esecuzione del report. Eseguire il report nelle fasce orarie di minore attività.  
   

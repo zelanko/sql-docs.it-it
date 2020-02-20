@@ -1,6 +1,6 @@
 ---
 title: Analisi in blocchi in RevoScaleR
-description: Esercitazione dettagliata su come dividere i dati in blocchi per l'analisi distribuita usando il linguaggio R in SQL Server.
+description: "Esercitazione di RevoScaleR 12: Come dividere i dati in blocchi per l'analisi distribuita usando il linguaggio R in SQL Server."
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727241"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947215"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Eseguire l'analisi in blocchi usando rxDataStep (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 12 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa lezione si userà la funzione **rxDataStep** per elaborare i dati in blocchi, anziché caricare nella memoria l'intero set di dati ed elaborarlo in una sola volta come succede nel codice R tradizionale. La funzione **rxDataStep** legge i dati in blocchi, applica le funzioni R ad ogni blocco di dati (uno per volta) e salva i risultati di riepilogo di ogni blocco in un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comune. Quando tutti i dati sono stati letti, i risultati vengono combinati.
+In questa esercitazione si userà la funzione **rxDataStep** per elaborare i dati in blocchi, anziché caricare nella memoria l'intero set di dati ed elaborarlo in una sola volta come succede nel codice R tradizionale. La funzione **rxDataStep** legge i dati in blocchi, applica le funzioni R ad ogni blocco di dati (uno per volta) e salva i risultati di riepilogo di ogni blocco in un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comune. Quando tutti i dati sono stati letti, i risultati vengono combinati.
 
 > [!TIP]
-> Per questa lezione si calcola una tabella di contingenza usando la funzione **table** in R. Questo esempio è stato ideato solo per scopi didattici. 
+> Per questa esercitazione si calcola una tabella di contingenza usando la funzione **table** in R. Questo esempio è stato ideato solo per scopi didattici. 
 > 
 > Per catalogare set di dati reali, è consigliabile usare le funzioni **rxCrossTabs** e **rxCube** di **RevoScaleR**, in quanto sono ottimizzate per questo tipo di operazione.
 

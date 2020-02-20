@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982796"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Metodo getIndexInfo (SQLServerDatabaseMetaData)
@@ -47,7 +47,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Valore **String** contenente il nome dello schema.  
   
- *table*  
+ *tabella*  
   
  Valore **String** contenente il nome della tabella.  
   
@@ -57,7 +57,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *approximate*  
   
- **true** se i risultati riflettono i valori approssimati o non aggiornati. **false** se i risultati sono accurati.  
+ **true** se i risultati riflettono valori approssimativi o non aggiornati. **false** se i risultati sono accurati.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -65,26 +65,26 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getIndexInfo viene specificato dal metodo getIndexInfo nell'interfaccia java.sql.DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getIndexInfo conterrà le informazioni seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nome del database contenente la tabella specificata.|  
-|TABLE_SCHEM|**String**|Schema della tabella.|  
-|TABLE_NAME|**String**|Nome della tabella.|  
+|TABLE_CAT|**Stringa**|Nome del database contenente la tabella specificata.|  
+|TABLE_SCHEM|**Stringa**|Schema della tabella.|  
+|TABLE_NAME|**Stringa**|Nome della tabella.|  
 |NON_UNIQUE|**boolean**|Indica se i valori di indice possono essere non univoci.|  
-|INDEX_QUALIFIER|**String**|Nome del proprietario dell'indice. Sarà Null se TYPE è tableIndexStatistic.|  
-|INDEX_NAME|**String**|Nome dell'indice.|  
+|INDEX_QUALIFIER|**Stringa**|Nome del proprietario dell'indice. Sarà Null se TYPE è tableIndexStatistic.|  
+|INDEX_NAME|**Stringa**|Nome dell'indice.|  
 |TYPE|**short**|Tipo dell'indice. Può essere uno dei valori seguenti:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|Posizione ordinale della colonna nell'indice. La prima colonna nell'indice è 1.|  
-|COLUMN_NAME|**String**|Nome della colonna.|  
-|ASC_OR_DESC|**String**|Ordine utilizzato nelle regole di confronto dell'indice. Può essere uno dei valori seguenti:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (non applicabile)<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce sempre "A".|  
+|COLUMN_NAME|**Stringa**|Nome della colonna.|  
+|ASC_OR_DESC|**Stringa**|Ordine utilizzato nelle regole di confronto dell'indice. Può essere uno dei valori seguenti:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (non applicabile)<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce sempre "A".|  
 |CARDINALITY|**int**|Numero di righe nella tabella o di valori univoci nell'indice.|  
 |PAGES|**int**|Numero di pagine utilizzate per l'archiviazione dell'indice o della tabella.|  
-|FILTER_CONDITION|**String**|Condizione di filtro.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce sempre null.|  
+|FILTER_CONDITION|**Stringa**|Condizione di filtro.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce sempre Null.|  
   
 > [!NOTE]  
 >  Per altre informazioni sui dati restituiti dal metodo getIndexInfo, vedere "sp_indexes (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

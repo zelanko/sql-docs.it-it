@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7da810593c6b7dee9ab80af17d840ed3d0dc4d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 445057a5ac7144e7bb97f74f8d6eb20d8332f8e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594035"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190633"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo di connessione a SQL Server Parallel Data Warehouse (SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "73594035"
   
  Lo strumento consente di partizionare tabelle di database di grandi dimensioni in più nodi fisici, dove ogni nodo esegue la propria istanza di SQL Server. Quando un report si connette a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] per recuperare i dati del report, si connette al nodo di controllo che gestisce l'elaborazione delle query nell'appliance [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Una volta stabilita la connessione, non si noteranno differenze nell'uso di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'interno e all'esterno di un ambiente [!INCLUDE[ssDW](../../includes/ssdw-md.md)] .  
   
- Per includere nel report dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
+ Per includere nel report dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)], è necessario avere un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
  Questa estensione per i dati supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.  
    
@@ -37,7 +37,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Inoltre, per fornire le credenziali quali nome utente e password, viene utilizzata la finestra di dialogo **Proprietà origini dati** . Le opzioni `User Id` e `Password` vengono aggiunte automaticamente alla stringa di connessione, pertanto non è necessario digitarle come parte della stringa di connessione. Nell'interfaccia utente sono inoltre disponibili opzioni per specificare l'indirizzo IP del nodo di controllo nello strumento [!INCLUDE[ssDW](../../includes/ssdw-md.md)] e il numero di porta. Per impostazione predefinita, il numero di porta è 17000. La porta è configurabile da un amministratore e nella stringa di connessione potrebbe essere utilizzato un numero di porta diverso.  
   
- Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altre informazioni sugli esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenziali  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] fornisce la propria tecnologia di sicurezza per implementare e archiviare nomi utente e password. Non è possibile utilizzare l'autenticazione di Windows. Se si tenta di connettersi a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizzando l'autenticazione di Windows, si verificherà un errore.  
@@ -50,7 +50,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
- Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

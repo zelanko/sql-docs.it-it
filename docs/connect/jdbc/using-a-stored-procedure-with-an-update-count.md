@@ -11,10 +11,10 @@ ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 851974955b9311efc149ecdff310bfbb1d8869fc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026933"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Uso di una stored procedure con i conteggi di aggiornamento
@@ -26,7 +26,7 @@ Per modificare i dati in un database di [!INCLUDE[ssNoVersion](../../includes/ss
 Dopo aver impostato la chiamata alla stored procedure usando la classe SQLServerCallableStatement, chiamare la stored procedure usando il metodo [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) o il metodo [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). Il metodo executeUpdate restituisce un valore **int** contenente il numero di righe interessate dalla stored procedure, diversamente dal metodo execute. Se si usa il metodo execute e si desidera ottenere il conteggio del numero di righe interessate, chiamare il metodo [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) dopo avere eseguito la stored procedure.
 
 > [!NOTE]  
-> Se si desidera che il driver JDBC restituisca tutti i conteggi degli aggiornamenti, inclusi i conteggi degli aggiornamenti restituiti dai trigger eventualmente attivati, impostare la proprietà della stringa di connessione lastUpdateCount su "false". Per ulteriori informazioni sulla proprietà lastUpdateCount, vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).
+> Se si desidera che il driver JDBC restituisca tutti i conteggi degli aggiornamenti, inclusi i conteggi degli aggiornamenti restituiti dai trigger eventualmente attivati, impostare la proprietà della stringa di connessione lastUpdateCount su "false". Per altre informazioni sulla proprietà lastUpdateCount, vedere [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).
 
 Come esempio viene creata la tabella e la stored procedure seguenti e vengono inseriti i dati di esempio nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

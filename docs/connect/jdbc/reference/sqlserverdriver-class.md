@@ -11,16 +11,16 @@ ms.assetid: fbdceae5-7e7b-4edb-8c33-c701ca6b2d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55c8a6bc70b8a2674b28d80552ef0cc95465007e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971310"
 ---
 # <a name="sqlserverdriver-class"></a>Classe SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Rappresenta [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Questa classe include metodi per la connessione a un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per il recupero di informazioni sul driver JDBC.  
+  Rappresenta [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Questa classe include metodi per la connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per il recupero di informazioni sul driver JDBC.  
   
  **Pacchetto:** com.microsoft.sqlserver.jdbc  
   

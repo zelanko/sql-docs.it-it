@@ -1,10 +1,7 @@
 ---
-title: Finestra di dialogo Aggiorna tabella (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Finestra di dialogo Aggiorna tabella
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,24 +10,30 @@ f1_keywords:
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2c3c1b59b43458bf6f24e5c255f43d7eb4cd92e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 5af6b442486a1c80a1b9ec9f8d870f167c67de35
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263118"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246036"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>Finestra di dialogo Aggiorna tabella (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Questa finestra di dialogo consente di specificare la tabella da aggiornare.  
-  
+
+Questa finestra di dialogo consente di specificare la tabella da aggiornare.
+
 Viene visualizzata quando nel riquadro Diagramma sono aperte più tabelle e si cambia il tipo di query in modo da disporre di una query di aggiornamento (Update).  
-  
-Selezionare la tabella da aggiornare e scegliere **OK**.\  
-  
-> [!NOTE]  
-> Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
-  
-## <a name="see-also"></a>Vedere anche  
-[Creazione di query di aggiornamento (Visual Database Tools)](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)  
-  
+
+Selezionare la tabella da aggiornare e scegliere **OK**.
+
+> [!NOTE]
+> Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.
+
+## <a name="see-also"></a>Vedere anche
+
+[Creare query di aggiornamento](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)

@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche di testo con caratteri jolly | Microsoft Docs
-ms.custom: ''
+title: Testo di ricerca con caratteri jolly
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,16 +16,16 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdc79f8162ef95fdbaa34e36629484f1a17d6436
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264163"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253616"
 ---
 # <a name="search-text-with-wildcards"></a>Testo di ricerca con caratteri jolly
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Caratteri o cifre nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+  Le espressioni seguenti possono sostituire caratteri o cifre nel campo **Trova** della finestra di dialogo **Trova e sostituisci** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-search-using-wildcards"></a>Per eseguire la ricerca utilizzando caratteri jolly  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68264163"
   
  Nella tabella seguente sono descritti i caratteri jolly disponibili nell' **Elenco riferimenti**.  
   
-|Espressione|Sintassi|Descrizione|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Un solo carattere|?|Individua un qualsiasi singolo carattere.|  
 |Una sola cifra|#|Individua una qualsiasi singola cifra. Ad esempio, 7# individua i numeri che comprendono 7 seguito da un altro numero. In questo caso potrebbe essere 71 ma non 17.|  
@@ -45,4 +45,4 @@ ms.locfileid: "68264163"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)   
- [Testo di ricerca con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [Eseguire ricerche di testo con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  

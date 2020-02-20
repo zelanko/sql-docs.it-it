@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6779c0892137ee60f011f365e0f3ee4d46b046f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994368"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -41,7 +41,7 @@ HRESULT WaitForAsynchCompletion(
  *dwMillisecTimeOut*[in]  
  Timeout in millisecondi.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  S_OK  
  Il metodo è riuscito.  
   
@@ -57,7 +57,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  Oltre ai valori di codice restituiti elencati in precedenza, il metodo **ISSAsynchStatus::WaitForAsynchCompletion** supporta anche i valori di codice restituiti dai metodi OLEDB di base **ICommand::Execute** e **IDBInitialize::Initialize**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo **ISSAsynchStatus::WaitForAsynchCompletion** non verrà restituito fino al superamento del valore di timeout (in millisecondi) o al completamento dell'operazione in sospeso. L'oggetto **Command** include una proprietà **CommandTimeout** che controlla il numero di secondi che devono trascorrere prima del timeout di una query. La proprietà **CommandTimeout** verrà ignorata se usata insieme al metodo **ISSAsynchStatus::WaitForAsynchCompletion**.  
   
  La proprietà di timeout viene ignorata per le operazioni asincrone. Il parametro di timeout di **ISSAsynchStatus::WaitForAsynchCompletion** specifica la quantità massima di tempo che deve trascorrere prima che il controllo venga restituito al chiamante. Se questo timeout scade, verrà restituito DB_S_ASYNCHRONOUS. I timeout non annullano mai operazioni asincrone. Se l'applicazione deve annullare un'operazione asincrona che non viene completata entro il periodo di timeout, deve attendere lo scadere del timeout e quindi annullare in modo esplicito l'operazione se viene restituito DB_S_ASYNCHRONOUS.  
@@ -73,6 +73,6 @@ HRESULT WaitForAsynchCompletion(
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)   
- [OLE DB &#40;ISSAsynchStatus&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

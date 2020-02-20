@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571502"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Distribuzione e supporto della versione in SQL Server Data Tools (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "65571502"
   
  I report vengono compilati prima di essere sottoposti a rendering come anteprime in Progettazione report o di essere distribuiti nel server di report.  
   
- È possibile impostare le proprietà di configurazione nella finestra di dialogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **di** .  
+ È possibile impostare le proprietà di configurazione nella finestra di dialogo **Proprietà progetto** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Nelle proprietà di compilazione e distribuzione è incluso quanto segue:  
   
@@ -43,14 +43,14 @@ ms.locfileid: "65571502"
   
 -   TargetServerVersion è una proprietà di distribuzione che consente di identificare la versione prevista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installata nel server di report di destinazione specificato nella proprietà TargetServerURL.  
   
- Quando si specifica la versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella finestra di dialogo **Proprietà progetto** , non vengono ripristinati automaticamente i report di questa versione. Di conseguenza, un progetto server di report può contenere report delle due diverse versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando il progetto server di report viene distribuito, tutti i report presenti nel progetto vengono convertiti nella versione specificata in TargetServerVersion.  
+ Quando si specifica la versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella finestra di dialogo **Proprietà progetto**, non vengono ripristinati automaticamente i report di questa versione. Di conseguenza, un progetto server di report può contenere report delle due diverse versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando il progetto server di report viene distribuito, tutti i report presenti nel progetto vengono convertiti nella versione specificata in TargetServerVersion.  
   
  È possibile aggiungere più di una configurazione di progetto a un progetto; ognuna viene utilizzata per uno scenario differente, ad esempio la distribuzione in versioni diverse di server di report. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) e [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
 ##  <a name="bkmk_SupportedVersions"></a> Versioni supportate  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti server di report, non è progettato per l'esecuzione in computer basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]e non può essere installato nei server basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti server di report, non può essere eseguito in computer basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e non può essere installato nei server basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
   
  Nella tabella seguente sono descritte le versioni supportate per la creazione e la pubblicazione di report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -59,11 +59,11 @@ ms.locfileid: "65571502"
   
 |Tipo di progetto o file|Versione|Creazione di report|Pubblicazione di report|Note|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Schema RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Schema RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schema RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Schema RDL 2008 R2|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solo server di report|Aggiornamenti dello schema da RDL 2003 e RDL 2005 a RDL 2008 in locale.|  
+|Progetto server di report<br /><br /> o<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Schema RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|Progetto server di report<br /><br /> o<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Schema RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Progetto server di report<br /><br /> o<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schema RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Progetto server di report<br /><br /> o<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Schema RDL 2008 R2|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Progetto server di report<br /><br /> o<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solo server di report|Aggiornamenti dello schema da RDL 2003 e RDL 2005 a RDL 2008 in locale.|  
   
  Per altre informazioni sull'apertura di report in una versione precedente dello schema di definizione del report, vedere [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md). Per ulteriori informazioni su schemi di definizione dei report specifici, vedere la pagina relativa alla [specifica del linguaggio RDL](https://go.microsoft.com/fwlink/?linkid=116865).  
   

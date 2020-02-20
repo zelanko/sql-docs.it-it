@@ -1,6 +1,6 @@
 ---
 title: Set di dati demo Iris per le esercitazioni
-Description: Creare un database contenente il set di dati Iris e una tabella in cui archiviare i modelli. Questo set di dati viene usato in esercizi che illustrano come eseguire il wrapping del linguaggio R o del codice Python in una stored procedure di SQL Server.
+Description: Creare un database contenente il set di dati Iris e i modelli predittivi. Questo set di dati viene usato nelle esercitazioni di R e Python per Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727102"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908757"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dati demo Iris per le esercitazioni su Python e R in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

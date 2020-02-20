@@ -14,10 +14,10 @@ ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128952"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Impostazione degli argomenti dei metodi del servizio Web

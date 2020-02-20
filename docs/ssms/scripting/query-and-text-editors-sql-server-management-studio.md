@@ -1,5 +1,7 @@
 ---
-title: Editor di query e di testo (SQL Server Management Studio) | Microsoft Docs
+title: Editor di query e di testo (SSMS)
+description: Informazioni su come usare gli editor di SQL Server Management Studio (SSMS) per eseguire query, modificare e testare i file in modo interattivo.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,15 +24,14 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 07ab012f916a86ca8642c81e2bdd87dfc815db2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988154"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558051"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editor di query e di testo (SQL Server Management Studio)
 
@@ -120,16 +121,16 @@ ms.locfileid: "70988154"
 |Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query XML/A.|[Editor XML &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |Viene descritto come configurare opzioni per i vari editor, ad esempio numerazione delle righe e opzioni IntelliSense.|[Configurazione di editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Vengono descritti i vari modi in cui è possibile avviare gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Apertura di un editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
-|Viene descritto come gestire le modalità di visualizzazione, ad esempio utilizzando il ritorno a capo automatico, la divisione di una finestra o le schede.|[Gestione dell'editor e della modalità di visualizzazione](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
-|Viene descritto come impostare le opzioni di formattazione, ad esempio testo nascosto o rientri.|[Gestione della formattazione del codice](../../relational-databases/scripting/manage-code-formatting.md)|  
-|Viene descritto come spostarsi nel testo in una finestra dell'editor mediante caratteristiche come la ricerca incrementale o la funzione "vai a".|[Spostamento nel codice e nel testo](../../relational-databases/scripting/navigate-code-and-text.md)|  
+|Viene descritto come gestire le modalità di visualizzazione, ad esempio utilizzando il ritorno a capo automatico, la divisione di una finestra o le schede.|[Gestire l'editor e la modalità di visualizzazione](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
+|Viene descritto come impostare le opzioni di formattazione, ad esempio testo nascosto o rientri.|[Gestire la formattazione del codice](../../relational-databases/scripting/manage-code-formatting.md)|  
+|Viene descritto come spostarsi nel testo in una finestra dell'editor mediante caratteristiche come la ricerca incrementale o la funzione "vai a".|[Spostarsi nel codice e nel testo](../../relational-databases/scripting/navigate-code-and-text.md)|  
 |Viene descritto come impostare le opzioni di codifica a colori per varie classi di sintassi, semplificando la lettura di istruzioni complesse.|[Codifica con colori negli editor di query](../../relational-databases/scripting/color-coding-in-query-editors.md)|  
 |Viene descritto come utilizzare la struttura del codice per nascondere parti di script complessi nei momenti in cui non vengono utilizzate.|[Struttura del codice](../../relational-databases/scripting/code-outlining.md)|  
-|Viene descritto come trascinare il testo da un percorso in uno script e rilasciarlo in un nuovo percorso.|[Trascinamento della selezione](../../relational-databases/scripting/drag-and-drop-text.md)|  
+|Viene descritto come trascinare il testo da un percorso in uno script e rilasciarlo in un nuovo percorso.|[Spostare testo tramite trascinamento della selezione](../../relational-databases/scripting/drag-and-drop-text.md)|  
 |Viene descritto come effettuare operazioni di ricerca e sostituzione globale, ad esempio in caso di modifica dei nomi di colonna.|[Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)|  
-|Viene descritto come impostare segnalibri per trovare più facilmente parti importanti di codice.|[Gestione di segnalibri](../../relational-databases/scripting/manage-bookmarks.md)|  
-|Viene descritto come visualizzare script o risultati in una finestra o in una griglia.|[Stampa di codice e risultati](../../relational-databases/scripting/print-code-and-results.md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di sqlcmd nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifica di script SQLCMD con l'editor di query](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
+|Viene descritto come impostare segnalibri per trovare più facilmente parti importanti di codice.|[Gestire i segnalibri](../../relational-databases/scripting/manage-bookmarks.md)|  
+|Viene descritto come visualizzare script o risultati in una finestra o in una griglia.|[Stampare codice e risultati](../../relational-databases/scripting/print-code-and-results.md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di sqlcmd nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modificare script SQLCMD con l'editor di query](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |Viene descritto come utilizzare le caratteristiche IntelliSense come il completamento automatico di nomi oggetto durante la digitazione o la verifica del corretto posizionamento dei punti di interruzione.|[IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
 |Vengono descritte le modalità di utilizzo dei frammenti di codice nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . I frammenti sono modelli per istruzioni o blocchi di uso comune e possono essere personalizzati o estesi per includere frammenti specifici del sito.|[Frammenti di codice Transact-SQL](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |Viene descritto come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice e visualizzare informazioni di debug, ad esempio i valori in variabili e parametri.|[Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  

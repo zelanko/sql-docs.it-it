@@ -14,13 +14,13 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570582"
 ---
-# <a name="role-definitions"></a>Definizioni di ruolo
+# <a name="role-definitions"></a>Definizioni dei ruoli
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per *definizione del ruolo* si intende una raccolta denominata di attività che definisce le operazioni disponibili in un server di report. Le definizioni di ruolo rendono disponibili le regole utilizzate dal server di report per implementare la sicurezza. Quando un utente tenta di eseguire un'attività, ad esempio la pubblicazione di un report, nel server di report viene innanzitutto valutata l'assegnazione di ruolo dell'utente per stabilire se questa attività è inclusa nella relativa definizione di ruolo. Se l'attività è inclusa nella definizione di ruolo, la richiesta viene inoltrata.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Utilizzo dei ruoli per autorizzare l'accesso al server di report  

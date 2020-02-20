@@ -16,10 +16,10 @@ ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973116"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Metodo setResponseBuffering (SQLServerStatement)
@@ -35,21 +35,21 @@ public final void setResponseBuffering(java.lang.String value)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Valore*  
+ *value*  
   
  Valore **String** contenente la modalità di memorizzazione delle risposte nel buffer. La modalità valida può essere una delle stringhe senza distinzione tra maiuscole e minuscole seguenti: **full** o **adaptive**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore **adaptive** specifica la memorizzazione nel buffer della quantità di dati minima possibile, quando necessario.  
   
  Il valore **full** specifica la lettura dell'intero risultato dal server in fase di esecuzione.  
   
- Adaptive è il valore predefinito nel driver JDBC versione 2,0 e 3,0. Full è l'impostazione predefinita precedente alla versione 2,0 del driver JDBC.  
+ Adaptive è il valore predefinito nel driver JDBC versione 2.0 e 3.0. Full era il valore predefinito prima della versione 2.0 del driver JDBC.  
   
- Il metodo [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) consente di eseguire l'override della proprietà **String** della connessione **responseBuffering** per l'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) corrente. Per ulteriori informazioni sull'utilizzo della modalità di buffering delle risposte, vedere [utilizzo del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Il metodo [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) consente di eseguire l'override della proprietà **String** della connessione **responseBuffering** per l'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) corrente. Per altre informazioni sull'uso della modalità di buffering delle risposte, vedere [Uso del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md).  
   
  Se l'applicazione specifica un valore del parametro non valido nel metodo [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md), viene generato un oggetto [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md).  
   

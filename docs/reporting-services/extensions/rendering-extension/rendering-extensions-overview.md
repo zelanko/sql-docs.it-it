@@ -12,21 +12,21 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193889"
 ---
 # <a name="rendering-extensions-overview"></a>Cenni preliminari sulle estensioni per il rendering
-  Un'estensione per il rendering è un componente o un modulo di un server di report che consente di trasformare le informazioni sul layout e i dati del report in un formato specifico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include sette estensioni per il rendering: HTML, Excel, Word, CSV o Text, XML, Image e PDF. È possibile creare estensioni per il rendering aggiuntive per generare report in altri formati.  
+  Un'estensione per il rendering è un componente o un modulo di un server di report che consente di trasformare le informazioni sul layout e i dati del report in un formato specifico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include sette estensioni per il rendering: HTML, Excel, Word, CSV o testo, XML, immagine e PDF. È possibile creare estensioni per il rendering aggiuntive per generare report in altri formati.  
   
 > [!NOTE]  
 >  Per determinare quali sono le estensioni per il rendering disponibili, è possibile visualizzare l'elenco delle estensioni installate nel file RSReportServer.config.  
   
  Nella tabella seguente sono descritte le estensioni per il rendering incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extension Name|Descrizione|  
+|Nome estensione|Descrizione|  
 |--------------------|-----------------|  
 |**XML**|Consente di eseguire il rendering di un report in formato XML. Il report viene aperto in un browser. Le trasformazioni aggiuntive applicate a questo output XML possono rappresentare un metodo efficace per evitare di sviluppare un'estensione per il rendering personalizzata.|  
 |**CSV**|Consente di eseguire il rendering di un report in formato con valori delimitati da virgole. Il report viene aperto in uno strumento di visualizzazione associato ai formati di file CSV.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63193889"
  Quando un report viene elaborato, il risultato è un modello a oggetti esposto pubblicamente noto come Modello a oggetti per il rendering (ROM, Rendering Object Model). Il modello a oggetti per il rendering è una raccolta di classi che definiscono il contenuto, il layout e i dati di un report che è stato elaborato. Questo modello è disponibile per gli sviluppatori che desiderano progettare, sviluppare e distribuire estensioni per il rendering personalizzate per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Il modello a oggetti per il rendering viene creato quando il server di report elabora la definizione XML di un report insieme ai dati del report definiti dall'utente. Al termine dell'elaborazione, il modello a oggetti pubblico viene utilizzato da un'estensione per il rendering per definire l'output del report. Le classi pubbliche disponibili del modello a oggetti per il rendering sono definite nello spazio dei nomi **Microsoft.ReportingServices.OnDemandReportRendering**.  
   
 ## <a name="writing-custom-rendering-extensions"></a>Creazione di estensioni per il rendering personalizzate  
- Prima di decidere di creare un'estensione per il rendering personalizzata, è consigliabile valutare alternative più semplici. È possibile effettuare le operazioni seguenti:  
+ Prima di decidere di creare un'estensione per il rendering personalizzata, è consigliabile valutare alternative più semplici. È possibile:  
   
 -   Personalizzare l'output sottoposto a rendering specificando le impostazioni relative alle informazioni sui dispositivi per le estensioni esistenti.  
   

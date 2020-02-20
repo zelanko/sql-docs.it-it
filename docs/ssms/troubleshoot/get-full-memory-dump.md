@@ -1,5 +1,5 @@
 ---
-title: Ottenere il dump completo della memoria per risolvere i problemi di SQL Server Management Studio (SSMS)
+title: Ottenere il dump della memoria completo per risolvere i problemi di SSMS
 Description: Risoluzione dei problemi relativi a un blocco o un arresto anomalo del sistema di SSMS tramite la raccolta di un dump completo della memoria
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -9,14 +9,14 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dineth, sstein
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95beb87d72295f4f5ea10b5bb33476d4d27af628
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266716"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247167"
 ---
 # <a name="get-full-memory-dump"></a>Ottenere il dump completo della memoria
 

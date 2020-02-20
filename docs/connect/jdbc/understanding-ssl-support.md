@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713306"
 ---
 # <a name="understanding-encryption-support"></a>Informazioni sul supporto della crittografia
@@ -28,19 +28,19 @@ Se l'applicazione non richiede la crittografia, [!INCLUDE[jdbcNoVersion](../../i
 > [!NOTE]  
 > Perché una connessione TLS riesca, assicurarsi che il valore passato a **serverName** corrisponda esattamente al nome comune o al nome DNS nel nome soggetto alternativo (SAN, Subject Alternate Name) nel certificato del server.  
 >
-> Per altre informazioni su come configurare TLS per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [abilitare le connessioni crittografate al motore di database](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> Per altre informazioni su come configurare TLS per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Abilitare le connessioni crittografate al motore di database](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Per consentire alle applicazioni di usare la crittografia TLS, a partire dalla versione 1.2 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sono state introdotte le proprietà di connessione **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** e **hostNameInCertificate**. Per altre informazioni, vedere [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
   
  La tabella seguente offre un riepilogo del comportamento della versione di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per i possibili scenari di connessione TLS. In ogni scenario viene usato un set di proprietà di connessione TLS diverso. La tabella include i valori seguenti:  
   
-- **blank**: "la proprietà non esiste nella stringa di connessione"  
+- **vuoto**: la proprietà non esiste nella stringa di connessione  
   
-- **valore**: "la proprietà è presente nella stringa di connessione e il relativo valore è valido"  
+- **value**: la proprietà esiste nella stringa di connessione e il relativo valore è valido  
   
-- **any**: "non è importante se la proprietà esiste nella stringa di connessione o se il relativo valore è valido"  
+- **qualsiasi**: non è importante se la proprietà esiste nella stringa di connessione o se il relativo valore è valido  
   
 > [!NOTE]  
 > Lo stesso comportamento si applica all'autenticazione utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'autenticazione integrata di Windows.  

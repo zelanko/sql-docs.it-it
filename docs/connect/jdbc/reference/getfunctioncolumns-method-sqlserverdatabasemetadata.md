@@ -11,10 +11,10 @@ ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982967"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Metodo getFunctionColumns (SQLServerDatabaseMetaData)
@@ -55,42 +55,42 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getFunctionColumns viene specificato dal metodo getFunctionColumns nell'interfaccia java.sql.DatabaseMetaData.  
   
  Restituisce solo le funzioni e i parametri corrispondenti allo schema, al nome della funzione e al nome del parametro specificati all'interno del catalogo specificato.  
   
  Ogni riga nel set di risultati include le colonne seguenti per una descrizione del parametro, una descrizione della colonna o un tipo restituito:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**String**|Nome del database contenente la funzione.|  
-|FUNCTION_SCHEM|**String**|Schema della funzione.|  
-|FUNCTION_NAME|**String**|Nome della funzione.|  
-|COLUMN_NAME|**String**|Nome di un parametro o di una colonna.|  
-|COLUMN_TYPE|**short**|**Tipo della colonna. Può essere uno dei valori seguenti:**<br /><br /> functionColumnUnknown (0): tipo sconosciuto.<br /><br /> functionColumnIn (1): parametro di input.<br /><br /> functionColumnInOut (2): parametro di input/output.<br /><br /> functionColumnOut (3): parametro di output.<br /><br /> functionReturn (4): valore restituito della funzione.<br /><br /> functionColumnResult (5): un parametro o una colonna è una colonna del set di risultati.|  
+|FUNCTION_CAT|**Stringa**|Nome del database contenente la funzione.|  
+|FUNCTION_SCHEM|**Stringa**|Schema della funzione.|  
+|FUNCTION_NAME|**Stringa**|Nome della funzione.|  
+|COLUMN_NAME|**Stringa**|Nome di un parametro o di una colonna.|  
+|COLUMN_TYPE|**short**|**Tipo della colonna. Può essere uno dei valori seguenti:**<br /><br /> functionColumnUnknown (0): Tipo sconosciuto.<br /><br /> functionColumnIn (1): parametro di input.<br /><br /> functionColumnInOut (2): parametro di input/output.<br /><br /> functionColumnOut (3): parametro di output.<br /><br /> functionReturn (4): valore restituito della funzione.<br /><br /> functionColumnResult (5): un parametro o una colonna è una colonna nel set di risultati.|  
 |DATA_TYPE|**smallint**|Tipo di dati SQL da Java.sql.Types.|  
-|TYPE_NAME|**String**|Nome del tipo di dati.|  
+|TYPE_NAME|**Stringa**|Nome del tipo di dati.|  
 |PRECISION|**int**|Numero totale di cifre significative.|  
 |LENGTH|**int**|Lunghezza dei dati in byte.|  
 |SCALE|**short**|Numero di cifre a destra del separatore decimale.|  
 |RADIX|**short**|Base per i tipi numerici.|  
-|NULLABLE|**short**|Indica se il parametro o il valore restituito può contenere un valore **null**.<br /><br /> **Può essere uno dei valori seguenti:**<br /><br /> functionNoNulls (0): il valore NULL non è consentito.<br /><br /> functionNullable (1): il valore NULL è consentito.<br /><br /> functionNullableUnknown (2): sconosciuto.|  
-|REMARKS|**String**|Commenti su una colonna o un parametro.|  
-|COLUMN_DEF|**String**|Valore predefinito della colonna.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
-|SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **DateTime** e ISO **Interval**, questa colonna è null.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
+|NULLABLE|**short**|Indica se il parametro o il valore restituito può contenere un valore **null**.<br /><br /> **Può essere uno dei valori seguenti:**<br /><br /> functionNoNulls (0): il valore NULL non è consentito.<br /><br /> functionNullable (1): il valore NULL è consentito.<br /><br /> functionNullableUnknown (2): Sconosciuto.|  
+|REMARKS|**Stringa**|Commenti su una colonna o un parametro.|  
+|COLUMN_DEF|**Stringa**|Valore predefinito della colonna.<br /><br /> **Nota:** Queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
+|SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**.<br /><br /> **Nota:** Queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **datetime** e **ISO interval**, questa colonna è NULL.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Lunghezza massima dei parametri o delle colonne di tipo carattere o binario. Per gli altri tipi di dati il valore è NULL.|  
 |ORDINAL_POSITION|**int**|Per i parametri di input e di output, rappresenta la posizione a partire da 1.<br /><br /> Per le colonne del set di risultati, è la posizione della colonna nel set di risultati a partire da 1.<br /><br /> Per il valore restituito, è 0.|  
-|IS_NULLABLE|**String**|Determina se un parametro o una colonna ammette i valori Null.<br /><br /> Può essere uno dei valori seguenti:<br /><br /> **Sì**: il parametro o la colonna può includere valori null.<br /><br /> **No**: il parametro o la colonna non può includere valori null.<br /><br /> Stringa vuota (""): sconosciuto.|  
-|SS_TYPE_CATALOG_NAME|**String**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
-|SS_TYPE_SCHEMA_NAME|**String**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
-|SS_UDT_CATALOG_NAME|**String**|Tipo definito dall'utente (UDT) del nome completo.|  
-|SS_UDT_SCHEMA_NAME|**String**|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, viene visualizzata una stringa vuota.|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Nome di una raccolta di XML Schema. Se non è possibile trovare il nome, viene visualizzata una stringa vuota.|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
-|SS_XML_SCHEMACOLLECTION_NAME|**String**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
+|IS_NULLABLE|**Stringa**|Determina se un parametro o una colonna ammette i valori Null.<br /><br /> Può essere uno dei valori seguenti:<br /><br /> **YES**: il parametro o la colonna può includere valori NULL.<br /><br /> **NO**: il parametro o la colonna non può includere valori NULL.<br /><br /> Stringa vuota (""): Sconosciuto.|  
+|SS_TYPE_CATALOG_NAME|**Stringa**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
+|SS_TYPE_SCHEMA_NAME|**Stringa**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
+|SS_UDT_CATALOG_NAME|**Stringa**|Tipo definito dall'utente (UDT) del nome completo.|  
+|SS_UDT_SCHEMA_NAME|**Stringa**|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**Stringa**|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, viene visualizzata una stringa vuota.|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**Stringa**|Nome di una raccolta di XML Schema. Se non è possibile trovare il nome, viene visualizzata una stringa vuota.|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**Stringa**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
+|SS_XML_SCHEMACOLLECTION_NAME|**Stringa**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
 |SS_DATA_TYPE|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usato in stored procedure estese.<br /><br /> **Nota** Per altre informazioni sui tipi di dati restituiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere "Tipi di dati (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -11,10 +11,10 @@ ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971587"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Membri di SQLServerConnectionPoolDataSource
@@ -24,19 +24,19 @@ ms.locfileid: "67971587"
   
 ## <a name="constructors"></a>Costruttori  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[SQLServerConnectionPoolDataSource ()](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructor.md)|Inizializza una nuova istanza della classe [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md).|  
   
 ## <a name="fields"></a>Campi  
- Nessuna.  
+ No.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
- Nessuna.  
+ No.  
   
 ## <a name="methods"></a>Metodi  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Restituisce il valore della proprietà di connessione **applicationIntent**.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Restituisce il nome dell'applicazione.|  

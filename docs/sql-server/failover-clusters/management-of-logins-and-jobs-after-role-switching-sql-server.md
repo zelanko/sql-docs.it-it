@@ -1,6 +1,7 @@
 ---
-title: Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Gestire account di accesso e processi dopo il failover del mirror
+description: Informazioni su come gestire account di accesso e processi dopo aver effettuato il failover del database con mirroring dal database primario a quello secondario.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230216"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68063849"
   
  Per altre informazioni, vedere la pagina relativa agli [utenti orfani con log shipping e mirroring del database](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog del motore di database).  
   
-## <a name="jobs"></a>processi  
+## <a name="jobs"></a>Processi  
  I processi, ad esempio quelli di backup, richiedono una particolare attenzione. Dopo un cambio di ruolo, in genere il proprietario del database o l'amministratore di sistema deve ricreare i processi per il nuovo database primario/principale.  
   
  Se l'istanza del server primario/principale precedente è disponibile, è consigliabile eliminare i processi originali nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in questione. Si noti che i processi nel database mirror attuale non vengono eseguiti poiché il database si trova nello stato RESTORING e, pertanto, non è disponibile.  
@@ -47,7 +48,7 @@ ms.locfileid: "68063849"
 >  È possibile che istanze differenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano configurate in modo diverso, ad esempio con lettere di unità differenti. I processi di ogni partner devono supportare eventuali differenze di questo tipo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   

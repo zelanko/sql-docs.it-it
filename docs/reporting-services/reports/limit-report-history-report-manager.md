@@ -1,5 +1,5 @@
 ---
-title: Limitare la cronologia dei Report - Reporting Services | Microsoft Docs
+title: Limitare la cronologia dei report - Reporting Services | Microsoft Docs
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,10 +15,10 @@ ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492600"
 ---
 # <a name="limit-report-history---reporting-services"></a>Limitare la cronologia dei report - Reporting Services
@@ -40,7 +40,7 @@ ms.locfileid: "67492600"
   
 1.  In Gestione report passare al report per il quale si desidera configurare la cronologia e quindi fare clic su di esso per aprirlo.  
   
-2.  Fare clic sulla scheda **Proprietà** .  
+2.  Fare clic sulla scheda **Proprietà**.  
   
 3.  Fare clic sulla scheda **Cronologia** .  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67492600"
   
 1.  Nel portale Web passare al report per il quale si vuole configurare la cronologia, quindi farci clic sopra per aprirlo.  
   
-2.  Fare clic sulla scheda **Proprietà** .  
+2.  Fare clic sulla scheda **Proprietà**.  
   
 3.  Fare clic sulla scheda **Cronologia** .  
   

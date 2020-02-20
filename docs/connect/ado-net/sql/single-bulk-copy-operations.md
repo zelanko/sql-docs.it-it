@@ -1,6 +1,6 @@
 ---
 title: Singole operazioni di copia bulk
-description: Viene descritto come eseguire una singola copia bulk dei dati in un'istanza di SQL Server utilizzando la classe SqlBulkCopy e come eseguire l'operazione di copia bulk utilizzando istruzioni Transact-SQL e la classe SqlCommand.
+description: Viene descritto come eseguire una singola copia bulk dei dati in un'istanza di SQL Server usando la classe SqlBulkCopy e come eseguire l'operazione di copia bulk usando istruzioni Transact-SQL e la classe SqlCommand.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 792ebcb5a4365301c31362a748d786c17ddee42a
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 85d24b6695dfe9f592bfefabb13c2042cf3450c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452089"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251175"
 ---
 # <a name="single-bulk-copy-operations"></a>Singole operazioni di copia bulk
 
@@ -36,7 +36,7 @@ I passaggi generali per l'esecuzione di un'operazione di copia bulk sono i segue
   
 2. Connettersi al server di destinazione (la connessione può essere eseguita automaticamente anche da **SqlBulkCopy**).  
   
-3. Creare un oggetto <xref:Microsoft.Data.SqlClient.SqlBulkCopy>, impostando le proprietà necessarie.  
+3. Creare un oggetto <xref:Microsoft.Data.SqlClient.SqlBulkCopy>, impostando le eventuali proprietà necessarie.  
   
 4. Impostare la proprietà **DestinationTableName** per indicare la tabella di destinazione per l'operazione di inserimento bulk.  
   
@@ -50,14 +50,14 @@ I passaggi generali per l'esecuzione di un'operazione di copia bulk sono i segue
 >  È consigliabile che i tipi di dati delle colonne di origine e di destinazione corrispondano. Se i tipi di dati non corrispondono, **SqlBulkCopy** tenterà di convertire ogni valore di origine nel tipo di dati di destinazione usando le regole impiegate da <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>. Le conversioni possono influire sulle prestazioni, nonché provocare errori imprevisti. Ad esempio, un tipo di dati `Double` può essere convertito in un tipo di dati `Decimal` nella maggior parte dei casi, ma non sempre.  
   
 ## <a name="example"></a>Esempio  
-Nell'applicazione console seguente viene illustrato come caricare i dati utilizzando la classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. In questo esempio, viene usato un oggetto <xref:Microsoft.Data.SqlClient.SqlDataReader> per copiare i dati dalla tabella **Production.Product** del database **AdventureWorks** di SQL Server in una tabella simile dello stesso database.  
+L'applicazione console riportata di seguito dimostra come caricare i dati usando la classe <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. In questo esempio, viene usato un oggetto <xref:Microsoft.Data.SqlClient.SqlDataReader> per copiare i dati dalla tabella **Production.Product** del database **AdventureWorks** di SQL Server in una tabella simile dello stesso database.  
   
 > [!IMPORTANT]
 >  Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Installazione di esempio della copia bulk](bulk-copy-example-setup.md). Il codice viene fornito solo per illustrare la sintassi relativa all'uso di **SqlBulkCopy**. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL `INSERT … SELECT` per copiare i dati.  
   
 [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](~/../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
   
-## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Esecuzione di un'operazione di copia bulk utilizzando Transact-SQL e la classe Command  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Esecuzione di un'operazione di copia bulk usando Transact-SQL e la classe command  
 Nell'esempio seguente viene illustrato come usare il metodo <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> per eseguire l'istruzione BULK INSERT.  
   
 > [!NOTE]

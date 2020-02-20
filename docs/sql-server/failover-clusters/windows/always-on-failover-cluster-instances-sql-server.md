@@ -1,6 +1,7 @@
 ---
-title: Istanze del cluster di failover Always On (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Istanze del cluster di failover Always On
+description: Descrizione dell'istanza del cluster di failover Always On per SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063799"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230195"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Istanze del cluster di failover Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +137,7 @@ ms.locfileid: "68063799"
  Archiviazione  
  Diversamente dal gruppo di disponibilità, un'istanza del cluster di failover deve usare l'archiviazione condivisa tra tutti i nodi dell'istanza del cluster di failover per l'archiviazione di log e database. L'archiviazione condivisa può avvenire sotto forma di dischi di cluster WSFC, dischi su una rete SAN, Spazi di archiviazione diretta (S2D) o condivisioni di file su un protocollo SMB. In tal modo, tutti i nodi nell'istanza del cluster di failover dispongono della stessa vista di dati dell'istanza quando si verifica un failover. Tuttavia, questo vuole dire che l'archiviazione condivisa potenzialmente potrebbe essere l'unico punto di errore e l'istanza del cluster di failover dipende dalla soluzione di archiviazione sottostante per assicurare la protezione dei dati.  
   
- Nome della rete  
+ Nome rete  
  Il nome della rete virtuale (VNN, Virtual Network Name) fornisce un punto di connessione unificato per l'istanza del cluster di failover. In tal modo le applicazioni possono connettersi al nome VNN senza il bisogno di conoscere il nodo al momento attivo. Quando si verifica un failover, il VNN viene registrato nel nuovo nodo attivo dopo l'avvio. Questo processo non è visibile al client o all'applicazione che si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , riducendo di conseguenza i tempi d'inattività dell'applicazione o dei client durante un errore.  
   
  IP virtuali  

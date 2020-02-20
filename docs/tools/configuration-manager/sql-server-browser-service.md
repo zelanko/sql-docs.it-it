@@ -1,6 +1,6 @@
 ---
-title: Servizio SQL Server Browser | Microsoft Docs
-ms.custom: ''
+title: SQL Server Browser Service
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +19,12 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccac0c03b9dfcd4291227100787bb39072e91dca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: ba9a8f2af9b703b64ffadb597d9eda2edb28a0b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024109"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307087"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68024109"
   
 -   Durante l'installazione di un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="background"></a>Informazioni preliminari  
+## <a name="background"></a>Background  
  Nelle versioni precedenti a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]è possibile installare solo un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resta in attesa delle richieste in entrata sulla porta 1433, assegnata a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'autorità ufficiale IANA (Internet Assigned Numbers Authority). Poiché solo un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare una porta, quando in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] è stato introdotto il supporto per più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è stato sviluppato il protocollo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) per l'ascolto sulla porta UDP 1434. Il servizio listener risponde alle richieste del client con i nomi delle istanze installate e le porte o le named pipe usate dall'istanza. Per risolvere i problemi connessi ai suoi limiti, in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] il sistema SSRP è stato sostituito dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser.  
   
 ## <a name="how-sql-server-browser-works"></a>Funzionamento di SQL Server Browser  
@@ -130,7 +130,7 @@ ms.locfileid: "68024109"
  Le istanze nascoste sono istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano solo connessioni della memoria condivisa. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare il flag `HideInstance` per indicare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non deve rispondere inviando alcuna informazione su questa istanza del server.  
   
 ### <a name="using-a-firewall"></a>Utilizzo di un firewall  
- Per comunicare con il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in un server protetto da un firewall, aprire la porta UDP 1434 oltre alla porta TCP usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la porta 1433. Per informazioni sull'utilizzo di un firewall, vedere "Procedura: Configurazione di un firewall per l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Per comunicare con il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in un server protetto da un firewall, aprire la porta UDP 1434 oltre alla porta TCP usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la porta 1433. Per informazioni sull'utilizzo di un firewall, vedere "Procedura: Configurare un firewall per l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)  

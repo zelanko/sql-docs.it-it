@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 9b8eca48287388eba7f8e1f13ba4c6e5692a278d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: b3607172643129b7ec327d12f6818dafbde10e23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251059"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190014"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Aggiungere e verificare una connessione dati (Generatore report e SSRS)
 
@@ -24,7 +24,7 @@ Per aggiungere un'origine dati condivisa al report, accedere a un server di repo
 
 Per creare un'origine dati incorporata, l'utente deve disporre delle informazioni di connessione all'origine esterna di dati oltre a dover conoscere le autorizzazioni necessarie per l'accesso ai dati. Queste informazioni provengono solitamente dal proprietario dell'origine dati. Per verificare che le credenziali specificate siano sufficienti si può testare la connessione.
 
-Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specificare le credenziali in Generatore report](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
+Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Specificare le credenziali in Generatore report](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017)
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -54,7 +54,7 @@ L'origine dati verrà visualizzata nel riquadro dei dati del report.
 
 3. Se la connessione riesce, verrà visualizzato il messaggio seguente: "Creazione connessione completata". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. In caso contrario, verrà visualizzato il messaggio: "Impossibile connettersi all'origine dati".  
+4. Se la connessione non riesce, verrà visualizzato il messaggio seguente: "Non è possibile connettersi all'origine dati".  
 
 5. Fare clic su **Dettagli**e utilizzare le informazioni per risolvere il problema.
 
@@ -67,4 +67,4 @@ L'origine dati verrà visualizzata nel riquadro dei dati del report.
 - [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
 - [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
 - [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Creare stringhe di connessione dati - Generatore report e SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

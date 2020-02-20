@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653318"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325425"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL
 
@@ -77,8 +77,8 @@ La procedura seguente consente di creare una tabella esterna nel pool di dati de
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. Nella versione CTP 3.1 la creazione del pool di dati è asincrona, ma non esiste alcun modo per determinare quando viene completata. Prima di continuare, attendere due minuti per avere la certezza che il pool di dati sia stato creato.
+
+La creazione di una tabella esterna del pool di dati è un'operazione di blocco. Il controllo viene restituito dopo aver completato la creazione della tabella specificata in tutti i nodi del pool di dati back-end. Se si verifica un errore durante l'operazione di creazione, viene restituito un messaggio di errore al chiamante.
 
 ## <a name="load-data"></a>Caricare dati
 

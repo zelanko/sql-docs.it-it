@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1dffc95e50ffb1e7e2cba68700a26ade0a72da6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015574"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB)
@@ -24,10 +24,10 @@ ms.locfileid: "68015574"
 
   In questo esempio viene utilizzata l'interfaccia IRowsetFastUpload per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla funzionalità FILESTREAM, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Per altre informazioni sulla funzionalità FileStream, vedere [Supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Esempio  
- Prima di compilare ed eseguire questo esempio, abilitare il supporto FILESTREAM ([Abilitazione e configurazione di FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Prima di compilare ed eseguire questo esempio, abilitare il supporto per FILESTREAM ([Abilitare e configurare FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   

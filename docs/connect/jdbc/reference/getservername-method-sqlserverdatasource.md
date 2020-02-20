@@ -1,5 +1,5 @@
 ---
-title: Metodo GetServerName (SQLServerDataSource) | Microsoft Docs
+title: Metodo getServerName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 487d214dbdd6974442749dd0cff6ac24fe9d1977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979949"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>Metodo getServerName (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getServerName()
 ## <a name="return-value"></a>Valore restituito  
  Valore **String** contenente il nome del server o Null se non viene impostato alcun valore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il nome del server è il nome host del computer di destinazione che esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se la proprietà getServerName non è impostata, getServerName restituisce il valore predefinito Null.  
   
 ## <a name="see-also"></a>Vedere anche  

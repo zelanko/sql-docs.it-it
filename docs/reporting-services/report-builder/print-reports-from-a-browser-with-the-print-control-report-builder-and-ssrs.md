@@ -9,10 +9,10 @@ ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581162"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Stampare i report da un browser con il controllo di stampa (Generatore report e SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65581162"
   
  Per migliorare la qualità della stampa dei report visualizzati in un browser e per consentire la stampa di più pagine, è possibile usare la funzionalità di stampa sul lato client disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questa funzionalità consente di visualizzare una finestra di dialogo **Stampa** standard che può essere usata per selezionare una stampante, specificare le pagine e i margini e visualizzare un'anteprima del report prima della stampa. La funzionalità di stampa sul lato client può essere usata in sostituzione del comando **Stampa** del menu **File** del browser. Quando si utilizza la stampa sul lato client, il report viene stampato come è stato progettato, senza gli elementi aggiuntivi presenti nella stampa delle pagine Web.  
   
- Per utilizzare la funzionalità di stampa sul lato client, è necessario installare un controllo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX. Per altre informazioni, [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Per utilizzare la funzionalità di stampa sul lato client, è necessario installare un controllo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX. Per altre informazioni, vedere [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

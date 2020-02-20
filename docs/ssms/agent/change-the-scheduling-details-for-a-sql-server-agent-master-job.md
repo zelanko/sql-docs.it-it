@@ -1,24 +1,26 @@
 ---
-title: Modificare i dettagli della pianificazione per un processo master di SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Modificare i dettagli della pianificazione per un processo master
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9baa8d095102f63f834342d7145e05c345a6ac1e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 45eddc3b97099eafdba01ec091f3e860f1b2ab8e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553313"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242538"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -31,40 +33,40 @@ In questo argomento verrà descritto come modificare i dettagli della pianificaz
 ### <a name="Restrictions"></a>Limitazioni e restrizioni  
 Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non può essere destinato sia a server locali sia a server remoti.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Per modificare i dettagli della pianificazione per la definizione di un processo  
   
-1.  In **Esplora oggetti** fare clic sul segno più per espandere il server contenente il processo di cui si desidera modificare la pianificazione.  
+1. In **Esplora oggetti** fare clic sul segno più per espandere il server contenente il processo di cui si desidera modificare la pianificazione.  
   
-2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
+2. Fare clic sul segno più per espandere **SQL Server Agent**.  
   
-3.  Fare clic sul segno più per espandere la cartella **Processi** .  
+3. Fare clic sul segno più per espandere la cartella **Processi** .  
   
-4.  Fare clic con il pulsante destro del mouse sul processo di cui si vuole modificare la pianificazione e selezionare **Proprietà**.  
+4. Fare clic con il pulsante destro del mouse sul processo di cui si vuole modificare la pianificazione e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo -** _nome\_processo_ selezionare **Pianificazioni** in **Selezione pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - Nuovo processo &#40;pagina Pianificazioni&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5. Nella finestra di dialogo **Proprietà processo -** _nome\_processo_ selezionare **Pianificazioni** in **Selezione pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - Nuovo processo &#40;pagina Pianificazioni&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
-6.  Al termine, fare clic su **OK**.  
+6. Al termine, fare clic su **OK**.  
   
 ## <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
   
-#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Per modificare i dettagli della pianificazione per la definizione di un processo  
+#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Per modificare i dettagli della pianificazione per la definizione di un processo
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-2.  Sulla barra Standard fare clic su **Nuova query**.  
+2. Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
-    -- changes the enabled status of the NightlyJobs schedule to 0   
-    -- and sets the owner to terrid.   
+    -- changes the enabled status of the NightlyJobs schedule to 0
+    -- and sets the owner to terrid.
     USE msdb ;  
     GO  
   
@@ -75,5 +77,4 @@ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
     GO  
     ```  
   
-Per altre informazioni, vedere [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).  
-  
+Per altre informazioni, vedere [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).

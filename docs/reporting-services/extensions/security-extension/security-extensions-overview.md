@@ -11,10 +11,10 @@ ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225862"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>Panoramica delle estensioni di sicurezza - Reporting Services (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "63225862"
   
  Poiché le estensioni di sicurezza si basano su un'API aperta ed estensibile, è possibile creare nuove estensioni di autenticazione e autorizzazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Di seguito viene fornito un esempio di una tipica implementazione dell'estensione di sicurezza in cui l'autenticazione e l'autorizzazione sono basate su form:  
   
- ![Processo di estensione della sicurezza di Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Processo di estensione della sicurezza di Reporting Services")  
+ ![Processo dell'estensione di sicurezza di Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Processo dell'estensione di sicurezza di Reporting Services")  
   
  Come illustrato nella figura, l'autenticazione e l'autorizzazione vengono effettuate nel modo seguente:  
   

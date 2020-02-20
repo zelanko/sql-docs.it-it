@@ -16,10 +16,10 @@ ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 570a9185a83ecf1af0e47ee25cce5445dca1b958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975984"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>Metodo refreshRow (SQLServerResultSet)
@@ -37,8 +37,8 @@ public void refreshRow()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo refreshRow viene specificato dal Metodo refreshRow nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo refreshRow viene specificato dal metodo refreshRow nell'interfaccia java.sql.ResultSet.  
   
  Non è possibile chiamare questo metodo quando il cursore si trova sulla riga di inserimento.  
   

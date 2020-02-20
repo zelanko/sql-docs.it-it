@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580659"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957445"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
   L'estensione per il rendering HTML esegue il rendering di un report impaginato in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.  
@@ -79,11 +79,13 @@ ms.locfileid: "65580659"
 ### <a name="hyperlinks-and-drillthrough"></a>Collegamenti ipertestuali e collegamenti drill-through  
  Il rendering di collegamenti ipertestuali e collegamenti drill-through restituisce collegamenti ipertestuali in elementi del report racchiudendo l'elemento in cui sono definiti tra tag di ancoraggio HTML (\<a>).  
   
-### <a name="search"></a>Cerca  
+### <a name="search"></a>Ricerca  
  La caratteristica Cerca consente agli utenti di cercare una stringa di testo all'interno del report.  
   
  Ulteriori funzionalità di ricerca vengono fornite dal controllo Web Form ReportViewer.  
   
+##  <a name="FontsOnClient"></a> Tipi di carattere nel computer client
+ Quando nel report è usato un tipo di carattere personalizzato, questo tipo di carattere deve essere installato nel computer usato per visualizzare il report, ovvero il computer client, per garantire una corretta visualizzazione del report. Se il tipo di carattere non è installato nel computer client, nel report verrà visualizzato un tipo di carattere predefinito di sistema invece di quello personalizzato.
   
 ##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  Modificando le impostazioni relative alle informazioni sul dispositivo, è possibile modificare alcune impostazioni predefinite per questo renderer, tra cui la modalità di rendering. Per altre informazioni, vedere [Impostazioni relative alle informazioni sul dispositivo HTML](../../reporting-services/html-device-information-settings.md).  

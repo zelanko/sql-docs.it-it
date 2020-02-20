@@ -1,21 +1,22 @@
 ---
-title: Note sulla versione per SQL Server Management Studio (SSMS) | Microsoft Docs
+title: Note sulla versione di SSMS
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: dnethi
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: cdcc955050ebab5702d22fef60628876bd367757
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.openlocfilehash: 6ff730a55a52319082d4af9021d698bf696ec0be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801150"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037120"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -58,6 +59,7 @@ La versione 18.4 è un aggiornamento della versione 18.3.1 con i nuovi elementi 
 | Classificazione dei dati | Aggiunta del supporto dei criteri di Information Protection personalizzati per la classificazione dei dati. |
 | Archivio query | Aggiunta del valore *Numero massimo di piani per query* nelle proprietà della finestra di dialogo. |
 | Archivio query | Aggiunta del supporto per i nuovi criteri di acquisizione personalizzati. |
+| Archivio query | Aggiunta di **Modalità di acquisizione delle statistiche di attesa** alle opzioni **Proprietà database** di **Query Store**. |
 | SMO/scripting | Supporto dello script della vista materializzata in SQL DW. |
 | SMO/scripting | Aggiunta del supporto per *SQL su richiesta*. |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta di 50 regole di valutazione (vedere i dettagli su GitHub). |
@@ -93,7 +95,7 @@ La versione 18.4 è un aggiornamento della versione 18.3.1 con i nuovi elementi 
 
 * Il diagramma di database creato da SSMS in esecuzione nel computer A non può essere modificato dal computer B (si verifica un arresto anomalo di SSMS). Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 
-* Esistono problemi di aggiornamento durante il passaggio tra finestre di query diverse. Per altri dettagli, vedere UserVoice. Una soluzione alternativa per questo problema è disabilitare l'accelerazione hardware in *Strumenti > Opzioni*.
+* Esistono problemi di aggiornamento durante il passaggio tra finestre di query diverse. Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). Una soluzione alternativa per questo problema è disabilitare l'accelerazione hardware in *Strumenti > Opzioni*.
 
 È possibile fare riferimento a [UserVoice](https://feedback.azure.com/forums/908035-sql-server) per altri problemi noti e per inviare commenti e suggerimenti al team del prodotto.
 
@@ -101,7 +103,7 @@ La versione 18.4 è un aggiornamento della versione 18.3.1 con i nuovi elementi 
 
 Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti dei titoli nelle sezioni seguenti:
 
-## <a name="downloadssdtmediadownloadpng-ssms-1831httpsgomicrosoftcomfwlinklinkid2105412"></a>![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+## <a name="download-ssms-1831"></a>![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 Numero di versione: 18.3.1  
 Numero di build: 15.0.18183.0  
@@ -155,7 +157,7 @@ La versione 18.3.1 è un aggiornamento della versione 18.2 con i nuovi elementi 
 
 È possibile fare riferimento a [UserVoice](https://feedback.azure.com/forums/908035-sql-server) per altri problemi noti e per inviare commenti e suggerimenti al team del prodotto.
 
-## <a name="downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720"></a>![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+## <a name="download-ssms-182"></a>![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 Numero di versione: 18.2  
 Numero di build: 15.0.18142.0  
@@ -225,7 +227,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 
 - Come lingua predefinita per gli account di accesso SQL può essere visualizzato l'Arabo nella finestra di dialogo Proprietà account di accesso, indipendentemente dalla lingua predefinita effettiva impostata per l'account di accesso. Per visualizzare la lingua predefinita effettiva per un determinato account di accesso, usare T-SQL per selezionare la voce **default_language_name** dell'account di accesso da **master.sys.server_principles**.
 
-## <a name="downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583"></a>![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+## <a name="download-ssms-181"></a>![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Numero di versione: 18.1  
 - Numero di build: 15.0.18131.0  
@@ -295,7 +297,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 
 - Il diagramma di database creato da SSMS in esecuzione nel computer A non può essere modificato dal computer B (si verifica un arresto anomalo di SSMS). Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 
-## <a name="downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649"></a>![scaricare ](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+## <a name="download-ssms-180"></a>![download](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Numero di versione: 18.0  
 - Numero di build: 15.0.18118.0  
@@ -327,7 +329,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |SSMS non viene più aggiunto alla variabile di ambiente PATH|Il percorso di SSMS.EXE e degli strumenti in generale non viene più aggiunto al percorso. Gli utenti possono aggiungerlo direttamente o, nel caso di un computer Windows moderno, tramite il menu Start.|
 |Gli ID pacchetto non sono più necessari per sviluppare le estensioni di SSMS| In passato SSMS caricava in modo selettivo solo i pacchetti noti e gli sviluppatori dovevano registrare i propri pacchetti. Questo non si verifica più.|
 |SQL Server Management Studio (SSMS) - Generale|Opzione di configurazione AUTOGROW_ALL_FILES disponibile per i filegroup in SSMS.|
-|SQL Server Management Studio (SSMS) - Generale|Rimozione delle opzioni a rischio 'lightweight pooling' e 'priority boost' dalla GUI di SSMS. Per i dettagli, vedere [Priority boost details – and why it's not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
+|SQL Server Management Studio (SSMS) - Generale|Rimozione delle opzioni a rischio 'lightweight pooling' e 'priority boost' dalla GUI di SSMS. Per i dettagli, vedere [Priority boost details – and why it's not recommended](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
 |SQL Server Management Studio (SSMS) - Generale|Nuovi menu e tasti di scelta rapida per la creazione di file: **CTRL+ALT+N**. **CTRL+N** continua a funzionare per creare una nuova query.|
 |SQL Server Management Studio (SSMS) - Generale|La finestra di dialogo **Nuova regola del firewall** consente ora di specificare un nome di regola invece di generarne uno automaticamente.|
 |SQL Server Management Studio (SSMS) - Generale|Funzionalità IntelliSense migliorata nell'editor, in particolare per T-SQL v140 e successive.|
@@ -412,9 +414,9 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |SQL Server Management Studio (SSMS) - Generale|Un'altra serie di correzioni per fare in modo che SSMS riconosca più monitor e apra una finestra di dialogo nel monitor corretto.|
 |Analysis Services|Correzione di un problema per cui "Impostazioni avanzate" per l'interfaccia utente AS Xevent viene troncata.|
 |Analysis Services|Risolto un problema per cui l'analisi DAX generava l'eccezione File non trovato.|
-|Database SQL di Azure|Correzione di un problema per cui l'elenco di database non veniva compilato correttamente per la finestra delle query del database SQL di Azure in caso di connessione a un database utente nel database SQL di Azure invece che a un database master.|
-|Database SQL di Azure|Correzione di un problema per cui non era possibile aggiungere "Tabella temporale" a un database SQL di Azure.|
-|Database SQL di Azure|Abilitata l'opzione di sottomenu Proprietà statistiche nel menu Statistiche in Azure, che è ormai completamente supporta da molto tempo.|
+|database SQL di Azure|Correzione di un problema per cui l'elenco di database non veniva compilato correttamente per la finestra delle query del database SQL di Azure in caso di connessione a un database utente nel database SQL di Azure invece che a un database master.|
+|database SQL di Azure|Correzione di un problema per cui non era possibile aggiungere "Tabella temporale" a un database SQL di Azure.|
+|database SQL di Azure|Abilitata l'opzione di sottomenu Proprietà statistiche nel menu Statistiche in Azure, che è ormai completamente supporta da molto tempo.|
 |Azure SQL - Supporto generale|Correzione di problemi in un controllo comune dell'interfaccia utente di Azure UI che impedisce all'utente di visualizzare le sottoscrizioni di Azure (se il loro numero è maggiore di 50). Impostazione dell'ordinamento in base al nome anziché in base all'ID sottoscrizione. L'utente poteva trovare questa impostazione ad esempio quando provava a ripristinare un backup da un URL.|
 |Azure SQL - Supporto generale|Correzione di un problema nel controllo interfaccia utente di Azure comune a causa del quale l'enumerazione di sottoscrizioni può generare un errore "L'indice non è compreso nell'intervallo. Deve essere non negativo e inferiore al numero di colonne." quando l'utente non aveva sottoscrizioni in alcuni tenant. L'utente poteva trovare questa impostazione ad esempio quando provava a ripristinare un backup da un URL.|
 |Azure SQL - Supporto generale|Correzione di un problema per cui gli obiettivi del livello di servizio vengono impostati come hardcoded, rendendo più difficile per SSMS supportare gli obiettivi del livello di servizio più recenti di SQL di Azure. Ora gli utenti possono accedere ad Azure e consentire a SSMS di recuperare tutti i dati degli obiettivi del livello di servizio applicabili (Edition e Max Size)|
@@ -564,7 +566,7 @@ Funzionalità deprecate e rimosse
 
 - Esistono problemi di aggiornamento durante il passaggio tra finestre di query diverse. Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). Una soluzione alternativa per questo problema è disabilitare l'accelerazione hardware in Strumenti > Opzioni.
 
-## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![Scaricare](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+## <a name="download-ssms-1791"></a>![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Numero di versione: 17.9.1<br>
 - Numero di build: 14.0.17289.0<br>
@@ -581,7 +583,7 @@ Funzionalità deprecate e rimosse
 
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [Francese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [Tedesco](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Giapponese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946"></a>![Download](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+## <a name="download-ssms-1653"></a>![download](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 Disponibilità generale| Numero di build: 13.0.16106.4
 
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [Francese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [Tedesco](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [Italiano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [Giapponese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [Coreano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [Russo](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [Spagnolo](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
@@ -606,12 +608,11 @@ In questa versione sono stati risolti i problemi seguenti:
 
 * Risolto un problema con la barra di scorrimento di SQL Designer. [ID Connect 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Il menu di scelta rapida per le tabelle si blocca momentaneamente 
+* Il menu di scelta rapida per le tabelle si blocca momentaneamente
 
 * SSMS in alcuni casi genera eccezioni in Monitoraggio attività e subisce un arresto anomalo. [ID Connect 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * Si verifica un arresto anomalo di SSMS 2016 con l'errore "Il processo è stato terminato a causa di un errore interno del runtime .NET in IP 71AF8579 (71AE0000) con codice di uscita 80131506"
-
 
 ## <a name="uninstall-and-reinstall-ssms-17x"></a>Disinstallare e reinstallare SSMS 17.x
 

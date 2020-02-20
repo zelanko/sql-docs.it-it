@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573659"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services
@@ -29,7 +29,7 @@ ms.locfileid: "65573659"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Per definire un parametro di query MDX in modalità progettazione  
   
-1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su un set di dati creato da un tipo di origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
+1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su un set di dati creato da un tipo di origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi scegliere **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
   
 2.  Trascinare una dimensione nell'area filtro e rilasciarla nella prima cella della colonna **Dimensione** .  
   
@@ -53,11 +53,11 @@ ms.locfileid: "65573659"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Per definire un parametro di query MDX in modalità query  
   
-1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su un set di dati creato da un tipo di origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
+1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su un set di dati creato da un tipo di origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi scegliere **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
   
 2.  Fare clic su **Progettazione** nella barra degli strumenti per passare alla modalità query.  
   
-3.  Nella barra degli strumenti della progettazione query MDX, fare clic su **Parametri query** (![icona della finestra di dialogo Parametri query](../../reporting-services/report-data/media/iconqueryparameter.gif "icona della finestra di dialogo Parametri query")). Verrà visualizzata la finestra di dialogo Parametri query.  
+3.  Nella barra degli strumenti della progettazione query MDX fare clic su **Parametri query** (![icona della finestra di dialogo Parametri query](../../reporting-services/report-data/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")). Verrà visualizzata la finestra di dialogo Parametri query.  
   
 4.  Nella colonna **Parametro** selezionare **\<Immetti parametro>** e digitare il nome di un parametro.  
   

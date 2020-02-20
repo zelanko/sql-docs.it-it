@@ -16,10 +16,10 @@ ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 999cfba0f0bd98bfc7e13f436303160ef66962b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978719"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>Metodo getTimestamp (java.lang.String)
@@ -40,12 +40,12 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
  Valore **String** contenente il nome del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto timestamp.  
+ Oggetto Timestamp.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia java.sql.CallableStatement.  
   
  Questo metodo restituisce valori solo dalle colonne **datetime** e **smalldatetime** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

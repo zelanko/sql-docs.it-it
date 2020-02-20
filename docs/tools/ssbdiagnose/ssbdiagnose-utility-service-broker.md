@@ -1,10 +1,7 @@
 ---
-title: Utilità ssbdiagnose (Service Broker) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Utilità ssbdiagnose (Service Broker)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +22,22 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a4f198a1b492719a6cf6916f4ee483424b3a7fa
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211412"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254197"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.
+
+L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -99,7 +102,7 @@ ssbdiagnose
   
 ```  
   
-## <a name="command-line-options"></a>Opzioni della riga di comando  
+## <a name="command-line-options"></a>Opzioni da riga di comando  
  **-XML**  
  Specifica che l'output di **ssbdiagnose** deve essere generato come file XML formattato. che può essere reindirizzato a un file oppure a un'altra applicazione. Se l'opzione **-XML** non viene specificata, l'output di **ssbdiagnose** viene formattato come testo leggibile.  
   
@@ -201,7 +204,7 @@ WHERE database_id = DB_ID();
  Gli ID conversazione vengono indicati nella colonna **conversation_id** della vista del catalogo **sys.conversation_endpoints** .  
   
  **-TIMEOUT** _timeout_interval_  
- Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time**-** out. Il valore*timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
+ Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time **-** out. Il valore*timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
   
  **\<runtimeconnectionoptions>**  
  Specifica le informazioni di connessione per i database che contengono i servizi associati agli elementi di conversazione monitorati. Se tutti i servizi si trovano nello stesso database, è necessario specificare solo una clausola **CONNECT TO** , mentre se i servizi si trovano in database separati è necessario specificare una clausola **CONNECT TO** per ogni database. Se **runtimeconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions**.  
@@ -231,7 +234,7 @@ WHERE database_id = DB_ID();
  Se l'opzione **-P** viene specificata senza che sia indicata una password, **ssbdiagnose** usa la password predefinita (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Per altre informazioni, vedere [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md).  
   
  La richiesta della password viene visualizzata mediante la stampa nella console, come indicato di seguito: `Password:`  
   
@@ -244,7 +247,7 @@ WHERE database_id = DB_ID();
  **-S** _server_name_[\\*instance_name*]  
  Specifica l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare.  
   
- Specificare *server_name* per connettersi all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Specificare _server\_name_**\\**_instance\_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../../includes/ssde-md.md)] su tale server. Se **-S** non viene specificata, **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDSERVER. Se SQLCMDSERVER non è impostata, **ssbdiagnose** si connette all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sul computer locale.  
+ Specificare *server_name* per connettersi all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Specificare _server\_name_ **\\** _instance\_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../../includes/ssde-md.md)] su tale server. Se **-S** non viene specificata, **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDSERVER. Se SQLCMDSERVER non è impostata, **ssbdiagnose** si connette all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sul computer locale.  
   
  **-d** _database_name_  
  Specifica il database che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare. Se il database non esiste, viene generato un messaggio di errore. Se l'opzione **-d** non è specificata, per impostazione predefinita viene usato il database specificato nella proprietà default-database dell'account di accesso.  
@@ -255,7 +258,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Visualizza la guida della riga di comando.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Usare **ssbdiagnose** per eseguire queste operazioni:  
   
 -   Verificare che non siano presenti errori di configurazione in un'applicazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] appena configurata.  
@@ -300,7 +303,7 @@ WHERE database_id = DB_ID();
  **Diagnosi**  
  Segnala un problema di configurazione, ovvero problemi rilevati durante l'esecuzione di un report **CONFIGURATION** o durante la fase di configurazione di un report **RUNTIME** . **ssbdiagnose** segnala ogni problema di configurazione solo una volta.  
   
- **Evento**  
+ **Event**  
  Segnala un evento di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] che indica che si è verificato un problema in una conversazione monitorata durante un report **RUNTIME** . **ssbdiagnose** segnala gli eventi ogni volta che vengono generati. Se il problema viene rilevato in più conversazioni, gli eventi possono essere segnalati più volte.  
   
  **Problema**  
@@ -315,7 +318,7 @@ WHERE database_id = DB_ID();
 ## <a name="examples"></a>Esempi  
  Questa sezione include esempi d'uso di **ssbdiagnose** a un prompt dei comandi.  
   
-### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. Controllo della configurazione di due servizi nello stesso database  
+### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>R. Controllo della configurazione di due servizi nello stesso database  
  Nell'esempio seguente viene illustrato come richiedere un report di configurazione quando si verificano le seguenti condizioni:  
   
 -   Il servizio Initiator e quello di destinazione si trovano nello stesso database.  

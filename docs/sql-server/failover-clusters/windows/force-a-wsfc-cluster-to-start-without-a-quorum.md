@@ -1,6 +1,7 @@
 ---
-title: Forzare l'avvio di un cluster WSFC senza un quorum | Microsoft Docs
-ms.custom: ''
+title: Forzare l'avvio di un cluster WSFC senza un quorum
+description: Illustra come forzare l'avvio di Windows Server Failover Cluster senza un quorum.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044728"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258145"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzare l'avvio di un cluster WSFC senza un quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +113,7 @@ net.exe start clussvc /forcequorum
   
 -   Anche altre funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quali [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], mirroring del database e log shipping potrebbero richiedere azioni per recuperare i dati e ristabilire completamente la disponibilità elevata.  
   
-     **Per ulteriori informazioni:**  
+     **Per altre informazioni:**  
   
      [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   

@@ -1,27 +1,26 @@
 ---
-title: 'Avvio rapido: Creare script R'
-titleSuffix: SQL Server Machine Learning Services
-description: Creare ed eseguire semplici script R in un'istanza di SQL Server con Machine Learning Services per SQL Server.
+title: 'Avvio rapido: Eseguire gli script R'
+description: Eseguire un set di semplici script R con Machine Learning Services per SQL Server. Informazioni su come usare la stored procedure sp_execute_external_script per eseguire lo script in un'istanza di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831786"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare ed eseguire semplici script R con Machine Learning Services per SQL Server
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Avvio rapido: Eseguire semplici script R con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questo argomento di avvio rapido verrà creato ed eseguito un set di semplici script R con [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md). Si apprenderà come eseguire il wrapping di uno script R ben formato nella stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ed eseguire lo script in un'istanza di SQL Server.
+In questo argomento di avvio rapido verrà seguito un set di semplici script R con [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md). Si apprenderà come usare la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per eseguire lo script in un'istanza di SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -33,7 +32,7 @@ In questo argomento di avvio rapido verrà creato ed eseguito un set di semplici
 
 ## <a name="run-a-simple-script"></a>Eseguire uno script semplice
 
-Per eseguire uno script R, è necessario passarlo come argomento alla stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+Per eseguire uno script R, passarlo come argomento alla stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 Questa stored procedure di sistema avvia il runtime R nel contesto di SQL Server, passa i dati a R, gestisce le sessioni utente di R in modo sicuro e restituisce i risultati al client.
 
 Nei passaggi successivi si eseguirà questo script R di esempio nell'istanza di SQL Server:
@@ -63,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. Il risultato corretto viene calcolato e la funzione R `print` restituisce il risultato nella finestra **Messaggi**.
+1. Viene calcolato il risultato corretto e la funzione `print` di R restituisce il risultato nella finestra **Messaggi**.
 
    Il risultato sarà simile al seguente.
 
@@ -91,7 +90,7 @@ Gli input per la stored procedure `sp_execute_external_script` includono:
 | | |
 |-|-|
 | @language | Definisce l'estensione del linguaggio da chiamare, in questo caso R |
-| @script | Definisce i comandi passati al runtime R. L'intero script R deve essere incluso in questo argomento come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e quindi chiamare la variabile |
+| @script | Definisce i comandi passati al runtime R. L'intero script R deve essere incluso in questo argomento, come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e quindi chiamare la variabile |
 | @input_data_1 | Dati restituiti dalla query, passati al runtime R, che restituisce i dati a SQL Server come frame di dati |
 |WITH RESULT SETS | Clausola che definisce lo schema della tabella dati restituita per SQL Server, aggiungendo "Hello World" come nome di colonna e **int** per il tipo di dati |
 
@@ -161,7 +160,7 @@ Per il momento, verranno usate le variabili di input e di output predefinite di 
     Si noti che R fa distinzione tra maiuscole e minuscole. Le variabili di input e di output usate nello script R (**SQL_out**, **SQL_in**) devono corrispondere ai nomi definiti con `@input_data_1_name` e `@output_data_1_name`, inclusa la distinzione tra maiuscole e minuscole.
 
    > [!TIP]
-   > È possibile passare come parametro un solo set di dati di input ed è possibile restituire un solo set di dati. È tuttavia possibile chiamare altri set di dati dall'interno del codice R e restituire output di altri tipi oltre al set di dati. È anche possibile aggiungere la parola chiave OUTPUT a qualsiasi parametro in modo che venga restituito con i risultati.
+   > È possibile passare come parametro un solo set di dati di input e si può restituire un solo set di dati. Tuttavia, è possibile chiamare altri set di dati dall'interno del codice R e restituire output di altri tipi in aggiunta al set di dati. È anche possibile aggiungere la parola chiave OUTPUT a qualsiasi parametro per fare in modo che venga restituito con i risultati.
 
 1. È anche possibile generare i valori usando solo lo script R senza dati di input (`@input_data_1` è impostato su un valore vuoto).
 

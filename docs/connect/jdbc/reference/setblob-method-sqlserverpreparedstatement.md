@@ -1,5 +1,5 @@
 ---
-title: Metodo seblob (SQLServerPreparedStatement) | Microsoft Docs
+title: Metodo setBlob (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 218ff486-3f31-49e4-ad81-a423246a8307
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd2208d2a82a9376438b61e144665cbda5152bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975051"
 ---
 # <a name="setblob-method-sqlserverpreparedstatement"></a>Metodo setBlob (SQLServerPreparedStatement)
@@ -42,12 +42,12 @@ public final void setBlob(int i,
   
  *x*  
   
- Oggetto BLOB.  
+ Oggetto Blob.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo setBlob viene specificato dal metodo setBlob nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

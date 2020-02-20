@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: connettersi a una porta specificata | Microsoft Docs'
+title: 'Procedura: Connettersi a una porta specificata | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015056"
 ---
-# <a name="how-to-connect-on-a-specified-port"></a>Procedura: Connessione a una porta specifica
+# <a name="how-to-connect-on-a-specified-port"></a>Procedura: Connettersi a una porta specificata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In questo argomento viene descritto come connettersi a SQL Server mediante una porta specifica con i [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ### <a name="to-connect-on-a-specified-port"></a>Per connettersi a una porta specifica  
   
-1.  Verificare la porta del server configurata per accettare le connessioni. Per informazioni su come configurare un server per accettare le connessioni su una porta specifica, vedere [Procedura: Configurazione di un server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
+1.  Verificare la porta del server configurata per accettare le connessioni. Per informazioni sulla configurazione di un server in modo che accetti le connessioni su una porta specificata, vedere [Procedura: Configurare un server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 2.  Aggiungere la porta desiderata al parametro *$serverName* della funzione [sqlsrv_connect](../../connect/php/sqlsrv-connect.md). Separare il nome del server e la porta con una virgola. Ad esempio, le righe di codice seguente usano il driver SQLSRV per illustrare come connettersi a un server denominato *myServer* sulla porta 1521:  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo GetObject (int, Java. util. map) | Microsoft Docs
+title: Metodo getObject (int, java.util.Map) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981241"
 ---
 # <a name="getobject-method-int-javautilmap"></a>Metodo getObject (int, java.util.Map)
@@ -45,7 +45,7 @@ public java.lang.Object getObject(int index,
   
  *map*  
   
- Oggetto map.  
+ Oggetto Map.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore **Object**.  
@@ -53,7 +53,7 @@ public java.lang.Object getObject(int index,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getObject viene specificato dal metodo getObject nell'interfaccia java.sql.CallableStatement.  
   
  Il metodo restituirà il valore della colonna specificata come oggetto Java. Il tipo dell'oggetto Java sarà il tipo di oggetto Java predefinito che corrisponde al tipo SQL della colonna, in base al mapping per i tipi predefiniti indicato nella specifica JDBC. Se si tratta di un valore NULL SQL, il driver restituisce un valore Null Java.  

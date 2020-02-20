@@ -16,10 +16,10 @@ ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81d07743dfefe0b0305b1a094a9ae4632d4effd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978587"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>Metodo getTrustServerCertificate (SQLServerDataSource)
@@ -35,9 +35,9 @@ public boolean getTrustServerCertificate()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** Se TrustServerCertificate è abilitato. In caso contrario, **false**.  
+ **true** se la proprietà trustServerCertificate è abilitata. In caso contrario, **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la proprietà trustServerCertificate è impostata su **true**, il certificato SSL (Secure Sockets Layer) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene automaticamente considerato attendibile quando il livello di comunicazione è crittografato tramite SSL. In altri termini, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] non convalida il certificato SSL di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il valore predefinito è **false**.  
   
  Se la proprietà trustServerCertificate è impostata su **false**, il certificato SSL del server viene convalidato da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  

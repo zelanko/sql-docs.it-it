@@ -16,10 +16,10 @@ ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbf9b18fdc6b590f085b5be6babd64100006163a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975272"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>Metodo setAutoCommit (SQLServerConnection)
@@ -35,15 +35,15 @@ public void setAutoCommit(boolean value)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Valore*  
+ *value*  
   
  **true** per abilitare la modalità di commit automatico per la connessione, **false** per disabilitarla.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setAutoCommit viene specificato dal metodo setAutoCommit nell'interfaccia java. SQL. Connection.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setAutoCommit viene specificato dal metodo setAutoCommit nell'interfaccia java.sql.Connection.  
   
  Se una connessione è in modalità autocommit, tutte le relative istruzioni SQL vengono eseguite e sottoposte a commit come transazioni singole. In caso contrario, le istruzioni SQL vengono raggruppate in transazioni terminate da una chiamata al metodo [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) o [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md). Per impostazione predefinita, le nuove connessioni sono in modalità autocommit.  
   

@@ -1,5 +1,5 @@
 ---
-title: Comparabilità per IRowsetFind | Microsoft Docs
+title: Possibilità di confronto per IRowsetFind | Microsoft Docs
 description: Possibilità di confronto per IRowsetFind
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6750e4af88f875b7557671d628fdf2570f8dcff1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995148"
 ---
 # <a name="comparability-for-irowsetfind"></a>Possibilità di confronto per IRowsetFind

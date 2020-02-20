@@ -11,10 +11,10 @@ ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6b68caa4abff00f113176791d06c6361c5da1e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953112"
 ---
 # <a name="getclientinfo-method-"></a>Metodo getClientInfo ()
@@ -35,10 +35,10 @@ public java.util.Properties getClientInfo()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo Metodo getClientInfo viene specificato dal Metodo getClientInfo nell'interfaccia java. SQL. Connection.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getClientInfo viene specificato dal metodo getClientInfo nell'interfaccia java.sql.Connection.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] non supporta alcuna proprietà delle informazioni client. Di conseguenza, questo metodo restituisce un oggetto proprietà vuoto.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] non supporta alcuna proprietà delle informazioni client. Di conseguenza, questo metodo restituisce un oggetto Properties vuoto.  
   
  Analogamente, le applicazioni possono usare il metodo [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) della classe [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) per recuperare un elenco delle proprietà delle informazioni client supportate dal driver. Il metodo [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) restituisce un set di risultati vuoto.  
   

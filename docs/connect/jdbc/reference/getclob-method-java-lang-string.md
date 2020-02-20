@@ -16,10 +16,10 @@ ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ba397d39378e6e45bf63dffa4eb2efbca3b432c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953023"
 ---
 # <a name="getclob-method-javalangstring"></a>Metodo getClob (java.lang.String)
@@ -40,12 +40,12 @@ public java.sql.Clob getClob(java.lang.String sCol)
  Valore **String** contenente il nome del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto CLOB.  
+ Oggetto Clob.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getClob viene specificato dal metodo getClob nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

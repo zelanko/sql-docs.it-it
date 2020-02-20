@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68255177"
 ---
 # <a name="configure-report-builder-access"></a>Configurare l'accesso a Generatore report
@@ -29,15 +29,15 @@ L'accesso a Generatore report dipende dai fattori seguenti:
 
 Generatore report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere l'argomento relativo alle [funzionalità supportate dalle edizioni di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-Il computer client deve avere [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,6 o 4.6.1 installato rispettivamente per SSRS 2016 e 2017. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce l'infrastruttura per l'esecuzione di applicazioni [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+Nel computer client deve essere installato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 o 4.6.1 per SSRS 2016 e 2017 rispettivamente. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce l'infrastruttura per l'esecuzione di applicazioni [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-È necessario utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o versione successiva o un altro browser moderno.  
+È necessario usare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o versione successiva oppure un altro browser moderno.  
 
 Generatore report viene sempre eseguito con attendibilità totale e non è possibile configurarlo per l'esecuzione con attendibilità parziale. Nelle versioni precedenti è possibile eseguire Generatore report in attendibilità parziale, ma tale opzione non è supportata in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Abilitazione e disabilitazione di Generatore report  
 
-Generatore report è abilitato per impostazione predefinita. Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità Generatore report impostando la proprietà di sistema del server di report **ShowDownloadMenu** su **false**. Impostando questa proprietà, vengono disabilitati i download di Generatore report, Mobile Report Publisher e Power BI mobile per il server di report.  
+Generatore report è abilitato per impostazione predefinita. Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità Generatore report impostando la proprietà di sistema del server di report **ShowDownloadMenu** su **false**. Impostando questa proprietà, vengono disabilitati i download di Generatore report, Mobile Report Publisher e Power BI per dispositivi mobili per il server di report.  
 
  Per impostare le proprietà di sistema del server di report, è possibile utilizzare Management Studio o uno script:   
 
@@ -101,7 +101,7 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 
     4. In Descrizione immettere una descrizione per il ruolo in modo da indicare lo scopo del ruolo agli utenti del portale Web.  
 
-    5. Aggiungere le attività seguenti: **Utilizzo di report**, **Visualizzazione di report**, **Visualizzazione di modelli**, **Visualizzazione di risorse**, **Visualizzazione di cartelle**e **Gestione di sottoscrizioni individuali**.  
+    5. Aggiungere le attività seguenti: **Utilizzo di report**, **Visualizzazione di report**, **Visualizzazione di modelli**, **Visualizzazione di risorse**, **Visualizzazione di cartelle** e **Gestione di sottoscrizioni individuali**.  
 
     6. Fare clic su **OK** per salvare il ruolo.  
 
@@ -109,10 +109,10 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 
 1. Avviare il portale Web.  
 
-2. Fare clic sull'icona a forma di ingranaggio nella parte superiore destra del portale web home page e selezionare **Impostazioni sito** dal menu a discesa.  
+2. Fare clic sull'icona a forma di ingranaggio nell'angolo in alto a destra della home page del portale Web e selezionare **Impostazioni sito** dal menu a discesa.  
 ![icona a forma di ingranaggio e menu del portale Web](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
-3. Fare clic su **Sicurezza**.  
+3. Fare clic su **Security**.  
 
 4. Se esiste già un'assegnazione di ruolo per l'utente o il gruppo per cui si vuole configurare l'accesso a Generatore report, fare clic su **Modifica**.  
 In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente immettere un account utente o di gruppo di dominio Windows nel formato \<dominio>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
@@ -123,7 +123,7 @@ In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente
 
 7. Fare clic sulla scheda **Impostazioni cartella** .  
 
-8. Fare clic sulla scheda **Sicurezza** .  
+8. Fare clic sulla scheda **Security** (Sicurezza).  
 
 9. Se esiste già un'assegnazione di ruolo per l'utente o il gruppo per cui si vuole configurare l'accesso a Generatore report, fare clic su **Modifica**.  
 

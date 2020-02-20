@@ -16,10 +16,10 @@ ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983206"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>Metodo getFetchSize (SQLServerStatement)
@@ -40,8 +40,8 @@ public final int getFetchSize()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getFetchSize viene specificato dal metodo getFetchSize nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getFetchSize viene specificato dal metodo getFetchSize nell'interfaccia java.sql.Statement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

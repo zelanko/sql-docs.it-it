@@ -1,5 +1,5 @@
 ---
-title: Metodo selong (SQLServerCallableStatement) | Microsoft Docs
+title: Metodo setLong (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f7110594eb808a50fa88e22b1e38d2a4052066f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974041"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>Metodo setLong (SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setLong(java.lang.String sCol,
   
  *l*  
   
- Valore **Long** .  
+ Valore **long**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo setLong viene specificato dal metodo setLong nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

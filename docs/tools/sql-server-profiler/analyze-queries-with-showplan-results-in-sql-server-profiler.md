@@ -1,27 +1,25 @@
 ---
-title: Analizzare query con risultati SHOWPLAN in SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Analizzare query con risultati SHOWPLAN
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- events [SQL Server], Showplan
-- Profiler [SQL Server Profiler], Showplan results
-- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 577590c360b14af9129487c120dbf70726f2a7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105610"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307379"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizzare query con risultati SHOWPLAN in SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   È possibile aggiungere a una definizione di traccia classi di eventi Showplan che determinano la raccolta e la visualizzazione delle informazioni sul piano della query nella traccia in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . È inoltre possibile estrarre eventi Showplan dagli altri eventi raccolti nella traccia e salvarli in un file XML distinto.  
   

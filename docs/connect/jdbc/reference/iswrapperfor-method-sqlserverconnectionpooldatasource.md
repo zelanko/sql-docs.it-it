@@ -11,10 +11,10 @@ ms.assetid: 09ed10eb-6e46-437b-a7c0-3c55574aad38
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45e7e2cd5e14392d5acc00601d05d3c7eb42f192
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977092"
 ---
 # <a name="iswrapperfor-method-sqlserverconnectionpooldatasource"></a>Metodo isWrapperFor (SQLServerConnectionPoolDataSource)
@@ -32,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parametri  
  *iface*  
   
- **Classe** che definisce un'interfaccia.  
+ Valore **class** che definisce un'interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
  **true** se questo oggetto implementa l'interfaccia o esegue il wrapping di un oggetto che implementa l'interfaccia. In caso contrario, **false**.  
@@ -40,12 +40,12 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md) e il metodo [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md) sono definiti dall'interfaccia java.sql.Wrapper, introdotta nella specifica JDBC 4.0.  
   
  Se questo metodo restituisce true, la chiamata a [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md) con lo stesso argomento avrà esito positivo.  
   
- Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per altre informazioni, vedere [Wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo unwrap &#40;SQLServerConnectionPoolDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)   

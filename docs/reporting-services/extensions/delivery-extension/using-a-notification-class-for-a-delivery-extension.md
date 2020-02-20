@@ -14,16 +14,16 @@ ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad2792a390597223a98b8606af4cb361d17b9e8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193675"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Utilizzo della classe Notification per un'estensione per il recapito
   La classe <xref:Microsoft.ReportingServices.Interfaces.Notification> si trova nello spazio dei nomi <xref:Microsoft.ReportingServices.Interfaces> e rappresenta le informazioni sulla sottoscrizione utilizzate dalle estensioni per il recapito per recapitare i report. La classe <xref:Microsoft.ReportingServices.Interfaces.Notification> fornisce numerose proprietà che possono essere utilizzate per eseguire il rendering dei report per il recapito, determinare lo stato della notifica e impostare i dati degli utenti.  
   
- ![Processo di notifica del report](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "Processo di notifica del Report")  
+ ![Processo di notifica dei report](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "Processo di notifica dei report")  
 La notifica rappresenta l'oggetto centrale di qualsiasi tipo di recapito  
   
  Quando viene generato un evento associato a una sottoscrizione che utilizza l'estensione per il recapito personalizzata, viene creata una notifica contenente un oggetto <xref:Microsoft.ReportingServices.Interfaces.Report>. L'oggetto <xref:Microsoft.ReportingServices.Interfaces.Report> incapsula le funzionalità necessarie per eseguire il rendering di un determinato report in un formato di rendering supportato e contiene proprietà specifiche del report, ad esempio il nome del report e il suo URL nel server. Per altre informazioni sulla classe<xref:Microsoft.ReportingServices.Interfaces.Report>, vedere [Uso della classe di Report per l'estensione per il recapito](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md).  

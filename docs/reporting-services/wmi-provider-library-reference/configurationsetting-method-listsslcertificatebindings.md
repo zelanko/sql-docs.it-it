@@ -11,10 +11,10 @@ ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3184d9dff106628e09491852690da9f667570ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579889"
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>Metodo ConfigurationSetting - ListSSLCertificateBindings
@@ -64,7 +64,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

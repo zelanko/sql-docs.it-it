@@ -12,10 +12,10 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593861"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa
@@ -117,7 +117,7 @@ Il problema sarà intermittente perché solo il server che ha creato l'attività
   
     6.  In **Database server report**selezionare il database creato per il primo server di report, quindi fare clic su **Avanti**. Il nome predefinito è ReportServer. Non selezionare ReportServerTempDB. Questo database viene utilizzato solo per l'archiviazione temporanea dei dati durante l'elaborazione dei report. Se l'elenco dei database è vuoto, ripetere i quattro passaggi precedenti per stabilire una connessione al server.  
   
-    7.  Nella pagina Credenziali selezionare il tipo di account e il tipo di credenziali utilizzati dal server di report per la connessione al database del server di report. È possibile utilizzare le stesse credenziali della prima istanza del server di report oppure altre credenziali. Fare clic su **Avanti**.  
+    7.  Nella pagina Credenziali selezionare il tipo di account e il tipo di credenziali utilizzati dal server di report per la connessione al database del server di report. È possibile utilizzare le stesse credenziali della prima istanza del server di report oppure altre credenziali. Selezionare **Avanti**.  
   
     8.  Selezionare **Riepilogo** e quindi fare clic su **Fine**.  
   
@@ -138,7 +138,7 @@ Il problema sarà intermittente perché solo il server che ha creato l'attività
     > [!NOTE]  
     >  **Problema:** quando si cerca di aggiungere un'istanza del server di report di Reporting Services alla distribuzione con scalabilità orizzontale, potrebbero essere visualizzati messaggi di errore di tipo "Accesso negato".  
     >   
-    >  **Soluzione alternativa:** eseguire il backup della chiave di crittografia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dalla prima istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e ripristinare la chiave nel secondo server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Successivamente, tentare di aggiungere il secondo server alla distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Soluzione alternativa:** eseguire il backup della chiave di crittografia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dalla prima istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e ripristinare la chiave nel secondo server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Successivamente, tentare di aggiungere il secondo server alla distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  A questo punto dovrebbe essere possibile verificare che entrambe le istanze del server di report siano operative. Per verificare la seconda istanza, è possibile usare lo strumento Configurazione di Reporting Services per connettersi al server di report e fare clic su **URL servizio Web** o su **URL del portale Web**.  
   
@@ -146,8 +146,8 @@ Il problema sarà intermittente perché solo il server che ha creato l'attività
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare un account di servizio](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-[configurare un URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[Configurare un account del servizio](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[Configurare un URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Creare un database del server di report in modalità nativa](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configurare gli URL del server di report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurare una connessione del database del server di report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

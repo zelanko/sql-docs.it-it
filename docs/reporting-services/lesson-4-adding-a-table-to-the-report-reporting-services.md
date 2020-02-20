@@ -1,6 +1,7 @@
 ---
-title: 'Lezione 4: Aggiunta di una tabella al report (Reporting Services) | Microsoft Docs'
-ms.date: 04/29/2019
+title: 'Lezione 4: Aggiungere una tabella al report | Microsoft Docs'
+description: Dopo aver definito il set di dati, è possibile iniziare a progettare il report impaginato. Per creare un layout di report, trascinare gli oggetti del report dal riquadro Casella degli strumenti all'area di progettazione.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106012"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244295"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lezione 4: Aggiunta di una tabella al report (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>Lezione 4: Aggiungere una tabella al report (Reporting Services)
 
-Dopo aver definito il set di dati, è possibile iniziare la progettazione del report. Per creare un layout di report, trascinare gli *oggetti del report* dal riquadro **Casella degli strumenti** all'**area di progettazione**. I tipi di oggetti del report includono ad esempio:
+Dopo aver definito il set di dati, è possibile iniziare a progettare il report impaginato. Per creare un layout di report, trascinare gli *oggetti del report* dal riquadro **Casella degli strumenti** all'**area di progettazione**. I tipi di oggetti del report includono ad esempio:
 
 - Tabella
 - Casella di testo
-- image
-- Riga
+- Immagine
+- Grafico a linee
 - Rectangle
 - Grafico
 - Mappa
@@ -52,7 +53,7 @@ Le *aree dati*sono elementi che contengono righe ripetute di dati provenienti da
 
     ![ssrs_tutorial_addcolumn](media/ssrs-tutorial-addcolumn.png)
 
-7. Aggiungere il campo `[LineTotal]` nello stesso modo, creando una quinta colonna. L'etichetta di colonna aggiunta è "Line Total". Progettazione report crea automaticamente un nome descrittivo per la colonna dividendo "LineTotal" in due parole.
+7. Aggiungere il campo `[LineTotal]` con la stessa procedura, creando una quinta colonna. L'etichetta di colonna aggiunta è "Line Total". Progettazione report crea automaticamente un nome descrittivo per la colonna dividendo "LineTotal" in due parole.
 
 Nel diagramma riportato di seguito è illustrata un'area dati della tabella popolata con i campi seguenti: Date, Order, Product, Qty e Line Total.
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
@@ -69,7 +70,7 @@ Mediante la visualizzazione in anteprima di un report è possibile visualizzare 
 
 La figura seguente illustra parte del report nella visualizzazione **Anteprima**.
 
-   ![Anteprima, righe di dettaglio della tabella con cinque colonne](media/rs-basictabledetailspreview.png "Anteprima, righe di dettaglio della tabella con cinque colonne")
+   ![Anteprima, righe di dettaglio di una tabella con cinque colonne](media/rs-basictabledetailspreview.png "Anteprima, righe di dettaglio di una tabella con cinque colonne")
 
 Esaminare i valori di Date e Line Total. Nella lezione successiva verrà illustrato come formattarli per ottenere una visualizzazione più chiara.
 
@@ -78,7 +79,7 @@ Esaminare i valori di Date e Line Total. Nella lezione successiva verrà illustr
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-È stata aggiunta un'area dati tabella al report, quindi si sono aggiunti campi all'area dati ed è stata visualizzata l'anteprima del report. Nella lezione successiva verrà illustrato come formattare le intestazioni di colonna e le espressioni dei campi. Passare quindi a [Lezione 5: Formattazione di un report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
+È stata aggiunta un'area dati tabella al report, quindi si sono aggiunti campi all'area dati ed è stata visualizzata l'anteprima del report. Nella lezione successiva verrà illustrato come formattare le intestazioni di colonna e le espressioni dei campi. Procedere quindi a [Lezione 5: Formattazione di un report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
 ## <a name="see-also"></a>Vedere anche
 

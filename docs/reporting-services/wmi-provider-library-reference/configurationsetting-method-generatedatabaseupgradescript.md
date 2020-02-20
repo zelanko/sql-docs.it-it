@@ -16,10 +16,10 @@ ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ffd8985175c7ad2d8acacc95d85bd15ccba1e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579954"
 ---
 # <a name="configurationsetting-method---generatedatabaseupgradescript"></a>Metodo di ConfigurationSetting - GenerateDatabaseUpgradeScript
@@ -55,7 +55,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Lo script generato supporta [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisiti  

@@ -1,7 +1,6 @@
 ---
-title: Requisiti di Riesecuzione distribuita | Microsoft Docs
-ms.custom: ''
-ms.date: 01/18/2018
+title: Requisiti relativi a Riesecuzione distribuita
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +8,14 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 01/18/2018
+ms.openlocfilehash: 1adafe699b1168305042fbe3e9e840ca7a06e703
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075028"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993622"
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68075028"
 ### <a name="input-trace-versions"></a>Versioni della traccia di input  
  Riesecuzione distribuita supporta dati di traccia di input raccolti nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]seguenti:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Aggiornamento cumulativo 1 e versioni successive. Vedere- [SQL Server 2017 aggiornamenti cumulativi](https://aka.ms/sql2017cu).
+-   Aggiornamento cumulativo 1 e versioni successive di [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]. Vedere [Aggiornamenti cumulativi per SQL Server 2017](https://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -49,9 +50,9 @@ ms.locfileid: "68075028"
   
  È inoltre possibile creare un modello di traccia personalizzato e utilizzarlo per riprodurre eventi con Riesecuzione distribuita, purché contenga gli eventi seguenti:  
   
--   Audit Login  
+-   Connessione di controllo  
   
--   Audit Logout  
+-   Disconnessione di controllo  
   
 -   ExistingConnection  
   
@@ -91,7 +92,7 @@ ms.locfileid: "68075028"
   
 -   TextData  
   
--   Application Name  
+-   Nome dell'applicazione  
   
 -   LoginName  
   
@@ -159,7 +160,7 @@ ms.locfileid: "68075028"
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Sicurezza di Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md)   
+ [Sicurezza di Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-security.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

@@ -13,24 +13,24 @@ ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993534"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Procedura: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Quando si usa il driver sqlsrv per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è possibile recuperare i tipi di data e ora (**smalldatetime**, **DateTime**, **date**, **Time**, **datetime2**e **DateTimeOffset**) come stringhe specificando quanto segue: nella stringa di connessione o a livello di istruzione:
+Quando si usa il driver SQLSRV per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è possibile recuperare i tipi di data e ora (**smalldatetime**, **datetime**, **date**, **time**, **datetime2** e **datetimeoffset**) come stringhe specificando l'opzione seguente nella stringa di connessione o a livello di istruzione:
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-Il valore predefinito è **false**, vale a dire che i tipi **smalldatetime**, **datetime**, **date**, **time**, **datetime2** e **datetimeoffset** verranno restituiti come oggetti [DateTime PHP](http://php.net/manual/en/class.datetime.php). Se questa opzione è impostata a livello di istruzione, esegue l'override dell'impostazione del livello di connessione.
+Il valore predefinito è **false**, vale a dire che i tipi **smalldatetime**, **datetime**, **date**, **time**, **datetime2** e **datetimeoffset** verranno restituiti come oggetti [DateTime PHP](http://php.net/manual/en/class.datetime.php). Se questa opzione è impostata a livello di istruzione, esegue l'override dell'impostazione a livello di connessione.
 
-Per impostazione predefinita, il driver PDO_SQLSRV restituisce i tipi di data e ora come stringhe. Per recuperarli come oggetti DateTime PHP, vedere [procedura: recuperare i tipi di data e ora come oggetti DateTime php usando PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+Per impostazione predefinita, il driver PDO_SQLSRV restituisce i tipi di data e ora come stringhe. Per recuperarli come oggetti DateTime PHP, vedere [Procedura: Recuperare i tipi di data e ora come oggetti Datetime PHP usando PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
 ## <a name="example"></a>Esempio
 L'esempio seguente illustra la sintassi per specificare il recupero dei tipi di data e ora come stringhe.
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>Esempio
-L'opzione ReturnDatesAsStrings a livello di istruzione sostituisce l'opzione di connessione corrispondente.
+L'opzione ReturnDatesAsStrings a livello di istruzione esegue l'override dell'opzione di connessione corrispondente.
 
 ```php
 <?php

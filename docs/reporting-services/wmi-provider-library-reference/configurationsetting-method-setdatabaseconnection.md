@@ -16,10 +16,10 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af40d79d876edb8f0448bd5abaef5c173a6edce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572592"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>Metodo di ConfigurationSetting - SetDatabaseConnection
@@ -47,7 +47,7 @@ public void BackupEncryptionKey(string Server,
  Nome del database del server di report.  
   
  *CredentialsType*  
- Tipo di credenziali da utilizzare per la connessione. I valori possibili sono i seguenti.  
+ Tipo di credenziali da utilizzare per la connessione. I valori possibili sono:  
   
 -   0: Windows  
   
@@ -67,7 +67,7 @@ public void BackupEncryptionKey(string Server,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando il parametro *CredentialsType* è impostato su 0 (Windows), è necessario impostare i parametri *UserName* e *Password* . Il parametro *UserName* deve avere il formato "dominio\nomeutente" e il valore deve rappresentare un account di accesso di Windows valido.  
   
  Quando il parametro *CredentialsType* è impostato su 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), il valore passato nel parametro *UserName* deve essere conforme ai requisiti di un nome account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

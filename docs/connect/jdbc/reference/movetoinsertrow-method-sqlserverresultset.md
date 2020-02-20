@@ -16,10 +16,10 @@ ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bc8420b9f79ce61874dbb03e73924e7be6eca96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976780"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>Metodo moveToInsertRow (SQLServerResultSet)
@@ -37,8 +37,8 @@ public void moveToInsertRow()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo moveToInsertRow viene specificato dal metodo moveToInsertRow nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo moveToInsertRow viene specificato dal metodo moveToInsertRow nell'interfaccia java.sql.ResultSet.  
   
  La posizione corrente del cursore viene memorizzata mentre il cursore viene posizionato sulla riga di inserimento. La riga di inserimento è una riga speciale associata a un set di risultati aggiornabile. Si tratta essenzialmente di un buffer in cui è possibile costruire una nuova riga chiamando i metodi di aggiornamento prima di aggiungere la riga al set di risultati.  
   

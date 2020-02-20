@@ -1,5 +1,5 @@
 ---
-title: "Lesson 2: Modifying the Report Data Source Properties (Lezione 2: Modifica delle proprietà dell'origine dati del report) | Microsoft Docs"
+title: "Lezione 2: Modifica delle proprietà dell'origine dati del report | Microsoft Docs"
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651726"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lezione 2: Modifica delle proprietà dell'origine dati del report
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verrà usato il portale Web per selezionare un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
   
 Inoltre, verrà modificato il set di dati e il report per utilizzare un parametro al fine di filtrare il report in `[Order]` in modo che tramite la sottoscrizione sia possibile restituire istanze differenti del report per formati di rendering e ordini specifici.  
@@ -24,7 +24,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 1.  Accedere al portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con privilegi di amministratore, ad esempio, fare clic con il pulsante destro del mouse sull'icona di Internet Explorer e scegliere **Esegui come amministratore**.  
  
-2.    Individuare l'URL del portale Web.  Esempio:   
+2.    Individuare l'URL del portale Web.  Ad esempio:   
     `https://<server name>/reports`.  
     `https://localhost/reports`
  **Nota:** l'URL del *portale* Web è "Reports", non l'URL del *server* di report di "Reportserver".  
@@ -95,7 +95,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 6.  Fare clic su **OK**.  
   
-7.  Fare clic sulla scheda **Anteprima** per eseguire il report. Notare la casella di input dei parametri nella parte superiore del report. È possibile effettuare le operazioni seguenti:  
+7.  Fare clic sulla scheda **Anteprima** per eseguire il report. Notare la casella di input dei parametri nella parte superiore del report. È possibile:  
   
     -   Fare clic su Visualizza report per visualizzare il report completo senza l'utilizzo di parametri.  
   
@@ -105,11 +105,11 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 ## <a name="bkmk_redeploy"></a>Ridistribuire il report  
   
-1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usate nell'esercitazione relativa alla tabella, vedere la sezione "Per pubblicare il report nel server di report (facoltativo)" della [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usate nell'esercitazione relativa alla tabella, vedere la sezione "Per pubblicare il report nel server di report (facoltativo)" di [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Sulla barra degli strumenti fare clic su **Compila** , quindi scegliere **Distribuisci Tutorial**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 + In questo modo il report è stato configurato per l'acquisizione di dati usando credenziali archiviate e i dati possono essere filtrati con un parametro. 
 + Nella lezione successiva la sottoscrizione verrà configurata usando le pagine della sottoscrizione guidata dai dati del portale Web. Vedere [Lezione 3: Definizione di una sottoscrizione guidata dai dati](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   

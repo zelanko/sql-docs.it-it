@@ -14,14 +14,14 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228751"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto. A partire da SQL Server 2016 Reporting Services o versione successiva (SSRS) CTP 3.2, il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] portale web è disponibile. In questo articolo verranno esaminati il portale Web e la nuova esperienza del portale Web.  
+In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto. A partire da SQL Server 2016 Reporting Services o versione successiva (SSRS) CTP 3.2, è disponibile il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In questo articolo verranno esaminati il portale Web e la nuova esperienza del portale Web.  
   
 > [!NOTE]  
 > La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per altre informazioni sulla gestione dell'ambiente in cui viene eseguito un server di report, vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -42,7 +42,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di
   
 -   Bilanciare le richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
--   Fornire le autorizzazioni per eseguire le attività di gestione usando ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
+-   Fornire le autorizzazioni per eseguire le attività di gestione usando ruoli predefiniti: **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
   
 Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e il portale Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Il portale Web consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e usare report e altri tipi di contenuto, nonché visualizzare e usare tutti gli elementi condivisi e le funzionalità di distribuzione del report. Il portale Web è un sito aggiornato che offre gran parte delle funzionalità di Gestione report, deprecato. Per altre informazioni, vedere [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
@@ -56,9 +56,9 @@ Gli strumenti per la gestione dei contenuti del server di report includono [!INC
   
  Nel portale Web gli elementi che è possibile spostare sono indicati nella gerarchia di cartelle. L'immagine seguente mostra le icone di ogni elemento che è possibile spostare.  
   
-  ![Icone di server di report per gli elementi spostabile](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+  ![Icone del server di report per elementi mobili](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
- Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione di cartelle" e "Gestione di origini dei dati".  
+ Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione di cartelle" e "Gestione di origini dati".  
   
 ##  <a name="bkmk_Folders"></a> Cartelle  
  Per fare riferimento agli elementi archiviati e gestiti da un server di report viene utilizzata una gerarchia di cartelle.  Per impostazione predefinita, la struttura di cartelle è costituita da un nodo radice denominato Home e da cartelle riservate che supportano la funzionalità facoltativa Report personali. Le cartelle aggiuntive vengono definite dall'utente. Le cartelle del server di report sono utili se si desidera concedere lo stesso livello di accesso a più elementi. Le autorizzazioni impostate per la cartella possono essere ereditate dagli elementi di tale cartella e in cartelle aggiuntive incluse in essa. È ad esempio possibile creare un set di cartelle sotto la cartella Home, assegnare autorizzazioni del team a ogni cartella, quindi consentire a membri del team di personalizzare le cartelle incluse nella cartella del team in base alle necessità.  
@@ -121,10 +121,10 @@ Gli strumenti per la gestione dei contenuti del server di report includono [!INC
 ### <a name="adding-and-viewing-a-resource"></a>Aggiunta e visualizzazione di una risorsa  
  Per aggiungere una risorsa a un server di report, caricare o pubblicare un file:  
   
-|Operazione|Tipo di file|  
+|Operazione|Tipo file|  
 |---------------|---------------|  
 |Caricamento|Per caricare una risorsa, è necessario usare il portale Web se il server di report è in esecuzione in modalità nativa o una pagina di applicazione in un sito di SharePoint se il server è in esecuzione in modalità integrata SharePoint. Per altre informazioni, vedere [Caricare un file o un report nel server di report](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) o [Caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
-|Pubblicazione|Tutti i file in un progetto che non sono report, parti del report, origini dati o set di dati, vengono caricati come risorse. Per pubblicare una risorsa, aggiungere un elemento esistente a un progetto in Progettazione report, quindi pubblicare il progetto in un server di report.|  
+|Pubblica|Tutti i file in un progetto che non sono report, parti del report, origini dati o set di dati, vengono caricati come risorse. Per pubblicare una risorsa, aggiungere un elemento esistente a un progetto in Progettazione report, quindi pubblicare il progetto in un server di report.|  
   
  Tutte le risorse provengono da file presenti nel file system, caricati successivamente in un server di report. Ad eccezione dei limiti per le dimensioni del file predefinite di 4 MB imposte da ASP.NET, non sono presenti restrizioni sui tipi di file che è possibile caricare. Alcuni tipi di file risultano tuttavia più adatti di altri con tipo MIME equivalente per la pubblicazione in un server di report come risorse. Ad esempio, le risorse basate su file HTML e JPG vengono aperte in una finestra del browser quando l'utente fa clic sulla risorsa. In tal modo i file HTML vengono visualizzati come pagine Web e i file JPG come immagini visibili all'utente. Al contrario le risorse con tipi MIME non equivalenti, ad esempio file di applicazioni desktop, non vengono visualizzate in alcun modo nella finestra del browser.  
   
@@ -142,7 +142,7 @@ Gli strumenti per la gestione dei contenuti del server di report includono [!INC
   
  Per utilizzare una risorsa immagine in un report, aggiungere il file di immagine al progetto e pubblicarlo insieme al report. Dopo la pubblicazione, è possibile aggiornare il riferimento all'immagine nel report in modo che punti alla risorsa nel server di report e successivamente ripubblicare il report per salvare le modifiche. È possibile a questo punto aggiornare l'immagine in modo indipendente dal report ripubblicando la risorsa. Nel report viene utilizzata la versione più recente dell'immagine disponibile nel server di report.  
   
- Per altre informazioni, vedere [aggiornamento di una risorsa (portale web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
+ Per altre informazioni, vedere [Aggiornare una risorsa (portale Web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
 ##  <a name="bkmk_MyReports"></a> Report personali  
  La cartella Report personali è un'area di lavoro personale specifica di ogni utente che accede a un server di report con un account di dominio valido. Questa cartella speciale può essere utilizzata per archiviare report non ancora definitivi, report che non saranno soggetti a un'ampia distribuzione o report che sono stati modificati per rispondere a esigenze specifiche. Non è possibile limitare la quantità né le dimensioni degli elementi che possono essere archiviati in una cartella Report personali, né è possibile configurare una cartella Report personali per la condivisione tra più utenti.  
@@ -170,7 +170,7 @@ Gli strumenti per la gestione dei contenuti del server di report includono [!INC
 ## <a name="tasks"></a>Attività  
  [Caricare file in una cartella](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [Creare, eliminare o modificare una cartella (portale Web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
- [Aggiornare una risorsa (portale web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
+ [Aggiornare una risorsa (portale Web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [Caricare file in una cartella](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
 ## <a name="see-also"></a>Vedere anche  

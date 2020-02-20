@@ -12,14 +12,14 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503068"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizzatore HTML e barra degli strumenti dei report
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un Visualizzatore HTML usato per visualizzare i report quando vengono richiesti dal server di report. Il Visualizzatore HTML è progettato per la visualizzazione di report in formato HTML e include una barra degli strumenti dei report, una sezione dei parametri, una sezione delle credenziali e una mappa documento. Nella barra degli strumenti dei report nel Visualizzatore HTML sono disponibili funzionalità per l'utilizzo del report oltre a opzioni per l'esportazione che consentono di visualizzare il report in formati diversi da HTML. La sezione dei parametri e la mappa documento vengono visualizzate solo se si aprono report configurati per l'utilizzo dei parametri e di un controllo mappa documento.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un visualizzatore HTML usato per visualizzare i report quando vengono richiesti dal server di report. Il Visualizzatore HTML è progettato per la visualizzazione di report in formato HTML e include una barra degli strumenti dei report, una sezione dei parametri, una sezione delle credenziali e una mappa documento. Nella barra degli strumenti dei report nel Visualizzatore HTML sono disponibili funzionalità per l'utilizzo del report oltre a opzioni per l'esportazione che consentono di visualizzare il report in formati diversi da HTML. La sezione dei parametri e la mappa documento vengono visualizzate solo se si aprono report configurati per l'utilizzo dei parametri e di un controllo mappa documento.  
   
  Sebbene non sia possibile modificare la barra degli strumenti dei report, è possibile configurare parametri nell'URL di un report affinché nascondano tale barra in un report. Per altre informazioni su come nascondere la barra degli strumenti dei report, vedere [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md).  
   
@@ -30,11 +30,11 @@ ms.locfileid: "65503068"
   
  La barra degli strumenti dei report è simile a quella illustrata nella figura seguente. La barra degli strumenti dei report effettivamente visualizzata può essere diversa rispetto a questa figura, a seconda delle funzionalità per i report o delle opzioni di rendering disponibili.  
   
- ![Report toolbar](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barra degli strumenti dei report](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra degli strumenti dei report")  
   
  Nella tabella seguente vengono descritte le funzionalità di utilizzo più comune della barra degli strumenti dei report. Per ogni funzionalità viene inoltre indicato il controllo utilizzato per accedervi.  
   
-|Controllo o icona||Per|  
+|Controllo o icona||A|  
 |------------------------------|-|--------|  
 |![Controlli per la navigazione tra le pagine](../reporting-services/media/htmlviewer-pagenav.gif "Controlli per la navigazione tra le pagine")|**Controlli per la navigazione tra le pagine**|Aprire la prima o l'ultima pagina di un report, scorrere un report una pagina alla volta, aprire una pagina specifica di un report. Per visualizzare una pagina specifica, digitare il numero di pagina e premere INVIO.|  
 |![Controlli per la visualizzazione delle pagine](../reporting-services/media/htmlviewer-pagesize.gif "Controlli per la visualizzazione delle pagine")|**Controlli per la visualizzazione delle pagine**|Ingrandire o ridurre le dimensioni della pagina del report. Oltre a modificare il valore percentuale, è possibile selezionare **Larghezza pagina** per adeguare la larghezza della pagina del report alle dimensioni della finestra del browser oppure **Pagina intera** per visualizzare l'intero report nella finestra del browser. In **Internet Explorer 5.5 e versioni successive è supportata l'opzione** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
@@ -43,7 +43,7 @@ ms.locfileid: "65503068"
 |![Icona della mappa documento](../reporting-services/media/htmlviewer-docmap.GIF "Icona della mappa documento")|**Icona della mappa documento**|Visualizzare o nascondere il riquadro della mappa documento in un report che include una mappa documento. Una mappa documento è un controllo per la navigazione all'interno del report simile al riquadro di navigazione in un sito Web. È possibile fare clic sugli elementi nella mappa documento per passare a un gruppo, a una pagina o a un sottoreport specifico.|  
 |![Icona della stampante](../reporting-services/media/printer-icon.gif "Icona della stampante")|**Icona della stampante**|Aprire una finestra di dialogo Stampa per specificare le opzioni di stampa e stampare un report. La prima volta che si seleziona questa icona viene richiesto di scaricare il controllo di stampa.|  
 ||**Visualizzare e nascondere le icone**|Visualizzare o nascondere i campi dei valori di parametro e il pulsante **Visualizza report** in un report con parametri.|  
-|![Pulsante di aggiornamento del browser nella barra degli strumenti dei report](../reporting-services/media/htmlviewer-refresh.GIF "Pulsante di aggiornamento del browser nella barra degli strumenti dei report")|**Icona per l'aggiornamento del report**|Aggiornare il report. I dati dei report live verranno aggiornati. I report memorizzati nella cache verranno ricaricati dalla posizione di archiviazione.|  
+|![Pulsante di aggiornamento del browser sulla barra degli strumenti dei report](../reporting-services/media/htmlviewer-refresh.GIF "Pulsante di aggiornamento del browser sulla barra degli strumenti dei report")|**Icona per l'aggiornamento del report**|Aggiornare il report. I dati dei report live verranno aggiornati. I report memorizzati nella cache verranno ricaricati dalla posizione di archiviazione.|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icona Feed di dati**|Feed di dati generati dai report.|  
 |![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Aggiungi al dashboard di Power BI**|Aggiungere elementi dei report di supporto a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Se il pulsante non è visibile, il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65503068"
   
 ## <a name="see-also"></a>Vedere anche  
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

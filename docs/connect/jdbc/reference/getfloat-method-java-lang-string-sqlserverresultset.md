@@ -16,10 +16,10 @@ ms.assetid: 09491a8a-1931-411e-9b35-2b269c1b7f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08d74e16d8d841503ea729d28518be8018e2bc6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983078"
 ---
 # <a name="getfloat-method-javalangstring-sqlserverresultset"></a>Metodo getFloat (java.lang.String) (SQLServerResultSet)
@@ -40,12 +40,12 @@ public float getFloat(java.lang.String columnName)
  Valore **String** contenente il nome della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore **float** .  
+ Valore **float**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getFloat viene specificato dal metodo getFloat nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce tutti i tipi numerici con fedeltà **float** di Java.  

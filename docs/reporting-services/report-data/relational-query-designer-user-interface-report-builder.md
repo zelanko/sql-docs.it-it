@@ -15,14 +15,14 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593384"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
-  Generatore report e Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]forniscono entrambi una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo che semplificano la creazione di una query per specificare i dati da recuperare dai database relazionali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
+  Generatore report e Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] forniscono entrambi una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo che semplificano la creazione di una query per specificare i dati da recuperare dai database relazionali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
   
 > [!NOTE]  
 >  Per specificare in Generatore report una query per i tipi di origine dati Oracle, OLE DB, ODBC e Teradata, è necessario utilizzare la finestra Progettazione query basata su testo. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report &#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
@@ -96,7 +96,7 @@ ms.locfileid: "73593384"
 |Aggregate|Descrizione|  
 |---------------|-----------------|  
 |Avg|Restituisce la media dei valori di un gruppo. Implementa l'aggregazione SQL AVG.|  
-|Count|Restituisce il numero degli elementi contenuti in un gruppo. Implementa l'aggregazione SQL COUNT.|  
+|Conteggio|Restituisce il numero degli elementi contenuti in un gruppo. Implementa l'aggregazione SQL COUNT.|  
 |Count Big|Consente di restituire il numero di elementi di un gruppo. Si tratta dell'aggregazione SQL COUNT_BIG. La differenza tra COUNT e COUNT_BIG è che la seconda restituisce sempre un valore del tipo di dati **bigint** .|  
 |Min|Restituisce il valore minimo in un gruppo. Implementa l'aggregazione SQL MIN.|  
 |Max|Restituisce il valore massimo in un gruppo. Implementa l'aggregazione SQL MAX.|  

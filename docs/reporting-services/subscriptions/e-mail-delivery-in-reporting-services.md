@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305041"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
@@ -32,7 +32,7 @@ ms.locfileid: "72305041"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
 ## <a name="e-mail-delivery-options"></a>Opzioni di recapito tramite posta elettronica  
  La funzionalità di recapito della posta elettronica del server di report consente di recapitare report in base alle modalità seguenti  
@@ -90,7 +90,7 @@ ms.locfileid: "72305041"
 ## <a name="see-also"></a>Vedere anche  
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)  
   
   

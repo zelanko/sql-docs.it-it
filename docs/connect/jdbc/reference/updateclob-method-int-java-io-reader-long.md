@@ -1,5 +1,5 @@
 ---
-title: Metodo updateClob (int, Java. io. Reader, Long) | Microsoft Docs
+title: Metodo updateClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5c958ccb-386a-4dd5-901d-5a106dac2683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 196960b897b9e351eb7541c181cc0b828959c13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996652"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>Metodo updateClob (int, java.io.Reader, long)
@@ -47,7 +47,7 @@ public void updateClob(int columnIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateClob viene specificato dal metodo updateClob nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  

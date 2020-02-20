@@ -16,10 +16,10 @@ ms.assetid: 85d4eb84-6d0a-4671-b6e5-a7085e086fcf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4afcc9c8f4554375f2c87ccc0c70302c84aaa2f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968682"
 ---
 # <a name="supportstablecorrelationnames-method-sqlserverdatabasemetadata"></a>Metodo supportsTableCorrelationNames (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsTableCorrelationNames()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo supportsTableCorrelationNames viene specificato dal Metodo supportsTableCorrelationNames nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo supportsTableCorrelationNames viene specificato dal metodo supportsTableCorrelationNames nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

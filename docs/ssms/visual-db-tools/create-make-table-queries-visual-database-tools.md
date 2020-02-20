@@ -1,10 +1,9 @@
 ---
-title: Creare query di creazione tabella (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Creare query di creazione tabella
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbacf31bf3fcbb9cafd88e57e7c798a584b74ef7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264378"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254334"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Creazione di query di creazione tabella (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,24 +67,24 @@ Per utilizzare correttamente una query di creazione tabella è necessario che:
   
     Per creare una tabella di destinazione in un altro database è necessario specificare il nome completo di una tabella, compreso il nome del database di destinazione, il proprietario (se necessario) e il nome della tabella.  
   
-4.  Specificare le colonne da copiare aggiungendole alla query. Per informazioni dettagliate, vedere [Aggiunta di colonne a query (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Verranno copiate solo le colonne aggiunte alla query. Per copiare righe intere, scegliere **&#42; (Tutte le colonne)**.  
+4.  Specificare le colonne da copiare aggiungendole alla query. Per informazioni dettagliate, vedere [Aggiungere colonne a query](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Verranno copiate solo le colonne aggiunte alla query. Per copiare righe intere, scegliere **&#42; (Tutte le colonne)** .  
   
     Le colonne selezionate verranno aggiunte alla colonna **Colonna** del riquadro Criteri.  
   
 5.  Se si desidera copiare le righe in un particolare ordine, specificare il criterio di ordinamento. Per informazioni dettagliate, vedere **Ordinamento e raggruppamento dei risultati delle query**.  
   
-6.  Specificare le righe da copiare immettendo le condizioni di ricerca. Per informazioni dettagliate, vedere [Specifica di criteri di ricerca (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Specificare le righe da copiare immettendo le condizioni di ricerca. Per informazioni dettagliate, vedere [Specificare criteri di ricerca (../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Se non si specifica alcuna condizione di ricerca, tutte le righe della tabella di origine verranno copiate nella tabella di destinazione.  
   
     > [!NOTE]  
     > Quando nel riquadro Criteri si aggiunge una colonna da includere nella ricerca, tale colonna verrà aggiunta anche all'elenco delle colonne da copiare. Se si desidera utilizzare una colonna per la ricerca senza copiarla, deselezionare la casella di controllo accanto al nome della colonna nel rettangolo che rappresenta la tabella o l'oggetto con struttura di tabella.  
   
-7.  Se si desidera copiare le informazioni di riepilogo, specificare le opzioni di raggruppamento. Per informazioni dettagliate, vedere [Riepilogo dei risultati di query (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  Se si desidera copiare le informazioni di riepilogo, specificare le opzioni di raggruppamento. Per informazioni dettagliate, vedere [Riepilogare i risultati di query (../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 Quando si esegue una query di creazione tabella, non viene restituito alcun risultato nel [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Viene invece visualizzato un messaggio che indica il numero di righe copiate.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedure per la progettazione di query e viste (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Tipi di query (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Procedure per la progettazione di query e viste (../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tipi di query (../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

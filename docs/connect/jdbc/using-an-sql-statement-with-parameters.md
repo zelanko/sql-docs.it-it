@@ -1,5 +1,5 @@
 ---
-title: Uso di un'istruzione SQL con parametri | Microsoft Docs
+title: Uso di istruzioni SQL con parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7b8b3f8b387345d91451c726b7f74a5685913f6
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026651"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Uso di istruzioni SQL con parametri
@@ -25,7 +25,7 @@ Per elaborare i dati di un database di [!INCLUDE[ssNoVersion](../../includes/ssn
 
 Quando si costruisce l'istruzione SQL, i parametri IN sono specificati utilizzando il carattere ? (punto interrogativo), il quale funge da segnaposto per i valori dei parametri che verranno successivamente passati all'istruzione SQL. Per specificare un valore per un parametro, è possibile usare uno dei metodi setter della classe SQLServerPreparedStatement. Il metodo Set da utilizzare dipende dal tipo di dati del valore che si desidera passare all'istruzione SQL.
 
-Quando si passa un valore al metodo Set, è necessario specificare non solo il valore effettivo da utilizzare nell'istruzione SQL, ma anche la posizione ordinale del parametro nell'istruzione stessa. Se, ad esempio, l'istruzione SQL contiene un solo parametro, il valore ordinale sarà 1. Se l'istruzione contiene due parametri, il primo valore ordinale sarà 1 e il secondo sarà 2.
+Quando si passa un valore al metodo Set, è necessario specificare non solo il valore effettivo da utilizzare nell'istruzione SQL, ma anche la posizione ordinale del parametro nell'istruzione stessa. Ad esempio, se l'istruzione SQL contiene un solo parametro, il relativo valore ordinale sarà 1. Se l'istruzione contiene due parametri, il primo valore ordinale sarà 1 e il secondo sarà 2.
 
 Nell'esempio seguente una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] viene passata alla funzione e un'istruzione SQL preparata viene costruita ed eseguita con un singolo valore del parametro di stringa. I risultati vengono quindi letti dal set di risultati.
 

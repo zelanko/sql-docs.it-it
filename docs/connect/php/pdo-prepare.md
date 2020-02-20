@@ -1,7 +1,7 @@
 ---
 title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993198"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941201"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,27 +29,27 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Parametri
-$*statement*: stringa contenente l'istruzione SQL da eseguire.
+$*statement*: stringa contenente l'istruzione SQL.
 
 *key_pair*: matrice contenente il nome e il valore di un attributo. Per ulteriori informazioni, vedere le sezione Note.
 
 ## <a name="return-value"></a>Valore restituito
 In caso di esito positivo restituisce un oggetto PDOStatement. In caso di esito negativo restituisce un oggetto PDOException o false, a seconda del valore di `PDO::ATTR_ERRMODE`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] non valuta le istruzioni preparate fino all'esecuzione.
 
 Nella tabella seguente sono elencati i valori *key_pair* possibili.
 
-|Key|Descrizione|
+|Chiave|Descrizione|
 |-------|---------------|
-|PDO::ATTR_CURSOR|Specifica il comportamento del cursore. Il valore predefinito è `PDO::CURSOR_FWDONLY`, un cursore di tipo forward non scorrevole. `PDO::CURSOR_SCROLL` è un cursore scorrevole.<br /><br />Ad esempio, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Se questo attributo è impostato su `PDO::CURSOR_SCROLL`, è quindi possibile usare `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` per impostare il tipo di cursore scorrevole, come descritto di seguito.<br /><br />Per altre informazioni sui set di risultati e sui cursori nel driver PDO_SQLSRV, vedere [Tipi di cursore &#40;driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|
+|PDO::ATTR_CURSOR|Specifica il comportamento del cursore. Il valore predefinito è `PDO::CURSOR_FWDONLY`, un cursore di tipo forward non scorrevole. `PDO::CURSOR_SCROLL` è un cursore scorrevole.<br /><br />Ad esempio: `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Se questo attributo è impostato su `PDO::CURSOR_SCROLL`, è quindi possibile usare `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` per impostare il tipo di cursore scorrevole, come descritto di seguito.<br /><br />Per altre informazioni sui set di risultati e sui cursori nel driver PDO_SQLSRV, vedere [Tipi di cursore &#40;driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|
 |PDO::ATTR_EMULATE_PREPARES|Per impostazione predefinita, questo attributo è false. È possibile modificare questa impostazione usando `PDO::ATTR_EMULATE_PREPARES => true`. Per informazioni dettagliate e un esempio, vedere la sezione relativa a [EMULATE_PREPARES](#emulate-prepare).|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|Specifica il tipo di cursore scorrevole. È valido solo quando `PDO::ATTR_CURSOR` è impostato su `PDO::CURSOR_SCROLL`. Vedere di seguito per informazioni sui valori ammessi per questo attributo.|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Specifica il numero di posizioni decimali per la formattazione dei valori money recuperati. Questa opzione funziona solo quando `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` è true. Per altre informazioni, vedere [Formattazione di stringhe decimali e valori money (driver PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Se true, consente di specificare l'esecuzione di una query diretta. False indica l'esecuzione di un'istruzione preparata. Per altre informazioni su `PDO::SQLSRV_ATTR_DIRECT_QUERY`, vedere [Esecuzione di istruzioni diretta e preparata nel driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (impostazione predefinita)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Specifica se recuperare i tipi di data e ora come oggetti [DateTime PHP](http://php.net/manual/en/class.datetime.php). Per altre informazioni, vedere [Procedura: Recuperare i tipi di data e ora come oggetti DateTime PHP usando il driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Specifica se recuperare i tipi di data e ora come oggetti [DateTime PHP](http://php.net/manual/en/class.datetime.php). Per altre informazioni, vedere [Procedura: Recuperare i tipi di data e ora come oggetti Datetime PHP usando il driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Gestisce i recuperi numerici dalle colonne con tipi SQL numerici. Per altre informazioni, vedere [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Specifica se aggiungere zeri iniziali alle stringhe decimali quando appropriato. Se impostata, questa opzione abilita l'opzione `PDO::SQLSRV_ATTR_DECIMAL_PLACES` per la formattazione dei tipi money. Per altre informazioni, vedere [Formattazione di stringhe decimali e valori money (driver PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Per altre informazioni, vedere [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
@@ -139,6 +139,33 @@ print_r($row);
 ?>
 ```
 
+## <a name="example"></a>Esempio
+I due frammenti di codice seguenti illustrano come usare PDO::prepare con i dati destinati alle colonne CHAR/VARCHAR. Poiché la codifica predefinita per PDO::prepare è UTF-8, l'utente può usare l'opzione `PDO::SQLSRV_ENCODING_SYSTEM` per evitare le conversioni implicite.
+
+**Opzione 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**Opzione 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
+```
+
 <a name="emulate-prepare" />
 
 ## <a name="example"></a>Esempio
@@ -216,6 +243,52 @@ Per associare parametri con codifiche diverse, ad esempio UTF-8 o binaria, l'ute
 Il driver PDO_SQLSRV controlla prima di tutto la codifica specificata in `PDO::bindParam()`, ad esempio `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`.
 
 Se non è presente, il driver controlla se è impostata una codifica in `PDO::prepare()` o `PDOStatement::setAttribute()`. In caso contrario, il driver userà la codifica specificata in `PDO::__construct()` o `PDO::setAttribute()`.
+
+Inoltre, a partire dalla versione 5.8.0, quando si usa PDO::prepare con `PDO::ATTR_EMULATE_PREPARES` impostato su true, l'utente può usare [i tipi di stringhe estesi introdotti in PHP 7.2](https://wiki.php.net/rfc/extended-string-types-for-pdo) per assicurarsi che venga usato il prefisso `N`. I frammenti di codice seguenti mostrano diverse alternative.
+
+> [!NOTE]
+> Per impostazione predefinita, emulate prepares è impostato su false e in questo caso le costanti di tipo stringa PDO estese verranno ignorate.
+
+**Uso dell'opzione del driver PDO::SQLSRV_ENCODING_UTF8 durante l'associazione**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**Uso dell'attributo PDO::SQLSRV_ATTR_ENCODING**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**Uso della costante PDO PDO::PARAM_STR_NATL**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**Impostazione del tipo di parametro di stringa predefinito PDO::PARAM_STR_NATL**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### <a name="limitations"></a>Limitazioni
 

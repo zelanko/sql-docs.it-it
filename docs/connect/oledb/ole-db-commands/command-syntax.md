@@ -1,6 +1,6 @@
 ---
-title: Sintassi del comando | Microsoft Docs
-description: Sintassi del comando e stored procedure
+title: Sintassi dei comandi | Microsoft Docs
+description: Sintassi dei comandi e stored procedure
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016124"
 ---
 # <a name="command-syntax"></a>Sintassi dei comandi
@@ -27,7 +27,7 @@ ms.locfileid: "68016124"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il driver OLE DB per SQL Server riconosce la sintassi del comando specificata dalla macro DBGUID_SQL. Per il driver OLE DB per SQL Server, l'identificatore indica che un'amalgama di ODBC SQL, ISO ed [!INCLUDE[tsql](../../../includes/tsql-md.md)] è una sintassi valida. L'istruzione SQL seguente, ad esempio, utilizza una sequenza di escape ODBC SQL per specificare la funzione per i valori stringa LCASE:  
+  OLE DB Driver per SQL Server riconosce la sintassi dei comandi specificata dalla macro DBGUID_SQL. Per OLE DB Driver per SQL Server l'identificatore indica che una combinazione di ODBC SQL, ISO e [!INCLUDE[tsql](../../../includes/tsql-md.md)] è una sintassi valida. L'istruzione SQL seguente, ad esempio, utilizza una sequenza di escape ODBC SQL per specificare la funzione per i valori stringa LCASE:  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

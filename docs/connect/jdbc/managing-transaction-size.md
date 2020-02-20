@@ -11,10 +11,10 @@ ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b443e3541dbf86fd0cfa947f057faaf62e08226
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027904"
 ---
 # <a name="managing-transaction-size"></a>Gestione delle dimensioni delle transazioni

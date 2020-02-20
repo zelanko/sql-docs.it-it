@@ -1,11 +1,13 @@
 ---
-title: Eliminare e ricreare chiavi di crittografia (Gestione configurazione SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+title: Eliminare e ricreare chiavi di crittografia (Gestione configurazione) | Microsoft Docs
+description: Le attività di eliminazione e ricreazione di chiavi di crittografia non rientrano nella manutenzione di routine delle chiavi di crittografia.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593531"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866304"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Chiavi di crittografia SSRS - Eliminare e ricreare chiavi di crittografia
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>Eliminare e ricreare chiavi di crittografia (Gestione configurazione SSRS)
   Le attività di eliminazione e ricreazione di chiavi di crittografia non rientrano nella manutenzione di routine delle chiavi di crittografia. Tali attività vengono eseguite in risposta a una specifica minaccia al server di report oppure come ultima risorsa quando non è più possibile accedere a un database del server di report.  
   
--   Ricreare la chiave simmetrica quando si ritiene che quella esistente sia compromessa. È inoltre possibile ricreare la chiave regolarmente come procedura consigliata per la sicurezza.  
+-   Ricreare la chiave simmetrica quando si ritiene che quella esistente sia compromessa. È anche possibile ricreare la chiave regolarmente come procedura consigliata per la sicurezza.  
   
 -   Eliminare le chiavi di crittografia esistenti e il contenuto crittografato inutilizzabile quando non è possibile ripristinare la chiave simmetrica.  
   
-## <a name="re-creating-encryption-keys"></a>ricreazione di chiavi di crittografia  
- Se si ha la prova che la chiave simmetrica sia nota a utenti non autorizzati oppure se il server di report è stato attaccato, come misura di sicurezza è possibile ricreare la chiave simmetrica in modo da reimpostarla. Se si ricrea la chiave simmetrica, tutti i valori crittografati verranno crittografati nuovamente utilizzando il nuovo valore. Se si eseguono più server in una distribuzione con scalabilità orizzontale, tutte le copie della chiave simmetrica verranno aggiornate in base al nuovo valore. Il server di report utilizza le chiavi pubbliche disponibili per aggiornare la chiave simmetrica per ogni server presente nella distribuzione.  
+## <a name="recreating-encryption-keys"></a>Ricreazione di chiavi di crittografia  
+ Se si ha la prova che la chiave simmetrica sia nota a utenti non autorizzati oppure se il server di report è stato attaccato, come misura di sicurezza è possibile ricreare la chiave simmetrica in modo da reimpostarla. Se si ricrea la chiave simmetrica, tutti i valori crittografati verranno crittografati nuovamente usando il nuovo valore. Se si eseguono più server in una distribuzione con scalabilità orizzontale, tutte le copie della chiave simmetrica verranno aggiornate in base al nuovo valore. Il server di report utilizza le chiavi pubbliche disponibili per aggiornare la chiave simmetrica per ogni server presente nella distribuzione.  
   
  La chiave simmetrica può essere ricreata solo quando il server di report è in uno stato attivo. La ricreazione delle chiavi di crittografia e la riesecuzione della crittografia del contenuto interferisce con le operazioni del server. Durante l'operazione di riesecuzione della crittografia il server deve essere offline e il server di report non deve ricevere richieste.  
   
- Per reimpostare la chiave simmetrica e i dati crittografati è possibile usare lo strumento di configurazione di Reporting Services o l'utilità **rskeymgmt**. Per altre informazioni sulla creazione della chiave simmetrica, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Per reimpostare la chiave simmetrica e i dati crittografati è possibile usare lo strumento di configurazione di Reporting Services o l'utilità **rskeymgmt** . Per altre informazioni sulla creazione della chiave simmetrica, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Come ricreare chiavi di crittografia (strumento di configurazione di Reporting Services)  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>Come ricreare chiavi di crittografia (strumento di configurazione di Reporting Services)  
   
 1.  Disabilitare il servizio Web ReportServer e l'accesso HTTP modificando la proprietà **IsWebServiceEnabled** nel file rsreportserver.config. Questo passaggio arresta temporaneamente l'invio delle richieste di autenticazione al server di report senza arrestare completamente il server. È necessario disporre di un servizio minimo per poter ricreare le chiavi.  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593531"
   
 5.  Riabilitare il servizio Web e l'accesso HTTP modificando la proprietà **IsWebServiceEnabled** nel file rsreportserver.config. Se si utilizza una distribuzione con scalabilità orizzontale, eseguire questa procedura per tutte le istanze.  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Come ricreare chiavi di crittografia (rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>Come ricreare chiavi di crittografia (rskeymgmt)  
   
 1.  Disabilitare il servizio Web ReportServer e l'accesso HTTP. Per arrestare le operazioni del servizio Web, seguire le istruzioni riportate nella procedura precedente.  
   

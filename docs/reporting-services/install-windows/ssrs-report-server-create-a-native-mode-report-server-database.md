@@ -1,8 +1,10 @@
 ---
-title: Creare un database del server di report in modalità nativa (Gestione configurazione SSRS) | Microsoft Docs
-ms.date: 05/24/2018
+title: Creare un database del server di report in modalità nativa (Gestione configurazione) | Microsoft Docs
+description: Reporting Services in modalità nativa usa un database di SQL Server per l'archiviazione interna. Il database è obbligatorio e viene utilizzato per archiviare report pubblicati, modelli, origini dati condivise, dati di sessione, risorse e metadati del server.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593552"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866334"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>Creare un database del server di report in modalità nativa
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa viene utilizzato un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Il database è obbligatorio e viene utilizzato per archiviare report pubblicati, modelli, origini dati condivise, dati di sessione, risorse e metadati del server.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa usa un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Il database è obbligatorio e viene utilizzato per archiviare report pubblicati, modelli, origini dati condivise, dati di sessione, risorse e metadati del server.  
 
 Per creare un database del server di report o modificare le credenziali o la stringa di connessione, utilizzare le opzioni disponibili nella pagina Database di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -71,7 +73,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
 ### <a name="to-create-a-local-report-server-database"></a>Per creare un database del server di report locale  
   
-1.  Avviare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report per cui si desidera creare il database. Per altre informazioni, vedere [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Avviare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report per cui si desidera creare il database. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Nella pagina Database selezionare **Cambia database**.  
   
@@ -85,7 +87,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
     3.  Selezionare **Test connessione** per convalidare la connessione al server.  
   
-    4.  Fare clic su **Avanti**.  
+    4.  Selezionare **Avanti**.  
   
 5.  Specificare le proprietà utilizzate per creare il database. Per ulteriori informazioni sull'utilizzo di tali proprietà, vedere [Operazioni preliminari](#rsdbrequirements) in questo argomento.  
   
@@ -95,7 +97,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
     3.  La modalità del server di report è sempre impostata su **Nativa**.  
   
-    4.  Fare clic su **Avanti**.  
+    4.  Selezionare **Avanti**.  
   
 6.  Specificare le credenziali utilizzate dal server di report per la connessione al database del server di report.  
   
@@ -107,7 +109,7 @@ Per creare un database del server di report o modificare le credenziali o la str
   
          Selezionare **Credenziali del servizio** se si desidera che il server di report si connetta tramite l'account del servizio. Se si seleziona questa opzione, il server si connette utilizzando la sicurezza integrata e le credenziali non verranno crittografate o archiviate.  
   
-    2.  Fare clic su **Avanti**.  
+    2.  Selezionare **Avanti**.  
   
 7.  Esaminare le informazioni incluse nella pagina Riepilogo per verificare che le impostazioni siano corrette, quindi scegliere **Avanti**.  
   
@@ -127,7 +129,7 @@ In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
   
     2.  Selezionare **Test connessione** per convalidare la connessione al server.  
   
-    3.  Fare clic su **Avanti**.  
+    3.  Selezionare **Avanti**.  
 
 4.  Specificare le credenziali utilizzate dal server di report per la connessione al database del server di report.  
   
@@ -139,7 +141,7 @@ In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
   
          Selezionare **Credenziali del servizio** se si desidera che il server di report si connetta tramite l'account del servizio. Se si seleziona questa opzione, il server si connette utilizzando la sicurezza integrata e le credenziali non verranno crittografate o archiviate.  
   
-    2.  Fare clic su **Avanti**. 
+    2.  Selezionare **Avanti**. 
 
 5. Rivedere le impostazioni e selezionare **Avanti**.
 

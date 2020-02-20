@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b4ab3a1b0d6f76cd3918b20460c41d66e9616da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972778"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverdatasource"></a>Metodo setStatementPoolingCacheSize (SQLServerDataSource)
@@ -32,13 +32,13 @@ public void setStatementPoolingCacheSize(boolean statementPoolingCacheSize);
 #### <a name="parameters"></a>Parametri  
  *statementPoolingCacheSize*  
   
- Nuovo valore della proprietà di connessione **disablestatementpooling** .  
+ Nuovo valore della proprietà di connessione **statementPoolingCacheSize**.  
 
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
- Questo metodo è disponibile dal driver JDBC versione 6,4 e successive.
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo è disponibile dal driver JDBC versione 6.4 e successive.
  
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

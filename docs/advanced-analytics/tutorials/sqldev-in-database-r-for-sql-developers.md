@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479407"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Esercitazione: Analisi dei dati R per sviluppatori SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questa esercitazione per programmatori SQL vengono fornite informazioni sull'integrazione di R mediante la creazione e la distribuzione di una soluzione di Machine Learning basata su R usando un database [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server. Si useranno T-SQL, SQL Server Management Studio e un'istanza del motore di database con [Machine Learning Services]([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) e il supporto del linguaggio R.
+In questa esercitazione per programmatori SQL vengono fornite informazioni sull'integrazione di R mediante la creazione e la distribuzione di una soluzione di Machine Learning basata su R usando un database [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server. Si useranno T-SQL, SQL Server Management Studio e un'istanza del motore di database con [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) e il supporto del linguaggio R.
 
 Questa esercitazione presenta le funzioni R usate in un flusso di lavoro di modellazione dei dati. I passaggi includono l'esplorazione dei dati, la creazione e il training di un modello di classificazione binaria e la distribuzione del modello. Il modello che verrà compilato consente di stimare se è probabile che per una corsa venga lasciata una mancia, in base all'ora del giorno, alla distanza percorsa e al luogo di partenza della corsa. 
 

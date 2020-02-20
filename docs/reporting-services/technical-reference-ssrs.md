@@ -15,10 +15,10 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892816"
 ---
 # <a name="technical-reference-ssrs"></a>Guida di riferimento tecnico (SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "68892816"
  ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Errori ed eventi**  
  [Causa e risoluzione degli errori di Reporting Services](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Guida di riferimento alle funzionalità**  
+ ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Informazioni di riferimento sulle funzionalità**  
  [Guida sensibile al contesto di Progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
   
  [Guida sensibile al contesto di Gestione report](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
@@ -41,7 +41,7 @@ ms.locfileid: "68892816"
   
  [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Utilità della riga di comando del server di report**  
+ ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Utilità del prompt dei comandi del server di report**  
  [Utilità RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [Utilità rsconfig &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  

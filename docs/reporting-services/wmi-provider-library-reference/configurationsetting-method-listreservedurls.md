@@ -11,10 +11,10 @@ ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 886c6b6622a2051751704aa9ea72aabcbb4afef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579903"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>Metodo di ConfigurationSetting - ListReservedURLs
@@ -56,7 +56,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

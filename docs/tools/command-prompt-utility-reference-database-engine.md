@@ -1,10 +1,7 @@
 ---
-title: Utilità del prompt dei comandi SQL (motore di database) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Utilità del prompt dei comandi SQL (motore di database)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,21 +13,25 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2b4dd847c828d18f30c161d9cfb1d8ab30e8ebb9
-ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
-ms.translationtype: MTE75
+ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71077531"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992741"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilità del prompt dei comandi SQL (motore di database)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Le utilità del prompt dei comandi consentono di generare script di operazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La tabella seguente contiene un elenco delle utilità del prompt dei comandi fornite con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
-Per informazioni sulla *principale* GUI SQL e sugli strumenti da riga di comando, vedere [Panoramica degli strumenti SQL](overview-sql-tools.md).
+Le utilità del prompt dei comandi consentono di generare script di operazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La tabella seguente contiene un elenco delle utilità del prompt dei comandi fornite con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-  
+Per informazioni sui *principali* strumenti dell'interfaccia utente grafica e della riga di comando di SQL, vedere [Panoramica degli strumenti di SQL](overview-sql-tools.md).
+
 |**Utilità**|**Descrizione**|**Posizione di installazione**|  
 |-----------------|---------------------|----------------------|  
 |[Utilità bcp](../tools/bcp-utility.md)|Usata per copiare i dati tra un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e un file di dati in un formato specificato dall'utente.|\<*unità*:>\Programmi\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
@@ -41,7 +42,7 @@ Per informazioni sulla *principale* GUI SQL e sugli strumenti da riga di comando
 |[Utilità osql](../tools/osql-utility.md)|Consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , procedure di sistema e file script al prompt dei comandi.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilità profiler](../tools/profiler-utility.md)|Consente di avviare [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] dal prompt dei comandi.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilità RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|Consente di eseguire script progettati per la gestione di server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[utilità rsconfig &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)|Consente di configurare una connessione a un server di report.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[Utilità rsconfig &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)|Consente di configurare una connessione a un server di report.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilità rskeymgmt &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)|Consente di gestire le chiavi di crittografia in un server di report.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Applicazione sqlagent90](../tools/sqlagent90-application.md)|Utilizzata per avviare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent da un prompt dei comandi.|\<unità>:\Program Files\Microsoft SQL Server\\<*instance_name*>\MSSQL\Binn|  
 |[Utilità sqlcmd](../tools/sqlcmd-utility.md)|Consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , procedure di sistema e file script al prompt dei comandi.|\<*unità*:>\Programmi\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
@@ -56,18 +57,17 @@ Per informazioni sulla *principale* GUI SQL e sugli strumenti da riga di comando
 
 ## <a name="command-prompt-utilities-syntax-conventions"></a>Convenzioni di sintassi per le utilità del del prompt dei comandi  
   
-|**Convenzione**|**Utilizzo**|  
+|**Convenzione**|**Usata per**|  
 |--------------------|------------------|  
-|MAIUSCOLE|Istruzioni e termini utilizzati a livello di sistema operativo.|  
+|LETTERE MAIUSCOLE|Istruzioni e termini utilizzati a livello di sistema operativo.|  
 |`monospace`|Esempi di comandi e codice di programmazione.|  
 |*corsivo*|Parametri specificati dall'utente.|  
 |**grassetto**|Comandi, parametri e altri elementi della sintassi che devono essere digitati esattamente come indicato.|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Agente distribuzione repliche](../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Agente lettura log repliche](../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Agente merge repliche](../relational-databases/replication/agents/replication-merge-agent.md)   
- [Agente di lettura coda repliche](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Agente snapshot repliche](../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  
+
+## <a name="see-also"></a>Vedere anche
+
+* [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)
+* [Agente lettura log repliche](../relational-databases/replication/agents/replication-log-reader-agent.md)
+* [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)
+* [Agente di lettura coda repliche](../relational-databases/replication/agents/replication-queue-reader-agent.md)
+* [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)

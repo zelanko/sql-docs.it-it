@@ -11,10 +11,10 @@ ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0a76052ccf05927ebd598e2baa37fbf0229bf54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981388"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>Metodo getNString (java.lang.String) (SQLServerResultSet)
@@ -40,10 +40,10 @@ public java.lang.String getNString(java.lang.String columnLabel)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getNString viene specificato dal metodo getNString nell'interfaccia java.sql.SQLServerResultSet.  
   
- Questo metodo può essere utilizzato per recuperare il valore di una colonna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**o **XML** nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
+ Questo metodo può essere usato per recuperare il valore di una colonna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext** o **xml** nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getNString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

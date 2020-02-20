@@ -11,15 +11,15 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140480"
 ---
 # <a name="create-the-rsexecrole"></a>Creare RSExecRole
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzato un ruolo del database predefinito denominato **RSExecRole** che consente di concedere autorizzazioni del server di report al database relativo. Il ruolo **RSExecRole** viene creato automaticamente con il database del server di report. Si consiglia di non modificare mai né di assegnare utenti a tale ruolo. Quando si sposta un database del server di report in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]nuovo o diverso, è necessario tuttavia creare nuovamente il ruolo nei database di sistema master e msdb.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzato un ruolo del database predefinito denominato **RSExecRole** che consente di concedere autorizzazioni del server di report al database relativo. Il ruolo **RSExecRole** viene creato automaticamente con il database del server di report. Si consiglia di non modificare mai né di assegnare utenti a tale ruolo. Quando si sposta un database del server di report in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] nuovo o diverso, è necessario tuttavia creare nuovamente il ruolo nei database di sistema master e msdb.  
   
  Utilizzando le istruzioni indicate di seguito, verranno effettuate le operazioni seguenti:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67140480"
   
 ### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Per creare RSExecRole nel database di sistema master mediante Management Studio  
   
-1.  Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , quindi connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è ospitato il database del server di report.  
+1.  Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], quindi connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è ospitato il database del server di report.  
   
 2.  Aprire **Database**.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "67140480"
   
 6.  Aprire **Ruoli**.  
   
-7.  Fare clic con il pulsante destro del mouse su **Ruoli del database**, quindi scegliere **Nuovo ruolo database**. Il **ruolo del Database - nuovo** verrà visualizzata la pagina.  
+7.  Fare clic con il pulsante destro del mouse su **Ruoli del database**, quindi scegliere **Nuovo ruolo database**. Verrà visualizzata la pagina **Ruolo del database - Nuovo**.  
   
 8.  In **Nome ruolo**digitare **RSExecRole**.  
   
 9. In **Proprietario** digitare **dbo**.  
   
-10. Pagina Seleziona **entità a protezione diretta**.  
+10. Selezionare la pagina **Entità a protezione diretta**.  
   
 11. Fare clic su **Cerca**. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67140480"
   
 18. Fare clic su **OK**, quindi fare di nuovo clic su **OK** .  
   
-19. Nel **Execute** riga il **Concedi** colonna, selezionare la casella di controllo.  
+19. Nella colonna **Concedi** della riga **Esegui** selezionare la casella di controllo.  
   
 20. Ripetere il passaggio per ognuna delle stored procedure rimanenti. A**RSExecRole** devono essere concesse le autorizzazioni di esecuzione per tutte le tre stored procedure.  
 
@@ -116,7 +116,7 @@ ms.locfileid: "67140480"
   
 7.  In Proprietario digitare **dbo**.  
   
-8.  Selezionare il **entità a protezione diretta** pagina.  
+8.  Selezionare la pagina **Entità a protezione diretta**.  
   
 9.  Fare clic su **Cerca**. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "67140480"
   
 19. Ripetere il passaggio per ognuna delle stored procedure rimanenti. A RSExecRole devono essere concesse le autorizzazioni di esecuzione per tutte le dieci stored procedure.  
   
-20. Sempre nella **entità a protezione diretta** pagina, fare clic su **ricerca** nuovamente. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.  
+20. Nella pagina **Entità a protezione diretta** fare di nuovo clic su **Cerca**. Verrà visualizzata la finestra di dialogo **Aggiungi oggetti** . L'opzione **Specifica oggetti** è selezionata per impostazione predefinita.  
   
 21. Fare clic su **OK**.  
   
@@ -204,15 +204,15 @@ ms.locfileid: "67140480"
   
 2.  Fare clic su **Database**.  
   
-3.  Fare clic su **Cambia database**.  
+3.  Fare clic su **Modifica database**.  
   
 4.  Fare clic su **Scegli un database del server di report esistente**.  
   
 5.  Immettere il nome del server del Motore di database. Se i database del server di report sono stati collegati a un'istanza denominata, è necessario digitare il nome dell'istanza nel formato \<nomeserver>\\<nomeistanza\>.  
   
-6.  Fare clic su **Test connessione**. Si dovrebbe visualizzare una finestra di dialogo che informa, "Test connessione riuscito".
+6.  Fare clic su **Test connessione**. Verrà visualizzata una finestra di dialogo che indica "Test della connessione riuscito".
   
-7.  Selezionare **accettabile** per chiudere la finestra di dialogo e quindi selezionare **successivo**.  
+7.  Selezionare **OK** per chiudere la finestra di dialogo e quindi selezionare **Avanti**.  
   
 8.  In Database selezionare il database del server di report.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "67140480"
   
 14. Fare clic su **URL del portale Web**.  
   
-15. Fare clic sul collegamento per aprire il portale web. Gli elementi del server di report dovrebbero essere visualizzati dal database del server di report.  
+15. Fare clic sul collegamento per aprire il portale Web. Gli elementi del server di report dovrebbero essere visualizzati dal database del server di report.  
 
 ## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>Creazione del ruolo RSExecRole e delle autorizzazioni relative con T-SQL
 È anche possibile creare il ruolo e concedere le autorizzazioni relative sui database di sistema usando lo script T-SQL seguente:

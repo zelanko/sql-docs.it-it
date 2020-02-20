@@ -16,10 +16,10 @@ ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3918215f40a77fa5288dd345715856829b607dae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977519"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>Metodo isNullable (SQLServerResultSetMetaData)
@@ -40,13 +40,13 @@ public int isNullable(int column)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se la colonna può essere null. In caso contrario, **false**.  
+ **true** se la colonna può essere NULL. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo isNullable viene specificato dal metodo isNullable nell'interfaccia java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo isNullable viene specificato dal metodo isNullable nell'interfaccia java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

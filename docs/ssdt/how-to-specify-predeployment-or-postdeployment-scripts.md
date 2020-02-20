@@ -1,24 +1,25 @@
 ---
-title: 'Procedura: Specificare script di pre-distribuzione o post-distribuzione | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Specificare script di pre-distribuzione o di post-distribuzione
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199293"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244269"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procedura: Specificare script pre-distribuzione o post-distribuzione
-Gli script pre-distribuzione e post-distribuzione consentono di eseguire le istruzioni Transact\-SQL prima e dopo lo script di distribuzione principale generato dal progetto di database. Lo script di pre-distribuzione non verrà eseguito quando si aggiornano le destinazioni dai risultati di confronto dello schema in Visual Studio. Un progetto può contenere un solo script pre-distribuzione e un solo script post-distribuzione. Tali script possono essere utilizzati per molti scopi. Esempio:  
+
+Gli script pre-distribuzione e post-distribuzione consentono di eseguire le istruzioni Transact\-SQL prima e dopo lo script di distribuzione principale generato dal progetto di database. Lo script di pre-distribuzione non verrà eseguito quando si aggiornano le destinazioni dai risultati di confronto dello schema in Visual Studio. Un progetto può contenere un solo script pre-distribuzione e un solo script post-distribuzione. Tali script possono essere utilizzati per molti scopi. Ad esempio:  
   
 -   Uno script pre-distribuzione può essere utilizzato per copiare i dati da una tabella da modificare in una tabella temporanea prima di riformattare e applicare i dati nella tabella modificata in uno script post-distribuzione  
   
@@ -45,7 +46,7 @@ END
   
     Verrà aperto l'Editor Transact\-SQL in cui è visualizzato il contenuto del file.  
   
-È possibile utilizzare la sintassi e le variabili SQLCMD negli script e impostare tali valori nelle proprietà del progetto di database. Esempio:  
+È possibile utilizzare la sintassi e le variabili SQLCMD negli script e impostare tali valori nelle proprietà del progetto di database. Ad esempio:  
   
 -   È possibile utilizzare la sintassi SQLCMD per includere il contenuto di un file in uno script pre-distribuzione o post-distribuzione. I file vengono inclusi ed eseguiti nell'ordine in cui vengono definiti: `:r .\myfile.sql`  
   

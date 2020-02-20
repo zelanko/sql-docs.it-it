@@ -16,10 +16,10 @@ ms.assetid: b6255d2e-0028-474a-afa8-553ef092243e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0919590ec727068b97ef66d3d0f6824aefcbe03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980032"
 ---
 # <a name="getselectmethod-method-sqlserverdatasource"></a>Metodo getSelectMethod (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getSelectMethod()
 ## <a name="return-value"></a>Valore restituito  
  Valore **String** contenente il tipo di cursore predefinito.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La proprietà selectMethod specifica il tipo di cursore predefinito che viene utilizzato per un set di risultati. Questa proprietà è utile in caso di set di risultati di grandi dimensioni e se non desidera archiviare tutto il set di risultati in memoria nel lato client. Impostando la proprietà su "cursor", è possibile creare un cursore sul lato server che può recuperare i blocchi di dati più piccoli in una sola volta. Se la proprietà selectMethod non è impostata, il metodo getSelectMethod restituisce il valore predefinito "direct".  
   
 ## <a name="see-also"></a>Vedere anche  

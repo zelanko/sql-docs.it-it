@@ -1,5 +1,5 @@
 ---
-title: Informazioni di riferimento sul driver PDO_SQLSRV | Microsoft Docs
+title: Informazioni di riferimento per il driver PDO_SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8aa5f04ab9ae510ec0a7c3ead0c30600ebb9b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936189"
 ---
-# <a name="pdosqlsrv-driver-reference"></a>Guida di riferimento del driver PDO_SQLSRV
+# <a name="pdo_sqlsrv-driver-reference"></a>Guida di riferimento del driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Due oggetti supportano PDO:  

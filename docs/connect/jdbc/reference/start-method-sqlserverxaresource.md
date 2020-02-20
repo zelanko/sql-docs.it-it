@@ -1,5 +1,5 @@
 ---
-title: Metodo Start (SQLServerXAResource) | Microsoft Docs
+title: Metodo start (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 33c90213-92f7-416b-b2fa-67a1afe64e97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cef1af2c416231892ea74a7def90237f84b036d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970037"
 ---
 # <a name="start-method-sqlserverxaresource"></a>Metodo start (SQLServerXAResource)
@@ -38,16 +38,16 @@ public void start(javax.transaction.xa.Xid xid,
 #### <a name="parameters"></a>Parametri  
  *xid*  
   
- Oggetto XID.  
+ Oggetto Xid.  
   
  *flags*  
   
- Valore **int** .  
+ Valore **int**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo start viene specificato dal metodo start nell'interfaccia javax.transaction.xa.XAResource.  
   
 ## <a name="see-also"></a>Vedere anche  

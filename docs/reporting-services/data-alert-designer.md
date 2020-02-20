@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571600"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
@@ -57,7 +57,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ##  <a name="AlertDesigner"></a> Interfaccia utente della finestra di progettazione Avviso dati  
  L'interfaccia della finestra di progettazione Avviso dati è suddivisa in aree. Sono disponibili l'area in cui si seleziona il feed di dati del report, l'area in cui si creano condizioni semplici o complesse aggiungendo regole alle condizioni e così via. Nella figura seguente sono illustrate le aree della finestra di progettazione Avviso dati.  
   
- ![Aree all'interno dell'interfaccia utente della finestra di progettazione Avviso dati](../reporting-services/media/rs-alertdesigner.gif "Aree all'interno dell'interfaccia utente della finestra di progettazione Avviso dati")  
+ ![Aree all'interno dell'interfaccia utente Alert Designer](../reporting-services/media/rs-alertdesigner.gif "Aree all'interno dell'interfaccia utente Alert Designer")  
   
   
 ### <a name="alert-data"></a>Dati di avviso  
@@ -73,7 +73,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
  Alcuni report dispongono di milioni di righe di dati. Nella tabella vengono mostrate solo le prime 100 righe di dati nel feed.  
   
-### <a name="alert-name"></a>Nome dell'avviso  
+### <a name="alert-name"></a>Nome avviso  
  Per impostazione predefinita, la definizione di avviso e il report hanno lo stesso nome. È possibile modificare il nome dell'avviso per renderlo più significativo. In questo modo sarà più semplice gestire gli avvisi, determinando quali aggiornare, eliminare e così via.  
   
  È possibile creare più avvisi in un report nonché disporre di più definizioni di avviso con lo stesso nome. Tuttavia si consiglia di utilizzare nomi di avviso univoci in modo da facilitare la differenziazione e la gestione delle definizioni di avviso. L'elenco di tutti gli avvisi creati può essere visualizzato in Gestione avvisi dati. Per altre infomrazioni, vedere [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gestire gli avvisi dati in Gestione avvisi dati](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
@@ -179,7 +179,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ##  <a name="CreateAlert"></a> Creare una definizione di avviso dati  
  Se all'utente vengono concesse le autorizzazioni Visualizzazione elementi e Creazione avvisi di SharePoint, potrà creare una definizione di avviso dati per qualsiasi report per il quale dispone dell'autorizzazione per la visualizzazione, a condizione che nel report vengano utilizzate credenziali archiviate o nessuna credenziale. Il report viene eseguito da una raccolta di SharePoint. I dati disponibili per l'utilizzo nella finestra di progettazione Avviso dati provengono dal report. Se il report è con parametri, potrebbe essere necessario eseguirlo usando valori dei parametri diversi per assicurarsi che i dati di interesse vengano visualizzati nel report. Dopo aver aperto il report, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report per aprire la finestra di progettazione Avviso dati. Nell'immagine seguente viene illustrato come aprire la finestra di progettazione Avviso dati.  
   
- ![Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint")  
+ ![Aprire Alert Designer dalla raccolta di SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Aprire Alert Designer dalla raccolta di SharePoint")  
   
  Per altre informazioni, vedere [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -198,7 +198,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
  Per modificare una definizione di avviso dati, fare clic con il pulsante destro del mouse su di essa in Gestione avvisi dati, quindi scegliere **Modifica**. Nella figura seguente è illustrato il menu di scelta rapida per un avviso dati in Gestione avvisi dati.  
   
- ![Aprire la finestra di progettazione Avviso dati facendo clic su Modifica](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Aprire la finestra di progettazione Avviso dati facendo clic su Modifica")  
+ ![Aprire la finestra di progettazione di avvisi dati facendo clic su Modifica](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Aprire la finestra di progettazione di avvisi dati facendo clic su Modifica")  
   
  Per altre informazioni, vedere [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   

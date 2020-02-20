@@ -1,11 +1,7 @@
 ---
-title: Opzioni dell'editor Transact-SQL | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Opzioni dell'editor Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
@@ -27,14 +23,19 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110628"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256324"
 ---
 # <a name="transact-sql-editor-options"></a>Opzioni dell'editor Transact-SQL
+
 In questo argomento sono contenute informazioni su alcune opzioni dell'editor Transact-SQL. Per impostare queste opzioni, passare alla finestra **Opzione** tramite il menu **Strumenti\Opzioni**.  
   
 [Esecuzione di query](#QueryExecution)  
@@ -67,7 +68,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
 |**SET CURSOR_CLOSE_ON_COMMIT**|Controlla se il cursore non viene chiuso quando una transazione viene confermata. Per altre informazioni, vedere [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754).|  
 |**SET ANSI_PADDING**|Controlla la modalità di archiviazione nella colonna dei valori di dimensioni inferiori alle dimensioni definite per la colonna e dei valori che includono spazi vuoti finali con tipo di dati **char**, **varchar**, **binary**e **varbinary** . Per altre informazioni, vedere [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755).|  
 |**SET ANSI_WARNINGS**|Specifica il comportamento standard SQL-92 per diverse condizioni di errore. Per altre informazioni, vedere [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
-|**SET ANSI_NULLS**|Specifica la conformità del comportamento agli standard SQL-92 per gli operatori di confronto uguale a (**=**) e diverso da (**<>**) quando vengono usati con valori Null. Per altre informazioni, vedere [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
+|**SET ANSI_NULLS**|Specifica la conformità del comportamento agli standard SQL-92 per gli operatori di confronto uguale a ( **=** ) e diverso da ( **<>** ) quando vengono usati con valori Null. Per altre informazioni, vedere [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
 ## <a name="QueryResults"></a>Risultati query  
   
@@ -81,7 +82,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
 |**Dimensioni massime caratteri recuperati**|Dati non XML:<br /><br />Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella. **Nota:** Se si specifica un numero elevato di caratteri, i dati nel set di risultati potrebbero non essere visualizzati completamente. Il numero massimo di caratteri visualizzati in ogni cella dipende dalle dimensioni del carattere. Se si specifica un valore elevato in questa casella e vengono restituiti set di risultati di notevoli dimensioni, la memoria per SQL Server Management Studio potrebbe risultare insufficiente con effetti negativi sulle prestazioni del sistema.<br /><br />Dati XML<br /><br />Consente di selezionare i valori 1 MB, 2 MB o 5 MB. Selezionare Illimitate per recuperare tutti i caratteri.|  
 |**Formato di output**|Per impostazione predefinita, l'output viene visualizzato in colonne create utilizzando gli spazi per separare i risultati. Per separare le colonne, è inoltre possibile utilizzare virgole, caratteri di tabulazione o spazi. Selezionare la casella di controllo **Delimitatore personalizzato** per specificare un carattere di delimitazione differente nella casella **Delimitatore personalizzato** .|  
 |**Delimitatore personalizzato**|Consente di specificare il carattere che si desidera utilizzare per separare le colonne. Questa opzione è disponibile solo se la casella di controllo **Delimitatore personalizzato** è selezionata nella finestra **Formato di output** .|  
-|**Includi intestazioni di colonna nel set di risultati**|Deselezionare questa casella di controllo se non si desidera applicare un titolo alle colonne.|  
+|**Includi intestazioni di colonna nel set di risultati**|Deselezionare questa casella di controllo se non si vuole applicare un titolo alle colonne.|  
 |**Scorri i risultati ricevuti**|Selezionare questa casella di controllo per mantenere visualizzati gli ultimi record restituiti nella parte inferiore. Deselezionare la casella per mantenere visualizzata la prima riga restituita.|  
 |**Allinea a destra i valori numerici**|Selezionare questa casella di controllo per allineare i valori numeri a destra nella colonna in modo da semplificare l'esame delle cifre con un numero di posizioni decimali predefinito.|  
 |**Elimina risultati dopo l'esecuzione della query**|Libera la memoria eliminando i risultati della query dopo che sono stati visualizzati.|  

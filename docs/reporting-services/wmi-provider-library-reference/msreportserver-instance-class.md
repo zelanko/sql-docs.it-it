@@ -17,13 +17,13 @@ ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92b678e0b9cc07cacfc6501b75b3e9d5c2889e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572254"
 ---
-# <a name="msreportserverinstance-class"></a>classe MSReportServer_Instance
+# <a name="msreportserver_instance-class"></a>classe MSReportServer_Instance
   La classe MSReportServer_Instance fornisce le informazioni di base necessarie a un client per la connessione a un server di report installato.  
   
  Per un elenco di tutti i membri di questo tipo, vedere [Membri di MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

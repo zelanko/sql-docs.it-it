@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di istruzioni con SQL | Microsoft Docs
+title: Uso di istruzioni con SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025835"
 ---
 # <a name="using-statements-with-sql"></a>Uso di istruzioni SQL
@@ -26,7 +26,7 @@ Quando si gestiscono dati in un database di [!INCLUDE[ssNoVersion](../../include
 Se l'istruzione SQL non contiene parametri IN, usare la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md); se, invece, contiene parametri IN, usare la classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
 > [!NOTE]  
-> Se è necessario usare istruzioni SQL che contengono sia parametri IN che OUT, è necessario implementarle come stored procedure e chiamarle usando la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Per ulteriori informazioni sull'utilizzo delle stored procedure, vedere [utilizzo delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+> Se è necessario usare istruzioni SQL che contengono sia parametri IN che OUT, è necessario implementarle come stored procedure e chiamarle usando la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Per altre informazioni sull'uso delle stored procedure, vedere [Uso delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
   
 Nelle sezioni seguenti sono descritti i diversi scenari di utilizzo di dati in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante istruzioni SQL.  
 

@@ -16,10 +16,10 @@ ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c83fe6aa33d77db98fcdfc757b9bf219a45a9b15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976767"
 ---
 # <a name="next-method-sqlserverresultset"></a>Metodo next (SQLServerResultSet)
@@ -40,7 +40,7 @@ public boolean next()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo next viene specificato dal metodo next nell'interfaccia java.sql.ResultSet.  
   
  Un cursore del set di risultati viene posizionato inizialmente prima della prima riga. La prima chiamata al metodo next rende la prima riga quella corrente, la seconda chiamata rende la seconda riga quella corrente e così via.  

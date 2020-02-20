@@ -11,10 +11,10 @@ ms.assetid: 9a86daeb-03b2-45ef-82d3-495f33fb0113
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fc825228c8092a5a9dce998f53e1fbf763cff8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981452"
 ---
 # <a name="getnclob-method-sqlservercallablestatement"></a>Metodo getNClob (SQLServerCallableStatement)
@@ -24,9 +24,9 @@ ms.locfileid: "67981452"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo &#40;getNClob int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|Recupera il valore del parametro **NCLOB** JDBC designato come oggetto **NClob** nel linguaggio di programmazione Java.|  
+|[Metodo getNClob &#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|Recupera il valore del parametro **NCLOB** JDBC designato come oggetto **NClob** nel linguaggio di programmazione Java.|  
 |[Metodo getNClob &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|Recupera il valore di un parametro **NCLOB** JDBC designato come oggetto **NClob** nel linguaggio di programmazione Java.|  
   
 ## <a name="see-also"></a>Vedere anche  

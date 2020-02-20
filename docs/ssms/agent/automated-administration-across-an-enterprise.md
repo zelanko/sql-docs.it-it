@@ -1,10 +1,9 @@
 ---
-title: Amministrazione automatizzata in un'organizzazione | Microsoft Docs
-ms.custom: ''
+title: Amministrazione automatizzata in un'organizzazione
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29884599271e85e1ea1be04391fe387092351d55
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 874e2bb1099c047e212cb25f7cac11768c28ce20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252059"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252665"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ Sono incluse informazioni sull'impostazione della sottochiave MsxEncryptChannelO
 [Gestire i processi in un'azienda](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Contiene informazioni su verifica dello stato dei processi, modifica dei server di destinazione per i processi, sincronizzazione dei clock dei server e polling dei server master per determinare lo stato attuale dei processi.  
   
-[Risolvere i problemi relativi a processi multiserver che utilizzano proxy](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
+[Risolvere i problemi relativi a processi multiserver che usano proxy](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
 Contiene informazioni sulla risoluzione dei problemi relativi a processi multiserver che utilizzano proxy con esito negativo.  
   
 [Polling dei server](../../ssms/agent/poll-servers.md)  

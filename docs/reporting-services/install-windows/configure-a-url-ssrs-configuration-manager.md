@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594110"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurare un URL (Gestione configurazione SSRS)
@@ -105,7 +105,7 @@ ms.locfileid: "73594110"
 > 
 >  Per risolvere questo problema, eliminare tutte le associazioni, quindi crearne di nuove con impostazioni univoche o configurare le registrazioni di URL di Reporting Services con caratteri jolly.
   
-### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>Per creare una prenotazione URL per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-create-a-url-reservation-for-the-ssrswebportal"></a>Per creare una prenotazione URL per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  Avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report.  
   

@@ -2,20 +2,20 @@
 title: Supporto UTF-8 in OLE DB Driver for SQL Server| Microsoft Docs
 description: Supporto UTF-8 in OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
-ms.translationtype: MTE75
+ms.reviewer: v-kaywon
+ms.author: jroth
+author: rothja
+ms.openlocfilehash: 340c1bdd7ab3ff54ffab52aebe08eeab258c7b41
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70392013"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257691"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Supporto UTF-8 in OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ Microsoft OLE DB Driver for SQL Server (versione 18.2.1) aggiunge il supporto pe
 - [Supporto UTF-8](#ctp23)
 
 > [!IMPORTANT]
-> Il driver Microsoft OLE DB per SQL Server usa la funzione [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) per determinare la codifica del buffer di input DBTYPE_STR. Gli scenari in cui GetACP restituisce una codifica UTF-8 non sono supportati. Se il buffer deve archiviare dati Unicode, il tipo di dati del buffer deve essere impostato su DBTYPE_WSTR (codificato con UTF-16).
+> Microsoft OLE DB Driver per SQL Server usa la funzione [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) per determinare la codifica del buffer di input DBTYPE_STR. Gli scenari in cui GetACP restituisce una codifica UTF-8 non sono supportati. Se il buffer deve archiviare dati Unicode, il tipo di dati del buffer deve essere impostato su DBTYPE_WSTR (con codifica UTF-16).
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserimento dei dati in una colonna CHAR or VARCHAR con codifica UTF-8
 Quando si crea un buffer del parametro di input per l'inserimento, il buffer viene descritto tramite una matrice di [strutture DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Ogni struttura DBBINDING associa un singolo parametro al buffer del consumer e contiene informazioni come la lunghezza e il tipo del valore dati. Per un buffer del parametro di input di tipo CHAR, il campo *wType* della struttura DBBINDING deve essere impostato su DBTYPE_STR. Per un buffer del parametro di input di tipo WCHAR, il campo *wType* della struttura DBBINDING deve essere impostato su DBTYPE_WSTR.
@@ -41,7 +41,7 @@ Il buffer del parametro di input può essere convertito nelle regole di confront
 |DBTYPE_STR|DBTYPE_STR|Conversione server dalla tabella codici del client alla tabella codici delle regole di confronto del database; conversione server dalla tabella codici delle regole di confronto del database alla tabella codici delle regole di confronto della colonna.|Verificare che la tabella codici del client e la tabella codici delle regole di confronto del database siano in grado di rappresentare tutti i caratteri nei dati di input. Per inserire un carattere polacco, la tabella codici del client può ad esempio essere impostata su 1250 (ANSI dell'Europa centrale) e le regole di confronto del database possono avvalersi del polacco come designazione delle regole di confronto (ad esempio Polish_100_CI_AS_SC) oppure supportare UTF-8.|
 |DBTYPE_STR|DBTYPE_WSTR|Conversione driver dalla tabella codici del client alla codifica UTF-16; conversione server dalla codifica UTF-16 alla tabella codici delle regole di confronto della colonna.|Verificare che la tabella codici del client sia in grado di rappresentare tutti i caratteri nei dati di input. Per inserire un carattere polacco, la tabella codici del client potrebbe ad esempio essere impostata su 1250 (ANSI dell'Europa centrale).|
 |DBTYPE_WSTR|DBTYPE_STR|Conversione driver dalla codifica UTF-16 alla tabella codici delle regole di confronto del database; conversione server dalla tabella codici delle regole di confronto del database alla tabella codici delle regole di confronto della colonna.|Verificare che la tabella codici delle regole di confronto del database sia in grado di rappresentare tutti i caratteri nei dati di input. Per inserire un carattere polacco, la tabella codici delle regole di confronto del database può ad esempio avvalersi del polacco come designazione delle regole di confronto (ad esempio Polish_100_CI_AS_SC) oppure supportare UTF-8.|
-|DBTYPE_WSTR|DBTYPE_WSTR|Conversione server da UTF-16 alla tabella codici delle regole di confronto della colonna.|Nessuna.|
+|DBTYPE_WSTR|DBTYPE_WSTR|Conversione server da UTF-16 alla tabella codici delle regole di confronto della colonna.|No.|
 
 ## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>Recupero dati da una colonna CHAR or VARCHAR con codifica UTF-8
 Quando si crea un buffer per i dati recuperati, il buffer viene descritto tramite una matrice di [strutture DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Ogni struttura DBBINDING associa una singola colonna nella riga recuperata. Per recuperare i dati della colonna di tipo CHAR, impostare il campo *wType* della struttura DBBINDING su DBTYPE_STR. Per recuperare i dati della colonna di tipo WCHAR, impostare il campo *wType* della struttura DBBINDING su DBTYPE_WSTR.

@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889837"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
@@ -82,7 +82,7 @@ ms.locfileid: "68889837"
 > [!NOTE]  
 >  Per passare dalla modalità **Predefinita** alla modalità **Avanzata** (e viceversa), fare clic con il pulsante destro del mouse sulla freccia GIÙ a destra dell'icona **Gruppi di colonne** .  
   
- Per altre informazioni, vedere [Riquadro di raggruppamento](../../reporting-services/tools/grouping-pane.md).  
+ Per altre informazioni, vedere [Raggruppamento date](../../reporting-services/tools/grouping-pane.md).  
   
   
 ###  <a name="bkmk_Toolbox"></a> Casella degli strumenti  

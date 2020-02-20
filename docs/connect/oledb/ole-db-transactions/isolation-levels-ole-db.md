@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993968"
 ---
 # <a name="isolation-levels-ole-db"></a>Livelli di isolamento (OLE DB)
@@ -27,11 +27,11 @@ ms.locfileid: "67993968"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  I client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono controllare i livelli di isolamento delle transazioni per una connessione. Per controllare il livello di isolamento delle transazioni, il driver OLE DB per SQL Server consumer utilizza:  
+  I client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono controllare i livelli di isolamento delle transazioni per una connessione. Per controllare il livello di isolamento delle transazioni, il consumer di OLE DB Driver per SQL Server usa:  
   
 -   DBPROP_SESS_AUTOCOMMITISOLEVELS della proprietà DBPROPSET_SESSION per la modalità di autocommit predefinita del driver OLE DB per SQL Server.  
   
-     Il driver OLE DB per SQL Server valore predefinito per il livello è DBPROPVAL_TI_READCOMMITTED.  
+     L'impostazione predefinita di OLE DB Driver per SQL Server per il livello è DBPROPVAL_TI_READCOMMITTED.  
   
 -   Parametro *isoLevel* del metodo **ITransactionLocal::StartTransaction** per le transazioni locali di cui viene eseguito il commit manuale.  
   

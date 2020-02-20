@@ -9,17 +9,17 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578827"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Visualizzazione di una serie con più intervalli di dati in un grafico
 
   Nel grafico verranno usati i valori minimo e massimo di una serie per calcolare la scala dell'asse. Se una serie nel grafico contiene più intervalli di dati, è possibile che i punti dati vengano nascosti e che solo alcuni di essi risultino facilmente visibili nel grafico. Si supponga ad esempio che in un report vengano visualizzati i totali delle vendite giornaliere per un periodo di 30 giorni.  
   
- ![Grafico con più intervalli di dati](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "grafico con più intervalli di dati")  
+ ![Grafico con più intervalli di dati](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "Grafico con più intervalli di dati")  
   
  Per la maggior parte del mese, le vendite sono comprese tra 10 e 40. Una campagna di marketing per le vendite di una settimana ha tuttavia causato un improvviso aumento delle vendite all'inizio di aprile. Questa modifica nei dati di vendita produce una distribuzione non uniforme di punti dati che riduce la leggibilità complessiva del grafico.  
   

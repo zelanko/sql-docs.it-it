@@ -1,6 +1,6 @@
 ---
-title: Utilità SqlLocalDB | Microsoft Docs
-ms.custom: ''
+title: Utilità SqlLocalDB
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78358b6477208dcb7aecb4c031ee25318eab9e05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c829c9adce95dd1a4a84d5fd6fc7b88abdece96a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065460"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306674"
 ---
 # <a name="sqllocaldb-utility"></a>Utilità SqlLocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Usare l'utilità **SqlLocalDB** per creare un'istanza di **LocalDB** di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]. L'utilità **SqlLocalDB** (SqlLocalDB.exe) è un semplice strumento della riga di comando che consente a utenti e sviluppatori di creare e gestire un'istanza di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Per informazioni su come usare **LocalDB**, vedere [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
+  Usare l'utilità **SqlLocalDB** per creare un'istanza di **Local DB** di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]. L'utilità **SqlLocalDB** (SqlLocalDB.exe) è un semplice strumento della riga di comando che consente a utenti e sviluppatori di creare e gestire un'istanza di **Local DB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Per informazioni su come usare **LocalDB**, vedere [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,7 +73,7 @@ SqlLocalDB.exe
  **-?**  
  Restituisce brevi descrizioni di ogni opzione **SqlLocalDB** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'argomento *instance name* deve seguire le regole per gli identificatori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure deve essere incluso tra virgolette.  
   
  L'esecuzione di SqlLocalDB senza argomenti restituisce il testo della Guida.  
@@ -82,7 +82,7 @@ SqlLocalDB.exe
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-an-instance-of-localdb"></a>A. Creazione di un'istanza di LocalDB.  
+### <a name="a-creating-an-instance-of-localdb"></a>R. Creazione di un'istanza di LocalDB.  
  L'esempio seguente crea e avvia un'istanza di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**di** denominata `DEPARTMENT` usando i file binari di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
 ```  

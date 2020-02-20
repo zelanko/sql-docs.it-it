@@ -1,6 +1,7 @@
 ---
-title: Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover| Microsoft Docs
-ms.custom: ''
+title: Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover
+description: Informazioni su come visualizzare e leggere il log di diagnostica generato dall'istanza del cluster di failover di SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904988"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242876"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +88,11 @@ ORDER BY Time;
 > [!NOTE]  
 >  È possibile filtrare i risultati in base a stati o componenti specifici utilizzando la clausola WHERE.  
   
-##  <a name="TsqlConfigure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlConfigure"></a> Uso di Transact-SQL  
  **Per configurare le proprietà del log di diagnostica**  
   
 > [!NOTE]  
->  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample), più avanti in questa sezione.  
+>  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
   
  L'istruzione DDL (Data Definition Language), **ALTER SERVER CONFIGURATION**, consente di avviare o arrestare la registrazione dei dati di diagnostica acquisiti dalla stored procedure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e di impostare i parametri di configurazione del log SQLDIAG, come il conteggio del rollover dei file di log, le dimensioni dei file di log e la posizione dei file. Per dettagli sulla sintassi, vedere [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
@@ -100,7 +101,7 @@ ORDER BY Time;
 ####  <a name="TsqlExample"></a> Setting diagnostic log options  
  Negli esempi inclusi in questa sezione viene illustrato come impostare i valori per l'opzione del log di diagnostica.  
   
-##### <a name="a-starting-diagnostic-logging"></a>A. Avvio della registrazione dei dati di diagnostica  
+##### <a name="a-starting-diagnostic-logging"></a>R. Avvio della registrazione dei dati di diagnostica  
  Nell'esempio seguente viene avviata la registrazione dei dati di diagnostica.  
   
 ```  
@@ -131,6 +132,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

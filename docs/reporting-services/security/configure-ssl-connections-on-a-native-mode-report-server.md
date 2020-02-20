@@ -11,10 +11,10 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b90383fb387f8593db7aa4ee4760181a7322a475
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028924"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurare connessioni SSL in un server di report in modalità nativa
@@ -82,7 +82,7 @@ ms.locfileid: "69028924"
   
  Le associazioni SSL sono una risorsa condivisa in Microsoft Windows. Le modifiche apportate da Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o da altri strumenti come Gestione IIS possono influire su altre applicazioni presenti nello stesso computer. Per modificare le associazioni è quindi consigliabile utilizzare lo stesso strumento adoperato per la creazione.  Ad esempio, se le associazioni SSL sono state create mediante Gestione configurazione, è consigliabile usare questo stesso strumento per gestirne il ciclo di vita. Lo stesso concetto vale per la creazione e la gestione delle associazioni mediante Gestione IIS. Se IIS viene installato nel computer prima di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è consigliabile esaminare la configurazione SSL in IIS prima di configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Se si rimuovono le associazioni SSL per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante Gestione configurazione Reporting Services, SSL potrebbe non funzionare più per i siti Web di un server in cui è in esecuzione Internet Information Services (IIS) o un altro server HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager rimuove la chiave del registro di sistema seguente: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** quando questa chiave del registro di sistema viene rimossa, viene anche rimossa l'associazione SSL per IIS. Senza questa associazione, SSL non viene fornito per il protocollo HTTPS. Per diagnosticare questo problema, usare Gestione IIS o l'utilità della riga di comando HTTPCFG.exe. Per risolvere il problema, ripristinare l'associazione SSL per i siti Web tramite Gestione IIS. Per evitare questo problema in futuro, usare Gestione IIS per rimuovere le associazioni SSL e quindi usare Gestione IIS per ripristinare l'associazione per i siti Web desiderati. Per altre informazioni, vedere l'articolo della Knowledge Base [Mancato funzionamento di SSL dopo la rimozione di un'associazione SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Se si rimuovono le associazioni SSL per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante Gestione configurazione Reporting Services, SSL potrebbe non funzionare più per i siti Web di un server in cui è in esecuzione Internet Information Services (IIS) o un altro server HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestione configurazione rimuove la chiave del Registro di sistema riportata di seguito: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Quando questa chiave del Registro di sistema viene rimossa, viene rimossa anche l'associazione SSL per IIS. Senza questa associazione, SSL non viene fornito per il protocollo HTTPS. Per diagnosticare questo problema, usare Gestione IIS o l'utilità della riga di comando HTTPCFG.exe. Per risolvere il problema, ripristinare l'associazione SSL per i siti Web tramite Gestione IIS. Per evitare questo problema in futuro, usare Gestione IIS per rimuovere le associazioni SSL e quindi usare Gestione IIS per ripristinare l'associazione per i siti Web desiderati. Per altre informazioni, vedere l'articolo della Knowledge Base [Mancato funzionamento di SSL dopo la rimozione di un'associazione SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   

@@ -16,10 +16,10 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570963"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Metodo ConfigurationSetting - GenerateDatabaseRightsScript
@@ -61,7 +61,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se *DatabaseName* è vuoto, *IsRemote* viene ignorato e per il nome del database viene usato il valore del file di configurazione del server di report.  
   
  Se *IsWindowsUser* è impostato su **true**, *UserName* deve essere nel formato \<dominio>\\<nome utente\>.  
@@ -87,7 +87,7 @@ out Int32 HRESULT);
   
  Se l'account **LocalService** predefinito è specificato e il database del server di report è remoto, viene restituito un errore.  
   
- Quando *IsWindowsUser* è True e il valore fornito in *UserName* deve essere convertito, il provider WMI determina se il database del server di report si trova sullo stesso computer o su un computer remoto. Per determinare se l'installazione è locale, il provider WMI valuta la proprietà DatabaseServerName rispetto al seguente elenco di valori. Se viene rilevata una corrispondenza, il database è locale. In caso contrario, è remoto. Il confronto non effettua la distinzione tra maiuscole e minuscole.  
+ Quando *IsWindowsUser* è True e il valore fornito in *UserName* deve essere convertito, il provider WMI determina se il database del server di report si trova sullo stesso computer o su un computer remoto. Per determinare se l'installazione è locale, il provider WMI valuta la proprietà DatabaseServerName rispetto al seguente elenco di valori. Se viene rilevata una corrispondenza, il database è locale. In caso contrario, è remoto. Il confronto non fa distinzione tra maiuscole e minuscole.  
   
 |Valore di DatabaseServerName|Esempio|  
 |---------------------------------|-------------|  

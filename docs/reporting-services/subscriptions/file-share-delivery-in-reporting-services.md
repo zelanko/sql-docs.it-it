@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278235"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "72278235"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint|  
   
  **Contenuto dell'argomento:**  
   
@@ -68,15 +68,15 @@ ms.locfileid: "72278235"
 ##  <a name="bkmk_file_options"></a> Opzioni relative ai file  
  Quando si crea una sottoscrizione di condivisione file, è possibile configurare la modalità di creazione del nome file e se il file sovrascrive le versioni precedenti del report. Un nome file completo è costituito da tre parti, ovvero il nome, l'estensione e un testo o un numero aggiunto al file per creare un nome file univoco  
   
- **Nome file** : il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
+ **Nome file:** il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
   
- **Sovrascrittura:** è possibile specificare le opzioni di sovrascrittura per riusare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
+ **Sovrascrivi:** È possibile specificare le opzioni di sovrascrittura per riutilizzare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
   
  Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A tale scopo, aggiungere la variabile **\@timestamp** al nome file, ad esempio *CompanySales@timestamp* . In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
   
  L'immagine seguente riporta un esempio delle impostazioni per una sottoscrizione configurata per il recapito della condivisione file.  
   
- ![sottoscrizione di condivisione di file](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "sottoscrizione di condivisione di file")  
+ ![Sottoscrizione di condivisione file](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Sottoscrizione di condivisione file")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

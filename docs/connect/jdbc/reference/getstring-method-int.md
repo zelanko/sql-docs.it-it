@@ -1,5 +1,5 @@
 ---
-title: Metodo GetString (int) | Microsoft Docs
+title: Metodo getString (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f3fce8bf-8d6e-476f-aa6d-992daa79b899
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2160e7214b3ad60d2c8629d55bd79de8a5b15905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979497"
 ---
 # <a name="getstring-method-int"></a>Metodo getString (int)
@@ -45,7 +45,7 @@ public java.lang.String getString(int index)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getString viene specificato dal metodo getString nell'interfaccia java.sql.CallableStatement.  
   
  Tutte le colonne in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono essere restituite come stringa. Pertanto, possono essere restituite una rappresentazione di stringa di tutti i tipi numerici e basati su caratteri e una rappresentazione in stringa esadecimale di colonne binarie quali binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier.  

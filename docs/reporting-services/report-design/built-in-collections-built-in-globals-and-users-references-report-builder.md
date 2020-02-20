@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581842"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte predefinite Globals e Users (Generatore report)
@@ -28,12 +28,12 @@ ms.locfileid: "65581842"
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|Data e ora di inizio dell'esecuzione del report.|  
 |PageNumber|**Integer**|Numero di pagina corrente relativo a interruzioni di pagina che ne determinano la reimpostazione. All'inizio dell'elaborazione del report, il valore è impostato su 1. Il numero di pagina aumenta per ogni pagina di cui è stato eseguito il rendering.<br /><br /> Per numerare le pagine all'interno di interruzioni di pagina per un rettangolo, un'area dati, un gruppo di aree dati o una mappa, nella proprietà PageBreak impostare la proprietà ResetPageNumber su **True**. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
-|ReportFolder|**String**|Percorso completo della cartella contenente il report. Non include l'URL del server di report.|  
-|ReportName|**String**|Nome del report archiviato nel database del server di report.|  
-|ReportServerUrl|**String**|URL del server di report in cui il report è in esecuzione.|  
+|ReportFolder|**Stringa**|Percorso completo della cartella contenente il report. Non include l'URL del server di report.|  
+|ReportName|**Stringa**|Nome del report archiviato nel database del server di report.|  
+|ReportServerUrl|**Stringa**|URL del server di report in cui il report è in esecuzione.|  
 |TotalPages|**Integer**|Numero totale di pagine relativo alle interruzioni di pagina che determinano la reimpostazione di PageNumber. Se non sono impostate interruzioni di pagina, questo valore corrisponde a OverallTotalPages.<br /><br /> La proprietà TotalPages può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
-|PageName|**String**|Nome della pagina. All'inizio dell'elaborazione del report, il valore viene impostato da una proprietà del report, InitialPageName. Quando ciascun elemento del report viene elaborato, questo valore viene sostituito con il valore corrispondente di PageName da un rettangolo, un'area dati, un gruppo di aree dati o una mappa. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageName può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
-|OverallPageNumber|**Valore intero**|Numero della pagina corrente per l'intero report. ResetPageNumber non ha effetto su questo valore.<br /><br /> La proprietà OverallPageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
+|PageName|**Stringa**|Nome della pagina. All'inizio dell'elaborazione del report, il valore viene impostato da una proprietà del report, InitialPageName. Quando ciascun elemento del report viene elaborato, questo valore viene sostituito con il valore corrispondente di PageName da un rettangolo, un'area dati, un gruppo di aree dati o una mappa. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageName può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
+|OverallPageNumber|**Integer**|Numero della pagina corrente per l'intero report. ResetPageNumber non ha effetto su questo valore.<br /><br /> La proprietà OverallPageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |OverallTotalPages|**Integer**|Numero complessivo di pagine per l'intero report. ResetPageNumber non ha effetto su questo valore.<br /><br /> La proprietà OverallTotalPages può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |RenderFormat|**RenderFormat**|Informazioni sulla richiesta di rendering corrente.<br /><br /> Per altre informazioni, vedere "RenderFormat" nella sezione successiva.|  
   
@@ -42,9 +42,9 @@ ms.locfileid: "65581842"
 ### <a name="renderformat"></a>RenderFormat  
  Nella tabella seguente vengono descritti i membri per **RenderFormat**.  
   
-|Membro|Tipo|Descrizione|  
+|Membro|Type|Descrizione|  
 |------------|----------|-----------------|  
-|nome|**String**|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
+|Nome|**Stringa**|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
 |IsInteractive|**Boolean**|Specifica se nella richiesta di rendering corrente è usato un formato di rendering interattivo.|  
 |DeviceInfo|Raccolta nome/valore di sola lettura|Coppie chiave/valore per i parametri deviceinfo per la richiesta di rendering corrente.<br /><br /> È possibile specificare i valori stringa usando la chiave o un indice nella raccolta.|  
   
@@ -72,8 +72,8 @@ ms.locfileid: "65581842"
   
 |**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
-|**Lingua**|**String**|Lingua dell'utente che esegue il report. Ad esempio, `en-US`.|  
-|**UserID**|**String**|ID dell'utente che esegue il report. Se si usa l'autenticazione di Windows, questo valore corrisponde all'account di dominio dell'utente corrente. Il valore è determinato dall'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , che può usare l'autenticazione di Windows o quella personalizzata.|  
+|**Lingua**|**Stringa**|Lingua dell'utente che esegue il report. Ad esempio: `en-US`.|  
+|**UserID**|**Stringa**|ID dell'utente che esegue il report. Se si usa l'autenticazione di Windows, questo valore corrisponde all'account di dominio dell'utente corrente. Il valore è determinato dall'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , che può usare l'autenticazione di Windows o quella personalizzata.|  
  
 ### <a name="using-locale-settings"></a>Utilizzo delle impostazioni locali  
  È possibile usare espressioni per fare riferimento alle impostazioni locali in un computer client tramite il valore **User.Language** , in modo da determinare la modalità di visualizzazione di un report all'utente. È possibile, ad esempio, creare un report in cui venga usata un'espressione di query diversa basata sul valore delle impostazioni locali. La query può essere modificata per recuperare informazioni localizzate da una colonna diversa, a seconda della lingua restituita. È inoltre possibile usare un'espressione per modificare le impostazioni relative alla lingua del report o degli elementi del report in base a questa variabile.  

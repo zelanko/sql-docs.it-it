@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 18b60a7359392a973a9486c9d4c8266e6997c9df
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516522"
 ---
 # <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
   È possibile usare i seguenti parametri come parte di un URL per configurare l'aspetto dei [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]report. I parametri più comuni sono elencati in questa sezione: I parametri rilevano la distinzione tra maiuscole e minuscole e iniziano con i prefissi di parametro *rs:* se indirizzati al server di report e *rc:* se indirizzati a un visualizzatore HTML. È inoltre possibile specificare parametri specifici per dispositivi o estensioni per il rendering. Per altre informazioni sui parametri specifici per il dispositivo, vedere [Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "72542177"
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** non funziona per stringhe di accesso con URL che usano un indirizzo IP, invece un nome di dominio, per fare riferimento a un report ospitato in un sito di SharePoint.  
   
--   *Parameters* : visualizza o nasconde l'area dei parametri sulla barra degli strumenti. Se si imposta questo parametro su **true**, viene visualizzata l'area dei parametri sulla barra degli strumenti. Se si imposta questo parametro su **false**, l'area dei parametri non viene visualizzata e non può essere visualizzata dall'utente. Se si imposta questo parametro su un valore **Collapsed**, l'area dei parametri non viene visualizzata, ma può essere visualizzata o nascosta dall'utente finale. Il valore predefinito di questo parametro è **true**.  
+-   *Parametri*: Visualizza o nasconde l'area dei parametri sulla barra degli strumenti. Se si imposta questo parametro su **true**, viene visualizzata l'area dei parametri sulla barra degli strumenti. Se si imposta questo parametro su **false**, l'area dei parametri non viene visualizzata e non può essere visualizzata dall'utente. Se si imposta questo parametro su un valore **Collapsed**, l'area dei parametri non viene visualizzata, ma può essere visualizzata o nascosta dall'utente finale. Il valore predefinito di questo parametro è **true**.  
   
      Per un esempio in modalità **Native** :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72542177"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : imposta il valore di zoom del report come percentuale con valore intero o come costante stringa. I valori stringa standard comprendono **Page Width** e **Whole Page**. Questo parametro viene ignorato dalle versioni di Internet Explorer precedenti a Internet Explorer 5.0 e da tutti i browser non[!INCLUDE[msCoName](../includes/msconame-md.md)] . Il valore predefinito di questo parametro è **100**.  
+-   *Zoom*: Imposta il valore di zoom del report come percentuale con valore intero o come costante di stringa. I valori stringa standard comprendono **Page Width** e **Whole Page**. Questo parametro viene ignorato dalle versioni di Internet Explorer precedenti a Internet Explorer 5.0 e da tutti i browser non[!INCLUDE[msCoName](../includes/msconame-md.md)] . Il valore predefinito di questo parametro è **100**.  
   
      Per un esempio in modalità **Native** :  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72542177"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
--   *Section* : imposta la pagina del report da visualizzare. Se il valore è superiore al numero di pagine nel report viene visualizzata l'ultima pagina. Se il valore è inferiore a **0** viene visualizzata la pagina 1 del report. Il valore predefinito di questo parametro è **1**.  
+-   *Sezioni*: Imposta la pagina del report da visualizzare. Se il valore è superiore al numero di pagine nel report viene visualizzata l'ultima pagina. Se il valore è inferiore a **0** viene visualizzata la pagina 1 del report. Il valore predefinito di questo parametro è **1**.  
   
      Ad esempio, per visualizzare la pagina 2 del report in modalità **Native** :  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72542177"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   *FindString*: individua un set di testo specifico in un report.  
+-   *FindString*: Individuare un set di testo specifico in un report.  
   
      Per un esempio in modalità **Native** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72542177"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
--   *StartFind* : specifica l'ultima sezione in cui eseguire la ricerca. Il valore predefinito di questo parametro è l'ultima pagina del report.  
+-   *StartFind*: Specifica l'ultima sezione in cui cercare. Il valore predefinito di questo parametro è l'ultima pagina del report.  
   
      Per un esempio in modalità **Native** in cui viene cercata la prima occorrenza del testo "Mountain-400" nel report di esempio Product Catalog a partire da pagina uno fino a pagina cinque.  
   
@@ -107,22 +107,22 @@ ms.locfileid: "72542177"
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   *EndFind* : imposta il numero dell'ultima pagina da usare nella ricerca. Ad esempio, il valore **5** indica che l'ultima pagina in cui cercare è la pagina 5 del report. Il valore predefinito è il numero della pagina corrente. Utilizzare questo parametro con il parametro *StartFind* . Vedere l'esempio precedente.  
+-   *EndFind*: Imposta il numero dell'ultima pagina da utilizzare nella ricerca. Ad esempio, il valore **5** indica che l'ultima pagina in cui cercare è la pagina 5 del report. Il valore predefinito è il numero della pagina corrente. Utilizzare questo parametro con il parametro *StartFind* . Vedere l'esempio precedente.  
   
--   *FallbackPage* : imposta il numero della pagina da visualizzare se si verifica un errore durante una ricerca o la selezione di una mappa documento. Il valore predefinito è il numero della pagina corrente.  
+-   *FallbackPage*: Imposta il numero della pagina da visualizzare se si verifica un errore durante una ricerca o la selezione di una mappa documento. Il valore predefinito è il numero della pagina corrente.  
   
--   *GetImage* : ottiene una determinata icona per l'interfaccia utente del visualizzatore HTML.  
+-   *GetImage*: Ottiene una determinata icona per l'interfaccia utente del visualizzatore HTML.  
   
--   *Icon* : ottiene l'icona di una determinata estensione per il rendering.  
+-   *Icona*: Ottiene l'icona di una determinata estensione per il rendering.  
   
--   *Stylesheet*: consente di specificare un foglio di stile da applicare al visualizzatore HTML.  
+-   *Foglio di stile*: Consente di specificare un foglio di stile da applicare al visualizzatore HTML.  
   
--   Impostazione relativa alle informazioni sul dispositivo: specifica un'impostazione relativa alle informazioni sul dispositivo nel formato `rc:tag=value`, dove *tag* è il nome di un'impostazione relativa alle informazioni sul dispositivo specifica dell'estensione per il rendering usata attualmente (vedere la descrizione del parametro *Format* ). Ad esempio, è possibile usare l'impostazione relativa alle informazioni sul dispositivo *OutputFormat* in modo tale che l'estensione per il rendering IMAGE esegua il rendering del report a un'immagine JPEG usando i parametri seguenti nella stringa di accesso con URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo specifiche per l'estensione, vedere [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Impostazione relativa alle informazioni sul dispositivo: Specifica un'impostazione relativa alle informazioni sul dispositivo nel formato `rc:tag=value`, dove *tag* è il nome di un'impostazione relativa alle informazioni sul dispositivo specifica dell'estensione per il rendering attualmente usata. Vedere la descrizione del parametro *Format*. Ad esempio, è possibile usare l'impostazione relativa alle informazioni sul dispositivo *OutputFormat* in modo tale che l'estensione per il rendering IMAGE esegua il rendering del report a un'immagine JPEG usando i parametri seguenti nella stringa di accesso con URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo specifiche per l'estensione, vedere [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Comandi del server di report (rs:)  
  I comandi del server di report hanno il prefisso *rs:* e vengono usati sul server di report:  
   
--   *Command*:  
+-   *Comando*:  
                   Esegue un'azione su un elemento del catalogo, a seconda del tipo di elemento. Il valore predefinito è determinato dal tipo dell'elemento del catalogo a cui viene fatto riferimento nella stringa di accesso con URL. I valori validi sono:  
   
     -   **ListChildren** e **GetChildren** Consentono di visualizzare il contenuto di una cartella. Gli elementi della cartella sono visualizzati in una pagina generica di navigazione degli elementi.  
@@ -212,9 +212,13 @@ ms.locfileid: "72542177"
   
     -   **IMAGE**  
   
-    -   **EXCEL**  
+    -   **EXCEL** (per l'estensione xls)
+    
+    -   **EXCELOPENXML** (per l'estensione xlsx)
   
-    -   **WORD**  
+    -   **WORD** (per l'estensione doc)
+    
+    -   **WORDOPENXML** (per l'estensione docx)
   
     -   **CSV**  
   
@@ -247,7 +251,7 @@ ms.locfileid: "72542177"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* : esegue il rendering di un report in base a uno snapshot della cronologia del report. Per altre informazioni, vedere [Eseguire il rendering degli snapshot della cronologia dei report tramite l'accesso con URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
+-   *Snapshot*: Esegue il rendering di un report in base a uno snapshot della cronologia del report. Per altre informazioni, vedere [Eseguire il rendering degli snapshot della cronologia dei report tramite l'accesso con URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
   
      Ad esempio in modalità **Native** , per recuperare uno snapshot della cronologia del report datato 2003-04-07 con un timestamp 13.40.02:  
   
@@ -278,7 +282,7 @@ ms.locfileid: "72542177"
 ##  <a name="bkmk_webpart"></a> Comandi Web part del visualizzatore di report (rv:)  
  I seguenti nomi dei parametri di report riservati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono usati per individuare la web part di Visualizzatore report integrata con SharePoint. Questi nomi di parametro sono preceduti dal prefisso *rv:* . La Web part del visualizzatore di report accetta inoltre il parametro *rs:ParameterLanguage* .  
   
--   *Toolbar*: determina la visualizzazione della barra degli strumenti per la web part di Visualizzatore report. Il valore predefinito è **Full**. I valori possibili sono i seguenti.  
+-   *Barra degli strumenti*: Determina la visualizzazione della barra degli strumenti per la web part del visualizzatore di report. Il valore predefinito è **Full**. I valori possibili sono:  
   
     -   **Full**: per visualizzare la barra degli strumenti completa.  
   
@@ -292,7 +296,7 @@ ms.locfileid: "72542177"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
--   *HeaderArea*: determina la visualizzazione dell'intestazione per la web part di Visualizzatore report. Il valore predefinito è **Full**. I valori possibili sono i seguenti.  
+-   *HeaderArea*: Determina la visualizzazione dell'intestazione per la web part del visualizzatore di report. Il valore predefinito è **Full**. I valori possibili sono:  
   
     -   **Full**: per visualizzare l'intestazione completa.  
   
@@ -306,11 +310,11 @@ ms.locfileid: "72542177"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
--   *DocMapAreaWidth*: determina la larghezza di visualizzazione in pixel dell'area dei parametri nella web part di Visualizzatore report. Il valore predefinito è uguale a quello della web part del visualizzatore di report. Deve essere un valore intero non negativo.  
+-   *DocMapAreaWidth*: Determina la larghezza di visualizzazione, in pixel, dell'area dei parametri nella web part del visualizzatore di report. Il valore predefinito è uguale a quello della web part del visualizzatore di report. Deve essere un valore intero non negativo.  
   
--   *AsyncRender*: determina se il rendering di un report viene eseguito in modo asincrono. Il valore predefinito è **true**con cui si specifica che il rendering di un report viene eseguito in modo asincrono. Deve essere un valore booleano **true** o **false**.  
+-   *AsyncRender*: Determina se il rendering di un report viene eseguito in modo asincrono. Il valore predefinito è **true**con cui si specifica che il rendering di un report viene eseguito in modo asincrono. Deve essere un valore booleano **true** o **false**.  
   
--   *ParamMode*: determina come viene mostrata l'area dei messaggi di richiesta del parametro della web part Visualizzatore di report nella visualizzazione a pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
+-   *ParamMode*: determina come appare l'area dei messaggi di richiesta del parametro della web part di Visualizzatore report nella visualizzazione Pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
   
     -   **Full**: consente di visualizzare l'area dei messaggi di richiesta del parametro.  
   
@@ -324,7 +328,7 @@ ms.locfileid: "72542177"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: determina come viene mostrata l'area mappa documento della web part Visualizzatore di report nella visualizzazione a pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
+-   *DocMapMode*: determina come appare l'area mappa documento della web part di Visualizzatore report nella visualizzazione Pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
   
     -   **Full**: consente di visualizzare l'area mappa documento.  
   
@@ -332,7 +336,7 @@ ms.locfileid: "72542177"
   
     -   **Hidden**: consente di nascondere l'area mappa documento.  
   
--   *DockToolBar*: determina se la barra degli strumenti della web part Visualizzatore di report sarà ancorata in alto o in basso. I valori validi sono **Top** e **Bottom**. Il valore predefinito è **Top**.  
+-   *DockToolBar*: determina se la barra degli strumenti della web part di Visualizzatore report è ancorata alla parte superiore o inferiore. I valori validi sono **Top** e **Bottom**. Il valore predefinito è **Top**.  
   
      Ad esempio in modalità **SharePoint** , per ancorare la barra degli strumenti alla parte inferiore.  
   
@@ -340,7 +344,7 @@ ms.locfileid: "72542177"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: determina quali elementi della barra degli strumenti vengono visualizzati. Si tratta di un valore di enumerazione bit per bit. Per includere un elemento della barra degli strumenti, aggiungere il valore dell'elemento al valore totale. Ad esempio: per nessun menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=63 (o 0x3F) vale a dire 1+2+4+8+16+32; per solo voci del menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=960 (o 0x3C0). Il valore predefinito è **-1**che include tutti gli elementi della barra degli strumenti. I valori validi sono:  
+-   *ToolBarItemsDisplayMode*: Determina gli elementi della barra degli strumenti che vengono visualizzati. Si tratta di un valore di enumerazione bit per bit. Per includere un elemento della barra degli strumenti, aggiungere il valore dell'elemento al valore totale. Ad esempio: per nessun menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=63 (o 0x3F) vale a dire 1+2+4+8+16+32; per solo voci del menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=960 (o 0x3C0). Il valore predefinito è **-1**che include tutti gli elementi della barra degli strumenti. I valori validi sono:  
   
     -   1 (0x1): pulsante **Indietro**  
   
@@ -372,6 +376,6 @@ ms.locfileid: "72542177"
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
+ [Esportare un report tramite l'accesso con URL](../reporting-services/export-a-report-using-url-access.md)  
   
   

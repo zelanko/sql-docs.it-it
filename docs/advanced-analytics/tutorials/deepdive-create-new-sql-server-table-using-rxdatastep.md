@@ -1,6 +1,6 @@
 ---
 title: Creare una tabella usando rxDataStep
-description: Esercitazione dettagliata su come creare una tabella di SQL Server usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 11: Come creare una tabella di SQL Server usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727252"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947255"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Creare una nuova tabella di SQL Server usando rxDataStep (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 11 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa lezione verrà illustrato come spostare i dati tra i frame di dati in memoria, il contesto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i file locali.
+In questa esercitazione verrà illustrato come spostare i dati tra i frame di dati in memoria, il contesto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i file locali.
 
 > [!NOTE]
-> In questa lezione viene usato un set di dati diverso. Il set di dati dei ritardi delle compagnie aeree è un set di dati pubblico ampiamente usato per gli esperimenti di Machine Learning. I file di dati usati in questo esempio sono disponibili nella stessa directory degli altri esempi del prodotto.
+> Questa esercitazione usa un set di dati diverso. Il set di dati dei ritardi delle compagnie aeree è un set di dati pubblico ampiamente usato per gli esperimenti di Machine Learning. I file di dati usati in questo esempio sono disponibili nella stessa directory degli altri esempi del prodotto.
 
 ## <a name="load-data-from-a-local-xdf-file"></a>Caricare i dati da un file XDF locale
 
-Nella prima metà di questa esercitazione è stata usata la funzione **RxTextData** per importare i dati in R da un file di testo e quindi è stata usata la funzione **RxDataStep** per spostare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Nella prima metà di questa serie di esercitazione è stata usata la funzione **RxTextData** per importare i dati in R da un file di testo e quindi è stata usata la funzione **RxDataStep** per spostare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Per questa lezione l'approccio è diverso e si usano i dati di un file salvato in [formato XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i dati trasformati vengono salvati in una nuova tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Per questa esercitazione l'approccio è diverso e si usano i dati di un file salvato in [formato XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Dopo avere eseguito alcune piccole trasformazioni sui dati usando il file XDF, i dati trasformati vengono salvati in una nuova tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 **Che cos'è XDF?**
 

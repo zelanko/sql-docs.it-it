@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592309"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190682"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati del report (Generatore report e SSRS)
   Un set di dati consente di specificare i dati che si desidera utilizzare da una connessione dati. È basato su una connessione dati salvata nel report come origine dati incorporata o come riferimento a un'origine dati condivisa su un server di report. Nel set di dati è inclusa una query che specifica un set di campi. Quando si trascinano questi campi nell'area di progettazione, è possibile creare espressioni che restituiscono i dati effettivi quando si esegue il report.  
@@ -73,7 +73,7 @@ ms.locfileid: "73592309"
   
 -   Un set di risultati restituito da qualsiasi provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] registrato e configurato.  
   
--   Dati da un modello di report progettato per una specifica origine dati, con entità, relazioni di entità e campi predefiniti. Per ulteriori informazioni, vedere "set di dati del report" nella [documentazione relativa a Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+-   Dati da un modello di report progettato per una specifica origine dati, con entità, relazioni di entità e campi predefiniti. Per altre informazioni, vedere "Set di dati del report" nella [documentazione di Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  Quando il report viene elaborato in fase di esecuzione, il set di risultati effettivi restituito per una query può includere zero o più righe. È anche possibile che le colonne definite nella query non siano presenti nell'origine dati. Per i valori Null restituiti dall'origine dati viene eseguito il mapping al valore [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] System.DBNull.Value **di**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592309"
   
  La differenza tra le origini dati incorporate e quelle condivise dipende dalle diverse modalità di creazione, archiviazione e gestione. Nella tabella seguente vengono riepilogate le differenze fra le origini dati incorporate e quelle condivise:  
   
-|Descrizione|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> origine dati|  
+|Descrizione|Origine dati<br /><br /> origine dati|Condiviso<br /><br /> origine dati|  
 |-----------------|------------------------------|----------------------------|  
 |La connessione dati è incorporata nella definizione del report.|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "Disponibile")||  
 |Il puntatore alla connessione dati nel server di report è incorporato nella definizione del report.||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "Disponibile")|  
@@ -143,8 +143,8 @@ ms.locfileid: "73592309"
 |Proprietà|Note sulla configurazione per la definizione|Note sulla configurazione per l'istanza|  
 |--------------|--------------------------------------------|------------------------------------------|  
 |Testo della query|Configurare la query, anche definendola come espressione.|Impossibile modificare la query.|  
-|Parametri della query|Non può fare riferimento ai parametri del report<br /><br /> Include valori predefiniti<br /><br /> Include un flag di sola lettura|Configurare parametri non contrassegnati come di sola lettura nella definizione|  
-|Filtri|Definisci filtri|Impossibile visualizzare o modificare i filtri del set di dati che fanno parte della definizione<br /><br /> Può creare filtri aggiuntivi|  
+|Parametri di query|Non può fare riferimento ai parametri del report<br /><br /> Include valori predefiniti<br /><br /> Include un flag di sola lettura|Configurare parametri non contrassegnati come di sola lettura nella definizione|  
+|Filtri|Definire filtri|Impossibile visualizzare o modificare i filtri del set di dati che fanno parte della definizione<br /><br /> Può creare filtri aggiuntivi|  
 |origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
 |Campi|Campi dal comando di query<br /><br /> I campi calcolati non fanno parte della definizione del set di dati|Visualizzare campi, ma non modificarli<br /><br /> La raccolta di campi è statica basata sulla query al momento dell'aggiunta del set di dati condiviso al report. Per aggiornare, fare clic su **Aggiorna campi** nella finestra di dialogo **Proprietà set di dati** . La raccolta di campi effettivi è qualsiasi risultato restituito dalla query corrente nella definizione.<br /><br /> Aggiungere campi calcolati|  
 |Set di dati|Opzioni dei dati quale la distinzione tra maiuscole e minuscole|Eseguire l'override di opzioni dei dati nell'istanza|  
@@ -219,7 +219,7 @@ ms.locfileid: "73592309"
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9e41ac864403dce2cad648790099496b53c4b6dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573261"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190891"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associare un report a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report da un server di test a uno di produzione, può essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report nel nuovo server è necessario riassociarlo a un'origine dati condivisa archiviata nel nuovo server di report. Se il report non viene riassociato non funzionerà correttamente quando vi si accede dal nuovo server di report.  
@@ -58,12 +58,12 @@ ms.locfileid: "65573261"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. Scegliere **Chiudi**.  
+10. Fare clic su **Close**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

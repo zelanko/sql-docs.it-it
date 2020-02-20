@@ -1,8 +1,10 @@
 ---
-title: Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint | Microsoft Docs
-ms.date: 05/30/2016
+title: Dove trovare il componente aggiuntivo SSRS per SharePoint | Microsoft Docs
+description: Il componente aggiuntivo SQL Server Reporting Services per Prodotti e tecnologie SharePoint (rssharepoint.msi) può essere scaricato dal Web e offre funzionalità per l'integrazione di un server di report con una distribuzione di SharePoint.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
@@ -10,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 35d35caf3bf1d16696b88dcba9b81c2274be7234
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637845"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866294"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint
 
@@ -24,7 +26,7 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 > [!IMPORTANT]  
 >  Per un elenco delle combinazioni supportate del componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], di un server di report e di SharePoint, vedere [Combinazioni supportate di SharePoint, server Reporting Services e componente aggiuntivo &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint  
+##  <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Componente aggiuntivo Reporting Services per prodotti SharePoint  
  Per scaricare e installare il componente aggiuntivo, vedere l'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
 -   [Componente aggiuntivo Microsoft® SQL Server 2016 Reporting Services per Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=52682)  
@@ -35,7 +37,7 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
 -   Da un'installazione al prompt dei comandi installare il componente aggiuntivo tramite l'opzione **RS_SHPWFE** . Per altre informazioni sulle installazioni al prompt dei comandi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vedere [Installare Reporting Services al prompt dei comandi](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint  
+##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Componente aggiuntivo Reporting Services per prodotti SharePoint  
  Per scaricare e installare il componente aggiuntivo, vedere l'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
 -   [Componente aggiuntivo Microsoft® SQL Server 2014 Reporting Services per Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=42294)  
@@ -46,14 +48,14 @@ Il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
 -   Da un'installazione al prompt dei comandi installare il componente aggiuntivo tramite l'opzione **RS_SHPWFE** . Per altre informazioni sulle installazioni al prompt dei comandi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vedere [Installare Reporting Services al prompt dei comandi](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint  
+##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]Componente aggiuntivo Reporting Services per prodotti SharePoint  
  Nella versione [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] del componente aggiuntivo e del server di report è stato aggiunto il supporto per SharePoint Server 2013.  
   
  Per scaricare e installare il componente aggiuntivo, vedere l'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   **Componente aggiuntivo SP1:** [Componente aggiuntivo Microsoft® SQL Server® 2012 SP1 Reporting Services per Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583) (https://www.microsoft.com/download/details.aspx?id=35583).  
+-   **Componente aggiuntivo SP1:**  [Componente aggiuntivo Microsoft® SQL Server® 2012 SP1 Reporting Services per Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583) (https://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
+-   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componente aggiuntivo Reporting Services per prodotti SharePoint 2010
 

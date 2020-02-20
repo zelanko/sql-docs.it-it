@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66428978"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
@@ -122,7 +122,7 @@ ms.locfileid: "66428978"
   
     -   **SpatialData.** Campo che dispone di dati spaziali che specificano la latitudine e la longitudine della città.  
   
-    -   **Name.** Campo che contiene il nome della città.  
+    -   **Nome.** Campo che contiene il nome della città.  
   
     -   **Area.** Campo che contiene il nome della regione.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66428978"
   
  Le cause radici del mancato ottenimento del risultato desiderato quando si visualizza un report con mappe possono essere molteplici. Per isolare e analizzare ogni problema, può essere utile usare un livello alla volta. Usare il riquadro Mappa per selezionare un livello e attivare o disattivare facilmente la visibilità.  
   
- Per altre informazioni sui report con mappe, vedere [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Per altre informazioni sui report con mappe, vedere [Risoluzione dei problemi relativi alle parti del report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure che illustrano in dettaglio le modalità di utilizzo delle mappe e dei relativi livelli nei report.  
@@ -250,6 +250,6 @@ ms.locfileid: "66428978"
   
  [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

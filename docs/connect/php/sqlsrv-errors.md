@@ -18,13 +18,13 @@ ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015057"
 ---
-# <a name="sqlsrverrors"></a>sqlsrv_errors
+# <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Restituisce informazioni complete sull'errore e/o sull'avviso relativo all'ultima operazione **sqlsrv** eseguita.  
@@ -55,7 +55,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Parametri  
-*$errorsAndOrWarnings* [facoltativo]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
+*$errorsAndOrWarnings*[FACOLTATIVO]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
   
 |valore|Descrizione|  
 |---------|---------------|  
@@ -68,7 +68,7 @@ Se non viene specificato alcun valore di parametro, vengono restituiti gli avvis
 ## <a name="return-value"></a>Valore restituito  
 Una **matrice** di matrici oppure **null**. Ogni **matrice** della **matrice** restituita contiene tre coppie chiave-valore. Nella tabella seguente sono elencate le chiavi con la relativa descrizione:  
   
-|Key|Descrizione|  
+|Chiave|Descrizione|  
 |-------|---------------|  
 |SQLSTATE|Per errori originati dal driver ODBC, il valore SQLSTATE restituito da ODBC. Per informazioni sui valori SQLSTATE per ODBC, vedere [Codici di errore ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di IMSSP.<br /><br />Per gli avvisi originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valore SQLSTATE di 01SSP.|  
 |codice|Per errori originati da SQL Server, il codice di errore nativo di SQL Server.<br /><br />Per errori originati dal driver ODBC, il codice di errore restituito da ODBC.<br /><br />Per gli errori originati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], il codice di errore [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Per altre informazioni, vedere [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  

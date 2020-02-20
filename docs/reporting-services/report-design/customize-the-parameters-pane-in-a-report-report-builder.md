@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63218978"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
@@ -24,7 +24,7 @@ ms.locfileid: "63218978"
   
 1.  Nella scheda **Vista** selezionare la casella di controllo **Parametri** per visualizzare il riquadro dei parametri.  
   
-     ![Riquadro parametri di accesso dalla scheda Vista](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Riquadro parametri di accesso dalla scheda Vista")  
+     ![Accedere al riquadro Parametri dalla scheda Visualizza](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Accedere al riquadro Parametri dalla scheda Visualizza")  
   
      Il riquadro viene visualizzato nella parte superiore dell'area di progettazione.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63218978"
   
     -   Fare clic con il pulsante destro del mouse su una cella vuota nel riquadro dei parametri e quindi scegliere **Aggiungi parametro**.  
   
-         ![Aggiungere un nuovo parametro dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Aggiungere un nuovo parametro dal riquadro dei parametri")  
+         ![Aggiungere il nuovo parametro dal riquadro Parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Aggiungere il nuovo parametro dal riquadro Parametri")  
   
     -   Fare clic con il pulsante destro del mouse su **Parametri** nel riquadro **Dati report** e quindi scegliere **Aggiungi parametro**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "63218978"
   
     -   Fare clic con il pulsante destro del mouse sul riquadro dei parametri, quindi scegliere **Proprietà parametri**.  
   
-         ![Accedere alle proprietà dei parametri dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Accedere alle proprietà dei parametri dal riquadro dei parametri")  
+         ![Accedere alle proprietà dei parametri dal riquadro Parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Accedere alle proprietà dei parametri dal riquadro Parametri")  
   
     -   Fare clic con il pulsante destro del mouse sul riquadro **Dati report** e quindi scegliere **Proprietà parametri**.  
   
 5.  Per aggiungere nuove colonne e righe al riquadro o eliminare le colonne e le righe esistenti, fare clic con il pulsante destro del mouse in un punto qualsiasi del riquadro dei parametri e quindi selezionare un comando nel menu visualizzato.  
   
-     ![Aggiungere colonne e righe al riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Aggiungere colonne e righe al riquadro dei parametri")  
+     ![Aggiungere colonne e righe al riquadro Parametri](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Aggiungere colonne e righe al riquadro Parametri")  
   
     > [!IMPORTANT]  
     >  Quando si elimina una colonna o una riga contenente parametri, questi vengono eliminati dal report.  
@@ -59,7 +59,7 @@ ms.locfileid: "63218978"
   
     -   Fare clic con il pulsante destro del mouse sul riquadro dei parametri, quindi scegliere  **Elimina**.  
   
-         ![Eliminare i parametri dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Eliminare i parametri dal riquadro dei parametri")  
+         ![Eliminare parametri dal riquadro Parametri](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Eliminare parametri dal riquadro Parametri")  
   
     -   Fare clic con il pulsante destro del mouse sul riquadro **Dati report** e quindi scegliere **Elimina**.  
   

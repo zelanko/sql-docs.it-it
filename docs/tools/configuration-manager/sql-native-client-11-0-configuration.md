@@ -1,6 +1,6 @@
 ---
-title: Configurazione di SQL Native Client 11,0 | Microsoft Docs
-ms.custom: ''
+title: Configurazione SQL Native Client 11.0
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e0b9e07f241892755e4009a942695c0d5d29322
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024242"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306723"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configurazione SQL Native Client 11.0
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  In questa sezione sono disponibili gli argomenti della Guida per le finestre di dialogo di **Configurazione SQL Server Native Client** in Gestione configurazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è la libreria di rete utilizzata dai computer client per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a partire da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  In questa sezione sono disponibili gli argomenti della Guida per le finestre di dialogo di **Configurazione SQL Server Native Client** in Gestione configurazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è la libreria di rete usata dai computer client per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partire da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le impostazioni configurate in Configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vengono utilizzate nel computer in cui viene eseguito il programma client. Se vengono configurate nel computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono applicate esclusivamente ai programmi client in esecuzione sul server.  
   

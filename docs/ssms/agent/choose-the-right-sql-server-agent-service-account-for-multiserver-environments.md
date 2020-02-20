@@ -1,10 +1,7 @@
 ---
-title: Scegliere l'account del servizio SQL Server Agent per ambienti multiserver | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Scegliere l'account del servizio Agent per ambienti multiserver
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +10,20 @@ helpviewer_keywords:
 ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8a689b24dc3c7c96402e2e1583c0186c70a592b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ecbf0a9d692092d61b3d10ae54f6d25afb4d7ba8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251696"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242502"
 ---
 # <a name="choose-the-right-sql-server-agent-service-account-for-multiserver-environments"></a>Scegliere l'account di servizio SQL Server Agent adatto ad ambienti multiserver
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -37,7 +39,7 @@ L'account di Windows scelto per il servizio [!INCLUDE[ssNoVersion](../../include
   
 -   Quando il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con l'account di sistema locale, le operazioni tra server master e server di destinazione sono supportate solo se entrambi risiedono nello stesso computer. Se si utilizza questa configurazione, quando si integrano i server di destinazione in un server master, verrà visualizzato il seguente messaggio:  
   
-    "Verifica che l'account di avvio dell'agente per *<nome_computer_server_destinazione>* disponga dei diritti per l'accesso come server di destinazione".  
+    "Verifica che l'account di avvio dell'agente per *<target_server_computer_name>* disponga dei diritti per l'accesso come server di destinazione".  
   
     Questo messaggio può essere ignorato. L'operazione di integrazione verrà completata correttamente.  
   

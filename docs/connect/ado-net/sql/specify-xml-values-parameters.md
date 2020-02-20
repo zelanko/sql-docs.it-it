@@ -1,6 +1,6 @@
 ---
 title: Specifica di valori XML come parametri
-description: Viene illustrato come passare i dati XML come parametro a un comando.
+description: Dimostrazione di come passare i dati XML come parametro a un comando.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452118"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251138"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
 
@@ -29,11 +29,11 @@ Se una query richiede un parametro il cui valore è una stringa XML, è possibil
 L'applicazione console seguente crea una nuova tabella nel database **AdventureWorks**. La nuova tabella include la colonna **SalesID** e la colonna XML **SalesInfo**.  
   
 > [!NOTE]
->  Per impostazione predefinita, il database di esempio **AdventureWorks** non viene installato insieme a SQL Server. Per installarlo, è possibile eseguire SQL Server installazione.  
+>  Per impostazione predefinita, il database di esempio **AdventureWorks** non viene installato insieme a SQL Server. Per installarlo, è sufficiente eseguire il programma di installazione di SQL Server.  
   
 Nell'esempio viene preparato un oggetto <xref:Microsoft.Data.SqlClient.SqlCommand> per inserire una riga nella nuova tabella. Successivamente, i dati XML per la colonna **SalesInfo** vengono forniti da un file salvato.  
   
-Per creare il file necessario per l'esecuzione dell'esempio, creare un nuovo file di testo nella stessa cartella del progetto. Denominare il file MyTestStoreData. XML. Aprire il file nel blocco note e copiare e incollare il testo seguente:  
+Per creare il file necessario per l'esecuzione dell'esempio, creare un nuovo file di testo nella stessa cartella del progetto. Denominare il file MyTestStoreData.xml. Aprire il file nel Blocco note e copiare e incollare il testo seguente:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

@@ -1,5 +1,5 @@
 ---
-title: 'DOP:: query | Microsoft Docs'
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936205"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -40,14 +40,14 @@ Se la chiamata ha esito positivo, PDO::query restituisce un oggetto PDOStatement
 ## <a name="exceptions"></a>Eccezioni  
 PDOException.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Una query eseguita con PDO::query può effettuare l'esecuzione diretta o preparata di un'istruzione, a seconda dell'impostazione di PDO::SQLSRV_ATTR_DIRECT_QUERY. Per altre informazioni, vedere [Esecuzione di istruzioni diretta e preparata nel driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT influisce anche sul comportamento di PDO::exec. Per altre informazioni, vedere [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 È possibile specificare le opzioni seguenti per $*fetch_style*.  
   
-|style|Descrizione|  
+|Style|Descrizione|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Richiede i dati della colonna specificata. La prima colonna della tabella è la colonna 0.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Crea un'istanza di una classe e assegna i nomi di colonna alle proprietà della classe. Se il costruttore della classe accetta uno o più parametri, è anche possibile passare *arglist*.|  

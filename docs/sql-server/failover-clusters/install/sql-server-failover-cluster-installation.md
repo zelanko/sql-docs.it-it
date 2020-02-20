@@ -1,7 +1,7 @@
 ---
-title: Installazione del cluster di failover di SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Installare l'istanza del cluster di failover
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063868"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230615"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installazione del cluster di failover di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68063868"
   
 1.  Per installare, configurare e gestire un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    -   Identificare le informazioni necessarie per creare l'istanza del cluster di failover (ad esempio la risorsa disco del cluster, gli indirizzi IP e il nome di rete) e i nodi disponibili per il failover. Per ulteriori informazioni:  
+    -   Identificare le informazioni necessarie per creare l'istanza del cluster di failover (ad esempio la risorsa disco del cluster, gli indirizzi IP e il nome di rete) e i nodi disponibili per il failover. Per altre informazioni:  
   
         -   [Operazioni preliminari all'installazione del clustering di failover](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68063868"
     - Istanza del cluster di failover di SQL Server in cluster con più domini.   
     - Istanza del cluster di failover di SQL Server in cluster di domini + gruppi di lavoro. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opzioni di installazione del cluster di failover  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opzioni di installazione del cluster di failover  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>Opzione 1: installazione integrata con la funzionalità per l'aggiunta del nodo  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è costituita da due passaggi:  
@@ -81,7 +81,7 @@ ms.locfileid: "68063868"
   
  **Nota** Gli indirizzi IP IPv6 sono supportati.  Se configurati entrambi, gli indirizzi IPv4 e IPv6 vengono trattati come subnet diverse e IPv6 viene portato online per primo.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster di failover su più subnet  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster di failover su più subnet  
  È possibile impostare le dipendenze OR quando i nodi del cluster si trovano in subnet diverse. Tuttavia, ogni nodo del cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere un possibile proprietario di almeno uno degli indirizzi IP specificati.  
   
 ## <a name="see-also"></a>Vedere anche  

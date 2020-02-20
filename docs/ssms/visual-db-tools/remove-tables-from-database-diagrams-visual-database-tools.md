@@ -1,10 +1,9 @@
 ---
-title: Rimuovere tabelle da diagrammi di database (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Rimuovere tabelle da diagrammi di database
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fae136b4de6a85d26d14b487e1812c3b95a17b7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6e3847aa5471b757333a4ec7ff1964acabf0e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256078"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255258"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Rimozione di tabelle da diagrammi di database (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68256078"
   
 2.  Fare clic con il pulsante destro del mouse sulla tabella e scegliere **Rimuovi tabella da diagramma** dal menu di scelta rapida.  
   
-    oppure  
+    -oppure-  
   
     Premere ESC.  
   
@@ -41,5 +42,5 @@ La tabella verrà rimossa dal diagramma ma esisterà ancora nel database.
   
 ## <a name="see-also"></a>Vedere anche  
 [Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Procedura: Eliminare tabelle da un database (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[Procedura: Eliminare tabelle da un database (https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

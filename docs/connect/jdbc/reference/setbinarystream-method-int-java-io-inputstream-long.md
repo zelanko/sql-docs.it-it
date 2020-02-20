@@ -11,10 +11,10 @@ ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34b61ba6338967945f92add5b212bfeae2458e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975290"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-long"></a>Metodo setBinaryStream (int, java.io.InputStream, long)
@@ -38,7 +38,7 @@ public final void setBinaryStream(int parameterIndex,
   
  *x*  
   
- Oggetto Java. io. InputStream.  
+ Oggetto java.io.InputStream.  
   
  *length*  
   
@@ -47,8 +47,8 @@ public final void setBinaryStream(int parameterIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setBinaryStream viene specificato dal metodo setBinaryStream nell'interfaccia java. SQL. PreparedStatement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setBinaryStream viene specificato dal metodo setBinaryStream nell'interfaccia java.sql.PreparedStatement.  
   
  Se la lunghezza del flusso è diversa da quanto specificato nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   

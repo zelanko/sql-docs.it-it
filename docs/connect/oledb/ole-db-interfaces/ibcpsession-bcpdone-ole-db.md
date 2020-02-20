@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994563"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -36,10 +36,10 @@ ms.locfileid: "67994563"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Dopo aver chiamato il metodo [BCPDone](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+## <a name="remarks"></a>Osservazioni  
+ Dopo aver chiamato il metodo [BCPDone](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  S_OK  
  Il metodo è riuscito.  
   
@@ -463,7 +463,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLE DB &#40;IBCPSession&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

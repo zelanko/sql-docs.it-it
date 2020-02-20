@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577793"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formattare un file script di Reporting Services
@@ -46,7 +46,7 @@ End Sub
 > [!IMPORTANT]  
 >  Le credenziali dell'utente vengono gestite dall'ambiente di script e vengono passate agli argomenti del prompt dei comandi tramite RS.exe. Anche se è possibile usare la variabile *rs* per impostare l'autenticazione del servizio Web, si consiglia di usare l'ambiente di script. Non è necessario autenticare il servizio Web nel file script. Per altre informazioni sull'autenticazione degli ambienti di script, vedere [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
- Non dichiarare gli spazi dei nomi all'interno del file script. L'ambiente di scripting rende disponibili molti spazi dei nomi [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utili: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** e **System.IO**.  
+ Non dichiarare gli spazi dei nomi all'interno del file script. L'ambiente di scripting rende disponibili diversi utili spazi dei nomi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** e **System.IO**.  
   
  Per esempi di script, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)(Esempi del prodotto SQL Server Reporting Services).  
   

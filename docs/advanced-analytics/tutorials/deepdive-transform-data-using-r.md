@@ -1,6 +1,6 @@
 ---
 title: Trasformare i dati con RevoScaleR
-description: Esercitazione dettagliata su come trasformare dati usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 9: Come trasformare dati usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 3e8c28548ba4fa5f5ad661e3b7b0872ad166b812
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947190"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Trasformare i dati con R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 9 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa lezione vengono fornite informazioni sulle funzioni di **RevoScaleR** per la trasformazione dei dati in varie fasi dell'analisi.
+In questa esercitazione vengono fornite informazioni sulle funzioni di **RevoScaleR** per la trasformazione dei dati in varie fasi dell'analisi.
 
 > [!div class="checklist"]
 > * Usare **rxDataStep** per creare e trasformare un subset di dati

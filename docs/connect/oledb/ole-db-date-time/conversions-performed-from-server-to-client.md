@@ -1,5 +1,5 @@
 ---
-title: Conversioni eseguite dal server al client | Microsoft Docs
+title: Conversioni eseguite da server a client |Microsoft Docs
 description: Conversioni eseguite da server a client
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015813"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversioni eseguite da server a client
@@ -27,14 +27,14 @@ ms.locfileid: "68015813"
   Questo articolo descrive le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con il driver OLE DB per SQL Server.  
   
 ## <a name="conversions"></a>Conversioni  
- Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se ICommandWithParameters:: separameterinfo è stato chiamato e il tipo specificato in *pwszDataSourceType* non corrisponde al tipo effettivo sul server, viene eseguita una conversione implicita dal server e il tipo restituito al client corrisponderà al tipo specificato tramite ICommandWithParameters:: separameterinfo. Se le regole di conversione del server sono diverse da quelle descritte in questo articolo, la conversione potrebbe dare risultati imprevisti. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  
+ Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se è stato chiamato ICommandWithParameters::SetParameterInfo e il tipo specificato in *pwszDataSourceType* non corrisponde al tipo di dati effettivo del server, il server esegue una conversione implicita e il tipo restituito al client corrisponderà a quello specificato tramite ICommandWithParameters::SetParameterInfo. Se le regole di conversione del server sono diverse da quelle descritte in questo articolo, la conversione potrebbe dare risultati imprevisti. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  
   
 |A -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1, 7|OK|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Time|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Data|1, 7|OK|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Tempo|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|DATETIME|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Datetime|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/D|N/D|N/D|N/D|N/D|N/D|  
@@ -50,7 +50,7 @@ ms.locfileid: "68015813"
 |Simbolo|Significato|  
 |------------|-------------|  
 |OK|Nessuna conversione necessaria.|  
-|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidata quando viene chiamato IAccessor:: CreateAccessor, viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
+|-|Non viene supportata alcuna conversione. Se l'associazione viene convalidata quando viene chiamato IAccessor::CreateAccessor, viene restituito DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*. Quando la convalida della funzione di accesso viene rinviata, viene impostato DBSTATUS_E_BADACCESSOR.|  
 |1|I campi relativi all'ora vengono impostati su zero.|  
 |2|Viene impostato DBSTATUS_E_CANTCONVERTVALUE.|  
 |3|Il fuso orario viene impostato su zero.|  

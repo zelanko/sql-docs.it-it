@@ -1,5 +1,5 @@
 ---
-title: Metodo GetFloat (int) | Microsoft Docs
+title: Metodo getFloat (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 40178471-4f35-4df9-b3fb-80cdf43de274
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb0f1d7376c92eb5710e9d308d40f10fce1e3fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983111"
 ---
 # <a name="getfloat-method-int"></a>Metodo getFloat (int)
@@ -40,12 +40,12 @@ public float getFloat(int index)
  Valore **int** che specifica l'indice del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore **float** .  
+ Valore **float**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getFloat viene specificato dal metodo getFloat nell'interfaccia java.sql.CallableStatement.  
   
  Questo metodo restituisce tutti i tipi numerici con fedeltà **float** di Java.  

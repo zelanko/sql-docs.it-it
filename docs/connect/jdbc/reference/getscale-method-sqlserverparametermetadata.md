@@ -16,10 +16,10 @@ ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980200"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>Metodo getScale (SQLServerParameterMetaData)
@@ -45,8 +45,8 @@ public int getScale(int param)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo Metodo getScale viene specificato dal Metodo getScale nell'interfaccia java. SQL. ParameterMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getScale viene specificato dal metodo getScale nell'interfaccia java.sql.ParameterMetaData.  
   
  Questo metodo ottiene le cifre della colonna a destra del separatore decimale. Per tipi che non dispongono di un separatore decimale, questo metodo restituisce "0".  
   

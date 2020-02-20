@@ -1,5 +1,5 @@
 ---
-title: Metodo updateByte (Java. lang. String, byte) | Microsoft Docs
+title: Metodo updateByte (java.lang.String, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5416aed2-a5b6-4e3b-9750-90db8cda8cec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ebc4d505cd116e98f5e5c68e66be7b2ea6c0274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996913"
 ---
 # <a name="updatebyte-method-javalangstring-byte"></a>Metodo updateByte (java.lang.String, byte)
@@ -47,7 +47,7 @@ public void updateByte(java.lang.String columnName,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateByte viene specificato dal metodo updateByte nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,6 +1,6 @@
 ---
-title: Proprietà - SQL Server Integration Services (scheda Accesso) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - SQL Server Integration Services (scheda Accesso)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 448653690fb6ff0f58b5bed308434c3bcff9a1e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 59fd7444eecfd0beb6310ecfec3380eaf1b8b3f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024065"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306853"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Proprietà - SQL Server Integration Services (scheda Accesso)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Usare la scheda **Accesso** della finestra di dialogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Proprietà** per specificare l'account usato dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e avviare e arrestare il servizio.  
+  Usare la scheda **Accesso** della finestra di dialogo **Proprietà** di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per specificare l'account usato dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e avviare e arrestare il servizio.  
   
 ## <a name="options"></a>Opzioni  
  **Account di sistema locale**  
@@ -29,7 +29,7 @@ ms.locfileid: "68024065"
  **Account seguente**  
  Specificare un account utente locale o di dominio che utilizza l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di utilizzare un account utente di dominio con diritti minimi. Per ulteriori informazioni sulla selezione di un account, cercare l'argomento "Impostazione di account di Windows per i servizi" nella documentazione online.  
   
- **Nome account**  
+ **Account Name** (Nome account)  
  Specificare il nome dell'account utente locale o di dominio.  
   
  **Password**  
@@ -38,10 +38,10 @@ ms.locfileid: "68024065"
  **Conferma password**  
  Digitare nuovamente la password dell'account.  
   
- **Start**  
+ **Inizia**  
  Avviare il servizio.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare il servizio.  
   
  **Sospendi**  

@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Indici/chiavi (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Indici/chiavi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc4ca010e03090b1ba695247023858b2d1541c40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254334"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224916"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici/chiavi (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ Questa finestra di dialogo consente di creare o modificare indici, chiavi primar
 **Indice o chiave primari/univoci selezionati**  
 Visualizza un elenco delle chiavi primarie o univoche e degli indici. Selezionare una chiave o un indice per visualizzarne le proprietà nella griglia a destra. Se l'elenco è vuoto, per la tabella non sono stati definiti indici.  
   
-**Aggiungi**  
+**Aggiungere**  
 Crea una chiave primaria o univoca oppure un indice.  
   
 **Elimina**  
@@ -53,7 +54,7 @@ Specifica se l'elemento selezionato nell'elenco **Selected Primary/Unique Key or
 Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione**.  
   
 **Nome**  
-Visualizza il nome della chiave o dell'indice. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
+Visualizza il nome della chiave o dell'indice. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. È possibile modificare il nome in qualsiasi momento.  
   
 **Descrizione**  
 Consente di immettere una descrizione della chiave o dell'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione ( **...** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
@@ -92,7 +93,7 @@ Indica se per le pagine intermedie dell'indice viene usata la stessa percentuale
 **Ignora chiavi duplicate**  
 Specifica l'effetto prodotto dall'inserimento di una riga con valore di chiave uguale a un valore di chiave esistente durante un'operazione di inserimento bulk. Se si sceglie:  
   
--   **Sì** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un avviso, ignora la riga in ingresso errata e tenta di inserire le righe rimanenti.  
+-   **Sì** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un avviso, ignora la riga in ingresso errata e prova a inserire le righe rimanenti.  
   
 -   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un messaggio di errore ed esegue il rollback dell'intera operazione di inserimento bulk.  
   
@@ -115,6 +116,6 @@ Specifica se il [!INCLUDE[ssDE](../../includes/ssde_md.md)] sottostante ricalcol
 Specifica se per l'indice è consentito il blocco a livello delle righe. L'attivazione o la disattivazione di tale blocco incide sulle prestazioni del database. L'impostazione consigliata è **Sì**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzo dei vincoli (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Utilizzo di chiavi (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[Utilizzo dei vincoli (https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Uso delle chiavi (https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

@@ -16,10 +16,10 @@ ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8803ead9f5ec779a024a0f1980b0e3dab3a746ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981158"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>Metodo getObject (java.lang.String, java.util.Map)
@@ -45,7 +45,7 @@ public java.lang.Object getObject(java.lang.String sCol,
   
  *m*  
   
- Oggetto map.  
+ Oggetto Map.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore **Object**.  
@@ -53,7 +53,7 @@ public java.lang.Object getObject(java.lang.String sCol,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getObject viene specificato dal metodo getObject nell'interfaccia java.sql.CallableStatement.  
   
  Il metodo restituirà il valore della colonna specificata come oggetto Java. Il tipo dell'oggetto Java sarà il tipo di oggetto Java predefinito che corrisponde al tipo SQL della colonna, in base al mapping per i tipi predefiniti indicato nella specifica JDBC. Se si tratta di un valore NULL SQL, il driver restituisce un valore Null Java.  

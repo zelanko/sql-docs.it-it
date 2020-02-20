@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581251"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Pianificare la progettazione e la distribuzione di report | Reporting Services
@@ -50,7 +50,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
 -   **Generatore report:** salvare un report nel server di report da Generatore report.  
   
--   **Portale Web** : caricare un report in un server di report in modalità nativa da [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+-   **Portale Web:** caricare un report in un server di report in modalità nativa da [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,14 +58,14 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
 
 ::: moniker-end
   
--   **A livello di programmazione:** pubblicare un report a livello di programmazione tramite le interfacce API SOAP in un server di report. Per ulteriori informazioni, vedere [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **A livello di codice:** pubblicare un report a livello di programmazione tramite le interfacce API SOAP in un server di report. Per ulteriori informazioni, vedere [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Nella tabella seguente viene elencata la versione supportata dello schema rdl in base alla versione del server di report.  
   
 |Versione del server di report|Versione dello schema RDL|  
 |---------------------------|------------------------|  
 |SQL Server 2016|2016 RDL<br /><br />2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> e<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> e<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Oppure<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Oppure<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
   
  Quando si carica una definizione di report nel server di report o si aggiorna un server di report che contiene report esistenti, il server di report mantiene il formato originale della definizione del report. **Quando viene utilizzato per la prima volta**, il server di report aggiorna il report nel database del server di report a un formato binario mantenuto per le viste successive. La definizione del report (con estensione RDL) non viene aggiornata.  
@@ -91,7 +91,7 @@ In una distribuzione in modalità SharePoint, passare alla raccolta documenti, s
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
 |Generatore report per SQL Server 2016|Crea 2016 RDL<br /><br /> Comporta l'aggiornamento di versioni precedenti di RDL a RDL 2016|2016 RDL|SQL Server 2016|
 |Progettazione report in SQL Server 2016 Data Tools - Business Intelligence per Microsoft Visual Studio 2015|Crea 2016 RDL<br /><br /> Comporta l'aggiornamento di versioni precedenti di RDL a RDL 2016|2016 RDL|SQL Server 2016|
-|Progettazione report in SQL Server 2014 Data Tools - Business Intelligence per Microsoft Visual Studio 2012<br /><br /> e<br /><br /> Progettazione report in SQL Server 2012 Data Tools - Business Intelligence per Microsoft Visual Studio 2012<br /><br /> e<br /><br /> Progettazione report in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluso in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea 2010 RDL<br /><br /> Comporta l'aggiornamento di versioni precedenti di RDL a 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Progettazione report in SQL Server 2014 Data Tools - Business Intelligence per Microsoft Visual Studio 2012<br /><br /> Oppure<br /><br /> Progettazione report in SQL Server 2012 Data Tools - Business Intelligence per Microsoft Visual Studio 2012<br /><br /> Oppure<br /><br /> Progettazione report in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluso in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea 2010 RDL<br /><br /> Comporta l'aggiornamento di versioni precedenti di RDL a 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Progettazione report in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Crea 2010 RDL<br /><br /> Comporta l'aggiornamento di versioni precedenti di RDL a 2010 RDL|2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Progettazione report in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Crea 2008 RDL<br /><br /> Comporta l'aggiornamento di versioni precedenti di RDL a 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|
   
@@ -99,17 +99,17 @@ In una distribuzione in modalità SharePoint, passare alla raccolta documenti, s
   
 -   [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
+-   [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_reportviewer"></a> Controlli ReportViewer  
  Un controllo ReportViewer di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] può visualizzare un report con estensione RDLC in modalità di anteprima locale o in modalità remota, il controllo può visualizzare un file con estensione RDL ospitato in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nella tabella seguente è riportato l'elenco delle versioni di RDL supportate dai controlli ReportViewer per l'elaborazione locale (con estensione RDLC). Il supporto RDL lato server è riepilogato nella sezione [Server di report e supporto dello schema RDL](#bkmk_report_server_rdl_schema_support).  
   
 |Controllo ReportViewer nel prodotto|Versione di RDL per l'anteprima locale|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>e<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> e<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> e<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> e<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Oppure<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Oppure<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Oppure<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Oppure<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- Per ulteriori informazioni, vedere quanto segue:  
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Conversione di file RDLC in file RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   

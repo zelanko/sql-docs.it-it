@@ -11,10 +11,10 @@ ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b26eee3bcb7a182cd6ce3d71a013fc44d61c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975360"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>Metodo setAsciiStream (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67975360"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo setAsciiStream &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|Imposta il numero di parametro designato sull'oggetto java.io.InputStream specificato.|  
 |[Metodo setAsciiStream &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|Imposta il numero di parametro designato sull'oggetto java.io.InputStream specificato, con il numero di byte specificato.|  

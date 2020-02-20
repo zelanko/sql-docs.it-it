@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572743"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaccia utente della finestra Progettazione query con interfaccia grafica
@@ -30,11 +30,11 @@ ms.locfileid: "65572743"
  .  
   
 ## <a name="graphical-query-designer"></a>Finestra Progettazione query con interfaccia grafica  
- La finestra Progettazione query con interfaccia grafica supporta tre tipi di comandi di query: **Text**, **StoredProcedure**o **TableDirect**. Prima di creare una query per il set di dati, è necessario selezionare l'opzione del tipo di comando nella pagina Query della finestra di dialogo [Proprietà set di dati](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
+ La finestra Progettazione query con interfaccia grafica supporta tre tipi di comandi di query: **Text**, **StoredProcedure** o **TableDirect**. Prima di creare una query per il set di dati, è necessario selezionare l'opzione del tipo di comando nella pagina Query della finestra di dialogo [Proprietà set di dati](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
   
  Sono disponibili le opzioni seguenti per tipo di query:  
   
--   **Text** Supporta il testo delle query [!INCLUDE[tsql](../../includes/tsql-md.md)] standard per le origini dei dati dei database relazionali, incluse le estensioni per l'elaborazione dati per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Oracle.  
+-   **Text** Supporta il testo delle query [!INCLUDE[tsql](../../includes/tsql-md.md)] standard per le origini dati dei database relazionali, incluse le estensioni per l'elaborazione dati per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Oracle.  
   
 -   **TableDirect** Seleziona tutte le colonne della tabella specificata. Per una tabella denominata Customers, ad esempio, è l'equivalente dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]`SELECT * FROM Customers`.  
   
@@ -74,12 +74,12 @@ ms.locfileid: "65572743"
 |![Pulsante Mostra/Nascondi riquadro griglia](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Pulsante Mostra/Nascondi riquadro griglia")|Consente di visualizzare o nascondere il riquadro griglia.|  
 |![Pulsante Mostra/Nascondi riquadro SQL](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Pulsante Mostra/Nascondi riquadro SQL")|Consente di visualizzare o nascondere il riquadro SQL.|  
 |![Pulsante Mostra/Nascondi riquadro risultati](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Pulsante Mostra/Nascondi riquadro risultati")|Consente di visualizzare o nascondere il riquadro risultati.|  
-|![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query.|  
+|![Eseguire la query](../../reporting-services/report-data/media/rsqdicon-run.gif "Eseguire la query")|Consente di eseguire la query.|  
 |![Pulsante Verifica istruzione SQL nel riquadro SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "Pulsante Verifica istruzione SQL nel riquadro SQL")|Consente di verificare la correttezza della sintassi del testo della query.|  
 |![Impostazione dell'ordinamento crescente per il campo selezionato](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "Impostazione dell'ordinamento crescente per il campo selezionato")|Consente di impostare l'ordinamento su **Ordinamento crescente** per la colonna selezionata nel riquadro Diagramma,|  
 |![Impostazione dell'ordinamento decrescente per il campo selezionato](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "Impostazione dell'ordinamento decrescente per il campo selezionato")|Consente di impostare l'ordinamento su **Ordinamento decrescente** per la colonna selezionata nel riquadro Diagramma,|  
 |![Rimozione del filtro dal campo selezionato](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "Rimozione del filtro dal campo selezionato")|Rimuovere il filtro per la colonna selezionata nel riquadro Diagramma contrassegnata come filtrata (![icona del filtro accanto alla colonna di filtro selezionata](../../reporting-services/report-data/media/rsqdicon-filter.gif "Icona del filtro accanto alla colonna di filtro selezionata")).|  
-|![Usa "Group By" per il campo selezionato](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "Usa \"Group By\" per il campo selezionato")|Consente di visualizzare o nascondere la colonna **Group By** nel riquadro Griglia. Quando il pulsante Mostra/Nascondi **Group By** è attivo, una colonna aggiuntiva denominata **Group By** viene visualizzata nel riquadro Griglia e ogni valore per le colonne selezionate nella query viene impostato per impostazione predefinita su **Group By**. Questo determina l'inclusione della colonna selezionata in una clausola Group By nel testo SQL. Utilizzare il pulsante Group By per aggiungere automaticamente una clausola GROUP BY che include tutte le colonne nella clausola SELECT. Quando la clausola SELECT include chiamate di funzione aggregate, ad esempio SUM(ColumnName), includere ogni colonna non aggregata nella clausola GROUP BY per fare in modo che venga visualizzata nel set di risultati.<br /><br /> Per essere visualizzata nel riquadro risultati, è necessario che per ogni colonna della query sia definita una funzione aggregata da utilizzare nel calcolo del valore da visualizzare nel riquadro risultati, oppure che la colonna della query venga specificata nella clausola GROUP BY della query SQL.|  
+|![Usa "Group By" per il campo selezionato](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "Usa "Group By" per il campo selezionato")|Consente di visualizzare o nascondere la colonna **Group By** nel riquadro Griglia. Quando il pulsante Mostra/Nascondi **Group By** è attivo, una colonna aggiuntiva denominata **Group By** viene visualizzata nel riquadro Griglia e ogni valore per le colonne selezionate nella query viene impostato per impostazione predefinita su **Group By**. Questo determina l'inclusione della colonna selezionata in una clausola Group By nel testo SQL. Utilizzare il pulsante Group By per aggiungere automaticamente una clausola GROUP BY che include tutte le colonne nella clausola SELECT. Quando la clausola SELECT include chiamate di funzione aggregate, ad esempio SUM(ColumnName), includere ogni colonna non aggregata nella clausola GROUP BY per fare in modo che venga visualizzata nel set di risultati.<br /><br /> Per essere visualizzata nel riquadro risultati, è necessario che per ogni colonna della query sia definita una funzione aggregata da utilizzare nel calcolo del valore da visualizzare nel riquadro risultati, oppure che la colonna della query venga specificata nella clausola GROUP BY della query SQL.|  
 |![Aggiunta di una nuova tabella al riquadro diagramma](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Aggiunta di una nuova tabella al riquadro diagramma")|Consente di aggiungere una nuova tabella dall'origine dei dati nel riquadro diagramma.<br /><br /> **Note** Quando si aggiunge una nuova tabella, Progettazione query tenta di abbinare le relazioni di chiave esterna dell'origine dati. Dopo aver aggiunto una tabella, verificare che le relazioni di chiave esterna rappresentate dai collegamenti tra le tabelle siano corrette.|  
   
 #### <a name="example"></a>Esempio  
@@ -116,7 +116,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i file con estensione sql e rdl. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Icona del pulsante Progettazione query standard](../../reporting-services/report-data/media/icongenericquerydesigner.gif "Icona del pulsante Progettazione query standard")|Consente di passare dall'interfaccia di Progettazione query generica all'interfaccia grafica e viceversa, mantenendo la visualizzazione del testo della query o della stored procedure.|  
-|![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di selezione tutte le colonne della tabella selezionata.|  
+|![Eseguire la query](../../reporting-services/report-data/media/rsqdicon-run.gif "Eseguire la query")|Consente di selezione tutte le colonne della tabella selezionata.|  
   
 ### <a name="command-type-storedprocedure"></a>Tipo di comando StoredProcedure  
  Nel tipo **StoredProcedure** nella finestra Progettazione query con interfaccia grafica viene visualizzato un elenco a discesa delle stored procedure disponibili dall'origine dei dati e un riquadro Risultati. Nella tabella seguente viene descritta la funzione di ogni riquadro.  
@@ -133,7 +133,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i file con estensione sql e rdl. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la stored procedure selezionata.|  
+|![Eseguire la query](../../reporting-services/report-data/media/rsqdicon-run.gif "Eseguire la query")|Consente di eseguire la stored procedure selezionata.|  
 |Elenco a discesa Stored procedure|Fare clic sulla freccia GIÙ per visualizzare un elenco delle stored procedure disponibili dall'origine dei dati. Fare clic su una stored procedure nell'elenco per selezionarla.|  
   
 #### <a name="example"></a>Esempio  

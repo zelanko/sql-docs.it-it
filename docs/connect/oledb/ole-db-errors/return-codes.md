@@ -23,10 +23,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a1deedd8903f69268ebc5e7f5caafaa79a7f7b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994931"
 ---
 # <a name="return-codes"></a>Codici restituiti
@@ -38,17 +38,17 @@ ms.locfileid: "67994931"
   
  Per altre informazioni sui codici restituiti OLE DB, vedere [Codici restituiti (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
- Quando un driver OLE DB per SQL Server funzione membro restituisce S_OK, la funzione ha esito positivo.  
+ Quando una funzione membro di OLE DB Driver per SQL Server restituisce S_OK, significa che la funzione ha avuto esito positivo.  
   
  Quando una funzione membro del driver OLE DB per SQL Server non restituisce S_OK, le macro FAILED e IS_ERROR che decomprimono HRESULT OLE/COM possono determinare l'esito positivo o negativo complessivo di una funzione.  
   
- Se FAILED o IS_ERROR restituisce TRUE, il consumer del driver OLE DB per SQL Server ha la conferma dell'esito negativo dell'esecuzione della funzione membro. Se FAILED o IS_ERROR restituiscono FALSE e HRESULT non è uguale a S_OK, il driver OLE DB per SQL Server consumer ha la certezza che la funzione abbia avuto esito positivo. Il consumer può recuperare informazioni dettagliate su questa restituzione di "esito positivo con informazioni" dalle interfacce di errore del driver OLE DB per SQL Server. Anche nel caso in cui una funzione abbia un esito chiaramente negativo (la macro FAILED restituisce TRUE), le interfacce di errore del driver OLE DB per SQL Server rendono disponibili informazioni dettagliate sull'errore.  
+ Se FAILED o IS_ERROR restituisce TRUE, il consumer del driver OLE DB per SQL Server ha la conferma dell'esito negativo dell'esecuzione della funzione membro. Se FAILED o IS_ERROR restituisce FALSE e il valore HRESULT è diverso da S_OK, il consumer di OLE DB Driver per SQL Server ha la conferma dell'esito positivo della funzione. Il consumer può recuperare informazioni dettagliate su questa restituzione di "esito positivo con informazioni" dalle interfacce di errore del driver OLE DB per SQL Server. Anche nel caso in cui una funzione abbia un esito chiaramente negativo (la macro FAILED restituisce TRUE), le interfacce di errore del driver OLE DB per SQL Server rendono disponibili informazioni dettagliate sull'errore.  
   
- OLE DB driver per SQL Server consumer incontrano in genere il valore HRESULT "success with information" di DB_S_ERRORSOCCURRED. Le funzioni membro che restituiscono DB_S_ERRORSOCCURRED definiscono in genere uno o più parametri che forniscono al consumer i valori di stato. Poiché è possibile che le uniche informazioni a disposizione del consumer siano quelle restituite nei parametri dei valori di stato, è necessario implementare la logica dell'applicazione per il recupero dei valori di stato quando sono disponibili.  
+ I consumer di OLE DB Driver per SQL Server in genere ricevono il valore HRESULT di "esito positivo con informazioni" di DB_S_ERRORSOCCURRED. Le funzioni membro che restituiscono DB_S_ERRORSOCCURRED definiscono in genere uno o più parametri che forniscono al consumer i valori di stato. Poiché è possibile che le uniche informazioni a disposizione del consumer siano quelle restituite nei parametri dei valori di stato, è necessario implementare la logica dell'applicazione per il recupero dei valori di stato quando sono disponibili.  
   
- Il driver OLE DB per le funzioni membro SQL Server non restituisce il codice di esito positivo S_FALSE. Tutti i driver OLE DB per SQL Server funzioni membro restituiscono sempre S_OK per indicare l'esito positivo.  
+ Le funzioni membro di OLE DB Driver per SQL Server non restituiscono il codice di esito positivo S_FALSE. Tutte le funzioni membro di OLE DB Driver per SQL Server restituiscono sempre S_OK per indicare l'esito positivo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [errori](../../oledb/ole-db-errors/errors.md)  
+ [Errori](../../oledb/ole-db-errors/errors.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68307574"
 ---
 # <a name="helplink-element"></a>Elemento HelpLink

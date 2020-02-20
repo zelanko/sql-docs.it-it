@@ -12,10 +12,10 @@ ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55e306b2fe7b8f52655f504d63f02ffc26e04ea1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971777"
 ---
 # <a name="sqlserverclob-members"></a>Membri di SQLServerClob
@@ -25,19 +25,19 @@ ms.locfileid: "67971777"
   
 ## <a name="constructors"></a>Costruttori  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|Inizializzano una nuova istanza della classe SQLServerClob.|  
   
 ## <a name="fields"></a>Campi  
- Nessuna.  
+ No.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
- Nessuna.  
+ No.  
   
 ## <a name="methods"></a>Metodi  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|Questo metodo libera l'oggetto CLOB e rilascia le risorse bloccate.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Materializza l'oggetto Clob come flusso ASCII.|  

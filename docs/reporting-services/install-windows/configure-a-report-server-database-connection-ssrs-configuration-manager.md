@@ -1,19 +1,20 @@
 ---
-title: Configurare una connessione del database del server di report (Gestione configurazione SSRS) | Microsoft Docs
+title: Configurare una connessione del database del server di report (Gestione configurazione) | Microsoft Docs
+description: Ogni istanza del server di report richiede una connessione al database del server di report in cui sono archiviati report, origini dei dati condivise, risorse e metadati gestiti dal server.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239376"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866041"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione SSRS)
 
@@ -109,7 +110,7 @@ Se si configura la connessione di database per l'utilizzo dell'account del servi
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Quando si usa un Istanza gestita SQL di Azure per ospitare Reporting Services database 2019, il supporto è limitato all'uso di SQL Server credenziali di accesso per la connessione.
+> Quando si usa un'istanza gestita di SQL di Azure per ospitare i database di Reporting Services 2019, il supporto è limitato all'uso delle credenziali di accesso di SQL server per la connessione.
 
 ::: moniker-end
 

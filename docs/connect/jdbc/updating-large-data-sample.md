@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento di un esempio di dati di grandi dimensioni | Microsoft Docs
+title: Esempio di aggiornamento di dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 231125f60ec0c5791e55a10cff56b3b93339fb91
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027076"
 ---
 # <a name="updating-large-data-sample"></a>Esempio di aggiornamento di dati di grandi dimensioni
@@ -31,7 +31,7 @@ Il file di codice per questo esempio è UpdateLargeData.java ed è disponibile n
 
 ## <a name="requirements"></a>Requisiti
 
-Per eseguire questa applicazione di esempio, è necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], nonché impostare il classpath per includere il file sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione comune di classe non trovata. Per ulteriori informazioni su come impostare il classpath, vedere [utilizzo del driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Per eseguire questa applicazione di esempio, è necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], nonché impostare il classpath per includere il file sqljdbc4.jar. Se nel classpath manca una voce per il file sqljdbc4.jar, nell'applicazione di esempio verrà generata un'eccezione comune di classe non trovata. Per altre informazioni su come impostare il classpath, vedere [Uso del driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono offerti i file di libreria di classi sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. In questo esempio vengono usati i metodi [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) e [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md), introdotti nell'API di JDBC 4.0, per accedere ai metodi di memorizzazione delle risposte nel buffer specifici del driver. Per compilare ed eseguire questo esempio, sarà necessaria la libreria di classi sqljdbc4.jar, che fornisce il supporto per JDBC 4.0. Per altre informazioni su quale file JAR scegliere, vedere [Requisiti di sistema per il driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).

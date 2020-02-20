@@ -1,10 +1,9 @@
 ---
-title: Gestire passaggi di processo | Microsoft Docs
-ms.custom: ''
+title: Gestire passaggi di processo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258044"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256108"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ Poiché i passaggi di processo vengono eseguiti nel contesto di un utente specif
   
 -   Programmi eseguibili e comandi del sistema operativo.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Istruzioni[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] attività.  
   
@@ -162,7 +163,7 @@ Quando si crea un passaggio di processo con un comando di [!INCLUDE[ssASnoversio
   
 -   Identificare il server OLAP di database in cui eseguire il passaggio di processo.  
   
--   Digitare l'istruzione da eseguire. È necessario che l'istruzione sia un file XML per il metodo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **di** . L'istruzione non può includere una busta SOAP completa o un file XML per il metodo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **di** . A differenza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , i passaggi di processo di **Agent non supportano le buste SOAP complete e il metodo** Discover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Digitare l'istruzione da eseguire. È necessario che l'istruzione sia un file XML per il metodo **Execute** di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. L'istruzione non può includere una busta SOAP completa o un file XML per il metodo **Discover** di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. A differenza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , i passaggi di processo di **Agent non supportano le buste SOAP complete e il metodo** Discover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="analysis-services-query-job-steps"></a>Passaggi di processo con query Analysis Services  
 Quando si crea un passaggio di processo con una query di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , è necessario eseguire le operazioni seguenti:  

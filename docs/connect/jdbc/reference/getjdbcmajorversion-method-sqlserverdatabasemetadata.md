@@ -16,10 +16,10 @@ ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c9b9a213b4863e068b0e9f5eb4115334d47e8e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982679"
 ---
 # <a name="getjdbcmajorversion-method-sqlserverdatabasemetadata"></a>Metodo getJDBCMajorVersion (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getJDBCMajorVersion()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getJDBCMajorVersion viene specificato dal Metodo getJDBCMajorVersion nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getJDBCMajorVersion viene specificato dal metodo getJDBCMajorVersion nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

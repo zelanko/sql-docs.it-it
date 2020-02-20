@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015375"
 ---
 # <a name="rowsets"></a>Set di righe
@@ -30,7 +30,7 @@ ms.locfileid: "68015375"
 
   Le righe di un set di righe contengono colonne di dati. I set di righe sono oggetti centrali che consentono a tutti i provider di dati OLE DB di esporre dati di set di risultati in formato tabulare.  
   
- Dopo aver creato una sessione mediante il metodo **IDBCreateSession::CreateSession**, il consumer può usare l'interfaccia **IOpenRowset** o **IDBCreateCommand** nella sessione per creare un set di righe. Il driver OLE DB per SQL Server supporta entrambe le interfacce. Di seguito sono descritti i due metodi.  
+ Dopo aver creato una sessione mediante il metodo **IDBCreateSession::CreateSession**, il consumer può usare l'interfaccia **IOpenRowset** o **IDBCreateCommand** nella sessione per creare un set di righe. OLE DB Driver per SQL Server supporta entrambe le interfacce. Di seguito sono descritti i due metodi.  
   
 -   Creare un set di righe chiamando il metodo **IOpenRowset::OpenRowset**.  
   

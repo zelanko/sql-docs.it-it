@@ -9,10 +9,10 @@ ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8aedfd50c591f3a8aef4855854eed760ce093a7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580622"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Più serie in un grafico (Generatore report e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "65580622"
 ## <a name="using-chart-areas"></a>Utilizzo di aree del grafico  
  Il grafico è il contenitore di livello superiore che include il bordo esterno, il titolo del grafico e la legenda. Per impostazione predefinita, il grafico contiene una sola area predefinita. L'area del grafico non è visibile sulla superficie del grafico, ma è possibile considerarla come un contenitore che include solo le etichette e il titolo degli assi, nonché l'area tracciato di una o più serie. Nell'illustrazione seguente viene mostrato il concetto di aree del grafico all'interno di un singolo grafico.  
   
- ![Visualizza un'area del grafico](../../reporting-services/report-design/media/chartareasdiagram.gif "Visualizza un'area del grafico")  
+ ![Diagramma di un'area del grafico](../../reporting-services/report-design/media/chartareasdiagram.gif "Diagramma di un'area del grafico")  
   
  L'uso della finestra di dialogo **Proprietà area grafico** consente di specificare l'orientamento 2D e 3D di tutte le serie contenute nell'area del grafico, di allineare più aree del grafico all'interno dello stesso grafico e di formattare i colori dell'area tracciato. Quando viene definita una nuova area del grafico in un grafico che contiene solo un area del grafico predefinita, lo spazio disponibile viene diviso orizzontalmente per due e la nuova area del grafico viene posizionata al di sotto della prima.  
   

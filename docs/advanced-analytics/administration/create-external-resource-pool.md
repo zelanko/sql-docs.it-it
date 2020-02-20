@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1803724f0dafccc1fe41d8e17060810a85e001
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727777"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252831"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Creare un pool di risorse per Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,9 +41,9 @@ Il processo include più passaggi:
 
     **Risultati dell'esempio**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
-    |2|predefiniti|0|100|0|100|100|0|0|
+    |2|default|0|100|0|100|100|0|0|
 
 2.  Controllare le risorse allocate al pool di risorse **esterno** predefinito.
   
@@ -53,9 +53,9 @@ Il processo include più passaggi:
 
     **Risultati dell'esempio**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
-    |2|predefiniti|100|20|0|2|
+    |2|default|100|20|0|2|
  
 3.  Con queste impostazioni predefinite del server il runtime esterno avrà probabilmente risorse insufficienti per completare la maggior parte delle attività. Per ovviare a questa situazione, è necessario modificare l'utilizzo delle risorse del server in questo modo:
   
@@ -123,7 +123,7 @@ Una funzione di classificazione esamina le attività in ingresso e determina se 
   
 2.  Nella funzione di classificazione per ogni pool di risorse definire il tipo di istruzioni o di richieste in ingresso che devono essere assegnate al pool di risorse.
   
-     Ad esempio, la funzione seguente restituisce il nome dello schema assegnato al pool di risorse esterno definito dall'utente se l'applicazione che ha inviato la richiesta è 'Microsoft R Host' o 'RStudio'. In caso contrario, restituisce il pool di risorse predefinito.
+     Ad esempio, la funzione seguente restituisce il nome dello schema assegnato al pool di risorse esterno definito dall'utente se l'applicazione che ha inviato la richiesta è 'Microsoft R Host', 'RStudio' o 'Mashup'. In caso contrario, restituisce il pool di risorse predefinito.
   
     ```sql
     USE master
@@ -133,7 +133,7 @@ Una funzione di classificazione esamina le attività in ingresso e determina se 
     WITH schemabinding
     AS
     BEGIN
-        IF program_name() in ('Microsoft R Host', 'RStudio') RETURN 'ds_wg';
+        IF program_name() in ('Microsoft R Host', 'RStudio', 'Mashup') RETURN 'ds_wg';
         RETURN 'default'
         END;
     GO
@@ -143,7 +143,7 @@ Una funzione di classificazione esamina le attività in ingresso e determina se 
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH  (classifier_function = dbo.is_ds_apps);
-    ALTER RESOURCE GOVERNOR WITH reconfigure;
+    ALTER RESOURCE GOVERNOR RECONFIGURE;
     GO
     ```
 
@@ -163,10 +163,10 @@ Per verificare che le modifiche siano state eseguite, controllare la configurazi
 
     **Risultati dell'esempio**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|interno|Media|25|0|0|0|0|1|2|
-    |2|predefiniti|Media|25|0|0|0|0|2|2|
+    |2|default|Media|25|0|0|0|0|2|2|
     |256|ds_wg|Media|25|0|0|0|0|2|256|
   
 2.  Usare la nuova vista del catalogo, [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) per visualizzare tutti i pool di risorse esterni.
@@ -177,9 +177,9 @@ Per verificare che le modifiche siano state eseguite, controllare la configurazi
 
     **Risultati dell'esempio**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
-    |2|predefiniti|100|20|0|2|
+    |2|default|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      Per altre informazioni, vedere [Viste del catalogo di Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).

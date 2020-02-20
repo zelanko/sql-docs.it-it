@@ -1,10 +1,9 @@
 ---
-title: Problemi legati all'evoluzione del database (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Problemi legati all'evoluzione del database
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33083fd036f2c52b12380f4186cbccc0c47f86be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 987f808a647966671e155c94a80270b1faf6da30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254255"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75225026"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Problemi legati all'evoluzione del database (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +36,6 @@ Quando si modifica la struttura di un database distribuito, è necessario assicu
 Indipendentemente dalla modalità in base a cui si modifica la progettazione del database, è consigliabile mantenere una cronologia delle modifiche. Una possibile soluzione consiste nel mantenere gli script SQL per tutte le modifiche apportate al database di produzione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzo dei vincoli (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Utilizzo dei vincoli](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Ambienti multiutente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

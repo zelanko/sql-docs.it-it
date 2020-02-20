@@ -16,10 +16,10 @@ ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977841"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>Metodo isAfterLast (SQLServerResultSet)
@@ -40,8 +40,8 @@ public boolean isAfterLast()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo isAfterLast viene specificato dal metodo isAfterLast nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo isAfterLast viene specificato dal metodo isAfterLast nell'interfaccia java.sql.ResultSet.  
   
  Se questo metodo viene utilizzato con cursori dinamici, inclusi i cursori di sola lettura forward-only, e la proprietà di connessione selectMethod viene impostata su "cursor", si verificherà un'eccezione.  
   

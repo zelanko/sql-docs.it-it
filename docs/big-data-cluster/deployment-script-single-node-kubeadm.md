@@ -1,26 +1,27 @@
 ---
-title: Eseguire la distribuzione con uno script Bash in un cluster kubeadm a nodo singolo
-titleSuffix: SQL Server big data clusters
+title: Distribuire un cluster kubeadm a nodo singolo
+titleSuffix: SQL Server Big Data Clusters
 description: Usare uno script di distribuzione Bash per distribuire un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in un cluster kubeadm a nodo singolo.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252094"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Eseguire la distribuzione con uno script Bash in un cluster kubeadm a nodo singolo
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In questa esercitazione si userà uno script di distribuzione Bash di esempio per distribuire un cluster Kubernetes a nodo singolo usando kubeadm e un cluster Big Data di SQL Server.  
+In questa esercitazione si userà uno script di distribuzione Bash di esempio per distribuire un cluster Kubernetes a nodo singolo usando kubeadm e un cluster Big Data di SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 

@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893245"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |Provider del server di report||  
 |Rendering del server di report||  
 |Anteprima report del server di report||  
-|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
+|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: Versione di valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
 |Processi in esecuzione del server di report||  
 |Richieste in esecuzione del server di report||  
 |Pianificazione del server di report||  

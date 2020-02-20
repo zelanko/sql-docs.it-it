@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127377"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831600"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ Prima di distribuire un cluster Big Data di SQL Server 2019, [installare innanzi
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Estensione di SQL Server 2019 per Azure Data Studio
+- [Estensione di virtualizzazione dei dati](../azure-data-studio/data-virtualization-extension.md) per Azure Data Studio
 
 ## <a id="prereqs"></a> Prerequisiti per Kubernetes
 
@@ -171,8 +171,8 @@ Le variabili di ambiente seguenti vengono usate per le impostazioni di sicurezza
 
 | Variabile di ambiente | Requisito |Descrizione |
 |---|---|---|
-| `AZDATA_USERNAME` | Obbligatorio |Nome utente dell'amministratore del cluster Big Data di SQL Server. Viene creato un account di accesso sysadmin con lo stesso nome nell'istanza master di SQL Server. Come procedura consigliata per la sicurezza, l'account `sa` è disabilitato. |
-| `AZDATA_PASSWORD` | Obbligatorio |Password per gli account utente creati sopra. La stessa password viene usata per l'utente `root`, usato per la protezione del gateway Knox e HDFS. |
+| `AZDATA_USERNAME` | Obbligatoria |Nome utente dell'amministratore del cluster Big Data di SQL Server. Viene creato un account di accesso sysadmin con lo stesso nome nell'istanza master di SQL Server. Come procedura consigliata per la sicurezza, l'account `sa` è disabilitato. |
+| `AZDATA_PASSWORD` | Obbligatoria |Password per gli account utente creati sopra. La stessa password viene usata per l'utente `root`, usato per la protezione del gateway Knox e HDFS. |
 | `ACCEPT_EULA`| Obbligatoria per il primo utilizzo di `azdata`| Impostata su "yes". Quando è impostata come variabile di ambiente, applica il contratto di licenza con l'utente finale a SQL Server e a `azdata`. Se non è impostata come variabile di ambiente, è possibile includere `--accept-eula=yes` al primo utilizzo del comando `azdata`.|
 | `DOCKER_USERNAME` | Facoltativo | Nome utente per accedere alle immagini del contenitore se sono archiviate in un repository privato. Per altre informazioni su come usare un repository Docker privato per la distribuzione di cluster Big Data, vedere l'argomento [Distribuzioni offline](deploy-offline.md).|
 | `DOCKER_PASSWORD` | Facoltativo |Password per accedere al repository privato citato sopra. |
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> È necessario usare l'utente `root` per il gateway Knox con la password precedente. `root` è l'unico utente supportato per in questa configurazione di autenticazione di base (nome utente/password). Per l'istanza master di SQL Server, il nome utente di cui è stato effettuato il provisioning da usare con la password precedente è `sa`.
+> È necessario usare l'utente `root` per il gateway Knox con la password precedente. `root` è l'unico utente supportato per in questa configurazione di autenticazione di base (nome utente/password).
+> Per connettersi a SQL Server con l'autenticazione di base, usare gli stessi valori delle [variabili di ambiente](#env) AZDATA_USERNAME e AZDATA_PASSWORD. 
 
 
 Dopo aver impostato le variabili di ambiente, è necessario eseguire `azdata bdc create` per attivare la distribuzione. Questo esempio usa il profilo di configurazione del cluster creato sopra:

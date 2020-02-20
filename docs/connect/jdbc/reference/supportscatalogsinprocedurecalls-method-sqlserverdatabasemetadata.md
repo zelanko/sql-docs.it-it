@@ -16,10 +16,10 @@ ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e9f6532ca8f23a9e8d729bccc204865860e71ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969680"
 ---
 # <a name="supportscatalogsinprocedurecalls-method-sqlserverdatabasemetadata"></a>Metodo supportsCatalogsInProcedureCalls (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsCatalogsInProcedureCalls()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo supportsCatalogsInProcedureCalls viene specificato dal metodo supportsCatalogsInProcedureCalls nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo supportsCatalogsInProcedureCalls viene specificato dal metodo supportsCatalogsInProcedureCalls nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

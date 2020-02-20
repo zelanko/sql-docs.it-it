@@ -1,23 +1,25 @@
 ---
-title: Using the WinForms ReportViewer Control (Uso del controllo WinForms ReportViewer) | Microsoft Docs
+title: Usare il controllo Windows Form ReportViewer
+description: Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile usare il controllo Windows Form ReportViewer per eseguirne il rendering in un'applicazione Windows.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195286"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796884"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>Utilizzo del controllo Windows Form ReportViewer
+# <a name="use-the-winforms-reportviewer-control"></a>Usare il controllo Windows Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile usare il controllo Windows Form ReportViewer per eseguirne il rendering in un'applicazione Windows.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Per aggiungere il controllo ReportViewer a un'applicazione Windows  
@@ -38,13 +40,13 @@ ms.locfileid: "63195286"
   
  Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **Attività di ReportViewer** che richiede di selezionare un report.  
   
- Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere scelto l'opzione **\<Server di report>** , vengono visualizzate due proprietà aggiuntive: **URL server di report** e **Percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
+ Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere scelto l'opzione **\<Server di report>** vengono visualizzate due proprietà aggiuntive: **URL server di report** e **Percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
   
- ![Selezionare report server](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Selezionare report server")  
+ ![Selezionare il report del server](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Selezionare il report del server")  
   
  Se il report da visualizzare è un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente.  
   
- ![Selezionare report locale](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Selezionare report locale")  
+ ![Selezionare il report locale](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Selezionare il report locale")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Visualizzazione di report in modalità di elaborazione remota  
  Nell'esempio seguente viene illustrato come eseguire il rendering di un report distribuito in un server di report mediante il controllo Windows Form ReportViewer. In questo esempio viene usato il report Sales Order Detail incluso nel progetto di report di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -157,7 +159,7 @@ End Class
   
      Il file Sales Order Detail.rdl dovrebbe ora far parte del progetto.  
   
-     ![Report Sales Detail Order](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Report Sales Detail Order")  
+     ![Report Sales Order Detail](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Report Sales Order Detail")  
   
 5.  Fare clic con il pulsante destro del mouse sul file Sales Order Detail.rdl in Esplora soluzioni e selezionare **Rinomina**. Rinominare il report in **Sales Order Detail.rdlc** e premere INVIO.  
   
@@ -168,7 +170,7 @@ End Class
   
 6.  Dopo aver rinominato il report, selezionare il file e individuare la finestra Proprietà. Modificare la proprietà **Copia nella directory di output** in **Copia se più recente**.  
   
-     ![Configurazione dell'impostazione Copia nella directory di output](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configurazione dell'impostazione Copia nella directory di output")  
+     ![Configurazione dell'impostazione di copia nell'output](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configurazione dell'impostazione di copia nell'output")  
   
      Se la finestra **Proprietà** non è visibile, è possibile aprirla scegliendo **Finestra Proprietà** dal menu **Visualizza**.  
   

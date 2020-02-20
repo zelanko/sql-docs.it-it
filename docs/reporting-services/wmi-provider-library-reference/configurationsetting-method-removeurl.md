@@ -11,10 +11,10 @@ ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3471c54ae18269c281104c3572235099bcf4e61b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571298"
 ---
 # <a name="configurationsetting-method---removeurl"></a>Metodo di ConfigurationSetting - RemoveURL
@@ -43,7 +43,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  *lcid*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
- *Errore*  
+ *Error (Errore) (Error (Errore)e)*  
  [out] Descrizione dell'errore che si è verificato.  
   
  *HRESULT*  
@@ -52,7 +52,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  *UrlString* non include il nome della directory virtuale. A tale scopo è disponibile il [metodo SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md).  
   
  Prima di chiamare il metodo [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) , è necessario specificare un valore per la proprietà di configurazione VirtualDirectory relativa al parametro *Applicazione* . Usare il [Metodo SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) per impostare la proprietà VirtualDirectory.  

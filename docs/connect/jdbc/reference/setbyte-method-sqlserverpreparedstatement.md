@@ -1,5 +1,5 @@
 ---
-title: Metodo sebyte (SQLServerPreparedStatement) | Microsoft Docs
+title: Metodo setByte (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 39c5ca20-d5f0-40dd-a853-29c3b8cd38e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 410d42a5fa7fdf0e1b3415f85214a87af993b7db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974982"
 ---
 # <a name="setbyte-method-sqlserverpreparedstatement"></a>Metodo setByte (SQLServerPreparedStatement)
@@ -47,7 +47,7 @@ public final void setByte(int n,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo setByte viene specificato dal metodo setByte nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  

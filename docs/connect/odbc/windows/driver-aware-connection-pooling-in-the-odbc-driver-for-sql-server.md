@@ -11,10 +11,10 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68009967"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pool di connessioni compatibile con il driver nel driver ODBC per SQL Server
@@ -28,8 +28,8 @@ ms.locfileid: "68009967"
   
 -   Il pool di connessioni compatibile con il driver impedisce la restituzione di una connessione non valida dal pool.  
   
--   Il pool di connessioni compatibile con il driver riconosce gli attributi di connessione specifici del driver. Quindi, se una connessione USA `SQL_COPT_SS_APPLICATION_INTENT` impostata su sola lettura, tale connessione ottiene il proprio pool di connessioni.
--   Impostando `SQL_COPT_SS_ACCESS_TOKEN` l'attributo si crea un pool di connessioni separatamente 
+-   Il pool di connessioni compatibile con il driver riconosce gli attributi di connessione specifici del driver. Pertanto, se una connessione usa `SQL_COPT_SS_APPLICATION_INTENT` impostato su sola lettura, tale connessione ottiene il proprio pool di connessioni.
+-   Impostando l'attributo `SQL_COPT_SS_ACCESS_TOKEN` viene creato un pool di connessioni separatamente. 
   
 Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chiave della stringa di connessione differisce tra la stringa di connessione e la stringa di connessione in pool, il driver usa una connessione in pool. Tuttavia, le prestazioni sono migliori se tutti gli ID dell'attributo di connessione o tutte le parole chiave della stringa di connessione corrispondono. (Per abbinare una connessione a una connessione in pool, il driver reimposta l'attributo.) Le prestazioni diminuiscono perché la reimpostazione dei parametri seguenti rende necessaria una chiamata di rete aggiuntiva.  
   
@@ -48,8 +48,8 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
     |`AnsiNPW`|Sì|Sì|
     |`App`|Sì|Sì|
     |`ApplicationIntent`|Sì|Sì|  
-    |`Authentication`|Sì|no|
-    |`ColumnEncryption`|Sì|no|
+    |`Authentication`|Sì|No|
+    |`ColumnEncryption`|Sì|No|
     |`Database`|Sì|Sì|
     |`Encrypt`|Sì|Sì|  
     |`Failover_Partner`|Sì|Sì|
@@ -67,16 +67,16 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
     
 - Se è presente una differenza in uno qualsiasi dei seguenti attributi di connessione tra la stringa di connessione e una stringa di connessione in pool, non verrà usata una connessione in pool.  
   
-    |attribute|Driver ODBC 13|Driver ODBC 11|  
+    |Attributo|Driver ODBC 13|Driver ODBC 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sì|Sì|
     |`SQL_ATTR_PACKET_SIZE`|Sì|Sì|
     |`SQL_COPT_SS_ANSI_NPW`|Sì|Sì|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|Sì|no|
-    |`SQL_COPT_SS_AUTHENTICATION`|Sì|no|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|Sì|No|
+    |`SQL_COPT_SS_AUTHENTICATION`|Sì|No|
     |`SQL_COPT_SS_ATTACHDBFILENAME`|Sì|Sì|
     |`SQL_COPT_SS_BCP`|Sì|Sì|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sì|no|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sì|No|
     |`SQL_COPT_SS_CONCAT_NULL`|Sì|Sì|
     |`SQL_COPT_SS_ENCRYPT`|Sì|Sì|
     |`SQL_COPT_SS_FAILOVER_PARTNER`|Sì|Sì|
@@ -87,7 +87,7 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
     |`SQL_COPT_SS_SERVER_SPN`|Sì|Sì|
     |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Sì|Sì|
     |`SSPROP_AUTH_REPL_SERVER_NAME`|Sì|Sì|
-    |`SQL_COPT_SS_TNIR`|Sì|no|
+    |`SQL_COPT_SS_TNIR`|Sì|No|
  
 -   Il driver può ripristinare e modificare le seguenti parole chiave e i seguenti attributi di connessione senza effettuare una chiamata di rete aggiuntiva. Il driver reimposta i parametri seguenti per assicurarsi che la connessione non contenga informazioni non corrette.  
   
@@ -107,7 +107,7 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
   
      Modificando uno dei seguenti attributi di connessione, sarà comunque possibile riusare una connessione esistente.  Il driver reimposterà il valore in base alla necessità. Il driver può reimpostare questi attributi nel client senza effettuare una chiamata di rete aggiuntiva.  
   
-    |attribute|Driver ODBC 13|Driver ODBC 11|  
+    |Attributo|Driver ODBC 13|Driver ODBC 11|  
     |-|-|-|  
     |Tutti gli attributi di istruzione|Sì|Sì|
     |`SQL_ATTR_AUTOCOMMIT`|Sì|Sì|

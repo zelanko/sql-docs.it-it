@@ -1,5 +1,5 @@
 ---
-title: Metodo getresultt (SQLServerStatement) | Microsoft Docs
+title: Metodo getResultSet (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 929a14e2-8e98-4c32-89aa-86733c717ec1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d739a9c8c531259d526829f1f8ebeba94ca28f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980391"
 ---
 # <a name="getresultset-method-sqlserverstatement"></a>Metodo getResultSet (SQLServerStatement)
@@ -40,8 +40,8 @@ public final java.sql.ResultSet getResultSet()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getresultt viene specificato dal metodo getresultt nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getResultSet viene specificato dal metodo getResultSet nell'interfaccia java.sql.Statement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

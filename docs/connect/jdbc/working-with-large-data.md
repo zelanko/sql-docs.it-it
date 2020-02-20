@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di dati di grandi dimensioni | Microsoft Docs
+title: Uso di dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aab60ed1db5d7749c4edbc52fcad4bebddf93d52
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025457"
 ---
 # <a name="working-with-large-data"></a>Uso di dati di grandi dimensioni
@@ -25,7 +25,7 @@ Il driver JDBC fornisce supporto per la memorizzazione nel buffer adattiva, che 
 
 In [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] JDBC Driver versione 1.2 la modalità di buffering predefinita era "**full**". Se l'applicazione non impostava la proprietà di connessione "responseBuffering" su "**adaptive**" nelle proprietà di connessione oppure tramite il metodo [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) dell'oggetto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), il driver supportava la lettura dell'intero risultato dal server. Per ottenere il comportamento di buffering adattivo, l'applicazione doveva impostare esplicitamente la proprietà di connessione "responseBuffering" su "**adaptive**".  
   
-il valore **adaptive** è la modalità di buffering predefinita e il driver JDBC memorizza nel buffer la quantità minima possibile di dati quando necessario. Per ulteriori informazioni sull'utilizzo del buffer adattivo, vedere [utilizzo del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md).  
+il valore **adaptive** è la modalità di buffering predefinita e il driver JDBC memorizza nel buffer la quantità minima possibile di dati quando necessario. Per altre informazioni sull'uso del buffer adattivo, vedere [Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md).  
   
  Gli argomenti in questa sezione descrivono vari modi per recuperare dati per valori di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

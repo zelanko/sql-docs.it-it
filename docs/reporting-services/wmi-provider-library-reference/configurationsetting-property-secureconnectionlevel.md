@@ -16,10 +16,10 @@ ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570256"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>Proprietà di ConfigurationSetting - SecureConnectionLevel
@@ -41,7 +41,7 @@ public Integer SecureConnectionLevel;
 ## <a name="example-code"></a>Codice di esempio  
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 In SQL Server 2008 R2 SecureConnectionLevel diventa un'opzione di attivazione/disattivazione. Per altre informazioni, vedere [Metodo ConfigurationSetting - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md).
 

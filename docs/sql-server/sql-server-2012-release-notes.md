@@ -13,19 +13,19 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136527"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare Microsoft SQL Server 2012 o di risolverne i problemi ([fare clic qui per scaricarlo](https://go.microsoft.com/fwlink/?LinkId=238647)). Questo documento è disponibile solo online, non nei supporti di installazione, e viene aggiornato periodicamente.  
   
-Per informazioni su come installare SQL Server 2012, vedere il file Leggimi di SQL Server 2012 disponibile nei supporti di installazione e nella pagina di download del [file Leggimi](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Altre informazioni sono disponibili nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=190948) e nel [forum su SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
+Per informazioni su come installare SQL Server 2012, vedere il file Leggimi di SQL Server 2012 disponibile nei supporti di installazione e nella pagina di download del [file Leggimi](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Ulteriori informazioni sono disponibili nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=190948) e nel [forum su SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
-## <a name="Install"></a>1.0 Operazioni preliminari all'installazione  
+## <a name="Install"></a>1.0 Prima di installare  
 Prima di installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si considerino le informazioni riportate di seguito.  
   
 ### <a name="11-rules-documentation-for-sql-server-2012-setup"></a>1.1 Documentazione sulle regole relative al programma di installazione di SQL Server 2012  
@@ -64,7 +64,7 @@ Prima di installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si consi
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-o Gestione configurazione  
+o  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -132,7 +132,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         5.  Attendere il completamento del processo di installazione, quindi scegliere **Chiudi**.  
   
-        Metodo 2: Usare Windows PowerShell  
+        Metodo 2: uso di Windows PowerShell  
   
         1.  Fare clic su **Start** | **Tutti i programmi** | **Accessori**.  
   
@@ -291,7 +291,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
   
 **Problema:** alcune opzioni di configurazione nello strumento non sono applicabili. Evitare, ad esempio, di usare "Oggetti relativi a processi" quando si elaborano partizioni. Nell'opzione di configurazione "Elaborazione parallela" è incluso un messaggio di errore non valido in cui viene indicato che l'elaborazione parallela non è supportata nella SKU standard.  
   
-**Soluzione alternativa:** None  
+**Soluzione alternativa:** nessuno  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -332,7 +332,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 Indicazione di individuazione informazioni terminata o ritardo nell'attività di pulizia interattiva  
 **Problema:** se un amministratore termina un'attività nella schermata Monitoraggio attività, un utente interattivo che sta eseguendo operazioni di individuazione informazioni, gestione del dominio o un'attività di pulizia interattiva non riceverà alcuna indicazione che la propria attività è stata terminata finché non procede all'operazione successiva.  
   
-**Soluzione alternativa:** None  
+**Soluzione alternativa:** nessuno  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 Le operazioni provenienti da più attività vengono ignorate da un'operazione di annullamento  
 **Problema:** se si fa clic su **Annulla** quando si esegue un'attività di individuazione informazioni o gestione di dominio e vi sono anche altre attività in esecuzione, che sono state completate precedentemente ma senza che sia stata eseguita un'operazione di pubblicazione, tutto ciò che è stato eseguito sin dall'ultima pubblicazione di tutte le attività, non solo quelle attuali, verrà annullato.  
@@ -392,7 +392,7 @@ In un progetto DQS se è stato eseguito il mapping di un campo nei dati di origi
   
 -   Rimuovere i dati in tutte le colonne successive alla 255 nel file con estensione xls, salvare il file, quindi importare i valori dal file con estensione xls in un dominio.  
   
-### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqsadministrator"></a>4.16 La funzionalità Monitoraggio attività non è disponibile per ruoli diversi da dqs_administrator  
+### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqs_administrator"></a>4.16 La funzionalità Monitoraggio attività non è disponibile per ruoli diversi da dqs_administrator  
 La funzionalità Monitoraggio attività è disponibile solo per gli utenti che dispongono del ruolo dqs_administrator. Se all'account utente è associato il ruolo dqs_kb_editor o dqs_kb_operator, la funzionalità Monitoraggio attività non sarà disponibile nell'applicazione client Data Quality.  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 Errore durante l'apertura di una Knowledge Base nel relativo elenco recente per la gestione del dominio  
@@ -475,7 +475,7 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Layout del nuovo piano di manutenzione non compatibile con gli strumenti precedenti di SQL Server  
 **Problema:** quando gli strumenti di gestione di SQL Server 2012 vengono usati per modificare un piano di manutenzione esistente creato in una versione precedente degli strumenti di gestione di SQL Server (SQL Server 2008 R2, SQL Server 2008 o SQL Server 2005), il piano di manutenzione viene salvato in un nuovo formato. Le precedenti versioni degli strumenti di gestione di SQL Server non supportano questo nuovo formato.  
   
-**Soluzione alternativa**: None  
+**Soluzione alternativa**: nessuno  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 Limitazioni di Intellisense in caso di accesso a un database indipendente  
 Problema: Intellisense in SQL Server Management Studio (SSMS) e SQL Server Data Tools (SSDT) non funziona come previsto quando utenti indipendenti accedono a database indipendenti. In questo caso potrebbero verificarsi i problemi seguenti:  
@@ -486,7 +486,7 @@ Problema: Intellisense in SQL Server Management Studio (SSMS) e SQL Server Data 
   
 3.  Mancato funzionamento della descrizione comando per le funzioni predefinite.  
   
-**Soluzione alternativa**:  None  
+**Soluzione alternativa**:  nessuno  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 Gruppi di disponibilità AlwaysOn  
 Prima di provare a creare un gruppo di disponibilità, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753168) nella documentazione online. Per un'introduzione ai gruppi di disponibilità AlwaysOn, vedere la pagina relativa ai [gruppi di disponibilità AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753166)nella documentazione online.  
@@ -503,7 +503,7 @@ Nella seguente tabella viene riepilogato il supporto dei driver per i gruppi di 
 |Driver|Failover su più subnet|Finalità dell'applicazione|Routing di sola lettura|Failover su più subnet: Failover dell'endpoint su una sola subnet più rapido|Failover su più subnet: Risoluzione dell'istanza denominata per le istanze cluster SQL|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sì|Sì|Sì|Sì|Sì|  
-|SQL Native Client 11.0 OLEDB|no|Sì|Sì|no|no|  
+|SQL Native Client 11.0 OLEDB|No|Sì|Sì|No|No|  
 |ADO.NET con .NET Framework 4.0 con patch di connettività **\&#42;**|Sì|Sì|Sì|Sì|Sì|  
 |ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **\&#42;\&#42;**|Sì|Sì|Sì|Sì|Sì|  
 |Microsoft JDBC Driver 4.0 per SQL Server|Sì|Sì|Sì|Sì|Sì|  

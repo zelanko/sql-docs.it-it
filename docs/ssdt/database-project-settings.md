@@ -1,11 +1,7 @@
 ---
-title: Impostazioni del progetto del database secondario | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Impostazioni del progetto di database
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
@@ -40,14 +36,19 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912850"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241680"
 ---
 # <a name="database-project-settings"></a>Impostazioni del progetto di database
+
 Le impostazioni del progetto di database vengono usate per controllare gli aspetti delle configurazioni relative a database, debug e compilazione. Tali impostazioni sono suddivise nelle categorie seguenti.  
   
 -   [Impostazioni progetto](#bkmk_proj_settings)  
@@ -58,13 +59,13 @@ Le impostazioni del progetto di database vengono usate per controllare gli aspet
   
 -   [SQLCLR e Compilazione SQLCLR](#bkmk_sqlclr_sqlclrbuild)  
   
--   [Compilazione](#bkmk_build)  
+-   [Build](#bkmk_build)  
   
 -   [Variabili SQLCMD](#bkmk_sqlcmd_variables)  
   
 -   [Eventi di compilazione](#bkmk_build_events)  
   
--   [Debug](#bkmk_debug)  
+-   [Eseguire il debug](#bkmk_debug)  
   
 -   [Percorsi riferimento](#bkmk_ref_paths)  
   
@@ -116,7 +117,7 @@ Funzionalità che richiedono la configurazione di un database o un'istanza, ad e
   
 -   FileTable  
   
--   Rilevamento delle modifiche  
+-   Rilevamento modifiche  
   
 -   Funzioni per i set di righe: OPENROWSET, OPENQUERY, OPENDATASOURCE  
   
@@ -124,7 +125,7 @@ Funzionalità che richiedono la configurazione di un database o un'istanza, ad e
   
 Funzionalità attualmente non supportate per la convalida, ad esempio:  
   
--   Service Broker  
+-   Broker di servizio  
   
 -   Schema partizionato con filegroup definiti dall'utente  
   
@@ -177,7 +178,7 @@ Nella pagina delle proprietà **Compilazione SQLCLR** sono contenute le impostaz
   
 1.  In **Esplora soluzioni**fare clic sul nodo della soluzione per la quale si vuole specificare una configurazione della compilazione.  
   
-2.  Scegliere **Gestione configurazione** dal menu **Compila**. Verrà visualizzata la finestra di dialogo **Gestione configurazione** .  
+2.  Scegliere **Configuration Manager** dal menu **Compila**. Verrà visualizzata finestra di dialogo **Gestione configurazione**.  
   
     Specificare le impostazioni di configurazione che si desidera utilizzare per ogni progetto nella soluzione.  
   
@@ -193,7 +194,7 @@ Le impostazioni della tabella seguente si applicano a tutte le configurazioni de
 |---------|-----------------|---------------|  
 |Percorso dell'output di compilazione|bin\Debug\|Specifica dove viene generato l'output di compilazione quando si compila o si distribuisce il progetto di database. Se si specifica un percorso relativo, è necessario correlarlo al percorso del progetto di database. Se il percorso non esiste, viene creato.|  
 |Nome file di output di compilazione|*DatabaseProjectName*|Consente di specificare il nome che si desidera assegnare all'output che viene generato quando si compila il progetto di database.|  
-|Considera avvisi Transact\-SQL come errori|no|Specifica se un avviso di Transact\-SQL deve causare l'annullamento del processo di compilazione e distribuzione. Se questa casella di controllo è deselezionata, verranno visualizzati gli avvisi ma continuerà il processo di compilazione e distribuzione. Si tratta di un'impostazione specifica del progetto, non dell'utente, e viene archiviata nel file con estensione sqlproj.|  
+|Considera avvisi Transact\-SQL come errori|No|Specifica se un avviso di Transact\-SQL deve causare l'annullamento del processo di compilazione e distribuzione. Se questa casella di controllo è deselezionata, verranno visualizzati gli avvisi ma continuerà il processo di compilazione e distribuzione. Si tratta di un'impostazione specifica del progetto, non dell'utente, e viene archiviata nel file con estensione sqlproj.|  
 |Non visualizzare avvisi Transact\-SQL|Vuoto|Consente di specificare un elenco dei numeri degli avvisi, delimitati da virgole o da punti e virgola, tramite cui è possibile identificare gli avvisi annullati.<br /><br />Gli avvisi annullati non vengono visualizzati nella finestra **Elenco errori** e non influiscono sul completamento della compilazione, anche se si seleziona la casella di controllo **Considera avvisi Transact\-SQL come errori**.|  
   
 ## <a name="bkmk_sqlcmd_variables"></a>Variabili SQLCMD  
@@ -208,8 +209,8 @@ Inoltre, la pubblicazione sulla riga di comando consente di eseguire l'override 
   
 |Campo|Valore predefinito|Descrizione|  
 |---------|-----------------|---------------|  
-|Riga di comando eventi pre-compilazione|None|Specifica la riga di comando da eseguire prima della compilazione del progetto. Scegliere **Modifica pre-compilazione** per modificare la riga di comando.|  
-|Riga di comando eventi post-compilazione|None|Consente di specificare la riga di comando da eseguire dopo la compilazione del progetto. Scegliere **Modifica post-compilazione** per modificare la riga di comando.|  
+|Riga di comando eventi pre-compilazione|nessuno|Specifica la riga di comando da eseguire prima della compilazione del progetto. Scegliere **Modifica pre-compilazione** per modificare la riga di comando.|  
+|Riga di comando eventi post-compilazione|nessuno|Consente di specificare la riga di comando da eseguire dopo la compilazione del progetto. Scegliere **Modifica post-compilazione** per modificare la riga di comando.|  
 |Esegui evento post-compilazione|On successful build|Consente di specificare se la riga di comando post-compilazione deve essere eseguita sempre, solo a compilazione completata o solo quando la compilazione aggiorna l'output del progetto (script di compilazione).|  
   
 ## <a name="bkmk_debug"></a>Debug  
@@ -217,14 +218,14 @@ Inoltre, la pubblicazione sulla riga di comando consente di eseguire l'override 
   
 |Campo|Valore predefinito|Descrizione|  
 |---------|-----------------|---------------|  
-|Azione di avvio|None|Consente di specificare uno script o un programma esterno da eseguire durante il debug del progetto in uso.|  
+|Azione di avvio|nessuno|Consente di specificare uno script o un programma esterno da eseguire durante il debug del progetto in uso.|  
 |Stringa di connessione di destinazione|Data Source=(localdb)\\*NomeSoluzione*;Initial Catalog=*NomeProgettoDatabase*;Integrated Security=True;Pooling=False;Connect Timeout=30|Consente di specificare le informazioni di connessione per il server di database da utilizzare come destinazione per la configurazione della compilazione specificata. La stringa di connessione predefinita si trova in un'istanza del database locale di SQL Server creata dinamicamente e in un database.|  
 |Distribuisci proprietà database|Sì|Consente di specificare se le impostazioni DatabaseProerties.DatabaseProperties vengono distribuite o aggiornate quando si distribuisce il progetto di database.|  
-|Ricrea sempre database|no|Consente di specificare se eliminare e ricreare il database anziché eseguire un aggiornamento incrementale. Può essere necessario selezionare questa casella di controllo se, ad esempio, si vuole eseguire gli unit test del database per una distribuzione pulita del database. Se questa casella di controllo è deselezionata, il database esistente verrà aggiornato, non eliminato e ricreato.|  
-|Blocca distribuzione incrementale in caso di perdita di dati|sì|Consente di specificare se la distribuzione viene arrestata nel caso in cui un aggiornamento possa provocare una perdita di dati. Se viene selezionata questa casella di controllo, le modifiche che causerebbero una perdita di dati comportano l'arresto della distribuzione e la visualizzazione di un errore, pertanto i dati non vengono persi. Ad esempio la distribuzione viene arrestata se una colonna `varchar(50)` viene modificata in `varchar(30)`.<br /><br />**NOTA** La distribuzione viene bloccata solo se le tabelle in cui può verificarsi la perdita di dati contengono dati. Se non si perde alcun dato, la distribuzione continua.|  
-|Esegui istruzioni DROP su oggetti nel database di destinazione ma non nel progetto|no|Consente di specificare se gli oggetti presenti nel database di destinazione, ma non nel progetto di database, devono essere eliminati come parte dello script di distribuzione. È possibile escludere alcuni file nel progetto per rimuoverli temporaneamente dallo script di compilazione. Tuttavia, potrebbe essere necessario lasciare le versioni esistenti di tali oggetti nel database di destinazione. Questa casella di controllo non ha effetto se è selezionata la casella di controllo **Ricrea sempre database**, perché il database verrà eliminato.|  
-|Non utilizzare le istruzioni ALTER ASSEMBLY per aggiornare i tipi CLR|no|Consente di specificare se vengono utilizzate le istruzioni ALTER ASSEMBLY per aggiornare i tipi CLR (Common Language Runtime) o se l'oggetto che consente di creare istanze del tipo CLR verrà invece eliminato e ricreato quando vengono distribuite le modifiche.|  
-|Avanzate|no|Pulsante di comando che consente di specificare le opzioni tramite cui vengono controllati eventi e comportamenti per la distribuzione.|  
+|Ricrea sempre database|No|Consente di specificare se eliminare e ricreare il database anziché eseguire un aggiornamento incrementale. Può essere necessario selezionare questa casella di controllo se, ad esempio, si vuole eseguire gli unit test del database per una distribuzione pulita del database. Se questa casella di controllo è deselezionata, il database esistente verrà aggiornato, non eliminato e ricreato.|  
+|Blocca distribuzione incrementale in caso di perdita di dati|Sì|Consente di specificare se la distribuzione viene arrestata nel caso in cui un aggiornamento possa provocare una perdita di dati. Se viene selezionata questa casella di controllo, le modifiche che causerebbero una perdita di dati comportano l'arresto della distribuzione e la visualizzazione di un errore, pertanto i dati non vengono persi. Ad esempio la distribuzione viene arrestata se una colonna `varchar(50)` viene modificata in `varchar(30)`.<br /><br />**NOTA** La distribuzione viene bloccata solo se le tabelle in cui può verificarsi la perdita di dati contengono dati. Se non si perde alcun dato, la distribuzione continua.|  
+|Esegui istruzioni DROP su oggetti nel database di destinazione ma non nel progetto|No|Consente di specificare se gli oggetti presenti nel database di destinazione, ma non nel progetto di database, devono essere eliminati come parte dello script di distribuzione. È possibile escludere alcuni file nel progetto per rimuoverli temporaneamente dallo script di compilazione. Tuttavia, potrebbe essere necessario lasciare le versioni esistenti di tali oggetti nel database di destinazione. Questa casella di controllo non ha effetto se è selezionata la casella di controllo **Ricrea sempre database**, perché il database verrà eliminato.|  
+|Non utilizzare le istruzioni ALTER ASSEMBLY per aggiornare i tipi CLR|No|Consente di specificare se vengono utilizzate le istruzioni ALTER ASSEMBLY per aggiornare i tipi CLR (Common Language Runtime) o se l'oggetto che consente di creare istanze del tipo CLR verrà invece eliminato e ricreato quando vengono distribuite le modifiche.|  
+|Avanzate|No|Pulsante di comando che consente di specificare le opzioni tramite cui vengono controllati eventi e comportamenti per la distribuzione.|  
   
 ## <a name="bkmk_ref_paths"></a>Percorsi riferimento  
 È possibile utilizzare questa pagina per definire le variabili di server e database associate a un riferimento tra database. Inoltre, è possibile specificare i valori di tali variabili. Per altre informazioni, vedere [Uso di riferimenti in progetti di database](https://msdn.microsoft.com/library/bb386242.aspx).  

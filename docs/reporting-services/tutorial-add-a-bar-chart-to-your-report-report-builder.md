@@ -9,14 +9,14 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041183"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
-In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
+In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
 
 In un grafico a barre i dati delle categorie vengono visualizzati orizzontalmente per gli scopi seguenti:  
   
@@ -30,9 +30,9 @@ L'illustrazione seguente visualizza il grafico a barre che verrà creato con le 
   
  
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report di tabelle semplici &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -47,7 +47,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
-     ![Attività iniziale Generatore report](../reporting-services/media/rb-getstarted.png "Attività iniziale Generatore report")  
+     ![Riquadro attività iniziale di Generatore report](../reporting-services/media/rb-getstarted.png "Riquadro attività iniziale di Generatore report")  
   
      Se non viene visualizzata la finestra di dialogo **Riquadro attività iniziale** , fare clic su **File** >**Nuovo**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** . 
       
@@ -83,9 +83,9 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2015, CAST(207000. AS money) AS SalesYear2014  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 ## <a name="ChartType"></a>2. Creare un grafico a barre  
  
@@ -93,7 +93,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
-    Nella pagina **Disponi campi del grafico** il riquadro **Campi disponibili** include quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Trascinare LastName nel riquadro Categorie.  
   
@@ -101,7 +101,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 5.  Trascinare SalesYear2014 nel riquadro Valori sotto SalesYear2015. SalesYear2014 rappresenta l'importo totale delle vendite di ogni venditore per l'anno 2014.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  Fare clic su **Fine**.  
   
@@ -293,7 +293,7 @@ Nel grafico verranno visualizzati i nomi dei primi cinque venditori dai dati rel
   
 4.  Fare clic su **Salva**.   
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un grafico a barre al report. Per altre informazioni sui grafici, vedere [Grafici](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Grafici a barre](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  

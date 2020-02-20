@@ -16,10 +16,10 @@ ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d05b367901aae7a37e10b0a2091a268c3a78a7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954832"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>Metodo executeBatch (SQLServerStatement)
@@ -42,7 +42,7 @@ public int[] executeBatch()
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo executeBatch viene specificato dal metodo executeBatch nell'interfaccia java.sql.Statement.  
   
  Dopo aver inviato i comandi al database, questo metodo cancella qualsiasi comando del batch.  

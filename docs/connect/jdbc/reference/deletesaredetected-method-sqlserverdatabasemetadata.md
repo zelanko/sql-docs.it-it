@@ -16,10 +16,10 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955125"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Metodo deletesAreDetected (SQLServerDatabaseMetaData)
@@ -58,18 +58,18 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se un gap sostituisce la riga eliminata. **false** se la riga eliminata viene rimossa.  
+ **true** se uno spazio sostituisce la riga eliminata. **false** se la riga eliminata viene rimossa.  
   
  Quando si usa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], questo metodo restituisce **true** per i cursori TYPE_SS_SCROLL_KEYSET e **false** per tutti gli altri tipi di set di risultati.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo deletesAreDetected viene specificato dal metodo deletesAreDetected nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo deletesAreDetected viene specificato dal metodo deletesAreDetected nell'interfaccia java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]rileva le righe eliminate per tutti i tipi di cursore aggiornabili, sebbene il rilevamento sia temporaneo per i cursori dinamici e di avanzamento.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rileva le righe eliminate per tutti i tipi di cursore aggiornabili, sebbene il rilevamento sia temporaneo per i cursori forward e dinamici.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

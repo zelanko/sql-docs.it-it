@@ -9,10 +9,10 @@ ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582238"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatori nelle espressioni (Generatore report e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65582238"
 |>=|Maggiore o uguale a.|  
 |=|Uguale a.|  
 |<>|Diverso da.|  
-|Simile a|Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=.<br /><br /> Nella tabella seguente sono elencati i caratteri che è possibile utilizzare come caratteri jolly:<br /><br /> %: qualsiasi stringa composta da zero o più caratteri.<br /><br /> _: qualsiasi carattere singolo.<br /><br /> [ ]: qualsiasi carattere singolo compreso nell'intervallo ([a-f]) o nel set ([aeiou]) specificato.<br /><br /> [^]: qualsiasi carattere singolo non compreso nell'intervallo ([^a-f]) o nel set ([^aeiou]) specificato|  
+|Simile a|Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=.<br /><br /> Nella tabella seguente sono elencati i caratteri che è possibile utilizzare come caratteri jolly:<br /><br /> %: Stringa composta da zero o più caratteri.<br /><br /> _: Carattere singolo.<br /><br /> [ ]: qualsiasi carattere singolo compreso nell'intervallo ([a-f]) o nel set ([aeiou]) specificato.<br /><br /> [^]: qualsiasi carattere singolo non compreso nell'intervallo ([^a-f]) o nel set ([^aeiou]) specificato|  
 |Is|Confronta due riferimenti a oggetti.|  
   
 ### <a name="string-concatenation"></a>Concatenazione di stringhe  
@@ -61,9 +61,9 @@ ms.locfileid: "65582238"
   
 |Operatore|Descrizione|  
 |--------------|-----------------|  
-|And|Esegue una congiunzione logica di due espressioni booleane oppure una congiunzione bit per bit di due espressioni numeriche.|  
+|e|Esegue una congiunzione logica di due espressioni booleane oppure una congiunzione bit per bit di due espressioni numeriche.|  
 |Not|Esegue una negazione logica di un'espressione booleana oppure una negazione bit per bit di un'espressione numerica.|  
-|e|Esegue una disgiunzione logica di due espressioni booleane oppure una disgiunzione bit per bit di due valori numerici.|  
+|Oppure|Esegue una disgiunzione logica di due espressioni booleane oppure una disgiunzione bit per bit di due valori numerici.|  
 |Xor|Esegue un'operazione di esclusione logica di due espressioni booleane oppure un'esclusione bit per bit di due espressioni numeriche.|  
 |AndAlso|Esegue una congiunzione logica di due espressioni.|  
 |OrElse|Esegue una disgiunzione logica di due espressioni.|  

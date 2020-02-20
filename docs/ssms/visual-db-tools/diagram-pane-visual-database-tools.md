@@ -1,10 +1,9 @@
 ---
-title: Riquadro Diagramma (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Riquadro Diagramma
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 00f4257a78b06d9f0ce3c21cb16ef04514eda76d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9ba8a064256541ffc756ef37fe01f1205e6bc243
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263847"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251892"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Riquadro Diagramma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ Nel riquadro Diagramma ogni tabella o oggetto con valori di tabella viene visual
 **Tabelle**  
 Elenca le tabelle che è possibile aggiungere al riquadro Diagramma. Per aggiungere una tabella, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più tabelle, selezionarle e fare clic su **Aggiungi**.  
   
-**Viste**  
+**Visualizzazioni**  
 Elenca le viste che è possibile aggiungere al riquadro Diagramma. Per aggiungere una vista, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più viste, selezionarle e fare clic su **Aggiungi**.  
   
 **Funzioni**  

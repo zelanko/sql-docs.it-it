@@ -1,7 +1,7 @@
 ---
-title: Aggiungere o rimuovere nodi in un cluster di failover di SQL Server (programma di installazione) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Aggiungere e rimuovere il cluster di failover dei nodi
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95d92e72baa3d1f36eb76649a46bb1dcdf35cd4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035245"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230894"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Aggiungere o rimuovere nodi in un cluster di failover di SQL Server (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "68035245"
   
 ##  <a name="Add"></a> Aggiungere un nodo  
   
-#### <a name="to-add-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Per aggiungere un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente  
+#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Per aggiungere un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, accedere alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
-2.  L'Installazione guidata consentirà di avviare il Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per aggiungere un nodo a un'istanza del cluster di failover esistente, fare clic su **Installazione** nel riquadro a sinistra. Selezionare quindi **Aggiungi nodo a cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
+2.  L'Installazione guidata consentirà di avviare il Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per aggiungere un nodo a un'istanza del cluster di failover esistente, fare clic su **Installazione** nel riquadro a sinistra. Selezionare quindi **Aggiungi nodo a cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  Controllo configurazione sistema consentirà di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -85,11 +85,11 @@ ms.locfileid: "68035245"
   
 ##  <a name="Remove"></a> Rimuovere un nodo  
   
-#### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Per rimuovere un nodo da un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente  
+#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Per rimuovere un nodo da un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic sul file setup.exe. Per eseguire l'installazione da una condivisione di rete, accedere alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
-2.  L'Installazione guidata consentirà di avviare il Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per rimuovere un nodo da un'istanza del cluster di failover esistente, fare clic su **Manutenzione** nel riquadro a sinistra, quindi selezionare **Rimuovi nodo da un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
+2.  L'Installazione guidata consentirà di avviare il Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per rimuovere un nodo da un'istanza del cluster di failover esistente, fare clic su **Manutenzione** nel riquadro a sinistra, quindi selezionare **Rimuovi nodo da un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  Controllo configurazione sistema consentirà di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   

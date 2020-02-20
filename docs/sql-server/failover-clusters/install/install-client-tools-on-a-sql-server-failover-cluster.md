@@ -1,7 +1,7 @@
 ---
-title: Installare strumenti client in un cluster di failover di SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Installare gli strumenti client: cluster di failover'
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063942"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230497"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installare strumenti client in un cluster di failover di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68063942"
   
 ## <a name="installation-procedures"></a>Procedure di installazione  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>Installazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'interfaccia utente del programma di installazione  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>Installazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'interfaccia utente del programma di installazione  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Nella cartella di installazione radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione dalla condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68063942"
   
 5.  Nella pagina **Selezione funzionalità** selezionare gli strumenti che si vuole installare e attenersi alle istruzioni della restante parte del processo di installazione.  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Installazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal prompt dei comandi  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>Installazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal prompt dei comandi  
   
 1.  Per installare gli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], eseguire il comando seguente: Setup.exe/q/Action=Install /Features=Tools  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68063942"
   
 3.  Per installare gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completi, eseguire il comando seguente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Per altre informazioni sui valori dei parametri per le funzionalità, vedere [Installazione di SQL Server 2016 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Disinstallazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="uninstalling-ssnoversion-client-tools"></a>Disinstallazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Questi strumenti vengono visualizzati in Installazione applicazioni nel Pannello di controllo come **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** e possono essere rimossi dalla stessa posizione. Se si utilizza l'opzione per la rimozione dei nodi per disinstallare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal cluster di failover, non verranno contemporaneamente disinstallati i componenti client.  
   
 ## <a name="see-also"></a>Vedere anche  

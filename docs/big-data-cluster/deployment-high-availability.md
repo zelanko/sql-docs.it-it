@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 231a33f4d149e442487a7c93c1e2b4c5cdfad8d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76115423"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
 
@@ -38,7 +38,7 @@ Ecco alcune delle funzionalità offerte dai gruppi di disponibilità:
 - Viene effettuato il provisioning automatico di un endpoint esterno per la connessione ai database all'interno del gruppo di disponibilità. Questo endpoint `master-svc-external` ha il ruolo di listener del gruppo di disponibilità.
 - Viene effettuato il provisioning di un secondo endpoint esterno per le connessioni di sola lettura alle repliche secondarie per la scalabilità orizzontale dei carichi di lavoro di lettura.
 
-## <a name="deploy"></a>Distribuzione
+## <a name="deploy"></a>Distribuire
 
 Per distribuire l'istanza master di SQL Server in un gruppo di disponibilità:
 
@@ -150,7 +150,7 @@ Ecco un esempio che mostra come esporre questo endpoint e quindi aggiungere il d
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
     ```
 
-    Per un cluster del servizio Azure Kubernetes eseguire lo stesso comando, ad eccezione del fatto che il tipo del servizio creato sarà `LoadBalancer`. Esempio: 
+    Per un cluster del servizio Azure Kubernetes eseguire lo stesso comando, ad eccezione del fatto che il tipo del servizio creato sarà `LoadBalancer`. Ad esempio: 
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=LoadBalancer
@@ -200,6 +200,7 @@ Limitazioni e problemi noti relativi ai gruppi di disponibilità per l'istanza m
 - I database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE`, come `RESTORE DATABSE` o `CREATE DATABASE FROM SNAPSHOT`, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza ](#instance-connect) e aggiungere manualmente il database al gruppo di disponibilità.
 - Per alcune operazioni come l'esecuzione delle impostazioni di configurazione del server con `sp_configure`, è necessaria una connessione al database `master` dell'istanza di SQL Server, non al database `master` del gruppo di disponibilità. Non è possibile usare l'endpoint primario corrispondente. Seguire [le istruzioni](#instance-connect) per esporre un endpoint e connettersi all'istanza di SQL Server ed eseguire `sp_configure`. È possibile usare l'autenticazione SQL solo quando si espone manualmente l'endpoint per la connessione al database `master` dell'istanza di SQL Server.
 - La configurazione a disponibilità elevata deve essere creata quando viene distribuito il cluster Big Data. Non è possibile abilitare la configurazione a disponibilità elevata con i gruppi di disponibilità dopo la distribuzione.
+- Mentre il database msdb contenuto è incluso nel gruppo di disponibilità e i processi di SQL Agent vengono replicati, i processi non vengono attivati in base alla pianificazione. La soluzione consiste nel [connettersi a ognuna delle istanze di SQL Server](#instance-connect) e creare i processi nel database msdb dell'istanza.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

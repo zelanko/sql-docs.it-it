@@ -11,10 +11,10 @@ ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d106ad25c1823f873ade24800e44987d78a2f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970257"
 ---
 # <a name="sqlserverxaconnection-members"></a>Membri di SQLServerXAConnection
@@ -23,17 +23,17 @@ ms.locfileid: "67970257"
   Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- Nessuna.  
+ No.  
   
 ## <a name="fields"></a>Campi  
- Nessuna.  
+ No.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
- Nessuna.  
+ No.  
   
 ## <a name="methods"></a>Metodi  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|Ereditato da [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md). Registra il listener di eventi specificato in modo che riceva una notifica quando si verifica un evento su questo oggetto Connection.|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|Ereditato da [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md). Chiude la connessione fisica rappresentata da questo oggetto Connection.|  

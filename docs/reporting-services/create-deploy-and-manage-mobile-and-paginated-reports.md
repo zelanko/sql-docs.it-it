@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571564"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
@@ -30,7 +30,7 @@ Per informazioni sul server di report di Power BI, vedere [Che cos'è Server di 
 
 SQL Server Reporting Services (SSRS) offre un set di servizi e strumenti locali per creare, distribuire e gestire report impaginati e per dispositivi mobili.
 
-![SQL Server Reporting Services su tutti i dispositivi](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services su tutti i dispositivi")
+![Insieme di SQL Server Reporting Services](../reporting-services/media/ss-reporting-services-all-together.png "Insieme di SQL Server Reporting Services")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Creare, distribuire e gestire report impaginati e per dispositivi mobili
 
@@ -63,7 +63,7 @@ Questo carico di lavoro BI di base esiste tuttora e pertanto è stato modernizza
 * Tutti gli stili e le tavolozze dei colori predefiniti sono stati aggiornati in modo da poter creare report con un nuovo stile moderno minimalista.
 * Il riquadro dei parametri è stato aggiornato ed è ora possibile disporre i parametri nell'ordine desiderato.
 * I report possono essere esportati in nuovi formati, ad esempio PowerPoint. Le visualizzazioni di Reporting Services in PowerPoint sono attive e modificabili, non semplici screenshot.
-* È possibile creare un'esperienza ibrida di Power BI/Reporting Services. Anziché ricreare i report di Reporting Services locali in Power BI, è possibile aggiungere elementi visivi da tali report ai dashboard di Power BI, in modo da monitorare tutto da un'unica posizione nel proprio dashboard di Power BI.
+* È possibile creare un'esperienza ibrida di Power BI/Reporting Services.  Anziché ricreare i report di Reporting Services locali in Power BI, è possibile aggiungere elementi visivi dai report ai dashboard di Power BI. in modo da monitorare tutto da un'unica posizione nel proprio dashboard di Power BI.
 
 ## <a name="mobile-reports"></a>Report per dispositivi mobili
 
@@ -83,7 +83,7 @@ Mentre si creano visualizzazioni, Mobile Report Publisher genera automaticamente
 
 Per gli utenti finali di Reporting Services in modalità nativa, il punto di ingresso è un portale Web moderno visualizzabile nella maggior parte dei browser. Nel nuovo portale sarà possibile accedere a tutti i report impaginati e per dispositivi mobili Reporting Services, nonché agli indicatori KPI in modo da visualizzare le principali metriche aziendali immediatamente nel browser, senza dover aprire un report.
 
-Il nuovo portale Web è una riscrittura completa di Report Manager. Attualmente è un'app HTML5 a pagina singola, basata su standard, per cui sono ottimizzati i browser moderni: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e tutti i principali browser.
+Il nuovo portale Web è una riscrittura completa di Report Manager. È ora diventato un'app HTML5 a pagina singola, basata su standard, per cui sono ottimizzati i browser moderni: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e tutti i browser più diffusi.
 
 Il contenuto del portale Web è organizzato in base al tipo:
 
@@ -110,7 +110,7 @@ Per altre informazioni, vedere [Server di report di Reporting Services in modali
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Funzionalità di programmazione di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
+## <a name="ssrsnoversion-programming-features"></a>Funzionalità di programmazione di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
 
 Sfruttando le funzionalità di programmazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è possibile estendere e personalizzare le funzionalità di creazione di report. Usare le API di SSRS per integrare o estendere l'elaborazione di dati e report in applicazioni personalizzate.
 
@@ -119,7 +119,7 @@ Per altre informazioni, vedere [Guida per gli sviluppatori (Reporting Services)]
 ## <a name="next-steps"></a>Passaggi successivi
 
 * [Installare Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [Scaricare SQL Server Data Tools (SSDT)](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [Scaricare la versione più recente di SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 * [Installare Generatore report](../reporting-services/install-windows/install-report-builder.md)
 
 * Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

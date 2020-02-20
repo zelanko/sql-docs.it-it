@@ -9,10 +9,10 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70176284"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
@@ -62,7 +62,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 |Sottoscrizioni|Sì|Sì||  
 |Impostazioni di cronologia|Sì|Sì|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
 |Opzioni di elaborazione|Sì|Sì||  
-|Opzioni di aggiornamento cache|Sì|Sì|Le impostazioni dipendenti vengono migrate come parte di un elemento del catalogo. Di seguito è riportato un esempio dello script relativo alla migrazione di un report (con estensione rdl) e delle impostazioni correlate, ad esempio le opzioni di aggiornamento della cache:<br /><br /> -   Migrazione di parametri per il report TitleOnly.rdl: 0 elementi trovati.<br />-   Migrazione di sottoscrizioni per il report TitleOnly.rdl: 1 elemento trovato.<br />-   Migrazione della sottoscrizione Salva in \\\server\public\savedreports come TitleOnly... SUCCESS<br />-   Migrazione delle impostazioni di cronologia per il report TitleOnly.rdl... SUCCESS<br />-   Migrazione delle opzioni di elaborazione per il report TitleOnly.rdl... 0 elementi trovati.<br />-   Migrazione delle opzioni di aggiornamento della cache per il report TitleOnly.rdl... SUCCESS<br />-   Migrazione dei piani di aggiornamento della cache per il report TitleOnly.rdl: 1 elemento trovato.<br />-   Migrazione del piano di aggiornamento della cache titleonly_refresh735amM2F... SUCCESS|  
+|Opzioni di aggiornamento cache|Sì|Sì|Le impostazioni dipendenti vengono migrate come parte di un elemento del catalogo. Di seguito è riportato un esempio dello script relativo alla migrazione di un report (con estensione rdl) e delle impostazioni correlate, ad esempio le opzioni di aggiornamento della cache:<br /><br /> -   Migrazione di parametri per il report TitleOnly.rdl: 0 elementi trovati.<br />-   Migrazione di sottoscrizioni per il report TitleOnly.rdl: 1 elementi trovati.<br />-   Migrazione della sottoscrizione Salva in \\\server\public\savedreports come TitleOnly... SUCCESS<br />-   Migrazione delle impostazioni di cronologia per il report TitleOnly.rdl... SUCCESS<br />-   Migrazione delle opzioni di elaborazione per il report TitleOnly.rdl... 0 elementi trovati.<br />-   Migrazione delle opzioni di aggiornamento della cache per il report TitleOnly.rdl... SUCCESS<br />-   Migrazione dei piani di aggiornamento della cache per il report TitleOnly.rdl: 1 elementi trovati.<br />-   Migrazione del piano di aggiornamento della cache titleonly_refresh735amM2F... SUCCESS|  
 |Piani di aggiornamento della cache|Sì|Sì||  
 |Immagini|Sì|Sì||  
 |Parti del report|Sì|Sì||  
@@ -70,17 +70,17 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 ##  <a name="bkmk_required_permissions"></a> Autorizzazioni necessarie  
  Le autorizzazioni necessarie per leggere o scrivere elementi e risorse non sono le stesse per tutti i metodi usati nello script. Nella tabella seguente sono riepilogati i metodi usati per ogni elemento o risorsa e vengono forniti collegamenti al contenuto correlato. Passare all'articolo specifico per visualizzare le autorizzazioni necessarie. Ad esempio nell'argomento del metodo ListChildren sono indicate le autorizzazioni necessarie:  
   
--   **Autorizzazioni necessarie per la modalità nativa:** ReadProperties sull'elemento  
+-   **Autorizzazioni necessarie per la modalità nativa:** ReadProperties su Item  
   
 -   **Autorizzazioni necessarie per la modalità SharePoint:** ViewListItems  
   
-|Elemento o risorsa|Origine|Destinazione|  
+|Elemento o risorsa|Source (Sorgente)|Destinazione|  
 |----------------------|------------|------------|  
 |Elementi del catalogo|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
-|Role|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
+|Ruolo|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
 |Criteri di sistema|<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|  
 |Pianificazione|<xref:ReportService2010.ReportingService2010.ListSchedules%2A>|<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|  
-|Sottoscrizione|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
+|Subscription|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
 |Piano di aggiornamento della cache|<xref:ReportService2010.ReportingService2010.ListCacheRefreshPlans%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetCacheRefreshPlanProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|  
 |Parametri|<xref:ReportService2010.ReportingService2010.GetItemParameters%2A>|<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|  
 |Opzioni di esecuzione|<xref:ReportService2010.ReportingService2010.GetExecutionOptions%2A>|<xref:ReportService2010.ReportingService2010.SetExecutionOptions%2A>|  
@@ -199,7 +199,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
   
 ##  <a name="bkmk_parameter_description"></a> Descrizione dei parametri  
   
-|Parametro|Descrizione|Obbligatorio|  
+|Parametro|Descrizione|Obbligatoria|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|URL del server di report di origine|Sì|  
 |**-u** dominio\password **-p** password|Credenziali per il server di origine.|FACOLTATIVO, se non viene impostato vengono utilizzate le credenziali predefinite|  
@@ -314,7 +314,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
  Eseguire nuovamente lo script con il flag **–t** per visualizzare un messaggio simile a questo:  
   
--   System.Exception: Impossibile connettersi al server: https://\<nomeserver>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Richiesta non riuscita con stato HTTP 401: Non autorizzato**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage messaggio risposta WebResponse, Stream responseStream, Boolean asyncCall) in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password Il dominio di stringa, Int32 timeout) in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fine dell'analisi dello stack dell'eccezione interna--  
+-   System.Exception: Non è stato possibile connettersi al server: https://\<nomeserver>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Richiesta non riuscita con stato HTTP 401: Non autorizzato**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage messaggio risposta WebResponse, Stream responseStream, Boolean asyncCall) in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password Il dominio di stringa, Int32 timeout) in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---fine dell'analisi dello stack dell'eccezione interna--  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

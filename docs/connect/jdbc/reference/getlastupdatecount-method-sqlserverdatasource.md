@@ -16,10 +16,10 @@ ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d284e02be13af60bf7d8e7d447835f7eccd90a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982605"
 ---
 # <a name="getlastupdatecount-method-sqlserverdatasource"></a>Metodo getLastUpdateCount (SQLServerDataSource)
@@ -37,7 +37,7 @@ public boolean getLastUpdateCount()
 ## <a name="return-value"></a>Valore restituito  
  **true** se lastUpdateCount è abilitato. In caso contrario, **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la proprietà lastUpdateCount è impostata su **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] restituirà solo l'ultimo conteggio aggiornamenti da un'istruzione SQL passata al server. Se la proprietà lastUpdateCount è impostata su **false**, il driver restituirà tutti i conteggi aggiornamenti, inclusi quelli restituiti dai trigger che possono essere stati attivati. Se la proprietà lastUpdateCount non è impostata, il metodo getLastUpdateCount restituisce il valore predefinito **true**.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 6: Adding Grouping and Totals (Reporting Services) (Lezione 6: Aggiunta di gruppi e totali (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 6: Aggiunta di gruppi e totali (Reporting Services) | Microsoft Docs'
 ms.date: 04/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65089672"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
 
 In questa lezione finale dell'esercitazione si aggiungeranno raggruppamenti e totali al report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per organizzare e riepilogare i dati.  
 
@@ -28,7 +28,7 @@ In questa lezione finale dell'esercitazione si aggiungeranno raggruppamenti e to
     > [!NOTE]
     > Si noti che nell'handle di riga è ora presente una parentesi, che indica un gruppo. La tabella contiene ora due colonne con l'espressione `[Date]`, una su ogni lato di una linea verticale tratteggiata.
     >
-    >![gruppo data aggiunto](media/rs-basictablegroups1design.png "gruppo data aggiunto")
+    >![Gruppo di date aggiunto](media/rs-basictablegroups1design.png "Gruppo di date aggiunto")
 4. Dal riquadro **Dati report** trascinare il campo `[Order]` nel riquadro **Gruppi di righe**. Posizionarlo sotto **Date** e sopra **= (Dettagli)** .
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
@@ -38,7 +38,7 @@ In questa lezione finale dell'esercitazione si aggiungeranno raggruppamenti e to
 
 5. Eliminare le colonne con le espressioni `[Date]` e `[Order]` originali a destra della linea doppia. Selezionare gli handle delle due colonne, fare clic con il pulsante destro del mouse e scegliere **Elimina colonne**. Progettazione report rimuoverà le espressioni delle righe singole, in modo da visualizzare solo le espressioni di raggruppamento.
 
-    ![Selezionare le colonne da eliminare](media/rs-basictablegroupsdeletecols.gif "Selezionare colonne da eliminare")
+    ![Selezione colonne da eliminare](media/rs-basictablegroupsdeletecols.gif "Selezione colonne da eliminare")
 
 6. Per formattare la nuova colonna `[Date]`, fare clic con il pulsante destro del mouse sulla cella dell'area dati contenente l'espressione `[Date]` e scegliere **Proprietà casella di testo**.
 7. Selezionare **Numero** nella casella di riepilogo della colonna più a sinistra e **Data** nella casella di riepilogo **Categoria**.
@@ -58,7 +58,7 @@ In questa lezione finale dell'esercitazione si aggiungeranno raggruppamenti e to
 6. Scegliere **Colore di sfondo** > quadrato **Grigio chiaro** dal menu **Formato**.
 7. Selezionare **OK** per applicare la formattazione.
 
-   ![Visualizzazione progettazione: tabella di base con totale degli ordini](media/rs-basictablesumlinetotaldesign.gif "Visualizzazione progettazione: tabella semplice con totale degli ordini")
+   ![Visualizzazione Progettazione: tabella di base con totale degli ordini](media/rs-basictablesumlinetotaldesign.gif "Visualizzazione Progettazione: tabella di base con totale degli ordini")
 
 ## <a name="add-the-daily-total-to-the-report"></a>Aggiungere il totale giornaliero al report
 
@@ -68,7 +68,7 @@ In questa lezione finale dell'esercitazione si aggiungeranno raggruppamenti e to
 4. Scegliere **Colore di sfondo** > quadrato **Arancione** dal menu **Formato**.
 5. Selezionare **OK** per applicare la formattazione.
 
-   ![Impostare il colore di sfondo su arancione](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+   ![Impostare il colore di sfondo su Arancione](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
 ## <a name="add-the-grand-total-to-the-report"></a>Aggiungere il totale complessivo al report
 
@@ -78,13 +78,13 @@ In questa lezione finale dell'esercitazione si aggiungeranno raggruppamenti e to
 4. Scegliere **Colore di sfondo** > quadrato **Azzurro** dal menu **Formato**.
 5. Selezionare **OK** per applicare la formattazione.
 
-    ![Visualizzazione progettazione: totale complessivo nella tabella semplice](media/rs-basictablesumgrandtotaldesign.gif "visualizzazione progettazione: totale complessivo nella tabella semplice")
+    ![Visualizzazione Progettazione: totale complessivo in una tabella di base](media/rs-basictablesumgrandtotaldesign.gif "Visualizzazione Progettazione: totale complessivo in una tabella di base")
 
 ## <a name="preview-the-report"></a>Visualizzare l'anteprima del report
 
 Per visualizzare in anteprima le modifiche apportate alla formattazione, selezionare la scheda **Anteprima**. Sulla barra degli strumenti **Anteprima** selezionare il pulsante **Ultima pagina**, visualizzato come ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). I risultati dovrebbero avere l'aspetto seguente:
 
-   ![Anteprima: tabella semplice con totale complessivo](media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella semplice con totale complessivo")
+   ![Anteprima: tabella di base con totale complessivo](media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella di base con totale complessivo")
 
 ## <a name="publishing-the-report-to-the-report-server-optional"></a>Pubblicazione del report nel *server di report* (facoltativo)
 
@@ -92,11 +92,11 @@ Un passaggio facoltativo consiste nel pubblicare il report completato nel server
 
 1. Scegliere **Proprietà Tutorial** dal menu **Progetto**.
 2. In **TargetServerURL** digitare il nome del server di report in uso, ad esempio:
-    - `http:/<servername>/reportserver`
+    - `http:/<servername>/reportserver` oppure
     - `https://localhost/reportserver` funziona se la progettazione del report viene eseguita nel server di report.
 
 3. Il nome di **TargetReportFolder** è Tutorial, dal nome del progetto. Progettazione report distribuisce il report in questa cartella.
-4. Fare clic su **OK**.
+4. Selezionare **OK**.
 5. Scegliere **Distribuisci Tutorial** dal menu **Compila**.
 
     Se viene visualizzato un messaggio simile al seguente nella finestra **Output**, la distribuzione è stata completata correttamente.
@@ -104,12 +104,12 @@ Un passaggio facoltativo consiste nel pubblicare il report completato nel server
     > ------ Compilazione avviata: Progetto: tutorial, Configurazione: Debug ------  
     > 'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato.  
     > Compilazione completata -- 0 errori, 0 avvisi  
-    > ------ Distribuzione avviata: Progetto: tutorial, Configurazione: Debug ------  
+    > ------ Stato distribuzione: Progetto: tutorial, Configurazione: Debug ------  
     > È in corso la distribuzione in `https://[server name]/reportserver`  
     > Distribuzione report '/tutorial/Sales Orders'.  
     > Distribuzione completata -- 0 errori, 0 avvisi  
     > ========== Compilazione: 1 completate o aggiornate, 0 non riuscite, 0 ignorate ==========  
-    > ========== Distribuzione: 1 completate, 0 non riuscite, 0 ignorate ==========  
+    > ========== Distribuzione: 1 completata, 0 non riuscite, 0 ignorate ==========  
 
     Se viene visualizzato un messaggio di errore simile al seguente, verificare di avere le autorizzazioni appropriate per il server di report e di aver avviato [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegi di amministratore.
     >

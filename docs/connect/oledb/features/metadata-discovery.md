@@ -1,6 +1,6 @@
 ---
 title: Individuazione dei metadati | Microsoft Docs
-description: Individuazione dei metadati nel driver OLE DB per SQL Server
+description: Individuazione dei metadati in OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989057"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
@@ -28,18 +28,18 @@ ms.locfileid: "67989057"
   
  Se si sviluppa un'applicazione utilizzando il driver OLE DB per SQL Server ma si esegue la connessione a una versione del server precedente a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], la funzionalità di individuazione dei metadati corrisponderà alla versione del server.  
   
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Osservazioni   
  Le funzioni membro OLE DB seguenti sono state migliorate in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] per garantire una migliore individuazione dei metadati:  
   
 -   IColumnsInfo::GetColumnInfo  
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (vedere [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) per altre informazioni)  
+-   ICommandWithParameters:: GetParameterInfo (per altre informazioni, vedere [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md))  
   
  È inoltre possibile notare un miglioramento nelle prestazioni quando si specifica il formato dei metadati utilizzando IBCPSession::BCPSetBulkMode  
   
- L'individuazione dei metadati migliorata nel driver OLE DB per SQL Server è possibile a causa dell'aggiunta di due stored procedure [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]in:  
+ Il miglioramento dell'individuazione dei metadati in OLE DB Driver per SQL Server è stato reso possibile dall'aggiunta di due stored procedure in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
   
 -   sp_describe_first_result_set  
   

@@ -1,10 +1,7 @@
 ---
-title: Selezionare un account per il servizio SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 05/04/2017
+title: Selezionare un account per il servizio SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811548"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253227"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -84,10 +86,10 @@ Nella tabella seguente vengono elencati i tipi di account di Windows che possono
 |------------------------|-------------------------|--------------------|--------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)] Account di dominio di Windows (membro del gruppo Administrators di Windows)|Supportato|Supportato|Supportato|  
 |Account di dominio di Windows (non amministrativo)|Supportato<br /><br />Vedere Limitazione 1 di seguito.|Supportato<br /><br />Vedere Limitazione 1 di seguito.|Supportato<br /><br />Vedere Limitazione 1 di seguito.|  
-|Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<br /><br />Vedere Limitazione 1, 3 e 4 di seguito.|Non supportato|Non supportato|  
-|Account Utente locale (non amministrativo)|Supportato<br /><br />Vedere Limitazione 1 di seguito.|Non supportato|Non applicabile|  
-|Account Sistema locale (NT AUTHORITY\System)|Supportato<br /><br />Vedere Limitazione 2 di seguito.|Non supportato|Supportato<br /><br />Vedere Limitazione 2 di seguito.|  
-|Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportato|Non supportato|Non supportato|  
+|Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<br /><br />Vedere Limitazione 1, 3 e 4 di seguito.|Non supportate|Non supportate|  
+|Account Utente locale (non amministrativo)|Supportato<br /><br />Vedere Limitazione 1 di seguito.|Non supportate|Non applicabile|  
+|Account Sistema locale (NT AUTHORITY\System)|Supportato<br /><br />Vedere Limitazione 2 di seguito.|Non supportate|Supportato<br /><br />Vedere Limitazione 2 di seguito.|  
+|Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportate|Non supportate|Non supportate|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitazione 1: uso di account non amministrativi per l'amministrazione multiserver  
 È possibile che l'integrazione nei server di destinazione non riesca e venga visualizzato il messaggio di errore "Operazione di integrazione non riuscita".  
@@ -118,7 +120,7 @@ Per risolvere il problema, riavviare il computer in cui [!INCLUDE[ssNoVersion](.
   
 **Per specificare il profilo di posta di SQL Server Agent**  
   
--   [Procedura: Configurare Posta elettronica di SQL Server Agent per l'uso di Posta elettronica database (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Procedura: Configurare Posta elettronica di SQL Server Agent per l'uso di Posta elettronica database](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di specificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve essere avviato all'avvio del sistema operativo.  

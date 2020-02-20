@@ -16,10 +16,10 @@ ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953288"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>Metodo getCharacterStream (java.lang.String)
@@ -45,8 +45,8 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getCharacterStream viene specificato dal metodo getCharacterStream nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getCharacterStream viene specificato dal metodo getCharacterStream nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo legge solo tipi di dati character Unicode di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quali nchar, nvarchar, nvarchar(max) e ntext. Tutti gli altri tipi di dati, inclusi i tipi di caratteri ASCII, genereranno un'eccezione. Per leggere i tipi di dati ASCII, usare il metodo [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   

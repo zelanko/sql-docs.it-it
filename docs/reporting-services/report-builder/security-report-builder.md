@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593847"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190102"
 ---
 # <a name="security-report-builder"></a>Sicurezza (Generatore report)
-  Generatore report è un'applicazione client di creazione di report progettata per utilizzare un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il server di report può essere configurato per lavorare in modalità nativa come server autonomo o in modalità integrata SharePoint per supportare i report in un sito di SharePoint.  
+  Generatore report è un'applicazione client di creazione di report progettata per utilizzare un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il server di report può essere configurato per lavorare in modalità nativa come server autonomo o in modalità integrata SharePoint per supportare i report in un sito di SharePoint.  
   
  In Generatore report è possibile creare report, set di dati condivisi e parti del report riutilizzabili. Da un server di report o un sito di SharePoint, è possibile modificare report e aggiungere origini dati condivise, set di dati condivisi e parti del report condivise.  
   
@@ -90,10 +90,10 @@ ms.locfileid: "73593847"
   
  In fase di progettazione del report, le credenziali vengono utilizzare per eseguire query di set di dati e visualizzare in anteprima il report. In fase di esecuzione, le credenziali vengono utilizzare per eseguire il report e memorizzare nella cache i risultati delle query. È inoltre possibile memorizzare indipendentemente nella cache i risultati di query del set di dati condiviso. Le credenziali nella fase di progettazione e nella fase di esecuzione possono essere differenti. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- Per altre informazioni sulla protezione dei dati, vedere [Centro sicurezza per SQL Server motore di database e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
+ Per altre informazioni sulla protezione dei dati, vedere il [Centro sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
   
- Per altre informazioni, vedere la pagina relativa alla [connessioni dati, alle origini dati e alle stringhe di connessione in Generatore report](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altre informazioni sulle origini dati, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Informazioni sui modelli e sui filtri di sicurezza  
@@ -107,7 +107,7 @@ ms.locfileid: "73593847"
   
 -   Non utilizzare parametri basati su parametri di query e che sono di tipo **Text** a meno che si forniscano valori validi. Un elenco dei valori disponibili aiuta un utente a scegliere solo valori validi. Senza questo elenco non è possibile limitare i valori che possono essere immessi da un utente.  
   
--   Non usare il parametro globale [&UserID] per proteggere i dati privati. Come parametro del report, questo valore può essere specificato in un URL del report tramite la sintassi di accesso agli URL. L'utilizzo di questo valore in un'espressione in un set di dati condiviso evita la memorizzazione nella cache del set di dati. Per altre informazioni, vedere [riferimento ai parametri di accesso con URL](../../reporting-services/url-access-parameter-reference.md).  
+-   Non usare il parametro globale [&UserID] per proteggere i dati privati. Come parametro del report, questo valore può essere specificato in un URL del report tramite la sintassi di accesso agli URL. L'utilizzo di questo valore in un'espressione in un set di dati condiviso evita la memorizzazione nella cache del set di dati. Per altre informazioni, vedere [Informazioni di riferimento sui parametri di accesso con URL](../../reporting-services/url-access-parameter-reference.md).  
   
  Una volta che gli elementi sono pubblicati in un server di report, l'amministratore del server di report può facilitarne la protezione assegnando la sicurezza basata sui ruoli o cartella e la sicurezza a livello di elemento. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md).  
   

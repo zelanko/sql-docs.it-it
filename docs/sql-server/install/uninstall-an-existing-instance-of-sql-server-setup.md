@@ -1,7 +1,7 @@
 ---
-title: Disinstallare un'istanza esistente di SQL Server (programma di installazione) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2019
+title: Disinstallare un'istanza esistente
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251072"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258955"
 ---
-# <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (programma di installazione)
+# <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (Programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   In questo articolo viene descritto come disinstallare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi inclusi in questo articolo consentono anche di preparare il sistema per la reinstallazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,19 +55,19 @@ ms.locfileid: "71251072"
     > I database ReportServer sono inclusi in SQL Server Reporting Services.   
 
  
-1.  **Arrestare tutti i** **servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Prima di disinstallare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è consigliabile arrestare tutti i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le connessioni attive possono impedire la corretta esecuzione della disinstallazione.  
+1.  **Arrestare tutti** i **servizi** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Prima di disinstallare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è consigliabile arrestare tutti i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le connessioni attive possono impedire la corretta esecuzione della disinstallazione.  
   
 1.  **Utilizzare un account dotato di autorizzazioni appropriate.** Accedere al server utilizzando l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account che dispone di autorizzazioni equivalenti. È possibile, ad esempio, accedere al server utilizzando un account membro del gruppo di amministratori locali.  
   
-## <a name="uninstall"></a>Uninstall 
+## <a name="uninstall"></a>Disinstallare 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10 / 2016 +](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10 / 2016 +](#tab/Windows10)
 
 Per disinstallare SQL Server da Windows 10, Windows Server 2016, Windows Server 2019 e versioni successive, seguire questa procedura: 
 
 1. Per iniziare il processo di rimozione, passare a **Impostazioni** dal menu Start e quindi scegliere **App**. 
 1. Cercare `sql` nella casella di ricerca. 
-1. Selezionare **Microsoft SQL Server (versione) (bit)** . Ad esempio, `Microsoft SQL Server 2017 (64-bit)`.
+1. Selezionare **Microsoft SQL Server (versione) (bit)** . Ad esempio: `Microsoft SQL Server 2017 (64-bit)`.
 1. Selezionare **Disinstalla**.
  
     ![Disinstallare SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
@@ -84,12 +84,12 @@ Per disinstallare SQL Server da Windows 10, Windows Server 2016, Windows Server 
  
 1. Aggiornare la finestra **App e funzionalità** per verificare che l'istanza di SQL Server sia stata rimossa correttamente e determinare gli eventuali componenti di SQL Server ancora presenti. Rimuovere anche questi componenti da questa finestra, se lo si desidera. 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 Per disinstallare SQL Server da Windows Server 2008, Windows Server 2012 e Windows 2012 R2, seguire questa procedura: 
 
 1. Per avviare il processo di rimozione, passare al **Pannello di controllo** e quindi selezionare **Programmi e funzionalità**.
-1. Fare clic con il pulsante destro del mouse su **Microsoft SQL Server (versione) (bit)**  e scegliere **Disinstalla**. Ad esempio, `Microsoft SQL Server 2012 (64-bit)`.  
+1. Fare clic con il pulsante destro del mouse su **Microsoft SQL Server (versione) (bit)**  e scegliere **Disinstalla**. Ad esempio: `Microsoft SQL Server 2012 (64-bit)`.  
   
     ![Disinstallare SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 

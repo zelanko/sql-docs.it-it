@@ -1,6 +1,6 @@
 ---
-title: Motore di database - Connetti al server (pagina Proprietà connessione) | Microsoft Docs
-ms.custom: ''
+title: Motore di database - Connetti al server (pagina Proprietà connessione)
+ms.custom: seo-lt-2019
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93c9069cf3a52cbbfa961737350976c3beda4304
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265098"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245014"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Motore di database - Connetti al server (pagina Proprietà connessione)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Usare questa scheda per visualizzare o specificare le opzioni per la connessione a un'istanza del [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o alla registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+Usare questa scheda per visualizzare o specificare le opzioni per la connessione a un'istanza del [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Connetti al database**  
 Selezionare dall'elenco un database al quale connettersi. Se si seleziona **<default>** , viene stabilita la connessione al database predefinito del server. Se si seleziona **<Browse server>** , sarà possibile cercare il database a cui connettersi tra quelli disponibili nel server.  
@@ -43,7 +43,7 @@ Immettere il numero di secondi di attesa dell'attivazione di una connessione pri
 **Timeout esecuzione**  
 Immettere il numero massimo di secondi di attesa del completamento dell'esecuzione di un'attività nel server. Il valore predefinito è zero secondi, che indica l'assenza di un timeout.  
   
-**Crittografa connessione**  
+**Crittografia connessione**  
 Consente di forzare la crittografia della connessione.  
   
 **Utilizza colore personalizzato**  
@@ -61,7 +61,7 @@ Quando si esegue la connessione con l'autenticazione **Active Directory - Univer
 **Reimposta tutto**  
 Consente di sostituire i valori predefiniti a tutti i valori delle proprietà di connessione immessi manualmente.  
   
-**Connect**  
+**Connettere**  
 Consente di eseguire un tentativo di connessione con i valori elencati.  
   
 **Opzioni**  
@@ -71,7 +71,7 @@ Fare clic su questo pulsante per modificare la finestra di dialogo e nascondere 
 Durante la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Server registrati**, scegliere questa opzione per verificare la connessione.  
   
 **Salva**  
-Salva le impostazioni in **Server registrati**.  
+Consente di salvare le impostazioni in **Server registrati**.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Finestra di dialogo Proprietà connessione](../../ssms/f1-help/connection-properties-dialog-box.md)  

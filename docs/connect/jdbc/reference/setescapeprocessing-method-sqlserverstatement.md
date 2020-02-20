@@ -16,10 +16,10 @@ ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17df08b401c7e1ae4e1f5d3b386808f11e3bb180
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974302"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>Metodo setEscapeProcessing (SQLServerStatement)
@@ -40,13 +40,13 @@ public final void setEscapeProcessing(boolean enable)
 #### <a name="parameters"></a>Parametri  
  *enable*  
   
- **true** per abilitare l'elaborazione di escape. In caso contrario, **false**.  
+ **true** per abilitare l'elaborazione delle sequenze di escape. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setEscapeProcessing viene specificato dal Metodo setEscapeProcessing nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setEscapeProcessing viene specificato dal metodo setEscapeProcessing nell'interfaccia java.sql.Statement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

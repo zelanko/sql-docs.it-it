@@ -11,10 +11,10 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71712967"
 ---
 # <a name="using-encryption"></a>Uso della crittografia
@@ -32,7 +32,7 @@ L'abilitazione della crittografia TLS contribuisce alla sicurezza del traffico d
 Negli argomenti di questa sezione viene descritto il supporto della crittografia TLS in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e vengono illustrate le nuove proprietà di connessione e le modalità disponibili per la configurazione dell'archivio di attendibilità sul lato client.  
   
 > [!NOTE]  
-> È consigliabile usare la proprietà di connessione **hostNameInCertificate** per convalidare un certificato TLS.  
+> Per convalidare un certificato TLS, è consigliabile usare la proprietà di connessione **hostNameInCertificate**.  
 
 ## <a name="in-this-section"></a>Contenuto della sezione  
 

@@ -1,6 +1,7 @@
 ---
-title: 'Lesson 1: Creating a Report Server Project (Reporting Services) (Lezione 1: Creazione di un progetto server report (Reporting Services)) | Microsoft Docs'
-ms.date: 05/01/2019
+title: 'Lezione 1: Creare un progetto server di report | Microsoft Docs'
+description: In questa lezione si creano un progetto server di report e un file di definizione del report (con estensione rdl) usando Progettazione report.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244318"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lezione 1: Creazione di un progetto server report (Reporting Services)
+# <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lezione 1: Creare un progetto server di report (Reporting Services)
 
 In questa lezione si creano un *progetto server di report* e un file di *definizione del report (con estensione rdl)* usando *Progettazione report*.
 
@@ -37,7 +38,7 @@ Quando si creano report con Progettazione report, viene creato un progetto serve
     > [!IMPORTANT]
     > Per Visual Studio, se Reporting Services non è disponibile nella colonna a sinistra, aggiungere Progettazione report installando il carico di lavoro SSDT. Scegliere **Ottieni strumenti e funzionalità** dal menu **Strumenti** e quindi selezionare **SQL Server Data Tools** nei carichi di lavoro visualizzati. Se nella colonna centrale non vengono visualizzati gli oggetti Reporting Services, aggiungere le estensioni di Reporting Services. Scegliere **Estensioni e aggiornamenti** > **Online** dal menu **Strumenti**. Nella colonna centrale selezionare **Microsoft Reporting Services Projects** (Progetti di Microsoft Reporting Services) > **Download** nelle estensioni visualizzate. Per SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-3. Selezionare l'icona di **Progetto server di report** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;nella colonna centrale della finestra di dialogo **Nuovo progetto**.
+3. Selezionare l'icona di **Progetto server di report**&nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;nella colonna centrale della finestra di dialogo **Nuovo progetto**.
 
 4. Nella casella di testo **Nome** digitare "Tutorial" come nome del progetto. Per impostazione predefinita, nella casella di testo **Percorso** viene visualizzato il percorso della cartella "Documenti\Visual Studio 20xx\Projects\". Progettazione report crea una cartella denominata Tutorial in questo percorso e il progetto Tutorial in tale cartella. Se il progetto non appartiene a una soluzione di Visual Studio, Visual Studio crea anche un file di soluzione con estensione sln.
 
@@ -67,4 +68,4 @@ Sono stati così creati il progetto report Tutorial e il report Sales Orders. Ne
 - Creare un set di dati dall'origine dati
 - Progettare e formattare il layout del report
 
-Passare a [Lezione 2: Specifica delle informazioni di connessione &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Procedere a [Lezione 2: Definizione delle informazioni di connessione &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

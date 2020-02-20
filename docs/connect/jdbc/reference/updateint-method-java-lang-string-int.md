@@ -16,10 +16,10 @@ ms.assetid: b0aef8f7-057e-4b57-892c-d120f2daed77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11ee34cd5281fb7db564e965556ff5ee455fb7d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998846"
 ---
 # <a name="updateint-method-javalangstring-int"></a>Metodo updateInt (java.lang.String, int)
@@ -42,16 +42,16 @@ public void updateInt(java.lang.String columnName,
   
  *x*  
   
- Valore **int** .  
+ Valore **int**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateInt viene specificato dal metodo updateInt nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo &#40;updateInt SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
+ [Metodo updateInt &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

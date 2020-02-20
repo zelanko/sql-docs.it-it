@@ -1,20 +1,21 @@
 ---
-title: Creare un database del server di report, Gestione configurazione SSRS | Microsoft Docs
+title: Creare un database del server di report, Gestione configurazione | Microsoft Docs
+description: La modalità nativa di SQL Server Reporting Services usa due database relazionali di SQL Server per l'archiviazione di metadati e oggetti del server di report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123011"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253312"
 ---
-# <a name="create-a-report-server-database"></a>Creare un database del server di report 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Creare un database del server di report, Gestione configurazione SSRS  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 

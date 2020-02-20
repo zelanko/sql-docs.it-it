@@ -1,27 +1,27 @@
 ---
 title: Supporto di SqlClient per il ripristino di emergenza a disponibilità elevata
-description: Viene descritto il supporto SqlClient per i gruppi di disponibilità di ripristino di emergenza a disponibilità elevata (AlwaysOn).
+description: Viene descritto il supporto di SqlClient per gruppi di disponibilità AlwaysOn per il ripristino di emergenza a disponibilità elevata.
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258554"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto di SqlClient per il ripristino di emergenza a disponibilità elevata
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-In questo argomento viene illustrato provider di dati Microsoft SqlClient per il supporto SQL Server per il ripristino di emergenza a disponibilità elevata, Gruppi di disponibilità AlwaysOn.  La funzionalità dei gruppi di disponibilità AlwaysOn è stata aggiunta in SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione online di SQL Server.  
+In questo argomento viene illustrato il provider di dati Microsoft SqlClient per il supporto in SQL Server dei gruppi di disponibilità AlwaysOn per il ripristino di emergenza e la disponibilità elevata.  La funzionalità dei gruppi di disponibilità AlwaysOn è stata aggiunta in SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione online di SQL Server.  
   
 È ora possibile specificare il listener di un gruppo di disponibilità (AG) (disponibilità elevata, ripristino di emergenza) o l'istanza del cluster di failover di SQL Server 2012 nella proprietà di connessione. Se un'applicazione SqlClient è connessa a un database AlwaysOn che esegue il failover, dopo il failover la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per proseguire con l'esecuzione.  
   
@@ -59,7 +59,7 @@ Usare le linee guida seguenti per connettersi a un server in un gruppo di dispon
   
 - La connessione a un'istanza di SQL Server configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
-- Il comportamento di un'applicazione che usa la proprietà di connessione `MultiSubnetFailover` non è influenzato dal tipo di autenticazione, ovvero autenticazione di SQL Server, autenticazione Kerberos o autenticazione di Windows.  
+- Il comportamento di un'applicazione in cui viene usata la proprietà di connessione `MultiSubnetFailover` non è influenzato dal tipo di autenticazione, ovvero autenticazione di SQL Server, autenticazione Kerberos o autenticazione di Windows.  
   
 - Aumentare il valore di `Connect Timeout` in base al tempo di failover e in modo da ridurre i ripetuti tentativi di connessione dell'applicazione.  
   
@@ -76,7 +76,7 @@ Usare le linee guida seguenti per connettersi a un server in un gruppo di dispon
 Una connessione non verrà eseguita correttamente se una replica primaria è configurata per rifiutare i carichi di lavoro in sola lettura e nella stringa di connessione è contenuto `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aggiornamento per l'uso di cluster su più subnet dal mirroring del database  
-Si verificherà un errore di connessione (<xref:System.ArgumentException>) se nella stringa di connessione sono presenti le parole chiave di connessione `MultiSubnetFailover` e `Failover Partner` o se vengono utilizzati `MultiSubnetFailover=True` e un protocollo diverso da TCP. Si verificherà un errore (<xref:Microsoft.Data.SqlClient.SqlException>) anche se viene usato `MultiSubnetFailover` e se SQL Server restituisce una risposta del partner di failover in cui viene indicato che fa parte di una coppia del mirroring del database.  
+Si verificherà un errore di connessione (<xref:System.ArgumentException>) se nella stringa di connessione sono presenti le parole chiave di connessione `MultiSubnetFailover` e `Failover Partner` o se vengono usati `MultiSubnetFailover=True` e un protocollo diverso da TCP. Si verificherà un errore (<xref:Microsoft.Data.SqlClient.SqlException>) anche se viene usato `MultiSubnetFailover` e se SQL Server restituisce una risposta del partner di failover in cui viene indicato che fa parte di una coppia del mirroring del database.  
   
 Se si aggiorna un'applicazione SqlClient che usa il mirroring del database in uno scenario su più subnet, è necessario rimuovere la proprietà di connessione `Failover Partner` e sostituirla con `MultiSubnetFailover` impostata su `True`, nonché sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se in una stringa di connessione vengono utilizzati `Failover Partner` e `MultiSubnetFailover=True`, verrà generato un errore dal driver. Se, tuttavia, in una stringa di connessione vengono utilizzati `Failover Partner` e `MultiSubnetFailover=False` (o `ApplicationIntent=ReadWrite`), nell'applicazione verrà utilizzato il mirroring del database.  
   
@@ -87,7 +87,7 @@ Se `ApplicationIntent=ReadOnly`, nel client viene richiesto un carico di lavoro 
   
 La parola chiave `ApplicationIntent` non funziona con i database legacy di sola lettura.  
   
-Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la clausola `ALLOW_CONNECTIONS` delle istruzioni `PRIMARY_ROLE` e `SECONDARY_ROLE`Transact-SQL.  
+Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la clausola `ALLOW_CONNECTIONS` delle istruzioni Transact-SQL `PRIMARY_ROLE` e `SECONDARY_ROLE`.  
   
 La parola chiave `ApplicationIntent` è utilizzata per abilitare il routing di sola lettura.  
   

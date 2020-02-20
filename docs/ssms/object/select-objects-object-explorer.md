@@ -1,6 +1,6 @@
 ---
-title: Seleziona oggetti (Esplora oggetti) | Microsoft Docs
-ms.custom: ''
+title: Seleziona oggetti (Esplora oggetti)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bed66d2d2d7bfcd275cc5674c0ec41edd2a0e1b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c60f25406cb10e6ca6a12abe10a65a8a91fd1f59
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262236"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243525"
 ---
 # <a name="select-objects-object-explorer"></a>Seleziona oggetti (Esplora oggetti)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,12 +25,12 @@ Usare la finestra di dialogo **Seleziona oggetti** per aggiungere un oggetto a u
   
 ## <a name="options"></a>Opzioni  
 **Selezionare i tipi di oggetti seguenti**  
-Consente di visualizzare un elenco dei tipi ai quali appartengono gli oggetti da selezionare I tipi includono entità ed entità a sicurezza diretta a livello di database e a livello di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa casella viene popolata con le selezioni eseguite nella finestra di dialogo **Seleziona tipi di oggetti** alla quale è possibile accedere con il pulsante **Tipi di oggetti** .  
+Consente di visualizzare un elenco dei tipi ai quali appartengono gli oggetti da selezionare I tipi includono entità ed entità a sicurezza diretta a livello di database e a livello di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa casella viene popolata con le selezioni eseguite nella finestra di dialogo **Seleziona tipi di oggetti** alla quale è possibile accedere con il pulsante **Tipi di oggetti** .  
   
 **Immettere i nomi degli oggetti da selezionare**  
 Consente di immettere un elenco separato da punto e virgola dei nomi degli oggetti da selezionare. Gli oggetti da selezionare devono essere del tipo elencato nella casella **Selezionare i tipi di oggetti seguenti** . È possibile selezionare gli oggetti nell'elenco che viene visualizzato facendo clic sul pulsante **Sfoglia** .  
   
-**Tipi di oggetti**  
+**Tipi di oggetto**  
 Consente di visualizzare un elenco di tipi di oggetti. Effettuare una o più selezioni selezionando la casella di controllo corrispondente al tipo.  
   
 **Controlla nomi**  

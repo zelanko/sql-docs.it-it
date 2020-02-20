@@ -16,10 +16,10 @@ ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc02d31a1d13a3d32f581da6fb3367473cb88bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955130"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>Metodo deleteRow (SQLServerResultSet)
@@ -37,8 +37,8 @@ public void deleteRow()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo deleteRow viene specificato dal metodo deleteRow nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo deleteRow viene specificato dal metodo deleteRow nell'interfaccia java.sql.ResultSet.  
   
  Non è possibile chiamare questo metodo quando il cursore si trova sulla riga di inserimento.  
   

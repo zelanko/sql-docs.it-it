@@ -16,10 +16,10 @@ ms.assetid: 44474000-8951-49ee-93a5-c8cb879eaf55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25731d68f767fbdd614525e5a39613fc46ae6206
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978837"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Metodo getTimestamp (java.lang.String, java.util.Calendar) (SQLServerResultSet)
@@ -45,12 +45,12 @@ public java.sql.Timestamp getTimestamp(java.lang.String colName,
  Oggetto Calendar.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto timestamp.  
+ Oggetto Timestamp.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce valori solo dalle colonne datetime e smalldatetime di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -9,10 +9,10 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72252135"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
@@ -23,9 +23,9 @@ In questa esercitazione viene aggiunto un parametro in un report impaginato di [
 I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report. 
    
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo stimato per il completamento dell'esercitazione: 25 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 25 minuti  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -52,7 +52,7 @@ Creare un report matrice, un'origine dati e un set di dati.
   
 7.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati dall'elenco o passare al server di report per selezionarne una. Selezionare un'origine dati di tipo **SQL Server**.  
       
-8.  Scegliere **Avanti**.  
+8.  Fare clic su **Avanti**.  
 
     Potrebbe essere necessario immettere le credenziali.    
      
@@ -82,11 +82,11 @@ Creare un report matrice, un'origine dati e un set di dati.
   
 11. Sulla barra degli strumenti di Progettazione query fare clic su **Esegui** ( **!** ) per visualizzare i dati.   
   
-    Il set di risultati include 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita nelle colonne seguenti: StoreID, Subcategory, Quantity. Il nome del punto vendita non è incluso nel set di risultati. Più avanti in questa esercitazione, si cercherà il nome del punto vendita che corrisponde all'identificatore del punto vendita in un set di dati separato.  
+    Il set di risultati è costituito da 11 righe di dati in cui viene mostrata la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita, illustrati nelle colonne seguenti: StoreID, Subcategory, Quantity. In questa query, il nome del punto vendita non è parte del set di risultati. Più avanti in questa esercitazione, si cercherà il nome del punto vendita che corrisponde all'identificatore del punto vendita in un set di dati separato.  
   
     Questa query non contiene parametri di query. Verranno aggiunti più avanti in questa esercitazione.   
   
-12. Scegliere **Avanti**.  
+12. Fare clic su **Avanti**.  
   
 ## <a name="CompleteWizard"></a>2. Organizzare i dati e scegliere il layout nella procedura guidata  
 La procedura guidata offre una progettazione iniziale per la visualizzazione dei dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della tabella o della matrice.  
@@ -101,13 +101,13 @@ La procedura guidata offre una progettazione iniziale per la visualizzazione dei
   
     I valori delle quantità vendute sono stati organizzati in righe raggruppate per sottocategoria, con una colonna per ogni punto vendita.  
   
-4.  Scegliere **Avanti**.  
+4.  Fare clic su **Avanti**.  
   
 5.  Nella pagina **Scegliere il layout** in **Opzioni**verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
     Quando si esegue il report, nell'ultima colonna verrà mostrata la quantità totale di ogni sottocategoria per tutti i punti vendita mentre nell'ultima riga verrà mostrata la quantità totale per tutte le sottocategorie per ogni punto vendita.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 8.  Fare clic su **Fine**.  
   
@@ -265,7 +265,7 @@ Nel report viene visualizzata la quantità venduta di accessori, cineprese e fot
   
 7.  Visualizzare l'anteprima del report.  
   
-Per *\@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store" perché è il primo valore del set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
+Per *\@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso America del Nord Online Store" perché è il primo valore del set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Per specificare un valore predefinito personalizzato  
   
@@ -379,7 +379,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 5.  Nel riquadro Dati report espandere la cartella **Set di dati** , fare clic con il pulsante destro del mouse su **DataSet1**e quindi fare clic su **Query**.  
   
-6.  Modificare il **segno di uguale** (=) in **IN** nella clausola [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause nella clausola last line nella clausola query:  
+6.  Modificare il **segno di uguale** (=) in **IN** nella clausola [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** nell'ultima riga della query:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -496,7 +496,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 Il report verrà salvato sul server di report. Il server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Questa operazione conclude la procedura dettagliata per l'aggiunta di un parametro al report. Per altre informazioni sui parametri, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Vedere anche  

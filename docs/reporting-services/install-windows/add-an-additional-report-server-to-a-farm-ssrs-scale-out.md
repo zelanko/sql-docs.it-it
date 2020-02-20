@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225680"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "63225680"
   
 -   (4) Rappresenta una soluzione software o hardware di bilanciamento del carico di rete.  
   
- ![Aggiunta di un server applicazioni di Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Aggiunta di un server applicazioni di Reporting Services")  
+ ![Aggiunta di un server applicazioni a Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Aggiunta di un server applicazioni a Reporting Services")  
   
  Nei seguenti passaggi si presuppone che l'installazione e la configurazione del server vengano eseguite da un amministratore. Il server verrà configurato come nuovo server applicazioni nella farm e non verrà utilizzato come un front-end Web.  
   

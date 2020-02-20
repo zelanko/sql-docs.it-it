@@ -16,10 +16,10 @@ ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c43d503fafba7d6dad8f7d982ad2f51542c61c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980184"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>Metodo getScale (SQLServerResultSetMetaData)
@@ -45,10 +45,10 @@ public int getScale(int column)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo Metodo getScale viene specificato dal Metodo getScale nell'interfaccia java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getScale viene specificato dal metodo getScale nell'interfaccia java.sql.ResultSetMetaData.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il driver JDBC 3,0 presenta modifiche del comportamento nella colonna DECIMAL_DIGITS. Per altre informazioni, vedere [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
+ Il driver JDBC 3.0 per [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta modifiche funzionali nella colonna DECIMAL_DIGITS. Per altre informazioni, vedere [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

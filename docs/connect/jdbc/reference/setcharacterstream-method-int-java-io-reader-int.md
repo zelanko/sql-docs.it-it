@@ -16,10 +16,10 @@ ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974771"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>Metodo setCharacterStream (int, java.io.Reader, int)
@@ -52,8 +52,8 @@ public final void setCharacterStream(int n,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia java. SQL. PreparedStatement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia java.sql.PreparedStatement.  
   
  Se la lunghezza del flusso è diversa da quella specificata nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   

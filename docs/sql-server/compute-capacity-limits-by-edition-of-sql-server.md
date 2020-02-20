@@ -14,10 +14,10 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067570"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
@@ -61,7 +61,7 @@ ms.locfileid: "68067570"
   
 -   Un processore fisico può essere costituito da uno o più core. Un processore fisico corrisponde a un pacchetto del processore o a un socket.  
   
-Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Se ad esempio il computer in uso dispone di due processori quad core con hyperthreading abilitato e due thread per core, sono presenti 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Si noti che:  
+Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Se ad esempio il computer in uso dispone di due processori quad core con hyperthreading abilitato e due thread per core, sono presenti 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Vale la pena notare che:  
   
 -   La capacità di calcolo di un processore logico da un solo thread di un core con l'Hyper-Threading è inferiore alla capacità di calcolo di un processore logico da quello stesso core con l'Hyper-Threading disabilitato.  
   

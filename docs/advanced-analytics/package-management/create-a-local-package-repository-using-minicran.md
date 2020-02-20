@@ -3,19 +3,19 @@ title: Creare un repository con miniCRAN
 description: Informazioni su come installare offline i pacchetti R usando miniCRAN per creare un repository locale di pacchetti e dipendenze.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727577"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479473"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creare un repository di pacchetti R locale usando miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ I repository di pacchetti sono utili negli scenari seguenti:
 
 - **Sicurezza**: molti utenti di R sono abituati a scaricare e installare nuovi pacchetti R a loro discrezione, da CRAN o da uno dei suoi siti mirror. Per motivi di sicurezza, tuttavia, i server di produzione che eseguono [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] in genere non dispongono di connettività Internet.
 
-- **Installazione offline facilitata**: per installare un pacchetto in un server offline, è necessario scaricare anche tutte le dipendenze del pacchetto. Con miniCRAN è più semplice ottenere tutte le dipendenze nel formato corretto. miniCRAN consente di evitare eventuali errori delle dipendenze quando si preparano i pacchetti per l'installazione con l'istruzione [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+- **Installazione offline facilitata**: per installare un pacchetto in un server offline, è necessario scaricare anche tutte le dipendenze del pacchetto. Con miniCRAN è più semplice ottenere tutte le dipendenze nel formato corretto ed evitare errori di dipendenza.
 
 - **Gestione delle versioni migliorata**: in un ambiente multiutente è in genere opportuno evitare l'installazione senza restrizioni di più versioni di pacchetto nel server. Usare un repository locale per rendere disponibile un set coerente di pacchetti per gli utenti.
 
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 Quando si ha un repository locale con i pacchetti necessari, spostarlo nel computer di SQL Server. La procedura seguente descrive come installare i pacchetti usando R Tools.
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> Il metodo consigliato per l'installazione dei pacchetti consiste nell'usare **sqlmlutils**. Vedere [Installare nuovi pacchetti R con sqlmlutils](install-additional-r-packages-on-sql-server.md).
+::: moniker-end
+
 1. Copiare l'intera cartella contenente il repository miniCRAN nel server in cui si prevede di installare i pacchetti. La cartella ha in genere la struttura seguente: 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ Quando si ha un repository locale con i pacchetti necessari, spostarlo nel compu
    - Ad esempio, il percorso di file predefinito per RGUI è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - Ad esempio, il percorso di file per RGUI è `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 

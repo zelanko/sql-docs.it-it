@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed100221dd827b84dba935db730d02e8268aac41
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d6c9273abda883b175a46d9695d4d231cc5bc73
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638000"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190758"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile usare l'estensione per l'elaborazione dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di SharePoint.  
@@ -28,11 +28,11 @@ ms.locfileid: "73638000"
 ## <a name="data-source-type"></a>Tipo di origine dati  
  Utilizzare il tipo di origine dati del report **Microsoft SQL Server Analysis Services**.  
   
-## <a name="connection-string"></a>Stringa di connessione  
+## <a name="connection-string"></a>Connection String  
  La stringa di connessione è l'URL alla cartella di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicata in SharePoint nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o in un'altra libreria, ad esempio `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenziali  
- Specificare le credenziali necessarie per accedere alla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Specificare le credenziali necessarie per accedere alla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Query  
  Dopo essersi connessi all'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , usare la query in formato grafico MDX per compilare una query individuando e selezionando una delle strutture di dati sottostanti. Dopo aver compilato una query, eseguirla per visualizzare dati di esempio nel riquadro dei risultati.  
@@ -45,7 +45,7 @@ ms.locfileid: "73638000"
 ## <a name="parameters"></a>Parametri  
  Nel riquadro Filtri selezionare l'opzione **Parametri** affinché un filtro crei automaticamente un parametro di report con valori disponibili che corrispondono alle selezioni del filtro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se viene aperto Generatore report dalla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , le tabelle pivot, i grafici pivot, i filtri dei dati e altre caratteristiche di layout e analitiche della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non vengono ricreati nel report. Al contrario, nel report vuoto è inclusa un'origine dati preconfigurata che punta ai dati della cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La progettazione di report basati su una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] può richiedere molto tempo a seconda del numero di filtri dei dati, di filtri, di tabelle o di grafici che si vuole ricreare nel report. Un approccio migliore consiste nel prevedere la presentazione dei dati desiderati in un report indipendentemente dalla progettazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  I dati di una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono molto compressi, mentre i dati recuperati dalla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per un report non sono compressi. Utilizzare Progettazione query per specificare i filtri e i parametri utili per limitare i dati a quelli necessari per il report.  

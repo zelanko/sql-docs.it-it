@@ -1,10 +1,9 @@
 ---
-title: Specificare la posizione di un server di destinazione | Microsoft Docs
-ms.custom: ''
+title: Specificare la posizione di un server di destinazione
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +12,17 @@ helpviewer_keywords:
 ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 99c67c3d0e3afbda0c05e3feb3ed1e0d6951f870
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ad1eb886c611da105be9c999d8ebc323edb9eb6d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552465"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245796"
 ---
-# <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>Specificare la posizione di un server di destinazione (SQL Server Management Studio)
+# <a name="specify-a-target-server39s-location"></a>Specificare la posizione di un server di destinazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -34,9 +35,9 @@ In questo argomento viene illustrato come specificare il percorso di un server d
 ### <a name="Restrictions"></a>Limitazioni e restrizioni  
 L'esecuzione di questa azione modifica il Registro di sistema. La modifica manuale del Registro di sistema non è un'operazione consigliata, in quanto modifiche inadeguate o non corrette possono causare gravi problemi di configurazione nel sistema. La modifica del Registro di sistema tramite l'editor corrispondente deve essere pertanto eseguita esclusivamente da utenti esperti. Per ulteriori informazioni, vedere la documentazione di Microsoft Windows.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  

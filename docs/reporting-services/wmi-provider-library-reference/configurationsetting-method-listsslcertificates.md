@@ -11,10 +11,10 @@ ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e39c771872b0afbb614257145f447d1a47386a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571334"
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>Metodo di ConfigurationSetting - ListSSLCertificates
@@ -53,7 +53,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

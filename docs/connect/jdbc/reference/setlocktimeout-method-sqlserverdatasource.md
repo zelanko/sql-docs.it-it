@@ -16,10 +16,10 @@ ms.assetid: 10dca5aa-1851-4326-9ae9-7a8430d12d11
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95dc93b8695f9bfe464545ab5f1aa6096a4476be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974105"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>Metodo setLockTimeout (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setLockTimeout(int lockTimeout)
   
  Valore **int** contenente il numero di millisecondi di attesa.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il timeout di blocco è il numero di millisecondi di attesa prima che venga segnalato un timeout di blocco per il database. Il valore predefinito -1 indica un'attesa illimitata. Se specificato, questo valore diventerà l'impostazione predefinita per tutte le istruzioni sulla connessione.  
   
 > [!NOTE]  

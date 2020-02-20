@@ -1,5 +1,5 @@
 ---
-title: Confronto tra i server di report di Reporting Services in SharePoint e nativa | Microsoft Docs
+title: Confronto tra server di report nativi e di Reporting Services in SharePoint | Microsoft Docs
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67038021"
 ---
-# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Confronto tra i server di report di Reporting Services in SharePoint e nativa
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Confronto tra server di report nativi e di Reporting Services in SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -52,18 +52,18 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
 |**Indirizzamento tramite URL**|Sì|L'indirizzamento tramite URL è diverso nella modalità integrata SharePoint. Per fare riferimento a report, modelli di report, origini dati condivise e risorse vengono usati gli URL di SharePoint. La gerarchia di cartelle del server di report non viene usata. Se si dispone di applicazioni personalizzate che si basano sull'accesso all'URL supportato in un server di report in modalità nativa, questa funzionalità non sarà più disponibile quando il server di report è configurato per l'integrazione con SharePoint.<br /><br /> Per altre informazioni sull'accesso all'URL, vedere [Riferimento ai parametri di accesso con URL](../../reporting-services/url-access-parameter-reference.md)|  
 |**Estensioni di sicurezza personalizzate**|Sì|Le estensioni di sicurezza personalizzate di Reporting Services non possono essere distribuite o usate nel server di report. Il server di report include una speciale estensione di sicurezza, che viene usata quando si configura un server di report per l'esecuzione in modalità di integrazione con SharePoint. Tale estensione di sicurezza è un componente interno ed è necessaria per le operazioni in modalità integrata.|  
 |**Gestione configurazione**|Sì|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
-|**Portale Web**|Sì|Non è possibile gestire in modalità SharePoint nel portale web. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**Portale Web**|Sì|Non è possibile gestire la modalità SharePoint nel portale Web. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Sì|No.|  
-|**Report personali**|Sì|no|  
-|**Sottoscrizioni personali** e metodi di invio in batch|Sì|no|  
-|**Avvisi dati**|no|Sì|  
-|**Power View**|no|Sì<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Report personali**|Sì|No|  
+|**Sottoscrizioni personali** e metodi di invio in batch|Sì|No|  
+|**Avvisi dati**|No|Sì|  
+|**Power View**|No|Sì<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Report RDL**|Sì|Sì<br /><br /> I report RDL possono essere eseguiti nei server di report di Reporting Services in modalità nativa o SharePoint.|  
-|**Report RDLX**|no|Sì<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di Reporting Services in modalità SharePoint.|  
-|**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|no|Sì|  
-|**Aree AAM per distribuzioni che si interfacciano a Internet**|no|Sì|  
-|**Backup e recupero di SharePoint**|no|Sì|  
-|**Supporto del log ULS**|no|Sì|  
+|**Report RDLX**|No|Sì<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di Reporting Services in modalità SharePoint.|  
+|**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|No|Sì|  
+|**Aree AAM per distribuzioni che si interfacciano a Internet**|No|Sì|  
+|**Backup e recupero di SharePoint**|No|Sì|  
+|**Supporto del log ULS**|No|Sì|  
   
 ## <a name="native-mode"></a>Modalità nativa
 
@@ -95,7 +95,7 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
   
  La figura seguente illustra un ambiente Reporting Services in modalità SharePoint:  
   
- ![Architettura funzionale di SharePoint SSRS](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Architettura funzionale di SharePoint SSRS")  
+ ![Architettura funzionale di SharePoint per SSRS](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Architettura funzionale di SharePoint per SSRS")  
   
 ||Descrizione|  
 |-|-----------------|  
@@ -112,7 +112,7 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
   
 ## <a name="report-server-database"></a>Database del server di report
 
- Il server di report è un server senza stato che archivia tutte le proprietà, gli oggetti e i metadati in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nei dati archiviati sono inclusi i report pubblicati e compilati, i modelli di report e la gerarchia di cartelle in cui è disponibile l'indirizzamento per tutti gli elementi gestiti dal server di report. Un database del server di report può offrire lo spazio di archiviazione interno per una singola installazione di Reporting Services o per più server di report che fanno parte di una distribuzione con scalabilità orizzontale. Se un server di report viene configurato per l'esecuzione in una distribuzione più ampia di un prodotto o una tecnologia SharePoint, vengono usati i database SharePoint in aggiunta al database del server di report. Per altre informazioni sugli archivi dati utilizzati nell'installazione di Reporting Services, vedere [Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+ Il server di report è un server senza stato che archivia tutte le proprietà, gli oggetti e i metadati in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nei dati archiviati sono inclusi i report pubblicati e compilati, i modelli di report e la gerarchia di cartelle in cui è disponibile l'indirizzamento per tutti gli elementi gestiti dal server di report. Un database del server di report può offrire lo spazio di archiviazione interno per una singola installazione di Reporting Services o per più server di report che fanno parte di una distribuzione con scalabilità orizzontale. Se un server di report viene configurato per l'esecuzione in una distribuzione più ampia di un prodotto o una tecnologia SharePoint, vengono usati i database SharePoint in aggiunta al database del server di report. Per altre informazioni sugli archivi dati utilizzati nell'installazione di Reporting Services, vedere [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="authentication-rendering-data-and-delivery-extensions"></a>Estensioni per le operazioni di autenticazione, rendering, elaborazione dati e recapito
 
@@ -120,9 +120,9 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
   
  In Reporting Services sono disponibili estensioni predefinite che consentono di utilizzare tutte le funzionalità del server senza la necessità di sviluppare componenti personalizzati. Nella tabella seguente sono descritte le estensioni predefinite che concorrono a formare un'istanza del server di report completa con funzionalità immediatamente disponibili per l'utilizzo:  
   
-|Tipo|Default|  
+|Type|Predefinito|  
 |----------|-------------|  
-|Autenticazione|Un'istanza del server di report predefinita supporta l'autenticazione di Windows, incluse le funzionalità di rappresentazione e delega, se abilitate nel dominio.|  
+|Authentication|Un'istanza del server di report predefinita supporta l'autenticazione di Windows, incluse le funzionalità di rappresentazione e delega, se abilitate nel dominio.|  
 |Elaborazione dati|In un'istanza del server di report predefinita sono incluse le estensioni per l'elaborazione dati per origini dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse e ODBC.|  
 |Rendering|In un'istanza del server di report predefinita sono incluse le estensioni per il rendering di file HTML, Excel, CSV, XML, immagine, Word, elenco SharePoint e PDF.|  
 |Recapito|Un'istanza del server di report predefinita include un'estensione per il recapito tramite posta elettronica e un'estensione per il recapito tramite condivisione di file. Se il server di report è configurato per l'integrazione con SharePoint, è possibile utilizzare un'estensione per il recapito tramite cui è possibile salvare report in una raccolta di SharePoint.|  

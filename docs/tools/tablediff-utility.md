@@ -1,6 +1,6 @@
 ---
-title: Utilità tablediff | Microsoft Docs
-ms.custom: ''
+title: utilità tablediff
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,18 +19,18 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986043"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304801"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
   
--   Confronto riga per riga tra una tabella di origine in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che funge da server di pubblicazione per la replica e una tabella di destinazione in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che fungono da Sottoscrittori della replica.  
+-   Confronto riga per riga tra una tabella di origine in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che funge da server di pubblicazione per la replica e una tabella di destinazione in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che fungono da sottoscrittori della replica.  
   
 -   Esegue un confronto rapido mediante il confronto solo dei conteggi delle righe e degli schemi.  
   
@@ -168,11 +168,11 @@ tablediff
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Esito positivo|  
+|**0**|Operazione completata|  
 |**1**|Errore critico|  
 |**2**|Differenze tra tabelle|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'utilità **tablediff** non può essere usata con server non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Le tabelle contenenti colonne con il tipo di dati **sql_variant** non sono supportate.  

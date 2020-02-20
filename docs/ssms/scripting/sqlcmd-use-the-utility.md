@@ -1,6 +1,6 @@
 ---
-title: Usare l'utilità sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Utilizzo dell'utilità sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: f3e77699ce94f150bc5ec38fa40c400884d38faa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816611"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243463"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Usare l'utilità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "71816611"
   
 -   L'opzione di output ( **-o**) specifica il file nel quale **sqlcmd** inserirà il proprio output.  
   
-## <a name="connect-to-the-sqlcmd-utility"></a>Connettere all'utilità sqlcmd  
+## <a name="connect-to-the-sqlcmd-utility"></a>Connettersi all'utilità sqlcmd  
   
 -   Connessione a un'istanza predefinita utilizzando l'autenticazione di Windows per eseguire in modo interattivo le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71816611"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     o Gestione configurazione  
+     o  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -97,7 +97,7 @@ ms.locfileid: "71816611"
     > **SUGGERIMENTO** Per un elenco delle opzioni supportate dall'utilità **sqlcmd** , eseguire: `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Eseguire le istruzioni Transact-SQL in modo interattivo usando sqlcmd  
- È possibile usare l'utilità **sqlcmd** in modo interattivo per eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in una finestra del prompt dei comandi. Per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] con **sqlcmd**, eseguire l'utilità senza usare le opzioni **-Q**, **-q**, **-Z**o **-i** per specificare eventuali file di input o query. Esempio:  
+ È possibile usare l'utilità **sqlcmd** in modo interattivo per eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in una finestra del prompt dei comandi. Per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] con **sqlcmd**, eseguire l'utilità senza usare le opzioni **-Q**, **-q**, **-Z**o **-i** per specificare eventuali file di input o query. Ad esempio:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71816611"
 ## <a name="quoted-strings"></a>Stringhe tra virgolette  
  I caratteri racchiusi tra virgolette vengono utilizzati senza alcuna pre-elaborazione aggiuntiva, fatta eccezione per il fatto che è possibile inserire virgolette in una stringa immettendo due virgolette consecutive. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tratta questa sequenza di caratteri come virgoletta. La traduzione avviene tuttavia nel server. Le variabili di scripting non vengono espanse se sono incluse all'interno di una stringa.  
   
- Esempio:  
+ Ad esempio:  
   
  `sqlcmd`  
   
@@ -211,7 +211,7 @@ ms.locfileid: "71816611"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>A. Esecuzione di uno script utilizzando sqlcmd  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>R. Esecuzione di uno script utilizzando sqlcmd  
  Avviare Blocco note e digitare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
  `USE AdventureWorks2012;`  

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b02789c787266a3370e3c5c9bfae50ea337d19db
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72381856"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Criteri di supporto per driver OLE DB per SQL Server
@@ -22,26 +22,26 @@ ms.locfileid: "72381856"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questo articolo illustra il modo in cui i vari componenti di accesso ai dati possono essere usati con OLE DB driver per SQL Server.  
+  Questo articolo illustra come i vari componenti di accesso ai dati possono essere usati con OLE DB Driver per SQL Server.  
 
 ## <a name="server-support"></a>Supporto server  
- OLE DB driver per SQL Server supporta le connessioni ai [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+ OLE DB Driver per SQL Server supporta le connessioni alle versioni comprese tra [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] e [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e ad [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ## <a name="supported-operating-system-versions"></a>Versioni di sistema operativo supportate  
- Nella tabella seguente sono elencati i sistemi operativi che supportano OLE DB driver per SQL Server.  
+ Nella tabella seguente sono elencati i sistemi operativi supportati da OLE DB Driver per SQL Server.  
 
 | Sistemi operativi supportati |  |
 |--------------------------------------|---------------------------------|   
-| Aggiornamento di Microsoft Windows 8.1 + [aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785)  + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Aggiornamento di Microsoft Windows Server 2012 R2 + [aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785)  + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
+| Microsoft Windows 8.1 + [aggiornamento di aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [aggiornamento di aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
 
 
 ## <a name="ado-support-policies"></a>Criteri di supporto ADO  
  Le applicazioni ADO possono usare il provider OLE DB SQLOLEDB incluso in Windows se non richiedono alcuna funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
 
- Le applicazioni ADO possono utilizzare il driver OLE DB per SQL Server, ma in tal caso devono specificare `DataTypeCompatibility=80` nelle stringhe di connessione. Se nelle stringhe di connessione è presente `DataTypeCompatibility=80`, sono disponibili solo le funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ Le applicazioni ADO possono usare OLE DB Driver per SQL Server. In tal caso è tuttavia necessario che sia specificato `DataTypeCompatibility=80` nelle stringhe di connessione. Se nelle stringhe di connessione è presente `DataTypeCompatibility=80`, sono disponibili solo le funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 ## <a name="ole-db-support-policies"></a>Criteri di supporto OLE DB  
-Le applicazioni possono usare il provider OLE DB (SQLOLEDB) incluso con il sistema operativo Windows. Tuttavia, si trova in modalità di manutenzione e non viene più aggiornato. Usare invece il driver OLE DB per SQL Server (MSOLEDBSQL).
+Le applicazioni possono usare il provider OLE DB (SQLOLEDB) incluso con il sistema operativo Windows. Questo provider è tuttavia in modalità manutenzione e non viene più aggiornato. Usare invece OLE DB Driver per SQL Server (MSOLEDBSQL).
 
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni con OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
