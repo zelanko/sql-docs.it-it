@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581496"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report (SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65581496"
 2.  Visualizzare in anteprima un report con i riferimenti agli assembly personalizzati in modalità locale.  
   
 ##  <a name="Common"></a> Inclusione di riferimenti a funzioni usate di frequente  
- Usare la finestra di dialogo **Espressione** per visualizzare un elenco per categoria di funzioni comuni predefinite di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando si espande **Funzioni comuni** e fa clic su una categoria, nel riquadro **Elemento** viene visualizzato l'elenco di funzioni da includere in un'espressione. Le funzioni comuni includono classi degli spazi dei nomi [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funzioni della libreria run-time di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Per praticità, è possibile visualizzare le funzioni usate più di frequente nella finestra di dialogo **Espressione** , in cui sono elencate per categoria: Testo, Data e ora, Matematiche, Ispezione, Flusso programma, Aggregazione, Finanziarie, Conversione e Varie. Le funzioni usate meno di frequente non sono riportate nell'elenco, ma possono comunque essere usate in un'espressione.  
+ Usare la finestra di dialogo **Espressione** per visualizzare un elenco per categoria di funzioni comuni predefinite di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando si espande **Funzioni comuni** e fa clic su una categoria, nel riquadro **Elemento** viene visualizzato l'elenco di funzioni da includere in un'espressione. Le funzioni comuni includono classi degli spazi dei nomi [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> e <xref:System.Convert> e funzioni della libreria run-time di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Per praticità, è possibile visualizzare le funzioni più comunemente usate nella finestra di dialogo **Espressione** in cui sono elencate per categoria: Testo, Data e ora, Matematiche, Ispezione, Flusso programma, Aggregazione, Finanziarie, Conversione e Varie Le funzioni usate meno di frequente non sono riportate nell'elenco, ma possono comunque essere usate in un'espressione.  
   
  Per utilizzare una funzione predefinita, fare doppio clic sul relativo nome nel riquadro Elemento. Nel riquadro Descrizione verrà visualizzata una descrizione della funzione e nel riquadro Esempio un esempio della chiamata alla funzione. Nel riquadro del codice, quando si digita il nome della funzione seguito da una parentesi aperta **(** , tramite IntelliSense verranno visualizzate tutte le sintassi valide per la chiamata alla funzione. Ad esempio per calcolare il valore massimo per un campo denominato `Quantity` in una tabella, aggiungere l'espressione semplice `=Max(` nel riquadro del codice, quindi usare gli smart tag per visualizzare tutte le possibili sintassi valide per la chiamata alla funzione. Per completare questo esempio, digitare `=Max(Fields!Quantity.Value)`.  
   
@@ -99,7 +99,7 @@ Public Dim MyDoubleVersion As Double = 123.456
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- Il codice seguente, se incorporato nel blocco di codice di una definizione del report, indica un'implementazione del metodo **FixSpelling** . Questo esempio illustra come usare un riferimento completo alla classe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **StringBuilder** class.  
+ Il codice seguente, se incorporato nel blocco di codice di una definizione del report, indica un'implementazione del metodo **FixSpelling** . Questo esempio illustra come usare un riferimento completo alla classe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **StringBuilder**.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -115,7 +115,7 @@ End Function
  Per altre informazioni sulle raccolte di oggetti predefiniti e sull'inizializzazione, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inizializzazione di oggetti assembly personalizzati](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Inclusione di riferimenti ai parametri da codice  
- È possibile fare riferimento alla raccolta globale di parametri tramite codice personalizzato in un blocco di codice della definizione del report oppure in un assembly personalizzato specificato dall'utente. La raccolta di parametri è di sola lettura e non include iteratori pubblici. Non è possibile usare un costrutto [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **di** per esaminare la raccolta parametro per parametro. È necessario conoscere il nome del parametro definito nella definizione del report per potervi fare riferimento nel codice personalizzato. È tuttavia possibile scorrere tutti i valori di un parametro multivalore.  
+ È possibile fare riferimento alla raccolta globale di parametri tramite codice personalizzato in un blocco di codice della definizione del report oppure in un assembly personalizzato specificato dall'utente. La raccolta di parametri è di sola lettura e non include iteratori pubblici. Non è possibile usare un costrutto **For Each** di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per analizzare la raccolta. È necessario conoscere il nome del parametro definito nella definizione del report per potervi fare riferimento nel codice personalizzato. È tuttavia possibile scorrere tutti i valori di un parametro multivalore.  
   
  Nella tabella seguente sono inclusi esempi di riferimenti alla raccolta predefinita `Parameters` da codice personalizzato:  
   
@@ -178,7 +178,7 @@ End Function
  Per altre informazioni sull'accesso al codice, vedere [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ##  <a name="collections"></a> Passaggio di raccolte predefinite in assembly personalizzati  
- Se si vuole passare raccolte predefinite, ad esempio la raccolta *Globals* o *Parameters* , in un assembly personalizzato per l'elaborazione, è necessario aggiungere nel progetto di codice un riferimento all'assembly che definisce le raccolte predefinite e accede allo spazio dei nomi corretto. A seconda del fatto che l'assembly personalizzato venga sviluppato per un report eseguito in un server di report (report del server) o un report eseguito localmente in un'applicazione .NET (report locale), l'assembly a cui è necessario fare riferimento è diverso. Per informazioni dettagliate, vedere di seguito.  
+ Se si vuole passare raccolte predefinite, ad esempio la raccolta *Globals* o *Parameters* , in un assembly personalizzato per l'elaborazione, è necessario aggiungere nel progetto di codice un riferimento all'assembly che definisce le raccolte predefinite e accede allo spazio dei nomi corretto. A seconda del fatto che l'assembly personalizzato venga sviluppato per un report eseguito in un server di report (report del server) o un report eseguito localmente in un'applicazione .NET (report locale), l'assembly a cui è necessario fare riferimento è diverso. Vedere di seguito per altri dettagli.  
   
 -   **Spazio dei nomi:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
@@ -190,7 +190,7 @@ End Function
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere codice a un report &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [Uso di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Utilizzo di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

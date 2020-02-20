@@ -1,6 +1,6 @@
 ---
-title: Struttura del codice | Microsoft Docs
-ms.custom: ''
+title: Struttura del codice
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c718d4f6ff1d057c23f8041be755da54f9b5da58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 366928df4dfe2b4b3c7c2749201d1d3980937f01
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256639"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254029"
 ---
 # <a name="code-outlining"></a>Struttura del codice
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68256639"
   
  Quando si sposta il puntatore sulla casella in cui sono presenti i tre punti (...), il codice contenuto nell'area compressa viene visualizzato in una descrizione di comando, come illustrato nella figura seguente.  
   
- ![Codice XML con una descrizione comando che mostra il codice nascosto](../../ssms/scripting/media/editoutlinexmlmouse.gif "Codice XML con una descrizione comando che mostra il codice nascosto")  
+ ![Codice XML con una descrizione comandi in cui è illustrato il codice nascosto](../../ssms/scripting/media/editoutlinexmlmouse.gif "Codice XML con una descrizione comandi in cui è illustrato il codice nascosto")  
   
  Quando si fa clic sul segno meno nella riga \<MiddleTag>, vengono compresse le parti relative a MiddleTag e InnerTag, come illustrato nella figura seguente.  
   

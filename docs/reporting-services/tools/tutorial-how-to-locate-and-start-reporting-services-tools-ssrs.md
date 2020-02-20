@@ -1,10 +1,10 @@
 ---
-title: 'Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS) | Microsoft Docs'
-ms.date: 05/15/2019
+title: 'Esercitazione: Individuare e avviare gli strumenti di Reporting Services | Microsoft Docs'
+description: Questa esercitazione illustra gli strumenti usati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report di Report Services impaginati e per dispositivi mobili.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
-description: Questa esercitazione illustra gli strumenti usati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report di Report Services impaginati e per dispositivi mobili.
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be9da26fc71dbcbf9fd47aa94c0ee721b160eed6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65875170"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245521"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "65875170"
 -   Gestire le chiavi di crittografia.  
 -   Configurare l'elaborazione automatica del report e il relativo recapito per posta elettronica.  
   
-**Installazione:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+**Installazione:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Per avviare Gestione configurazione Reporting Services  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65875170"
   
      Se si specifica un computer remoto, fare clic su **Trova** per stabilire una connessione. È necessario configurare in anticipo il server di report per l'amministrazione remota. Per altre informazioni, vedere [Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  In **Nome istanza**selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si desidera configurare. Nell'elenco sono incluse solo le istanze del server di report SQL Server 2008 e versioni successive. Non è possibile configurare versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+3.  In **Nome istanza** selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si vuole configurare. Nell'elenco sono incluse solo le istanze del server di report SQL Server 2008 e versioni successive. Non è possibile configurare versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 4.  Fare clic su **Connetti**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65875170"
 ##  <a name="web-portal-native-mode"></a>Portale Web (modalità nativa)  
  Usare [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) (Portale Web (modalità nativa SSRS)) per impostare autorizzazioni, gestire sottoscrizioni e pianificazioni e usare report. Il portale Web può essere usato anche per visualizzare i report.  
   
- **Installazione:** il portale Web viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **Installazione:** il portale Web viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]: [Installare un server di report in modalità nativa di Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  Per aprire il portale Web è necessario disporre di autorizzazioni sufficienti (inizialmente, solo i membri del gruppo Administrators locale dispongono delle autorizzazioni per l'accesso alle funzionalità del portale Web). Il portale Web offre diverse pagine e opzioni a seconda delle assegnazioni di ruolo dell'utente corrente. Per gli utenti che non dispongono di autorizzazioni verrà visualizzata una pagina vuota. Per gli utenti con autorizzazioni per la visualizzazione di report verranno visualizzati collegamenti per aprire i report. Per sapere di più sulle autorizzazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65875170"
   
      **Or**  
   
-     Fare clic su **Start**, selezionare **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi scegliere **SQL Server Management Studio**. Verrà visualizzata la finestra di dialogo **Connetti al server** .  
+     Fare clic su **Start**, selezionare **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi scegliere **SQL Server Management Studio**. Viene visualizzata la finestra di dialogo **Connetti al server** .  
   
 2.  Se la finestra di dialogo **Connetti al server** non viene visualizzata, in **Esplora oggetti**fare clic su **Connetti** e quindi scegliere **Reporting Services**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65875170"
 5.  Fare clic su **Connetti**. È possibile espandere il nodo radice per impostare proprietà server, modificare definizioni di ruolo o disabilitare funzionalità del server di report.  
   
 ##  <a name="bkmk_ssdt"></a> SQL Server Data Tools con Progettazione report e Creazione guidata report  
- Sono disponibili due diversi strumenti per creare report impaginati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero Progettazione report e [Generatore report](#bkmk_report_builder).  
+ Sono disponibili due diversi strumenti per creare report impaginati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    Progettazione report e [Generatore report](#bkmk_report_builder).  
   
  Progettazione report è disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio. L'area di progettazione di Progettazione report include finestre a schede, procedure guidate e menu per l'accesso alle funzionalità per la creazione di report. Lo strumento di progettazione report diventa disponibile quando si sceglie un modello di progetto per il server di report o di procedura guidata di server di report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per sapere di più, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
@@ -129,7 +129,7 @@ Scaricare [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714
   
 5.  Digitare un nome e un percorso per il progetto oppure fare clic su **Sfoglia** e selezionare il percorso desiderato.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] si apre con la pagina iniziale di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . In Esplora soluzioni sono disponibili le categorie per la creazione di report e origini dei dati. È possibile utilizzare queste categorie per creare nuovi report e origini dei dati. Le finestre a schede vengono visualizzate quando si crea una definizione di report. Queste finestre sono Dati, Layout e Anteprima.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] si apre con la pagina iniziale di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. In Esplora soluzioni sono disponibili le categorie per la creazione di report e origini dei dati. È possibile utilizzare queste categorie per creare nuovi report e origini dei dati. Le finestre a schede vengono visualizzate quando si crea una definizione di report. Queste finestre sono Dati, Layout e Anteprima.  
   
  Per iniziare il primo report, vedere [Creare un report tabella semplice &#40;Esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Per sapere di più sugli strumenti di progettazione query che è possibile usare in Progettazione report, vedere [Strumenti di progettazione query &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
@@ -140,7 +140,7 @@ Quando il report impaginato è pronto, pubblicarlo in un server di report o [sal
   
  [Scaricare Generatore report](https://go.microsoft.com/fwlink/?LinkID=219138) dall'Area download Microsoft.  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>Per iniziare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+### <a name="to-start-ssrbnoversion"></a>Per iniziare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  Nel portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scegliere  **Report impaginato** dal menu **Nuovo**.  
   
@@ -148,7 +148,7 @@ Quando il report impaginato è pronto, pubblicarlo in un server di report o [sal
   
 2.  Se [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] non è ancora installato in questo computer, selezionare **Scarica [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]** .  
   
-     e  
+     Oppure  
   
      [Scaricare Generatore report](https://go.microsoft.com/fwlink/?LinkID=219138) dall'Area download Microsoft.  
   
@@ -159,7 +159,7 @@ Quando il report impaginato è pronto, pubblicarlo in un server di report o [sal
   
  [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527) dall'Area download Microsoft.  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>Per iniziare [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
+### <a name="to-start-ss_mobilereptpub_short"></a>Per iniziare [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  Nel portale Web di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scegliere  **Report per dispositivi mobili** dal menu **Nuovo**.  
   
@@ -167,7 +167,7 @@ Quando il report impaginato è pronto, pubblicarlo in un server di report o [sal
   
 2.  Se [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] non è ancora installato in questo computer, selezionare **Scarica [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]** .  
   
-     e  
+     Oppure  
   
      [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527) dall'Area download Microsoft.  
   

@@ -1,6 +1,7 @@
 ---
-title: Paginazione in Reporting Services (Generatore report e SSRS) | Microsoft Docs
-ms.date: 07/26/2019
+title: Paginazione nei report (Generatore report e SSRS) | Microsoft Docs
+description: Il termine paginazione si riferisce al numero di pagine all'interno di un report impaginato e alla disposizione degli elementi del report in tali pagine. In Reporting Services la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632031"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247335"
 ---
-# <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginazione in Reporting Services (Generatore report e SSRS)
-  Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginazione nei report (Generatore report e SSRS)
+  Il termine paginazione si riferisce al numero di pagine all'interno di un report impaginato e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  In questo argomento viene illustrato l'impatto delle dimensioni della pagina fisica e del layout del report sul rendering del report eseguito mediante renderer di interruzioni di pagina manuali. È possibile impostare le proprietà per modificare le dimensioni e i margini delle pagine fisiche e dividere il report in colonne nei riquadri **Proprietà report** e **Proprietà** o nella finestra di dialogo **Imposta pagina** . Per accedere al riquadro **Proprietà report** , fare clic sull'area blu all'esterno del corpo del report. Per accedere alla finestra di dialogo **Imposta pagina** , fare clic su **Esegui** nella scheda Home, quindi fare clic su **Imposta pagina** nella scheda Esegui.  
   
@@ -43,14 +44,14 @@ ms.locfileid: "68632031"
   
  L'area della pagina fisica disponibile in seguito all'allocazione dello spazio per margini, spaziatura delle colonne, intestazione e piè di pagina, è denominata *area utilizzabile della pagina*. I margini vengono applicati solo quando si esegue il rendering e si stampano report nei formati dei renderer di interruzioni di pagina manuali. Nell'immagine seguente sono indicati il margine e l'area utilizzabile della pagina di una pagina fisica.  
   
- ![Pagina fisica con margini e area usabile.](../../reporting-services/report-design/media/rspagemargins.gif "Pagina fisica con margini e area usabile.")  
+ ![Pagina fisica con margini e area utilizzabile.](../../reporting-services/report-design/media/rspagemargins.gif "Pagina fisica con margini e area utilizzabile.")  
   
 ### <a name="newsletter-style-columns"></a>Colonne in formato newsletter  
  Il report può essere diviso in colonne, ad esempio le colonne di un giornale, che vengono considerate come pagine logiche di cui viene eseguito il rendering nella stessa pagina fisica. Le colonne vengono disposte da sinistra verso destra e dall'alto verso il basso e sono separate tra loro da spazi vuoti. Se il report è diviso in più colonne, ogni pagina fisica viene divisa verticalmente in colonne, ciascuna delle quali viene considerata come una pagina logica. Si supponga ad esempio che in una pagina fisica siano presenti due colonne. Il contenuto del report verrà inserito nella prima e quindi nella seconda colonna. Se le prime due colonne sono insufficienti per il contenuto del report, verranno riempite la prima e quindi la seconda colonna nella pagina successiva. Le colonne continuano a essere riempite, da sinistra verso destra e dall'alto verso il basso, finché non viene eseguito il rendering di tutti gli elementi del report. Se per le colonne si specificano dimensioni tali che la larghezza orizzontale o verticale sia uguale a zero, il valore predefinito dell'impostazione relativa alla spaziatura tra le colonne sarà uguale a zero.  
   
  Le colonne vengono specificate nella finestra di dialogo **Imposta pagina** o nel riquadro **Proprietà report** oppure modificando le proprietà TopMargin, BottomMargin, LeftMargin e RightMargin nel riquadro **Proprietà** . Se si desidera usare per i margini dimensioni non definite, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report. Le colonne vengono applicate solo quando si esegue il rendering e si stampano report nei formati PDF o Immagine. Nell'immagine seguente è indicata l'area utilizzabile di una pagina contenente colonne.  
   
- ![Pagina fisica con colonne visualizzate.](../../reporting-services/report-design/media/rspagecolumns.gif "Pagina fisica con colonne visualizzate.")  
+ ![Pagina fisica con colonne illustrate.](../../reporting-services/report-design/media/rspagecolumns.gif "Pagina fisica con colonne illustrate.")  
   
 ## <a name="page-breaks-and-page-names"></a>Interruzioni e nomi di pagina  
  La leggibilità di un report, così come il controllo e l'esportazione dei relativi dati potrebbero risultare migliori quando il report dispone di nomi di pagina. Reporting Services offre proprietà per report e aree dati Tablix (tabella, matrice ed elenco), gruppi e rettangoli nel report per controllare la paginazione, reimpostare i numeri di pagina e fornire nuovi nomi di pagina del report in base alle interruzioni di pagina. Tali caratteristiche consentono di migliorare i report indipendentemente dal formato in cui ne viene eseguito il rendering, tuttavia risultano utili soprattutto in caso di esportazione dei report nelle cartelle di lavoro di Excel.  

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo del mirroring del database (JDBC) | Microsoft Docs
+title: Uso del mirroring del database (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026432"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Uso del mirroring del database (JDBC)
@@ -40,7 +40,7 @@ Quando si verifica un errore nel server di database principale, l'applicazione c
 Quando viene inizialmente stabilita una connessione, il server principale invia l'identità del partner di failover al client che verrà utilizzando quando si verifica il failover. Se un'applicazione tenta di stabilire una connessione iniziale con un server principale con errori, il client non riconosce l'identità del partner di failover. Per consentire ai client di gestire questo scenario, la proprietà della stringa di connessione failoverPartner e facoltativamente il metodo di origine dati [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) consentono al client di specificare autonomamente l'identità del partner di failover. La proprietà client viene usata solo in questo scenario. Se il server principale è disponibile, non viene usata.
 
 > [!NOTE]  
-> Se la proprietà failoverPartner viene specificata nella stringa di connessione o nell'oggetto origine dati, è necessario impostare anche la proprietà databaseName. In caso contrario, verrà generata un'eccezione. Se le proprietà failoverPartner e databaseName non sono specificate in modo esplicito, l'applicazione non tenterà di eseguire il failover in caso di errore del server di database principale. In altri termini, il reindirizzamento trasparente funziona solo per connessioni che specificano in modo esplicito le proprietà failoverPartner e databaseName. Per ulteriori informazioni su failoverPartner e su altre proprietà della stringa di connessione, vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).
+> Se la proprietà failoverPartner viene specificata nella stringa di connessione o nell'oggetto origine dati, è necessario impostare anche la proprietà databaseName. In caso contrario, verrà generata un'eccezione. Se le proprietà failoverPartner e databaseName non sono specificate in modo esplicito, l'applicazione non tenterà di eseguire il failover in caso di errore del server di database principale. In altri termini, il reindirizzamento trasparente funziona solo per connessioni che specificano in modo esplicito le proprietà failoverPartner e databaseName. Per altre informazioni su failoverPartner e altre proprietà della stringa di connessione, vedere [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).
 
 Se il server del partner di failover fornito dal client non fa riferimento a un server che opera come partner di failover per il database specificato e se il server o il database a cui viene fatto riferimento si trova in una disposizione di mirroring, la connessione viene rifiutata dal server. Benché la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) fornisca il metodo [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), questo metodo restituisce solo il nome del partner di failover specificato nella stringa di connessione o nel metodo setFailoverPartner. Per recuperare il nome dell'effettivo partner di failover usato, usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:
 

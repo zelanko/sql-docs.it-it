@@ -14,10 +14,10 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993673"
 ---
 # <a name="default-php-data-types"></a>Tipi di dati PHP predefiniti
@@ -29,46 +29,46 @@ Quando vengono restituiti dati mediante il driver PDO_SQLSRV, il tipo di dati sa
   
 Nella parte restante di questo argomento sono descritti i tipi di dati predefiniti del driver SQLSRV.  
   
-Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati dal server), i tipi di dati PHP predefiniti (nei quali vengono convertiti i dati), nonché la codifica predefinita per i flussi e le stringhe. Per informazioni dettagliate su come specificare i tipi di dati durante il recupero di dati dal server, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati dal server), i tipi di dati PHP predefiniti (nei quali vengono convertiti i dati), nonché la codifica predefinita per i flussi e le stringhe. Per informazioni dettagliate su come specificare i tipi di dati durante il recupero di dati dal server, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 |Tipo di SQL Server|Tipo PHP predefinito|Codifica predefinita|  
 |-------------------|--------------------|--------------------|  
-|BIGINT|String|carattere a 8 bit<sup>1</sup>|  
+|bigint|string|carattere a 8 bit<sup>1</sup>|  
 |BINARY|Stream<sup>2</sup>|Binario<sup>3</sup>|  
-|bit|Valore intero|carattere a 8 bit<sup>1</sup>|  
-|char|String|carattere a 8 bit<sup>1</sup>|  
-|date<sup>4</sup>|DATETIME|Non applicabile|  
-|datetime<sup>4</sup>|DATETIME|Non applicabile|  
-|datetime2<sup>4</sup>|DATETIME|Non applicabile|  
-|datetimeoffset<sup>4</sup>|DATETIME|Non applicabile|  
-|Decimal|String|carattere a 8 bit<sup>1</sup>|  
-|FLOAT|float|carattere a 8 bit<sup>1</sup>|  
+|bit|Integer|carattere a 8 bit<sup>1</sup>|  
+|char|string|carattere a 8 bit<sup>1</sup>|  
+|date<sup>4</sup>|Datetime|Non applicabile|  
+|datetime<sup>4</sup>|Datetime|Non applicabile|  
+|datetime2<sup>4</sup>|Datetime|Non applicabile|  
+|datetimeoffset<sup>4</sup>|Datetime|Non applicabile|  
+|decimal|string|carattere a 8 bit<sup>1</sup>|  
+|float|Float|carattere a 8 bit<sup>1</sup>|  
 |geography|Stream|Binario<sup>3</sup>|  
 |geometry|Stream|Binario<sup>3</sup>|  
 |image<sup>5</sup>|Stream<sup>2</sup>|Binario<sup>3</sup>|  
-|INT|Valore intero|carattere a 8 bit<sup>1</sup>|  
-|money|String|carattere a 8 bit<sup>1</sup>|  
-|NCHAR|String|carattere a 8 bit<sup>1</sup>|  
-|NUMERIC|String|carattere a 8 bit<sup>1</sup>|  
-|NVARCHAR|String|carattere a 8 bit<sup>1</sup>|  
+|INT|Integer|carattere a 8 bit<sup>1</sup>|  
+|money|string|carattere a 8 bit<sup>1</sup>|  
+|NCHAR|string|carattere a 8 bit<sup>1</sup>|  
+|NUMERIC|string|carattere a 8 bit<sup>1</sup>|  
+|NVARCHAR|string|carattere a 8 bit<sup>1</sup>|  
 |nvarchar(MAX)|Stream<sup>2</sup>|carattere a 8 bit<sup>1</sup>|  
 |ntext<sup>6</sup>|Stream<sup>2</sup>|carattere a 8 bit<sup>1</sup>|  
-|REAL|float|carattere a 8 bit<sup>1</sup>|  
-|smalldatetime|DATETIME|carattere a 8 bit<sup>1</sup>|  
-|SMALLINT|Valore intero|carattere a 8 bit<sup>1</sup>|  
-|SMALLMONEY|String|carattere a 8 bit<sup>1</sup>|  
-|sql_variant<sup>7</sup>|String|carattere a 8 bit<sup>1</sup>|  
+|real|Float|carattere a 8 bit<sup>1</sup>|  
+|smalldatetime|Datetime|carattere a 8 bit<sup>1</sup>|  
+|SMALLINT|Integer|carattere a 8 bit<sup>1</sup>|  
+|SMALLMONEY|string|carattere a 8 bit<sup>1</sup>|  
+|sql_variant<sup>7</sup>|string|carattere a 8 bit<sup>1</sup>|  
 |text<sup>8</sup>|Stream<sup>2</sup>|carattere a 8 bit<sup>1</sup>|  
-|time<sup>4</sup>|DATETIME|Non applicabile|  
-|TIMESTAMP|String|carattere a 8 bit<sup>1</sup>|  
-|TINYINT|Valore intero|carattere a 8 bit<sup>1</sup>|  
-|UDT (tipo definito dall'utente)|Stream<sup>2</sup>|Binario<sup>3</sup>|  
+|time<sup>4</sup>|Datetime|Non applicabile|  
+|timestamp|string|carattere a 8 bit<sup>1</sup>|  
+|TINYINT|Integer|carattere a 8 bit<sup>1</sup>|  
+|UDT|Stream<sup>2</sup>|Binario<sup>3</sup>|  
 |UNIQUEIDENTIFIER|String<sup>9</sup>|carattere a 8 bit<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|Binario<sup>3</sup>|  
 |varbinary(MAX)|Stream<sup>2</sup>|Binario<sup>3</sup>|  
-|varchar|String|carattere a 8 bit<sup>1</sup>|  
+|varchar|string|carattere a 8 bit<sup>1</sup>|  
 |varchar(MAX)|Stream<sup>2</sup>|carattere a 8 bit<sup>1</sup>|
-|xml|Stream<sup>2</sup>|carattere a 8 bit<sup>1</sup>|  
+|Xml|Stream<sup>2</sup>|carattere a 8 bit<sup>1</sup>|  
   
 
 1.  I dati vengono restituiti come caratteri a 8 bit come specificato nella tabella codici delle impostazioni locali di Windows impostate nel sistema. Eventuali caratteri multibyte o che non eseguono il mapping in questa tabella codici vengono sostituiti con un carattere punto interrogativo (?) a byte singolo.  
@@ -97,20 +97,20 @@ I tipi di dati nuovi in SQL Server 2008 e presenti all'esterno delle colonne, ad
   
 |Funzionalità|Supporto PHP|  
 |-----------|---------------|  
-|Parametro con valori di tabella|no|  
-|Colonne di tipo sparse|Partial|  
+|Parametro con valori di tabella|No|  
+|Colonne di tipo sparse|Parziale|  
 |Compressione bit Null|Sì|  
 |Tipi CLR definiti dall'utente di grandi dimensioni (UDT)|Sì|  
-|Nome dell'entità servizio|no|  
+|Nome dell'entità servizio|No|  
 |MERGE|Sì|  
-|FILESTREAM|Partial|  
+|FILESTREAM|Parziale|  
   
 Il supporto dei tipi parziale indica che non è possibile eseguire una query a livello di programmazione per il tipo della colonna.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Converting Data Types](../../connect/php/converting-data-types.md)
+[Conversione dei tipi di dati](../../connect/php/converting-data-types.md)
 
 [Tipi PHP](https://php.net/manual/en/language.types.php)
 

@@ -16,10 +16,10 @@ ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c1b6732f5cb22126ad9a102322a88df95606be7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955215"
 ---
 # <a name="datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata"></a>Metodo dataDefinitionCausesTransactionCommit (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean dataDefinitionCausesTransactionCommit()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se l'istruzione DDL forza un commit. In caso contrario, **false**.  
+ **true** se l'istruzione DDL impone un commit. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo dataDefinitionCausesTransactionCommit viene specificato dal Metodo dataDefinitionCausesTransactionCommit nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo dataDefinitionCausesTransactionCommit viene specificato dal metodo dataDefinitionCausesTransactionCommit nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

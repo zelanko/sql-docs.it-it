@@ -16,10 +16,10 @@ ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e82f85941899fc05fc8fdf35cd7ae65870100ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983572"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>Metodo getDouble (java.lang.String) (SQLServerResultSet)
@@ -40,12 +40,12 @@ public double getDouble(java.lang.String columnName)
  Valore **String** contenente il nome della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore **Double** .  
+ Valore **double**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getDouble viene specificato dal metodo getDouble nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce tutti i tipi di dati numerici con fedeltà **double** di Java.  

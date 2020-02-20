@@ -5,16 +5,16 @@ description: Informazioni su come installare gli strumenti usati con [!INCLUDE[b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 964b6db780564797e35c4a40377227d3b56e4a3e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532231"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721699"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installare gli strumenti per Big Data di SQL Server 2019
 
@@ -26,7 +26,7 @@ Questo articolo descrive gli strumenti client che devono essere installati per l
 
 La tabella seguente elenca gli strumenti comuni per i cluster Big Data e indica come installarli:
 
-| Strumento | Obbligatorio | Descrizione | Installazione |
+| Strumento | Obbligatoria | Descrizione | Installazione |
 |---|---|---|---|
 | `python` | Sì | Python è un linguaggio di programmazione di alto livello interpretato e orientato a oggetti con semantica dinamica. Molte parti dei cluster Big Data per SQL Server usano Python. | [Installare Python](#python)|
 | `azdata` | Sì | Strumento da riga di comando per l'installazione e la gestione di un cluster Big Data. | [Installazione](deploy-install-azdata.md) |
@@ -58,7 +58,7 @@ La tabella precedente contiene tutti gli strumenti comuni usati con i cluster Bi
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **Estensione di SQL Server 2019**
+- **Estensione di virtualizzazione dei dati**
 
 Gli strumenti rimanenti sono necessari solo in determinati scenari. È possibile usare l'**interfaccia della riga di comando di Azure** per gestire i servizi di Azure associati alle distribuzioni nel servizio Azure Kubernetes. **mssql-cli** è uno strumento facoltativo ma utile che permette di connettersi all'istanza master di SQL Server nel cluster ed eseguire query dalla riga di comando. **sqlcmd** e `curl` sono obbligatori se si prevede di installare dati di esempio con lo script GitHub.
 
@@ -66,7 +66,7 @@ Gli strumenti rimanenti sono necessari solo in determinati scenari. È possibile
 
 1. In un computer con accesso a Internet, scaricare uno dei file compressi seguenti contenenti Python:
 
-   | Sistema operativo | Scarica |
+   | Sistema operativo | Download |
    |---|---|
    | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |

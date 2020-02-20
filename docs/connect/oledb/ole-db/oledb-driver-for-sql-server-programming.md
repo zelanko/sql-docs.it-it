@@ -1,5 +1,5 @@
 ---
-title: Driver OLE DB per la programmazione SQL Server | Microsoft Docs
+title: Programmazione con OLE DB Driver for SQL Server | Microsoft Docs
 description: Driver OLE DB per programmazione con SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993921"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Driver OLE DB per programmazione con SQL Server
@@ -30,17 +30,17 @@ ms.locfileid: "67993921"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il driver OLE DB per SQL Server è un'API COM di basso livello utilizzata per l'accesso ai dati. Il driver OLE DB per SQL Server è consigliato per lo sviluppo di strumenti, utilità o componenti di basso livello che necessitano di prestazioni elevate. Il driver OLE DB per SQL Server è un provider nativo a prestazioni elevate che accede direttamente al protocollo TDS (Tabular Data Stream) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  OLE DB Driver per SQL Server è un'API COM di base usata per l'accesso ai dati. Il driver OLE DB per SQL Server è consigliato per lo sviluppo di strumenti, utilità o componenti di basso livello che necessitano di prestazioni elevate. Il driver OLE DB per SQL Server è un provider nativo a prestazioni elevate che accede direttamente al protocollo TDS (Tabular Data Stream) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- OLE DB driver per SQL Server fornisce OLE DB supporto per le applicazioni che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]si connettono a.  
+ OLE DB Driver per SQL Server fornisce supporto OLE DB alle applicazioni che si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Il driver OLE DB per SQL Server è un provider OLE DB compatibile con la versione 2,0.  
+ OLE DB Driver per SQL Server è un provider compatibile con OLE DB versione 2.0.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Creazione di un driver OLE DB per applicazione SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Oggetti &#40;origine dati OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Oggetti di origine dati &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Comandi](../../oledb/ole-db-commands/commands.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67993921"
   
 -   [Tabelle e indici](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Tipi &#40;di dati OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Tipi di dati &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Supporto del set di righe dello schema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "67993921"
   
 -   [Transazioni](../../oledb/ole-db-transactions/transactions.md)  
   
--   [errori](../../oledb/ole-db-errors/errors.md)  
+-   [Errori](../../oledb/ole-db-errors/errors.md)  
   
 -   [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Supporto per colonne di tipo sparse &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [Guida di riferimento a &#40;OLE DB&#41; per SQL Server OLE DB](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Informazioni di riferimento su OLE DB Driver per SQL Server &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Procedure relative a OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

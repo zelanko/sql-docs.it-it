@@ -1,23 +1,24 @@
 ---
-title: Verifica del codice di database tramite unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Verifica del codice di database
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140947"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243492"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Verifica del codice di database tramite unit test di SQL Server
+
 È possibile usare unit test di SQL Server per definire uno stato di base del database e verificare quindi eventuali modifiche apportate successivamente agli oggetti di database.  
   
 Per definire uno stato di base per un database, è possibile creare un progetto di test e scrivere set di istruzioni Transact\-SQL che operano sugli oggetti di database. Con questi test è possibile verificare in un ambiente di sviluppo isolato se gli oggetti funzionano come previsto. Gli unit test di SQL Server sono efficaci in combinazione con lo sviluppo di database offline tramite progetti di database di SQL Server. Per altre informazioni, vedere [Sviluppo di database offline orientato ai progetti](../ssdt/project-oriented-offline-database-development.md). Dopo aver definito un set di base di unit test di SQL Server, è possibile usare tali test per verificare il corretto funzionamento del database prima di archiviare le modifiche nel controllo delle versioni.  

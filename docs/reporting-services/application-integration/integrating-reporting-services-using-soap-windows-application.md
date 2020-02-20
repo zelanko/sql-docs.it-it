@@ -1,9 +1,11 @@
 ---
-title: Using the SOAP API in a Windows Application (Uso dell'API SOAP in un'applicazione Windows) | Microsoft Docs
+title: Usare l'API SOAP nelle applicazioni Windows
+description: È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. Accedere al servizio Web in un'applicazione Windows scrivendo codice che consenta di effettuare chiamate al servizio.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -13,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9802e3b2c60a345d789a63ec5f2bc2cc9198ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741770"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796985"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrazione di Reporting Services tramite SOAP - Applicazione Windows
   È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web in un'applicazione Windows semplicemente scrivendo codice che consenta di effettuare chiamate al servizio. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web e consente di usare un'infrastruttura familiare e gli strumenti per compilare applicazioni aziendali basate sulla tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

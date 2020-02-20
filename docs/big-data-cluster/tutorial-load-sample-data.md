@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653281"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831417"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Esercitazione: Caricare dati di esempio in un cluster Big Data di SQL Server
 
@@ -36,7 +36,7 @@ Questa esercitazione illustra come usare uno script per caricare dati di esempio
  
 ## <a id="sampledata"></a> Caricare dati di esempio
 
-Questa procedura usa uno script di bootstrap per scaricare un backup del database di SQL Server e caricare i dati nel cluster Big Data. Per semplicità d'uso, questa procedura è stata suddivisa nelle sezioni [Windows](#windows) e [Linux](#linux).
+Questa procedura usa uno script di bootstrap per scaricare un backup del database di SQL Server e caricare i dati nel cluster Big Data. Per semplicità d'uso, questa procedura è stata suddivisa nelle sezioni [Windows](#windows) e [Linux](#linux). Se si vuole usare la combinazione nome utente/password di base come meccanismo di autenticazione, impostare le variabili di ambiente AZDATA_USERNAME e AZDATA_PASSWORD prima di eseguire lo script. In caso contrario, lo script userà l'autenticazione integrata per connettersi all'istanza master di SQL Server e al gateway Knox. È anche necessario specificare il nome DNS per gli endpoint per poter usare l'autenticazione integrata.
 
 ## <a id="windows"></a> Windows
 
@@ -64,18 +64,16 @@ Questa procedura descrive come usare un client Windows per caricare i dati di es
    | Parametro | Descrizione |
    |---|---|
    | <CLUSTER_NAMESPACE> | Nome assegnato al cluster Big Data. |
-   | <SQL_MASTER_IP> | Indirizzo IP dell'istanza master. |
-   | <SQL_MASTER_SA_PASSWORD> | Password SA per l'istanza master. |
-   | <KNOX_IP> | Indirizzo IP del gateway HDFS/Spark. |
-   | <KNOX_PASSWORD> | Password del gateway HDFS/Spark. |
-
+   | <SQL_MASTER_ENDPOINT> | Nome DNS o indirizzo IP dell'istanza master. |
+   | <KNOX_ENDPOINT> | Nome DNS o indirizzo IP del gateway HDFS/Spark. |
+   
    > [!TIP]
    > Usare [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-big-data-cluster-name>` e osservare gli indirizzi EXTERNAL-IP per l'istanza master (**master-svc-external**) e Knox (**gateway-svc-external**). Il nome predefinito di un cluster è **mssql-cluster**.
 
 1. Eseguire lo script di bootstrap.
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -100,10 +98,8 @@ Questa procedura descrive come usare un client Linux per caricare i dati di esem
    | Parametro | Descrizione |
    |---|---|
    | <CLUSTER_NAMESPACE> | Nome assegnato al cluster Big Data. |
-   | <SQL_MASTER_IP> | Indirizzo IP dell'istanza master. |
-   | <SQL_MASTER_SA_PASSWORD> | Password SA per l'istanza master. |
-   | <KNOX_IP> | Indirizzo IP del gateway HDFS/Spark. |
-   | <KNOX_PASSWORD> | Password del gateway HDFS/Spark. |
+   | <SQL_MASTER_ENDPOINT> | Nome DNS o indirizzo IP dell'istanza master. |
+   | <KNOX_ENDPOINT> | Nome DNS o indirizzo IP del gateway HDFS/Spark. |
 
    > [!TIP]
    > Usare [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-big-data-cluster-name>` e osservare gli indirizzi EXTERNAL-IP per l'istanza master (**master-svc-external**) e Knox (**gateway-svc-external**). Il nome predefinito di un cluster è **mssql-cluster**.
@@ -111,7 +107,7 @@ Questa procedura descrive come usare un client Linux per caricare i dati di esem
 1. Eseguire lo script di bootstrap.
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706052"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190397"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configurare la suddivisione in livelli HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configurare la suddivisione in livelli HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ La suddivisione in livelli HDFS offre la possibilità di montare in HDFS un file
 ## <a name="hdfs-tiering-overview"></a>Panoramica della suddivisione in livelli HDFS
 
 Con la suddivisione in livelli, le applicazioni possono accedere facilmente ai dati in un'ampia gamma di archivi esterni come se i dati si trovassero in HDFS in locale. Il montaggio è un'operazione sui metadati, in cui i metadati che descrivono lo spazio dei nomi nel file system esterno vengono copiati in HDFS in locale. Questi metadati includono informazioni sulle directory e sui file esterni insieme ai relativi elenchi di controllo di accesso e autorizzazioni. I dati corrispondenti vengono copiati solo su richiesta quando si accede ai dati, ad esempio con una query. È ora possibile accedere ai dati del file system esterno dal cluster Big Data di SQL Server. È possibile eseguire processi Spark e query SQL su questi dati nello stesso modo in cui si eseguono sui dati locali archiviati in HDFS nel cluster.
+
+Questo video di 7 minuti offre una panoramica della suddivisione in livelli HDFS:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>Memorizzazione nella cache
 Attualmente, per impostazione predefinita, l'1% dello spazio di archiviazione HDFS totale viene riservato per la memorizzazione nella cache dei dati montati. La memorizzazione nella cache è un'impostazione globale per tutti i montaggi.

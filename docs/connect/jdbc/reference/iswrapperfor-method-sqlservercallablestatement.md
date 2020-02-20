@@ -11,10 +11,10 @@ ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b1a572d3ab2dfba9d0aa0b8284fc770f3422782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977106"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>Metodo isWrapperFor (SQLServerCallableStatement)
@@ -32,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parametri  
  *iface*  
   
- **Classe** che definisce un'interfaccia.  
+ Valore **class** che definisce un'interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
  **true** se questo oggetto implementa l'interfaccia o esegue il wrapping di un oggetto che implementa l'interfaccia. In caso contrario, **false**.  
@@ -40,12 +40,12 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md) e il metodo [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) sono definiti dall'interfaccia java.sql.Wrapper, introdotta in JDBC 4.0.  
   
  Se questo metodo restituisce **true**, la chiamata a [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) con lo stesso argomento avrà esito positivo.  
   
- Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per altre informazioni, vedere [Wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   

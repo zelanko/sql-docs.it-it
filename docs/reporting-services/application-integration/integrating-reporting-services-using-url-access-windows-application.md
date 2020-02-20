@@ -1,9 +1,11 @@
 ---
-title: Uso dell'accesso con URL in un'applicazione Windows | Microsoft Docs
+title: Usare l'accesso con URL nelle applicazioni Windows
+description: L'accesso con URL a un server di report è ottimizzato per un ambiente Web, ma è possibile usarlo anche per incorporare i report di Reporting Services in un'applicazione Windows.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012183"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796905"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integrazione di Reporting Services tramite l'accesso con URL - Applicazione Windows
   Sebbene l'accesso con URL a un server di report sia ottimizzato per un ambiente Web, è possibile utilizzarlo anche per incorporare i report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Per l'accesso con URL che comporta l'utilizzo di Windows Form è tuttavia necessario utilizzare comunque la tecnologia del browser Web. È possibile utilizzare gli scenari di integrazione seguenti con l'accesso con URL e Windows Form:  

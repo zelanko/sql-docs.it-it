@@ -1,10 +1,9 @@
 ---
-title: Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri | Microsoft Docs
-ms.custom: ''
+title: Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260425"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254444"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -162,7 +163,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 In Progettazione query e Progettazione viste questa clausola WHERE viene rappresentata nel riquadro Criteri come indicato di seguito:  
   
-![Clausole OR collegate definite nel riquadro Criteri](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Clausole OR collegate definite nel riquadro Criteri")  
+![Clausole OR collegate definite nel riquadro dei criteri](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Clausole OR collegate definite nel riquadro dei criteri")  
   
 Se si apporta una modifica alla query, ad esempio modificando uno dei valori nel riquadro Criteri, in Progettazione query e Progettazione viste l'istruzione SQL verrà ricreata nel riquadro SQL. L'istruzione SQL ricreata sarà analoga alla visualizzazione del riquadro Criteri invece che all'istruzione originaria. Se ad esempio il riquadro Criteri contiene clausole AND distribuite, l'istruzione risultante nel riquadro SQL verrà ricreata con clausole AND distribuite esplicitamente. Per ulteriori informazioni, tornare a "Funzionamento di AND con più clausole OR" in questo argomento.  
   

@@ -11,10 +11,10 @@ ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970525"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>Membri di SQLServerResultSetMetaData
@@ -23,20 +23,20 @@ ms.locfileid: "67970525"
   Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- Nessuna.  
+ No.  
   
 ## <a name="fields"></a>Campi  
- Nessuna.  
+ No.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls, columnNullable, columnNullableUnknown|  
   
 ## <a name="methods"></a>Metodi  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|Ottiene il nome del catalogo per la tabella che include la colonna designata.|  
 |[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|Restituisce il nome completo della classe Java di cui vengono prodotte le istanze se viene chiamato il metodo [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) per recuperare un valore dalla colonna.|  

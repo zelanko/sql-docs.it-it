@@ -1,5 +1,5 @@
 ---
-title: Metodo registerOutParameter per il tipo e la scalabilità | Microsoft Docs
+title: Metodo registerOutParameter per tipo e scala | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 134fcc223486971bb8249f1313c84ce969308626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975936"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>Metodo registerOutParameter (java.lang.String, int, int)
@@ -45,15 +45,15 @@ public void registerOutParameter(java.lang.String s,
   
  Codice di tipo JDBC come definito in java.sql.Types.  
   
- *scala*  
+ *scale*  
   
  Valore **int** che indica il numero di cifre da posizionare a destra del separatore decimale.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo registerOutParameter viene specificato dal metodo registerOutParameter nell'interfaccia java. SQL. CallableStatement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo registerOutParameter viene specificato dal metodo registerOutParameter nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo registerOutParameter &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

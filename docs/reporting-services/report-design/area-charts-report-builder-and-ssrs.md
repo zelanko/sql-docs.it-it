@@ -9,10 +9,10 @@ ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1bcd78ad109727e8f585f06703a293665b7cb310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581855"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Grafici ad area (Generatore report e SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65581855"
   
  Nella figura seguente è illustrato un esempio di grafico ad area in pila. I dati sono particolarmente adatti per un grafico ad area in pila, in quanto è possibile visualizzare i totali per tutte le serie oltre alla percentuale di ogni serie rispetto al totale.  
   
- ![Grafico ad area](../../reporting-services/report-design/media/areachart.gif "grafico ad Area")  
+ ![Grafico ad area](../../reporting-services/report-design/media/areachart.gif "Grafico ad area")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

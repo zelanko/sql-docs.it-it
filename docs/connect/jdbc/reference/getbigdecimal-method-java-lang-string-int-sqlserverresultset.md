@@ -16,10 +16,10 @@ ms.assetid: 572a1799-c232-400f-b8d8-37a5719a8d5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 701afddaeaad79356a6b76a05a02f5cff1df1f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953906"
 ---
 # <a name="getbigdecimal-method-javalangstring-int-sqlserverresultset"></a>Metodo getBigDecimal (java.lang.String, int) (SQLServerResultSet)
@@ -43,7 +43,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
   
  Valore **String** contenente il nome della colonna.  
   
- *scala*  
+ *scale*  
   
  Valore **int** che indica il numero di cifre a destra del separatore decimale.  
   
@@ -53,8 +53,8 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getBigDecimal viene specificato dal Metodo getBigDecimal nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getBigDecimal viene specificato dal metodo getBigDecimal nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getBigDecimal &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

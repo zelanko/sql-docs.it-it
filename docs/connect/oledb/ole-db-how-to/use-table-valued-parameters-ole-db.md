@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994598"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utilizzare parametri con valori di tabella (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994598"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva. In questo esempio vengono creati gli elementi seguenti:  
+  Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva. Questo esempio consente di eseguire le seguenti operazioni:  
   
 -   Creazione di parametri con valori di tabella utilizzando l'individuazione dinamica tramite IOpenRowset::OpenRowset.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "67994598"
   
 -   Utilizzo di proprietà dei parametri personalizzate tramite ISSCommandWithParameters.  
   
--   Mostra la gestione degli errori per gli errori MSOLEDBSQL.  
+-   Visualizzazione della gestione degli errori per gli errori MSOLEDBSQL.  
   
- Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri &#40;con valori di tabella OLE DB driver&#41;per SQL Server](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Per altre informazioni sui parametri con valori di tabella, vedere [Parametri con valori di tabella &#40;OLE DB Driver per SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) consente di creare il database usato dall'esempio.  

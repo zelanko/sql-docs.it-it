@@ -11,10 +11,10 @@ ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027748"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protezione delle applicazioni del driver JDBC
@@ -33,7 +33,7 @@ Negli argomenti di questa sezione vengono descritti alcuni problemi di sicurezza
 | [Convalida dell'input utente](../../connect/jdbc/validating-user-input.md)             | Vengono descritte le tecniche per la convalida dell'input utente.                                                                                                                          |
 | [Sicurezza dell'applicazione](../../connect/jdbc/application-security.md)               | Viene descritto come utilizzare le autorizzazioni relative ai criteri Java per proteggere un'applicazione del driver JDBC.                                                                                |
 | [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)               | Viene descritto come stabilire un canale di comunicazione sicuro con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando SSL (Secure Sockets Layer). |
-| [Modalità FIPS](../../connect/jdbc/fips-mode.md)                                     | Viene descritto come utilizzare il driver JDBC in modalità conforme a FIPS.                                                                                                              |
+| [Modalità FIPS](../../connect/jdbc/fips-mode.md)                                     | Viene descritto come usare il driver JDBC in modalità conforme a FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>Vedere anche  
 

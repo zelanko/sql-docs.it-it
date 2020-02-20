@@ -16,10 +16,10 @@ ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976006"
 ---
 # <a name="previous-method-sqlserverresultset"></a>Metodo previous (SQLServerResultSet)
@@ -40,8 +40,8 @@ public boolean previous()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo precedente viene specificato dal metodo precedente nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo previous viene specificato dal metodo previous nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

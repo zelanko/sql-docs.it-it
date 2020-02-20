@@ -13,10 +13,10 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67500190"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definizioni di ruolo - Ruoli predefiniti
@@ -24,7 +24,7 @@ ms.locfileid: "67500190"
   
 ## <a name="how-to-use-predefined-roles"></a>Come usare i ruoli predefiniti  
   
-1. Rivedere i ruoli predefiniti per determinare se è possibile utilizzarli così come sono. Se è necessario modificare le attività o definire ruoli aggiuntivi, eseguire queste operazioni prima di iniziare ad assegnare gli utenti a ruoli specifici. Per creare o modificare i ruoli personalizzati utilizzano SQL Server Management Studio. Per altre informazioni, vedere [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
+1. Rivedere i ruoli predefiniti per determinare se è possibile utilizzarli così come sono. Se è necessario modificare le attività o definire ruoli aggiuntivi, eseguire queste operazioni prima di iniziare ad assegnare gli utenti a ruoli specifici. Per creare o modificare i ruoli personalizzati, usare SQL Server Management Studio. Per altre informazioni, vedere [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
 2. Individuare gli utenti e i gruppi che devono accedere al server di report e il livello di autorizzazioni richiesto. La maggior parte degli utenti dovrebbe essere assegnata al ruolo **Visualizzazione** o al ruolo **Generatore report** . Il ruolo **Server di pubblicazione** dovrebbe essere utilizzato per un numero più limitato di utenti. Il ruolo **Gestione contenuto**dovrebbe essere assegnato a pochissimi utenti.  
 
@@ -37,7 +37,7 @@ ms.locfileid: "67500190"
   
  Nella tabella seguente è descritto l'ambito predefinito dei ruoli:  
   
-|Ruolo predefinito|ambito|Descrizione|  
+|Ruolo predefinito|Scope|Descrizione|  
 |---------------------|-----------|-----------------|  
 |[Ruolo Gestione contenuto](#bkmk_content)|Elemento|Può gestire il contenuto nel server di report, inclusi cartelle, report e risorse.|  
 |[Ruolo Server di pubblicazione](#bkmk_publisher)|Elemento|Può pubblicare report e report collegati nel server di report.|  
@@ -60,9 +60,9 @@ ms.locfileid: "67500190"
 |Utilizzo di report|Leggere le definizioni dei report.|  
 |Creazione di report collegati|Creare report collegati basati su un report non collegato.|  
 |Gestione di tutte le sottoscrizioni|Visualizzare, modificare ed eliminare sottoscrizioni associate ai report e ai report collegati, indipendentemente dal proprietario della sottoscrizione. Questa attività supporta inoltre la creazione di sottoscrizioni guidate dai dati.|  
-|Gestione di origini dei dati|Creare ed eliminare origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
+|Gestire le origini dati|Creare ed eliminare origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
 |Gestione di cartelle|Creare, visualizzare ed eliminare cartelle e visualizzarne e modificarne le proprietà.|  
-|Gestione di modelli|Creare, visualizzare ed eliminare modelli e visualizzare e modificare le proprietà dei modelli.|  
+|Gestire i modelli|Creare, visualizzare ed eliminare modelli e visualizzare e modificare le proprietà dei modelli.|  
 |Gestione di sottoscrizioni individuali|Creare, visualizzare, modificare ed eliminare sottoscrizioni personali degli utenti per report e report collegati.|  
 |Gestione della cronologia dei report|Creare, visualizzare ed eliminare la cronologia del report, visualizzare le proprietà della cronologia del report e visualizzare e modificare le impostazioni che determinano i limiti per la cronologia dello snapshot e il funzionamento della memorizzazione nella cache.|  
 |Gestione di report|Aggiungere ed eliminare report, modificare i parametri dei report, visualizzare e modificare le proprietà dei report, visualizzare e modificare le origini dei dati per il contenuto dei report, visualizzare e modificare le definizioni dei report e impostare i criteri di sicurezza a livello dei report.|  
@@ -95,10 +95,10 @@ ms.locfileid: "67500190"
 |Attività|Descrizione|  
 |----------|-----------------|  
 |Creazione di report collegati|Creare report collegati e pubblicarli in una cartella del server di report.|  
-|Gestione di origini dei dati|Creare ed eliminare elementi delle origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
+|Gestire le origini dati|Creare ed eliminare elementi delle origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
 |Gestione di cartelle|Creare, visualizzare ed eliminare cartelle e visualizzare e modificare le proprietà delle cartelle.|  
 |Gestione di report|Aggiungere ed eliminare report, modificare i parametri dei report, visualizzare e modificare le proprietà dei report, visualizzare e modificare le origini dei dati per il contenuto dei report, visualizzare e modificare le definizioni dei report.|  
-|Gestione di modelli|Creare, visualizzare ed eliminare modelli di report e visualizzare e modificare le proprietà dei modelli di report.|  
+|Gestire i modelli|Creare, visualizzare ed eliminare modelli di report e visualizzare e modificare le proprietà dei modelli di report.|  
 |Gestione di risorse|Creare, modificare ed eliminare risorse e visualizzare e modificare le proprietà delle risorse.|  
   
 ### <a name="customizing-the-publisher-role"></a>Personalizzazione del ruolo Server di pubblicazione  
@@ -159,7 +159,7 @@ ms.locfileid: "67500190"
 |----------|-----------------|  
 |Creazione di report collegati|Creare report collegati basati su report archiviati nella cartella Report personali dell'utente.|  
 |Gestione di cartelle|Creare, visualizzare ed eliminare cartelle e visualizzarne e modificarne le proprietà.|  
-|Gestione di origini dei dati|Creare ed eliminare origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
+|Gestire le origini dati|Creare ed eliminare origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
 |Gestione di sottoscrizioni individuali|Creare, visualizzare, modificare ed eliminare sottoscrizioni per report e report collegati.|  
 |Gestione di report|Aggiungere ed eliminare report, modificare i parametri dei report, visualizzare e modificare le proprietà dei report, visualizzare e modificare le origini dei dati per il contenuto dei report, visualizzare e modificare le definizioni dei report e impostare i criteri di sicurezza a livello di report.|  
 |Gestione di risorse|Creare, modificare ed eliminare le risorse e visualizzare e modificare le proprietà delle risorse.|  
@@ -186,9 +186,9 @@ ms.locfileid: "67500190"
 |Attività|Descrizione|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Avviare l'esecuzione della definizione del report senza pubblicarlo in un server di report.|  
-|Gestisci processi|Visualizzare e annullare processi in esecuzione. Per altre informazioni, vedere [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md).|  
+|Gestire i processi|Visualizzare e annullare processi in esecuzione. Per altre informazioni, vedere [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md).|  
 |Gestione delle proprietà del server di report|Visualizzare e modificare proprietà relative al server di report e agli elementi gestiti dal server di report.<br /><br /> Questa attività supporta la ridenominazione del portale Web, l'attivazione della funzionalità Report personali e la definizione delle impostazioni predefinite della cronologia del report.|  
-|Gestione di ruoli|Creare, visualizzare, modificare ed eliminare definizioni di ruolo.<br /><br /> I membri del ruolo **Amministratore sistema** possono utilizzare la pagina Impostazioni sito per gestire i ruoli.|  
+|Gestire i ruoli|Creare, visualizzare, modificare ed eliminare definizioni di ruolo.<br /><br /> I membri del ruolo **Amministratore sistema** possono utilizzare la pagina Impostazioni sito per gestire i ruoli.|  
 |Gestione di pianificazioni condivise|Creare, visualizzare, modificare ed eliminare pianificazioni condivise che vengono utilizzate per eseguire o aggiornare i report.|  
 |Gestione della sicurezza del server di report|Visualizzare e modificare le assegnazioni di ruolo a livello di sistema.|  
   

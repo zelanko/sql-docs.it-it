@@ -1,29 +1,28 @@
 ---
-title: 'Avvio rapido: Tipi di dati Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Questo argomento di avvio rapido illustra come usare tipi di dati e oggetti dati in Python e SQL Server con Machine Learning Services per SQL Server.
+title: 'Avvio rapido: Strutture dei dati di Python'
+description: Questo argomento di avvio rapido illustra come usare le strutture di dati e gli oggetti dati in Python e Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727013"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831906"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Avvio rapido: Gestire tipi di dati e oggetti usando Python in Machine Learning Services per SQL Server
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Avvio rapido: Strutture di dati e oggetti quando si usa Python in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo argomento di avvio rapido illustra come usare le strutture di dati quando si usa Python in Machine Learning Services per SQL Server.
+In questo argomento di avvio rapido si scoprirà come usare le strutture di dati quando si usa Python in Machine Learning Services per SQL Server.
 
-SQL Server si basa sul pacchetto Python **pandas**, ideale per lavorare con dati tabulari. Tuttavia, non si può passare un valore scalare da Python a SQL Server e aspettarsi semplicemente che funzioni. In questo argomento di avvio rapido verranno esaminate alcune definizioni dei tipi di dati di base per prepararsi per eventuali problemi aggiuntivi che possono verificarsi durante il passaggio di dati tabulari tra Python e SQL Server.
+SQL Server si basa sul pacchetto Python **pandas**, ideale per lavorare con dati tabulari. Tuttavia, non si può passare un valore scalare da Python a SQL Server e aspettarsi semplicemente che funzioni. In questo argomento di avvio rapido verranno esaminate alcune definizioni di base delle strutture di dati prepararsi per eventuali problemi aggiuntivi che possono verificarsi durante il passaggio di dati tabulari tra Python e SQL Server.
 
 Ecco alcuni concetti da tenere in considerazione:
 

@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573314"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
@@ -42,20 +42,20 @@ ms.locfileid: "65573314"
   
 |**Proprietà**|**Tipo**|**Descrizione o valore previsto**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Oggetto**|Specifica il valore dei dati del campo.|  
+|**Valore**|**Object**|Specifica il valore dei dati del campo.|  
 |**IsMissing**|**Boolean**|Indica se il campo è stato trovato nel set di dati risultante.|  
-|**UniqueName**|**String**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** per un dipendente può essere *[Dipendente].[Reparto dipendente].[Reparto].&[Vendite].&[Responsabile vendite Nord America].&[272]* .|  
-|**BackgroundColor**|**String**|Restituisce il colore di sfondo definito nel database per il campo.|  
-|**Colore**|**String**|Restituisce il colore di primo piano definito nel database per l'elemento.|  
-|**FontFamily**|**String**|Restituisce il nome del tipo di carattere definito nel database per l'elemento.|  
-|**FontSize**|**String**|Restituisce le dimensioni in punti del tipo di carattere definito nel database per l'elemento.|  
-|**SpessoreCarattere**|**String**|Restituisce lo spessore del carattere definito nel database per l'elemento.|  
-|**FontStyle**|**String**|Restituisce lo stile del tipo di carattere definito nel database per l'elemento.|  
-|**TextDecoration**|**String**|Restituisce la formattazione di testo speciale definita nel database per l'elemento.|  
-|**FormattedValue**|**String**|Restituisce un valore formattato per una misura o una cifra chiave. La proprietà **FormattedValue** di **Quote vendite** restituisce, ad esempio, un formato valuta come $ 1.124.400,00.|  
-|**Key**|**Oggetto**|Restituisce la chiave per un livello.|  
+|**UniqueName**|**Stringa**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** per un dipendente può essere *[Dipendente].[Reparto dipendente].[Reparto].&[Vendite].&[Responsabile vendite Nord America].&[272]* .|  
+|**BackgroundColor**|**Stringa**|Restituisce il colore di sfondo definito nel database per il campo.|  
+|**Color**|**Stringa**|Restituisce il colore di primo piano definito nel database per l'elemento.|  
+|**FontFamily**|**Stringa**|Restituisce il nome del tipo di carattere definito nel database per l'elemento.|  
+|**FontSize**|**Stringa**|Restituisce le dimensioni in punti del tipo di carattere definito nel database per l'elemento.|  
+|**SpessoreCarattere**|**Stringa**|Restituisce lo spessore del carattere definito nel database per l'elemento.|  
+|**FontStyle**|**Stringa**|Restituisce lo stile del tipo di carattere definito nel database per l'elemento.|  
+|**TextDecoration**|**Stringa**|Restituisce la formattazione di testo speciale definita nel database per l'elemento.|  
+|**FormattedValue**|**Stringa**|Restituisce un valore formattato per una misura o una cifra chiave. La proprietà **FormattedValue** di **Quote vendite** restituisce, ad esempio, un formato valuta come $ 1.124.400,00.|  
+|**Chiave**|**Object**|Restituisce la chiave per un livello.|  
 |**LevelNumber**|**Integer**|Per gerarchie padre-figlio, questa proprietà restituisce il numero del livello o della dimensione.|  
-|**ParentUniqueName**|**String**|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  
+|**ParentUniqueName**|**Stringa**|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  
   
 > [!NOTE]  
 >  I valori per queste proprietà di campo estese sono disponibili solo se vengono forniti dall'origine dati, ad esempio il cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , quando il report viene eseguito e vengono recuperati i dati per i relativi set di dati. È quindi possibile fare riferimento a tali valori delle proprietà di campo in qualsiasi espressione utilizzando la sintassi descritta nella sezione seguente. Poiché, tuttavia, questi campi sono specifici del provider di dati in uso, eventuali modifiche apportate a tali valori non vengono salvate con la definizione del report.  
@@ -95,9 +95,9 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|Domenica|7/1/2001|[Date].[Date].[All Periods]|1|  
-|2-Jul-01|[Date].[Date].&[2]|Lunedì|7/2/2001|[Date].[Date].[All Periods]|2|  
-|3-Jul-01|[Date].[Date].&[3]|Martedì|7/3/2001|[Date].[Date].[All Periods]|3|  
+|1-Jul-01|[Date].[Date].&[1]|Sunday|7/1/2001|[Date].[Date].[All Periods]|1|  
+|2-Jul-01|[Date].[Date].&[2]|Monday|7/2/2001|[Date].[Date].[All Periods]|2|  
+|3-Jul-01|[Date].[Date].&[3]|Tuesday|7/3/2001|[Date].[Date].[All Periods]|3|  
   
  Le query MDX predefinite compilate mediante Progettazione query MDX in modalità grafica includono solo MEMBER_CAPTION e UNIQUENAME per le proprietà delle dimensioni. Per impostazione predefinita, tali valori sono sempre di tipo **String**.  
   
@@ -117,19 +117,19 @@ CELL PROPERTIES
   
  Le prime quattro righe visualizzate nel riquadro risultati MDX sono illustrate nella tabella seguente.  
   
-|Month of Year|Order Count|  
+|Month of Year|Numero di ordini|  
 |-------------------|-----------------|  
-|Gennaio|2,481|  
+|January|2,481|  
 |Febbraio|2,684|  
 |Marzo|2,749|  
 |April|2,739|  
   
- Sebbene le proprietà facciano parte dell'istruzione MDX SELECT, non sono incluse nelle colonne del set di risultati. I dati sono tuttavia disponibili per un report mediante la caratteristica delle proprietà estese. Nel riquadro risultati di una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare doppio clic sulla cella per visualizzare i relativi valori delle proprietà, se impostati nel cubo. Se si fa doppio clic sulla prima cella Order Count contenente 1,379, verrà visualizzata una finestra popup con le proprietà della cella seguenti:  
+ Sebbene le proprietà facciano parte dell'istruzione MDX SELECT, non sono incluse nelle colonne del set di risultati. I dati sono tuttavia disponibili per un report mediante la caratteristica delle proprietà estese. Nel riquadro risultati di una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fare doppio clic sulla cella per visualizzare i relativi valori delle proprietà, se impostati nel cubo. Se si fa doppio clic sulla prima cella Order Count contenente 1,379, verrà visualizzata una finestra popup con le proprietà della cella seguenti:  
   
 |Proprietà|valore|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALORE|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  

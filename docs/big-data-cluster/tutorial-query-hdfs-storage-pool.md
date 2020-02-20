@@ -1,20 +1,21 @@
 ---
-title: Eseguire query sui dati HDFS presenti nel pool di archiviazione
-titleSuffix: SQL Server big data clusters
+title: 'Eseguire query su dati HDFS: pool di archiviazione'
+titleSuffix: SQL Server Big Data Clusters
 description: Questa esercitazione illustra come eseguire una query su dati HDFS in un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Si creerà una tabella esterna con i dati del pool di archiviazione e si eseguirà quindi una query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652447"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226476"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire query su dati HDFS in un cluster Big Data di SQL Server
 
@@ -30,6 +31,10 @@ In questa esercitazione verranno illustrate le procedure per:
 
 > [!TIP]
 > Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi descritti in questa esercitazione. Per istruzioni, vedere [Esempi di virtualizzazione di dati](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) in GitHub.
+
+Questo video di 7 minuti illustra come eseguire query su dati HDFS in un cluster Big Data:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a id="prereqs"></a> Prerequisiti
 

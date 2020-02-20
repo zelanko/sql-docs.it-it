@@ -13,14 +13,14 @@ ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1ec4fb2f9d38997c7000e576a36fa8c6c1407e45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194310"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Procedura: Debug di assembly personalizzati
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre diversi strumenti di debug che consentono di analizzare il codice assembly personalizzato e individuare eventuali errori. Per ogni attività specifica è disponibile uno strumento appropriato. In questo esempio viene utilizzato [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
+# <a name="how-to-debug-custom-assemblies"></a>Procedura: Eseguire il debug di assembly personalizzati
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre diversi strumenti di debug che consentono di analizzare il codice degli assembly personalizzati e individuare eventuali errori. Per ogni attività specifica è disponibile uno strumento appropriato. In questo esempio viene utilizzato [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  Il modo migliore per progettare, sviluppare e testare assembly personalizzati per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nel creare una soluzione che contiene sia i report di test che l'assembly personalizzato.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63194310"
   
 5.  Con il progetto assembly personalizzato nella finestra attiva fare clic su **Connetti a processo** dal menu **Debug**.  
   
-     Viene visualizzata la finestra di dialogo **Connetti a processo**.  
+     Verrà visualizzata la finestra di dialogo **Connetti a processo**.  
   
 6.  Nell'elenco di processi selezionare il processo devenv.exe che corrisponde al progetto report e fare clic su **Connetti**.  
   

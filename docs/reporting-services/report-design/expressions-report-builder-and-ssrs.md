@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579114"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Espressioni (Generatore report e SSRS)
@@ -84,7 +84,7 @@ Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferim
 |[Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Viene descritto come accedere alle classi CLR predefinite <xref:System.Math> e <xref:System.Convert>, ad altre classi CLR, a funzioni della libreria di runtime di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o a metodi da un assembly esterno.<br /><br /> Viene descritto come accedere a codice personalizzato incorporato nel report o compilato e installato come assembly personalizzato sia nel client che nel server di report.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
 ##  <a name="Valid"></a> Convalida delle espressioni  
- Quando si crea un'espressione per una proprietà specifica dell'elemento del report, i riferimenti che è possibile includere in un'espressione dipendono dai valori accettati dalla proprietà dell'elemento del report e dall'ambito nel quale viene valutata la proprietà. Esempio:  
+ Quando si crea un'espressione per una proprietà specifica dell'elemento del report, i riferimenti che è possibile includere in un'espressione dipendono dai valori accettati dalla proprietà dell'elemento del report e dall'ambito nel quale viene valutata la proprietà. Ad esempio:  
   
 -   Per impostazione predefinita, l'espressione [Sum] consente di calcolare la somma di dati presenti nell'ambito al momento della valutazione dell'espressione. Per una cella della tabella, l'ambito dipende dalle appartenenze ai gruppi di righe e di colonne. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
   
@@ -94,7 +94,7 @@ Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferim
   
  Per altre informazioni, vedere [Riferimento dell'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)sottostante.  
   
-##  <a name="Section"></a> Argomenti della sezione  
+##  <a name="Section"></a> Contenuto della sezione  
  [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  

@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403259"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
@@ -67,11 +67,11 @@ ms.locfileid: "66403259"
 7. In **Destinazione** selezionare **Condivisione file di Windows**.  
   
 8. In **Opzioni di recapito (Condivisione file di Windows)** specificare:  
-   - **Nome file**: digitare un nome di file per il report.
-   - **Aggiungi estensione file alla creazione del file**: questa opzione consente di aggiungere un'estensione di tre caratteri al nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
+   - **Nome del file**: digitare un nome di file per il report.
+   - **Aggiungi estensione file alla creazione del file**: Questa opzione consente di specificare un'estensione di tre caratteri per il nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
    - **Percorso**: digitare il percorso UNC (Universal Naming Convention) di una cartella esistente a cui si vuole che vengano recapitati i report, ad esempio \\<nomeserver\>\<reportpersonali>. Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
   
-     ![sottoscrizione di condivisione di file](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "sottoscrizione di condivisione di file")  
+     ![Sottoscrizione di condivisione file](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Sottoscrizione di condivisione file")  
   
    - **Formato di rendering**: selezionare un formato di output del report per il recapito del file. Selezionare un formato corrispondente all'applicazione desktop che verrà utilizzata per aprire il report. Evitare formati che non eseguono il rendering del report in un singolo flusso o che introducono elementi di interattività non supportati in un file statico, ad esempio il formato HTML 4.0.  
   
@@ -112,9 +112,9 @@ Il report viene recapitato come file statico. Se include funzionalità interatti
      >[!NOTE]  
      > A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
   
-   - **Oggetto**: l'impostazione predefinita è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
+   - **Soggetto**: l'impostazione predefinita è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
   
-     ![Sottoscrizione con recapito tramite posta elettronica](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "Sottoscrizione con recapito tramite posta elettronica")  
+     ![Sottoscrizione tramite posta elettronica](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "Sottoscrizione tramite posta elettronica")  
 
    - **Includi report**: selezionare questa opzione per incorporare o allegare una copia del report. Il formato del report dipende dal formato di output di rendering selezionato. Non selezionare questa opzione se si ritiene che le dimensioni del report possano essere superiori al limite impostato per il sistema di posta elettronica.  
   
@@ -135,7 +135,7 @@ Il report viene recapitato come file statico. Se include funzionalità interatti
 ##  <a name="bkmk_modify_subscription"></a> Per modificare una sottoscrizione  
  Una sottoscrizione può essere modificata in qualsiasi momento. Se si modifica una sottoscrizione mentre viene elaborata, le impostazioni aggiornate vengono usato solo se vengono salvate nel server di report prima che l'estensione per il recapito riceva i dati della sottoscrizione. In caso contrario, vengono utilizzate le impostazioni esistenti.  
   
- L'utente che crea una sottoscrizione diventa automaticamente il proprietario di tale sottoscrizione e può pertanto modificarla o eliminarla. È possibile modificare il proprietario del report dalla pagina delle proprietà di sottoscrizione oppure è possibile modificare la proprietà a livello di codice. Per ulteriori informazioni, vedere quanto segue:  
+ L'utente che crea una sottoscrizione diventa automaticamente il proprietario di tale sottoscrizione e può pertanto modificarla o eliminarla. È possibile modificare il proprietario del report dalla pagina delle proprietà di sottoscrizione oppure è possibile modificare la proprietà a livello di codice. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   

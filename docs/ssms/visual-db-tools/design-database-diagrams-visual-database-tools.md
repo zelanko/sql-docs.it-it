@@ -1,10 +1,9 @@
 ---
-title: Progettare diagrammi di database (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Progettare diagrammi di database
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55505f8f14bb28d2724bbb53b733b25311b0e0a9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7cb6fabaa6d1dcbfb632e234b04e2e7bbc95541e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263784"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254650"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Progettare diagrammi di database (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ In un diagramma di database ogni tabella può presentarsi con tre caratteristich
   
 Se una tabella è stata modificata ma non ancora salvata, alla fine del nome della tabella sarà presente un asterisco (*) per segnalare che le modifiche non sono state salvate. Per informazioni sul salvataggio di tabelle e diagrammi modificati, vedere [Usare i diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**Selettore di riga** Per selezionare una colonna del database nella tabella, è possibile fare clic sul selettore di riga. Se la colonna è inclusa nella chiave primaria della tabella, con il selettore di riga verrà visualizzato un simbolo di chiave. Per informazioni sulle chiavi primarie, vedere [Utilizzo di chiavi (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
+**Selettore di riga** Per selezionare una colonna del database nella tabella, è possibile fare clic sul selettore di riga. Se la colonna è inclusa nella chiave primaria della tabella, con il selettore di riga verrà visualizzato un simbolo di chiave. Per informazioni sulle chiavi primarie, vedere [Utilizzo di chiavi (https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   
 **Colonne delle proprietà** Il set di colonne delle proprietà è visibile solo in determinate viste della tabella. Per semplificare la gestione delle dimensioni e del layout del diagramma, è possibile visualizzare una tabella in cinque viste diverse.  
   

@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008427"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resilienza di connessione nel driver ODBC di Windows
@@ -35,7 +35,7 @@ ms.locfileid: "68008427"
   
      È possibile modificare il numero di tentativi di connessione quando si:  
   
-    -   Definisce o modifica un'origine dati che usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il controllo **ConnectRetryCount** .  
+    -   Definisce o modifica un'origine dati che usa il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il controllo **ConnectRetryCount**.  
   
     -   Usa la parola chiave della stringa di connessione **ConnectRetryCount** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008427"
   
      È possibile modificare l'intervallo tra i tentativi di connessione quando si:  
   
-    -   Definisce o modifica un'origine dati che usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il controllo **ConnectRetryInterval** .  
+    -   Definisce o modifica un'origine dati che usa il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il controllo **ConnectRetryInterval**.  
   
     -   Usa la parola chiave della stringa di connessione **ConnectRetryInterval** .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68008427"
 |IMC06|La connessione è interrotta e il ripristino non è possibile. La connessione è stata contrassegnata dal driver client come non ripristinabile. Non è stato eseguito alcun tentativo di ripristinare la connessione.|  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente contiene due funzioni. **func1** illustra come connettersi con un nome origine dati (DSN) che usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows. DSN usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e specifica l'ID utente. **func1** recupera quindi il numero di tentativi di connessione con **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ L'esempio seguente contiene due funzioni. **func1** illustra come connettersi con un nome origine dati (DSN) che usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows. DSN usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e specifica l'ID utente. **func1** quindi recupera il numero di tentativi di connessione con **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** usa **SQLDriverConnect**, la parola chiave della stringa di connessione **ConnectRetryCount** e attributi di connessione per recuperare l'impostazione relativa ai tentativi di connessione e all'intervallo tra i tentativi.  
   

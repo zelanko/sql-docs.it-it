@@ -1,5 +1,5 @@
 ---
-title: Metodo GetReference (SQLServerDataSource) | Microsoft Docs
+title: Metodo getReference (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980465"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Metodo getReference (SQLServerDataSource)
@@ -35,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto di riferimento.  
+ Oggetto Reference.  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo GetReference viene specificato dal metodo GetReference nell'interfaccia javax. naming. Referenceable.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getReference viene specificato dal metodo getReference nell'interfaccia javax. naming. Referenceable.  
   
  Prima di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, se l'oggetto SQLServerDataSource.setTrustStorePassword veniva chiamato su un oggetto SQLServerDataSource, la password era disponibile nell'oggetto restituito da SQLServerDataSource.getReference, e questo poteva essere usato per eseguire connessioni aggiuntive. Nel driver JDBC 3.0 sarà necessario impostare la password sull'oggetto restituito da SQLServerDataSource.getReference, prima di eseguire connessioni con l'oggetto.  
   

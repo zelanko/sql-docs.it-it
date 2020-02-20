@@ -1,6 +1,7 @@
 ---
-title: Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+title: Aggiungere un'azione Espandi o Comprimi (Generatore report e SSRS) | Microsoft Docs
+description: È possibile permettere a un utente di espandere o comprimere in modo interattivo gli elementi di un report impaginato oppure, per una tabella o una matrice, righe e colonne associate a un gruppo.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582129"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242554"
 ---
-# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
-  È possibile permettere a un utente di espandere o comprimere in modo interattivo elementi del report oppure, per una tabella o una matrice, righe e colonne associate a un gruppo. Per consentire agli utenti di espandere o comprimere un elemento, impostare le proprietà di visibilità per tale elemento. L'impostazione della visibilità può essere usata in un visualizzatore di report HTML ed è a volte definita azione *drill-down* .  
+# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
+  È possibile permettere a un utente di espandere o comprimere in modo interattivo gli elementi di un report impaginato oppure, per una tabella o una matrice, righe e colonne associate a un gruppo. Per consentire agli utenti di espandere o comprimere un elemento, impostare le proprietà di visibilità per tale elemento. L'impostazione della visibilità può essere usata in un visualizzatore di report HTML ed è a volte definita azione *drill-down* .  
   
  Nella visualizzazione di progettazione report specificare il nome della casella di testo del report in cui si desidera espandere e comprimere le icone degli elementi Toggle. Nella casella di testo del report visualizzabile vengono visualizzati, oltre al contenuto, un segno più (+) o un segno meno (-). Quando l'utente fa clic sull'elemento Toggle, la visualizzazione del report viene aggiornata per visualizzare o nascondere l'elemento del report, in base alle impostazioni di visibilità correnti per gli elementi presenti nel report.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "65582129"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Per aggiungere a un elemento del report un'azione per espandere e comprimere  
   
-1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere e scegliere **Proprietà** *\<elemento report*. Viene visualizzata la finestra di dialogo **Proprietà** *\<elemento report>* relativa all'elemento report.  
+1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere e scegliere **Proprietà** *\<elemento del report*. Viene visualizzata la finestra di dialogo **Proprietà** *\<elemento del report>* relativa all'elemento del report.  
   
 2.  Fare clic su **Visibilità**.  
   

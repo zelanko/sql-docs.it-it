@@ -11,10 +11,10 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194231"
 ---
 # <a name="data-processing-extensions-overview"></a>Cenni preliminari sulle estensioni per l'elaborazione dati
@@ -52,7 +52,7 @@ Architettura delle estensioni per l'elaborazione dati di Reporting Services
 ## <a name="data-extension-process-flow"></a>Flusso di processo dell'estensione per i dati  
  Prima di sviluppare un'estensione per i dati personalizzata, è necessario capire in che modo le estensioni per i dati vengono utilizzate dal server di report per elaborare i dati. È inoltre necessario comprendere i costruttori e i metodi chiamati dal server di report.  
   
- ![Flusso del processo per l'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Flusso del processo per l'estensione per l'elaborazione dati")  
+ ![Flusso di processo per l'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Flusso di processo per l'estensione per l'elaborazione dati")  
 Flusso di processo dettagliato di un'estensione per i dati chiamata dal server di report  
   
  Nella figura è illustrata la sequenza di eventi seguente:  

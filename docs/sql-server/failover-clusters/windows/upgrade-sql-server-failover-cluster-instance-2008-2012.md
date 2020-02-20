@@ -1,6 +1,7 @@
 ---
-title: Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012 | Microsoft Docs
-ms.date: 01/25/2018
+title: 'Aggiornare le istanze di SQL Server: cluster Windows Server 2012 e versioni precedenti'
+description: Descrive come aggiornare le istanze del cluster di failover di SQL Server in esecuzione in Windows Server 2008, Windows Server 2008 R2 e Windows Server 2012.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904964"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242850"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
@@ -282,7 +283,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
     Dopo la migrazione, le associazioni ai servizi remoti funzionano come previsto, man mano che viene eseguita la migrazione degli utenti che usano tali associazioni.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
+### <a name="ssnoversion-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
 -   **Processi**
 
@@ -320,6 +321,6 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 - [Completare l'aggiornamento al motore di database](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Modificare la modalità di compatibilità del database e usare l'archivio query](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Vantaggi delle nuove funzionalità di SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
-- [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
+- [Aggiornare un'istanza del cluster di failover di SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
 - [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Aggiungere funzionalità a un'istanza di SQL Server 2016 (programma di installazione)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

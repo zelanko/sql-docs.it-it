@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9feef3af6a4506f3daa6fab793a3c76a5dd84cae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581037"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gestire gli avvisi dati in Gestione avvisi dati
@@ -25,7 +25,7 @@ ms.locfileid: "65581037"
 
 Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati e le informazioni sugli avvisi. Possono inoltre eliminare i propri avvisi, aprire definizioni di avviso per la modifica nella finestra di progettazione Avviso dati ed eseguire i propri avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per gli utenti in Gestione avvisi dati.
 
- ![Funzionalità di Gestione avvisi dati per gli utenti SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Funzionalità di Gestione avvisi dati per gli utenti SharePoint")
+ ![Funzionalità di Gestione avvisi per gli utenti di SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Funzionalità di Gestione avvisi per gli utenti di SharePoint")
 
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
@@ -36,7 +36,7 @@ Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati
   
 2.  Fare clic sull'icona per espandere il menu a discesa in un report, quindi fare clic su **Gestisci avvisi dati**. Nella figura seguente è illustrato il menu a discesa.  
   
-     ![Aprire Gestione avvisi dati dal menu di scelta rapida dei report](../reporting-services/media/rs-openalertmanager.gif "Aprire Gestione avvisi dati dal menu di scelta rapida dei report")  
+     ![Aprire Gestione avvisi dal menu di scelta rapida del report](../reporting-services/media/rs-openalertmanager.gif "Aprire Gestione avvisi dal menu di scelta rapida del report")  
   
      Verrà aperto Gestione avvisi dati. Per impostazione predefinita, vengono elencati gli avvisi per il report selezionati nella raccolta.  
   

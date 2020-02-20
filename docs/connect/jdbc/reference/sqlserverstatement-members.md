@@ -1,5 +1,5 @@
 ---
-title: Membri SQLServerStatement | Microsoft Docs
+title: Membri di SQLServerStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970359"
 ---
 # <a name="sqlserverstatement-members"></a>Membri di SQLServerStatement
@@ -23,20 +23,20 @@ ms.locfileid: "67970359"
   Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- Nessuna.  
+ No.  
   
 ## <a name="fields"></a>Campi  
- Nessuna.  
+ No.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>Metodi  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Aggiunge il comando SQL specificato all'elenco corrente di comandi per questo oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Annulla l'istruzione SQL attualmente in esecuzione tramite questo oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  

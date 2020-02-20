@@ -9,10 +9,10 @@ ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576382"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funzioni di Generatore report - Funzione Aggregate
@@ -38,8 +38,8 @@ Aggregate(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Il tipo restituito dipende dal provider di dati. Restituisce **Nothing** se il provider di dati non supporta questa funzione o se i dati non sono disponibili.  
   
-## <a name="remarks"></a>Remarks  
- La funzione **Aggregate** offre una modalità per usare aggregazioni calcolate sull'origine dati esterna. Il supporto per questa caratteristica è determinato dall'estensione dei dati. L'estensione dell'elaborazione dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio, consente di recuperare set di righe bidimensionali da una query MDX. Alcune righe del set di risultati possono contenere valori di aggregazione calcolati nel server dell'origine dati. Tali valori sono noti come *aggregazioni server*. Per visualizzare le aggregazioni server nella finestra Progettazione query con interfaccia grafica per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare il pulsante **Mostra aggregazione** sulla barra degli strumenti. Per altre informazioni, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report &#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Aggregate** offre una modalità per usare aggregazioni calcolate sull'origine dati esterna. Il supporto per questa caratteristica è determinato dall'estensione dei dati. L'estensione per l'elaborazione dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ad esempio, recupera set di righe bidimensionali da una query MDX. Alcune righe del set di risultati possono contenere valori di aggregazione calcolati nel server dell'origine dati. Tali valori sono noti come *aggregazioni server*. Per visualizzare le aggregazioni server nella finestra Progettazione query con interfaccia grafica per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare il pulsante **Mostra aggregazione** sulla barra degli strumenti. Per altre informazioni, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report &#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
   
  Quando si visualizza la combinazione di valori di aggregazione e di set di dati di dettaglio nelle righe di dettaglio di un'area dati Tablix, le aggregazioni server non vengono solitamente incluse perché non corrispondono a dati di dettaglio. Tuttavia, è possibile visualizzare tutti i valori recuperati per il set di dati e personalizzare le modalità di calcolo e visualizzazione dei dati di aggregazione.  
   

@@ -1,6 +1,6 @@
 ---
-title: Utilità Profiler | Microsoft Docs
-ms.custom: ''
+title: Utilità profiler
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faaf063fc00964ec6d060d03f42acc3e1eaaa33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105639"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307389"
 ---
 # <a name="profiler-utility"></a>Utilità profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ profiler
  Specifica una tabella di traccia da caricare all'avvio di SQL Profiler. Assieme alla tabella è necessario specificare il database, l'utente oppure lo schema.  
   
  **/T"** *template_name* **"**  
- Specifica il modello che verrà caricato per configurare la traccia. È necessario racchiudere il nome del modello tra virgolette. Il nome del modello deve trovarsi nella directory dei modelli di sistema oppure in quella dei modelli utente. Se in entrambe le directory esistono due modelli con lo stesso nome, verrà caricato il modello incluso nella directory di sistema. Se non esiste alcun modello con il nome specificato, verrà caricato il modello standard. Si noti che l'estensione di file tdf del modello non dovrà essere specificata come parte del *template_name*. Esempio:  
+ Specifica il modello che verrà caricato per configurare la traccia. È necessario racchiudere il nome del modello tra virgolette. Il nome del modello deve trovarsi nella directory dei modelli di sistema oppure in quella dei modelli utente. Se in entrambe le directory esistono due modelli con lo stesso nome, verrà caricato il modello incluso nella directory di sistema. Se non esiste alcun modello con il nome specificato, verrà caricato il modello standard. Si noti che l'estensione di file tdf del modello non dovrà essere specificata come parte del *template_name*. Ad esempio:  
   
 ```  
 /T "standard"  
@@ -103,7 +103,7 @@ profiler
 |Parametro|Definizione|  
 |---------------|----------------|  
 |MM|Mese nel formato a 2 cifre|  
-|DD|Giorno nel formato a 2 cifre|  
+|GG|Giorno nel formato a 2 cifre|  
 |YY|Anno nel formato a 2 cifre|  
 |hh|Ora a 2 cifre nel formato a 24 ore|  
 |MM|Minuti nel formato a 2 cifre|  
@@ -118,7 +118,7 @@ profiler
  **/Z**  *file_size*  
  Specifica le dimensioni del file di traccia espresse in megabyte (MB). Le dimensioni predefinite sono pari a 5 MB. Se si abilita il rollover, a tutti i file di rollover verrà applicato il valore limite specificato in questo argomento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per avviare la traccia con un modello specifico, usare contemporaneamente le opzioni **/S** e **/T** . Per avviare una traccia utilizzando il modello Standard in MyServer\MyInstance, ad esempio, al prompt dei comandi digitare quanto segue:  
   
 ```  

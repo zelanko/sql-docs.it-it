@@ -1,5 +1,5 @@
 ---
-title: Funzionalità internazionali del driver JDBC | Microsoft Docs
+title: Caratteristiche internazionali del driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028016"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Caratteristiche internazionali del driver JDBC
@@ -33,7 +33,7 @@ ms.locfileid: "69028016"
 ## <a name="handling-of-character-data"></a>Gestione dei dati di tipo carattere  
  I dati di tipo carattere in Java vengono gestiti come Unicode per impostazione predefinita. L'oggetto **String** Java rappresenta dati di tipo carattere Unicode. Nel driver JDBC l'unica eccezione a questa regola è costituita dai metodi per il richiamo e l'impostazione dei flussi ASCII, che rappresentano casi speciali poiché utilizzano flussi di byte con il presupposto implicito di singole tabelle codici conosciute (ASCII).  
   
- Il driver JDBC fornisce inoltre la proprietà della stringa di connessione **sendStringParametersAsUnicode** . che può essere utilizzata per specificare che i parametri preparati per i dati di tipo carattere verranno inviati in formato ASCII or MBCS (Multi-byte Character Set) anziché Unicode. Per ulteriori informazioni sulla proprietà della stringa di connessione **sendStringParametersAsUnicode** , vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
+ Il driver JDBC fornisce inoltre la proprietà della stringa di connessione **sendStringParametersAsUnicode**. che può essere utilizzata per specificare che i parametri preparati per i dati di tipo carattere verranno inviati in formato ASCII or MBCS (Multi-byte Character Set) anziché Unicode. Per altre informazioni sulla proprietà della stringa di connessione **sendStringParametersAsUnicode**, vedere [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ### <a name="driver-incoming-conversions"></a>Conversioni in ingresso nel driver  
  I dati di tipo text Unicode provenienti dal server non devono essere convertiti. Vengono passati direttamente in formato Unicode. I dati non Unicode provenienti dal server vengono convertiti dalla tabella codici, a livello di database o di colonna, a Unicode. Per eseguire queste conversioni vengono utilizzate le routine di conversione JVM (Java Virtual Machine). Le conversioni vengono eseguite su tutti metodi per il richiamo di flussi String e Character tipizzati.  
@@ -46,7 +46,7 @@ ms.locfileid: "69028016"
  D'altro canto, i metodi dell'API per caratteri non nazionali, ad esempio i metodi setString, setCharacterStream e setClob delle classi [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) inviano i valori al server in formato Unicode solo quando la proprietà **sendStringParametersAsUnicode** è impostata su "true", che corrisponde al valore predefinito.  
   
 ## <a name="non-unicode-parameters"></a>Parametri non Unicode  
- Per ottenere prestazioni ottimali con tipi **char**, **varchar** o **LONGVARCHAR** di parametri non Unicode, impostare la proprietà della stringa di connessione **sendStringParametersAsUnicode** su "false" e utilizzare i metodi per caratteri non nazionali.  
+ Per prestazioni ottimali con il tipo **CHAR**, **VARCHAR** o **LONGVARCHAR** di parametri non Unicode, impostare la proprietà della stringa di connessione **sendStringParametersAsUnicode** su "false" e usare i metodi per caratteri non nazionali.  
   
 ## <a name="formatting-issues"></a>Problemi di formattazione  
  Per la data, l'ora e le valute, tutte le operazioni di formattazione con i dati localizzati vengono eseguite a livello di linguaggio Java usando l'oggetto Impostazioni locali e i diversi metodi di formattazione per i tipi di dati **Data**, **Calendario** e **Numero**. Nei rari casi in cui il driver JDBC deve passare dati dipendenti dalle impostazioni locali in un formato localizzato, viene utilizzato il formattatore appropriato con le impostazioni locali JVM predefinite.  

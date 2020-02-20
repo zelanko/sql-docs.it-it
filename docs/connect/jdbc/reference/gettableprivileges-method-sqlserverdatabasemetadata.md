@@ -16,10 +16,10 @@ ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979226"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Metodo getTablePrivileges (SQLServerDatabaseMetaData)
@@ -45,7 +45,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
   
  Valore **String** contenente il modello del nome dello schema. Se si specifica Null per questo parametro, non è necessario utilizzare il nome dello schema.  
   
- *table*  
+ *tabella*  
   
  Valore **String** contenente il modello del nome della tabella.  
   
@@ -55,20 +55,20 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getTablePrivileges viene specificato dal metodo getTablePrivileges nell'interfaccia java.sql.DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getTablePrivileges conterrà le informazioni seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Nome del catalogo.|  
-|TABLE_SCHEM|**String**|Nome dello schema della tabella.|  
-|TABLE_NAME|**String**|Il nome della tabella.|  
-|GRANTOR|**String**|Oggetto che concede l'accesso.|  
-|GRANTEE|**String**|Oggetto a cui si concede l'accesso.|  
-|PRIVILEGE|**String**|Tipo di accesso concesso.|  
-|IS_GRANTABLE|**String**|Indica se l'utente autorizzato può concedere l'accesso agli altri utenti.|  
+|TABLE_CAT|**Stringa**|Nome del catalogo.|  
+|TABLE_SCHEM|**Stringa**|Nome dello schema della tabella.|  
+|TABLE_NAME|**Stringa**|Il nome della tabella.|  
+|GRANTOR|**Stringa**|Oggetto che concede l'accesso.|  
+|GRANTEE|**Stringa**|Oggetto a cui si concede l'accesso.|  
+|PRIVILEGE|**Stringa**|Tipo di accesso concesso.|  
+|IS_GRANTABLE|**Stringa**|Indica se l'utente autorizzato può concedere l'accesso agli altri utenti.|  
   
 > [!NOTE]  
 >  Per ulteriori informazioni sui dati restituiti dal metodo getTablePrivileges, vedere "sp_table_privileges (Transact-SQL)" nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

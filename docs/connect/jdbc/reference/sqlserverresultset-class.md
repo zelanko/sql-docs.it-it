@@ -11,10 +11,10 @@ ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e0a2185037f54aa7ed975667c0bdd5fb921c845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970617"
 ---
 # <a name="sqlserverresultset-class"></a>Classe SQLServerResultSet
@@ -33,7 +33,7 @@ ms.locfileid: "67970617"
 public final class SQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Esistono due tipi di set di risultati: lato client e lato server.  
   
  I set di risultati del lato client vengono utilizzati quando le dimensioni dei risultati sono tali da consentirne la conservazione nella memoria del processo client. Questi risultati sono disponibili più rapidamente e vengono letti interamente dal database da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Inoltre non impongono carico aggiuntivo sul database, evitando l'overhead correlato alla creazione di cursori sul lato server. Tuttavia, questi tipi di set di risultati non sono aggiornabili.  
@@ -42,7 +42,7 @@ public final class SQLServerResultSet
   
  La classe SQLServerResultSet fornisce numerosi metodi che consentono l'aggiornamento del set di risultati con qualsiasi tipo di dati Java nativo e numerosi tipi di oggetti Java.  
   
- Questa classe supporta l'annullamento del wrapping alla classe SQLServerResultSet, l'interfaccia ISQLServerResultSet e l'interfaccia java. SQL. ResultSet. Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Questa classe supporta l'annullamento del wrapping per la classe SQLServerResultSet, l'interfaccia ISQLServerResultSet e l'interfaccia java.sql.ResultSet. Per altre informazioni, vedere [Wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

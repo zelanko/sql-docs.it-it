@@ -1,5 +1,5 @@
 ---
-title: Metodo seencrypt (SQLServerDataSource) | Microsoft Docs
+title: Metodo setEncrypt (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974293"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Metodo setEncrypt (SQLServerDataSource)
@@ -37,9 +37,9 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>Parametri  
  *encrypt*  
   
- **true** se la crittografia del Secure Sockets Layer (SSL) è abilitata tra il client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e il. In caso contrario, **false**.  
+ **true** se la crittografia Secure Sockets Layer (SSL) è abilitata tra il client e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In caso contrario, **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la proprietà encrypt è impostata su **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fa in modo che in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga usata la crittografia SSL per tutti i dati inviati tra il client e il server, se nel server è installato un certificato. Il valore predefinito è **false**.  
   
  Il driver JDBC rileva l'ambiente Java Virtual Machine (JVM) in cui viene eseguito durante il tentativo di stabilire un handshake SSL.  

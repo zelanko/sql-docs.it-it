@@ -16,10 +16,10 @@ ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5bfc0fb1d1a74131d0e8e71055356f958a9b508
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973098"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>Metodo setResponseBuffering (SQLServerDataSource)
@@ -35,16 +35,16 @@ public void setResponseBuffering(java.lang.String value)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Valore*  
+ *value*  
   
  Valore **String** contenente la modalità di flusso e di memorizzazione nel buffer. La modalità valida può essere una delle stringhe senza distinzione tra maiuscole e minuscole seguenti: **full** o **adaptive**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore **full** specifica la lettura dell'intero risultato dal server in fase di esecuzione.  
   
  Il valore **adaptive** specifica la memorizzazione nel buffer della quantità di dati minima possibile, quando necessario. Il valore **adaptive** rappresenta la modalità di memorizzazione nel buffer predefinita.  
   
- Per ulteriori informazioni sull'utilizzo della modalità di buffering delle risposte, vedere [utilizzo del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Per altre informazioni sull'uso della modalità di buffering delle risposte, vedere [Uso del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

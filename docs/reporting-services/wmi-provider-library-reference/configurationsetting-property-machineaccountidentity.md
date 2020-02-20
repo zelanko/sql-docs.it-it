@@ -11,10 +11,10 @@ ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c755fd18f3b904f6c28707752e5ff00c6086f0b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570289"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>Proprietà di ConfigurationSetting - MachineAccountIdentity
@@ -37,6 +37,6 @@ public string MachineAccountIdentity;
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  
+ [Proprietà di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  
   
   

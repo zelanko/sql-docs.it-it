@@ -13,10 +13,10 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65502848"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Chiavi di crittografia SSRS - Eseguire il backup e il ripristino delle chiavi di crittografia
@@ -46,7 +46,7 @@ ms.locfileid: "65502848"
 
  Durante il backup della chiave simmetrica, la chiave viene scritta nel file specificato dall'utente e quindi viene codificata utilizzando la password fornita dall'utente. La chiave simmetrica non può mai essere archiviata non crittografata, pertanto è necessario fornire una password per codificarla al momento di salvarla su disco. Dopo aver creato il file, è necessario archiviarlo in un percorso protetto e **ricordare la password** per poterlo sbloccare. Per eseguire il backup della chiave simmetrica, è possibile utilizzare gli strumenti riportati di seguito.  
   
- **Modalità nativa:** Gestione configurazione Reporting Services o l'utilità **rskeymgmt** .  
+ **Modalità nativa:** Gestione configurazione Reporting Services o l'utilità **rskeymgmt**.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -67,7 +67,7 @@ ms.locfileid: "65502848"
   
 4.  Specificare un file in cui includere la chiave archiviata. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiunge l'estensione snk al file. È consigliabile archiviare il file su un disco separato dal server di report.  
   
-5.  Fare clic su **OK**.  
+5.  Selezionare **OK**.  
   
 ###  <a name="bkmk_backup_rskeymgmt"></a> Eseguire il backup di chiavi di crittografia - rskeymgmt (modalità nativa)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "65502848"
   
 4.  Digitare la password che sblocca il file.  
   
-5.  Fare clic su **OK**. 
+5.  Selezionare **OK**. 
   
 ###  <a name="bkmk_restore_rskeymgmt"></a> Ripristinare le chiavi di crittografia - rskeymgmt (modalità nativa)  
   

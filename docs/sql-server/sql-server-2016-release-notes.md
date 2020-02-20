@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632916"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909851"
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Le funzionalità seguenti sono disponibili nelle edizioni Standard, Web, Express
 - Changed Data Capture (non disponibile in Express)
 - columnstore
 - Compressione
-- Mascheramento dati dinamici
+- Maschera dati dinamica
 - Controllo con granularità fine
 - OLTP in memoria (non disponibile nel database locale)
 - Più contenitori FileStream (non disponibili nel database locale)
@@ -141,10 +141,10 @@ L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'install
 -   [Archivio query (GA)](#bkmk_ga_query_store)
 -   [Documentazione del prodotto (GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Requisito di installazione patch (disponibilità generale)
 **Problema e impatto per i clienti:** Microsoft ha identificato un problema con i file binari di Microsoft VC++ 2013 Runtime che vengono installati come prerequisito da SQL Server 2016. È disponibile un aggiornamento per risolvere questo problema. Se questo aggiornamento dei file binari di VC++ Runtime non viene installato, potrebbero verificarsi problemi di stabilità di SQL Server 2016 in determinati scenari. Prima di installare SQL Server 2016, verificare se il computer richiede la patch descritta in [KB 3164398](https://support.microsoft.com/kb/3164398). La patch è inclusa anche nell'[aggiornamento cumulativo 1 (CU1) per SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
 
-**Soluzione:** Usare una delle soluzioni seguenti:
+**Risoluzione:** Usare una delle soluzioni seguenti:
 
 - Installare l'aggiornamento per Visual C++ 2013 e Visual C++ Redistributable Package ( [KB 3138367](https://support.microsoft.com/kb/3138367)). La soluzione nella KB è la soluzione consigliata. È possibile installarlo prima o dopo l'installazione di SQL Server 2016.
 

@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle proprietà dell'origine dati | Microsoft Docs
+title: Impostazione delle proprietà delle origini dati | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027733"
 ---
 # <a name="setting-the-data-source-properties"></a>Impostazione delle proprietà dell'origine dati
@@ -25,7 +25,7 @@ Le origini dati sono il meccanismo ideale con cui creare connessioni JDBC in un 
 
 I prodotti Java EE, quali server applicazioni e motori servlet/JSP, consentono in genere di configurare origini dati per l'accesso ai database. Tutte le proprietà elencate nell'argomento [Impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) possono essere specificate ovunque la configurazione consenta di immettere una proprietà come coppia proprietà=valore.
 
-Per altre informazioni sulle origini dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Per un esempio di come usare la classe SQLServerDataSource per creare una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, vedere esempio di [origine dati](../../connect/jdbc/data-source-sample.md).
+Per altre informazioni sulle origini dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Per un esempio di come usare la classe SQLServerDataSource per creare una connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Esempio di origine dati](../../connect/jdbc/data-source-sample.md).
 
 ## <a name="see-also"></a>Vedere anche
 

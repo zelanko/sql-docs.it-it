@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2d21e270eb7e2d387201d66df0bb566c3924d53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994402"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "67994402"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  L'interfaccia **IRowsetFastLoad** espone il supporto per operazioni di copia bulk di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basate sulla memoria. OLE DB driver per SQL Server consumer utilizzano l'interfaccia per aggiungere rapidamente dati a una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella esistente.  
+  L'interfaccia **IRowsetFastLoad** espone il supporto per operazioni di copia bulk di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basate sulla memoria. I consumer di OLE DB Driver per SQL Server usano l'interfaccia per aggiungere rapidamente dati a una tabella di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente.  
   
  Se si imposta SSPROP_ENABLEFASTLOAD su VARIANT_TRUE per una sessione, non è possibile leggere dati dai set di righe restituiti successivamente dalla sessione. Quando SSPROP_ENABLEFASTLOAD è impostato su VARIANT_TRUE, tutti i set di righe creati nella sessione saranno del tipo IRowsetFastLoad. I set di righe IRowsetFastLoad non supportano la funzionalità di recupero del set di righe, quindi non è possibile leggere i set di righe.  
   

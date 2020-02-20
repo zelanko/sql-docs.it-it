@@ -1,6 +1,6 @@
 ---
-title: Recupero delle informazioni sull'errore | Microsoft Docs
-description: Recupero delle informazioni sugli errori mediante OLE DB driver per SQL Server
+title: Recupero di informazioni sugli errori | Microsoft Docs
+description: Recupero di informazioni sugli errori tramite OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: efde220b1cdc849eec9c0483453739b47fac7a75
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874647"
 ---
 # <a name="retrieving-error-information"></a>Recupero delle informazioni sugli errori
@@ -221,6 +221,6 @@ void DumpErrorInfo
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [errori](../../oledb/ole-db-errors/errors.md)  
+ [Errori](../../oledb/ole-db-errors/errors.md)  
   
   

@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262897"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
@@ -111,7 +111,7 @@ Per informazioni sulla migrazione di una distribuzione di [!INCLUDE[ssRSnoversio
   
 * I certificati SSL (Secure Sockets Layer) client non sono supportati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive. Se si utilizzano certificati SSL client, è necessario riprogettare la soluzione per la creazione di report prima di procedere alla migrazione.  
   
-* Se si usa un tipo di autenticazione diverso dall'autenticazione integrata di Windows, è necessario aggiornare l'elemento `<AuthenticationTypes>` nel file **RSReportServer.config** con un tipo di autenticazione supportato. I tipi di autenticazione supportati sono NTLM, Kerberos, Negotiate e Basic. Le autenticazioni anonima, .NET Passport e Digest non sono supportate in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive.  
+* Se si usa un tipo di autenticazione diverso dall'autenticazione integrata di Windows, è necessario aggiornare l'elemento `<AuthenticationTypes>` nel file **RSReportServer.config** con un tipo di autenticazione supportato. I tipi di autenticazione supportati sono NTLM, Kerberos, Negotiate e Basic. Le autenticazioni anonime, .NET Passport e Digest non sono supportate in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive.  
   
 * Se si usano fogli di stile CSS personalizzati nell'ambiente di report, la migrazione non può essere eseguita e sarà necessario spostarli manualmente in seguito alla migrazione.
   
@@ -215,7 +215,7 @@ Per altre informazioni sulle modifiche apportate in SQL Server Reporting Service
   
     1. [Distribuzione di un assembly personalizzato](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Procedura: Distribuzione di un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Procedura: Distribuire un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Distribuzione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   

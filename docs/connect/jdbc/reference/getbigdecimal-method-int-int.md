@@ -16,10 +16,10 @@ ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77fa7092b7835e400b7ced8c7dbc0368188b0eb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954002"
 ---
 # <a name="getbigdecimal-method-int-int"></a>Metodo getBigDecimal (int, int)
@@ -43,7 +43,7 @@ public java.math.BigDecimal getBigDecimal(int index,
   
  Valore **int** che specifica l'indice del parametro.  
   
- *scala*  
+ *scale*  
   
  Valore **int** che indica il numero di cifre a destra del separatore decimale.  
   
@@ -53,8 +53,8 @@ public java.math.BigDecimal getBigDecimal(int index,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getBigDecimal viene specificato dal Metodo getBigDecimal nell'interfaccia java. SQL. CallableStatement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getBigDecimal viene specificato dal metodo getBigDecimal nell'interfaccia java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getBigDecimal &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

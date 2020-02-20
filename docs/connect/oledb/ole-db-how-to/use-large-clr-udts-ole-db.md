@@ -1,5 +1,5 @@
 ---
-title: Usare i tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Microsoft Docs
+title: Usare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Microsoft Docs
 description: Usare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 07a3023f61f26bbc4850eaa495f134d87c6a61c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994604"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utilizzare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994604"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In questo esempio viene illustrato come recuperare righe con tipi di grandi dimensioni definiti dall'utente da un set di risultati. Per ulteriori informazioni, vedere [tipi &#40;CLR definiti dall'utente di grandi&#41;dimensioni OLE DB](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva.  
+  In questo esempio viene illustrato come recuperare righe con tipi di grandi dimensioni definiti dall'utente da un set di risultati. Per altre informazioni, vedere [Tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva.  
   
 ## <a name="example"></a>Esempio  
  L'esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella con una colonna di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà utilizzato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  

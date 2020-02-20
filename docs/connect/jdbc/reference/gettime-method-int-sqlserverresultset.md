@@ -16,10 +16,10 @@ ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b862aed00a154cac23df4008da649347f94f000a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979116"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>Metodo getTime (int) (SQLServerResultSet)
@@ -40,12 +40,12 @@ public java.sql.Time getTime(int columnIndex)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto temporale.  
+ Oggetto Time.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce una parte dell'ora valida di un tipo di dati datetime o smalldatetime di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte della data impostata sulla data di base di Java (01/01/1970).  

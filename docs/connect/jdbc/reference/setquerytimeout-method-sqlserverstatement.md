@@ -16,10 +16,10 @@ ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a4a271e07dea5a533dcb19b098a3e3de29e535e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973177"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>Metodo setQueryTimeout (SQLServerStatement)
@@ -42,8 +42,8 @@ public final void setQueryTimeout(int seconds)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setQueryTimeout viene specificato dal metodo setQueryTimeout nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setQueryTimeout viene specificato dal metodo setQueryTimeout nell'interfaccia java.sql.Statement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

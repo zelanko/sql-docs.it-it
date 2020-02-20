@@ -1,5 +1,5 @@
 ---
-title: Metodo GetMetadata (SQLServerConnection) | Microsoft Docs
+title: Metodo getMetaData (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fdf49c68acd2ef1b1544ad02efcb4079ceeac67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981874"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>Metodo getMetaData (SQLServerConnection)
@@ -40,8 +40,8 @@ public java.sql.DatabaseMetaData getMetaData()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getMetaData viene specificato dal metodo getMetaData nell'interfaccia java. SQL. Connection.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getMetaData viene specificato dal metodo getMetaData nell'interfaccia java.sql.Connection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

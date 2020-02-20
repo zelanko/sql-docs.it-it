@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041164"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910938"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Note sulla versione di ODBC per SQL Server in Windows
 
@@ -44,13 +44,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5, gennaio 2020
+
+| Funzionalità aggiunta | Dettagli |
+| :------------ | :------ |
+| Attributo di connessione SQL_COPT_SS_SPID per recuperare SPID senza round trip al server | Vedere [Parole chiave e attributi per stringhe di connessione e DSN](../dsn-connection-string-attribute.md). |
+| Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, ottobre 2019
 
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
 | Supporto per endpoint Azure Key Vault aggiuntivi | Vedere [Uso di Always Encrypted con il driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
 | Supporto per l'impostazione della versione di classificazione dei dati | Vedere [Classificazione dei dati](../data-classification.md#bkmk-version). |
-| Il driver installerà ora Azure Active Drirectory Authentication Library (adal. dll) usato per l'autenticazione in Azure | |
+| Includere Azure Active Directory Authentication Library (adal.dll) nel programma di installazione | Ora inclusa nell'installazione del driver di base, verranno così aggiornate le installazioni esistenti di Microsoft Active Directory Authentication Library per SQL Server, rimuovendo l'applicazione dall'elenco delle applicazioni installate in Windows. |
 | Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -59,7 +67,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
 | Always Encrypted con enclave sicuri. | Vedere [Uso di Always Encrypted con il driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
-| Impostazioni Keep-alive TCP configurabili. | Vedere [Connessione a SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
+| Impostazioni keep-alive TCP configurabili. | Vedere [Connessione a SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
 | Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

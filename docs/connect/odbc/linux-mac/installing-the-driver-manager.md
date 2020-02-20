@@ -13,10 +13,10 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008789"
 ---
 # <a name="installing-the-driver-manager"></a>Installazione di Gestione driver
@@ -71,7 +71,7 @@ Se l'esecuzione dello script di installazione non viene completata, configurare 
   
 4.  Passare alla directory unixODBC-2.3.0.  
   
-5.  Un prompt dei comandi, eseguire il comando: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8"** .  
+5.  Al prompt dei comandi, eseguire il comando: **CPPFLAGS="-DSIZEOF_LONG_INT=8"** .  
   
 6.  Un prompt dei comandi, eseguire il comando: **export CPPFLAGS**.  
   

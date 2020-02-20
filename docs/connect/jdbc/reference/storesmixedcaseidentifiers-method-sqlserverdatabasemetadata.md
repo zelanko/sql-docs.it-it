@@ -16,10 +16,10 @@ ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1d1a924b913ecffc4baea959053001d7e30c1db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969904"
 ---
 # <a name="storesmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>Metodo storesMixedCaseIdentifiers (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean storesMixedCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se gli identificatori vengono archiviati in lettere maiuscole e minuscole. In caso contrario, **false**.  
+ **true** se gli identificatori vengono archiviati con lettere maiuscole e minuscole. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo storesMixedCaseIdentifiers viene specificato dal Metodo storesMixedCaseIdentifiers nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo storesMixedCaseIdentifiers viene specificato dal metodo storesMixedCaseIdentifiers nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577865"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190435"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Progettare report impaginati di Reporting Services con progettazione Report (SSRS)
 
@@ -44,7 +44,7 @@ I progetti report costituiscono il contenitore per le definizioni e le risorse d
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è uno strumento client. È possibile testare la soluzione di report localmente nel computer, distribuirla in un ambiente di testing per il test della soluzione server, quindi distribuirla in un ambiente di produzione. Dopo la distribuzione, verificare che le estensioni per l'elaborazione dell'origine dati e le credenziali dell'origine dati siano configurate per l'ambiente del server di report. È possibile utilizzare Gestione configurazione per gestire le proprietà per distribuzioni diverse. Per altre informazioni, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Set di dati condivisi  
  Utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per definire e distribuire set di dati condivisi per una soluzione di report. I set di dati condivisi possono essere distribuiti indipendentemente dagli altri elementi di un progetto tramite le proprietà **OverwriteDatasets** e **TargetDatasetFolder** . Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -90,7 +90,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
  Le parti del report possono essere distribuite indipendentemente da altri elementi di un progetto tramite **TargetReportPartFolder** e altre proprietà. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 ##  <a name="bkmk_Resources"></a> Risorse  
- È possibile aggiungere al progetto file correlati al report, ma non elaborati dal server di report. È ad esempio possibile aggiungere immagini per le immagini o file di forma ESRI per i dati spaziali. Per altre informazioni, vedere [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
+ È possibile aggiungere al progetto file correlati al report, ma non elaborati dal server di report. È ad esempio possibile aggiungere immagini per le immagini o file di forma ESRI per i dati spaziali. Per altre informazioni, vedere [Risorse](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
 ##  <a name="bkmk_ReportLayout"></a> Layout del report impaginato  
  Per creare il layout del report, trascinare gli elementi e le aree dati del report dalla casella degli strumenti nell'area di progettazione e disporli. Trascinare i campi del set di dati sugli elementi dell'area di progettazione per aggiungere dati al report. Per organizzare i dati in gruppi in un'area dati Tablix, trascinare i campi del set di dati nel riquadro di raggruppamento. Poiché gli strumenti per la creazione di report costituiscono essenzialmente un modo per creare definizioni di report, l'approccio alla progettazione di report di Generatore report e Progettazione report è piuttosto simile.  
@@ -118,7 +118,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
     > [!NOTE]  
     >  Per utilizzare la modalità debug, è necessario impostare un elemento iniziale. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto report, scegliere **Proprietà**, quindi selezionare il nome del report da visualizzare nella proprietà **StartItem**.  
   
-     Se si desidera visualizzare in anteprima un report che non è l'elemento iniziale del progetto, selezionare una configurazione che compili il report senza distribuirlo, ad esempio la configurazione DebugLocal. Fare clic con il pulsante destro del mouse sul report, quindi fare clic su **Esegui**. È necessario scegliere una configurazione che non preveda la distribuzione del report. In caso contrario, il report verrà pubblicato nel server di report anziché venire visualizzato in locale in una finestra di anteprima.  
+     Se si desidera visualizzare in anteprima un report che non è l'elemento iniziale del progetto, selezionare una configurazione che compili il report senza distribuirlo, ad esempio la configurazione DebugLocal. Fare clic con il pulsante destro del mouse sul report e quindi scegliere **Esegui**. È necessario scegliere una configurazione che non preveda la distribuzione del report. In caso contrario, il report verrà pubblicato nel server di report anziché venire visualizzato in locale in una finestra di anteprima.  
   
 -   **Anteprima di stampa.**  
   

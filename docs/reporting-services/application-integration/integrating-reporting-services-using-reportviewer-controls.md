@@ -1,9 +1,11 @@
 ---
-title: Integrazione di Reporting Services tramite i controlli Visualizzatore report | Microsoft Docs
+title: Integrare usando i controlli Visualizzatore report
+description: In Visual Studio sono disponibili due controlli Visualizzatore report per l'integrazione delle funzionalità di visualizzazione dei report nelle applicazioni.
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Viewer controls
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741884"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796860"
 ---
-# <a name="integrating-reporting-services-using-report-viewer-controls"></a>Integrazione di Reporting Services tramite i controlli Visualizzatore report
+# <a name="integrate-reporting-services-using-report-viewer-controls"></a>Integrare Reporting Services usando i controlli Visualizzatore report
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 sono disponibili due controlli Visualizzatore report per l'integrazione delle funzionalità di visualizzazione dei report nelle applicazioni. È disponibile una versione per le applicazioni basate su Windows Form e una per le applicazioni Web Form. Ogni controllo offre funzionalità simili, ma ognuno è progettato per un ambiente specifico. Entrambi i controlli consentono di elaborare i report distribuiti in un server di report (modalità di elaborazione remota) o copiati in un computer in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è stato installato (modalità di elaborazione locale).  
   
  Il controllo Visualizzatore report non include il supporto integrato per l'adattamento dinamico ai diversi dispositivi con risoluzioni dello schermo diverse.  

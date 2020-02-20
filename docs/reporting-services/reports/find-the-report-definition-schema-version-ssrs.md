@@ -13,17 +13,17 @@ ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 129fcb8e1533162560b88e9400c68c7c863be119
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826834"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Individuare la versione dello schema di definizione del report (SSRS)
 
-Un file di definizione del report specifica lo spazio dei nomi RDL per la versione dello schema di definizione del report utilizzata per convalidare il file rdl. Quando si apre un file con estensione RDL in un ambiente, ad esempio Progettazione Report di creazione report [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], Visual Studio o Generatore Report. Se il report è stato creato per uno spazio dei nomi precedente, viene creato automaticamente un file di backup e il report viene aggiornato allo spazio dei nomi corrente. Salvando la definizione del report aggiornata, si salva il file con estensione rdl convertito. Questo è l'unico modo per aggiornare una definizione del report. La definizione del report non viene aggiornata su un server di report. Il report compilato viene aggiornato su un server di report. Per altre informazioni, vedere [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+Un file di definizione del report specifica lo spazio dei nomi RDL per la versione dello schema di definizione del report utilizzata per convalidare il file rdl. Quando si apre un file RDL in un ambiente di creazione report, ad esempio Progettazione report, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], Visual Studio o Generatore report, se il report è stato creato per uno spazio dei nomi precedente, viene creato automaticamente un file di backup e il report viene aggiornato allo spazio dei nomi corrente. Salvando la definizione del report aggiornata, si salva il file con estensione rdl convertito. Questo è l'unico modo per aggiornare una definizione del report. La definizione del report non viene aggiornata su un server di report. Il report compilato viene aggiornato su un server di report. Per altre informazioni, vedere [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-## <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Procedura: Identificare la versione di schema RDL di un report  
+## <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Procedura: Identificazione della versione di schema RDL di un report  
   
 1. Aprire il file del report con estensione rdl in un'applicazione, ad esempio il Blocco note o XML Notepad, nella quale è possibile visualizzare il codice XML.  
   
@@ -33,9 +33,9 @@ Un file di definizione del report specifica lo spazio dei nomi RDL per la versio
     <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">  
     ```  
   
-     Lo spazio dei nomi definizione di report più recente è il 2016. Tuttavia, lo spazio dei nomi definizione di report pubblicato più recente è 2010, specificato dall'URL seguente: `https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`...
+     Lo spazio dei nomi della definizione del report più recente è 2016. Lo spazio dei nomi della definizione del report pubblicato più di recente è tuttavia 2010, specificato dall'URL seguente: `https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`.
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procedura: Identificare la versione di schema RDL di Progettazione report  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procedura: Identificazione della versione di schema RDL di Progettazione report  
   
 1.  Apre un nuovo progetto. La versione del progetto che si sceglie determina la versione dello schema RDL. In SQL Server sono supportate più versioni dello schema. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -57,15 +57,15 @@ Un file di definizione del report specifica lo spazio dei nomi RDL per la versio
   
      Lo spazio dei nomi della definizione del report viene specificato dall'URL seguente: `https://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Procedura: Identificare la versione di schema RDL nel server di report  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Procedura: Identificazione della versione di schema RDL nel server di report  
   
--   Nel portale web, digitare l'URL del server di report. Ad esempio, nel seguente URL viene specificato un server di report sul computer locale:  
+-   Nel portale Web digitare l'URL per il server di report. Ad esempio, nel seguente URL viene specificato un server di report sul computer locale:  
   
      `https://localhost/reportserver/reportdefinition.xsd`  
   
      Il file con estensione xsd viene aperto nel browser.  
   
-     L'elemento XML Schema specifica lo spazio dei nomi dello schema. Nell'elemento schema seguente, ad esempio, sono specificati tre spazi dei nomi: il riferimento di targetNamespace usato internamente da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], il riferimento xsd per lo schema stesso (xsd) e il riferimento della definizione del report.  *Anno* rappresenta l'anno dello schema è utilizzando il report. Ad esempio, 2010 o 2016.
+     L'elemento XML Schema specifica lo spazio dei nomi dello schema. Nell'elemento schema seguente, ad esempio, sono specificati tre spazi dei nomi: il riferimento di targetNamespace usato internamente da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], il riferimento xsd per lo schema stesso (xsd) e il riferimento della definizione del report.  *Year* rappresenta l'anno dello schema usato dal report, ad esempio 2010 o 2016.
   
     ``` XML  
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" elementFormDefault="qualified">  

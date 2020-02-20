@@ -1,6 +1,6 @@
 ---
 title: Caricare i dati mediante rxImport
-description: Esercitazione dettagliata su come caricare dati usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 10: Come caricare i dati usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee0a1ddf8ccfdaf9c2b7b4f2ba5724451e7d71b8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b9b3924f2c9b315e519d5f65e68d2006a2a6edf4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727224"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947077"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Caricare dati in memoria usando rxImport (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 10 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+
+Questa esercitazione illustrerà come ottenere i dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usare la funzione **rxImport** per inserire i dati di interesse in un file locale. In questo modo è possibile analizzare i dati nel contesto di calcolo locale più volte senza dover ripetere la query del database.
 
 La funzione [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) può essere usata per spostare i dati da un'origine dati di un frame di dati nella memoria di una sessione o in un file XDF sul disco. Se non si specifica un file come destinazione, i dati vengono inseriti in memoria come frame di dati.
-
-Questo passaggio illustra come ottenere i dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e come usare la funzione **rxImport** per inserire i dati di interesse in un file locale. In questo modo è possibile analizzare i dati nel contesto di calcolo locale più volte senza dover ripetere la query del database.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Estrarre un subset di dati da SQL Server alla memoria locale
 

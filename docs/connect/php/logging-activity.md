@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993332"
 ---
 # <a name="logging-activity"></a>Attività di registrazione
@@ -24,7 +24,7 @@ ms.locfileid: "67993332"
 
 Per impostazione predefinita, gli errori e gli avvisi generati dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] non vengono registrati. In questo argomento viene illustrato come configurare l'attività di registrazione.  
   
-## <a name="logging-activity-using-the-pdosqlsrv-driver"></a>Attività di registrazione con il driver PDO_SQLSRV  
+## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Attività di registrazione con il driver PDO_SQLSRV  
 La sola configurazione disponibile per il driver PDO_SQLSRV è la voce pdo_sqlsrv.log_severity nel file php.ini.  
   
 Aggiungere quanto segue alla fine del file php.ini:  
@@ -64,7 +64,7 @@ Nella tabella seguente sono descritte le costanti che possono essere usate come 
 |Valore (intero equivalente tra parentesi)|Descrizione|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Attiva la registrazione di tutti i sottosistemi.|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|Disattiva la registrazione. Impostazione predefinita.|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|Disattiva la registrazione. Questa è la modalità predefinita.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Attiva la registrazione dell'attività di inizializzazione.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Attiva la registrazione dell'attività di connessione.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Attiva la registrazione delle attività delle istruzioni.|  
@@ -95,7 +95,7 @@ Nella tabella seguente sono descritte le costanti che possono essere usate come 
 |Valore (intero equivalente tra parentesi)|Descrizione|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Specifica la registrazione di errori, avvisi e notifiche.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifica che gli errori vengono registrati. Impostazione predefinita.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Specifica che gli errori vengono registrati. Questa è la modalità predefinita.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Specifica che gli avvisi vengono registrati.|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|Specifica che le notifiche vengono registrate.|  
   

@@ -9,10 +9,10 @@ ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48da3d62e18a77bc8629d43ef170ca2b0622fe16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581707"
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>Modificare l'ordine di un parametro del report (Generatore report e SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65581707"
   
 -   Fare clic su un parametro nel riquadro dei **dati del report** e usare i pulsanti freccia Su e freccia Giù per spostare il parametro in una posizione superiore o inferiore nell'elenco, come mostrato nell'immagine seguente.  Quando si modifica l'ordine del parametro del riquadro dei **dati del report** , viene modificata la posizione del parametro nel riquadro.  
   
-     ![Modificare l'ordine dei parametri nel riquadro Dati report](../../reporting-services/report-design/media/ssrs-changeorderofparameters-reportdata.png "Modificare l'ordine dei parametri nel riquadro Dati report")  
+     ![Modificare l'ordine dei parametri nel riquadro dei dati del report](../../reporting-services/report-design/media/ssrs-changeorderofparameters-reportdata.png "Modificare l'ordine dei parametri nel riquadro dei dati del report")  
   
 -   Nel riquadro dei parametri trascinare il parametro in una nuova colonna o riga del riquadro. Quando si modifica la posizione del parametro nel riquadro, viene modificato l'ordine del parametro nel riquadro dei **dati del report** . Per altre informazioni sullo spostamento dei parametri nel riquadro, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   

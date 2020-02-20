@@ -11,10 +11,10 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953178"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Metodo getClientConnectionID (SQLServerConnection)
@@ -34,8 +34,8 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sull'accesso alle informazioni di diagnostica nel log degli eventi estesi, vedere [accesso alle informazioni di diagnostica nel log degli eventi estesi](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+## <a name="remarks"></a>Osservazioni  
+ Per altre informazioni sull'accesso alle informazioni di diagnostica nel log degli eventi estesi, vedere [Accesso alle informazioni di diagnostica nel log degli eventi estesi](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  Nell'esempio seguente viene mostrato come ottenere l'ID connessione:  
   
@@ -56,7 +56,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getClientConnectionID** funziona indipendentemente dalla versione del server a cui ci si connette, ma i registri eventi estesi e la voce relativa agli errori del buffer circolare di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connettività non saranno presenti in 2008 R2 e versioni precedenti.  
+ **getClientConnectionID** funziona indipendentemente dalla versione del server a cui ci si connette, ma i registri degli eventi estesi e la voce relativa agli errori del buffer circolare di connettività non saranno presenti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 e versioni precedenti.  
   
  È possibile individuare l'ID connessione nel log degli eventi estesi per verificare se l'errore sia nel server qualora l'evento esteso per la registrazione dell'ID connessione sia abilitato. È anche possibile trovare l'ID connessione nel buffer circolare di connessione ([Risoluzione dei problemi di connettività in SQL Server 2008 con il buffer circolare della connettività](https://go.microsoft.com/fwlink/?LinkId=207752)) per determinati errori di connessione. Se l'ID connessione non si trova nel buffer circolare di connessione, si può presumere che si tratti di un errore di rete.  
   

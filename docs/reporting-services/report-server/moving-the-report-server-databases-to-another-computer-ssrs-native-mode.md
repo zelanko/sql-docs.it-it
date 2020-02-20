@@ -1,6 +1,7 @@
 ---
-title: Spostamento di database del server di report in un altro computer (modalità nativa SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+title: Spostare database del server di report in un altro computer (modalità nativa) | Microsoft Docs
+description: È possibile spostare i database del server di report usati in un'installazione del motore di database di SQL Server in un'istanza di un computer diverso.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619679"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254581"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
 
-  È possibile spostare i database del server di report usati in un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'istanza di un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
+  È possibile spostare i database del server di report usati in un'installazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza di un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Lo spostamento di un database non influisce sulle operazioni pianificate attualmente definite per gli elementi del server di report.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619679"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Backup e ripristino dei database del server di report  
  Se il server di report non può essere portato in modalità offline, è possibile rilocare i database del server di report tramite backup e ripristino. Per eseguire queste due operazioni, è necessario usare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Dopo aver ripristinato i database, è necessario configurare il server di report per utilizzare il database nella nuova istanza del server. Per ulteriori informazioni, vedere le istruzioni alla fine di questo argomento.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Utilizzo di BACKUP e COPY_ONLY per eseguire il backup dei database del server di report  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Utilizzo di BACKUP e COPY_ONLY per eseguire il backup dei database del server di report  
  Quando si esegue il backup dei database, impostare l'argomento COPY_ONLY. Accertarsi di eseguire il backup di entrambi i database e dei file di log.  
   
 ```  
@@ -200,15 +201,15 @@ GO
   
 1.  Avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi al server di report.  
   
-2.  Nella pagina Database fare clic su **Cambia database**. Scegliere **Avanti**.  
+2.  Nella pagina Database fare clic su **Cambia database**. Fare clic su **Avanti**.  
   
-3.  Fare clic su **Scegli un database del server di report esistente**. Scegliere **Avanti**.  
+3.  Fare clic su **Scegli un database del server di report esistente**. Fare clic su **Avanti**.  
   
-4.  Selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita attualmente il database del server di report, quindi fare clic su **Test connessione**. Scegliere **Avanti**.  
+4.  Selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita attualmente il database del server di report, quindi fare clic su **Test connessione**. Fare clic su **Avanti**.  
   
-5.  In Nome database selezionare il database del server di report da utilizzare. Scegliere **Avanti**.  
+5.  In Nome database selezionare il database del server di report da utilizzare. Fare clic su **Avanti**.  
   
-6.  In Credenziali specificare le credenziali che il server di report utilizzerà per la connessione al database relativo. Scegliere **Avanti**.  
+6.  In Credenziali specificare le credenziali che il server di report utilizzerà per la connessione al database relativo. Fare clic su **Avanti**.  
   
 7.  Fare clic su **Avanti** , quindi su **Fine**.  
   

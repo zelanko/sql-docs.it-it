@@ -16,10 +16,10 @@ ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f808bdc5deecb861b4b54eb2d84463e61ec0e39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978986"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>Metodo getTime (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67978986"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[getTime (int)](../../../connect/jdbc/reference/gettime-method-int.md)|Recupera il valore del parametro designato come oggetto java.sql.Time nel linguaggio di programmazione Java in base all'indice del parametro.|  
 |[getTime (int, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-int-java-util-calendar.md)|Recupera il valore del parametro designato come oggetto java.sql.Time nel linguaggio di programmazione Java, in base all'indice del parametro, usando l'oggetto Calendar specificato.|  

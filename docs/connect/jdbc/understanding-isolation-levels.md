@@ -11,10 +11,10 @@ ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027396"
 ---
 # <a name="understanding-isolation-levels"></a>Informazioni sui livelli di isolamento
@@ -41,17 +41,17 @@ La scelta di un livello di isolamento delle transazioni non ha effetto sui blocc
   
 Un livello di isolamento minore aumenta le possibilità di accesso ai dati da parte di molti utenti contemporaneamente, ma anche la quantità di effetti di concorrenza, ad esempio letture dirty o perdita di aggiornamenti, che possono verificarsi. Al contrario, un livello di isolamento maggiore riduce i tipi di effetti di concorrenza che si possono verificare, ma richiede più risorse di sistema e aumenta le probabilità che una transazione venga bloccata da un'altra. La scelta del livello di isolamento corretto dipende dal giusto equilibrio tra requisiti relativi all'integrità dei dati per l'applicazione e overhead di ogni livello di isolamento. Il livello di isolamento più elevato, Serializable, garantisce che una transazione recuperi esattamente gli stessi dati a ogni ripetizione di un'operazione di lettura. Tuttavia questo avviene applicando un livello di blocco con probabilità effetti su altri utenti in sistemi multiutente. Il livello di isolamento minimo, Read uncommitted, consente di recuperare i dati modificati ma di cui non è stato eseguito il commit da altre transazioni. In tale livello possono verificarsi tutti gli effetti collaterali della concorrenza, ma l'assenza di blocco in lettura e di controllo delle versioni riduce al minimo l'overhead.  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
  Nella tabella seguente vengono illustrati gli effetti collaterali della concorrenza consentiti dai diversi livelli di isolamento.  
   
 | Livello di isolamento  | Lettura dirty | Lettura non ripetibile | Lettura fantasma |
 | ---------------- | ---------- | ------------------- | ------- |
 | Read Uncommitted | Sì        | Sì                 | Sì     |
-| Read Committed   | no         | Sì                 | Sì     |
-| Repeatable Read  | no         | no                  | Sì     |
-| Snapshot         | no         | no                  | no      |
-| Serializable     | no         | no                  | no      |
+| Read Committed   | No         | Sì                 | Sì     |
+| Repeatable Read  | No         | No                  | Sì     |
+| Snapshot         | No         | No                  | No      |
+| Serializable     | No         | No                  | No      |
   
 Le transazioni devono essere eseguite almeno a un livello di isolamento Repeatable read, per impedire la perdita di aggiornamenti che può verificarsi quando due transazioni recuperano entrambe la stessa riga e successivamente la aggiornano in base ai valori recuperati in origine. Se le due transazioni aggiornano le righe usando una singola istruzione UPDATE e non basano l'aggiornamento sui valori recuperati in precedenza, non possono verificarsi perdite di aggiornamenti al livello di isolamento predefinito Read committed.  
 

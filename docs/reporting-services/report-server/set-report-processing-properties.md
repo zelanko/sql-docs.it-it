@@ -16,16 +16,16 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140401"
 ---
 # <a name="set-report-processing-properties"></a>Impostare proprietà di elaborazione dei report
   Le proprietà di esecuzione dei report consentono di controllarne le modalità di esecuzione e devono essere impostate singolarmente per ogni report.  
   
- Per impostare le proprietà di esecuzione dei report, passare al report nel portale web, fare doppio clic su report e selezionare **Gestisci** dal menu a discesa.
+ Per impostare le proprietà di esecuzione dei report, passare al report nel portale Web, fare clic con il pulsante destro del mouse sul report e scegliere **Gestisci** dal menu a discesa.
   
 ## <a name="report-execution-modes"></a>Modalità di esecuzione dei report  
  I report possono essere eseguiti su richiesta o come snapshot. Nella sezione seguente vengono descritte le due diverse modalità.  

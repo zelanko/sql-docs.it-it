@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412650"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
@@ -72,8 +72,8 @@ SQL Server 2016 Reporting Services o versione successiva (SSRS) include gli ogge
   
 |Oggetto prestazione|Note|  
 |------------------------|-----------|  
-|**.NET CLR Data** e **.NET CLR Memory**|Usa il portale web [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] i contatori delle prestazioni. Per ulteriori informazioni, vedere "Miglioramento delle prestazioni e della scalabilità di applicazioni .NET" su MSDN.|  
-|**Process**|Aggiungere i contatori delle prestazioni **Elapsed Time** e **ID Process** affinché un'istanza ReportingServicesService registri il tempo di attività del processo in base all'ID processo.|  
+|**.NET CLR Data** e **.NET CLR Memory**|Il portale Web usa i contatori delle prestazioni di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Per ulteriori informazioni, vedere "Miglioramento delle prestazioni e della scalabilità di applicazioni .NET" su MSDN.|  
+|**Processo**|Aggiungere i contatori delle prestazioni **Elapsed Time** e **ID Process** affinché un'istanza ReportingServicesService registri il tempo di attività del processo in base all'ID processo.|  
   
 ## <a name="sharepoint-events"></a>Eventi di SharePoint  
  Oltre agli oggetti relativi alle prestazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può essere necessario configurare eventi di SharePoint se si esegue un server di report in modalità integrata SharePoint e l'ambiente di report è stato configurato per l'uso di un prodotto SharePoint. In questa sezione utilizzare Eventi per un server di report in modalità integrata SharePoint per esaminare gli eventi di diagnostica che potrebbero fornire informazioni utili se l'ambiente di report è integrato con SharePoint.  
@@ -85,13 +85,13 @@ SQL Server 2016 Reporting Services o versione successiva (SSRS) include gli ogge
  [Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 Web Service SharePoint Mode e MSRS 2011 Windows Service SharePoint Mode &#40;modalità SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Descrive i contatori delle prestazioni utilizzati dal servizio Windows ReportServer.  
   
- [Contatori delle prestazioni per gli oggetti prestazioni di ReportServer:Service e ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Contatori delle prestazioni per gli oggetti prestazioni ReportServer:Service e ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Vengono descritti i contatori delle prestazioni correlati ad HTTP e alla memoria in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ::: moniker-end
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
   

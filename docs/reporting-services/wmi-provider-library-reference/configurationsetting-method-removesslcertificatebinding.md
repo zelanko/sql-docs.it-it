@@ -11,10 +11,10 @@ ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571281"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Metodo di ConfigurationSetting - RemoveSSLCertificateBinding
@@ -51,7 +51,7 @@ public void RemoveSSLCertificateBindings(string Application,
  *lcid*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
- *Errore*  
+ *Error (Errore) (Error (Errore)e)*  
  [out] Descrizione dell'errore che si è verificato.  
   
  *HRESULT*  
@@ -60,7 +60,7 @@ public void RemoveSSLCertificateBindings(string Application,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo rimuove l'associazione specifica dal file rsreportserver.config e facoltativamente da HTTP.SYS.  
   
 ## <a name="requirements"></a>Requisiti  

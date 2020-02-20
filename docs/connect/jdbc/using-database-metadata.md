@@ -11,10 +11,10 @@ ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026423"
 ---
 # <a name="using-database-metadata"></a>Uso dei metadati del database
@@ -25,7 +25,7 @@ Per eseguire una query su un database e ottenere informazioni sugli oggetti supp
 
 Per creare un oggetto SQLServerDatabaseMetaData, è possibile usare il metodo [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) per ottenere informazioni sul database a cui è connesso.
 
-Nell'esempio seguente viene passata alla funzione una connessione aperta [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] al database di esempio, viene usato il metodo getMetaData della classe SQLServerConnection per restituire un oggetto SQLServerDatabaseMetaData e quindi vari metodi di L'oggetto SQLServerDatabaseMetaData viene utilizzato per visualizzare informazioni sul driver, sulla versione del driver, sul nome del database e sulla versione del database.
+Nell'esempio seguente una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] viene passata alla funzione, il metodo getMetaData della classe SQLServerConnection viene usato per restituire un oggetto SQLServerDatabaseMetadata, quindi vengono usati vari metodi dell'oggetto SQLServerDatabaseMetaData per visualizzare le informazioni sul driver, sulla versione del driver, sul nome e sulla versione del database.
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

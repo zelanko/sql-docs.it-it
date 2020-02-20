@@ -16,10 +16,10 @@ ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e63dbb2ef8864c07bf1deb58e99a08ea70fafdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972060"
 ---
 # <a name="setxopenstates-method-sqlserverdatasource"></a>Metodo setXopenStates (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setXopenStates(boolean xopenStates)
   
  **true** se la conversione di stati SQL in stati conformi a XOPEN è abilitata. In caso contrario, **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la proprietà xopenStates è impostata su **true**, gli stati SQL vengono convertiti in stati conformi a XOPEN da [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. L'impostazione predefinita è **false** e determina la generazione dei codici di stato SQL 99 da parte del driver JDBC. Se la proprietà xopenStates non è impostata, il metodo [getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md) restituisce il valore predefinito **false**.  
   
 ## <a name="see-also"></a>Vedere anche  

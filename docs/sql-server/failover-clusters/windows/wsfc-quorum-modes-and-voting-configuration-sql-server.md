@@ -1,6 +1,7 @@
 ---
-title: Modalità quorum WSFC e configurazione del voto (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Modalità quorum WSFC e configurazione del voto
+descriptoin: 'A description of the quroum modes and voting configuration used by the Windows Server Failover Cluster with a SQL Server failover cluster instance, or an Always On availability group. '
+ms.custom: seo-lt-2019
 ms.date: 10/03/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,30 +14,17 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09dc99233119b39161039f524599b9f36c3128ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107875"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822171"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sia i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , sia le istanze del cluster di failover Always On usano Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata Always On, nonché per risolverne i problemi.  
   
- **Contenuto dell'argomento:**  
-  
--   [Rilevamento dell'integrità del cluster in base al quorum](#ClusterHealthDetectionbyQuorum)  
-  
--   [Modalità quorum](#QuorumModes)  
-  
--   [Nodi votanti e non votanti](#VotingandNonVotingNodes)  
-  
--   [Modifiche ai voti quorum consigliate](#RecommendedAdjustmentstoQuorumVoting)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
--   [Contenuto correlato](#RelatedContent)  
   
 ##  <a name="ClusterHealthDetectionbyQuorum"></a> Rilevamento dell'integrità del cluster in base al quorum  
  Ogni nodo in un cluster WSFC partecipa alla comunicazione heartbeat periodica per condividere il proprio stato di integrità con gli altri nodi. I nodi che non rispondono sono considerati in stato di errore.  
@@ -124,7 +112,7 @@ ms.locfileid: "68107875"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni Always On di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Quorum vote configuration check in Always On Availability Group Wizards (Controllo della configurazione di voto quorum nelle procedure guidate dei gruppi di disponibilità Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
@@ -134,6 +122,6 @@ ms.locfileid: "68107875"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
- [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

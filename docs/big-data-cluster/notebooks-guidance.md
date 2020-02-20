@@ -1,26 +1,32 @@
 ---
-title: Eseguire notebook in Azure Data Studio
-titleSuffix: SQL Server big data clusters
+title: 'Eseguire notebook: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: Questo articolo illustra come eseguire notebook di Jupyter in Azure Data Studio con connessione a un cluster Big Data di SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/08/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23ff737a0fe1434c29b9cdf09102bc5042e68dc3
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: ff3f569761b7ba95a64f693f1726df589ce7e579
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844297"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244098"
 ---
 # <a name="how-to-use-notebooks-in-sql-server"></a>Come usare i notebook in SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come avviare l'esperienza dei notebook nella versione più recente di [**Azure Data Studio** ](../azure-data-studio/download.md) e come iniziare a creare notebook personalizzati. Viene inoltre illustrato come scrivere notebook usando kernel diversi.
+Questo articolo descrive come avviare l'esperienza dei notebook nella versione più recente di [**Azure Data Studio**](../azure-data-studio/download.md) e come iniziare a creare notebook personalizzati. Viene inoltre illustrato come scrivere notebook usando kernel diversi.
+
+Guardare questo breve video di 5 minuti per un'introduzione ai notebook in Azure Data Studio:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="connect-to-sql-server"></a>Connessione a SQL Server
 

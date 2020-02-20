@@ -11,10 +11,10 @@ ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027026"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Uso di una stored procedure senza parametri
@@ -28,7 +28,7 @@ Quando si usa il driver JDBC per chiamare una stored procedure senza parametri, 
 `{call procedure-name}`
 
 > [!NOTE]  
-> Per ulteriori informazioni sulle sequenze di escape SQL, vedere [utilizzo di sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Per altre informazioni sulle sequenze di escape SQL, vedere [Uso delle sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Come esempio, viene creata la seguente stored procedure nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

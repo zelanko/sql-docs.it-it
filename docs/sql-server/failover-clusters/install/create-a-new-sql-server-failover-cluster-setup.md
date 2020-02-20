@@ -1,7 +1,7 @@
 ---
-title: Creare un nuovo cluster di failover di SQL Server (programma di installazione) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Creare un nuovo cluster di failover
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230480"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Creare un nuovo cluster di failover di SQL Server (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,23 +82,23 @@ ms.locfileid: "68893180"
 > [!NOTE]  
 >  Prendere nota del percorso dell'unità condivisa in Amministrazione cluster prima di eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Questa informazione è necessaria per creare un nuovo cluster di failover.  
   
-### <a name="to-install-a-new-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-integrated-install-with-add-node"></a>Per installare un nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'installazione integrata con la funzionalità per l'aggiunta del nodo.  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>Per installare un nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'installazione integrata con la funzionalità per l'aggiunta del nodo.  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, spostarsi nella cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe. Per altre informazioni sulla procedura di installazione dei prerequisiti, vedere [Operazioni preliminari all'installazione del clustering di failover](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
 2.  L'Installazione guidata consente di avviare il Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per creare una nuova installazione cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fare clic su **Installazione nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** nella pagina di installazione.  
   
-3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 4.  Scegliere **Avanti**per continuare.  
   
 5.  Nella pagina File di supporto per l'installazione fare clic su **Installa** per installare i file specifici.  
   
-6.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarlo come report HTML.  
+6.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 7.  Nella pagina codice Product Key indicare se si installa un'edizione gratuita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o se si dispone di una chiave PID per una versione di produzione del prodotto. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-8.  Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Per continuare, fare clic su **Avanti** . Per terminare l'installazione, fare clic su **Annulla**.  
+8.  Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Fare clic su **Avanti** per continuare. Per terminare l'installazione, fare clic su **Annulla**.  
   
 9. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo, ma solo il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità tabulare e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità multidimensionale supportano il clustering di failover. Gli altri componenti selezionati verranno eseguiti in modo autonomo senza funzionalità di failover nel nodo corrente in cui si esegue il programma di installazione. Per altre informazioni sulle modalità di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vedere [Determinare la modalità server di un'istanza di Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68893180"
   
      **Directory radice istanza**: per impostazione predefinita, la directory radice dell'istanza è C:\Programmi\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Per specificare una directory radice non predefinita, utilizzare il campo disponibile oppure fare clic sul pulsante con i puntini di sospensione per individuare una cartella di installazione.  
   
-     **Istanze e funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rilevate nel computer**: nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per continuare, fare clic su **Avanti** .  
+     **Istanze e funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rilevate nel computer**: nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Fare clic su **Avanti** per continuare.  
   
 12. Utilizzare la pagina Gruppo risorse cluster per specificare il nome del gruppo di risorse cluster in cui verranno memorizzate le risorse del server virtuale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per specificare il nome del gruppo di risorse cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sono disponibili due opzioni:  
   
@@ -143,7 +143,7 @@ ms.locfileid: "68893180"
   
     -   Digitare il nome di un nuovo gruppo da creare. Il nome "Archiviazione disponibile" non è un nome di gruppo valido.  
   
-13. Nella pagina Selezione dischi cluster selezionare la risorsa disco del cluster condivisa del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il disco di cluster è l'unità in cui verranno memorizzati i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile specificare più di un disco. Nella griglia Dischi condivisi disponibili vengono visualizzati un elenco dei dischi disponibili, l'indicazione dell'eventuale qualifica di ogni disco come disco condiviso e una descrizione di ogni risorsa disco. Per continuare, fare clic su **Avanti** .  
+13. Nella pagina Selezione dischi cluster selezionare la risorsa disco del cluster condivisa del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il disco di cluster è l'unità in cui verranno memorizzati i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile specificare più di un disco. Nella griglia Dischi condivisi disponibili vengono visualizzati un elenco dei dischi disponibili, l'indicazione dell'eventuale qualifica di ogni disco come disco condiviso e una descrizione di ogni risorsa disco. Fare clic su **Avanti** per continuare.  
   
     > [!NOTE]  
     >  La prima unità viene utilizzata come unità predefinita per tutti i database, tuttavia è possibile modificarla nelle pagine di configurazione del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] o di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
@@ -154,7 +154,7 @@ ms.locfileid: "68893180"
   
     -   **Impostazioni di rete** : specificare il tipo e l'indirizzo IP per l'istanza del cluster di failover.  
   
-     Per continuare, fare clic su **Avanti** .  
+     Fare clic su **Avanti** per continuare.  
   
 15. Utilizzare questa pagina per specificare i criteri di sicurezza cluster.  
   
@@ -162,17 +162,17 @@ ms.locfileid: "68893180"
   
     -   In [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]specificare i gruppi di dominio per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tutte le autorizzazioni per le risorse sono controllate da gruppi a livello di dominio che includono gli account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come membri del gruppo.  
   
-     Per continuare, fare clic su **Avanti** .  
+     Fare clic su **Avanti** per continuare.  
   
 16. Il flusso di lavoro relativo alla parte rimanente di questo argomento dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]).  
   
 17. Nella pagina Configurazione server - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
-     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. Il tipo di avvio viene impostato su manuale per tutti i servizi compatibili con i cluster, ad esempio la ricerca full-text [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e non può essere modificato durante l'installazione. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione del server - Account di servizio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. Il tipo di avvio viene impostato su manuale per tutti i servizi compatibili con i cluster, ad esempio la ricerca full-text [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, e non può essere modificato durante l'installazione. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio in questa istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina.  
   
-     **Nota sulla protezione** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
+     **Nota sulla sicurezza** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      Dopo aver specificato le informazioni di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Avanti**.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "68893180"
     > [!NOTE]  
     >  Per specificare un file server SMB (Server Message Block) come directory di dati, impostare la **directory radice dati predefinita** sulla condivisione file nel formato \\\NomeServer\NomeCondivisione\\...  
    
-21. Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM per abilitare la funzione FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per continuare, fare clic su **Avanti** .  
+21. Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM per abilitare la funzione FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Fare clic su **Avanti** per continuare.  
   
 22. Utilizzare la pagina Configurazione [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Provisioning account per specificare gli utenti o gli account che disporranno di autorizzazioni di amministratore per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. È necessario specificare almeno un amministratore di sistema per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer che disporranno di privilegi di amministratore per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
   
@@ -216,7 +216,7 @@ ms.locfileid: "68893180"
   
 27. Durante l'installazione, nella pagina Stato dell'installazione è possibile monitorare lo stato di avanzamento del processo.  
   
-28. Al termine dell'installazione, nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**.  
+28. Al termine dell'installazione nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**.  
   
 29. Se viene richiesto, riavviare il computer. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni sui file di log del programma di installazione, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
@@ -237,11 +237,11 @@ ms.locfileid: "68893180"
   
 3.  Una volta installati i prerequisiti, l'Installazione guidata avvia Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per preparare il nodo per il clustering, spostarsi nella pagina **Avanzate** , quindi fare clic su **Preparazione cluster avanzata**.  
   
-4.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarlo come report HTML.  
+4.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 5.  Nella pagina File di supporto per l'installazione fare clic su **Installa** per installare i file specifici.  
   
-6.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarlo come report HTML.  
+6.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 7.  Nella pagina Selezione lingua è possibile specificare la lingua per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si sta eseguendo l'installazione in un sistema operativo localizzato e se nei supporti di installazione sono inclusi i Language Pack sia per l'inglese sia per la lingua corrispondente al sistema operativo. Per altre informazioni sul supporto di lingue diverse e sulle considerazioni relative all'installazione, vedere le [versioni della lingua locale in SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
@@ -252,7 +252,7 @@ ms.locfileid: "68893180"
     > [!NOTE]  
     >  È necessario specificare lo stesso codice Product Key in tutti i nodi in preparazione per lo stesso cluster di failover.  
   
-9. Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Per continuare, fare clic su **Avanti** . Per terminare l'installazione, fare clic su **Annulla**.  
+9. Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Fare clic su **Avanti** per continuare. Per terminare l'installazione, fare clic su **Annulla**.  
   
 10. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo, ma solo il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità tabulare e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità multidimensionale supportano il clustering di failover. Gli altri componenti selezionati verranno eseguiti in modo autonomo senza funzionalità di failover nel nodo corrente in cui si esegue il programma di installazione. Per altre informazioni sulle modalità di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vedere [Determinare la modalità server di un'istanza di Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
@@ -275,7 +275,7 @@ ms.locfileid: "68893180"
   
      **Directory radice istanza**: per impostazione predefinita, la directory radice dell'istanza è C:\Programmi\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Per specificare una directory radice non predefinita, utilizzare il campo disponibile oppure fare clic sul pulsante con i puntini di sospensione per individuare una cartella di installazione.  
   
-     **Istanze installate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per continuare, fare clic su **Avanti** .  
+     **Istanze installate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. Se nel computer è già installata un'istanza predefinita, è necessario installare un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Fare clic su **Avanti** per continuare.  
   
 12. Nella pagina Requisiti di spazio su disco viene calcolato lo spazio su disco necessario per le funzionalità specificate e vengono confrontati i requisiti con lo spazio su disco disponibile nel computer in cui è in esecuzione il programma di installazione.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "68893180"
   
     -   In [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]specificare i gruppi di dominio per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tutte le autorizzazioni per le risorse sono controllate da gruppi a livello di dominio che includono gli account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come membri del gruppo.  
   
-     Per continuare, fare clic su **Avanti** .  
+     Fare clic su **Avanti** per continuare.  
   
 14. Il flusso di lavoro relativo alla parte rimanente di questo argomento dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
@@ -295,13 +295,13 @@ ms.locfileid: "68893180"
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio in questa istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina.  
   
-     **Nota sulla protezione** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
+     **Nota sulla sicurezza** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      Dopo aver specificato le informazioni di accesso per i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Avanti**.  
   
 16. Usare la scheda **Configurazione server - Regole di confronto** per specificare regole di confronto non predefinite per [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-17. Usare la pagina **Configurazione server - Filestream** per abilitare FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Per continuare, fare clic su **Avanti** .  
+17. Usare la pagina **Configurazione server - Filestream** per abilitare FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Fare clic su **Avanti** per continuare.  
   
 18. Utilizzare la pagina Configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per specificare il tipo di installazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da creare. Per l'installazione di cluster di failover, l'opzione è impostata su Installazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non configurata. È necessario configurare i servizi [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dopo aver completato l'installazione.  
    
@@ -311,7 +311,7 @@ ms.locfileid: "68893180"
   
 21. Nella pagina Inizio installazione è presente una visualizzazione albero delle opzioni specificate durante l'installazione. Per continuare, fare clic su **Installa**. Il programma di installazione consentirà innanzitutto di installare i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
   
-     Durante l'installazione, nella pagina Stato dell'installazione è possibile monitorare lo stato di avanzamento del processo. Al termine dell'installazione, nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti.  
+     Durante l'installazione, nella pagina Stato dell'installazione è possibile monitorare lo stato di avanzamento del processo. Al termine dell'installazione nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti.  
   
 22. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**.  
   
@@ -325,11 +325,11 @@ ms.locfileid: "68893180"
   
 1.  Dopo aver preparato tutti i nodi nel modo descritto nel passaggio relativo alla [preparazione](#prepare), eseguire il programma di installazione in uno dei nodi preparati, preferibilmente in quello proprietario del disco condiviso. Nella pagina **Avanzate** di Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fare clic su **Completamento cluster avanzato**.  
   
-2.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarli come report HTML.  
+2.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 3.  Nella pagina File di supporto per l'installazione fare clic su **Installa** per installare i file specifici.  
   
-4.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarlo come report HTML.  
+4.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. Al termine della verifica, fare clic su **Avanti** per continuare. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
 5.  Nella pagina Selezione lingua è possibile specificare la lingua per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si sta eseguendo l'installazione in un sistema operativo localizzato e se nei supporti di installazione sono inclusi i Language Pack sia per l'inglese sia per la lingua corrispondente al sistema operativo. Per altre informazioni sul supporto di lingue diverse e sulle considerazioni relative all'installazione, vedere le [versioni della lingua locale in SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
@@ -348,7 +348,7 @@ ms.locfileid: "68893180"
   
     -   Digitare il nome di un nuovo gruppo da creare. Il nome "Archiviazione disponibile" non è un nome di gruppo valido.  
   
-9. Nella pagina Selezione dischi cluster selezionare la risorsa disco del cluster condivisa del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il disco di cluster è l'unità in cui verranno memorizzati i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile specificare più di un disco. Nella griglia Dischi condivisi disponibili vengono visualizzati un elenco dei dischi disponibili, l'indicazione dell'eventuale qualifica di ogni disco come disco condiviso e una descrizione di ogni risorsa disco. Per continuare, fare clic su **Avanti** .  
+9. Nella pagina Selezione dischi cluster selezionare la risorsa disco del cluster condivisa del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il disco di cluster è l'unità in cui verranno memorizzati i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile specificare più di un disco. Nella griglia Dischi condivisi disponibili vengono visualizzati un elenco dei dischi disponibili, l'indicazione dell'eventuale qualifica di ogni disco come disco condiviso e una descrizione di ogni risorsa disco. Fare clic su **Avanti** per continuare.  
   
     > [!NOTE]  
     >  La prima unità viene utilizzata come unità predefinita per tutti i database, tuttavia è possibile modificarla nelle pagine di configurazione del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] o di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
@@ -357,7 +357,7 @@ ms.locfileid: "68893180"
   
     -   **Impostazioni di rete**: specificare il tipo e l'indirizzo IP per tutti i nodi e le subnet dell'istanza del cluster di failover. È possibile specificare più indirizzi IP per un cluster di failover su più subnet, tuttavia è supportato un solo indirizzo IP per subnet. Ogni nodo preparato deve essere proprietario di almeno un indirizzo IP. Se si dispone di più subnet nel cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sarà richiesto di impostare la dipendenza delle risorse indirizzo IP su OR.  
   
-     Per continuare, fare clic su **Avanti** .  
+     Fare clic su **Avanti** per continuare.  
   
 11. Il flusso di lavoro relativo alla parte rimanente di questo argomento dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
@@ -393,9 +393,9 @@ ms.locfileid: "68893180"
   
 18. Durante l'installazione, nella pagina Stato dell'installazione è possibile monitorare lo stato di avanzamento del processo.  
   
-19. Al termine dell'installazione, nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**. A questo punto tutti i nodi preparati per lo stesso cluster di failover appartengono al cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completato.  
+19. Al termine dell'installazione nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**. A questo punto tutti i nodi preparati per lo stesso cluster di failover appartengono al cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completato.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  **Configurare la nuova installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni, vedere [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  

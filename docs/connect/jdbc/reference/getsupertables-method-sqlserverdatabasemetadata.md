@@ -16,10 +16,10 @@ ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 798b5d2abca5aad5daa075a10652b4952dae6e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979309"
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>Metodo getSuperTables (SQLServerDatabaseMetaData)
@@ -58,7 +58,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getSuperTables viene specificato dal metodo getSuperTables nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  

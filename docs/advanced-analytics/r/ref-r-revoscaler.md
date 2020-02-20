@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706757"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (libreria R in SQL Server)
@@ -36,7 +36,7 @@ La libreria **RevoScaleR** è distribuita in più prodotti Microsoft, ma l'utili
 La libreria **RevoScaleR** è basata su R 3.4.3 ed è disponibile solo quando si installa uno dei prodotti o download Microsoft seguenti:
 
 + [R Services per SQL Server 2016](../install/sql-r-services-windows-install.md)
-+ [Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 o versione successiva](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -87,7 +87,7 @@ Dopo aver creato un oggetto di origine dati, è possibile usare l'oggetto per ca
 
 ## <a name="3-graphing-functions"></a>3 - Funzioni di creazione di grafici
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |Crea un istogramma dai dati. | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |Crea un tracciato di linea dai dati. | 
@@ -98,7 +98,7 @@ Dopo aver creato un oggetto di origine dati, è possibile usare l'oggetto per ca
 
 ## <a name="4-descriptive-statistics"></a>4 - Statistiche descrittive
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |Calcola i quantili approssimativi dei file XDF e dei frame di dati senza ordinamento. | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |Statistiche di riepilogo di base dei dati, inclusi i calcoli per gruppo. La scrittura di calcoli per gruppo nel file XDF non è supportata. | 
@@ -119,7 +119,7 @@ Dopo aver creato un oggetto di origine dati, è possibile usare l'oggetto per ca
 
 ## <a name="5-prediction-functions"></a>5 - Funzioni di stima
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |Adatta un modello lineare ai dati. | 
 |[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |Adatta un modello di regressione logistica ai dati. | 

@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580067"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
@@ -49,7 +49,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Nel diagramma seguente viene illustrato il flusso di lavoro per la creazione e il salvataggio di una definizione di avviso dati, tramite la creazione di un processo di SQL Agent per avviare l'elaborazione di un'istanza di avviso dati e l'invio tramite posta elettronica di messaggi di avviso dati contenenti i dati del report da cui è stato attivato l'avviso per uno o più destinatari.  
   
- ![Flusso di lavoro negli avvisi di Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Flusso di lavoro negli avvisi di Reporting Services")  
+ ![Flusso di lavoro negli avvisi Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Flusso di lavoro negli avvisi Reporting Services")  
   
 ### <a name="reports-supported-by-data-alerts"></a>Report supportati dagli avvisi dati  
  È possibile creare avvisi dati per tutti i tipi di report professionali scritti in linguaggio RDL (Report Definition Language) e creati in Progettazione report o Generatore report. Si tratta di report in cui sono incluse aree dati, quali tabelle e grafici, report con sottoreport e report complessi con più gruppi di colonne paralleli e aree dati annidate. Gli unici requisiti sono che il report includa almeno un'area dati di qualsiasi tipo e che l'origine dati del report sia configurata per utilizzare le credenziali archiviate o nessuna credenziale. Se nel report non è disponibile alcuna area dati, non è possibile creare un avviso per questo report.  
@@ -58,7 +58,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa o SharePoint o si utilizza la versione autonoma di Generatore report, è possibile salvare i report in un server di report, nel computer in uso o in una raccolta di SharePoint. Per creare avvisi dati per i report, questi ultimi devono essere salvati o caricati in una raccolta di SharePoint. Ciò significa che non è possibile creare avvisi per report salvati in un server di report in modalità nativa o nel computer in uso. Inoltre, non è possibile creare avvisi incorporati in applicazioni personalizzate.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta diversi tipi di credenziali nei report. È possibile creare avvisi dati per report con origine dati configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Non è possibile creare avvisi per report configurati per l'utilizzo di credenziali di sicurezza integrate o per la richiesta di credenziali. Il report viene eseguito come parte dell'elaborazione della definizione di avviso e l'elaborazione non viene completata senza credenziali. Per ulteriori informazioni, vedere quanto segue:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta diversi tipi di credenziali nei report. È possibile creare avvisi dati per report con origine dati configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Non è possibile creare avvisi per report configurati per l'utilizzo di credenziali di sicurezza integrate o per la richiesta di credenziali. Il report viene eseguito come parte dell'elaborazione della definizione di avviso e l'elaborazione non viene completata senza credenziali. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -116,7 +116,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
 ##  <a name="InstallAlerting"></a> Installare avvisi dati  
  La funzionalità relativa agli avvisi dati è disponibile solo se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è installato in modalità SharePoint. Quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, tramite l'installazione vengono creati automaticamente il database di avvisi in cui vengono archiviati i metadati di avviso e le definizioni di avviso dati, nonché due pagine di SharePoint per la gestione degli avvisi e la finestra di progettazione Avviso dati viene aggiunta al sito di SharePoint. Non vi sono passaggi specifici da eseguire o opzioni da impostare per gli avvisi durante l'installazione.  
   
- Per altre informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, inclusi il servizio condiviso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che rappresenta una novità in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e l'applicazione del servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è necessario creare e configurare per poter usare le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in MSDN Library.  
+ Per altre informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, inclusi il servizio condiviso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che rappresenta una novità in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e l'applicazione del servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è necessario creare e configurare per poter usare le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in MSDN Library.  
   
  Come illustrato nel diagramma riportato in precedenza in questo argomento, per gli avvisi dati vengono utilizzati processi di SQL Server Agent. Per creare i processi, è necessario che SQL Server Agent sia in esecuzione. SQL Server Agent potrebbe essere stato configurato per l'avvio automatico al momento dell'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In caso contrario, è possibile avviare SQL Server Agent manualmente. Per altre informazioni, vedere [Configurare SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -131,7 +131,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Nella tabella seguente sono elencati gli elementi di configurazione per gli avvisi dati, i relativi valori predefiniti, le descrizioni e le posizioni.  
   
-|Impostazione|Valore predefinito|Descrizione|Percorso|  
+|Impostazione|Default Value|Descrizione|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Numero di minuti tra l'inizio di un ciclo di pulizia e l'altro.|File di configurazione del server di report|  
 |AlertingExecutionLogCleanupMinutes|10080|Numero di minuti di durata delle voci del log di esecuzione.|File di configurazione del server di report|  
@@ -207,7 +207,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 |Tipo di utente|Autorizzazione di SharePoint|Descrizione dell'attività|  
 |---------------|---------------------------|----------------------|  
-|Information Worker|Visualizzazione elementi<br /><br /> Creazione avvisi|Visualizzare elementi come i report e creare avvisi dati per i report. Modificare ed eliminare gli avvisi.|  
+|Information Worker|Visualizzazione elementi<br /><br /> Creare avvisi|Visualizzare elementi come i report e creare avvisi dati per i report. Modificare ed eliminare gli avvisi.|  
 |Amministratore di avvisi|Gestione avvisi|Visualizzare un elenco di tutti gli avvisi dati salvati nel sito di SharePoint ed eliminare gli avvisi.|  
   
 ##  <a name="DiagnosticsLogging"></a> Diagnostica e registrazione  
@@ -311,9 +311,9 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 -   [Gestire gli avvisi dati in Gestione avvisi dati](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Gestire tutti gli avvisi dati in un sito di SharePoint](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [Concedere autorizzazione a utenti e amministratori di avvisi](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
+-   [Concedere autorizzazioni a utenti e amministratori di avvisi](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

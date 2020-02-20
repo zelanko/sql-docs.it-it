@@ -11,10 +11,10 @@ ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027642"
 ---
 # <a name="understanding-concurrency-control"></a>Informazioni sul controllo della concorrenza
@@ -25,16 +25,16 @@ ms.locfileid: "69027642"
 > [!NOTE]  
 >  Per altre informazioni sulla concorrenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere "Gestione dell'accesso ai dati simultaneo" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il driver JDBC supporta i tipi di concorrenza seguenti:  
   
 |Tipo di concorrenza|Caratteristiche|Blocchi di riga|Descrizione|  
 |----------------------|---------------------|---------------|-----------------|  
-|CONCUR_READ_ONLY|Read Only|no|Gli aggiornamenti eseguiti tramite il cursore non sono consentiti e sulle righe del set di risultati non viene mantenuto attivo alcun blocco.|  
-|CONCUR_UPDATABLE|Ottimistica di lettura e scrittura|no|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.|  
+|CONCUR_READ_ONLY|Sola lettura|No|Gli aggiornamenti eseguiti tramite il cursore non sono consentiti e sulle righe del set di risultati non viene mantenuto attivo alcun blocco.|  
+|CONCUR_UPDATABLE|Ottimistica di lettura e scrittura|No|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.|  
 |CONCUR_SS_SCROLL_LOCKS|Pessimistica di lettura e scrittura|Sì|Si presuppone che le contese tra le righe nel database siano probabili. L'integrità delle righe viene assicurata tramite i blocchi di riga.|  
-|CONCUR_SS_OPTIMISTIC_CC|Ottimistica di lettura e scrittura|no|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, il server modifica questa impostazione in CONCUR_SS_OPTIMISTIC_CCVAL se nella tabella non è presente una colonna timestamp.<br /><br /> In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], se nella tabella sottostante è presente una colonna timestamp, viene usata l'opzione OPTIMISTIC WITH ROW VERSIONING anche se è specificata l'opzione OPTIMISTIC WITH VALUES. Se si specifica l'opzione OPTIMISTIC WITH ROW VERSIONING e nella tabella non sono incluse colonne timestamp, viene utilizzata l'opzione OPTIMISTIC WITH VALUES.|  
-|CONCUR_SS_OPTIMISTIC_CCVAL|Ottimistica di lettura e scrittura|no|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto dei dati della riga.|  
+|CONCUR_SS_OPTIMISTIC_CC|Ottimistica di lettura e scrittura|No|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, il server modifica questa impostazione in CONCUR_SS_OPTIMISTIC_CCVAL se nella tabella non è presente una colonna timestamp.<br /><br /> In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], se nella tabella sottostante è presente una colonna timestamp, viene usata l'opzione OPTIMISTIC WITH ROW VERSIONING anche se è specificata l'opzione OPTIMISTIC WITH VALUES. Se si specifica l'opzione OPTIMISTIC WITH ROW VERSIONING e nella tabella non sono incluse colonne timestamp, viene utilizzata l'opzione OPTIMISTIC WITH VALUES.|  
+|CONCUR_SS_OPTIMISTIC_CCVAL|Ottimistica di lettura e scrittura|No|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto dei dati della riga.|  
   
 ## <a name="result-sets-that-are-not-updateable"></a>Set di risultati non aggiornabili  
  Un set di risultati aggiornabile è un set di risultati in cui è possibile inserire, aggiornare ed eliminare righe. Nei casi seguenti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può creare un cursore aggiornabile e viene generata l'eccezione "Il set di risultati non è aggiornabile".  

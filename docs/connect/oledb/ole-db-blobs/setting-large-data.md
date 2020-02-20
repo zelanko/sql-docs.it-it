@@ -1,6 +1,6 @@
 ---
 title: Impostazione di dati di grandi dimensioni | Microsoft Docs
-description: Impostazione di dati di grandi dimensioni con OLE DB driver per SQL Server
+description: Impostazione di dati di grandi dimensioni con OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936522"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
@@ -28,7 +28,7 @@ ms.locfileid: "67936522"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Con il driver OLE DB per SQL Server, è possibile impostare i dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
+  Con OLE DB Driver per SQL Server è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione di un consumer.  
   
  Il consumer crea un oggetto di archiviazione che contiene i dati e passa un puntatore a tale oggetto di archiviazione al provider. Il provider legge quindi i dati dall'oggetto di archiviazione del consumer e li scrive nella colonna BLOB.  
   

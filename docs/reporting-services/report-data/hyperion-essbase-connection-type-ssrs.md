@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593830"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190832"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
   Per includere dati da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]che consente di recuperare dati multidimensionali da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "73593830"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altre informazioni sugli esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenziali  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
   
- Per altre informazioni, vedere [connessioni dati, origini dati e stringhe &#40;di connessione Generatore report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [specificare le credenziali e le informazioni di connessione per le origini dati dei report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Query  
@@ -81,12 +81,12 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Proprietà**|**Tipo**|**Descrizione o valore previsto**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Oggetto**|Specifica il valore dei dati del campo.<br /><br /> Per una proprietà delle dimensioni, viene eseguito il mapping a MEMBER_CAPTION. Per una misura, viene eseguito il mapping a un valore dei dati.|  
+|**Valore**|**Object**|Specifica il valore dei dati del campo.<br /><br /> Per una proprietà delle dimensioni, viene eseguito il mapping a MEMBER_CAPTION. Per una misura, viene eseguito il mapping a un valore dei dati.|  
 |**IsMissing**|**Boolean**|Indica se il campo è stato trovato nel set di dati risultante.|  
-|**FormattedValue**|**String**|Restituisce un valore formattato per una cifra chiave.<br /><br /> Mapping eseguito da FORMATTED_VALUE nell'espressione MDX.|  
-|**BackgroundColor**|**String**|Restituisce il colore di sfondo definito nel database per il campo.<br /><br /> Mapping eseguito da BACK_COLOR nell'espressione MDX.|  
-|**Colore**|**String**|Restituisce il colore di primo piano definito nel database per l'elemento.<br /><br /> Mapping eseguito da FORE_COLOR nell'espressione MDX.|  
-|**UniqueName**|**String**|Restituisce il nome completo di un livello.<br /><br /> Mapping eseguito da MEMBER_UNIQUE_NAME nell'espressione MDX.|  
+|**FormattedValue**|**Stringa**|Restituisce un valore formattato per una cifra chiave.<br /><br /> Mapping eseguito da FORMATTED_VALUE nell'espressione MDX.|  
+|**BackgroundColor**|**Stringa**|Restituisce il colore di sfondo definito nel database per il campo.<br /><br /> Mapping eseguito da BACK_COLOR nell'espressione MDX.|  
+|**Color**|**Stringa**|Restituisce il colore di primo piano definito nel database per l'elemento.<br /><br /> Mapping eseguito da FORE_COLOR nell'espressione MDX.|  
+|**UniqueName**|**Stringa**|Restituisce il nome completo di un livello.<br /><br /> Mapping eseguito da MEMBER_UNIQUE_NAME nell'espressione MDX.|  
   
  Per altre informazioni sull'uso di campi e proprietà di campo in un'espressione, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -102,7 +102,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Proprietà**|**Tipo**|**Descrizione o valore previsto**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**String**|Definita in una misura. Si tratta del valore **FormattedValue** disponibile come tipo stringa.|  
+|**FORMAT_STRING**|**Stringa**|Definita in una misura. Si tratta del valore **FormattedValue** disponibile come tipo stringa.|  
   
   
 ##  <a name="Remarks"></a> Osservazioni  
@@ -127,7 +127,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -136,7 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi generata dalla query del set di dati.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41; ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Fornisce informazioni approfondite sul supporto della piattaforma e della versione per ogni estensione per i dati.  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Fornisce informazioni approfondite sul supporto di piattaforme e versioni per ogni estensione per i dati.  
   
  [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Vengono fornite informazioni dettagliate sull'utilizzo di questa estensione per i dati.  

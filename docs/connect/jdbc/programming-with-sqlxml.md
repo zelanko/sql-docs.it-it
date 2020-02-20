@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027776"
 ---
 # <a name="programming-with-sqlxml"></a>Programmazione con SQLXML
@@ -27,11 +27,11 @@ ms.locfileid: "69027776"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Lettura e scrittura di dati XML con oggetti SQLXML  
  Nell'elenco seguente viene descritto come usare i metodi dell'API [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per leggere e scrivere dati XML con oggetti SQLXML:  
   
--   Per creare un oggetto SQLXML, usare il metodo [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Si noti che questo metodo consente di creare un oggetto SQLXML senza dati. Per aggiungere dati **XML** all'oggetto SQLXML, chiamare uno dei metodi seguenti specificati nell'interfaccia SQLXML: seresult, SetCharacterStream, setBinaryStream o sestring.  
+-   Per creare un oggetto SQLXML, usare il metodo [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Si noti che questo metodo consente di creare un oggetto SQLXML senza dati. Per aggiungere dati **xml** all'oggetto SQLXML, chiamare uno dei metodi seguenti specificati nell'interfaccia SQLXML: setResult, setCharacterStream, setBinaryStream o setString.  
   
 -   Per recuperare l'oggetto SQLXML stesso, usare i metodi getSQLXML della classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) o [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
--   Per recuperare i dati **XML** da un oggetto SQLXML, utilizzare uno dei metodi seguenti specificati nell'interfaccia SQLXML: getSource, GetCharacterStream, getBinaryStream o GetString.  
+-   Per recuperare dati **xml** da un oggetto SQLXML, usare uno dei metodi seguenti specificati nell'interfaccia SQLXML: getSource, getCharacterStream, getBinaryStream o getString.  
   
 -   Per aggiornare i dati **xml** in un oggetto SQLXML, usare il metodo [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "69027776"
  I parser XML non gestiscono i valori vuoti. SQL Server consente tuttavia alle applicazioni di recuperare e archiviare valori vuoti da e nelle colonne del database del tipo di dati XML. Se pertanto durante l'analisi dei dati XML il valore sottostante è vuoto, il parser genererà un'eccezione. Per gli output DOM il driver JDBC rileverà l'eccezione e genererà un errore. Per gli output SAX e StAX l'errore deriverà direttamente dal parser.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Supporto del buffer adattivo con SQLXML  
- I flussi di caratteri e binari restituiti dall'oggetto SQLXML rispettano le modalità di buffer adattivo o completo. Se invece i parser XML non sono flussi, non rispetteranno le impostazioni del buffer adattivo o completo. Per ulteriori informazioni sul buffer adattivo, vedere [utilizzo del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md).  
+ I flussi di caratteri e binari restituiti dall'oggetto SQLXML rispettano le modalità di buffer adattivo o completo. Se invece i parser XML non sono flussi, non rispetteranno le impostazioni del buffer adattivo o completo. Per altre informazioni sul buffer adattivo, vedere [Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md)  

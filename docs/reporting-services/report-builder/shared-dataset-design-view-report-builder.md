@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b4936ef2889d433985d4ff0206d72722300ac91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500516"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190030"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Visualizzazione di progettazione set di dati condivisi (Generatore report)
   In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Un set di dati condiviso viene pubblicato in un server di report e può essere usato da più report. È possibile creare set di dati da condividere con altri utenti. Nella finestra di progettazione di set di dati condivisi è possibile selezionare un'origine dati condivisa, specificare proprietà per il set di dati condiviso e creare una query in Progettazione query.  
@@ -23,7 +23,7 @@ ms.locfileid: "66500516"
  Per altre informazioni sull'uso di dati in un report, vedere [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Barra multifunzione  
- La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati nei seguenti gruppi logici: Connessione, Set di dati e Progettazione query.  
+ La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati nei gruppi logici seguenti: Connessione, Set di dati e Progettazione query.  
   
 ### <a name="connection"></a>Connessione  
  Usare il pulsante **Seleziona** nel gruppo Connessione per selezionare un'origine dati condivisa o individuare e selezionare l'origine dati condivisa nel server di report.  
@@ -31,7 +31,7 @@ ms.locfileid: "66500516"
 > [!NOTE]  
 >  Un set di dati condiviso deve essere basato su un'origine dati condivisa. Se l'origine dati richiesta non è disponibile, è necessario crearne una nel server di report. Per altre informazioni, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ### <a name="dataset"></a>Set di dati  
  Usare il pulsante **Opzioni SET** per impostare le proprietà del set di dati condiviso, tra cui:  
@@ -82,7 +82,7 @@ ms.locfileid: "66500516"
   
  Se un report contiene parametri, prima che il report possa essere eseguito automaticamente, è necessario che per tutti i parametri siano presenti valori predefiniti. Se un parametro non ha un valore predefinito, quando si esegue il report è necessario scegliere un valore per il parametro e quindi fare clic su **Visualizza report** nella scheda **Esegui** .  
   
- Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
 ##  <a name="Save"></a> Salvataggio del set di dati condiviso  

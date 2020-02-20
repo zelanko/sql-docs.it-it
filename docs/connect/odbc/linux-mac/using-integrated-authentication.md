@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008697"
 ---
 # <a name="using-integrated-authentication"></a>Uso dell'autenticazione integrata
@@ -24,9 +24,9 @@ ms.locfileid: "68008697"
 
 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS supporta le connessioni che usano l'autenticazione integrata Kerberos. Supporta il centro distribuzione chiavi di MIT Kerberos e può essere usato con GSSAPI (Generic Security Services Application Program Interface) e librerie Kerberos v5.
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>Uso dell'autenticazione integrata per la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da un'applicazione ODBC  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Uso dell'autenticazione integrata per la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da un'applicazione ODBC  
 
-È possibile abilitare l'autenticazione integrata di Kerberos specificando **Trusted_Connection = yes** nella stringa di connessione di **SQLDriverConnect** o **SQLConnect**. Esempio:  
+È possibile abilitare l'autenticazione integrata di Kerberos specificando **Trusted_Connection = yes** nella stringa di connessione di **SQLDriverConnect** o **SQLConnect**. Ad esempio:  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
@@ -60,11 +60,11 @@ La pagina relativa a[configurazione e uso di Kerberos](https://commons.oreilly.c
   
 ## <a name="tracking-access-to-a-database"></a>Rilevamento dell'accesso a un database
 
-Un amministratore di database può creare un itinerario di controllo di accesso a un database quando vengono usati account di sistema per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'autenticazione integrata.  
+Un amministratore del database può creare un audit trail di accesso a un database quando vengono usati account di sistema per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'autenticazione integrata.  
   
 L'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa l'account di sistema e non vi è alcuna funzionalità in Linux per rappresentare il contesto di sicurezza. Sono pertanto necessari più dati per determinare l'utente.
   
-Per controllare le attività in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per conto di utenti diversi dagli account di sistema, è necessario che l'applicazione usi [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
+Per controllare le attività in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per conto di utenti diversi dagli account di sistema, è necessario che l'applicazione usi l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
 Per migliorare le prestazioni, l'applicazione può usare pool di connessioni con autenticazione integrata e controllo. Tuttavia, la combinazione di pool di connessioni, autenticazione integrata e controllo crea un rischio per la sicurezza perché il programma di gestione dei driver unixODBC consente a utenti diversi di riutilizzare le connessioni in pool. Per altre informazioni, vedere la pagina relativa ai [pool di connessioni ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
@@ -94,13 +94,13 @@ Per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con 
   
 Non è possibile usare `-T` con l'opzione `-U` o `-P`.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Sintassi supportata per un nome SPN registrato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>Sintassi supportata per un nome SPN registrato da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 Di seguito è indicata la sintassi usata per i nomi SPN nella stringa di connessione o negli attributi di connessione:  
 
 |Sintassi|Descrizione|  
 |----------|---------------|  
-|MSSQLSvc/*fqdn*:*port*|Nome SPN predefinito generato dal provider quando si usa il protocollo TCP. *port* è un numero di porta TCP. *fqdn* è un nome di dominio completo.|  
+|MSSQLSvc/*fqdn*:*port*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP. *port* è un numero di porta TCP. *fqdn* è un nome di dominio completo.|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Autenticazione di un computer Linux o macOS con Active Directory
 

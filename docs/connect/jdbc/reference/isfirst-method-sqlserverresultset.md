@@ -16,10 +16,10 @@ ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b847361621ad8d44840aa4bab02e4877128e8f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977618"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>Metodo isFirst (SQLServerResultSet)
@@ -40,7 +40,7 @@ public boolean isFirst()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo isFirst viene specificato dal metodo isFirst nell'interfaccia java.sql.ResultSet.  
   
  Se questo metodo viene utilizzato con i cursori forward e dinamici, viene generata un'eccezione.  

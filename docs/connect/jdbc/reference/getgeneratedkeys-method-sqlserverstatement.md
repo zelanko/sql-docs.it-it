@@ -16,10 +16,10 @@ ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d47ff96fe493053e7a953cfbae53e52be95a0d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982946"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>Metodo getGeneratedKeys (SQLServerStatement)
@@ -40,10 +40,10 @@ public final java.sql.ResultSet getGeneratedKeys()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getGeneratedKeys viene specificato dal metodo getGeneratedKeys nell'interfaccia java. SQL. Statement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getGeneratedKeys viene specificato dal metodo getGeneratedKeys nell'interfaccia java.sql.Statement.  
   
- Per ulteriori informazioni sull'utilizzo di questo metodo, vedere [utilizzo delle chiavi generate automaticamente](../../../connect/jdbc/using-auto-generated-keys.md).  
+ Per altre informazioni su come usare questo metodo, vedere [Uso delle chiavi generate automaticamente](../../../connect/jdbc/using-auto-generated-keys.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

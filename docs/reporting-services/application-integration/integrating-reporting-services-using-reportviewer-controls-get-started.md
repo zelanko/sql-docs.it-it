@@ -1,6 +1,8 @@
 ---
-title: Introduzione al controllo ReportViewer 2016 |Microsoft Docs
-ms.date: 09/18/2018
+title: Guida introduttiva ai controlli Visualizzatore report
+description: I controlli Visualizzatore report possono essere usati per integrare i report RDL di Reporting Services nelle app Web Form e Windows Form.
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -8,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503913"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241832"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrazione di Reporting Services tramite i controlli Visualizzatore report - Guida introduttiva
 
@@ -48,7 +50,7 @@ I controlli Visualizzatore report possono essere usati per integrare i report RD
     
 La pagina finale sarà simile alla seguente.
 
-```
+```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
@@ -69,7 +71,6 @@ La pagina finale sarà simile alla seguente.
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Aggiornamento di un progetto esistente per usare il controllo Visualizzatore report
@@ -78,7 +79,7 @@ Assicurarsi di aggiornare tutti i riferimenti degli assembly alla versione *15.0
 
 ### <a name="sample-webconfig-changes"></a>Modifiche del file web.config di esempio
 
-```
+```xml
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
@@ -145,9 +146,9 @@ Assicurarsi di aggiornare tutti i riferimenti degli assembly alla versione *15.0
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Aggiungere un nuovo controllo dal codice o [aggiungere il controllo alla casella degli strumenti](##adding-control-to-visual-studio-toolbar).
+3. Aggiungere un nuovo controllo dal codice o [aggiungere il controllo alla casella degli strumenti](#adding-control-to-visual-studio-toolbar).
 
-    ```
+    ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     
     private void InitializeComponent()
@@ -175,7 +176,7 @@ Se si imposta l'altezza del controllo visualizzatore al 100%, l'elemento padre d
 
 ### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Impostazione dell'altezza di tutti i predecessori al 100%
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -196,14 +197,13 @@ Se si imposta l'altezza del controllo visualizzatore al 100%, l'elemento padre d
     </form>
 </body>
 </html>
-
 ```
 
 ### <a name="setting-the-parents-height-attribute"></a>Impostazione dell'attributo altezza dell'elemento padre
 
 Per altre informazioni sulle lunghezze percentuali di Viewport, vedere [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Viewport-lunghezze percentuali).
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -219,7 +219,6 @@ Per altre informazioni sulle lunghezze percentuali di Viewport, vedere [Viewport
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>Aggiunta del controllo alla barra degli strumenti di Visual Studio

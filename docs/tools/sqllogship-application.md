@@ -1,6 +1,6 @@
 ---
-title: Applicazione sqllogship | Microsoft Docs
-ms.custom: ''
+title: Applicazione sqllogship
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 8f66feb78bb789bf976d6b44b025af20c6575ee6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68065447"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306651"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'applicazione **sqllogship** esegue un'operazione di backup, copia o ripristino e le attività di pulizia associate per una configurazione per il log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
   
- Per le convenzioni di sintassi, vedere ![Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento").  
+ ![Icona di collegamento a un argomento](../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") Per le convenzioni di sintassi, vedere [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +54,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-verboselevel** _level_  
  Specifica il livello di messaggi aggiunti alla cronologia di log shipping. *level* può essere uno dei valori interi seguenti:  
   
-|level|Descrizione|  
+|Level|Descrizione|  
 |-----------|-----------------|  
 |0|L'output non include messaggi di traccia e di debug.|  
 |1|L'output include messaggi di gestione degli errori.|  
@@ -68,7 +68,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-querytimeout** _timeout_value_  
  Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* is **int** _._  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È consigliabile utilizzare i processi di backup, copia e ripristino per eseguire le operazioni corrispondenti, quando possibile. Per avviare questi processi da un'operazione batch o un'altra applicazione, chiamare la stored procedure [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
  La cronologia di log shipping creata da **sqllogship** è intercalata dalla cronologia creata dai processi di backup, copia e ripristino del log shipping. Se si prevede di usare ripetutamente **sqllogship** per eseguire operazioni di backup, copia o ripristino per una configurazione per il log shipping, prendere in considerazione di disabilitare il processo o i processi per il log shipping corrispondenti. Per altre informazioni, vedere [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  

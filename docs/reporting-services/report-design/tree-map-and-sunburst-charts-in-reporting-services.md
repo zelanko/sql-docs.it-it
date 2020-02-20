@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259359"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Grafici mappa ad albero e radiali in Reporting Services 
@@ -125,7 +125,7 @@ La query restituisce dati dettagliati sugli ordini di vendita AdventureWorks con
   
     3. Per il tipo di connessione selezionare **Microsoft SQL Server**.  
   
-    4. Immettere la stringa di connessione per il server e il database. Esempio:  
+    4. Immettere la stringa di connessione per il server e il database. Ad esempio:  
   
         ```
         Data Source=[server name];Initial Catalog=AdventureWorks2016  
@@ -168,7 +168,7 @@ La query restituisce dati dettagliati sugli ordini di vendita AdventureWorks con
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. Fare clic su **OK**.  
+    5. Selezionare **OK**.  
   
      Per altre informazioni sulla creazione di un set di dati, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   

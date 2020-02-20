@@ -11,10 +11,10 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955511"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Metodo compareTo (DateTimeOffset)
@@ -38,10 +38,10 @@ public int compareTo(DateTimeOffset other)
 |Valore restituito|Descrizione|  
 |------------------|-----------------|  
 |0|Entrambi gli oggetti **DateTimeOffset** rappresentano lo stesso punto nel tempo.|  
-|numero negativo|Questo oggetto **DateTimeOffset** rappresenta un punto nel tempo precedente all' *altro*.|  
-|numero positivo|Questo oggetto **DateTimeOffset** rappresenta un punto nel tempo successivo a un *altro*.|  
+|numero negativo|Questo oggetto **DateTimeOffset** rappresenta un punto nel tempo precedente rispetto a *other*.|  
+|numero positivo|Questo oggetto **DateTimeOffset** rappresenta un punto nel tempo successivo rispetto a *other*.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando due oggetti **DateTimeOffset** specificano la stessa ora GMT, non viene applicato alcun ordinamento aggiuntivo in base alla differenza.  
   
 ## <a name="see-also"></a>Vedere anche  

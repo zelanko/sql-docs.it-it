@@ -1,7 +1,7 @@
 ---
-title: Configurare un computer multihomed per l'accesso a SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Configurare un computer multihomed per l'accesso
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126216"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244456"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,13 +65,13 @@ ms.locfileid: "68126216"
   
 3.  Annotare gli indirizzi IPv4 e gli indirizzi IPv6 utilizzati. Le altre informazioni presenti nell'elenco, ad esempio gli indirizzi temporanei, le subnet mask e i gateway predefiniti, rappresentano informazioni importanti per la configurazione di una rete TCP/IP, ma non vengono utilizzate in questo esempio.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Per determinare le porte e gli indirizzi IP usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>Per determinare le porte e gli indirizzi IP usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
 2.  In **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nel riquadro della console espandere **Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , espandere **Protocolli per \<nome istanza>** e quindi fare doppio clic su **TCP/IP**.  
   
-3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP, nel formato **IP1**, **IP2**fino a **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
+3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP nel formato **IP1**, **IP2**e **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
   
 4.  Per ogni indirizzo IP, la presenza del valore **0** nella finestra di dialogo **Porte dinamiche TCP**indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa su porte dinamiche. Poiché in questo esempio vengono utilizzate porte fisse e non porte dinamiche, che potrebbero subire modifiche in caso di riavvio, se nella finestra di dialogo **Porte dinamiche TCP** è contenuto il valore **0**, eliminare lo 0.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68126216"
 10. Nella pagina **Azione** esaminare le opzioni. Poiché in questo esempio non si utilizza il firewall per forzare connessioni protette, fare clic su **Consenti la connessione**, quindi su **Avanti**.  
   
     > [!NOTE]  
-    >  Nell'ambiente potrebbe essere necessario utilizzare connessioni protette. Se si seleziona una delle opzioni relative alle connessioni protette, potrebbe essere necessario configurare un certificato e l'opzione **Forza crittografia**. Per altre informazioni sulle connessioni protette, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) e [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Nell'ambiente potrebbe essere necessario utilizzare connessioni protette. Se si seleziona una delle opzioni relative alle connessioni protette, potrebbe essere necessario configurare un certificato e l'opzione **Forza crittografia** . Per altre informazioni sulle connessioni protette, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) e [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. Nella pagina **Profilo** selezionare uno o più profili per la regola. Se non si ha familiarità con i profili del firewall, fare clic sul collegamento **Ulteriori informazioni sui profili** nel programma firewall.  
   

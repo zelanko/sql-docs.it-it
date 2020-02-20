@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593950"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190697"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
@@ -28,7 +28,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  In Progettazione query vengono visualizzati automaticamente gli elenchi SharePoint a cui è possibile accedere perché si dispone delle autorizzazioni sufficienti.  
   
- Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altri esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report. Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide. I tipi di credenziali che è possibile usare con questa estensione per i dati dipendono dalla configurazione della tecnologia SharePoint per l'elenco SharePoint usato come origine dati.  
@@ -42,20 +42,20 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|no|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|No|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
   
  \* Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
   
- **tabella 2**  
+ **Tabella 2**  
   
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|no|no|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|no|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|No|No|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
+||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|No|No<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
   
  \* Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
   
@@ -71,7 +71,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione&#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Specificare credenziali e informazioni di connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Specificare credenziali e informazioni di connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Query  
  Per progettare una query, creare un nuovo set di dati basato sull'origine dati, quindi aprire la finestra Progettazione query associata. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -169,7 +169,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

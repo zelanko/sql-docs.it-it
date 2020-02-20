@@ -1,5 +1,7 @@
 ---
-title: Configurare le regole del firewall prima di eseguire il debugger TSQL
+title: Configurare le regole del firewall prima di eseguire il debugger di T-SQL
+description: Informazioni su come configurare le regole di Windows Firewall prima di eseguire il debugger Transact-SQL (T-SQL) quando si è connessi a un'istanza di SQL Server in SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -19,21 +21,20 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9d501f8acdbdbbc9a2942ef522714a445e62fb
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097946"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558266"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurare le regole del firewall prima di eseguire il debugger TSQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-È necessario configurare regole di Windows Firewall per abilitare il debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in un computer diverso da Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+È necessario configurare regole di Windows Firewall per abilitare il debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in un computer diverso da Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] .
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 

@@ -7,26 +7,26 @@ ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028838"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761805"
 ---
 # <a name="sql-server-privacy-supplement"></a>Supplemento alla privacy di SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo articolo riepiloga le funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SQL Server può raccogliere informazioni standard sul computer e dati relativi all'uso e alle prestazioni che possono venire trasmessi a Microsoft e analizzati al fine di migliorare la qualità, la sicurezza e l'affidabilità del prodotto. Questo articolo funge da supplemento all'[Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). La classificazione dei dati in questo articolo si applica solo alle versioni del prodotto SQL Server locale. Non si applica agli elementi seguenti:
+Questo articolo riepiloga le funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SQL Server può raccogliere informazioni standard sul computer e dati relativi all'uso e alle prestazioni che possono venire trasmessi a Microsoft e analizzati al fine di migliorare la qualità, la sicurezza e l'affidabilità del prodotto. Se si installa SQL Server in una macchina virtuale nel servizio Microsoft Azure, potrebbero essere inviate a Microsoft informazioni sull'ambiente in modo che Microsoft possa registrare la risorsa macchina virtuale SQL Server con il provider di risorse all'interno della sottoscrizione di Azure, come descritto più in dettaglio [qui](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Durante la registrazione della risorsa macchina virtuale SQL Server, è possibile che l'estensione agente IaaS di SQL Server venga installata nella macchina virtuale come descritto più in dettaglio [qui](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Questo articolo funge da supplemento all'[Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). La classificazione dei dati in questo articolo si applica solo alle versioni del prodotto SQL Server locale. Non si applica agli elementi seguenti:
 
-- Database SQL di Azure
+- database SQL di Azure
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
-- Data Migration Assistant
+- Database Migration Assistant
 - SQL Server Migration Assistant
 - Estensione MS-SQL
 

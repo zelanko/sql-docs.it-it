@@ -1,23 +1,25 @@
 ---
-title: Using the WebForms ReportViewer Control (Uso del controllo WebForm ReportViewer) | Microsoft Docs
+title: Usare il controllo Web Form ReportViewer
+description: Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile utilizzare il controllo Web Form ReportViewer per eseguirne il rendering in un'applicazione Web.
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MTE75
+ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687374"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796932"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
+# <a name="use-the-webforms-reportviewer-control"></a>Usare il controllo Web Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile utilizzare il controllo Web Form ReportViewer per eseguirne il rendering in un'applicazione Web.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Per utilizzare il controllo ReportViewer in un'applicazione Web  
@@ -30,7 +32,7 @@ ms.locfileid: "71687374"
   
 2.  Individuare il controllo **ScriptManager** nel gruppo**AJAX Extensions** nella finestra **Casella degli strumenti** e trascinarlo nell'area di progettazione del Web Form.  
   
-     **Casella degli strumenti** non è visibile, è possibile accedervi scegliendo **Casella degli strumenti** dal menu **Visualizza**.  
+     Se la **casella degli strumenti** non è visibile, è possibile accedervi scegliendo **Casella degli strumenti** dal menu **View**.  
   
 3.  Individuare il controllo **ReportViewer** nella **Casella degli strumenti** e trascinarlo nell'area di progettazione sotto il controllo **ScriptManager**.  
   
@@ -155,7 +157,7 @@ End Class
   
      Il file Sales Order Detail.rdl dovrebbe ora far parte del progetto.  
   
-5.  Fare clic con il pulsante destro del mouse sul file Sales Order Detail.rdl in Esplora soluzioni e selezionare **Rinomina**. Rinominare il report in**Sales Order Detail.rdlc** e premere INVIO.  
+5.  Fare clic con il pulsante destro del mouse sul file Sales Order Detail.rdl in Esplora soluzioni e selezionare **Rinomina**. Rinominare il report in **Sales Order Detail.rdlc** e premere INVIO.  
   
      Se Esplora soluzioni non è visibile, è possibile aprirlo scegliendo Esplora soluzioni dal menu **Visualizza**.  
   

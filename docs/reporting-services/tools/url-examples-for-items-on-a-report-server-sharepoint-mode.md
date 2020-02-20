@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574013"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Esempi di URL per gli elementi in un server di report - Modalità SharePoint
@@ -29,7 +29,7 @@ ms.locfileid: "65574013"
   
  Per accedere al contenuto del server di report e proteggerlo, è possibile utilizzare gli elementi della gerarchia Web indicati di seguito. Altri oggetti, quali elenchi e pagine, non vengono utilizzati per accedere al contenuto del server di report e non sono pertanto descritti nella tabella seguente.  
   
-|Object|Descrizione|  
+|Oggetto|Descrizione|  
 |------------|-----------------|  
 |Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web possiede un URL, ad esempio `http:*//servername*`, e può contenere più siti.|  
 |Sito|Un sito può essere un sito padre o un sito secondario di un'applicazione Web.|  
@@ -56,7 +56,7 @@ ms.locfileid: "65574013"
   
  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] la libreria si trova dopo il nome del server, ad esempio `https://*servername/*Shared Documents`.  
   
- In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]la raccolta è invece indicata dopo il sito e il sito secondario. Ad esempio, `https://*servername/site/*Documents`.  
+ In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]la raccolta è invece indicata dopo il sito e il sito secondario. Ad esempio: `https://*servername/site/*Documents`.  
   
  Per trovare le informazioni sul percorso di una nuova raccolta di SharePoint o per un sito con cui non si ha familiarità, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare i report. Se la raccolta è vuota, caricare uno o più file. Fare clic con il pulsante destro del mouse sul file e scegliere **Proprietà** per aprire la finestra **Proprietà** . L'indirizzo del file include i valori dell'URL necessari per l'operazione di pubblicazione.  
   

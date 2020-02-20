@@ -1,24 +1,26 @@
 ---
 title: Trovare il codice Product Key per SQL Server Reporting Services | Microsoft Docs
-ms.date: 10/02/2019
+description: Informazioni su come trovare il codice Product Key per SQL Server Reporting Services (SSRS) 2017 e 2019 per installare il server in un ambiente di produzione.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6033b15655cebd557ee93efabce32ea0981072f1
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.openlocfilehash: c85fc8de816c24496fe0ffb353f7d51e20b07389
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952718"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866054"
 ---
 # <a name="find-the-product-key-for-sql-server-reporting-services"></a>Trovare il codice Product Key per SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-Informazioni su come trovare il codice Product Key per SQL Server Reporting Services (SSRS) 2017 e 2019 per poter installare il server in un ambiente di produzione.
+Informazioni su come trovare il codice Product Key per SQL Server Reporting Services (SSRS) 2017 e 2019 per installare il server in un ambiente di produzione.
 
 Per trovare il codice Product Key, per prima cosa scaricare ed eseguire il programma di installazione di SQL Server.
 
@@ -27,7 +29,7 @@ Per trovare il codice Product Key, per prima cosa scaricare ed eseguire il progr
 
     ![Copiare il codice Product Key per SQL Server](media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png)
 
-1. [Scaricare Reporting Services](install-reporting-services.md), eseguire il programma di installazione e incollare la chiave:
+1. [Scaricare Reporting Services](install-reporting-services.md), eseguire l'installazione e incollare la chiave:
 
      ![Incollare il codice Product Key](media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png)
 

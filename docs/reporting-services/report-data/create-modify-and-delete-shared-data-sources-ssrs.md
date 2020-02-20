@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573205"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190861"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Creare, modificare ed eliminare origini dati condivise (SSRS)
   Un'origine dati condivisa è un set di proprietà di connessione dell'origine dati a cui è possibile fare riferimento in più report, modelli e sottoscrizioni guidate dai dati in esecuzione su un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Le origini dei dati condivise rappresentano una soluzione semplice per gestire proprietà dell'origine dati soggette a frequenti modifiche. Se un account utente o una password viene modificata o se si sposta il database in un server diverso, è possibile aggiornare le informazioni di connessione da una posizione centralizzata.  
@@ -32,10 +32,10 @@ ms.locfileid: "65573205"
   
 |Parte|Descrizione|  
 |----------|-----------------|  
-|nome|Un nome che identifica l'elemento all'interno della gerarchia di cartelle del server di report.|  
+|Nome|Un nome che identifica l'elemento all'interno della gerarchia di cartelle del server di report.|  
 |Descrizione|Una descrizione che viene visualizzata con l'elemento nel portale Web quando viene visualizzato il contenuto della cartella.|  
 |Tipo di connessione|L'estensione per l'elaborazione dati utilizzata con l'origine dati. È possibile utilizzare solo estensioni per l'elaborazione dati distribuite sul server di report. Per altre informazioni sulle estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
-|Stringa di connessione|La stringa di connessione per il database. Per altre informazioni e per visualizzare esempi di stringhe di connessione alle origini dati più frequenti, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
+|Stringa di connessione|La stringa di connessione per il database. Per altre informazioni e per visualizzare esempi di stringhe di connessione alle origini dati più frequenti, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo di credenziali|Specifica in che modo vengono ottenute le credenziali per la connessione e se devono essere utilizzate quando viene stabilita la connessione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  Le origini dei dati condivise non contengono informazioni sulla query utilizzata per recuperare i dati. La query viene sempre mantenuta all'interno della definizione del report.  
@@ -167,7 +167,7 @@ Quando si elimina un'origine dati condivisa, vengono disattivati tutti i report,
   
 4.  Scegliere il tipo di origine dati dall'elenco **Tipo di origine dati**. Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-5.  In **Stringa di connessione**specificare un puntatore all'origine dati e qualsiasi altra impostazione necessaria per stabilire una connessione all'origine dati esterna. La sintassi della stringa di connessione è determinata dal tipo di origine dei dati che si sta utilizzando. Per altri esempi e informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+5.  In **Stringa di connessione**specificare un puntatore all'origine dati e qualsiasi altra impostazione necessaria per stabilire una connessione all'origine dati esterna. La sintassi della stringa di connessione è determinata dal tipo di origine dei dati che si sta utilizzando. Per altre informazioni ed esempi, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 6.  In **Credenziali**specificare la modalità con cui il server di report ottiene le credenziali per l'accesso all'origine dati esterna. Le credenziali possono essere archiviate, richieste al momento dell'esecuzione, integrate o configurate per l'elaborazione automatica del report.  
   
@@ -214,7 +214,7 @@ Quando si elimina un'origine dati condivisa, vengono disattivati tutti i report,
      Per i modelli di report, nell'elenco degli elementi dipendenti sono visualizzati i report creati in Generatore report. L'elenco degli elementi dipendenti relativo alle origini dei dati condivise può includere sia i report che i modelli di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configurare le proprietà delle origini dati per un report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

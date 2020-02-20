@@ -1,10 +1,9 @@
 ---
-title: Proprietà processo - Nuovo processo (pagina Pianificazioni) | Microsoft Docs
-ms.custom: ''
+title: Proprietà processo - Nuovo processo (pagina Pianificazioni)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d9d06def940d757e183b2ed6341d034628ccea7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b8cb5f6fafa2ef48b3aea31e916480e712f477af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267820"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242262"
 ---
 # <a name="job-properties---new-job-schedules-page"></a>Proprietà processo - Nuovo processo (pagina Pianificazioni)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ Usare questa pagina per visualizzare e organizzare le pianificazioni relative a 
 **Elenco pianificazioni**  
 Elenca le pianificazioni relative al processo corrente.  
   
-**Nuova**  
+**Nuovo**  
 Consente di creare una nuova pianificazione. Dopo la creazione, la pianificazione verrà aggiunta al processo.  
   
 **Seleziona**  

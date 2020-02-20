@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492746"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Configurare le proprietà di esecuzione per un report
@@ -60,22 +60,22 @@ ms.locfileid: "67492746"
   
 Dal [portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md):  
   
-1. Passare al report per il quale si desidera configurare le proprietà di esecuzione.  
+1. Passare al report per il quale si vogliono configurare le proprietà di esecuzione.  
   
-2. Fare doppio clic su report, quindi scegliere **Gestisci** dal menu di riepilogo a discesa.
+2. Fare clic con il pulsante destro del mouse sul report e scegliere **Gestisci** dal menu a discesa.
 
-3. Selezionare il **snapshot della cronologia** scheda per visualizzare i **snapshot della cronologia** pagina.  
+3. Selezionare la scheda **Snapshot della cronologia** per visualizzare la pagina **Snapshot della cronologia**.  
   
-4. Selezionare **pianificazioni e impostazioni** pulsante e controllare **Crea snapshot della cronologia in base a una pianificazione** se non è già selezionata.
+4. Selezionare il pulsante **Schedules and settings** (Pianificazioni e impostazioni) e selezionare **Creare gli snapshot della cronologia in base a una pianificazione** se non è già selezionato.
   
-5. Selezionare una **pianificazione condivisa** o una **pianificazione specifica del Report** come desiderato.  
+5. Selezionare una **pianificazione condivisa** o una **pianificazione in base al report** in base alle esigenze.  
   
-6. Nel **avanzate** , selezionare il valore desiderato **conservazione** criteri per gli snapshot della cronologia.  
+6. Nella sezione **Avanzate** selezionare il criterio **Conservazione** desiderato per gli snapshot della cronologia.  
   
 7. Selezionare **Applica**.  
   
    >[!NOTE]
-   >Se si desidera creare immediatamente uno snapshot, selezionare la **nuovo snapshot della cronologia** pulsante anziché il **pianificazioni e impostazioni** pulsante e uno snapshot del report verrà creato immediatamente.  
+   >Per creare immediatamente uno snapshot, selezionare il pulsante **Nuovo snapshot della cronologia** invece del pulsante **Schedules and settings** (Pianificazioni e impostazioni). Verrà immediatamente creato uno snapshot del report.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   

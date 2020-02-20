@@ -1,5 +1,5 @@
 ---
-title: C++App ODBC che accede a un database SQL
+title: App ODBC C++ che accede a un database SQL
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67690555"
 ---
-# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++Applicazione di esempio ODBC accede a un database SQL
+# <a name="c-odbc-example-application-accesses-a-sql-database"></a>Applicazione di esempio ODBC C++ che accede a un database SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-In questo C++ applicazione di esempio illustra come usare le API ODBC per connettersi e accedere a un database SQL.
+L'applicazione di esempio C++ dimostra come usare le API ODBC per connettersi e accedere a un database SQL.
 
-Tra ottobre 2013 e 2019 luglio, in questo esempio C++ applicazione ODBC è stato scaricato 47,300 volte. In luglio 2019 questa origine di applicazione è stata spostata dalla raccolta di codice di Microsoft alla pagina Web.
+Tra ottobre 2013 e luglio 2019, questa applicazione ODBC C++ di esempio è stata scaricata 47.300 volte. Nel luglio 2019 il codice sorgente di questa applicazione è stato spostato dalla raccolta di codice di Microsoft a questa pagina Web.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md
@@ -31,7 +31,7 @@ New as .md file on 2019/July/08.  GeneMi.
 Was:  https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953
 -->
 
-## <a name="a-readmetxt"></a>A. ReadMe.txt
+## <a name="a-readmetxt"></a>R. ReadMe.txt
 
 ```
 Environment Where Tested
@@ -79,7 +79,7 @@ To run the sample:
      3. Select the ODBC DSN to connect to. Follow the message of the sample application to input SQL query.
 ```
 
-## <a name="b-odbcsqlcpp-code"></a>B. codice odbcsql.cpp
+## <a name="b-odbcsqlcpp-code"></a>B. Codice odbcsql.cpp
 
 ```cpp
 /******************************************************************************* 

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015211"
 ---
 # <a name="stored-procedures"></a>Stored procedure
@@ -27,7 +27,7 @@ ms.locfileid: "68015211"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Un stored procedure ([stored procedure &#40;motore di database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  Una stored procedure ([Stored procedure &#40;motore di database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   Stored procedure  
   

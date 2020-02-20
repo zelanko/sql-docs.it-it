@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di sequenze di escape SQL | Microsoft Docs
+title: Uso delle sequenze di escape SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025888"
 ---
 # <a name="using-sql-escape-sequences"></a>Uso delle sequenze di escape SQL
@@ -61,7 +61,7 @@ Il driver JDBC supporta le sequenze di escape delle funzioni nelle istruzioni SQ
 {fn functionName}  
 ```
 
-dove `functionName` è una funzione supportata dal driver JDBC. Esempio: 
+dove `functionName` è una funzione supportata dal driver JDBC. Ad esempio: 
 
 ```sql
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -69,9 +69,9 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 Nella tabella seguente sono elencate le varie funzioni supportate dal driver JDBC in caso di utilizzo di una sequenza di escape delle funzioni:  
   
-| Funzioni per i valori stringa                                                                                                                                                                                                                                                                                                                        | Funzioni numeriche                                                                                                                                                                                                                                                                                                                                                                                                   | Funzioni data/ora                                                                                                                                                                                                                                                                                                                                             | Funzioni di sistema                             |
+| Funzioni di stringa                                                                                                                                                                                                                                                                                                                        | Funzioni numeriche                                                                                                                                                                                                                                                                                                                                                                                                   | Funzioni data/ora                                                                                                                                                                                                                                                                                                                                             | Funzioni di sistema                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCATENA<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> GIORNOANNO<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> Utente |
+| ASCII<br /><br /> CHAR<br /><br /> CONCATENA<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | abs<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> GIORNOANNO<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > Se si tenta di utilizzare una funzione non supportata dal database, si verifica un errore.  
@@ -88,11 +88,11 @@ dove `literal-type` è uno dei valori seguenti:
   
 | Tipo di valore letterale | Descrizione | Formato del valore               |
 | ------------ | ----------- | -------------------------- |
-| d            | date        | aaaa-mm-gg                 |
-| t            | Time        | hh:mm:ss [1]               |
+| d            | Data        | aaaa-mm-gg                 |
+| t            | Tempo        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | aaaa-mm-gg hh:mm:ss[.f...] |
   
-Esempio:  
+Ad esempio:  
 
 ```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}
@@ -111,7 +111,7 @@ Una stored procedure è un oggetto eseguibile archiviato nel database. In genere
 
 dove `procedure-name` specifica il nome di una stored procedure e `parameter` specifica un parametro della stored procedure.  
   
-Per ulteriori informazioni sull'utilizzo della `call` sequenza di escape con le stored procedure, vedere [utilizzo delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Per altre informazioni sull'uso della sequenza di escape `call` con le stored procedure, vedere [Uso delle istruzioni con le stored procedure](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Outer join
 
@@ -130,7 +130,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 
 dove `table-reference` è il nome di una tabella e `search-condition` è la condizione di join che si desidera usare per le tabelle.  
   
-Esempio:  
+Ad esempio:  
 
 ```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status

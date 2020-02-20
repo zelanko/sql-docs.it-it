@@ -1,5 +1,5 @@
 ---
-title: Metodo GetFunctions (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Metodo getFunctions (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982949"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>Metodo getFunctions (SQLServerDatabaseMetaData)
@@ -50,7 +50,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getFunctions viene specificato dal metodo getFunctions nell'interfaccia java.sql.DatabaseMetaData.  
   
  Restituisce solo le funzioni utente e di sistema che corrispondono ai nomi di schema e funzione specificati.  
@@ -60,15 +60,15 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  La descrizione di ogni funzione include le colonne seguenti:  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**String**|Nome del database contenente la funzione.|  
-|FUNCTION_SCHEM|**String**|Nome dello schema contenente la funzione.|  
-|FUNCTION_NAME|**String**|Nome della funzione.|  
+|FUNCTION_CAT|**Stringa**|Nome del database contenente la funzione.|  
+|FUNCTION_SCHEM|**Stringa**|Nome dello schema contenente la funzione.|  
+|FUNCTION_NAME|**Stringa**|Nome della funzione.|  
 |NUM_INPUT_PARAMS|**int**|Riservato per utilizzi futuri, attualmente restituisce un valore pari a -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Riservato per utilizzi futuri, attualmente restituisce un valore pari a -1.|  
 |NUM_RESULT_SETS|**int**|Riservato per utilizzi futuri, attualmente restituisce un valore pari a -1.|  
-|REMARKS|**String**|Commenti sulla funzione.|  
+|REMARKS|**Stringa**|Commenti sulla funzione.|  
 |FUNCTION_TYPE|**short**|Tipo della funzione. Può essere uno dei valori seguenti:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  Tutte le descrizioni del set di risultati restituito sono ordinate in base a FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME e SPECIFIC_NAME.  

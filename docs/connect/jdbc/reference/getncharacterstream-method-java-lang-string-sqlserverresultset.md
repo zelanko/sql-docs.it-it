@@ -11,10 +11,10 @@ ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c2cd07b0420d8ca961c61c205c94cd19fe6666e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981643"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>Metodo getNCharacterStream (java.lang.String) (SQLServerResultSet)
@@ -40,10 +40,10 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getNCharacterStream viene specificato dal metodo getNCharacterStream nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getNCharacterStream viene specificato dal metodo getNCharacterStream nell'interfaccia java.sql.ResultSet.  
   
- Questo metodo può essere utilizzato per recuperare il valore di una colonna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**o **XML** nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
+ Questo metodo può essere usato per recuperare il valore di una colonna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext** o **xml** nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

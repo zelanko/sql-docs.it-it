@@ -16,10 +16,10 @@ ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f35a71cc741411f3aad3408d366f3f70218fecdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978527"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>Metodo getTrustStore (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getTrustStore()
 ## <a name="return-value"></a>Valore restituito  
  Valore **String** contenente il percorso (incluso il nome file) del file trustStore del certificato o Null se non è impostato alcun valore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la proprietà trustStore non è impostata, il metodo [getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md) restituisce Null.  
   
 ## <a name="see-also"></a>Vedere anche  

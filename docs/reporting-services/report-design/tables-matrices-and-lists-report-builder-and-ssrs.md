@@ -34,10 +34,10 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574681"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelle, matrici ed elenchi (Generatore report e SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "65574681"
   
  ![RS_TableMatrixList](../../reporting-services/report-design/media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Per una rapida introduzione a tabelle, matrici ed elenchi, vedere [Esercitazione: creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Esercitazione: creazione di un report matrice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md), e [Esercitazione: creazione di un report in formato libero &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Per una rapida introduzione alle tabelle, alle matrici e agli elenchi, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) ed [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare tabelle matrici ed elenchi separatamente da un report come parte del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "65574681"
 ##  <a name="Matrix"></a> Matrice  
  Usare una matrice per visualizzare i riepiloghi dei dati aggregati raggruppati in righe e colonne, analogamente a una tabella pivot o a un report a campi incrociati. Il numero di righe e colonne per i gruppi è determinato dal numero di valori univoci per ogni gruppo di righe e colonne. Nella figura seguente viene illustrato il modello di matrice iniziale selezionato nell'area di progettazione:  
   
- ![Nuova matrice aggiunta dalla casella degli strumenti selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti selezionata")  
+ ![Nuova matrice aggiunta dalla casella degli strumenti e selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti e selezionata")  
   
  È possibile raggruppare i dati per più campi o espressioni in gruppi di righe e di colonne. In fase di esecuzione, quando si combinano i dati del report e le aree dati, le dimensioni di una matrice aumentano orizzontalmente e verticalmente nella pagina quando si aggiungono colonne per i gruppi di colonne e righe per i gruppi di righe. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella. Ad esempio, se la matrice dispone di un gruppo di righe (Category) e di due gruppi di colonne (Territory e Year) che consentono di visualizzare la somma di vendite, nel report vengono visualizzate due celle con somme di vendite per ogni valore nel gruppo Category. L'ambito delle celle sono le due intersezioni: Category e Territory e Category e Year. La matrice può includere gruppi nidificati e adiacenti. I gruppi nidificati presentano una relazione padre-figlio mentre i gruppi adiacenti una relazione di tipo peer. È possibile aggiungere subtotali per alcuni o tutti i livelli di gruppi di righe e colonne nidificati all'interno della matrice.  
   

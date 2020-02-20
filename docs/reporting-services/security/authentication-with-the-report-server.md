@@ -15,10 +15,10 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570892"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticazione con il server di report
@@ -34,9 +34,9 @@ ms.locfileid: "65570892"
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Sì|Viene dapprima effettuato il tentativo di utilizzare Kerberos per l'autenticazione integrata di Windows. Se Active Directory non è in grado di concedere un ticket per la richiesta client al server di report, viene impostata nuovamente l'autenticazione NTML. L'autenticazione verrà reimpostata su NTLM solo se il ticket non è disponibile. Se il primo tentativo genera un errore anziché un ticket mancante, il server di report non esegue un secondo tentativo.|  
 |RSWindowsNTLM|NTLM|Sì|Utilizza NTLM per l'autenticazione integrata di Windows.<br /><br /> Le credenziali non verranno delegate né rappresentate in altre richieste. Le richieste successive seguiranno una nuova sequenza In attesa/Risposta. A seconda delle impostazioni di sicurezza della rete, è possibile che a un utente vengano richieste le credenziali o che la richiesta di autenticazione venga gestita in modo trasparente.|  
-|RSWindowsKerberos|Kerberos|no|Utilizza Kerberos per l'autenticazione integrata di Windows. È necessario configurare Kerberos impostando i nomi SPN (Service Principle Name) per gli account del servizio, per cui è necessario disporre dei privilegi di amministratore di dominio. Se viene configurata una delega dell'identità utilizzando Kerberos, il token dell'utente che richiede un report può essere utilizzato anche in una connessione aggiuntiva alle origini dati esterne che forniscono i dati ai report.<br /><br /> Prima di specificare RSWindowsKerberos, assicurarsi che il tipo di browser in uso lo supporti. Se si usa Microsoft Edge o Internet Explorer, l'autenticazione Kerberos è supportata solo tramite negoziazione. Microsoft Edge o Internet Explorer non formulerà una richiesta di autenticazione che specifica direttamente Kerberos.|  
-|RSWindowsBasic|Standard|no|L'autenticazione di base è definita nel protocollo HTTP e può essere utilizzata solo per autenticare richieste HTTP al server di report.<br /><br /> Le credenziali vengono passate nella richiesta HTTP in codifica in base 64. Se si utilizza l'autenticazione di base, utilizzare Secure Sockets Layer (SSL) per crittografare le informazioni relative all'account utente prima di inviarle sulla rete. SSL fornisce un canale crittografato per l'invio di una richiesta di connessione dal client al server di report mediante una connessione TCP/IP HTTP. Per altre informazioni, vedere [Using SSL to Encrypt Confidential Data (Uso di SSL per crittografare dati riservati)](https://go.microsoft.com/fwlink/?LinkId=71123) sul sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
-|Personalizzato|(anonimo)|no|L'autenticazione anonima indica al server di report di ignorare l'intestazione di autenticazione nelle richieste HTTP. Il server di report accetta tutte le richieste, ma esegue una chiamata a un'autenticazione basata su form di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] fornita per autenticare l'utente.<br /><br /> Specificare **Personalizzato** solo se si distribuisce un modulo di autenticazione personalizzato che gestisce tutte le richieste di autenticazione sul server di report. Non è possibile utilizzare il tipo di autenticazione Custom con l'estensione di autenticazione di Windows predefinita.|  
+|RSWindowsKerberos|Kerberos|No|Utilizza Kerberos per l'autenticazione integrata di Windows. È necessario configurare Kerberos impostando i nomi SPN (Service Principle Name) per gli account del servizio, per cui è necessario disporre dei privilegi di amministratore di dominio. Se viene configurata una delega dell'identità utilizzando Kerberos, il token dell'utente che richiede un report può essere utilizzato anche in una connessione aggiuntiva alle origini dati esterne che forniscono i dati ai report.<br /><br /> Prima di specificare RSWindowsKerberos, assicurarsi che il tipo di browser in uso lo supporti. Se si usa Microsoft Edge o Internet Explorer, l'autenticazione Kerberos è supportata solo tramite negoziazione. Microsoft Edge o Internet Explorer non formulerà una richiesta di autenticazione che specifica direttamente Kerberos.|  
+|RSWindowsBasic|Basic|No|L'autenticazione di base è definita nel protocollo HTTP e può essere utilizzata solo per autenticare richieste HTTP al server di report.<br /><br /> Le credenziali vengono passate nella richiesta HTTP in codifica in base 64. Se si utilizza l'autenticazione di base, utilizzare Secure Sockets Layer (SSL) per crittografare le informazioni relative all'account utente prima di inviarle sulla rete. SSL fornisce un canale crittografato per l'invio di una richiesta di connessione dal client al server di report mediante una connessione TCP/IP HTTP. Per altre informazioni, vedere [Using SSL to Encrypt Confidential Data (Uso di SSL per crittografare dati riservati)](https://go.microsoft.com/fwlink/?LinkId=71123) sul sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|Personalizzato|(anonimo)|No|L'autenticazione anonima indica al server di report di ignorare l'intestazione di autenticazione nelle richieste HTTP. Il server di report accetta tutte le richieste, ma esegue una chiamata a un'autenticazione basata su form di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] fornita per autenticare l'utente.<br /><br /> Specificare **Personalizzato** solo se si distribuisce un modulo di autenticazione personalizzato che gestisce tutte le richieste di autenticazione sul server di report. Non è possibile utilizzare il tipo di autenticazione Custom con l'estensione di autenticazione di Windows predefinita.|  
   
 ## <a name="unsupported-authentication-methods"></a>Metodi di autenticazione non supportati  
  I metodi e le richieste di autenticazione seguenti non sono supportati.  
@@ -60,7 +60,7 @@ ms.locfileid: "65570892"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Configurare l'autenticazione di Windows nel server di report.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+-   [Configurare l'autenticazione di Windows nel server di report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
 -   [Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   

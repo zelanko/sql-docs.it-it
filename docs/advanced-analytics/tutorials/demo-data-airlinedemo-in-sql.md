@@ -1,6 +1,6 @@
 ---
 title: Dati demo di una compagnia aerea per le esercitazioni
-Description: Creare un database contenente il set di dati della compagnia aerea da R e Python. Questo set di dati viene usato in esercizi che illustrano come eseguire il wrapping del linguaggio R o del codice Python in una stored procedure di SQL Server.
+Description: Creare un database contenente il set di dati della compagnia aerea da R e Python. Questo set di dati viene usato nelle esercitazioni di R e Python per Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727144"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908908"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo sugli arrivi di una compagnia aerea per le esercitazioni su Python e R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

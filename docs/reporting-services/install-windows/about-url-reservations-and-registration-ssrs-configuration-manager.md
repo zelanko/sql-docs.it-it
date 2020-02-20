@@ -1,8 +1,10 @@
 ---
-title: Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS) | Microsoft Docs
-ms.date: 06/20/2019
+title: Prenotazioni e registrazione URL (Configuration Manager) | Microsoft Docs
+description: Gli URL per le applicazioni di Reporting Services vengono definiti come prenotazioni URL in HTTP.SYS.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314033"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259334"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
   Gli URL per le applicazioni di Reporting Services vengono definiti come prenotazioni URL in HTTP.SYS. Una prenotazione URL definisce la sintassi di un endpoint dell'URL in un'applicazione Web. Le prenotazioni URL vengono definite sia per il servizio Web ReportServer sia per il portale Web quando si configurano le applicazioni nel server di report. Le prenotazioni URL vengono create automaticamente quando si configurano gli URL tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -82,8 +84,8 @@ ms.locfileid: "67314033"
   
 |Tipo di istanza|Applicazione|URL predefinito|Prenotazione di URL effettiva in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Istanza predefinita|servizio Web ReportServer|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|Istanza predefinita|Portale Web|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Istanza predefinita|servizio Web ReportServer|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Istanza predefinita|Portale Web|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |Istanza denominata|servizio Web ReportServer|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |Istanza denominata|Portale Web|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|servizio Web ReportServer|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  

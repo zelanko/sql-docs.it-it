@@ -11,10 +11,10 @@ ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971517"
 ---
 # <a name="sqlserverdatasource-class"></a>Classe SQLServerDataSource
@@ -33,8 +33,8 @@ ms.locfileid: "67971517"
 public class SQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Questa classe supporta l'annullamento del wrapping alla classe SQLServerDataSource, l'interfaccia ISQLServerDataSource e l'interfaccia DataSource. Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+## <a name="remarks"></a>Osservazioni  
+ Questa classe supporta l'annullamento del wrapping per la classe SQLServerDataSource, l'interfaccia ISQLServerDataSource e l'interfaccia DataSource. Per altre informazioni, vedere [Wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

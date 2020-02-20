@@ -11,10 +11,10 @@ ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caad3533d06ad7c00a4fb2cd8000bdd12c51acdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999115"
 ---
 # <a name="updatedatetimeoffsetint-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
@@ -38,13 +38,13 @@ public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x)
   
  *x*  
   
- Oggetto della [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
+ Oggetto [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- È possibile recuperare un valore di [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) con [SQLServerResultSet. GetDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md).  
+## <a name="remarks"></a>Osservazioni  
+ È possibile recuperare un valore della [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) con [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [updateDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   

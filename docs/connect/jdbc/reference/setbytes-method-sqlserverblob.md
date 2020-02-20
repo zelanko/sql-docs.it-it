@@ -1,5 +1,5 @@
 ---
-title: Metodo sebytes (SQLServerBlob) | Microsoft Docs
+title: Metodo setBytes (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00bc342081260af4740f20e6ec88c02061623b28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974900"
 ---
 # <a name="setbytes-method-sqlserverblob"></a>Metodo setBytes (SQLServerBlob)
@@ -29,7 +29,7 @@ ms.locfileid: "67974900"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[setBytes (long, byte&#91;&#93;)](../../../connect/jdbc/reference/setbytes-method-long-byte.md)|Scrive la matrice di byte specificata nell'oggetto BLOB a partire dalla posizione specificata, quindi restituisce il numero di byte scritti.|  
 |[setBytes (long, byte&#91;&#93;, int, int)](../../../connect/jdbc/reference/setbytes-method-long-byte-int-int.md)|Scrive tutta o parte della matrice di byte specificata nell'oggetto BLOB a partire dalla posizione, dall'offset e dalla lunghezza specificati; quindi restituisce il numero di byte scritti.|  

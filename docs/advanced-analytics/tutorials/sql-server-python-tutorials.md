@@ -1,6 +1,6 @@
 ---
 title: Esercitazioni di Python
-description: Questo articolo descrive le esercitazioni di Python per Machine Learning Services per SQL Server. Informazioni su come eseguire script Python. Compilare, eseguire il training e distribuire modelli Python in SQL Server. Informazioni sui contesti di calcolo remoti e locali. Esplorare i pacchetti Microsoft Python per le attività di data science e Machine Learning.
+description: Questo articolo descrive le esercitazioni di Python per Machine Learning Services per SQL Server. Informazioni su come eseguire gli script e creare modelli di Machine Learning in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/04/2019
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199401"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908752"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Esercitazioni di Python per Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

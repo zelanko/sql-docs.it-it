@@ -16,10 +16,10 @@ ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c51da69e7218f91630543fe7bee5ec0d7fd6b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956022"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>Metodo acceptsURL (SQLServerDriver)
@@ -45,8 +45,8 @@ public boolean acceptsURL(java.lang.String url)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo acceptsURL viene specificato dal metodo acceptsURL nell'interfaccia java. SQL. driver.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo acceptsURL viene specificato dal metodo acceptsURL nell'interfaccia java.sql.Driver.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

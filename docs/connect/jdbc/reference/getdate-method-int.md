@@ -16,10 +16,10 @@ ms.assetid: aa9f08af-df24-4c80-8298-c4007339b20a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d959dc2f9372aa723089dc87bea66424c4d2ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984014"
 ---
 # <a name="getdate-method-int"></a>Metodo getDate (int)
@@ -40,12 +40,12 @@ public java.sql.Date getDate(int index)
  Valore **int** che specifica l'indice del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto Data.  
+ Oggetto Date.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getDate viene specificato dal metodo getDate nell'interfaccia java.sql.CallableStatement.  
   
  Questo metodo restituisce una parte della data valida di un tipo di dati **datetime** o **smalldatetime** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte dell'ora impostata sull'ora di base 00.00 (mezzanotte) di Java.  

@@ -16,10 +16,10 @@ ms.assetid: a59cfe98-c0f4-46ad-9243-62aa56855f1a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d745712e5a8c4b59ea85c1a9b19c2e247c166be3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982298"
 ---
 # <a name="getmaxcolumnsingroupby-method-sqlserverdatabasemetadata"></a>Metodo getMaxColumnsInGroupBy (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxColumnsInGroupBy()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getMaxColumnsInGroupBy viene specificato dal metodo getMaxColumnsInGroupBy nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getMaxColumnsInGroupBy viene specificato dal metodo getMaxColumnsInGroupBy nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

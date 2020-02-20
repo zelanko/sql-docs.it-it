@@ -16,10 +16,10 @@ ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f88939af9ba975abc32a1c3b7f26e5a3db04ce0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977289"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>Metodo isReadOnly (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public boolean isReadOnly(int column)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo isReadOnly viene specificato dal metodo isReadOnly nell'interfaccia java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo isReadOnly viene specificato dal metodo isReadOnly nell'interfaccia java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041203"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
@@ -21,7 +21,7 @@ In questa esercitazione viene illustrato come creare un report tabella semplice 
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,7 +48,7 @@ In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre in
   
 ### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
-1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
+1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
 2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
@@ -66,7 +66,7 @@ In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre in
   
 6.  Fare clic sulla scheda **Credenziali** . Immettere le credenziali necessarie per accedere all'origine dati esterna.  
   
-7. Fare clic sulla scheda Generale. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
+7. Fare clic sulla scheda Generale. Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**.  
   
     Verrà visualizzato il messaggio "Creazione connessione completata".  
   
@@ -74,7 +74,7 @@ In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre in
   
     Verrà visualizzata di nuovo la pagina **Scegliere una connessione a un'origine dei dati** con la nuova origine dati selezionata.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 ## <a name="Query"></a>1b. Creare una query in Creazione guidata tabella  
 In un report, è possibile usare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da usare solo in questo report. In questa esercitazione si creerà un set di dati incorporato.  
@@ -84,7 +84,7 @@ In un report, è possibile usare un set di dati condiviso che dispone di una que
   
 ### <a name="to-create-a-query"></a>Per creare una query  
   
-1.  Nella pagina **Progetta query** viene aperta la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
+1.  Nella pagina **Progetta query** si apre la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
   
     Fare clic su **Modifica come testo**. Nella finestra Progettazione query basata su testo viene visualizzato il riquadro della query e il riquadro dei risultati.  
   
@@ -130,7 +130,7 @@ In un report, è possibile usare un set di dati condiviso che dispone di una que
   
     Nel set di risultati le intestazioni di colonna sono basate sui nomi nella query. Nel set di dati, le intestazioni di colonna diventano i nomi dei campi e vengono salvate nel report. Al termine della procedura guidata, è possibile utilizzare il riquadro dei dati del report per esaminare la raccolta dei campi del set di dati.  
   
-4.  Scegliere **Avanti**.  
+4.  Fare clic su **Avanti**.  
   
 ## <a name="Groups"></a>1c. Organizzare dati in gruppi in Creazione guidata tabella  
 Quando si selezionano dei campi da raggruppare, si progetta una tabella con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
@@ -157,7 +157,7 @@ Quando si selezionano dei campi da raggruppare, si progetta una tabella con righ
   
     I passaggi 4 e 5 consentono di organizzare i valori per i campi prima in base alla data, quindi in base alla sottocategoria del prodotto per quella data.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 ## <a name="Subtotals"></a>1d. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
 Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare valori di aggregazione per i campi. È possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
@@ -184,7 +184,7 @@ Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe n
   
 4.  Fare clic su **Avanti** per visualizzare un'anteprima della tabella, quindi fare clic su **Fine**.  
   
-La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 ## <a name="FormatCurrency"></a>2. Formattare i dati come valuta  
 Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un numero generico. È possibile formattare tale numero come valuta.   
@@ -350,7 +350,7 @@ In questa esercitazione, si esporterà il report in Excel e si imposterà una pr
   
 2.  Verificare che il nome della scheda della cartella di lavoro sia **Vendite prodotto Excel**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 La procedura dettagliata per la creazione di un report tabella semplice è terminata. Per altre informazioni sulle tabelle, vedere [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  

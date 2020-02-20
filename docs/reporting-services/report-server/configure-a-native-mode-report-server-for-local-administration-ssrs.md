@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403269"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66403269"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66403269"
   
 5.  Fare clic su **Opzioni Internet**.  
   
-6.  Fare clic su **Sicurezza**.  
+6.  Fare clic su **Security**.  
   
 7.  Fare clic su **Siti attendibili**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66403269"
   
 11. Scegliere **Aggiungi**.  
   
-12. Fare clic su **OK**.  
+12. Selezionare **OK**.  
   
 ###  <a name="bkmk_configure_folder_settings"></a> Impostazioni della cartella del portale Web  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66403269"
   
 5.  Selezionare **Gestione contenuto**.  
   
-6.  Fare clic su **OK**.  
+6.  Selezionare **OK**.  
   
 ###  <a name="bkmk_configure_site_settings"></a> Impostazioni del sito del portale Web  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66403269"
 
 5.  Selezionare **Amministratore sistema**.  
   
-6.  Fare clic su **OK**.  
+6.  Selezionare **OK**.  
   
 7.  Chiudere il portale Web.  
   

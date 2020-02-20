@@ -11,10 +11,10 @@ ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1c1c6a6330fec261de12a1ee64f7384f7e2ab59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970813"
 ---
 # <a name="sqlserverpooledconnection-members"></a>Membri di SQLServerPooledConnection
@@ -23,17 +23,17 @@ ms.locfileid: "67970813"
   Nelle tabelle seguenti sono elencati i membri esposti dalla classe [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).  
   
 ## <a name="constructors"></a>Costruttori  
- Nessuna.  
+ No.  
   
 ## <a name="fields"></a>Campi  
- Nessuna.  
+ No.  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
- Nessuna.  
+ No.  
   
 ## <a name="methods"></a>Metodi  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|Registra il listener di eventi specificato in modo che riceva una notifica quando si verifica un evento in questo oggetto [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|Chiude la connessione fisica rappresentata da questo oggetto [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  

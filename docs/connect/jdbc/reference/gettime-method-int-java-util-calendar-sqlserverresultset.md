@@ -16,10 +16,10 @@ ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 82f4c082145fc9d043047390d0b07380f37c798b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979144"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>Metodo getTime (int, java.util.Calendar) (SQLServerResultSet)
@@ -45,12 +45,12 @@ public java.sql.Time getTime(int columnIndex,
  Oggetto Calendar.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto temporale.  
+ Oggetto Time.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce una parte dell'ora valida di un tipo di dati datetime o smalldatetime di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte della data impostata sulla data di base (1970/01/01) di Java nel fuso orario del calendario.  

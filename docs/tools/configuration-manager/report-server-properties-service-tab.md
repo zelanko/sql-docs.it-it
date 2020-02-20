@@ -1,6 +1,6 @@
 ---
-title: Proprietà - Server di report (scheda Servizio) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - Server di report (scheda Servizio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e99d8aab84cb06727d5f396a2d89573642b7e70d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902421968723f52949b352318b864d60714a6059
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058351"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307901"
 ---
 # <a name="report-server-properties-service-tab"></a>Proprietà - Server di report (scheda Servizio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Si tratta del servizio del server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
+  Si tratta del servizio del server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  

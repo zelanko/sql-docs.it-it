@@ -1,23 +1,24 @@
 ---
-title: 'Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Estendere la compilazione del progetto di database per generare statistiche del modello
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069014"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242685"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello
+
 È possibile creare un collaboratore alla compilazione per eseguire azioni personalizzate quando si compila un progetto di database. In questa procedura dettagliata, si crea un collaboratore alla compilazione denominato ModelStatistics che restituisce statistiche dal modello di database SQL quando si compila un progetto di database. Poiché questo collaboratore alla compilazione accetta i parametri durante la compilazione, sono richiesti alcuni passaggi aggiuntivi.  
   
 In questa procedura dettagliata, vengono eseguite le attività principali seguenti:  
@@ -60,7 +61,7 @@ Di seguito sono riportati alcuni dei comandi utilizzati dal collaboratore di ese
   
 **Identificazione univoca del collaboratore**  
   
-Durante il processo di compilazione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori alla compilazione sono identificati da un attributo [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) . Questo attributo è richiesto per consentire di individuare i collaboratori. Dovrebbe essere simile al seguente:  
+Durante il processo di compilazione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori alla compilazione sono identificati da un attributo [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx). Questo attributo è richiesto per consentire di individuare i collaboratori. Dovrebbe essere simile al seguente:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -437,7 +438,7 @@ Per creare un collaboratore alla compilazione, è necessario effettuare le attiv
   
 3.  Fare clic su **Firma assembly**.  
   
-4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>**.  
+4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>** .  
   
 5.  Nella finestra di dialogo **Crea chiave con nome sicuro** , in **Nome file di chiave**, digitare **MyRefKey**.  
   
@@ -447,7 +448,7 @@ Per creare un collaboratore alla compilazione, è necessario effettuare le attiv
   
 8.  Scegliere **Salva tutti** dal menu **File**.  
   
-9. Scegliere **Compila soluzione** dal menu **Compila**.  
+9. Nel menu **Compila** scegliere **Compila soluzione**.  
   
     È quindi necessario installare l'assembly in modo che venga caricato quando si compilano progetti SQL.  
   
@@ -524,11 +525,11 @@ Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per pa
   
 1.  In Visual Studio fare clic con il pulsante destro del mouse sul progetto e selezionare "Ricompila". In questo modo il progetto verrà ricompilato ed è necessario verificare le statistiche del modello generate, con l'output incluso nell'output di compilazione e salvato in ModelStatistics.xml. Si noti che può essere necessario scegliere "Mostra tutti i file" in Esplora soluzioni per visualizzare il file XML.  
   
-2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>**, su **Strumenti di Visual Studio** e quindi su **Prompt dei comandi di Visual Studio (<Visual Studio Version>)**.  
+2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>** , su **Strumenti di Visual Studio** e quindi su **Prompt dei comandi di Visual Studio (<Visual Studio Version>)** .  
   
 3.  Al prompt dei comandi, passare alla cartella contenente il progetto SQL.  
   
-4.  Al prompt dei comandi digitare quanto segue:  
+4.  Al prompt dei comandi digitare il comando seguente:  
   
     ```  
     MSBuild /t:Rebuild MyDatabaseProject.sqlproj /p:BuildContributors=$(BuildContributors);ExampleContributors.ModelStatistics /p:ContributorArguments=$(ContributorArguments);GenerateModelStatistics=true;SortModelStatisticsBy=name;OutDir=.\;  
@@ -587,7 +588,7 @@ Relationships
   
     I risultati segnalati sono anche mantenuti nel file XML.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 È possibile creare strumenti aggiuntivi per eseguire l'elaborazione del file XML di output. Questo è solo un esempio di collaboratore alla compilazione È possibile, ad esempio, creare un collaboratore alla compilazione per restituire un file del dizionario dei dati come parte della compilazione.  
   
 ## <a name="see-also"></a>Vedere anche  

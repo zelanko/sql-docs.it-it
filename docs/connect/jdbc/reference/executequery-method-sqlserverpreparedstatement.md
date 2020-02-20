@@ -16,10 +16,10 @@ ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9dcf711e3d95577d41a53329f7ebab4b65389a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954788"
 ---
 # <a name="executequery-method-sqlserverpreparedstatement"></a>Metodo executeQuery (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954788"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[executeQuery ()](../../../connect/jdbc/reference/executequery-method.md)|Esegue la query SQL in questo oggetto [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e restituisce l'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) generato dalla query.|  
 |[executeQuery (java.lang.String)](../../../connect/jdbc/reference/executequery-method-java-lang-string.md)|Esegue l'istruzione SQL specificata e restituisce un solo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  

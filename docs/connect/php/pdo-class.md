@@ -1,5 +1,5 @@
 ---
-title: Classe DOP | Microsoft Docs
+title: Classe PDO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b016d850286daf0c2cda9604302d78faa6cc6ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936283"
 ---
 # <a name="pdo-class"></a>Classe PDO
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-La classe PDO contiene metodi che consentono all'applicazione PHP di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+La classe PDO contiene metodi che consentono all'applicazione PHP di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,7 +29,7 @@ La classe PDO contiene metodi che consentono all'applicazione PHP di connettersi
 PDO {}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 La classe PDO contiene i metodi seguenti:  
   
 [PDO::__construct](../../connect/php/pdo-construct.md)  
@@ -40,7 +40,7 @@ La classe PDO contiene i metodi seguenti:
   
 [PDO::errorCode](../../connect/php/pdo-errorcode.md)  
   
-[PDO::errorInfo](../../connect/php/pdo-errorinfo.md)  
+[PDO::errorCode](../../connect/php/pdo-errorinfo.md)  
   
 [PDO::exec](../../connect/php/pdo-exec.md)  
   

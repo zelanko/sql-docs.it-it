@@ -1,6 +1,6 @@
 ---
-title: Utilità SQLdiag | Microsoft Docs
-ms.custom: ''
+title: SQLdiag - utilità
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.openlocfilehash: a94daa3fc9756c690a5cd6188e59a9bfd97ca27d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251363"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306666"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "72251363"
   
 -   Registri di prestazioni di Windows  
   
--   Registri eventi di Windows  
+-   Log eventi di Windows  
   
 -   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] tracce  
   
@@ -159,11 +159,11 @@ sqldiag
   
  È possibile usare*SQLdiag_application_name* per avviare o arrestare un'istanza specifica del servizio **SQLdiag** .  
   
- Esempio:  
+ Ad esempio:  
   
  **SQLDIAG START /A**  _SQLdiag_application_name_  
   
- È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Esempio:  
+ È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio:  
   
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   
@@ -222,16 +222,16 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  Avvia o arresta il servizio **SQLdiag** . **STOP_ABORT** forza il servizio di arrestarsi al più presto senza portare a termine la raccolta dei dati diagnostici in corso.  
   
- Questi argomenti di controllo del servizio devono essere i primi nella riga di comando quando vengono utilizzati. Esempio:  
+ Questi argomenti di controllo del servizio devono essere i primi nella riga di comando quando vengono utilizzati. Ad esempio:  
   
  **SQLDIAG START**  
   
- L' argomento **/A** , che specifica un'istanza denominata di **SQLdiag**, è l'unico che può essere usato con **START**, **STOP**o **STOP_ABORT** per il controllo di un'istanza specifica del servizio **SQLdiag** . Esempio:  
+ L' argomento **/A** , che specifica un'istanza denominata di **SQLdiag**, è l'unico che può essere usato con **START**, **STOP**o **STOP_ABORT** per il controllo di un'istanza specifica del servizio **SQLdiag** . Ad esempio:  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>Requisiti di sicurezza  
- Se l'utilità **SQLdiag** non viene eseguita in modalità generica specificando l'argomento della riga di comando **/G** , l'utente che esegue **SQLdiag** deve essere membro del gruppo **Administrators** di Windows e membro del ruolo predefinito del server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. Per impostazione predefinita, l'utilità **SQLdiag** esegue la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, ma supporta anche l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Se l'utilità **SQLdiag** non viene eseguita in modalità generica specificando l'argomento della riga di comando **/G**, l'utente che esegue **SQLdiag** deve essere membro del gruppo **Administrators** di Windows e membro del ruolo predefinito del server **sysadmin** di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'utilità **SQLdiag** esegue la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, ma supporta anche l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
  Le prestazioni relative all'esecuzione dell'utilità **SQLdiag** dipendono dal tipo di dati diagnostici configurati per la raccolta. Se ad esempio l'utilità **SQLdiag** è stata configurata per raccogliere informazioni di traccia di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , maggiore è il numero di classi degli eventi selezionate per la raccolta delle tracce, maggiore sarà l'impatto sulle prestazioni del server.  
@@ -260,7 +260,7 @@ sqldiag
   
  In caso di uso dell'utilità **SQLdiag** per diagnosticare un problema che è possibile riprodurre, attendere la visualizzazione di questo messaggio prima di riprodurre il problema nel server.  
   
- L'utilità**SQLdiag** raccoglie la maggior parte dei dati diagnostici in parallelo. Tutti i dati diagnostici vengono raccolti con la connessione a strumenti, ad esempio l'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **di** oppure il processore dei comandi di Windows, tranne quando le informazioni vengono raccolte dai registri di prestazioni e dai registri eventi di Windows. L'utilità**SQLdiag** usa un thread di lavoro per computer per monitorare la raccolta di dati diagnostici da questi strumenti, spesso attendendo contemporaneamente il completamento della raccolta da parte di più strumenti. Durante il processo di raccolta l'utilità **SQLdiag** instrada l'output di ogni dato diagnostico alla cartella di output.  
+ L'utilità**SQLdiag** raccoglie la maggior parte dei dati diagnostici in parallelo. Tutti i dati diagnostici vengono raccolti con la connessione a strumenti, ad esempio l'utilità **sqlcmd** di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure il processore dei comandi di Windows, tranne quando le informazioni vengono raccolte dai registri di prestazioni e dai registri eventi di Windows. L'utilità**SQLdiag** usa un thread di lavoro per computer per monitorare la raccolta di dati diagnostici da questi strumenti, spesso attendendo contemporaneamente il completamento della raccolta da parte di più strumenti. Durante il processo di raccolta l'utilità **SQLdiag** instrada l'output di ogni dato diagnostico alla cartella di output.  
   
 ## <a name="stopping-data-collection"></a>Arresto della raccolta di dati  
  Dopo l'inizio della raccolta di dati diagnostici, l'utilità **SQLdiag** continua a raccogliere informazioni finché non viene arrestata manualmente oppure in base all'ora di arresto specificata. Per configurare l'arresto dell'esecuzione dell'utilità **SQLdiag** a un'ora specifica, usare l'argomento **/E** , che consente di specificare l'ora di arresto desiderata, oppure l'argomento **/X** , che imposta l'esecuzione dell'utilità **SQLdiag** in modalità snapshot.  
@@ -303,7 +303,7 @@ sqldiag /B +01:00:00 /E +03:00:00
   
  Se si specifica un valore relativo per *start_time* , l'utilità **SQLdiag** viene avviata a un'ora relativa rispetto alla data e all'ora correnti. Se si specifica un valore relativo per *end_time* , l'utilità **SQLdiag** viene interrotta a un'ora relativa rispetto al valore specificato per *start_time*. Se la data o l'ora di inizio e fine specificate sono già trascorse, l'utilità **SQLdiag** modifica forzatamente la data e l'ora di inizio in modo che facciano riferimento a un periodo futuro.  
   
- Ciò ha implicazioni molto importanti sulle date di inizio e fine selezionate. Si consideri l'esempio descritto di seguito.  
+ Ciò ha implicazioni molto importanti sulle date di inizio e fine selezionate. Prendere in considerazione gli esempi seguenti:  
   
 ```  
 sqldiag /B +01:00:00 /E 08:30:00  

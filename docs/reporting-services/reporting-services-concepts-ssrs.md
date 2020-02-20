@@ -9,22 +9,22 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570859"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
-  In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+  In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Concetti relativi ai server di report  
  Un server di report è un computer con un'istanza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installata. Un server di report archivia internamente elementi quali report impaginati e per dispositivi mobili, elementi e risorse correlati al report, pianificazioni e sottoscrizioni. È possibile configurare un server di report come un server singolo autonomo o come una farm con scalabilità orizzontale o può essere integrato con SharePoint Server. Si interagisce con gli elementi del server di report tramite il servizio Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il provider WMI, l'accesso con URL o a livello di codice tramite script. La modalità di interazione con un server di report dipende dalla topologia di distribuzione e dalla configurazione.  
   
 ### <a name="native-mode-report-servers"></a>Server di report in modalità nativa
- Un server di report configurato in modalità nativa è un computer su cui è installato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ed è configurato come un server autonomo. Si interagisce con il server di report, report e elementi correlati ai report tramite un browser con [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] o comandi dell'accesso con URL, SQL Server Management Studio o a livello di programmazione tramite script. Per altre informazioni, vedere [Reporting Services Report Server &#40;Native Mode&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Un server di report configurato in modalità nativa è un computer in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è installato e configurato come server autonomo. Si interagisce con il server di report, report e elementi correlati ai report tramite un browser con [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] o comandi dell'accesso con URL, SQL Server Management Studio o a livello di programmazione tramite script. Per altre informazioni, vedere [Reporting Services Report Server &#40;Native Mode&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ### <a name="sharepoint-mode-report-servers"></a>Server di report in modalità SharePoint  
  Esistono due diverse configurazioni per un server di report integrato con SharePoint. In [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene installato con un SharePoint Server come un servizio SharePoint Shared. Nelle versioni precedenti, il server di report si integra con SharePoint Server mediante l'installazione del componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per SharePoint. In entrambi casi, si interagisce con il server di report, i report e gli elementi correlati al report tramite pagine di applicazione sul sito di SharePoint. Si usano la raccolta documenti di SharePoint e le altre librerie create per archiviare i tipi di contenuto correlati ai report. Per altre informazioni, vedere [Server di report di Reporting Services &#40;modalità SharePoint&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "65570859"
  Una sottoscrizione è una richiesta di recapito di un report in un momento specifico o in risposta a un evento in un formato di file di applicazione specificato nella sottoscrizione stessa. Le sottoscrizioni rappresentano un'alternativa all'esecuzione di un report su richiesta. Se si usano report su richiesta, sarà necessario selezionare manualmente il report ogni volta che si desidera visualizzarlo. In alternativa, le sottoscrizioni possono essere usate per la pianificazione e l'automazione del recapito di un report. È possibile recapitare report a una cartella Posta in arrivo o a una condivisione file. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ### <a name="extensions"></a>Estensioni
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che è possibile usare per personalizzare soluzioni del report. Il server di report supporta estensioni di autenticazione personalizzate, estensioni per l'elaborazione dati, estensioni dell'elaborazione di report, estensioni per il rendering ed estensioni per il recapito e estensioni disponibili per gli utenti sono configurabili nel file di configurazione RSReportServer.config. Ad esempio, è possibile limitare i formati di esportazione che il visualizzatore di report può usare. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o i controlli personalizzati. Per altre informazioni, vedere [Estensioni di Reporting Services &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che è possibile usare per personalizzare le soluzioni del report. Il server di report supporta estensioni di autenticazione personalizzate, estensioni per l'elaborazione dati, estensioni dell'elaborazione di report, estensioni per il rendering ed estensioni per il recapito e estensioni disponibili per gli utenti sono configurabili nel file di configurazione RSReportServer.config. Ad esempio, è possibile limitare i formati di esportazione che il visualizzatore di report può usare. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o i controlli personalizzati. Per altre informazioni, vedere [Estensioni di Reporting Services &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="report-access"></a>Accesso ai report 
  L'accesso su richiesta consente agli utenti di selezionare i report da uno strumento per la visualizzazione dei report. A seconda della configurazione del server di report è possibile usare il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], una Web part di [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0, una raccolta di SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è installato in modalità integrata SharePoint, un controllo ReportViewer incorporato o un browser tramite URL. Per altre informazioni sull'accesso ai report su richiesta, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "65570859"
   
 -   **Stringa di connessione.** Una stringa di connessione è una versione della stringa delle proprietà di connessione che sono necessarie per la connessione a un'origine dati. Le proprietà di connessione variano in base al tipo di connessione dati.  
   
--   **Origine dati condivisa.** Un'origine dati condivisa è disponibile in un server di report o in un sito di SharePoint per essere utilizzata da più report.  
+-   **Origine dati condivisa.** Un'origine dati condivisa è disponibile in un server di report o in un sito di SharePoint per essere usata da più report.  
   
      Le origini dati condivise sono utili quando si usano spesso le stesse origini dati. Si consiglia di usare le origini dati condivise il più possibile. Rendono i report e l'accesso ai report più facile da gestire, offrono una maggiore protezione dei report e delle origini dati usate. Se è necessaria un'origine dati condivisa, chiedere all'amministratore di sistema di creare una.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65570859"
   
 -   **Credenziali.** Si tratta delle informazioni di autenticazione necessarie per consentire l'accesso ai dati esterni.  
   
-     Le credenziali vengono usate per creare un'origine dati incorporata, per eseguire una query o per recuperare dati durante l'elaborazione di report. Il proprietario dell'origine dati determina il tipo di credenziali che è necessario usare per accedere ai dati. Le credenziali sono gestite indipendentemente dalla connessione dati in un server di report, un sito di SharePoint o in un computer locale in un ambiente di creazione di report. A seconda del tipo di origine dati, è possibile salvare le credenziali per evitare la richiesta o di impostare di chiedere conferma a ciascun utente. Le credenziali necessarie potrebbero variare a seconda se la connessione all'origine dati viene eseguita dal computer in uso o dal server di report. Per altre informazioni, vedere [Specificare credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+     Le credenziali vengono usate per creare un'origine dati incorporata, per eseguire una query o per recuperare dati durante l'elaborazione di report. Il proprietario dell'origine dati determina il tipo di credenziali che è necessario usare per accedere ai dati. Le credenziali sono gestite indipendentemente dalla connessione dati in un server di report, un sito di SharePoint o in un computer locale in un ambiente di creazione di report. A seconda del tipo di origine dati, è possibile salvare le credenziali per evitare la richiesta o di impostare di chiedere conferma a ciascun utente. Le credenziali necessarie potrebbero variare a seconda se la connessione all'origine dati viene eseguita dal computer in uso o dal server di report. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ### <a name="report-datasets"></a>Set di dati del report 
  In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Il set di dati dipende dalla connessione dati contenente le informazioni sull'origine dati esterna. I dati stessi non sono inclusi nella definizione del report. Nel set di dati sono contenuti un comando di query, una raccolta campi, parametri, filtri e opzioni dei dati in cui sono incluse la distinzione tra maiuscole e minuscole e le regole di confronto. Esistono due tipi di set di dati:  
@@ -186,7 +186,7 @@ ms.locfileid: "65570859"
 ##  <a name="bkmk_StagesofReports"></a> Passaggi dei report impaginati di Reporting Services  
  Una definizione di report può essere creata, pubblicata o salvata, compilata, elaborata, memorizzata nella cache, se ne può eseguire il rendering, può essere visualizzata, esportata e salvata come cronologia. Durante l'esecuzione di un report, il server di report elabora il report in tre passaggi, ovvero elaborazione del report, elaborazione dei dati e rendering. L'elaborazione dei dati e del report viene eseguita in base a una definizione del report; il risultato è un formato interno temporaneo. Per i report in formato temporaneo viene eseguito il rendering in un formato di visualizzazione specifico. Nel diagramma seguente vengono mostrati le fasi e gli elementi dell'elaborazione di report.  
   
- ![diagramma relativo all'elaborazione dei report](../reporting-services/media/report-execution.gif "diagramma relativo all'elaborazione dei report")  
+ ![report processing diagram](../reporting-services/media/report-execution.gif "diagramma relativo all'elaborazione dei report")  
 Diagramma relativo all'elaborazione dei report  
   
 ### <a name="report-definition"></a>Definizione di report  
@@ -210,7 +210,7 @@ Diagramma relativo all'elaborazione dei report
   
 ## <a name="see-also"></a>Vedere anche  
  [Caratteristiche e attività di Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [Riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc76cee723c11d49a4d6149a7c3a1df4cedbc256
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015174"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Informazioni sugli esempi di codice nella documentazione
@@ -27,11 +27,11 @@ Esistono diversi aspetti da tenere presenti durante l'esecuzione degli esempi di
   
     Per informazioni su come scaricare versioni gratuite e versioni di valutazione di SQL Server, vedere [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
-    Per informazioni su come scaricare e installare il database AdventureWorks, vedere la [pagina relativa a AdventureWorks nel repository SQL Server Samples di GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
+    Per informazioni su come scaricare e installare il database AdventureWorks, vedere la [pagina di AdventureWorks nel repository GitHub di esempi su SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
 -   Quasi tutti gli esempi di codice di questa documentazione sono destinati a essere eseguiti dalla riga di comando, che consente il test automatizzato di tutti gli esempi di codice. Per informazioni sull'esecuzione di PHP dalla riga di comando, vedere [Utilizzo PHP da linea di comando](https://php.net/manual/en/features.commandline.php).  
   
--   Sebbene gli esempi siano scritti per essere eseguiti dalla riga di comando, è possibile eseguire ogni esempio tramite chiamata da un browser senza apportare modifiche allo script. Per formattare l'output, sostituire ogni "\n" con "\<\/br >" in ogni esempio prima di richiamarlo da un browser.  
+-   Sebbene gli esempi siano scritti per essere eseguiti dalla riga di comando, è possibile eseguire ogni esempio tramite chiamata da un browser senza apportare modifiche allo script. Per formattare correttamente l'output, sostituire ogni "\n" con "\<\/br>" in ogni esempio prima di richiamarlo da un browser.  
   
 -   Allo scopo di mantenere ogni esempio mirato, non è stata eseguita una gestione degli errori corretta in tutti gli esempi. Si consiglia, pertanto, di ricercare eventuali errori in tutte le chiamate a una funzione **sqlsrv** o a un metodo PDO e di gestirli in base alle esigenze dell'applicazione.  
   

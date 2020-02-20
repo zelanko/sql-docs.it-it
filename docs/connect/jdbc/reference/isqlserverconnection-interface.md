@@ -11,16 +11,16 @@ ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977456"
 ---
 # <a name="isqlserverconnection-interface"></a>Interfaccia ISQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Rappresenta una connessione JDBC a un database [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
+  Rappresenta una connessione JDBC a un database di [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa interfaccia è stata aggiunta in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Pacchetto:** com.microsoft.sqlserver.jdbc  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67977456"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa interfaccia viene implementata dalla [classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
  Questa interfaccia espone il campo specifico di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] seguente:  

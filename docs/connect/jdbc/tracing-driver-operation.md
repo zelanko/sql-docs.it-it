@@ -1,5 +1,5 @@
 ---
-title: Traccia operazione driver | Microsoft Docs
+title: Creazione di tracce per le operazioni del driver | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027589"
 ---
 # <a name="tracing-driver-operation"></a>Creazione di tracce
@@ -25,7 +25,7 @@ ms.locfileid: "69027589"
 > [!NOTE]  
 >  Per il componente nativo (sqljdbc_xa.dll) incluso nel driver JDBC, la creazione di tracce è abilitata grazie al framework Built-In Diagnostics (BID). Per informazioni sul BID, vedere la pagina relativa alla [traccia di accesso ai dati in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
- Quando si sviluppa l'applicazione, è possibile eseguire chiamate a oggetti Logger che consentono di creare oggetti LogRecord, i quali vengono quindi passati a oggetti Handler per l'elaborazione. Gli oggetti logger e handler usano entrambi i livelli di registrazione e, facoltativamente, i filtri di registrazione per regolare quali LogRecords vengono elaborati. Al termine delle operazioni di registrazione, con gli oggetti Handler possono facoltativamente essere utilizzati gli oggetti Formatter per pubblicare le informazioni sul log.  
+ Quando si sviluppa l'applicazione, è possibile eseguire chiamate a oggetti Logger che consentono di creare oggetti LogRecord, i quali vengono quindi passati a oggetti Handler per l'elaborazione. Sia per gli oggetti Logger che per gli oggetti Handler vengono usati i livelli di registrazione e, facoltativamente, i filtri di registrazione per definire quali LogRecord elaborare. Al termine delle operazioni di registrazione, con gli oggetti Handler possono facoltativamente essere utilizzati gli oggetti Formatter per pubblicare le informazioni sul log.  
   
  Per impostazione predefinita, l'output del framework java.util.logging viene scritto su un file. Tale file deve disporre di autorizzazioni di scrittura per il contesto su cui è in esecuzione il driver JDBC.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69027589"
   
  Nella tabella seguente sono descritti i vari livelli di registrazione disponibili per le categorie di registrazione pubbliche.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |SEVERE|Indica un problema grave. Si tratta del livello più elevato. Nel driver JDBC viene utilizzato per segnalare errori ed eccezioni.|  
 |WARNING|Indica un potenziale problema.|  
@@ -53,21 +53,21 @@ ms.locfileid: "69027589"
   
  Nella tabella seguente sono descritti i vari livelli di registrazione disponibili per le categorie di registrazione interne.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |SEVERE|Indica un problema grave. Si tratta del livello più elevato. Nel driver JDBC viene utilizzato per segnalare errori ed eccezioni.|  
 |WARNING|Indica un potenziale problema.|  
 |INFO|Fornisce messaggi informativi.|  
 |FINE|Fornisce informazioni di base sulle tracce, incluse la creazione e l'eliminazione di oggetti di base. Fornisce inoltre tutte le eccezioni generate dai metodi pubblici.|  
-|FINER|Fornisce informazioni dettagliate sulle tracce, inclusi tutti i punti di ingresso e di uscita dei metodi pubblici con i tipi di dati dei parametri associati, nonché le proprietà pubbliche per le classi pubbliche. Fornisce inoltre parametri di input, parametri di output e valori restituiti del metodo ad eccezione dei tipi di valori restituiti CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Le seguenti categorie di registrazione erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). A partire dalla versione 2.0 sono state aggiornate al livello FINER.|  
-|FINEST|Fornisce le informazioni più dettagliate disponibili sulle tracce. È il livello più basso.<br /><br /> Le seguenti categorie di registrazione erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINEST: TDS.DATA e TDS.TOKEN. A partire dalla versione 2.0 hanno mantenuto lo stesso livello di registrazione.|  
+|FINER|Fornisce informazioni dettagliate sulle tracce, inclusi tutti i punti di ingresso e di uscita dei metodi pubblici con i tipi di dati dei parametri associati, nonché le proprietà pubbliche per le classi pubbliche. Fornisce inoltre parametri di input, parametri di output e valori restituiti del metodo ad eccezione dei tipi di valori restituiti CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Le categorie di registrazione seguenti erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA, e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). A partire dalla versione 2.0 sono state aggiornate al livello FINER.|  
+|FINEST|Fornisce le informazioni più dettagliate disponibili sulle tracce. È il livello più basso.<br /><br /> Le categorie di registrazione seguenti erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINEST: TDS.DATA e TDS.TOKEN. A partire dalla versione 2.0 hanno mantenuto lo stesso livello di registrazione.|  
 |OFF|Disattiva la registrazione.|  
 |ALL|Abilita la registrazione di tutti i messaggi.|  
   
 ## <a name="logging-categories"></a>Categorie di registrazione  
  Quando si crea un oggetto Logger, è necessario indicare la categoria o l'entità denominata da cui si desidera ricevere le informazioni sul log. Il driver JDBC supporta le seguenti categorie di registrazione pubbliche, definite tutte nel pacchetto di driver com.microsoft.sqlserver.jdbc.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |Connessione|Consente di registrare i messaggi nella classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Le applicazioni possono impostare il livello di registrazione su FINER.|  
 |.|Consente di registrare i messaggi nella classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Le applicazioni possono impostare il livello di registrazione su FINER.|  
@@ -77,9 +77,9 @@ ms.locfileid: "69027589"
   
  A partire dalla versione 2.0, il driver Microsoft JDBC fornisce anche il pacchetto com.microsoft.sqlserver.jdbc.internals, che include il supporto per la registrazione per le seguenti categorie di registrazione interne.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
-|AuthenticationJNI|Registra i messaggi relativi ai problemi di autenticazione integrata di Windows (quando la proprietà di connessione **authenticationScheme** è impostata in modo implicito o esplicito su **NativeAuthentication**).<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINEST e FINE.|  
+|AuthenticationJNI|Registra i messaggi relativi ai problemi di autenticazione integrata di Windows, quando la proprietà di connessione **authenticationScheme** è impostata in modo implicito o esplicito su **NativeAuthentication**.<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINEST e FINE.|  
 |SQLServerConnection|Consente di registrare i messaggi nella classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Le applicazioni possono impostare il livello di registrazione su FINE e FINER.|  
 |SQLServerDataSource|Consente di registrare i messaggi nelle classi [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) e [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md).<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINER.|  
 |InputStream|Consente di registrare i messaggi relativi ai tipi di dati java.io.InputStream e java.io.Reader, nonché ai tipi di dati per i quali è disponibile un identificatore max, ad esempio varchar, nvarchar e varbinary.<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINER.|  

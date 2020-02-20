@@ -1,26 +1,26 @@
 ---
-title: Riesecuzione distribuita SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL Server Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-helpviewer_keywords:
-- Distributed Replay
-- SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f71b19977746ecc52817fa0128d6f0a8e681ff5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949917"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993421"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di valutare l'impatto dei futuri aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile usarla anche per valutare l'impatto degli aggiornamenti hardware e del sistema operativo e dell'ottimizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+La funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di valutare l'impatto dei futuri aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile usarla anche per valutare l'impatto degli aggiornamenti hardware e del sistema operativo e dell'ottimizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-distributed-replay"></a>Vantaggi di Distributed Replay  
  Analogamente a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile utilizzare Distributed Replay per riprodurre una traccia acquisita su un ambiente di testing aggiornato. Diversamente da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], Distributed Replay non si limita alla riproduzione del carico di lavoro da un singolo computer,  
@@ -46,28 +46,28 @@ ms.locfileid: "67949917"
 ## <a name="distributed-replay-concepts"></a>Concetti di base di Distributed Replay  
  I componenti seguenti costituiscono l'ambiente di Distributed Replay:  
   
--   **Strumento di amministrazione di Riesecuzione distribuita**: un'applicazione console, **DReplay.exe**, usata per comunicare con il servizio controller di Riesecuzione distribuita. Utilizzare lo strumento di amministrazione per controllare la riproduzione distribuita.  
+-   **Strumento di amministrazione Riesecuzione distribuita**: applicazione console, **DReplay.exe**, usata per comunicare con il servizio controller di Riesecuzione distribuita. Utilizzare lo strumento di amministrazione per controllare la riproduzione distribuita.  
   
--   **Controller di Riesecuzione distribuita**: un computer che esegue il servizio Windows denominato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controller di Riesecuzione distribuita. Con il controller di Riesecuzione distribuita è possibile orchestrare le azioni dei client Riesecuzione distribuita. In ogni ambiente di Riesecuzione distribuita può essere presente una sola istanza del controller.  
+-   **Controller di Riesecuzione distribuita**: computer che esegue il servizio di Windows denominato controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con il controller di Riesecuzione distribuita è possibile orchestrare le azioni dei client Riesecuzione distribuita. In ogni ambiente di Riesecuzione distribuita può essere presente una sola istanza del controller.  
   
--   **Client Riesecuzione distribuita**: uno o più computer (fisico o virtuale) che eseguono il servizio Windows denominato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Riesecuzione distribuita. I client Riesecuzione distribuita vengono usati insieme per simulare carichi di lavoro in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni ambiente di Riesecuzione distribuita possono essere presenti uno o più client.  
+-   **Client Riesecuzione distribuita**: uno o più computer (fisici o virtuali) che eseguono il servizio di Windows denominati client Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I client Riesecuzione distribuita vengono usati insieme per simulare carichi di lavoro in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni ambiente di Riesecuzione distribuita possono essere presenti uno o più client.  
   
--   **Server di destinazione**: un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che i client Riesecuzione distribuita possono usare per riprodurre i dati di traccia. È consigliabile posizionare il server di destinazione in un ambiente di testing.  
+-   **Server di destinazione**: istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che i client Riesecuzione distribuita possono usare per riprodurre i dati di traccia. È consigliabile posizionare il server di destinazione in un ambiente di testing.  
   
  Distributed Replay Administration Tool, Controller e Client possono essere installati in computer diversi o sullo stesso computer. Sullo stesso computer può essere in esecuzione una sola istanza del servizio Distributed Replay Controller o Client.  
   
  Nella figura seguente viene mostrata l'architettura fisica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay:  
   
- ![Architettura riesecuzione distribuita](../../tools/distributed-replay/media/distributedreplayarch.gif "Architettura riesecuzione distribuita")  
+ ![Architettura di Riesecuzione distribuita](../../tools/distributed-replay/media/distributedreplayarch.gif "Architettura di Riesecuzione distribuita")  
   
 ## <a name="distributed-replay-tasks"></a>Attività Distributed Replay  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come configurare Distributed Replay.|[Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)|  
-|Viene descritto come preparare i dati di traccia di input.|[Preparazione dei dati di traccia di input](../../tools/distributed-replay/prepare-the-input-trace-data.md)|  
-|Viene descritto come riprodurre i dati di traccia.|[Riproduzione di dati di traccia](../../tools/distributed-replay/replay-trace-data.md)|  
-|Viene descritto come rivedere i risultati dei dati di traccia di Distributed Replay.|[Controllo dei risultati della riproduzione](../../tools/distributed-replay/review-the-replay-results.md)|  
+|Viene descritto come configurare Distributed Replay.|[Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)|  
+|Viene descritto come preparare i dati di traccia di input.|[Preparare i dati di traccia di input](../../tools/distributed-replay/prepare-the-input-trace-data.md)|  
+|Viene descritto come riprodurre i dati di traccia.|[Rieseguire i dati di traccia](../../tools/distributed-replay/replay-trace-data.md)|  
+|Viene descritto come rivedere i risultati dei dati di traccia di Distributed Replay.|[Esaminare i risultati della riesecuzione](../../tools/distributed-replay/review-the-replay-results.md)|  
 |Viene descritto come usare lo strumento di amministrazione per avviare, monitorare e annullare operazioni nel controller.|[Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577983"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190039"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report impaginati necessari. L'area di progettazione si trova al centro della finestra ed è circondata dalla barra multifunzione e dai riquadri. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Questo articolo illustra i riquadri che consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  
   
- ![Visualizzazione di progettazione di Generatore report](../../reporting-services/report-builder/media/ssrb-designview.png "Visualizzazione di progettazione di Generatore report")  
+ ![Visualizzazione Progettazione di Generatore report](../../reporting-services/report-builder/media/ssrb-designview.png "Visualizzazione Progettazione di Generatore report")  
   
 1.  Barra multifunzione  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65577983"
   
 -   [Immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
   
--   [Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+-   [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
 -   [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -162,7 +162,7 @@ ms.locfileid: "65577983"
  Per altre informazioni, vedere [Anteprima di report in Generatore report](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Esecuzione di un report con parametri  
- Un report eseguito viene elaborato automaticamente. Se il report contiene parametri, tutti i parametri devono disporre di valori predefiniti prima che il report possa essere eseguito automaticamente. Se un parametro non ha un valore predefinito, quando si esegue il report è necessario scegliere un valore per il parametro e quindi fare clic su **Visualizza report** nella scheda Esegui. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Un report eseguito viene elaborato automaticamente. Se il report contiene parametri, tutti i parametri devono disporre di valori predefiniti prima che il report possa essere eseguito automaticamente. Se un parametro non ha un valore predefinito, quando si esegue il report è necessario scegliere un valore per il parametro e quindi fare clic su **Visualizza report** nella scheda Esegui. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Anteprima di stampa  
  Quando un report visualizzato in anteprima in modalità di esecuzione assomiglia a un report prodotto in HTML. L'anteprima non è in formato HTML, ma il layout e la paginazione del report sono simili a quelli dell'output HTML. Se si passa alla modalità anteprima di stampa, è possibile visualizzare la rappresentazione del report stampato. Fare clic sul pulsante **Anteprima di stampa** nella scheda **Esegui** . Il report verrà visualizzato come in una pagina fisica. Questa visualizzazione assomiglia all'output generato dalle estensioni per il rendering delle immagini e PDF. L'anteprima di stampa non è un'immagine, né un file PDF, ma l'impaginazione e il layout del report sono simili a quelli dell'output in questi formati.  

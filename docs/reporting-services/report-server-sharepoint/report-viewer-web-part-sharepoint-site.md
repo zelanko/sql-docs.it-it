@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 882dafee6997f4e0a140872847cfa2fdc1109f05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580571"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Web part Visualizzatore di report in un sito di SharePoint - Reporting Services
@@ -40,7 +40,7 @@ La web part Visualizzatore di report è disponibile nell'Area download Microsoft
 
 [Scaricare il pacchetto della soluzione web part Visualizzatore di report](https://www.microsoft.com/download/details.aspx?id=55949)
 
-## <a name="considerations-and-limitations"></a>Considerazioni e limitazioni
+## <a name="considerations-and-limitations"></a>Considerazioni e limiti
 
 Gli elementi elencati sono specifici della web part Visualizzatore di report aggiornata.
 

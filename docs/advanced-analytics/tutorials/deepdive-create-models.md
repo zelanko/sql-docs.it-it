@@ -1,6 +1,6 @@
 ---
 title: Creare modelli R con RevoScaleR
-description: Esercitazione dettagliata su come compilare un modello usando il linguaggio R in SQL Server.
+description: 'Esercitazione di RevoScaleR 7: Come creare un modello usando il linguaggio R in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727267"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947244"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Creare modelli R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa lezione fa parte dell'[esercitazione di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) relativa all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa è l'esercitazione 7 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-I dati di training sono stati ampliati. È ora il momento di analizzare i dati usando la modellazione di regressione. I modelli lineari costituiscono uno strumento importante nel mondo dell'analisi predittiva. Il pacchetto **RevoScaleR** include algoritmi di regressione che possono suddividere il carico di lavoro ed eseguirlo in parallelo.
+I dati di training sono stati ampliati. In questa esercitazione si analizzeranno i dati usando la modellazione di regressione. I modelli lineari costituiscono uno strumento importante nel mondo dell'analisi predittiva. Il pacchetto **RevoScaleR** include algoritmi di regressione che possono suddividere il carico di lavoro ed eseguirlo in parallelo.
 
 > [!div class="checklist"]
 > * Creare un modello di regressione lineare

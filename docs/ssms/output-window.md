@@ -1,6 +1,6 @@
 ---
-title: Finestra di output di SSMS | Microsoft Docs
-ms.custom: ''
+title: Finestra di output di SSMS
+ms.custom: seo-lt-2019
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cee27bc499a00fc77dd022ffa6c29f0173a2a571
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 558396e4429037f59abe63e205e1dca6e7785548
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262227"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257523"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>Finestra di output in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

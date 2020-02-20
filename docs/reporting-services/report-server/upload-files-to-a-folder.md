@@ -17,10 +17,10 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228680"
 ---
 # <a name="upload-files-to-a-folder"></a>Caricare file in una cartella
@@ -33,15 +33,15 @@ ms.locfileid: "67228680"
     >[!NOTE]  
     >Non è possibile caricare un file di origine dei dati del report con estensione rds per creare un'origine dei dati condivisa. Un file con estensione rds viene utilizzato solo in Progettazione report. Tale file non fornisce il contenuto per un elemento dell'origine dati condivisa definito e gestito tramite il portale Web. In alternativa al caricamento è possibile creare uno script per la creazione di un'origine dei dati condivisa in base a un file con estensione rds.  
   
- Le dimensioni massime consentite per gli elementi caricati è di 2 GB e può essere impostato utilizzando la proprietà MaxFileSizeMb in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ Le dimensioni massime del file per gli elementi caricati sono pari a 2 GB e possono essere impostate usando la proprietà MaxFileSizeMb in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  I file caricati in un database del server di report sono visualizzati nella gerarchia di cartelle con le icone seguenti.  
   
-  ![Icone file uploadable del Server di report](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
+  ![Icone di file caricabili del server di report](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
   
  I file caricati vengono inseriti automaticamente nella cartella selezionata. È pertanto possibile passare alla cartella desiderata prima di caricare il file oppure spostare il file nella cartella desiderata dopo averlo caricato.  
   
- Per caricare un file, usare il portale web. La possibilità o meno di caricare file in un server di report dipende dalle attività incluse nell'assegnazione di ruolo. Se vengono utilizzate le impostazioni di sicurezza predefinite, gli amministratori locali possono aggiungere elementi a un server di report. Se è attivata la funzionalità Report personali, qualsiasi utente con una cartella Report personali disporrà dell'autorizzazione per caricare elementi in quella cartella. Se si utilizzano assegnazioni di ruolo personalizzate, tali assegnazioni devono includere attività che supportano la gestione delle cartelle.  
+ Per caricare un file, usare il portale Web. La possibilità o meno di caricare file in un server di report dipende dalle attività incluse nell'assegnazione di ruolo. Se vengono utilizzate le impostazioni di sicurezza predefinite, gli amministratori locali possono aggiungere elementi a un server di report. Se è attivata la funzionalità Report personali, qualsiasi utente con una cartella Report personali disporrà dell'autorizzazione per caricare elementi in quella cartella. Se si utilizzano assegnazioni di ruolo personalizzate, tali assegnazioni devono includere attività che supportano la gestione delle cartelle.  
   
 |Per|Includere queste attività|  
 |----------------|-------------------------|  

@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706355"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190393"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Introduzione ai [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019"></a>Introduzione ai [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -32,6 +32,11 @@ Questo articolo presenta i concetti principali e un quadro generale per la compr
 
 > [!TIP]
 > Per ottenere rapidamente un ambiente in cui siano già distribuiti Kubernetes e un cluster Big Data e rendere più semplice l'apprendimento delle relative funzionalità, usare uno degli script di esempio indicati nella [sezione degli script](#scripts). Dopo la distribuzione, per gestire il cluster usare gli [strumenti client](#tools) nella sezione seguente.
+
+Guardare questo video di 9 minuti per una panoramica della distribuzione di cluster Big Data:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a id="tools"></a> Strumenti client
 

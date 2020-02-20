@@ -16,10 +16,10 @@ ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5bcbcf0fde93dbba2e1d664ef7768232355ba5de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581042"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>Metodo di ConfigurationSetting - GenerateDatabaseCreationScript
@@ -60,7 +60,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genera uno script SQL che crea database del server di report per la versione del server di report attualmente connessa.  
   
  Il valore fornito nel parametro *DatabaseName* deve essere conforme alle convenzioni di denominazione dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

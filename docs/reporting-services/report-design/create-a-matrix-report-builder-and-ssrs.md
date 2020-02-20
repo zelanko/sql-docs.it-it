@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581549"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Creare una matrice (Generatore report e SSRS)
@@ -20,10 +20,10 @@ ms.locfileid: "65581549"
   
  Al termine della progettazione iniziale, è possibile continuare a sviluppare una matrice per migliorare la visualizzazione per l'utente. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Per una rapida introduzione alle matrici, vedere [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
+ Per un'introduzione rapida alle matrici, vedere [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
->  È possibile pubblicare elenchi separatamente da un report come parti del report. Altre informazioni su [Parti del report (Generatore report e SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  È possibile pubblicare elenchi separatamente da un report come parti del report. Altre informazioni su [Parti del report (Generatore report SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ##  <a name="AddingMatrix"></a> Aggiunta di una matrice al report  
  Aggiungere una matrice all'area di progettazione dalla scheda Inserisci sulla barra multifunzione. È possibile aggiungere una matrice tramite la Creazione guidata tabella o matrice in cui è inclusa la creazione di una connessione all'origine dati e di un set di dati, nonché la configurazione della tabella o l'aggiunta di una matrice basata sul modello di matrice.  
@@ -33,11 +33,11 @@ ms.locfileid: "65581549"
   
  Per descrivere come configurare una tabella dall'inizio alla fine, in questo argomento viene usato il modello di matrice.  La matrice dispone inizialmente di un gruppo di righe, un gruppo di colonne, una cella d'angolo e una cella di dati, come mostrato nella figura seguente.  
   
- ![Matrice vuota con un gruppo di righe e un gruppo di colonne](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matrice vuota con un gruppo di righe e un gruppo di colonne")  
+ ![Matrice vuota con 1 riga e 1 gruppo di colonne](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matrice vuota con 1 riga e 1 gruppo di colonne")  
   
  Quando si seleziona una matrice nell'area di progettazione, vengono visualizzati handle di riga e di colonna, come mostrato nella figura seguente.  
   
- ![Nuova matrice aggiunta dalla casella degli strumenti selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti selezionata")  
+ ![Nuova matrice aggiunta dalla casella degli strumenti e selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti e selezionata")  
   
  Aggiungere i gruppi trascinando i campi del set di dati nelle aree Gruppi di righe e Gruppi di colonne del riquadro di raggruppamento. Il primo campo che si trascina nel riquadro dei gruppi di righe o dei gruppi di colonne sostituisce il gruppo vuoto iniziale predefinito. È quindi possibile applicare la formattazione per ogni cella, in base ai dati.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65581549"
   
  Quando il report viene eseguito, le intestazioni di colonna dinamiche si espandono verso destra, oppure verso sinistra se la proprietà Direzione della matrice è impostata su RTL, per un numero di colonne pari ai valori di gruppo univoci. Le righe dinamiche si espandono verso la parte inferiore della pagina. I dati visualizzati nelle celle del corpo della Tablix sono aggregazioni basate sulle intersezioni di gruppi di righe e di colonne, come mostrato nella figura seguente.  
   
- ![Matrice, gruppi di righe e colonne annidate con totali](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matrice, gruppi di righe e colonne annidate con totali")  
+ ![Matrice, gruppi di righe e di colonne annidati con totali](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matrice, gruppi di righe e di colonne annidati con totali")  
   
  Nell'anteprima il report viene visualizzato come nella figura seguente.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65581549"
 ##  <a name="AddingAdjacentGroup"></a> Aggiunta di un gruppo adiacente a una matrice  
  Per aggiungere un gruppo adiacente basato su un singolo campo del set di dati, usare il menu di scelta rapida nel riquadro Raggruppamento. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Nella figura seguente è mostrato un gruppo basato sulla geografia e un gruppo adiacente basato sull'anno.  
   
- ![Gruppi di colonne adiacenti per la geografia e l'anno](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Gruppi di colonne adiacenti per la geografia e l'anno")  
+ ![Gruppi di colonne adiacenti per Geography e Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Gruppi di colonne adiacenti per Geography e Year")  
   
  In questo esempio la query ha filtrato i valori dei dati in modo da includere solo quelli relativi all'Europa e agli anni 2003 e 2004. È tuttavia possibile impostare filtri su ciascun gruppo indipendentemente. Nell'anteprima il report viene visualizzato come nella figura seguente.  
   

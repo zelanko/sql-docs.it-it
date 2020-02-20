@@ -11,10 +11,10 @@ ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cee317d725b730f50eeef0502f63d7fca6d2c4b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997122"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>Metodo updateBlob (int, java.io.InputStream, long)
@@ -47,7 +47,7 @@ public void updateBlob(int columnIndex,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  

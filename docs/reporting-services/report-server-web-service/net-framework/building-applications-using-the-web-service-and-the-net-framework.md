@@ -19,14 +19,14 @@ ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284650"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Compilazione di applicazioni tramite servizio Web e .NET Framework
-  Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile utilizzare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente, per utilizzare i servizi Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  
+  Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile usare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente, per usare i servizi Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  
   
  Un client del servizio Web ReportServer è qualsiasi componente o applicazione che comunica con un server di report utilizzando messaggi SOAP (Simple Object Access Protocol).  
   
@@ -48,9 +48,9 @@ ms.locfileid: "63284650"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Creazione del proxy del servizio Web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Vengono descritte le modalità di aggiunta di una classe proxy al progetto utilizzando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Creazione del proxy del servizio Web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Vengono descritte le modalità di aggiunta di una classe proxy al progetto usando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
 |[Autenticazione del servizio Web](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Viene descritto in che modo vengono autenticate le chiamate al servizio Web ReportServer.|  
-|[Chiamata ai metodi del servizio Web](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Viene descritto come utilizzare l'API SOAP per chiamare i metodi del servizio Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Chiamata ai metodi del servizio Web](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Viene descritto come usare l'API SOAP per chiamare i metodi del servizio Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
 |[Impostazione della proprietà Url del servizio Web](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Viene illustrato come indirizzare a livello di programmazione il proxy del servizio Web a un nuovo URL del server dopo avere creato il riferimento Web.|  
 |[Impostazione degli argomenti dei metodi del servizio Web](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Viene descritto come richiamare un metodo del servizio Web e come fornire gli argomenti del metodo.|  
 |[Omissione di valori per gli oggetti del servizio Web facoltativi](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Viene descritto come omettere i valori per gli oggetti del servizio Web facoltativi.|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314022"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190448"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] I report impaginati sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report impaginato diventa un elemento di report archiviato nel server di report o nel sito di SharePoint. I report impaginati sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È anche possibile [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
+  I report impaginati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report impaginato diventa un elemento di report archiviato nel server di report o nel sito di SharePoint. I report impaginati sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È anche possibile [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
   
  Se non si ha familiarità con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], assicurarsi di consultare le informazioni in [Concetti relativi a Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "67314022"
   
 -   Per ogni report:  
   
-    -   **Identificare le origini dei dati.** Definire le origini dati del report, una per ogni origine di dati. Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    -   **Identificare le origini dei dati.** Definire le origini dati del report, una per ogni origine di dati. Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
     -   **Scegliere quali dati utilizzare da ogni origine.** Per ogni origine dati, definire il set di dati del report. In ogni set di dati viene inclusa una query per specificare quali dati utilizzare. Se si dispone di parametri di report, definire un set di dati per popolare l'elenco dei valori disponibile per ogni parametro. Per altre informazioni, vedere [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) e [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Scegliere una visualizzazione dati.** Per ogni set di dati, specificare quale area dati usare per visualizzare i dati. Effettuare la scelta da un elenco di tabelle, grafici, misuratori e mappe. Per ulteriori informazioni, vedere gli articoli seguenti:  
+    -   **Scegliere una visualizzazione dati.** Per ogni set di dati, specificare quale area dati usare per visualizzare i dati. Effettuare la scelta da un elenco di tabelle, grafici, misuratori e mappe. Per altre informazioni, vedere gli articoli seguenti:  
   
         -   [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "67314022"
   
         -   [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personalizzare i dati e il layout.** Progettare il layout del report. Una definizione di un report è formata da un corpo del report, origini dati, set di dati, aree dati, caselle di testo, righe e immagini. I rettangoli vengono utilizzati come contenitori per il layout e come elementi visivi. Personalizzare ogni area dati creando espressioni per il controllo di filtri, gruppi, ordinamento, formato e visualizzazione i dati. Aggiungere i nomi dei report, i percorsi e le altre informazioni di identificazione che semplifichino la gestione di decine o centinaia di report. Aggiungere elementi e contenitori visivi per organizzare gli elementi di layout sulla pagina. Per ulteriori informazioni, vedere gli articoli seguenti:  
+    -   **Personalizzare i dati e il layout.** Progettare il layout del report. Una definizione di un report è formata da un corpo del report, origini dati, set di dati, aree dati, caselle di testo, righe e immagini. I rettangoli vengono utilizzati come contenitori per il layout e come elementi visivi. Personalizzare ogni area dati creando espressioni per il controllo di filtri, gruppi, ordinamento, formato e visualizzazione i dati. Aggiungere i nomi dei report, i percorsi e le altre informazioni di identificazione che semplifichino la gestione di decine o centinaia di report. Aggiungere elementi e contenitori visivi per organizzare gli elementi di layout sulla pagina. Per altre informazioni, vedere gli articoli seguenti:  
   
         -   [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67314022"
 ## <a name="view-reports"></a>Visualizzazione di report  
  Oltre alla visualizzazione in anteprima di un report salvato in locale o pubblicato in un server di report, è possibile fornire ai lettori del report un'ampia gamma di opzioni di visualizzazione. Per visualizzare un report:  
   
--   **Browser.**  Utilizzare il servizio Web ReportServer o il sito di SharePoint per visualizzare report pubblicati. Su un sito di SharePoint, è possibile anche configurare un Web part per la visualizzazione dei report pubblicati. Per ulteriori informazioni, vedere gli articoli seguenti:
+-   **Browser.**  Utilizzare il servizio Web ReportServer o il sito di SharePoint per visualizzare report pubblicati. Su un sito di SharePoint, è possibile anche configurare un Web part per la visualizzazione dei report pubblicati. Per altre informazioni, vedere gli articoli seguenti:
 
      - [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
      - [Portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
@@ -134,7 +134,7 @@ ms.locfileid: "67314022"
   
 -   **Stampa.**  Un lettore di report può stampare un report o alcune delle relative pagine, a seconda della modalità di visualizzazione. Per altre informazioni, vedere [Stampa di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Applicazione Web o Windows Form.**  Usare Visual Studio per sviluppare un'applicazione che facilita la creazione di report tramite SSRS. Per altre informazioni, vedere [[l'integrazione di Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
+-   **Applicazione Web o Windows Form.**  Usare Visual Studio per sviluppare un'applicazione che faciliti la creazione di report tramite SSRS. Per altre informazioni, vedere [Integrazione di Reporting Services nelle applicazioni](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
 ## <a name="manage-reports"></a>Gestione di report  
  Per gestire un report pubblicato:  
@@ -180,5 +180,5 @@ Come amministratore del server di report, identificare l'autorizzazione e il sis
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Estensioni &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [Confronto tra i server di report di Reporting Services in SharePoint e nativa](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+ [Confronto tra server di report nativi e di Reporting Services in SharePoint](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   

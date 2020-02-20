@@ -16,10 +16,10 @@ ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d382ef1b3a07abce21ccdf4b621d214f92d2007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979792"
 ---
 # <a name="getshort-method-sqlservercallablestatement"></a>Metodo getShort (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67979792"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|Recupera il valore del parametro designato come oggetto **short** nel linguaggio di programmazione Java in base all'indice del parametro.|  
 |[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|Recupera il valore del parametro designato come oggetto **short** nel linguaggio di programmazione Java in base al nome del parametro.|  

@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499556"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
@@ -22,7 +22,7 @@ In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di 
 
 Nel report le informazioni vengono raggruppate per territorio e vengono visualizzati il nome del responsabile vendite del territorio e informazioni dettagliate e riepilogative relative alle vendite. Si inizia con un'area dati elenco come base per il report in formato libero, quindi si aggiunge un pannello decorativo con un'immagine, testo statico contenente dati, una tabella per la visualizzazione di informazioni dettagliate e facoltativamente grafici a torta e istogrammi per la visualizzazione di informazioni di riepilogo.  
   
-Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,11 +48,11 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Origine dati**.  
   
-2.  Nella casella **Nome** digitare **ListDataSource**  
+2.  Nella casella **Nome** digitare: **ListDataSource**  
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<nomeserver>**  
   
     **\<nomeserver>** , ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
   
@@ -64,7 +64,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Set di dati**.  
   
-2.  Nella casella **Nome** digitare **ListDataset**.  
+2.  Nella casella **Nome** digitare: **ListDataset**.  
   
 3.  Fare clic su **Utilizzare un set di dati incorporato nel report**, quindi verificare che l'origine dati sia **ListDataSource**.  
   
@@ -201,7 +201,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
   
 3.  Con il cursore nella casella di testo, digitare: **Notiziario per** . Includere uno spazio dopo la parola "per", per separare il testo del campo che verrà aggiunto nel passaggio successivo.   
   
-    ![Aggiungere il testo dell'intestazione newsletter](../reporting-services/media/tutorial-newsletterfor.png "Aggiungere il testo dell'intestazione newsletter")  
+    ![Aggiungi testo di intestazione newsletter](../reporting-services/media/tutorial-newsletterfor.png "Aggiungi testo di intestazione newsletter")  
   
 4.  Trascinare il campo `[Territory]` da ListDataSet nel riquadro dei dati del report nella casella di testo e posizionarlo dopo "Notiziario per".  
   
@@ -215,7 +215,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
     *  **20 pt**.
     *  **Cremisi**.  
   
-9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola, per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
+9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
  
 10. Trascinare il campo `[FullName]` da ListDataSet nel riquadro dei dati del report nella casella di testo e posizionarlo dopo "Salve", quindi digitare una virgola (,).  
    
@@ -244,7 +244,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
       *  **10 pt**.
       *  **Nero**.  
  
-20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che verrà aggiunto nel passaggio successivo. 
+20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo. 
   
 21. Trascinare il campo Sales nella casella di testo, posizionarlo dopo il testo digitato nel passaggio precedente, quindi digitare un punto esclamativo (!).  
 
@@ -295,13 +295,13 @@ Utilizzare la procedura guidata Nuova tabella o matrice per aggiungere una tabel
   
 5.  Ripetere il passaggio 3 per SalesDate, Quantity e Sales. Posizionare SalesDate sotto Product, Quantity sotto SalesDate e Sales sotto SalesDate.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  Nella pagina **Scegliere il layout** visualizzare il layout della tabella.  
   
     La tabella è semplice: cinque colonne senza gruppi di righe o colonne. Poiché non dispone di gruppi, le opzioni di layout correlate ai gruppi non sono disponibili. Più avanti nell'esercitazione si aggiornerà manualmente la tabella per includere un totale.  
   
-8.  Scegliere **Avanti**.  
+8.  Fare clic su **Avanti**.  
   
 9. Fare clic su **Fine**.  
   
@@ -408,8 +408,8 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
 10. Selezionare il titolo del grafico e digitare: **Quantità di prodotto vendute**.  
   
 12. Nella scheda **Home** > **Carattere** impostare per il titolo:
-    * **Carattere** **Segoe UI Semibold**.
-    * **Dimensione** **12 pt**.
+    * **Tipo di carattere** **Segoe UI Semibold**.
+    * **Dimensioni** **12 pt**.
     * **Colore** **Nero**.  
 
 13. Fare clic con il pulsante destro del mouse sulla legenda > **Proprietà legenda**.
@@ -447,8 +447,8 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
 10. Selezionare il titolo del grafico e digitare: **Vendite prodotto**.  
   
 12. Nella scheda **Home** > **Carattere** impostare per il titolo:
-    * **Carattere** **Segoe UI Semibold**.
-    * **Dimensione** **12 pt**.
+    * **Tipo di carattere** **Segoe UI Semibold**.
+    * **Dimensioni** **12 pt**.
     * **Colore** **Nero**.  
   
 15. Fare clic con il pulsante destro del mouse sulla legenda, quindi scegliere **Elimina legenda**.  
@@ -497,7 +497,7 @@ Nel report verranno visualizzati i dati di vendita riepilogativi in diagrammi a 
   
 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 L'esercitazione sulla creazione di un report in formato libero è terminata.  
   
 Per altre informazioni sugli elenchi, vedere: 

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994771"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticazione Kerberos integrata (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994771"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questo esempio illustra come ottenere l'autenticazione Kerberos reciproca usando OLE DB nel driver OLE DB per SQL Server. Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva.  
+  Questo esempio illustra come ottenere l'autenticazione Kerberos reciproca usando OLE DB Driver per SQL Server. Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva.  
   
  Per altre informazioni sui nomi SPN e l'autenticazione Kerberos, vedere l'argomento relativo al [supporto dei nomi dell'entità servizio &#40;SPN&#41; nelle connessioni client](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   

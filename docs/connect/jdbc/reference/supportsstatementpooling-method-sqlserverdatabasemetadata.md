@@ -16,10 +16,10 @@ ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9a0c1be55ed478127488b4abee3364e5818a514
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968785"
 ---
 # <a name="supportsstatementpooling-method-sqlserverdatabasemetadata"></a>Metodo supportsStatementPooling (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsStatementPooling()
 ## <a name="exceptions"></a>Eccezioni  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo supportsStatementPooling viene specificato dal metodo supportsStatementPooling nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo supportsStatementPooling viene specificato dal metodo supportsStatementPooling nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

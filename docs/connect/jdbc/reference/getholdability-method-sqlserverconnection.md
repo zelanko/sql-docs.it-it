@@ -1,5 +1,5 @@
 ---
-title: Metodo getcontainity (SQLServerConnection) | Microsoft Docs
+title: Metodo getHoldability (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f7dfc9609443febe545bd3b6ac7a6cdf75e1756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982936"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>Metodo getHoldability (SQLServerConnection)
@@ -44,8 +44,8 @@ public int getHoldability()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo getcontainity viene specificato dal metodo getcontainity nell'interfaccia java. SQL. Connection.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo getHoldability viene specificato dal metodo getHoldability nell'interfaccia java.sql.Connection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

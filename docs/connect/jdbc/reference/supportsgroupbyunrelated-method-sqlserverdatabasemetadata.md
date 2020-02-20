@@ -16,10 +16,10 @@ ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c9ae064a25dc8386b38b11f79ab9ffb5b78a9ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969337"
 ---
 # <a name="supportsgroupbyunrelated-method-sqlserverdatabasemetadata"></a>Metodo supportsGroupByUnrelated (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsGroupByUnrelated()
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo supportsGroupByUnrelated viene specificato dal metodo supportsGroupByUnrelated nell'interfaccia java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo supportsGroupByUnrelated viene specificato dal metodo supportsGroupByUnrelated nell'interfaccia java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041575"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
@@ -27,9 +27,9 @@ Per variare l'aspetto degli elementi mappa, è possibile specificare un campo co
 In questa esercitazione viene compilato un report mappa in cui sono visualizzate le posizioni di alcuni negozi nelle regioni dello stato di New York.  
    
 > [!NOTE]  
-> In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per questa esercitazione è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [Pianificare il supporto dei report mappa](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
@@ -59,7 +59,7 @@ In questa sezione si aggiunge una mappa al report dalla raccolta mappe. La mappa
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina **Scegli opzioni di dati spaziali e vista mappa** accettare le impostazioni predefinite e fare clic su **Avanti**. 
  
@@ -118,7 +118,7 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
   
 1.  Nella scheda **Esegui** fare clic su > **Progettazione** per tornare alla visualizzazione Progettazione.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livelli mappa** . Sulla barra degli strumenti, fare clic sul pulsante **Creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livelli mappa** . Sulla barra degli strumenti fare clic sul pulsante **Creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -131,7 +131,7 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
     > [!NOTE]  
     > L'origine dati scelta non ha importanza purché si disponga delle autorizzazioni appropriate. Non verranno recuperati dati dall'origine dati. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  Nella pagina **Progetta query** fare clic su **Modifica come testo**.  
   
@@ -174,12 +174,12 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
     *   **SellingArea**: l'area disponibile per la visualizzazione dei prodotti, che va da circa 42 metri quadrati a circa 104 metri quadrati.
     *   **City**.
     *   **County**.
-    *   **Sales**: vendite totali. 
+    *   **Vendite**: vendite totali. 
     *   **SpatialLocation**: percorso in longitudine e latitudine. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. Scegliere **Avanti**.  
+10. Fare clic su **Avanti**.  
   
     Il set di dati del report denominato DataSet1 viene creato automaticamente. Al termine della procedura guidata, è possibile visualizzare la relativa raccolta campi nel riquadro Dati report.  
   
@@ -187,9 +187,9 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
   
     Nella vista mappa vengono visualizzati cerchi che indicano la posizione di ogni negozio.  
   
-12. Scegliere **Avanti**.  
+12. Fare clic su **Avanti**.  
   
-13. Nella pagina Scegli vista mappa fare clic su **Mappa a bolle** per un tipo di mappa che visualizza marcatori le cui dimensioni variano in base ai dati. Scegliere **Avanti**.  
+13. Nella pagina Scegli vista mappa fare clic su **Mappa a bolle** per un tipo di mappa che visualizza marcatori le cui dimensioni variano in base ai dati. Fare clic su **Avanti**.  
   
 14. Nella pagina **Scegli il set di dati analitici** fare clic su DataSet1 e quindi su **Avanti**. Questo set di dati contiene sia dati analitici sia dati spaziali che verranno visualizzati al nuovo livello punto.   
   
@@ -234,7 +234,7 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic sul pulsante **Creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti fare clic sul pulsante **Creazione guidata nuovo livello** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server** e fare clic su **Avanti**.  
   
@@ -242,7 +242,7 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
   
 5.  In **Scegliere una connessione a un'origine dati spaziali di SQL Server**selezionare DataSource1, l'origine dati usata durante la prima procedura.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  Nella pagina **Progetta query** fare clic su **Modifica come testo**. Progettazione query passa alla modalità basata su testo.  
   
@@ -255,7 +255,7 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
     Sulla mappa viene visualizzato un percorso tra tre negozi.  
   
@@ -263,7 +263,7 @@ Utilizzare la Creazione guidata livello mappa per aggiungere un livello mappa in
   
     Nella vista mappa viene visualizzato un percorso da un negozio nella parte nord dello stato di New York a un negozio nella parte sud dello stesso stato.  
   
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
 12. Nella pagina **Scegli vista mappa** fare clic su **Mappa linea di base**e quindi su **Avanti**.  
   
@@ -289,7 +289,7 @@ In questa sezione si aggiunge un livello mappa in cui viene visualizzato uno sfo
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti fare clic su **Aggiungi livello** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Nell'elenco a discesa fare clic su **Livello sezione**.  
   
@@ -453,7 +453,7 @@ Per rappresentare un nuovo negozio che non è ancora stato creato, specificare u
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), quindi fare clic su **Livello punto**.  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti fare clic su **Aggiungi livello** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), quindi fare clic su **Livello punto**.  
   
     Un nuovo livello punto viene aggiunto alla mappa. Per impostazione predefinita, il livello punto usa il tipo di dati spaziali **Incorporato**.  
   
@@ -516,7 +516,7 @@ Nella visualizzazione della struttura la mappa nell'area di visualizzazione e la
   
 1.  Passare alla Visualizzazione della struttura.
   
-1.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
+1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
 2.  Digitare **Vendite nei punti vendita di New York** , quindi fare clic all'esterno della casella di testo.  
   
@@ -536,7 +536,7 @@ Se si salva in un server di report, è possibile visualizzarlo su tale server.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Questa operazione conclude la procedura dettagliata per l'aggiunta di una mappa al report.  
   
 Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  

@@ -9,16 +9,16 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581504"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Creazione di fatture e form con elenchi (Generatore Report e SSRS)
   Un'area dati elenco viene ripetuta con ogni gruppo o riga nel set di dati del report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile utilizzare un elenco per creare form o report in formato libero, ad esempio fatture, o in combinazione ad altre aree dati, nonché definire elenchi contenenti il numero desiderato di elementi del report. Un elenco può essere annidato con  
   
- Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare elenchi separatamente da un report come parti del report. Altre informazioni su [Parti del report (Generatore report SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "65581504"
 ##  <a name="AddingList"></a> Aggiunta di un elenco al report  
  Aggiungere un elenco all'area di progettazione dalla scheda Inserisci sulla barra multifunzione. Per impostazione predefinita, l'elenco contiene inizialmente una sola cella in una riga associata al gruppo di dettagli.  
   
- ![Nuovo elemento elenco per i report nell'area di progettazione](../../reporting-services/report-design/media/rs-listtemplatenew.gif "Nuovo elemento elenco per i report nell'area di progettazione")  
+ ![Elemento del report del nuovo elenco nell'area di progettazione](../../reporting-services/report-design/media/rs-listtemplatenew.gif "Elemento del report del nuovo elenco nell'area di progettazione")  
   
  Quando si seleziona un elenco nell'area di progettazione, vengono visualizzati handle di riga e di colonna, come mostrato nella figura seguente.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "65581504"
   
  Nella figura seguente viene riportato un elenco che include informazioni su un ordine, oltre ai campi Date, Order, Qty, Product, LineTotal e a un'immagine.  
   
- ![Elenco in visualizzazione Progettazione con 4 campi e un'immagine](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "Elenco in visualizzazione Progettazione con 4 campi e un'immagine")  
+ ![Elenco in visualizzazione Progettazione, 4 campi e un'immagine](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "Elenco in visualizzazione Progettazione, 4 campi e un'immagine")  
   
  In Anteprima l'elenco si ripete per visualizzare i dati del campo in formato libero, come mostrato nella figura seguente:  
   
- ![Anteprima dell'elenco con quattro campi e un'immagine](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "Anteprima dell'elenco con quattro campi e un'immagine")  
+ ![Anteprima dell'elenco con 4 campi e un'immagine](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "Anteprima dell'elenco con 4 campi e un'immagine")  
   
 > [!NOTE]  
 >  Per mostrare il layout in formato libero per ogni valore del campo, nelle figure vengono incluse delle linee tratteggiate, in genere non utilizzate in un report di produzione.  
@@ -55,11 +55,11 @@ ms.locfileid: "65581504"
   
  È possibile, ad esempio, incorporare una tabella e un grafico che mostrano viste diverse dello stesso set di dati. Se si aggiunge un gruppo all'elenco, gli elementi del report nidificati si ripetono una volta per ogni valore del gruppo. Nella figura seguente viene mostrato un elenco raggruppato per categoria di prodotto. Non è presente alcuna riga di dettaglio. Due tabelle vengono nidificate l'una accanto all'altra nell'elenco. Nella prima sono visualizzate le sottocategorie con le vendite totali, nella seconda la categoria raggruppata per area geografica, con un grafico che mostra la distribuzione delle sottocategorie.  
   
- ![Elenco con due tabelle, una con un grafico annidato](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "Elenco con due tabelle, una con un grafico annidato")  
+ ![Elenco con 2 tabelle di cui una con grafico annidato](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "Elenco con 2 tabelle di cui una con grafico annidato")  
   
  In Anteprima la tabella riporta le vendite totali per tutte le sottocategorie di biciclette e la tabella accanto visualizza la suddivisione di vendite per area geografica. Attraverso un'espressione che consente di specificare il colore di sfondo per la tabella e una tavolozza personalizzata per il grafico, la prima tabella include anche la legenda dei colori del grafico.  
   
- ![Anteprima, due tabelle, una con un grafico annidato](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Anteprima, due tabelle, una con un grafico annidato")  
+ ![Anteprima, 2 tabelle di cui una con grafico annidato](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Anteprima, 2 tabelle di cui una con grafico annidato")  
   
   
 ## <a name="see-also"></a>Vedere anche  

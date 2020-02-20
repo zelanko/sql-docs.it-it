@@ -1,5 +1,5 @@
 ---
-title: Metodo setBinaryStream per il flusso di input-Long | Microsoft Docs
+title: Metodo setBinaryStream per il flusso di input - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2020b147b67557417b7c64cc05a053f9650d828
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975168"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>Metodo setBinaryStream (java.lang.String, java.io.InputStream, int)
@@ -41,7 +41,7 @@ public void setBinaryStream(java.lang.String parameterName,
   
  Una **stringa** che contiene il nome del parametro.  
   
- *Valore*  
+ *value*  
   
  Oggetto InputStream.  
   
@@ -52,8 +52,8 @@ public void setBinaryStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo setBinaryStream viene specificato dal metodo setBinaryStream nell'interfaccia java. SQL. CallableStatement.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo setBinaryStream viene specificato dal metodo setBinaryStream nell'interfaccia java.sql.CallableStatement.  
   
  Se la lunghezza del flusso è diversa da quanto specificato nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   

@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575615"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65575615"
 ## <a name="types-of-axes"></a>Tipi di assi  
  Il grafico include due assi principali: l'asse dei valori e l'asse delle categorie.  
   
- ![Asse dei valori e asse delle categorie del grafico](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Asse dei valori e asse delle categorie del grafico")  
+ ![Assi dei valori e delle categorie del grafico](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Assi dei valori e delle categorie del grafico")  
   
  Quando si trascina un campo dal set di dati alla superficie del grafico, verrà determinato se tale campo appartiene all'asse delle categorie o dei valori.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65575615"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Esempio di calcolo delle etichette degli assi  
  La tabella seguente contiene esempi di dati sulle vendite da tracciare in un istogramma. Il campo Name viene aggiunto all'area Gruppi di categorie e il campo Quantity all'area Valori.  
   
-|nome|Quantity|  
+|Nome|Quantità|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

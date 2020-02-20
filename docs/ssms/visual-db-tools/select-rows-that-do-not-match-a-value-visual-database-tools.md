@@ -1,10 +1,9 @@
 ---
-title: Selezionare righe non corrispondenti a un valore (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Selezionare le righe non corrispondenti a un valore
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b664c5a99e362ca09096e745cb1fae49799ef81e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: ba594307277060abd6ddedb9dd7fda7c1a8bebee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266867"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255087"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Selezione di righe non corrispondenti a un valore (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +40,6 @@ NOT LIKE 'A%'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Regole per l'immissione di valori di ricerca (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Specificare i criteri di ricerca (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Regole per l'immissione di valori di ricerca](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Specificare criteri di ricerca](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

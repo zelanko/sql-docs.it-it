@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579009"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -65,9 +65,9 @@ ms.locfileid: "65579009"
 -   [Gestione di processi a livello di programmazione](#bkmk_programmatically)  
   
 ##  <a name="bkmk_native"></a> Visualizzare e annullare i processi (modalità nativa)  
- È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
+ È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
   
- È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
+ È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
   
  Non è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per elencare o annullare la generazione o l'elaborazione di modelli o sottoscrizioni guidate dai dati. In Reporting Services non è possibile annullare la generazione o l'elaborazione di modelli. Per annullare sottoscrizioni guidate dai dati, è possibile tuttavia utilizzare le istruzioni fornite in questo argomento.  
   

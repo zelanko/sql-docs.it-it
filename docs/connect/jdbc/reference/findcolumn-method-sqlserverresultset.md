@@ -16,10 +16,10 @@ ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954576"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>Metodo findColumn (SQLServerResultSet)
@@ -45,8 +45,8 @@ public int findColumn(java.lang.String columnName)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Questo metodo findColumn viene specificato dal metodo findColumn nell'interfaccia java. SQL. ResultSet.  
+## <a name="remarks"></a>Osservazioni  
+ Questo metodo findColumn viene specificato dal metodo findColumn nell'interfaccia java.sql.ResultSet.  
   
  Se esistono più colonne con lo stesso nome, il metodo findColumn restituisce la prima corrispondenza con distinzione tra maiuscole e minuscole. Se non esiste alcuna corrispondenza con distinzione tra maiuscole e minuscole, questo metodo restituisce la prima corrispondenza senza tale distinzione.  
   

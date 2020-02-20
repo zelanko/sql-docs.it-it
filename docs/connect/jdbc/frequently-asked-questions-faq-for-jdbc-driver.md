@@ -11,10 +11,10 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049816"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
@@ -39,9 +39,9 @@ Microsoft JDBC Driver 7.4 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e
 
 | JAR                        | Specifica JDBC            | Versione JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| MSSQL-JDBC-7.4.1. jre12. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 12.0    |
-| MSSQL-JDBC-7.4.1. jre11. jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
-| MSSQL-JDBC-7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.2 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e include due librerie di classi JAR nel pacchetto di installazione, come descritto di seguito:
@@ -110,7 +110,7 @@ A partire dalla versione 1.2, il driver supporta la crittografia Secure Sockets 
 **Quali tipi di autenticazione supporta Microsoft JDBC Driver per SQL Server?**  
 La tabella seguente elenca le opzioni di autenticazione disponibili. L'autenticazione Kerberos Java pura è disponibile a partire dalla versione 4.0 del driver.
 
-| Piattaforma    | Autenticazione                        |
+| Piattaforma    | Authentication                        |
 | ----------- | ------------------------------------- |
 | Non Windows | Kerberos Java pura                    |
 | Non Windows | SQL Server                            |
@@ -129,7 +129,7 @@ Sì. Il driver supporta l'uso degli indirizzi IPv6. Usare la raccolta di proprie
 Il buffer adattivo è stato introdotto a partire da Microsoft SQL Server 2005 JDBC Driver versione 1.2. È progettato per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server. La funzionalità di buffering adattivo di Microsoft SQL Server JDBC Driver fornisce una proprietà della stringa di connessione responseBuffering che può essere impostata su "adattiva" o "completa". Nella versione 1.2 la modalità di buffering predefinita è "full" e l'applicazione deve impostare la modalità di buffering adattivo in modo esplicito. A partire da JDBC Driver versione 2.0 il comportamento predefinito è "adattivo". Per ottenere il comportamento di buffering adattivo, l'applicazione non deve quindi richiederlo in modo esplicito. Per altre informazioni, vedere [Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md) e il blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (Che cos'è il buffering delle risposte adattivo e perché usarlo).
 
 **Il driver supporta il pool di connessioni?**  
-Il driver fornisce il supporto per il pool di connessioni Java Platform, Enterprise Edition 5 (Java EE 5). Il driver implementa le interfacce JDBC 3.0 necessarie per consentire al driver di partecipare a qualsiasi implementazione di pool di connessioni offerta dai fornitori di server applicazioni middleware. Il driver partecipa alle connessioni in pool in questi ambienti. Per altre informazioni, vedere [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). Il driver non fornisce una propria implementazione di pool, ma si basa su server applicazioni Java di terze parti.
+Il driver fornisce il supporto per il pool di connessioni Java Platform, Enterprise Edition 5 (Java EE 5). Il driver implementa le interfacce JDBC 3.0 necessarie per consentire al driver di partecipare a qualsiasi implementazione di pool di connessioni offerta dai fornitori di server applicazioni middleware. Il driver partecipa alle connessioni in pool in questi ambienti. Per altre informazioni, vedere [Uso del pool di connessioni](../../connect/jdbc/using-connection-pooling.md). Il driver non fornisce una propria implementazione di pool, ma si basa su server applicazioni Java di terze parti.
 
 **È disponibile il supporto per il driver?**  
 Sono disponibili diverse opzioni di supporto. È possibile pubblicare eventuali domande o problemi nel [repository GitHub](https://github.com/microsoft/mssql-jdbc) monitorato da Microsoft. I [forum](https://go.microsoft.com/fwlink/?LinkID=246673) sono monitorati da Microsoft, dagli MVP e dalla community. È anche possibile contattare il Supporto tecnico Microsoft. Il team di sviluppo potrebbe richiedere di riprodurre il problema all'esterno di eventuali server applicazioni di terze parti. Se il problema non può essere riprodotto all'esterno dell'ambiente contenitore Java che lo ospita, sarà necessario coinvolgere le terze parti interessate per consentire al team di continuare a offrire assistenza. Per una risoluzione più efficace del problema, il team potrebbe anche richiedere di riprodurlo in un sistema operativo come Windows.
