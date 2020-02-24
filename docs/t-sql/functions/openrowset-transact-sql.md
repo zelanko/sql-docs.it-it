@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910144"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074459"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>Argomenti
 
-*provider_name* è una stringa di caratteri che rappresenta il nome descrittivo (o PROGID) del provider OLE DB specificato nel Registro di sistema. *provider_name* non ha un valore predefinito.
+### <a name="provider_name"></a>'*provider_name*'
+Stringa di caratteri che rappresenta il nome descrittivo (o PROGID) del provider OLE DB specificato nel Registro di sistema. *provider_name* non ha un valore predefinito.
 
 *datasource* è una costante stringa che corrisponde a un'origine dati OLE DB specifica. *datasource* è la proprietà DBPROP_INIT_DATASOURCE da passare all'interfaccia IDBProperties del provider per l'inizializzazione di quest'ultimo. In genere questa stringa include il nome del file di database, il nome di un server di database o un nome riconosciuto dal provider per individuare il database o i database.
 
 *user_id* è una costante stringa che rappresenta il nome utente passato al provider OLE DB specificato. *user_id* consente di specificare il contesto di sicurezza per la connessione e viene passato come proprietà DBPROP_AUTH_USERID per l'inizializzazione del provider. *user_id* non può essere un ID di accesso di Microsoft Windows.
 
 *password* è una costante stringa che rappresenta la password utente da passare al provider OLE DB. *password* viene passato come proprietà DBPROP_AUTH_PASSWORD durante l'inizializzazione del provider. *password* non può essere una password di Microsoft Windows.
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 *provider_string* è una stringa di connessione specifica del provider che viene passata come proprietà DBPROP_INIT_PROVIDERSTRING per l'inizializzazione del provider OLE DB. In *provider_string* sono incluse in genere tutte le informazioni di connessione necessarie per inizializzare il provider. Per un elenco di parole chiave riconosciute dal provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vedere [Proprietà di inizializzazione e di autorizzazione](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 *object* è il nome dell'oggetto che identifica in modo univoco l'oggetto da utilizzare.
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 *query* è una costante stringa inviata al provider ed eseguita da questo. L'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non elabora questa query, ma i risultati della query restituiti dal provider (query pass-through). Le query pass-through risultano utili quando vengono utilizzate in provider che non espongono i dati tabulari tramite i nomi di tabella, ma solo attraverso un linguaggio di comando. Le query pass-through sono supportate nel server remoto, a condizione che il provider di query supporti l'oggetto OLE DB Command e le relative interfacce obbligatorie. Per altre informazioni, vedere [Informazioni di riferimento di SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
-BULK usa il provider BULK di set di righe per OPENROWSET per leggere i dati da un file. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET è in grado di leggere da un file di dati senza caricare i dati in una tabella di destinazione. Ciò consente di utilizzare OPENROWSET con un'istruzione SELECT semplice.
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+Utilizza il provider BULK per set di righe per OPENROWSET per leggere i dati da un file. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET è in grado di leggere da un file di dati senza caricare i dati in una tabella di destinazione. Ciò consente di utilizzare OPENROWSET con un'istruzione SELECT semplice.
 
 > [!IMPORTANT]
 > Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
@@ -181,10 +205,23 @@ Leggendo *data_file* come ASCII, restituisce il contenuto come set di righe a ri
 
 SINGLE_NCLOB, leggendo *data_file* come UNICODE, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **nvarchar(max)** , in base alle regole di confronto del database corrente.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>Opzioni di formato del file di input
 
 FORMAT **=** 'CSV' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifica un file di valori separati da virgole conforme allo standard [RFC 4180](https://tools.ietf.org/html/rfc4180).
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='*format_file_path*' specifica il percorso completo di un file di formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: XML e non XML.
 
