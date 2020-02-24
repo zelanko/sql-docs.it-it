@@ -15,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 233a96ee389e8ffa7b190fde4413a33d51d0c462
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910164"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173575"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ No, la replica funziona solo quando si usa il nome effettivo del server. A parti
   
 -   Per articoli di pubblicazioni che usano snapshot in modalità carattere (usati per Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Sottoscrittori [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): per impostazione predefinita, il proprietario rimane vuoto. Il proprietario viene impostato sul proprietario associato all'account utilizzato dall'agente di distribuzione o dall'agente di merge per la connessione al Sottoscrittore.  
   
- Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<***Articolo***>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<** _Articolo_ **>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>In che modo è possibile configurare le concessioni del database di sottoscrizione per ottenere la corrispondenza con quelle del database di pubblicazione?  
  Per impostazione predefinita, la replica non esegue istruzioni GRANT nel database di sottoscrizione. Se si desidera che le autorizzazioni del database di sottoscrizione corrispondano a quelle del database di pubblicazione, utilizzare uno dei seguenti metodi.  
