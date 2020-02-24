@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893030"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478509"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novità di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -52,13 +52,12 @@ Questa pagina include informazioni di riepilogo e collegamenti a informazioni pi
     - **Dynamic Data Masking:** Se specificato nella definizione della tabella, i dati mascherati sono nascosti per la maggior parte degli utenti e solo gli utenti con l'autorizzazione UNMASK possono visualizzare i dati completi.
     - **Sicurezza a livello di riga:** L'accesso ai dati può essere limitato a livello del motore di database in modo che gli utenti visualizzino solo gli elementi pertinenti. 
 
-Vedere [Motore di database](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services offre prestazioni migliori, funzionalità di creazione, gestione di database, filtraggio, elaborazione e molto altro per i database con modello tabulare basati sul **livello di compatibilità 1200**.
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integra in SQL Server il linguaggio di programmazione R, usato per l'analisi statistica. 
 - La nuova funzionalità di **verifica di coerenza del database (DBCC)** viene eseguita internamente per rilevare possibili problemi di danneggiamento dei dati.
 - La funzionalità **query diretta**, che consente di eseguire query su dati esterni dinamici invece di importarli in primo luogo, ora supporta più origini dati, tra le quali SQL Azure, Oracle e Teradata. 
-- Sono disponibili numerose nuove **funzioni DAX (Data Access Expressions)** .
+- Sono disponibili numerose nuove **funzioni DAX (Data Access Expressions)**.
 - Il nuovo spazio dei nomi **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** gestisce istanze e modelli della modalità tabulare. 
 - È stato eseguito il refactoring di [Analysis Services Management (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) per includere un secondo assembly, **Microsoft.AnalysisServices.Core.dll**.
 

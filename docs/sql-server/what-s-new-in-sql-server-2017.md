@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874819"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478490"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ SQL Server 2017 include numerose nuove funzionalità del motore di database, mig
 - I **miglioramenti degli oggetti ottimizzati per la memoria** includono sp_spaceused e l'eliminazione del limite di 8 indici per le tabelle ottimizzate per la memoria, sp_rename per le tabelle ottimizzate per la memoria e i moduli T-SQL compilati in modo nativo e CASE e TOP (N) WITH TIES per i moduli T-SQL compilati in modo nativo. I file di filegroup con ottimizzazione per la memoria possono ora essere archiviati ed è possibile eseguirne il backup e il ripristino nell'archiviazione di Azure. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** è una nuova classe di autorizzazioni a protezione diretta che supportano CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP e VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS è ora visibile in sys.fn_builtin_permissions. (CTP 1.0)
 - È stata aggiunto il livello **COMPATIBILITY_LEVEL 140** del database. (CTP 1.0).  
-
-Per altre informazioni, vedere [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md) (Novità del motore di database di SQL Server 2017).
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - La nuova funzionalità **Scalabilità orizzontale** di SSIS include le seguenti funzionalità nuove e modificate. Per altre informazioni, vedere [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Novità di Integration Services in SQL Server 2017). (RC1)

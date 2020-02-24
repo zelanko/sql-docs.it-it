@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317031"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173566"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -30,7 +30,7 @@ Ecco alcuni aspetti importanti di cui tenere conto quando si pianifica la config
 
 - Per una corretta distribuzione del cluster Big Data, verificare che sia disponibile la quantità necessaria di volumi permanenti. Se si esegue la distribuzione in un cluster del servizio Azure Kubernetes (AKS) e si usa una classe di archiviazione predefinita (`default` o `managed-premium`), la classe supporta il provisioning dinamico per i volumi permanenti. Di conseguenza, non è necessario creare in anticipo i volumi permanenti, ma è necessario assicurarsi che i nodi di lavoro disponibili nel cluster del servizio Azure Kubernetes siano in grado di collegare tanti dischi quanti sono i volumi permanenti richiesti per la distribuzione. A seconda delle [dimensioni delle macchine virtuali](https://docs.microsoft.com/azure/virtual-machines/linux/sizes) specificate per i nodi di lavoro, ogni nodo può collegare un determinato numero di dischi. Per un cluster con dimensioni predefinite (senza disponibilità elevata), sono necessari almeno 24 dischi. Se si abilita la disponibilità elevata o si aumentano i pool, assicurarsi di avere almeno due volumi permanenti per ogni replica aggiuntiva, indipendentemente dalla risorsa che si intende aumentare.
 
-- Se lo strumento di provisioning dell'archiviazione per la classe di archiviazione specificata nella configurazione non supporta il provisioning dinamico, è necessario creare in anticipo i volumi permanenti. Ad esempio, lo strumento di provisioning `local-storage` non consente il provisioning dinamico. Vedere questo [script di esempio](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) per informazioni su come eseguire questa operazione in un cluster Kubernetes distribuito con `kubeadm`.
+- Se lo strumento di provisioning dell'archiviazione per la classe di archiviazione specificata nella configurazione non supporta il provisioning dinamico, è necessario creare in anticipo i volumi permanenti. Ad esempio, lo strumento di provisioning `local-storage` non consente il provisioning dinamico. Vedere questo [script di esempio](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) per informazioni su come eseguire questa operazione in un cluster Kubernetes distribuito con `kubeadm`.
 
 - Quando si distribuisce un cluster Big Data, è possibile configurare la stessa classe di archiviazione perché venga usata da tutti i componenti del cluster. Tuttavia, come procedura consigliata per una distribuzione di produzione, diversi componenti richiederanno configurazioni di archiviazione diverse per gestire i vari carichi di lavoro in termini di dimensioni o velocità effettiva. È possibile sovrascrivere la configurazione dell'archiviazione predefinita specificata nel controller per ognuna delle istanze master di SQL Server, per i set di dati e per i pool di archiviazione. Questo articolo contiene alcuni esempi su come eseguire questa operazione.
 
