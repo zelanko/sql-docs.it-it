@@ -30,7 +30,7 @@ In questo argomento viene descritto come utilizzare [!INCLUDE[ssSqlProfiler](../
   
      Verrà visualizzata la finestra di dialogo **Proprietà traccia** .  
   
-    > **NOTA** Se la casella di controllo Avvia traccia non appena viene stabilita una connessione è selezionata, la finestra di dialogo **Proprietà traccia** non verrà visualizzata e verrà invece avviata la traccia. Per disattivare questa impostazione, scegliere *Opzioni* dal menu ***Strumenti*** e deselezionare la casella di controllo Avvia traccia non appena viene stabilita una connessione.  
+    > **NOTA** Se la casella di controllo **Avvia traccia non appena viene stabilita una connessione** è selezionata, la finestra di dialogo **Proprietà traccia** non verrà visualizzata e verrà invece avviata la traccia. Per disattivare questa impostazione, scegliere *Opzioni* dal menu ***Strumenti*** e deselezionare la casella di controllo Avvia traccia non appena viene stabilita una connessione.  
   
 2.  Nella casella **Nome traccia** digitare un nome per la traccia.  
   
