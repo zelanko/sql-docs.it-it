@@ -1,7 +1,7 @@
 ---
 title: Eventi ed errori del motore di database
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -9,16 +9,27 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918184"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146281"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
 La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il testo del messaggio di errore dalla vista del catalogo sys.messages. Laddove applicabile, il numero di errore è un collegamento ad altre informazioni.
+
+L'elenco non è completo. Per un elenco completo di tutti gli errori, eseguire una query sulla vista del catalogo sys.messages con la query seguente:
+
+```sql
+SELECT message_id AS Error, severity AS Severity,  
+[Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
+text AS [Description]
+FROM sys.messages
+WHERE language_id = <desired language, such as 1033 for US English>
+ORDER BY message_id
+```
 
 ## <a name="errors--2-to-999"></a>Errori da -2 a 999
 
@@ -574,7 +585,31 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   971 |   10  |   No  |   Il database delle risorse è stato rilevato in due posizioni diverse. Il database delle risorse verrà collegato nella stessa directory di sqlservr.exe in '%.*ls' al posto del database delle risorse attualmente collegato in '%.* ls'.    |
 |   972 |   17  |   No  |   Impossibile utilizzare il database '%d' durante l'esecuzione della procedura. |
 |   973 |   10  |   Sì |   Database %ls avviato. FILESTREAM non è tuttavia compatibile con le opzioni READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION. Rimuovere i file FILESTREAM e i filegroup FILESTREAM oppure impostare READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION su OFF.   |
+|974 | 10  | No  |  Impossibile collegare il database delle risorse nella stessa directory di sqlservr.exe in '%.*ls' perché i file di database non esistono.|
+|975 | 10  | Sì |  Impossibile aggiornare gli oggetti di sistema nel database '%.*ls' perché è di sola lettura. |
+|976 | 14  | No  |  Il database di destinazione, '%.*ls', partecipa a un gruppo di disponibilità e non è attualmente accessibile per le query. Lo spostamento dei dati è sospeso o la replica di disponibilità non è abilitata per l'accesso in lettura. Per consentire l'accesso in sola lettura a questa e ad altri database nel gruppo di disponibilità, abilitare l'accesso in lettura a una o più repliche di disponibilità secondarie nel gruppo. |
+|977 | 10 |  No  |  Avviso: impossibile trovare l'indice associato per il vincolo '%.*ls' in object_id '%d' nel database '%.* ls'.|
+|978 | 14 |  No  |  Il database di destinazione ('%.*ls') si trova in un gruppo di disponibilità ed è attualmente accessibile alle connessioni quando la finalità dell'applicazione è impostata in sola lettura. Per ulteriori informazioni sulla finalità delle applicazioni, vedere la documentazione online di SQL Server. |
+|979  | 14 | No  |  Il database di destinazione ('%.*ls') si trova in un gruppo di disponibilità e attualmente non consente le connessioni di sola lettura. Per ulteriori informazioni sulla finalità delle applicazioni, vedere la documentazione online di SQL Server.|
+|980 |  21 |  Sì |  Impossibile caricare il database '%.*ls' in SQL Server perché contiene un indice columnstore. L'edizione attualmente installata di SQL Server |non supporta gli indici columnstore. Disabilitare l'indice columnstore nel database utilizzando un'edizione supportata di SQL Server|
+|981  |  10 | No | Per la gestione database verrà utilizzata la versione del database di destinazione %d. |
+|982  |  14 | No | Impossibile accedere al database '%.*ls' Nessuna replica secondaria online abilitata per l'accesso di sola lettura. Controllare la configurazione del gruppo di disponibilità per verificare che almeno una replica secondaria sia configurata per l'accesso di sola lettura. Attendere che sia online una replica abilitata|
+|983 |  14  | No | Impossibile accedere al database di disponibilità '%.*ls' perché la replica di database non presenta il ruolo PRIMARIO o SECONDARIO. Le connessioni a un database di disponibilità sono consentite solo quando la replica di database presenta il ruolo PRIMARIO o SECONDARIO. Riprovare in un secondo momento |
+|984 | 21  | Sì | Impossibile eseguire una copia con controllo delle versioni di sqlscriptdowngrade.dll da Binn nella cartella Binn\Cache. API VerInstallFile non riuscita con codice di errore %d.|
+|985 |  10 | Sì  |      File '%ls' installato correttamente nella cartella '%ls'. |
+|986 |  10 | No   |     Impossibile ottenere una pagina di avvio pulita per il database '%.*ls' dopo %d tentativi. Questo è un messaggio informativo. Non è richiesta alcuna azione da parte dell'utente. |
+|987 |  23  |    Sì | Inserimento chiave duplicata rilevato durante l'aggiornamento degli oggetti di sistema nel database '%.*ls'.|
+|988 |  14  |    No  | Non è possibile accedere al database '%.*ls' perché manca un quorum di nodi per la disponibilità elevata. Riprovare in un secondo momento.|
+|989 |  16  |    No  | Impossibile portare il database host con ID %d offline quando uno o più database della partizione sono contrassegnati come sospetti.|
+|990 |  16  |    No  | Il database host con ID %d verrà portato offline perché uno o più database della partizione sono contrassegnati come sospetti.|
+|991 |  16  |    No  | Impossibile portare il database host '%.*ls' offline quando uno o più database della partizione sono contrassegnati come sospetti.|
+|992 |  16  |    No  | Non è stato possibile ottenere il blocco condiviso nel database '%.*ls'.|
+|993 |  10  |    No  | Durante la fase di roll forward del database '%.*ls' è stato applicato l'aggiornamento della versione da %d a %d.|
+|994 |  10  |    No  | Avviso: l'indice "%*ls" in "%* ls"."%.*ls" è stato disabilitato perché contiene una colonna calcolata.|
+|995 |  10  |    No  | Avviso: l'indice "%.*ls" in "%.* ls" è stato disabilitato. Non è possibile aggiornarlo perché risiede in un filegroup di sola lettura.|
+|996 |  10  |    No  | Avviso: l'indice "%.*ls" in "%.* ls" è stato disabilitato. Questo indice columnstore non può essere aggiornato probabilmente perché supera il limite delle dimensioni di riga di '%d' byte.|
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
+
 
 ## <a name="errors-1000-to-1999"></a>Errori da 1000 a 1999
 
@@ -2158,11 +2193,12 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   4863    |   16  |   No  |   Errore di conversione (troncamento) dei dati durante il caricamento bulk. Riga %d, colonna %d (%ls).   |
 |   4864    |   16  |   No  |   Errore di conversione (non corrispondenza di tipo o carattere non valido per la tabella codici specificata) dei dati durante il caricamento bulk. Riga %d, colonna %d (%ls).    |
 |   4865    |   16  |   No  |   Impossibile eseguire il caricamento bulk perché è stato superato il numero massimo di errori (%d).    |
-|   4866    |   16  |   No  |   Caricamento bulk non riuscito. Il file di dati contiene una colonna troppo lunga per la riga %d, colonna %d. Verificare che i caratteri di terminazione di campo e di riga siano specificati correttamente.   |
+|   4866    |   16  |   No  |   Caricamento bulk non riuscito. Il file di dati contiene una colonna troppo lunga per la riga %d, colonna %d. Verificare che i caratteri di terminazione di campo e di riga siano specificati correttamente.   | Il caricamento bulk non è riuscito a causa di un valore di colonna non valido nel file di dati CSV %ls nella riga %d, colonna %d | 
 |   4867    |   16  |   No  |   Errore di conversione dei dati durante il caricamento bulk (overflow). Riga %d, colonna %d (%ls). |
 |   4868    |   16  |   No  |   Caricamento bulk non riuscito. La tabella codici "%d" non è installata. Installarla ed eseguire nuovamente il comando.   |
 |   4869    |   16  |   No  |   Caricamento bulk non riuscito. Il file di dati contiene un valore Null imprevisto alla riga %d, colonna %d. La colonna di destinazione (%ls) è definita come non Null.    |
 |   4870    |   16  |   No  |   Impossibile eseguire il caricamento bulk a causa di un errore durante la scrittura nel file "%ls". Codice di errore del sistema operativo %ls.   |
+|   4879    |   16  |   No  | 
 |   4871    |   16  |   No  |   Errore di caricamento bulk durante la registrazione degli errori. |
 |   4872    |   16  |   No  |   Riga %d nel file di formato "%ls": ID di elemento "%ls" duplicato.   |
 |   4873    |   16  |   No  |   Riga %d nel file di formato "%ls":  riferimento all'ID di elemento inesistente "%ls".    |
