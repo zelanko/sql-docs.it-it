@@ -14,12 +14,12 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfaaea1b07c17fbf5c47bbcccf20a3ca55862123
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
+ms.sourcegitcommit: 0381fd3b76933db7bb1c1ee6a3b29de1f08c7ce4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72278206"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77646327"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità del Motore di database in SQL Server 2014
   In questo argomento vengono descritte le modifiche di comportamento introdotte nel [!INCLUDE[ssDE](../includes/ssde-md.md)]. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -30,18 +30,17 @@ ms.locfileid: "72278206"
 ## <a name="Denali"></a>Modifiche del comportamento in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Individuazione dei metadati  
- I [!INCLUDE[ssDE](../includes/ssde-md.md)] miglioramenti apportati [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] all'inizio di consentono a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti rispetto a quelli restituiti da SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nelle versioni precedenti di. Per altre informazioni, vedere [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
+ I [!INCLUDE[ssDE](../includes/ssde-md.md)] miglioramenti apportati [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] a iniziano con Consenti a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti rispetto a quelli restituiti da SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nelle versioni precedenti di. Per altre informazioni, vedere [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
   
  L' [opzione SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) per determinare il formato di una risposta senza eseguire effettivamente la query viene sostituita con [sp_describe_first_result_set &#40;&#41;transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) [sp_describe_undeclared_parameters &#40;Transact-sql ](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)&#41;, [sys. dm_exec_describe_first_result_set &#40;transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)e [sys. dm_exec_describe_first_result_set_for_object &#40;Transact- ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)SQL&#41;.  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Modifiche al comportamento di script di un'attività di SQL Server Agent  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo potrebbe inavvertitamente influire su quello esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro * \@schedule_uid* che in genere è l'ultimo parametro della sezione che crea la pianificazione del processo nel processo esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
+A partire [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]da, se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo processo potrebbe inavvertitamente influire sul processo esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro * \@schedule_uid* che in genere è l'ultimo parametro della sezione che crea la pianificazione del processo nel processo esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]è ora possibile eseguire l'elaborazione delle costanti in fase di compilazione per i seguenti oggetti CLR definiti dall'utente:  
-  
+A partire [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]da, i seguenti oggetti CLR definiti dall'utente sono ora ripieghevoli:  
+
 -   Funzioni CLR definite dall'utente con valori scalari deterministici.  
-  
 -   Metodi deterministici di tipi CLR definiti dall'utente.  
   
  Con questo miglioramento si cerca di ottimizzare le prestazioni quando questi metodi o funzioni vengono chiamati più di una volta con gli stessi argomenti. Tuttavia, questa modifica potrebbe provocare risultati imprevisti quando funzioni o metodi non deterministici sono stati contrassegnati erroneamente come deterministici. Il determinismo di una funzione o di un metodo CLR viene indicato dal valore della proprietà `IsDeterministic` di `SqlFunctionAttribute` o `SqlMethodAttribute`.  
@@ -51,23 +50,23 @@ ms.locfileid: "72278206"
   
  In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], in caso di chiamata del metodo `STEnvelope` con oggetti vuoti, venivano restituiti i risultati seguenti:  
   
-```  
-select geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
+```sql  
+SELECT geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
 -- returns POINT EMPTY  
-select geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
 -- returns LINESTRING EMPTY  
-select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
 -- returns POLYGON EMPTY  
 ```  
   
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], in caso di chiamata del metodo `STEnvelope` con oggetti vuoti, vengono ora restituiti i risultati seguenti:  
   
-```  
-select geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
+```sql  
+SELECT geometry::Parse('POINT EMPTY').STEnvelope().ToString()  
 -- returns GEOMETRYCOLLECTION EMPTY  
-select geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('LINESTRING EMPTY').STEnvelope().ToString()  
 -- returns GEOMETRYCOLLECTION EMPTY  
-select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
+SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()  
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
@@ -77,10 +76,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  La `LOG` funzione dispone ora di un parametro di *base* facoltativo. Per ulteriori informazioni, vedere [LOG &#40;&#41;Transact-SQL ](/sql/t-sql/functions/log-transact-sql).  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>Modifica del calcolo delle statistiche durante operazioni su indici partizionati  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]le statistiche non vengono create analizzando tutte le righe nella tabella se viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Dopo avere aggiornato un database con gli indici partizionati, è possibile notare una differenza nei dati dell'istogramma relativamente a tali indici. Tale cambiamento potrebbe non influire sulle prestazioni di query. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, utilizzare CREATE STATISTICS o UPDATE STATISTICS con la clausola FULLSCAN.  
+In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]le statistiche non vengono create analizzando tutte le righe nella tabella se viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Dopo avere aggiornato un database con gli indici partizionati, è possibile notare una differenza nei dati dell'istogramma relativamente a tali indici. Tale cambiamento potrebbe non influire sulle prestazioni di query. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, usare `CREATE STATISTICS` o `UPDATE STATISTICS` con la clausola `FULLSCAN`.  
   
 ### <a name="data-type-conversion-by-the-xml-value-method-has-changed"></a>Modifica della conversione del tipo di dati mediante il metodo relativo al valore XML  
- Il comportamento interno del metodo `value` del tipo di dati `xml` è cambiato. Con questo metodo è possibile eseguire un'espressione XQuery sul codice XML ottenendo un valore scalare del tipo di dati specificato di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il tipo xs deve essere convertito nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In precedenza, con il metodo `value` era possibile convertire internamente il valore di origine in xs:string e, successivamente, convertire xs:string nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]la conversione a xs:string viene ignorata nei casi seguenti:  
+Il comportamento interno del metodo `value` del tipo di dati `xml` è cambiato. Con questo metodo è possibile eseguire un'espressione XQuery sul codice XML ottenendo un valore scalare del tipo di dati specificato di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il tipo xs deve essere convertito nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In precedenza, con il metodo `value` era possibile convertire internamente il valore di origine in xs:string e, successivamente, convertire xs:string nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]la conversione a xs:string viene ignorata nei casi seguenti:  
   
 |Tipo di dati XS di origine|Tipo di dati di SQL Server di destinazione|  
 |-------------------------|--------------------------------------|  
@@ -101,14 +100,14 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Se si utilizza sqlcmd. exe con la modalità XML (comando: XML ON) quando si esegue un'istruzione SELECT * from T FOR XML, si verificano modifiche del comportamento.  
   
 ### <a name="dbcc-checkident-revised-message"></a>Revisione del messaggio restituito da DBCC CHECKIDENT  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo se utilizzato con RESEED *new_reseed_value*  per modificare il valore Identity corrente. Il nuovo messaggio è "verifica delle informazioni sull'identità: valore Identity\<corrente ' valore identity corrente>'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo se utilizzato con RESEED *new_reseed_value*  per modificare il valore Identity corrente. Il nuovo messaggio è *"verifica delle informazioni sull'identità: valore Identity\<corrente ' valore Identity corrente>'"*. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
   
- Nelle versioni precedenti il messaggio è "verifica delle informazioni di identità: valore Identity corrente\<' valore identity corrente>', valore di colonna\<corrente ' valore colonna corrente>'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema". Il messaggio è invariato quando DBCC CHECKIDENT viene specificato con NORESEED, senza un secondo parametro o senza il valore reseed. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ Nelle versioni precedenti il messaggio è *"verifica delle informazioni di identità: valore Identity corrente\<' valore Identity corrente>', valore di colonna\<corrente ' valore colonna corrente>'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, contattare l'amministratore di sistema. "* Il messaggio è invariato quando `DBCC CHECKIDENT` viene specificato con `NORESEED`, senza un secondo parametro o senza un valore di RESEED. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Modifica del comportamento della funzione exist() nel tipo di dati di XML  
- Il comportamento della funzione **exist()** è cambiato se si confronta un tipo di dati XML con un valore Null a 0 (zero). Prendere in considerazione gli esempi seguenti:  
+ Il comportamento della `exist()` funzione è stato modificato quando si confronta un tipo di dati XML con un valore null a 0 (zero). Prendere in considerazione gli esempi seguenti:  
   
-```xml  
+```sql  
 DECLARE @test XML;  
 SET @test = null;  
 SELECT COUNT(1) WHERE @test.exist('/dogs') = 0;  
@@ -118,7 +117,7 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') = 0;
   
  I confronti riportati di seguito non sono cambiati:  
   
-```xml  
+```sql  
 DECLARE @test XML;  
 SET @test = null;  
 SELECT COUNT(1) WHERE @test.exist('/dogs') = 1; -- 0 expected, 0 returned  
