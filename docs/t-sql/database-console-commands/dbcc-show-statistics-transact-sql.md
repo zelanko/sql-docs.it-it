@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116476"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074446"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,28 +158,30 @@ Per ottimizzare le stime relative alla cardinalità per query che restituiscono 
 ## <a name="restrictions"></a>Restrizioni  
  DBCC SHOW_STATISTICS non fornisce statistiche per gli indici spaziali o columnstore ottimizzati in memoria xVelocity.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Autorizzazioni per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Per visualizzare l'oggetto statistiche, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server `sysadmin` o del ruolo predefinito del database `db_owner` o `db_ddladmin`.
-  
-Tramite [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 vengono modificate le restrizioni alle autorizzazioni e gli utenti che hanno l'autorizzazione SELECT possono usare questo comando. Affinché le autorizzazioni SELECT siano sufficienti per eseguire il comando, sono richiesti i requisiti seguenti:
+## <a name="permissions-for-ssnoversion-and-sssds"></a>Autorizzazioni per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Per visualizzare l'oggetto statistiche, l'utente deve avere l'autorizzazione SELECT per la tabella.
+Affinché le autorizzazioni SELECT siano sufficienti per eseguire il comando, sono richiesti i requisiti seguenti:
 -   Gli utenti devono disporre delle autorizzazioni su tutte le colonne nell'oggetto statistiche  
 -   Gli utenti devono disporre dell'autorizzazione su tutte le colonne in una condizione di filtro, se esistente  
--   La tabella non può avere criteri di sicurezza a livello di riga.  
+-   La tabella non può avere criteri di sicurezza a livello di riga.
+-   Se una delle colonne all'interno di un oggetto statistiche viene mascherata con regole di Dynamic Data Masking, oltre all'autorizzazione SELECT, l'utente deve avere l'autorizzazione UNMASK
+
+Nelle versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server `sysadmin` o del ruolo predefinito del database `db_owner` o `db_ddladmin`.
+[!NOTE]
+Per ripristinare il comportamento precedente a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, usare il flag di traccia 9485.
   
-Per disabilitare questo comportamento, utilizzare il traceflag 9485.
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Autorizzazioni per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="permissions-for-sssdw-and-sspdw"></a>Autorizzazioni per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS richiede l'autorizzazione SELECT per la tabella o l'appartenenza a uno degli elementi seguenti:
 -   ruolo predefinito del server sysadmin  
 -   ruolo predefinito del database db_owner  
 -   ruolo predefinito del database db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitazioni e restrizioni per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitazioni e restrizioni per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS consente di visualizzare le statistiche archiviate nel database shell a livello di nodo di controllo. Non vengono visualizzate le statistiche create automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sui nodi di calcolo.
   
 DBCC SHOW_STATISTICS non è supportato per le tabelle esterne.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Esempi: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>Esempi: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>R. Restituzione di tutte le informazioni statistiche  
 Nell'esempio seguente vengono visualizzate tutte le informazioni statistiche per l'indice `AK_Address_rowguid` della tabella `Person.Address` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Visualizzare il contenuto di un oggetto statistiche  
  Nell'esempio seguente viene visualizzato il contenuto delle statistiche Customer_LastName per la tabella DimCustomer.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137090"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146311"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ Per aumentare il livello di sicurezza, il messaggio di errore restituito al clie
 |12|L'account di accesso è valido, ma l'accesso al server ha avuto esito negativo.|  
 |18|È necessario modificare la password.|  
 |38, 46|Impossibile trovare il database richiesto dall'utente.|
+|58| Quando SQL Server è impostato per usare solo l'autenticazione di Windows e un client prova ad accedere usando l'autenticazione di SQL. Un'altra causa si ha quando gli ID di sicurezza non corrispondono.|
 |102 - 111|Errore di AAD.|
 |122 - 124|Errore dovuto al campo di nome utente o password vuoto.|
 |126|Il database richiesto dall'utente non esiste.|

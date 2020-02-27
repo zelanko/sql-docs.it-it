@@ -1,7 +1,7 @@
 ---
 title: Costruzione dell'URL della connessione | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028450"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004536"
 ---
 # <a name="building-the-connection-url"></a>Costruzione dell'URL della connessione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -92,18 +92,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  Lo spazio all'interno delle parentesi graffe è letterale e non viene eliminato.  
   
 ##  <a name="Connectingintegrated"></a> Connessione con autenticazione integrata in Windows  
- Il driver JDBC supporta l'utilizzo dell'autenticazione integrata di tipo 2 nei sistemi operativi Windows tramite la proprietà della stringa di connessione integratedSecurity. Per utilizzare l'autenticazione integrata, copiare il file sqljdbc_auth.dll in una directory nel percorso di sistema di Windows nel computer in cui è installato il driver JDBC.  
+ Il driver JDBC supporta l'utilizzo dell'autenticazione integrata di tipo 2 nei sistemi operativi Windows tramite la proprietà della stringa di connessione integratedSecurity. Per usare l'autenticazione integrata, copiare il file mssql-jdbc_auth-\<versione>-\<arch>.dll in una directory nel percorso di sistema di Windows nel computer in cui è installato il driver JDBC.  
   
- I file sqljdbc_auth.dll sono installati nel percorso seguente:  
+ I file mssql-jdbc_auth-\<versione>-\<arch>.dll sono installati nella posizione seguente:  
   
  \<*directory di installazione*>\<\sqljdbc_*Version*>\\<*Language>* \auth\  
   
  Per i sistemi operativi supportati da [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vedere [Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) per una descrizione di una funzionalità aggiunta in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] che consente a un'applicazione di connettersi a un database tramite l'autenticazione integrata Kerberos di tipo 4.  
   
 > [!NOTE]  
->  Se si esegue Java Virtual Machine (JVM) a 32 bit, utilizzare il file sqljdbc_auth.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, utilizzare il file sqljdbc_auth.dll nella cartella x64.  
+>  Se si esegue Java Virtual Machine (JVM) a 32 bit, usare il file mssql-jdbc_auth-\<versione>-\<arch>.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, usare il file mssql-jdbc_auth-\<versione>-\<arch>.dll nella cartella x64.  
   
- In alternativa è possibile impostare la proprietà di sistema java.library.path in modo da specificare la directory di sqljdbc_auth.dll. Ad esempio, se il driver JDBC è installato nella directory predefinita, specificare il percorso della DLL utilizzando il seguente argomento della VM (Virtual Machine) quando l'applicazione Java viene avviata:  
+ In alternativa è possibile impostare la proprietà di sistema java.library.path in modo da specificare la directory di mssql-jdbc_auth-\<versione>-\<arch>.dll. Ad esempio, se il driver JDBC è installato nella directory predefinita, specificare il percorso della DLL utilizzando il seguente argomento della VM (Virtual Machine) quando l'applicazione Java viene avviata:  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

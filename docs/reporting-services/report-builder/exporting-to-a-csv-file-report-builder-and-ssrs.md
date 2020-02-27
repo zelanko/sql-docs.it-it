@@ -1,5 +1,5 @@
 ---
-title: Esportazione in un file CSV (Generatore report e SSRS) | Microsoft Docs
+title: Esportazione in un file CSV (Generatore report) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581202"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078371"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
   L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report impaginati come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.  
@@ -55,7 +55,7 @@ ms.locfileid: "65581202"
   
 -   Grafico a linee  
   
--   Image  
+-   Immagine  
   
 -   Rectangle  
   

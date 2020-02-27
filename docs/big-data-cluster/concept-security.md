@@ -9,12 +9,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253118"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074429"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Concetti relativi alla sicurezza per i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,6 +66,10 @@ Nel contesto dei Big Data l'autorizzazione viene in genere eseguita tramite gli 
 La crittografia delle comunicazioni tra i client e gli endpoint esterni, nonché tra i componenti all'interno del cluster, è protetta con TLS/SSL tramite certificati.
 
 Tutte le comunicazioni da SQL Server a SQL Server, ad esempio la comunicazione dell'istanza master di SQL Server con un pool di dati, vengono protette tramite account di accesso SQL.
+
+> [!IMPORTANT]
+>  I cluster Big Data usano etcd per archiviare le credenziali. Come procedura consigliata, è necessario assicurarsi che il cluster Kubernetes sia configurato per l'uso della crittografia etcd per i dati inattivi. Per impostazione predefinita, i segreti archiviati in etcd non sono crittografati. La documentazione di Kubernetes fornisce informazioni dettagliate su questa attività amministrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ e https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
 
 ## <a name="basic-administrator-login"></a>Account di accesso amministratore di base
 

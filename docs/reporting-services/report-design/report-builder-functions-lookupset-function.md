@@ -1,5 +1,5 @@
 ---
-title: Funzione LookupSet (Generatore report e SSRS) | Microsoft Docs
+title: Funzione LookupSet (Generatore report) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577405"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081224"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funzioni di Generatore report - Funzione LookupSet
   Viene restituito il set di valori corrispondenti per il nome specificato da un set di dati contenente coppie nome/valore.  

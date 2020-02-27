@@ -1,7 +1,7 @@
 ---
 title: Funzionalità non supportate - OLTP in memoria
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412510"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558327"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Questo argomento illustra le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportate per l'uso con oggetti ottimizzati per la memoria.  
+Questo argomento illustra le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportate per l'uso con oggetti ottimizzati per la memoria. La sezione finale elenca anche le funzionalità che non erano supportate per OLTP in memoria, ma che lo sono diventate in seguito.
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funzionalità non supportate per OLTP in memoria  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funzionalità non supportate per OLTP in memoria  
 
 Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicate di seguito non sono supportate in un database contenente oggetti ottimizzati per la memoria, incluso un filegroup di dati ottimizzato per la memoria.  
 
@@ -44,7 +44,7 @@ Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in
 | Modalità fiber | La modalità fiber non è supportata con le tabelle ottimizzate per la memoria:<br /><br />Se la modalità fiber è attiva, non è possibile creare database con filegroup ottimizzati per la memoria né aggiungere filegroup ottimizzati per la memoria a database esistenti.<br /><br />È possibile abilitare la modalità fiber se sono presenti database con filegroup ottimizzati per la memoria. Tuttavia, l'abilitazione della modalità fiber richiede il riavvio del server. In quella situazione il recupero dei database con filegroup ottimizzati per la memoria avrà esito negativo. Verrà quindi visualizzato un messaggio di errore che suggerisce di disabilitare la modalità fiber per usare i database con i filegroup ottimizzati per la memoria.<br /><br />Se è attiva la modalità fiber, non sarà possibile allegare e ripristinare un database con filegroup ottimizzati per la memoria. Il database verrà contrassegnato come sospetto.<br /><br />Per altre informazioni, vedere [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitazione di Service Broker|Non è possibile accedere a una coda da una stored procedure compilata in modo nativo,<br /><br /> né a una coda in un database remoto in una transazione che accede a tabelle ottimizzate per la memoria.|  
 |Replica nei sottoscrittori|La replica transazionale in tabelle ottimizzate per la memoria nei sottoscrittori è supportata con alcune restrizioni. Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  
-
+|||
 
 #### <a name="cross-database-queries-and-transcations"></a>Query e transazioni tra database
 
@@ -55,7 +55,7 @@ Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella t
 |---------------|-------------|-----------------|  
 | Database utente, **modello** e **msdb**. | No | Nella maggior parte dei casi, query e transazioni tra database *non* sono supportate.<br /><br />Una query non è in grado di accedere ad altri database se usa una tabella ottimizzata per la memoria o una stored procedure compilata in modo nativo. Questa restrizione si applica sia alle transazioni che alle query.<br /><br />Le eccezioni sono i database di sistema **tempdb** e **master**. In questo caso il database **master** è disponibile per l'accesso in sola lettura. |
 | Database delle **risorse**, **tempdb** | Sì | In una transazione che coinvolge gli oggetti di OLTP In memoria, i database di sistema **risorse** e **tempdb** possono essere usati senza alcuna restrizione aggiuntiva.
-
+||||
 
 ## <a name="scenarios-not-supported"></a>Scenari non supportati  
   
@@ -69,9 +69,7 @@ Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella t
 - Il tipo di dati ROWVERSION (TIMESTAMP) non è supportato. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   
 - L'opzione di chiusura automatica non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA  
-  
-- Gli snapshot del database non sono supportati per i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.  
-  
+
 - La DDL transazionale, ad esempio le istruzioni CREATE/ALTER/DROP degli oggetti OLTP in memoria, non è supportata nelle transazioni utente.  
   
 - Notifica degli eventi.  
@@ -82,7 +80,17 @@ Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella t
 - L'indipendenza del database ([Database indipendenti](../../relational-databases/databases/contained-databases.md)) non è supportata con OLTP in memoria.
     - L'autenticazione di database indipendenti è supportata, Tuttavia, tutti gli oggetti OLTP in memoria sono contrassegnati come entità che interrompono il contenimento nella vista a gestione dinamica (DMV) **dm_db_uncontained_entities**.
 
-  
-## <a name="see-also"></a>Vedere anche  
+## <a name="recently-added-supports"></a>Supporti aggiunti di recente
+
+In alcuni casi, in una versione più recente di SQL Server viene aggiunto il supporto per una funzionalità che in precedenza non era supportata. Questa sezione elenca le funzionalità che non erano supportate per OLTP in memoria, ma che lo sono diventate in seguito.
+
+Nella tabella seguente i valori della _versione_, ad esempio `(15.x)`, fanno riferimento al valore restituito dall'istruzione Transact-SQL `SELECT @@Version;`.
+
+| Nome funzionalità | Versione di SQL Server | Commenti |
+| :----------- | :-------------------- | :------- |
+| Snapshot del database | 2019 (15.x) | Gli snapshot del database sono ora supportati per i database che contengono un filegroup MEMORY_OPTIMIZED_DATA. |
+| &nbsp; | &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>Vedere anche
 
 - [Supporto di SQL Server per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

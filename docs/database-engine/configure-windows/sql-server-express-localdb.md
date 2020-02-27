@@ -14,14 +14,14 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73926035"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479719"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -38,11 +38,11 @@ Con l'installazione di Local DB viene copiato un set di file minimo necessario p
  >[!TIP]
  > È anche possibile installare Local DB insieme a Visual Studio. Durante l'installazione di Visual Studio selezionare il carico di lavoro **Sviluppo per desktop .NET**, che include SQL Server Express Local DB.
 
-- Se si ha un account di Azure, [iniziare da qui](https://azure.microsoft.com/services/virtual-machines/sql-server/) e creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
+- Se si ha un account di Azure, [iniziare da qui](https://azure.microsoft.com/services/virtual-machines/sql-server/) e creare rapidamente una macchina virtuale in cui è già installato SQL Server.
 
 ## <a name="install-localdb"></a>Installare LocalDB
 
-Installare Local DB tramite l'installazione guidata o usando il programma SqlLocal DB.msi. Local DB è un'opzione dell'installazione di [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
+Installare Local DB tramite l'installazione guidata o usando il programma SqlLocal DB.msi. Local DB è un'opzione per l'installazione di SQL Server Express Local DB. 
  
 Selezionare Local DB nella pagina **Selezione funzionalità/Funzionalità condivise** durante l'installazione. È possibile un'unica installazione dei file binari di Local DB per ogni versione principale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile avviare più processi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e in tutti verranno usati gli stessi file binari. Un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avviata come Local DB presenta le stesse limitazioni di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].
 
@@ -134,7 +134,7 @@ Per informazioni sulla risoluzione dei problemi di Local DB, vedere [Troubleshoo
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Un'istanza di Local DB di [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] è un'istanza creata da un utente per l'uso personale. Qualsiasi utente del computer è in grado di creare un database mediante un'istanza di Local DB, archiviando i file nel profilo utente ed eseguendo il processo con le relative credenziali. Per impostazione predefinita, l'accesso all'istanza di Local DB è limitato al proprietario. I dati contenuti in Local DB sono protetti dall'accesso ai file di database tramite il file system. Se i file di database dell'utente sono archiviati in un percorso condiviso, il database può essere aperto da qualsiasi utente con accesso al file system in quel percorso usando un'istanza di Local DB di cui è proprietario. Se i file di database si trovano in un percorso protetto, ad esempio la cartella dati utente, solo quell'utente e gli amministratori con accesso a quella cartella, possono aprire il database. I file di Local DB possono essere aperti solo da un'istanza di Local DB alla volta.
+Un'istanza di Local DB di SQL Server Express è un'istanza creata da un utente per l'uso personale. Qualsiasi utente del computer è in grado di creare un database mediante un'istanza di Local DB, archiviando i file nel profilo utente ed eseguendo il processo con le relative credenziali. Per impostazione predefinita, l'accesso all'istanza di Local DB è limitato al proprietario. I dati contenuti in Local DB sono protetti dall'accesso ai file di database tramite il file system. Se i file di database dell'utente sono archiviati in un percorso condiviso, il database può essere aperto da qualsiasi utente con accesso al file system in quel percorso usando un'istanza di Local DB di cui è proprietario. Se i file di database si trovano in un percorso protetto, ad esempio la cartella dati utente, solo quell'utente e gli amministratori con accesso a quella cartella, possono aprire il database. I file di Local DB possono essere aperti solo da un'istanza di Local DB alla volta.
 
 >[!NOTE]
 >Local DB viene eseguito sempre nel contesto di sicurezza dell'utente. Questo significa che Local DB non viene mai eseguito con credenziali del gruppo di amministratori locali. Di conseguenza, tutti i file di database usati da un'istanza di Local DB devono essere accessibili usando l'account di Windows dell'utente proprietario, senza considerare l'appartenenza al gruppo di amministratori locali.

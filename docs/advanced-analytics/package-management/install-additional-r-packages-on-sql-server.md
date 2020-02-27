@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74479436"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558371"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installare nuovi pacchetti R con sqlmlutils
 
@@ -129,13 +129,15 @@ Se il computer client usato per connettersi a SQL Server dispone di accesso a In
 
 1. Nel computer client aprire RStudio e creare un nuovo file di **script R**.
 
-1. Usare lo script R seguente per installare il pacchetto **glue** usando **sqlmlutils**. Usare le proprie informazioni di connessione al database di SQL Server. Se non si usa l'autenticazione di Windows, aggiungere i parametri `uid` e `pwd`.
+1. Usare lo script R seguente per installare il pacchetto **glue** usando **sqlmlutils**. Sostituire le informazioni di connessione del database di SQL Server personalizzate.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -146,7 +148,7 @@ Se il computer client usato per connettersi a SQL Server dispone di accesso a In
 ### <a name="add-the-package-offline"></a>Aggiungere il pacchetto offline
 
 Se il computer client non dispone di una connessione Internet, è possibile usare **miniCRAN** per scaricare il pacchetto **glue** usando un computer con accesso a Internet. Copiare quindi il pacchetto nel computer client in cui è possibile installare il pacchetto offline.
-Per informazioni sull'installazione di [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran), vedere **Installare miniCRAN**.
+Per informazioni sull'installazione di **miniCRAN**, vedere [Installare miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
 
 In un computer con accesso a Internet:
 

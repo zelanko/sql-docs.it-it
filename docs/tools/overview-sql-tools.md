@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/06/2019
+ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f4aaea790cf1e308b0675792b110ed129a55ed97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76516262"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051671"
 ---
 # <a name="sql-tools-overview"></a>Panoramica degli strumenti SQL
 
@@ -47,13 +47,13 @@ Gli strumenti seguenti sono i principali strumenti da riga di comando.
 
 | Strumento | Descrizione | Sistema operativo |
 |:--|:--|:--|
+|[**bcp**](bcp-utility.md)|L'utilità del **p**rogramma di **c**opia **b**ulk (**bcp**) esegue operazioni di copia bulk di dati tra un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e un file di dati in un formato specificato dall'utente.| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli (anteprima)** ](mssql-cli.md)|**mssql-cli** è uno strumento da riga di comando interattivo per l'esecuzione di query su SQL Server. Inoltre, è possibile eseguire query su SQL Server con uno strumento da riga di comando che include IntelliSense, l'evidenziazione della sintassi e altro ancora. | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** consente di configurare SQL Server eseguito in Linux. | **Linux** |
+|[**mssql-scripter (anteprima)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** è un'esperienza da riga di comando multipiattaforma per la creazione di script per i database SQL Server. | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |L'utilità **sqlcmd** consente di immettere istruzioni Transact-SQL, procedure di sistema e file di script al prompt dei comandi. | **Windows</br>macOS</br>Linux** |
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage.exe** è un'utilità della riga di comando che automatizza diverse attività di sviluppo di database. |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** offre dei cmdlet per l'utilizzo di SQL. | **Windows</br>macOS</br>Linux** |
-| [**sqlcmd**](sqlcmd-utility.md) |L'utilità **sqlcmd** consente di immettere istruzioni Transact-SQL, procedure di sistema e file di script al prompt dei comandi. | **Windows</br>macOS</br>Linux** |
-|[**bcp**](bcp-utility.md)|L'utilità del **p**rogramma di **c**opia **b**ulk (**bcp**) esegue operazioni di copia bulk di dati tra un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e un file di dati in un formato specificato dall'utente.| **Windows</br>macOS</br>Linux** |
-|[**mssql-scripter (anteprima)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** è un'esperienza da riga di comando multipiattaforma per la creazione di script per i database SQL Server. | **Windows</br>macOS</br>Linux** |
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** consente di configurare SQL Server eseguito in Linux. | **Linux** |
 
 ## <a name="migration-and-other-tools"></a>Migrazione e altri strumenti
 
@@ -62,9 +62,10 @@ Questi strumenti vengono usati per la migrazione, la configurazione e la disponi
 | Strumento | Descrizione |
 |:--|:--|
 | **[Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Usare SQL Server Configuration Manager per configurare i servizi SQL Server e configurare la connettività di rete. Configuration Manager viene eseguito in Windows|
-| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | Usare SQL Server Migration Assistant per automatizzare la migrazione di database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e Sybase.|
 | **[Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md)** | Usare Database Experimentation Assistant per valutare una versione di destinazione di SQL per un determinato carico di lavoro. |
+| **[Data Migration Assistant](../dma/dma-overview.md)** | Lo strumento Data Migration Assistant consente di eseguire l'aggiornamento a una piattaforma dati moderna individuando i problemi di compatibilità che possono influire sulle funzionalità del database nella nuova versione di SQL Server o in Database SQL di Azure. |
 | **[Riesecuzione distribuita](../tools/distributed-replay/install-distributed-replay-overview.md)** | Usare la funzionalità Riesecuzione distribuita per agevolare la valutazione dell'impatto dei futuri aggiornamenti di SQL Server. È possibile usare Riesecuzione distribuita anche per valutare l'impatto degli aggiornamenti hardware e del sistema operativo e dell'ottimizzazione di SQL Server. |
 | **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | L'utilità ssbdiagnose segnala la presenza di problemi nelle conversazioni di Service Broker o nella configurazione dei servizi di Service Broker. |
+| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | Usare SQL Server Migration Assistant per automatizzare la migrazione di database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e Sybase.|
 
-Per informazioni su altri strumenti non citati in questa pagina, vedere le [utilità del prompt dei comandi SQL](command-prompt-utility-reference-database-engine.md).
+Per informazioni su ulteriori strumenti non citati in questa pagina, vedere [Utilità del prompt dei comandi SQL](command-prompt-utility-reference-database-engine.md) e [Scaricare le funzionalità estese e gli strumenti di SQL Server](download-sql-feature-packs.md)

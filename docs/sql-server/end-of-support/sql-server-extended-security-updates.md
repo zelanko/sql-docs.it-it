@@ -10,22 +10,22 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6662705a3b9e9f946d17b3edfbe158a8ac4f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75325553"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256728"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Che cosa sono gli aggiornamenti della sicurezza estesa per SQL Server?
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo offre informazioni sull'uso del servizio del Registro di sistema di SQL Server per ricevere gli aggiornamenti della sicurezza estesa per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. Per altre informazioni su altre opzioni, vedere [Opzioni di fine del supporto](sql-server-end-of-life-overview.md). 
 
 ## <a name="overview"></a>Panoramica
-
-Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha raggiunto la fine del ciclo di vita del supporto, è possibile scegliere di effettuare una sottoscrizione per gli aggiornamenti della sicurezza estesa per i server e rimanere protetti per un massimo di tre anni fino a quando non si è pronti a eseguire l'aggiornamento a una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a eseguire la migrazione a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È possibile acquistare questa sottoscrizione per i server locali oppure ottenerla gratuitamente eseguendo la migrazione dei server locali a macchine virtuali di Azure. È quindi possibile usare il servizio del **Registro di sistema di SQL Server** nel portale di Azure per registrare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha raggiunto la fine del supporto e scaricare gli aggiornamenti quando vengono resi disponibili. 
+Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha raggiunto la fine del ciclo di vita del supporto, è possibile scegliere di effettuare una sottoscrizione per gli aggiornamenti della sicurezza estesa per i server e rimanere protetti per un massimo di tre anni fino a quando non si è pronti a eseguire l'aggiornamento a una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a eseguire la migrazione a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Questa sottoscrizione è disponibile in due modi:
+-  Può essere acquistata per i server di ambienti locali o ospitati.
+-  In forma gratuita e abilitata per impostazione predefinita quando si esegue la migrazione di server locali a macchine virtuali di Azure. È quindi possibile usare il servizio del **Registro di sistema di SQL Server** nel portale di Azure per registrare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha raggiunto la fine del supporto e scaricare gli aggiornamenti quando vengono resi disponibili. 
 
 Microsoft consiglia di applicare le patch degli aggiornamenti della sicurezza estesa non appena sono disponibili per mantenere protetta l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni dettagliate sugli aggiornamenti della sicurezza estesa, vedere la pagina [Aggiornamenti di sicurezza estesa: domande frequenti](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
@@ -33,9 +33,9 @@ Microsoft consiglia di applicare le patch degli aggiornamenti della sicurezza es
 > [Il supporto esteso per SQL Server 2008 e SQL Server 2008 R2 è terminato il 10 luglio 2019](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). Per queste versioni, provare a usare gli aggiornamenti della sicurezza estesa descritti in questo articolo o altre opzioni di migrazione. Per altre informazioni, vedere [Opzioni di fine del supporto](sql-server-end-of-life-overview.md).
 
 ## <a name="what-are-extended-security-updates"></a>Che cosa sono gli aggiornamenti della sicurezza estesa
-Gli aggiornamenti della sicurezza estesa per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] includono il provisioning degli aggiornamenti della sicurezza per i clienti che hanno acquistato una sottoscrizione di aggiornamento per il supporto esteso. 
+Gli aggiornamenti della sicurezza estesa per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] includono il provisioning degli aggiornamenti della sicurezza per i clienti che hanno acquistato una sottoscrizione di aggiornamento per il supporto esteso.
 
-Gli aggiornamenti della sicurezza estesa vengono distribuiti **se e quando disponibili** quando viene individuata una vulnerabilità di sicurezza classificata come **critica** da [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Per questa ragione, gli aggiornamenti della sicurezza estesa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non hanno una cadenza di rilascio regolare. 
+Gli aggiornamenti della sicurezza estesa vengono resi disponibili **se necessario** quando viene individuata una vulnerabilità di sicurezza classificata come **critica** da [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Per questa ragione, gli aggiornamenti della sicurezza estesa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non hanno una cadenza di rilascio regolare.
 
 Gli aggiornamenti della sicurezza estesa non includono:
 - Nuove funzionalità
@@ -43,34 +43,39 @@ Gli aggiornamenti della sicurezza estesa non includono:
 - Correzioni richieste dal cliente
 
 ### <a name="support"></a>Supporto
-
 Gli aggiornamenti della sicurezza estesa non includono il supporto tecnico, ma è possibile usare un contratto di supporto attivo, ad esempio [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) o il supporto tecnico Premier/Unified per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] / [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] per ottenere supporto tecnico sui carichi di lavoro coperti dagli aggiornamenti della sicurezza estesa se si sceglie di lavorare in locale. In alternativa, se si esegue l'hosting in Azure, è possibile usare un piano di supporto di Azure per ottenere supporto tecnico. 
 
   > [!NOTE]
   > Microsoft non offre supporto tecnico per le istanze di [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] (sia locali che in ambienti host) che non sono coperte da una sottoscrizione degli aggiornamenti della sicurezza estesa. 
 
-## <a name="esu-availability"></a>Disponibilità degli aggiornamenti della sicurezza estesa
+## <a name="esu-availability-and-deployment"></a>Disponibilità e distribuzione degli aggiornamenti della sicurezza estesa
+Gli aggiornamenti della sicurezza estesa sono disponibili per i clienti che eseguono il carico di lavoro in ambienti Azure, locali o ospitati.
 
-Gli aggiornamenti della sicurezza estesa sono disponibili per i clienti che eseguono il carico di lavoro in ambienti Azure, locali o ospitati. 
+### <a name="azure-virtual-machines"></a>Macchine virtuali di Azure
+Se si esegue la migrazione dei carichi di lavoro in macchine virtuali di Azure (IaaS), sarà possibile accedere agli aggiornamenti della sicurezza estesa per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] per un massimo di tre anni dopo la fine del supporto **senza costi aggiuntivi** oltre al costo di esecuzione della macchina virtuale. I clienti non necessitano di Software Assurance per ricevere gli aggiornamenti della sicurezza estesa in Azure. 
 
-**Macchine virtuali di Azure**: Se si esegue la migrazione dei carichi di lavoro in macchine virtuali di Azure (IaaS), sarà possibile accedere agli aggiornamenti della sicurezza estesa per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] per un massimo di tre anni dopo la fine del supporto **senza costi aggiuntivi** oltre al costo di esecuzione della macchina virtuale. I clienti non necessitano di Software Assurance per ricevere gli aggiornamenti della sicurezza estesa in Azure. 
+Le macchine virtuali di Azure che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **Windows Server 2008 R2 e versioni successive** riceveranno automaticamente gli aggiornamenti della sicurezza estesa tramite i canali di aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti, quando la macchina virtuale è configurata per l'uso dell'[applicazione automatica delle patch](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-**Ambienti locali o ospitati**: Se si ha Software Assurance, è possibile acquistare gli aggiornamenti della sicurezza estesa per un massimo di tre anni dopo la data di fine del supporto con un Contratto Enterprise (EA), un Contratto Enterprise Subscription (EAS), un'iscrizione Server & Cloud Enrollment (SCE) (SCE) o un'iscrizione Enrollment for Education Solutions (EES). È possibile acquistare gli aggiornamenti della sicurezza estesa solo per i server che è necessario coprire. Gli aggiornamenti della sicurezza estesa possono essere acquistati direttamente da Microsoft o da un partner licenze Microsoft. 
+Le macchine virtuali di Azure che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **Windows Server 2008** o le macchine virtuali che ***non* sono state configurate per l'[applicazione automatica delle patch](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** dovranno scaricare e distribuire manualmente le patch degli aggiornamenti della sicurezza estesa come descritto nella sezione [Ambienti locali o ospitati](#on-premises-or-hosted-environments).
+
+### <a name="on-premises-or-hosted-environments"></a>Ambienti locali o ospitati
+Se si ha Software Assurance, è possibile acquistare un abbonamento per gli aggiornamenti della sicurezza estesa per un massimo di tre anni dopo la data di fine del supporto con un Contratto Enterprise (EA), un Contratto Enterprise Subscription (EAS), un'iscrizione Server & Cloud Enrollment (SCE) o un'iscrizione Enrollment for Education Solutions (EES). È possibile acquistare gli aggiornamenti della sicurezza estesa solo per i server che è necessario coprire. Gli aggiornamenti della sicurezza estesa possono essere acquistati direttamente da Microsoft o da un partner licenze Microsoft. 
+
+I clienti coperti con contratti per gli aggiornamenti della sicurezza estesa devono seguire questa procedura seguente per scaricare e distribuire una patch di aggiornamento della sicurezza estesa:
+-  [Registrare le istanze idonee](#register-instances-for-esus) in **[Registro SQL Server](#create-sql-server-registry)** . 
+-  Dopo aver eseguito la registrazione, ogni volta che vengono rilasciate patch di aggiornamento della sicurezza estesa, nel portale di Azure sarà disponibile un collegamento di download per scaricare il pacchetto. 
+-  Il pacchetto scaricato può essere distribuito manualmente negli ambienti locali o ospitati o tramite qualsiasi soluzione di orchestrazione degli aggiornamenti usata nell'organizzazione, ad esempio Microsoft Endpoint Configuration Manager (in precedenza System Center Configuration Manager). 
+
+> [!NOTE]
+> Questo è anche il processo che i clienti dovranno eseguire per Azure Stack e Macchine virtuali di Microsoft Azure che non sono configurati per la ricezione degli aggiornamenti automatici.
 
 Per altre informazioni, vedere [Aggiornamenti di sicurezza estesa: domande frequenti](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 
-## <a name="esu-delivery"></a>Recapito degli aggiornamenti della sicurezza estesa
-
-**Macchine virtuali di Azure**: i clienti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che eseguono Windows Server 2008 R2 e versioni successive riceveranno automaticamente gli aggiornamenti della sicurezza estesa tramite i canali di aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti usando l'[applicazione automatica delle patch](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). Le macchine virtuali di Azure che eseguono Windows Server 2008 o le macchine virtuali che _non_ sono state configurate per l'applicazione automatica delle patch dovranno implementare manualmente il metodo di registrazione e download locale.  
-
-**Ambienti locali o ospitati**: I clienti coperti dai contratti degli aggiornamenti della sicurezza estesa possono [registrare le istanze idonee](#register-instances-for-esus) con il **Registro di sistema di SQL Server**. Dopo aver effettuato la registrazione, ogni volta che sono disponibili aggiornamenti della sicurezza estesa, i clienti possono usare il collegamento per il download disponibile nel portale di Azure per scaricare il pacchetto degli aggiornamenti e distribuirlo negli ambienti locali o ospitati. Questo è anche il processo che i clienti dovranno eseguire per Azure Stack e Macchine virtuali di Microsoft Azure che non sono configurati per la ricezione degli aggiornamenti automatici.
-
 ## <a name="create-sql-server-registry"></a>Creare il registro di SQL Server
-
 Per registrare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitate per gli aggiornamenti della sicurezza estesa, è necessario innanzitutto creare il registro di SQL Server nel portale di Azure. 
 
-  > [!IMPORTANT]
-  > Non è necessario registrare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli aggiornamenti della sicurezza estesa quando si esegue una macchina virtuale di Azure configurata per gli [aggiornamenti automatici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). 
+> [!IMPORTANT]
+> Non è necessario registrare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli aggiornamenti della sicurezza estesa quando si esegue una macchina virtuale di Azure configurata per gli [aggiornamenti automatici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). 
 
 Per creare il registro di SQL Server, seguire questa procedura:
 

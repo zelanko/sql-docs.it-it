@@ -1,5 +1,5 @@
 ---
-title: Tipo di connessione SQL Azure (SSRS) | Microsoft Docs
+title: Tipo di connessione SQL Azure | Microsoft Docs
 description: L'estensione per i dati della connessione SQL Azure supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244565"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081757"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo di connessione a SQL Azure (SSRS)
 

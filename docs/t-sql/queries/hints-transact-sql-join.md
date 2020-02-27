@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67902020"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255986"
 ---
 # <a name="hints-transact-sql---join"></a>Hint (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67902020"
   
 ## <a name="arguments"></a>Argomenti  
  LOOP | HASH | MERGE  
- Specifica che il join della query deve essere un join ciclico, hash o di merge. L'utilizzo delle opzioni LOOP | HASH | MERGE consente di applicare un join specifico tra due tabelle. Non è possibile specificare LOOP come tipo di join insieme a RIGHT o FULL.  
+ Specifica che il join della query deve essere un join ciclico, hash o di merge. L'utilizzo delle opzioni LOOP | HASH | MERGE consente di applicare un join specifico tra due tabelle. Non è possibile specificare LOOP come tipo di join insieme a RIGHT o FULL. Per altre informazioni, vedere [Join](../../relational-databases/performance/joins.md).
   
  REMOTE  
  Specifica che l'operazione di join viene eseguita nella posizione della tabella di destra. Ciò risulta utile quando la tabella di sinistra è una tabella locale e la tabella di destra è una tabella remota. Utilizzare l'opzione REMOTE solo quando il numero di righe della tabella di sinistra è inferiore a quello della tabella di destra.  

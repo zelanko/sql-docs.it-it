@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002336"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144199"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ Gli hint per la query specificano che gli hint indicati devono essere utilizzati
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 Impedisce a Query Optimizer di ricompilare una query in seguito a modifiche alle statistiche. Se si specifica KEEPFIXED PLAN, una query viene ricompilata solo se lo schema delle tabelle sottostanti cambia o se si esegue **sp_recompile** in tali tabelle.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
 Impedisce alla query di usare un indice columnstore ottimizzato per la memoria non cluster. Se la query contiene l'hint per la query per evitare l'uso dell'indice columnstore e un hint per l'indice per usare un indice columnstore, gli hint sono in conflitto e la query restituisce un errore.  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 Indica a Query Optimizer di usare i dati statistici invece dei valori iniziali per tutte le variabili locali quando la query viene compilata e ottimizzata. L'ottimizzazione include i parametri creati con la parametrizzazione forzata.  
   
 Se si usano OPTIMIZE FOR @variable_name = _literal\_constant_ e OPTIMIZE FOR UNKNOWN nello stesso hint per la query, Query Optimizer userà il valore _literal\_constant_ indicato per un valore specifico. Query Optimizer userà UNKNOWN per i restanti valori di variabile. I valori vengono utilizzati durante l'ottimizzazione della query e non durante l'esecuzione di questa.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Specifica le regole di parametrizzazione applicate da Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla query durante la compilazione.  
   
@@ -249,6 +250,11 @@ Specifica le regole di parametrizzazione applicate da Query Optimizer di [!INCLU
 > Per altre informazioni, vedere [Specificare il comportamento di parametrizzazione delle query tramite guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 SIMPLE indica a Query Optimizer di tentare la parametrizzazione semplice. FORCED indica a Query Optimizer di tentare la parametrizzazione forzata. Per altre informazioni, vedere [Parametrizzazione forzata in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), e [Parametrizzazione semplice in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+
+QUERYTRACEON trace_flag    
+Questa opzione consente di abilitare un flag di traccia che influisce sul piano solo durante la compilazione di una singola query. Analogamente ad altre opzioni a livello di query, è possibile usarla insieme alle guide di piano per trovare il testo corrispondente di una query eseguita da qualsiasi sessione e applicare automaticamente un flag di traccia che influisce sul piano quando la query viene compilata. L'opzione QUERYTRACEON è supportata solo per i flag di traccia di Query Optimizer documentati nella tabella della sezione "Altre informazioni" in [Flag di traccia](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Tuttavia, questa opzione non restituirà alcun errore o avviso se viene usato un numero di flag di traccia non supportato. Se il flag di traccia specificato non influisce su un piano di esecuzione di query, l'opzione verrà ignorata automaticamente.
+
+È possibile specificare più di un flag di traccia nella clausola OPTION se QUERYTRACEON trace_flag_number viene duplicato con numeri di flag di traccia diversi.
 
 RECOMPILE  
 Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di generare un nuovo piano temporaneo per la query ed eliminare immediatamente tale piano al termine dell'esecuzione della query. Il piano di query generato non sostituisce un piano archiviato nella cache quando la stessa query viene eseguita senza l'hint RECOMPILE. Se RECOMPILE non viene specificato, i piani di query vengono inseriti nella cache e riutilizzati da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando si compilano piani di query, l'hint per la query RECOMPILE usa i valori correnti delle variabili locali incluse nella query. Se la query è contenuta in una stored procedure, vengono usati i valori correnti passati ai parametri.  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. Uso di QUERYTRACEON HINT  
+ Nell'esempio seguente vengono usati gli hint per la query QUERYTRACEON. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. È possibile abilitare tutti gli hotfix per i piani controllati dal flag di traccia 4199 per una determinata query usando la query seguente:
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ È anche possibile usare più flag di traccia come nella query seguente:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>Vedere anche  
 [Hint &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

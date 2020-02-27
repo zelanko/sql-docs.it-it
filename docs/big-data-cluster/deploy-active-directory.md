@@ -1,20 +1,20 @@
 ---
-title: Distribuire un cluster Big Data di SQL Server in modalità Active Directory
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Distribuire in modalità Active Directory
+titleSuffix: SQL Server Big Data Cluster
 description: Informazioni su come aggiornare un cluster Big Data di SQL Server in un dominio di Active Directory.
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253113"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544880"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
@@ -164,25 +164,25 @@ Oltre alle variabili di ambiente per le credenziali, è necessario fornire anche
 
 Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggiungere questi parametri ai file `control.json` e `bdc.json` usando i comandi `config replace` mostrati più avanti in questo articolo. Tutti gli esempi seguenti usano il dominio di esempio `contoso.local`.
 
-- `security.ouDistinguishedName`: nome distinto di un'unità organizzativa (OU) in cui verranno aggiunti tutti gli account Active Directory creati tramite la distribuzione del cluster. Se il dominio è denominato `contoso.local`, il nome distinto dell'unità organizzativa è: `OU=BDC,DC=contoso,DC=local`.
+- `security.activeDirectory.ouDistinguishedName`: nome distinto di un'unità organizzativa (OU) in cui verranno aggiunti tutti gli account Active Directory creati tramite la distribuzione del cluster. Se il dominio è denominato `contoso.local`, il nome distinto dell'unità organizzativa è: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.dnsIpAddresses`: elenco di indirizzi IP dei controller di dominio
+- `security.activeDirectory.dnsIpAddresses`: elenco di indirizzi IP dei controller di dominio
 
-- `security.domainControllerFullyQualifiedDns`: elenco di nomi di dominio completi del controller di dominio. Il nome di dominio completo contiene il nome computer/host del controller di dominio. Se sono presenti più controller di dominio, è possibile fornirne un elenco qui. Esempio: `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: elenco di nomi di dominio completi del controller di dominio. Il nome di dominio completo contiene il nome computer/host del controller di dominio. Se sono presenti più controller di dominio, è possibile fornirne un elenco qui. Esempio: `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **Parametro facoltativo**: nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`.
+- `security.activeDirectory.realm` **Parametro facoltativo**: nella maggior parte dei casi, l'area di autenticazione è uguale al nome di dominio. Per i casi in cui non sono uguali, usare questo parametro per definire il nome dell'area di autenticazione, ad esempio `CONTOSO.LOCAL`.
 
-- `security.domainDnsName`: Nome del dominio, ad esempio `contoso.local`.
+- `security.activeDirectory.domainDnsName`: Nome del dominio, ad esempio `contoso.local`.
 
-- `security.clusterAdmins`: questo parametro accetta **un solo gruppo di Active Directory**. I membri di questo gruppo otterranno autorizzazioni di amministratore nel cluster. Questo significa che avranno autorizzazioni di amministratore di sistema in SQL Server, autorizzazioni utente con privilegi avanzati in HDFS e autorizzazioni di amministratore nel controller. **Si noti che questo gruppo deve essere presente in Active Directory prima che venga avviata la distribuzione. Si noti anche che questo gruppo non può avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+- `security.activeDirectory.clusterAdmins`: questo parametro accetta **un solo gruppo di Active Directory**. I membri di questo gruppo otterranno autorizzazioni di amministratore nel cluster. Questo significa che avranno autorizzazioni di amministratore di sistema in SQL Server, autorizzazioni utente con privilegi avanzati in HDFS e autorizzazioni di amministratore nel controller. **Si noti che questo gruppo deve essere presente in Active Directory prima che venga avviata la distribuzione. Si noti anche che questo gruppo non può avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-- `security.clusterUsers`: elenco dei gruppi di Active Directory che sono utenti normali (senza autorizzazioni di amministratore) nel cluster Big Data. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+- `security.activeDirectory.clusterUsers`: elenco dei gruppi di Active Directory che sono utenti normali (senza autorizzazioni di amministratore) nel cluster Big Data. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-- `security.appOwners` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+- `security.activeDirectory.appOwners` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-- `security.appReaders` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+- `security.activeDirectory.appReaders` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-**Come controllare l'ambito del gruppo AD:**
+**Come controllare l'ambito del gruppo AD:** 
 [fare clic qui per istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) per verificare l'ambito di un gruppo di Active Directory, per determinare se è DomainLocal.
 
 Se il file di configurazione della distribuzione non è stato ancora inizializzato, è possibile eseguire questo comando per ottenere una copia della configurazione.
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 Per impostare i parametri precedenti nel file `control.json`, usare i comandi `azdata` seguenti. I comandi sostituiscono la configurazione e forniscono i valori personalizzati prima della distribuzione.
 
-L'esempio seguente sostituisce i valori relativi ad Active Directory nella configurazione della distribuzione. I dettagli del dominio riportati di seguito sono valori di esempio.
+ > [!IMPORTANT]
+ > Nella versione SQL Server 2019 CU2 la struttura della sezione relativa alla configurazione della sicurezza nel profilo di distribuzione è cambiata leggermente e tutte le impostazioni di Active Directory correlate si trovano nella nuova sezione *activeDirectory* nell'albero json in *security* nel file *control.json*.
+
+L'esempio seguente si basa sull'uso di SQL Server 2019 CU2. Illustra come sostituire i valori di parametri correlati ad Active Directory nella configurazione della distribuzione. I dettagli del dominio riportati di seguito sono valori di esempio.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+Analogamente, nelle versioni precedenti a SQL Server 2019 CU2, è possibile eseguire:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

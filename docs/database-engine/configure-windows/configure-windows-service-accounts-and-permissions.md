@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 491d1e260206121b431276088ff5b34516b4d337
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929154"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173601"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -387,7 +387,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 |Launchpad|%binn|Lettura, Esecuzione|
 ||ExtensiblilityData|Controllo completo|
-||Log\ExtensibiltityLog|Controllo completo|
+||Log\ExtensibilityLog|Controllo completo|
   
  \*Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene disabilitato nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services.  
   

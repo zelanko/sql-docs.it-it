@@ -1,5 +1,5 @@
 ---
-title: Gestione contenuto del server di report (modalità nativa SSRS) | Microsoft Docs
+title: Gestione contenuto del server di report (modalità nativa) | Microsoft Docs
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67228751"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077980"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto. A partire da SQL Server 2016 Reporting Services o versione successiva (SSRS) CTP 3.2, è disponibile il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In questo articolo verranno esaminati il portale Web e la nuova esperienza del portale Web.  

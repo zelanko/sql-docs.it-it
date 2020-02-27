@@ -1,5 +1,5 @@
 ---
-title: DataSources and DataSets Collection References (Report Builder and SSRS) (Riferimenti a raccolte DataSources e DataSets (Generatore report e SSRS)) | Microsoft Docs
+title: Riferimenti a raccolte DataSources e DataSets (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 930dfe2773b72723c2b8dc8571272847bb0d62d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581811"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081465"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte DataSources e DataSets (Generatore report)
   La raccolta **DataSources** rappresenta tutte le origini dati usate in un report. Analogamente, la raccolta **DataSets** rappresenta tutti i set di dati per tutte le origini dati disponibili in un report. Usare il riquadro **Dati report** per ottenere una visualizzazione gerarchica dei set di dati del report organizzati sotto l'origine dati cui fanno riferimento. Se si includono riferimenti a queste raccolte, durante l'anteprima del report questi valori non verranno visualizzati. Le raccolte sono disponibili solo dopo la pubblicazione del report in un server di report.  

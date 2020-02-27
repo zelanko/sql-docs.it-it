@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706274"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363240"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -381,7 +381,7 @@ ODBC Driver for SQL Server viene fornito con i provider di archivi chiavi predef
 Azure Key Vault (AKV) rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master della colonna predefinito per Azure Key Vault. Per altre informazioni sulla configurazione di un'istanza di Azure Key Vault per Always Encrypted, vedere [Azure Key Vault - Procedura dettagliata](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Introduzione a Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) e [Creazione di chiavi master della colonna in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
 
 > [!NOTE]
-> Il driver ODBC non supporta Active Directory Federation Services per l'autenticazione AKV. Se si usa l'autenticazione di Azure Active Directory per AKV e la configurazione di Active Directory include servizi federati, l'autenticazione potrebbe non riuscire.
+> Il driver ODBC supporta solo l'autenticazione AKV direttamente con Azure Active Directory. Se si usa l'autenticazione di Azure Active Directory per AKV e la configurazione di Active Directory richiede l'autenticazione in un endpoint Active Directory Federation Services, l'autenticazione potrebbe non riuscire.
 > In Linux e macOS, per la versione del driver 17.2 e versioni successive, `libcurl` è necessario per usare questo provider, ma non è una dipendenza esplicita poiché altre operazioni con il driver non lo richiedono. Se si verifica un errore relativo a `libcurl`, verificare che sia installato.
 
 Il driver supporta l'autenticazione ad Azure Key Vault usando i seguenti tipi di credenziali:

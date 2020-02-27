@@ -1,5 +1,5 @@
 ---
-title: Che cos'è SQL Server Reporting Services (SSRS) | Microsoft Docs
+title: Che cos'è SQL Server Reporting Services | Microsoft Docs
 description: Informazioni sugli strumenti e i servizi per i report di Reporting Services impaginati e per dispositivi mobili in locale.
 ms.date: 05/06/2019
 ms.prod: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571564"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082629"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
 

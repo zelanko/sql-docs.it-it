@@ -1,6 +1,6 @@
 ---
-title: Portale Web di un server di report (modalità nativa SSRS) | Microsoft Docs
-ms.date: 12/05/2018
+title: Portale Web di un server di report (modalità nativa) | Microsoft Docs
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874909"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082515"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Portale Web di un server di report (modalità nativa SSRS)
 
@@ -30,7 +30,7 @@ Il portale Web di un server di report di Reporting Services è un'esperienza bas
 
 - Visualizzare, ricercare, stampare e sottoscrivere report.
 - Creare, proteggere e gestire la gerarchia di cartelle per organizzare gli elementi presenti nel server.
-- Configurare la sicurezza basata sui ruoli dalla quale dipende l'accesso a elementi e operazioni.
+- Configurare la sicurezza basata sui ruoli dalla quale dipende l'accesso a elementi e operazioni. Per informazioni dettagliate, vedere [Definizioni di ruolo - Ruoli predefiniti](security/role-definitions-predefined-roles.md).
 - Configurare le proprietà di esecuzione del report, la cronologia del report e i parametri del report.
 - Creare pianificazioni condivise e origini dei dati condivise per migliorare la gestione delle pianificazioni e delle connessioni alle origini dei dati.
 - Creare sottoscrizioni guidate dai dati che consentono di distribuire i report a un elenco di destinatari di grandi dimensioni.

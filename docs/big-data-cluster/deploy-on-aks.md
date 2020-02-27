@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251205"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173613"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurare il servizio Azure Kubernetes per le distribuzioni di cluster Big Data di SQL Server
 
@@ -68,6 +68,12 @@ Un gruppo di risorse di Azure è un gruppo logico in cui le risorse di Azure ven
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. Identificare l'area di Azure in cui si vuole distribuire il cluster e le risorse usando questo comando:
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. Creare un gruppo di risorse con il comando **az group create**. L'esempio seguente consente di creare un gruppo di risorse denominato `sqlbdcgroup` nell'area `westus2`.
@@ -132,7 +138,7 @@ Scegliere la versione più recente disponibile del cluster. Annotare il numero d
    --kubernetes-version <version number>
    ```
 
-   È possibile aumentare o ridurre il numero di nodi dell'agente Kubernetes modificando `--node-count <n>`, dove `<n>` indica il numero di nodi dell'agente che si vuole usare. Questo numero non include il nodo Kubernetes master, gestito in background dal servizio Azure Kubernetes. L'esempio precedente usa un solo nodo a scopo di valutazione.
+   È possibile aumentare o ridurre il numero di nodi dell'agente Kubernetes modificando `--node-count <n>`, dove `<n>` indica il numero di nodi dell'agente che si vuole usare. Questo numero non include il nodo Kubernetes master, gestito in background dal servizio Azure Kubernetes. L'esempio precedente usa un solo nodo a scopo di valutazione. È anche possibile modificare `--node-vm-size` per selezionare una dimensione di macchina virtuale appropriata corrispondente ai requisiti del carico di lavoro. Usare il comando `az vm list-sizes --location westus2 -o table` per elencare le dimensioni delle macchine virtuali disponibili nella propria area.
 
    Dopo alcuni minuti, il comando viene completato e restituisce le informazioni in formato JSON sul cluster.
 
@@ -161,6 +167,7 @@ Se si verificano problemi durante la creazione di un servizio Azure Kubernetes c
 
 - Assicurarsi di avere installato la [versione più recente dell'interfaccia della riga di comando di Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Provare a eseguire gli stessi passaggi usando un gruppo di risorse e un nome di cluster diversi.
+- Vedere la [documentazione dettagliata sulla risoluzione dei problemi per il servizio Azure Kubernetes](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

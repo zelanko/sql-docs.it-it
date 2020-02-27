@@ -1,5 +1,5 @@
 ---
-title: Aggiungere e modificare una linea (Generatore report e SSRS) | Microsoft Docs
+title: Aggiungere e modificare una linea (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b58cb9cd7b4fcb13454b1a8d7cebcf380987fcbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e188a075237c7cea2c05bb8bc0a5dd6f1496f39e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582100"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080631"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Aggiungere e modificare una linea (Generatore report e SSRS)
   È possibile aggiungere una linea a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per inserire un elemento grafico per separare le varie sezioni. L'aspetto della linea può essere personalizzato modificando le proprietà, come il colore o lo stile. Ad esempio, è necessario incorporare i colori aziendali nel report.    

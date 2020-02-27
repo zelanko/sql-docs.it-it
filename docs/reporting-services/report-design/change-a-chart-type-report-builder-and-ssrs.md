@@ -1,5 +1,5 @@
 ---
-title: Modificare un tipo di grafico (Generatore report e SSRS) | Microsoft Docs
+title: Modificare un tipo di grafico (Generatore report) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b035a1efda99ac47063cb16c3b6ff57b40035da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: de9785121ebd5703abda6c1a52dfb02e180a42cb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581754"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081884"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modificare un tipo di grafico (Generatore report e SSRS)
 Quando si inserisce un grafico in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la prima volta, viene visualizzata la finestra di dialogo **Seleziona tipo di grafico** . Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  

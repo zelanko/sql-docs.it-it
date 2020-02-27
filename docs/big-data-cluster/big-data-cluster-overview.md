@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720936"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173641"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+# <a name="what-are-big-data-clusters-2019"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ I [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 
 
 La gestione e il monitoraggio vengono forniti tramite una combinazione di strumenti da riga di comando, API, portali e viste a gestione dinamica.
 
-È possibile usare Azure Data Studio per eseguire un'ampia gamma di attività sul cluster Big Data. Tutto questo viene reso possibile dalla nuova **estensione di SQL Server 2019**. L'estensione offre quanto segue:
-
+È possibile usare [Azure Data Studio](../azure-data-studio/what-is.md) per eseguire un'ampia gamma di attività sul cluster Big Data:
 - Frammenti predefiniti per attività di gestione comuni.
 - Possibilità di esplorare HDFS, caricare file, visualizzare file in anteprima e creare directory.
 - Possibilità di creare, aprire ed eseguire notebook compatibili con Jupyter.
-- Procedura guidata di virtualizzazione dei dati per semplificare la creazione di origini dati esterne.
+- Procedura guidata di virtualizzazione dei dati per semplificare la creazione di origini dati esterne (funzionalità abilitata dall'**estensione di virtualizzazione dei dati**).
 
 ## <a id="architecture"></a> Architettura
 

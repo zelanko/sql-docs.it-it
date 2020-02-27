@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245295"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179282"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Ogni database include un contatore che viene incrementato a ogni operazione di i
   
 **timestamp** è il sinonimo del tipo di dati **rowversion** ed è conforme al comportamento dei sinonimi dei tipi di dati. Nelle istruzioni DDL usare **rowversion** anziché **timestamp** laddove possibile. Per altre informazioni, vedere [Sinonimi dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Il tipo di dati [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp**di** è diverso dal tipo di dati **timestamp** definito nello standard ISO.
+Il tipo di dati **timestamp** di [!INCLUDE[tsql](../../includes/tsql-md.md)] è diverso dal tipo di dati **timestamp** definito nello standard ISO.
   
 > [!NOTE]  
 >  La sintassi di **timestamp** è deprecata. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-È possibile utilizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di esempio seguenti per implementare il controllo della concorrenza ottimistico nella tabella `MyTest` durante l'aggiornamento.
+È possibile utilizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di esempio seguenti per implementare il controllo della concorrenza ottimistico nella tabella `MyTest` durante l'aggiornamento. Lo script usa `<myRv>` per rappresentare il valore **rowversion** dall'ultima lettura della riga. Sostituire il valore con il valore **rowversion** effettivo. Un esempio di un valore **rowversion** effettivo è `0x00000000000007D3`.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -89,7 +89,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -99,12 +99,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` è il valore della colonna **rowversion** relativo alla riga che indica l'ultima volta in cui la riga è stata letta. Tale valore deve essere sostituito dal valore **rowversion** effettivo. Un esempio del valore **rowversion** effettivo è 0x00000000000007D3.
-  
+
+
 È possibile inoltre inserire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di esempio in una transazione. Eseguendo una query sulla variabile `@t` nell'ambito della transazione, è possibile recuperare la colonna aggiornata `myKey` della tabella senza rieseguire una query sulla tabella `MyTest`.
-  
-Di seguito viene riportato lo stesso esempio che usa la sintassi **timestamp**:
-  
+
+Di seguito viene riportato lo stesso esempio che usa la sintassi **timestamp**. Sostituire `<myTS>` con un **timestamp** effettivo.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -118,7 +118,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

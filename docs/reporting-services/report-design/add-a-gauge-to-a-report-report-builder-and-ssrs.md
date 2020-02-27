@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un misuratore a un report (Generatore report e SSRS) | Microsoft Docs
+title: Aggiungere un misuratore a un report (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b5c1a9989831e6c28cd2aecd58a3e9f8640465c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 45f01040e150a613cf49451371fd4e7b742042c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575014"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080734"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Aggiungere un misuratore a un report (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , per riepilogare i dati in formato visivo è possibile usare un'area dati Misuratore. Dopo aver aggiunto tale area dati all'area di progettazione, è possibile trascinare i campi del set di dati del report in un riquadro dei dati nel misuratore.  

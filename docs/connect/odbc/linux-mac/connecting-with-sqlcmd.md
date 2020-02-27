@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005915"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971439"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ Nella versione corrente, sono disponibili le opzioni seguenti:
 - -e Scrive gli script di input nel dispositivo di output standard (stdout).
 
 - -E usa una connessione trusted e l'autenticazione integrata. Per altre informazioni sull'esecuzione di connessioni trusted che usano l'autenticazione integrata da un client Linux o macOS, vedere [Uso dell'autenticazione integrata](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] Specifica le tabelle codici di input e output. Il numero specificato per codepage è un valore numerico che indica una tabella codici di Linux installata.
+(disponibile dalla versione 17.5.1.1)
 
 - -h *numero_di_righe* Specifica il numero di righe da stampare tra le intestazioni delle colonne.  
   
@@ -159,8 +162,6 @@ Nella versione corrente, sono disponibili i comandi seguenti:
 Nella versione corrente non sono disponibili le opzioni seguenti:  
 
 - -A Stabilisce la connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite una connessione amministrativa dedicata (DAC, Dedicated Administrator Connection). Per informazioni su come effettuare una connessione amministrativa dedicata (DAC), vedere [Linee guida per la programmazione](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-  
-- -f *tabella_codici* Specifica le tabelle codici di input e output.  
   
 - -L Elenca i computer server configurati localmente e i nomi dei computer server che trasmettono in rete.  
   

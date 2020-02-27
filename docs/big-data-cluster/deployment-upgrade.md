@@ -5,16 +5,16 @@ description: Informazioni su come aggiornare cluster Big Data di SQL Server a un
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831830"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256869"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -34,7 +34,7 @@ Prima di procedere, consultare le [note sulla versione dell'aggiornamento per ve
 
 ## <a name="upgrade-from-supported-release"></a>Aggiornamento dalla versione supportata
 
-In questa sezione viene illustrato come aggiornare BDC per SQL Server da una versione supportata (inizia con SQL Server 2019 GDR1) a una versione supportata più recente.
+In questa sezione viene illustrato come aggiornare BDC per SQL Server da una versione supportata (a partire da SQL Server 2019 GDR1) a una versione supportata più recente.
 
 1. Eseguire un backup dell'istanza master di SQL Server.
 2. Eseguire un backup di HDFS.
@@ -76,7 +76,7 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
 >I tag immagine più recenti sono disponibili nelle [note sulla versione dei cluster Big Data di SQL Server 2019](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->Se si usa un repository privato per eseguire preventivamente il pull delle immagini per la distribuzione o l'aggiornamento di BDC, verificare che le immagini di compilazione correnti e le immagini di compilazione di destinazione si trovino nel repository privato. Questo consente di ripristinare correttamente lo stato precedente, se necessario. Inoltre, se sono le credenziali del repository privato sono state modificate dopo la distribuzione originale, aggiornare il segreto corrispondente in Kubernetes prima di eseguire l'aggiornamento. Non è disponibile alcun supporto per l'aggiornamento delle credenziali con le variabili di ambiente DOCKER_PASSWORD e DOCKER_USERNAME. Aggiornare il segreto usando [la modifica dei segreti in kubectl](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). L'aggiornamento con diversi repository privati per le compilazioni correnti e di destinazione non è supportato.
+>Se si usa un repository privato per eseguire preventivamente il pull delle immagini per la distribuzione o l'aggiornamento di BDC, verificare che le immagini di compilazione correnti e le immagini di compilazione di destinazione si trovino nel repository privato. Questo consente di ripristinare correttamente lo stato precedente, se necessario. Se le credenziali del repository privato sono state modificate dopo la distribuzione originale, inoltre, aggiornare le variabili di ambiente corrispondenti DOCKER_PASSWORD e DOCKER_USERNAME. L'aggiornamento con diversi repository privati per le compilazioni correnti e di destinazione non è supportato.
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>Aumentare il timeout per l'aggiornamento
 
@@ -93,7 +93,15 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-Per aumentare i timeout per un aggiornamento, modificare la mappa di configurazione dell'aggiornamento. Per modificare la mappa di configurazione dell'aggiornamento:
+Per aumentare i timeout per un aggiornamento, usare i parametri **--controller-timeout** e **--component-timeout** per specificare valori più elevati quando si esegue l'aggiornamento. Questa opzione è disponibile solo a partire da SQL Server 2019 CU2. Ad esempio:
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** indica il numero di minuti di attesa del completamento dell'aggiornamento del controller o del database del controller.
+**--component-timeout** definisce la quantità di tempo disponibile per il completamento di ogni fase successiva dell'aggiornamento.
+
+Per aumentare i timeout per un aggiornamento prima della versione SQL Server 2019 CU2, modificare la mappa di configurazione dell'aggiornamento. Per modificare la mappa di configurazione dell'aggiornamento:
 
 Eseguire il comando seguente:
 

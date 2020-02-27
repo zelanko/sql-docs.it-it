@@ -1,5 +1,5 @@
 ---
-title: Add Bevel, Emboss, and Texture Styles to a Chart (Aggiungere gli stili smussato, rilievo e trama a un grafico (Generatore report e SSRS)) | Microsoft Docs
+title: Aggiungere gli stili smussato, rilievo e trama a un grafico (Generatore report) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 34f69e4c8c1b62e01f8cb73e26f84d05e427a9ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581661"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078755"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Effetti per i grafici - Aggiungere smussatura, rilievo o trama (Generatore report)
   Quando si utilizzano determinati tipi di grafico, è possibile specificare un effetto di disegno per aumentarne l'effetto visivo. Tali effetti vengono applicati solo alle serie, mentre non influiscono su altri elementi del grafico.  

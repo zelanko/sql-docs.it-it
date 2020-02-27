@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Machine Learning Services è una funzionalità di SQL Server che offre la possibilità di eseguire script Python e R con dati relazionali. È possibile usare pacchetti e framework open source, oltre ai pacchetti Python e R di Microsoft per l'analisi predittiva e le funzioni di Machine Learning. Gli script vengono eseguiti nel database senza trasferire i dati all'esterno di SQL Server o in rete. Questo articolo illustra le nozioni di base di Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/07/2019
+ms.date: 02/04/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558289"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004567"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Che cos'è Machine Learning Services per SQL Server (Python e R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,19 @@ Esistono due modi per eseguire gli script Python e R in Machine Learning Service
 
 + È anche possibile usare il client Python o R preferito e scrivere script che eseguono il push dell'esecuzione (denominata *contesto di calcolo remoto*) a un'istanza di SQL Server remota. Per altre informazioni, vedere come configurare un client di data science per lo [sviluppo in Python](python/setup-python-client-tools-sql.md) e lo [sviluppo in R](r/set-up-a-data-science-client.md).
 
+<a name="versions"></a>
+
+## <a name="python-and-r-versions"></a>Versioni di Python e R
+
+La versione di Python e R inclusa in Machine Learning Services dipende dalla versione di SQL Server in uso. 
+
+| Versione di SQL Server | Versione Python | Versione di R |
+|-|-|-|
+| SQL Server 2017 | 3.5.2 | 3.3.3 |
+| SQL Server 2019 | 3.7.3 | 3.5.2 |
+
+Per la versione di R in SQL Server 2016, vedere la sezione [Versione di R in Che cos'è R Services?](r/sql-server-r-services.md#version)
+
 <a name="packages"></a>
 
 ## <a name="python-and-r-packages"></a>Pacchetti Python e R
@@ -95,11 +108,10 @@ Per altre informazioni sui pacchetti installati con Machine Learning Services e 
 
 1. Scrivere il primo script Python o R
 
-    + Avvio rapido: [Creare ed eseguire script R semplici in SQL](tutorials/quickstart-r-create-script.md)
-    + Avvio rapido: [Creare ed eseguire il training di un modello predittivo in R](tutorials/quickstart-r-train-score-model.md)
+    + Avvio rapido: [Eseguire script Python semplici](tutorials/quickstart-python-create-script.md)
+    + Avvio rapido: [Eseguire script R semplici](tutorials/quickstart-r-create-script.md)
     + Esercitazione: [Usare Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): esplorare dati, progettare caratteristiche, eseguire il training e la distribuzione di modelli ed eseguire stime (serie in cinque parti)
     + Esercitazione: [Usare R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): esplorare dati, progettare caratteristiche, eseguire il training e la distribuzione di modelli ed eseguire stime (serie in cinque parti)
-    + Esercitazione: [Usare Machine Learning Services in R Tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): esplorare dati, creare grafici e tracciati, progettare caratteristiche, eseguire il training e la distribuzione di modelli ed eseguire stime (serie in sei parti)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

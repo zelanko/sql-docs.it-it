@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909651"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544900"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
 
@@ -307,6 +307,7 @@ In questa sezione vengono descritti i nuovi comportamenti introdotti con il live
 |Vedere l'esempio E nella sezione Esempi riportata più avanti.|Vedere l'esempio F nella sezione Esempi riportata più avanti.|Basso|
 |La funzione ODBC {fn CONVERT()} utilizza il formato di data predefinito della lingua specifica. Per alcune lingue il formato predefinito è AGM, che può comportare errori di conversione quando la funzione CONVERT() è combinata con altre funzioni, ad esempio `{fn CURDATE()}`, che prevedono l'uso del formato AMG.|La funzione ODBC `{fn CONVERT()}` usa lo stile 121, un formato AMG indipendente dalla lingua, per la conversione nei tipi di dati ODBC SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP.|Basso|
 |Le funzioni intrinseche datetime, ad esempio DATEPART, non richiedono che i valori di input di tipo stringa siano valori letterali datetime validi. Ad esempio, `SELECT DATEPART (year, '2007/05-30')` viene compilato correttamente.|Le funzioni intrinseche datetime, ad esempio `DATEPART`, richiedono che i valori di input di tipo stringa siano valori letterali datetime validi. Quando si utilizza un valore letterale datetime non valido, viene restituito l'errore 241.|Basso|
+|Gli spazi finali specificati nel primo parametro di input per la funzione REPLACE vengono eliminati quando il parametro è di tipo char. Ad esempio, nell'istruzione SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>', il valore 'ABC ' viene erroneamente valutato come 'ABC'.|Gli spazi finali vengono sempre mantenuti. Per le applicazioni che si basano sul comportamento precedente della funzione, usare la funzione RTRIM quando si specifica il primo parametro di input per la funzione. La sintassi seguente, ad esempio, riproduce il comportamento di SQL Server 2005 SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'.|Basso|
 
 ## <a name="reserved-keywords"></a>Parole chiave riservate
 

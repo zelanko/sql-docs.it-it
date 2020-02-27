@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320588"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256744"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ Dispositivo di**backup**
  Una strategia di ripristino può essere considerata efficace solo dopo l'esecuzione di test dei backup. È essenziale testare accuratamente la strategia di backup per ogni database ripristinando una copia del database in un sistema di prova. È necessario testare il ripristino di tutti i tipi di backup che si desidera utilizzare. Si consiglia inoltre di eseguire, dopo il ripristino del backup, delle verifiche di coerenza via DBCC CHECKDB del database per assicurarsi che il supporto di backup non sia danneggiato. 
 
 ### <a name="verify-media-stability-and-consistency"></a>Verificare la stabilità e la coerenza dei supporti
-Usare le opzioni di verifica disponibili nelle utilità di backup (comando BACKUP di T-SQL, piani di manutenzione dei server SQL, software o soluzione di backup dell'utente e così via). Per un esempio, vedere [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Usare funzionalità avanzate come BACKUP CHECKSUM per rilevare i problemi del supporto di backup. Per altre informazioni,[ vedere ](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+Usare le opzioni di verifica disponibili nelle utilità di backup (comando BACKUP di T-SQL, piani di manutenzione dei server SQL, software o soluzione di backup dell'utente e così via). Per un esempio, vedere [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Usare funzionalità avanzate come BACKUP CHECKSUM per rilevare i problemi del supporto di backup. Per altre informazioni, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### <a name="document-backuprestore-strategy"></a>Strategia di backup/ripristino dei documenti 
 È consigliabile documentare le procedure di backup e ripristino e mantenerne una copia nella documentazione relativa alle procedure operative aziendali.

@@ -1,7 +1,7 @@
 ---
 title: Uso di Always Encrypted con il driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2020
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae119c85877768f7a3356a139c5aaf3f70dc6f8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75681712"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004610"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -147,7 +147,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Mentre gli altri provider dell'archivio chiavi in questo articolo sono disponibili su tutte le piattaforme supportate dal driver, l'implementazione di SQLServerColumnEncryptionCertificateStoreProvider del driver JDBC è disponibile solo nei sistemi operativi Windows. Ha una dipendenza da sqljdbc_auth.dll disponibile nel pacchetto del driver. Per usare questo provider, copiare il file sqljdbc_auth.dll in una directory nel percorso di sistema Windows nel computer in cui è installato il driver JDBC. In alternativa è possibile impostare la proprietà di sistema java.library.path in modo da specificare la directory di sqljdbc_auth.dll. Se si esegue Java Virtual Machine (JVM) a 32 bit, utilizzare il file sqljdbc_auth.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, utilizzare il file sqljdbc_auth.dll nella cartella x64. Ad esempio, se si usa il driver JVM a 32 bit e il driver JDBC è installato nella directory predefinita, specificare il percorso della DLL tramite l'argomento seguente della VM (Virtual Machine) quando l'applicazione Java viene avviata: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Mentre gli altri provider dell'archivio chiavi in questo articolo sono disponibili su tutte le piattaforme supportate dal driver, l'implementazione di SQLServerColumnEncryptionCertificateStoreProvider del driver JDBC è disponibile solo nei sistemi operativi Windows. Ha una dipendenza da mssql-jdbc_auth-\<versione>-\<arch>.dll disponibile nel pacchetto del driver. Per usare questo provider, copiare il file mssql-jdbc_auth-\<versione>-\<arch>.dll in una directory nel percorso di sistema Windows nel computer in cui è installato il driver JDBC. In alternativa è possibile impostare la proprietà di sistema java.library.path in modo da specificare la directory di mssql-jdbc_auth-\<versione>-\<arch>.dll. Se si esegue Java Virtual Machine (JVM) a 32 bit, usare il file mssql-jdbc_auth-\<versione>-x86.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, usare il file mssql-jdbc_auth-\<versione>-x64.dll nella cartella x64. Ad esempio, se si usa il driver JVM a 32 bit e il driver JDBC è installato nella directory predefinita, specificare il percorso della DLL tramite l'argomento seguente della VM (Virtual Machine) quando l'applicazione Java viene avviata: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Uso del provider dell'archivio chiavi Java
 Il driver JDBC è disponibile in un’implementazione predefinita del provider dell’archivio chiavi per l’archivio chiavi Java. Se la proprietà della stringa di connessione **keyStoreAuthentication** è presente nella stringa di connessione ed è impostata su "JavaKeyStorePassword", il driver crea automaticamente un'istanza del provider e lo registra per l'archivio chiavi Java. Il nome del provider dell'archivio chiavi Java è MSSQL_JAVA_KEYSTORE. È anche possibile eseguire query su questo nome usando l'API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 

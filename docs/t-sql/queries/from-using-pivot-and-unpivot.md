@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d776fbae94ae69af10595d7c0d50b84449dd9875
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72305171"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255995"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
 
@@ -157,6 +157,8 @@ I valori univoci restituiti dalla colonna `EmployeeID` diventano campi nel set d
   
 > [!IMPORTANT]  
 >  Quando le funzioni di aggregazione sono usate con `PIVOT`, gli eventuali valori Null presenti nella colonna dei valori non vengono considerati nel calcolo di un'aggregazione.  
+
+## <a name="unpivot-example"></a>Esempio di UNPIVOT
   
 `UNPIVOT` esegue l'operazione quasi opposta rispetto a `PIVOT`, ruotando le colonne in righe. Si supponga che la tabella generata nell'esempio precedente venga archiviata nel database come `pvt` e che si desideri ruotare gli identificatori di colonna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` in valori di riga corrispondenti a un particolare fornitore. È quindi necessario identificare altre due colonne. La colonna che conterrà i valori di colonna da ruotare (`Emp1`, `Emp2` e così via) sarà denominata `Employee` e la colonna che conterrà i valori che attualmente si trovano nelle colonne ruotate sarà denominata `Orders`. Queste colonne corrispondono rispettivamente a *pivot_column* e *value_column* nella definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La query è la seguente.  
   

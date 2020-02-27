@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2019
+ms.date: 02/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row mode execution
 - batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909751"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466172"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Il piano di esecuzione di una query è costituito dalla definizione degli elemen
 
 Il processo di scelta di un piano di esecuzione è denominato ottimizzazione. Query Optimizer è uno dei principali componenti di un sistema di database SQL. L'overhead generato dall'utilizzo di Query Optimizer per l'analisi della query e la scelta di un piano è ampiamente compensato dall'efficienza del piano di esecuzione scelto. Si supponga, ad esempio, che il progetto di costruzione di una casa venga assegnato a due imprese edili diverse. Se un'impresa dedica alcuni giorni alla pianificazione della costruzione della casa e l'altra impresa inizia immediatamente la costruzione senza alcuna pianificazione, è molto probabile che l'impresa che ha pianificato il progetto termini la costruzione per prima.
 
-Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un'utilità di ottimizzazione basata sui costi. A ogni piano di esecuzione possibile corrisponde un costo in termini di quantità di risorse del computer utilizzate. Query Optimizer analizza i piani possibili e sceglie il piano con il costo stimato minore. Per alcune istruzioni `SELECT` complesse i piani di esecuzione possibili sono migliaia. In questi casi, Query Optimizer non analizza tutte le combinazioni possibili, ma utilizza algoritmi complessi per individuare rapidamente un piano di esecuzione il cui costo si avvicini il più possibile al costo minimo teorico.
+Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un ottimizzatore basato sui costi. A ogni piano di esecuzione possibile corrisponde un costo in termini di quantità di risorse del computer utilizzate. Query Optimizer analizza i piani possibili e sceglie il piano con il costo stimato minore. Per alcune istruzioni `SELECT` complesse i piani di esecuzione possibili sono migliaia. In questi casi, Query Optimizer non analizza tutte le combinazioni possibili, ma utilizza algoritmi complessi per individuare rapidamente un piano di esecuzione il cui costo si avvicini il più possibile al costo minimo teorico.
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non sceglie esclusivamente il piano di esecuzione con il costo minore in termini di risorse, ma individua il piano che restituisce più rapidamente i risultati all'utente con un costo ragionevole in termini di risorse. Ad esempio, l'esecuzione parallela di una query in genere utilizza una quantità di risorse maggiore rispetto all'esecuzione seriale, ma consente di completare la query più rapidamente. Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] userà un piano di esecuzione parallela per restituire i risultati, a condizione che tale piano non aumenti il carico sul server.
 
@@ -132,7 +132,7 @@ Di seguito viene illustrata la procedura di base necessaria per elaborare una si
 5. Il motore relazionale elabora i dati restituiti dal motore di archiviazione nel formato definito per il set di risultati e restituisce il set di risultati al client.
 
 ### <a name="ConstantFolding"></a> Valutazione delle espressioni ed elaborazione delle costanti 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alcune espressioni costanti vengono valutate in una fase preliminare per migliorare le prestazioni delle query. Questo comportamento viene denominato elaborazione delle costanti in fase di compilazione. Una costante è un valore letterale di [!INCLUDE[tsql](../includes/tsql-md.md)], ad esempio 3, ABC, 2005-12-31, 1.0e3 o 0x12345678.
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alcune espressioni costanti vengono valutate in una fase preliminare per migliorare le prestazioni delle query. Questo comportamento viene denominato elaborazione delle costanti in fase di compilazione. Una costante è un valore letterale [!INCLUDE[tsql](../includes/tsql-md.md)], ad esempio `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` o `0x12345678`.
 
 #### <a name="foldable-expressions"></a>Espressioni per cui è possibile eseguire l'elaborazione delle costanti in fase di compilazione
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzata l'elaborazione delle costanti in fase di compilazione per i tipi di espressioni seguenti:
@@ -203,11 +203,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -219,7 +219,7 @@ La procedura di base descritta per l'elaborazione di un'istruzione `SELECT` è v
 Anche le istruzioni DDL (Data Definition Language), ad esempio `CREATE PROCEDURE` o `ALTER TABLE`, vengono risolte in una serie di operazioni relazionali eseguite nelle tabelle del catalogo di sistema e in alcuni casi, ad esempio con `ALTER TABLE ADD COLUMN`, nelle tabelle di dati.
 
 ### <a name="worktables"></a>Tabelle di lavoro
-È possibile che il motore relazionale debba compilare una tabella di lavoro per eseguire un'operazione logica specificata in un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. Le tabelle di lavoro sono tabelle interne utilizzate per inserirvi i risultati intermedi. Le tabelle di lavoro vengono generate per alcune query `GROUP BY`, `ORDER BY`o `UNION` . Se, ad esempio, una clausola `ORDER BY` fa riferimento a colonne non coperte da indici, può essere necessario generare una tabella di lavoro per disporre il set di risultati nell'ordine richiesto. Le tabelle di lavoro vengono a volte utilizzate anche come spool per conservare temporaneamente il risultato dell'esecuzione di un piano della query. Le tabelle di lavoro vengono compilate in tempdb e vengono eliminate automaticamente quando non sono più necessarie.
+È possibile che il motore relazionale debba compilare una tabella di lavoro per eseguire un'operazione logica specificata in un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. Le tabelle di lavoro sono tabelle interne utilizzate per inserirvi i risultati intermedi. Le tabelle di lavoro vengono generate per alcune query `GROUP BY`, `ORDER BY`o `UNION` . Se ad esempio una clausola `ORDER BY` fa riferimento a colonne non coperte da indici, può essere necessario generare una tabella di lavoro per disporre il set di risultati nell'ordine richiesto. Le tabelle di lavoro vengono a volte utilizzate anche come spool per conservare temporaneamente il risultato dell'esecuzione di un piano della query. Le tabelle di lavoro vengono compilate in tempdb e vengono eliminate automaticamente quando non sono più necessarie.
 
 ### <a name="view-resolution"></a>Risoluzione delle viste
 In Query Processor di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le viste indicizzate e non indicizzate vengono gestite in modi diversi: 
@@ -240,7 +240,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -251,16 +251,16 @@ In base a questa vista, le due istruzioni [!INCLUDE[tsql](../includes/tsql-md.md
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -328,7 +328,7 @@ In Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vie
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * L'opzione di sessione `NUMERIC_ROUNDABORT` è impostata su OFF.
+* L'opzione di sessione `NUMERIC_ROUNDABORT` è impostata su OFF.
 * In Query Optimizer viene trovata una corrispondenza tra le colonne dell'indice della vista e gli elementi della query, tra cui: 
   * Predicati relativi a condizioni di ricerca nella clausola WHERE
   * Operazioni di join
@@ -348,7 +348,6 @@ Non è necessario che una query faccia riferimento in modo esplicito a una vista
 Query Optimizer elabora le viste indicizzate a cui fa riferimento la clausola `FROM` come viste standard. Tramite Query Optimizer la definizione della vista viene espansa nella query all'inizio del processo di ottimizzazione. Viene quindi eseguita la ricerca della corrispondenza nella vista indicizzata. La vista indicizzata potrebbe essere usata nel piano di esecuzione finale selezionato da Query Optimizer oppure il piano può ottenere dalla vista i dati necessari accedendo alle tabelle di base a cui fa riferimento la vista. Tramite Query Optimizer viene scelta l'alternativa con il costo inferiore.
 
 #### <a name="using-hints-with-indexed-views"></a>Utilizzo di hint con viste indicizzate
-
 È possibile impedire l'uso delle viste indicizzate da parte di una query usando l'hint per la query `EXPAND VIEWS` oppure è possibile usare l'hint di tabella `NOEXPAND` per fare in modo che venga impiegato un indice per una vista indicizzata specificata nella clausola `FROM` di una query. È tuttavia consigliabile lasciar determinare in modo dinamico a Query Optimizer i metodi di accesso migliori da utilizzare per ogni query. Limitare l'uso degli hint `EXPAND` e `NOEXPAND` a casi specifici per i quali si è verificato che in tal modo è possibile ottenere un miglioramento significativo delle prestazioni.
 
 L'opzione `EXPAND VIEWS` specifica che in Query Optimizer non verranno usati indici delle viste per l'intera query. 
@@ -364,7 +363,6 @@ In genere, quando Query Optimizer trova una corrispondenza tra una vista indiciz
 Nelle definizioni delle viste indicizzate non sono consentiti hint. Nella modalità di compatibilità 80 e superiore, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono ignorati gli hint contenuti nelle definizioni delle viste indicizzate quando ne viene eseguita la manutenzione oppure quando vengono eseguite query in cui sono utilizzate viste indicizzate. Sebbene l'utilizzo di hint nelle definizioni delle viste indicizzate non comporti la generazione di un errore di sintassi nella modalità di compatibilità 80, gli hint vengono ignorati.
 
 ### <a name="resolving-distributed-partitioned-views"></a>Risoluzione di viste partizionate distribuite
-
 Query Processor di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ottimizza le prestazioni delle viste partizionate distribuite. Per le prestazioni delle viste partizionate distribuite, l'aspetto più importante è rappresentato dalla necessità di ridurre al minimo la quantità di dati trasferiti tra server membri.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila piani dinamici e intelligenti che consentono di usare le query distribuite in modo efficiente ai fini dell'accesso ai dati da tabelle membro remote: 
@@ -408,34 +406,66 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila a volte questi tipi di piani di esecuzione dinamici anche per query senza parametri. Query Optimizer può parametrizzare una query in modo che il piano di esecuzione possa essere riutilizzato. Se Query Optimizer esegue la parametrizzazione di una query che fa riferimento a una vista partizionata, non potrà più basarsi sul presupposto che le righe necessarie verranno recuperate da una tabella di base specificata e dovrà utilizzare filtri dinamici nel piano di esecuzione.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Esecuzione di stored procedure e trigger
-
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene archiviata solo l'origine di stored procedure e trigger. Se una stored procedure o un trigger viene eseguito per la prima volta, l'origine viene compilata in un piano di esecuzione. Se la stored procedure o il trigger viene eseguito nuovamente prima che il piano di esecuzione venga rimosso dalla memoria, il motore relazionale rileva e riutilizza il piano esistente. Se il piano è stato rimosso dalla memoria, viene creato un nuovo piano. Questo processo è simile al processo seguito da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per tutte le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)]. Il vantaggio principale, in termini di prestazioni, di stored procedure e trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rispetto ai batch di [!INCLUDE[tsql](../includes/tsql-md.md)] dinamico è che le relative istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] sono sempre le stesse, pertanto, il motore relazionale mette agevolmente in corrispondenza con tutti i piani di esecuzione esistenti. I piani di stored procedure e trigger sono quindi facilmente riutilizzabili.
 
 Il piano di esecuzione delle stored procedure e dei trigger viene eseguito indipendentemente dal piano di esecuzione del batch che chiama la stored procedure o che attiva il trigger. In tal modo viene garantito un maggiore riutilizzo dei piani di esecuzione delle stored procedure e dei trigger.
 
 ## <a name="execution-plan-caching-and-reuse"></a>Memorizzazione nella cache e riutilizzo del piano di esecuzione
-
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un pool di memoria utilizzato per archiviare sia i piani di esecuzione che i buffer dei dati. La percentuale del pool allocata ai piani di esecuzione o ai buffer dei dati varia dinamicamente in base allo stato del sistema. La parte del pool di memoria usata per archiviare i piani di esecuzione è denominata cache dei piani.
+
+La cache dei piani ha due archivi per tutti i piani compilati:
+-  Archivio della cache di tipo **Piani per gli oggetti** usato per i piani correlati agli oggetti persistenti (stored procedure, funzioni e trigger).
+-  Archivio della cache di tipo **Piani SQL** usato per i piani correlati alle query con parametri automatici, dinamiche o preparate.
+
+La query seguente fornisce informazioni sull'utilizzo della memoria per questi due archivi della cache:
+
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
+
+> [!NOTE]
+> La cache dei piani ha due archivi aggiuntivi che non vengono usati per l'archiviazione dei piani:     
+> -  Archivio della cache di tipo **Alberi associati** usato per le strutture dei dati usate durante la compilazione di un piano per viste, vincoli e impostazioni predefinite. Queste strutture sono note come alberi associati o alberi di algebrizzazione.      
+> -  Archivio della cache di tipo **Stored procedure estese** usato per le procedure di sistema predefinite, ad esempio `sp_executeSql` o `xp_cmdshell`, che vengono definite usando una DLL e non le istruzioni Transact-SQL. La struttura memorizzata nella cache contiene solo il nome della funzione e il nome della DLL in cui è implementata la procedura.      
 
 I piani di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includono i componenti principali seguenti: 
 
-- **Piano di esecuzione della query**     
-  La parte centrale del piano di esecuzione è una struttura di dati rientrante di sola lettura che può essere utilizzata da un numero qualsiasi di utenti. Questo elemento è detto piano della query. Nel piano della query non viene archiviato alcun contesto utente. In memoria non vi sono mai più di una o due copie del piano della query: una copia per tutte le esecuzioni seriali e una per tutte le esecuzioni parallele. La copia parallela copre tutte le esecuzioni parallele, indipendentemente dal loro grado di parallelismo. 
+- **Piano compilato** (o piano di query)     
+  Il piano di query generato dal processo di compilazione è per lo più una struttura dei dati rientrante di sola lettura usata da un numero qualsiasi di utenti. Archivia informazioni su:
+  -  Operatori fisici che implementano l'operazione descritta dagli operatori logici. 
+  -  Ordine di questi operatori, che determina l'ordine in cui i è possibile accedere ai dati, filtrarli e aggregarli. 
+  -  Numero di righe stimate che passano attraverso gli operatori. 
+  
+     > [!NOTE]
+     > Nelle versioni più recenti del [!INCLUDE[ssde_md](../includes/ssde_md.md)] vengono archiviate anche le informazioni sugli oggetti statistici usate per la [stima della cardinalità](../relational-databases/performance/cardinality-estimation-sql-server.md).
+     
+  -  Oggetti di supporto da creare, ad esempio [tabelle di lavoro](#worktables) o file di lavoro in tempdb. 
+  Nel piano di query non vengono archiviate informazioni di contesto utente o di runtime. In memoria non vi sono mai più di una o due copie del piano della query: una copia per tutte le esecuzioni seriali e una per tutte le esecuzioni parallele. La copia parallela copre tutte le esecuzioni parallele, indipendentemente dal loro grado di parallelismo.   
+  
 - **Contesto di esecuzione**     
-  Ogni utente che esegue la query dispone di una struttura di dati contenente i dati specifici per l'esecuzione, ad esempio i valori dei parametri. Questa struttura di dati è denominata contesto di esecuzione. Le strutture di dati del contesto di esecuzione vengono riutilizzate. Se un utente esegue una query e una delle strutture non è in uso, questa viene reinizializzata con il contesto del nuovo utente. 
+  Ogni utente che esegue la query dispone di una struttura di dati contenente i dati specifici per l'esecuzione, ad esempio i valori dei parametri. Questa struttura di dati è denominata contesto di esecuzione. Le strutture dei dati del contesto di esecuzione vengono riutilizzate, a differenza del contenuto. Se un altro utente esegue la stessa query, le strutture dei dati vengono reinizializzate con il contesto del nuovo utente. 
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)], il motore relazionale esegue prima di tutto una ricerca nella cache dei piani per verificare la presenza di un piano di esecuzione esistente per la stessa istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] si qualifica come esistente se corrisponde letteralmente a un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] eseguita in precedenza con un piano memorizzato nella cache, carattere per carattere. L'eventuale piano esistente trovato viene riusato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], evitando così l'overhead associato alla ricompilazione dell'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. Se non esiste già un piano di esecuzione, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene generato un nuovo piano per la query.
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 > [!NOTE]
-> Alcune istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] non vengono memorizzate nella cache, ad esempio le istruzioni per operazioni bulk in esecuzione su rowstore o le istruzioni contenenti valori letterali stringa di dimensioni superiori a 8 KB.
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ha tre opzioni di visualizzazione dei piani di esecuzione:        
+> -  ***[Piano di esecuzione stimato](../relational-databases/performance/display-the-estimated-execution-plan.md)***, ovvero il piano compilato.        
+> -  ***[Piano di esecuzione effettivo](../relational-databases/performance/display-an-actual-execution-plan.md)***, ovvero il piano compilato più il contesto di esecuzione. Include le informazioni di runtime disponibili al termine dell'esecuzione, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../includes/ssde_md.md)], il tempo trascorso e di CPU usato durante l'esecuzione.        
+> -  ***[Statistiche sulle query dinamiche](../relational-databases/performance/live-query-statistics.md)***, ovvero il piano compilato più il contesto di esecuzione. Includono le informazioni di runtime durante l'avanzamento dell'esecuzione e vengono aggiornate ogni secondo. Le informazioni di runtime includono, ad esempio, il numero effettivo di righe che passano attraverso gli operatori.       
+
+Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)], il [!INCLUDE[ssde_md](../includes/ssde_md.md)] esegue prima di tutto una ricerca nella cache dei piani per verificare la presenza di un piano di esecuzione esistente per la stessa istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] si qualifica come esistente se corrisponde letteralmente a un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] eseguita in precedenza con un piano memorizzato nella cache, carattere per carattere. L'eventuale piano esistente trovato viene riusato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], evitando così l'overhead associato alla ricompilazione dell'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. Se non esiste un piano di esecuzione, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene generato un nuovo piano per la query.
+
+> [!NOTE]
+> I piani di esecuzione per alcune istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] non sono persistenti nella cache dei piani, ad esempio le istruzioni per operazioni bulk in esecuzione su rowstore o le istruzioni contenenti valori letterali stringa di dimensioni superiori a 8 KB. Questi piani esistono solo mentre la query è in esecuzione.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un efficiente algoritmo per l'individuazione di piani di esecuzione esistenti per una specifica istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. Nella maggior parte dei sistemi le risorse minime usate da questa analisi sono inferiori rispetto a quelle risparmiate grazie alla possibilità di riusare i piani esistenti anziché compilare ogni istruzione [!INCLUDE[tsql](../includes/tsql-md.md)].
 
-Per gli algoritmi che consentono di trovare la corrispondenza tra le nuove istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e i piani di esecuzione esistenti inutilizzati nella cache è necessario che i riferimenti agli oggetti siano completi. Ad esempio, si supponga che `Person` è lo schema predefinito per l'utente che esegue le istruzioni `SELECT` seguenti. In questo esempio non è necessario che la tabella `Person` sia completa per essere eseguita. Per la seconda istruzione non viene trovata una corrispondenza a un piano esistente, mentre per la terza viene trovata una corrispondenza:
+Per gli algoritmi che consentono di trovare la corrispondenza tra le nuove istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e i piani di esecuzione esistenti inutilizzati nella cache dei piani è necessario che i riferimenti agli oggetti siano completi. Ad esempio, si supponga che `Person` è lo schema predefinito per l'utente che esegue le istruzioni `SELECT` seguenti. In questo esempio non è necessario che la tabella `Person` sia completa per essere eseguita. Per la seconda istruzione non viene trovata una corrispondenza a un piano esistente, mentre per la terza viene trovata una corrispondenza:
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -444,8 +474,154 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### <a name="removing-execution-plans-from-the-plan-cache"></a>Rimozione di piani di esecuzione dalla cache dei piani
+La modifica delle opzioni SET seguenti per una determinata esecuzione comprometterà la possibilità di riutilizzare i piani, perché il [!INCLUDE[ssde_md](../includes/ssde_md.md)] esegue l'[elaborazione delle costanti in fase di compilazione](#ConstantFolding) e queste opzioni influiscono sui risultati di tali espressioni:
 
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+
+### <a name="caching-multiple-plans-for-the-same-query"></a>Memorizzazione di più piani nella cache per la stessa query 
+Le query e i piani di esecuzione sono identificabili in modo univoco nel [!INCLUDE[ssde_md](../includes/ssde_md.md)], proprio come un'impronta digitale:
+-  Per valore **hash del piano di query** si intende un valore hash binario calcolato sul piano di esecuzione per una determinata query che consente di identificare in modo univoco piani di esecuzioni analoghi. 
+-  Per valore **hash della query** si intende un valore hash binario calcolato sul testo [!INCLUDE[tsql](../includes/tsql-md.md)] di una query che consente di identificare in modo univoco le query. 
+
+Un piano compilato può essere recuperato dalla cache dei piani usando un **handle di piani**, ovvero un identificatore temporaneo che rimane costante solo mentre il piano è nella cache. L'handle di piani è un valore hash derivato dal piano compilato dell'intero batch. L'handle di piani per un piano compilato rimane invariato anche se una o più istruzioni nel batch vengono ricompilate.
+
+> [!NOTE]
+> Se un piano è stato compilato per un batch invece che per una singola istruzione, il piano per le istruzioni individuali del batch può essere recuperato usando l'handle di piani e gli offset delle istruzioni.     
+> La vista DMV `sys.dm_exec_requests` contiene le colonne `statement_start_offset` e `statement_end_offset` per ogni record, che fanno riferimento all'istruzione attualmente in esecuzione di un batch attualmente in esecuzione o di un oggetto persistente. Per altre informazioni, vedere [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).       
+> Anche la vista DMV `sys.dm_exec_query_stats` contiene queste colonne per ogni record, che fanno riferimento alla posizione di un'istruzione all'interno di un batch o di un oggetto persistente. Per altre informazioni, vedere [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).     
+
+Il testo [!INCLUDE[tsql](../includes/tsql-md.md)] effettivo di un batch viene archiviato in uno spazio di memoria separato dalla cache dei piani, denominato cache **SQL Manager** (SQLMGR). Il testo [!INCLUDE[tsql](../includes/tsql-md.md)] per un piano compilato può essere recuperato dalla cache SQL Manager usando un **handle SQL**, ovvero un identificatore temporaneo che rimane costante solo mentre almeno un piano che vi fa riferimento è nella cache dei piani. L'handle SQL è un valore hash derivato dal testo dell'intero batch ed è sicuramente univoco per ogni batch.
+
+> [!NOTE]
+> Come un piano compilato, il testo [!INCLUDE[tsql](../includes/tsql-md.md)] viene archiviato per batch, inclusi i commenti. L'handle SQL contiene l'hash MD5 dell'intero batch ed è sicuramente univoco per ogni batch.
+
+La query seguente fornisce informazioni sull'utilizzo della memoria per la cache SQL Manager:
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+Esiste una relazione 1:N tra un handle SQL e gli handle dei piani. Tale condizione si verifica quando la chiave della cache per i piani compilati è diversa. La causa può essere una modifica nelle opzioni SET tra due esecuzioni dello stesso batch.
+
+Si consideri la stored procedure seguente:
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+Verificare il contenuto che è possibile trovare nella cache dei piani usando la query seguente:
+
+```sql
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Eseguire ora la stored procedure con un parametro diverso, ma senza apportare altre modifiche al contesto di esecuzione:
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Verificare ancora il contenuto che è possibile trovare nella cache dei piani. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Si noti che il valore `usecounts` è salito a 2, che indica che lo stesso piano memorizzato nella cache è stato riutilizzato senza modifiche, perché sono state riutilizzate le strutture dei dati del contesto di esecuzione. Modificare ora l'opzione `SET ANSI_DEFAULTS` ed eseguire la stored procedure usando lo stesso parametro.
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Verificare ancora il contenuto che è possibile trovare nella cache dei piani. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Si noti che ora nell'output DMV `sys.dm_exec_cached_plans` sono presenti due voci:
+-  La colonna `usecounts` contiene il valore `1` nel primo record, relativo al piano eseguito una volta con `SET ANSI_DEFAULTS OFF`.
+-  La colonna `usecounts` contiene il valore `2` nel secondo record, relativo al piano eseguito con `SET ANSI_DEFAULTS ON`, perché è stato eseguito due volte.    
+-  Il diverso `memory_object_address` si riferisce a un'altra voce del piano di esecuzione nella cache dei piani. Il valore `sql_handle` è tuttavia lo stesso per entrambe le voci perché fanno riferimento allo stesso batch. 
+   -  L'esecuzione con `ANSI_DEFAULTS` impostato su OFF ha un nuovo `plan_handle` e può essere riutilizzata per le chiamate con lo stesso set di opzioni SET. Il nuovo handle del piano è necessario perché il contesto di esecuzione è stato reinizializzato a causa delle opzioni SET modificate. Non viene tuttavia attivata una ricompilazione perché entrambe le voci fanno riferimento allo stesso piano e alla stessa query, come indicato dai valori `query_plan_hash` e `query_hash`.
+
+Ciò significa che nella cache sono presenti due voci del piano corrispondenti allo stesso batch ed evidenzia l'importanza di verificare che la cache dei piani che influisce sulle opzioni SET sia la stessa, quando le stesse query vengono eseguite ripetutamente, per ottimizzare il riutilizzo del piano e fare in modo che le dimensioni della cache dei piani siano sempre quelle minime necessarie. 
+
+> [!TIP]
+> Un problema comune è che client diversi possono avere valori predefiniti diversi per le opzioni SET. Ad esempio, una connessione stabilita tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] imposta automaticamente `QUOTED_IDENTIFIER` su ON, mentre SQLCMD imposta `QUOTED_IDENTIFIER` su OFF. L'esecuzione delle stesse query da questi due client restituirà più piani (come illustrato nell'esempio precedente).
+
+### <a name="removing-execution-plans-from-the-plan-cache"></a>Rimozione di piani di esecuzione dalla cache dei piani
 I piani di esecuzione rimangono nella cache dei piani fino a quando è disponibile memoria sufficiente per archiviarli. In caso di un numero eccessivo di richieste di memoria, il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa un approccio basato sui costi per determinare i piani di esecuzione da rimuovere dalla cache dei piani. Per prendere una decisione basata sui costi, il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incrementa e decrementa una variabile relativa al costo corrente per ogni piano di esecuzione in base ai fattori descritti di seguito.
 
 Quando un processo utente inserisce un piano di esecuzione nella cache, il costo corrente viene impostato sul costo di compilazione della query originale. Per i piani di esecuzione ad hoc, il processo utente imposta il costo corrente su zero. Quindi, ogni volta che un processo utente fa riferimento a un piano di esecuzione, il costo corrente viene reimpostato sul costo di compilazione originale. Per i piani di esecuzione ad hoc, il processo utente aumenta il costo corrente. Per tutti i piani, il valore massimo per il costo corrente corrisponde al costo di compilazione originale.
@@ -503,14 +679,13 @@ La colonna `recompile_cause` dell'XEvent `sql_statement_recompile` contiene un c
 
 > [!NOTE]
 > Nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui non sono disponibili xEvent, è possibile usare l'evento di traccia [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler per lo stesso scopo, ovvero segnalare le ricompilazioni a livello di istruzione.
-> Anche l'evento di traccia [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) segnala le ricompilazioni a livello di istruzione e questo evento di traccia può essere usato anche per tenere traccia delle ricompilazioni ed eseguirne il debug. Mentre SP:Recompile viene generato solo per stored procedure e trigger, `SQL:StmtRecompile` viene generato per stored procedure, trigger, batch ad-hoc, batch eseguiti usando `sp_executesql`, query preparate e SQL dinamico.
+> Anche l'evento di traccia `SQL:StmtRecompile` segnala le ricompilazioni a livello di istruzione e questo evento di traccia può essere usato anche per tenere traccia delle ricompilazioni ed eseguirne il debug. Mentre `SP:Recompile` viene generato solo per stored procedure e trigger, `SQL:StmtRecompile` viene generato per stored procedure, trigger, batch ad hoc, batch eseguiti USANDO `sp_executesql`, query preparate e linguaggio SQL dinamico.
 > La colonna *EventSubClass* di `SP:Recompile` e `SQL:StmtRecompile` contiene un codice integer che indica il motivo della ricompilazione. I codici sono descritti [qui](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
 > Quando l'opzione di database `AUTO_UPDATE_STATISTICS` è impostata su `ON`, le query vengono ricompilate quando sono indirizzate a tabelle o viste indicizzate le cui statistiche sono state aggiornate o le cui cardinalità sono state modificate in modo significativo dall'ultima esecuzione. Questo comportamento si applica alle tabelle standard definite dall'utente, alle tabelle temporanee e alle tabelle inserite ed eliminate, create dai trigger DML. Se le prestazioni delle query sono influenzate da un numero eccessivo di ricompilazioni, è possibile modificare l'impostazione su `OFF`. Quando l'opzione `AUTO_UPDATE_STATISTICS` del database è impostata su `OFF`, non vengono eseguite ricompilazioni in base alle statistiche o alle modifiche delle cardinalità, ad eccezione delle tabelle inserite ed eliminate create dai trigger DML `INSTEAD OF`. Poiché tali tabelle vengono create in tempdb, la ricompilazione delle query che vi accedono dipende dall'impostazione di `AUTO_UPDATE_STATISTICS` in tempdb. Si noti che nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti alla 2005, la ricompilazione delle query continua in base alle modifiche delle cardinalità delle tabelle inserite ed eliminate del trigger DML, anche quando l'impostazione è `OFF`.
 
 ### <a name="PlanReuse"></a> Parametri e riutilizzo del piano di esecuzione
-
 L'utilizzo dei parametri, inclusi i marcatori di parametro nelle applicazioni ADO, OLE DB e ODBC, può comportare un maggiore riutilizzo dei piani di esecuzione. 
 
 > [!WARNING] 
@@ -579,7 +754,6 @@ WHERE AddressID = 1 + 2;
 La query può tuttavia essere parametrizzata in base alle regole di parametrizzazione semplice. Quando un tentativo di parametrizzazione forzata ha esito negativo, viene successivamente tentata la parametrizzazione semplice.
 
 ### <a name="SimpleParam"></a> Parametrizzazione semplice
-
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'uso di parametri o di marcatori di parametro nelle istruzioni Transact-SQL aumenta la capacità del motore relazionale di trovare una corrispondenza tra le nuove istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e i piani di esecuzione esistenti compilati in precedenza.
 
 > [!WARNING] 
@@ -615,7 +789,6 @@ In base al comportamento predefinito della parametrizzazione semplice, in [!INCL
 In alternativa, è possibile specificare la parametrizzazione di una singola query e di tutte le altre con sintassi equivalente ma che differiscono solo per i valori dei parametri. 
 
 ### <a name="ForcedParam"></a> Parametrizzazione forzata
-
 È possibile ignorare il comportamento predefinito di parametrizzazione semplice di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificando la parametrizzazione di tutte le istruzioni `SELECT`, `INSERT`, `UPDATE` e `DELETE` di un database in base a limiti specifici. La parametrizzazione forzata viene attivata impostando l'opzione `PARAMETERIZATION` su `FORCED` nell'istruzione `ALTER DATABASE` . La parametrizzazione forzata può offrire un miglioramento delle prestazioni di alcuni database riducendo la frequenza delle operazioni di compilazione e ricompilazione delle query. I database che possono essere soggetti a un miglioramento delle prestazione grazie alla parametrizzazione forzata sono in genere quelli che ricevono volumi elevati di query simultanee da origini quali le applicazioni POS.
 
 Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, qualsiasi valore letterale visualizzato in un'istruzione `SELECT`, `INSERT`, `UPDATE`o `DELETE` , inviato in qualsiasi forma, viene convertito in un parametro durante la compilazione delle query. Le eccezioni consistono in valori letterali presenti nei costrutti di query seguenti: 
@@ -654,7 +827,6 @@ La parametrizzazione viene eseguita a livello di singole istruzioni [!INCLUDE[ts
 > I nomi dei parametri sono arbitrari. Gli utenti o le applicazioni non devono basarsi su un ordine di denominazione specifico. È anche possibile che gli elementi seguenti cambino tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e gli aggiornamenti dei Service Pack: nomi dei parametri, scelta dei valori letterali con parametri e spaziatura nel testo con parametri.
 
 #### <a name="data-types-of-parameters"></a>Tipi di dati dei parametri
-
 Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono parametrizzati valori letterali, i parametri vengono convertiti nei tipi di dati seguenti:
 
 * I valori letterali interi le cui dimensioni altrimenti si adatterebbero al tipo di dati int vengono parametrizzati in int. I valori letterali interi di dimensioni maggiori inclusi in predicati che comportano qualsiasi operatore di confronto, come <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` e `IN`, vengono parametrizzati in numeric(38,0). I valori letterali di dimensioni maggiori non inclusi in predicati che comportano operatori di confronto vengono parametrizzati in numeric, la cui precisione è tale da supportarne le dimensioni e il cui valore di scala è 0.
@@ -666,7 +838,6 @@ Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono paramet
 * I valori letterali di tipo money vengono parametrizzati in money.
 
 #### <a name="ForcedParamGuide"></a> Linee guida per l'utilizzo della parametrizzazione forzata
-
 Quando si desidera impostare l'opzione `PARAMETERIZATION` su FORCED, considerare gli aspetti seguenti:
 
 * Tramite la parametrizzazione forzata, in pratica, le costanti letterali incluse in una query vengono modificate in parametri durante la compilazione di una query. È pertanto possibile che in Query Optimizer vengano scelti piani non ottimali per le query. In particolare, è meno probabile che Query Optimizer associ la query a una vista indicizzata o a un indice in una colonna calcolata. Potrebbero inoltre essere scelti piani non ottimali per le query formulate nelle tabelle partizionate e nelle viste partizionate distribuite. Non utilizzare la parametrizzazione forzata negli ambienti basati in modo significativo su viste indicizzate e indici in colonne calcolate. In generale l'opzione `PARAMETERIZATION FORCED` deve essere usata solo da amministratori di database esperti dopo avere determinato che le prestazioni non subiranno alcun impatto negativo.
@@ -681,7 +852,6 @@ Quando si desidera impostare l'opzione `PARAMETERIZATION` su FORCED, considerare
 > Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, il report dei messaggi di errore potrebbe presentare differenze rispetto a quando l'opzione `PARAMETERIZATION` è impostata su `SIMPLE`: questa impostazione potrebbe comportare la segnalazione di più messaggi di errore nei casi in cui nella parametrizzazione semplice sarebbe stato segnalato un numero di messaggi di errore inferiore e i numeri di riga nei quali si sono verificati gli errori potrebbero non essere segnalati correttamente.
 
 ### <a name="preparing-sql-statements"></a>Preparazione delle istruzioni SQL
-
 Il motore relazionale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] introduce il supporto completo per la preparazione di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] prima dell'esecuzione. Se un'applicazione deve eseguire un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] più volte, potrà usare l'API di database per: 
 
 * Preparare l'istruzione una sola volta. L'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] viene compilata in un piano di esecuzione.
@@ -734,7 +904,6 @@ Per altre informazioni sulla risoluzione dei problemi di analisi dei parametri, 
 > Per le query che usano l'hint `RECOMPILE`, vengono individuati sia i valori dei parametri che i valori correnti delle variabili locali. I valori individuati (dei parametri e delle variabili locali) sono quelli esistenti nella posizione all'interno del batch prima dell'istruzione con l'hint `RECOMPILE`. In particolare, per i parametri, non vengono individuati i valori passati con la chiamata del batch.
 
 ## <a name="parallel-query-processing"></a>Elaborazione parallela di query
-
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è possibile eseguire query parallele, che consentono di ottimizzare l'esecuzione delle query e le operazioni sugli indici nei computer che dispongono di più microprocessori (CPU). La possibilità di eseguire una query o un'operazione sugli indici in parallelo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando diversi thread di lavoro del sistema operativo assicura maggiore velocità ed efficienza.
 
 Durante l'ottimizzazione delle query, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ricerca le query o le operazioni sugli indici che potrebbero trarre vantaggio dall'esecuzione parallela. Nel piano di esecuzione di tali query [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inserisce operatori di scambio per preparare la query all'esecuzione parallela. Un operatore di scambio è un operatore del piano di esecuzione della query responsabile della gestione dei processi, della ridistribuzione dei dati e del controllo di flusso. L'operatore di scambio include gli operatori logici `Distribute Streams`, `Repartition Streams`e `Gather Streams` come sottotipi, ognuno dei quali può essere incluso nell'output Showplan del piano di esecuzione parallela di una query. 
@@ -766,23 +935,22 @@ Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoV
 * La query contiene operatori scalari o relazionali che non possono essere eseguiti in parallelo. Alcuni operatori possono richiedere l'esecuzione seriale di una sezione della query o dell'intero piano.
 
 ### <a name="DOP"></a> Grado di parallelismo
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rileva automaticamente il grado di parallelismo ottimale per ogni istanza di esecuzione parallela di una query o di operazione DDL sull'indice, utilizzando i criteri seguenti: 
 
 1. Esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un computer con più microprocessori o CPU, ad esempio un computer SMP (Symmetric Multiprocessing).  
-  Solo i computer con più CPU possono utilizzare le query parallele. 
+   Solo i computer con più CPU possono utilizzare le query parallele. 
 
 2. Disponibilità di un numero sufficiente di thread di lavoro.  
-  Per l'esecuzione di una query o di un'operazione su un indice è necessario un numero specifico di thread di lavoro. L'esecuzione di un piano parallelo richiede un numero di thread di lavoro maggiore rispetto all'esecuzione di un piano seriale e il numero di thread di lavoro necessari aumenta con il grado di parallelismo. Se non è possibile rispettare i requisiti di thread di lavoro del piano parallelo per un grado di parallelismo specifico, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] riduce automaticamente il grado di parallelismo o ignora completamente il piano parallelo nel contesto del carico di lavoro specificato ed esegue il piano seriale (un solo thread di lavoro). 
+   Per l'esecuzione di una query o di un'operazione su un indice è necessario un numero specifico di thread di lavoro. L'esecuzione di un piano parallelo richiede un numero di thread di lavoro maggiore rispetto all'esecuzione di un piano seriale e il numero di thread di lavoro necessari aumenta con il grado di parallelismo. Se non è possibile rispettare i requisiti di thread di lavoro del piano parallelo per un grado di parallelismo specifico, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] riduce automaticamente il grado di parallelismo o ignora completamente il piano parallelo nel contesto del carico di lavoro specificato ed esegue il piano seriale (un solo thread di lavoro). 
 
 3. Tipo di query o di operazione sull'indice eseguita.  
-  Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile modificare il valore predefinito di 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se da un test appropriato risulta che è preferibile usare un valore diverso per il carico di lavoro in esecuzione. 
+   Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile modificare il valore predefinito di 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se da un test appropriato risulta che è preferibile usare un valore diverso per il carico di lavoro in esecuzione. 
 
 4. Presenza di un numero sufficiente di righe da elaborare.  
-  Se Query Optimizer determina che il numero di righe di un flusso è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
+   Se Query Optimizer determina che il numero di righe di un flusso è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
 
 5. Disponibilità di statistiche di distribuzione correnti.  
-  Se il grado di parallelismo massimo non è disponibile, prima di annullare il piano parallelo vengono considerati i gradi inferiori.  
+   Se il grado di parallelismo massimo non è disponibile, prima di annullare il piano parallelo vengono considerati i gradi inferiori.  
   Ad esempio, quando si crea un indice cluster in una vista, non è possibile valutare le statistiche di distribuzione perché l'indice cluster non esiste ancora. In questo caso, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] non può fornire il grado di parallelismo massimo per l'operazione sull'indice. Alcuni operatori, ad esempio quelli relativi all'ordinamento e all'analisi, possono tuttavia trarre vantaggi dall'esecuzione parallela.
 
 > [!NOTE]
@@ -795,7 +963,6 @@ In un piano di esecuzione parallela della query, gli operatori insert, update e 
 I cursori statici e gestiti da keyset possono essere popolati tramite piani di esecuzione parallela. La funzionalità dei cursori dinamici può invece essere implementata solo tramite l'esecuzione seriale. Query Optimizer genera sempre un piano di esecuzione seriale per le query che fanno parte di un cursore dinamico.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Sostituzione dei gradi di parallelismo
-
 È possibile usare l'opzione di configurazione del server [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) in [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) per limitare il numero di processori da usare per l'esecuzione del piano parallelo. L'opzione Massimo grado di parallelismo può essere ignorata per le singole istruzioni delle query e delle operazioni sugli indici specificando l'hint per le query MAXDOP o l'opzione per gli indici MAXDOP. MAXDOP offre un maggiore controllo sulle singole query e operazioni sugli indici. Ad esempio, è possibile usare questa opzione per aumentare o diminuire il numero di processori dedicati a un'operazione sull'indice online. Ciò consente di bilanciare le risorse utilizzate per un'operazione sull'indice con quelle degli utenti simultanei. 
 
 L'impostazione dell'opzione max degree of parallelism su 0 (impostazione predefinita) consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 nell'esecuzione di piani paralleli. Anche se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] imposta una destinazione di runtime di 64 processori logici quando l'opzione MAXDOP è impostata su 0, è possibile impostare manualmente un valore diverso se necessario. L'impostazione di MAXDOP su 0 per query e indici consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 per le query o gli indici specificati nell'esecuzione di piani paralleli. MAXDOP non è un valore imposto per tutte le query parallele, ma piuttosto un valore target provvisorio per tutte le query idonee per il parallelismo. Ciò significa che se ci sono thread di lavoro sufficienti disponibili in fase di esecuzione, una query può essere eseguita con un grado di parallelismo minore rispetto all'opzione di configurazione del server MAXDOP.
@@ -803,7 +970,6 @@ L'impostazione dell'opzione max degree of parallelism su 0 (impostazione predefi
 Fare riferimento a questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) per informazioni sulle procedure consigliate per la configurazione di MAXDOP.
 
 ### <a name="parallel-query-example"></a>Esempio di query parallela
-
 Nella query seguente viene eseguito il conteggio del numero di ordini effettuati nel trimestre con inizio 1 aprile 2000. Per questi ordini, almeno uno degli articoli è stato ricevuto dal cliente successivamente alla data prevista. La query indica il numero totale di tali ordini raggruppati per priorità di ordine e disposti in ordine di priorità crescente. 
 
 Nell'esempio seguente vengono utilizzati nomi di tabelle e colonne fittizi.
@@ -913,7 +1079,6 @@ Le fasi principali di un'operazione parallela sugli indici includono quanto segu
 Singole istruzioni `CREATE TABLE` o `ALTER TABLE` possono avere più vincoli che richiedono la creazione di un indice. Le operazioni di creazione dell'indice vengono eseguite in serie, anche se in un computer con più CPU ogni singola operazione può essere eseguita in parallelo.
 
 ## <a name="distributed-query-architecture"></a>Architettura delle query distribuite
-
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due metodi per fare riferimento a origini dati OLE DB eterogenee nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)]:
 
 * Nomi di server collegati  
@@ -1013,16 +1178,15 @@ Nella figura seguente sono illustrate le proprietà dell'operatore `Clustered In
 
 #### <a name="partitioned-attribute"></a>Attributo Partitioned
 
-Quando su una tabella o un indice partizionato si esegue un operatore quale `Index Seek` , l'attributo `Partitioned` viene incluso sia nel piano della fase di compilazione che in quello della fase di esecuzione ed è impostato su `True` (1). L'attributo non viene visualizzato quando è impostato su `False` (0).
+Quando su una tabella o un indice partizionato si esegue un operatore quale Index Seek, l'attributo `Partitioned` viene incluso sia nel piano della fase di compilazione che in quello della fase di esecuzione ed è impostato su `True` (1). L'attributo non viene visualizzato quando è impostato su `False` (0).
 
 L'attributo `Partitioned` può essere visualizzato negli operatori fisici e logici seguenti:  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|Table Scan|Index Scan|
+|Index Seek|Insert|
+|Aggiornamento|Delete|
+|Unione||
 
 Come illustrato nella figura precedente, questo attributo viene visualizzato nelle proprietà dell'operatore in cui è definito. Nell'output di Showplan XML, questo attributo è indicato come `Partitioned="1"` nel nodo `RelOp` dell'operatore nel quale è definito.
 

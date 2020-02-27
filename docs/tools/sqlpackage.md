@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993016"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250596"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -44,7 +44,29 @@ La riga di comando di **SqlPackage.exe** consente di specificare queste azioni i
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>Esempi di utilizzo
+
+**Generare un confronto tra database usando i file con estensione dacpac con l'output di uno script SQL**
+
+Per iniziare, creare un file con estensione dacpac delle modifiche più recenti al database:
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+Creare un file con estensione dacpac della destinazione del database (senza modifiche):
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+Creare uno script SQL che genera le differenze dei due file dacpac:
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>Guida per l'azione Estrai
 
 |Parametro|Forma breve|valore|Descrizione|
@@ -206,6 +228,7 @@ Un'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in 
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Specifica se le differenze nel tempo di conservazione in SQL Server della route nella tabella di routing devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifica se le differenze nei punti e virgola tra le istruzioni T-SQL verranno ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifica se le differenze nelle opzioni di tabella devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifica se le differenze nelle opzioni della partizione di tabella devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.  Questa opzione si applica solo ai database di data warehouse Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Specifica se le differenze negli oggetti impostazioni utente devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Specifica se le differenze nello spazio devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifica se le differenze nel valore della clausola WITH NOCHECK per vincoli CHECK devono essere ignorate o aggiornate quando si esegue la pubblicazione.|
@@ -433,6 +456,7 @@ Un'azione report di **SqlPackage.exe** crea un report XML delle modifiche che ve
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Specifica se le differenze nel tempo di conservazione in SQL Server della route nella tabella di routing devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifica se le differenze nei punti e virgola tra le istruzioni T-SQL verranno ignorate o aggiornate quando si esegue la pubblicazione in un database.| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifica se le differenze nelle opzioni di tabella devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifica se le differenze nelle opzioni della partizione di tabella devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.  Questa opzione si applica solo ai database di data warehouse Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Specifica se le differenze negli oggetti impostazioni utente devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Specifica se le differenze nello spazio devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database. |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifica se le differenze nel valore della clausola WITH NOCHECK per vincoli CHECK devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.| 
@@ -597,6 +621,7 @@ L'azione Script di **SqlPackage.exe** consente di creare uno script di aggiornam
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Specifica se le differenze nel tempo di conservazione in SQL Server della route nella tabella di routing devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifica se le differenze nei punti e virgola tra le istruzioni T-SQL verranno ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifica se le differenze nelle opzioni di tabella devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifica se le differenze nelle opzioni della partizione di tabella devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.  Questa opzione si applica solo ai database di data warehouse Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Specifica se le differenze negli oggetti impostazioni utente devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Specifica se le differenze nello spazio devono essere ignorate o aggiornate quando si esegue la pubblicazione in un database.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifica se le differenze nel valore della clausola WITH NOCHECK per vincoli CHECK devono essere ignorate o aggiornate quando si esegue la pubblicazione.|

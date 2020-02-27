@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6fcb5285a7ec24b8b27afd86cd0b77777f716ce3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76761545"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544913"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 
@@ -52,16 +52,16 @@ L'utilità del **p**rogramma di **c**opia **b**ulk (**bcp**) esegue operazioni d
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>Scaricare la versione più recente della utilità bcp
 
-**[![download](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15.0 per SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![download](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15.0 per SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![download](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15 per SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![download](../ssdt/media/download.png) Download di Microsoft Command Line Utilities 15 per SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 Gli strumenti da riga di comando dipendono dalla disponibilità generale (GA), ma vengono rilasciati con il pacchetto di installazione per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### <a name="version-information"></a>Informazioni sulla versione
 
 Numero di versione: 15.0 <br>
-Numero di build: 15.0.1000.34<br>
-Data di rilascio: 18 ottobre 2018
+Numero di build: 15.0.1300.359<br>
+Data di rilascio: 13 marzo 2019
 
 La nuova versione di SQLCMD supporta l'autenticazione di Azure AD, incluso il supporto di Multi-Factor Authentication (MFA) per le funzionalità database SQL, SQL Data Warehouse e Always Encrypted.
 Il nuovo BCP supporta l'autenticazione di Azure AD, incluso il supporto di Multi-Factor Authentication (MFA) per il database SQL e SQL Data Warehouse.
@@ -70,9 +70,9 @@ Il nuovo BCP supporta l'autenticazione di Azure AD, incluso il supporto di Multi
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
-Per questo componente sono necessari sia [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) che [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+Per questo componente sono necessari sia [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) che [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-Per controllare la versione di BCP, eseguire il comando `bcp /v` e verificare che sia in uso 15.0.1000.34 o versione successiva.
+Per controllare la versione di BCP, eseguire il comando `bcp /v` e verificare che sia in uso la versione 15.0.1300.359 o successiva.
 
 <table><th>Sintassi</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -117,12 +117,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  _**data\_file**_ <a name="data_file"></a>  
  Percorso completo del file di dati. Quando si esegue un'importazione bulk dei dati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il file di dati include i dati da copiare nella tabella o nella vista specificata. Quando si esegue un'esportazione bulk dei dati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il file di dati include i dati copiati dalla tabella o dalla vista. Il percorso può essere costituito da un numero di caratteri compreso tra 1 e 255. Il file di dati può contenere un massimo di 2^63 - 1 righe.  
-  
+
  _**database\_name**_ <a name="db_name"></a>  
  Nome del database in cui si trova la tabella o la vista specificata. Se tale valore non è specificato, il database è quello predefinito dell'utente.  
-  
+
  È anche possibile specificare in modo esplicito il nome del database con **d-** .  
-  
+
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  Specifica la direzione della copia bulk nel modo seguente:  
   
@@ -211,7 +211,8 @@ Indica che il valore passato all'opzione di `bcp` `-S` deve essere interpretato 
   
  *first_row* può essere un numero intero positivo con valore massimo pari a 2^63-1. **-F** *first_row* è in base 1.  
 
-**-G**<a name="G"></a>  
+**-G**<a name="G"></a>
+
  Questa opzione viene usata dal client durante la connessione al database SQL di Azure o a Azure SQL Data Warehouse per specificare che l'utente venga autenticato tramite l'autenticazione di Azure Active Directory. L'opzione -G richiede la [versione 14.0.3008.27 o una versione successiva](https://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire bcp-v. Per altre informazioni vedere [Usare l'autenticazione di Azure Active Directory per l'autenticazione di un database SQL o di SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 > [!IMPORTANT]
@@ -219,58 +220,60 @@ Indica che il valore passato all'opzione di `bcp` `-S` deve essere interpretato 
 > L'autenticazione integrata e interattiva di AAD non è attualmente supportata in Linux o macOS.
 
 > [!TIP]
->  Per verificare se la versione di bcp in uso include il supporto per l'autenticazione di Azure Active Directory (AAD), digitare **bcp --** (bcp\<spazio>\<barra>\<barra>) e verificare che -G sia presente nell'elenco degli argomenti disponibili.
+> Per verificare se la versione di bcp in uso include il supporto per l'autenticazione di Azure Active Directory (AAD), digitare **bcp --** (bcp\<spazio>\<barra>\<barra>) e verificare che -G sia presente nell'elenco degli argomenti disponibili.
 
 - **Nome utente e password di Azure Active Directory:** 
 
     Quando si vuole usare nome utente e password di Azure Active Directory, è possibile fornire l'opzione **-G** e anche usare nome utente e password fornendo le opzioni **-U** e **-P** . 
 
     Nell'esempio seguente vengono esportati i dati usando nome utente e password di Azure AD, corrispondenti alle credenziali di AAD. L'esempio esporta la tabella `bcptest` del database `testdb` dal server di Azure `aadserver.database.windows.net` e archivia i dati nel file `c:\last\data1.dat`:
-    ``` 
+
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
-    ``` 
+    ```
 
     Nell'esempio seguente vengono importati i dati usando nome utente e password di Azure AD, corrispondenti alle credenziali di AAD. L'esempio importa i dati dal file `c:\last\data1.dat` nella tabella `bcptest` per il database `testdb` sul server di Azure `aadserver.database.windows.net` usando utente e password di Azure AD:
-    ```
+
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
 - **Integrazione con Azure Active Directory**
 
-    Per l'autenticazione integrata di Azure Active Directory, fornire l'opzione **-G** senza nome utente o password. Questa configurazione presuppone che l'account utente di Windows corrente, ovvero l'account con cui viene eseguito il comando bcp, sia federato con Azure AD: 
+    Per l'autenticazione integrata di Azure Active Directory, fornire l'opzione **-G** senza nome utente o password. Questa configurazione presuppone che l'account utente di Windows corrente, ovvero l'account con cui viene eseguito il comando bcp, sia federato con Azure AD:
 
     Nell'esempio seguente i dati vengono esportati usando l'account integrato in Azure AD. L'esempio esporta la tabella `bcptest` del database `testdb` dal server di Azure `aadserver.database.windows.net` usando un account integrato in Azure AD e archivia i dati nel file `c:\last\data2.dat`:
 
-    ```
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     Nell'esempio seguente i dati vengono importati usando l'autorizzazione integrata di Azure AD. L'esempio importa i dati dal file `c:\last\data2.txt` nella tabella `bcptest` per il database `testdb` sul server di Azure `aadserver.database.windows.net` usando l'autorizzazione integrata di Azure AD:
 
-    ```
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
 - **Azure Active Directory Interactive**  
 
-   L'autenticazione interattiva di Azure AD per il database SQL di Azure e SQL Data Warehouse consente di usare un metodo interattivo che supporta l'autenticazione a più fattori. Per altre informazioni, vedere l'articolo sull'[autenticazione interattiva di Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+   L'autenticazione interattiva di Azure AD per il database SQL di Azure e SQL Data Warehouse consente di usare un metodo interattivo che supporta l'autenticazione a più fattori. Per altre informazioni, vedere l'articolo sull'[autenticazione interattiva di Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
    La modalità interattiva di Azure AD richiede **bcp** [versione 15.0.1000.34](#download-the-latest-version-of-bcp-utility) o successiva, nonché [ODBC 17.2 o versioni successive](https://www.microsoft.com/download/details.aspx?id=56567).  
 
-   Per abilitare l'autenticazione interattiva, specificare l'opzione-G solo con il nome utente (-U) senza una password.   
+   Per abilitare l'autenticazione interattiva, specificare l'opzione-G solo con il nome utente (-U) senza una password.
 
    Nell'esempio seguente vengono esportati i dati usando la modalità interattiva di Azure AD e indicando il nome utente che rappresenta un account AAD. Si tratta dello stesso esempio usato nella sezione precedente: *Nome utente e password di Azure Active Directory*.  
 
-   Per la modalità interattiva è necessario immettere manualmente una password o, per gli account con l'autenticazione a più fattori abilitata, completare il metodo di autenticazione a più fattori configurato. 
+   Per la modalità interattiva è necessario immettere manualmente una password o, per gli account con l'autenticazione a più fattori abilitata, completare il metodo di autenticazione a più fattori configurato.
 
-   ``` 
-   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
-   ``` 
-
-   Se un utente di Azure AD fa parte di un dominio federato che usa un account Windows, il nome utente richiesto nella riga di comando contiene il relativo account di dominio, ad esempio joe@contoso.com, vedere di seguito:   
-
+   ```cmd
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
-   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+
+   Se un utente di Azure AD fa parte di un dominio federato che usa un account Windows, il nome utente richiesto nella riga di comando contiene il relativo account di dominio, ad esempio joe@contoso.com, vedere di seguito:
+
+   ```cmd
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
    Se in un'istanza specifica di Azure AD esistono utenti guest che fanno parte di un gruppo presente nel database SQL con autorizzazioni di database che consentono di eseguire il comando bcp, viene usato l'alias utente guest, ad esempio *keith0@adventureworks.com* .
@@ -304,7 +307,7 @@ Specifica che viene acquisito un blocco a livello di tabella per l'aggiornamento
   
   > [!NOTE]
   > L'utilità**bcp** ora esegue la convalida e i controlli dei dati che potrebbero causare la mancata esecuzione degli script quando questi vengono eseguiti su dati non validi inclusi in un file di dati.
-  
+
   > [!NOTE]
   > L'opzione **-m** *max_errors* non è valida per il controllo dei vincoli.
   
@@ -439,18 +442,29 @@ Esegue l'operazione di copia bulk utilizzando i tipi di dati nativi del database
 
 ## Osservazioni<a name="remarks"></a>
 
- L'utilità **bcp** 13.0 viene installato durante l'installazione degli strumenti di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se gli strumenti vengono installati sia per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che per una versione precedente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a seconda del valore della variabile di ambiente PATH, è possibile che venga usato il client **bcp** precedente anziché il client **bcp** 13.0. La variabile di ambiente definisce il set di directory utilizzato in Windows per la ricerca di file eseguibili. Per determinare la versione in uso, eseguire il comando **bcp /v** al prompt dei comandi di Windows. Per informazioni su come impostare il percorso di comando nella variabile di ambiente PATH, vedere la Guida di Windows.  
- 
-L'utilità bcp può anche essere scaricata separatamente dal [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).  Selezionare `ENU\x64\MsSqlCmdLnUtils.msi` o `ENU\x86\MsSqlCmdLnUtils.msi`.
+- L'utilità **bcp** 13.0 viene installato durante l'installazione degli strumenti di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se gli strumenti vengono installati sia per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che per una versione precedente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a seconda del valore della variabile di ambiente PATH, è possibile che venga usato il client **bcp** precedente anziché il client **bcp** 13.0. La variabile di ambiente definisce il set di directory utilizzato in Windows per la ricerca di file eseguibili. Per determinare la versione in uso, eseguire il comando **bcp /v** o **bcp -v** al prompt dei comandi di Windows. Per informazioni su come impostare il percorso di comando nella variabile di ambiente PATH, vedere [Variabili di ambiente](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) o cercare le variabili di ambiente nella Guida di Windows.
 
-  
- I file di formato XML sono supportati solo quando gli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installati insieme a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
-  
- Per informazioni sulla posizione e sulle modalità di esecuzione dell'utilità **bcp** e sulle convenzioni di sintassi per le utilità della riga di comando, vedere [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
-  
- Per informazioni sulla preparazione dei dati per le operazioni di importazione o esportazione in blocco, vedere [Preparare i dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
-  
- Per informazioni sui casi in cui le operazioni di inserimento di righe eseguite durante l'importazione in blocco vengono registrate nel log delle transazioni, vedere [Prerequisiti per la registrazione minima nell'importazione in blocco](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+    Per assicurarsi che sia in esecuzione la versione più recente dell'utilità bcp, è necessario rimuovere le versioni precedenti dell'utilità bcp.
+    
+    Per determinare la posizione di installazione di tutte le versioni dell'utilità bcp, digitare nel prompt dei comandi:
+    
+    ```cmd
+    where bcp.exe
+    ```
+
+- L'utilità bcp può anche essere scaricata separatamente dal [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).  Selezionare `ENU\x64\MsSqlCmdLnUtils.msi` o `ENU\x86\MsSqlCmdLnUtils.msi`.
+
+- I file di formato XML sono supportati solo quando gli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installati insieme a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.
+
+- Per informazioni sulla posizione e sulle modalità di esecuzione dell'utilità **bcp** e sulle convenzioni di sintassi per le utilità della riga di comando, vedere [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../tools/command-prompt-utility-reference-database-engine.md).
+
+- Per informazioni sulla preparazione dei dati per le operazioni di importazione o esportazione in blocco, vedere [Preparare i dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
+
+- Per informazioni sui casi in cui le operazioni di inserimento di righe eseguite durante l'importazione in blocco vengono registrate nel log delle transazioni, vedere [Prerequisiti per la registrazione minima nell'importazione in blocco](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
+
+- [Uso di caratteri speciali aggiuntivi](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+
+    I caratteri <, >, |, &, ^ sono caratteri speciali della shell dei comandi e devono essere preceduti dal carattere di escape (^) o racchiusi tra virgolette quando vengono usati nella stringa, ad esempio "StringaContenenteSimbolo&". Se si usano le virgolette per racchiudere una stringa contenente uno dei caratteri speciali, le virgolette vengono impostate come parte del valore della variabile di ambiente.
 
 ## <a name="native-data-file-support"></a>Supporto per file di dati nativi
 
@@ -569,7 +583,7 @@ GO
 
 SET NOCOUNT ON;
 
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')
 BEGIN
     SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
     FROM WideWorldImporters.Warehouse.StockItemTransactions  
@@ -590,7 +604,7 @@ END
 
 Al prompt dei comandi immettere il comando seguente:
 
-```
+```cmd
 bcp -v
 ```
   
@@ -602,7 +616,7 @@ Gli esempi seguenti illustrano l'uso dell'opzione **out** nella tabella `WideWor
 
   Al prompt dei comandi immettere il comando seguente:
 
-  ```
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -624,7 +638,7 @@ L'esempio seguente illustra l'uso dell'opzione **out** nella tabella `WideWorldI
 
 Al prompt dei comandi immettere il comando seguente: \(Verrà richiesto di inserire la password.\)
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -636,7 +650,7 @@ Gli esempi seguenti illustrano l'opzione **in** nella tabella `WideWorldImporter
 
   Al prompt dei comandi immettere il comando seguente:
 
-  ```
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -644,7 +658,7 @@ Gli esempi seguenti illustrano l'opzione **in** nella tabella `WideWorldImporter
   
 Al prompt dei comandi immettere il comando seguente:
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -656,7 +670,7 @@ Per copiare una colonna specifica, è possibile usare l'opzione **queryout** .  
   
 Al prompt dei comandi immettere il comando seguente:
 
-```
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -666,7 +680,7 @@ Per copiare una riga specifica, è possibile usare l'opzione **queryout** . Nell
   
 Al prompt dei comandi immettere il comando seguente:
 
-```
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -676,7 +690,7 @@ Per copiare il set di risultati da un'istruzione Transact-SQL a un file di dati,
 
 Al prompt dei comandi immettere il comando seguente:
 
-```
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -686,7 +700,7 @@ Nell'esempio seguente vengono creati tre diversi file di formato per la tabella 
 
 Al prompt dei comandi immettere i comandi seguenti:
 
-```
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -708,12 +722,12 @@ Per usare un file di formato creato in precedenza durante l'importazione di dati
 
 Al prompt dei comandi immettere il comando seguente:
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 
-> [!NOTE]  
->  I file di formato risultano particolarmente utili quando i campi dei file di dati sono diversi dalle colonne della tabella, ad esempio per numero, ordine o tipi di dati. Per altre informazioni, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+> [!NOTE]
+> I file di formato risultano particolarmente utili quando i campi dei file di dati sono diversi dalle colonne della tabella, ad esempio per numero, ordine o tipi di dati. Per altre informazioni, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
 
 ### <a name="j-specifying-a-code-page"></a>J. Definizione di una tabella codici
 
@@ -731,13 +745,19 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 
 ## <a name="see-also"></a>Vedere anche
 
- [Preparare i dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+- [Preparare i dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
+
+- [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)
+
+- [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)
+
+- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)
+
+- [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+
+- [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
+
+- [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 
 ## <a name="feedback"></a>Commenti e suggerimenti
 

@@ -1,5 +1,5 @@
 ---
-title: Esportazione in Microsoft Word (Generatore report e SSRS) | Microsoft Docs
+title: Esportazione in Microsoft Word (Generatore report) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 75df880cf51df8670671331ddd6de2738b0bba54
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688204"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079408"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 

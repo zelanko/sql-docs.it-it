@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831760"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977545"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare e assegnare i punteggi a un modello predittivo in Python con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Ora che un modello è stato creato, sottoposto a training e salvato, procedere c
 
 In questo esercizio si è appreso come creare stored procedure dedicate a diverse attività, in cui ognuna ha usato la stored procedure di sistema `sp_execute_external_script` per avviare un processo Python. Gli input del processo Python vengono passati a `sp_execute_external` come parametri. Sia lo script Python stesso che le variabili di dati in un database di SQL Server vengono passati come input.
 
-In genere è consigliabile pianificare l'uso di SSMS solo con codice Python pulito o codice Python semplice che restituisce output basato su riga. Come strumento, SSMS supporta linguaggi di query come T-SQL e restituisce set di righe bidimensionali. Se il codice genera un output visivo come un grafico a dispersione o un istogramma, è necessario uno strumento o un'applicazione per utenti finali in grado di eseguire il rendering dell'immagine.
+In genere è consigliabile pianificare l'uso di SSMS solo con codice Python pulito o codice Python semplice che restituisce output basato su riga. Come strumento, SSMS supporta linguaggi di query come T-SQL e restituisce set di righe bidimensionali. Se il codice genera un output visivo come un grafico a dispersione o un istogramma, sono necessari uno strumento o un'applicazione per utenti finali separati in grado di eseguire il rendering dell'immagine all'esterno della stored procedure.
 
 Per alcuni sviluppatori Python abituati a scrivere script onnicomprensivi che gestiscono una serie di operazioni, l'organizzazione delle attività in procedure separate potrebbe sembrare superflua. Il training e l'assegnazione dei punteggi hanno però casi d'uso diversi. Separando queste attività, è possibile inserirle in pianificazioni diverse e assegnare le autorizzazioni in base a ogni operazione.
 

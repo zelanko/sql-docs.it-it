@@ -1,5 +1,5 @@
 ---
-title: Sintassi di query XML per i dati del report XML (SSRS) | Microsoft Docs
+title: Sintassi di query XML per i dati del report XML | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574852"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081354"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintassi di query XML per i dati del report XML (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile creare set di dati per origini dati XML. Dopo aver definito un'origine dati, è possibile creare una query per il set di dati. In base al tipo di dati XML a cui punta l'origine dati, è possibile creare la query del set di dati includendo un elemento **Query** XML o un percorso di elemento. Un elemento **Query** XML inizia con un tag **\<Query>** e include spazi dei nomi ed elementi XML che variano in base all'origine dati. Un percorso di elemento è indipendente dallo spazio dei nomi e specifica i nodi e gli attributi dei nodi dei dati XML sottostanti da utilizzare tramite una sintassi di tipo XPath. Per altre informazioni sui percorsi di elementi, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "65574852"
 |Documento XML che utilizza valori predefiniti.|*Nessuna query*.<br /><br /> Il percorso viene derivato dal documento XML stesso ed è indipendente dallo spazio dei nomi.|  
   
 > [!NOTE]  
->  Nel primo esempio di servizio Web è riportato il contenuto del server di report che usa il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Per eseguire questa query, è necessario creare una nuova origine dati e impostare la stringa di connessione su `https://localhost/reportserver/reportservice2006.asmx`. Il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> accetta due parametri: **Elemento** e **Ricorsivo**. Impostare il valore predefinito per **Elemento** su **/** e **Ricorsivo** su **1**.  
+>  Nel primo esempio di servizio Web è riportato il contenuto del server di report che usa il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Per eseguire questa query, è necessario creare una nuova origine dati e impostare la stringa di connessione su `https://localhost/reportserver/reportservice2006.asmx`. Il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> accetta due parametri: **Item** e **Recursive**. Impostare il valore predefinito per **Elemento** su **/** e **Ricorsivo** su **1**.  
   
 ## <a name="specifying-namespaces"></a>Definizione degli spazi dei nomi  
  Usare l'elemento **Query** XML per specificare gli spazi dei nomi usati nei dati XML dell'origine dati. Nella query XML seguente viene usato lo spazio dei nomi **sales**. Nei nodi **ElementPath** XML per `sales:LineItems` e `sales:LineItem` viene usato lo spazio dei nomi **sales**.  

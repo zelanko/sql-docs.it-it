@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558052"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256654"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server (Analisi utilizzo software)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558052"
 
 Microsoft SQL Server include funzionalità che supportano Internet e sono in grado di raccogliere e inviare a Microsoft dati relativi al computer o al dispositivo. Queste informazioni sono denominate *informazioni standard del computer*. Il componente per il controllo locale della [raccolta di dati di diagnostica e utilizzo di SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) scrive i dati raccolti dal servizio in una specifica cartella, che rappresenta i dati (log) da inviare a Microsoft. Lo scopo del controllo locale è quello di consentire ai clienti di visualizzare tutti i dati che Microsoft raccoglie con questa funzionalità, per motivi di conformità alle normative o rispetto della privacy.  
 
-In SQL Server 2016 CU2 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server e Analysis Services (SSAS). In SQL Server 2016 CU4 e SQL Server 2016 SP1 il controllo locale è abilitato anche per SQL Server Integration Services (SSIS). Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati di diagnostica e utilizzo non è disponibile.
+Per SQL Server 2016 CU2 e CU3 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server e SQL Server Analysis Services (SSAS). Per SQL Server 2016 CU4, SQL Server 2016 SP1 e versioni successive il controllo locale è abilitato anche per SQL Server Integration Services (SSIS). Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati di diagnostica e utilizzo non è disponibile.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -42,7 +42,7 @@ Per rifiutare esplicitamente la raccolta di dati, vedere [Attivazione o disattiv
 
 Per abilitare il controllo locale in ogni istanza di SQL Server sono previsti i prerequisiti seguenti: 
 
-1. L'istanza deve essere stata aggiornata a SQL Server 2016 RTM CU2 o versione successiva. Per Integration Services, l'istanza deve essere stata aggiornata a SQL 2016 RTM CU4 o SQL 2016 SP1
+1. L'istanza deve essere stata aggiornata a SQL Server 2016 RTM CU2 o versione successiva. Per Integration Services, l'istanza deve essere stata aggiornata a SQL 2016 RTM CU4, SQL 2016 SP1 o versioni successive.
 
 1. L'utente deve essere un amministratore di sistema o un ruolo con diritti di accesso per aggiungere e modificare la chiave del Registro di sistema, creare cartelle, gestire la sicurezza delle cartelle e arrestare o avviare un servizio di Windows.  
 
@@ -320,7 +320,7 @@ Questi file di log vengono scritti in formato JSON. Ogni riga corrisponde a un o
 Non verrà scritto alcun file del controllo locale.
 
 **Cosa accade se la connettività Internet non è disponibile o il computer si trova all'interno del firewall?**
-I dati di diagnostica e utilizzo di SQL Server 2016 non verranno inviati a Microsoft. Se configurato correttamente, il computer proverà comunque a scrivere i log del controllo locale.
+I dati di diagnostica e utilizzo di SQL Server non verranno inviati a Microsoft. Se configurato correttamente, il computer proverà comunque a scrivere i log del controllo locale.
 
 **Come fanno gli amministratori di database a disabilitare il controllo locale?**
 Per eseguire questa operazione, rimuovere la voce della chiave del Registro di sistema UserRequestedLocalAuditDirectory.
@@ -333,7 +333,7 @@ Gli amministratori di database devono gestire autonomamente la pulizia dei file 
 
 **Quale client o strumento è possibile usare per leggere l'output JSON?**
 L'output può essere letto con il Blocco note, in Visual Studio o nel lettore JSON desiderato.
-In alternativa, è possibile leggere il file JSON e analizzare i dati in un'istanza di SQL Server 2016, come illustrato di seguito. Per altre informazioni su come leggere il file JSON in SQL Server, visitare [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importazione di file JSON in SQL Server mediante OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
+In alternativa, è possibile leggere il file JSON e analizzare i dati in un'istanza di SQL Server, come illustrato di seguito. Per altre informazioni su come leggere il file JSON in SQL Server, visitare [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importazione di file JSON in SQL Server mediante OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

@@ -10,13 +10,13 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
-ms.openlocfilehash: 6ff730a55a52319082d4af9021d698bf696ec0be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.date: 02/19/2020
+ms.openlocfilehash: 8be225915b657b4c3bcd8a141c6ebc4c3e6440c4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76037120"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507561"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -52,7 +52,7 @@ SSMS 18.4 è la versione disponibile a livello generale più recente di SSMS. Se
 
 La versione 18.4 è un aggiornamento della versione 18.3.1 con i nuovi elementi e le correzioni di bug seguenti.
 
-## <a name="whats-new-in-184"></a>Novità della versione 18.4
+### <a name="whats-new-in-184"></a>Novità della versione 18.4
 
 | Nuovo elemento | Dettagli |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -71,25 +71,25 @@ La versione 18.4 è un aggiornamento della versione 18.3.1 con i nuovi elementi 
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento dell'output dei cmdlet per migliorare la leggibilità delle raccomandazioni. |
 | Profiler XEvent | Aggiunta dell'evento *error_reported* alle sessioni del profiler XEvent. |
 
-## <a name="bug-fixes-in-184"></a>Correzioni di bug nella versione 18.4
+### <a name="bug-fixes-in-184"></a>Correzioni di bug nella versione 18.4
 
 | Nuovo elemento | Dettagli |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Analysis Services | È stato risolto un problema per cui l'editor di script DAX per i database multidimensionali non mostrava tabelle in IntelliSense. |
 | Analysis Services | Usare il parser DAX per eseguire la conversione in una stringa del motore. Riguarda separatori internazionali, decimali e spazi vuoti. |
-| Always Encrypted | È stato risolto un problema per cui la *convalida delle attestazioni* faceva *distinzione tra maiuscole e minuscole*. |
-| Always Encrypted | È stato risolto un problema per cui la segnalazione di errori/avvisi non funzionava correttamente. |
+| Always Encrypted | È stato risolto un problema a causa del quale la *convalida delle attestazioni* non faceva *distinzione tra maiuscole e minuscole*. |
+| Always Encrypted | È stato risolto un problema a causa del quale la segnalazione di errori/avvisi non funzionava correttamente. |
 | Copia guidata database | Sono stati risolti vari problemi di troncamento e layout nel rendering di questa finestra di dialogo. |
-| SQL Server Management Studio (SSMS) - Generale | È stato risolto un problema esistente da tempo per cui SSMS non rispettava le informazioni di connessione passate dalla riga di comando quando venivano specificati anche file SQL. |
+| SQL Server Management Studio (SSMS) - Generale | È stato risolto un problema esistente da tempo a causa del quale SSMS non rispettava le informazioni di connessione passate dalla riga di comando quando venivano specificati anche file SQL. |
 | SQL Server Management Studio (SSMS) - Generale | Correzione di un problema di arresto anomalo in SSMS durante il tentativo di visualizzare entità a protezione diretta negli oggetti "Filtro di replica". |
 | SQL Server Management Studio (SSMS) - Generale | È stato risolto il problema della rimozione dell'opzione della riga di comando -P facendo in modo che SSMS esamini la cache delle credenziali: se vengono trovate le credenziali necessarie, vengono usate per stabilire la connessione. |
 | Importa file flat | È stato risolto un problema per cui la funzionalità *Importa file flat* non gestiva correttamente i qualificatori di testo. |
 | Esplora oggetti | È stato risolto un problema per cui l'eliminazione di un database SQL di Azure in Esplora oggetti mostrava un messaggio non corretto. |
-| Risultati delle query | È stato risolto un problema introdotto in SSMS 18.3.1 per cui le griglie disegnate erano leggermente troppo strette e alla fine della stringa più lunga di ogni colonna compariva *...* . |
+| Risultati delle query | È stato risolto un problema introdotto in SSMS 18.3.1 a causa del quale le griglie vengono disegnate strette e con *...* alla fine della stringa più lunga di ogni colonna. |
 | Strumenti di replica | È stato risolto un problema che causava la generazione di un errore dell'applicazione ("Impossibile caricare il file o l'assembly...") quando si tentava di modificare i processi di SQL Agent. |
 | SMO/scripting | È stato risolto un problema per cui *Crea script per tabella…* per SQL DW con regole di confronto Japanese_BIN2 non funzionava.|
 | SMO/scripting | È stato risolto un problema per cui ScriptAlter () terminava l'esecuzione delle istruzioni nel server.|
-| SQL Agent | È stato risolto un problema per cui l'interfaccia utente dell'operatore agente non aggiornava il nome dell'operatore quando veniva modificato nell'interfaccia utente, né veniva creato uno script. Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647).|
+| SQL Agent | È stato risolto un problema a causa del quale l'interfaccia utente dell'operatore agente non aggiornava il nome dell'operatore quando veniva modificato nell'interfaccia utente, né veniva creato uno script. Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647).|
 
 ### <a name="known-issues-184"></a>Problemi noti (18.4)
 
@@ -101,9 +101,20 @@ La versione 18.4 è un aggiornamento della versione 18.3.1 con i nuovi elementi 
 
 ## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
 
-Scaricare le versioni precedenti di SSMS facendo clic sui collegamenti dei titoli nelle sezioni seguenti:
+Scaricare le versioni precedenti di SSMS selezionando il collegamento per il download nella sezione correlata.
 
-## <a name="download-ssms-1831"></a>![download](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+| Versione di SSMS | Numero di build | Data di rilascio |
+|--------------|--------------|-------------------|
+| [18.3.1](#1831) | 15.0.18183.0 | 2 ottobre 2019 |
+| [18.2](#182) | 15.0.18142.0 | 25 luglio 2019 |
+| [18.1](#181) | 15.0.18131.0 | 11 giugno 2019 |
+| [18.0](#180) | 15.0.18118.0 | 24 aprile 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | 21 novembre 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | 30 gennaio 2017 |
+
+### <a name="1831"></a>18.3.1
+
+![download](../ssdt/media/download.png) [Scaricare SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 Numero di versione: 18.3.1  
 Numero di build: 15.0.18183.0  
@@ -113,7 +124,7 @@ SSMS 18.3.1 è la versione disponibile a livello generale più recente di SSMS. 
 
 La versione 18.3.1 è un aggiornamento della versione 18.2 con i nuovi elementi e le correzioni di bug seguenti.
 
-## <a name="whats-new-in-1831"></a>Novità della versione 18.3.1
+#### <a name="whats-new-in-1831"></a>Novità della versione 18.3.1
 
 | Nuovo elemento | Dettagli |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -127,7 +138,7 @@ La versione 18.3.1 è un aggiornamento della versione 18.2 con i nuovi elementi 
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiunta del supporto per Istanza gestita di database SQL di Azure. |
 | SMO/scripting | [API Valutazione SQL](../sql-assessment-api/sql-assessment-api-overview.md) - Aggiornamento della visualizzazione predefinita dei cmdlet per visualizzare i risultati come tabella. |
 
-## <a name="bug-fixes-in-1831"></a>Correzioni di bug nella versione 18.3.1
+#### <a name="bug-fixes-in-1831"></a>Correzioni di bug nella versione 18.3.1
 
 | Nuovo elemento | Dettagli |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -149,7 +160,7 @@ La versione 18.3.1 è un aggiornamento della versione 18.2 con i nuovi elementi 
 | Interfaccia utente di Query Store | È stato risolto un problema a causa del quale l'asse Y non veniva ridimensionato con la selezione della metrica *Conteggio esecuzioni* nella visualizzazione *Query rilevate*. |
 | Valutazione della vulnerabilità | Cancellazione e approvazione della baseline per database SQL di Azure disabilitata.|
 
-### <a name="known-issues-1831"></a>Problemi noti (18.3.1)
+#### <a name="known-issues-1831"></a>Problemi noti (18.3.1)
 
 - Il diagramma di database creato da SSMS in esecuzione nel computer A non può essere modificato dal computer B (si verifica un arresto anomalo di SSMS). Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 
@@ -157,7 +168,9 @@ La versione 18.3.1 è un aggiornamento della versione 18.2 con i nuovi elementi 
 
 È possibile fare riferimento a [UserVoice](https://feedback.azure.com/forums/908035-sql-server) per altri problemi noti e per inviare commenti e suggerimenti al team del prodotto.
 
-## <a name="download-ssms-182"></a>![download](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+### <a name="182"></a>18.2
+
+![download](../ssdt/media/download.png) [Scaricare SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 Numero di versione: 18.2  
 Numero di build: 15.0.18142.0  
@@ -165,7 +178,7 @@ Data di rilascio: 25 luglio 2019
 
 La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e le correzioni di bug seguenti.
 
-## <a name="whats-new-in-182"></a>Novità della versione 18.2
+### <a name="whats-new-in-182"></a>Novità della versione 18.2
 
 |  Nuovo elemento  |  Dettagli  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -174,12 +187,12 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Aggiunta del supporto di IntelliSense. |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Attiva un'ottimizzazione all'interno del motore di database che contribuisce a migliorare la velocità effettiva per gli inserimenti nell'indice con un elevato grado di concorrenza. Questa opzione è destinata agli indici che sono soggetti a conflitti di inserimento dell'ultima pagina, che generalmente si verificano con gli indici con una chiave sequenziale, come una colonna Identity, una sequenza o una colonna di data/ora. Per altri dettagli, vedere [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys). |
 | Esecuzione o risultati di query | Aggiunta di *Ora di completamento* nei messaggi per tenere traccia di quando viene completata l'esecuzione di una determinata query. |
-| Esecuzione o risultati di query | È consentita la visualizzazione (risultato come testo) e l'archiviazione nelle celle (risultato come griglia) di più dati. SSMS consente ora fino a 2 M di caratteri per entrambi (rispettivamente, fino a 256 e 64 K). In questo modo è stato risolto anche il problema a causa del quale gli utenti non erano in grado di acquisire più di 43680 caratteri dalle celle della griglia. |
+| Esecuzione o risultati di query | È consentita la visualizzazione (risultato come testo) e l'archiviazione nelle celle (risultato come griglia) di più dati. SSMS consente ora fino a 2 M di caratteri per entrambi (rispettivamente, fino a 256 K e 64 K). In questo modo è stato risolto anche il problema a causa del quale gli utenti non erano in grado di acquisire più di 43680 caratteri dalle celle della griglia. |
 | Showplan | Aggiunta di un nuovo attributo in QueryPlan quando è abilitata la [funzionalità UDF scalare inline](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqludfs). |
 | SMO | Aggiunta del supporto per l'*API Valutazione SQL*. Per altre informazioni, vedere [API Valutazione SQL](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 |  |  |
 
-## <a name="bug-fixes-in-182"></a>Correzioni di bug nella versione 18.2
+#### <a name="bug-fixes-in-182"></a>Correzioni di bug nella versione 18.2
 
 |  Nuovo elemento  |  Dettagli  |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -215,7 +228,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |**Installazione di SSMS**| **È stato risolto un problema a causa del quale il programma di installazione di SSMS bloccava erroneamente l'installazione di lingue non corrispondenti per i report SSMS. Questo poteva essere un problema in alcune situazioni anomale, ad esempio un'installazione interrotta o una disinstallazione non corretta di una versione precedente di SSMS. Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37483594/).** |
 | Profiler XEvent | Correzione di un arresto anomalo durante la chiusura del visualizzatore. |
 
-### <a name="known-issues-182"></a>Problemi noti (18.2)
+#### <a name="known-issues-182"></a>Problemi noti (18.2)
 
 - Il diagramma di database creato in un'istanza di SSMS in esecuzione nel computer A non può essere modificato dal computer B (causando un arresto anomalo di SSMS). Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 
@@ -227,17 +240,19 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 
 - Come lingua predefinita per gli account di accesso SQL può essere visualizzato l'Arabo nella finestra di dialogo Proprietà account di accesso, indipendentemente dalla lingua predefinita effettiva impostata per l'account di accesso. Per visualizzare la lingua predefinita effettiva per un determinato account di accesso, usare T-SQL per selezionare la voce **default_language_name** dell'account di accesso da **master.sys.server_principles**.
 
-## <a name="download-ssms-181"></a>![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+### <a name="181"></a>18.1
+
+![download](../ssdt/media/download.png) [Scaricare SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Numero di versione: 18.1  
 - Numero di build: 15.0.18131.0  
-- Data di rilascio: 11 giugno 2019  
+- Data di rilascio: 11 giugno 2019
 
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
 18.1 è un aggiornamento di piccole dimensioni della versione 18.0 con i nuovi elementi e le correzioni di bug seguenti.
 
-## <a name="whats-new-in-181"></a>Novità della versione 18.1
+#### <a name="whats-new-in-181"></a>Novità della versione 18.1
 
 | Nuovo elemento| Dettagli|
 | :-------| :------|
@@ -245,7 +260,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 | SSBDIAGNOSE.EXE |Lo strumento da riga di comando di diagnostica di SQL Server è stato nuovamente aggiunto al pacchetto di SSMS.|
 | Integration Services (SSIS) | Supporto per la pianificazione del pacchetto SSIS, che si trova nel catalogo SSIS in Azure o nel file system, in Azure. Esistono tre voci di menu per l'avvio della finestra di dialogo Nuova pianificazione: *Nuova pianificazione* che viene visualizzata quando si fa clic con il pulsante destro del mouse sul pacchetto SSIS nel catalogo SSIS in Azure, *Schedule SSIS Package in Azure* (Pianifica pacchetto SSIS in Azure) in *Esegui migrazione ad Azure* nel menu *Strumenti* e "Schedule SSIS in Azure" (Pianifica SSIS in Azure) che viene visualizzata quando si fa clic con il pulsante destro del mouse sulla cartella Processi in SQL Server Agent dell'Istanza gestita del database SQL di Azure.|
 
-## <a name="bug-fixes-in-181"></a>Correzioni di bug nella versione 18.1
+#### <a name="bug-fixes-in-181"></a>Correzioni di bug nella versione 18.1
 
 | Nuovo elemento | Dettagli |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -287,7 +302,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 | Interfaccia utente XEvent | Aggiunta della colonna "Pacchetto" all'elenco XEvents per evitare ambiguità tra eventi con nomi identici. |
 | Interfaccia utente XEvent | Aggiunta del mapping del tipo di classe "EXTERNAL LIBRARY" mancante a XEventUI. |
 
-### <a name="known-issues-181"></a>Problemi noti (18.1)
+#### <a name="known-issues-181"></a>Problemi noti (18.1)
 
 - Gli utenti potrebbero visualizzare un errore trascinando un oggetto tabella da Esplora oggetti nell'editor di query. Siamo a conoscenza del problema, la cui correzione è prevista nella prossima versione.
 
@@ -297,7 +312,9 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 
 - Il diagramma di database creato da SSMS in esecuzione nel computer A non può essere modificato dal computer B (si verifica un arresto anomalo di SSMS). Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649).
 
-## <a name="download-ssms-180"></a>![download](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+### <a name="180"></a>18.0
+
+![download](../ssdt/media/download.png) [Scaricare SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Numero di versione: 18.0  
 - Numero di build: 15.0.18118.0  
@@ -305,7 +322,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [Francese](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [Tedesco](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [Italiano](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [Giapponese](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [Coreano](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [Russo](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
-### <a name="whats-new-in-180"></a>Novità della versione 18.0
+#### <a name="whats-new-in-180"></a>Novità della versione 18.0
 
 | Nuovo elemento| Dettagli|
 | :-------| :------|
@@ -343,7 +360,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |Integrazione di Azure Data Studio|Aggiunta di una voce di menu per avviare e scaricare Azure Data Studio.|
 |Integrazione di Azure Data Studio|Aggiunta della voce di menu "Start Azure Data Studio" (Avvia Azure Data Studio) in Esplora oggetti.|
 |Integrazione di Azure Data Studio|Quando si fa clic con il pulsante destro del mouse su un nodo di database in Esplora oggetti, vengono visualizzati i menu di scelta rapida per eseguire una query o per creare un nuovo notebook in Azure Data Studio.|
-|Supporto di Azure SQL| Le proprietà del database SLO/Edition/MaxSize ora accettano nomi personalizzati, facilitando il supporto delle edizioni future del database SQL di Azure.|
+|Supporto di Azure SQL| Le proprietà del database SLO/Edition/MaxSize ora accettano nomi personalizzati, facilitando il supporto delle edizioni future dei database SQL di Azure.|
 |Supporto di Azure SQL| Aggiunto il supporto per gli SKU vCore (utilizzo generico e business critical): Gen4_24 e tutti gli SKU Gen5.|
 |Istanza gestita di database SQL di Azure|Aggiunta di un nuovo tipo di account di accesso di AAD in SMO e SSMS quando ci si connette a un'istanza gestita di database SQL di Azure.|
 |Always On|Rigenerazione hash per RTO (tempo di recupero stimato) e RPO (perdita di dati stimata) nel dashboard Always On di SSMS. Vedere la documentazione aggiornata all'indirizzo [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
@@ -379,7 +396,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |SMO| Aggiunto un nuovo evento per gli oggetti SMO ("PropertyMissing") che aiuta gli autori di applicazioni a rilevare i problemi di prestazioni SMO in tempi più rapidi.|
 |SMO| Nuova proprietà DefaultBackupChecksum esposta nell'oggetto Configuration, che corrisponde alla configurazione del server "backup checksum default".|
 |SMO| Nuova proprietà ProductUpdateLevel inclusa nell'oggetto Server, che esegue il mapping al livello di servizio per la versione di SQL in uso (ad esempio CU12, RTM).|
-|SMO| Nuova proprietà LastGoodCheckDbTime inclusa in un oggetto Database, che esegue il mapping alla proprietà del database "lastgoodcheckdbtime". Se tale proprietà non è disponibile, sarà restituito il valore predefinito 1/1/1900 12:00:00 AM.|
+|SMO| Nuova proprietà LastGoodCheckDbTime inclusa in un oggetto Database, che esegue il mapping alla proprietà del database "lastgoodcheckdbtime". Se tale proprietà non è disponibile, viene restituito il valore predefinito 1/1/1900 12:00:00 AM.|
 |SMO|Percorso del file RegSrvr.xml (file di configurazione Server registrato) spostato in "%AppData%\Microsoft\SQL Server Management Studio"(senza versione, quindi può essere condiviso tra più versioni di SSMS).|
 |SMO|Aggiunta di "Cloud di controllo" come nuovo tipo di quorum e nuovo tipo di risorsa.|
 |SMO|Aggiunta del supporto per i "vincoli di arco" sia in SMO che in SSMS.|
@@ -391,7 +408,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |Valutazione della vulnerabilità|Aggiunta di una nuova funzionalità per l'esportazione in Excel dei risultati dell'analisi di Valutazione vulnerabilità.|
 |Visualizzatore XEvent|Visualizzatore XEvent: abilitata la finestra di showplan per un maggior numero di XEvent.|
 
-### <a name="bug-fixes-in-180"></a>Correzioni di bug nella versione 18.0
+#### <a name="bug-fixes-in-180"></a>Correzioni di bug nella versione 18.0
 
 | Nuovo elemento| Dettagli|
 | :-------| :------|
@@ -457,12 +474,12 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |Procedura guidata Importa file flat|Correzione di un problema a causa del quale i valori di tipo *float* venivano immessi come *null*.|
 |Procedura guidata Importa file flat|Correzione di un problema per cui l'importazione guidata non elaborava valori decimali negativi.|
 |Procedura guidata Importa file flat|Correzione di un problema per cui la procedura guidata non eseguiva l'importazione da file CSV a colonna singola.|
-|Procedura guidata Importa file flat|[In SSMS 17.9] Correzione di un problema per cui la procedura guidata Importa file flat non consente di cambiare la tabella di destinazione se esiste già. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). |
+|Procedura guidata Importa file flat|Correzione di un problema a causa del quale la procedura guidata Importa file flat non consente di cambiare la tabella di destinazione se esiste già. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). |
 |Visualizzatore della Guida|Miglioramento della logica associata al supporto delle modalità online/offline. Alcuni problemi devono essere ancora risolti.|
 |Visualizzatore della Guida|Correzione di "Visualizza Guida" per rispettare le impostazioni online/offline. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791). |
 |Disponibilità elevata e ripristino di emergenza<BR> Gruppi di disponibilità (disponibilità generale)|Correzione di un problema per cui i ruoli nella procedura guidata "Failover gruppo di disponibilità" vengono sempre visualizzati come "Risoluzione in corso".|
 |Disponibilità elevata e ripristino di emergenza<BR> Gruppi di disponibilità (disponibilità generale)|Risolto un problema per cui SSMS visualizzava avvisi troncati nel dashboard del gruppo di disponibilità.|
-|Integration Services|Correzione di un problema per cui la distribuzione guidata non si connette a SQL Server quando nello stesso computer sono installati sia SQL Server 2019 che SSMS 18.0.|
+|Integration Services|Correzione di un problema a causa del quale la distribuzione guidata non si connette a SQL Server quando nello stesso computer sono installati sia SQL Server 2019 che SSMS 18.0.|
 |Integration Services|Risolto un problema per cui l'attività di pianificazione della manutenzione non poteva essere modifica al momento della progettazione della pianificazione della manutenzione.|
 |Integration Services|Correzione di un problema a causa del quale la distribuzione guidata si blocca se il progetto in distribuzione viene rinominato.|
 |Integration Services|Abilitata l'impostazione dell'ambiente nella funzionalità di pianificazione di Azure-SSIS IR.|
@@ -535,7 +552,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |Profiler XEvent|Correzione di un problema per cui il profiler XEvent non veniva avviato se connesso a un server SQL Server a 96 nuclei.|
 |Visualizzatore XEvent|Correzione di un problema per cui il visualizzatore XEvent si arresta in modo anomalo quando si prova a raggruppare gli eventi usando le opzioni della barra degli strumenti Eventi estesi.|
 
-### <a name="deprecated-and-removed-features-in-180"></a>Funzionalità deprecate e rimosse nella versione 18.0
+#### <a name="deprecated-and-removed-features-in-180"></a>Funzionalità deprecate e rimosse nella versione 18.0
 
 Funzionalità deprecate e rimosse
 - Debugger Transact-SQL
@@ -550,7 +567,7 @@ Funzionalità deprecate e rimosse
 - Strumenti di Configuration Manager:
   - Gestione configurazione SQL Server e Gestione configurazione server di report non sono più inclusi nell'installazione di SSMS.
 - Criteri standard DMF
-  - I criteri non vengono più installati con SSMS. Verranno spostati in Git. Gli utenti potranno contribuire allo sviluppo e scaricarli/installarli in base alle esigenze.
+  - I criteri non vengono più installati con SSMS. Vengono spostati in Git. Gli utenti possono contribuire a svilupparli e scaricarli/installarli in base alle esigenze.
 - Opzione della riga di comando -P di SSMS rimossa
   - A causa di problemi di sicurezza, l'opzione per specificare password non crittografate nella riga di comando è stata rimossa.
 - Rimozione dell'opzione Genera script > Pubblica su servizio Web
@@ -558,7 +575,7 @@ Funzionalità deprecate e rimosse
 - Rimozione del nodo "Manutenzione > Legacy" di Esplora oggetti.
   - I nodi obsoleti "Piani di manutenzione del database" e "SQL Mail" non saranno più accessibili. I nodi recenti "Posta elettronica database" e "Piani di manutenzione" funzionano come di consueto.
 
-### <a name="known-issues-180"></a>Problemi noti (18.0)
+#### <a name="known-issues-180"></a>Problemi noti (18.0)
 
 - Si potrebbe verificare un problema durante l'installazione della versione 18.0, per cui non è possibile eseguire SQL Server Management Studio. Se si verifica questo problema, seguire la procedura descritta nell'articolo [SSMS2018: installato, ma non viene eseguito](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run).
 
@@ -566,13 +583,17 @@ Funzionalità deprecate e rimosse
 
 - Esistono problemi di aggiornamento durante il passaggio tra finestre di query diverse. Per altri dettagli, vedere [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). Una soluzione alternativa per questo problema è disabilitare l'accelerazione hardware in Strumenti > Opzioni.
 
-## <a name="download-ssms-1791"></a>![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+### <a name="1791"></a>17.9.1
 
-- Numero di versione: 17.9.1<br>
-- Numero di build: 14.0.17289.0<br>
+![download](../ssdt/media/download.png) [Scaricare SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- Numero di versione: 17.9.1  
+- Numero di build: 14.0.17289.0  
 - Data di rilascio: 21 novembre 2018
 
 17.9.1 è un aggiornamento di piccole dimensioni della versione 17.9 con le correzioni di bug seguenti:
+
+#### <a name="bug-fixes-in-1791"></a>Correzioni di bug nella versione 17.9.1
 
 - Correzione di un problema a causa del quale la connessione degli utenti veniva chiusa e riaperta ogni volta che veniva chiamata una query durante l'uso dell'autenticazione "Azure Active Directory - Universale con supporto MFA" con l'editor di query SQL. Gli effetti collaterali della chiusura della connessione includevano il rilascio imprevisto delle tabelle temporanee e talvolta l'assegnazione di un nuovo SPID alla connessione.
 - Risolto un problema che persisteva da tempo per cui il piano di ripristino poteva non trovare o generare un piano di ripristino inefficiente in determinate condizioni.
@@ -583,12 +604,41 @@ Funzionalità deprecate e rimosse
 
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [Francese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [Tedesco](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Giapponese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## <a name="download-ssms-1653"></a>![download](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
-Disponibilità generale| Numero di build: 13.0.16106.4
+#### <a name="uninstall-and-reinstall-ssms-17x"></a>Disinstallare e reinstallare SSMS 17.x
+
+Se si verificano problemi durante l'installazione di SSMS che non vengono risolti con una disinstallazione e reinstallazione standard, è possibile provare a [ripristinare](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 Isolated Shell. Se il ripristino di Visual Studio 2015 Isolated Shell non risolve il problema, la procedura seguente consente di risolvere molti problemi casuali:
+
+1. Disinstallare SSMS nello stesso modo in cui si disinstalla qualsiasi applicazione, usando *App e funzionalità*, *Programmi e funzionalità*, a seconda della versione di Windows in uso.
+
+2. Disinstallare Visual Studio 2015 Isolated Shell **da un prompt dei comandi con privilegi elevati**:
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3. Disinstallare Microsoft Visual C++ 2015 Redistributable nello stesso modo in cui si disinstalla un'applicazione qualsiasi. Disinstallare sia la versione x86 che la x64 se sono entrambe presenti nel computer.
+
+4. Reinstallare Visual Studio 2015 Isolated Shell **da un prompt dei comandi con privilegi elevati**:  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+
+    ```vs_isoshell.exe /PromptRestart```
+
+5. Reinstallare SSMS.
+
+6. Eseguire l'aggiornamento alla [versione più recente di Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) se non è già stato fatto.
+
+### <a name="1653"></a>16.5.3
+
+![download](../ssdt/media/download.png) [Scaricare SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+
+- Numero di versione: 16.5.3  
+- Numero di build: 13.0.16106.4  
+- Data di rilascio: 30 gennaio 2017
 
 [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [Francese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [Tedesco](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [Italiano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [Giapponese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [Coreano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [Russo](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [Spagnolo](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
-In questa versione sono stati risolti i problemi seguenti:
+#### <a name="bug-fixes-in-1653"></a>Correzioni di bug nella versione 16.5.3
 
 * Correzione di un problema introdotto in SSMS 16.5.2 che causava l'espansione del nodo 'Tabella' quando la tabella aveva più di una colonna di tipo sparse.
 
@@ -613,30 +663,6 @@ In questa versione sono stati risolti i problemi seguenti:
 * SSMS in alcuni casi genera eccezioni in Monitoraggio attività e subisce un arresto anomalo. [ID Connect 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * Si verifica un arresto anomalo di SSMS 2016 con l'errore "Il processo è stato terminato a causa di un errore interno del runtime .NET in IP 71AF8579 (71AE0000) con codice di uscita 80131506"
-
-## <a name="uninstall-and-reinstall-ssms-17x"></a>Disinstallare e reinstallare SSMS 17.x
-
-Se si verificano problemi durante l'installazione di SSMS che non vengono risolti con una disinstallazione e reinstallazione standard, è possibile provare a [ripristinare](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 Isolated Shell. Se il ripristino di Visual Studio 2015 Isolated Shell non risolve il problema, la procedura seguente consente di risolvere molti problemi casuali:
-
-1. Disinstallare SSMS nello stesso modo in cui si disinstalla qualsiasi applicazione, usando *App e funzionalità*, *Programmi e funzionalità*, a seconda della versione di Windows in uso.
-
-2. Disinstallare Visual Studio 2015 Isolated Shell **da un prompt dei comandi con privilegi elevati**:
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
-
-    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
-
-3. Disinstallare Microsoft Visual C++ 2015 Redistributable nello stesso modo in cui si disinstalla un'applicazione qualsiasi. Disinstallare sia la versione x86 che la x64 se sono entrambe presenti nel computer.
-
-4. Reinstallare Visual Studio 2015 Isolated Shell **da un prompt dei comandi con privilegi elevati**:  
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
-
-    ```vs_isoshell.exe /PromptRestart```
-
-5. Reinstallare SSMS.
-
-6. Eseguire l'aggiornamento alla [versione più recente di Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) se non è già stato fatto.
 
 ## <a name="additional-downloads"></a>Download aggiuntivi
 

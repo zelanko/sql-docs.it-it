@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72906883"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256754"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurare gruppi con scalabilità orizzontale PolyBase in Windows
 
@@ -51,7 +51,7 @@ Di seguito vengono illustrati i passaggi per configurare un gruppo di PolyBase c
   
    - PQTH4A-CMP02  
   
-2. Account di dominio: *PQTH4A\PolyBaseUse*r  
+2. Account di dominio: *PQTH4A\PolyBaseUser*  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installare SQL Server con PolyBase in tutti i computer
 
@@ -61,7 +61,7 @@ Di seguito vengono illustrati i passaggi per configurare un gruppo di PolyBase c
   
 3. Nella pagina Configurazione server usare l'**account di dominio** PQTH4A\PolyBaseUser per il motore di ricerca PolyBase di SQL Server e SQL Server PolyBase Data Movement Service.
   
-4. Nella pagina di configurazione di PolyBase selezionare l'opzione **Usare questa istanza di SQL Server come parte del gruppo PolyBase con scalabilità orizzontale**. Verrà aperto il firewall per consentire le connessioni in ingresso ai servizi di PolyBase.
+4. Nella pagina di configurazione di PolyBase selezionare l'opzione **Usare questa istanza di SQL Server come parte del gruppo PolyBase con scalabilità orizzontale**. Verrà aperto il firewall per consentire le connessioni in ingresso ai servizi di PolyBase. Se il nodo head è un'istanza denominata, è necessario aggiungere manualmente la porta di SQL Server a Windows Firewall nel nodo head e anche avviare SQL Browser nel nodo head.
   
 5. Al termine dell'installazione, eseguire **services.msc**. Verificare che SQL Server, il motore PolyBase e PolyBase Data Movement Service siano in esecuzione.
   

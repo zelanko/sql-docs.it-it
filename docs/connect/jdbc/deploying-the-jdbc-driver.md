@@ -1,7 +1,7 @@
 ---
 title: Distribuzione del driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049840"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004680"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Distribuzione del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049840"
 >  Per informazioni generali sulla distribuzione di applicazioni Java, vedere il sito Web Java.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Distribuzione del driver JDBC in sistemi Windows  
- Per distribuire il driver JDBC in sistemi operativi Windows, è necessario usare la versione del file ZIP eseguibile del pacchetto di installazione, denominata in genere `sqljdbc_<version>_<language>.exe`.  
-  
- Per l'esecuzione automatica del file eseguibile ZIP, è necessario usare l'opzione della riga di comando `/auto` nella riga di comando o in un file batch nel modo seguente:  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  Quando si usa l'opzione `/auto` l'installazione non sarà realmente automatica, in quanto la finestra di dialogo di WinZip verrà comunque visualizzata sullo schermo dell'utente. Tuttavia, non è necessario interagire con essa e viene chiusa non appena l'operazione di decompressione è stata completata.  
-  
+ Per distribuire il driver JDBC in sistemi operativi Windows, è necessario decomprimere il pacchetto di installazione compresso, denominato in genere `sqljdbc_<version>_<language>.zip`.
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>Distribuzione del driver in sistemi UNIX 
  Quando il driver JDBC viene distribuito in sistemi operativi UNIX, è necessario usare la versione del file GZIP del pacchetto di installazione, denominata in genere `sqljdbc_<version>_<language>.tar.gz`.  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049840"
 
 ## <a name="legalities-of-driver-redistribution"></a>Note legali sulla ridistribuzione dei driver
 
-Le versioni 6.0, 6.2, 6.4 e 7.0 del driver JDBC sono ridistribuibili. Esaminare la clausola _Codice distribuibile_ nei contratti di licenza.
+Le versioni 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 e 8.2 del driver JDBC sono ridistribuibili. Esaminare la clausola _Codice distribuibile_ nei contratti di licenza.
 
 Le versioni 4.x del driver JDBC sono obsolete. Il supporto per 4.x è scaduto prima del 2018.
 

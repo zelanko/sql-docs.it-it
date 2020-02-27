@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906837"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179272"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,7 +41,7 @@ Per modificare il livello di compatibilità di un database, fare riferimento a [
   
 ## <a name="syntax"></a>Sintassi  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -62,6 +62,8 @@ Restituisce una tabella a colonna singola le cui righe sono sottostringhe. Il no
 **STRING_SPLIT** inserisce una stringa con sottostringhe delimitate e inserisce un carattere da usare come delimitatore o separatore. STRING_SPLIT restituisce una tabella a colonna singola le cui righe contengono le sottostringhe. Il nome della colonna di output è **value**.
 
 Le righe di output potrebbero essere in qualsiasi ordine. L'ordine _non_ corrisponde necessariamente all'ordine delle sottostringhe nella stringa di input. È possibile ignorare l'ordinamento finale usando una clausola ORDER BY nell'istruzione SELECT (`ORDER BY value`).
+
+0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in STRING_SPLIT.
 
 Le sottostringhe vuote di lunghezza zero sono presenti quando la stringa di input contiene due o più occorrenze consecutive del carattere delimitatore. Le sottostringhe vuote vengono trattate allo stesso modo delle sottostringhe semplici. È possibile escludere le righe che contengono la sottostringa vuota usando la clausola WHERE (`WHERE value <> ''`). Se la stringa di input è NULL, la funzione con valori di tabella STRING_SPLIT restituisce una tabella vuota.  
 

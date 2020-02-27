@@ -1,5 +1,5 @@
 ---
-title: Generare i feed di dati da un report (Generatore report e SSRS) | Microsoft Docs
+title: Generare i feed di dati da un report (Generatore report) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a94df8959adf40edfe2e78c7c281dd5d57f90266
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 177dbefd38e00d70a58b283bdeb52d2aa80abf97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580768"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079199"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generare i feed di dati da un report (Generatore report e SSRS)
 

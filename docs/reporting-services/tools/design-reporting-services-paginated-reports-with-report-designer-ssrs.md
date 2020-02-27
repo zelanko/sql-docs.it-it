@@ -1,5 +1,5 @@
 ---
-title: Progettare report con Progettazione report (SSRS) | Microsoft Docs
+title: Progettare report con Progettazione report | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190435"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081708"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Progettare report impaginati di Reporting Services con progettazione Report (SSRS)
 

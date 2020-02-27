@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71149928"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971429"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Che cos'è R Services per SQL Server 2016?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,12 @@ In R Services è possibile eseguire script R in due modi:
 + Il modo più comune consiste nell'usare la stored procedure T-SQL [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 + È anche possibile usare il client R preferito e scrivere script che eseguono il push dell'esecuzione (detta *contesto di calcolo remoto*) a un'istanza di SQL Server remota. Per altre informazioni, vedere come [configurare lo sviluppo in R di un client di data science](../r/set-up-a-data-science-client.md).
+
+<a name="version"></a>
+
+## <a name="r-version"></a>Versione di R
+
+R versione 3.2.2 è incluso in SQL Server 2016 R Services. Per le versioni più recenti di R, usare [Machine Learning Services per SQL Server 2017 e versioni successive](../what-is-sql-server-machine-learning.md).
 
 <a name="packages"></a>
 
