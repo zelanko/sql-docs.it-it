@@ -12,91 +12,87 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014114"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176641"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  Un'istanza `MultiPolygon` è una raccolta di zero o più istanze `Polygon`.  
-  
-## <a name="polygon-instances"></a>Istanze Polygon  
- Nella figura seguente vengono illustrati esempi di istanze `MultiPolygon`.  
-  
- ![Esempi di istanze di geometria MultiPolygon](../../database-engine/media/multipolygon.gif "Esempi di istanze di geometria MultiPolygon")  
-  
- Come indicato nell'illustrazione:  
-  
--   Nella figura 1 viene rappresentata un'istanza `MultiPolygon` con due elementi `Polygon`. Il limite è definito dai due anelli esterni e dai tre anelli interni.  
-  
--   Nella figura 2 viene rappresentata un'istanza `MultiPolygon` con due elementi `Polygon`. Il limite è definito dai due anelli esterni e dai tre anelli interni. I due elementi `Polygon` si intersecano in un punto di tangenza.  
-  
-### <a name="accepted-instances"></a>Istanze accettate  
- Viene accettata un'istanza `MultiPolygon` se viene soddisfatta una delle condizioni indicate di seguito.  
-  
--   È un'istanza `MultiPolygon` vuota.  
-  
--   Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` accettate. Per ulteriori informazioni sulle istanze `Polygon` accettate, vedere [Polygon](../spatial/polygon.md).  
-  
- Negli esempi seguenti vengono illustrate alcune istanze `MultiPolygon` accettate.  
-  
-```  
-DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
-DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
-DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
-```  
-  
- Nell'esempio seguente viene illustrata un'istanza MultiPolygon che genererà un'eccezione `System.FormatException`.  
-  
-```  
-DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
-```  
-  
- La seconda istanza in MultiPolygon è un'istanza di LineString e non un'istanza Polygon accettata.  
-  
-### <a name="valid-instances"></a>Istanze valide  
- Un'istanza `MultiPolygon` è valida se è un'istanza `MultiPolygon` vuota o se soddisfa i criteri indicati di seguito.  
-  
-1.  Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` valide. Per le `Polygon` istanze valide, vedere [Polygon](../spatial/polygon.md).  
-  
-2.  Nessuna delle istanze `Polygon` che comprendono l'istanza `MultiPolygon` si sovrappone.  
-  
- Nell'esempio seguente vengono indicate due istanze `MultiPolygon` valide e un'istanza `MultiPolygon` valida.  
-  
-```  
-DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
-DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
-DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
-SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
-```  
-  
+  Un'istanza `MultiPolygon` è una raccolta di zero o più istanze `Polygon`.
+
+## <a name="polygon-instances"></a>Istanze Polygon
+ Nella figura seguente vengono illustrati esempi di istanze `MultiPolygon`.
+
+ ![Esempi di istanze di geometria MultiPolygon](../../database-engine/media/multipolygon.gif "Esempi di istanze di geometria MultiPolygon")
+
+ Come indicato nell'illustrazione:
+
+-   Nella figura 1 viene rappresentata un'istanza `MultiPolygon` con due elementi `Polygon`. Il limite è definito dai due anelli esterni e dai tre anelli interni.
+
+-   Nella figura 2 viene rappresentata un'istanza `MultiPolygon` con due elementi `Polygon`. Il limite è definito dai due anelli esterni e dai tre anelli interni. I due elementi `Polygon` si intersecano in un punto di tangenza.
+
+### <a name="accepted-instances"></a>Istanze accettate
+ Viene accettata un'istanza `MultiPolygon` se viene soddisfatta una delle condizioni indicate di seguito.
+
+-   È un'istanza `MultiPolygon` vuota.
+
+-   Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` accettate. Per ulteriori informazioni sulle istanze `Polygon` accettate, vedere [Polygon](../spatial/polygon.md).
+
+ Negli esempi seguenti vengono illustrate alcune istanze `MultiPolygon` accettate.
+
+```
+DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';
+DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';
+DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';
+```
+
+ Nell'esempio seguente viene illustrata un'istanza MultiPolygon che genererà un'eccezione `System.FormatException`.
+
+```
+DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';
+```
+
+ La seconda istanza in MultiPolygon è un'istanza di LineString e non un'istanza Polygon accettata.
+
+### <a name="valid-instances"></a>Istanze valide
+ Un'istanza `MultiPolygon` è valida se è un'istanza `MultiPolygon` vuota o se soddisfa i criteri indicati di seguito.
+
+1.  Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` valide. Per le `Polygon` istanze valide, vedere [Polygon](../spatial/polygon.md).
+
+2.  Nessuna delle istanze `Polygon` che comprendono l'istanza `MultiPolygon` si sovrappone.
+
+ Nell'esempio seguente vengono indicate due istanze `MultiPolygon` valide e un'istanza `MultiPolygon` valida.
+
+```
+DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';
+DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';
+DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';
+SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
+```
+
  
   `@g2` è valida perché le due istanze di `Polygon` si toccano solo in corrispondenza di un punto tangente. 
-  `@g3` non è valida perché gli interni delle due istanze di `Polygon` si sovrappongono.  
-  
-## <a name="examples"></a>Esempi  
- L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.  
-  
-```  
-DECLARE @g geometry;  
-SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
-SELECT @g.STGeometryN(2).STAsText();  
-```  
-  
- In questo esempio viene creata un'istanza `MultiPolygon` vuota.  
-  
-```  
-DECLARE @g geometry;  
-SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Polygon](../spatial/polygon.md)   
- [STArea &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
- [STCentroid &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
- [STPointOnSurface &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
- [Dati spaziali &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
-  
-  
+  `@g3` non è valida perché gli interni delle due istanze di `Polygon` si sovrappongono.
+
+## <a name="examples"></a>Esempi
+ L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.
+
+```
+DECLARE @g geometry;
+SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');
+SELECT @g.STGeometryN(2).STAsText();
+```
+
+ In questo esempio viene creata un'istanza `MultiPolygon` vuota.
+
+```
+DECLARE @g geometry;
+SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
+```
+
+## <a name="see-also"></a>Vedere anche
+ [Poligono](../spatial/polygon.md) [STArea &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type) [STCentroid &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type) [STPointOnSurface &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [dati spaziali](../spatial/spatial-data-sql-server.md) &#40;SQL Server&#41;
+
+

@@ -10,27 +10,27 @@ ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dea74f8fc22bea5a0903a3dae17f6c969849181c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65485057"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177281"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Attività 3: Pulizia dei dati fornitore rispetto alla Knowledge Base Suppliers
-  In questa attività viene eseguito il processo di pulizia computerizzato. In DQS vengono utilizzati algoritmi e livelli di probabilità avanzati basati sui valori soglia specificati per analizzare i dati rispetto alla Knowledge Base selezionata e procedere quindi alla relativa pulizia. Per ulteriori informazioni, vedere [pulizia dei dati tramite la Knowledge Base DQS (interna)](https://msdn.microsoft.com/library/hh213061.aspx) .  
-  
-1.  Fare clic su **Avvia** per avviare il processo di pulizia computerizzato.  
-  
-     ![Pagina Pulisci del processo di pulizia](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "Pagina Pulisci del processo di pulizia")  
-  
-2.  Al termine del processo di pulizia, verificare le **statistiche** nella scheda **Profiler** . Le statistiche di origine forniscono il numero di record elaborati, il numero di record risultanti corretti, il numero di record corretti da DQS, il numero di record che presentano modifiche suggerite da DQS e il numero di record non validi. Nella casella di riepilogo a destra è possibile visualizzare i valori corretti, quelli suggeriti, nonché la completezza (l'entità della presenza dei dati) e l'accuratezza (la misura entro cui i dati possono essere utilizzati per gli scopi previsti) dei valori per ogni dominio interessato dal processo di pulizia.  
-  
-     ![Risultati della pulizia](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "Risultati della pulizia")  
-  
-3.  Fare clic su **Avanti** per passare alla pagina **Gestisci e visualizza risultati** .  
-  
-## <a name="next-step"></a>passaggio successivo  
- [Attività 4: Gestione e visualizzazione dei risultati](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
-  
-  
+  In questa attività viene eseguito il processo di pulizia computerizzato. In DQS vengono utilizzati algoritmi e livelli di probabilità avanzati basati sui valori soglia specificati per analizzare i dati rispetto alla Knowledge Base selezionata e procedere quindi alla relativa pulizia. Per ulteriori informazioni, vedere [pulizia dei dati tramite la Knowledge Base DQS (interna)](https://msdn.microsoft.com/library/hh213061.aspx) .
+
+1.  Fare clic su **Avvia** per avviare il processo di pulizia computerizzato.
+
+     ![Pagina Pulisci del processo di pulizia](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "Pagina Pulisci del processo di pulizia")
+
+2.  Al termine del processo di pulizia, verificare le **statistiche** nella scheda **Profiler** . Le statistiche di origine forniscono il numero di record elaborati, il numero di record risultanti corretti, il numero di record corretti da DQS, il numero di record che presentano modifiche suggerite da DQS e il numero di record non validi. Nella casella di riepilogo a destra è possibile visualizzare i valori corretti, quelli suggeriti, nonché la completezza (l'entità della presenza dei dati) e l'accuratezza (la misura entro cui i dati possono essere utilizzati per gli scopi previsti) dei valori per ogni dominio interessato dal processo di pulizia.
+
+     ![Risultati della pulizia](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "Risultati della pulizia")
+
+3.  Fare clic su **Avanti** per passare alla pagina **Gestisci e visualizza risultati** .
+
+## <a name="next-step"></a>passaggio successivo
+ [Attività 4: Gestione e visualizzazione dei risultati](../../2014/tutorials/task-4-manaing-and-viewing-results.md)
+
+

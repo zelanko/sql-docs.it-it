@@ -13,41 +13,36 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 67e79a107c47563e507ad27fb0bd14f703206b4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 43cecce8e173c0135a7a37ee5800c7cf658c1f1a
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088785"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175380"
 ---
 # <a name="technical-reference-database-engine"></a>Guida di riferimento tecnico (Motore di database)
-  Consente di individuare gli strumenti, le lingue e la documentazione di riferimento per la programmazione dell'amministrazione per il [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") Guida di **riferimento alle funzionalità**  
- [Guida sensibile al contesto di Server registrati](../ssms/register-servers/registered-servers-f1-help.md)  
-  
- [Guida dei menu di SQL Server Management Studio](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
-  
- [Guida sensibile al contesto relativa a Visual Database Tools](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
-  
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **riferimento all'utilità della riga di comando**  
- [Utilità bcp](../tools/bcp-utility.md)  
-  
- [dta - utilità](../tools/dta/dta-utility.md)  
-  
- [Utilità SqlLocalDB](../tools/sqllocaldb-utility.md)  
-  
- [Altro...](../tools/command-prompt-utility-reference-database-engine.md)  
-  
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **motore di database cmdlet di PowerShell**  
- [cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
-  
- [Cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
-  
- ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") Guida **di riferimento a errori ed eventi**  
- [Motore di database eventi ed errori] (.. /relational-databases/errors-events/database-engine-events-and-errors.md0  
-  
- ![Icona cartella file di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Showplan Logical and Physical Operators Reference**  
- [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
-  
+  Consente di individuare gli strumenti, le lingue e la documentazione di riferimento per la programmazione dell'amministrazione per il [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") Guida di **riferimento alle funzionalità** [Server registrati Guida sensibile](../ssms/register-servers/registered-servers-f1-help.md) al contesto
+
+ [Guida dei menu di SQL Server Management Studio](../ssms/menu-help/sql-server-management-studio-menu-help.md)
+
+ [Guida sensibile al contesto relativa a Visual Database Tools](../ssms/visual-db-tools/visual-database-tools-f1-help.md)
+
+ ![Icona cartella file di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") utilità utilità di **riferimento utilità** [bcp](../tools/bcp-utility.md)
+
+ [dta - utilità](../tools/dta/dta-utility.md)
+
+ [Utilità SqlLocalDB](../tools/sqllocaldb-utility.md)
+
+ [Altro...](../tools/command-prompt-utility-reference-database-engine.md)
+
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **motore di database** cmdlet [di PowerShell Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)
+
+ [Cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)
+
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") Guida **di riferimento a errori ed eventi** [motore di database eventi ed errori] (.. /relational-databases/errors-events/database-engine-events-and-errors.md0
+
+ ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Showplan Logical and Physical Operators riferimento** [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)
+
+
