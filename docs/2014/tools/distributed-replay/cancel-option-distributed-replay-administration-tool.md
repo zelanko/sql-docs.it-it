@@ -10,51 +10,49 @@ ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6d9aa28d4a6879f3077b137880aae54b9a0c434
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ce29f56d7877712dd99553968b364b1c33471c2b
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63149873"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177327"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Opzione cancel (strumento di amministrazione Distributed Replay)
-  Lo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`,, è uno strumento da riga di comando che è possibile utilizzare per comunicare con il controller di riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **cancel** e la sintassi corrispondente.  
-  
- L'opzione **cancel** annulla l'operazione corrente in esecuzione nel controller.  
-  
- ![Icona di collegamento all'argomento](../../database-engine/media/topic-link.gif "Icona di collegamento a un argomento") Per ulteriori informazioni sulle convenzioni di sintassi utilizzate con la sintassi dello strumento di amministrazione, vedere [convenzioni della sintassi Transact-sql &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-dreplay cancel [-mcontroller] [-q]   
-```  
-  
-#### <a name="parameters"></a>Parametri  
- **-m** *controller*  
- Nome computer del controller. È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.  
-  
- Se il parametro **-m** non è specificato, viene usato il computer locale.  
-  
- **-q**  
- Modalità non interattiva. Non viene richiesta alcuna conferma da parte dell'utente.  
-  
- Il parametro **-q** è facoltativo.  
-  
-## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene inviata una richiesta di annullamento in modalità non interattiva. Il valore `localhost` indica che il servizio controller viene eseguito nello stesso computer dello strumento di amministrazione.  
-  
-```  
-dreplay cancel -m localhost -q  
-```  
-  
-## <a name="permissions"></a>Autorizzazioni  
- È necessario eseguire lo strumento di amministrazione come utente interattivo, scegliendo tra utente locale e account utente di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.  
-  
- Per altre informazioni, vedere [Sicurezza di Riesecuzione distribuita](distributed-replay-security.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)  
-  
-  
+  Lo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`,, è uno strumento da riga di comando che è possibile utilizzare per comunicare con il controller di riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **cancel** e la sintassi corrispondente.
+
+ L'opzione **cancel** annulla l'operazione corrente in esecuzione nel controller.
+
+ ![Icona di collegamento all'argomento](../../database-engine/media/topic-link.gif "Icona di collegamento a un argomento") Per altre informazioni sulle convenzioni relative alla sintassi dello strumento di amministrazione, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).
+
+## <a name="syntax"></a>Sintassi
+
+```
+
+dreplay cancel [-mcontroller] [-q] 
+```
+
+#### <a name="parameters"></a>Parametri
+ **-m** *controller* nome computer del controller. È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.
+
+ Se il parametro **-m** non è specificato, viene usato il computer locale.
+
+ **-q** Modalità non interattiva. Non viene richiesta alcuna conferma da parte dell'utente.
+
+ Il parametro **-q** è facoltativo.
+
+## <a name="examples"></a>Esempi
+ Nell'esempio seguente viene inviata una richiesta di annullamento in modalità non interattiva. Il valore `localhost` indica che il servizio controller viene eseguito nello stesso computer dello strumento di amministrazione.
+
+```
+dreplay cancel -m localhost -q
+```
+
+## <a name="permissions"></a>Autorizzazioni
+ È necessario eseguire lo strumento di amministrazione come utente interattivo, scegliendo tra utente locale e account utente di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.
+
+ Per altre informazioni, vedere [Sicurezza di Riesecuzione distribuita](distributed-replay-security.md).
+
+## <a name="see-also"></a>Vedere anche
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)
+
+

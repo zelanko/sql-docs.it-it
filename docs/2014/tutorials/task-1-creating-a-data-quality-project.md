@@ -10,29 +10,29 @@ ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484899"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177301"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Attività 1: Creazione di un progetto Data Quality
-  In questa attività viene creato un progetto Data Quality per la pulizia dei dati fornitore in un file di Excel nella Knowledge Base creata precedentemente in questa esercitazione.  
-  
-1.  Nel riquadro **Progetto Data Quality** della pagina principale fare clic su **Nuovo progetto Data Quality**.  
-  
-     ![Pulsante Nuovo progetto Data Quality nella pagina principale](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "Pulsante Nuovo progetto Data Quality nella pagina principale")  
-  
-2.  Digitare **Cleanse Supplier List** come **Nome** del progetto.  
-  
-3.  Selezionare **Suppliers** per il campo **Usa Knowledge Base** . Verranno puliti i dati fornitore di input nella Knowledge Base Suppliers creata precedentemente in questa esercitazione.  
-  
-4.  Assicurarsi che sia selezionato **Pulizia** come **Attività** nella parte inferiore del riquadro destro, quindi fare clic su **Avanti**.  
-  
-     ![Pagina Nuovo progetto Data Quality - Pulizia selezionata](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Pagina Nuovo progetto Data Quality - Pulizia selezionata")  
-  
-## <a name="next-step"></a>passaggio successivo  
- [Attività 2: Mapping delle colonne di Excel ai domini DQS](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
-  
-  
+  In questa attività viene creato un progetto Data Quality per la pulizia dei dati fornitore in un file di Excel nella Knowledge Base creata precedentemente in questa esercitazione.
+
+1.  Nel riquadro **Progetto Data Quality** della pagina principale fare clic su **Nuovo progetto Data Quality**.
+
+     ![Pulsante Nuovo progetto Data Quality nella pagina principale](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "Pulsante Nuovo progetto Data Quality nella pagina principale")
+
+2.  Digitare **Cleanse Supplier List** come **Nome** del progetto.
+
+3.  Selezionare **Suppliers** per il campo **Usa Knowledge Base** . Verranno puliti i dati fornitore di input nella Knowledge Base Suppliers creata precedentemente in questa esercitazione.
+
+4.  Assicurarsi che sia selezionato **Pulizia** come **Attività** nella parte inferiore del riquadro destro, quindi fare clic su **Avanti**.
+
+     ![Pagina Nuovo progetto Data Quality - Pulizia selezionata](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Pagina Nuovo progetto Data Quality - Pulizia selezionata")
+
+## <a name="next-step"></a>passaggio successivo
+ [Attività 2: Mapping delle colonne di Excel ai domini DQS](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
+
+

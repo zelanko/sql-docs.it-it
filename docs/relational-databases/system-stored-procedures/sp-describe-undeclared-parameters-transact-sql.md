@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908331"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180126"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   Restituisce un set di risultati che contiene metadati sui parametri non dichiarati in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considera ogni parametro utilizzato nel batch ** \@TSQL** , ma non dichiarato in ** \@params**. Viene restituito un set di risultati che contiene una riga per ognuno di questi parametri, con le informazioni sul tipo dedotte per quel parametro. La procedura restituisce un set di risultati vuoto se ** \@** il batch di input TSQL non contiene parametri, ad eccezione di quelli dichiarati in ** \@params**.  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> Per usare questa stored procedure in Azure sinapsi Analytics (in precedenza SQL DW), il livello di compatibilità di un database deve essere maggiore di 10. 
+
 ## <a name="arguments"></a>Argomenti  
 `[ \@tsql = ] 'Transact-SQL\_batch'`Una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *Transact-SQL_batch* può essere di **tipo nvarchar (**_n_**)** o **nvarchar (max)**.  
   
@@ -203,7 +206,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **sql_variant**  
   
-    -   **XML**  
+    -   **xml**  
   
     -   Tipi CLR definiti dal sistema (**hierarchyid**, **Geometry**, **geography**)  
   
@@ -222,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      In questo caso, E (\@p) è Col_Int + \@p e TT (\@p) è **int**. viene scelto **int** per \@p perché non produce conversioni implicite. Qualsiasi altra scelta del tipo di dati produce almeno una conversione implicita.  
   
-2.  Se più tipi di dati hanno un valore equivalente per il numero più piccolo di conversioni, viene utilizzato il tipo di dati con la precedenza maggiore. Ad esempio  
+2.  Se più tipi di dati hanno un valore equivalente per il numero più piccolo di conversioni, viene utilizzato il tipo di dati con la precedenza maggiore. Ad esempio:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 35f9cdfcc40d417a6aed19a3abe0e590061b2eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75256007"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180091"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Restituisce il piano di esecuzione della query per le richieste in corso. Utilizzare questa DMV per recuperare Showplan XML con statistiche temporanee. 
 
@@ -52,7 +52,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |request_id|**int**|ID della richiesta. Non ammette i valori NULL.|
 |sql_handle|**varbinary (64)**|Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query. Ammette valori Null.|
 |plan_handle|**varbinary (64)**|Token che identifica in modo univoco un piano di esecuzione della query per un batch attualmente in esecuzione. Ammette valori Null.|
-|query_plan|**XML**|Contiene la rappresentazione Showplan di runtime del piano di esecuzione della query specificato con *plan_handle* contenenti statistiche parziali. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente. Ammette valori Null.|
+|query_plan|**xml**|Contiene la rappresentazione Showplan di runtime del piano di esecuzione della query specificato con *plan_handle* contenenti statistiche parziali. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente. Ammette valori Null.|
 
 ## <a name="remarks"></a>Osservazioni
 Questa funzione di sistema è disponibile a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] partire da SP1. Vedere KB [3190871](https://support.microsoft.com/help/3190871)
@@ -66,7 +66,8 @@ Nelle condizioni seguenti non viene restituito alcun output Showplan nella colon
 A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_statistics_xml** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva il completamento del piano di query e generava l'errore 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **query_plan** restituisce null.   
 
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione per il server.  
+Nei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .
 
 ## <a name="examples"></a>Esempi  
   
