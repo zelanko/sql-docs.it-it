@@ -41,7 +41,7 @@ ms.locfileid: "75252983"
 |FROM|ORDER BY|  
 |HAVING|UNION|  
 |FOR|GROUP BY|  
-|Torna all'inizio|OPTION (hint)|  
+|TOP|OPTION (hint)|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>Istruzioni Transact-SQL aggiuntive supportate  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] offre inoltre supporto IntelliSense per le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] elencate nella tabella seguente.  
