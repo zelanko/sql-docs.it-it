@@ -5,18 +5,18 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein; maghan
-ms.topic: quickstart
+ms.topic: tutorial
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac805437d716bbc7e8fdf95f491c64331ddb4658
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76162650"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575544"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
 
@@ -31,7 +31,7 @@ Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per
 > * Usare la tabella della finestra di query per verificare le proprietà di connessione
 > * Modificare il server al quale è connessa la finestra di query
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa esercitazione è necessario avere SQL Server Management Studio e l'accesso a un'istanza di SQL Server. 
 

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831395"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608389"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usare uno script Python per distribuire un cluster Big Data di SQL Server nel servizio Azure Kubernetes
 
@@ -27,7 +27,7 @@ In questa esercitazione si usa uno script di distribuzione Python di esempio per
 
 La distribuzione predefinita di cluster Big Data usata in questo articolo è costituita da un'istanza SQL master, un'istanza del pool di calcolo, due istanze del pool di dati e due istanze del pool di archiviazione. I dati vengono salvati in modo permanente usando i volumi permanenti Kubernetes che usano le classi di archiviazione predefinite del servizio Azure Kubernetes. La configurazione predefinita usata in questa esercitazione è adatta per ambienti di sviluppo e test.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Una sottoscrizione di Azure.
 - [Strumenti per Big Data](deploy-big-data-tools.md):
@@ -82,7 +82,7 @@ Usare la procedura seguente per eseguire lo script di distribuzione in un prompt
    | **Nome utente** | Nome utente per l'utente del controller (il valore predefinito è **admin**). |
 
    > [!IMPORTANT]
-   > La dimensione del computer predefinita **Standard_L8s** potrebbe non essere disponibile in tutte le aree di Azure. Se si selezionano dimensioni del computer diverse, assicurarsi che il numero totale di dischi che è possibile collegare tra i nodi del cluster sia maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, il cluster Big Data richiede 24 attestazioni di volumi permanenti. La dimensione [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series), ad esempio, supporta 32 dischi collegati, quindi è possibile valutare i cluster Big Data con un singolo nodo di questa dimensione.
+   > La dimensione del computer predefinita **Standard_L8s** potrebbe non essere disponibile in tutte le aree di Azure. Se si selezionano dimensioni del computer diverse, assicurarsi che il numero totale di dischi che è possibile collegare tra i nodi del cluster sia maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, il cluster Big Data richiede 24 attestazioni di volumi permanenti. La dimensione [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series), ad esempio, supporta 32 dischi collegati, quindi è possibile valutare i cluster Big Data con un singolo nodo di questa dimensione.
 
    > [!NOTE]
    > Durante la distribuzione di cluster Big Data, l'account `sa` di SQL Server è disabilitato. Viene eseguito il provisioning di un nuovo account di accesso sysadmin nell'istanza master di SQL Server usando lo stesso nome specificato per l'input **Nome utente** e la password corrispondente all'input **Password**. Gli stessi valori di **Nome utente** e **Password** vengono usati anche per il provisioning di un utente amministratore del controller. Solo l'utente supportato per il gateway (Knox) è la **radice** e la password è identica a quella indicata in precedenza.
