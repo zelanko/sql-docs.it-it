@@ -1,5 +1,5 @@
 ---
-title: getAsciiStream Method (SQLServerCallableStatement) | Microsoft Docs
+title: Metodo getAsciiStream (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

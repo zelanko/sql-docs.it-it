@@ -46,7 +46,7 @@ Per altre informazioni sui diversi contesti di sicurezza in cui viene eseguito o
 ## <a name="order-in-which-scripts-are-run"></a>Ordine in cui vengono eseguiti gli script  
 L'ordine di esecuzione di ogni script è un aspetto fondamentale da considerare. Anche se l'ordine non può essere modificato, è possibile decidere quali script eseguire. La figura seguente include la selezione degli script che è possibile usare in un'esecuzione di test contenente due unit test di SQL Server e viene indicato l'ordine in cui vengono eseguiti:  
   
-![Two Database Unit Tests](../ssdt/media/twodatabaseunittests.png "Two Database Unit Tests")  
+![Due unit test del database](../ssdt/media/twodatabaseunittests.png "Due unit test del database")  
   
 > [!NOTE]  
 > Se è stata configurata la distribuzione del progetto di database di SQL Server, questa operazione viene eseguita all'avvio dell'esecuzione del test, usando la stringa di connessione del contesto autorizzato. Per altre informazioni, vedere [Procedura: Configurare l'esecuzione di unit test di SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  

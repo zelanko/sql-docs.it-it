@@ -1,5 +1,5 @@
 ---
-title: SQLServerException Constructors | Microsoft Docs
+title: Costruttori di SQLServerException | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -20,8 +20,8 @@ ms.locfileid: "67971039"
 # <a name="sqlserverexception-constructors"></a>Costruttori SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initializes a new instance of the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class.
+  Inizializza una nuova istanza della classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md).
 
-  For information about the members of [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), see [SQLServerException Members](../../../connect/jdbc/reference/sqlserverexception-members.md).  
+  Per informazioni sui membri di [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), vedere [Membri di SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
   
   

@@ -68,7 +68,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Flusso di autorizzazione  
  L'autorizzazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene controllata dall'estensione di sicurezza attualmente configurata per l'esecuzione nel server. L'autorizzazione è basata sul ruolo ed è limitata alle autorizzazioni e alle operazioni fornite dall'architettura di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Nel diagramma seguente è illustrato il processo di autorizzazione degli utenti per l'utilizzo degli elementi nel database del server di report:  
   
- ![Reporting Services security authorization flow](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services security authorization flow")  
+ ![Flusso delle autorizzazioni di sicurezza per Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Flusso delle autorizzazioni di sicurezza per Reporting Services")  
   
  Come illustrato in questo diagramma, per l'autorizzazione viene applicata la sequenza seguente:  
   

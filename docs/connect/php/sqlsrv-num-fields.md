@@ -26,7 +26,7 @@ ms.locfileid: "67992673"
 # <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recupera il numero di campi in un set di risultati attivo. This function can be called on any prepared statement, before or after execution.  
+Recupera il numero di campi in un set di risultati attivo. Questa funzione può essere chiamata in qualsiasi istruzione preparata, prima o dopo l'esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
