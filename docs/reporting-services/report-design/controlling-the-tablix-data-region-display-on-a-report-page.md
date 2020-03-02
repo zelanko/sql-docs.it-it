@@ -50,7 +50,7 @@ Le aree dati tabella, matrice ed elenco sono tutte esempi di aree dati *Tablix* 
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controllo della visualizzazione di gruppi di colonne e righe Tablix  
  Per controllare come vengono visualizzati i gruppi di aree dati Tablix occorre considerare la struttura di gruppo. Un'area dati Tablix può disporre di quattro aree, come mostrato nella figura seguente:  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Aree dell'area dati Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Aree dell'area dati Tablix")  
   
  L'area del gruppo di righe e l'area del gruppo di colonne contengono intestazioni di gruppo. Quando per un'area dati Tablix sono previste intestazioni di gruppo, è possibile controllare come le righe e le colonne vengono ripetute impostando proprietà nella pagina **Generale** della finestra di dialogo **Proprietà Tablix** .  
   
