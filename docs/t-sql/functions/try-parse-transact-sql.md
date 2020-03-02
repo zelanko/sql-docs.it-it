@@ -59,7 +59,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare TRY_PARSE solo per la conversione da stringa a data/ora e tipi di numero. Per le conversioni di tipi generali, continuare a utilizzare CAST o CONVERT. È opportuno ricordare che si verifica un sovraccarico nelle prestazioni durante l'analisi del valore stringa.  
   
- TRU_PARSE è basato sulla presenza di CLR (Common Language Runtime) di .NET Framework.  
+ TRY_PARSE è basato sulla presenza di CLR (Common Language Runtime) di .NET Framework.  
   
  Questa funzione non sarà eseguita in modalità remota poiché dipende dalla presenza di CLR. L'esecuzione in modalità remota di una funzione che richiede CLR provocherebbe un errore sul server remoto.  
   
