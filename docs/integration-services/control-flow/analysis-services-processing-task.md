@@ -1,10 +1,8 @@
 ---
 title: Attività Elaborazione Analysis Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298463"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634790"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
 
@@ -119,7 +117,8 @@ ms.locfileid: "71298463"
  **Argomenti correlati:** [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Elenco oggetti**  
- |Proprietà|Descrizione|  
+ 
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**nome oggetto**|Consente di visualizzare i nomi degli oggetti specificati.|  
 |**Tipo**|Consente di visualizzare i tipi degli oggetti specificati.|  
@@ -138,7 +137,8 @@ ms.locfileid: "71298463"
  **Argomenti correlati:** [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Riepilogo impostazioni batch**  
- |Proprietà|Descrizione|  
+ 
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Ordine di elaborazione**|Consente di specificare se gli oggetti devono essere elaborati sequenzialmente o in un batch. Se si utilizza l'elaborazione parallela, consente di specificare il numero di oggetti da elaborare simultaneamente.|  
 |**Modalità transazione**|Consente di specificare la modalità di transazione per l'elaborazione sequenziale.|  
@@ -150,4 +150,3 @@ ms.locfileid: "71298463"
  Consente di modificare le opzioni di elaborazione e la gestione degli errori nelle chiavi della dimensione.  
   
  **Argomenti correlati:** [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
-  

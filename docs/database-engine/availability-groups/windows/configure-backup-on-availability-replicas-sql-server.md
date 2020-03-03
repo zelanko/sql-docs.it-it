@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.openlocfilehash: f5aa9a2373d622e74b2964c7a6dc967a82ab4e36
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146291"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177381"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configurare backup in repliche secondarie per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,9 @@ ms.locfileid: "77146291"
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
  È necessario essere connessi all'istanza del server che ospita la replica primaria.  
+ 
+   > [!NOTE]
+   > Non è necessario che la replica secondaria sia leggibile per l'offload dei backup. I backup avranno comunque esito positivo nella replica secondaria anche se `Readable Secondary` è impostato su `no`. 
   
   
 ##  <a name="Permissions"></a> Autorizzazioni  
@@ -180,7 +183,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> Per ottenere informazioni sulle impostazioni delle preferenze di backup  
  Gli elementi seguenti sono utili per ottenere informazioni pertinenti per il backup di una replica secondaria.  
   
-|Visualizza|Informazioni|Colonne pertinenti|  
+|Visualizzazione|Informazioni|Colonne pertinenti|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)|Indica se la replica corrente è la replica di backup preferita|Non applicabile.|  
 |[sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)|preferenza di backup automatico|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  

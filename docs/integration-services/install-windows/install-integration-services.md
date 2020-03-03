@@ -1,5 +1,5 @@
 ---
-title: Installare SQL Server Integration Services (SSIS) | Microsoft Docs
+title: Installare SQL Server Integration Services | Microsoft Docs
 description: Informazioni su come installare Microsoft SQL Server Integration Services (SSIS) e su come ottenere altri download per SSIS
 ms.custom: ''
 ms.date: 09/19/2019
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4f3dbfa81e52d050b3e5df46ea2ea5911a8b1254
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74491958"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903688"
 ---
 # <a name="install-integration-services-ssis"></a>Installare Integration Services (SSIS)
 
@@ -87,7 +87,7 @@ Per impostazione predefinita, in una nuova installazione, [!INCLUDE[ssISnoversio
 
 Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], selezionare i componenti necessari dall'elenco seguente:
 
-- **Integration Services (SSIS)** . Installare SSIS con l'Installazione guidata di SQL Server. Se si seleziona SSIS viene installato quanto segue:
+- **Integration Services (SSIS)**. Installare SSIS con l'Installazione guidata di SQL Server. Se si seleziona SSIS viene installato quanto segue:
 
   - Supporto per il catalogo SSIS nel motore di database di SQL Server.
 
@@ -99,7 +99,7 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
 - **Motore di database di SQL Server**. Installare il motore di database con l'Installazione guidata di SQL Server. La selezione del motore di database consente di creare e ospitare il database del catalogo SSIS, `SSISDB`, per archiviare, gestire, eseguire e monitorare i pacchetti SSIS.
 
-- **SQL Server Data Tools (SSDT)** . Per scaricare e installare SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L'installazione di SSDT consente di progettare e distribuire pacchetti SSIS. Con SSDT vengono installati i componenti seguenti:
+- **SQL Server Data Tools (SSDT)**. Per scaricare e installare SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L'installazione di SSDT consente di progettare e distribuire pacchetti SSIS. Con SSDT vengono installati i componenti seguenti:
 
   - Strumenti di progettazione e sviluppo di pacchetti SSIS, incluso Progettazione SSIS.
 
@@ -113,7 +113,7 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
   - Importazione ed esportazione guidate di SQL Server.
 
-- **SQL Server Data Tools (SSDT)** . Il programma di installazione autonomo di SSDT per Visual Studio 2019 è stato sospeso. Per Visual Studio 2019, è ora possibile ottenere l'estensione di Progettazione SSIS da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
+- **SQL Server Data Tools (SSDT)**. Il programma di installazione autonomo di SSDT per Visual Studio 2019 è stato sospeso. Per Visual Studio 2019, è ora possibile ottenere l'estensione di Progettazione SSIS da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
 - **Integration Services Feature Pack per Azure**. Per scaricare e installare il Feature Pack, vedere [Microsoft SQL Server 2017 Integration Services Feature Pack per Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). L'installazione del Feature Pack consente la connessione dei pacchetti ai servizi di archiviazione e analisi nel cloud di Azure, inclusi i servizi seguenti:
 

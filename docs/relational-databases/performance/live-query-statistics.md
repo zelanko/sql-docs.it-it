@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983246"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180092"
 ---
 # <a name="live-query-statistics"></a>Live Query Statistics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di visualizzare il piano di esecuzione dinamico di una query attiva. Il piano dinamico delle query offre informazioni approfondite in tempo reale sul processo di esecuzione della query, man mano che i controlli passano da un [operatore del piano di query](../../relational-databases/showplan-logical-and-physical-operators-reference.md) a un altro. Il piano dinamico delle query visualizza lo stato complessivo delle query e le statistiche di esecuzione a livello di operatore, ad esempio il numero di righe prodotte, il tempo trascorso, lo stato di avanzamento dell'operatore e così via. Poiché questi dati sono disponibili in tempo reale senza dover attendere il completamento della query, queste statistiche di esecuzione sono estremamente utili per il debug di problemi relativi alle prestazioni delle query. Questa funzionalità è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ma può funzionare con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 > [!NOTE]
 > Internamente le statistiche sulle query dinamiche sfruttano la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!WARNING]  
 > Questa funzionalità viene usata principalmente per la risoluzione dei problemi. L'uso di questa funzionalità può rallentare in parte le prestazioni complessive delle query, in particolare in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).  
@@ -62,7 +62,9 @@ ms.locfileid: "73983246"
  Perché le statistiche delle query dinamiche possano acquisire informazioni sullo stato di avanzamento delle query, è necessario che l'infrastruttura del profilo delle statistiche sia stata abilitata. A seconda della versione, l'overhead può essere notevole. Per altre informazioni su questo overhead, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## <a name="permissions"></a>Autorizzazioni  
- Sono richieste l'autorizzazione a livello di database `SHOWPLAN` per popolare la pagina dei risultati delle **statistiche sulle query dinamiche**, l'autorizzazione a livello di server `VIEW SERVER STATE` per visualizzare le statistiche dinamiche e le autorizzazioni necessarie per eseguire la query.  
+Sono richieste l'autorizzazione a livello di database `SHOWPLAN` per popolare la pagina dei risultati **Statistiche query dinamiche** e le autorizzazioni necessarie per eseguire la query.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è richiesta l'autorizzazione a livello di server `VIEW SERVER STATE` per visualizzare le statistiche dinamiche.  
+Nei livelli [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database per visualizzare le statistiche dinamiche. Nei livelli [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard e Basic è richiesto l'account **Amministratore server** o **Amministratore Azure Active** per visualizzare le statistiche dinamiche.
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

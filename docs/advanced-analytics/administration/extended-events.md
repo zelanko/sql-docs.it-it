@@ -3,18 +3,18 @@ title: Monitorare gli script con eventi estesi
 description: Informazioni su come usare gli eventi estesi per monitorare e risolvere i problemi delle operazioni correlate agli script esterni di processi di Machine Learning Services per SQL Server, Launchpad di SQL Server e Python o R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727734"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200982"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Monitorare gli script Python e R con eventi estesi in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ Machine Learning Services per SQL Server avvia alcuni servizi che vengono esegui
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    Per acquisire gli eventi correlati a Launchpad, inserire il file *config* nella directory Binn per l'istanza di SQL Server. In un'installazione predefinita la directory è:
+    Per acquisire gli eventi correlati a Launchpad, posizionare il file con estensione *xml* nella directory Binn per l'istanza di SQL Server. In un'installazione predefinita la directory è:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** è il processo satellite che supporta l'estendibilità di SQL con linguaggi di script esterni, come R o Python. Un'istanza separata di BxlServer viene avviata per ogni istanza del linguaggio esterno.
   
-    Per acquisire gli eventi correlati a BXLServer, inserire il file con estensione *config* nella directory di installazione di R o Python. In un'installazione predefinita la directory è:
+    Per acquisire gli eventi correlati a BXLServer, posizionare il file con estensione *xml* nella directory di installazione di R o Python. In un'installazione predefinita la directory è:
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
@@ -145,7 +145,7 @@ L'esempio seguente illustra la definizione della traccia degli eventi per il ser
 </event_sessions>  
 ```
 
-+ Inserire il file *config* nella directory Binn per l'istanza di SQL Server.
++ Posizionare il file con estensione *xml* nella directory Binn per l'istanza di SQL Server.
 + Il nome del file deve essere `Launchpad.xevents.xml`.
 
 ### <a name="example-capturing-bxlserver-events"></a>Esempio: Acquisizione degli eventi di BXLServer  
@@ -175,7 +175,7 @@ L'esempio seguente illustra la definizione di una traccia di eventi per l'esegui
 </event_sessions>  
 ```
 
-+ Inserire il file *config* nella stessa directory dell'eseguibile di BXLServer.
++ Posizionare il file con estensione *xml* nella stessa directory dell'eseguibile di BXLServer.
 + Il nome del file deve essere `bxlserver.xevents.xml`.
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -1,5 +1,5 @@
 ---
-title: Supporto della disponibilità elevata in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
+title: Supporto della disponibilità elevata in Scale Out| Microsoft Docs
 description: Questo articolo descrive come configurare SSIS Scale Out per la disponibilità elevata
 ms.custom: performance
 ms.date: 05/23/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028756"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903678"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -31,7 +31,7 @@ In alternativa, la disponibilità elevata sul lato Scale Out Master può essere 
 
 Per configurare la disponibilità elevata sul lato Scale Out Master con Always On per il catalogo SSIS, eseguire le operazioni seguenti:
 
-## <a name="1-prerequisites"></a>1. Prerequisites
+## <a name="1-prerequisites"></a>1. Prerequisiti
 Configurare un cluster di failover di Windows Vedere il post di blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installazione della funzionalità di clustering di failover e degli strumenti per Windows Server 2012) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Installare Scale Out Master nel nodo primario
@@ -67,7 +67,7 @@ Seguire le istruzioni per impostare e configurare il supporto SSISDB per Always 
 È anche necessario creare un listener del gruppo di disponibilità per il gruppo di disponibilità in cui viene aggiunto il database SSISDB. Vedere [Creare o configurare un listener del gruppo di disponibilità](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Aggiornare il file di configurazione del servizio Scale Out Master
-Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` nel nodo master e secondario. Aggiornare **SqlServerName** in *[Nome DNS del listener del gruppo di disponibilità],[Porta]* .
+Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` nel nodo master e secondario. Aggiornare **SqlServerName** in *[Nome DNS del listener del gruppo di disponibilità],[Porta]*.
 
 ## <a name="6-enable-package-execution-logging"></a>6. Abilitare la registrazione dell'esecuzione dei pacchetti
 

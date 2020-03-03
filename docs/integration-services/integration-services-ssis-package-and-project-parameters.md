@@ -1,5 +1,5 @@
 ---
-title: Parametri del pacchetto e del progetto di Integration Services (SSIS) | Microsoft Docs
+title: Parametri del pacchetto e del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296164"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903858"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
 
@@ -133,7 +133,7 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
 4.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri vengono archiviati nel file di progetto.  
   
-    > **AVVISO** È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)** . Utilizzando l'ultimo pulsante della barra degli strumenti, è possibile specificare un valore per un parametro utilizzato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+    > **AVVISO** È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)**. Utilizzando l'ultimo pulsante della barra degli strumenti, è possibile specificare un valore per un parametro utilizzato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
     > **NOTA** Se si riapre il file di pacchetto senza aprire il progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la scheda **Parametri** sarà vuota e disabilitata.  
   
@@ -162,7 +162,7 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
   
 5.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri sono archiviati nelle configurazioni del file di progetto. Salvare il file di progetto per eseguire il commit al disco delle eventuali modifiche apportate ai valori dei parametri.  
   
-    > **AVVISO** È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)** . Usando l'ultimo pulsante della barra degli strumenti per aprire la finestra di dialogo **Gestione dei valori dei parametri**, è possibile specificare un valore per un parametro usato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+    > **AVVISO** È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)**. Usando l'ultimo pulsante della barra degli strumenti per aprire la finestra di dialogo **Gestione dei valori dei parametri**, è possibile specificare un valore per un parametro usato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 La finestra di dialogo **Imposta parametri** consente di associare un parametro nuovo o esistente a una proprietà di un'attività. È possibile aprire la finestra di dialogo facendo clic con il pulsante destro del mouse su un'attività o sulla scheda Flusso di controllo in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], quindi selezionando **Imposta parametri**. Nell'elenco seguente vengono descritti gli elementi dell'interfaccia utente della finestra di dialogo. Per altre informazioni sui parametri, vedere [Parametri di Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).

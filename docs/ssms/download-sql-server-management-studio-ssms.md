@@ -23,12 +23,12 @@ ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 02/18/2020
-ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
-ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
+ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77520944"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652930"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
@@ -80,6 +80,30 @@ Sono presenti alcuni [problemi noti](release-notes-ssms.md#known-issues-184) in 
 ## <a name="previous-versions"></a>Versioni precedenti
 
 Questo articolo è solo per la versione più recente di SSMS. Per scaricare le versioni precedenti di SSMS, vedere [Versioni precedenti di SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases).
+
+## <a name="unattended-install"></a>Installazione automatica
+
+È anche possibile installare SSMS usando uno script del prompt dei comandi.
+
+Se si vuole installare SSMS in background senza richieste dell'interfaccia utente grafica, seguire questa procedura.
+
+1. Avviare il prompt dei comandi con autorizzazioni elevate.
+
+2. Digitare il comando seguente nel prompt dei comandi.
+
+    ```console
+    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    Esempio:
+
+    ```console
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    È anche possibile passare */Passive* invece di */Quiet* per visualizzare l'interfaccia utente del programma di installazione.
+
+3. Se l'operazione ha esito positivo, SSMS viene installato in %systemdrive%\SSMSto\Common7\IDE\Ssms.exe in base all'esempio. Se si verificano errori, è possibile verificare il codice di errore restituito nel file di log in %TEMP%\SSMSSetup.
 
 ## <a name="supported-sql-offerings-ssms-184"></a>Offerte di SQL supportate (SSMS 18.4)
 

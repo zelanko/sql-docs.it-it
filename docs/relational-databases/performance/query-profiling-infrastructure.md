@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257667"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705906"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] offre la possibilità di accedere alle informazioni di runtime nei piani di esecuzione delle query. Una delle azioni più importanti quando si verifica un problema di prestazioni consiste nell'individuare in modo preciso il carico di lavoro in esecuzione e la modalità di gestione delle risorse. Per questa ragione, è necessario accedere al [piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
@@ -59,7 +59,7 @@ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[s
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Infrastruttura di profilatura delle statistiche di esecuzione query lightweight v1
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 A partire [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], con l'introduzione della profilatura lightweight è stato ridotto l'overhead delle prestazioni per raccogliere informazioni sui piani di esecuzione. A differenza della profilatura standard, la profilatura lightweight non raccoglie informazioni di runtime della CPU. La profilatura lightweight continua comunque a raccogliere il totale di righe conteggio delle righe e le informazioni sull'utilizzo dell'I/O.
 
@@ -89,7 +89,7 @@ Durante l'esecuzione di una sessione di eventi estesi che usa l'evento *query_th
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infrastruttura di profilatura delle statistiche di esecuzione query lightweight v2
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 include una versione rivista della profilatura lightweight con un overhead minimo. La profilatura lightweight può essere anche abilitata a livello globale tramite il [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) per le versioni indicate nella sezione precedente *Si applica a*. Una nuova DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) viene introdotta per restituire il piano di esecuzione query per le richieste in elaborazione.
 
@@ -119,9 +119,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Infrastruttura di profilatura delle statistiche di esecuzione query lightweight v3
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] include una nuova versione rivista della profilatura lightweight che raccoglie il totale di righe per tutte le esecuzioni. La profilatura lightweight è abilitata per impostazione predefinita in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e il flag di traccia 7412 non ha alcun effetto. È possibile disabilitare la profilatura lightweight a livello di database usando la [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] includono una nuova versione rivista della profilatura leggera che raccoglie informazioni sul numero di righe per tutte le esecuzioni. La profilatura leggera è abilitata per impostazione predefinita in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il flag di traccia 7412 non ha alcun effetto. È possibile disabilitare la profilatura lightweight a livello di database usando la [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 È stata introdotta una nuova DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) per restituire l'equivalente dell'ultimo piano di esecuzione effettivo noto per la maggior parte delle query. Tale DMF è denominata *statistiche dell'ultimo piano di query*. È possibile abilitare le statistiche dell'ultimo piano di query a livello di database usando la [configurazione con ambito database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 

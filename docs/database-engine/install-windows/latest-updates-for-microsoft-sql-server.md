@@ -10,13 +10,14 @@ ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
+ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 1aa72f7e0d383d4baefd47577282687e4882a555
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: aa78f1c759fe86dbb203f6e63d09f2ab3d5f6fad
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256776"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608470"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Aggiornamenti più recenti per Microsoft SQL Server
 
@@ -32,7 +33,7 @@ Ognuno dei collegamenti seguenti offre informazioni per tutti i prodotti e le te
 |--|--|--|--|--|--|
 |SQL Server 2019|N/D|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 2 [(KB 4536075)](https://support.microsoft.com/help/4536075)|13/2/2020|[Installazione di SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2017|N/D|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 19 [(KB 4535007)](https://support.microsoft.com/help/4535007)|5/2/2020|[Installazione di SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 11 [(KB 4535706)](https://support.microsoft.com/kb/4535706)|11/2/2020|[Installazione di SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 12 [(KB 4536648)](https://support.microsoft.com/kb/4536648)|25/2/2020|[Installazione di SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|9/7/2019|[Installazione di SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|N/D|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|22/11/2017|[Installazione di SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4532095](https://support.microsoft.com/help/4532095)|CU 4 [(KB 4535288)](https://support.microsoft.com/kb/4535288)|11/2/2020|[Installazione di SQL Server 2014](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
@@ -50,7 +51,7 @@ Ognuno dei collegamenti seguenti offre informazioni per tutti i prodotti e le te
 |SQL Server 2005 |SP4 [(KB 2463332)](https://support.microsoft.com/kb/2463332)|N/D|N/D|N/D|[Installazione di SQL Server 2005](https://msdn.microsoft.com/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/D|N/D|N/D|[Installazione di SQL Server 2000](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**Informazioni sul test degli aggiornamenti:**  [Test e sviluppo delle roadmap di supporto per applicazioni ISV (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+**Informazioni sul test degli aggiornamenti:** [Test e sviluppo delle roadmap di supporto per applicazioni ISV (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>Knowledge Base
 

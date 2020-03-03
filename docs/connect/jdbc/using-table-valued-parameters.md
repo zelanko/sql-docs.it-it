@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249709"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575339"
 ---
 # <a name="using-table-valued-parameters"></a>Uso di parametri con valori di tabella
 
@@ -42,7 +42,7 @@ I valori di colonna nei parametri con valori di tabella sono accessibili tramite
 
 Prima dell'introduzione dei parametri con valori di tabella in SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o a un comando SQL con parametri erano limitate. Uno sviluppatore può scegliere tra le opzioni seguenti per passare più righe al server:  
   
-- Usare una serie di parametri singoli per rappresentare i valori in più colonne e righe di dati. La quantità di dati che è possibile passare usando questo metodo è limitata dal numero di parametri consentiti. Le stored procedure di SQL Server possono includere al massimo 2100 parametri. La logica lato server è necessaria per assemblare questi singoli valori in una variabile di tabella o in una tabella temporanea per l'elaborazione.  
+- usare una serie di parametri singoli per rappresentare i valori in più colonne e righe di dati. La quantità di dati che è possibile passare usando questo metodo è limitata dal numero di parametri consentiti. Le stored procedure di SQL Server possono includere al massimo 2100 parametri. La logica lato server è necessaria per assemblare questi singoli valori in una variabile di tabella o in una tabella temporanea per l'elaborazione.  
   
 - Aggregare più valori di dati in stringhe delimitate o in documenti XML, quindi passare i valori di testo a una procedura o a un'istruzione. Questa operazione richiede che la routine o l'istruzione includa la logica necessaria per convalidare le strutture dei dati e disaggregare i valori.  
   
@@ -94,7 +94,7 @@ Esistono diverse limitazioni per i parametri con valori di tabella:
   
 - I parametri con valori di tabella possono essere indicizzati solo per supportare vincoli UNIQUE o PRIMARY KEY. SQL Server non gestisce statistiche su parametri con valori di tabella.  
   
-- I parametri con valori di tabella sono di sola lettura nel codice Transact-SQL. Non è possibile aggiornare i valori delle colonne nelle righe di un parametro con valori di tabella e non è possibile inserire o eliminare righe. Per modificare i dati passati a un'istruzione stored procedure o parametrizzata in un parametro con valori di tabella, è necessario inserire i dati in una tabella temporanea o in una variabile di tabella.  
+- I parametri con valori di tabella sono di sola lettura nel codice Transact-SQL. Non è possibile aggiornare i valori delle colonne nelle righe di un parametro con valori di tabella e non è possibile inserire o eliminare righe. Per modificare i dati trasferiti a un'istruzione stored procedure o parametrizzata in un parametro con valori di tabella, è necessario inserire i dati in una tabella temporanea o in una variabile di tabella.  
   
 - Non è possibile usare le istruzioni ALTER TABLE per modificare la progettazione dei parametri con valori di tabella.
 
@@ -127,7 +127,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>Passaggio di un parametro con valori di tabella come oggetto SQLServerDataTable  
 
-A partire da Microsoft JDBC Driver 6.0 per SQL Server, la classe SQLServerDataTable rappresenta una tabella in memoria di dati relazionali. In questo esempio viene illustrato come costruire un parametro con valori di tabella da dati in memoria usando l'oggetto SQLServerDataTable. Il codice crea innanzitutto un oggetto SQLServerDataTable, ne definisce lo schema e popola la tabella con i dati. Il codice configura quindi un'istruzione SQLServerPreparedStatement che passa questa tabella di dati come parametro con valori di tabella a SQL Server.  
+A partire da Microsoft JDBC Driver 6.0 per SQL Server, la classe SQLServerDataTable rappresenta una tabella in memoria di dati relazionali. In questo esempio viene illustrato come costruire un parametro con valori di tabella da dati in memoria usando l'oggetto SQLServerDataTable. Il codice crea prima di tutto un oggetto SQLServerDataTable, ne definisce lo schema e popola la tabella con i dati. Il codice configura quindi un'istruzione SQLServerPreparedStatement che passa questa tabella di dati come parametro con valori di tabella a SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Passaggio di un parametro con valori di tabella come oggetto ResultSet  
 
-In questo esempio viene illustrato come eseguire lo streaming di righe di dati da un ResultSet a un parametro con valori di tabella. Il codice recupera innanzitutto i dati da una tabella di origine e crea un oggetto SQLServerDataTable, ne definisce lo schema e popola la tabella con i dati. Il codice configura quindi un'istruzione SQLServerPreparedStatement che passa questa tabella di dati come parametro con valori di tabella a SQL Server.  
+In questo esempio viene illustrato come eseguire lo streaming di righe di dati da un ResultSet a un parametro con valori di tabella. Il codice recupera prima di tutto i dati da una tabella di origine in un oggetto SQLServerDataTable, ne definisce lo schema e popola la tabella con i dati. Il codice configura quindi un'istruzione SQLServerPreparedStatement che passa questa tabella di dati come parametro con valori di tabella a SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */

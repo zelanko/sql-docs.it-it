@@ -1,5 +1,5 @@
 ---
-title: Eseguire un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach | Microsoft Docs
+title: Eseguire un ciclo su file e tabelle di Excel con un contenitore Ciclo Foreach | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c636138358dda82c758ab2db70fab8d315f9b9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c82f5f361bf04b7d3d4a4c7012cee92d2a85ebfd
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71294025"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903756"
 ---
-# <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach
+# <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Eseguire un ciclo su file e tabelle di Excel con un contenitore Ciclo Foreach
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

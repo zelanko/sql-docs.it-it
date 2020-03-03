@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909311"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608501"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909311"
 ##  <a name="Enabling"></a> Abilitazione di Archivio query  
  Per impostazione predefinita, la funzionalità Archivio query non è attiva per i nuovi database.  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Usare la pagina Archivio query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Usare la pagina Archivio query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un database e quindi scegliere **Proprietà**.  
   
@@ -595,7 +595,7 @@ Se si usa **sp_query_store_force_plan** , è possibile forzare solo piani che so
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Supporto dell'uso forzato del piano per cursori fast forward e statici
   
-A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3, Query Store consente di forzare i piani di esecuzione query per i cursori API e [!INCLUDE[tsql](../../includes/tsql-md.md)] Fast Forward e statici. A tale scopo, è possibile usare `sp_query_store_force_plan` o i report di Query Store di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e database SQL di Azure (tutti i modelli di distribuzione), Query Store consente di forzare i piani di esecuzione query per i cursori API e [!INCLUDE[tsql](../../includes/tsql-md.md)] Fast Forward e statici. A tale scopo, è possibile usare `sp_query_store_force_plan` o i report di Query Store di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Rimuovere l'utilizzo forzato del piano per una query
 

@@ -1,5 +1,5 @@
 ---
-title: Risolvere i problemi di SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
+title: Risoluzione dei problemi relativi a SSIS Scale Out | Microsoft Docs
 description: Questo articolo descrive come risolvere i problemi comuni con SSIS Scale Out
 ms.custom: performance
 ms.date: 01/09/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67896156"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903774"
 ---
 # <a name="troubleshoot-scale-out"></a>Risolvere i problemi di Scale Out
 
@@ -65,7 +65,7 @@ Controllare i messaggi di errore nel log del servizio Scale Out Worker in `\<dri
 
 ### <a name="symptoms"></a>Sintomi
 
-*"System.ServiceModel.EndpointNotFoundException: Non è disponibile alcun endpoint in ascolto su https://* [NomeComputer]:[Porta] */ClusterManagement/ in grado di accettare il messaggio."*
+*"System.ServiceModel.EndpointNotFoundException: Non è disponibile alcun endpoint in ascolto su https://*[NomeComputer]:[Porta]*/ClusterManagement/ in grado di accettare il messaggio."*
 
 ### <a name="solution"></a>Soluzione
 
@@ -213,7 +213,7 @@ I messaggi di errore nel report di esecuzione del pacchetto non sono sufficienti
 ### <a name="solution"></a>Soluzione
 Sono disponibili più log di esecuzione in `TasksRootFolder` configurati in `WorkerSettings.config`. Per impostazione predefinita, la cartella è `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. *[account]* indica l'account che esegue il servizio Scale Out Worker con il valore predefinito `SSISScaleOutWorker140`.
 
-Per individuare il log per l'esecuzione del pacchetto con *[execution ID]* , eseguire il comando Transact-SQL seguente per ottenere il valore di *[task ID*. Quindi, individuare il nome della sottocartella contenente *[task ID]* in `TasksRootFolder`.
+Per individuare il log per l'esecuzione del pacchetto con *[execution ID]*, eseguire il comando Transact-SQL seguente per ottenere il valore di *[task ID*. Quindi, individuare il nome della sottocartella contenente *[task ID]* in `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]

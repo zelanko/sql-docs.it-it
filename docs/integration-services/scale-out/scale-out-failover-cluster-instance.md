@@ -1,5 +1,5 @@
 ---
-title: Supporto di SQL Server Integration Services (SSIS) Scale Out per disponibilità elevata tramite istanza di cluster di failover di SQL Server | Microsoft Docs
+title: Supporto di Scale Out per la disponibilità elevata con un'istanza del cluster di failover di SQL Server | Microsoft Docs
 description: Questo articolo descrive come configurare SSIS Scale Out per la disponibilità elevata con un'istanza del cluster di failover di SQL Server
 ms.custom: performance
 ms.date: 04/10/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68811203"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903798"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Supporto di Scale Out per disponibilità elevata tramite istanza del cluster di failover di SQL Server
 
@@ -25,7 +25,7 @@ ms.locfileid: "68811203"
 
 Per configurare la disponibilità elevata sul lato Scale Out Master con l'istanza del cluster di failover di SQL Server, seguire la procedura qui riportata:
 
-## <a name="1-prerequisites"></a>1. Prerequisites
+## <a name="1-prerequisites"></a>1. Prerequisiti
 Configurare un cluster di failover di Windows Vedere il post di blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installazione della funzionalità di clustering di failover e degli strumenti per Windows Server 2012) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Installare cluster di failover di SQL Server

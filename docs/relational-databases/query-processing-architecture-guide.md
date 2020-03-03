@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466172"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903873"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzata l'ela
 - Espressioni aritmetiche che contengono solo costanti, ad esempio 1+1 o 5/3*2.
 - Espressioni logiche che contengono solo costanti, ad esempio 1=1 e 1>2 AND 3>4.
 - Funzioni predefinite che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera idonee per l'elaborazione delle costanti, come `CAST` e `CONVERT`. In genere, per una funzione è possibile eseguire l'elaborazione delle costanti in fase di compilazione se si tratta di una funzione solo dei relativi input e non di altre informazioni contestuali, ad esempio opzioni SET, impostazioni della lingua, opzioni di database e chiavi di crittografia. Per le funzioni non deterministiche non è possibile eseguire l'elaborazione delle costanti in fase di compilazione. Per le funzioni predefinite deterministiche, tranne alcune eccezioni, è possibile eseguire l'elaborazione delle costanti in fase di compilazione.
+- Metodi deterministici di tipi CLR definiti dall'utente e funzioni CLR definite dall'utente con valori scalari deterministici (a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Per altre informazioni, vedere [Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
-> Si applica un'eccezione ai tipi LOB. Se il tipo di output del processo di elaborazione delle costanti è un tipo LOB, ossia text, image, nvarchar(max), varchar(max) o varbinary(max), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non esegue l'elaborazione delle costanti per l'espressione.
+> Si applica un'eccezione ai tipi LOB. Se il tipo di output del processo di elaborazione delle costanti è un tipo LOB, ossia text,ntext, image, nvarchar(max), varchar(max), varbinary(max) o XML, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non esegue l'elaborazione delle costanti per l'espressione.
 
 #### <a name="nonfoldable-expressions"></a>Espressioni per cui non è possibile eseguire l'elaborazione delle costanti in fase di compilazione
 Per tutti gli altri tipi di espressione non è possibile eseguire l'elaborazione delle costanti in fase di compilazione. In particolare, non è possibile eseguire l'elaborazione delle costanti in fase di compilazione per i tipi di espressioni seguenti:
 - Espressioni non costanti, ad esempio un'espressione il cui risultato dipende dal valore di una colonna.
 - Espressioni il cui risultato dipende da una variabile o un parametro locale, ad esempio @x.
 - Funzioni non deterministiche.
-- Funzioni definite dall'utente ([!INCLUDE[tsql](../includes/tsql-md.md)] e CLR).
+- Funzioni [!INCLUDE[tsql](../includes/tsql-md.md)]definite dall'utente<sup>1</sup>.
 - Espressioni il cui risultato dipende dalle impostazioni della lingua.
 - Espressioni il cui risultato dipende dalle opzioni SET.
 - Espressioni il cui risultato dipende dalle opzioni di configurazione del server.
+
+<sup>1</sup> Prima di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le funzioni e i metodi CLR definiti dall'utente con valori scalari deterministici dei tipi CLR definiti dall'utente non supportavano l'elaborazione in fase di compilazione. 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Esempi di espressioni per le quali è possibile eseguire l'elaborazione delle costanti in fase di compilazione e di espressioni per le quali tale elaborazione non è possibile
 Si consideri la query seguente:
@@ -912,21 +915,27 @@ Durante l'ottimizzazione delle query, [!INCLUDE[ssNoVersion](../includes/ssnover
 > Alcuni costrutti impediscono a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di applicare il parallelismo nell'intero piano di esecuzione o in parti del piano di esecuzione.
 
 I costrutti che impediscono il parallelismo includono:
->
-> - **Funzioni definite dall'utente scalari**    
->   Per altre informazioni sulle funzioni definite dall'utente scalari, vedere [Creare funzioni definite dall'utente](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] può eseguire l'inline di queste funzioni e sbloccare l'uso del parallelismo durante l'elaborazione delle query. Per altre informazioni sull'inlining di funzioni definite dall'utente scalari, vedere [Elaborazione di query intelligenti](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
-> - **Remote Query**    
->   Per altre informazioni su Remote Query, vedere [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md).
-> - **Cursori dinamici**    
->   Per altre informazioni sui cursori, vedere [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
-> - **Query ricorsive**    
->   Per altre informazioni sulla ricorsione, vedere [Linee guida per la definizione e l'utilizzo delle espressioni di tabella comuni ricorsive](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Ricorsione in T-SQL).
-> - **Funzioni con valori di tabella**    
->   Per altre informazioni sulle funzioni con valori di tabella, vedere [Creazione di funzioni definite dall'utente (Motore di database)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
-> - **Parola chiave TOP**    
->   Per altre informazioni, vedere [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+-   **Funzioni definite dall'utente scalari**        
+    Per altre informazioni sulle funzioni definite dall'utente scalari, vedere [Creare funzioni definite dall'utente](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] può eseguire l'inline di queste funzioni e sbloccare l'uso del parallelismo durante l'elaborazione delle query. Per altre informazioni sull'inlining di funzioni definite dall'utente scalari, vedere [Elaborazione di query intelligenti](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    
+-   **Remote Query**        
+    Per altre informazioni su Remote Query, vedere [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+    
+-   **Cursori dinamici**        
+    Per altre informazioni sui cursori, vedere [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+    
+-   **Query ricorsive**        
+    Per altre informazioni sulla ricorsione, vedere [Linee guida per la definizione e l'utilizzo delle espressioni di tabella comuni ricorsive](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Ricorsione in T-SQL).
 
-Dopo l'inserimento degli operatori di scambio, si ottiene un piano di esecuzione parallela della query. Questo tipo di piano può usare più di un thread di lavoro. In un piano di esecuzione seriale, usato da una query non parallela, l'esecuzione è invece affidata a un solo thread di lavoro. Il numero effettivo di thread di lavoro usati da una query parallela viene determinato al momento dell'inizializzazione del piano di esecuzione della query e dipende dalla complessità del piano e dal grado di parallelismo. Il grado di parallelismo determina il numero massimo di CPU usate, ma non il numero di thread di lavoro usati. Il valore del grado di parallelismo viene impostato a livello del server e può essere modificato usando la stored procedure di sistema sp_configure. Questo valore può essere sostituito per singole istruzioni di query o di indice specificando l'hint per la query `MAXDOP` o l'opzione di indice `MAXDOP` . 
+-   **Funzioni con valori di tabella**        
+    Per altre informazioni sulle funzioni con valori di tabella, vedere [Creazione di funzioni definite dall'utente (Motore di database)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+    
+-   **Parola chiave TOP**        
+    Per altre informazioni, vedere [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+
+Dopo l'inserimento degli operatori di scambio, si ottiene un piano di esecuzione parallela della query. Questo tipo di piano può usare più di un thread di lavoro. In un piano di esecuzione seriale, usato da una query non parallela (seriale), l'esecuzione è invece affidata a un solo thread di lavoro. Il numero effettivo di thread di lavoro usati da una query parallela viene determinato al momento dell'inizializzazione del piano di esecuzione della query e dipende dalla complessità del piano e dal grado di parallelismo. 
+
+Il grado di parallelismo (DOP) determina il numero massimo di CPU usate, ma non il numero di thread di lavoro usati. Il limite DOP viene impostato per [attività](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Non è un limite per [richiesta](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o per query. Ciò significa che durante l'esecuzione di query parallele una singola richiesta può generare più attività che vengono assegnate a un'[utilità di pianificazione](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Un numero maggiore di processori rispetto a quello specificato da MAXDOP può essere usato contemporaneamente in un determinato punto di esecuzione delle query, quando vengono eseguite contemporaneamente attività diverse. Per altre informazioni, vedere [Guida sull'architettura dei thread e delle attività](../relational-databases/thread-and-task-architecture-guide.md).
 
 Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non usa un piano di esecuzione parallela per una query:
 
@@ -937,21 +946,15 @@ Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoV
 ### <a name="DOP"></a> Grado di parallelismo
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rileva automaticamente il grado di parallelismo ottimale per ogni istanza di esecuzione parallela di una query o di operazione DDL sull'indice, utilizzando i criteri seguenti: 
 
-1. Esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un computer con più microprocessori o CPU, ad esempio un computer SMP (Symmetric Multiprocessing).  
-   Solo i computer con più CPU possono utilizzare le query parallele. 
+1. Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è **in esecuzione in un computer con più microprocessori o CPU**, ad esempio un computer SMP (Symmetric Multiprocessing). Solo i computer con più CPU possono utilizzare le query parallele. 
 
-2. Disponibilità di un numero sufficiente di thread di lavoro.  
-   Per l'esecuzione di una query o di un'operazione su un indice è necessario un numero specifico di thread di lavoro. L'esecuzione di un piano parallelo richiede un numero di thread di lavoro maggiore rispetto all'esecuzione di un piano seriale e il numero di thread di lavoro necessari aumenta con il grado di parallelismo. Se non è possibile rispettare i requisiti di thread di lavoro del piano parallelo per un grado di parallelismo specifico, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] riduce automaticamente il grado di parallelismo o ignora completamente il piano parallelo nel contesto del carico di lavoro specificato ed esegue il piano seriale (un solo thread di lavoro). 
+2. Se **è disponibile di un numero sufficiente di thread di lavoro**. Per l'esecuzione di una query o di un'operazione su un indice è necessario un numero specifico di thread di lavoro. L'esecuzione di un piano parallelo richiede un numero di thread di lavoro maggiore rispetto all'esecuzione di un piano seriale e il numero di thread di lavoro necessari aumenta con il grado di parallelismo. Se non è possibile rispettare i requisiti di thread di lavoro del piano parallelo per un grado di parallelismo specifico, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] riduce automaticamente il grado di parallelismo o ignora completamente il piano parallelo nel contesto del carico di lavoro specificato ed esegue il piano seriale (un solo thread di lavoro). 
 
-3. Tipo di query o di operazione sull'indice eseguita.  
-   Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile modificare il valore predefinito di 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se da un test appropriato risulta che è preferibile usare un valore diverso per il carico di lavoro in esecuzione. 
+3. **Tipo di query o di operazione sull'indice eseguita**. Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile modificare il valore predefinito di 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se da un test appropriato risulta che è preferibile usare un valore diverso per il carico di lavoro in esecuzione. 
 
-4. Presenza di un numero sufficiente di righe da elaborare.  
-   Se Query Optimizer determina che il numero di righe di un flusso è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
+4. Presenza di un **numero sufficiente di righe da elaborare**. Se Query Optimizer determina che il numero di righe di un flusso è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
 
-5. Disponibilità di statistiche di distribuzione correnti.  
-   Se il grado di parallelismo massimo non è disponibile, prima di annullare il piano parallelo vengono considerati i gradi inferiori.  
-  Ad esempio, quando si crea un indice cluster in una vista, non è possibile valutare le statistiche di distribuzione perché l'indice cluster non esiste ancora. In questo caso, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] non può fornire il grado di parallelismo massimo per l'operazione sull'indice. Alcuni operatori, ad esempio quelli relativi all'ordinamento e all'analisi, possono tuttavia trarre vantaggi dall'esecuzione parallela.
+5. **Disponibilità di statistiche di distribuzione correnti**. Se il grado di parallelismo massimo non è disponibile, prima di annullare il piano parallelo vengono considerati i gradi inferiori. Ad esempio, quando si crea un indice cluster in una vista, non è possibile valutare le statistiche di distribuzione perché l'indice cluster non esiste ancora. In questo caso, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] non può fornire il grado di parallelismo massimo per l'operazione sull'indice. Alcuni operatori, ad esempio quelli relativi all'ordinamento e all'analisi, possono tuttavia trarre vantaggi dall'esecuzione parallela.
 
 > [!NOTE]
 > Le operazioni parallele sugli indici sono disponibili solo nelle edizioni Enterprise, Developer ed Evaluation di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -963,11 +966,23 @@ In un piano di esecuzione parallela della query, gli operatori insert, update e 
 I cursori statici e gestiti da keyset possono essere popolati tramite piani di esecuzione parallela. La funzionalità dei cursori dinamici può invece essere implementata solo tramite l'esecuzione seriale. Query Optimizer genera sempre un piano di esecuzione seriale per le query che fanno parte di un cursore dinamico.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Sostituzione dei gradi di parallelismo
-È possibile usare l'opzione di configurazione del server [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) in [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) per limitare il numero di processori da usare per l'esecuzione del piano parallelo. L'opzione Massimo grado di parallelismo può essere ignorata per le singole istruzioni delle query e delle operazioni sugli indici specificando l'hint per le query MAXDOP o l'opzione per gli indici MAXDOP. MAXDOP offre un maggiore controllo sulle singole query e operazioni sugli indici. Ad esempio, è possibile usare questa opzione per aumentare o diminuire il numero di processori dedicati a un'operazione sull'indice online. Ciò consente di bilanciare le risorse utilizzate per un'operazione sull'indice con quelle degli utenti simultanei. 
+Il grado di parallelismo imposta il numero di processori da usare durante l'esecuzione di piani paralleli. Questa configurazione può essere impostata a diversi livelli:
+
+1.  A livello di server, con l'[opzione di configurazione del server](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **massimo grado di parallelismo (MAXDOP)**.</br> **Si applica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] presenta raccomandazioni automatiche per l'impostazione dell'opzione di configurazione del server MAXDOP durante il processo di installazione. L'interfaccia utente del programma di installazione consente di accettare le impostazioni consigliate o di immettere valori personalizzati. Per altre informazioni, vedere [Pagina Configurazione del motore di database - MaxDOP](../sql-server/install/instance-configuration.md#maxdop).
+
+2.  A livello di carico di lavoro, con l'[opzione di configurazione del gruppo di carico di lavoro di Resource Governor](../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.</br> **Si applica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  A livello di database, con la [configurazione con ambito database](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.</br> **Si applica a**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+
+4.  A livello di istruzione di query o di indice, con l'[hint per la query](../t-sql/queries/hints-transact-sql-query.md) **MAXDOP** o l'opzione di indice **MAXDOP**. Ad esempio, è possibile usare questa opzione per aumentare o diminuire il numero di processori dedicati a un'operazione sull'indice online. Ciò consente di bilanciare le risorse utilizzate per un'operazione sull'indice con quelle degli utenti simultanei.</br> **Si applica a**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 L'impostazione dell'opzione max degree of parallelism su 0 (impostazione predefinita) consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 nell'esecuzione di piani paralleli. Anche se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] imposta una destinazione di runtime di 64 processori logici quando l'opzione MAXDOP è impostata su 0, è possibile impostare manualmente un valore diverso se necessario. L'impostazione di MAXDOP su 0 per query e indici consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 per le query o gli indici specificati nell'esecuzione di piani paralleli. MAXDOP non è un valore imposto per tutte le query parallele, ma piuttosto un valore target provvisorio per tutte le query idonee per il parallelismo. Ciò significa che se ci sono thread di lavoro sufficienti disponibili in fase di esecuzione, una query può essere eseguita con un grado di parallelismo minore rispetto all'opzione di configurazione del server MAXDOP.
 
-Fare riferimento a questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) per informazioni sulle procedure consigliate per la configurazione di MAXDOP.
+> [!TIP]
+> Per linee guida sulla configurazione di MAXDOP, vedere questa [pagina della documentazione](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
 ### <a name="parallel-query-example"></a>Esempio di query parallela
 Nella query seguente viene eseguito il conteggio del numero di ordini effettuati nel trimestre con inizio 1 aprile 2000. Per questi ordini, almeno uno degli articoli è stato ricevuto dal cliente successivamente alla data prevista. La query indica il numero totale di tali ordini raggruppati per priorità di ordine e disposti in ordine di priorità crescente. 

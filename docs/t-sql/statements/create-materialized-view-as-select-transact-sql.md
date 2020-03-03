@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fd41b851ac7240ded3b0508f0bfd45fad0377c27
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75226740"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568074"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "75226740"
 
 Questo articolo illustra l'istruzione T-SQL CREATE MATERIALIZED VIEW AS SELECT in Azure SQL Data Warehouse per lo sviluppo di soluzioni. L'articolo include anche esempi di codice.
 
-Una vista materializzata rende persistenti i dati restituiti dalla query di definizione della vista e viene aggiornata automaticamente in caso di modifiche dei dati nelle tabelle sottostanti.   Migliora le prestazioni delle query complesse, in genere le query con join e aggregazioni, offrendo allo stesso tempo operazioni di manutenzione semplici.   Con la funzionalità di corrispondenza automatica del piano di esecuzione, non sarà necessario fare riferimento a una vista materializzata nella query per fare in modo che Query Optimizer prenda in considerazione la vista per la sostituzione.  Ciò consente ai progettisti dei dati di implementare le viste materializzate come un meccanismo per migliorare il tempo di risposta delle query, senza doverle modificare.  
+Una vista materializzata rende persistenti i dati restituiti dalla query di definizione della vista e viene aggiornata automaticamente in caso di modifiche dei dati nelle tabelle sottostanti.   Migliora le prestazioni delle query complesse, in genere le query con join e aggregazioni, offrendo allo stesso tempo operazioni di manutenzione semplici.   Con la funzionalità di corrispondenza automatica del piano di esecuzione, non sarà necessario fare riferimento a una vista materializzata nella query per fare in modo che Query Optimizer prenda in considerazione la vista per la sostituzione.  Questa funzionalità consente ai progettisti dei dati di implementare le viste materializzate come meccanismo per migliorare il tempo di risposta delle query, senza doverle modificare.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -108,20 +108,24 @@ Se si usano le aggregazioni MIN/MAX nell'elenco SELECT della definizione della v
   
 ## <a name="remarks"></a>Osservazioni
 
-Una vista materializzata nel data warehouse di Azure è molto simile a una vista indicizzata in SQL Server.  Condivide quasi le stesse restrizioni della vista indicizzata (vedere [Creare viste indicizzate](/sql/relational-databases/views/create-indexed-views) per informazioni dettagliate) ad eccezione del fatto che una vista materializzata supporta le funzioni di aggregazione.   Ecco altre considerazioni per la vista materializzata.  
- 
+Una vista materializzata nel data warehouse di Azure è simile a una vista indicizzata in SQL Server.  Condivide quasi le stesse restrizioni della vista indicizzata (vedere [Creare viste indicizzate](/sql/relational-databases/views/create-indexed-views) per informazioni dettagliate) ad eccezione del fatto che una vista materializzata supporta le funzioni di aggregazione.   
+
 La vista materializzata supporta solo CLUSTERED COLUMNSTORE INDEX. 
 
 Una vista materializzata non può fare riferimento ad altre viste.  
- 
-È possibile creare viste materializzate su tabelle partizionate.  Sono supportate operazioni SPLIT/MERGE sulle tabelle a cui fanno riferimento le viste materializzate.  Le operazioni SWITCH non sono supportate sulle tabelle a cui fanno riferimento le viste materializzate. Se l'operazione viene tentata, l'utente visualizzerà l'errore `Msg 106104, Level 16, State 1, Line 9`
+
+Non è possibile creare una vista materializzata in una tabella con Maschera dati dinamica (DDM), anche se la colonna DDM non fa parte della vista materializzata.  Se una colonna della tabella fa parte di una vista materializzata attiva o una vista materializzata disabilitata, non è possibile aggiungere DDM a questa colonna.  
+
+Non è possibile creare una vista materializzata in una tabella con sicurezza a livello di riga abilitata.
+
+È possibile creare viste materializzate su tabelle partizionate.  Le operazioni SPLIT/MERGE sulle partizioni sono supportate per le tabelle di base delle viste materializzate. L'operazione SWITCH per una partizione non è supportata.  
  
 Le operazioni ALTER TABLE SWITCH non sono supportate sulle tabelle a cui fanno riferimento le viste materializzate. Disabilitare o eliminare le viste materializzate prima di usare ALTER TABLE SWITCH. Negli scenari seguenti la creazione della vista materializzata richiede l'aggiunta di nuove colonne alla vista materializzata:
 
 |Scenario|Nuove colonne da aggiungere alla vista materializzata|Comment|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() non è presente nell'elenco SELECT di una definizione di vista materializzata| COUNT_BIG (*) |Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente.|
-|La funzione SUM(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione che ammette i valori Null. |COUNT_BIG (a) |Gli utenti devono aggiungere l'espressione 'a' manualmente nella definizione della vista materializzata.|
+|La funzione SUM(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione che ammette i valori Null |COUNT_BIG (a) |Gli utenti devono aggiungere l'espressione 'a' manualmente nella definizione della vista materializzata.|
 |La funzione AVG(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione.|SUM(a), COUNT_BIG(a)|Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente.|
 |La funzione STDEV(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione.|SUM(a), COUNT_BIG(a), SUM(square(a))|Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente. |
 | | | |

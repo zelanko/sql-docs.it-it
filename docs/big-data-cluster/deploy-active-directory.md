@@ -5,16 +5,16 @@ description: Informazioni su come aggiornare un cluster Big Data di SQL Server i
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544880"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200962"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
@@ -182,7 +182,7 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 
 - `security.activeDirectory.appReaders` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
 
-**Come controllare l'ambito del gruppo AD:** 
+**Come controllare l'ambito del gruppo AD:**
 [fare clic qui per istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) per verificare l'ambito di un gruppo di Active Directory, per determinare se è DomainLocal.
 
 Se il file di configurazione della distribuzione non è stato ancora inizializzato, è possibile eseguire questo comando per ottenere una copia della configurazione.
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - La modalità Active Directory sicura funziona attualmente solo negli ambienti di distribuzione `kubeadm` e non nel servizio Azure Kubernetes. Il profilo di distribuzione `kubeadm-prod` include le sezioni di sicurezza per impostazione predefinita.
 
-- Attualmente è consentito un solo cluster Big Data per dominio. L'abilitazione di più cluster Big Data per dominio verrà introdotta in una versione futura.
+- Al momento è consentito un solo BDC per dominio (Active Directory). L'abilitazione di più cluster Big Data per dominio verrà introdotta in una versione futura.
 
 - Nessuno dei gruppi AD specificati nelle configurazioni di sicurezza può avere l'ambito DomainLocal. È possibile controllare l'ambito di un gruppo di Active Directory seguendo [queste istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

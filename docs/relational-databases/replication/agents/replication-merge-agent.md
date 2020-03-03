@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846740"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705866"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -112,8 +113,8 @@ replmerg [-?]
  **-?**  
  Stampa tutti i parametri disponibili.  
   
- **-Publisher** _server_name_[ **\\** _instance_name_]  
- Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-PublisherDB** _publisher_database_  
  Nome del database del server di pubblicazione.  
@@ -121,8 +122,8 @@ replmerg [-?]
  **-Publication** _publication_  
  Nome della pubblicazione. Questo parametro è valido solo se la pubblicazione è configurata in modo che sia sempre disponibile uno snapshot per le sottoscrizioni nuove o reinizializzate.  
   
- **-Subscriber** _server_name_[ **\\** _instance_name_]  
- Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-SubscriberDB** _subscriber_database_  
  Nome del database Sottoscrittore.  
@@ -139,8 +140,8 @@ replmerg [-?]
  **-DefinitionFile** _def_path_and_file_name_  
  Percorso del file di definizione dell'agente. Un file di definizione dell'agente contiene argomenti del prompt dei comandi per l'agente. Il contenuto del file viene analizzato come file eseguibile. Utilizzare virgolette doppie (") per specificare valori dell'argomento contenenti caratteri arbitrari.  
   
- **-Distributor** _server_name_[ **\\** _instance_name_]  
- Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Per la distribuzione (push) del database di distribuzione, per impostazione predefinita viene utilizzato il nome dell'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer locale.  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Per la distribuzione (push) del database di distribuzione, per impostazione predefinita viene utilizzato il nome dell'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer locale.  
   
  **-DistributorLogin** _distributor_login_  
  Nome dell'account di accesso del database di distribuzione.  
@@ -301,7 +302,7 @@ replmerg [-?]
  **-ProfileName** _profile_name_  
  Specifica un profilo agente da utilizzare per i parametri dell'agente. Se **ProfileName** è NULL, il profilo agente è disabilitato. Se **ProfileName** non viene specificato, viene utilizzato il profilo predefinito per il tipo di agente. Per altre informazioni, vedere [Profili degli agenti di replica](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _publisher_login_  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  Specifica se l'agente di merge sta eseguendo la sincronizzazione tra un Sottoscrittore e un server di pubblicazione alternativo. Un valore **1** indica che si tratta di un server di pubblicazione alternativo. Il valore predefinito è **0**.  
-  
+ 
+ **-T** [**101|102**]  
+ Flag di traccia che consentono funzionalità aggiuntive per l'agente di merge. Il valore **101** abilita informazioni di registrazione dettagliate aggiuntive per determinare la quantità di tempo necessaria per ogni passaggio del processo di sincronizzazione della replica di tipo merge. Il valore **102** scrive le stesse statistiche del flag di traccia **101**, ma nella tabella <Distribution server>..msmerge_history. Abilitare la registrazione dell'agente di merge quando si usa il flag di traccia 101 usando i parametri `-output` e `-outputverboselevel`.  Ad esempio, aggiungere i parametri seguenti all'agente di merge e quindi riavviare l'agente: `-T 101, -output, -outputverboselevel`. 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Numero di generazioni da elaborare in un singolo batch mentre vengono caricate le modifiche dal Sottoscrittore al server di pubblicazione. Una generazione è definita come un gruppo logico di modifiche per articolo. Il valore predefinito per un collegamento di comunicazione affidabile è **100**. Il valore predefinito per un collegamento di comunicazione non affidabile è **1**.  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  Per avviare l'agente di merge, eseguire **replmerg.exe** dal prompt dei comandi. Per informazioni, vedere [File eseguibili dell'Agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>Risoluzione dei problemi relativi alle prestazioni dell'agente di merge 
  La cronologia dell'agente di merge per la sessione corrente non viene eliminata durante l'esecuzione in modalità continua. Un agente con esecuzione prolungata può comportare un numero elevato di voci nelle tabelle della cronologia di merge che potrebbero ridurre le prestazioni. Per risolvere questo problema, passare alla modalità pianificata o continuare a utilizzare la modalità continua, ma creare un processo dedicato per riavviare periodicamente l'agente di merge oppure ridurre i dettagli del livello di cronologia per diminuire il numero di righe e, pertanto, l'impatto sulle prestazioni.  
+ 
+  In alcuni casi, l'agente di merge di replica potrebbe richiedere molto tempo per la replica delle modifiche. Per determinare quale passaggio del processo di sincronizzazione della replica di tipo merge richiede più tempo, usare il flag di traccia 101 insieme alla registrazione dell'agente di merge. A tale scopo, usare i parametri seguenti per l'agente di merge, quindi riavviare l'agente:   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+Inoltre, se è necessario scrivere statistiche nella tabella <Distribution server>..msmerge_history, usare il flag di traccia -T 102.
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione dell'agente di replica](../../../relational-databases/replication/agents/replication-agent-administration.md)  

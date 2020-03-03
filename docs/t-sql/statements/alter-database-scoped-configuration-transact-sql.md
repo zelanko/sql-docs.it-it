@@ -23,18 +23,21 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
+ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558357"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180076"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Questa istruzione abilita diverse impostazioni di configurazione del database a livello di **singolo database**. Questa istruzione è disponibile nel [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Tali impostazioni consentono di eseguire le operazioni seguenti:
+Questo comando abilita diverse impostazioni di configurazione del database a livello di **singolo database**. 
+
+Le impostazioni seguenti sono supportate in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: 
 
 - Cancellare la cache delle procedure.
 - Impostare il parametro MAXDOP su un valore arbitrario (1,2,...) per il database primario in base a ciò che è più adatto e impostare un valore diverso (ad esempio 0) per tutti i database secondari usati (ad esempio per le query di report).
@@ -54,11 +57,16 @@ Questa istruzione abilita diverse impostazioni di configurazione del database a 
 - Abilita l'equivalente dell'ultimo piano di esecuzione effettivo in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specificare il numero di minuti dopo i quali un'operazione sugli indici ripristinabile sospesa deve essere arrestata automaticamente dal motore di SQL Server.
 
+Questa impostazione è disponibile solo in Azure Synapse Analytics (in precedenza SQL Data Warehouse).
+- Impostare il livello di compatibilità di un database utente
+
 ![Icona di collegamento](../../database-engine/configure-windows/media/topic-link.gif "icona di collegamento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
 ```
+-- Syntax for SQL Server and Azure SQL Database
+
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY] SET <set_options>}
@@ -102,6 +110,21 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` è diventata `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` è diventata `BATCH_MODE_ADAPTIVE_JOINS`
 
+```
+-- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    SET <set_options>
+}
+[;]
+
+< set_options > ::=
+{
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+}
+```
+
 ## <a name="arguments"></a>Argomenti
 
 FOR SECONDARY
@@ -132,7 +155,7 @@ Per impostare questa opzione a livello di istanza, vedere [Configurare l'opzione
 
 > [!TIP]
 > Per eseguire questa operazione a livello di query, usare l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
-> Per eseguire questa operazione a livello di server, usare l'[opzione di configurazione server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) relativa al **massimo grado di parallelismo (MAXDOP)** .     
+> Per eseguire questa operazione a livello di server, usare l'[opzione di configurazione server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) relativa al **massimo grado di parallelismo (MAXDOP)**.     
 > Per eseguire questa operazione a livello di carico di lavoro, usare l'[opzione di configurazione del gruppo di carico di lavoro di Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
 PRIMARY
@@ -373,6 +396,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 **SI APPLICA A**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Consente di controllare se un predicato di [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) influisce sulla cardinalità del piano di esecuzione della query utente complessiva. Quando ISOLATE_SECURITY_POLICY_CARDINALITY è impostato su ON, un predicato di Sicurezza a livello di riga non influisce sulla cardinalità di un piano di esecuzione. Si considerino, ad esempio, una tabella contenente 1 milione di righe e un predicato di Sicurezza a livello di riga che limita il risultato a 10 righe per un utente specifico che esegue la query. Se questa configurazione con ambito di database è impostata su OFF, la stima della cardinalità di questo predicato sarà 10. Se invece è impostata su ON, l'ottimizzazione delle query stimerà 1 milione righe. È consigliabile usare il valore predefinito per la maggior parte dei carichi di lavoro.
+
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+
+**SI APPLICA A**: solo Azure Synapse Analytics (in precedenza SQL DW)
+
+Imposta i comportamenti di Transact-SQL e dell'elaborazione delle query in modo che risultino compatibili con la versione specificata del motore di database.  Una volta impostata, quando viene eseguita una query su tale database, verranno applicate solo le funzionalità compatibili.  Per impostazione predefinita, il livello di compatibilità di un database viene impostato su AUTO al momento della creazione.  Il livello di compatibilità viene mantenuto anche dopo operazioni di sospensione/ripresa o backup/ripristino del database. 
+
+|Livello di compatibilità    |   Commenti|  
+|-----------------------|--------------|
+|**AUTO**| Valore predefinito.  Il valore è uguale al livello di compatibilità più recente supportato.|
+|**10**| Applica i comportamenti Transact-SQL e di elaborazione delle query prima dell'introduzione del supporto del livello di compatibilità.|
+|**20**| Primo livello di compatibilità che include i comportamenti di elaborazione delle query e Transact-SQL controllati. |
 
 ## <a name="Permissions"></a> Autorizzazioni
 
