@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536647"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903818"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
@@ -205,7 +205,7 @@ Se questo parametro non è specificato, il comando COPY rileva automaticamente i
 
 - Estensione gz - **GZIP**
 - Estensione snappy - **Snappy**
-- Estensione deflate - **DefaultCodec**
+- .deflate - **DefaultCodec** (solo Parquet e ORC)
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* si applica al formato CSV e specifica un singolo carattere che verrà usato come carattere virgolette (delimitatore di stringa) nel file CSV. Se non viene specificato alcun valore, viene usato il carattere virgolette (") come definito nello standard RFC 4180. I caratteri ASCII estesi non sono supportati con UTF-8 per FIELDQUOTE.
