@@ -1300,7 +1300,7 @@
               items:
                 - name: Create
                   href: relational-databases/databases/create-a-database-snapshot-transact-sql.md
-                - name: Visualizza
+                - name: Visualizzazione
                   href: relational-databases/databases/view-a-database-snapshot-sql-server.md
                 - name: Ripristinare a uno snapshot
                   href: relational-databases/databases/revert-a-database-to-a-database-snapshot.md
@@ -1426,7 +1426,7 @@
               href: relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTable
           items:
-            - name: Prerequisites
+            - name: Prerequisiti
               href: relational-databases/blob/enable-the-prerequisites-for-filetable.md
             - name: 'Creare, modificare ed eliminare'
               href: relational-databases/blob/create-alter-and-drop-filetables.md
@@ -1669,7 +1669,7 @@
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifica
               href: relational-databases/tables/modify-edge-constraint.md
-            - name: Visualizza
+            - name: Visualizzazione
               href: relational-databases/tables/view-edge-constraint-properties.md
         - name: Chiavi primarie
           href: relational-databases/tables/primary-and-foreign-key-constraints.md
@@ -1858,7 +1858,7 @@
           href: relational-databases/user-defined-functions/execute-user-defined-functions.md
         - name: Rinominare
           href: relational-databases/user-defined-functions/rename-user-defined-functions.md
-        - name: Visualizza
+        - name: Visualizzazione
           href: relational-databases/user-defined-functions/view-user-defined-functions.md
     - name: Viste
       href: relational-databases/views/views.md
@@ -1934,7 +1934,7 @@
           items:
             - name: Informazioni di riferimento
               href: relational-databases/xml/reference-the-built-in-xml-schema-collection-sys.md
-            - name: Visualizza
+            - name: Visualizzazione
               href: relational-databases/xml/view-a-stored-xml-schema-collection.md
             - name: Concessione di autorizzazioni
               href: relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md
@@ -6279,7 +6279,7 @@
           items:
             - name: Avvi rapidi
               items:
-                - name: 'Avvio rapido: Eventi estesi in SQL Server'
+                - name: 'Guida introduttiva: Eventi estesi in SQL Server'
                   href: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
             - name: Esercitazioni
               items:
@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: editor di query del Motore di database
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: Editor XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Codifica con colori negli editor di query
@@ -8890,7 +8890,7 @@
                       href: ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
                     - name: Stop a Job
                       href: ssms/agent/stop-a-job.md
-                - name: Visualizza
+                - name: Visualizzazione
                   items:
                     - name: Processo
                       href: ssms/agent/view-a-job.md
@@ -15461,7 +15461,7 @@
             - name: Funzioni matematiche
               href: t-sql/functions/mathematical-functions-transact-sql.md
               items:
-                - name: abs
+                - name: ABS
                   href: t-sql/functions/abs-transact-sql.md
                 - name: ACOS
                   href: t-sql/functions/acos-transact-sql.md
@@ -15687,7 +15687,7 @@
                   href: t-sql/functions/char-transact-sql.md
                 - name: CHARINDEX
                   href: t-sql/functions/charindex-transact-sql.md
-                - name: CONCATENA
+                - name: CONCAT
                   href: t-sql/functions/concat-transact-sql.md
                 - name: CONCAT_WS
                   href: t-sql/functions/concat-ws-transact-sql.md

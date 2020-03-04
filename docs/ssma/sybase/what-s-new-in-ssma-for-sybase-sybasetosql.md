@@ -1,24 +1,31 @@
 ---
 title: Novità di SSMA per SAP ASE (SybaseToSQL) | Microsoft Docs
+authors: HJToland3;nahk-ivanov
 ms.custom: ''
-ms.date: 01/22/2020
+ms.date: 3/2/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-author: HJToland3
-ms.author: Shamikg
-ms.openlocfilehash: 752c099f985cc1695ab30e2d01241aea4c0c754c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: jtoland;alexiva
+ms.openlocfilehash: c2b167db0db7e82f0f37afbe165fcd75cf41204b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76516617"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256891"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novità di SSMA per SAP ASE (SybaseToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di SAP ASE (in precedenza SSMA per Sybase) in ogni versione.
+
+## <a name="ssma-v87"></a>SSMA v 8,7
+
+La versione v 8,7 di SSMA per SAP ASE presenta correzioni minime e miglioramenti delle prestazioni nell'interfaccia utente grafica.
+
+> [!IMPORTANT]
+> Con SSMA v 8.5 e versioni successive, .NET 4.7.2 è un prerequisito di installazione. Se è necessario installare questa versione, è possibile scaricare il file di runtime da [qui](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
@@ -52,7 +59,7 @@ La versione v 8.4 di SSMA per SAP ASE è stata migliorata con correzioni mirate 
 La versione 8.3 di SSMA per SAP ASE è stata migliorata con correzioni mirate progettate per migliorare le metriche di qualità e conversione. Questa versione di SSMA per SAP ASE fornisce inoltre le correzioni seguenti:
 
 * Risolvere i problemi di accessibilità
-* Aggiungere il supporto di base per il tipo ' hierarchyid ' in SQL Server
+* Aggiungere il supporto di `hierarchyid` base per il tipo in SQL Server
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -105,7 +112,7 @@ La versione v 7.9 di SSMA per SAP ASE contiene le modifiche seguenti:
 
 La versione v 7.8 di SSMA per SAP ASE contiene le modifiche seguenti:
 
-* Modificare il mapping dei tipi evidenziato nelle impostazioni del progetto.
+* Modificare il mapping dei tipi evidenziato nelle **impostazioni del progetto**.
 * Possibilità per gli utenti di disabilitare la telemetria.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -127,7 +134,7 @@ La versione v 7.6 di SSMA per SAP ASE contiene le modifiche seguenti:
 La versione v 7.5 di SSMA per SAP ASE (in precedenza SSMA per Sybase) contiene le modifiche seguenti:
 
 * Sono stati apportati numerosi miglioramenti per garantire maggiore accessibilità per utenti con particolari esigenze.
-* Supporto per la sintassi di creazione o sostituzione.
+* Supporto per `CREATE OR REPLACE` la sintassi.
 
 ## <a name="ssma-v74"></a>SSMA v 7.4
 
@@ -139,7 +146,7 @@ La versione v 7.4 di SSMA per Sybase contiene le modifiche seguenti:
 * La metrica relativa alla qualità e alla conversione è stata migliorata con correzioni mirate, basate sui suggerimenti dei clienti.
 
   > [!IMPORTANT]
-  > .NET 4.5.2 è un prerequisito per l'installazione di SSMA v 7.4. Inoltre, a partire da v 7.4, la versione a 32 bit di SSMA viene sospesa.  
+  > .NET 4.5.2 è un prerequisito per l'installazione di SSMA v 7.4. Inoltre, a partire da v 7.4, la versione a 32 bit di SSMA viene sospesa.
 
 ## <a name="ssma-v73"></a>SSMA v 7.3
 
@@ -173,135 +180,135 @@ La versione v 7.1 di SSMA per Sybase contiene le modifiche seguenti:
 
 ## <a name="may-2016"></a>Maggio 2016
 
-La versione 2016 di SSMA per Sybase contiene le modifiche seguenti:  
+La versione 2016 di SSMA per Sybase contiene le modifiche seguenti:
 
 * Aggiunta del supporto per SQL Server 2016.
 * Controllo del programma di installazione rimosso per .NET 2,0.
 * La dipendenza del pacchetto di estensione è stata aggiornata da .NET 3,5 a .NET 4,0.
-* Corretti i comandi "Salva progetto" e "Apri progetto" per la console SSMA.
-* Correzione del comando "SecurePassword" per la console di SSMA.
+* Correzione `save-project` dei `open-project` comandi e per la console di SSMA.
+* Correzione `securepassword` del comando per la console SSMA.
 * Correzione del conteggio degli oggetti per il caricamento iniziale.
 * Correzione del bug nelle impostazioni globali.
 
 ## <a name="march-2016"></a>marzo 2016
 
-La versione di anteprima di marzo 2016 di SSMA per Sybase aggiunge il supporto per la migrazione a SQL Server 2016.  
-  
+La versione di anteprima di marzo 2016 di SSMA per Sybase aggiunge il supporto per la migrazione a SQL Server 2016.
+
 ## <a name="january-2016"></a>Gennaio 2016
 
-La versione di manutenzione di SSMA per Sybase di gennaio 2016 contiene le modifiche seguenti:  
-  
-* Aggiunta voce di menu Visualizza log a SSMA (RFC 5706203).  
+La versione di manutenzione di SSMA per Sybase di gennaio 2016 contiene le modifiche seguenti:
+
+* Aggiunta voce di menu Visualizza log a SSMA (RFC 5706203).
 * Aggiunta di dati di telemetria.
 
 ## <a name="july-2014"></a>2014 luglio
 
-La versione luglio 2014 di SSMA per Sybase contiene le modifiche seguenti:  
-  
-* Conversione del codice del database SQL di Azure migliorata.  
-* Spostamento della funzionalità Pack di estensione nello schema per supportare il database SQL di Azure.  
-* Miglioramenti apportati alle prestazioni testati per i database con oltre 10.000 oggetti.  
-* Aggiunta di miglioramenti dell'interfaccia utente per la gestione di un numero elevato di oggetti.  
-* È stata aggiunta la possibilità di evidenziare gli schemi LOB "noti", in modo che possano essere ignorati durante la conversione.  
-* Aggiunta di miglioramenti della velocità di conversione.  
+La versione luglio 2014 di SSMA per Sybase contiene le modifiche seguenti:
+
+* Conversione del codice del database SQL di Azure migliorata.
+* Spostamento della funzionalità Pack di estensione nello schema per supportare il database SQL di Azure.
+* Miglioramenti apportati alle prestazioni testati per i database con oltre 10.000 oggetti.
+* Aggiunta di miglioramenti dell'interfaccia utente per la gestione di un numero elevato di oggetti.
+* È stata aggiunta la possibilità di evidenziare gli schemi LOB noti, in modo che possano essere ignorati durante la conversione.
+* Aggiunta di miglioramenti della velocità di conversione.
 * Aggiunta della possibilità di visualizzare i conteggi degli oggetti nell'interfaccia utente.
-* Dimensioni del report ridotte di oltre il 25%.  
-* Messaggi di errore migliorati per costrutti non analizzati.  
-  
+* Dimensioni del report ridotte di oltre il 25%.
+* Messaggi di errore migliorati per costrutti non analizzati.
+
 ## <a name="april-2014"></a>Aprile 2014
 
-La versione aprile 2014 di SSMA per Sybase contiene le modifiche seguenti:  
-  
-* Aggiunta del supporto per MS SQL Server 2014.  
-* Correzione dei bug relativi alla conversione in Azure.  
-* Correzione dei bug relativi alle pagine del report invisibile in IE 10.  
-  
+La versione aprile 2014 di SSMA per Sybase contiene le modifiche seguenti:
+
+* Aggiunta del supporto per MS SQL Server 2014.
+* Correzione dei bug relativi alla conversione in Azure.
+* Correzione dei bug relativi alle pagine del report invisibile in IE 10.
+
 ## <a name="january-2012"></a>gennaio 2012
 
-La versione di SSMA per Sybase di gennaio 2012 contiene le modifiche seguenti:  
-  
+La versione di SSMA per Sybase di gennaio 2012 contiene le modifiche seguenti:
+
 * Aggiunta del supporto per la conversione del trigger di rollback.
-* È stata fornita una correzione@ROWCOUNT per la@ERROR conversione di @ e @ nella stessa istruzione set.  
-  
+* È stata fornita la `@@ROWCOUNT` correzione `@@ERROR` per la conversione `SET` di e nella stessa istruzione.
+
 ## <a name="july-2011"></a>luglio 2011
 
-La versione 2011 di SSMA per Sybase fornisce una segnalazione degli errori migliorata durante la migrazione dei dati.  
-  
+La versione 2011 di SSMA per Sybase fornisce una segnalazione degli errori migliorata durante la migrazione dei dati.
+
 ## <a name="april-2011"></a>Aprile 2011
 
-La versione aprile 2011 di SSMA per Sybase contiene le modifiche seguenti:  
-  
-* Prodotto consolidato "SSMA for Sybase", che supporta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" e Azure SQL.  
-* Aggiunta del supporto per la connessione e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la migrazione a "Denali".  
-* Aggiunta di una nuova funzionalità per la conversione e la migrazione dei database Sybase in Azure SQL.  
-* Motore di migrazione dei dati avanzato sul lato client, che supporta la migrazione parallela dei dati.  
+La versione aprile 2011 di SSMA per Sybase contiene le modifiche seguenti:
+
+* Prodotto consolidato "SSMA for Sybase", che supporta [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] e SQL di Azure.
+* Aggiunta del supporto per la connessione e [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]la migrazione a.
+* Aggiunta di una nuova funzionalità per la conversione e la migrazione dei database Sybase in Azure SQL.
+* Motore di migrazione dei dati avanzato sul lato client, che supporta la migrazione parallela dei dati.
 * Miglioramento delle prestazioni di migrazione dei dati con modelli di recupero con registrazione minima
-* È stata aggiunta la possibilità di convertire e migrare correttamente i database Sybase con distinzione tra maiuscole e minuscole in SQL Server.  
-* Aggiunta del supporto per la conversione di istruzioni join non ANSI di Sybase ASE per SQL Server istruzioni di join ANSI è stata estesa per eliminare e aggiornare le istruzioni.  
-* Sono state fornite opzioni di connettività aggiuntive per la connessione ai Server Sybase ASE usando il provider ODBC Sybase ASE e i provider ADO.Net di Sybase ASE.
-* Rimuovere la dipendenza da un database separato denominato **SysDB**, che contiene le funzioni di emulazione Sybase (installate come parte del pacchetto di estensione).
-* Aggiunta della possibilità di installare SSMA per Sybase Extension Pack nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster.
-* Aggiunta compatibilità con le versioni precedenti dei progetti creati da versioni precedenti di SSMA (v 4.0 e v 4.2).  
-* Aggiunta della possibilità di installare il prodotto SSMA per Sybase v 5.0 side-by-Side (SxS) con le versioni precedenti di SSMA (v 4.0 e v 4.2).  
-  
+* È stata aggiunta la possibilità di convertire e migrare correttamente i database Sybase con distinzione tra maiuscole e minuscole in SQL Server.
+* Aggiunta del supporto per la conversione di istruzioni join non ANSI di Sybase ASE per SQL Server istruzioni di join ANSI è stata estesa per eliminare e aggiornare le istruzioni.
+* Sono state fornite opzioni di connettività aggiuntive per la connessione ai Server Sybase ASE usando il provider ODBC Sybase ASE e i provider ADO.NET di Sybase ASE.
+* È stata rimossa la dipendenza da un `SysDB`database separato denominato, che contiene le funzioni di emulazione Sybase (installate come parte del pacchetto di estensione).
+* Aggiunta della possibilità di installare SSMA per Sybase Extension Pack nei [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] cluster.
+* Aggiunta compatibilità con le versioni precedenti dei progetti creati da versioni precedenti di SSMA (v 4.0 e v 4.2).
+* Aggiunta della possibilità di installare il prodotto SSMA per Sybase v 5.0 side-by-Side (SxS) con le versioni precedenti di SSMA (v 4.0 e v 4.2).
+
 ## <a name="july-2010"></a>Luglio 2010
 
 La versione 2010 di SSMA per Sybase è stata aggiunta:
 
-* Supporto per la migrazione a SQL Server 2008 R2.  
-* Nuova applicazione console SSMA per l'esecuzione da riga di comando.  
-* Supporto per la migrazione dei dati tramite motori di migrazione dei dati lato server e lato client.  
-* Supporto per l'istruzione "Custom SELECT" nella migrazione dei dati.  
-* Supporto per la migrazione da Sybase ASE 15.0.3 e 15,5.  
-  
+* Supporto per la migrazione a SQL Server 2008 R2.
+* Nuova applicazione console SSMA per l'esecuzione da riga di comando.
+* Supporto per la migrazione dei dati tramite motori di migrazione dei dati lato server e lato client.
+* Supporto per l'istruzione "Custom SELECT" nella migrazione dei dati.
+* Supporto per la migrazione da Sybase ASE 15.0.3 e 15,5.
+
 ## <a name="june-2008"></a>2008 giugno
 
-La versione di giugno 2008 di SSMA per Sybase contiene le modifiche seguenti:  
-  
+La versione di giugno 2008 di SSMA per Sybase contiene le modifiche seguenti:
+
 * È stato aggiunto SSMA tester, che testa automaticamente la conversione dell'oggetto di database e la migrazione dei dati eseguita da SSMA. Al termine di tutti i passaggi della migrazione di SSMA, utilizzare SSMA tester per verificare che gli oggetti convertiti funzionino allo stesso modo e che tutti i dati siano stati trasferiti correttamente.
 * Aggiunta della conversione precedente a SQL. L'utente può ora specificare dichiarazioni di tabella temporanea (e di altro oggetto) per ogni routine di origine da usare nella conversione.
-* Aggiunta di miglioramenti nella conversione degli oggetti:  
-  * La conversione di join è stata modificata.  
-  * Aggregazioni e non aggregazioni senza clausole/Group by.  
-  * Funzione IDENTITY con un'istruzione SELECT INTO.  
-  * Vincoli e indici cluster in blocco solo dati.  
-  * Tabelle temporanee create da SELECT INTO.  
-  * Vincoli/indici per le tabelle temporanee.  
-  * Sono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportati i nuovi tipi 2008 DateTime.  
-  * Supporto per la connettività e i tipi di DataType di Sybase 15,0.  
-  
+* Aggiunta di miglioramenti nella conversione degli oggetti:
+  * La conversione di join è stata modificata.
+  * Aggregazioni e non aggregazioni senza clausole/Group by.
+  * `IDENTITY` Funzione con un' `SELECT INTO` istruzione.
+  * Vincoli e indici cluster in blocco solo dati.
+  * Tabelle temporanee create `SELECT INTO`da.
+  * Vincoli/indici per le tabelle temporanee.
+  * Sono [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] supportati i nuovi tipi DateTime.
+  * Supporto per la connettività e i tipi di dati di Sybase 15,0.
+
 ## <a name="may-2007"></a>2007 maggio
 
-È stata aggiunta la versione 2007 di SSMA per Sybase:  
-  
-* Possibilità di caricare più velocemente il contenuto del database durante il salvataggio di un progetto.  
-* Supporto per i commenti immessi dall'utente in SQL Server modalità SQL formattata.  
-* Miglioramenti nella conversione degli oggetti.  
+È stata aggiunta la versione 2007 di SSMA per Sybase:
+
+* Possibilità di caricare più velocemente il contenuto del database durante il salvataggio di un progetto.
+* Supporto per i commenti immessi dall'utente in SQL Server modalità SQL formattata.
+* Miglioramenti nella conversione degli oggetti.
 
 ## <a name="november-2006"></a>2006 novembre
 
-La versione di novembre 2006 di SSMA per Sybase contiene le modifiche seguenti:  
-  
-* Sono state aggiunte nuove impostazioni globali:  
-  * È possibile scegliere di visualizzare i numeri di riga nelle finestre dell'editor.  
-  * È possibile configurare SSMA in modo da richiedere la sostituzione di oggetti duplicati o sempre o mai sostituire gli oggetti duplicati durante la conversione dello schema.  
-* È stata aggiunta una nuova opzione di conversione che consente di configurare il modo in cui SSMA gestisce le situazioni seguenti:  
-  * Istruzione CAST o CONVERT che contiene una stringa binaria.  
-  * Verifica la presenza di valori null nelle espressioni di uguaglianza.  
-  * Tabelle proxy.  
-  * Numeri di errore del messaggio utente per RAISERROR.  
-  * Istruzioni UPDATE che contengono identificatori non risolti.  
-* Aggiunta di una nuova opzione di migrazione che consente di specificare in che modo SSMA deve gestire le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date che non rientrano nell'intervallo di date.  
-* È stata aggiunta un'impostazione **SQL formattata** nella scheda **SQL** , che formatta il codice per migliorare la leggibilità.  
+La versione di novembre 2006 di SSMA per Sybase contiene le modifiche seguenti:
+
+* Sono state aggiunte nuove impostazioni globali:
+  * È possibile scegliere di visualizzare i numeri di riga nelle finestre dell'editor.
+  * È possibile configurare SSMA in modo da richiedere la sostituzione di oggetti duplicati o sempre o mai sostituire gli oggetti duplicati durante la conversione dello schema.
+* È stata aggiunta una nuova opzione di conversione che consente di configurare il modo in cui SSMA gestisce le situazioni seguenti:
+  * Istruzione `CAST` o `CONVERT` che contiene una stringa binaria.
+  * Verifica la presenza di valori null nelle espressioni di uguaglianza.
+  * Tabelle proxy.
+  * Numeri di errore del messaggio `RAISERROR`utente per.
+  * `UPDATE`istruzioni che contengono identificatori non risolti.
+* Aggiunta di una nuova opzione di migrazione che consente di specificare in che modo SSMA deve gestire le [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] date che non rientrano nell'intervallo di date.
+* È stata aggiunta un'impostazione **SQL formattata** nella scheda **SQL** , che formatta il codice per migliorare la leggibilità.
 * Correzioni di bug, tra cui:
-  * SSMA ora converte la *tabella* di blocco della tabella in {Shared | EXCLUSIVe} istruzioni in modalità aggiungendo un hint TABLOCK o TABLOCKX alla query SELECT successiva sulla tabella.  
-  * I cast necessari vengono ora aggiunti quando si utilizzano tipi binari nelle espressioni di caratteri.  
-  * Miglioramenti delle prestazioni e della memoria.  
-  
+  * SSMA converte `LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` ora le istruzioni aggiungendo un `TABLOCK` hint `TABLOCKX` o alla query successiva `SELECT` nella tabella.
+  * I cast necessari vengono ora aggiunti quando si utilizzano tipi binari nelle espressioni di caratteri.
+  * Miglioramenti delle prestazioni e della memoria.
+
 ## <a name="july-2006"></a>2006 luglio
 
-La versione di SSMA per Sybase di luglio 2006 costituisce la versione iniziale.  
-  
+La versione di SSMA per Sybase di luglio 2006 costituisce la versione iniziale.
+
 ## <a name="see-also"></a>Vedere anche
 
 [Introduzione con SSMA per Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

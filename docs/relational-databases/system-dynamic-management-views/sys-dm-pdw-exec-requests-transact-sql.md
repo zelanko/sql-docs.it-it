@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632762"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256879"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,10 +44,26 @@ ms.locfileid: "73632762"
 |group_name|**sysname** |Per le richieste che utilizzano risorse, group_name è il nome del gruppo di carico di lavoro in cui viene eseguita la richiesta.  Se la richiesta non utilizza risorse, group_name è null.</br>Si applica a: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Per le richieste che usano risorse, il nome del classificatore usato per l'assegnazione delle risorse e l'importanza.||
 |resource_allocation_percentage|**Decimal (5, 2)**|Percentuale di risorse allocate alla richiesta.</br>Si applica a: Azure SQL Data Warehouse|
-|result_set_cache|**bit**|Indica in dettaglio se una query completata è un hit cache dei risultati (1) o meno (0). </br>Si applica a: Azure SQL Data Warehouse|0, 1|
+|result_set_cache|**bit**|Indica in dettaglio se una query completata ha utilizzato la cache del set di risultati.  </br>Si applica a: Azure SQL Data Warehouse| 1 = riscontri nella cache del set di risultati </br> 0 = mancato riscontro nella cache del set di risultati </br> Valori negativi = motivi per cui la memorizzazione nella cache del set di risultati non è stata usata.  Per informazioni dettagliate, vedere la sezione Osservazioni.|
 ||||
   
+## <a name="remarks"></a>Osservazioni 
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
+
+ Il result_set_cache è una maschera di maschera di utilizzo della cache dei set di risultati di una query.  Questa colonna può essere la [| (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti:  
+  
+|valore|Descrizione|  
+|-----------|-----------------|  
+|**1**|Riscontro nella cache del set di risultati|  
+|-**0x00**|Mancata memorizzazione nella cache del set di risultati|  
+|-**0x01**|La memorizzazione nella cache del set di risultati è disabilitata nel database.|  
+|-**0x02**|La memorizzazione nella cache del set di risultati è disabilitata nella sessione. | 
+|-**0x04**|La memorizzazione nella cache del set di risultati è disabilitata perché non sono presenti origini dati per la query.|  
+|-**0x08**|Il caching del set di risultati è disabilitato a causa di predicati di sicurezza a livello di riga.|  
+|-**0x10**|La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della tabella di sistema, della tabella temporanea o della tabella esterna della query.|  
+|-**0x20**|La memorizzazione nella cache del set di risultati è disabilitata perché la query contiene costanti di runtime, funzioni definite dall'utente o funzioni non deterministiche.|  
+|-**0x40**|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono troppo grandi (> 1 milione righe).|  
+|-**0x80**|La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe di grandi dimensioni (>64KB).|  
   
 ## <a name="permissions"></a>Autorizzazioni
 
