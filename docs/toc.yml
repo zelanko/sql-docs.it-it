@@ -8520,8 +8520,6 @@
                 - name: Editor di query e di testo
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: editor di query del Motore di database
-                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: Editor XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Codifica con colori negli editor di query
@@ -9023,6 +9021,8 @@
               items:
                 - name: Guida F1 per le connessioni al server (SSMS)
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: editor di query del Motore di database
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: Connetti ad Archiviazione di Microsoft Azure
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: Connessione ai componenti di SQL Server da SQL Server Management Studio
