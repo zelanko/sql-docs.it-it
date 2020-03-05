@@ -16,12 +16,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68890378"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280858"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installazione di Analysis Services in modalità Multidimensionale e Data Mining
   
@@ -70,7 +70,7 @@ ms.locfileid: "68890378"
   
  [Determinare la modalità server di un'istanza di Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
- [SQL Server componenti aggiuntivi Data mining](https://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server componenti aggiuntivi Data mining](https://www.microsoft.com/download/details.aspx?id=35578)  
   
  Per impostazione predefinita, i database di esempio, il codice di esempio e i componenti aggiuntivi delle applicazioni client non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare i database di esempio e il codice di esempio, vedere il sito Web [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   

@@ -10,19 +10,19 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632711"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280919"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lezione 1: Creazione di oggetti di database
   In questa lezione vengono illustrate le procedure per creare un database, creare in quest'ultimo una tabella, nonché come accedere ai dati della tabella e modificarli. Poiché l'obiettivo di questa lezione è offrire un'introduzione all'uso di [!INCLUDE[tsql](../includes/tsql-md.md)], non verranno usate né descritte le numerose opzioni disponibili per le istruzioni.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] Le istruzioni possono essere scritte e inviate a [!INCLUDE[ssDE](../includes/ssde-md.md)] nei modi seguenti:  
   
--   Mediante [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In questa esercitazione si presuppone che venga usato [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ma è anche possibile usare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponibile come download gratuito nell' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   Mediante [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In questa esercitazione si presuppone che venga usato [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ma è anche possibile usare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponibile come download gratuito nell' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   Mediante l' [utilità sqlcmd](../tools/sqlcmd-utility.md).  
   
