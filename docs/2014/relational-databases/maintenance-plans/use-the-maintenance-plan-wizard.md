@@ -35,14 +35,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70153817"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339024"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
-  In questo argomento viene descritto come creare un piano di manutenzione a uno o più server utilizzando la Creazione guidata piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La creazione guidata piano di manutenzione consente di creare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un piano di manutenzione che Agent può eseguire a intervalli regolari. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
+  In questo argomento viene descritto come creare un piano di manutenzione a uno o più server utilizzando la Creazione guidata piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tramite la Creazione guidata piano di manutenzione è possibile creare un piano di manutenzione che potrà essere regolarmente eseguito in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
   
  **Contenuto dell'articolo**  
   
@@ -429,7 +429,7 @@ ms.locfileid: "70153817"
      **Report in formato testo piano di manutenzione**  
      Elimina i report in formato testo relativi a piani di manutenzione eseguiti in precedenza.  
   
-     **Percorso del file**  
+     **Percorso file**  
      Specifica il percorso dei file da eliminare.  
   
      **Elimina file specifico**  

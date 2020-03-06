@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798341"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339206"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installare la modalità SharePoint di Reporting Services per SharePoint 2013
   Nelle procedure contenute in questo argomento viene illustrata l'installazione di un unico server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint. Nei passaggi è inclusa l'esecuzione dell'Installazione guidata di SQL Server, nonché di attività di configurazione in cui viene utilizzata Amministrazione centrale SharePoint. L'argomento può inoltre essere utilizzato per singole procedure di aggiornamento di un'installazione esistente, ad esempio per creare una applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "72798341"
   
  L'installazione a server singolo è utile per scenari di sviluppo e di test, ma non è consigliata per ambienti di produzione.  
   
- **In questo argomento**  
+ **Contenuto dell'argomento:**  
   
 -   [Distribuzione a server singolo di esempio](#bkmk_singleserver)  
   
@@ -62,8 +62,8 @@ ms.locfileid: "72798341"
 |**1**|Servizio SharePoint installato dal programma di installazione di SQL Server. È possibile creare una o più applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**2**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Il componente aggiuntivo per prodotti SharePoint fornisce i componenti dell'interfaccia utente nei server SharePoint.|  
-|**(3)**|Applicazione Excel Services utilizzata da Power View e PowerPivot.|  
-|**(4)**|Applicazione di servizio PowerPivot.|  
+|**3**|Applicazione Excel Services utilizzata da Power View e PowerPivot.|  
+|**4**|Applicazione di servizio PowerPivot.|  
   
  ![Distribuzione a server singolo in modalità SharePoint per SSRS](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "Distribuzione a server singolo in modalità SharePoint per SSRS")  
   
@@ -122,7 +122,7 @@ ms.locfileid: "72798341"
   
     -   **Reporting Services componente aggiuntivo per prodotti SharePoint**.  
   
-         ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "note") L'opzione di installazione guidata per l'installazione del componente aggiuntivo è una novità [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] della versione.  
+         ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "nota") L'opzione di installazione guidata per l'installazione del componente aggiuntivo è una novità [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] della versione.  
   
     -   Se non si dispone già di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]di SQL Server, è anche possibile selezionare **Servizi motore di database** e **Strumenti di gestione - Completa** per un ambiente completo.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72798341"
   
 12. Se si seleziona Servizi motore di database, accettare l'istanza predefinita di **MSSQLSERVER** nella pagina **Configurazione dell'istanza** e fare clic su **Avanti**.  
   
-     ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "note") L'architettura del servizio Reporting Services SharePoint non è basata su una SQL Server "istanza", come nell'architettura di Reporting Services precedente.  
+     ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "nota") L'architettura del servizio Reporting Services SharePoint non è basata su una SQL Server "istanza", come nell'architettura di Reporting Services precedente.  
   
 13. Esaminare la pagina **Requisiti di spazio su disco** e fare clic su **Avanti**.  
   
@@ -414,7 +414,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ## <a name="see-also"></a>Vedere anche  
  [Cmdlet di PowerShell per Reporting Services modalità SharePoint](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Aggiornare ed eseguire la migrazione Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Roadmap del contenuto: configurare e configurare SharePoint Server e SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
  [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services servizio SharePoint e applicazioni di servizio](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188826"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339094"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent è un servizio di Microsoft Windows che esegue attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -84,10 +84,9 @@ ms.locfileid: "68188826"
   
  Un avviso può rispondere a una delle condizioni seguenti:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eventi  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventi  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condizioni delle prestazioni  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condizioni delle prestazioni  
   
 -   Eventi WMI (Microsoft Windows Management Instrumentation) nel computer in cui viene eseguito SQL Server Agent  
   

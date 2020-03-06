@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401459"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340469"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Elenchi di controllo della configurazione dell'appliance per il sistema di piattaforma Analytics
 Fornisce elenchi di controllo per le attività necessarie per configurare il sistema di piattaforma di analisi per il proprio ambiente. Queste attività di configurazione sono necessarie prima di poter usare l'appliance.  
@@ -24,7 +24,7 @@ Fornisce elenchi di controllo per le attività necessarie per configurare il sis
   
 ## <a name="BeforeTasks"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
   
 1.  Il dispositivo deve essere installato nel data center e acceso.  
   
@@ -69,13 +69,13 @@ Dopo aver eseguito le attività di **Configuration Manager** , eseguire il segue
   
 |Attività di configurazione|Descrizione|  
 |----------------------|---------------|  
-|Il software antivirus di terze parti può essere installato e configurato nell'appliance di SQL Server PDW per i nodi rivolte all'esterno.<br /><br />(Facoltativa)|Per ulteriori informazioni, vedere la pagina relativa al [&#41;del sistema &#40;Analytics del software antivirus ](antivirus-software.md).|  
-|La password per la modalità ripristino servizi directory può essere modificata.<br /><br />(Facoltativa)|Per ulteriori informazioni, vedere la pagina relativa alla [configurazione della password amministratore per l'accesso ai nodi ad in modalità ripristino servizi Directory &#40;ripristino servizi directory&#41; &#40;&#41;di sistema della piattaforma ](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  
+|Il software antivirus di terze parti può essere installato e configurato nell'appliance di SQL Server PDW per i nodi rivolte all'esterno.<br /><br />Facoltativa|Per ulteriori informazioni, vedere la pagina relativa al [&#41;del sistema &#40;Analytics del software antivirus ](antivirus-software.md).|  
+|La password per la modalità ripristino servizi directory può essere modificata.<br /><br />Facoltativa|Per ulteriori informazioni, vedere la pagina relativa alla [configurazione della password amministratore per l'accesso ai nodi ad in modalità ripristino servizi Directory &#40;ripristino servizi directory&#41; &#40;&#41;di sistema della piattaforma ](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  
 |Configurare l'appliance per la ricezione degli aggiornamenti software<br /><br />(Consigliato)|Il dispositivo deve essere configurato in modo da ricevere gli aggiornamenti per la SQL Server PDW e il software sottostante.<br /><br />Per ulteriori informazioni, vedere [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md). Per informazioni su WSUS, vedere la pagina relativa al [&#41;del sistema della piattaforma &#40;Analytics ](software-servicing.md).|  
-|Configurare la connettività a dati esterni, ad esempio Hadoop o archiviazione BLOB di Azure.<br /><br />(Facoltativa)|Per altre informazioni, vedere [configurare la connettività di base per i dati esterni &#40;&#41;di sistema della piattaforma di analisi ](configure-polybase-connectivity-to-external-data.md).|  
-|Configurare il software antivirus<br /><br />(Facoltativa)|Le soluzioni antivirus di terze parti possono essere usate per proteggere i nodi rivolte all'esterno, ma non è obbligatorio. Attenersi alle linee guida riportate in.|  
-|Configurare le schede di rete InfiniBand nei server di backup e di caricamento<br /><br />(Facoltativa)|Per configurare il backup e il caricamento dei server per la connessione a SQL Server PDW tramite la rete InfiniBand, è necessario configurare le schede di rete per consentire al DNS dell'appliance di risolvere la connessione InfiniBand alla rete InfiniBand attualmente attiva.|  
-|Configurare per inviare i dati di telemetria a Microsoft<br /><br />(Facoltativa)|Per configurare Analytics Platform System per l'invio di dati di telemetria a Microsoft, è necessario eseguire uno script di PowerShell nel nodo di controllo. Per istruzioni specifiche, vedere [inviare il feedback di telemetria a Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  
+|Configurare la connettività a dati esterni, ad esempio Hadoop o archiviazione BLOB di Azure.<br /><br />Facoltativa|Per altre informazioni, vedere [configurare la connettività di base per i dati esterni &#40;&#41;di sistema della piattaforma di analisi ](configure-polybase-connectivity-to-external-data.md).|  
+|Configurare il software antivirus<br /><br />Facoltativa|Le soluzioni antivirus di terze parti possono essere usate per proteggere i nodi rivolte all'esterno, ma non è obbligatorio. Attenersi alle linee guida riportate in.|  
+|Configurare le schede di rete InfiniBand nei server di backup e di caricamento<br /><br />Facoltativa|Per configurare il backup e il caricamento dei server per la connessione a SQL Server PDW tramite la rete InfiniBand, è necessario configurare le schede di rete per consentire al DNS dell'appliance di risolvere la connessione InfiniBand alla rete InfiniBand attualmente attiva.|  
+|Configurare per inviare i dati di telemetria a Microsoft<br /><br />Facoltativa|Per configurare Analytics Platform System per l'invio di dati di telemetria a Microsoft, è necessario eseguire uno script di PowerShell nel nodo di controllo. Per istruzioni specifiche, vedere [inviare il feedback di telemetria a Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Software antivirus &#40;piattaforma del sistema di analisi&#41;](antivirus-software.md)  

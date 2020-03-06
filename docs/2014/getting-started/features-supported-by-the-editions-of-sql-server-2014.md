@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176130"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339294"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Funzionalità supportate dalle edizioni di SQL Server 2014
 
@@ -169,7 +169,7 @@ ms.locfileid: "70176130"
 |Distributed Replay - Client|Sì|No|Sì|Sì||||  
 |Distributed Replay - Controller|Sì (Enterprise supporta fino a 16 client, Developer supporta solo 1 client)|No|Sì (supporto di 1 solo client)|Sì (supporto di 1 solo client)||||  
 |SQL Profiler|Sì|Sì|Sì|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Agente|Sì|Sì|Sì|Sì||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Sì|Sì|Sì|Sì||||  
 |Management Pack di Microsoft System Center Operations Manager|Sì|Sì|Sì|Sì||||  
 |Ottimizzazione guidata motore di database (DTA)|Sì|Sì|Sì<sup>3</sup>|Sì<sup>3</sup>||||  
 |Procedura guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] distribuire un database in una macchina virtuale di Azure|Sì|Sì|Sì|Sì|Sì|Sì|Sì|  

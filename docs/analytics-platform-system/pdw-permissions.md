@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177176"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339573"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in parallelo data warehouse
 Questo articolo descrive i requisiti e le opzioni per la gestione delle autorizzazioni di database per SQL Server PDW.

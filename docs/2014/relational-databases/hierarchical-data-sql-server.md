@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63065705"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339239"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
   Il tipo di `hierarchyid` dati incorporato rende più semplice archiviare ed eseguire query sui dati gerarchici. `hierarchyid`è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  

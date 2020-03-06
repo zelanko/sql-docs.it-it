@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62519164"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339139"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
   Utilizzando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile creare una tabella o un indice partizionato in [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati delle tabelle e degli indici partizionati vengono suddivisi orizzontalmente in unità che possono essere distribuite in più filegroup di un database. Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
@@ -81,14 +81,14 @@ ms.locfileid: "62519164"
   
 -   Autorizzazione CONTROL SERVER o ALTER ANY DATABASE per il server del database in cui vengono creati la funzione e lo schema di partizione.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Per creare uno o più filegroup, i file corrispondenti e una tabella attenersi ai passaggi della procedura riportata di seguito. Gli oggetti della procedura descritta di seguito verranno utilizzati come riferimento quando si crea la tabella partizionata.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Per creare nuovi filegroup per una tabella partizionata  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database in cui si vuole creare una tabella partizionata e scegliere **Proprietà**.  
   
-2.  Nella finestra di dialogo **Proprietà database -** *nome_database* selezionare **Filegroup**in **Selezione pagina**.  
+2.  Nella finestra di dialogo **Proprietà database -** *nome_database* selezionare **Filegroup** in **Selezione pagina**.  
   
 3.  In **Righe**fare clic su **Aggiungi**. Nella nuova riga immettere il nome del filegroup.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62519164"
   
 #### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
-1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione**e quindi selezionare **Create Partition (Crea partizione)**.  
+1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione**e quindi selezionare **Create Partition (Crea partizione)** .  
   
 2.  Nella pagina **Creazione guidata partizione**della **relativa procedura guidata** fare clic su **Avanti**.  
   
@@ -119,10 +119,10 @@ ms.locfileid: "62519164"
   
      In questa pagina sono disponibili le seguenti opzioni aggiuntive:  
   
-     **Colloca questa tabella nella tabella partizionata selezionata**  
+     **Colloca tabella nella tabella partizionata selezionata**  
      Consente di selezionare una tabella partizionata contenente dati correlati e di creare un join con la tabella nella colonna di partizionamento. Le query sulle tabelle con partizioni unite nelle colonne di partizionamento vengono in genere eseguite in modo più efficiente.  
   
-     **Allinea nello spazio di archiviazione indici univoci e indici univoci con una colonna di partizione indicizzata**  
+     **Allinea nello spazio di archiviazione indici univoci e non univoci con una colonna di partizione indicizzata**  
      Consente di allineare tutti gli indici della tabella partizionati con lo stesso schema di partizione. Quando una tabella e i relativi indici sono allineati, è possibile spostare in modo più efficace le partizioni all'interno e all'esterno delle tabelle partizionate, in quanto i dati vengono partizionati con lo stesso algoritmo.  
   
      Dopo aver selezionato la colonna di partizionamento e qualsiasi altra opzione, fare clic su **Avanti**.  
@@ -144,15 +144,15 @@ ms.locfileid: "62519164"
      **Imposta limiti...**  
      Consente di aprire la finestra di dialogo **Imposta valori limite** per selezionare i valori limite e gli intervalli di date desiderati per le partizioni. Questa opzione è disponibile solo se è stata selezionata una colonna di partizionamento contenente uno dei tipi di dati seguenti: `date`, `datetime`, `smalldatetime`, `datetime2` o `datetimeoffset`.  
   
-     **Stima archiviazione**  
+     **Valuta spazio di archiviazione**  
      Consente di valutare il numero di righe, lo spazio necessario e quello disponibile per l'archiviazione di ciascun filegroup specificato per le partizioni. Questi valori vengono visualizzati nella griglia come valori di sola lettura.  
   
      Nella finestra di dialogo **Imposta valori limite** sono inoltre disponibili le seguenti opzioni aggiuntive:  
   
-     **Data di inizio**  
+     **Data inizio**  
      Consente di selezionare la data di inizio per i valori di intervallo delle partizioni.  
   
-     **Data di fine**  
+     **Data fine**  
      Consente di selezionare la data di fine per i valori di intervallo delle partizioni. Se è stata selezionata l'opzione **Limite sinistro** nella pagina **Esegui mapping partizioni** , questa data costituirà l'ultimo valore per ogni filegroup/partizione. Se è stata selezionata l'opzione **Limite destro** nella pagina **Esegui mapping partizioni** , questa data costituirà il primo valore nel penultimo filegroup.  
   
      **Intervallo di date**  
@@ -170,7 +170,7 @@ ms.locfileid: "62519164"
      **Genera script negli Appunti**  
      Salva lo script negli Appunti.  
   
-     **Genera script in nuova finestra query**  
+     **Genera script in nuova finestra Query**  
      Genera lo script in una nuova finestra dell'editor di query. Si tratta della selezione predefinita.  
   
      Se si seleziona **Pianifica**, fare clic su **Cambia pianificazione**.  
@@ -179,13 +179,13 @@ ms.locfileid: "62519164"
   
     2.  Nell'elenco **Tipo pianificazione** selezionare il tipo di pianificazione:  
   
-        -   **Avvia automaticamente all'avvio SQL Server Agent**  
+        -   **Avvia automaticamente all'avvio di SQL Server Agent**  
   
-        -   **Avvia quando la CPU diventa inattiva**  
+        -   **Avvia quando la CPU risulta inattiva**  
   
-        -   **Ricorrente**. Selezionare questa opzione se la nuova tabella partizionata viene aggiornata regolarmente con nuove informazioni.  
+        -   **Periodica**. Selezionare questa opzione se la nuova tabella partizionata viene aggiornata regolarmente con nuove informazioni.  
   
-        -   **Una volta**. Si tratta della selezione predefinita.  
+        -   **Singola occorrenza**. Si tratta della selezione predefinita.  
   
     3.  Selezionare o deselezionare la casella di controllo **Abilitata** per abilitare o disabilitare la pianificazione.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "62519164"
   
                 -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita il giorno 15 del mese a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio: domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
         2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
@@ -251,14 +251,14 @@ ms.locfileid: "62519164"
      **Copia report negli Appunti**  
      Copia i risultati del report dello stato della procedura guidata negli Appunti.  
   
-     **Invia report come messaggio di posta elettronica**  
+     **Invia report per posta elettronica**  
      Copia i risultati del report dello stato della procedura guidata in un messaggio di posta elettronica.  
   
      Al termine, fare clic su **Chiudi**.  
   
  Creazione guidata partizione crea la funzione e lo schema di partizione, quindi applica il partizionamento alla tabella specificata. Per verificare il partizionamento della tabella, in Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella e scegliere **Proprietà**. Fare clic sulla pagina **Archiviazione** . Nella pagina vengono visualizzate informazioni come il nome della funzione e dello schema di partizione e il numero di partizioni.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
@@ -411,9 +411,9 @@ ms.locfileid: "62519164"
   
 -   [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
--   [CREAZIONE di una funzione di partizione &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
+-   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
   
--   [CREAZIONE dello schema di partizione &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
+-   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
   
 -   [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   
