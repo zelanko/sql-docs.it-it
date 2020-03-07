@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76287159"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338225"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificare le opzioni di inizializzazione dello snapshot per la replica di SQL 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
