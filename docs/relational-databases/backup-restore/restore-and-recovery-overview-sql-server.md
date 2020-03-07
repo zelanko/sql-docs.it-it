@@ -22,11 +22,11 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72916071"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338250"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
