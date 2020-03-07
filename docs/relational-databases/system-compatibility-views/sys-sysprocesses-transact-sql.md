@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947154"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866370"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "74947154"
 |hostname|**nchar (128)**|Nome della workstation.|  
 |program_name|**nchar (128)**|Nome dell'applicazione.|  
 |hostprocess|**nchar (10)**|Numero di ID del processo della workstation.|  
-|cmd|**nchar (26)**|Comando in fase di esecuzione.|  
+|cmd|**nchar (52)**|Comando in fase di esecuzione.|  
 |nt_domain|**nchar (128)**|Dominio di Windows per il client, se si utilizza l'autenticazione di Windows, o connessione trusted.|  
 |nt_username|**nchar (128)**|Nome utente di Windows per il processo, se si utilizza l'autenticazione di Windows, o connessione trusted.|  
 |net_address|**nchar (12)**|Identificatore univoco assegnato alla scheda di rete della workstation di ogni utente. Quando un utente esegue l'accesso, questo identificatore viene inserito nella colonna net_address.|  
