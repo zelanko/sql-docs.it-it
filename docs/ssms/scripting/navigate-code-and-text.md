@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b03a4fdc2d7a49cdd9896768fb7e7d989bc4d3d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253746"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261844"
 ---
 # <a name="navigate-code-and-text"></a>Spostamento nel codice e nel testo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "75253746"
 -   Comando **Vai a** .  
   
 > [!NOTE]  
->  Per un elenco completo dei tasti di scelta rapida, vedere [Tasti di scelta rapida di SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  Per un elenco completo dei tasti di scelta rapida, vedere [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="navigating-with-bookmarks"></a>Spostamento con segnalibri  
  Per modificare un documento in una posizione e quindi tornare rapidamente alla posizione originale, è possibile aggiungere un segnalibro. Per impostare segnalibri e spostarsi tra di essi, utilizzare tasti di scelta rapida. I segnalibri possono essere visualizzati nella finestra Segnalibro.  

@@ -1,10 +1,7 @@
 ---
 title: Guida F1 per le connessioni al server
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1d4ae0491aee99acca8c6f82e96208ff9eb5bec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 1e2c897807cadf602dffaa7217442074f6f3cad8
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75243906"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261890"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Guida sensibile al contesto per le connessioni al server (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Questa sezione contiene gli argomenti della Guida sensibile al contesto per la finestra di dialogo **Connetti al server** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Cerca server &#40;Server locali&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
@@ -55,5 +57,4 @@ Questa sezione contiene gli argomenti della Guida sensibile al contesto per la f
   
 [Connetti al server &#40;Reporting Services&#41;](../../ssms/f1-help/connect-to-server-reporting-services.md)  
   
-[Password scaduta](../../ssms/f1-help/password-expired.md)  
-  
+[Password scaduta](../../ssms/f1-help/password-expired.md)

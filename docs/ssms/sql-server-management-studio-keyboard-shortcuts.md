@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2997c185dcd01c00b007cd676fe0eef7e3ac2048
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75242808"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261720"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tasti di scelta rapida di SQL Server Management Studio
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono disponibili due schemi di tastiera. Per impostazione predefinita, viene usato lo schema di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], in cui i tasti di scelta rapida sono basati su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] è inoltre disponibile uno schema di tastiera simile allo schema standard di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Per cambiare lo schema di tastiera o aggiungere tasti di scelta rapida, scegliere **Opzioni** dal menu **Strumenti**. Selezionare lo schema della tastiera desiderato nella pagina **Ambiente**, **Tastiera** .  
+
+In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono disponibili due schemi di tastiera. Per impostazione predefinita, viene usato lo schema di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], in cui i tasti di scelta rapida sono basati su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] è inoltre disponibile uno schema di tastiera simile allo schema standard di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Per cambiare lo schema di tastiera o aggiungere tasti di scelta rapida, scegliere **Opzioni** dal menu **Strumenti**. Selezionare lo schema della tastiera desiderato nella pagina **Ambiente**, **Tastiera** .  
   
 > [!NOTE]  
 >  Per visualizzare solo le intestazioni, fare clic su **Comprimi tutto** nella parte superiore di questa pagina.  
