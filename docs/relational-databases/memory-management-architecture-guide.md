@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115272"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338567"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 
@@ -47,7 +47,7 @@ Uno dei principali obiettivi di progettazione di tutti i software di database è
 > [!NOTE]
 > In un sistema con carichi elevati e con un numero eccessivo di richieste di memoria, le query con merge join, sort e bitmap nel piano di query possono eliminare il bitmap quando non ottengono la memoria minima necessaria per il bitmap. Ciò può influire sulle prestazioni delle query e, se il processo di ordinamento non può essere contenuto nella memoria, è possibile aumentare l'uso delle tabelle di lavoro nel database tempdb, causando la crescita di tempdb. Per risolvere questo problema, aggiungere memoria fisica o ottimizzare le query per l'uso di un piano di query diverso e più rapido.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Assegnazione della quantità massima di memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>Assegnazione della quantità massima di memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le quantità di memoria seguenti. 
 
@@ -72,7 +72,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate alla gestione della memoria a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>Modifiche apportate alla gestione della memoria a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), l'allocazione di memoria viene gestita con cinque meccanismi diversi:
 -  **Allocatore di pagine singole**, che include solo le allocazioni di memoria minori o uguali a 8 KB nel processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le opzioni di configurazione *max server memory (MB)* e *min server memory (MB)* che determinano i limiti di memoria fisica usata dall'allocatore di pagine singole. Il pool di buffer è contemporaneamente il meccanismo per l'allocazione di pagine singole e il maggiore consumer di allocazioni di pagine singole.
@@ -107,7 +107,7 @@ Questo comportamento viene in genere osservato durante le operazioni seguenti:
 -  Operazioni di traccia che devono archiviare parametri di input di grandi dimensioni.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate a "memory_to_reserve" a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Modifiche apportate a "memory_to_reserve" a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Nelle versioni precedenti di SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva parte dello spazio indirizzi virtuali del processo per l'**allocatore di più pagine**, l'**allocatore CLR**, le allocazioni di memoria per gli **stack di thread** nel processo di SQL Server e le **allocazioni di Windows dirette**. Questa parte dello spazio indirizzi virtuali è nota anche come area MemToLeave o "pool non di buffer".
 
 Lo spazio indirizzi virtuali riservato per queste allocazioni varia a seconda dell'opzione di configurazione _**memory\_to\_reserve**_ . Il valore predefinito usato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è 256 MB. Per sostituire il valore predefinito, usare il parametro di avvio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*.
