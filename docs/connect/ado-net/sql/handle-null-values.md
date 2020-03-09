@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 861ed4395e6cf8f5e8df3a5cc41a0f6da597e5ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2bcd54ab83429b1f7961480210c12eb546a2aa70
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247746"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896730"
 ---
 # <a name="handling-null-values"></a>Gestione dei valori NULL
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Se il valore di una colonna è sconosciuto o mancante, viene usato un valore Null in un database relazionale. Un valore Null non è né una stringa vuota (per i tipi di dati character o datetime) né un valore zero (per i tipi di dati numerici). La specifica ANSI SQL-92 indica che un valore Null deve essere lo stesso per tutti i tipi di dati, in modo che tutti i valori Null vengano gestiti in modo coerente. Lo spazio dei nomi <xref:System.Data.SqlTypes> specifica la semantica Null implementando l'interfaccia <xref:System.Data.SqlTypes.INullable>. Ogni tipo di dati in <xref:System.Data.SqlTypes> ha una propria proprietà `IsNull` e un valore `Null` che può essere assegnato a un'istanza di tale tipo di dati.  
   

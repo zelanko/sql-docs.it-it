@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1b5742d082fdb40b03663cf2db719399290a010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247771"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896951"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerazione di istanze di SQL Server (ADO.NET)
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server consente alle applicazioni di trovare le istanze di SQL Server all'interno della rete corrente. La classe <xref:System.Data.Sql.SqlDataSourceEnumerator> espone queste informazioni allo sviluppatore di applicazioni, offrendo una classe <xref:System.Data.DataTable> che contiene informazioni su tutti i server visibili. La tabella restituita include un elenco di istanze di server disponibili in rete che corrisponde all'elenco fornito quando un utente tenta di creare una nuova connessione ed espande l'elenco a discesa contenente tutti i server disponibili nella finestra di dialogo **Proprietà connessione**. I risultati visualizzati non sono sempre completi.  
   

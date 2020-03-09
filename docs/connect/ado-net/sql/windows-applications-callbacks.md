@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253378"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896016"
 ---
 # <a name="windows-applications-using-callbacks"></a>Applicazioni Windows tramite callback
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Nella maggior parte degli scenari di elaborazione asincrona la procedura ideale è avviare un'operazione di database e continuare a eseguire altri processi senza attendere il completamento dell'operazione di database. Tuttavia, in molti scenari è necessario eseguire un'operazione al termine dell'operazione di database. In un'applicazione Windows, ad esempio, può essere opportuno delegare l'operazione con esecuzione prolungata a un thread in background, consentendo al thread dell'interfaccia utente di rimanere reattivo. Tuttavia, al termine dell'operazione di database, si devono usare i risultati per popolare il modulo. Questo tipo di scenario si implementa in modo ottimale con un callback.  
   

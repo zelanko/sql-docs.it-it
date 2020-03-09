@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4d0f31c8f5fbb282c880abaee62f05dc190bbfc
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251138"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896658"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore con un'istanza del tipo di dati **SqlXml**. L'operazione è semplicissima in quanto le colonne XML in SQL Server accettano valori di parametro esattamente come altri tipi di dati.  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 85d24b6695dfe9f592bfefabb13c2042cf3450c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1029d9a0121b23963ccfc12582bd9d9cc7fd6cd6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251175"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896595"
 ---
 # <a name="single-bulk-copy-operations"></a>Singole operazioni di copia bulk
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 L'approccio più semplice per eseguire un'operazione di copia bulk di SQL Server consiste nell'eseguire una singola operazione su un database. Per impostazione predefinita, una copia bulk viene eseguita come un'operazione isolata: l'operazione di copia avviene in modalità non transazionale, senza la possibilità di eseguirne il rollback.  
   

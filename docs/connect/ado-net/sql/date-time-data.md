@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 95c250c0eff6d22bb5bc8b284503156d412d6a45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247814"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896996"
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 2008 introduce nuovi tipi di dati per la gestione delle informazioni relative a data e ora. I nuovi tipi di dati includono tipi distinti per data e ora e tipi di dati espansi ottimizzati in termini di intervallo, precisione e riconoscimento del fuso orario. Il provider di dati Microsoft SqlClient per SQL Server (<xref:Microsoft.Data.SqlClient>) offre il supporto completo per tutte le nuove funzionalità del motore di database di SQL Server 2008. Per usare queste nuove funzionalità con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva) o .NET Core 1.0 (o versione successiva).  
   

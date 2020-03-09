@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
@@ -13,16 +12,17 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b52267870338065589de9bb54e5a332b923348fd
-ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e0a042c6c5e937c08e5bcc6402caa8338f22b332
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77568100"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895830"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Scaricare ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - Articolo precedente:&nbsp;&nbsp;&nbsp;[Passaggio 3: Modello di verifica per la connessione a SQL con ADO.NET](step-3-connect-sql-ado-net.md)  
 
@@ -41,7 +41,7 @@ Le classi ADO.NET per la connessione all'istanza locale di Microsoft SQL Server 
   
 Il programma deve distinguere gli errori temporanei dagli errori persistenti. Gli errori temporanei sono condizioni di errore che possono scomparire entro un breve periodo di tempo, ad esempio problemi momentanei della rete.  Un esempio di errore persistente può essere l'uso da parte del programma di un nome scritto in modo errato per il database di destinazione: in questo caso l'errore "Database non trovato" è persistente e non è possibile cancellarlo entro un breve periodo di tempo.  
   
-L'elenco dei numeri di errore classificati come errori temporanei è disponibile nell'elenco dei [messaggi di errore per le applicazioni client del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)   
+L'elenco dei numeri di errore classificati come errori temporanei è disponibile nell'elenco dei [messaggi di errore per le applicazioni client del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Passaggio 2: Creare ed eseguire un'applicazione di esempio  
   
@@ -67,7 +67,7 @@ Incollare questo codice nel file **Program.cs** .
   
 È necessario modificare le stringhe per nome del server, password e così via. È possibile trovare queste stringhe nel metodo denominato **GetSqlConnectionStringBuilder**.  
   
-NOTA:  La stringa di connessione per il nome del server è pensata per il database SQL di Azure, perché include il prefisso di quattro caratteri di **tcp:**, ma è possibile modificare la stringa del server per connettersi a Microsoft SQL Server.  
+NOTA:  La stringa di connessione per il nome del server è pensata per il database SQL di Azure, perché include il prefisso di quattro caratteri di **tcp:** , ma è possibile modificare la stringa del server per connettersi a Microsoft SQL Server.  
   
   
 ```csharp

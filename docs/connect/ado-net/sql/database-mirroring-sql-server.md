@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247826"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897005"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Il mirroring del database in SQL Server consente di mantenere una copia, o mirror, di un database di SQL Server in un server di standby. Il mirroring garantisce che siano sempre presenti due copie separate dei dati, offrendo disponibilità elevata e ridondanza completa dei dati. Il provider Microsoft SqlClient per SQL Server fornisce il supporto implicito per il mirroring del database. Pertanto, una volta configurato il provider per un database di SQL Server, lo sviluppatore non dovrà eseguire alcuna operazione né scrivere codice. L'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection> supporta inoltre una modalità di connessione esplicita che consente di specificare il nome di un server partner di failover in <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   

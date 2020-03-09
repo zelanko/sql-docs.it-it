@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5477b655554dceaa5f43b7d099e0fc156340f558
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4ec71c2bd693599106692a45f9e9aa10a63babd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75233808"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896233"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Esecuzione di SqlCommand con SqlNotificationRequest
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 È possibile configurare un elemento <xref:Microsoft.Data.SqlClient.SqlCommand> per generare una notifica se i dati cambiano dopo essere stati recuperati dal server e il set di risultati è diverso se la query viene eseguita di nuovo. Questa operazione è utile per gli scenari in cui si usano code di notifica personalizzate sul server o non si vogliono gestire oggetti attivi.
 

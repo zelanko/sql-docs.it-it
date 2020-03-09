@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2173a6aaf0f07ffaa50d87ed7563dca8022ceebc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76ed05f39cba61ea7f26deaef6cd38552b11f199
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250968"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897085"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenari di sicurezza delle applicazioni in SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Non esiste un unico modo corretto per creare un'applicazione client SQL Server sicura. Ogni applicazione è unica per requisiti, ambiente di distribuzione e popolazione di utenti. Un'applicazione ragionevolmente sicura quando viene distribuita inizialmente può diventare meno sicura nel corso del tempo. Non è possibile prevedere con precisione le minacce che potrebbero emergere in futuro.  
   

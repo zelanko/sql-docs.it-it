@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257021"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280951"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lezione 1: Creare ed eseguire query per oggetti di database
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ In questa lezione vengono illustrate le procedure per creare un database, creare
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] Le istruzioni possono essere scritte e inviate a [!INCLUDE[ssDE](../includes/ssde-md.md)] nei modi seguenti:  
   
--   Mediante [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In questa esercitazione si presuppone che venga usato [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ma è anche possibile usare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponibile come download gratuito nell' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   Mediante [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In questa esercitazione si presuppone che venga usato [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], ma è anche possibile usare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponibile come download gratuito nell' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   Mediante l' [utilità sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -34,14 +34,14 @@ Il codice viene eseguito in [!INCLUDE[ssDE](../includes/ssde-md.md)] nello stess
   
 Per eseguire le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], aprire [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 Per completare questa esercitazione è necessario avere SQL Server Management Studio e l'accesso a un'istanza di SQL Server. 
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piattaforma in uso tra i collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
-- **Windows**: [scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [Scaricare SQL Server 2017 Developer](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Creazione di un database
 Analogamente a numerose altre istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , l'istruzione CREATE DATABASE ha un parametro obbligatorio, ovvero il nome del database. L'istruzione CREATE DATABASE dispone inoltre di numerosi parametri facoltativi, ad esempio il percorso su disco in cui si desidera inserire i file del database. Quando si esegue CREATE DATABASE senza parametri facoltativi, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono utilizzati i valori predefiniti per molti di tali parametri. In questa esercitazione vengono utilizzati solo alcuni dei parametri facoltativi della sintassi.   
@@ -105,7 +105,7 @@ Dopo aver creato la tabella **Products** è possibile inserirvi dati con l'istru
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
-La sintassi di base è INSERT, nome tabella, elenco colonne, VALUES, a cui segue quindi un elenco dei valori da inserire. I due trattini davanti a una riga indicano che si tratta di un commento il cui testo verrà ignorato dal compilatore. In questo caso il commento descrive una variazione consentita della sintassi.  
+La sintassi di base è la seguente: INSERT, nome tabella, elenco colonne, VALUES, quindi un elenco dei valori da inserire. I due trattini davanti a una riga indicano che si tratta di un commento il cui testo verrà ignorato dal compilatore. In questo caso il commento descrive una variazione consentita della sintassi.  
   
 ### <a name="insert-data-into-a-table"></a>Inserire dati in una tabella  
   

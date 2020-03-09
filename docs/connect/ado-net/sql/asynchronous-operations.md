@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7a070d71b653b0afc9e94c898653432e7e388d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250928"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897057"
 ---
 # <a name="asynchronous-operations"></a>Operazioni asincrone
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Per il completamento di alcune operazioni del database, ad esempio le esecuzioni di comandi, può essere richiesto molto tempo. In questi casi usare le applicazioni a thread singolo per bloccare le altre operazioni e attendere il completamento del comando prima di riprenderle. Invece, la possibilità di assegnare un'operazione con esecuzione prolungata a un thread in background consente di mantenere attivo il thread in primo piano per tutta l'operazione. In un'applicazione Windows, ad esempio, la delega dell'operazione con esecuzione prolungata a un thread in background consente al thread dell'interfaccia utente di rimanere reattivo mentre viene eseguita l'operazione.  
   

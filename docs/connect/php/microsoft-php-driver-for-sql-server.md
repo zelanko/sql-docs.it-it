@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67936342"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866521"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Driver Microsoft per PHP per SQL Server
 
@@ -39,7 +39,7 @@ I driver Microsoft per PHP per SQL Server consentono l'integrazione con SQL Serv
 * [Risorse di supporto dei driver Microsoft per PHP per SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Download  
-* ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download dei driver per PHP per SQL](download-drivers-php-sql-server.md)
+* ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Download dei driver per PHP per SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Esempi  
 * [Esempi di codice per i driver Microsoft per PHP per SQL Server](code-samples-for-php-sql-driver.md)

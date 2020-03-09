@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251189"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896599"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiche del provider per SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Scaricare ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 A partire da .NET Framework versione 2.0 e .NET Core versione 1.0, il provider di dati Microsoft SqlClient per SQL Server supporta le statistiche in fase di esecuzione. Le statistiche devono essere abilitate impostando la proprietà <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> dell'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection> su `True` dopo aver creato un oggetto connessione valido. Una volta abilitate le statistiche, è possibile esaminarle come "snapshot in un dato momento" recuperando un riferimento <xref:System.Collections.IDictionary> tramite il metodo <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> dell'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection>. È possibile enumerare l'elenco come un set di voci del dizionario delle coppie nome/valore. Queste coppie nome/valore non sono ordinate. In qualsiasi momento è possibile chiamare il metodo <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> dell'oggetto <xref:Microsoft.Data.SqlClient.SqlConnection> per reimpostare i contatori. Se la raccolta delle statistiche non è stata abilitata, non viene generata alcuna eccezione. Inoltre, se <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> viene chiamato senza che prima sia stato chiamato <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, i valori recuperati sono i valori iniziali per ogni voce. Se si abilitano le statistiche, si esegue l'applicazione per un periodo di tempo e si disabilitano le statistiche, i valori recuperati rifletteranno i valori raccolti fino al punto in cui le statistiche sono state disabilitate. Tutti i valori statistici raccolti sono in base alla connessione.  
   
