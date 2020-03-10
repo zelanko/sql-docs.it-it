@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256904"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78926106"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -69,7 +69,7 @@ Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clu
 
 ## <a id="cu2"></a> CU2 (feb 2020)
 
-Aggiornamento cumulativo 2 (CU2) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4003.23.
+Aggiornamento cumulativo 2 (CU2) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4013.40.
 
 |Versione pacchetto | Tag dell'immagine |
 |-----|-----|

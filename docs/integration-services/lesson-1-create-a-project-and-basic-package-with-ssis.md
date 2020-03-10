@@ -11,11 +11,11 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257067"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338185"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base con SSIS
 
@@ -27,7 +27,7 @@ In questa lezione viene creato un pacchetto ETL semplice che estrae i dati da un
   
 Prima di creare un pacchetto è necessario conoscere bene la formattazione usata nei dati di origine e nella destinazione. Sarà quindi possibile definire le trasformazioni necessarie per eseguire il mapping tra i dati di origine e la destinazione.  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Questa esercitazione si basa su Microsoft SQL Server Data Tools, un set di pacchetti di esempio e un database di esempio.
 

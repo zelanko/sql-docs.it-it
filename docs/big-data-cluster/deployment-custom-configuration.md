@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558316"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340483"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per risorse e servizi cluster
 
@@ -169,7 +169,7 @@ Per applicare le stesse configurazioni per un servizio associato a più risorse,
 
 Per personalizzare i file di configurazione della distribuzione del cluster, è possibile usare qualsiasi editor in formato JSON, ad esempio VSCode. Per la creazione di script per queste modifiche a scopo di automazione, usare il comando `azdata bdc config`. Questo articolo descrive come configurare le distribuzioni di cluster Big Data modificando i file di configurazione della distribuzione. Fornisce anche alcuni esempi su come modificare la configurazione per diversi scenari. Per altre informazioni sull'uso di file di configurazione nelle distribuzioni, vedere le [linee guida per la distribuzione](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Installare azdata](deploy-install-azdata.md).
 

@@ -10,11 +10,11 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73723797"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339879"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Esercitazione: Sviluppo SQL per data scientist R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Questo esempio può essere esteso a tutti i tipi di problemi della vita reale, a
 
 Poiché la procedura dettagliata è pensata per far conoscere [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] agli sviluppatori R, R viene usato il più possibile. Ciò non significa però che R sia necessariamente lo strumento migliore per ogni attività. In molti casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe offrire prestazioni migliori, in particolare in attività quali l'aggregazione dei dati e la progettazione delle funzionalità.  Tali attività possono trarre vantaggio dalle nuove funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ad esempio gli indici columnstore con ottimizzazione per la memoria. Le ottimizzazioni possibili vengono evidenziate man mano.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 + [Machine Learning Services per SQL Server con integrazione di R](../install/sql-machine-learning-services-windows-install.md#verify-installation) o [R Services per SQL Server 2016](../install/sql-r-services-windows-install.md)
 

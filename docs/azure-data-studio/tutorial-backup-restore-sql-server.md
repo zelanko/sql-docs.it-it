@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73532443"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339869"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino di database con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-name-sos"></a>Backup e ripristino di database con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 In questa esercitazione si apprenderà come usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per:
 > [!div class="checklist"]
@@ -27,7 +27,7 @@ In questa esercitazione si apprenderà come usare [!INCLUDE[name-sos](../include
 > * Ripristinare un database
 > * Visualizzare lo stato dell'attività di ripristino
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per questa esercitazione è necessario il database *TutorialDB* di SQL Server. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 

@@ -15,11 +15,11 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72278279"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340413"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72278279"
   
 -   **IMPORT**: l'utente può importare lo schema e i dati in un nuovo database nel server host.  
   
- Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database SQL Server Management Studio, il Portale di Azure e l'API DACFx.  
+ Entrambe queste funzionalità sono supportate dagli strumenti di gestione database: SQL Server Management Studio, il portale di Azure e l'API DACFx.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere membro del ruolo **dbmanager** o avere autorizzazioni **CREATE DATABASE** per creare un database, compresa la creazione di un database con la distribuzione di un pacchetto DAC. L'utente deve essere membro del ruolo **dbmanager** o avere autorizzazioni **DROP DATABASE** per eliminare un database.  

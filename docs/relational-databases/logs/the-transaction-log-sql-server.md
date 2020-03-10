@@ -15,11 +15,11 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75493578"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338735"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Per informazioni sull'architettura e sui meccanismi interni del log delle transa
 ### <a name="individual-transaction-recovery"></a>Recupero di singole transazioni
 Se un'applicazione esegue un'istruzione `ROLLBACK` oppure se [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva un errore quale la perdita della comunicazione con un client, vengono usati i record del log per eseguire il rollback delle modifiche apportate da una transazione incompleta. 
 
-### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Recupero di tutte le transazioni incomplete all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="recovery-of-all-incomplete-transactions-when-ssnoversion-is-started"></a>Recupero di tutte le transazioni incomplete all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 Se si verifica un errore in un server, è possibile che alcune modifiche ai database non siano state scritte dalla cache del buffer ai file di dati e che transazioni incomplete abbiano apportato modifiche al file di dati. All'avvio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono recuperati i singoli database. Viene quindi eseguito il roll forward di tutte le modifiche registrate nel log che potrebbero non essere state scritte nei file di dati. A questo punto, per salvaguardare l'integrità del database, viene eseguito il rollback di tutte le transazioni incomplete rilevate nel log delle transazioni. Per altre informazioni, vedere [Panoramica del ripristino e del recupero (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Rollforward di una pagina, un file, un filegroup o un database ripristinato fino al punto in cui si è verificato l'errore
@@ -133,7 +133,7 @@ La*registrazione minima* implica la registrazione nel log delle transazioni dell
   
  Per le operazioni seguenti, con registrazione completa nel modello di recupero con registrazione completa, è prevista la registrazione minima nel modello di recupero con registrazione minima e in quello con registrazione minima delle operazioni bulk:  
   
--   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quando la replica transazionale è abilitata, le operazioni `BULK INSERT` vengono registrate completamente, anche nel modello di recupero con registrazione minima delle operazioni bulk.  
   
