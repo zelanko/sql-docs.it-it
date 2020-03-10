@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903668"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338964"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procedura dettagliata: Installare Integration Services (SSIS) Scale Out
 
@@ -107,7 +107,7 @@ Per installare la funzionalità Scale Out Worker, usare l'installazione guidata 
 
     ![Configurazione Server 2](media/server-config-2.PNG "Configurazione Server 2")
 
-3.  Nella pagina **Configurazione del ruolo di lavoro di scalabilità orizzontale di Integration Services** specificare l'endpoint per la connessione al master di scalabilità orizzontale. 
+3.  Nella pagina **Integration Services Scale Out Worker Configuration** specificare l'endpoint per la connessione al servizio Scale Out Worker. 
 
     - Per un ambiente con **computer singolo**, l'endpoint viene generato automaticamente quando Scale Out Master e Scale Out Worker vengono installati contemporaneamente. 
 
@@ -165,7 +165,7 @@ Se il tipo di avvio dei servizi non è stato impostato su **Automatico** durante
 
 ## <a name="EnableMaster"></a> Abilitare il master di scalabilità orizzontale
 
-Quando si crea il catalogo SSISDB in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], selezionare **Abilita questo server come SSIS Scale Out Master** nella finestra di dialogo **Creazione catalogo**.
+Quando si crea il catalogo SSISDB in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], fare clic su **Abilita questo server come SSIS Scale Out Master** nella finestra di dialogo **Crea catalogo**.
 
 Dopo aver creato il catalogo, è possibile abilitare Scale Out Master con [Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 

@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72304958"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340683"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
 
@@ -163,7 +163,7 @@ GO
   
      In un indice breadth-first tutti gli elementi figlio diretti di un nodo vengono posizionati insieme. Pertanto, gli indici breadth-first sono in grado di fornire risposte alle query sugli elementi figlio immediati, ad esempio "Trova tutti i dipendenti che riportano direttamente a questo responsabile".  
   
- La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [Esercitazione: Uso del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Creazione di indici  
@@ -271,7 +271,7 @@ INSERT SimpleDemo
 ##  <a name="tasks"></a> Attività correlate  
   
 ###  <a name="migrating"></a> Migrazione dalla relazione elemento padre/figlio a hierarchyid  
- La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite **hierarchyid** consiste nell'usare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione di una tabella padre/figlio, vedere la lezione 1 di [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite **hierarchyid** consiste nell'usare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione della tabella elemento padre/figlio, vedere la lezione 1 di [Esercitazione: Uso del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestione di un albero tramite hierarchyid  
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai metodi per il tipo di dati hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Esercitazione: Uso del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
