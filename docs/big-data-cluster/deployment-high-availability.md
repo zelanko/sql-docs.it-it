@@ -5,16 +5,16 @@ description: Informazioni su come distribuire un cluster Big Data di SQL Server 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: a73259663f710cfc5df5dc40745ecda9fdbd8f13
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259215"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338105"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
 
@@ -32,7 +32,7 @@ Ecco alcune delle funzionalità offerte dai gruppi di disponibilità:
 - Tutti i database vengono aggiunti automaticamente al gruppo di disponibilità, inclusi tutti i database utente e di sistema come `master` e `msdb`. Questa funzionalità offre una vista a singolo sistema di tutte le repliche del gruppo di disponibilità. Vengono usati database modello aggiuntivi, `model_replicatedmaster` e `model_msdb`, per eseguire l'inizializzazione della parte replicata dei database di sistema. Oltre a questi database, sarà possibile osservare i database `containedag_master` e `containedag_msdb` se ci si connette direttamente all'istanza. I database `containedag` rappresentano i database `master` e `msdb` all'interno del gruppo di disponibilità.
 
   > [!IMPORTANT]
-  > Al momento della versione SQL Server 2019 CU1, solo i database creati come risultato di un'istruzione CREATE DATABASE vengono aggiunti automaticamente al gruppo di disponibilità. I database creati nell'istanza come risultato di altri flussi di lavoro come il ripristino non vengono ancora aggiunti al gruppo di disponibilità e l'amministratore del cluster Big Data deve eseguire questa operazione manualmente. Per istruzioni, vedere la sezione [Connettersi a un'istanza di SQL Server](#instance-connect).
+  > Al momento della versione SQL Server 2019 CU1, solo i database creati come risultato di un'istruzione CREATE DATABASE vengono aggiunti automaticamente al gruppo di disponibilità. I database creati nell'istanza come risultato di altri flussi di lavoro come database di collegamento non vengono ancora aggiunti al gruppo di disponibilità e l'amministratore del cluster Big Data deve eseguire questa operazione manualmente. Per istruzioni, vedere la sezione [Connettersi a un'istanza di SQL Server](#instance-connect). Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di un'istruzione RESTORE hanno lo stesso comportamento e richiedono che i database vengano aggiunti manualmente al gruppo di disponibilità incluso.
   >
 - I database di configurazione Polybase non sono inclusi nel gruppo di disponibilità perché contengono metadati a livello di istanza specifici di ogni replica.
 - Viene effettuato il provisioning automatico di un endpoint esterno per la connessione ai database all'interno del gruppo di disponibilità. Questo endpoint `master-svc-external` ha il ruolo di listener del gruppo di disponibilità.
@@ -129,12 +129,15 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> Connettersi all'istanza di SQL Server
 
-Per alcune operazioni come l'impostazione delle configurazioni a livello di server o l'aggiunta manuale di un database al gruppo di disponibilità, è necessario connettersi all'istanza di SQL Server. Per operazioni come `sp_configure`, `RESTORE DATABASE` o qualsiasi DDL dei gruppi di disponibilità, è necessario questo tipo di connessione. Per impostazione predefinita, il cluster Big Data non include un endpoint che permette la connessione all'istanza ed è necessario esporre l'endpoint manualmente. 
+Per alcune operazioni come l'impostazione delle configurazioni a livello di server o l'aggiunta manuale di un database al gruppo di disponibilità, è necessario connettersi all'istanza di SQL Server. Nelle versioni precedenti a SQL Server 2019 CU2 le operazioni come `sp_configure`, `RESTORE DATABASE` o qualsiasi DLL dei gruppi di disponibilità richiedono questo tipo di connessione. Per impostazione predefinita, il cluster Big Data non include un endpoint che permette la connessione all'istanza ed è necessario esporre l'endpoint manualmente. 
 
 > [!IMPORTANT]
 > L'endpoint esposto per le connessioni all'istanza di SQL Server supporta solo l'autenticazione SQL, anche nei cluster in cui è abilitato Active Directory. Per impostazione predefinita, durante la distribuzione di un cluster Big Data l'account di accesso `sa` è disabilitato e viene effettuato il provisioning di un nuovo account di accesso `sysadmin` in base ai valori forniti in fase di distribuzione per le variabili di ambiente `AZDATA_USERNAME` e `AZDATA_PASSWORD`.
 
 Ecco un esempio che mostra come esporre questo endpoint e quindi aggiungere il database creato con un flusso di lavoro di ripristino al gruppo di disponibilità. Si applicano istruzioni simili anche alla configurazione di una connessione all'istanza master di SQL Server quando si vuole modificare le configurazioni del server con `sp_configure`.
+
+> [!NOTE]
+> A partire da SQL Server 2019 CU2 i database creati come risultato di un flusso di lavoro di ripristino vengono aggiunti automaticamente al gruppo di disponibilità incluso.
 
 - Determinare il pod che ospita la replica primaria connettendosi all'endpoint `sql-server-master` ed eseguire:
 
@@ -197,10 +200,10 @@ Ecco un esempio che mostra come esporre questo endpoint e quindi aggiungere il d
 
 Limitazioni e problemi noti relativi ai gruppi di disponibilità per l'istanza master di SQL Server nel cluster Big Data:
 
-- I database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE`, come `RESTORE DATABASE` o `CREATE DATABASE FROM SNAPSHOT`, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza ](#instance-connect) e aggiungere manualmente il database al gruppo di disponibilità.
+- Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE` e `RESTORE DATABASE`, come `CREATE DATABASE FROM SNAPSHOT`, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza ](#instance-connect) e aggiungere manualmente il database al gruppo di disponibilità.
 - Per alcune operazioni come l'esecuzione delle impostazioni di configurazione del server con `sp_configure`, è necessaria una connessione al database `master` dell'istanza di SQL Server, non al database `master` del gruppo di disponibilità. Non è possibile usare l'endpoint primario corrispondente. Seguire [le istruzioni](#instance-connect) per esporre un endpoint e connettersi all'istanza di SQL Server ed eseguire `sp_configure`. È possibile usare l'autenticazione SQL solo quando si espone manualmente l'endpoint per la connessione al database `master` dell'istanza di SQL Server.
 - La configurazione a disponibilità elevata deve essere creata quando viene distribuito il cluster Big Data. Non è possibile abilitare la configurazione a disponibilità elevata con i gruppi di disponibilità dopo la distribuzione.
-- Mentre il database msdb contenuto è incluso nel gruppo di disponibilità e i processi di SQL Agent vengono replicati, i processi non vengono attivati in base alla pianificazione. La soluzione consiste nel [connettersi a ognuna delle istanze di SQL Server](#instance-connect) e creare i processi nel database msdb dell'istanza.
+- Mentre il database msdb contenuto è incluso nel gruppo di disponibilità e i processi di SQL Agent vengono replicati, i processi non vengono attivati in base alla pianificazione. La soluzione consiste nel [connettersi a ognuna delle istanze di SQL Server](#instance-connect) e creare i processi nel database msdb dell'istanza. A partire da SQL Server 2019 CU2 sono supportati solo i processi creati in ognuna delle repliche dell'istanza master.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
