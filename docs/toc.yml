@@ -4165,10 +4165,6 @@
       items:
         - name: Novità
           href: sql-server/install/what-s-new-in-sql-server-installation.md
-        - name: Specifiche di capacità massima
-          href: sql-server/maximum-capacity-specifications-for-sql-server.md
-        - name: Limiti della capacità di calcolo per edizione
-          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Note sulla versione
       items:
         - name: Funzionalità sospese in SQL Server
@@ -4188,6 +4184,10 @@
     - name: Pianificazione
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
+        - name: Specifiche di capacità massima
+          href: sql-server/maximum-capacity-specifications-for-sql-server.md
+        - name: Limiti della capacità di calcolo per edizione
+          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
         - name: Requisiti hardware e software
           items:
             - name: SQL Server 2019
@@ -4196,11 +4196,11 @@
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: Considerazioni relative alla sicurezza
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-        - name: Protocolli e librerie di rete
+        - name: Protocolli di rete e librerie
           href: sql-server/install/network-protocols-and-network-libraries.md
         - name: Utilizzare più versioni e istanze
           href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-        - name: Versioni in lingua locale
+        - name: Versioni in lingua
           href: sql-server/install/local-language-versions-in-sql-server.md
         - name: Percorsi dei file
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
@@ -9837,6 +9837,8 @@
               href: linux/sql-server-linux-setup-ssis.md
             - name: Installare SQL Server Machine Learning Services
               href: linux/sql-server-linux-setup-machine-learning.md
+            - name: Installare Machine Learning Services per SQL Server in Docker
+              href: linux/sql-server-setup-machine-learning-docker.md
             - name: Installare le estensioni del linguaggio di SQL Server
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: Configurare i repository
