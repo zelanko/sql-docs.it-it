@@ -12,20 +12,20 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
+ms.sourcegitcommit: 39d8d2d504d0ab70bac5ae3e981657e15dfb7bee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65483416"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78964366"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Creare un amministratore di modelli (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un amministratore di modelli quando si desidera che un gruppo o un utente disponga dell'autorizzazione **aggiornamento** per tutti gli oggetti in uno o più modelli.  
   
 > [!TIP]  
->  Per semplificare l'amministrazione, creare un gruppo locale o di Windows e configurarlo come amministratore di modelli. È quindi possibile aggiungere e rimuovere utenti nel gruppo senza accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+>  Per semplificare l'amministrazione, creare un gruppo locale o di Windows e configurarlo come amministratore del modello. È quindi possibile aggiungere e rimuovere utenti nel gruppo senza accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso all'area funzionale **Autorizzazioni utenti e gruppi** .  

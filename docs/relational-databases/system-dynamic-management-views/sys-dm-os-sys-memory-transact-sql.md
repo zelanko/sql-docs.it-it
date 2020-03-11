@@ -20,12 +20,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899707"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027951"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67899707"
 |**total_physical_memory_kb**|**bigint**|Dimensione totale della memoria fisica disponibile per il sistema operativo, espressa in kilobyte (KB).|  
 |**available_physical_memory_kb**|**bigint**|Dimensione della memoria fisica disponibile, espressa in KB.|  
 |**total_page_file_kb**|**bigint**|Dimensione del limite del commit riportata dal sistema operativo, espressa in KB|  
-|**available_page_file_kb**|**bigint**|Totale di file di paging non utilizzati, espresso in KB.|  
+|**available_page_file_kb**|**bigint**|Quantità totale di file di paging non utilizzati, in KB.|  
 |**system_cache_kb**|**bigint**|Totale di memoria cache del sistema, espressa in KB.|  
 |**kernel_paged_pool_kb**|**bigint**|Totale del pool paginato del kernel, espresso in KB.|  
 |**kernel_nonpaged_pool_kb**|**bigint**|Totale del pool non paginato del kernel, espresso in KB.|  
