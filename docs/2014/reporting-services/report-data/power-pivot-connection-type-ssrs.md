@@ -10,12 +10,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200412"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112140"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile utilizzare l'estensione di elaborazione dei dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di PowerPivot pubblicata in una raccolta PowerPivot di SharePoint.  
@@ -25,7 +25,7 @@ ms.locfileid: "74200412"
 ## <a name="prerequisites"></a>Prerequisites  
  L'origine dati PowerPivot deve essere pubblicata in una raccolta PowerPivot in un sito di SharePoint.  
   
- Per supportare connessioni da Generatore report in una cartella di lavoro di PowerPivot, è necessario che nel computer workstation sia disponibile SQL Server 2008 R2 ADOMD.NET. La libreria client viene installata con PowerPivot per Excel, ma se si utilizza un computer che non dispone di questa applicazione, è necessario scaricare e installare ADOMD.NET dalla pagina relativa a [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
+ Per supportare connessioni da Generatore report in una cartella di lavoro di PowerPivot, è necessario che nel computer workstation sia disponibile SQL Server 2008 R2 ADOMD.NET. La libreria client viene installata con PowerPivot per Excel, ma se si utilizza un computer che non dispone di questa applicazione, è necessario scaricare e installare ADOMD.NET dalla pagina relativa a [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="data-source-type"></a>Tipo di origine dati  
  Utilizzare il tipo di origine dati del report **Microsoft SQL Server Analysis Services**.  
@@ -63,7 +63,7 @@ ms.locfileid: "74200412"
 -   Nel report sono contenuti solo dati PowerPivot di un'origine dati PowerPivot.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services interfaccia utente di progettazione query MDX &#40;Generatore report&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

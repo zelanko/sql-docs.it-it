@@ -1,5 +1,6 @@
 ---
 title: Installare e configurare il database di esempio AdventureWorks
+description: Seguire queste istruzioni per scaricare e installare i database di esempio AdventureWorks con SQL Server Management Studio o nel database SQL di Azure.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,19 +10,19 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 424d85e947769e8e78b828e5b46d3b384eb1b50a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74318990"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112321"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Installazione e configurazione di AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Collegamenti per il download e istruzioni di installazione di AdventureWorks. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) o [database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, usare SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere risultati ottimali, usare la versione di giugno 2016 o successiva.

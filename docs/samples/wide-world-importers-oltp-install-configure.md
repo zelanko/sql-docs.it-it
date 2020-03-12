@@ -1,5 +1,6 @@
 ---
 title: Installare e configurare il database di esempio WideWorldImporters
+description: Seguire queste istruzioni per scaricare, installare e configurare il database di esempio WideWorldImporters con SQL Server Management Studio.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,18 +10,18 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 14570059925fa5f8d8d24502c18593a118d84e37
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056267"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112441"
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Istruzioni per l'installazione e la configurazione del database OLTP Wide World Importers.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) o il [database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, usare SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere risultati ottimali, usare la versione di giugno 2016 o successiva.

@@ -1,5 +1,6 @@
 ---
 title: WideWorldImportersDW-flusso di lavoro ETL | Microsoft Docs
+description: Usare il pacchetto ETL con SQL Server Integration Services (SSIS) per eseguire periodicamente la migrazione dei dati dal database WideWorldImporters al WideWorldImportersDW.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 000d12b97eb2eefbfcd9a6a73e02c0098b2afdbb
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067626"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112391"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flusso di lavoro ETL WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ L'elaborazione principale viene avviata popolando la tabella delle dimensioni da
 
 Successivamente, una serie di attività flusso di dati carica ogni dimensione. Quindi, caricano ogni fatto.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - SQL Server 2016 (o versione successiva) con i database WideWorldImporters e WideWorldImportersDW (nello stesso o in istanze diverse di SQL Server)
 - SQL Server Management Studio
@@ -62,7 +63,7 @@ Per il codice sorgente per ricreare il database di esempio, vedere [Wide-World-I
    2. Immettere un nome, ad esempio *WIDEWORLDIMPORTERS ETL*.
    3. Aggiungere un **passaggio di processo** del tipo **SQL Server Integration Services pacchetto**.
    4. Selezionare il server in cui è presente il catalogo Integration Services, quindi selezionare il pacchetto *ETL giornaliero* .
-   5. In **** > **gestioni connessioni**di configurazione assicurarsi che le connessioni all'origine e alla destinazione siano configurate correttamente. Il valore predefinito è la connessione all'istanza locale.
+   5. In **Configuration** > **gestioni connessioni**di configurazione assicurarsi che le connessioni all'origine e alla destinazione siano configurate correttamente. Il valore predefinito è la connessione all'istanza locale.
    6. Selezionare **OK** per creare il processo.
 
 3. Eseguire o pianificare il processo.

@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257896"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111904"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Installazione di SQL Server Migration Assistant per Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso viene installato tramite una procedura guidata basata su Windows Installer. In questo argomento vengono fornite informazioni sui prerequisiti di installazione, un collegamento alla versione più recente di SSMA e istruzioni per l'installazione, la gestione delle licenze, la disinstallazione e l'aggiornamento di SSMA.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Prima di installare SSMA, verificare che il sistema soddisfi i requisiti seguenti:  
   
 -   Windows 7 o versione successiva o Windows Server 2008 o una versione successiva.  
@@ -45,7 +45,7 @@ Prima di installare SSMA, verificare che il sistema soddisfi i requisiti seguent
   
 -   Provider Microsoft Data Access Object (DAO) versione 12,0 o 14,0. È possibile installare il provider DAO da Microsoft Office prodotto 2010/2007 o scaricarlo dal sito Web Microsoft.  
   
--   Il client SQL Server Native Access (SNAC) versione 10,5 e successive per la migrazione a SQL Azure. È possibile ottenere la versione più recente di SNAC da [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)  
+-   Il client SQL Server Native Access (SNAC) versione 10,5 e successive per la migrazione a SQL Azure. È possibile ottenere la versione più recente di SNAC da [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)  
   
 -   4 GB di RAM (scelta consigliata).  
   

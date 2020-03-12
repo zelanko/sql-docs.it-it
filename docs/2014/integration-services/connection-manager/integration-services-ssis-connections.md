@@ -20,15 +20,15 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833785"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112165"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]i pacchetti utilizzano le connessioni per eseguire diverse attività e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementare le funzionalità di: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  I pacchetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usano le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
   
 -   Connessione ad archivi dati di origine e destinazione, ad esempio file di testo, file XML, cartelle di lavoro di Excel e database relazionali, per l'estrazione e il caricamento dei dati.  
   
@@ -51,12 +51,11 @@ ms.locfileid: "62833785"
  Per stabilire queste connessioni, in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le gestioni connessioni, come descritto nella sezione successiva.  
   
 ## <a name="connection-managers"></a>Gestioni connessioni  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene utilizzata la gestione connessione come rappresentazione logica di una connessione. In fase di progettazione si impostano le proprietà della gestione connessione per descrivere la connessione fisica che verrà creata da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] durante l'esecuzione del pacchetto. Le gestioni connessioni includono ad esempio la proprietà `ConnectionString`, che viene impostata in modalità progettazione. In fase di esecuzione verrà quindi creata una connessione fisica utilizzando il valore archiviato nella proprietà relativa alla stringa di connessione.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene utilizzata la gestione connessione come rappresentazione logica di una connessione. In fase di progettazione si impostano le proprietà della gestione connessione per descrivere la connessione fisica che verrà creata da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] durante l'esecuzione del pacchetto. Le gestioni connessioni includono ad esempio la proprietà `ConnectionString`, che viene impostata in modalità progettazione. In fase di esecuzione verrà quindi creata una connessione fisica utilizzando il valore archiviato nella proprietà relativa alla stringa di connessione.  
   
  In un pacchetto è possibile utilizzare più istanze di un determinato tipo di gestione connessione ed è possibile impostare proprietà specifiche per ogni istanza. In fase di esecuzione ogni istanza di un determinato tipo di gestione connessione crea una connessione con attributi diversi.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in sono disponibili diversi tipi di gestioni connessioni che consentono ai pacchetti di connettersi a un'ampia gamma di origini dati e server:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre diversi tipi di gestioni connessioni che consentono di stabilire connessioni tra i pacchetti e un'ampia gamma di server e origini dati:  
   
 -   Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]vengono installate le gestioni connessioni predefinite.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62833785"
 |FTP|Consente di connettersi a un server FTP.|[gestione connessione FTP](ftp-connection-manager.md)|  
 |HTTP|Consente di connettersi a un server Web.|[gestione connessione HTTP](http-connection-manager.md)|  
 |MSMQ|Consente di connettersi a una coda di messaggi.|[gestione connessione MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Consente di connettersi a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto di.|[Analysis Services - gestione connessione](analysis-services-connection-manager.md)|  
+|MSOLAP100|Consente di connettersi a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto di.|[Gestione connessione Analysis Services](analysis-services-connection-manager.md)|  
 |MULTIFILE|Consente di connettersi a più file e cartelle.|[gestione connessione per più file](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Consente di connettersi a più file e cartelle di dati.|[gestione connessione per più file flat](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Consente di connettersi a un'origine dei dati tramite un provider OLE DB.|[gestione connessione OLE DB](ole-db-connection-manager.md)|  
@@ -98,7 +97,7 @@ ms.locfileid: "62833785"
 |Type|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
 |ORACLE|Consente di connettersi a \<un> server di informazioni sulla versione di Oracle.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
+|SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
 |TERADATA|Stabilisce la connessione a \<un> server di informazioni sulla versione di Teradata.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Gestioni connessioni personalizzate  

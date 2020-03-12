@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200439"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112212"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configurazione iniziale (PowerPivot per SharePoint)
   Seguire i passaggi descritti in questo argomento per configurare un'installazione iniziale di PowerPivot per SharePoint. Il modo più semplice per eseguire questa operazione consiste nell'utilizzare lo strumento di configurazione PowerPivot. Tale strumento consente di eseguire in modo automatico tutti i passaggi di configurazione descritti di seguito.  
@@ -24,7 +24,7 @@ ms.locfileid: "74200439"
   
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario che il server SharePoint sia stato installato tramite l'opzione per server farm durante l'installazione di SharePoint. Non è supportato un server SharePoint autonomo che utilizza un database predefinito. Per ulteriori informazioni, vedere [linee guida per l'utilizzo di SQL Server funzionalità di business intelligence in una farm di SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -227,7 +227,7 @@ ms.locfileid: "74200439"
   
  L'installazione del provider consentirà di garantire che le cartelle di lavoro per le quali viene fatto riferimento a MSOLAP.4 nella stringa di connessione dati funzionino correttamente su un server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. L'installazione del provider OLE DB per SQL Server 2008 R2 rappresenta inoltre un approccio alternativo all'aggiornamento di cartelle di lavoro create in una versione precedente di PowerPivot per Excel.  
   
- È possibile scaricare il provider dalla [pagina SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978). Cercare **microsoft® provider OLE DB Analysis Services per microsoft® SQL Server® 2008 R2**, quindi scaricare il pacchetto per x64 del programma di `SQLServer2008_ASOLEDB10.msi` installazione.  
+ È possibile scaricare il provider dalla [pagina SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272). Cercare **microsoft® provider OLE DB Analysis Services per microsoft® SQL Server® 2008 R2**, quindi scaricare il pacchetto per x64 del programma di `SQLServer2008_ASOLEDB10.msi` installazione.  
   
  Per ulteriori informazioni sull'installazione del provider, inclusi i passaggi di verifica, vedere [Install the provider OLE DB Analysis Services on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   

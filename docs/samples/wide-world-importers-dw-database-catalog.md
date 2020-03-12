@@ -1,5 +1,6 @@
 ---
 title: Catalogo di database OLAP WideWorldImporters-SQL | Microsoft Docs
+description: Informazioni sugli schemi, le tabelle e le stored procedure utilizzati per l'elaborazione analitica e di data warehousing nel database WideWorldImportersDW.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104292"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112439"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogo di database WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

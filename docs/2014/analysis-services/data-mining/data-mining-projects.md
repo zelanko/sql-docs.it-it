@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705291"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112159"
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
   Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
@@ -161,7 +161,7 @@ ms.locfileid: "73705291"
   
  Queste visualizzazioni sono temporanee e vengono chiuse senza essere salvate quando si esce dalla sessione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pertanto, se è necessario esportare tali visualizzazioni in un'altra applicazione per una presentazione o un'ulteriore analisi, usare i comandi **Copia** forniti in ogni scheda o riquadro dell'interfaccia del visualizzatore.  
   
- I componenti aggiuntivi Data mining per Excel forniscono inoltre un modello di Visio che è possibile utilizzare per rappresentare i modelli in un diagramma di Visio e annotare e modificare il diagramma utilizzando gli strumenti di Visio. Per altre informazioni, vedere [Componenti aggiuntivi Data mining di Microsoft SQL Server 2008 SP2 per Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
+ I componenti aggiuntivi Data mining per Excel forniscono inoltre un modello di Visio che è possibile utilizzare per rappresentare i modelli in un diagramma di Visio e annotare e modificare il diagramma utilizzando gli strumenti di Visio. Per altre informazioni, vedere [Componenti aggiuntivi Data mining di Microsoft SQL Server 2008 SP2 per Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=8569).
   
 ###  <a name="bkmk_Validate"></a>Test e convalida di modelli  
  Dopo avere creato un modello, è possibile analizzare i risultati e decidere quali modelli offrono prestazioni ottimali.  

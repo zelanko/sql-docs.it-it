@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811075"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112247"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
   Con OLTP in memoria sono state introdotte le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In questo articolo viene fornita una panoramica sull'elaborazione delle query per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Per la creazione dei piani di query illustrati in questo articolo, le due tabelle sono state popolate con dati del database di esempio Northwind, che è possibile scaricare da [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654)(Database di esempio Northwind e pubs per SQL Server 2000).  
+ Per la creazione dei piani di query illustrati in questo articolo, le due tabelle sono state popolate con dati del database di esempio Northwind, che è possibile scaricare da [Northwind and pubs Sample Databases for SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)(Database di esempio Northwind e pubs per SQL Server 2000).  
   
  Si consideri la query seguente, che crea un join tra le tabelle Customer e Order e restituisce l'ID dell'ordine e le informazioni sul cliente associato:  
   
@@ -94,7 +94,7 @@ Piano di query per un hash join di tabelle basate su disco.
   
  In questa query le righe della tabella Order vengono recuperate utilizzando l'indice cluster. L'operatore fisico `Hash Match` viene ora utilizzato per l'`Inner Join`. L'indice cluster di Order non è ordinato in base a CustomerID, pertanto per un `Merge Join` sarebbe necessario un operatore di ordinamento, che influirebbe sulle prestazioni. Si noti il costo relativo dell'operatore `Hash Match` (75%) rispetto al costo dell'operatore `Merge Join` nell'esempio precedente (46%). In Query Optimizer l'operatore `Hash Match` è stato preso in considerazione anche nell'esempio precedente, con la conclusione, tuttavia, che l'operatore `Merge Join` avrebbe offerto prestazioni migliori.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Elaborazione delle query per tabelle basate su disco  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Elaborazione delle query per tabelle basate su disco  
  Nel diagramma seguente viene illustrato il flusso di elaborazione delle query ad hoc in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
  ![Pipeline di elaborazione delle query di SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "Pipeline di elaborazione delle query di SQL Server.")  
@@ -116,7 +116,7 @@ Pipeline di elaborazione delle query di SQL Server.
   
  Per la prima query di esempio, il motore di esecuzione richiede ad Access Methods le righe dell'indice cluster di Customer e dell'indice non cluster di Order. Access Methods attraversa le strutture di indice ad albero B per recuperare le righe richieste. In questo caso vengono recuperate tutte le righe poiché il piano richiede le analisi complete degli indici.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ai batch ad hoc e alle stored procedure si fa riferimento anche con l'espressione " [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretato". L'interpretazione si riferisce al fatto che ogni operatore nel piano di query viene interpretato dal motore di esecuzione delle query. Il motore di esecuzione legge l'operatore e i relativi parametri ed esegue l'operazione.  
   
  Il codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato può essere utilizzato per accedere sia a tabelle ottimizzate per la memoria che a tabelle basate su disco. Nella figura seguente viene illustrata l'elaborazione delle query per l'accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria:  
@@ -200,7 +200,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Compilazione ed elaborazione delle query  
  Nel diagramma seguente viene illustrato il processo di compilazione per le stored procedure compilate in modo nativo:  
   
- ![Compilazione nativa di stored procedure.](../../database-engine/media/hekaton-query-plan-6.gif "Compilazione nativa delle stored procedure.")  
+ ![Compilazione nativa delle stored procedure.](../../database-engine/media/hekaton-query-plan-6.gif "Compilazione nativa delle stored procedure.")  
 Compilazione nativa delle stored procedure.  
   
  Il processo è il seguente:  

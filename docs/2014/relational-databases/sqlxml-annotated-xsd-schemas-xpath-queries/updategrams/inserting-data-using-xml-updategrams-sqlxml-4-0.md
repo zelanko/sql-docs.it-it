@@ -33,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b06e98d5ef3dfc4ad8ab99e374e2d7b5539c98be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637901"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112198"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
   Un updategram indica un'operazione di inserimento quando un'istanza di record viene visualizzata nel blocco ** \<after>** ma non nel blocco ** \<before>** corrispondente. In questo caso, l'updategram inserisce il record in ** \<dopo>** blocco nel database.  
@@ -211,7 +211,7 @@ ms.locfileid: "73637901"
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi di tabella possono includere uno spazio, ad esempio la tabella Dettagli ordine nel database Northwind. Tuttavia, questo non è valido nei caratteri XML che sono identificatori validi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ma non è possibile codificare identificatori XML validi con ' __xHHHH\_\_' come valore di codifica, dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere nell'ordine del primo bit più significativo.  
   
 > [!NOTE]  
->  In questo esempio viene utilizzato il database Northwind, È possibile installare il database Northwind utilizzando uno script SQL disponibile per il download da questo [sito Web Microsoft](https://www.microsoft.com/download/details.aspx?id=23654).  
+>  In questo esempio viene utilizzato il database Northwind, È possibile installare il database Northwind utilizzando uno script SQL disponibile per il download da questo [sito Web Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Il nome dell'elemento deve inoltre essere racchiuso tra parentesi ([ ]). Poiché i caratteri [e] non sono validi in XML, è necessario codificarli come _x005B\_ e _x005D\_rispettivamente. Se si utilizza uno schema di mapping, è possibile fornire nomi di elemento che non contengono caratteri non validi, ad esempio spazi vuoti. Lo schema di mapping esegue il mapping richiesto, pertanto non è necessario eseguire la codifica per questi caratteri.  
   

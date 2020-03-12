@@ -34,12 +34,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252494"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112264"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "75252494"
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi di tabella possono includere uno spazio, ad esempio la tabella Dettagli ordine nel database Northwind. Tuttavia, questo non è valido nei caratteri XML che sono identificatori validi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ma non è possibile codificare identificatori XML validi con ' __xHHHH\_\_' come valore di codifica, dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere nell'ordine del primo bit più significativo.  
   
 > [!NOTE]  
->  In questo esempio viene utilizzato il database Northwind, È possibile installare il database Northwind utilizzando uno script SQL disponibile per il download da questo [sito Web Microsoft](https://www.microsoft.com/download/details.aspx?id=23654).  
+>  In questo esempio viene utilizzato il database Northwind, È possibile installare il database Northwind utilizzando uno script SQL disponibile per il download da questo [sito Web Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Il nome dell'elemento deve inoltre essere racchiuso tra parentesi ([ ]). Poiché i caratteri [e] non sono validi in XML, è necessario codificarli come _x005B\_ e _x005D\_rispettivamente. Se si utilizza uno schema di mapping, è possibile fornire nomi di elemento che non contengono caratteri non validi, ad esempio spazi vuoti. Lo schema di mapping esegue il mapping richiesto, pertanto non è necessario eseguire la codifica per questi caratteri.  
   
