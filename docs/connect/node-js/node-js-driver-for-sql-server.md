@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67916050"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896782"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Driver Node.js per SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download del driver SQL Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Download del driver SQL Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Il modulo tedious è un'implementazione javascript del protocollo TDS ed è supportato da tutte le versioni moderne di SQL Server. Il driver è un progetto open source, disponibile in GitHub.  
+Il modulo tedious è un'implementazione JavaScript del protocollo TDS, supportato da tutte le versioni moderne di SQL Server. Il driver è un progetto open source, disponibile in GitHub.  
   
 È possibile connettersi a un database SQL usando Node.js in Windows, Linux o Mac.  
   

@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809955"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288979"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -63,7 +63,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
  I predicati del filtro e di blocco e i criteri di sicurezza si comportano nel modo seguente:  
   
-- È possibile definire una funzione di predicato che si unisca a un'altra tabella e/o chiami una funzione. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = ON`, il join o la funzione è accessibile dalla query e funziona come previsto senza controlli aggiuntivi delle autorizzazioni. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = OFF`, gli utenti dovranno avere autorizzazioni **SELECT** o **EXECUTE** su queste tabelle e funzioni aggiuntive per eseguire query sulla tabella di destinazione.
+- È possibile definire una funzione di predicato che si unisca a un'altra tabella e/o chiami una funzione. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = ON` (valore predefinito), il join o la funzione è accessibile dalla query e funziona come previsto senza controlli aggiuntivi delle autorizzazioni. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = OFF`, gli utenti dovranno avere autorizzazioni **SELECT** su queste tabelle e funzioni aggiuntive per eseguire query sulla tabella di destinazione. Se la funzione di predicato richiama una funzione CLR a valori scalari, è necessaria anche l'autorizzazione **EXECUTE**.
   
 - È possibile inviare una query in una tabella con un predicato di sicurezza definito ma disabilitato. Le righe filtrate o bloccate non sono interessate.  
   
@@ -121,7 +121,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 ## <a name="Best"></a> Procedure consigliate  
   
-- Si consiglia di creare uno schema separato per gli oggetti della sicurezza a livello di riga, la funzione di predicato e i criteri di sicurezza.  
+- È consigliabile creare uno schema separato per gli oggetti con sicurezza a livello di riga, vale a dire funzioni di predicato e criteri di sicurezza. In questo modo si separano le autorizzazioni necessarie per questi oggetti speciali dalle tabelle di destinazione. La separazione aggiuntiva per diversi criteri e funzioni di predicato può essere necessaria nei database multi-tenant, ma non rappresenta uno standard per ogni caso.
   
 - L'autorizzazione **ALTER ANY SECURITY POLICY** è destinata agli utenti con privilegi elevati (ad esempio il gestore dei criteri di sicurezza). Il gestore dei criteri di sicurezza non richiede l'autorizzazione **SELECT** per le tabelle che protegge.  
   

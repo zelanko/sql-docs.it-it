@@ -13,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255526"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280925"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Finestra di dialogo Vincoli CHECK (Visual Database Tools)
 
@@ -44,7 +44,7 @@ Rimuove dalla tabella il vincolo selezionato. Per annullare l'aggiunta di un vin
 Viene espansa per visualizzare il campo della proprietà **Espressione** .  
   
 **Espressione**  
-Visualizza l'espressione relativa al vincolo CHECK selezionato. Per i nuovi vincoli, è necessario immettere l'espressione prima di uscire dalla casella. È anche possibile modificare vincoli CHECK esistenti. Per altre informazioni, vedere [Utilizzo dei vincoli (https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Visualizza l'espressione relativa al vincolo CHECK selezionato. Per i nuovi vincoli, è necessario immettere l'espressione prima di uscire dalla casella. È anche possibile modificare vincoli CHECK esistenti. Per altre informazioni, vedere [Uso dei vincoli](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Categoria Identità**  
 Viene espansa per visualizzare le proprietà **Nome** e **Descrizione**.  

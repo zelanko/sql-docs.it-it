@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74542311"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866379"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,12 +160,12 @@ Per connettersi a SQL Server tramite TCP/IP è necessario che Windows sia in gra
     - IPv4: `ping 192.168.1.101`
     - IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
 
-1. Se la rete è configurata correttamente, `ping` restituisce `Reply from <IP address>` seguito da alcune informazioni aggiuntive. Se `ping` restituisce `Destination host unreachable` o `Request timed out`, significa che la connettività TCP/IP non è configurata correttamente. Gli errori di questo tipo potrebbero indicare un problema del computer client, del computer server o di un componente della rete, ad esempio un router. Per risolvere i problemi di rete, vedere[Risoluzione dei problemi avanzata per i problemi TCP/IP]a(/windows/client-management/troubleshoot-tcpip).
+1. Se la rete è configurata correttamente, `ping` restituisce `Reply from <IP address>` seguito da alcune informazioni aggiuntive. Se `ping` restituisce `Destination host unreachable` o `Request timed out`, significa che la connettività TCP/IP non è configurata correttamente. Gli errori di questo tipo potrebbero indicare un problema del computer client, del computer server o di un componente della rete, ad esempio un router. Per risolvere i problemi di rete, vedere [Risoluzione avanzata dei problemi relativi alla connettività TCP/IP](/windows/client-management/troubleshoot-tcpip).
 1. Successivamente, se il test di ping ha esito positivo usando l'indirizzo IP, verificare che il nome del computer possa essere risolto nell'indirizzo TCP/IP. Nella finestra del prompt dei comandi nel computer client digitare `ping` seguito dal nome del computer che esegue SQL Server. Ad esempio, usare `ping newofficepc` 
 1. Se il comando `ping` per l'indirizzo IP ha esito positivo, ma il `ping` al computer restituisce `Destination host unreachable` o `Request timed out`, è possibile che nella cache del computer client siano memorizzate informazioni di risoluzione dei nomi obsolete (non aggiornate). Digitare `ipconfig /flushdns` per cancellare la cache DNS (Dynamic Name Resolution). Quindi eseguire nuovamente il ping del computer per nome. Con la cache DNS vuota, il computer client cercherà le informazioni più recenti sull'indirizzo IP del computer server. 
 1. Se la rete è configurata correttamente, `ping` restituisce `Reply from <IP address>` seguito da alcune informazioni aggiuntive. Se il ping al computer server con l'indirizzo IP ha esito positivo ma viene restituito un errore, ad esempio `Destination host unreachable.` o `Request timed out.`, quando si esegue il ping con il nome del computer, significa che la risoluzione dei nomi non è configurata correttamente. Per altre informazioni, vedere l'articolo del 2006 indicato in precedenza [How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790) (Come risolvere i problemi di base TCP/IP). Poiché la risoluzione dei nomi non è necessaria per connettersi a SQL Server, se il nome del computer non può essere risolto in un indirizzo IP, è necessario stabilire le connessioni specificando l'indirizzo IP. La risoluzione dei nomi può essere corretta in seguito.
 
-## <a name = "openport"></a>Aprire una porta nel firewall
+## <a name="open-a-port-in-the-firewall"></a>Aprire una porta nel firewall
 
 Per impostazione predefinita, Windows Firewall è attivato e bloccherà le connessioni da altri computer. Per connettersi tramite TCP/IP da un altro computer, è necessario configurare il firewall nel computer SQL Server per consentire le connessioni alla porta TCP usata dal motore di database. Per impostazione predefinita, l'istanza predefinita è in ascolto sulla porta TCP 1433. Se sono presenti istanze denominate o se la porta dell'istanza predefinita è stata modificata, la porta TCP di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] potrebbe essere in ascolto su un'altra porta. Vedere [Ottenere la porta TCP dell'istanza di SQL Server](#getTCP).
 

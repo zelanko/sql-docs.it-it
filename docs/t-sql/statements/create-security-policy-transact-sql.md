@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117289"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288953"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* Operazione DML specifica per la quale verrà applicato il predicato di blocco. AFTER specifica che il predicato verrà valutato in base ai valori delle righe dopo l'esecuzione dell'operazione DML (INSERT o UPDATE). BEFORE specifica che il predicato verrà valutato in base ai valori delle righe prima dell'esecuzione dell'operazione DML (UPDATE o DELETE). Se non è specificata alcuna operazione, il predicato verrà applicato a tutte le operazioni.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  Abilita o disabilita il criterio di sicurezza per l'applicazione dei relativi predicati di sicurezza alle tabelle di destinazione. Se non specificato, il criterio di sicurezza creato è abilitato.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- Indica se tutte le funzioni di predicato nei criteri devono essere create con l'opzione SCHEMABINDING. Per impostazione predefinita tutte le funzioni devono essere create con SCHEMABINDING.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ Indica se tutte le funzioni di predicato nei criteri devono essere create con l'opzione SCHEMABINDING. L'impostazione predefinita è **ON** e tutte le funzioni devono essere create con SCHEMABINDING.  
   
  NOT FOR REPLICATION  
  Indica che il criterio di sicurezza non deve essere eseguito quando un agente di replica modifica l'oggetto di destinazione. Per altre informazioni, vedere [Controllare il comportamento di trigger e vincoli durante la sincronizzazione &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

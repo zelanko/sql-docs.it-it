@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281869"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225927"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps Tools (anteprima)
 
@@ -38,6 +38,8 @@ Se non si dispone di un'organizzazione **Azure DevOps**, per prima cosa iscriver
 
 Percorso della cartella o del file di progetto da compilare. Se viene specificato un percorso di cartella, l'attività di compilazione SSIS cercherà in modo ricorsivo tutti i file dtproj in questa cartella e li compilerà tutti.
 
+Il percorso del progetto non può essere *vuoto*, deve essere impostato come **.** per eseguire la compilazione dalla cartella radice del repository.
+
 #### <a name="project-configuration"></a>Configurazione del progetto
 
 Nome della configurazione di progetto da usare per la compilazione. Se non viene specificata, per impostazione predefinita viene assegnata la prima configurazione di progetto definita in ogni file dtproj.
@@ -50,9 +52,19 @@ Percorso di una cartella separata in cui salvare i risultati della compilazione,
 
 - L'attività di compilazione SSIS si basa su Visual Studio e Progettazione SSIS, obbligatoria negli agenti di compilazione. Per eseguire l'attività di compilazione SSIS nella pipeline, quindi, è necessario scegliere **vs2017-win2016** per gli agenti ospitati da Microsoft oppure installare Visual Studio e Progettazione SSIS (VS2017 + SSDT2017 o VS2019 + estensione Progetti SSIS) negli agenti self-hosted.
 
-- Per compilare progetti SSIS usando i componenti predefiniti (incluso SSIS Azure Feature Pack e altri componenti di terze parti), i componenti predefiniti devono essere installati nel computer in cui è in esecuzione l'agente pipeline.  Per l'agente ospitato da Microsoft, l'utente può aggiungere un'[attività di script di PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) o un'[attività script da riga di comando](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) per scaricare e installare i componenti prima dell'esecuzione dell'attività di compilazione SSIS.
+- Per compilare progetti SSIS usando i componenti predefiniti (incluso SSIS Azure Feature Pack e altri componenti di terze parti), i componenti predefiniti devono essere installati nel computer in cui è in esecuzione l'agente pipeline.  Per l'agente ospitato da Microsoft, l'utente può aggiungere un'[attività di script di PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) o un'[attività script da riga di comando](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) per scaricare e installare i componenti prima dell'esecuzione dell'attività di compilazione SSIS. Di seguito è riportato lo script di esempio di PowerShell per installare il Feature Pack di Azure: 
 
-- Nell'attività di compilazione SSIS non sono supportati i livelli di protezione **EncryptSensitiveWithPassword** e **EncryptAllWithPassword**. Verificare che nessuno dei progetti SSIS presenti nella codebase usi questi due livelli di protezione. In caso contrario, l'attività di compilazione SSIS si blocca e viene generato un errore di timeout durante l'esecuzione.
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
+
+- Nell'attività di compilazione SSIS non sono supportati i livelli di protezione **EncryptSensitiveWithPassword** e **EncryptAllWithPassword**. Verificare che nessuno dei progetti SSIS presenti nella codebase usi questi due livelli di protezione. In caso contrario, l'attività di compilazione SSIS si bloccherà e genererà un errore di timeout durante l'esecuzione.
+
+- **ConnectByProxy** è una nuova proprietà aggiunta recentemente in SSDT. SSDT installato nell'agente ospitato da Microsoft non è aggiornato, usare quindi l'agente self-hosted come soluzione alternativa.
 
 ## <a name="ssis-deploy-task"></a>Attività SSIS Deploy (Distribuzione SSIS)
 
@@ -128,7 +140,7 @@ Consente di specificare se TP deve continuare la distribuzione dei progetti o de
 L'attività di distribuzione SSIS non supporta attualmente gli scenari seguenti:
 
 - Configurare l'ambiente nel catalogo SSIS.
-- Distribuire ispac in Azure SQL Server o in un'istanza gestita di SQL di Azure che consente solo l'autenticazione a più fattori.
+- Distribuire ispac in SQL Server di Azure o in un'istanza gestita di SQL di Azure che consente solo l'autenticazione a più fattori.
 - Distribuire i pacchetti in MSDB o nell'archivio pacchetti SSIS.
 
 ## <a name="release-notes"></a>Note sulla versione

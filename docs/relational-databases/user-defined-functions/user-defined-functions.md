@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73843835"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370544"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Vantaggi delle funzioni definite dall'utente
   
 -   Consentono di ridurre il traffico di rete.  
   
-     È possibile esprimere in una funzione un'operazione che filtra i dati sulla base di un vincolo complesso che non è possibile esprimere in una singola espressione scalare. È quindi possibile richiamare la funzione nella clausola WHERE per ridurre il numero delle righe inviate al client.  
+     È possibile esprimere in una funzione un'operazione che filtra i dati sulla base di un vincolo complesso che non è possibile esprimere in una singola espressione scalare. È possibile richiamare la funzione nella clausola WHERE per ridurre il numero di righe inviate al client.  
   
 > [!IMPORTANT]
 > Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente nelle query possono essere eseguite solo su un solo thread (piano di esecuzione seriale). Non è quindi possibile un'elaborazione parallela delle query se si usano le funzioni definite dall'utente. Per altre informazioni sull'elaborazione parallela delle query, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).

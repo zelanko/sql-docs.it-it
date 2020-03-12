@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180076"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288962"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -121,7 +121,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
 }
 ```
 
@@ -155,7 +155,7 @@ Per impostare questa opzione a livello di istanza, vedere [Configurare l'opzione
 
 > [!TIP]
 > Per eseguire questa operazione a livello di query, usare l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
-> Per eseguire questa operazione a livello di server, usare l'[opzione di configurazione server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) relativa al **massimo grado di parallelismo (MAXDOP)**.     
+> Per eseguire questa operazione a livello di server, usare l'[opzione di configurazione server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) relativa al **massimo grado di parallelismo (MAXDOP)** .     
 > Per eseguire questa operazione a livello di carico di lavoro, usare l'[opzione di configurazione del gruppo di carico di lavoro di Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
 PRIMARY
@@ -397,7 +397,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Consente di controllare se un predicato di [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) influisce sulla cardinalità del piano di esecuzione della query utente complessiva. Quando ISOLATE_SECURITY_POLICY_CARDINALITY è impostato su ON, un predicato di Sicurezza a livello di riga non influisce sulla cardinalità di un piano di esecuzione. Si considerino, ad esempio, una tabella contenente 1 milione di righe e un predicato di Sicurezza a livello di riga che limita il risultato a 10 righe per un utente specifico che esegue la query. Se questa configurazione con ambito di database è impostata su OFF, la stima della cardinalità di questo predicato sarà 10. Se invece è impostata su ON, l'ottimizzazione delle query stimerà 1 milione righe. È consigliabile usare il valore predefinito per la maggior parte dei carichi di lavoro.
 
-DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 **SI APPLICA A**: solo Azure Synapse Analytics (in precedenza SQL DW)
 

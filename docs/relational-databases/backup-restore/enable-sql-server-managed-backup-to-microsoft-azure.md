@@ -1,5 +1,5 @@
 ---
-title: Usare il backup gestito in Azure"
+title: Usare il backup gestito in Azure
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.description: Enable SQL Server managed backup to Azure
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e59dfd9c79090bc20a517367e0145303822d8079
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257948"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280888"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Abilitare il backup gestito di SQL Server in Azure
 
@@ -34,7 +34,7 @@ Il processo richiede un account Azure. Se è già disponibile un account, proced
 
 Per altre informazioni sugli account di archiviazione, vedere [Informazioni sugli account di archiviazione di Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
 
-#### <a name="azure-clitabazure-cli"></a>[Interfaccia della riga di comando di Azure](#tab/azure-cli)
+#### <a name="azure-cli"></a>[Interfaccia della riga di comando di Azure](#tab/azure-cli)
 
 1. Accedere all'account Azure.
 
@@ -61,7 +61,7 @@ Per altre informazioni sugli account di archiviazione, vedere [Informazioni sugl
     az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
-#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+#### <a name="powershell"></a>[PowerShell](#tab/azure-powershell)
 
 1. Il comando seguente consente di accedere al proprio account Azure.
 
