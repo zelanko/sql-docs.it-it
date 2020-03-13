@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339572"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289699"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Concedere autorizzazioni T-SQL per data warehouse parallele
 Concedere le autorizzazioni T-SQL per le operazioni di database in parallelo data warehouse.
@@ -249,4 +249,4 @@ Per creare account di accesso amministratore, vedere ruoli predefiniti del [Serv
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREA UTENTE](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
-[Caricamento](load-overview.md)  
+[Load](load-overview.md)  

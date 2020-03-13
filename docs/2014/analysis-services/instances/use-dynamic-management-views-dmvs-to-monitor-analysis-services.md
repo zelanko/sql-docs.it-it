@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079578"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217113"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utilizzare DMV per monitorare Analysis Services
   Le DMV (viste a gestione dinamica) di Analysis Services sono strutture di query che consentono di esporre informazioni sulle operazioni del server locali e sull'integrità del server. La struttura di query è un'interfaccia dei set di righe dello schema tramite cui vengono restituiti i metadati e le informazioni di monitoraggio per un'istanza di Analysis Services.  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[Set di righe DBSCHEMA_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Restituisce un elenco di tutte le tabelle nel database corrente. È possibile utilizzare questo elenco per creare una query DMV.|  
 |[Set di righe DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Restituisce un elenco delle colonne e delle tabelle utilizzate in un modello che presentano dipendenze da altre colonne e tabelle.|  
 |[Set di righe DISCOVER_COMMAND_OBJECTS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative agli oggetti utilizzati dal comando a cui si fa riferimento.|  
-|[Set di righe DISCOVER_COMMANDS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative al comando attualmente in esecuzione.|  
+|[Set di righe DISCOVER_COMMANDS](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative al comando attualmente in esecuzione.|  
 |[Set di righe DISCOVER_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative alle connessioni aperte ad Analysis Services.|  
 |[Set di righe DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Restituisce informazioni su un modello tabulare.<br /><br /> Richiede l'aggiunta di SYSTEMRESTRICTSCHEMA e di parametri aggiuntivi.|  
 |[Set di righe DISCOVER_DB_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative alle connessioni aperte da Analysis Services a origini dati esterne, ad esempio durante l'elaborazione o l'importazione.|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[Set di righe MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Restituisce informazioni sugli oggetti origine dati definiti nel database corrente.|  
 |[Set di righe MDSCHEMA_KPIS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Restituisce informazioni sugli indicatori KPI definiti nel database corrente.|  
 |[Set di righe MDSCHEMA_LEVELS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Restituisce informazioni sui livelli nelle gerarchie definite nel database corrente.|  
-|[Set di righe MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Elenca la dimensione dei gruppi di misure.|  
+|[Set di righe MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|Elenca la dimensione dei gruppi di misure.|  
 |[Set di righe MDSCHEMA_MEASUREGROUPS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Restituisce un elenco dei gruppi di misure nella connessione corrente.|  
-|[Set di righe MDSCHEMA_MEASURES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Restituisce un elenco delle misure nella connessione corrente.|  
+|[Set di righe MDSCHEMA_MEASURES](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|Restituisce un elenco delle misure nella connessione corrente.|  
 |[Set di righe MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Restituisce un elenco di tutti i membri nella connessione corrente elencati per database, cubo e dimensione.|  
 |[Set di righe MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Restituisce un nome completo di ogni proprietà, insieme a tipo di proprietà, tipo di dati e altri metadati.|  
 |[Set di righe MDSCHEMA_SETS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Restituisce un elenco di set definiti nella connessione corrente.|  

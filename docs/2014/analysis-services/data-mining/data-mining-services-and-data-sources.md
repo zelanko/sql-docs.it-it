@@ -10,12 +10,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084921"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217123"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
   Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -117,7 +117,7 @@ ms.locfileid: "66084921"
   
  Se la stored procedure restituisce un set di dati, il client riceverà un set di dati o una tabella di dati con una tabella nidificata che contiene le righe. Se ad esempio viene creata una query sul contenuto del modello, la query restituisce l'intero modello. Per evitare la restituzione di troppe righe, è possibile scrivere stored procedure utilizzando il modello a oggetti ADOMD+.  
   
- Per scrivere una stored procedure del server, è necessario fare riferimento allo spazio dei nomi Microsoft.AnalysisServices.AdomdServer. Per altre informazioni sulla creazione e l'uso di stored procedure, vedere [Funzioni definite dall'utente e stored procedure](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
+ Per scrivere una stored procedure del server, è necessario fare riferimento allo spazio dei nomi Microsoft.AnalysisServices.AdomdServer. Per altre informazioni sulla creazione e l'uso di stored procedure, vedere [Funzioni definite dall'utente e stored procedure](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Non è possibile utilizzare le stored procedure per modificare la sicurezza per gli oggetti server dei dati. Quando si esegue una stored procedure, viene utilizzato il contesto corrente dell'utente per determinare l'accesso a tutti gli oggetti server. Gli utenti devono pertanto disporre delle autorizzazioni appropriate per qualsiasi oggetto di database a cui accedono.  

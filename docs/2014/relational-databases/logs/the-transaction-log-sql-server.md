@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338275"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289409"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
   Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Per evitarne il riempimento, il log delle transazioni deve essere troncato regolarmente. Tuttavia, alcuni fattori possono posticipare il troncamento del log, pertanto è importante monitorare le dimensioni del log. Ad alcune operazioni può essere applicata la registrazione minima per ridurre l'impatto sulle dimensioni del log delle transazioni.  
@@ -106,7 +106,7 @@ ms.locfileid: "78338275"
   
  Per le operazioni seguenti, con registrazione completa nel modello di recupero con registrazione completa, è prevista la registrazione minima nel modello di recupero con registrazione minima e in quello con registrazione minima delle operazioni bulk:  
   
--   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  Quando la replica transazionale è abilitata, le operazioni BULK INSERT vengono registrate completamente persino nel modello di recupero con registrazione minima delle operazioni bulk.  

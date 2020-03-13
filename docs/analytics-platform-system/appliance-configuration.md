@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340469"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289739"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Elenchi di controllo della configurazione dell'appliance per il sistema di piattaforma Analytics
 Fornisce elenchi di controllo per le attività necessarie per configurare il sistema di piattaforma di analisi per il proprio ambiente. Queste attività di configurazione sono necessarie prima di poter usare l'appliance.  

@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339196"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289559"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Progettare report con Progettazione report (SSRS)
   Progettazione report consente di ottenere report e soluzioni di creazione di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] completi. Tale strumento offre un'interfaccia grafica in cui è possibile definire origini dati, set di dati, query, posizioni di layout del report per aree dati e campi, nonché caratteristiche interattive, quali l'interazione tra parametri e set di report.  
@@ -120,7 +120,7 @@ ms.locfileid: "78339196"
      Se si utilizza una configurazione del progetto che compila il report senza distribuirlo, il report specificato nella proprietà `StartItem` della configurazione corrente viene aperto in una finestra di anteprima separata.  
   
     > [!NOTE]  
-    >  Per utilizzare la modalità debug, è necessario impostare un elemento iniziale. In Esplora soluzioni fare clic con il pulsante destro del mouse sul **** progetto report, scegliere `StartItem`proprietà, quindi in selezionare il nome del report da visualizzare.  
+    >  Per utilizzare la modalità debug, è necessario impostare un elemento iniziale. In Esplora soluzioni fare clic con il pulsante destro del mouse sul **Properties**progetto report, scegliere `StartItem`proprietà, quindi in selezionare il nome del report da visualizzare.  
   
      Se si desidera visualizzare in anteprima un report che non è l'elemento iniziale del progetto, selezionare una configurazione che compili il report senza distribuirlo, ad esempio la configurazione DebugLocal. Fare clic con il pulsante destro del mouse sul report e quindi scegliere **Esegui**. È necessario scegliere una configurazione che non preveda la distribuzione del report. In caso contrario, il report verrà pubblicato nel server di report anziché venire visualizzato in locale in una finestra di anteprima.  
   

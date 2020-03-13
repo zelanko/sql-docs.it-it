@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339194"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289589"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto.
@@ -179,6 +179,6 @@ ms.locfileid: "78339194"
  [Caricare file in una cartella](upload-files-to-a-folder.md)
 
 ## <a name="see-also"></a>Vedere anche
- [](../tools/reporting-services-tools.md) [Ruoli e autorizzazioni di Reporting Services Tools &#40;Reporting Services report di](../security/roles-and-permissions-reporting-services.md) [Reporting Services](../reports/reporting-services-reports-ssrs.md)&#41;&#40;SSRS&#41;
+ [Reporting Services Tools](../tools/reporting-services-tools.md) [Ruoli e autorizzazioni di Reporting Services Tools &#40;Reporting Services report di](../security/roles-and-permissions-reporting-services.md) [Reporting Services](../reports/reporting-services-reports-ssrs.md)&#41;&#40;SSRS&#41;
 
 

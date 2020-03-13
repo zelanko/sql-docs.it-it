@@ -11,11 +11,11 @@ ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915492"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289799"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Aggiornamento da un driver 3.5 a un driver 3.8
 In questo argomento vengono fornite linee guida e considerazioni per l'aggiornamento di un driver ODBC 3,5 a un driver ODBC 3,8.  

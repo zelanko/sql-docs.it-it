@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339294"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289289"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Funzionalità supportate dalle edizioni di SQL Server 2014
 
@@ -89,7 +89,7 @@ ms.locfileid: "78339294"
   
  <sup>1</sup> la licenza basata su Enterprise Edition con server + licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] core per istanza. Non sono previsti limiti nel modello di licenza server basato su core. Per altre informazioni, vedere [limiti di capacità di calcolo per edizione di SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-##  <a name="High_availability"></a>Disponibilità elevata  
+##  <a name="High_availability"></a> Disponibilità elevata  
   
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  

@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225398"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217082"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in Internet Information Services (IIS) 8.0
   In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
@@ -38,7 +38,7 @@ ms.locfileid: "75225398"
   
  Questo argomento include le sezioni seguenti:  
   
--   [Panoramica](#bkmk_overview)  
+-   [Overview](#bkmk_overview)  
   
 -   [Prerequisiti](#bkmk_prereq)  
   
@@ -80,15 +80,15 @@ ms.locfileid: "75225398"
   
 -   **Sicurezza** | **autenticazione di Windows**o **autenticazione di base**e qualsiasi altra funzionalità di sicurezza necessaria per lo scenario di accesso ai dati.  
   
--   **** | **CGI** per lo sviluppo di applicazioni  
+-   **Application Development** | **CGI** per lo sviluppo di applicazioni  
   
--   **** | **Estensioni ISAPI** per lo sviluppo di applicazioni  
+-   **Application Development** | **Estensioni ISAPI** per lo sviluppo di applicazioni  
   
  Per verificare o aggiungere questi componenti, usare **Server Manager** | **Gestisci** | **Aggiungi ruoli e funzionalità**. Eseguire la procedura guidata fino a **Ruoli server**. Scorrere fino a **Server Web (IIS)**.  
   
 1.  Aprire | **sicurezza** **server Web**e scegliere i metodi di autenticazione.  
   
-2.  Aprire **** | **sviluppo applicazioni** server Web e scegliere **CGI** ed **estensioni ISAPI**.  
+2.  Aprire **Web Server** | **sviluppo applicazioni** server Web e scegliere **CGI** ed **estensioni ISAPI**.  
   
      ![Pagina Aggiungi funzionalità del ruolo server Web](../media/ssas-httpaccess-isapicgi.png "Pagina Aggiungi funzionalità del ruolo server Web")  
   
@@ -246,7 +246,7 @@ ms.locfileid: "75225398"
 ## <a name="step-5-grant-data-access-permissions"></a>Passaggio 5: Concedere le autorizzazioni di accesso ai dati  
  Come indicato in precedenza, sarà necessario concedere le autorizzazioni nell'istanza di Analysis Services. A ogni oggetto di database verranno assegnati ruoli mediante i quali viene fornito un livello specificato di autorizzazioni (lettura o lettura/scrittura) e ogni ruolo disporrà di membri costituiti da identità utente di Windows.  
   
- Per impostare le autorizzazioni è possibile utilizzare SQL Server Management Studio. Nella cartella **** | **ruoli** del database è possibile creare ruoli, specificare le autorizzazioni del database, assegnare l'appartenenza agli account di gruppo o utente di Windows, quindi concedere le autorizzazioni di lettura o scrittura per oggetti specifici. In genere, le autorizzazioni di **lettura** per un cubo sono sufficienti per le connessioni client, mediante le quali vengono usati, ma non aggiornati, i dati del modello.  
+ Per impostare le autorizzazioni è possibile utilizzare SQL Server Management Studio. Nella cartella **Database** | **ruoli** del database è possibile creare ruoli, specificare le autorizzazioni del database, assegnare l'appartenenza agli account di gruppo o utente di Windows, quindi concedere le autorizzazioni di lettura o scrittura per oggetti specifici. In genere, le autorizzazioni di **lettura** per un cubo sono sufficienti per le connessioni client, mediante le quali vengono usati, ma non aggiornati, i dati del modello.  
   
  L'assegnazione dei ruoli varia a seconda della modalità con cui è stata configurata l'autenticazione.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "75225398"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- Per altre informazioni sulla connessione a livello di programmazione, vedere [Implementazione di connessioni protette in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
+ Per altre informazioni sulla connessione a livello di programmazione, vedere [Implementazione di connessioni protette in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  Come passaggio finale, accertarsi di eseguire successivamente un test più rigido utilizzando un computer client in esecuzione nell'ambiente di rete dal quale hanno origine le connessioni.  
   

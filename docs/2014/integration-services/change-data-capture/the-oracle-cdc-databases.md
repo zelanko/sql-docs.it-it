@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338994"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289269"
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
   Un'istanza di Oracle CDC è associata a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dallo stesso nome nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione. Questo database è denominato database Oracle CDC o CDC.  
@@ -98,7 +98,7 @@ ms.locfileid: "78338994"
 |----------|-----------------|  
 |version|Tiene traccia della versione della configurazione dell'istanza di CDC. Viene aggiornato ogni volta che si aggiorna la tabella e ogni volta che si aggiunge una nuova istanza di acquisizione o si rimuove un'istanza di acquisizione esistente.|  
 |connect_string|Stringa di connessione Oracle. Esempio di base:<br /><br /> `<server>:<port>/<instance>` (ad esempio `erp.contoso.com:1521/orcl`).<br /><br /> Nella stringa di connessione è anche possibile specificare un descrittore della connessione di rete Oracle, ad esempio `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se si utilizza un server di elenchi in linea o nomi TNS, la stringa di connessione può essere il nome della connessione.<br /><br /> Per altre informazioni sulle stringhe di connessione Oracle, vedere [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) per dettagli sulle stringhe di connessione al database Oracle per l'istanza di Oracle Instant Client usata dal servizio Oracle CDC.|  
-|use_windows_authentication|Valore booleano che può essere:<br /><br /> **0**: vengono forniti nome utente e password Oracle per l'autenticazione (valore predefinito)<br /><br /> **1**: per connettersi al database Oracle viene utilizzata l'autenticazione di Windows. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.|  
+|use_windows_authentication|Valore booleano che può essere:<br /><br /> **0**: vengono forniti nome utente e password Oracle per l'autenticazione (impostazione predefinita)<br /><br /> **1**: per connettersi al database Oracle viene usata l'autenticazione di Windows. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.|  
 |username|Nome dell'utente del database Oracle di log mining. È obbligatorio solo se **use_windows_authentication = 0**.|  
 |password|Password dell'utente del database Oracle di log mining. È obbligatorio solo se **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Tempo, in secondi, durante il quale una transazione Oracle viene mantenuta in memoria prima di essere scritta nella tabella **cdc.xdbcdc_staged_transactions** . Il valore predefinito è 120 secondi.|  
@@ -109,7 +109,7 @@ ms.locfileid: "78338994"
   
 |Nome|Predefinito|Min|Max|Statico|Descrizione|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|traccia|False|-|-|False|Valori disponibili:<br /><br /> **True**<br /><br /> **False**<br /><br /> **in**<br /><br /> **spento**|  
+|traccia|False|-|-|False|Valori disponibili:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|La dimensione in Kbyte dei blocchi di memoria allocati per una transazione; una transazione può allocare più di un blocco. Vedere la colonna memory_limit nella tabella [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  
 |target_max_batched_transactions|100|1|1000|True|Numero massimo di transazioni Oracle che è possibile elaborare come una transazione nell'aggiornamento delle tabelle SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|False|L'intervallo, in secondi, per l'aggiornamento della tabella **lsn_time_mapping** quando nelle tabelle acquisite non è presente alcuna attività.|  

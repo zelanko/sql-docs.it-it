@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934552"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289119"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Senza l'ottimizzazione automatica, gli utenti devono monitorare il sistema perio
 I [!INCLUDE[ssde_md](../../includes/ssde_md.md)] piani forzati manualmente non devono essere forzati per sempre, perché deve essere in grado di applicare piani ottimali. L'utente o l'amministratore di database deve infine disforzare il piano usando `sp_query_store_unforce_plan` la [!INCLUDE[ssde_md](../../includes/ssde_md.md)] procedura e consentire al di trovare il piano ottimale. 
 
 > [!TIP]
-> Alternativelly, utilizzare le **query con piani forzati** query Store visualizzazione per individuare e disforzare i piani.
+> In alternativa, utilizzare le **query con piani forzati** query Store visualizzazione per individuare e disforzare i piani.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce tutte le viste e le procedure necessarie per monitorare le prestazioni e risolvere i problemi in Query Store.
 
@@ -188,5 +188,5 @@ Senza la gestione automatica degli indici, l'utente deve eseguire manualmente la
  [Piani di esecuzione](../../relational-databases/performance/execution-plans.md)    
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitoraggio delle prestazioni tramite il Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
