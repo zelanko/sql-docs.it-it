@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: Usare il server cronologia Spark esteso
               href: big-data-cluster/spark-history-server.md
+        - name: Risolvere problemi
+          items:
+            - name: Distribuzione di Active Directory
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: Informazioni di riferimento
       items:
         - name: Informazioni di riferimento sulla distribuzione
