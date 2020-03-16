@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028743"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288355"
 ---
 # <a name="server-memory-configuration-options"></a>Opzioni di configurazione server memory
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Le opzioni per la memoria **min server memory** e **max server memory** possono 
 
 <sup>2</sup> Fare riferimento alla pagina della documentazione [Configurare l'opzione di configurazione del server max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) per informazioni sui thread di lavoro predefiniti calcolati per un determinato numero di CPU per cui è stata impostata l'affinità nell'host corrente.
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Come configurare le opzioni di memoria tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>Come configurare le opzioni di memoria tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Usare le due opzioni per la memoria del server **min server memory** e **max server memory** per riconfigurare la quantità di memoria, in megabyte, gestita dallo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>Procedura per la configurazione di una quantità di memoria fissa (non consigliata)  
@@ -105,7 +105,7 @@ Per abilitare l'opzione Blocco di pagine in memoria:
   
 6.  Nella finestra di dialogo **Impostazioni criteri di sicurezza locali** aggiungere l'account con i privilegi per l'esecuzione di sqlservr.exe (account di avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Esecuzione di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="running-multiple-instances-of-ssnoversion"></a>Esecuzione di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Quando si eseguono più istanze di [!INCLUDE[ssDE](../../includes/ssde-md.md)], è possibile gestire la memoria in tre modi:  
   
 -   Usare **max server memory** per controllare l'utilizzo della memoria, come [descritto in dettaglio in precedenza](#max_server_memory). Stabilire le impostazioni massime per ogni istanza, accertandosi che il totale non sia superiore alla memoria fisica disponibile sul computer. È possibile rendere la memoria di ogni istanza proporzionale al relativo carico di lavoro previsto o alle dimensioni del database. Questo approccio presenta il vantaggio di rendere la memoria libera immediatamente disponibile ad ogni nuovo processo o istanza. Lo svantaggio è che se non vengono eseguite tutte le istanze, parte della memoria resterà inusata.  

@@ -10,11 +10,11 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971429"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286085"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Che cos'è R Services per SQL Server 2016?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,8 +87,8 @@ R versione 3.2.2 è incluso in SQL Server 2016 R Services. Per le versioni più 
 
 1. Scrivere il primo script R
 
-    + Avvio rapido: [Creare ed eseguire script R semplici in SQL Server](../tutorials/quickstart-r-create-script.md)
-    + Avvio rapido: [Creare ed eseguire il training di un modello predittivo in R](../tutorials/quickstart-r-train-score-model.md)
+    + Guida introduttiva: [Creare ed eseguire script R semplici in SQL Server](../tutorials/quickstart-r-create-script.md)
+    + Guida introduttiva: [Creare ed eseguire il training di un modello predittivo in R](../tutorials/quickstart-r-train-score-model.md)
     + Esercitazione: [Usare R in T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): esplorare dati, progettare caratteristiche, eseguire il training e la distribuzione di modelli ed eseguire stime (serie in cinque parti)
     + Esercitazione: [Usare R Services in R Tools](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): esplorare dati, creare grafici e tracciati, progettare caratteristiche, eseguire il training e la distribuzione di modelli ed eseguire stime (serie in sei parti)
 

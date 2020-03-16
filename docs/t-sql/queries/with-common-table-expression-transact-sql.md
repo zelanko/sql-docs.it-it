@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564808"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287305"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Identificatore valido per l'espressione di tabella comune. *expression_name* dev
  *CTE_query_definition*  
  Specifica un'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune. L'istruzione SELECT per *CTE_query_definition* deve soddisfare gli stessi requisiti necessari per creare una vista, con la differenza che una CTE non può definire un'altra CTE. Per altre informazioni, vedere la sezione Osservazioni e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se si definiscono più *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Se si definiscono più elementi *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
 ## <a name="remarks"></a>Osservazioni  
   
@@ -142,7 +142,7 @@ Le linee guida seguenti sono valide per le espressioni di tabella comuni non ric
   
 -   Le funzioni analitiche e di aggregazione nella parte ricorsiva dell'espressione CTE vengono applicate al set per il livello di ricorsione corrente, non al set per l'espressione CTE. Le funzioni come `ROW_NUMBER` funzionano solo nel subset di dati passato dal livello di ricorsione corrente e non nell'intero set di dati passato alla parte ricorsiva della CTE. Per altre informazioni, vedere l'esempio K, Utilizzo di funzioni analitiche in un'espressione CTE ricorsiva, più avanti.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Funzionalità e limitazioni delle espressioni di tabella comuni in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>Funzionalità e limitazioni delle espressioni di tabella comuni in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'implementazione corrente delle CTE in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] presenta le caratteristiche e le limitazioni seguenti:  
   
 -   Una CTE può essere specificata in un'istruzione `SELECT`.  
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` restituisce 1 per ogni sessione della parte ricorsiva dell'espressione CTE perché solo il subset di dati per tale livello di ricorsione viene passato a `ROWNUMBER`. Per ognuna delle iterazioni della parte ricorsiva della query, viene passata solo una riga a `ROWNUMBER`.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Uso di un'espressione di tabella comune all'interno di un'istruzione CTAS  
  L'esempio seguente crea una nuova tabella contenente il numero totale di ordini di vendita all'anno per tutti i venditori di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  

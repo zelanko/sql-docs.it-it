@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893917"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198418"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Usare la piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui dati in dispositivi mobili e desktop per server Web, server aziendali e il cloud.  
@@ -23,7 +23,7 @@ Usare la piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui d
 ## <a name="sql-data-storage"></a>Archiviazione dei dati SQL
 * [Motore di database di SQL Server](../database-engine/configure-windows/sql-server-database-engine.md): usare il motore di database di SQL Server per creare database relazionali per i dati di elaborazione di transazioni online o i dati OLAP (Online Analytical Processing). 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): usare SQL Azure per trasferire un database nel cloud 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact consente di creare applicazioni autonome e connesse occasionalmente per dispositivi mobili, desktop e client Web.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): SQL Server Compact consente di creare applicazioni autonome e connesse occasionalmente per dispositivi mobili, desktop e client Web.
 * [Local DB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): usare Local DB durante lo sviluppo per scrivere e testare il codice Transact-SQL senza dover gestire un'istanza server completa di SQL Server.
 
 ## <a name="sql-data-tools"></a>Strumenti dati SQL

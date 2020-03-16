@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76909851"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286335"
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Miglioramenti relativi a prestazioni e scalabilità inclusi in SQL Server 2016 S
 |Pulizia rilevamento modifiche    |   Miglioramento delle prestazioni di pulizia di Rilevamento modifiche ed efficienza delle tabelle lato Rilevamento modifiche.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |Usare il timeout della CPU per annullare la richiesta di Resource Governor   |   Migliora la gestione delle richieste di query annullando di fatto la richiesta, se viene raggiunta la soglia della CPU per una richiesta. Questo comportamento viene abilitato con il flag di traccia 2422. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |SELECT INTO per creare la tabella di destinazione in filegroup    |   A partire da SQL Server 2016 SP2, la sintassi T-SQL SELECT INTO supporta il caricamento di una tabella in un filegroup diverso da quello predefinito dell'utente usando la parola chiave <Filegroup name> ON nella sintassi T-SQL. |       |
-|Checkpoint indiretto migliorato per TempDB    |   Il checkpoint indiretto per TempDB è stato migliorato per ridurre al minimo la contesa di spinlock in DPLists. Questo miglioramento consente il ridimensionamento predefinito del carico di lavoro TempDB in SQL Server 2016 se il checkpoint indiretto è attivo per TempDB.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
+|Checkpoint indiretto migliorato per TempDB    |   Il checkpoint indiretto per TempDB è stato migliorato per ridurre al minimo la contesa di spinlock in DPLists. Questo miglioramento consente di aumentare per impostazione predefinita il numero di istanze del carico di lavoro TempDB in SQL Server 2016 se il checkpoint indiretto è attivo per TempDB.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
 |Prestazioni di backup del database migliorate nei computer di memoria di grandi dimensioni  |   SQL Server 2016 SP2 ottimizza il modo in cui le operazioni di I/O in corso vengono svuotate durante il backup, comportando un significativo miglioramento delle prestazioni di backup per i database di piccole e medie dimensioni. È stato osservato un miglioramento più di 100 volte superiore trasferendo i backup del database di sistema in un computer da 2 TB. Il miglioramento delle prestazioni si riduce con l'aumentare delle dimensioni del database e delle pagine di cui eseguire il backup e l'I/O di backup richiede più tempo rispetto allo scorrimento del pool di buffer. Questa modifica consentirà di aumentare le prestazioni di backup per i clienti che ospitano più database di piccole dimensioni in server di fascia alta di grandi dimensioni con molta memoria.    |       |
 |Supporto per la compressione del backup VDI per i database abilitati per TDE   |   In SQL Server 2016 SP2 è stato aggiunto il supporto VDI per consentire alle soluzioni di backup VDI di sfruttare la compressione per i database abilitati per TDE. Con questo miglioramento, è stato introdotto un nuovo formato di backup per supportare la compressione del backup per i database abilitati per TDE. Il motore di SQL Server gestirà in modo trasparente i formati di backup nuovi ed esistenti per ripristinare i backup.   |       |
 |Caricamento dinamico dei parametri dei profili agenti di replica    |   Questo nuovo miglioramento consente di caricare i parametri degli agenti di replica in modo dinamico senza dover riavviare l'agente. Questa modifica è applicabile solo ai parametri dei profili agenti di uso più frequente. |       |

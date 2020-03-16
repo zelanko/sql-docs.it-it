@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4832f28fbd07d85c9afaaf7874a51655b6922dc3
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68042598"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090585"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -70,5 +70,5 @@ ms.locfileid: "68042598"
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze geografiche](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+ [ShortestLineTo (tipo di dati geometry)](../../t-sql/spatial-geometry/shortestlineto-geometry-data-type.md)  
   

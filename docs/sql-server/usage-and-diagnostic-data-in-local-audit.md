@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256654"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286275"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server (Analisi utilizzo software)
 
@@ -38,7 +38,7 @@ Per SQL Server 2016 CU2 e CU3 il controllo locale è configurabile a livello di 
 
 Per rifiutare esplicitamente la raccolta di dati, vedere [Attivazione o disattivazione del controllo locale](#turning-local-audit-on-or-off)
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Prerequisiti 
 
 Per abilitare il controllo locale in ogni istanza di SQL Server sono previsti i prerequisiti seguenti: 
 

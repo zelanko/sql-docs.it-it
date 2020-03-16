@@ -1,6 +1,6 @@
 ---
 title: Sviluppare usando le API REST
-ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
+description: L'API REST consente l'accesso programmatico agli oggetti contenuti nel catalogo di un server di report di SQL Server 2017 Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,12 +9,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75321821"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937672"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Sviluppare con le API REST per Reporting Services
 
