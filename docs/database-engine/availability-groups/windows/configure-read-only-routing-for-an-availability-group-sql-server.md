@@ -18,11 +18,11 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67988438"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286685"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurare il routing di sola lettura per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

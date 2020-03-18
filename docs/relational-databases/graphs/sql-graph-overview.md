@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096082"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428152"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Elaborazione di grafi con SQL Server e il database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096082"
 
 ## <a name="what-is-a-graph-database"></a>Che cos'è un database a grafo?  
 Un database a grafo è una raccolta di nodi (o vertici) e archi (o relazioni). Un nodo rappresenta un'entità (ad esempio, una persona o un'organizzazione) e un arco rappresenta una relazione tra i due nodi che collega (ad esempio, mi piace o amici). Sia i nodi che i bordi possono avere proprietà associate. Ecco alcune funzionalità che rendono univoco un database a grafo:  
--   Gli archi o relazioni sono entità di prima classe in un Database a grafo e possono avere attributi o proprietà associate ad essi. 
--   Un singolo arco può collegare in modo flessibile più nodi in un Database a grafo.
--   È possibile esprimere facilmente criteri di ricerca e query di navigazione a più hop.
--   È possibile esprimere facilmente chiusura transitiva e query polimorfiche.
+-    Gli archi o relazioni sono entità di prima classe in un Database a grafo e possono avere attributi o proprietà associate ad essi. 
+-    Un singolo arco può collegare in modo flessibile più nodi in un Database a grafo.
+-    È possibile esprimere facilmente criteri di ricerca e query di navigazione a più hop.
+-    È possibile esprimere facilmente chiusura transitiva e query polimorfiche.
 
 ## <a name="when-to-use-a-graph-database"></a>Quando utilizzare un database a grafo
 
-Non esiste nulla che possa essere ottenuto da un database a grafo, che non possa essere ottenuto usando un database relazionale. Tuttavia, un database a grafo può rendere più semplice esprimere un certo tipo di query. Inoltre, con ottimizzazioni specifiche, alcune query possono garantire prestazioni migliori. La decisione di scegliere uno di essi può essere basata sui fattori seguenti:  
--   L'applicazione contiene dati gerarchici. Il tipo di dati HierarchyID può essere utilizzato per implementare gerarchie, ma presenta alcune limitazioni. Ad esempio, non consente di archiviare più elementi padre per un nodo.
--   L'applicazione dispone di relazioni molti-a-molti complesse. Quando l'applicazione si evolve, vengono aggiunte nuove relazioni.
--   È necessario analizzare relazioni e dati interconnessi.
+Un database relazionale può ottenere qualsiasi elemento di un database Graph. Tuttavia, un database a grafo rende più semplice esprimere determinati tipi di query. Inoltre, con ottimizzazioni specifiche, alcune query possono garantire prestazioni migliori. La scelta di un database relazionale o a grafo si basa sui fattori seguenti:  
+-    L'applicazione contiene dati gerarchici. Il tipo di dati HierarchyID può essere utilizzato per implementare gerarchie, ma presenta alcune limitazioni. Ad esempio, non consente di archiviare più elementi padre per un nodo.
+-    L'applicazione dispone di relazioni molti-a-molti complesse. Quando l'applicazione si evolve, vengono aggiunte nuove relazioni.
+-    È necessario analizzare relazioni e dati interconnessi.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Caratteristiche del grafo introdotte in[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>Caratteristiche del grafo introdotte in[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Si sta iniziando ad aggiungere estensioni di grafo a SQL Server per semplificare l'archiviazione e l'esecuzione di query sui dati del grafo. Le funzionalità seguenti sono state introdotte nella prima versione. 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Completamente integrato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Completamente integrato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore 
 Le estensioni del grafo sono completamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrate nel motore di. Usare lo stesso motore di archiviazione, metadati, query processor e così via per archiviare ed eseguire query sui dati del grafo. Eseguire query su dati grafici e relazionali in un'unica query. Combinando le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Graph con altre tecnologie come columnstore, ha, R Services e così via. Il database SQL Graph supporta inoltre tutte le funzionalità di sicurezza e conformità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibili con.
  
 ### <a name="tooling-and-ecosystem"></a>Strumenti e ecosistema
