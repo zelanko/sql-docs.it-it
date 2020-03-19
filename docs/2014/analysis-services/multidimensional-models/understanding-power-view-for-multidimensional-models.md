@@ -10,12 +10,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75229390"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525462"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
   Questo articolo descrive la funzionalità Power View per modelli multidimensionali di Microsoft SQL Server 2014 e fornisce importanti informazioni destinate agli amministratori e ai professionisti di business intelligence che intendono implementare Power View per modelli multidimensionali nelle relative organizzazioni.  
@@ -28,7 +28,7 @@ ms.locfileid: "75229390"
   
  ![Power View per l'architettura dei modelli multidimensionali](../media/daxmd-architecture.gif "Power View per l'architettura dei modelli multidimensionali")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  **Requisiti del server**  
   
 -   SQL Server 2014 Enterprise o Business Intelligence Edition con Analysis Services in esecuzione in modalità multidimensionale  
@@ -225,7 +225,7 @@ ms.locfileid: "75229390"
   
  Il documento CSDL in uscita restituito rappresenta il modello come spazio dei nomi, contenente entità, associazioni e proprietà.  
   
- Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Riferimento tecnico per le annotazioni di Business Intelligence per CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) in MSDN e [\[MS-CSDLBI\]: Formato di file delle definizioni dello schema concettuale con annotazioni di Business Intelligence](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Riferimento tecnico per le annotazioni di Business Intelligence per CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl) in MSDN e [\[MS-CSDLBI\]: Formato di file delle definizioni dello schema concettuale con annotazioni di Business Intelligence](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Guida del client su Office.com  
  Negli articoli seguenti, disponibili su Office.com, vengono fornite ulteriori informazioni sulla modalità di visualizzazione degli oggetti del modello multidimensionale in Power View e sulla creazione di un report di esempio:  
