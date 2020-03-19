@@ -1,5 +1,6 @@
 ---
 title: Novità di SQL Server 2016
+description: Informazioni sulle nuove funzionalità di sicurezza di SQL Server 2016, sulle funzionalità di query, Hadoop e integrazione cloud, analisi R e altro ancora.
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190617"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novità di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -57,7 +58,7 @@ SQL Server 2016 Analysis Services offre prestazioni migliori, funzionalità di c
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integra in SQL Server il linguaggio di programmazione R, usato per l'analisi statistica. 
 - La nuova funzionalità di **verifica di coerenza del database (DBCC)** viene eseguita internamente per rilevare possibili problemi di danneggiamento dei dati.
 - La funzionalità **query diretta**, che consente di eseguire query su dati esterni dinamici invece di importarli in primo luogo, ora supporta più origini dati, tra le quali SQL Azure, Oracle e Teradata. 
-- Sono disponibili numerose nuove **funzioni DAX (Data Access Expressions)**.
+- Sono disponibili numerose nuove **funzioni DAX (Data Access Expressions)** .
 - Il nuovo spazio dei nomi **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** gestisce istanze e modelli della modalità tabulare. 
 - È stato eseguito il refactoring di [Analysis Services Management (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) per includere un secondo assembly, **Microsoft.AnalysisServices.Core.dll**.
 

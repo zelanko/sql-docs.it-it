@@ -1,5 +1,6 @@
 ---
 title: Impostazione della proprietà Url del servizio Web | Microsoft Docs
+description: Nelle applicazioni Microsoft .NET Framework è possibile modificare l'URL di base del servizio Web ReportServer a cui è diretta l'applicazione.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13fc37cd6b0b7396196ad8f514ec34fb9b317a16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 982b1c80e9c9cd71b67e0f5a2fb227a9dc8d999f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128837"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198508"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Impostazione della proprietà Url del servizio Web
   In qualsiasi momento nelle applicazioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è possibile modificare l'URL di base del servizio Web ReportServer a cui è attualmente diretta l'applicazione. A tale scopo, è sufficiente impostare la proprietà **Url** dell'oggetto servizio. Ad esempio:  

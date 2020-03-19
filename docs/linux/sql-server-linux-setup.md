@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: Installare, aggiornare e disinstallare SQL Server in Linux. Questo articolo illustra gli scenari online, offline e automatici.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
+ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75884013"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319841"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linee guida per l'installazione di SQL Server in Linux
 
@@ -60,8 +60,8 @@ SQL Server è supportato in Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpri
 | Piattaforma | Versioni supportate | Recupero
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Scaricare RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [Scaricare SLES v12](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Scaricare Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [Scaricare SLES v12](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04, 18.04 | [Ottenere Ubuntu 18.04](http://releases.ubuntu.com/bionic/)
 | **Docker Engine** | 1.8+ | [Scaricare Docker](https://www.docker.com/get-started)
 
 ::: moniker-end

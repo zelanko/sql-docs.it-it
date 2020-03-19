@@ -1,7 +1,7 @@
 ---
-title: Note sulla versione di ODBC in Linux e macOS | Microsoft Docs
+title: Note sulla versione per ODBC Driver for SQL Server in Linux e macOS
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896764"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090499"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -51,7 +51,7 @@ GeneMi.  2019/04/03.
 | :------------ | :------ |
 | Attributo di connessione SQL_COPT_SS_SPID per recuperare SPID senza round trip al server | Vedere [Parole chiave e attributi per stringhe di connessione e DSN](../dsn-connection-string-attribute.md). |
 | Supporto per l'indicazione dell'accettazione del contratto di licenza tramite `debconf` in Debian e Ubuntu | Vedere[Installazione del driver](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
-| Nuove distribuzioni supportate. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Nuove distribuzioni supportate. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -82,7 +82,7 @@ Quando si usa Always Encrypted con enclave sicuri e Azure Key Vault, i percorsi 
 
 | Nuovo elemento | Dettagli |
 | :------- | :------ |
-| Nuove distribuzioni supportate. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| Nuove distribuzioni supportate. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Modalità di autenticazione dell'identità del servizio gestita di Azure Active Directory (assegnata dal sistema e dall'utente). | Vedere [Uso di Azure Active Directory con il driver ODBC](../using-azure-active-directory.md). |
 | Capacità di trasmettere i parametri di input alle colonne Always Encrypted. | Per altre informazioni, vedere [Limitazioni del driver ODBC quando si usa Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transazioni distribuite XA. | Vedere [Uso delle transazioni XA](../use-xa-with-dtc.md).<br/><br/>XA è l'acronimo di _eXtended Architecture_, uno standard per l'esecuzione di una transazione globale che accede a più di un sistema di archiviazione dei dati lato server. |
@@ -122,7 +122,7 @@ Supporto per Always Encrypted per l'API BCP
 
 Il nuovo attributo della stringa di connessione UseFMTOnly fa in modo che i driver usino metadati legacy in casi particolari che richiedono tabelle temporanee.
 
-Supporto per l'istanza gestita di database SQL di Azure (anteprima privata estesa). 
+Supporto di Istanza gestita di database SQL di Azure. 
 > [!NOTE]
 > Esistono molte differenze nell'uso di Istanza gestita:
 > -   FILESTREAM non è supportato 
@@ -140,7 +140,7 @@ Supporto per l'istanza gestita di database SQL di Azure (anteprima privata estes
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiunge il supporto per Always Encrypted e Azure Active Directory quando viene usato in combinazione con Microsoft SQL Server 2016.
 
-**Nuove distribuzioni supportate**: sono supportati OS X 10.11 e macOS 10.12 nella prima versione del driver ODBC in macOS. È ora supportato anche Ubuntu 16.10 insieme a Red Hat 6, 7 e SUSE 12. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e la configurazione.  Per le istruzioni di installazione, vedere l'articolo relativo all'[installazione del driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+**Nuove distribuzioni supportate**: sono supportati OS X 10.11 e macOS 10.12 nella prima versione del driver ODBC in macOS. È ora supportato anche Ubuntu 16.10 insieme a Red Hat 6, 7 e SUSE 12. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e la configurazione. Per altre informazioni, vedere le istruzioni per l'installazione del driver ODBC per [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) e [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Modifiche al supporto di Gestione driver unixODBC 2.3.1**: il driver ODBC non dipende più dai pacchetti personalizzati per Gestione driver unixODBC (tranne in RedHat 6) e si basa invece sulla gestione dei pacchetti di distribuzione per risolvere la dipendenza UnixODBC dai repository di distribuzione.
 

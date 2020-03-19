@@ -1,6 +1,6 @@
 ---
 title: Usare l'API SOAP nelle applicazioni Windows
-description: È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. Accedere al servizio Web in un'applicazione Windows scrivendo codice che consenta di effettuare chiamate al servizio.
+description: È possibile accedere alle funzionalità del server di report con l'API SOAP di Reporting Services. Accedere al servizio Web in un'app di Windows effettuando chiamate al servizio.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 78bdfb5335f00df64e1ae3a98a6a34aa26f71881
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796985"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198199"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrazione di Reporting Services tramite SOAP - Applicazione Windows
   È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web in un'applicazione Windows semplicemente scrivendo codice che consenta di effettuare chiamate al servizio. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web e consente di usare un'infrastruttura familiare e gli strumenti per compilare applicazioni aziendali basate sulla tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -1,28 +1,28 @@
 ---
-title: Problemi noti in questa versione del driver per SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 02/15/2018
+title: Problemi noti per il driver ODBC in Linux e macOS
+ms.date: 03/05/2020
 ms.prod: sql
-ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - known issues
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9abed0dcd77e0759e92dc0380a42acfe54852a7
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971352"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286435"
 ---
-# <a name="known-issues-in-this-version-of-the-driver"></a>Problemi noti in questa versione del driver
+# <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problemi noti per il driver ODBC in Linux e macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Questo argomento contiene un elenco di problemi noti relativi a Microsoft ODBC Driver for SQL Server 13, 13.1 e 17 in Linux e macOS.
+Questo argomento contiene un elenco di problemi noti relativi a Microsoft ODBC Driver for SQL Server 13, 13.1 e 17 in Linux e macOS. Contiene anche i passaggi per la risoluzione dei problemi di connettività.
+
+## <a name="known-issues"></a>Problemi noti
 
 Altri problemi verranno pubblicati nel [blog del team di Microsoft ODBC Driver](https://blogs.msdn.com/b/sqlnativeclient/).  
 
@@ -36,7 +36,58 @@ Altri problemi verranno pubblicati nel [blog del team di Microsoft ODBC Driver](
 
 Ad esempio se la codifica è UTF-8 e si specifica 1 sia per *BufferLength* sia per *ColumnSize* in **SQLBindParameter** per un parametro out, quindi si prova a recuperare il carattere precedente archiviato in una colonna `char(1)` nel server (usando CP-1252), il driver tenta di convertirlo alla codifica UTF-8 a 3 byte, ma non può adattare il risultato in un buffer di 1 byte. Nella direzione opposta, *ColumnSize* viene confrontato con *BufferLength* in **SQLBindParameter** prima della conversione tra le diverse tabelle codici su client e server. Poiché il valore 1 di *ColumnSize* è minore di un valore *BufferLength* di 3 (ad esempio), il driver genera un errore. Per evitare questo errore, verificare che la lunghezza dei dati dopo la conversione si adatti correttamente al buffer o alla colonna specificati. Si noti che *ColumnSize* non può essere maggiore di 8000 per il tipo `varchar(n)`.
 
-## <a name="see-also"></a>Vedere anche  
-[Linee guida per la programmazione](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-[Note sulla versione](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+## <a id="connectivity"></a> Risoluzione dei problemi relativi alla connessione  
 
+Se non si riesce a stabilire una connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il driver ODBC, usare le informazioni seguenti per individuare il problema.  
+  
+Il problema di connessione più comune è legato alla presenza di due copie di Gestione driver UnixODBC installate. Cercare /usr for libodbc\*.so\*. Se è presente più di una versione del file, è possibile che esistano più installazioni di Gestione driver. L'applicazione potrebbe utilizzare la versione non corretta.
+  
+Abilitare il log della connessione modificando il file `/etc/odbcinst.ini` affinché contenga la sezione seguente con questi elementi:
+
+```
+[ODBC]
+Trace = Yes
+TraceFile = (path to log file, or /dev/stdout to output directly to the terminal)
+```  
+  
+Se viene generato un altro errore di connessione e il file di registro non è visualizzato, è possibile che nel computer in uso esistano due copie di Gestione driver. In caso contrario, l'output del log avrà un aspetto analogo a quanto segue:  
+  
+```
+[ODBC][28783][1321576347.077780][SQLDriverConnectW.c][290]  
+        Entry:  
+            Connection = 0x17c858e0  
+            Window Hdl = (nil)  
+            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
+            Str Out = (nil)  
+            Str Out Max = 0  
+            Str Out Ptr = (nil)  
+            Completion = 0  
+        UNICODE Using encoding ASCII 'UTF8' and UNICODE 'UTF16LE'  
+```  
+  
+Se la codifica dei caratteri ASCII è diversa da UTF-8, ad esempio: 
+  
+```
+UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'  
+```  
+  
+Sono installate più copie di Gestione driver e l'applicazione usa quella sbagliata oppure Gestione driver non è stato compilato correttamente.  
+  
+Per altre informazioni sulla risoluzione dei problemi di connessione, vedere:  
+
+- [Passaggi per risolvere i problemi di connettività di SQL](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+  
+- [Risoluzione dei problemi di connettività di SQL Server 2005 - Parte I](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2005-connectivity-issue-troubleshoot-part-i/ba-p/383034)  
+  
+- [Risoluzione dei problemi di connettività in SQL Server 2008 con il buffer circolare della connettività](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
+  
+- [Strumento di risoluzione dei problemi di autenticazione di SQL Server](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per le istruzioni di installazione per il driver ODBC, vedere gli articoli seguenti:
+
+- [Installazione di Microsoft ODBC Driver for SQL Server in Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installazione di Microsoft ODBC Driver for SQL Server in macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+
+Per altre informazioni, vedere le [linee guida per la programmazione](programming-guidelines.md) e le [note sulla versione](release-notes-odbc-sql-server-linux-mac.md).  

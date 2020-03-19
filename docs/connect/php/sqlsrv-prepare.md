@@ -18,11 +18,11 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68014994"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286545"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: espressione Transact-SQL corrispondente all'istruzione creata.  
   
-*$params* [facoltativo]: **matrice** di valori corrispondenti ai parametri di una query con parametri. Ogni elemento della matrice può corrispondere a uno dei seguenti:
+*$params* [FACOLTATIVO]: **matrice** di valori corrispondenti ai parametri di una query con parametri. Ogni elemento della matrice può corrispondere a uno dei seguenti:
   
 -   Valore letterale.  
   
@@ -65,7 +65,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[facoltativo]|Costante **SQLSRV_PHPTYPE_\*** che specifica il tipo di dati PHP del valore restituito.|  
     |*$sqlType*[facoltativo]|Costante **SQLSRV_SQLTYPE_\*** che specifica il tipo di dati SQL Server del valore di input.|  
   
-*$options* [facoltativo]: matrice associativa che imposta le <a name="properties">proprietà delle query</a>. Nella tabella seguente sono elencate le chiavi supportate e i valori corrispondenti:
+*$options* [FACOLTATIVO]: matrice associativa che imposta le <a name="properties">proprietà delle query</a>. Nella tabella seguente sono elencate le chiavi supportate e i valori corrispondenti:
 
 |Chiave|Valori supportati|Descrizione|  
 |-------|--------------------|---------------|  

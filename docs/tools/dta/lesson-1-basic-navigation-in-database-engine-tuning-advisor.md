@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307650"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286645"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database (DTA)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75307650"
 
 Ottimizzazione guidata motore di database offre una modalità basata su un'interfaccia utente grafica per visualizzare le sessioni di ottimizzazione e i report delle indicazioni di ottimizzazione. In questa lezione viene illustrato come avviare lo strumento e configurare la visualizzazione. Questa lezione consente di apprendere i diversi metodi per avviare lo strumento e per configurare la visualizzazione in modo da supportare le attività di ottimizzazione eseguite regolarmente.  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Prerequisiti 
 
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
@@ -36,7 +36,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 - Scaricare i [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
 
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
   > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e con attività semplici di amministrazione del database. 
@@ -57,7 +57,7 @@ Per impostazione predefinita, la configurazione all'avvio dello strumento Ottimi
 ![Finestra predefinita di Ottimizzazione guidata motore di database](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> La scheda **Monitoraggio sessione** visualizza il nome della sessione, che corrisponde al nome e ai dati correnti dell'utente connesso. 
+> La scheda **Monitoraggio sessione** visualizza il nome della sessione, che corrisponde al nome dell'utente connesso e alla data corrente. 
   
 Al primo avvio dell'interfaccia utente grafica dello strumento Ottimizzazione guidata motore di database vengono visualizzati due riquadri principali.  
   

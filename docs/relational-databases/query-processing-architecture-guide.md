@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903873"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288385"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consente di elaborare le query su diverse architetture di archiviazione dei dati, come tabelle locali, tabelle partizionate e tabelle distribuite su più server. Negli argomenti seguenti viene descritta l'elaborazione delle query e l'ottimizzazione del riutilizzo delle query in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite la memorizzazione nella cache dei piani di esecuzione.
 
@@ -86,7 +86,7 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Ottimizzazione delle istruzioni SELECT
-Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
+Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione query, talvolta definito piano di query o piano di esecuzione. La descrizione dettagliata del contenuto di un piano di esecuzione è riportata più avanti in questo argomento.
 
 I dati di input e di output di Query Optimizer durante l'ottimizzazione di una singola istruzione `SELECT` sono illustrati nel diagramma seguente:
 
@@ -100,17 +100,19 @@ Un'istruzione `SELECT` definisce soltanto gli elementi seguenti:
 
 Il piano di esecuzione di una query è costituito dalla definizione degli elementi seguenti: 
 
-* La sequenza di accesso alle tabelle di origine.  
-  In genere il server di database può utilizzare molte sequenze diverse per accedere alle tabelle di base e quindi compilare il set di risultati. Ad esempio, se l'istruzione `SELECT` fa riferimento a tre tabelle, il server di database può accedere innanzitutto a `TableA`, usare i dati di `TableA` per estrarre le righe corrispondenti da `TableB`, quindi usare i dati di `TableB` per estrarre i dati da `TableC`. Di seguito vengono indicate le altre sequenze di accesso alle tabelle utilizzabili dal server di database:  
+- **La sequenza di accesso alle tabelle di origine.** In genere il server di database può utilizzare molte sequenze diverse per accedere alle tabelle di base e quindi compilare il set di risultati. Ad esempio, se l'istruzione `SELECT` fa riferimento a tre tabelle, il server di database può accedere innanzitutto a `TableA`, usare i dati di `TableA` per estrarre le righe corrispondenti da `TableB`, quindi usare i dati di `TableB` per estrarre i dati da `TableC`. Di seguito vengono indicate le altre sequenze di accesso alle tabelle utilizzabili dal server di database:  
   `TableC`, `TableB`, `TableA`o  
   `TableB`, `TableA`, `TableC`o  
   `TableB`, `TableC`, `TableA`o  
   `TableC`, `TableA`, `TableB`  
 
-* I metodi utilizzati per estrarre i dati da ogni tabella.  
+- **I metodi usati per estrarre i dati da ogni tabella.**  
   Per accedere ai dati di ogni tabella sono in genere disponibili metodi diversi. Se sono necessarie solo alcune righe con valori di chiave specifici, il server di database può utilizzare un indice. Se sono necessarie tutte le righe della tabella, il server di database può ignorare gli indici ed eseguire un'analisi di tabella. Se sono necessarie tutte le righe di una tabella, ma l'indice contiene colonne chiave incluse in una clausola `ORDER BY`, è consigliabile eseguire l'analisi dell'indice anziché della tabella per evitare che il set di risultati venga ordinato separatamente. Se una tabella è di dimensioni molto ridotte, l'analisi della tabella può rappresentare il metodo più efficiente per quasi tutti gli accessi alla tabella.
+  
+- **I metodi usati per eseguire i calcoli e i modi usati per filtrare, aggregare e ordinare i dati da ogni tabella.**  
+  Se si accede ai dati dalle tabelle, è possibile usare metodi diversi per eseguire i calcoli sui dati, ad esempio il calcolo dei valori scalari, per aggregare e ordinare i dati come definito nel testo della query, ad esempio quando si usa una clausola `GROUP BY` o `ORDER BY`, e per filtrare i dati, ad esempio quando si usa una clausola `WHERE` o `HAVING`.
 
-Il processo di scelta di un piano di esecuzione è denominato ottimizzazione. Query Optimizer è uno dei principali componenti di un sistema di database SQL. L'overhead generato dall'utilizzo di Query Optimizer per l'analisi della query e la scelta di un piano è ampiamente compensato dall'efficienza del piano di esecuzione scelto. Si supponga, ad esempio, che il progetto di costruzione di una casa venga assegnato a due imprese edili diverse. Se un'impresa dedica alcuni giorni alla pianificazione della costruzione della casa e l'altra impresa inizia immediatamente la costruzione senza alcuna pianificazione, è molto probabile che l'impresa che ha pianificato il progetto termini la costruzione per prima.
+Il processo di scelta di un piano di esecuzione è denominato ottimizzazione. Query Optimizer è uno dei più importanti componenti del [!INCLUDE[ssde_md](../includes/ssde_md.md)]. L'overhead generato dall'utilizzo di Query Optimizer per l'analisi della query e la scelta di un piano è ampiamente compensato dall'efficienza del piano di esecuzione scelto. Si supponga, ad esempio, che il progetto di costruzione di una casa venga assegnato a due imprese edili diverse. Se un'impresa dedica alcuni giorni alla pianificazione della costruzione della casa e l'altra impresa inizia immediatamente la costruzione senza alcuna pianificazione, è molto probabile che l'impresa che ha pianificato il progetto termini la costruzione per prima.
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un ottimizzatore basato sui costi. A ogni piano di esecuzione possibile corrisponde un costo in termini di quantità di risorse del computer utilizzate. Query Optimizer analizza i piani possibili e sceglie il piano con il costo stimato minore. Per alcune istruzioni `SELECT` complesse i piani di esecuzione possibili sono migliaia. In questi casi, Query Optimizer non analizza tutte le combinazioni possibili, ma utilizza algoritmi complessi per individuare rapidamente un piano di esecuzione il cui costo si avvicini il più possibile al costo minimo teorico.
 
@@ -121,6 +123,12 @@ Per la stima dei costi in termini di risorse relativi ai diversi metodi di estra
 <sup>1</sup> La densità definisce la distribuzione di valori univoci esistenti nei dati, o il numero medio di valori duplicati per una determinata colonna. Man mano che la densità diminuisce, aumenta la selettività di un valore.
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un componente importante perché consente al server di database di adattarsi in modo dinamico alle condizioni variabili del database senza fare ricorso all'intervento di un programmatore o di un amministratore di database. In questo modo i programmatori possono concentrarsi sulla descrizione del risultato finale della query. A ogni esecuzione dell'istruzione, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un piano di esecuzione efficace per lo stato corrente del database.
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ha tre opzioni di visualizzazione dei piani di esecuzione:        
+> -  ***[Piano di esecuzione stimato](../relational-databases/performance/display-the-estimated-execution-plan.md)***, ovvero il piano compilato generato da Query Optimizer.        
+> -  ***[Piano di esecuzione effettivo](../relational-databases/performance/display-an-actual-execution-plan.md)***, ovvero il piano compilato più il contesto di esecuzione. Include le informazioni di runtime disponibili al termine dell'esecuzione, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../includes/ssde_md.md)], il tempo trascorso e di CPU usato durante l'esecuzione.        
+> -  ***[Statistiche sulle query dinamiche](../relational-databases/performance/live-query-statistics.md)***, ovvero il piano compilato più il contesto di esecuzione. Includono le informazioni di runtime durante l'avanzamento dell'esecuzione e vengono aggiornate ogni secondo. Le informazioni di runtime includono, ad esempio, il numero effettivo di righe che passano attraverso gli operatori.       
 
 ### <a name="processing-a-select-statement"></a>Elaborazione di un'istruzione SELECT
 Di seguito viene illustrata la procedura di base necessaria per elaborare una singola istruzione SELECT in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: 
@@ -450,12 +458,6 @@ I piani di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
   Ogni utente che esegue la query dispone di una struttura di dati contenente i dati specifici per l'esecuzione, ad esempio i valori dei parametri. Questa struttura di dati è denominata contesto di esecuzione. Le strutture dei dati del contesto di esecuzione vengono riutilizzate, a differenza del contenuto. Se un altro utente esegue la stessa query, le strutture dei dati vengono reinizializzate con il contesto del nuovo utente. 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ha tre opzioni di visualizzazione dei piani di esecuzione:        
-> -  ***[Piano di esecuzione stimato](../relational-databases/performance/display-the-estimated-execution-plan.md)***, ovvero il piano compilato.        
-> -  ***[Piano di esecuzione effettivo](../relational-databases/performance/display-an-actual-execution-plan.md)***, ovvero il piano compilato più il contesto di esecuzione. Include le informazioni di runtime disponibili al termine dell'esecuzione, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../includes/ssde_md.md)], il tempo trascorso e di CPU usato durante l'esecuzione.        
-> -  ***[Statistiche sulle query dinamiche](../relational-databases/performance/live-query-statistics.md)***, ovvero il piano compilato più il contesto di esecuzione. Includono le informazioni di runtime durante l'avanzamento dell'esecuzione e vengono aggiornate ogni secondo. Le informazioni di runtime includono, ad esempio, il numero effettivo di righe che passano attraverso gli operatori.       
 
 Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)], il [!INCLUDE[ssde_md](../includes/ssde_md.md)] esegue prima di tutto una ricerca nella cache dei piani per verificare la presenza di un piano di esecuzione esistente per la stessa istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] si qualifica come esistente se corrisponde letteralmente a un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] eseguita in precedenza con un piano memorizzato nella cache, carattere per carattere. L'eventuale piano esistente trovato viene riusato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], evitando così l'overhead associato alla ricompilazione dell'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)]. Se non esiste un piano di esecuzione, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene generato un nuovo piano per la query.
 
@@ -968,7 +970,7 @@ I cursori statici e gestiti da keyset possono essere popolati tramite piani di e
 #### <a name="overriding-degrees-of-parallelism"></a>Sostituzione dei gradi di parallelismo
 Il grado di parallelismo imposta il numero di processori da usare durante l'esecuzione di piani paralleli. Questa configurazione può essere impostata a diversi livelli:
 
-1.  A livello di server, con l'[opzione di configurazione del server](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **massimo grado di parallelismo (MAXDOP)**.</br> **Si applica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+1.  A livello di server, con l'[opzione di configurazione del server](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **massimo grado di parallelismo (MAXDOP)** .</br> **Si applica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
     > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] presenta raccomandazioni automatiche per l'impostazione dell'opzione di configurazione del server MAXDOP durante il processo di installazione. L'interfaccia utente del programma di installazione consente di accettare le impostazioni consigliate o di immettere valori personalizzati. Per altre informazioni, vedere [Pagina Configurazione del motore di database - MaxDOP](../sql-server/install/instance-configuration.md#maxdop).

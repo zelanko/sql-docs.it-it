@@ -14,11 +14,11 @@ author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338884"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287575"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
@@ -34,9 +34,9 @@ Per una rapida descrizione di come usare Query Store in scenari di risoluzione d
 
 ## <a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure
 
-Se si esegue Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], è possibile usare [informazioni dettagliate prestazioni query](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) per analizzare l'utilizzo delle risorse nel tempo. Sebbene sia possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) per ottenere un consumo dettagliato delle risorse per tutte le query, ad esempio CPU, memoria e I/O, informazioni dettagliate prestazioni query offre un modo rapido ed efficiente per determinare il loro effetto sul consumo di DTU complessivo per il database. Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Se si esegue Query Store nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure, è possibile usare [Informazioni dettagliate prestazioni query](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) per analizzare il consumo delle risorse nel tempo. Anche se è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) per ottenere il consumo dettagliato delle risorse per tutte le query, ad esempio CPU, memoria e I/O, Informazioni dettagliate prestazioni query offre un metodo rapido ed efficace per determinare l'impatto delle query sul consumo di DTU complessivo per il database. Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
-In questa sezione vengono descritte le impostazioni predefinite di configurazione ottimali progettate per garantire un funzionamento affidabile delle funzionalità di Query Store e dipendenti. La configurazione predefinita è ottimizzata per la raccolta di dati continua, ossia per un tempo minimo di OFF/READ_ONLY.
+Questa sezione descrive impostazioni di configurazione predefinite ottimali progettate per garantire un funzionamento affidabile di Query Store e delle funzionalità dipendenti. La configurazione predefinita è ottimizzata per la raccolta di dati continua, ossia per un tempo minimo di OFF/READ_ONLY.
 
 | Configurazione | Descrizione | Predefinito | Comment |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ In questa sezione vengono descritte le impostazioni predefinite di configurazion
 | | | | |
 
 > [!IMPORTANT]
-> I valori predefiniti indicati sopra vengono applicati automaticamente nella fase finale dell'attivazione dell'archivio query in tutti i database SQL di Azure (vedere la precedente nota importante). Al termine di questa operazione, il database SQL di Azure non modifica i valori di configurazione impostati dai clienti, a meno che non influisca negativamente sul carico di lavoro primario o sulle operazioni affidabili del Query Store.
+> I valori predefiniti indicati sopra vengono applicati automaticamente nella fase finale dell'attivazione dell'archivio query in tutti i database SQL di Azure (vedere la precedente nota importante). Dopo questa attivazione, il database SQL di Azure non modificherà i valori di configurazione impostati dai clienti, a meno che non abbiano un impatto negativo sul carico di lavoro primario o sull'affidabilità di funzionamento di Query Store.
 
 Se si desidera mantenere le impostazioni personalizzate, usare [ALTER DATABASE con le opzioni dell'archivio query](https://msdn.microsoft.com/library/bb522682.aspx) per riportare la configurazione allo stato precedente. Vedere [Procedure consigliate per l'archivio query](https://msdn.microsoft.com/library/mt604821.aspx) per informazioni su come scegliere i parametri di configurazione ottimali.
 
@@ -57,23 +57,23 @@ Se si desidera mantenere le impostazioni personalizzate, usare [ALTER DATABASE c
 
 È possibile usare Archivio query in tutti i database, anche in pool molto compressi. Tutti i problemi correlati all'utilizzo eccessivo delle risorse che possono essersi verificati quando Query Store era abilitato per un numero elevato di database nei pool elastici sono stati risolti.
 
-## <a name="Configure"></a>Mantieni Query Store regolati per il carico di lavoro
+## <a name="Configure"></a> Adattare Query Store al proprio carico di lavoro
 
 Configurare l'archivio query in base al carico di lavoro e ai requisiti di risoluzione dei problemi di prestazioni.
 I parametri predefiniti sono sufficienti per iniziare, ma è opportuno monitorare il comportamento di Query Store nel tempo e adattare la configurazione di conseguenza.
 
- ![Proprietà Query Store](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")
+ ![Proprietà di Query Store](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")
 
  Di seguito sono riportate alcune linee guida per l'impostazione dei valori dei parametri:
 
-**Dimensioni massime (MB)**: specifica il limite per lo spazio dati che query Store prende all'interno del database. Si tratta dell'impostazione più importante, che influisce direttamente sulla modalità di funzionamento di Query Store.
+**Dimensioni massime (MB)** : specifica il limite per lo spazio dati che Query Store occupa all'interno del database. Si tratta dell'impostazione più importante, che influisce direttamente sulla modalità di funzionamento di Query Store.
 
 Mentre Query Store raccoglie query, piani di esecuzione e statistiche, le sue dimensioni nel database aumentano fino a quando non viene raggiunto questo limite. A quel punto, l'archivio query passa automaticamente alla modalità operativa di sola lettura e smette di raccogliere nuovi dati. Questo si riflette negativamente sull'accuratezza dell'analisi delle prestazioni.
 
 Il valore predefinito in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] è 100 MB. Queste dimensioni potrebbero non essere sufficienti se il carico di lavoro genera un numero elevato di query e piani diversi o se si vuole conservare la cronologia delle query per un periodo di tempo più lungo. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il valore predefinito è 1 GB. Tenere traccia dell'utilizzo dello spazio e aumentare le **Dimensioni massime (MB)** per impedire che Query Store passi alla modalità di sola lettura.
 
 > [!IMPORTANT]
-> Il limite **Dimensioni massime (MB)** non è necessariamente applicato. Le dimensioni di archiviazione vengono controllate solo quando Query Store scrive i dati su disco. Questo intervallo viene impostato dall'opzione **Intervallo di scaricamento dati (minuti)**. Se Query Store ha violato il limite di dimensioni massime tra i controlli delle dimensioni di archiviazione, passa alla modalità di sola lettura. Se è abilitata la **Modalità di pulizia basata sulle dimensioni**, viene attivato anche il meccanismo di pulizia per applicare il limite di dimensioni massime.
+> Il limite **Dimensioni massime (MB)** non è necessariamente applicato. Le dimensioni di archiviazione vengono controllate solo quando Query Store scrive i dati su disco. Questo intervallo viene impostato dall'opzione **Intervallo di scaricamento dati (minuti)** . Se Query Store ha violato il limite di dimensioni massime tra i controlli delle dimensioni di archiviazione, passa alla modalità di sola lettura. Se è abilitata la **Modalità di pulizia basata sulle dimensioni**, viene attivato anche il meccanismo di pulizia per applicare il limite di dimensioni massime.
 
 Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o eseguire lo script seguente per ottenere informazioni aggiornate sulle dimensioni dell'archivio query:
 
@@ -86,17 +86,17 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;
 ```
 
-Lo script seguente imposta un nuovo valore per **Dimensioni massime (MB)**:
+Lo script seguente imposta un nuovo valore per **Dimensioni massime (MB)** :
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
 ```
 
- **Intervallo di scaricamento dati (minuti)**: definisce la frequenza per salvare in modo permanente le statistiche di runtime raccolte su disco. È espresso in minuti nell'interfaccia utente grafica (GUI), ma in [!INCLUDE[tsql](../../includes/tsql-md.md)] è espresso in secondi. Il valore predefinito è 900 secondi, ovvero 15 minuti nell'interfaccia utente grafica. Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per salvare i dati in modo permanente prima dell'arresto di un database.
+ **Intervallo di scaricamento dati (minuti)** : definisce la frequenza per salvare in modo permanente le statistiche di runtime raccolte su disco. È espresso in minuti nell'interfaccia utente grafica (GUI), ma in [!INCLUDE[tsql](../../includes/tsql-md.md)] è espresso in secondi. Il valore predefinito è 900 secondi, ovvero 15 minuti nell'interfaccia utente grafica. Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per salvare i dati in modo permanente prima dell'arresto di un database.
 
 > [!NOTE]
-> L'uso del flag di traccia 7745 impedisce la scrittura su disco dei dati di Query Store nel caso di un comando di failover o arresto. Per altre informazioni, vedere la sezione [usare i flag di traccia in server mission-critical](#Recovery) .
+> L'uso del flag di traccia 7745 impedisce la scrittura su disco dei dati di Query Store nel caso di un comando di failover o arresto. Per altre informazioni, vedere la sezione [Usare i flag di traccia nei server cruciali](#Recovery).
 
 Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per **Intervallo di scaricamento dati**:
 
@@ -105,14 +105,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);
 ```
 
-**Intervallo di raccolta Statistiche**: definisce il livello di granularità per le statistiche di runtime raccolte, espresse in minuti. Il valore predefinito è 60 minuti. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi. Tenere presente che il valore influisce direttamente sulle dimensioni dei dati di Query Store. Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per **Intervallo di raccolta statistiche**:
+**Intervallo di raccolta statistiche**: definisce il livello di granularità delle statistiche di runtime raccolte, espresso in minuti. Il valore predefinito è 60 minuti. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi. Tenere presente che il valore influisce direttamente sulle dimensioni dei dati di Query Store. Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per **Intervallo di raccolta statistiche**:
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
 ```
 
-**Soglia query non aggiornata (giorni)**: criteri di pulizia basati sul tempo che controllano il periodo di conservazione delle statistiche di Runtime permanente e delle query inattive espresse in giorni. Per impostazione predefinita, Query Store è configurato in modo da conservare i dati per 30 giorni, che per alcuni scenari potrebbe essere un periodo eccessivamente lungo.
+**Soglia per query non aggiornate (giorni)** : criteri di pulizia basati sul tempo, che controllano il periodo di conservazione di statistiche di runtime persistenti e query inattive, espresso in giorni. Per impostazione predefinita, Query Store è configurato in modo da conservare i dati per 30 giorni, che per alcuni scenari potrebbe essere un periodo eccessivamente lungo.
 
 Evitare di conservare i dati cronologici che non si intende usare. Questo accorgimento riduce il ricorso allo stato di sola lettura. Le dimensioni dei dati di Query Store e il tempo necessario per rilevare e limitare il problema saranno più prevedibili. Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oppure lo script seguente per configurare i criteri di pulizia basati sul tempo:
 
@@ -121,19 +121,19 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-**Modalità di pulizia basata sulle dimensioni**: specifica se la pulizia automatica dei dati si verifica quando query Store dimensioni dei dati si avvicinano al limite. Attivare la pulizia basata sulle dimensioni per assicurarsi che Query Store venga sempre eseguito in modalità lettura/scrittura e possa raccoglie i dati più recenti.
+**Modalità di pulizia basata sulle dimensioni**: specifica se viene eseguita la pulizia automatica dei dati quando le dimensioni dei dati di Query Store si avvicinano al limite. Attivare la pulizia basata sulle dimensioni per assicurarsi che Query Store venga sempre eseguito in modalità lettura/scrittura e possa raccoglie i dati più recenti.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ```
 
-**Modalità di acquisizione query Store**: specifica i criteri di acquisizione delle Query per query Store.
+**Modalità di acquisizione di Query Store**: specifica i criteri di acquisizione delle query per Query Store.
 
-- **All**: acquisisce tutte le query. Si tratta dell'opzione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- **Automatico**: le query poco frequenti e le query con durata di compilazione e di esecuzione non significativa vengono ignorate. Le soglie per la durata del runtime, della compilazione e del conteggio esecuzioni vengono determinate internamente. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si tratta dell'opzione predefinita.
-- **None**: query Store interrompe l'acquisizione di nuove query.
-- **Personalizzata**: consente il controllo aggiuntivo e la possibilità di ottimizzare i criteri di raccolta dei dati. Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni. Si tratta di un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store.
+- **All** (Tutto): Consente di acquisire tutte le query. Si tratta dell'opzione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+- **Auto**: le query poco frequenti e le query con durata di compilazione ed esecuzione non significativa vengono ignorate. Le soglie per la durata del runtime, della compilazione e del conteggio esecuzioni vengono determinate internamente. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si tratta dell'opzione predefinita.
+- **Nessuna**: Query Store smette di acquisire nuove query.
+- **Custom**: consente un maggiore controllo e la capacità di ottimizzare i criteri di raccolta dati. Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni. Si tratta di un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store.
 
 > [!IMPORTANT]
 > I cursori, le query all'interno delle stored procedure e le query compilate in modo nativo vengono sempre acquisiti quando la modalità di acquisizione di Query Store è impostata su **All**, **Auto** o **Custom**. Per acquisire le query compilate in modo nativo, abilitare la raccolta delle statistiche per query usando [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
@@ -233,12 +233,12 @@ La tabella seguente illustra quando usare ognuna delle viste dell'archivio query
 
 |Vista di SQL Server Management Studio|Scenario|
 |---------------|--------------|
-|**Query regressioni**|Trovare le query per cui le metriche di esecuzione sono recentemente regredite (ad esempio, peggiorate). <br />Usare questa vista per correlare i problemi di prestazioni osservati nell'applicazione con le query effettive da correggere o migliorare.|
-|**Utilizzo complessivo delle risorse**|Analizzare il consumo totale delle risorse per il database per una delle metriche di esecuzione.<br />Usare questa vista per identificare gli schemi di consumo delle risorse, ad esempio nei carichi di lavoro diurni e notturni, e ottimizzare il consumo complessivo per il database.|
+|**Query regredite**|Trovare le query per cui le metriche di esecuzione sono recentemente regredite (ad esempio, peggiorate). <br />Usare questa vista per correlare i problemi di prestazioni osservati nell'applicazione con le query effettive da correggere o migliorare.|
+|**Consumo complessivo risorse**|Analizzare il consumo totale delle risorse per il database per una delle metriche di esecuzione.<br />Usare questa vista per identificare gli schemi di consumo delle risorse, ad esempio nei carichi di lavoro diurni e notturni, e ottimizzare il consumo complessivo per il database.|
 |**Prime query per consumo di risorse**|Scegliere una metrica di esecuzione di interesse e trovare le query con i valori più estremi in un intervallo di tempo specificato. <br />Usare questa vista per concentrare l'attenzione sulle query più rilevanti che hanno l'impatto maggiore sul consumo delle risorse di database.|
 |**Query con piani forzati**|Elenca i piani forzati in precedenza tramite Query Store. <br />Usare questa vista per accedere rapidamente a tutti i piani attualmente forzati.|
 |**Query con variazione elevata**|Analizzare le query con variazione di esecuzione elevata in relazione alle dimensioni disponibili, ad esempio Durata, Tempo CPU, I/O e Utilizzo memoria, nell'intervallo di tempo desiderato.<br />Usare questa vista per identificare le query con prestazioni molto variabili che possono influire negativamente sull'esperienza utente in tutte le applicazioni.|
-|**Statistiche attese query**|Analizzare le categorie di attesa più attive in un database e le query che contribuiscono maggiormente alla categoria di attesa selezionata.<br />Usare questa vista per analizzare le statistiche di attesa e identificare le query che possono influire negativamente sull'esperienza utente in tutte le applicazioni.<br /><br />Si applica a: a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] partire da v [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]18.0 e.|
+|**Statistiche di attesa query**|Analizzare le categorie di attesa più attive in un database e le query che contribuiscono maggiormente alla categoria di attesa selezionata.<br />Usare questa vista per analizzare le statistiche di attesa e identificare le query che possono influire negativamente sull'esperienza utente in tutte le applicazioni.<br /><br />Si applica a: a partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Query rilevate**|Tenere traccia dell'esecuzione delle query più importanti in tempo reale. In genere, questa vista viene usata in presenza di query con piani forzati per garantire la stabilità delle prestazioni delle query.|
 
 > [!TIP]
@@ -246,10 +246,9 @@ La tabella seguente illustra quando usare ognuna delle viste dell'archivio query
 
 Quando si identifica una query con prestazioni non ottimali, l'azione correttiva dipende dalla natura del problema.
 
-- Se la query è stata eseguita con più piani e l'ultimo piano è notevolmente peggiore rispetto al piano precedente, è possibile ricorrere al meccanismo di uso forzato del piano. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a forzare il piano in query optimizer. Se l'uso forzato del piano ha esito negativo, viene generato un XEvent e a query optimizer viene richiesto di ottimizzare in modo normale.
+- Se la query è stata eseguita con più piani e l'ultimo piano è notevolmente peggiore rispetto al piano precedente, è possibile ricorrere al meccanismo di uso forzato del piano. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a forzare il piano in query optimizer. Se l'uso forzato del piano ha esito negativo, viene generato un XEvent e a query optimizer viene richiesto di ottimizzare in modo normale.
 
-  ![Piano di Query Store Force](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")
+  ![Forzatura del piano di Query Store](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")
 
   > [!NOTE]
   > Nella figura precedente sono illustrate forme diverse per piani di query specifici, con i significati seguenti per ogni stato possibile:<br />
@@ -262,16 +261,16 @@ Quando si identifica una query con prestazioni non ottimali, l'azione correttiva
   >
   > Le dimensioni della forma riflettono inoltre il numero di esecuzioni di query nell'intervallo di tempo specificato. Le dimensioni aumentano in base al numero di esecuzioni.
 
-- Si può concludere che la query sia priva di un indice per l'esecuzione ottimale. Queste informazioni vengono rese disponibili all'interno del piano di esecuzione query. Creare l'indice mancante e verificare le prestazioni delle query da usingQuery Store.
+- Si può concludere che la query sia priva di un indice per l'esecuzione ottimale. Queste informazioni vengono rese disponibili all'interno del piano di esecuzione query. Creare l'indice mancante e verificare le prestazioni della query usando Query Store.
 
-   ![Query Store Visualizza piano](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+   ![Visualizzare il piano di Query Store](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
 
 Se si esegue il carico di lavoro in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], iscriversi a Index Advisor per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] per ricevere automaticamente indicazioni relative agli indici.
 
 - In alcuni casi si potrebbe applicare la ricompilazione delle statistiche, se c'è una notevole differenza tra il numero stimato di righe nel piano di esecuzione e quello effettivo.
 - Riscrivere le query problematiche, ad esempio per sfruttare i vantaggi della parametrizzazione delle query o per implementare la logica ottimale.
 
-## <a name="Verify"></a>Verificare che Query Store raccolga i dati delle query in modo continuo
+## <a name="Verify"></a> Verificare che Query Store raccolga i dati delle query in modo continuativo
 
 Query Store può cambiare automaticamente la modalità operativa. Monitorare regolarmente lo stato di Query Store per assicurarsi che sia in funzione e per prevenire errori dovuti a cause evitabili. Eseguire questa query per determinare la modalità operativa e visualizzare i parametri più importanti:
 
@@ -356,11 +355,10 @@ Mantenere i dati più rilevanti nell'archivio query. La tabella seguente descriv
 
 |Modalità di acquisizione dell'archivio query|Scenario|
 |------------------------|--------------|
-|**Tutto**|Analizzare accuratamente il carico di lavoro in termini di forme di query, frequenza di esecuzione e altre statistiche.<br /><br /> Identificare le nuove query nel carico di lavoro.<br /><br /> Stabilire se vengono usate query ad hoc per identificare le opportunità di parametrizzazione automatica o da parte dell'utente.<br /><br />Nota: questa è la modalità di acquisizione predefinita [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]e.|
-|**Automatico**|Concentrare l'attenzione su query rilevanti e da correggere. Un esempio sono le query eseguite regolarmente o che hanno un consumo di risorse elevato.<br /><br />Nota: a partire [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]da, questa è la modalità di acquisizione predefinita.|
+|**Tutto**|Analizzare accuratamente il carico di lavoro in termini di forme di query, frequenza di esecuzione e altre statistiche.<br /><br /> Identificare le nuove query nel carico di lavoro.<br /><br /> Stabilire se vengono usate query ad hoc per identificare le opportunità di parametrizzazione automatica o da parte dell'utente.<br /><br />Nota: si tratta della modalità di acquisizione predefinita in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Auto**|Concentrare l'attenzione su query rilevanti e da correggere. Un esempio sono le query eseguite regolarmente o che hanno un consumo di risorse elevato.<br /><br />Nota: a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si tratta della modalità di acquisizione predefinita.|
 |**Nessuno**|Il set di query da monitorare è stato già acquisito in fase di esecuzione e si vuole eliminare qualsiasi distrazione introdotta da altre query.<br /><br /> È adatta ad ambienti di testing e di benchmarking.<br /><br /> È adatta ai fornitori di software che forniscono l'archivio query configurato per il monitoraggio del carico di lavoro della relativa applicazione.<br /><br /> Deve essere usata con cautela perché può precludere la possibilità di rilevare e ottimizzare nuove query importanti. Evitare di usare questa modalità a meno che non sia richiesta da uno scenario specifico.|
-|**Impostazione personalizzata**|
-  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una modalità di acquisizione Custom nel comando `ALTER DATABASE SET QUERY_STORE`. Una volta abilitate, le configurazioni aggiuntive di Query Store sono disponibili in una nuova impostazione di criteri di acquisizione di Query Store per ottimizzare la raccolta dati in un server specifico.<br /><br />Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni. Si tratta di un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|**Impostazione personalizzata**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una modalità di acquisizione Custom nel comando `ALTER DATABASE SET QUERY_STORE`. Una volta abilitate, le configurazioni aggiuntive di Query Store sono disponibili in una nuova impostazione di criteri di acquisizione di Query Store per ottimizzare la raccolta dati in un server specifico.<br /><br />Le nuove impostazioni personalizzate definiscono che cosa accade entro la soglia di tempo per i criteri di acquisizione interni. Si tratta di un limite di tempo durante il quale vengono valutate le condizioni configurabili e, se si verifica una di tali condizioni, la query è idonea per l'acquisizione da parte di Query Store. Per altre informazioni, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|
 
 > [!NOTE]
 > I cursori, le query all'interno delle stored procedure e le query compilate in modo nativo vengono sempre acquisiti quando la modalità di acquisizione di Query Store è impostata su **All**, **Auto** o **Custom**. Per acquisire le query compilate in modo nativo, abilitare la raccolta delle statistiche per query usando [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
@@ -376,7 +374,7 @@ La tabella seguente riporta le procedure consigliate:
 |Escludere le query non rilevanti.|Configurare la **modalità di acquisizione di Query Store** su **Auto**.|
 |Eliminare le query meno rilevanti quando vengono raggiunte le dimensioni massime.|Attivare criteri di pulizia basati sulle dimensioni.|
 
-## <a name="Parameterize"></a>Evitare di usare query senza parametri
+## <a name="Parameterize"></a> Evitare l'uso di query senza parametri
 
 L'uso di query senza parametri quando non è strettamente necessario non è una procedura consigliata. Un esempio è in caso di analisi ad hoc. Non è possibile usare nuovamente i piani memorizzati nella cache e questo impone a Query Optimizer di compilare query per ogni testo della query univoco. Per altre informazioni, vedere [Linee guida per l'utilizzo della parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
 
@@ -392,11 +390,11 @@ Valutare le opzioni seguenti:
   - Configurare la parametrizzazione forzata usando il comando dell'[opzione di database Parameterization](../../relational-databases/databases/database-properties-options-page.md#miscellaneous), se nel carico di lavoro è presente un numero ridotto di piani di query diversi. Un esempio è quando il rapporto tra il numero di valori query_hash distinti e il numero totale di voci in sys.query_store_query è molto inferiore a 1.
 - Impostare QUERY_CAPTURE_MODE su AUTO per filtrare automaticamente le query ad hoc con un consumo di risorse ridotto.
 
-## <a name="Drop"></a>Evitare un modello DROP e CREATE per contenere oggetti
+## <a name="Drop"></a> Evitare il modello DROP e CREATE per gli oggetti contenitore
 
 Query Store associa ogni voce di query a un oggetto contenitore, come una stored procedure, una funzione o un trigger. Quando si ricrea un oggetto contenitore, viene generata una nuova voce di query per lo stesso testo della query. Questo impedisce di monitorare le statistiche sulle prestazioni relative a tale query nel tempo e di ricorrere al meccanismo di uso forzato del piano. Per evitare questa situazione, usare il processo `ALTER <object>` per modificare la definizione dell'oggetto contenitore, quando è possibile.
 
-## <a name="CheckForced"></a>Controllare regolarmente lo stato dei piani forzati
+## <a name="CheckForced"></a> Verificare regolarmente lo stato dei piani forzati
 
 L'uso forzato del piano è un meccanismo efficace per risolvere i problemi di prestazioni delle query critiche e renderle più prevedibili. Come accade con gli hint di piano e le guide di piano, forzare un piano non garantisce che poi venga usato nelle esecuzioni successive. In genere, quando lo schema del database viene modificato in modo che gli oggetti a cui fa riferimento il piano di esecuzione vengano modificati o eliminati, l'uso forzato del piano ha esito negativo. In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opta per la ricompilazione delle query, mentre il motivo effettivo dell'errore viene esposto in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La query seguente restituisce informazioni sui piani forzati:
 
@@ -413,13 +411,13 @@ WHERE is_forced_plan = 1;
 
 Per un elenco completo dei motivi, vedere [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). È anche possibile usare l'oggetto XEvent **query_store_plan_forcing_failed** per monitorare e risolvere gli errori di uso forzato del piano.
 
-## <a name="Renaming"></a>Evitare di rinominare i database per le query con piani forzati
+## <a name="Renaming"></a> Evitare di rinominare i database per query con piani forzati
 
 I piani di esecuzione fanno riferimento agli oggetti usando nomi in tre parti come `database.schema.object`.
 
 Se si rinomina un database, l'uso forzato del piano ha esito negativo e questo provoca la ricompilazione in tutte le esecuzioni di query successive.
 
-## <a name="Recovery"></a>Usare i flag di traccia nei server di importanza critica
+## <a name="Recovery"></a> Usare i flag di traccia nei server cruciali
 
 I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la disponibilità dei database tramite Query Store. Per altre informazioni, vedere [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -435,8 +433,8 @@ I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la dis
 ## <a name="see-also"></a>Vedere anche
 
 - [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-- [Viste del catalogo di Query Store &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Stored procedure di Query Store &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-- [Usare Query Store con OLTP in memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
-- [Monitorare le prestazioni usando Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Viste del catalogo di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Stored procedure di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [Uso di Query Store con OLTP in-memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
+- [Monitoraggio delle prestazioni con Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)

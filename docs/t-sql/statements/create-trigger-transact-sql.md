@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340693"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287685"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ I trigger LOGON vengono attivati in risposta all'evento LOGON generato quando vi
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="sql-server-syntax"></a>Sintassi SQL Server  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="azure-sql-database-syntax"></a>Sintassi database SQL di Azure  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ Specifica che il trigger DML viene avviato *al posto* dell'istruzione di trigger
   
 In una tabella o vista è possibile definire al massimo un trigger INSTEAD OF per ogni istruzione INSERT, UPDATE o DELETE. È anche possibile definire viste che fanno riferimento ad altre viste. Ogni vista include un trigger INSTEAD OF.  
   
-Non è possibile definire i trigger INSTEAD OF in viste aggiornabili che usano WITH CHECK OPTION. Questa operazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando un trigger INSTEAD OF viene aggiunto a una vista aggiornabile per la quale è stato specificato WITH CHECK OPTION. Per poter definire il trigger INSTEAD OF, si rimuove l'opzione usando l'istruzione ALTER VIEW.  
+Non è possibile definire i trigger INSTEAD OF in viste aggiornabili che usano WITH CHECK OPTION. Questa operazione genera un errore quando un trigger INSTEAD OF viene aggiunto a una vista aggiornabile per la quale è stato specificato WITH CHECK OPTION. Per poter definire il trigger INSTEAD OF, si rimuove l'opzione usando l'istruzione ALTER VIEW.  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Specifica le istruzioni di modifica dei dati che attivano il trigger DML quando vengono eseguite sulla tabella o sulla vista. Specificare almeno un'opzione. Usare qualsiasi combinazione delle opzioni nell'ordine desiderato nella definizione di trigger.  

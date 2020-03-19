@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280951"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198408"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lezione 1: Creare ed eseguire query per oggetti di database
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ Per completare questa esercitazione è necessario avere SQL Server Management St
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piattaforma in uso tra i collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
+Se non è disponibile un'istanza di SQL Server, crearne una. Per crearne una, selezionare la piattaforma nei collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
 - **Windows**: [Scaricare SQL Server 2017 Developer](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Creazione di un database
-Analogamente a numerose altre istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , l'istruzione CREATE DATABASE ha un parametro obbligatorio, ovvero il nome del database. L'istruzione CREATE DATABASE dispone inoltre di numerosi parametri facoltativi, ad esempio il percorso su disco in cui si desidera inserire i file del database. Quando si esegue CREATE DATABASE senza parametri facoltativi, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono utilizzati i valori predefiniti per molti di tali parametri. In questa esercitazione vengono utilizzati solo alcuni dei parametri facoltativi della sintassi.   
+Analogamente a molte altre istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], l'istruzione [`CREATE DATABASE`](statements/create-database-transact-sql.md) ha un parametro obbligatorio, ovvero il nome del database. ` CREATE DATABASE` include anche molti parametri facoltativi, ad esempio il percorso su disco in cui si vogliono inserire i file del database. Quando si esegue `CREATE DATABASE` senza parametri facoltativi, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa i valori predefiniti per molti di tali parametri.
 
 1.  In una finestra dell'editor di query digitare ma non eseguire il codice seguente:  
   
@@ -53,7 +53,7 @@ Analogamente a numerose altre istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)
     GO  
     ```  
   
-2.  Usare il puntatore per selezionare le parole `CREATE DATABASE`e quindi premere **F1**. Verrà aperto l'argomento relativo all'istruzione CREATE DATABASE della documentazione online di SQL Server. È possibile utilizzare questa tecnica per trovare la sintassi completa di CREATE DATABASE e delle altre istruzioni utilizzate in questa esercitazione.  
+2.  Usare il puntatore per selezionare le parole `CREATE DATABASE`e quindi premere **F1**. Verrà aperto l'argomento relativo all'istruzione `CREATE DATABASE` nella documentazione online di SQL Server. È possibile usare questa tecnica per trovare la sintassi completa di `CREATE DATABASE` e delle altre istruzioni usate in questa esercitazione.  
   
 3.  Nell'editor di query premere **F5** per eseguire l'istruzione e creare un database denominato `TestData`.  
   
@@ -63,6 +63,7 @@ Quando si crea un database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > La parola chiave GO separa le istruzioni inviate in un singolo batch. GO è un elemento facoltativo se il batch contiene un'unica istruzione.  
 
 ## <a name="create-a-table"></a>Creare una tabella
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Per creare una tabella, è necessario specificare un nome per la tabella e i nomi e i tipi di dati di ogni colonna di quest'ultima. È inoltre consigliabile indicare se sono consentiti valori Null in ogni colonna. Per creare una tabella è necessario avere l'autorizzazione `CREATE TABLE` e l'autorizzazione `ALTER SCHEMA` per lo schema che conterrà la tabella. Il ruolo predefinito del database [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) dispone di tali autorizzazioni.  
@@ -76,6 +77,7 @@ Per un elenco di tipi di dati e collegamenti alle relative descrizioni, vedere [
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>Connessione dell'editor di query al database TestData  
+
 Nella finestra dell'editor di query digitare ed eseguire il codice seguente per connettersi al database `TestData` .  
   
   ```sql  
@@ -84,7 +86,8 @@ Nella finestra dell'editor di query digitare ed eseguire il codice seguente per 
   ```  
   
 ### <a name="create-the-table"></a>Creare la tabella
-Nell'editor di query digitare ed eseguire il codice seguente per creare una tabella semplice denominata `Products`. Le colonne nella tabella vengono denominate `ProductID`, `ProductName`, `Price`e `ProductDescription`. La colonna `ProductID` rappresenta la chiave primaria della tabella. `int`, `varchar(25)`, `money`e `varchar(max)` sono tutti tipi di dati. Le uniche colonne che possono non contenere dati quando viene inserita o modificata un riga sono `Price` e `ProductionDescription` . Questa istruzione contiene un elemento facoltativo (`dbo.`) che corrisponde a uno schema. Lo schema rappresenta l'oggetto di database a cui appartiene la tabella. Se si è un amministratore, `dbo` è lo schema predefinito. `dbo` corrisponde al proprietario del database.  
+
+Nella finestra dell'editor di query digitare ed eseguire il codice seguente per creare una tabella denominata `Products`. Le colonne nella tabella vengono denominate `ProductID`, `ProductName`, `Price`e `ProductDescription`. La colonna `ProductID` rappresenta la chiave primaria della tabella. `int`, `varchar(25)`, `money`e `varchar(max)` sono tutti tipi di dati. Le uniche colonne che possono non contenere dati quando viene inserita o modificata un riga sono `Price` e `ProductionDescription` . Questa istruzione contiene un elemento facoltativo (`dbo.`) che corrisponde a uno schema. Lo schema rappresenta l'oggetto di database a cui appartiene la tabella. Se si è un amministratore, `dbo` è lo schema predefinito. `dbo` corrisponde al proprietario del database.  
   
   ```sql  
   CREATE TABLE dbo.Products  
@@ -103,13 +106,13 @@ Dopo aver creato la tabella **Products** è possibile inserirvi dati con l'istru
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3,17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0.52||  
   
 La sintassi di base è la seguente: INSERT, nome tabella, elenco colonne, VALUES, quindi un elenco dei valori da inserire. I due trattini davanti a una riga indicano che si tratta di un commento il cui testo verrà ignorato dal compilatore. In questo caso il commento descrive una variazione consentita della sintassi.  
   
 ### <a name="insert-data-into-a-table"></a>Inserire dati in una tabella  
   
-1.  Eseguire l'istruzione seguente per inserire una riga nella tabella `Products` creata nell'attività precedente. Viene utilizzata la sintassi di base.  
+1.  Eseguire l'istruzione seguente per inserire una riga nella tabella `Products` creata nell'attività precedente.
   
    ```sql 
    -- Standard syntax  
@@ -117,7 +120,21 @@ La sintassi di base è la seguente: INSERT, nome tabella, elenco colonne, VALUES
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > Se l'inserimento ha esito positivo, procedere con il passaggio successivo.
+   >
+   > Se l'inserimento non riesce, è possibile che la tabella `Product` includa già una riga con tale ID prodotto. Per continuare, eliminare tutte le righe della tabella e ripetere il passaggio precedente. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) elimina tutte le righe nella tabella. 
+   >
+   > Eseguire il comando seguente per eliminare tutte le righe nella tabella:
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > Dopo aver troncato la tabella, ripetere il comando `INSERT` in questo passaggio.
+
 2.  L'istruzione seguente illustra come modificare l'ordine in cui vengono specificati i parametri scambiando la posizione di `ProductID` e `ProductName` in entrambi gli elenchi di campi (tra parentesi) e nell'elenco dei valori.  
   
    ```sql  
@@ -141,7 +158,7 @@ La sintassi di base è la seguente: INSERT, nome tabella, elenco colonne, VALUES
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -169,7 +186,7 @@ Utilizzare l'istruzione SELECT per leggere i dati archiviati in una tabella. L'i
   GO  
   ```  
   
-2.  È possibile utilizzare un asterisco per selezionare tutte le colonne della tabella. Si tratta di una tecnica utilizzata spesso nelle query ad hoc. È consigliabile specificare l'elenco delle colonne nel codice permanente in modo che l'istruzione restituisca le colonne previste anche se viene successivamente aggiunta una nuova colonna alla tabella.  
+2.  È possibile usare un asterisco (`*`) per selezionare tutte le colonne nella tabella. L'asterisco è per le query ad hoc. Specificare l'elenco delle colonne nel codice permanente in modo che l'istruzione restituisca le colonne previste anche se viene successivamente aggiunta una nuova colonna alla tabella.  
   
   ```sql  
   -- Returns all columns in the table  
@@ -224,7 +241,7 @@ In questo esempio si userà CREATE VIEW per creare una vista che seleziona solo 
   
 ### <a name="create-a-view"></a>Creare una vista  
   
-Eseguire l'istruzione seguente per creare un vista molto semplice che esegue un'istruzione SELECT e restituisce i nomi e i prezzi dei prodotti.  
+Eseguire l'istruzione seguente per creare un vista che esegue un'istruzione SELECT e restituisce i nomi e i prezzi dei prodotti.  
   
   ```sql  
   CREATE VIEW vw_Names  

@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256691"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198381"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: Usare l'autenticazione di Azure Active Directory con SQL Server in Linux
 
@@ -36,7 +36,7 @@ Questa esercitazione è costituita dalle attività seguenti:
 > * Creare account di accesso basati su AD in Transact-SQL
 > * Connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di Active Directory
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di configurare l'autenticazione di Active Directory, è necessario:
 
@@ -125,6 +125,7 @@ La configurazione dell'autenticazione di Active Directory per SQL Server in Linu
 
    > [!NOTE]
    > I comandi precedenti ammettono sia gli algoritmi di crittografia AES sia RC4 per l'autenticazione AD. RC4 è un algoritmo di crittografia più obsoleto. Se è necessario un livello di sicurezza più elevato, è possibile scegliere di creare le voci keytab usando soltanto l'algoritmo di crittografia AES.
+   > Le ultime due voci `UserName` devono essere in lettere minuscole oppure l'autenticazione delle autorizzazioni potrebbe non riuscire.
 
 1. Dopo aver eseguito il comando precedente, è necessario disporre di un file keytab denominato mssql.keytab. Copiare il file nel computer SQL Server nella cartella `/var/opt/mssql/secrets`.
 

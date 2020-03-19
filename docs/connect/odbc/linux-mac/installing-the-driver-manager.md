@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9a276d44cd67bf7d2d4befd24edefa6ebdf0759a
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68008789"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058791"
 ---
 # <a name="installing-the-driver-manager"></a>Installazione di Gestione driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,10 @@ Questo articolo contiene istruzioni per installare Gestione Driver unixODBC per 
 > Eliminare tutti i pacchetti di gestione dei driver installati nel computer prima di installare Gestione driver unixODBC. L'installazione di Gestione driver unixODBC potrebbe interrompere l'esecuzione di un programma di gestione dei driver esistente.  
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>Installazione di Gestione driver per Microsoft ODBC Driver 13, 13.1 e 17
-La dipendenza di Gestione driver viene risolta automaticamente dal sistema di gestione pacchetti quando si installa Microsoft ODBC Driver 17 for SQL Server in Linux o macOS, 13.1 o 13 seguendo le istruzioni riportate in [installazione di Microsoft ODBC Driver per SQL Server in Linux o macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+La dipendenza di Gestione driver viene risolta automaticamente dal sistema di gestione pacchetti quando si installa Microsoft ODBC Driver 13, 13.1 o 17 for SQL Server in Linux o macOS seguendo le istruzioni riportate negli articoli seguenti:
+
+- [Installazione di Microsoft ODBC Driver for SQL Server in Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installazione di Microsoft ODBC Driver for SQL Server in macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>Installazione di Gestione driver per Microsoft ODBC Driver 11 for SQL Server  
 
@@ -57,7 +60,7 @@ Se il computer non può accedere a un sito esterno tramite FTP, scaricare `unixO
 
 7.  Al termine dell'esecuzione dello script, seguire le istruzioni visualizzate per installare Gestione driver unixODBC.
 
-A questo punto si è pronti per l'installazione del driver. Per altre informazioni, vedere [installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
+A questo punto si è pronti per l'installazione del driver. Per altre informazioni, vedere le istruzioni per l'installazione del driver ODBC per [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) o [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Installazione manuale**
 
@@ -81,11 +84,10 @@ Se l'esecuzione dello script di installazione non viene completata, configurare 
   
 9. Al prompt dei comandi (connesso come radice), eseguire il comando: **make install**.  
 
-A questo punto si è pronti per l'installazione del driver. Per altre informazioni, vedere [installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
+A questo punto si è pronti per l'installazione del driver. Per altre informazioni, vedere le istruzioni per l'installazione del driver ODBC per [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) o [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
   
 ## <a name="see-also"></a>Vedere anche
-[Installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-[Problemi noti in questa versione del driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-
-[Note sulla versione](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Installazione di Microsoft ODBC Driver for SQL Server in Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installazione di Microsoft ODBC Driver for SQL Server in macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [Note sulla versione](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

@@ -1,5 +1,6 @@
 ---
 title: Metodi dei report | Microsoft Docs
+description: Questi metodi aggiungono elementi collegati a un database, ottengono il nome di un elemento per un elemento collegato, ottengono gli elementi collegati a un elemento e impostano un elemento del catalogo per un elemento collegato.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284423"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198248"
 ---
 # <a name="linked-reports-methods"></a>Metodi dei report collegati
   Per creare e gestire gli elementi collegati, è possibile utilizzare i metodi seguenti.  

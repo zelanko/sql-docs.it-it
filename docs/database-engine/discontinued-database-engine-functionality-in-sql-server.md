@@ -1,5 +1,6 @@
 ---
-title: Funzionalità del motore di database non più disponibili | Microsoft Docs
+title: Funzionalità del motore di database non più disponibili
+description: Informazioni sulle funzionalità del motore di database non più disponibili in SQL Server 2019 (15.x), SQL Server 2016 (13.x) e versioni precedenti.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258124"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190531"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funzionalità del motore di database sospese in SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssDE](../includes/ssde-md.md)] che non sono più disponibili in [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>Funzionalità sospese in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssqlv15"></a>Funzionalità sospese in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
 - Le seguenti opzioni di configurazione in ambito database sono sospese:
 
@@ -60,7 +61,7 @@ Per le opzioni di configurazione correnti, vedere [ALTER DATABASE SCOPED CONFIGU
 >[!NOTE]
 >Nessuna funzionalità è stata sospesa in [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>Funzionalità sospese in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## <a name="discontinued-features-in-sssql15"></a>Funzionalità sospese in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] è un'applicazione a 64 bit. L'installazione a 32 bit è stata sospesa, ma alcuni elementi vengono eseguiti come componenti a 32 bit.  
 

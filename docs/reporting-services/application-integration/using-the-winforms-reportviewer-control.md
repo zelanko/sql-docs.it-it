@@ -1,6 +1,6 @@
 ---
 title: Usare il controllo Windows Form ReportViewer
-description: Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile usare il controllo Windows Form ReportViewer per eseguirne il rendering in un'applicazione Windows.
+description: Per visualizzare i report distribuiti in un server di report o in un file system locale, è possibile usare il controllo WinForms ReportViewer per eseguirne il rendering in un'applicazione Windows.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796884"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198443"
 ---
 # <a name="use-the-winforms-reportviewer-control"></a>Usare il controllo Windows Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile usare il controllo Windows Form ReportViewer per eseguirne il rendering in un'applicazione Windows.  

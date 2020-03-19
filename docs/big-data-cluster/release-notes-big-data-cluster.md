@@ -5,16 +5,16 @@ description: Questo articolo descrive gli aggiornamenti più recenti e i problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78926106"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286225"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -50,7 +50,7 @@ Questa sezione illustra le piattaforme supportate con i [!INCLUDE[big-data-clust
 
 |Piattaforma|Versioni supportate|
 |---------|---------|
-|`azdata`|La versione secondaria deve corrispondere a quella del server (dell'istanza master di SQL Server).<br/><br/>Eseguire `azdata –-version` per convalidare la versione.<br/><br/>A partire da SQL Server 2019 CU2, questa versione è `15.0.4013`.|
+|`azdata`|La versione secondaria deve corrispondere a quella del server (dell'istanza master di SQL Server).<br/><br/>Eseguire `azdata –-version` per convalidare la versione.<br/><br/>A partire da SQL Server 2019 CU3, questa versione è `15.0.4023`.|
 |Azure Data Studio|Ottenere la build più recente di [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ## <a name="release-history"></a>Cronologia delle versioni
@@ -59,6 +59,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 | Versione               | Versione       | Data di rilascio |
 |-----------------------|---------------|--------------|
+| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 07 gennaio 2020   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 4 novembre 2019   |
@@ -66,6 +67,21 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 ## <a name="how-to-install-updates"></a>Come installare gli aggiornamenti
 
 Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu3"></a> CU3 (marzo 2020)
+
+Aggiornamento cumulativo 3 (CU3) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4023.6.
+
+|Versione pacchetto | Tag dell'immagine |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### <a name="resolved-issues"></a>Problemi risolti
+
+SQL Server 2019 CU3 risolve i problemi seguenti dalle versioni precedenti.
+
+- [Distribuzione con repository privato](#deployment-with-private-repository)
+- [Possibile esito negativo dell'aggiornamento a causa di un timeout](#upgrade-may-fail-due-to-timeout)
 
 ## <a id="cu2"></a> CU2 (feb 2020)
 
@@ -97,6 +113,8 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 
 ### <a name="deployment-with-private-repository"></a>Distribuzione con repository privato
 
+- **Versioni interessate**: GDR1, CU1, CU2. Risolto per CU3.
+
 - **Problema e impatto per i clienti**: L'aggiornamento da un repository privato presenta requisiti specifici
 
 - **Soluzione alternativa**: Se si usa un repository privato per eseguire preventivamente il pull delle immagini per la distribuzione o l'aggiornamento dei cluster Big Data, verificare che le immagini di compilazione correnti e le immagini di compilazione di destinazione si trovino nel repository privato. Questo consente di ripristinare correttamente lo stato precedente, se necessario. Se le credenziali del repository privato sono state modificate dopo la distribuzione originale, poi, aggiornare il segreto corrispondente in Kubernetes prima di eseguire l'aggiornamento. `azdata` non supporta l'aggiornamento delle credenziali tramite `AZDATA_PASSWORD` e le variabili di ambiente `AZDATA_USERNAME`. Aggiornare il segreto tramite [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
@@ -104,6 +122,8 @@ SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilit
 L'aggiornamento tramite repository diversi per le compilazioni correnti e di destinazione non è supportato.
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>Possibile esito negativo dell'aggiornamento a causa di un timeout
+
+- **Versioni interessate**: GDR1, CU1, CU2. Risolto per CU3.
 
 - **Problema e impatto per i clienti**: l'aggiornamento può avere esito negativo a causa di un timeout.
 
@@ -132,7 +152,7 @@ L'aggiornamento tramite repository diversi per le compilazioni correnti e di des
       kubectl edit configmap controller-upgrade-configmap
       ```
 
-   2.   Modificare i campi seguenti:
+   2. Modificare i campi seguenti:
 
        **`controllerUpgradeTimeoutInMinutes`** Indica il numero di minuti di attesa del completamento dell'aggiornamento del controller o del database del controller. Il valore predefinito è 5. Per l'aggiornamento impostare almeno il valore 20.
 
@@ -140,7 +160,7 @@ L'aggiornamento tramite repository diversi per le compilazioni correnti e di des
 
        **`componentUpgradeTimeoutInMinutes`** : Definisce la quantità di tempo disponibile per il completamento di ogni fase successiva dell'aggiornamento.  L'impostazione predefinita è 30. Per l'aggiornamento impostare su 45.
 
-   3.   Salvare e uscire.
+   3. Salvare e uscire.
 
    Lo script Python seguente rappresenta un altro metodo per l'impostazione del timeout:
 

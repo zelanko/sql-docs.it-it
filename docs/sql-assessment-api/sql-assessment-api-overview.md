@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73589135"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946716"
 ---
 # <a name="sql-assessment-api"></a>API Valutazione SQL
 
@@ -71,7 +71,7 @@ Per iniziare, esaminare gli esempi riportati di seguito.
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     È anche possibile usare il cmdlet Get-SqlDatabase per eseguire la stessa operazione.
 
     ```powershell
@@ -83,14 +83,14 @@ Per iniziare, esaminare gli esempi riportati di seguito.
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     È anche possibile usare il cmdlet Get-SqlDatabase per eseguire la stessa operazione.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Richiamare la valutazione per l'istanza e salvare i risultati in una tabella SQL. In questo esempio viene inviato tramite pipe l'output del cmdlet Get-SqlInstance al cmdlet Invoke-SqlAssessment, i cui risultati vengono inviati tramite pipe al cmdlet Write-SqlTableData. Si noti che il cmdlet Invoke-Assessment viene eseguito con il parametro `-FlattenOutput` in questo esempio. Questo parametro rende l'output adatto per il cmdlet Write-SqlTableData. Il secondo genera un errore se si omette il parametro.
+4. Richiamare la valutazione per l'istanza e salvare i risultati in una tabella SQL. In questo esempio viene inviato tramite pipe l'output del cmdlet Get-SqlInstance al cmdlet Invoke-SqlAssessment, i cui risultati vengono inviati tramite pipe al cmdlet Write-SqlTableData. Il cmdlet Invoke-Assessment viene eseguito con il parametro `-FlattenOutput` in questo esempio. Questo parametro rende l'output adatto per il cmdlet Write-SqlTableData. Il secondo genera un errore se si omette il parametro.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -131,7 +131,7 @@ Le regole specifiche hanno soglie che vengono confrontate rispetto al valore cor
 È possibile raggruppare i set di regole aggiungendo uno o più file JSON come parametri alla chiamata API Valutazione SQL. L'organizzazione può scrivere tali file autonomamente o ottenerli da terze parti. Ad esempio, è possibile disporre di un file JSON che disabilita regole specifiche del set di regole Microsoft e di un altro file JSON di un esperto del settore che include regole utili per l'ambiente in uso, seguito da un altro file JSON che modifica alcuni valori di soglia di quello specifico file JSON.
 
 > [!IMPORTANT]  
->  Si consiglia di non usare set di regole provenienti da origini non attendibili finché non vengono esaminati accuratamente per accertarsi che siano sicuri.
+> Si consiglia di non usare set di regole provenienti da origini non attendibili finché non vengono esaminati accuratamente per accertarsi che siano sicuri.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

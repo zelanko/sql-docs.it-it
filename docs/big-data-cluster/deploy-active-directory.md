@@ -2,19 +2,19 @@
 title: Distribuire in modalità Active Directory
 titleSuffix: SQL Server Big Data Cluster
 description: Informazioni su come aggiornare un cluster Big Data di SQL Server in un dominio di Active Directory.
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200962"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190589"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
@@ -174,16 +174,27 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 
 - `security.activeDirectory.domainDnsName`: Nome del dominio, ad esempio `contoso.local`.
 
-- `security.activeDirectory.clusterAdmins`: questo parametro accetta **un solo gruppo di Active Directory**. I membri di questo gruppo otterranno autorizzazioni di amministratore nel cluster. Questo significa che avranno autorizzazioni di amministratore di sistema in SQL Server, autorizzazioni utente con privilegi avanzati in HDFS e autorizzazioni di amministratore nel controller. **Si noti che questo gruppo deve essere presente in Active Directory prima che venga avviata la distribuzione. Si noti anche che questo gruppo non può avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+- `security.activeDirectory.clusterAdmins`: questo parametro accetta un solo gruppo di AD. L'ambito del gruppo di AD deve essere universale o di dominio globale. I membri di questo gruppo ottengono autorizzazioni di amministratore nel cluster. Questo significa che avranno autorizzazioni `sysadmin` in SQL Server, autorizzazioni utente con privilegi avanzati in HDFS e autorizzazioni di amministratore nel controller. 
 
-- `security.activeDirectory.clusterUsers`: elenco dei gruppi di Active Directory che sono utenti normali (senza autorizzazioni di amministratore) nel cluster Big Data. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+  >[!IMPORTANT]
+  >Creare questo gruppo in AD prima dell'avvio della distribuzione. Se l'ambito di questo gruppo di AD è il dominio, la distribuzione locale ha esito negativo.
 
-- `security.activeDirectory.appOwners` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+- `security.activeDirectory.clusterUsers`: elenco dei gruppi di Active Directory che sono utenti normali (senza autorizzazioni di amministratore) nel cluster Big Data. L'elenco può includere gruppi di AD che hanno come ambito i gruppi globali di dominio o universali. Non possono essere gruppi locali al dominio.
 
-- `security.activeDirectory.appReaders` **Parametro facoltativo**: elenco dei gruppi di Active Directory che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. **Si noti che questi gruppi devono essere presenti in Active Directory prima che venga avviata la distribuzione. Si noti anche che questi gruppi non possono avere l'ambito DomainLocal in Active Directory. Un gruppo con ambito locale di dominio causa un errore di distribuzione.**
+  >[!IMPORTANT]
+  >Creare questi gruppi in AD prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
 
-**Come controllare l'ambito del gruppo AD:**
-[fare clic qui per istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) per verificare l'ambito di un gruppo di Active Directory, per determinare se è DomainLocal.
+- `security.activeDirectory.appOwners` **Parametro facoltativo**: elenco dei gruppi di AD che hanno le autorizzazioni necessarie per creare, eliminare ed eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito i gruppi globali di dominio o universali. Non possono essere gruppi locali al dominio.
+
+  >[!IMPORTANT]
+  >Creare questi gruppi in AD prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
+
+- `security.activeDirectory.appReaders` **Parametro facoltativo**: elenco dei gruppi di AD che hanno le autorizzazioni necessarie per eseguire qualsiasi applicazione. L'elenco può includere gruppi di AD che hanno come ambito i gruppi globali di dominio o universali. Non possono essere gruppi locali al dominio.
+
+  >[!IMPORTANT]
+  >Creare questi gruppi in AD prima che venga avviata la distribuzione. Se l'ambito per uno di questi gruppi di AD è locale al dominio, la distribuzione non riesce.
+
+[Controllare l'ambito del gruppo AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) per determinare se è DomainLocal.
 
 Se il file di configurazione della distribuzione non è stato ancora inizializzato, è possibile eseguire questo comando per ottenere una copia della configurazione.
 

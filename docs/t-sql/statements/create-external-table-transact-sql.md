@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831969"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112452"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -103,7 +103,7 @@ In SQL Server l'istruzione CREATE EXTERNAL TABLE crea il percorso e la cartella,
 
 Se si specifica che LOCATION deve essere una cartella, una query PolyBase che effettua selezioni dalla tabella esterna recupererà i file dalla cartella e da tutte le relative sottocartelle. Proprio come Hadoop, PolyBase non restituisce le cartelle nascoste. Inoltre, non restituisce i file il cui nome file inizia con un carattere di sottolineatura (_) o un punto (.).
 
-In questo esempio, se LOCATION='/webdata/', una query PolyBase restituisce le righe da mydata.txt e mydata2.txt. Non restituirà mydata3.txt perché è una sottocartella di una cartella nascosta. Non restituirà _hidden.txt perché è un file nascosto.
+In questo esempio, se LOCATION='/webdata/', una query PolyBase restituisce le righe da mydata.txt e mydata2.txt. Non restituirà mydata3.txt perché è un file in una cartella nascosta. Non restituirà _hidden.txt perché è un file nascosto.
 
 ![Dati ricorsivi per tabelle esterne](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Dati ricorsivi per tabelle esterne")
 
@@ -623,7 +623,7 @@ Specifica l'origine dati esterna (un'origine dati non SQL Server) e un metodo di
 
 DATA_SOURCE La clausola DATA_SOURCE definisce l'origine dati esterna (una mappa partizioni) usata per la tabella esterna. Per un esempio, vedere [Creare tabelle esterne](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME e OBJECT_NAME Le clausole SCHEMA_NAME e OBJECT_NAME eseguono il mapping della definizione della tabella esterna a una tabella in uno schema diverso. Se queste clausole vengono omesse, si presupporrà che lo schema dell'oggetto remoto sia "dbo" e che il relativo nome sia identico al nome della tabella esterna in fase di definizione. Questo è utile se il nome della tabella remota è già in uso nel database in cui si vuole creare la tabella esterna. Ad esempio, si vuole definire una tabella esterna per ottenere una visualizzazione aggregata delle viste del catalogo o delle viste a gestione dinamica (DMV) nel livello dati con scalabilità orizzontale. Poiché le viste del catalogo e le DMV esistono già localmente, non sarà possibile usare i rispettivi nomi per la definizione della tabella esterna. Usare invece un nome diverso e usare il nome della vista del catalogo o della vista DMV nelle clausole SCHEMA_NAME e/o OBJECT_NAME. Per un esempio, vedere [Creare tabelle esterne](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
+SCHEMA_NAME e OBJECT_NAME Le clausole SCHEMA_NAME e OBJECT_NAME eseguono il mapping della definizione della tabella esterna a una tabella in uno schema diverso. Se queste clausole vengono omesse, si presuppone che lo schema dell'oggetto remoto sia "dbo" e che il relativo nome sia identico al nome della tabella esterna in fase di definizione. Questo è utile se il nome della tabella remota è già in uso nel database in cui si vuole creare la tabella esterna. Ad esempio, si vuole definire una tabella esterna per ottenere una visualizzazione aggregata delle viste del catalogo o delle viste a gestione dinamica (DMV) nel livello dati con scalabilità orizzontale. Poiché le viste del catalogo e le DMV esistono già localmente, non sarà possibile usare i rispettivi nomi per la definizione della tabella esterna. Usare invece un nome diverso e usare il nome della vista del catalogo o della vista DMV nelle clausole SCHEMA_NAME e/o OBJECT_NAME. Per un esempio, vedere [Creare tabelle esterne](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 DISTRIBUTION La clausola DISTRIBUTION specifica la distribuzione dei dati usata per questa tabella. Query Processor utilizza le informazioni fornite nella clausola DISTRIBUTION per generare i piani di query più efficienti.
 
@@ -881,7 +881,7 @@ Blocco condiviso per l'oggetto SCHEMARESOLUTION.
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>R. Importazione di dati da ADLS in Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
+### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>R. Importazione di dati da ADLS in Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
 
 ```sql
 

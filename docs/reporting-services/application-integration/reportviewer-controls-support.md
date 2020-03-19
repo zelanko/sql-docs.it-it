@@ -1,6 +1,6 @@
 ---
 title: Supporto per le versioni del controllo Report Viewer
-description: Il controllo Microsoft Report Viewer è compatibile con SQL Server Reporting Services e Server di report di Power BI che seguono i moderni criteri del ciclo di vita del supporto di Microsoft.
+description: Il controllo Microsoft Report Viewer è compatibile con SQL Server Reporting Services e Server di report di Power BI che seguono i moderni criteri del ciclo di vita del supporto.
 author: maggiesMSFT
 ms.custom: ''
 ms.author: maggies
@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 01/09/2019
-ms.openlocfilehash: 66691267ecdd2814cc84b2bfe544acce1d17ae82
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 671aacd4855afe4d4d5d0a8012fe5565420ff3e2
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198488"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Supporto per le versioni Current Branch di Report Viewer
 

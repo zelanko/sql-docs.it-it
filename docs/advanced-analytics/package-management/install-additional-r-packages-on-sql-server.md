@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558371"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027942"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installare nuovi pacchetti R con sqlmlutils
 
@@ -26,7 +26,7 @@ Questo articolo descrive come usare le funzioni incluse in [**sqlmlutils**](http
 > [!NOTE]
 > Per aggiungere pacchetti R in SQL Server non è consigliabile usare il comando `install.packages` standard di R. In alternativa, usare **sqlmlutils**, come descritto in questo articolo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Installare [R](https://www.r-project.org) e [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) nel computer client usato per connettersi a SQL Server. È possibile usare qualsiasi IDE di R per l'esecuzione di script, ma in questo articolo si presuppone che venga usato RStudio.
 
@@ -108,7 +108,7 @@ In un computer con accesso a Internet:
     , @script = N'print(R.version)'
    ```
 
-1. Scaricare la versione più recente del file ZIP di **sqlmlutils** da https://github.com/Microsoft/sqlmlutils/tree/master/R/dist. Non decomprimere il file ZIP. Ad esempio, scaricare il file in `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Scaricare la versione più recente del file ZIP di **sqlmlutils** da [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) (non decomprimere il file ZIP). Ad esempio, scaricare il file in `c:\downloads\sqlmlutils_0.7.1.zip`.
 
 1. Copiare l'intera cartella del repository di **RODBCext** (`c:\downloads\rodbcext`) e il file ZIP di **sqlmlutils** (`c:\downloads\sqlmlutils_0.7.1.zip`) nel computer client. Ad esempio, copiarli nella cartella `c:\temp\packages` del computer client.
 

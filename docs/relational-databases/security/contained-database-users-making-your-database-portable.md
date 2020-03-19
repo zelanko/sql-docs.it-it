@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557886"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375508"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
 
@@ -54,7 +54,7 @@ ms.locfileid: "75557886"
 
  Le regole di Windows Firewall si applicano a tutte le connessioni e producono gli stessi effetti sugli account di accesso (connessioni con modello tradizionale) e sugli utenti di database indipendente. Per altre informazioni su Windows Firewall, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewall
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewall
 
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] consente regole del firewall separate per connessioni a livello di server (account di accesso) e per connessioni a livello di database (utenti di database indipendente). Durante la connessione a un database utente vengono verificate per prime le regole del firewall a livello di database. Se non esistono regole che consentono l'accesso al database, vengono verificate le regole del firewall a livello di server, operazione che richiede l'accesso al database master del server di database SQL. L'uso combinato di regole del firewall a livello di database e utenti di database indipendente consente di non dover accedere al database master del server durante la connessione e implica di conseguenza un miglioramento della scalabilità della connessione.  
   
@@ -74,6 +74,31 @@ ms.locfileid: "75557886"
 |Modello tradizionale|Modello di utente di database indipendente|  
 |-----------------------|-----------------------------------|  
 |Per cambiare la password, nel contesto del database master:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Per cambiare la password, nel contesto del database utente:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+
+### <a name="managed-instance"></a>Istanza gestita
+
+Un'istanza gestita di database SQL di Azure si comporta come SQL Server in locale nel contesto dei database indipendenti. Assicurarsi di modificare il contesto del database dal database master al database utente durante la creazione dell'utente indipendente. Quando si imposta l'opzione di indipendenza, inoltre, non devono essere presenti connessioni attive al database utente. 
+
+Ad esempio: 
+
+```sql
+Use MASTER;
+GO 
+
+ALTER DATABASE Test
+SET containment=partial
+
+
+USE Test;  
+GO  
+CREATE USER Carlo  
+WITH PASSWORD='Enterpwdhere*'  
+
+
+SELECT containment_desc FROM sys.databases
+WHERE name='test'
+```
+
   
 ## <a name="remarks"></a>Osservazioni  
   

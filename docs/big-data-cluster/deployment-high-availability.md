@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a73259663f710cfc5df5dc40745ecda9fdbd8f13
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338105"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286045"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
 
@@ -36,7 +36,7 @@ Ecco alcune delle funzionalità offerte dai gruppi di disponibilità:
   >
 - I database di configurazione Polybase non sono inclusi nel gruppo di disponibilità perché contengono metadati a livello di istanza specifici di ogni replica.
 - Viene effettuato il provisioning automatico di un endpoint esterno per la connessione ai database all'interno del gruppo di disponibilità. Questo endpoint `master-svc-external` ha il ruolo di listener del gruppo di disponibilità.
-- Viene effettuato il provisioning di un secondo endpoint esterno per le connessioni di sola lettura alle repliche secondarie per la scalabilità orizzontale dei carichi di lavoro di lettura.
+- Viene effettuato il provisioning di un secondo endpoint esterno per le connessioni di sola lettura alle repliche secondarie per aumentare il numero di istanze per i carichi di lavoro di lettura.
 
 ## <a name="deploy"></a>Distribuire
 
@@ -201,6 +201,7 @@ Ecco un esempio che mostra come esporre questo endpoint e quindi aggiungere il d
 Limitazioni e problemi noti relativi ai gruppi di disponibilità per l'istanza master di SQL Server nel cluster Big Data:
 
 - Nelle versioni precedenti a SQL Server 2019 CU2 i database creati come risultato di flussi di lavoro diversi da `CREATE DATABASE` e `RESTORE DATABASE`, come `CREATE DATABASE FROM SNAPSHOT`, non vengono aggiunti automaticamente al gruppo di disponibilità. [Connettersi all'istanza ](#instance-connect) e aggiungere manualmente il database al gruppo di disponibilità.
+- Per eseguire correttamente il ripristino di un database abilitato per la funzionalità Transparent Data Encryption da un backup creato in un altro server, è necessario assicurarsi che i [certificati richiesti](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) vengano ripristinati sia nell'istanza master di SQL Server che nel master del gruppo di disponibilità contenuto. Vedere [qui](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) per un esempio di come eseguire il backup e il ripristino dei certificati.
 - Per alcune operazioni come l'esecuzione delle impostazioni di configurazione del server con `sp_configure`, è necessaria una connessione al database `master` dell'istanza di SQL Server, non al database `master` del gruppo di disponibilità. Non è possibile usare l'endpoint primario corrispondente. Seguire [le istruzioni](#instance-connect) per esporre un endpoint e connettersi all'istanza di SQL Server ed eseguire `sp_configure`. È possibile usare l'autenticazione SQL solo quando si espone manualmente l'endpoint per la connessione al database `master` dell'istanza di SQL Server.
 - La configurazione a disponibilità elevata deve essere creata quando viene distribuito il cluster Big Data. Non è possibile abilitare la configurazione a disponibilità elevata con i gruppi di disponibilità dopo la distribuzione.
 - Mentre il database msdb contenuto è incluso nel gruppo di disponibilità e i processi di SQL Agent vengono replicati, i processi non vengono attivati in base alla pianificazione. La soluzione consiste nel [connettersi a ognuna delle istanze di SQL Server](#instance-connect) e creare i processi nel database msdb dell'istanza. A partire da SQL Server 2019 CU2 sono supportati solo i processi creati in ognuna delle repliche dell'istanza master.

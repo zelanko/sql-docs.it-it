@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363240"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285845"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ Always Encrypted consente alle applicazioni client di eseguire la crittografia d
 
 Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 Configurare Always Encrypted nel database. Ciò implica il provisioning di chiavi Always Encrypted e l'impostazione della crittografia per le colonne di database selezionate. Se non è presente un database in cui Always Encrypted è configurato, seguire le istruzioni fornite nel blog di [introduzione a Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particolare, il database deve contenere le definizioni dei metadati per una chiave master della colonna, una chiave di crittografia della colonna e una tabella contenente una o più colonne crittografate con tale chiave di crittografia.
 
@@ -390,12 +390,15 @@ Il driver supporta l'autenticazione ad Azure Key Vault usando i seguenti tipi di
 
 - ID client/Segreto: con questo metodo, le credenziali sono rappresentate da un ID client dell'applicazione e un segreto dell'applicazione.
 
+- Identità gestita (17.5.2 +) - Assegnata dal sistema o dall'utente. Per altre informazioni, vedere [Identità gestite per le risorse di Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/).
+
 Per consentire al driver di usare chiavi master della colonna archiviate in Azure Key Vault per la crittografia di colonna, usare le seguenti parole chiave costituite solo dalla stringa di connessione:
 
 |Tipo di credenziali| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |Nome utente/password| `KeyVaultPassword`|Nome entità utente|Password|
 |ID client/Segreto| `KeyVaultClientSecret`|ID client|Segreto|
+|Identità gestita|`KeyVaultManagedIdentity`|ID oggetto (facoltativo, solo per assegnata dall'utente)|(non specificato)|
 
 #### <a name="example-connection-strings"></a>Esempi di stringhe di connessione
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**Identità gestita (assegnata dal sistema)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**Identità gestita (assegnata dall'utente)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 Non sono necessarie altre modifiche all'applicazione ODBC per usare Azure Key Vault per l'archiviazione di chiavi master della colonna.
+
+> [!NOTE]
+> Il driver contiene un elenco di endpoint AKV attendibili. A partire dalla versione del driver 17.5.2, questo elenco è configurabile: impostare la proprietà `AKVTrustedEndpoints` nel driver o nella chiave del Registro di sistema ODBCINST.INI o ODBC.INI di DSN (Windows) oppure nella sezione del file `odbcinst.ini` o `odbc.ini` (Linux/Mac) in un elenco delimitato da punti e virgola. L'impostazione nel sistema DSN ha la precedenza su un'impostazione nel driver. Se il valore inizia con un punto e virgola, estende l'elenco predefinito. In caso contrario, sostituisce l'elenco predefinito. L'elenco predefinito (fino alla versione 17.5) è `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
 

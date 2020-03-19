@@ -1,5 +1,6 @@
 ---
 title: Metodi del servizio Web ReportServer | Microsoft Docs
+description: I servizi Web ReportServer includono i metodi basati sulle funzionalità del componente fornite tramite gli endpoint del servizio Web esposti tramite le classi generate.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 88a79f66c6cb062dfe563883fbc5fef5eeebfe08
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284654"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198358"
 ---
 # <a name="report-server-web-service-methods"></a>Metodi del servizio Web ReportServer
   I servizi Web ReportServer includono diverse categorie di metodi basate sulle caratteristiche dei componenti. Questi metodi vengono forniti tramite diversi endpoint del servizio Web (tre per la gestione e uno per l'esecuzione dei report) esposti come membri delle classi <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Queste classi possono essere generate tramite uno strumento della classe proxy, ad esempio wsdl.exe incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Per altre informazioni sui servizi Web ReportServer e [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vedere [Compilazione di applicazioni tramite servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

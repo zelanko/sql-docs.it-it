@@ -3,17 +3,17 @@ title: Note sulla versione di SQL Server 2017 in Linux
 description: Questo articolo contiene le note sulla versione e le funzionalità supportate per SQL Server 2017 in esecuzione in Linux. Sono incluse le note sulla versione per la versione più recente e per diverse versioni precedenti.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/14/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 6887026d7aa549af0fef82b007b4034cffaf1d9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952519"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286695"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
@@ -46,6 +46,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 | Versione               | Versione       | Data di rilascio |
 |-----------------------|---------------|--------------|
+| [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
@@ -79,6 +80,20 @@ Se si aggiornano pacchetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 - [Installare il pacchetto di ricerca full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU19"></a> CU19 (febbraio 2020)
+
+Questo è l'aggiornamento cumulativo 19 (CU19) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il numero di questa versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è 14.0.3281.6. Per informazioni sulle correzioni e sui miglioramenti apportati in questa versione, vedere [https://support.microsoft.com/help/4535007](https://support.microsoft.com/help/4535007).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i pacchetti RPM e Debian con le informazioni riportate nella tabella seguente:
+
+| Pacchetto | Versione pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 14.0.3281.6-2 | [Pacchetto RPM del motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto SLES RPM | 14.0.3281.6-2 | [Pacchetto RPM del motore mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm) | 
+| Pacchetto Ubuntu 16.04 Debian | 14.0.3281.6-2 | [Pacchetto Debian del motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3281.6-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3281.6-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3281.6-2_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU18"></a> CU18 (dicembre 2019)
 
@@ -564,7 +579,7 @@ Se si usano condivisioni di rete **NFS (Network File System, file system di rete
   - Autenticazione di Windows
   - Componenti di terze parti
   - Change Data Capture (CDC)
-  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scale Out
+  - Aumentare il numero di istanze di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]
   - Feature Pack di Azure per SSIS
   - Supporto di Hadoop e HDFS
   - Microsoft Connector for SAP BW

@@ -1,5 +1,6 @@
 ---
 title: Metodi di pianificazione | Microsoft Docs
+description: In Reporting Services questi metodi consentono di creare e gestire pianificazioni condivise per l'esecuzione e il recapito di report e piani di aggiornamento della cache usati dal server di report.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 087e2111987de00b347c400ce7255cb7f9eee97e
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284424"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198338"
 ---
 # <a name="scheduling-methods"></a>Metodi di pianificazione
   Questi metodi consentono di creare e gestire pianificazioni condivise per l'esecuzione e il recapito di report e piani di aggiornamento della cache utilizzati dal server di report.  
