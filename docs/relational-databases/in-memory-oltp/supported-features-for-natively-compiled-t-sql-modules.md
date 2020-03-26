@@ -44,7 +44,7 @@ ms.locfileid: "79286665"
 
  Per informazioni complete sui costrutti non supportati e per informazioni su come sopperire ad alcune funzionalità non supportate nei moduli compilati in modo nativo, vedere [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Per altre informazioni su funzionalità non supportate, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="qsancsp"></a> Superficie di attacco delle query nei moduli nativi  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Superficie di attacco delle query nei moduli nativi  
 
 Sono supportati i costrutti delle query indicati di seguito:  
 
@@ -142,7 +142,7 @@ Tuttavia, una costante nella clausola **TOP** assicura prestazioni migliori risp
 Queste limitazioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] non si applicano all'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato nelle tabelle ottimizzate per la memoria.  
 
 
-##  <a name="dml"></a> Modifica dei dati  
+##  <a name="data-modification"></a><a name="dml"></a> Modifica dei dati  
 
 Sono supportate le istruzioni DML seguenti.  
 
@@ -154,7 +154,7 @@ Sono supportate le istruzioni DML seguenti.
 
 -   La clausola WHERE è supportata con le istruzioni UPDATE e DELETE.  
 
-##  <a name="cof"></a> Elementi del linguaggio per il controllo di flusso  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> Elementi del linguaggio per il controllo di flusso  
  Sono supportati i seguenti costrutti degli elementi del linguaggio per il controllo di flusso.  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ Sono supportate le istruzioni DML seguenti.
 
 -   BEGIN ATOMIC (al livello esterno della stored procedure). Per altri dettagli, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="so"></a> Operatori supportati  
+##  <a name="supported-operators"></a><a name="so"></a> Operatori supportati  
  Di seguito vengono elencati gli operatori supportati.  
 
 -   [Operatori di confronto &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (ad esempio >, \<, >= e <=)  
@@ -194,7 +194,7 @@ Sono supportate le istruzioni DML seguenti.
     - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], l'operatore APPLY è supportato in moduli compilati in modo nativo.
 
-##  <a name="bfncsp"></a> Funzioni integrate nei moduli compilati in modo nativo  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Funzioni integrate nei moduli compilati in modo nativo  
  Le seguenti funzioni sono supportate nei vincoli nelle tabelle ottimizzate per la memoria e nei moduli T-SQL compilati in modo nativo.  
 
 -   Tutte le [funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ Sono supportate le istruzioni DML seguenti.
 
 -   Le esecuzioni dei moduli nativi possono essere annidate.
 
-##  <a name="auditing"></a> Controllo  
+##  <a name="auditing"></a><a name="auditing"></a> Controllo  
  Il controllo a livello di routine è supportato nelle stored procedure compilate in modo nativo.  
 
  Per ulteriori informazioni sul controllo, vedere [Creazione di un controllo del server e di una specifica del controllo del database](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="tqh"></a> Hint di tabella e per la query  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> Hint di tabella e per la query  
  Sono supportati gli elementi seguenti:  
 
 -   Gli hint INDEX, FORCESCAN e FORCESEEK, nella sintassi di hint di tabella o nella [clausola OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) della query. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -241,7 +241,7 @@ Sono supportate le istruzioni DML seguenti.
 
  Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="los"></a> Limitazioni relative all'ordinamento  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> Limitazioni relative all'ordinamento  
  È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) può ordinare fino a 8.000 righe, meno se sono presenti join.  
 
  Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) che una [clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe viene visualizzato il messaggio di errore seguente: **Messaggio 41398, livello 16, stato 1, procedura *\<nomeProcedura>* , riga *\<<numeroRiga>* . L'operatore TOP può restituire un massimo di 8192 righe. Il numero richiesto è *\<numero>* .**  
