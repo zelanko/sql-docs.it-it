@@ -185,12 +185,12 @@ GO
 |Simbolo|Significato|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|_n|  
+|LIKE '[\_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d oppure f|  
 |LIKE '[-acdf]'|-, a, c, d oppure f|  
 |LIKE '[ [ ]'|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[_]d%'|abc_d e abc_de|  
+|LIKE 'abc[\_]d%'|abc_d e abc_de|  
 |LIKE 'abc[def]'|abcd, abce e abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Ricerche con la clausola ESCAPE  
@@ -198,7 +198,7 @@ GO
   
  Se dopo un carattere di escape non è presente alcun carattere nel modello LIKE, il modello non è valido e l'operatore LIKE restituisce FALSE. Se il carattere successivo al carattere di escape non è un carattere jolly, il carattere di escape viene eliminato e il carattere successivo viene considerato come un carattere normale nel modello. Questo è valido per il segno di percentuale (%), il carattere di sottolineatura (_) e la parentesi quadra aperta ([) quando questi caratteri jolly sono racchiusi tra doppie parentesi quadre ([ ]). I caratteri di escape possono essere usati all'interno di doppie parentesi quadre ([ ]), anche per eseguire l'escape di un accento circonflesso (^), un trattino (-) o una parentesi quadra chiusa (]).  
   
- 0x0000 (**char(0)**) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in LIKE.  
+ 0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in LIKE.  
   
 ## <a name="examples"></a>Esempi  
   
