@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79c81cafe588fd827ece6184cab5470df8ec4c42
+ms.sourcegitcommit: eef5ab1966062e190dc1cd49409bc0429ba6d1e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67904468"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290848"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Restituisce la configurazione del pool di risorse esterne [!INCLUDE[ssNoVersion]
   
 |Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|ID univoco del pool di risorse. Non ammette i valori Null.<br /><br /> **Nota:** Potrebbe essere rinominato in futuro.|
+|external_pool_id|**int**|ID univoco del pool di risorse. Non ammette i valori Null.|
 |name|**sysname**|Nome del pool di risorse. Non ammette i valori Null.|
 |max_cpu_percent|**int**|Larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|
 |max_memory_percent|**int**|Percentuale di memoria totale del server utilizzabile dalle richieste in questo pool di risorse. Non ammette i valori Null. Il valore massimo effettivo dipende dai valori minimi del pool. Ad esempio, impostando max_memory_percent su 100, il valore massimo effettivo risulta inferiore.|
