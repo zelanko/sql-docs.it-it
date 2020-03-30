@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581737"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS)
@@ -51,11 +51,11 @@ ms.locfileid: "65581737"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
-##  <a name="Viewport"></a> Per modificare la posizione di una legenda rispetto al viewport  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> Per modificare la posizione di una legenda rispetto al viewport  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Per modificare la posizione di una legenda rispetto al viewport  
   
-1.  In visualizzazione Struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina **Proprietà** _\<elemento report>_ .  
+1.  In visualizzazione Struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina _Proprietà\<_ **elemento report>** .  
   
 2.  In **Posizione**fare clic sulla posizione che specifica il punto in cui visualizzare la legenda rispetto al viewport.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65581737"
     > [!NOTE]  
     >  Nell'anteprima, le legende della mappa e la scala dei colori vengono visualizzate solo se sono disponibili i risultati delle regole correlate a tale legenda. Se non vi sono elementi da visualizzare, la legenda non viene mostrata nel report di cui è stato eseguito il rendering.  
   
-##  <a name="MapLegend"></a> Per modificare il layout della legenda di una mappa  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> Per modificare il layout della legenda di una mappa  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>Per modificare il layout della legenda di una mappa  
   
@@ -76,19 +76,19 @@ ms.locfileid: "65581737"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="MapLegendTitle"></a> Per mostrare o nascondere il titolo della legenda di una mappa  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> Per mostrare o nascondere il titolo della legenda di una mappa  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>Per mostrare o nascondere il titolo della legenda di una mappa  
   
 -   Fare clic con il pulsante destro del mouse sulla legenda della mappa nell'area di progettazione e quindi scegliere **Mostra titolo legenda**.  
   
-##  <a name="ColorScaleTitle"></a> Per mostrare o nascondere il titolo della scala dei colori  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> Per mostrare o nascondere il titolo della scala dei colori  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>Per mostrare o nascondere il titolo della scala dei colori  
   
 -   Fare clic con il pulsante destro del mouse sulla scala dei colori nell'area di progettazione e quindi scegliere **Mostra titolo scala dei colori**.  
   
-##  <a name="MoveItems"></a> Per spostare elementi all'esterno della prima legenda  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> Per spostare elementi all'esterno della prima legenda  
  Creare il numero di legende aggiuntive desiderato, quindi aggiornare le regole per ogni livello mappa per specificare in quale legenda visualizzare i risultati delle regole.  
   
 #### <a name="to-create-a-new-legend"></a>Per creare una nuova legenda  
@@ -109,7 +109,7 @@ ms.locfileid: "65581737"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TemplateStyle"></a> Per variare i colori degli elementi della mappa in base a uno stile modello  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> Per variare i colori degli elementi della mappa in base a uno stile modello  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>Per variare i colori degli elementi della mappa in base a uno stile modello  
   
@@ -123,7 +123,7 @@ ms.locfileid: "65581737"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorPalette"></a> Per variare i colori degli elementi della mappa in base a una tavolozza colori  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> Per variare i colori degli elementi della mappa in base a una tavolozza colori  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>Per variare i colori degli elementi della mappa in base a una tavolozza colori  
   
@@ -141,7 +141,7 @@ ms.locfileid: "65581737"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorRanges"></a> Per variare i colori degli elementi della mappa in base a intervalli di colori  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> Per variare i colori degli elementi della mappa in base a intervalli di colori  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>Per variare i colori degli elementi della mappa in base a intervalli di colori  
   
@@ -163,7 +163,7 @@ ms.locfileid: "65581737"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="CustomColors"></a> Per variare i colori degli elementi della mappa in base a colori personalizzati  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> Per variare i colori degli elementi della mappa in base a colori personalizzati  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>Per variare i colori degli elementi della mappa in base a colori personalizzati  
   
@@ -181,7 +181,7 @@ ms.locfileid: "65581737"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DistributionOptions"></a> Per impostare opzioni di distribuzione per una legenda  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> Per impostare opzioni di distribuzione per una legenda  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>Per impostare opzioni di distribuzione per una legenda  
   
@@ -213,13 +213,13 @@ ms.locfileid: "65581737"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="RuleLegend"></a> Per modificare il contenuto di una legenda di regole  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> Per modificare il contenuto di una legenda di regole  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>Per modificare il contenuto di una legenda di tipo dimensioni, spessore o tipo di marcatore  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_ .  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _Regola\<_ **tipo di elemento mappa>** .  
   
 3.  Verificare che l'opzione **Visualizza dati tramite** \<*tipo di regola*> sia selezionata.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "65581737"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorScale"></a> Per modificare il contenuto della scala dei colori  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> Per modificare il contenuto della scala dei colori  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>Per modificare il contenuto della legenda della scala dei colori o dei colori  
   
@@ -255,26 +255,26 @@ ms.locfileid: "65581737"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="HideItems"></a> Per rimuovere tutti gli elementi da una legenda  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> Per rimuovere tutti gli elementi da una legenda  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>Per nascondere elementi in base a una regola  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_ .  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _Regola\<_ **tipo di elemento mappa>** .  
   
 3.  Fare clic su **Legenda**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ChangeFormatItems"></a> Per modificare il formato del contenuto in una legenda  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> Per modificare il formato del contenuto in una legenda  
  Impostare le opzioni legenda per la regola associata alla legenda della mappa.  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>Per modificare il formato del contenuto in una legenda  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_ .  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _Regola\<_ **tipo di elemento mappa>** .  
   
 3.  Fare clic su **Legenda**.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "65581737"
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

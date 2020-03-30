@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994288"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Recupero di una sola riga utilizzando IRow
@@ -31,7 +31,7 @@ ms.locfileid: "67994288"
 
   L'implementazione dell'interfaccia **IRow** in OLE DB Driver per SQL Server è semplificata per migliorare le prestazioni. **IRow** consente l'accesso diretto alle colonne di un singolo oggetto riga. Se si prevede che il risultato dell'esecuzione di un comando produca esattamente una riga, **IRow** recupererà le colonne della riga in questione. Se il set di risultati include più righe, **IRow** esporrà solo la prima.  
   
- L'implementazione dell'interfaccia **IRow** non consente la navigazione all'interno della riga. È possibile accedere a ogni colonna della riga solo una volta con un'eccezione: è possibile accedere a una colonna una volta per trovare le dimensioni della colonna e di nuovo per recuperare i dati.  
+ L'implementazione dell'interfaccia **IRow** non consente la navigazione all'interno della riga. A ogni colonna della riga è possibile accedere una sola volta, con un'eccezione. È infatti possibile accedere a una colonna una volta per trovarne le dimensioni e una seconda volta per recuperare i dati.  
   
 > [!NOTE]  
 >  **IRow::Open** supporta solo i tipi DBGUID_STREAM e DBGUID_NULL di oggetti da aprire.  

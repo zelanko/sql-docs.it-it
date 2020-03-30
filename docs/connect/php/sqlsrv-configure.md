@@ -17,10 +17,10 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935808"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
@@ -38,7 +38,7 @@ sqlsrv_configure( string $setting, mixed $value )
 #### <a name="parameters"></a>Parametri  
 *$setting*: nome dell'impostazione da configurare. Vedere la tabella sottostante per un elenco delle impostazioni.  
   
-*$value*: valore da applicare all'impostazione specificata nel parametro *$setting*. I valori possibili per questo parametro dipendono dall'impostazione specificata. Nella tabella seguente sono elencate le combinazioni possibili:  
+*$value*: valore da applicare all'impostazione specificata nel parametro *$setting* . I valori possibili per questo parametro dipendono dall'impostazione specificata. Nella tabella seguente sono elencate le combinazioni possibili:  
   
 |Impostazione|Valori possibili per il parametro $value (equivalente Integer tra parentesi)|Valore predefinito|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
@@ -55,7 +55,7 @@ Se viene eseguita una chiamata a **sqlsrv_configure** con un'impostazione o un v
   
 (2) Per altre informazioni sull'attività di registrazione, vedere [Attività di registrazione](../../connect/php/logging-activity.md).  
   
-(3) Per altre informazioni sulla configurazione della gestione di errori e avvisi, vedere [Procedura: Configurare la gestione degli errori e degli avvisi usando il driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
+(3) Per altre informazioni sulla configurazione della gestione degli errori e degli avvisi, vedere [Procedura: Configurare la gestione degli errori e degli avvisi usando il driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
