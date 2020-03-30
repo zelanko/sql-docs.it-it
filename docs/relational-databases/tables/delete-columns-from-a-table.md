@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68088457"
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminare le colonne da una tabella
@@ -46,21 +46,21 @@ In questo argomento viene descritta la modalità di eliminazione delle colonne t
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare
 
-### <a name="Restrictions"></a> Limitazioni e restrizioni
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni
 
 Non è possibile eliminare una colonna che dispone di un vincolo CHECK. È necessario eliminare prima questo vincolo.
 
 Non è possibile eliminare una colonna che dispone di vincoli PRIMARY KEY o FOREIGN KEY o altre dipendenze a parte quando si utilizza Progettazione tabelle. Quando si utilizza Esplora oggetti o [!INCLUDE[tsql](../../includes/tsql-md.md)], è necessario prima rimuovere tutte le dipendenze sulla colonna.
 
-### <a name="Security"></a> Sicurezza
+### <a name="security"></a><a name="Security"></a> Sicurezza
 
-#### <a name="Permissions"></a> Autorizzazioni
+#### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 È necessario disporre dell'autorizzazione ALTER per la tabella.
 
-## <a name="SSMSProcedure"></a> Con SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>Per eliminare le colonne utilizzando Esplora oggetti.
 
@@ -77,7 +77,7 @@ Se la colonna contiene vincoli o altre dipendenze, un messaggio di errore sarà 
 2. Fare clic con il pulsante destro del mouse sulla colonna che si vuole eliminare e scegliere **Elimina colonna** dal menu di scelta rapida.
 3. Se la colonna fa parte di una relazione (FOREIGN KEY o PRIMARY KEY), verrà visualizzato un messaggio in cui viene chiesto di confermare l'eliminazione delle colonne selezionate e delle corrispondenti relazioni. Scegliere **Sì**.
 
-## <a name="TsqlProcedure"></a> Con Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
 
 ### <a name="to-delete-columns"></a>Per eliminare le colonne
 

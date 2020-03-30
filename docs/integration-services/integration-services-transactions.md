@@ -16,10 +16,10 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90855baaa61e242488a7fb6a91a52e34d77e5f48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284406"
 ---
 # <a name="integration-services-transactions"></a>Transazioni di Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "71284406"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Nei pacchetti vengono utilizzate transazioni per l'associazione di azioni del database eseguite dalle attività in unità atomiche in modo da mantenere l'integrità dei dati. Tutti i tipi di contenitori di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ovvero pacchetti, ciclo For, ciclo Foreach, contenitori Sequenza, nonché gli host di attività in cui è incapsulata ogni attività, possono essere configurati per l'uso delle transazioni. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include tre opzioni per la configurazione delle transazioni: **NotSupported**, **Supported** e **Required**.  
+  Nei pacchetti vengono utilizzate transazioni per l'associazione di azioni del database eseguite dalle attività in unità atomiche in modo da mantenere l'integrità dei dati. Tutti i tipi di contenitori di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ovvero pacchetti, ciclo For, ciclo Foreach, contenitori Sequenza, nonché gli host di attività in cui è incapsulata ogni attività, possono essere configurati per l'uso delle transazioni. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tre opzioni per la configurazione delle transazioni: **NotSupported**, **Supported**e **Required**.  
   
 -   L'opzione**Required** indica che il contenitore avvia una transazione, a meno che il contenitore padre non abbia già avviato un'altra transazione. In questo caso, il contenitore parteciperà alla transazione in corso. Si supponga, ad esempio, che un pacchetto includa un contenitore Sequenza con l'opzione **Required** . Se il pacchetto non è stato configurato per il supporto di transazioni, il contenitore avvierà la propria transazione. Se per il pacchetto è stata impostata l'opzione **Required** , il contenitore Sequenza parteciperà alla transazione del pacchetto.  
   

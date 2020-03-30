@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112864"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usa l'algoritmo di crittografia AES per proteggere la chiave master del servizio (SMK) e la chiave master del database (DMK). AES è un algoritmo di crittografia più recente rispetto a 3DES utilizzato nelle versioni precedenti. Dopo aver aggiornato un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le chiavi SMK e DMK devono essere rigenerate per aggiornare le chiavi master ad AES. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
-##  <a name="_changing"></a> Modifica dell'account del servizio SQL Server  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> Modifica dell'account del servizio SQL Server  
  Per modificare l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per gestire una modifica dell'account del servizio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia una copia ridondante della chiave master del servizio protetta dall'account del computer che ha le autorizzazioni necessarie concesse al gruppo di servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il computer viene ricompilato, lo stesso utente di dominio utilizzato in precedenza dall'account del servizio può recuperare la chiave master del servizio. Questa operazione non è possibile con gli account locali o con l'account di sistema locale, Servizio locale o Servizio di rete. Quando si sposta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un altro computer, eseguire la migrazione della chiave master del servizio usando la procedura di backup e ripristino.  
   
  L'istruzione REGENERATE consente di rigenerare la chiave master del servizio. In seguito alla rigenerazione della chiave master del servizio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decrittografa tutte le chiavi crittografate con tale chiave e quindi le crittografa con la nuova chiave master del servizio. Si tratta di un'operazione che utilizza molte risorse e pertanto dovrebbe essere pianificata in periodi di carico ridotto, a meno che la chiave non sia stata compromessa. In caso di esito negativo di una qualsiasi delle operazioni di decrittografia, l'intera istruzione avrà esito negativo.  

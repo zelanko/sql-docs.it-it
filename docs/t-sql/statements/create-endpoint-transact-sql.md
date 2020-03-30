@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902831"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67902831"
   
      In questa parte viene definito il payload supportato dall'endpoint. I tipi di payload supportati sono [!INCLUDE[tsql](../../includes/tsql-md.md)], SERVICE BROKER e DATABASE MIRRORING. In questa parte è inoltre possibile includere informazioni specifiche della lingua.  
   
-> **NOTA** I servizi Web XML nativi (endpoint SOAP/HTTP) sono stati rimossi in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **Nota:** i servizi Web XML nativi (endpoint SOAP/HTTP) sono stati eliminati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62c5a0400918ffe86cca4ec9ff98dd9254d29621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294345"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gestione connessione SQL Server Compact Edition

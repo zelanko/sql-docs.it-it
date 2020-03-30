@@ -21,10 +21,10 @@ ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48c645bd85034f226650cf5e98ddd18a6b8efa9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997982"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Eseguire il mapping delle porte TCP/IP ai nodi NUMA (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "67997982"
 > [!NOTE]  
 >  Per abilitare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'ascolto su più porte TCP per ogni indirizzo IP, vedere [Configurazione del Motore di database per l'attesa su più porte TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>Per eseguire il mapping di una porta TCP/IP a un nodo NUMA  
   

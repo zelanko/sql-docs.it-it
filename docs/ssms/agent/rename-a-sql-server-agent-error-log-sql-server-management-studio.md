@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce14a8ff4714d49fe6f43f8bc292cf3061e900e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254452"
 ---
 # <a name="rename-a-sql-server-agent-error-log"></a>Rinominare un log degli errori di SQL Server Agent
@@ -32,17 +32,17 @@ ms.locfileid: "75254452"
 
 Questo argomento descrive come rinominare il file in cui vengono scritti gli errori di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Restrictions"></a>Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitazioni e restrizioni  
   
 -   In Esplora oggetti viene visualizzato il nodo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent solo se si dispone dell'autorizzazione per utilizzarlo.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vengono scritti nel nuovo file solo dopo il riavvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorizzazioni  
 Per la corretta esecuzione delle funzioni, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia configurato per utilizzare le credenziali di un account membro del ruolo predefinito del server **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'account deve disporre delle autorizzazioni di Windows seguenti:  
   
 -   Accesso come servizio (SeServiceLogonRight)  
@@ -55,7 +55,7 @@ Per la corretta esecuzione delle funzioni, è necessario che [!INCLUDE[ssNoVersi
   
 Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) e [Impostazione di account di servizio Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-rename-a-sql-server-agent-error-log"></a>Per rinominare un log degli errori di SQL Server Agent  
   

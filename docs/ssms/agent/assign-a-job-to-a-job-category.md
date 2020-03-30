@@ -20,10 +20,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4f4efb07aaa9264a74eeebe4f432d4e4351cefe1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252699"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Assegnare un processo a una categoria di processi
@@ -37,12 +37,12 @@ Questo argomento descrive come assegnare processi di [!INCLUDE[msCoName](../../i
   
 Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È possibile assegnare processi a categorie predefinite, oppure creare una categoria definita dall'utente e usarla per l'assegnazione dei processi.  
 
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
@@ -58,7 +58,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 6.  Fare clic su **OK**.  
   
-## <a name="TSQL"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
@@ -80,7 +80,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 Per altre informazioni, vedere [sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
   
-## <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 **Per assegnare un processo a una categoria di processi**  
   
 Usare la classe **JobCategory** con un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell.  

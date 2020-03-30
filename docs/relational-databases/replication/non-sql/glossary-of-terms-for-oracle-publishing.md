@@ -13,10 +13,10 @@ ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ac643b3c0c095dee143c3feca878bd4072273bb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67901104"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossario dei termini per la pubblicazione Oracle
@@ -39,7 +39,7 @@ ms.locfileid: "67901104"
  Oggetto di database utilizzato per generare numeri univoci. Le sequenze vengono utilizzate nella replica per ordinare le modifiche apportate alle tabelle pubblicate.  
   
 #### <a name="sqlplus"></a>SQL\*Plus  
- Applicazione utilizzata per l'accesso e l'esecuzione di query in database Oracle. È simile a **sqlcmd** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Applicazione utilizzata per l'accesso e l'esecuzione di query in database Oracle. È simile a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sqlcmd**di**.  
   
 #### <a name="synonym"></a>Sinonimo  
  Alias di un oggetto. Lo speciale sinonimo public **MSSQLSERVERDISTRIBUTOR** viene creato automaticamente quando viene configurato un server di pubblicazione Oracle. Il sinonimo fa riferimento alla tabella **HREPL_Distributor** e garantisce un puntatore logico al server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che gestisce il server di pubblicazione.  

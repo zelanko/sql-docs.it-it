@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042534"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo di dati geography)

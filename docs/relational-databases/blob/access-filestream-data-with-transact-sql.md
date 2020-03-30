@@ -13,10 +13,10 @@ ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041229"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Accedere a Dati FILESTREAM con Transact-SQL
@@ -26,7 +26,7 @@ ms.locfileid: "68041229"
 > [!NOTE]  
 >  Gli esempi riportati in questo argomento richiedono il database e la tabella abilitati per FILESTREAM creati in [Creare un database abilitato per FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md) e [Creare una tabella per archiviare dati FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md).  
   
-##  <a name="ins"></a> Inserimento di una riga che contiene dati FILESTREAM  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> Inserimento di una riga che contiene dati FILESTREAM  
  Per aggiungere una riga a una tabella che supporta i dati FILESTREAM, utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Quando si inseriscono dati in una colonna FILESTREAM, è possibile inserire NULL o un valore **varbinary(max)** .  
   
 ### <a name="inserting-null"></a>Inserimento di NULL  
@@ -53,7 +53,7 @@ ms.locfileid: "68041229"
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
   
-##  <a name="upd"></a> Aggiornamento di dati FILESTREAM  
+##  <a name="updating-filestream-data"></a><a name="upd"></a> Aggiornamento di dati FILESTREAM  
  Per aggiornare i dati in file del file system, è possibile usare [!INCLUDE[tsql](../../includes/tsql-md.md)] , sebbene sia preferibile evitare questa procedura quando si devono trasmettere elevate quantità di dati a un file.  
   
  Nel seguente esempio il testo nel record del file viene sostituito con il testo `Xray 1`.  
@@ -61,7 +61,7 @@ ms.locfileid: "68041229"
  [!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]  
   
   
-##  <a name="del"></a> Eliminazione di dati FILESTREAM  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> Eliminazione di dati FILESTREAM  
  Quando si elimina una riga che contiene un campo FILESTREAM, vengono eliminati anche i file del file system sottostanti. L'unico modo per eliminare una riga e pertanto il file è l'utilizzo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE.  
   
  Nell'esempio seguente viene descritta l'eliminazione di una riga e dei file del file system associati.  

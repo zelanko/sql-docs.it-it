@@ -9,10 +9,10 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e2d6986e4bed1876854c0c78b596746be5dc758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082186"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Raccolte predefinite- Riferimenti alla raccolta dei parametri (Generatore report)
@@ -25,7 +25,7 @@ ms.locfileid: "77082186"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Single"></a> Utilizzo di un parametro a valore singolo in un'espressione  
+##  <a name="using-a-single-valued-parameter-in-an-expression"></a><a name="Single"></a> Utilizzo di un parametro a valore singolo in un'espressione  
  Nella tabella seguente sono riportati esempi della sintassi da utilizzare quando si include in un'espressione un riferimento a un parametro a valore singolo di un tipo di dati qualsiasi.  
   
 |Esempio|Descrizione|  
@@ -39,7 +39,7 @@ ms.locfileid: "77082186"
   
  Per altre informazioni sull'uso dei parametri in un filtro, vedere [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
-##  <a name="Multi"></a> Utilizzo di un parametro multivalore in un'espressione  
+##  <a name="using-a-multivalue-parameter-in-an-expression"></a><a name="Multi"></a> Utilizzo di un parametro multivalore in un'espressione  
  Nella tabella seguente sono riportati esempi della sintassi da utilizzare quando si include in un'espressione un riferimento a un parametro multivalore di un tipo di dati qualsiasi.  
   
 |Esempio|Descrizione|  

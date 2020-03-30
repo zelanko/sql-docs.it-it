@@ -25,10 +25,10 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 565252bee563fc0808a5ada6b515606c35f42187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296952"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Estensione del flusso di dati con il componente script

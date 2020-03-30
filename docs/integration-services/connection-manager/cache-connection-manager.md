@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294451"
 ---
 # <a name="cache-connection-manager"></a>gestione connessione della cache
@@ -67,7 +67,7 @@ ms.locfileid: "71294451"
   
  La finestra di dialogo **Editor gestione connessione della cache** include le schede seguenti:  
   
-###  <a name="generaltab"></a> Scheda Generale  
+###  <a name="general-tab"></a><a name="generaltab"></a> Scheda Generale  
  Usare la scheda **Generale** della finestra di dialogo **Editor gestione connessione della cache** per indicare se leggere la cache da un file o salvare la cache in un file.  
   
 #### <a name="options"></a>Opzioni  
@@ -98,7 +98,7 @@ ms.locfileid: "71294451"
  **Aggiorna metadati**  
  Eliminare i metadati della colonna nella Gestione connessione cache e ripopolare la Gestione connessione cache con i metadati della colonna da un file di cache selezionato.  
   
-###  <a name="columnstab"></a> Scheda Colonne  
+###  <a name="columns-tab"></a><a name="columnstab"></a> Scheda Colonne  
  Utilizzare la scheda **Colonne** della finestra di dialogo **Editor gestione connessione cache** per configurare le proprietà di ciascuna colonna nella cache.  
   
 #### <a name="options"></a>Opzioni  

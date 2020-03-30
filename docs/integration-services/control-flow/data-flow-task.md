@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298350"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
@@ -90,7 +90,7 @@ ms.locfileid: "71298350"
   
  Per molti eventi vengono scritte più voci nel log e i messaggi relativi a numerose voci di log contengono dati complessi. Per semplificare la comprensione e la comunicazione del contenuto dei messaggi complessi, è possibile analizzare il testo dei messaggi. In base alla posizione dei log, è possibile utilizzare istruzioni Transact-SQL o un componente script per separare il testo complesso in colonne o altri formati che si ritengono più utili.  
   
- Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", analizzato in colonne. Il messaggio è stato scritto dall'evento **OnPipelineRowsSent** quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
+ Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", scomposto in colonne. Il messaggio è stato scritto dall'evento **OnPipelineRowsSent** quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
 |Colonna|Descrizione|valore|  
 |------------|-----------------|-----------|  

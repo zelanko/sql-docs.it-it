@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296298"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Access (Importazione/Esportazione guidata SQL Server)
@@ -71,7 +71,7 @@ Se Access non è incluso nell'elenco delle origini dati, controllare se è in es
 > [!NOTE]
 > Per usare la versione a 64 bit dell'Importazione/Esportazione guidata SQL Server, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installano solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
 
-## <a name="officeDownloads"></a>Ottenere i file necessari per connettersi ad Access  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>Ottenere i file necessari per connettersi ad Access  
 Se non sono già stati installati, potrebbe essere necessario scaricare i componenti di connettività per le origini dati Microsoft Office, incluse le origini dati Access ed Excel. Scaricare la versione più recente dei componenti di connettività per i file Excel e Access qui: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 La versione più recente dei componenti può aprire file creati da versioni precedenti di Access.
@@ -82,7 +82,7 @@ Se si ha un abbonamento a Office 365, assicurarsi di scaricare Access Database E
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> File di database protetto da password
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> File di database protetto da password
 In alcuni casi il database Access è protetto da password ma non usa alcun file di informazioni sul gruppo di lavoro. È necessario che tutti gli utenti immettano la stessa password ma non è necessario che immettano un nome utente. Per specificare una password di database, eseguire le operazioni seguenti.
 
 1.  Nella pagina **Scelta origine dati** o **Scelta destinazione** fare clic sul pulsante **Avanzate** per aprire la finestra di dialogo **Proprietà di Data Link**.  

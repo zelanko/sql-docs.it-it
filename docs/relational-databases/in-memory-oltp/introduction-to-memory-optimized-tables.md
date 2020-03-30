@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050206"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduzione alle tabelle con ottimizzazione per la memoria
@@ -71,7 +71,7 @@ I seguenti fattori influiranno sui miglioramenti delle prestazioni che possono e
   
 *Comunicazione:* Il miglioramento delle prestazioni per un'applicazione con molte chiamate a stored procedure brevi può risultare inferiore rispetto a un'applicazione con meno chiamate e più funzionalità implementate in ogni stored procedure.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] Esecuzione:* In OLTP in memoria si ottengono le migliori prestazioni quando si utilizzano le stored procedure compilate in modo nativo anziché le stored procedure interpretate o l'esecuzione delle query. L'accesso alle tabelle ottimizzate per la memoria da queste stored procedure può essere vantaggioso.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] :* In OLTP in memoria si ottengono le migliori prestazioni quando si usano le stored procedure compilate in modo nativo anziché le stored procedure interpretate o l'esecuzione delle query. L'accesso alle tabelle ottimizzate per la memoria da queste stored procedure può essere vantaggioso.  
   
 *Analisi dell'intervallo e ricerca di punti:* Gli indici non cluster con ottimizzazione per la memoria supportano le analisi di intervalli e le analisi ordinate. Per le ricerche a punti, gli indici hash ottimizzati per la memoria offrono prestazioni migliori rispetto agli indici non cluster ottimizzati per la memoria. Gli indici non cluster con ottimizzazione per la memoria offrono prestazioni migliori rispetto agli indici basati su disco.
 
@@ -80,9 +80,9 @@ I seguenti fattori influiranno sui miglioramenti delle prestazioni che possono e
   - e gli indici non cluster.
   - Gli indici columnstore sono analizzabili in parallelo dall'inizio in SQL Server 2014.
   
-*Operazioni sugli indici:* Le operazioni sugli indici non vengono registrate e sono presenti solo in memoria.  
+*Operazioni sugli indici:* le operazioni sugli indici non vengono registrate e sono presenti solo in memoria.  
   
-*Concorrenza:* Le prestazioni di applicazioni interessate dalla concorrenza a livello di motore, ad esempio la contesa di latch o il blocco, migliorano significativamente quando l'applicazione viene spostata in OLTP in memoria.  
+*Concorrenza:* le prestazioni di applicazioni interessate dalla concorrenza a livello di motore, ad esempio la contesa di latch o il blocco, migliorano significativamente quando l'applicazione viene spostata in OLTP in memoria.  
   
 Nella tabella seguente sono elencati i problemi relativi a prestazioni e scalabilità presenti in genere nei database relazionali e viene descritto in che modo OLTP in memoria può consentire il miglioramento delle prestazioni.  
   
@@ -91,7 +91,7 @@ Nella tabella seguente sono elencati i problemi relativi a prestazioni e scalabi
 |Prestazioni<br /><br /> Utilizzo elevato delle risorse (CPU, I/O, rete o memoria).|CPU<br /> Le stored procedure compilate in modo nativo possono ridurre in modo significativo l'utilizzo della CPU perché richiedono un numero decisamente inferiore di istruzioni per eseguire un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] rispetto alle stored procedure interpretate.<br /><br /> OLTP in memoria può ridurre l'investimento hardware nei carichi di lavoro con scalabilità orizzontale, in quanto un server può potenzialmente fornire la velocità effettiva di cinque/dieci server.<br /><br /> I/O<br /> Se si verifica un collo di bottiglia a livello di I/O in seguito all'elaborazione di pagine di dati o di indice, in OLTP in memoria il collo di bottiglia potrebbe risultare contenuto. Inoltre, il checkpoint degli oggetti di OLTP in memoria è continuo e non genera aumenti improvvisi nelle operazioni di I/O. Se tuttavia il working set delle tabelle critiche per le prestazioni eccede la memoria disponibile, OLTP in memoria non sarà in grado di migliorare le prestazioni in quanto è necessario che i dati siano residenti in memoria. Se si verifica un collo di bottiglia a livello di I/O durante la registrazione, OLTP in memoria può ridurre il collo di bottiglia perché richiede meno attività di registrazione. Se una o più tabelle ottimizzate per la memoria sono configurate come tabelle non durevoli, è possibile eliminare la registrazione dei dati.<br /><br /> Memoria<br /> Con OLTP in memoria non si ottiene alcun vantaggio in termini di prestazioni. È possibile che OLTP in memoria comporti un utilizzo elevato di memoria, in quando gli oggetti devono essere residenti in memoria.<br /><br /> Rete<br /> Con OLTP in memoria non si ottiene alcun vantaggio in termini di prestazioni. I dati devo essere comunicati dal livello dati al livello applicazione.|  
 |Scalabilità<br /><br /> La maggior parte dei problemi di scalabilità nelle applicazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è causata da problemi di concorrenza, ad esempio la contesa in blocchi, latch e spinlock.|Contesa di latch<br /> Uno scenario tipico riguarda la contesa nell'ultima pagina di un indice quando vengono inserite contemporaneamente righe nell'ordine delle chiavi. Poiché in OLTP in memoria non vengono utilizzati latch per l'accesso ai dati, i problemi di scalabilità correlati alle contese di latch vengono completamente rimossi.<br /><br /> Contesa di spinlock<br /> Poiché in OLTP in memoria non vengono utilizzati latch per l'accesso ai dati, i problemi di scalabilità correlati alle contese di spinlock vengono completamente rimossi.<br /><br /> Contesa correlata al blocco<br /> Se nell'applicazione di database vengono rilevati problemi di blocco tra operazioni di lettura e scrittura, con OLTP in memoria vengono rimossi i problemi che impediscono di proseguire perché è previsto l'utilizzo di una nuova forma di controllo della concorrenza ottimistica per implementare tutti i livelli di isolamento delle transazioni. In OLTP in memoria, TempDB non viene utilizzato per l'archiviazione delle versioni di riga.<br /><br /> Se il problema di scalabilità è determinato dal conflitto tra due operazioni di scrittura, ad esempio due transazioni simultanee che tentano di aggiornare la stessa riga, OLTP in memoria consente il completamento di una transazione e genera un errore per l'altra. La transazione non riuscita deve essere inviata di nuovo in modo esplicito o implicito, ripetendone l'esecuzione. In entrambi i casi è necessario apportare modifiche all'applicazione.<br /><br /> Se nell'applicazione si verificano frequenti conflitti tra due operazioni di scrittura, il valore del blocco ottimistico viene ridotto. L'applicazione non è appropriata per OLTP in memoria. La maggior parte delle applicazioni OLTP non presenta conflitti di scrittura, a meno che il conflitto non venga attivato da escalation blocchi.|  
   
-##  <a name="rls"></a> Sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria  
+##  <a name="row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria  
 
 La[Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) è supportata per le tabelle ottimizzate per la memoria. L'applicazione dei criteri di sicurezza a livello di riga alle tabelle ottimizzate per la memoria corrisponde essenzialmente alle tabelle basate su disco, ad eccezione del fatto che le funzioni con valori di tabella inline usate come predicati di sicurezza devono essere compilate in modo nativo, ovvero create con l'opzione WITH NATIVE_COMPILATION. Per informazioni dettagliate, vedere la sezione [Compatibilità tra funzionalità](../../relational-databases/security/row-level-security.md#Limitations) e l'argomento [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) .  
   

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68116485"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
@@ -68,7 +68,7 @@ Il set di risultati per una tabella è il seguente.
 |pdw_node_id|INT|Nodo di calcolo usato per i report relativi all'uso dello spazio.||  
 |distribution_id|INT|Distribuzione usata per i report relativi all'uso dello spazio.|Il valore è -1 per le tabelle replicate.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>R. Sintassi di base di DBCC PDW_SHOWSPACEUSED  
 Gli esempi seguenti illustrano i diversi modi di visualizzare il numero di righe, lo spazio su disco riservato e lo spazio su disco usato dalla tabella FactInternetSales nel database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   

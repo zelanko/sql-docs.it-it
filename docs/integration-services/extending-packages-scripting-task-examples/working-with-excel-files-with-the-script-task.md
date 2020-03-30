@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286572"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
@@ -36,7 +36,7 @@ ms.locfileid: "71286572"
 > [!TIP]  
 >  Se si desidera creare un'attività da riusare con più pacchetti, è possibile usare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
 
-##  <a name="configuring"></a> Configurazione di un pacchetto per testare gli esempi  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> Configurazione di un pacchetto per testare gli esempi  
  È possibile configurare un singolo pacchetto per testare tutti gli esempi riportati in questo argomento. Negli esempi vengono utilizzate molte variabili del pacchetto e classi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Per configurare un pacchetto per l'utilizzo con gli esempi di questo argomento  
@@ -69,7 +69,7 @@ ms.locfileid: "71286572"
   
 5.  Impostare il linguaggio di scripting predefinito per il componente Script usando l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni**. Per ulteriori informazioni, vedere [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descrizione dell'esempio 1: verificare l'esistenza di un file di Excel  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> Descrizione dell'esempio 1: verificare l'esistenza di un file di Excel  
  In questo esempio viene determinato se il file della cartella di lavoro di Excel specificato nella variabile `ExcelFile` esiste, quindi il valore booleano della variabile `ExcelFileExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descrizione dell'esempio 2: verificare l'esistenza di una tabella di Excel  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> Descrizione dell'esempio 2: verificare l'esistenza di una tabella di Excel  
  In questo esempio viene determinato se il foglio di lavoro o l'intervallo denominato di Excel specificato nella variabile `ExcelTable` esiste nel file della cartella di lavoro di Excel specificato nella variabile `ExcelFile`, quindi il valore booleano della variabile `ExcelTableExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Descrizione dell'esempio 3: ottenere un elenco dei file di Excel in una cartella  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> Descrizione dell'esempio 3: ottenere un elenco dei file di Excel in una cartella  
  In questo esempio l'elenco dei file di Excel trovati nella cartella specificata nel valore della variabile `ExcelFolder` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelFiles`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere i file nella matrice.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Soluzione alternativa  
  Anziché utilizzare un'attività Script per raccogliere un elenco di file di Excel in una matrice, è anche possibile utilizzare l'enumeratore ForEach File per scorrere tutti i file di Excel presenti in una cartella. Per altre informazioni, vedere [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Descrizione dell'esempio 4: ottenere un elenco di tabelle in un file di Excel  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> Descrizione dell'esempio 4: ottenere un elenco di tabelle in un file di Excel  
  In questo esempio l'elenco dei fogli di lavoro e degli intervalli denominati trovati nel file della cartella di lavoro di Excel specificata dal valore della variabile `ExcelFile` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelTables`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere le tabelle nella matrice.  
   
 > [!NOTE]  
@@ -430,7 +430,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Soluzione alternativa  
  Anziché utilizzare un'attività Script per raccogliere un elenco delle tabelle di Excel in una matrice, è anche possibile utilizzare ForEach ADO.NET Schema Rowset Enumerator per scorrere tutte le tabelle, ovvero fogli di lavoro e intervalli denominati, nel file di una cartella di lavoro di Excel. Per altre informazioni, vedere [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="testing"></a> Visualizzazione dei risultati degli esempi  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a> Visualizzazione dei risultati degli esempi  
  Se tutti gli esempi di questo argomento sono stati configurati nello stesso pacchetto, è possibile connettere tutte le attività Script a un'attività Script aggiuntiva che visualizza l'output di tutti gli esempi.  
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Per configurare un'attività Script per visualizzare l'output degli esempi di questo argomento  

@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 353f9924a93e14d0617deb143ec2cbe080a465ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241903"
 ---
 # <a name="view-job-step-information"></a>Visualizzare informazioni sui passaggi di processo
@@ -42,17 +42,17 @@ In questo argomento viene illustrato come visualizzare informazioni dettagliate 
   
     [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Restrictions"></a>Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitazioni e restrizioni  
 Se un passaggio di processo è stato configurato per la scrittura dell'output in una tabella o file e il processo è stato eseguito almeno una volta, è possibile esaminare l'output nella scheda **Avanzate** della finestra di dialogo **Proprietà passaggio processo** . Quando un processo o un passaggio di processo viene eliminato, viene eliminato automaticamente anche il log di output.  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorizzazioni  
 È possibile visualizzare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . I membri di questo ruolo infatti possono visualizzare tutti i processi e tutte le informazioni sui passaggi di processo.  
   
-## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-job-step-information"></a>Per visualizzare informazioni sui passaggi di processo  
   

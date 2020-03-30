@@ -15,16 +15,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095299"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Risoluzione dei problemi nell'indicizzazione full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
-##  <a name="failure"></a> Risoluzione degli errori nell'indicizzazione full-text  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Risoluzione degli errori nell'indicizzazione full-text  
  Durante il popolamento o la gestione di un indice full-text, l'indicizzatore full-text potrebbe non eseguire correttamente l'indicizzazione di una o più righe per i motivi descritti di seguito. Questi errori a livello di riga non impediscono il completamento del popolamento. L'indicizzatore ignora queste righe, pertanto non sarà possibile recuperare il contenuto di tali righe tramite query.  
   
  È possibile che si verifichino errori di indicizzazione nelle situazioni seguenti.  
@@ -54,7 +54,7 @@ ms.locfileid: "68095299"
 >  Questa impostazione rende tuttavia l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] meno sicura. È consigliabile firmare tutti i componenti implementati o assicurarsi che tutti i componenti acquistati siano firmati. Per informazioni sulle firme dei componenti, vedere [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
   
-##  <a name="state"></a> Stato incoerente di un indice full-text dopo il ripristino del log delle transazioni  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Stato incoerente di un indice full-text dopo il ripristino del log delle transazioni  
  Durante il ripristino del log delle transazioni di un database, è possibile che venga visualizzato un avviso che indica che lo stato dell'indice full-text non è coerente. Questo accade perché l'indice full-text di una tabella è stato modificato dopo il backup del database. Per riportare l'indice full-text a uno stato coerente, è necessario eseguire un popolamento completo (ricerca per indicizzazione) della tabella. Per altre informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).  
   
   

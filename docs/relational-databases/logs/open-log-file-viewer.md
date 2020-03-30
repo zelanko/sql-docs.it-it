@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68083977"
 ---
 # <a name="open-log-file-viewer"></a>Aprire il visualizzatore file di log
@@ -41,7 +41,7 @@ ms.locfileid: "68083977"
   
  È possibile aprire il Visualizzatore file di log in diversi modi, a seconda delle informazioni che si desidera visualizzare.  
   
-##  <a name="BeforeYouBegin"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorizzazioni  
  Per accedere ai file di log per le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] online, è necessaria l'appartenenza al ruolo predefinito del server securityadmin.  
   
  Per accedere a file di log per istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** sia alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](../../relational-databases/logs/view-offline-log-files.md).  

@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011955"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configurazione dei protocolli di rete predefiniti di SQL Server
@@ -57,7 +57,7 @@ Per esempi di stringhe di connessione, vedere gli argomenti seguenti:
 
 
 
-## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Impostazioni del servizio Browser
+## <a name="ssnoversion_md-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Impostazioni del servizio Browser
 
 Il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser può essere configurato per l'avvio automatico durante l'installazione. L'avvio automatico rappresenta l'impostazione predefinita nei casi seguenti:
 

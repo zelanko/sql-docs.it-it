@@ -14,10 +14,10 @@ ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 817bfeccb29de6b1531b83a48da4d78f8397b4ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68058256"
 ---
 # <a name="remove-log-shipping-sql-server"></a>Disattivare il log shipping [SQL Server]
@@ -38,14 +38,14 @@ ms.locfileid: "68058256"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-remove-log-shipping"></a>Per rimuovere il log shipping  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68058256"
   
 5.  Fare clic su **OK** per rimuovere il log shipping dal database primario.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-remove-log-shipping"></a>Per rimuovere il log shipping  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68058256"
   
 6.  Facoltativamente, se non si utilizza più un database secondario per il log shipping, è possibile eliminarlo dal server secondario.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Aggiornamento del log shipping a SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

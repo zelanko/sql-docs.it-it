@@ -23,10 +23,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 2b19f1152ad5db39d60592fb23d29234db0d00fa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254668"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Procedure per la progettazione di query e viste (Visual Database Tools)

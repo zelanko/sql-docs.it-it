@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68096826"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "68096826"
   
  La raccolta di XML Schema può essere utilizzata anche per tipizzare variabili, parametri e colonne XML.  
   
-##  <a name="ddl"></a> Istruzioni DDL per la gestione di raccolte di XML Schema  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> Istruzioni DDL per la gestione di raccolte di XML Schema  
  È possibile creare raccolte di XML Schema nel database e associarle a variabili e colonne di tipo **xml** . Per gestire le raccolte di schemi nel database, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le istruzioni DDL seguenti:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) Importa i componenti di schema in un database.  
@@ -61,7 +61,7 @@ ms.locfileid: "68096826"
   
  Per eliminare la raccolta di schemi, utilizzare l'istruzione DROP XML SCHEMA COLLECTION, che consente di eliminare tutti gli schemi contenuti nella raccolta e di rimuovere l'oggetto raccolta. Si noti che prima di eliminare una raccolta di schemi è necessario soddisfare le condizioni descritte in [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
-##  <a name="components"></a> Informazioni sui componenti dello schema  
+##  <a name="understanding-schema-components"></a><a name="components"></a> Informazioni sui componenti dello schema  
  Quando si utilizza l'istruzione CREATE XML SCHEMA COLLECTION, vengono importati nel database diversi componenti dello schema, ad esempio elementi, attributi e definizioni di tipi dello schema. Se si utilizza l'istruzione DROP XML SCHEMA COLLECTION, verrà rimossa l'intera raccolta.  
   
  L'istruzione CREATE XML SCHEMA COLLECTION salva i componenti dello schema in diverse tabelle di sistema.  
@@ -131,7 +131,7 @@ ms.locfileid: "68096826"
 |**targetNamespace**|Le informazioni sui componenti appartenenti allo spazio dei nomi di destinazione vengono archiviate nei metadati.|  
 | &nbsp; | &nbsp; |
   
-##  <a name="perms"></a> Autorizzazioni per una raccolta di XML Schema  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> Autorizzazioni per una raccolta di XML Schema  
  È necessario disporre delle autorizzazioni necessarie per eseguire le operazioni seguenti:  
   
 -   Creare o caricare la raccolta XML Schema.  
@@ -160,7 +160,7 @@ ms.locfileid: "68096826"
   
      In questo argomento vengono fornite informazioni sulla negazione delle autorizzazioni per creare una raccolta XML Schema e delle autorizzazioni per un oggetto raccolta XML Schema.  
   
-##  <a name="info"></a> Acquisizione di Informazioni su XML Schema e Raccolte di schemi  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Acquisizione di Informazioni su XML Schema e Raccolte di schemi  
  Le raccolte di XML Schema sono enumerate nella vista del catalogo sys.xml_schema_collections. La raccolta di XML Schema "sys" è definita dal sistema e contiene gli spazi dei nomi predefiniti che è possibile utilizzare in tutte le raccolte di XML Schema definite dall'utente senza doverli caricare in modo esplicito. Tale elenco contiene gli spazi dei nomi per xml, xs, xsi, fn e xdt. Sono disponibili altre due viste del catalogo: sys.xml_schema_namespaces, che enumera tutti gli spazi dei nomi in ogni raccolta di XML Schema, e sys.xml_components, che enumera tutti i componenti degli elementi XML Schema presenti in ognuno.  
   
  La funzione predefinita **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri* restituisce un'istanza del tipo di dati **xml**. Tale istanza contiene frammenti di XML Schema per gli schemi inclusi in una raccolta di XML Schema, ad eccezione degli elementi XML Schema predefiniti.  

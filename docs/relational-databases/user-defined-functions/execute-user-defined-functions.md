@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123577"
 ---
 # <a name="execute-user-defined-functions"></a>Eseguire funzioni definite dall'utente
@@ -29,16 +29,16 @@ ms.locfileid: "68123577"
 > **Nota:** per altre informazioni, vedere l'argomento sulle  [funzioni definite dall'utente](user-defined-functions.md) e [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) . 
   
  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  In Transact-SQL è possibile specificare parametri tramite *valore* o*parameter_name*=*valore.* Un parametro non fa parte di una transazione. Se un parametro viene modificato in una transazione per la quale verrà eseguito il rollback, il valore del parametro non viene ripristinato al suo valore precedente. Il valore restituito al chiamante corrisponde sempre al valore specificato al termine del modulo.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
  Per eseguire l'istruzione [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) non sono necessarie autorizzazioni specifiche. Sono tuttavia **obbligatorie** autorizzazioni per le entità a protezione diretta a cui si fa riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) , il chiamante dell'istruzione EXECUTE deve avere l'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 ### <a name="example"></a>Esempio 
   

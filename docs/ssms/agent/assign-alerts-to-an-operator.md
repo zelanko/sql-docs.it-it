@@ -20,10 +20,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 30e89871b53c7972f0c21378e9e5a49ba12d4d63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252683"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assegnazione di avvisi a un operatore
@@ -35,9 +35,9 @@ ms.locfileid: "75252683"
 
 Questo argomento descrive come assegnare avvisi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent agli operatori, in modo che possano ricevere notifiche relative ai processi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Restrictions"></a>Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitazioni e restrizioni  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
   
@@ -45,12 +45,12 @@ Questo argomento descrive come assegnare avvisi di [!INCLUDE[msCoName](../../inc
   
 -   Gli eventuali errori che si verificano durante l'invio di un messaggio di posta elettronica o di una notifica su cercapersone vengono registrati nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorizzazioni  
 Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare avvisi agli operatori.  
   
-## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-assign-alerts-to-an-operator"></a>Per assegnare avvisi a un operatore  
   
@@ -62,13 +62,13 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare av
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore a cui assegnare un avviso, scegliere **Proprietà**e selezionare la pagina **Notifiche** .  
   
-5.  Nella finestra di dialogo **Proprietà**_nome\_operatore_ in **Seleziona una pagina** selezionare **Notifiche**.  
+5.  Nella finestra di dialogo _Proprietà\__ nome**operatore** in **Seleziona una pagina** selezionare **Notifiche**.  
   
-6.  Nell'area **Visualizza le notifiche inviate all'utente per**selezionare **Avvisi** per visualizzare un elenco di avvisi inviati all'operatore oppure selezionare **Processi** per visualizzare un elenco dei processi che inviano notifiche all'operatore. Selezionare una o più tra le caselle di controllo seguenti per definire il metodo di notifica secondo le necessità: **Posta elettronica**, **Cercapersone** o **Net Send**.  
+6.  Nell'area **Visualizza le notifiche inviate all'utente per**selezionare **Avvisi** per visualizzare un elenco di avvisi inviati all'operatore oppure selezionare **Processi** per visualizzare un elenco dei processi che inviano notifiche all'operatore. Selezionare una o più tra le caselle di controllo seguenti per definire il metodo di notifica secondo le necessità: **Posta elettronica**, **CERCAPERSONE**oppure **Net Send**.  
   
 7.  Al termine, fare clic su **OK**.  
   
-## <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-assign-alerts-to-an-operator"></a>Per assegnare avvisi a un operatore  
   

@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295676"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Ruoli Integration Services (servizio SSIS)
@@ -93,7 +93,7 @@ ms.locfileid: "71295676"
   
      È possibile assegnare un ruolo lettura o scrittura a ogni pacchetto.  
 
-## <a name="assign"></a> Assegnazione di un ruolo lettura e scrittura a un pacchetto
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> Assegnazione di un ruolo lettura e scrittura a un pacchetto
   È possibile assegnare un ruolo lettura o scrittura a ogni pacchetto.  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>Assegnazione di un ruolo lettura e scrittura a un pacchetto  
@@ -108,7 +108,7 @@ ms.locfileid: "71295676"
   
 5.  Fare clic su **OK**.
 
-## <a name="create"></a> Creazione di un ruolo definito dall'utente
+## <a name="create-a-user-defined-role"></a><a name="create"></a> Creazione di un ruolo definito dall'utente
     
 ### <a name="to-create-a-user-defined-role"></a>Per creare un ruolo definito dall'utente  
   
@@ -134,8 +134,8 @@ ms.locfileid: "71295676"
   
 11. Fare clic su **OK**.
 
-## <a name="roles_dialog"></a> Riferimento all'interfaccia utente della finestra di dialogo Ruoli pacchetto
-  Usare la finestra di dialogo **Ruoli pacchetto** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per specificare i ruoli a livello di database che dispongono dell'accesso in lettura al pacchetto e quelli che dispongono dell'accesso in scrittura. I ruoli a livello di database si applicano solo ai pacchetti archiviati nel database **msdb** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> Riferimento all'interfaccia utente della finestra di dialogo Ruoli pacchetto
+  Usare la finestra di dialogo **Ruoli pacchetto** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per specificare i ruoli a livello di database che dispongono dell'accesso in lettura al pacchetto e quelli che dispongono dell'accesso in scrittura. I ruoli a livello di database si applicano solo ai pacchetti archiviati nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdb**di**.  
   
  I ruoli elencati nella finestra di dialogo sono quelli attualmente disponibili nel database di sistema **msdb** . Se non viene selezionato alcun ruolo, viene applicato il ruolo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predefinito. Per impostazione predefinita, il ruolo lettura include **db_ssisadmin**, **db_ssisoperator**e l'utente che ha creato il pacchetto. Gli utenti membri di uno di questi ruoli o creatori dei pacchetti possono enumerare, visualizzare, esportare ed eseguire i pacchetti. Per impostazione predefinita, il ruolo scrittura include **db_ssisadmin** e l'utente che ha creato il pacchetto. L'utente membro di questo ruolo e il creatore dei pacchetti possono importare, eliminare e modificare i pacchetti.  
   

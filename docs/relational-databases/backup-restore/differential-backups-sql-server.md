@@ -14,10 +14,10 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68089839"
 ---
 # <a name="differential-backups-sql-server"></a>Backup differenziali [SQL Server]
@@ -27,7 +27,7 @@ ms.locfileid: "68089839"
  un backup differenziale si basa sul precedente backup completo dei dati più recente. In un backup differenziale vengono acquisiti solo i dati che hanno subito modifiche dopo il backup completo. Il backup completo su cui si basa un backup differenziale è noto come *base* del backup differenziale. I backup completi, ad eccezione di backup di sola copia, possono servire come base per una serie di backup differenziali, compresi backup di database, backup parziali e backup di file. Il backup di base per un backup differenziale di file può essere contenuto in un backup completo, un backup di file o un backup parziale.  
   
   
-##  <a name="Benefits"></a> Vantaggi  
+##  <a name="benefits"></a><a name="Benefits"></a> Vantaggi  
   
 -   La creazione di backup differenziali può risultare molto rapida rispetto alla creazione di un backup completo. Un backup differenziale registra solo i dati modificati dopo l'ultimo backup completo su cui si basa il backup differenziale. Ciò facilita l'esecuzione più frequente di backup dei dati, riducendo il rischio di perdita di dati. Prima di ripristinare un backup differenziale, è tuttavia necessario eseguire il ripristino della relativa base. Pertanto, l'esecuzione di un ripristino da un backup differenziale richiederà necessariamente più passaggi e tempo di un ripristino da un backup completo, poiché sono richiesti due file di backup.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68089839"
   
 -   In base al modello di recupero con registrazione completa, l'utilizzo di backup differenziali può ridurre il numero di backup del log che è necessario ripristinare.  
   
-##  <a name="Overview"></a> Panoramica dei backup differenziali  
+##  <a name="overview-of-differential-backups"></a><a name="Overview"></a> Panoramica dei backup differenziali  
  Un backup differenziale acquisisce lo stato di qualsiasi *extent* (raccolta di otto pagine fisicamente contigue) che ha subito modifiche tra la creazione della base differenziale e la creazione del backup differenziale. Le dimensioni di un determinato backup differenziale dipendono pertanto dalla quantità di dati modificata rispetto alla base. In genere, meno recente è la base, maggiori saranno le dimensioni di un nuovo backup differenziale. In una serie di backup differenziali, è probabile che gli extent aggiornati di frequente contengano dati diversi in ogni backup differenziale.  
   
  Nella figura seguente viene illustrato il funzionamento di un backup differenziale. Nella figura sono illustrati 24 extent di dati, sei dei quali sono stati modificati. Il backup differenziale contiene solo questi sei extent di dati. L'operazione di backup differenziale è basata su una pagina della mappa di bit contenente un bit per ogni extent. Per ogni extent aggiornato rispetto alla base, il bit viene impostato su 1 nella mappa di bit.  
@@ -54,7 +54,7 @@ ms.locfileid: "68089839"
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backup differenziali di database con tabelle con ottimizzazione per la memoria  
  Per informazioni sui backup differenziali e sui database con tabelle ottimizzate per la memoria, vedere [Backup di un database con tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md).  
   
-##  <a name="ReadOnlyDbs"></a> Backup differenziali di database di sola lettura  
+##  <a name="differential-backups-of-read-only-databases"></a><a name="ReadOnlyDbs"></a> Backup differenziali di database di sola lettura  
  Per i database di sola lettura, i backup completi sono più semplici da gestire quando vengono utilizzati singolarmente anziché in combinazione con i backup differenziali. Quando un database è di sola lettura, il backup e le altre operazioni non sono in grado di modificare i metadati inclusi nel file. I metadati necessari per un backup differenziale, ad esempio il numero di sequenza del file di log in corrispondenza del quale il backup differenziale ha inizio (l'LSN di base del backup differenziale), vengono pertanto archiviati nel database **master** . Se la base differenziale viene creata quando il database è di sola lettura, la mappa di bit differenziale indicherà un numero maggiore di modifiche rispetto a quelle effettivamente apportate dopo il backup di base. I dati aggiuntivi vengono letti dal backup, ma non vengono scritti nel backup, perché tramite il valore **differential_base_lsn** archiviato nella tabella di sistema [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) viene determinato se i dati sono realmente cambiati dopo la creazione della base.  
   
  Quando viene ricompilato, ripristinato oppure scollegato e collegato un database di sola lettura, le informazioni relative alla base differenziale vengono perse perché il database **master** non è sincronizzato con il database utente. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non è in grado di rilevare né evitare questo problema. Gli eventuali backup differenziali successivi non saranno basati sul backup completo più recente e potrebbero generare risultati imprevisti. Per creare una nuova base differenziale, è consigliabile eseguire un backup completo del database.  
@@ -66,7 +66,7 @@ ms.locfileid: "68089839"
   
  Se si scollega e si collega un database di sola lettura per il quale in seguito si prevede di usare backup differenziali, eseguire non appena possibile un backup completo sia del database di sola lettura che del database **master** .  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   

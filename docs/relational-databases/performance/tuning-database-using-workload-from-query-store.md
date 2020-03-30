@@ -12,10 +12,10 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113165"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ottimizzazione del database tramite un carico di lavoro dell'archivio query
@@ -35,7 +35,7 @@ Nella GUI di DTA selezionare il pulsante di opzione **Archivio query** nel riqua
 Dalla riga di comando (dta.exe) scegliere l'opzione **-iq** per selezionare il carico di lavoro dall'archivio query. 
 
 Tramite la riga di comando sono disponibili altre due opzioni che consentono di regolare il comportamento di DTA quando si seleziona il carico di lavoro dall'archivio query. Queste opzioni non disponibili tramite la GUI:
-  1. **Number of workload events to tune** (Numero di eventi del carico di lavoro da ottimizzare): questa opzione, specificata usando l'argomento della riga di comando **-n**, consente all'utente di controllare il numero di eventi di Query Store ottimizzati. Per impostazione predefinita, DTA usa il valore 1000 per questa opzione. DTA sceglie sempre gli eventi con costo più elevato in termini di durata totale. 
+  1. **Number of workload events to tune** (Numero di eventi del carico di lavoro da ottimizzare): questa opzione, specificata usando l'argomento della riga di comando **-n**, consente all'utente di controllare il numero di eventi da Query Store ottimizzati. Per impostazione predefinita, DTA usa il valore 1000 per questa opzione. DTA sceglie sempre gli eventi con costo più elevato in termini di durata totale. 
   
   2. **Time windows of events to tune** (Intervalli di tempo degli eventi da ottimizzare): poiché Query Store può contenere query eseguite molto tempo fa, questa opzione consente all'utente di specificare un intervallo di tempo precedente (in ore) in cui una query deve essere stata eseguita per essere considerata da DTA per l'ottimizzazione. Questa opzione si specifica usando l'argomento della riga di comando **-I**. 
 
@@ -46,6 +46,6 @@ La differenza tra le opzioni Archivio query e Cache dei piani è che il primo co
 
 ## <a name="see-also"></a>Vedere anche  
 [Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Esercitazione: Ottimizzazione guidata motore di database](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
+[Esercitazione: Strumento Ottimizzazione guidata motore di database](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [Come Archivio query raccoglie i dati](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Archivio query, procedure consigliate](../../relational-databases/performance/best-practice-with-the-query-store.md)

@@ -15,17 +15,17 @@ ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821777"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Visualizzare le proprietà del listener del gruppo di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento illustra come visualizzare le proprietà di un *listener del gruppo di disponibilità* Always On tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per visualizzare le proprietà del listener**  
   
 1.  In Esplora oggetti connettersi a un'istanza del server che ospita una replica di disponibilità del gruppo di disponibilità di cui si desidera visualizzare il listener. Fare clic sul nome del server per espandere il relativo albero.  
@@ -38,7 +38,7 @@ ms.locfileid: "74821777"
   
 5.  Verrà aperta la finestra di dialogo **Proprietà listener gruppo di disponibilità** . Per altre informazioni, vedere [Proprietà listener gruppo di disponibilità (finestra di dialogo)](#AgListenerPropertiesDialog), più avanti in questo argomento.  
   
-###  <a name="AgListenerPropertiesDialog"></a> Proprietà listener gruppo di disponibilità (finestra di dialogo)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> Proprietà listener gruppo di disponibilità (finestra di dialogo)  
  **Nome DNS del listener**  
  Nome di rete del listener del gruppo di disponibilità.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74821777"
   
  Nella griglia vengono visualizzate le subnet in cui il listener è in attesa e l'indirizzo IP associato a ciascuna subnet.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per visualizzare le proprietà del listener**  
   
  Per monitorare i listener del gruppo di disponibilità, utilizzare le viste seguenti:  
@@ -82,7 +82,7 @@ ms.locfileid: "74821777"
 > [!NOTE]  
 >  Per altre informazioni sull'uso di [!INCLUDE[tsql](../../../includes/tsql-md.md)] per monitorare l'ambiente di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

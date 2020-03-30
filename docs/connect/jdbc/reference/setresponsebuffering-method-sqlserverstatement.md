@@ -16,10 +16,10 @@ ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973116"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Metodo setResponseBuffering (SQLServerStatement)

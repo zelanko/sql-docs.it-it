@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934881"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Aggiungere un database a un gruppo di disponibilità Always On con la "Creazione guidata Gruppo di disponibilità"
@@ -31,10 +31,10 @@ ms.locfileid: "67934881"
   
 
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Se non è mai stato aggiunto un database a un gruppo di disponibilità, vedere la sezione "Database di disponibilità" in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Prerequisites"></a> Prerequisiti, restrizioni e raccomandazioni  
+##  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a> Prerequisiti, restrizioni e raccomandazioni  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67934881"
      Se non è possibile usare la procedura guidata per eseguire la sincronizzazione dei dati iniziale completa, sarà necessario preparare i database secondari manualmente. Tale operazione può essere eseguita prima o dopo l'esecuzione della procedura guidata. Per altre informazioni, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="use-the-new-availability-group-wizard"></a>Usare la "Creazione guidata Gruppo di disponibilità"
@@ -117,7 +117,7 @@ ms.locfileid: "67934881"
   
 11. Se la sincronizzazione dati iniziale non è stata avviata automaticamente su tutti i database secondari, è necessario configurare eventuali database secondari non ancora aggiunti. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

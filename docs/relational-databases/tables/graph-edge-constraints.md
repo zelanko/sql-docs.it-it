@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873879"
 ---
 # <a name="edge-constraints"></a>Vincoli di arco
@@ -29,7 +29,7 @@ ms.locfileid: "70873879"
 
 I vincoli di arco possono essere usati per imporre l'integrità dei dati e semantica specifica per le tabelle archi nel database a grafo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Connection"></a> Vincoli di arco
+## <a name="edge-constraints"></a><a name="Connection"></a> Vincoli di arco
 
 Nella prima versione delle funzionalità relative ai grafi, le tabelle archi non imponevano alcun vincolo per le estremità dell'arco. Questo significa che un arco in un database a grafo poteva connettere qualsiasi nodo a qualsiasi altro nodo, indipendentemente dal tipo.
 

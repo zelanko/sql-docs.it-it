@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082455"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout e rendering della pagina (Generatore report e SSRS)
@@ -24,7 +24,7 @@ Leggere le informazioni sulle estensioni per il rendering di [!INCLUDE[ssRSnover
   
  L'ottenimento dei migliori risultati per i report esportati è spesso un processo iterativo; si crea e visualizza in anteprima il report in Generatore report o Progettazione report, si esporta il report nel formato preferito, si rivede il report esportato e infine si apportano le modifiche al report.  
     
-##  <a name="PageLayout"></a> Elementi del report  
+##  <a name="report-items"></a><a name="PageLayout"></a> Elementi del report  
  Gli elementi del report sono elementi di layout associati a tipi diversi di dati del report. 
  
 * Tabella, Matrice, Elenco, Grafico e Misuratore sono elementi di report dell'area dati, ciascuno dei quali costituisce un collegamento a un set di dati del report. Durante l'elaborazione del report, l'area dati si espande nella pagina del report per visualizzare i dati. 
@@ -44,14 +44,14 @@ In un report possono essere contenuti sottoreport.
   
  Un report può estendersi su più pagine. L'intestazione e il piè di pagina vengono ripetuti in ogni pagina. Un report può contenere elementi grafici diversi, ad esempio immagini e linee, e può essere caratterizzato da più tipi di carattere, colori e stili che possono essere basati sulle espressioni.  
   
-##  <a name="ReportSections"></a> Sezioni del report  
+##  <a name="report-sections"></a><a name="ReportSections"></a> Sezioni del report  
  Un report è costituito da tre sezioni principali, ovvero un'intestazione di *pagina* e un piè di *pagina* facoltativi e un corpo del report. L'intestazione e il piè di pagina non rappresentano sezioni separate del *report* , ma sono inclusi tra gli elementi di report posizionati nella parte superiore e inferiore del corpo del report. L'intestazione e il piè di pagina consentono di ripetere lo stesso contenuto nella parte superiore e inferiore di ogni pagina del report. Nelle intestazioni e nei piè di pagina è possibile inserire immagini, caselle di testo e linee, mentre nel corpo del report è possibile inserire tutti i tipi di elementi di report.  
   
  È possibile impostare proprietà relative agli elementi di report per nasconderli o visualizzarli inizialmente nella pagina. È inoltre possibile impostare proprietà di visibilità per righe, colonne o gruppi per le aree dati e fornire interruttori per consentire all'utente di visualizzare o nascondere i dati del report in modo interattivo, nonché impostare la visibilità, iniziale o meno, usando espressioni, ad esempio quelle basate sui parametri di report.  
   
  Durante l'elaborazione del report, i relativi dati vengono combinati con gli elementi di layout del report e successivamente inviati a un renderer del report. In base a regole predefinite per l'espansione degli elementi di report, il renderer determina il livello di adattamento dei dati in ogni pagina. Per progettare un report leggibile ottimizzato per il renderer da utilizzare, è necessario comprendere le regole utilizzate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingExtensions"></a> Renderer  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> Renderer  
  In Reporting Services è disponibile un set di renderer, anche definiti estensioni per il rendering, che è possibile usare per esportare i report in formati diversi. Sono disponibili tre tipi di renderer:  
   
 -   **Renderer di dati** I renderer di dati rimuovono tutte le informazioni di formattazione e layout dal report e visualizzano solo i dati. Il file risultante può essere usato per importare i dati del report non elaborati in un altro tipo di file, ad esempio Excel, in un altro database, in un messaggio di dati XML o in un'applicazione personalizzata. I renderer di dati disponibili sono CSV e XML.  
@@ -65,7 +65,7 @@ In un report possono essere contenuti sottoreport.
   
  Quando si visualizza un report in anteprima in Generatore report o Progettazione report oppure si esegue un report nel server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il report viene sempre prima sottoposto a rendering in HTML. Dopo avere eseguito il report, sarà possibile esportarlo nei vari formati di file. Per altre informazioni, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingBehaviors"></a> Tipi di rendering  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> Tipi di rendering  
  A seconda del renderer selezionato, durante il rendering del report vengono applicate alcune regole. La disposizione degli elementi del report in una pagina dipende dalla combinazione dei seguenti fattori:  
   
 -   Regole di rendering.  
@@ -78,7 +78,7 @@ In un report possono essere contenuti sottoreport.
   
  Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
    
-##  <a name="Pagination"></a> Paginazione  
+##  <a name="pagination"></a><a name="Pagination"></a> Paginazione  
  Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la paginazione varia a seconda dell'estensione per il rendering utilizzata per visualizzare e recapitare il report, nonché delle opzioni di interruzione di pagina e raggruppamento configurate per il report.  
   
  Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. I report esportati tramite le estensioni per il rendering di **dati** e di **interruzioni di pagina software** non sono generalmente influenzati dalla paginazione. Quando si usa un'estensione per il rendering di dati, il report viene sottoposto a rendering come set di righe tabulare in formato XML o CSV. Per assicurarsi che i dati del report esportati siano utilizzabili, è necessario comprendere le regole applicate per eseguire il rendering di un set di righe tabulare bidimensionale da un report.  
@@ -87,7 +87,7 @@ In un report possono essere contenuti sottoreport.
   
  I renderer di**interruzioni di pagina manuali** influenzano soprattutto il layout del report e le dimensioni fisiche della pagina. Per sapere di più, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene mostrato in dettaglio l'utilizzo della paginazione nei report.  
   
 -   [Aggiungere un'interruzione di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ In un report possono essere contenuti sottoreport.
   
 -   [Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti vengono fornite ulteriori informazioni sul layout e sul rendering della pagina.  
   
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874761"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installare la ricerca full-text di SQL Server in Linux
@@ -30,7 +30,7 @@ Installare la ricerca full-text di SQL Server per la piattaforma in uso:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Eseguire l'installazione in RHEL</a>
+## <a name=""></a><a name="RHEL">Eseguire l'installazione in RHEL</a>
 
 Usare i comandi seguenti per installare **mssql-server-fts** in Red Hat Enterprise Linux. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 Se è necessaria un'installazione offline, individuare il download del pacchetto della ricerca full-text nelle [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Eseguire l'installazione in Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Eseguire l'installazione in Ubuntu</a>
 
 Usare i comandi seguenti per installare **mssql-server-fts** in Ubuntu. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 Se è necessaria un'installazione offline, individuare il download del pacchetto della ricerca full-text nelle [note sulla versione](sql-server-linux-release-notes.md). Usare quindi la stessa procedura di installazione offline descritta nell'articolo [Installare SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Eseguire l'installazione in SLES</a>
+## <a name=""></a><a name="SLES">Eseguire l'installazione in SLES</a>
 
 Usare i comandi seguenti per installare **mssql-server-fts** in SUSE Linux Enterprise Server. 
 
@@ -142,7 +142,7 @@ La ricerca full-text usa [word breaker](../relational-databases/search/configure
 | Urdu | 1056 |
 | Vietnamita | 1066 |
 
-## <a id="filters"></a> Filtri
+## <a name="filters"></a><a id="filters"></a> Filtri
 
 La ricerca full-text funziona anche con testo archiviato all'interno di file binari. In questo caso, tuttavia, per elaborare il file è necessario installare un filtro. Per altre informazioni sui filtri, vedere [Configurare e gestire filtri per la ricerca](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

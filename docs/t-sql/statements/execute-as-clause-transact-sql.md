@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70155054"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clausola EXECUTE AS (Transact-SQL)
@@ -110,7 +110,7 @@ DDL Triggers with Database Scope
   
  La concatenazione della proprietà presenta le limitazioni seguenti:  
   
--   Si applica solo alle istruzioni DML: SELECT, INSERT, UPDATE e DELETE.  
+-   Si applica solo a queste istruzioni DML: SELECT, INSERT, UPDATE e DELETE.  
   
 -   I proprietari degli oggetti chiamanti devono corrispondere a quelli degli oggetti chiamati.  
   

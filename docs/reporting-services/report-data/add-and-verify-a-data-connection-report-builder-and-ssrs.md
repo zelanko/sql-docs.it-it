@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
 ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082265"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Aggiungere e verificare una connessione dati (Generatore report e SSRS)
@@ -54,7 +54,7 @@ L'origine dati verrà visualizzata nel riquadro dei dati del report.
 
 3. Se la connessione riesce, verrà visualizzato il messaggio seguente: "Creazione connessione completata". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. Se la connessione non riesce, verrà visualizzato il messaggio seguente: "Non è possibile connettersi all'origine dati".  
+4. In caso contrario, verrà visualizzato il messaggio: "Impossibile connettersi all'origine dati".  
 
 5. Fare clic su **Dettagli**e utilizzare le informazioni per risolvere il problema.
 

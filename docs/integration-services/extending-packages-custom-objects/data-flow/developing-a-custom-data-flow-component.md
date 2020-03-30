@@ -19,10 +19,10 @@ ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cd3ef168c8d3c58fb387787e8635ef94c512a475
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297242"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Sviluppo di un componente del flusso di dati personalizzato
@@ -72,7 +72,7 @@ ms.locfileid: "71297242"
  [Sviluppo di tipi specifici di componenti del flusso di dati](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Contiene informazioni sullo sviluppo dei tre tipi di componenti del flusso di dati: origini, trasformazioni e destinazioni.  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  Contiene le classi e le interfacce utilizzate per creare componenti del flusso di dati personalizzati.  
   

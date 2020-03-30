@@ -15,10 +15,10 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 45cc5e8c2ca3e311704ffd4eb6577d2e934d484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140716"
 ---
 # <a name="merge-agent-security"></a>Sicurezza agente di merge

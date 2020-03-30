@@ -11,10 +11,10 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822042"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Monitoraggio e risoluzione dei problemi dei gruppi di disponibilità
@@ -23,7 +23,7 @@ ms.locfileid: "74822042"
  Poiché i gruppi di disponibilità sono una tecnologia integrata, molti problemi riscontrati potrebbero essere sintomi di altri problemi nel sistema di database. Alcuni problemi sono causati dalle impostazioni del gruppo di disponibilità, ad esempio la sospensione di un database di disponibilità. Altri problemi possono riguardare altri aspetti di SQL Server, ad esempio le impostazioni di SQL Server, le distribuzioni dei file di database e i problemi di prestazioni del sistema non legati alla disponibilità. Inoltre, possono esistere altri problemi al di fuori di SQL Server legati, ad esempio all'I/O di rete, a TCP/IP, ad Active Directory e a WSFC. I problemi che emergono in un gruppo di disponibilità, in una replica o in un database richiedono spesso l'analisi di varie tecnologie in cui cercare la causa principale.  
   
   
-##  <a name="BKMK_SCENARIOS"></a> Scenari di risoluzione dei problemi  
+##  <a name="troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Scenari di risoluzione dei problemi  
  Nella tabella seguente sono riportati collegamenti agli scenari di risoluzione dei problemi comuni per i gruppi di disponibilità. Questi sono suddivisi in categorie in base al tipo di scenario, ad esempio configurazione, connettività client, failover e prestazioni.  
   
 |Scenario|Tipo di scenario|Descrizione|  
@@ -37,7 +37,7 @@ ms.locfileid: "74822042"
 |[Risoluzione dei problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Prestazioni|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
 |[Risoluzione dei problemi: Tipo di attesa HADR_SYNC_COMMIT elevato con i con gruppi di disponibilità Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Prestazioni|Se HADR_SYNC_COMMIT richiede dei tempi insolitamente lunghi, esiste un problema di prestazioni nel flusso di spostamento dei dati o nella protezione avanzata del log di replica secondaria.|  
 
-##  <a name="BKMK_TOOLS"></a> Strumenti utili per la risoluzione dei problemi  
+##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> Strumenti utili per la risoluzione dei problemi  
  In fase di configurazione o di esecuzione dei gruppi di disponibilità, vari strumenti possono aiutare a diagnosticare diversi tipi di problemi. Nella tabella seguente vengono forniti collegamenti a informazioni utili su tali strumenti.  
   
 |Strumento|Descrizione|  
@@ -53,7 +53,7 @@ ms.locfileid: "74822042"
 |Contatori delle prestazioni Always On|Consentono di monitorare le attività dei gruppi di disponibilità, sono riportati in Monitor di sistema e sono utili per ottimizzare le prestazioni. Per altre informazioni, vedere [Replica di disponibilità di SQL Server](~/relational-databases/performance-monitor/sql-server-availability-replica.md) e [Replica di database di SQL Server](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  
 |[Buffer circolari Always On](always-on-ring-buffers.md)|Registrano gli avvisi all'interno del sistema SQL Server per la diagnostica interna e possono essere usati per eseguire il debug di problemi relativi ai gruppi di disponibilità.|  
   
-##  <a name="BKMK_MONITOR"></a> Monitoraggio dei gruppi di disponibilità  
+##  <a name="monitoring-availability-groups"></a><a name="BKMK_MONITOR"></a> Monitoraggio dei gruppi di disponibilità  
  Il momento ideale per risolvere i problemi di un gruppo di disponibilità è prima che il problema richieda un failover automatico o manuale. Questa attività può essere eseguita monitorando le metriche delle prestazioni del gruppo di disponibilità e configurando l'invio di avvisi quando le repliche di disponibilità hanno prestazioni che non rientrano nei limiti del contratto di servizio (SLA). Se una replica secondaria asincrona ha problemi di prestazioni che determinano l'aumento del tempo di failover stimato, ad esempio, non è consigliabile attendere un failover automatico e scoprire che il tempo di failover supera l'obiettivo del tempo di ripristino.  
   
  Poiché i gruppi di disponibilità sono una soluzione di elevata disponibilità e di ripristino di emergenza, le metriche delle prestazioni più importanti da monitorare sono il tempo di failover stimato, che influenza l'obiettivo tempo di ripristino (RTO), e la potenziale perdita di dati in caso di emergenza, che interessa l'obiettivo punto di ripristino (RPO). Queste metriche possono essere raccolte dai dati che SQL Server espone in qualsiasi momento, pertanto è possibile ricevere avvisi di un problema delle funzionalità di ripristino di emergenza a disponibilità elevata (HADR) nel sistema prima che si verifichino veri eventi di errore. Pertanto, è importante acquisire familiarità con il processo di sincronizzazione dei dati dei gruppi di disponibilità e di raccolta delle relative metriche.  

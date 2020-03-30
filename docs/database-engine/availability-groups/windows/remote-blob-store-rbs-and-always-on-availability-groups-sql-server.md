@@ -11,10 +11,10 @@ ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 864ed8080c3978ec272f5212fa0a5e8dc40c2350
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822487"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Usare Archivio BLOB remoto (RBS) con i gruppi di disponibilità Always On
@@ -31,15 +31,15 @@ ms.locfileid: "74822487"
 |Database diverso in un'istanza differente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (archiviato utilizzando un provider FILESTREAM remoto di RBS)|Sì<br /><br /> Questo database deve trovarsi in un gruppo di disponibilità separato.|  
 |Archivio BLOB di terze parti|No<br /><br /> Per proteggere questi dati BLOB, utilizzare i meccanismi di disponibilità elevata del provider dell'archivio BLOB.|  
   
-##  <a name="Limitations"></a> Limitazioni  
+##  <a name="limitations"></a><a name="Limitations"></a> Limitazioni  
   
 -   I gestori RBS devono essere indirizzati alla replica primaria.  
   
-##  <a name="Recommendations"></a> Raccomandazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   Utilizzare un listener del gruppo di disponibilità. Per altre informazioni, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (Gestione dell'archivio BLOB remoti) in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Documentazione online  
   

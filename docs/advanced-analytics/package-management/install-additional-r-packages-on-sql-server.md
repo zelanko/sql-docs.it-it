@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79027942"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installare nuovi pacchetti R con sqlmlutils
@@ -26,7 +26,7 @@ Questo articolo descrive come usare le funzioni incluse in [**sqlmlutils**](http
 > [!NOTE]
 > Per aggiungere pacchetti R in SQL Server non è consigliabile usare il comando `install.packages` standard di R. In alternativa, usare **sqlmlutils**, come descritto in questo articolo.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Installare [R](https://www.r-project.org) e [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) nel computer client usato per connettersi a SQL Server. È possibile usare qualsiasi IDE di R per l'esecuzione di script, ma in questo articolo si presuppone che venga usato RStudio.
 
@@ -148,7 +148,7 @@ Se il computer client usato per connettersi a SQL Server dispone di accesso a In
 ### <a name="add-the-package-offline"></a>Aggiungere il pacchetto offline
 
 Se il computer client non dispone di una connessione Internet, è possibile usare **miniCRAN** per scaricare il pacchetto **glue** usando un computer con accesso a Internet. Copiare quindi il pacchetto nel computer client in cui è possibile installare il pacchetto offline.
-Per informazioni sull'installazione di **miniCRAN**, vedere [Installare miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
+Per informazioni sull'installazione di [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran), vedere **Installare miniCRAN**.
 
 In un computer con accesso a Internet:
 

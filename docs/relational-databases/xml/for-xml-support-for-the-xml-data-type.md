@@ -14,10 +14,10 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67943257"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Supporto del tipo di dati xml in FOR XML

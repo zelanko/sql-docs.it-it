@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68135918"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
@@ -172,7 +172,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D: Classificazione di righe all'interno di una partizione  
 Questo esempio classifica gli addetti alle vendite in ogni territorio di vendita in base al totale delle vendite. `DENSE_RANK` partiziona il set di righe per `SalesTerritoryGroup` e ordina il set di risultati per `SalesAmountQuota`.  

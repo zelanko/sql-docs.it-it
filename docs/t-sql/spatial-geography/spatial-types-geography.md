@@ -18,16 +18,16 @@ ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042525"
 ---
 # <a name="spatial-types---geography"></a>Tipi spaziali - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Il tipo di dati spaziali **geography** viene implementato come tipo di dati .NET Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo rappresenta i dati in un sistema di coordinate di tipo terra rotonda. Il tipo di dati **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di archiviare dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
+  Il tipo di dati spaziali **geography** viene implementato come tipo di dati .NET Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo rappresenta i dati in un sistema di coordinate di tipo terra rotonda. Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography**di** consente di archiviare dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportato un set di metodi per il tipo di dati spaziali **geography**. Sono inclusi metodi per **geography** definiti dallo standard OGC (Open Geospatial Consortium) e un set di estensioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] a tale standard.  
  

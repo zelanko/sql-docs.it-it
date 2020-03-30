@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057901"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informazioni sul log shipping (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057901"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vantaggi  
+##  <a name="benefits"></a><a name="Benefits"></a> Vantaggi  
   
 -   Fornisce una soluzione di recupero di emergenza per un solo database primario e uno o più database secondari, ognuno in un'istanza separata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057901"
   
 -   Consente un ritardo specificato dall'utente tra l'esecuzione del backup del log del database primario da parte del server primario e il momento in cui è necessario che i server secondari eseguano il ripristino del backup del log. Un ritardo maggiore può essere utile, ad esempio, se i dati vengono modificati per errore nel database primario. Se la modifica accidentale viene identificata rapidamente, un ritardo può consentire il recupero dei dati precedenti alla modifica da un database secondario prima che la modifica venga estesa anche a questo database.  
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termini e definizioni  
  server primario  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che costituisce il server di produzione.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057901"
 > [!TIP]  
 >  Per ogni avviso, è necessario specificare un numero. Assicurarsi inoltre di configurare l'avviso in modo che un operatore venga notificato quando viene generato un avviso.  
   
-##  <a name="ComponentsAndConcepts"></a> Panoramica del log shipping  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Panoramica del log shipping  
  Il log shipping prevede tre operazioni:  
   
 1.  Backup del log delle transazioni nell'istanza del server primario.  
@@ -128,7 +128,7 @@ ms.locfileid: "68057901"
   
  ![Configurazione che include processi di backup, copia e ripristino](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configurazione che include processi di backup, copia e ripristino")  
   
-##  <a name="Interoperability"></a> Interoperabilità  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interoperabilità  
  Il log shipping può essere utilizzato con le funzionalità o i componenti seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057901"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e il mirroring del database si escludono a vicenda. Un database configurato per una di queste funzionalità non può essere configurato per l'altra.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Aggiornamento del log shipping a SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

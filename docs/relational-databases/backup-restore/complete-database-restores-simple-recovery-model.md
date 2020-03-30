@@ -17,10 +17,10 @@ ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242582"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione minima)
@@ -42,7 +42,7 @@ ms.locfileid: "75242582"
 > [!NOTE]  
 >  Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-##  <a name="Overview"></a> Panoramica del ripristino del database nel modello di recupero con registrazione minima  
+##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Panoramica del ripristino del database nel modello di recupero con registrazione minima  
  Se si utilizza il modello di recupero con registrazione minima, il ripristino completo del database richiede solo una o due istruzioni [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , a seconda che si desideri o meno ripristinare un backup differenziale del database. Se si utilizza solo un backup di database completo, ripristinare unicamente il backup più recente come illustrato nella figura seguente.  
   
  ![Ripristino solo di un backup completo del database](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Ripristino solo di un backup completo del database")  
@@ -54,7 +54,7 @@ ms.locfileid: "75242582"
 > [!NOTE]  
 >  Se si prevede di ripristinare un backup del database in un'istanza del server diversa, vedere [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Sintassi Transact-SQL di base per RESTORE  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintassi Transact-SQL di base per RESTORE  
  La sintassi di base di [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) per il ripristino di un backup di database completo è la seguente:  
   
  RESTORE DATABASE *nome_database* FROM *dispositivo_backup* [ WITH NORECOVERY ]  
@@ -66,7 +66,7 @@ ms.locfileid: "75242582"
   
  RESTORE DATABASE *nome_database* FROM *dispositivo_backup* WITH RECOVERY  
   
-###  <a name="Example"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> Esempio (Transact-SQL)  
  Nell'esempio seguente viene innanzitutto illustrato come utilizzare l'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) per creare un backup completo del database e un backup differenziale del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Questi backup vengono quindi ripristinati in sequenza. Il database è ripristinato con lo stesso stato del momento in cui è stato completato il backup differenziale del database.  
   
  Nell'esempio seguente vengono illustrate le opzioni fondamentali di una sequenza di ripristino per lo scenario di ripristino completo del database. Una *sequenza di ripristino* è costituita da una o più operazioni di ripristino che gestiscono lo spostamento dei dati attraverso una o più fasi del ripristino. La sintassi e i dettagli non rilevanti sono stati omessi. Quando si recupera un database, è consigliabile specificare in modo esplicito l'opzione RECOVERY per maggiore chiarezza, anche se si tratta dell'opzione predefinita.  
@@ -100,7 +100,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare un backup completo del database**  
   
 -   [Ripristinare un backup del database nel modello di recupero con registrazione minima &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  

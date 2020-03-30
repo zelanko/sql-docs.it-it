@@ -17,13 +17,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244243"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Procedura: Usare la ridenominazione e il refactoring per apportare modifiche agli oggetti di database
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Procedura: Utilizzo della ridenominazione e del refactoring per apportare modifiche agli oggetti di database
 
 Il menu contestuale Refactoring nell'Editor Transact\-SQL consente di rinominare o spostare un oggetto in uno schema differente e di generare un'anteprima di tutte le aree interessate prima di eseguire il commit della modifica. È inoltre possibile usare il menu Refactoring per indicare il nome completo di tutti i riferimenti agli oggetti di database o per espandere alcuni caratteri jolly nelle istruzioni `SELECT` del progetto di database in uso.  
   
@@ -40,7 +40,7 @@ Il menu contestuale Refactoring nell'Editor Transact\-SQL consente di rinominare
   
 4.  Nell schermata successiva sarà possibile visualizzare un'anteprima di un elenco di script che saranno interessati dall'operazione di ridenominazione. In particolare, verranno evidenziate tutte le parti che fanno riferimento a `Products`. Questa operazione è molto simile all'attività Trova tutti i riferimenti illustrata nella procedura precedente. Fare clic su un elemento nel riquadro superiore e visualizzare la modifica effettiva negli script (evidenziati in verde) nel riquadro inferiore.  
   
-5.  Fare clic su **Applica**.  
+5.  Fare clic su **Apply**.  
   
 6.  Per i file di script già aperti in Progettazione tabelle o nell'Editor Transact\-SQL, si noti che le posizioni in cui sono state eseguite modifiche sono evidenziate con una barra verde a sinistra nell'Editor Transact\-SQL.  
   

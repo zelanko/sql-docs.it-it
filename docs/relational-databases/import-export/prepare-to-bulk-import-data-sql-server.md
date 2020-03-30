@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063159"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararsi all'importazione bulk dei dati (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "68063159"
   
 -   Ottenere le autorizzazioni necessarie per l'account utente in uso.  
   
-     L'account utente usato per l'esecuzione dell'utilità **bcp**, dell'istruzione BULK INSERT oppure dell'istruzione INSERT ... L'istruzione SELECT * FROM OPENROWSET(BULK...) deve disporre delle autorizzazioni necessarie per la tabella, che vengono assegnate dal proprietario della tabella. Per altre informazioni sulle autorizzazioni necessarie per ogni metodo, vedere [Utilità bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     L'account utente usato per l'esecuzione dell'utilità **bcp** , dell'istruzione BULK INSERT oppure dell'istruzione INSERT ... L'istruzione SELECT * FROM OPENROWSET(BULK...) deve disporre delle autorizzazioni necessarie per la tabella, che vengono assegnate dal proprietario della tabella. Per altre informazioni sulle autorizzazioni necessarie per ogni metodo, vedere [Utilità bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Utilizzare il modello di recupero con registrazione minima delle operazioni bulk.  
   

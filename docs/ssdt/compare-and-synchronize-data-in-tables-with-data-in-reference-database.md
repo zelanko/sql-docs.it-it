@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241703"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Confrontare e sincronizzare i dati in una o più tabelle e i dati di un database di riferimento
@@ -53,7 +53,7 @@ In questa sezione sono riportate le descrizioni delle attività comuni che suppo
   
 **Confrontare i dati nelle tabelle e facoltativamente aggiornare la destinazione in modo corrispondente all'origine:** dopo aver specificato un database di origine e di destinazione da confrontare e dopo aver eseguito il confronto, è possibile visualizzare i risultati nella finestra **Confronto dati**. Non solo è possibile visualizzare i dettagli delle differenze, ma anche aggiornare lo script che è possibile utilizzare per sincronizzare i dati. Dopo aver identificato le differenze tra i due database, è possibile specificare un'azione per ogni differenza. È quindi possibile aggiornare la destinazione o esportare lo script di aggiornamento nell'editor Transact\-SQL o in un file. Può essere opportuno esportare lo script per consentirne la revisione prima di applicare le modifiche.  
   
-## <a name="UnderstandingDataCompareResults"></a>Informazioni sui risultati del confronto  
+## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>Informazioni sui risultati del confronto  
 Nella tabella seguente vengono descritte le cinque colonne nella finestra **Confronto dati**.  
   
 |Colonna|Note|  

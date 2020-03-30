@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71174228"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Visualizzazione e modifica delle proprietà delle sottoscrizioni push
@@ -32,7 +32,7 @@ ms.locfileid: "71174228"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Visualizzare e modificare le proprietà della sottoscrizione push dal server di pubblicazione nella:  
   
 -   Finestra di dialogo **Proprietà sottoscrizione - \<ServerPubblicazione>: \<DatabasePubblicazione>** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "71174228"
   
 4.  Se necessario, modificare le proprietà e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile modificare le sottoscrizioni push e accedere alle relative proprietà a livello di programmazione utilizzando stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di una sottoscrizione push di una pubblicazione snapshot o transazionale  
@@ -97,9 +97,9 @@ ms.locfileid: "71174228"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Specificare **\@publication**, **\@subscriber**, **\@subscriber_db**, la proprietà della sottoscrizione da modificare come **\@property** e il nuovo valore come **\@value**.  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  Le classi RMO utilizzate per la visualizzazione o la modifica delle proprietà di una sottoscrizione push dipendono dal tipo di pubblicazione per cui viene creata la sottoscrizione push.  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare o modificare le proprietà di una sottoscrizione push di una pubblicazione snapshot o transazionale  

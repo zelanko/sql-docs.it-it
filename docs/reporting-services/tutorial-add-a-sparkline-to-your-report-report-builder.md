@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043183"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
@@ -23,12 +23,12 @@ I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimen
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Tempo stimato per il completamento dell'esercitazione: 30 minuti.  
+Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Creare un report con una tabella  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. Creare un report con una tabella  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
@@ -71,7 +71,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 13. Fare clic su **Avanti**.  
   
-## <a name="Query"></a>2. Creare un layout query e tabella in Creazione guidata tabella  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2. Creare un layout query e tabella in Creazione guidata tabella  
 In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
   
 > [!NOTE]  
@@ -154,13 +154,13 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 14. La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti tre colonne e altrettante righe.  
   
-    Osservare il riquadro di raggruppamento. Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**. Nel riquadro Gruppi di righe viene visualizzato un gruppo di righe: **Product**. Nel riquadro Gruppi di colonne viene visualizzato un gruppo di colonne: **SalesDate**. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+    Osservare il riquadro di raggruppamento. Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**. Nel riquadro Gruppi di righe viene visualizzato un gruppo di righe, ovvero **Product**. Nel riquadro Gruppi di colonne viene visualizzato un gruppo di colonne, ovvero **SalesDate**. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
 
-### <a name="FormatCurrency"></a>2a. Formattare i dati come valuta  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. Formattare i dati come valuta  
 Per impostazione predefinita, i dati di riepilogo per il campo **Sales** riportano un numero generico. È possibile formattare tale numero come valuta. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  
   
 1.  Fare clic su **Progettazione** per passare alla visualizzazione Struttura.  
@@ -177,7 +177,7 @@ Per impostazione predefinita, i dati di riepilogo per il campo **Sales** riporta
     
     ![report-generatore-segnaposto-valore-pulsante](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. (Facoltativo) Formattare i dati come date  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Facoltativo) Formattare i dati come date  
 Per impostazione predefinita, nel campo **SalesDate** vengono visualizzate sia la data che l'ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
   
 1.  Fare clic sulla cella contenente `[SalesDate]`.  
@@ -190,7 +190,7 @@ Per impostazione predefinita, nel campo **SalesDate** vengono visualizzate sia l
   
 I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e i valori di riepilogo per **Sales** come valuta.   
   
-## <a name="Sparkline"></a>3. Aggiungere un grafico sparkline    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. Aggiungere un grafico sparkline    
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -224,7 +224,7 @@ I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4. Allineare i grafici sparkline verticalmente e orizzontalmente  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Allineare i grafici sparkline verticalmente e orizzontalmente  
 I grafici sparkline risultano di difficile lettura quando non usano tutti le stesse misure. È necessario che vi sia corrispondenza tra gli assi orizzontale e verticale di ognuno.  
    
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
@@ -251,7 +251,7 @@ Ora tutte le barre di ogni grafico sparkline sono allineate con le barre degli a
   
 ![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7. (Facoltativo) Modificare la larghezza delle colonne  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Facoltativo) Modificare la larghezza delle colonne  
 Per impostazione predefinita, in ogni cella della tabella è contenuta una casella di testo. Una casella di testo si espande verso il basso per adattarsi al testo digitato quando la pagina viene sottoposta al rendering. Nel report visualizzabile, ogni riga si espande fino all'altezza della casella di testo visualizzabile più alta nella riga. L'altezza della riga nell'area di progettazione non ha alcun effetto sull'altezza della riga nel report visualizzabile.  
   
 Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larghezza della colonna per adattare su un'unica riga il contenuto previsto delle caselle di testo nella colonna.  
@@ -266,7 +266,7 @@ Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larg
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report e verificare se la larghezza è sufficiente.  
   
-## <a name="Title"></a>8. (Facoltativo) Aggiungere un titolo al report  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (Facoltativo) Aggiungere un titolo al report  
 Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione sarà utilizzata la casella di testo che viene posizionata automaticamente nella parte superiore del corpo del report.  
   
 Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -285,7 +285,7 @@ Il testo può essere ulteriormente migliorato applicando stili di carattere, dim
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9. Salvare il report  
+## <a name="9-save-the-report"></a><a name="Save"></a>9. Salvare il report  
 Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  

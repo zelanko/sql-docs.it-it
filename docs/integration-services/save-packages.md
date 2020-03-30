@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295733"
 ---
 # <a name="save-packages"></a>Salvataggio di pacchetti
@@ -114,4 +114,4 @@ ms.locfileid: "71295733"
   
      Nell'elenco dei modelli è incluso il modello di pacchetto predefinito Nuovo pacchetto SSIS. I modelli che è possibile utilizzare come modelli di pacchetto sono identificati dall'icona di pacchetto.  
   
-4.  Scegliere **Aggiungi**.  
+4.  Fare clic su **Aggiungi**.  

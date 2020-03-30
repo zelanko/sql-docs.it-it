@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950330"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  L'impatto sulle prestazioni derivante dall'uso di *checkpoint_duration* dipende dal numero di pagine dirty, dall'attività del sistema e dalla durata effettiva specificata. Se ad esempio il checkpoint viene normalmente completato in 120 secondi e si imposta *checkpoint_duration* su 45 secondi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve dedicare al checkpoint più risorse di quante verrebbero assegnate per impostazione predefinita. Se invece si imposta *checkpoint_duration* su 180 secondi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna meno risorse di quante ne verrebbero assegnate per impostazione predefinita. In generale, un valore breve di *checkpoint_duration* aumenterà le risorse dedicate al checkpoint, mentre un valore elevato di *checkpoint_duration* le ridurrà. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un checkpoint, se possibile, viene sempre completato e l'istruzione CHECKPOINT restituisce immediatamente un risultato al completamento del checkpoint. In alcuni casi, quindi, un checkpoint può venire completato prima o dopo il periodo di tempo indicato.  
   
-##  <a name="Security"></a> Sicurezza  
+##  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'istruzione CHECKPOINT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** e non sono trasferibili.  

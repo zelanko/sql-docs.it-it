@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940409"
 ---
 # <a name="non-sql-server-subscribers"></a>Sottoscrittori non SQL Server  
@@ -87,7 +87,7 @@ Per informazioni sulla creazione delle sottoscrizioni di Oracle e IBM DB2, veder
   
 -   Se un articolo viene aggiunto o eliminato da una pubblicazione, sarà necessario reinizializzare le sottoscrizioni dei Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   I soli vincoli supportati per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono: NULL e NOT NULL. I vincoli delle chiavi primarie vengono replicati come indici univoci.  
+-   I soli vincoli supportati per tutti i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono NULL e NOT NULL. I vincoli delle chiavi primarie vengono replicati come indici univoci.  
   
 -   Il valore NULL viene considerato in modo diverso a seconda del database, con conseguenze sulla modalità di rappresentazione dei valori e delle stringhe vuote e dei valori NULL. Ciò a sua volta influisce sul comportamento dei valori inseriti nelle colonne con vincoli univoci definiti. Oracle consente, ad esempio, più valori NULL in una colonna considerata univoca, mentre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente un solo valore NULL in una colonna univoca.  
   

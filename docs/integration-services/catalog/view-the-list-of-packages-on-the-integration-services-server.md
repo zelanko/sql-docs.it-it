@@ -11,10 +11,10 @@ ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68c9fca56732dd0757d7c602152b523132d5eafc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294876"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Visualizzazione dell'elenco di pacchetti nel server Integration Services
@@ -30,7 +30,7 @@ ms.locfileid: "71294876"
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Per visualizzare i pacchetti archiviati nel server tramite Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], attenersi alla procedura riportata di seguito.  
   
-### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Per visualizzare i pacchetti utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+### <a name="to-view-packages-using-ssmanstudiofull"></a>Per visualizzare i pacchetti utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . cioè connettersi all'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui è ospitato il database di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   

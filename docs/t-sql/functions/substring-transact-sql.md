@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117670"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -46,7 +46,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Argomenti  
  *expression*  
- È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **character**, **binary**, **text**, **ntext** o **image**.  
+ È un'**espressione** di tipo **character**, **binary**, **text**, **ntext** o [image](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
  Valore intero o espressione **bigint** che specifica l'inizio dei caratteri restituiti. (La numerazione è in base 1, ovvero il primo carattere dell'espressione è 1). Se *start* è minore di 1, l'espressione restituita inizierà con il primo carattere specificato in *expression*. In questo caso, il numero di caratteri restituito è il valore maggiore tra la somma di *start* + *length*- 1 oppure 0. Se *start* è maggiore del numero di caratteri nell'espressione valore, viene restituita un'espressione di lunghezza zero.  
@@ -177,7 +177,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. Utilizzo della funzione SUBSTRING con una stringa di caratteri  
  In questo esempio viene illustrato come restituire solo una parte di una stringa di caratteri. Questa query eseguita nella tabella `dbo.DimEmployee` restituisce il cognome in una colonna e l'iniziale del nome nella seconda colonna.  

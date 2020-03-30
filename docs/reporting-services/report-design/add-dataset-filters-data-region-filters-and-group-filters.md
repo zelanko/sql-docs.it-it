@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65582059"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Aggiungere filtri per set di dati, aree dati e gruppi
@@ -25,12 +25,12 @@ ms.locfileid: "65582059"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> Scelta del momento in cui impostare un filtro  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> Scelta del momento in cui impostare un filtro  
  Quando non è possibile filtrare i dati nell'origine, specificare i filtri per gli elementi del report. Utilizzare, ad esempio, i filtri di report quando l'origine dati non supporta parametri di query o quando è necessario eseguire stored procedure e non è possibile modificare la query o quando lo snapshot di un report con parametri visualizza dati personalizzati per utenti diversi.  
   
  È possibile filtrare i dati di un report prima o dopo averli recuperati da un set di dati del report. Per filtrare i dati prima che vengano recuperati, modificare la query per ogni set di dati. Quando si filtrano nella query, i dati vengono filtrati nell'origine dei dati in modo da ridurre la quantità di dati da recuperare ed elaborare in un report. Per filtrare i dati dopo che sono stati recuperati, creare espressioni di filtro nel report. È possibile impostare espressioni di filtro per un set di dati, un'area dati o un gruppo, inclusi i gruppi di dettaglio. È anche possibile includere parametri nelle espressioni di filtro, per consentire di filtrare i dati per valori o utenti specifici, ad esempio applicando un filtro su un valore che identifica l'utente che visualizza il report.  
   
-##  <a name="Where"></a> Scelta della posizione in cui impostare un filtro  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> Scelta della posizione in cui impostare un filtro  
  Determinare la posizione in cui impostare un filtro in base all'effetto che si desidera ottenere nel report. In fase di esecuzione, il componente Elaborazione report applica i filtri prima al set di dati, quindi all'area dati e infine ai gruppi procedendo dall'alto verso il basso in ogni gerarchia di gruppi. In una tabella, una matrice e un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente. Quando l'elaboratore di report applica il filtro, tutte le equazioni di filtro vengono applicate nell'ordine con cui sono definite nella pagina **Filtro** della finestra di dialogo **Proprietà** per ogni elemento del report. Ciò equivale a unirle alle operazioni AND booleane.  
   
  Nell'elenco seguente viene confrontato l'effetto dell'impostazione dei filtri su elementi del report differenti:  
@@ -47,7 +47,7 @@ ms.locfileid: "65582059"
   
  Torna all'inizio  
   
-##  <a name="FilterEquations"></a> Informazioni su un'equazione di filtro  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a> Informazioni su un'equazione di filtro  
  In fase di esecuzione, il componente Elaborazione report converte il valore nel tipo di dati specificato, quindi utilizza l'operatore specificato per confrontare l'espressione e il valore. Nell'elenco seguente sono descritte le singole parti dell'equazione di filtro:  
   
 -   **Espressione** Definisce l'elemento al quale viene applicato il filtro. In genere, corrisponde a un campo del set di dati.  

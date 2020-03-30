@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 411d03198633354169e7faf8f5693685e078f2fa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75239145"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo
@@ -46,10 +46,10 @@ Quando si creano processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)]
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo  
   
@@ -77,7 +77,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 9. Se l'elenco **Esegui come utente** è disponibile selezionare l'account proxy account con le credenziali che verranno utilizzate dal processo.  
   
-## <a name="TSQL"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo  
   
@@ -101,7 +101,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 Per altre informazioni, vedere [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
-## <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 **Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo**  
   
 Usare la classe **JobStep** tramite un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

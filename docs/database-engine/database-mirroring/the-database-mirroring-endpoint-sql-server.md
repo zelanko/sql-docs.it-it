@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68047995"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Endpoint del mirroring del database (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68047995"
 >  La funzionalità del mirroring di database verrà rimossa in una delle prossime versioni di Microsoft SQL Server. Evitare di utilizzare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata in modo da poter utilizzare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
   
-##  <a name="ServerNetworkAddress"></a> Indirizzo di rete del server  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> Indirizzo di rete del server  
  L'indirizzo di rete di un'istanza del server, ovvero l' *indirizzo di rete del server* o l' *URL endpoint*, contiene il numero di porta del relativo endpoint e il nome di sistema e di dominio del relativo computer host. Il numero di porta identifica in modo univoco un'istanza del server specifica.  
   
  Nella figura seguente viene illustrato come sia possibile identificare in modo univoco due istanze nello stesso server. L'indirizzo di rete del server di entrambe le istanze contiene lo stesso nome di sistema, `MYSYSTEM`, e lo stesso nome di dominio, `Adventure-Works.MyDomain.com`. Per consentire al sistema di eseguire il routing delle connessioni a un'istanza del server, un indirizzo di rete del server include il numero di porta associato all'endpoint del mirroring di un'istanza del server specifica.  
@@ -57,7 +57,7 @@ ms.locfileid: "68047995"
 >  Non riconfigurare un endpoint del mirroring del database in uso. Le istanze del server utilizzano reciprocamente i propri endpoint per apprendere lo stato degli altri sistemi. La riconfigurazione dell'endpoint potrebbe determinarne il riavvio, situazione che alle altre istanze del server potrebbe apparire come un errore. Questa indicazione è particolarmente importante per la modalità con failover automatico, nella quale la riconfigurazione dell'endpoint in un partner potrebbe causare il verificarsi di un failover.  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> Determinazione del tipo di autenticazione per un endpoint del mirroring del database  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> Determinazione del tipo di autenticazione per un endpoint del mirroring del database  
  È importante comprendere che gli account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle istanze del server determinano il tipo di autenticazione che è possibile utilizzare per gli endpoint del mirroring del database, come indicato di seguito:  
   
 -   Se ogni istanza del server è in esecuzione con un account di servizio del dominio, è possibile utilizzare l'autenticazione di Windows per gli endpoint del mirroring del database. Se tutte le istanze del server vengono eseguite con lo stesso account utente di dominio, gli account di accesso utente corretti saranno disponibili automaticamente in entrambi i database **master** . Questa scelta semplifica la configurazione della sicurezza per i database di disponibilità ed è quella consigliata.  
@@ -74,7 +74,7 @@ ms.locfileid: "68047995"
      Non è disponibile alcun metodo automatico per la configurazione della sicurezza del mirroring del database tramite certificati. È necessario usare l'istruzione di [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT o il cmdlet di PowerShell **New-SqlHadrEndpoint** . Per altre informazioni, vedere [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md). Per informazioni su come abilitare l'autenticazione del certificato in un'istanza del server, vedere [Utilizzare certificati per un endpoint del mirroring del database (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare un endpoint del mirroring del database**  
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

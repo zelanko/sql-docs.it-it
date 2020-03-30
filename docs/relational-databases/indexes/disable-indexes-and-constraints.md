@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107140"
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
@@ -50,9 +50,9 @@ ms.locfileid: "68107140"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   In caso di disabilitazione, un indice non viene aggiornato.  
   
@@ -88,12 +88,12 @@ ms.locfileid: "68107140"
   
 -   La creazione di un nuovo indice cluster comporta l'abilitazione degli indici non cluster disabilitati precedentemente. Per altre informazioni, vedere [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68107140"
   
 -   Fare clic sul collegamento ipertestuale per visualizzare una finestra di dialogo contenente l'errore completo.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   

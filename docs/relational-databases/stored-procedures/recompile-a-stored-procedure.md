@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74564788"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
@@ -38,9 +38,9 @@ ms.locfileid: "74564788"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   Quando una stored procedure viene compilata per la prima volta o viene ricompilata, il piano di query della stored procedure viene ottimizzato per lo stato corrente del database e dei relativi oggetti. Se i dati o la struttura di un database vengono modificati significativamente, con la ricompilazione di una stored procedure viene aggiornato e ottimizzato il piano di query della stored procedure per tali modifiche. Ciò può migliorare le prestazioni di elaborazione della stored procedure.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "74564788"
   
 -   Se determinate query in una stored procedure utilizzano regolarmente valori atipici o temporanei, le prestazioni della stored procedure possono migliorare tramite l'utilizzo dell'hint per la query RECOMPILE all'interno delle query stesse. Poiché vengono ricompilate solo le query che utilizzano l'hint per la query anziché la stored procedure completa, viene riprodotto il comportamento di ricompilazione a livello di istruzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Oltre all'utilizzo dei valori dei parametri correnti della stored procedure, l'hint per la query RECOMPILE utilizza i valori di qualsiasi variabile locale inclusa nella stored procedure quando si compila l'istruzione. Per altre informazioni, vedere [Hint per la query (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Opzione**WITH RECOMPILE**  
  Se si utilizza questa opzione alla creazione della definizione della stored procedure, è necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui verrà creata la stored procedure.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74564788"
  Stored procedure di sistema**sp_recompile**  
  È richiesta l'autorizzazione ALTER per la stored procedure specificata.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
 
 1. Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

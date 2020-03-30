@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085438"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "68085438"
 
 Vengono descritte e confrontate le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Expectations"></a> Archiviazione di file nel database: vantaggi e comportamenti previsti
+## <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> Archiviazione di file nel database: vantaggi e comportamenti previsti
 
 Nella realtà un'ampia percentuale di dati aziendali non è strutturata e generalmente viene archiviata come file e documenti in file system. La maggior parte di questi dati viene prodotta, gestita e utilizzata da applicazioni che accedono ai file tramite API Windows. Solitamente le aziende mantengono questi dati nel file system, archiviando i metadati correlati per i file in un database relazionale.
 
@@ -40,15 +40,15 @@ L'integrazione dei dati non strutturati nel database relazionale offre i seguent
 
 Molti anni fa SQL Server non offriva modi diversi per archiviare i dati non strutturati in un database relazionale. Oggi, invece, offre vari modi per archiviare i dati non strutturati.
 
-## <a name="Filestream"></a> FILESTREAM
+## <a name="filestream"></a><a name="Filestream"></a> FILESTREAM
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone già della funzionalità FILESTREAM. La funzionalità FILESTREAM fornisce funzionalità di archiviazione, gestione e flusso efficienti per i dati non strutturati archiviati come file nel file system. Una soluzione FILESTREAM, tuttavia, richiede programmazione personalizzata e non soddisfa i requisiti per la piena compatibilità delle applicazioni Windows descritta sopra.
 
-## <a name="FileTables"></a> FileTable
+## <a name="filetables"></a><a name="FileTables"></a> FileTable
 
 La funzionalità FileTable si basa sulle capacità FILESTREAM esistenti e consente ai clienti aziendali di archiviare i dati non strutturati dei file e le gerarchie di directory in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La funzionalità soddisfa i requisiti per l'accesso non transazionale e la compatibilità delle applicazioni Windows per i dati basati su file.
 
-## <a name="CompareFileTable"></a> Confronto tra FILESTREAM e tabelle FileTable
+## <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Confronto tra FILESTREAM e tabelle FileTable
 
 |Funzionalità|Soluzione file server e database|Soluzione FILESTREAM|Soluzione FileTable|
 |:------|:--------------------------------|:------------------|:-----------------|
@@ -60,11 +60,11 @@ La funzionalità FileTable si basa sulle capacità FILESTREAM esistenti e consen
 |**Compatibilità delle applicazioni di Windows**|Sì|No|**Sì**|
 |**Accesso relazionale agli attributi dei file**|No|No|**Sì**|
 
-## <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)
+## <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)
 
 Un'altra opzione per l'archiviazione dei dati non strutturati implica l'utilizzo di un Archivio BLOB remoto. Per altre informazioni, vedere [Archivio Blob remoto (RBS) (SQL Server)](remote-blob-store-rbs-sql-server.md).
 
-## <a name="more"></a> Ulteriori informazioni
+## <a name="more-information"></a><a name="more"></a> Ulteriori informazioni
 
 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  

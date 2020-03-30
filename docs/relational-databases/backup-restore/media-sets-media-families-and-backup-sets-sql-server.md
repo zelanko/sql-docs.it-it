@@ -23,10 +23,10 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258686"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Set di supporti, gruppi di supporti e set di backup (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258686"
   
 >**NOTA** Per altre informazioni sul backup di SQL Server nel servizio Archiviazione BLOB di Azure, vedere [Backup e ripristino di SQL Server con il servizio Archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
-##  <a name="TermsAndDefinitions"></a> Termini  
+##  <a name="terms"></a><a name="TermsAndDefinitions"></a> Termini  
  **set di supporti**  
  Raccolta ordinata di supporti di backup, nastri o file su disco, su cui una o più operazioni di backup hanno eseguito la scrittura usando un tipo e un numero fisso di dispositivi di backup.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75258686"
  Contenuto di backup aggiunto a un set di supporti da un'operazione di backup completata.  
   
 
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> Panoramica dei set di supporti, dei gruppi di supporti e dei set di backup  
+##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> Panoramica dei set di supporti, dei gruppi di supporti e dei set di backup  
  I backup disponibili in un set di uno o più supporti di backup costituiscono un singolo set di supporti. Un *set di supporti* è una raccolta ordinata di *supporti di backup*, nastri o file su disco, o oggetti BLOB di Azure, su cui una o più operazioni di backup hanno eseguito la scrittura usando un tipo e un numero fissi di dispositivi di backup. Un set di supporti specificati usano unità nastro, unità disco o oggetti BLOB di Azure, ma non una combinazione di due o più. 
  
 **Esempio:** i dispositivi di backup associati a un set di supporti possono essere tre unità nastro denominate `\\.\TAPE0`, `\\.\TAPE1`e `\\.\TAPE2`. Il set di supporti include solo nastri, a partire da almeno tre nastri, ovvero uno per unità. Il tipo e il numero di dispositivi di backup vengono definiti in fase di creazione di un set di supporti e non è possibile modificarli. Se necessario, tra le operazioni di backup e ripristino è tuttavia possibile sostituire un determinato dispositivo con un dispositivo dello stesso tipo.  
@@ -166,7 +166,7 @@ GO
 -   Numero di set di backup  
 
   
-##  <a name="CreatingMediaSet"></a> Creating a new media set  
+##  <a name="creating-a-new-media-set"></a><a name="CreatingMediaSet"></a> Creating a new media set  
  Per creare un nuovo set di supporti, è necessario formattare i supporti di backup, ovvero uno o più nastri o file su disco. Durante il processo di formattazione i supporti di backup vengono modificati come descritto di seguito:  
   
 1.  L'eventuale vecchia intestazione viene eliminata, così come il contenuto precedente dei supporti di backup.  
@@ -176,7 +176,7 @@ GO
 2.  Sul supporto di backup (nastro o file su disco) di ciascun dispositivo di backup viene scritta una nuova intestazione supporto.  
 
   
-##  <a name="UseExistingMediaSet"></a> Backup su un set di supporti esistente  
+##  <a name="backing-up-to-an-existing-media-set"></a><a name="UseExistingMediaSet"></a> Backup su un set di supporti esistente  
  Quando si esegue il backup su un set di supporti esistente, è possibile scegliere tra le due opzioni seguenti:  
   
 -   Accodare i dati al set di backup esistente.  
@@ -193,7 +193,7 @@ L'accodamento, che corrisponde al comportamento predefinito dell'istruzione BACK
 
     >  La sovrascrittura dei set di backup esistenti viene specificata tramite l'opzione INIT dell'istruzione BACKUP.  
   
-##  <a name="Appending"></a> Appending to existing backup sets  
+##  <a name="appending-to-existing-backup-sets"></a><a name="Appending"></a> Appending to existing backup sets  
  È possibile archiviare nello stesso supporto i backup dello stesso database o di database differenti eseguiti in momenti diversi. Se si accoda un altro set di backup a un supporto esistente, il contenuto precedente del supporto rimane invariato e il nuovo backup viene registrato dopo la fine dell'ultimo backup presente nel supporto.  
   
  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accoda sempre i nuovi backup al supporto. È possibile accodare i backup solo alla fine del supporto. Se ad esempio un volume del supporto include cinque set di backup, non è possibile ignorare i primi tre set e sovrascrivere il quarto con un nuovo set di backup.  
@@ -205,7 +205,7 @@ L'accodamento, che corrisponde al comportamento predefinito dell'istruzione BACK
 > **IMPORTANTE** Non è possibile effettuare contemporaneamente backup compressi e non compressi in un set di supporti. Qualsiasi edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  
-##  <a name="Overwriting"></a> Overwriting backup sets  
+##  <a name="overwriting-backup-sets"></a><a name="Overwriting"></a> Overwriting backup sets  
  La sovrascrittura dei set di backup esistenti viene specificata tramite l'opzione INIT dell'istruzione BACKUP. Se le verifiche hanno esito positivo, questa opzione sovrascrive gli eventuali set di backup presenti nei supporti, mantenendo solo l'intestazione supporto. Se non esiste alcuna intestazione supporto ne viene creata una.  
   
  Per quanto riguarda le intestazioni del nastro, può risultare opportuno mantenerle. Nel caso di backup su disco vengono sovrascritti soltanto i file usati dai dispositivi di backup specificati per l'operazione. Gli altri file presenti nel disco rimangono inalterati. Durante la sovrascrittura di backup è possibile mantenere l'intestazione supporto esistente. Il nuovo backup verrà creato come primo backup del dispositivo di backup. Se l'intestazione supporto non è presente, viene creata automaticamente una nuova intestazione con un nome e una descrizione del supporto. Se l'intestazione supporto esistente non è valida, l'operazione di backup viene interrotta. Se il supporto è vuoto, viene generata una nuova intestazione supporto con gli eventuali valori MEDIANAME, MEDIAPASSWORD e MEDIADESCRIPTION specificati.  
@@ -227,7 +227,7 @@ L'accodamento, che corrisponde al comportamento predefinito dell'istruzione BACK
   
 
   
-##  <a name="SequenceNumbers"></a> Numeri di sequenza  
+##  <a name="sequence-numbers"></a><a name="SequenceNumbers"></a> Numeri di sequenza  
  L'ordine corretto è importante per più gruppi di supporti in un set di supporti o per più supporti di backup in un gruppo di supporti. Il backup assegna pertanto i numeri di sequenza nei modi seguenti:  
   
 -   Gruppi di supporti sequenziali in un set di supporti  
@@ -238,7 +238,7 @@ L'accodamento, che corrisponde al comportamento predefinito dell'istruzione BACK
   
      Un numero di sequenza di supporti indica l'ordine applicato ai supporti fisici in un gruppo di supporti. Il numero di sequenza è 1 per il supporto di backup iniziale. A esso è associato il tag 1, al secondo (il primo nastro di continuità) il tag 2 e così via. Quando il set di backup viene ripristinato, i numeri di sequenza dei supporti assicurano che l'operatore che ripristina i backup monti i supporti corretti nell'ordine corretto.  
   
-###  <a name="MultipleDevices"></a> Utilizzo di più dispositivi  
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> Utilizzo di più dispositivi  
  Quando si usano più unità nastro o file su disco, si applicano le considerazioni seguenti:  
   
 -   Per il backup:  
@@ -249,7 +249,7 @@ L'accodamento, che corrisponde al comportamento predefinito dell'istruzione BACK
   
      Per qualsiasi ripristino da backup su disco e per qualsiasi ripristino online, tutti i gruppi di supporti devono essere montati simultaneamente. Per un ripristino offline da backup su nastro, è possibile elaborare i gruppi di supporti da un minor numero di dispositivi di backup. Ogni gruppo di supporti deve essere elaborato completamente prima di avviare l'elaborazione di un altro gruppo di supporti. I gruppi di supporti vengono sempre elaborati in parallelo, a meno che siano ripristinati con un dispositivo singolo.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Creare un nuovo set di supporti**  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) (opzione **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti**)  

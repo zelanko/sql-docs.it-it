@@ -33,37 +33,37 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134428"
 ---
 # <a name="database-mail-configuration-objects"></a>Oggetti di configurazione di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Posta elettronica database ha due oggetti di configurazione: gli oggetti di configurazione del database offrono una modalità per configurare le impostazioni che Posta elettronica database deve usare per l'invio di messaggi di posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Posta elettronica database dispone di due oggetti di configurazione: gli oggetti di configurazione del database forniscono una modalità per configurare le impostazioni che Posta elettronica database deve utilizzare per l'invio di messaggi posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Account di Posta elettronica database  
   
 -   Profili di Posta elettronica database  
   
   
-##  <a name="VisualElement"></a> Relazione tra oggetti di configurazione di Posta elettronica database  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> Relazione tra oggetti di configurazione di Posta elettronica database  
  Nella figura seguente vengono illustrati due profili, tre account e tre utenti. User 1 può accedere a Profile 1, che usa Account 1 e Account 2. User 3 può accedere a Profile 2, che utilizza Account 2 e Account 3. User 2 può accedere sia a Profile 1 che a Profile 2.  
   
  ![Relazioni tra utenti, profili e account](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relazioni tra utenti, profili e account")  
   
   
-##  <a name="DBAccount"></a> Account di Posta elettronica database  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> Account di Posta elettronica database  
  Un account di Posta elettronica database contiene le informazioni utilizzate in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'invio di messaggi di posta elettronica a un server SMTP. In ogni account sono incluse le informazioni per un singolo server di posta elettronica.  
   
  Posta elettronica database supporta tre metodi di autenticazione per la comunicazione con un server SMTP:  
   
--   Autenticazione di Windows: Posta elettronica database usa le credenziali dell'account servizio Windows del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per l'autenticazione sul server SMTP.  
+-   Autenticazione di Windows: Posta elettronica database utilizza le credenziali dell'account servizio Windows del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per l'autenticazione sul server SMTP.  
   
--   Autenticazione di base:  Posta elettronica database usa il nome utente e la password specificati per l'autenticazione sul server SMTP.  
+-   Autenticazione di base: Posta elettronica database utilizza il nome utente e la password specificati per l'autenticazione sul server SMTP.  
   
--   Autenticazione anonima:  il server SMTP non richiede l'autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
+-   Autenticazione anonima: il server SMTP non richiede autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
   
  Le informazioni sull'account vengono archiviate nel database **msdb** . Ciascun account include le informazioni seguenti:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68134428"
  La Configurazione guidata posta elettronica database consente di creare e gestire account in modo rapido e semplice. Per la creazione e la gestione di account è anche possibile utilizzare le stored procedure di configurazione incluse in **msdb** .  
   
   
-##  <a name="DBProfile"></a> Profilo di Posta elettronica database  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> Profilo di Posta elettronica database  
  Un profilo di Posta elettronica database è una raccolta ordinata di account di Posta elettronica database correlati. Le applicazioni che inviano messaggi di posta elettronica utilizzando Posta elettronica database specificano i profili, anziché utilizzare direttamente gli account. La separazione delle informazioni relative ai singoli server di posta elettronica dagli oggetti utilizzati dall'applicazione consente di migliorare la flessibilità e l'affidabilità. I profili offrono infatti il failover automatico e se un server è bloccato, Posta elettronica database invia automaticamente la posta a un altro server di posta elettronica. Gli amministratori di database possono aggiungere, rimuovere o riconfigurare gli account senza che sia necessario apportare modifiche al codice dell'applicazione o ai passaggi del processo.  
   
  I profili consentono inoltre di controllare l'accesso alla posta elettronica. L'appartenenza a **DatabaseMailUserRole** è necessaria per l'invio in Posta elettronica database. I profili consentono un'ulteriore flessibilità agli amministratori nel controllo di chi invia i messaggi e di quali account vengono utilizzati.  
@@ -110,7 +110,7 @@ ms.locfileid: "68134428"
  Se esistono più account con lo stesso numero di sequenza, Posta elettronica database utilizza solo uno di questi account per un messaggio di posta specifico. In questo caso, non viene garantito quale account viene utilizzato per quel numero di sequenza né che venga utilizzato lo stesso account per ogni messaggio.  
   
   
-##  <a name="RelatedTasks"></a> Attività di configurazione di Posta elettronica database  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> Attività di configurazione di Posta elettronica database  
  Nella tabella seguente vengono descritte le attività di configurazione di Posta elettronica database.  
   
 |Attività di configurazione|Collegamento all'argomento|  
@@ -121,7 +121,7 @@ ms.locfileid: "68134428"
 |Viene illustrata la creazione di uno script di configurazione per Posta elettronica database utilizzando i modelli||  
   
   
-##  <a name="Add_Tasks"></a> Attività aggiuntive di configurazione di Posta elettronica database (Stored procedure di sistema)  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> Attività aggiuntive di configurazione di Posta elettronica database (Stored procedure di sistema)  
  Le stored procedure per la configurazione di Posta elettronica database sono disponibili nel database **msdb** .  
   
  Nelle tabelle seguenti vengono elencate le stored procedure utilizzate per la configurazione e la gestione di Posta elettronica database.  
@@ -165,7 +165,7 @@ ms.locfileid: "68134428"
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Arresta il programma esterno Posta elettronica database e la coda associata di SQL Service Broker.|  
 |[sysmail_help_status_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|Indica se Posta elettronica database è stato avviato.|  
   
-##  <a name="RelatedContent"></a> Riferimenti aggiuntivi  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> Riferimenti aggiuntivi  
   
 -   [Controlli e registrazione di Posta elettronica database](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

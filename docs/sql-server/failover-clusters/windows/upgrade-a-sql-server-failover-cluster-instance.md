@@ -15,10 +15,10 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 24607a6372ba733165aa12fd159baea10f80ebd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822022"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server
@@ -46,13 +46,13 @@ ms.locfileid: "74822022"
 ## <a name="prerequisites"></a>Prerequisites  
  Prima di iniziare, esaminare le informazioni seguenti:  
   
--   [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dalla versione del sistema operativo Windows e di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in uso. Non è ad esempio possibile eseguire l'aggiornamento direttamente da un'istanza di clustering di failover di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o aggiornare un cluster di failover in esecuzione in [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dalla versione del sistema operativo Windows e di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Non è ad esempio possibile eseguire l'aggiornamento direttamente da un'istanza di clustering di failover di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o aggiornare un cluster di failover in esecuzione in [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
--   [Scegliere un metodo di aggiornamento del motore di database](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti della versione e dell'edizione supportate e anche agli altri componenti installati nell'ambiente interessato per aggiornare i componenti nell'ordine corretto.  
+-   [Scegliere un Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selezionare il metodo di aggiornamento appropriato e i passaggi in base alla verifica degli aggiornamenti di versione ed edizione supportati e anche in base agli altri componenti installati nell'ambiente interessato per aggiornare i componenti di ordine corretto.  
   
--   [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti, l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
+-   [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti e l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
   
--   [Requisiti hardware e software per l'installazione di SQL Server ](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
+-   [Requisiti hardware e software per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Eseguire un aggiornamento o un aggiornamento in sequenza  
  Per aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per aggiornare i nodi del cluster di failover, uno alla volta, a partire dai nodi passivi. Man mano che viene aggiornato, ogni nodo viene escluso dai possibili proprietari del cluster di failover. In caso di failover imprevisto, i nodi aggiornati non partecipano al failover fino a quando la proprietà del gruppo di risorse del cluster non viene spostata in un nodo aggiornato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934821"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
@@ -38,7 +38,7 @@ ms.locfileid: "67934821"
 > -   I pacchetti di distribuzione di modelli possono essere utilizzati solo nell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per crearli. Non è possibile distribuire i pacchetti di distribuzione del modello creati in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
 > -   Dopo l'aggiornamento di Data Quality Services e Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tutte le versioni precedenti del componente aggiuntivo Master Data Services per Excel non funzioneranno più. È possibile scaricare il componente aggiuntivo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Services per Excel da [Componente aggiuntivo Master Data Services per Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
-##  <a name="fileLocation"></a> Percorso del file  
+##  <a name="file-location"></a><a name="fileLocation"></a> Percorso del file  
   
 -   Per impostazione predefinita, in [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] i file sono installati in *unità*:\Programmi\Microsoft SQL Server\140\Master Data Services.  
 
@@ -50,7 +50,7 @@ ms.locfileid: "67934821"
   
 -   Per impostazione predefinita, in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]i file sono installati in *unità*:\Programmi\Microsoft SQL Server\Master Data Services.  
   
-##  <a name="noengine"></a> Aggiornare senza aggiornamento del motore di database  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> Aggiornare senza aggiornamento del motore di database  
  In questo scenario si continua a usare [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per ospitare il database MDS. Tuttavia, è necessario aggiornare lo schema del database MDS e, successivamente, creare un'applicazione Web [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] corrente per accedere al database MDS. Dopo l'aggiornamento, l'accesso al database MDS non può essere più eseguito dall'applicazione Web precedente.  
   
  È possibile installare la versione corrente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e una versione precedente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] nello stesso computer. I file vengono installati in posizioni diverse, come illustrato in [Percorso file](#fileLocation).  
@@ -105,9 +105,9 @@ ms.locfileid: "67934821"
   
     2.  Selezionare il database MDS.  
   
-    3.  Fare clic su **Applica**.  
+    3.  Fare clic su **Apply**.  
   
-##  <a name="engine"></a> Aggiornare con l'aggiornamento del motore di database  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Aggiornare con l'aggiornamento del motore di database  
  In questo scenario il motore di database e l'applicazione [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono aggiornati da una versione precedente a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   
  **Per eseguire l'aggiornamento aggiornando il motore di database**  
@@ -118,7 +118,7 @@ ms.locfileid: "67934821"
   
 3.  Completare tutti i passaggi in [Aggiornare senza aggiornamento del motore di database](#noengine) .  
   
-##  <a name="twocomputer"></a> Aggiornare in uno scenario con due computer  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Aggiornare in uno scenario con due computer  
  Questo scenario comporta l'aggiornamento di un sistema nel quale SQL Server viene installato in due computer: uno con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] e l'altro con una versione precedente di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
  Se è installata una versione precedente di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], continuare a usare la versione precedente per ospitare il database MDS in un computer. Tuttavia, è necessario aggiornare lo schema del database MDS e quindi usare rispettivamente l'applicazione Web [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] per accedere al database MDS. L'accesso al database MDS non può essere più eseguito dall'applicazione Web della versione precedente.  
@@ -127,7 +127,7 @@ ms.locfileid: "67934821"
   
 -   Completare tutti i passaggi in [Aggiornare senza aggiornamento del motore di database](#noengine).  
   
-##  <a name="restore"></a> Aggiornare con il ripristino di un database da un backup  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Aggiornare con il ripristino di un database da un backup  
  In questo scenario, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] è installato insieme a una versione precedente nello stesso computer o in due computer differenti. È stato eseguito il backup prima dell'aggiornamento di un database in una versione precedente a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] e il database deve essere ripristinato.  
   
  **Per eseguire l'aggiornamento con il ripristino di un database da un backup**  
@@ -148,7 +148,7 @@ ms.locfileid: "67934821"
   
 3.  Aggiornare lo schema del database MDS, creare un'applicazione Web e associare la nuova applicazione Web al database MDS aggiornato. Per le istruzioni, vedere i passaggi da 2 a 4 in [Aggiornare senza aggiornamento del motore di database](#noengine)  
   
-## <a name="troubleshooting"></a>Risoluzione dei problemi  
+## <a name="troubleshooting"></a>risoluzione dei problemi  
  **Problema:** quando si apre l'applicazione Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] viene visualizzato un messaggio di errore indicante che la versione del client non è compatibile con quella del database.  
   
  **Soluzione:** questo problema si verifica quando un'applicazione Web Gestione dati master di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] prova ad accedere a un database che è stato aggiornato a [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. È necessario quindi usare un'applicazione Web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  

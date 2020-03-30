@@ -15,28 +15,28 @@ ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822436"
 ---
 # <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>Modificare il periodo di timeout della sessione per una replica del gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento illustra come configurare il periodo di timeout della sessione di una replica di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Il periodo di timeout della sessione è una proprietà della replica che determina i secondi di attesa di una replica di disponibilità per una risposta del ping da una replica connessa prima di considerare la connessione non riuscita. Per impostazione predefinita, l'attesa di una replica è di 10 secondi per una risposta del ping. Questa proprietà della replica si applica solo alla connessione tra una determinata replica secondaria e la replica primaria del gruppo di disponibilità. Per altre informazioni sul periodo di timeout della sessione, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
    
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
-##  <a name="Recommendations"></a> Raccomandazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
  È consigliabile usare un periodo di timeout di almeno 10 secondi. Con un valore inferiore a 10 secondi, può verificarsi un sovraccarico del sistema, con perdita di PING e generazione di falsi errori.  
   
   
-## <a name="Permissions"></a> Autorizzazioni  
+## <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per modificare il periodo di timeout della sessione per una replica di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -49,7 +49,7 @@ ms.locfileid: "74822436"
   
 5.  Nella finestra di dialogo **Proprietà replica di disponibilità** usare il campo **Timeout sessione (secondi)** per modificare il numero di secondi per il periodo di timeout della sessione su questa replica.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare il periodo di timeout della sessione per una replica di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -69,7 +69,7 @@ ms.locfileid: "74822436"
        MODIFY REPLICA ON 'INSTANCE09' WITH (SESSION_TIMEOUT = 15);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Con PowerShell  
  **Per modificare il periodo di timeout della sessione per una replica di disponibilità**  
   
 1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica primaria.  

@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080891"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)
@@ -57,19 +57,19 @@ ms.locfileid: "77080891"
   
 -   [Informazioni aggiuntive](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Panoramica delle modifiche di configurazione  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a> Panoramica delle modifiche di configurazione  
  Le seguenti modifiche di configurazione consentono di configurare il server in modo tale da utilizzare autorizzazioni utente standard per le gestione del contenuto e le operazioni del server di report:  
   
 -   Aggiungere gli URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ai siti attendibili. Per impostazione predefinita, nei sistemi operativi seguenti Internet Explorer viene eseguito in **modalità protetta**. Questa funzionalità impedisce alle richieste del browser di accedere a processi di alto livello in esecuzione nello stesso computer. È possibile disabilitare la modalità protetta per le applicazioni del server di report aggiungendo le applicazioni come Siti attendibili.  
   
 -   Creare assegnazioni di ruolo che concedono all'amministratore del server di report l'autorizzazione necessaria per gestire il contenuto e le operazioni senza dover utilizzare la funzionalità **Esegui come amministratore** in Internet Explorer. Creando assegnazioni di ruolo per l'account utente di Windows, è possibile accedere a un server di report con le autorizzazioni Gestione contenuto e Amministratore sistema tramite assegnazioni di ruolo esplicite che sostituiscono le assegnazioni di ruolo predefinite create da Reporting Services.  
   
-##  <a name="bkmk_configure_local_server"></a> Per configurare l'amministrazione del server di report locale e del portale Web  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> Per configurare l'amministrazione del server di report locale e del portale Web  
  Se si sta esplorando un server di report locale e vengono visualizzati errori simili ai seguenti, completare i passaggi di configurazione riportati in questa sezione.  
   
 -   L'utente `'Domain\[user name]`' non dispone delle autorizzazioni necessarie. Verificare che siano state concesse autorizzazioni sufficienti e che le restrizioni di Controllo account utente di Windows siano state gestite.  
   
-###  <a name="bkmk_site_settings"></a> Impostazioni dei siti attendibili nel browser  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> Impostazioni dei siti attendibili nel browser  
   
 1.  Aprire una finestra del browser utilizzando autorizzazioni Esegui come amministratore. Dal menu **Start** fare clic con il pulsante destro del mouse su **Internet Explorer** e scegliere **Esegui come amministratore**.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "77080891"
   
 10. Se non si usa HTTPS per il sito predefinito, deselezionare la casella di controllo **Richiedi verifica server (https:) per tutti i siti compresi nell'area** .  
   
-11. Scegliere **Aggiungi**.  
+11. Fare clic su **Aggiungi**.  
   
 12. Selezionare **OK**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Impostazioni della cartella del portale Web  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Impostazioni della cartella del portale Web  
   
 1.  Nel portale Web fare clic su **Gestisci cartella** nella home page.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "77080891"
   
 6.  Selezionare **OK**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Impostazioni del sito del portale Web  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Impostazioni del sito del portale Web  
   
 1.  Aprire il browser con i privilegi di amministratore e accedere al portale Web, `https://<server name>/reports`.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "77080891"
   
 8. Riaprire il portale Web in Internet Explorer senza usare **Esegui come amministratore**.  
   
-##  <a name="bkmk_configure_ssms"></a> Per configurare SQL Server Management Studio (SSMS) per l'amministrazione del server di report locale  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> Per configurare SQL Server Management Studio (SSMS) per l'amministrazione del server di report locale  
  Per impostazione predefinita, non è possibile accedere a tutte le proprietà dei server di report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a meno che non si esegua [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] con privilegi di amministratore.  
   
  **Per configurare proprietà e assegnazioni dei ruoli di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , pertanto, non è necessario avviare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] con autorizzazioni elevate tutte le volte:  
@@ -152,7 +152,7 @@ ms.locfileid: "77080891"
   
  Quando si apre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non si seleziona esplicitamente **Esegui come amministratore** si ha accesso alle proprietà del server di report.  
   
-##  <a name="bkmk_configure_ssdt"></a> Per configurare SQL Server Data Tools (SSDT) per la pubblicazione in un server di report locale  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> Per configurare SQL Server Data Tools (SSDT) per la pubblicazione in un server di report locale  
  Se è stato installato [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in uno dei sistemi operativi indicati nella prima sezione di questo argomento e si vuole che SSDT interagisca con un server di report in modalità nativa locale, si verificheranno problemi di autorizzazione a meno che non si apra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con autorizzazioni elevate o si configurino ruoli di Reporting Services. Ad esempio, se non si dispone di autorizzazioni sufficienti, si verificheranno problemi simili ai seguenti:  
   
 -   Quando si tenta di distribuire elementi dei report nel server di report del computer, viene visualizzato un messaggio di errore simile al seguente nella finestra **Elenco errori** :  
@@ -171,7 +171,7 @@ Sarà ora possibile distribuire report o altri elementi in un server di report l
   
 -   Vedere le sezioni [Impostazioni della cartella del portale Web](#bkmk_configure_folder_settings) e [Impostazioni del sito del portale Web](#bkmk_configure_site_settings) più indietro in questo argomento.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Informazioni aggiuntive  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> Informazioni aggiuntive  
  Un passaggio di configurazione aggiuntivo e comune correlato all'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nell'aprire la porta 80 in Windows Firewall per consentire l'accesso al computer del server di report. Per istruzioni, vedere [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Vedere anche  

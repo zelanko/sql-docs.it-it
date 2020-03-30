@@ -17,13 +17,13 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822646"
 ---
-# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Correzione automatica della pagina (Gruppi di disponibilità: mirroring del database
+# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Correzione di pagina automatica (Gruppi di disponibilità/Mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La correzione automatica della pagina è supportata dal mirroring del database e da [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Se una pagina viene danneggiata e resa illeggibile a causa di determinati tipi di errori, viene tentato il relativo recupero automatico tramite un partner di mirroring di database (principale o mirror) o una replica di disponibilità (primaria o secondaria). Dal partner o dalla replica che non è grado di leggere la pagina viene richiesta una copia aggiornata di quest'ultima dal relativo partner o da un'altra replica. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia leggibile. In questo modo, l'errore viene in genere risolto.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822646"
   
 -   [Procedura: Visualizzare i tentativi di correzione automatica della pagina](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Tipi di errore che provocano un tentativo di correzione automatica delle pagine  
+##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a> Tipi di errore che provocano un tentativo di correzione automatica delle pagine  
  Durante la correzione automatica delle pagine tramite mirroring del database, viene eseguito il tentativo di ripristinare solo le pagine in un file di dati in cui non è stato possibile completare un'operazione, a causa di uno degli errori elencati nella tabella seguente.  
   
 |Numero di errore|Descrizione|Istanze che provocano un tentativo di correzione automatica della pagina|  
@@ -56,17 +56,17 @@ ms.locfileid: "74822646"
  Per visualizzare gli errori CRC 823 e gli errori 824 recenti, vedere la tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) nel database [msdb](../../relational-databases/databases/msdb-database.md) .  
 
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="page-types-that-cannot-be-automatically-repaired"></a><a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
  La correzione automatica della pagina non può ripristinare i tipi di pagine di controllo seguenti:  
   
 -   Pagina di intestazione del file (ID pagina 0).  
   
 -   Pagina 9 (pagina di avvio del database).  
   
--   Pagine di allocazione: pagine GAM (Global Allocation Map), pagine SGAM ( Shared Global Allocation Map) e pagine PFS (Page Free Space).  
+-   Pagine di allocazione: pagine mappa di allocazione globale (GAM, Global Allocation Map), pagine mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) e pagine spazio libero nella pagina (PFS, Page Free Space).  
   
  
-##  <a name="PrimaryIOErrors"></a> Gestione degli errori di I/O nel database principale o primario  
+##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> Gestione degli errori di I/O nel database principale o primario  
  Nel database principale o primario, la correzione automatica della pagina è possibile solo quando il database è nello stato SINCRONIZZATO e tramite esso si stanno ancora inviando record di log per il database al database mirror o secondario. La sequenza di azioni di base in un tentativo di correzione automatica della pagina è la seguente:  
   
 1.  Quando si verifica un errore di lettura in una pagina di dati nel database principale o primario, tramite quest'ultimo viene inserita una riga nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) con lo stato di errore appropriato. Per il mirroring del database, dal database principale viene richiesta una copia della pagina dal database mirror. Per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], tramite il database primario viene trasmessa la richiesta a tutti i database secondari e la pagina viene restituita dal primo a rispondere. Nella richiesta viene specificato l'ID della pagina e il numero LSN presente attualmente al termine del log scaricato. La pagina è contrassegnata come *ripristino in sospeso*. In questo modo non sarà possibile accedervi durante il tentativo di correzione automatica della pagina. L'accesso a questa pagina durante il tentativo di correzione non verrà consentito e sarà visualizzato l'errore 829 (ripristino in sospeso).  
@@ -80,7 +80,7 @@ ms.locfileid: "74822646"
 5.  Se l'errore di I/O della pagina ha causato una qualsiasi [transazione posticipata](../../relational-databases/backup-restore/deferred-transactions-sql-server.md), una volta corretta la pagina, tramite il database principale o primario viene tentato di risolvere queste transazioni.  
   
  
-##  <a name="SecondaryIOErrors"></a> Gestione degli errori di I/O nel database mirror o secondario  
+##  <a name="handling-io-errors-on-the-mirrorsecondary-database"></a><a name="SecondaryIOErrors"></a> Gestione degli errori di I/O nel database mirror o secondario  
  Gli errori di I/O nelle pagine di dati che si verificano nel database mirror o secondario sono gestiti in genere nello stesso modo dal mirroring del database e da [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 1.  Con il mirroring del database, se vengono rilevati errori di I/O in una o più pagine dal database mirror quando tramite quest'ultimo viene eseguito il rollforward di un record di log, per la sessione di mirroring viene attivato lo stato SOSPESO. Con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], se vengono rilevati errori di I/O in una o più pagine da una replica secondaria quando tramite quest'ultima viene eseguito il rollforward di un record di log, per il database secondario viene attivato lo stato SOSPESO. A questo punto, il database mirror o secondario inserisce una riga con la stato di errore appropriato nella tabella **suspect_pages** . Dal database mirror o secondario viene quindi richiesta una copia della pagina dal database principale o primario.  
@@ -92,11 +92,11 @@ ms.locfileid: "74822646"
      Se da un database mirror o secondario non si riceve una pagina richiesta dal database principale o primario, il tentativo di correzione automatica della pagina non verrà completato. Con il mirroring del database, la sessione di mirroring rimane sospesa. Con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], il database secondario rimane sospeso. Se la ripresa della sessione di mirroring o del database secondario viene eseguita manualmente, le pagine danneggiate verranno rilevate nuovamente durante la fase di sincronizzazione.  
   
  
-##  <a name="DevBP"></a> Developer Best Practice  
+##  <a name="developer-best-practice"></a><a name="DevBP"></a> Developer Best Practice  
  La correzione automatica di una pagina è un processo asincrono eseguito in background. Pertanto, non sarà possibile completare un'operazione sul database tramite cui viene richiesta una pagina illeggibile e verrà restituito il codice di errore relativo alla condizione che lo ha causato. In fase di sviluppo di un'applicazione per un database con mirroring o un database di disponibilità, è consigliabile intercettare le eccezioni per le operazioni con errori. Se il codice di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è 823, 824 o 829, ripetere l'operazione in un secondo momento.  
   
 
-##  <a name="ViewAPRattempts"></a> Procedura: Visualizzare i tentativi di correzione automatica della pagina  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
  Tramite le DMV seguenti vengono restituite righe degli ultimi tentativi di correzione automatica delle pagine in un database di disponibilità o database con mirroring specificato, con un massimo di 100 righe per database.  
   
 -   **Gruppi di disponibilità AlwaysOn:**  
