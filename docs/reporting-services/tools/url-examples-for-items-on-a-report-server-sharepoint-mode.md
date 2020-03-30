@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574013"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Esempi di URL per gli elementi in un server di report - Modalità SharePoint
@@ -100,7 +100,7 @@ ms.locfileid: "65574013"
 |Il report di esempio Company Sales nella cartella **Documents/Doc** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 |Il report di esempio Company Sales in un **Centro report** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> Pubblicazione da uno strumento di creazione in una raccolta di SharePoint  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Pubblicazione da uno strumento di creazione in una raccolta di SharePoint  
  Quando per pubblicare in una raccolta i report e i file correlati si utilizza uno strumento di creazione dei report, i file vengono convalidati prima di essere aggiunti. Se invece si caricano i report e i file correlati usando l'azione **Carica** in una raccolta di SharePoint, non viene eseguito alcun controllo di convalida. In questo caso, non sarà possibile sapere se il file è valido fino a quando non si accederà al report per gestirlo, modificarlo o eseguirlo.  
   
 > [!NOTE]  

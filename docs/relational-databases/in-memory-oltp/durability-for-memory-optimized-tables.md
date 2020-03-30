@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67942801"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
@@ -41,7 +41,7 @@ ms.locfileid: "67942801"
   
  Quando una riga viene eliminata o aggiornata, non viene rimossa o modificata sul posto nel file di dati, ma le righe eliminate vengono rilevate in un altro tipo di file: il file differenziale. Le operazioni di aggiornamento sono elaborate come una tupla di operazioni di eliminazione e inserimento per ogni riga. Ciò consente di eliminare le operazioni di I/O casuali nel file di dati.  
  
-   Dimensioni: Ogni file di dati viene ridimensionato approssimativamente su 128 MB per i computer con memoria superiore a 16 GB e a 16 MB per i computer con memoria minore o uguale a 16 GB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file di dati vengono ridimensionati a 1GB. In questo modo è possibile migliorare l'efficienza del sottosistema di archiviazione per i carichi di lavoro con velocità effettiva elevata.  
+   Dimensioni: ogni file di dati viene ridimensionato approssimativamente a 128 MB per i computer con memoria superiore a 16 GB e a 16 MB per i computer con memoria minore o uguale a 16 GB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file di dati vengono ridimensionati a 1GB. In questo modo è possibile migliorare l'efficienza del sottosistema di archiviazione per i carichi di lavoro con velocità effettiva elevata.  
    
 ### <a name="the-delta-file"></a>File differenziale  
  Ogni file di dati è associato a un file differenziale con lo stesso intervallo di transazione che tiene traccia delle righe eliminate inserite dalle transazioni nell'intervallo di transazione. Questo file di dati e differenziale è spesso indicato come coppia di file di checkpoint (CFP, Checkpoint File Pair) e corrisponde all'unità di allocazione e deallocazione, oltre che all'unità per le operazioni di unione. Ad esempio, in un file differenziale che corrisponde all'intervallo di transazione (100, 200) verranno archiviate le righe eliminate inserite dalle transazioni nell'intervallo (100, 200). Come per i file di dati, l'accesso al file differenziale avviene in ordine sequenziale.  
@@ -86,7 +86,7 @@ ms.locfileid: "67942801"
   
  Un thread in background valuta tutte le coppie di file di checkpoint chiuse utilizzando un criterio di unione, quindi avvia una o più richieste di unione per le coppie di file di checkpoint qualificate. Queste richieste di unione vengono elaborate dal thread del checkpoint offline. La valutazione dei criteri di unione viene eseguita periodicamente, anche quando un checkpoint viene chiuso.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Criteri di unione  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Criteri di unione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa i criteri di unione seguenti:  
   
 -   Un'unione è pianificata se 2 o più coppie di file di checkpoint consecutive possono essere consolidate, dopo aver tenuto conto delle righe eliminate, in modo che le righe risultanti rientrino in una coppia di file di checkpoint di dimensioni di destinazione. Le dimensioni di destinazione dei file di dati e differenziali corrispondono alle dimensioni originali, come descritto in precedenza.  

@@ -14,10 +14,10 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259334"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "76259334"
 > [!NOTE]  
 > HTTP.SYS è un componente del sistema operativo che rimane in attesa delle richieste di rete e ne esegue quindi il routing a una coda di richieste. In questa versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTP.SYS definisce e gestisce la coda di richieste per il servizio Web ReportServer e per il portale Web. Internet Information Services (IIS) non viene più utilizzato per ospitare le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o accedervi. Per altre informazioni sulla funzionalità HTTP.SYS, vedere [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652).  
   
-##  <a name="ReportingServicesURLs"></a> URL in Reporting Services  
+##  <a name="urls-in-reporting-services"></a><a name="ReportingServicesURLs"></a> URL in Reporting Services  
  In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile accedere agli strumenti, alle applicazioni e agli elementi seguenti tramite URL:  
   
 -   servizio Web ReportServer  
@@ -46,7 +46,7 @@ ms.locfileid: "76259334"
 > [!NOTE]  
 > Questo articolo non descrive l'accesso tramite URL a report specifici archiviati nel server di report. Per altre informazioni sull'accesso tramite URL a questi elementi, vedere [Accedere agli elementi del server di report usando l'accesso tramite URL](../../reporting-services/access-report-server-items-using-url-access.md).  
   
-##  <a name="URLreservation"></a> Prenotazione e registrazione URL  
+##  <a name="url-reservation-and-registration"></a><a name="URLreservation"></a> Prenotazione e registrazione URL  
  Una prenotazione URL definisce gli URL che possono essere utilizzati per accedere a un'applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] riserverà uno o più URL per il servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS e li registra quindi all'avvio del servizio. Aggiungendo parametri all'URL, è possibile aprire i report tramite il servizio Web. Le prenotazioni e la registrazione vengono forniti da HTTP.SYS. Per altre informazioni, vedere [Prenotazioni, registrazione e routing dello spazio dei nomi](https://go.microsoft.com/fwlink/?LinkId=92653).  
   
  Una*prenotazione URL* è un processo tramite cui un endpoint dell'URL a un'applicazione Web viene creato e archiviato in HTTP.SYS. HTTP.SYS è il repository comune di tutte le prenotazioni URL definite in un computer e determina un set di regole comuni che garantiscono l'univocità delle prenotazioni URL.  
@@ -62,7 +62,7 @@ ms.locfileid: "76259334"
 |`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|La prenotazione URL specifica un carattere jolly (+) sulla porta 80. In questo modo nella coda del server di report viene inserita qualsiasi richiesta in ingresso che specifica un host per la risoluzione nel computer server di report sulla porta 80. Si noti che con tale prenotazione URL è possibile utilizzare il numero desiderato di URL per accedere al server di report.<br /><br /> Si tratta della prenotazione URL predefinita per un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la maggior parte dei sistemi operativi.|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|Questa prenotazione URL specifica un indirizzo IP ed è molto più restrittiva della prenotazione URL con carattere jolly. Solo gli URL che includono l'indirizzo IP possono essere utilizzati per la connessione al server di report. Tenuto conto di questa prenotazione URL, una richiesta a un server di report a `https://<computername>/reportserver` o `https://localhost/reportserver` avrà esito negativo.|  
   
-##  <a name="DefaultURLs"></a> URL predefiniti  
+##  <a name="default-urls"></a><a name="DefaultURLs"></a> URL predefiniti  
  Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato usando la configurazione predefinita, il programma di installazione prenoterà gli URL per il servizio Web ReportServer e per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. È possibile accettare questi valori predefiniti anche quando si definiscono prenotazioni URL nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli URL predefiniti includono il nome di un'istanza se si installa [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] o se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato come istanza denominata.  
   
 > [!IMPORTANT]  
@@ -91,13 +91,13 @@ ms.locfileid: "76259334"
 |SQL Server Express|servizio Web ReportServer|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
 |SQL Server Express|Portale Web|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
-##  <a name="URLPermissionsAccounts"></a> Autenticazione e identità del servizio per gli URL di Reporting Services  
+##  <a name="authentication-and-service-identity-for-reporting-services-urls"></a><a name="URLPermissionsAccounts"></a> Autenticazione e identità del servizio per gli URL di Reporting Services  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le prenotazioni di URL visualizzano l'account della prenotazione dell'URL. L'account del servizio virtuale viene usato per tutti gli URL creati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione nella stessa istanza.
   
  
  L'accesso anonimo è disabilitato perché la sicurezza predefinita è **RSWindowsNegotiate**. Per l'accesso Intranet, gli URL del server di report utilizzano nomi di computer di rete. Se si desidera configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per le connessioni Internet, è necessario utilizzare impostazioni diverse. Per altre informazioni sull'autenticazione, vedere [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md).  
   
-##  <a name="URLlocalAdmin"></a> URL per l'amministrazione locale  
+##  <a name="urls-for-local-administration"></a><a name="URLlocalAdmin"></a> URL per l'amministrazione locale  
  È possibile utilizzare `https://localhost/reportserver` o `https://localhost/reports` se è stato specificato un carattere jolly sicuro o vulnerabile per la prenotazione URL.  
   
  L'URL `https://localhost` viene interpretato come `https://127.0.0.1`. Se la prenotazione URL è stata associata a un nome di computer o a un singolo indirizzo IP, non è possibile utilizzare localhost se non si crea una prenotazione aggiuntiva per 127.0.0.1 nel computer locale. Analogamente, se localhost o 127.0.0.1 è disabilitato nel computer, non è possibile utilizzare l'URL.  

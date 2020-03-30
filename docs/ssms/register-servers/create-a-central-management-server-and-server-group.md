@@ -14,10 +14,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 67bc366117bd7dfd172a34458b05c94a8410965e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258927"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Creare un server di gestione centrale e un gruppo di server
@@ -39,16 +39,16 @@ In questo argomento viene illustrato come designare un'istanza di [!INCLUDE[ssNo
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Due ruoli del database nel database msdb concedono l'accesso ai server di gestione centrale. Solo i membri del ruolo ServerGroupAdministratorRole possono gestire il server di gestione centrale. Per connettersi a un server di gestione centrale, è necessario appartenere a un ruolo ServerGroupReaderRole.  
   
  Poiché le connessioni gestite da un server di gestione centrale vengono eseguite nel contesto dell'utente, l'utilizzo dell'autenticazione di Windows comporta la possibile variazione delle autorizzazioni effettive per i server registrati. L'utente, ad esempio, potrebbe essere un membro del ruolo predefinito del server sysadmin nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, ma disporre di autorizzazioni limitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Nelle procedure indicate di seguito viene descritto come eseguire i passaggi seguenti.  
   
 1.  Creare un server di gestione centrale.  

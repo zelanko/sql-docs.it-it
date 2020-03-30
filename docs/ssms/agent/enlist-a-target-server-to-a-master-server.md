@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 936c40de1bebd463ad0213ebdfc99171a0fd91a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242388"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Integrare un server di destinazione in un server master
@@ -37,7 +37,7 @@ Per informazioni sugli effetti dell'uso dell'account di Windows per il servizio 
   
 Per impostazione predefinita, per le connessioni tra server master e server di destinazione sono attive la crittografia SSL (Secure Sockets Layer) completa e la convalida del certificato. Per altre informazioni, vedere [Impostazione delle opzioni di crittografia nei server di destinazione](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
-## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Per integrare un server di destinazione  
   
@@ -47,7 +47,7 @@ Per impostazione predefinita, per le connessioni tra server master e server di d
   
 3.  In Configurazione guidata server di destinazione, eseguire i passaggi necessari per completare la procedura.  
   
-## <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Per integrare un server di destinazione  
   

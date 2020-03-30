@@ -20,10 +20,10 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258974"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Usare più versioni e istanze di SQL Server
@@ -76,7 +76,7 @@ Esempi: documentazione online di: [!INCLUDE[ssISnoversion](../../includes/ssisno
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le versioni con componenti che condividono la stessa versione principale e secondaria.
   
-Esempio: File di supporto per l'installazione.
+Esempio: file di supporto per l'installazione.
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Componenti specifici di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

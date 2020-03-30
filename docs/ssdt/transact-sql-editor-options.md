@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256324"
 ---
 # <a name="transact-sql-editor-options"></a>Opzioni dell'editor Transact-SQL
@@ -42,7 +42,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
   
 [Risultati query](#QueryResults)  
   
-## <a name="QueryExecution"></a>Esecuzione di query  
+## <a name="query-execution"></a><a name="QueryExecution"></a>Esecuzione di query  
   
 |Proprietà|Descrizione|  
 |------------|---------------|  
@@ -70,7 +70,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
 |**SET ANSI_WARNINGS**|Specifica il comportamento standard SQL-92 per diverse condizioni di errore. Per altre informazioni, vedere [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
 |**SET ANSI_NULLS**|Specifica la conformità del comportamento agli standard SQL-92 per gli operatori di confronto uguale a ( **=** ) e diverso da ( **<>** ) quando vengono usati con valori Null. Per altre informazioni, vedere [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
-## <a name="QueryResults"></a>Risultati query  
+## <a name="query-results"></a><a name="QueryResults"></a>Risultati query  
   
 |Proprietà|Descrizione|  
 |------------|---------------|  
@@ -79,7 +79,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
 |**Elimina risultati dopo l'esecuzione**|Consente di liberare memoria eliminando i risultati delle query dopo la loro visualizzazione.|  
 |**Visualizza risultati in una scheda separata**|Consente di visualizzare il set dei risultati in una nuova finestra del documento anziché nella parte inferiore della finestra del documento della query.|  
 |**Passa alla scheda dei risultati al termine della query**|Consente di impostare automaticamente lo stato attivo dello schermo sul set dei risultati.|  
-|**Dimensioni massime caratteri recuperati**|Dati non XML:<br /><br />Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella. **Nota:** Se si specifica un numero elevato di caratteri, i dati nel set di risultati potrebbero non essere visualizzati completamente. Il numero massimo di caratteri visualizzati in ogni cella dipende dalle dimensioni del carattere. Se si specifica un valore elevato in questa casella e vengono restituiti set di risultati di notevoli dimensioni, la memoria per SQL Server Management Studio potrebbe risultare insufficiente con effetti negativi sulle prestazioni del sistema.<br /><br />Dati XML<br /><br />Consente di selezionare i valori 1 MB, 2 MB o 5 MB. Selezionare Illimitate per recuperare tutti i caratteri.|  
+|**Dimensioni massime caratteri recuperati**|Dati non XML:<br /><br />Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella. **Nota:** se si specifica un numero elevato di caratteri, i dati nel set di risultati potrebbero non essere visualizzati completamente. Il numero massimo di caratteri visualizzati in ogni cella dipende dalle dimensioni del carattere. Se si specifica un valore elevato in questa casella e vengono restituiti set di risultati di notevoli dimensioni, la memoria per SQL Server Management Studio potrebbe risultare insufficiente con effetti negativi sulle prestazioni del sistema.<br /><br />Dati XML<br /><br />Consente di selezionare i valori 1 MB, 2 MB o 5 MB. Selezionare Illimitate per recuperare tutti i caratteri.|  
 |**Formato di output**|Per impostazione predefinita, l'output viene visualizzato in colonne create utilizzando gli spazi per separare i risultati. Per separare le colonne, è inoltre possibile utilizzare virgole, caratteri di tabulazione o spazi. Selezionare la casella di controllo **Delimitatore personalizzato** per specificare un carattere di delimitazione differente nella casella **Delimitatore personalizzato** .|  
 |**Delimitatore personalizzato**|Consente di specificare il carattere che si desidera utilizzare per separare le colonne. Questa opzione è disponibile solo se la casella di controllo **Delimitatore personalizzato** è selezionata nella finestra **Formato di output** .|  
 |**Includi intestazioni di colonna nel set di risultati**|Deselezionare questa casella di controllo se non si vuole applicare un titolo alle colonne.|  

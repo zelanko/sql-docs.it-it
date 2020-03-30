@@ -23,10 +23,10 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75305779"
 ---
 # <a name="sqlservr-application"></a>Applicazione sqlservr
@@ -48,7 +48,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 **-s** *instance_name* Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Se non si specifica un'istanza denominata, **sqlservr** avvia l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]
->Per l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare l'applicazione **sqlservr** nella directory appropriata per l'istanza. Nel caso dell'istanza predefinita, eseguire **sqlservr** dalla directory \MSSQL\Binn. Nel caso dell'istanza denominata, eseguire **sqlservr** dalla directory \MSSQL$*nome_istanza*\Binn.
+>Per l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare l'applicazione **sqlservr** nella directory appropriata per l'istanza. Nel caso dell'istanza predefinita, eseguire **sqlservr** dalla directory \MSSQL\Binn. Nel caso dell'istanza denominata, eseguire **sqlservr** dalla directory \MSSQL$\*nome_istanza* \Binn.
 
  **-c** Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modo indipendente da Gestione controllo servizi di Windows. Questa opzione viene utilizzata dal prompt dei comandi all'avvio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per ridurre il tempo di avvio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
 
@@ -63,7 +63,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-l** *master_log_path* Indica il percorso completo del file del log delle transazioni del database **master**. Non sono presenti spazi tra **-l** e *master_log_path*.
 
-**-m** Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modalità utente singolo. Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene avviato in modalità utente singolo, la connessione è consentita solo a un utente. Il meccanismo di CHECKPOINT, che assicura la regolare scrittura delle transazioni completate dalla cache del disco al database, non viene avviato. In genere, questa opzione viene utilizzata quando si riscontrano problemi che richiedono interventi nei database di sistema. L'impostazione abilita l'opzione **sp_configure allow updates**. Per impostazione predefinita, l'opzione **allow updates** è disabilitata.
+**-m** Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modalità utente singolo. Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene avviato in modalità utente singolo, la connessione è consentita solo a un utente. Il meccanismo di CHECKPOINT, che assicura la regolare scrittura delle transazioni completate dalla cache del disco al database, non viene avviato. In genere, questa opzione viene utilizzata quando si riscontrano problemi che richiedono interventi nei database di sistema. L'impostazione abilita l'opzione **sp_configure allow updates** . Per impostazione predefinita, l'opzione **allow updates** è disabilitata.
 
 **-n** Consente di avviare un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il set di parametri **-s** , viene avviata l'istanza predefinita. Al prompt dei comandi è necessario passare alla directory BINN appropriata per l'istanza prima di avviare **sqlservr.exe**. Ad esempio, se Instance1 usa \mssql$Instance1 per i relativi file binari, l'utente deve passare alla directory \mssql$Instance1\binn per avviare **sqlservr.exe -s instance1**. Se si avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'opzione **-n** , è consigliabile usare anche l'opzione **-e** . In caso contrario, gli eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono registrati.
 

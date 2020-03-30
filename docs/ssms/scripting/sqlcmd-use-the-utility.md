@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090599"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Usare l'utilità
@@ -42,7 +42,7 @@ ms.locfileid: "79090599"
   
 -   L'opzione server ( **-S**) identifica l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla quale si connette **sqlcmd**.  
   
--   Le opzioni di autenticazione ( **-E**, **-U**e **-P**) specificano le credenziali usate da **sqlcmd** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTA** l'opzione **-E** è quella predefinita e non deve essere specificata.  
+-   Le opzioni di autenticazione ( **-E**, **-U**e **-P**) specificano le credenziali usate da **sqlcmd** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTA:** l'opzione **-E** è quella predefinita e non deve essere specificata.  
   
 -   Le opzioni di input ( **-Q**, **-q**e **-i**) identificano la posizione dell'input per **sqlcmd**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "79090599"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **NOTA** Nell'esempio precedente l'opzione **-E** non è specificata perché è l'opzione predefinita. **sqlcmd** si connette all'istanza predefinita usando l'autenticazione di Windows.  
+    > **NOTA:** nell'esempio precedente l'opzione **-E** non è specificata perché è l'opzione predefinita e **sqlcmd** si connette all'istanza predefinita usando l'autenticazione di Windows.  
   
 -   Connessione a un'istanza denominata utilizzando l'autenticazione di Windows per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   

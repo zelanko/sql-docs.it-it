@@ -13,10 +13,10 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b1715b517f6933a9f904b17ff268fdf7162464d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294902"
 ---
 # <a name="project-versions-dialog-box"></a>Finestra di dialogo Versioni progetto
@@ -34,7 +34,7 @@ ms.locfileid: "71294902"
   
 -   [Ripristinare una versione Progetto](#restore)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Versioni di progetto  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> Aprire la finestra di dialogo Versioni di progetto  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71294902"
   
  Nella tabella **Versioni** della finestra di dialogo **Versioni progetto** viene visualizzato l'elenco di versioni del progetto che sono state distribuite nel server, con la data e l'ora di distribuzione della versione, la data e l'ora di ripristino della versione (se questa operazione è stata effettuata), la descrizione della versione e un identificatore di versione. La versione attualmente attiva viene indicata con un segno di spunta nella colonna **Corrente** della tabella.  
   
-##  <a name="restore"></a> Ripristinare una versione Progetto  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> Ripristinare una versione Progetto  
  Per ripristinare una versione precedente di un progetto, selezionare la versione nella tabella **Versioni** , quindi fare clic su **Ripristina versione selezionata**. Il progetto viene ripristinato alla versione selezionata e quella versione viene indicata con un segno di spunta nella colonna **Corrente** della tabella **Versioni** .  
   
   

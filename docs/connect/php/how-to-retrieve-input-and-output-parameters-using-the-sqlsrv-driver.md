@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Recuperare i parametri di I/O usando il driver SQLSRV | Microsoft Docs'
+title: 'Procedura: Recuperare i parametri di I/O mediante il driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993464"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di input e output usando il driver SQLSRV
@@ -30,7 +30,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per chiamare un
 L'esempio seguente chiama una stored procedure che sottrae le ore di ferie usufruite dalle ore di ferie disponibili di un dipendente specifico. La variabile che rappresenta le ore di ferie usufruite, *$vacationHrs*, viene passata alla stored procedure come parametro di input. Dopo aver aggiornato le ore di ferie disponibili, la stored procedure usa lo stesso parametro per restituire il numero di ore di ferie rimanenti.  
   
 > [!NOTE]  
-> L'inizializzazione di *$vacationHrs* su 4 imposta il valore restituito di PHPTYPE su Integer. Per garantire l'integrità del tipo di dati, i parametri di input/output devono essere inizializzati prima di chiamare la stored procedure. In alternativa, è necessario specificare il valore di PHPTYPE voluto. Per informazioni sull'impostazione di PHPTYPE, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md).  
+> L'inizializzazione di *$vacationHrs* su 4 imposta il valore restituito di PHPTYPE su Integer. Per garantire l'integrità del tipo di dati, i parametri di input/output devono essere inizializzati prima di chiamare la stored procedure. In alternativa, è necessario specificare il valore di PHPTYPE voluto. Per informazioni sull'impostazione di PHPTYPE, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Poiché la stored procedure restituisce due risultati, è necessario chiamare [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) dopo l'esecuzione della stored procedure per rendere disponibile il valore del parametro di output. Dopo la chiamata a **sqlsrv_next_result**, *$vacationHrs*, contiene il valore del parametro di output restituito dalla stored procedure.  
   

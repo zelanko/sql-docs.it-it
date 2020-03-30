@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63225680"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "63225680"
 >  La distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportata in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere la sezione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di [Funzionalità supportate dalle edizioni di SQL Server](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS).  
   
 > [!TIP]  
->  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non viene utilizzato Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiungere server e per la scalabilità orizzontale dei server di report. Con i prodotti SharePoint è possibile gestire la distribuzione con scalabilità orizzontale di Reporting Services in quanto i server SharePoint con il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono aggiunti alla farm.  
+>  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non si usa Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiungere server e per aumentare il numero di istanze dei server di report. Con i prodotti SharePoint è possibile gestire la distribuzione con scalabilità orizzontale di Reporting Services in quanto i server SharePoint con il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono aggiunti alla farm.  
   
  Per altre informazioni sul ridimensionamento dei server di report in modalità nativa, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-##  <a name="bkmk_loadbalancing"></a> Bilanciamento del carico  
+##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Bilanciamento del carico  
  Il bilanciamento del carico di applicazioni del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene gestito automaticamente da SharePoint, a meno che nell'ambiente sia presente una soluzione di bilanciamento del carico personalizzata o di terze parti. Secondo il comportamento predefinito del bilanciamento del carico di SharePoint, ogni applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene bilanciata tra tutti i server applicazioni in cui è stato avviato il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per verificare se il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è installato e avviato, fare clic su **Gestisci servizi nel server** in Amministrazione centrale SharePoint.  
   
-##  <a name="bkmk_prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> Prerequisiti  
   
 -   Per eseguire il programma di installazione di SQL Server, è necessario essere un amministratore locale.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63225680"
   
 -   Nel nuovo server dovrà essere installata la stessa versione di SharePoint in esecuzione sui server della farm correnti. Se nella farm è già installato, ad esempio, SharePoint 2013 Service Pack 1 (SP1), sarà necessario installare SP1 anche nel nuovo server prima di poterne creare un join alla farm.  
   
-##  <a name="bkmk_steps"></a> Passaggi  
+##  <a name="steps"></a><a name="bkmk_steps"></a> Passaggi  
  Nei passaggi di questo argomento si presuppone che l'installazione e la configurazione del server vengano eseguite da un amministratore della farm di SharePoint. Nel diagramma è illustrato un tipico ambiente a tre livelli e gli elementi numerati nel diagramma sono descritti nell'elenco seguente:  
   
 -   (1) Più server front-end Web (WFE). I server front-end Web richiedono il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per SharePoint 2016.  
@@ -63,7 +63,7 @@ ms.locfileid: "63225680"
 |Installare e configurare la modalità SharePoint di Reporting Services|Eseguire l'installazione di SQL Server. Per altre informazioni sull'installazione della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md)<br /><br /> Se il server viene usato solo come server applicazioni e non come un front-end Web, non è necessario selezionare **Componente aggiuntivo Reporting Services per prodotti SharePoint**.<br /><br /> 1) Nella pagina **Impostazione ruolo** selezionare **Installazione funzionalità SQL Server**<br /><br /> 2) Nella pagina **Selezione funzionalità** selezionare **Reporting Services - SharePoint**<br /><br /> 3) Nella pagina **Configurazione di Reporting Services**  verificare che l'opzione **Solo installazione** sia selezionata per **Modalità SharePoint di Reporting Services**.|  
 |Verificare che Reporting Services sia operativo.|1) Nel gruppo **Impostazioni di sistema** di Amministrazione centrale SharePoint fare clic su **Gestisci server della farm** .<br /><br /> 2) Verificare il **Servizio SQL Server Reporting Services**.<br /><br />Per altre informazioni, vedere [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
   
-##  <a name="bkmk_additional"></a> Configurazione aggiuntiva  
+##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> Configurazione aggiuntiva  
  È possibile ottimizzare singoli server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una distribuzione con scalabilità orizzontale solo per eseguire l'elaborazione in background, in modo da non condividere le risorse con esecuzione interattiva del report. Nell'elaborazione in background sono incluse pianificazioni, sottoscrizioni e avvisi dati.  
   
  Per modificare il comportamento di server di report singoli, impostare **\<IsWebServiceEnable>** su false nel file di configurazione **RSreportServer.config**.  

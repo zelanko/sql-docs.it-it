@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
 ms.openlocfilehash: cefef29e85ea4494faaa10385c45fc45a77a7e1e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258888"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>Modificare il nome di un server registrato o di un gruppo di server registrati
@@ -24,7 +24,7 @@ ms.locfileid: "75258888"
 
 In questo argomento viene descritto come modificare il nome di un server registrato o un gruppo di server registrati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile modificare il nome in qualunque momento. La modifica del nome di un server nella finestra Server registrati consente solo di modificare il nome visualizzato. Per connettersi a un server diverso, è necessario modificare le proprietà di connessione del server registrato.  
   
-## <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio
 
 Dal menu passare a **Visualizza\\server registrati** per aprire il riquadro **Server registrati**.
 

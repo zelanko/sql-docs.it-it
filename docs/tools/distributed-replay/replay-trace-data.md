@@ -12,10 +12,10 @@ ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4438724a57b374ef298ce4eca7acd9d6009bbbb5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306987"
 ---
 # <a name="replay-trace-data"></a>Riproduzione di dati di traccia
@@ -33,7 +33,7 @@ ms.locfileid: "75306987"
   
 ### <a name="to-replay-the-trace"></a>Per riprodurre la traccia  
   
-1.  **(Facoltativo) Modificare le impostazioni di configurazione della riproduzione**: per modificare le impostazioni di configurazione della riproduzione, ad esempio la modalità di sequenza e diversi valori di scala, è necessario modificare l'elemento `<ReplayOptions>` del file XML di configurazione della riproduzione `DReplay.exe.replay.config`. È possibile modificare anche l'elemento `<OutputOptions>` per specificare impostazioni di output, ad esempio se registrare o meno il conteggio delle righe. Se si modifica il file di configurazione della riproduzione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
+1.  **Modificare le impostazioni di configurazione della riproduzione (facoltativo)** : se si desidera modificare le impostazioni di configurazione della riproduzione, ad esempio la modalità di sequenza e diversi valori di scala, è necessario modificare l'elemento `<ReplayOptions>` del file XML di configurazione della riproduzione `DReplay.exe.replay.config`. È possibile modificare anche l'elemento `<OutputOptions>` per specificare impostazioni di output, ad esempio se registrare o meno il conteggio delle righe. Se si modifica il file di configurazione della riproduzione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
   
     1.  Creare una copia del file di configurazione della riproduzione predefinito `DReplay.exe.replay.config`e rinominare il nuovo file. Il file di configurazione della riproduzione predefinito si trova nella cartella di installazione dello strumento di amministrazione.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75306987"
   
      Per altre informazioni sul file di configurazione della riproduzione, vedere [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-2.  **Avviare la fase di riproduzione dell'evento**: per avviare la riproduzione distribuita, è necessario eseguire lo strumento di amministrazione con l'opzione **replay**. Per altre informazioni, vedere [Opzione replay &#40;strumento di amministrazione Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+2.  **Avviare la fase di riproduzione dell'evento**: per avviare la riproduzione distribuita, è necessario eseguire lo strumento di amministrazione con l'opzione **replay** . Per altre informazioni, vedere [Opzione replay &#40;strumento di amministrazione Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
     1.  Aprire l'utilità del prompt dei comandi di Windows (**CMD.exe**) e passare al percorso di installazione dello strumento di amministrazione Riesecuzione distribuita (**DReplay.exe**).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75306987"
   
     5.  (Facoltativo) Usare il parametro *target_server* , **-s**, per specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui i client Riesecuzione distribuita dovranno riprodurre il carico di lavoro dei file di traccia. Questo parametro non è necessario se è stato utilizzato l'elemento `<Server>` per specificare il server di destinazione nell'elemento `<ReplayOptions>` del file di configurazione della riproduzione.  
   
-    6.  Usare il parametro *clients* , **-w**, per specificare i client Riesecuzione distribuita che dovranno partecipare alla riproduzione. Elencare i nomi dei computer client, separati da virgole. Nota: Gli indirizzi IP non sono consentiti.  
+    6.  Usare il parametro *clients* , **-w**, per specificare i client Riesecuzione distribuita che dovranno partecipare alla riproduzione. Elencare i nomi dei computer client, separati da virgole. Nota: gli indirizzi IP non sono consentiti.  
   
     7.  (Facoltativo) Usare il parametro *config_file* , **-c**, per specificare il percorso del file di configurazione della riproduzione. Utilizzare questo parametro per puntare al nuovo file di configurazione se è stata modificata una copia del file di configurazione della riproduzione predefinito.  
   

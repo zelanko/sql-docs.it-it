@@ -17,10 +17,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246565"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Creazione di un nuovo server registrato (SQL Server Management Studio)
@@ -42,7 +42,7 @@ In questo argomento viene illustrato come salvare le informazioni di connessione
   
      Le registrazioni dei server vengono archiviate in un server di gestione centrale anziché nel file system. I server di gestione centrale e i server registrati subordinati possono essere registrati solo utilizzando l'autenticazione di Windows. Dopo la registrazione di un server di gestione centrale, verranno automaticamente visualizzati i server registrati associati. Per altre informazioni sui server di gestione centrale, vedere [Amministrare più server tramite server di gestione centrale](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non possono essere designate come server di gestione centrale.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Per registrare automaticamente le istanze locali del server  
   

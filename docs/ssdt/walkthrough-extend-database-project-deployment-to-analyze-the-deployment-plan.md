@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242677"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
@@ -41,7 +41,7 @@ Per completare questa procedura dettagliata, è necessario disporre dei componen
 > [!NOTE]  
 > Questa procedura dettagliata è destinata ad utenti che abbiano già familiarità con le funzionalità SQL di SSDT. È inoltre necessario che l'utente conosca i concetti di base di Visual Studio, ad esempio come creare una libreria di classi e come utilizzare l'editor di codice per aggiungere codice a una classe.  
   
-## <a name="CreateDeploymentContributor"></a>Creare un collaboratore alla distribuzione  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>Creare un collaboratore alla distribuzione  
 Per creare un collaboratore alla distribuzione, è necessario effettuare le attività seguenti:  
   
 -   Creare un progetto Libreria di classi e aggiungere i riferimenti richiesti.  
@@ -554,7 +554,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
 È quindi necessario installare l'assembly in modo che venga caricato quando si compilano e distribuiscono progetti SQL.  
   
-## <a name="InstallDeploymentContributor"></a>Installare un collaboratore alla distribuzione  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>Installare un collaboratore alla distribuzione  
 Per installare un collaboratore alla distribuzione, è necessario copiare l'assembly e il file con estensione pdb associato nella cartella Extensions.  
   
 #### <a name="to-install-the-mydeploymentcontributor-assembly"></a>Per installare l'assembly MyDeploymentContributor  
@@ -563,7 +563,7 @@ Per installare un collaboratore alla distribuzione, è necessario copiare l'asse
   
 -   Copiare il file di assembly **MyDeploymentContributor.dll** dalla directory di output alla directory %Programmi%\Microsoft SQL Server\110\DAC\Bin\Extensions. Per impostazione predefinita, il percorso del file con estensione dll compilato è PercorsoSoluzione\PercorsoProgetto\bin\Debug o PercorsoSoluzione\PercorsoProgetto\bin\Release.  
   
-## <a name="TestDeploymentContributor"></a>Testare il collaboratore alla distribuzione  
+## <a name="test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>Testare il collaboratore alla distribuzione  
 Per testare il collaboratore alla distribuzione, è necessario effettuare le attività seguenti:  
   
 -   Aggiungere proprietà al file con estensione sqlproj che si intende distribuire.  

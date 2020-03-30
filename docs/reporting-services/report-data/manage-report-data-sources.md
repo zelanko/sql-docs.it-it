@@ -14,10 +14,10 @@ ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190812"
 ---
 # <a name="manage-report-data-sources"></a>Gestire origini dati dei report
@@ -37,7 +37,7 @@ ms.locfileid: "74190812"
   
  Si noti che la modifica delle query non fa parte della gestione delle connessioni a origini dati. Per modificare una query per un report o un modello, è necessario utilizzare uno strumento di creazione e apportare le modifiche nella definizione del report o del modello.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Proprietà gestite: tipo di origine dati, stringhe di connessione e credenziali  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Proprietà gestite: tipo di origine dati, stringhe di connessione e credenziali.  
  Le proprietà dell'origine dati che è possibile gestire in un server di report sono le seguenti:  
   
 |Proprietà|Descrizione|Modalità di gestione|  

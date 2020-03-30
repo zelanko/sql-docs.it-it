@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244286"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
@@ -23,7 +23,7 @@ ms.locfileid: "75244286"
   
 -   [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Procedura: Configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Procedura: configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [Creare una definizione di compilazione di base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -67,7 +67,7 @@ Quando si eseguono unit test in un computer di compilazione, potrebbe non essere
   
 Per risolvere questi problemi, è necessario specificare una sezione di override nel file app.config tramite cui viene eseguito l'override di app.config con un file di configurazione specifico dell'ambiente Team Foundation Build. Per altre informazioni, vedere [Modificare il progetto di test](#ModifyTestProject) più avanti in questo argomento.  
   
-## <a name="ConfigureX64"></a>Configurare le impostazioni di test per l'esecuzione di unit test di SQL Server in un agente di compilazione x64  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>Configurare le impostazioni di test per l'esecuzione di unit test di SQL Server in un agente di compilazione x64  
 Prima di poter eseguire gli unit test in un agente di compilazione x64, è necessario configurare le impostazioni di test per modificare la piattaforma processi host.  
   
 #### <a name="to-specify-the-host-process-platform"></a>Per specificare la piattaforma processi host  
@@ -82,9 +82,9 @@ Prima di poter eseguire gli unit test in un agente di compilazione x64, è neces
   
 4.  In **Piattaforma processi host** all'interno del riquadro dei dettagli fare clic su **MSIL** per configurare i test da eseguire in un agente di compilazione x64.  
   
-5.  Fare clic su **Applica**.  
+5.  Fare clic su **Apply**.  
   
-## <a name="CreateATestList"></a>Assegnare test a una relativa categoria (facoltativo)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>Assegnare test a una relativa categoria (facoltativo)  
 In genere, quando si crea una definizione di compilazione per eseguire unit test, si specificano una o più categorie di test. Tutti i test nelle categorie specificate vengono eseguiti quando viene eseguita la compilazione.  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>Per assegnare test a una relativa categoria  
@@ -101,7 +101,7 @@ In genere, quando si crea una definizione di compilazione per eseguire unit test
   
     La nuova categoria di test verrà assegnata al test e sarà disponibile per gli altri test tramite le relative proprietà.  
   
-## <a name="ModifyTestProject"></a>Modificare il progetto di test  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>Modificare il progetto di test  
 Per impostazione predefinita, in Team Foundation Build viene creato un file di configurazione dal file app.config del progetto quando si compila il progetto di unit test. Il percorso del progetto del database viene archiviato come percorso relativo nel file app.config. I percorsi relativi utilizzabili in Visual Studio non potranno essere usati perché in Team Foundation Build i file compilati vengono inseriti in percorsi diversi in relazione alla posizione di esecuzione degli unit test. Inoltre, nel file app.config sono incluse le stringhe di connessione tramite cui viene specificato il database da testare. È inoltre necessario un file app.config separato per Team Foundation Build se gli unit test devono essere connessi a un database diverso da quello utilizzato durante la creazione del progetto di test. Apportando le modifiche indicate nella procedura successiva, è possibile impostare il progetto di test e il server di compilazione affinché in Team Foundation Build venga utilizzata una configurazione diversa.  
   
 > [!IMPORTANT]  
@@ -167,7 +167,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 9. In Esplora soluzioni fare doppio clic sul file app.config.  
   
-10. Nell'editor aggiungere `AllowConfigurationOverride="true"` per ogni nodo \<SqlUnitTesting_*VSVersion*>. Ad esempio:  
+10. Nell'editor aggiungere \< per ogni nodo *SqlUnitTesting_* VSVersion`AllowConfigurationOverride="true"`>. Ad esempio:  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  
@@ -197,7 +197,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 5.  Nella finestra di dialogo **Aggiungi file di distribuzione** specificare il file *BuildComputer*.sqlunitttest.config che è stato creato.  
   
-6.  Fare clic su **Applica**.  
+6.  Fare clic su **Apply**.  
   
 7.  Fare clic su **Close**.  
   
@@ -205,7 +205,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
     Successivamente è possibile archiviare la soluzione nel controllo delle versioni.  
   
-## <a name="CheckInTheTestList"></a>Archiviare la soluzione  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>Archiviare la soluzione  
 In questa procedura vengono archiviati tutti i file della soluzione. In questi file è incluso il file di metadati di test della soluzione, contenente le associazioni delle categorie di test e i test. Ogni volta che si aggiunge, elimina, riorganizza o modifica il contenuto dei test, il file di metadati di test viene aggiornato automaticamente per riflettere queste modifiche.  
   
 > [!NOTE]  
@@ -234,7 +234,7 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
     I test sono disponibili per Team Foundation Build. A questo punto è possibile creare una definizione di compilazione contenente i test che si desidera eseguire.  
   
-## <a name="CreateBuildDef"></a>Creare una definizione di compilazione  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>Creare una definizione di compilazione  
   
 #### <a name="to-create-a-build-definition"></a>Per creare una definizione di compilazione  
   
@@ -268,7 +268,7 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
     È stata creata una definizione di compilazione. Successivamente è possibile modificare il progetto di test.  
   
-## <a name="RunBuild"></a>Eseguire la nuova definizione di compilazione  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>Eseguire la nuova definizione di compilazione  
   
 #### <a name="to-run-the-new-build-type"></a>Per eseguire il nuovo tipo di compilazione  
   

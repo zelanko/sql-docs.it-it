@@ -17,10 +17,10 @@ ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2395a1ccabb78ca357a102407268119059a7328c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243868"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Visualizzazione o modifica delle proprietà di una connessione in un progetto

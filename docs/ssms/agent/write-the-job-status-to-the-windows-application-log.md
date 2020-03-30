@@ -19,10 +19,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2684e90bdbcf67f516ac1c2517122ed128ba0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255566"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Registrare lo stato del processo nel registro applicazioni di Windows
@@ -42,12 +42,12 @@ Tramite le risposte ai processi gli amministratori del database vengono informat
   
 -   Eliminazione automatica del processo. Usare la risposta soltanto se si è certi che non sarà necessario rieseguire il processo.  
   
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-write-job-status-to-the-windows-application-log"></a>Per registrare lo stato del processo nel registro applicazioni di Windows  
   
@@ -65,7 +65,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
     -   Fare clic su**Al termine del processo** per registrare lo stato del processo indipendentemente dal suo completamento.  
   
-## <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 **Per registrare lo stato del processo nel registro applicazioni di Windows**  
   
 Chiamare la proprietà **EventLogLevel** della classe **Job** tramite un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell.  

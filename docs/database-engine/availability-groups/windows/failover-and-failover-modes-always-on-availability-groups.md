@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67949108"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
@@ -57,7 +57,7 @@ ms.locfileid: "67949108"
   
 -   [Contenuto correlato](#RelatedContent)  
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termini e definizioni  
  Failover automatico  
  Failover che si verifica automaticamente alla perdita della replica primaria. Il failover automatico è supportato solo quando la replica primaria corrente e una replica secondaria sono entrambe configurate con la modalità di failover impostata su AUTOMATIC e la replica secondaria è attualmente sincronizzata.  Se la modalità di failover della replica primaria o di quella secondaria è MANUAL, il failover automatico non è supportato.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "67949108"
  [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]  
  In un determinato gruppo di disponibilità, il set di tutte le repliche di disponibilità il cui stato operativo è attualmente ONLINE, indipendentemente dalle modalità di disponibilità e di failover. Un [!INCLUDE[ssFosEntire](../../../includes/ssfosentire-md.md)]diventa rilevante quando nessuna replica secondaria si trova attualmente nello stato SINCRONIZZATO con la replica primaria.  
   
-##  <a name="Overview"></a> Panoramica del failover  
+##  <a name="overview-of-failover"></a><a name="Overview"></a> Panoramica del failover  
  Nella tabella seguente sono riportate le forme di failover supportate nelle diverse modalità di disponibilità e di failover. Per ogni associazione, la modalità di disponibilità e la modalità di failover effettive vengono determinate dall'intersezione delle modalità della replica primaria in aggiunta alle modalità di una o più repliche secondarie.  
   
 ||Modalità commit asincrono|Modalità commit sincrono con modalità di failover manuale|Modalità commit sincrono con modalità di failover automatico|  
@@ -95,11 +95,11 @@ ms.locfileid: "67949108"
 ### <a name="failover-sets"></a>Set di failover  
  Le forme di failover possibili per un gruppo di disponibilità specificato possono essere comprese in termini di set di failover. Un set di failover è composto dalla replica primaria e dalle repliche secondarie che supportano una forma specificata di failover, come riportato di seguito.  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (facoltativo):**  In un determinato gruppo di disponibilità, coppia di repliche di disponibilità, inclusa la replica primaria corrente, configurata per la modalità commit sincrono con failover automatico. Un failover automatico impostato diventa effettivo solo se la replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (facoltativo):**  in un determinato gruppo di disponibilità, coppia di repliche di disponibilità, inclusa la replica primaria corrente, configurata per la modalità commit sincrono con failover automatico, se presente. Un failover automatico impostato diventa effettivo solo se la replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facoltativo):**  In un determinato gruppo di disponibilità, set di due o tre repliche di disponibilità, inclusa la replica primaria corrente, configurato per la modalità commit sincrono, se presente. Un failover con commit sincrono impostato diventa effettivo solo se le repliche secondarie sono configurate per la modalità di failover manuale e almeno una replica secondaria si trova nello stato SYNCHRONIZED con la replica primaria.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facoltativo):**  in un determinato gruppo di disponibilità, set di due o tre repliche di disponibilità, inclusa la replica primaria corrente, configurato per la modalità commit sincrono, se presente. Un failover con commit sincrono impostato diventa effettivo solo se le repliche secondarie sono configurate per la modalità di failover manuale e almeno una replica secondaria si trova nello stato SYNCHRONIZED con la replica primaria.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  In un determinato gruppo di disponibilità, il set di tutte le repliche di disponibilità il cui stato operativo è attualmente ONLINE, indipendentemente dalle modalità di disponibilità e di failover. L'intero set di failover diventa rilevante quando nessuna replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  in un determinato gruppo di disponibilità, il set di tutte le repliche di disponibilità il cui stato operativo è attualmente ONLINE, indipendentemente dalle modalità di disponibilità e di failover. L'intero set di failover diventa rilevante quando nessuna replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
   
  Quando si configura una replica di disponibilità come commit sincrono con failover automatico, la replica di disponibilità diventa parte del [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Il fatto che un set diventi effettivo o meno dipende tuttavia dal database primario corrente. Le forme di failover effettivamente possibili in un determinato momento dipendono dai set di failover attualmente effettivi.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "67949108"
   
  ![Effetto del failover sulla configurazione della replica primaria](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "Effetto del failover sulla configurazione della replica primaria")  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
+##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a> Automatic Failover  
  In seguito a un failover automatico, una replica secondaria qualificata assume automaticamente il ruolo primario quando la replica primaria non è più disponibile. Il failover automatico è particolarmente appropriato quando il nodo WSFC che ospita la replica primaria è locale rispetto al nodo che ospita la replica secondaria. Ciò dipende dal fatto che la sincronizzazione dei dati funziona meglio con una latenza del messaggio bassa tra i computer e le connessioni client possono rimanere locali.  
   
  **Contenuto della sezione**  
@@ -127,7 +127,7 @@ ms.locfileid: "67949108"
   
 -   [Per abilitare il failover automatico](#EnableAutoFo)  
   
-###  <a name="RequiredConditions"></a> Condizioni necessarie per un failover automatico  
+###  <a name="conditions-required-for-an-automatic-failover"></a><a name="RequiredConditions"></a> Condizioni necessarie per un failover automatico  
  Il failover automatico si verifica solo se sussistono le condizioni seguenti:  
   
 -   Presenza di un set di failover automatico. Questo set è composto da una replica primaria e da una secondaria (la *destinazione del failover automatico*) entrambe configurate per la modalità con commit sincrono e impostate su AUTOMATIC per il failover. Se la replica primaria è impostata su MANUAL per il failover, il failover automatico non è supportato, anche se una replica secondaria è impostata su AUTOMATIC per il failover.  
@@ -145,7 +145,7 @@ ms.locfileid: "67949108"
   
 -   La replica primaria non è più disponibile e i livelli delle condizioni di failover definiti dai criteri di failover flessibili sono stati soddisfatti. Per informazioni sui livelli di condizione del failover, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-###  <a name="HowAutoFoWorks"></a> Funzionamento del failover automatico  
+###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> Funzionamento del failover automatico  
  Un failover automatico dà inizio alla sequenza di azioni seguente:  
   
 1.  Se l'istanza del server che ospita la replica primaria corrente è ancora in esecuzione, lo stato dei database primari diventa DISCONNECTED e tutti i client vengono disconnessi.  
@@ -161,7 +161,7 @@ ms.locfileid: "67949108"
   
 4.  Al riavvio, l'istanza del server che ospita la replica primaria precedente riconosce che il ruolo primario è stato assunto da un'altra replica di disponibilità. La replica primaria precedente passa quindi al ruolo secondario e i relativi database diventano database secondari. La nuova replica secondaria si connette alla replica primaria corrente e intercetta il più rapidamente possibile il relativo database fino ai database primari correnti. Non appena la nuova replica secondaria completa la risincronizzazione dei relativi database, il failover è nuovamente possibile nella direzione inversa.  
   
-###  <a name="EnableAutoFo"></a> Per configurare il failover automatico  
+###  <a name="to-configure-automatic-failover"></a><a name="EnableAutoFo"></a> Per configurare il failover automatico  
  Una replica di disponibilità può essere configurata per il supporto del failover automatico in qualsiasi momento.  
   
  **To configure automatic failover**  
@@ -172,7 +172,7 @@ ms.locfileid: "67949108"
   
 3.  Facoltativamente, modificare i criteri di failover flessibili del gruppo di disponibilità per specificare gli ordinamenti di errori che possono fare in modo che si verifichi un failover automatico. Per altre informazioni, vedere [Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md) e [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
-##  <a name="ManualFailover"></a> Failover manuale pianificato (senza perdita di dati)  
+##  <a name="planned-manual-failover-without-data-loss"></a><a name="ManualFailover"></a> Failover manuale pianificato (senza perdita di dati)  
  Il failover manuale comporta il passaggio al ruolo primario di una replica secondaria sincronizzata dopo che un amministratore di database esegue un comando di failover manuale sull'istanza del server che ospita la replica secondaria di destinazione. Per supportare il failover manuale, la replica secondaria e la replica primaria corrente devono essere entrambe configurate per la modalità commit sincrono, se presente. Di ogni database secondario sulla replica di disponibilità deve essere creato un join al gruppo di disponibilità e sincronizzato con il database primario corrispondente, vale a dire la replica secondaria deve essere sincronizzata. In questo modo si assicura che ogni transazione sottoposta a commit sul database primario precedente lo sia anche sul nuovo database primario. I nuovi database primari risulteranno pertanto identici ai database primari precedenti.  
   
  Nella figura seguente vengono illustrate le fasi di un failover pianificato:  
@@ -193,7 +193,7 @@ ms.locfileid: "67949108"
   
 -   [Mantenimento della disponibilità durante gli aggiornamenti](#ManualFailoverDuringUpgrades)  
   
-###  <a name="ManualFailoverConditions"></a> Condizioni necessarie per un failover manuale  
+###  <a name="conditions-required-for-a-manual-failover"></a><a name="ManualFailoverConditions"></a> Condizioni necessarie per un failover manuale  
  Per supportare un failover manuale, la replica primaria corrente deve essere impostata sulla modalità commit sincrono e una replica secondaria deve essere:  
   
 -   Configurata per la modalità commit sincrono.  
@@ -202,7 +202,7 @@ ms.locfileid: "67949108"
   
  Per eseguire manualmente il failover su un gruppo di disponibilità, è necessario connettersi alla replica secondaria che deve diventare la nuova replica primaria.  
   
-###  <a name="ManualFailoverHowWorks"></a> Funzionamento del failover manuale pianificato  
+###  <a name="how-a-planned-manual-failover-works"></a><a name="ManualFailoverHowWorks"></a> Funzionamento del failover manuale pianificato  
  Il failover manuale pianificato, che deve essere avviato sulla replica secondaria di destinazione, dà inizio alla sequenza di azioni seguente:  
   
 1.  Per assicurarsi che nessuna nuova transazione utente si verifichi sui database primari originali, il cluster WSFC invia una richiesta alla replica primaria per passare alla modalità offline.  
@@ -223,10 +223,10 @@ ms.locfileid: "67949108"
   
  Dopo il failover, è necessario riconnettere i client al database primario corrente. Per altre informazioni, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-###  <a name="ManualFailoverDuringUpgrades"></a> Mantenimento della disponibilità durante gli aggiornamenti  
+###  <a name="maintaining-availability-during-upgrades"></a><a name="ManualFailoverDuringUpgrades"></a> Mantenimento della disponibilità durante gli aggiornamenti  
  L'amministratore di database per i gruppi di disponibilità può utilizzare i failover manuali per gestire la disponibilità dei database durante aggiornamenti hardware o software. Per utilizzare un gruppo di disponibilità per aggiornamenti software, l'istanza del server e/o il nodo computer che ospita la replica secondaria di destinazione deve avere già ricevuto gli aggiornamenti. Per altre informazioni, vedere [Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   
-##  <a name="ForcedFailover"></a> Failover forzato (con possibile perdita di dati)  
+##  <a name="forced-failover-with-possible-data-loss"></a><a name="ForcedFailover"></a> Failover forzato (con possibile perdita di dati)  
  Il failover forzato di un gruppo di disponibilità (con possibile perdita di dati) è un metodo di ripristino di emergenza che consente di usare una replica secondaria come server warm standby. Dal momento che il failover forzato implica il rischio di possibili perdite di dati, è consigliabile usarlo con cautela e quando strettamente necessario. È consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio sui database di disponibilità e si è disposti a rischiare la perdita di dati. Per altre informazioni sui prerequisiti, consigli per il failover forzato e uno scenario di esempio che usa il failover forzato per il ripristino da un errore irreversibile, vedere [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 > [!WARNING]  
@@ -244,12 +244,12 @@ ms.locfileid: "67949108"
   
 -   [Gestione della potenziale perdita di dati](#ForcedFailoverManagingDataLoss)  
   
-###  <a name="ForcedFailoverHowWorks"></a> Funzionamento del failover forzato  
+###  <a name="how-forced-failover-works"></a><a name="ForcedFailoverHowWorks"></a> Funzionamento del failover forzato  
  Tramite il failover forzato viene avviata una transizione del ruolo primario a una replica di destinazione il cui ruolo si trova nello stato SECONDARY o RESOLVING. La destinazione del failover diventa la nuova replica primaria e tramite essa le copie dei database diventano immediatamente disponibili ai client. Quando la replica primaria precedente diventa disponibile, assume il ruolo secondario e i relativi database diventano database secondari.  
   
  Tutti i database secondari (compresi i database primari precedenti, una volta diventati disponibili) si trovano nello stato SUSPENDED. A seconda dello stato della sincronizzazione dei dati precedente di un database secondario sospeso, potrebbe essere adatto per recuperare i dati mancanti di cui è stato eseguito il commit per il database primario. Su una replica secondaria configurata per l'accesso in sola lettura, è possibile eseguire query sui database secondari per individuare manualmente i dati mancanti. È quindi possibile eseguire istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] per apportare le modifiche necessarie sui nuovi database primari.  
   
-###  <a name="ForcedFailoverRisks"></a> Rischi correlati al failover forzato  
+###  <a name="risks-of-forcing-failover"></a><a name="ForcedFailoverRisks"></a> Rischi correlati al failover forzato  
  È fondamentale comprendere che il failover forzato può causare la perdita di dati. La perdita di dati è possibile in quanto tramite la replica di destinazione non è possibile comunicare con la replica primaria e pertanto non è possibile garantire che i database siano sincronizzati. Il failover forzato comporta l'avvio di un nuovo fork di recupero. Poiché i database primari originali e i database secondari si trovano su fork di recupero diversi, ognuno di essi contiene dati che l'altro database non contiene: ogni database primario originale contiene tutte le modifiche non inviate al database secondario precedente dalla sua coda di invio (log non inviato). I database secondari precedenti contengono tutte le modifiche apportate dopo il failover forzato.  
   
  Se il failover viene forzato a causa di un errore della replica primaria, la potenziale perdita di dati dipende dal fatto che uno o più log delle transazioni siano stati inviati o meno alla replica secondaria prima dell'errore. Nella modalità commit asincrono, la presenza di log non inviati accumulati è sempre una possibilità. Nella modalità commit sincrono, questo è possibile solo fino a quando i database secondari non diventano sincronizzati.  
@@ -264,14 +264,14 @@ ms.locfileid: "67949108"
   
  I database secondari registrano solo due fork di recupero, pertanto se si eseguono più failover forzati, qualsiasi database secondario che abbia dato inizio alla sincronizzazione dati con il failover forzato precedente non potrà essere ripreso. In questo caso, i database secondari che non possono essere ripresi dovranno essere rimossi dal gruppo di disponibilità, ripristinati fino al momento corretto e nuovamente aggiunti al gruppo di disponibilità. È possibile osservare l'errore 1408 con stato 103 in questo scenario (errore: 1408, gravità: 16, stato: 103). Un ripristino non funziona tra più fork di recupero, pertanto, assicurarsi di eseguire un backup del log dopo avere eseguito più failover forzati.  
   
-###  <a name="WhyFFoPostForcedQuorum"></a> Motivi per cui è necessario il failover forzato dopo aver forzato il quorum  
+###  <a name="why-forced-failover-is-required-after-forcing-quorum"></a><a name="WhyFFoPostForcedQuorum"></a> Motivi per cui è necessario il failover forzato dopo aver forzato il quorum  
  Dopo aver forzato il quorum sul cluster WSFC (*quorum forzato*), sarà necessario effettuare un failover forzato (con possibile perdita di dati) su ogni gruppo di disponibilità. Il failover forzato è necessario poiché lo stato effettivo dei valori del cluster WSFC potrebbe essere andato perso. Dopo un quorum forzato è necessario evitare i failover normali poiché una replica secondaria non sincronizzata potrebbe essere visualizzata come sincronizzata nel cluster WSFC riconfigurato.  
   
- Si consideri ad esempio un cluster WSFC che ospita un gruppo di disponibilità in tre nodi:  il nodo A ospita la replica primaria e sia il nodo B che il nodo C ospitano una replica secondaria. Il nodo C viene disconnesso dal cluster WSFC mentre la replica secondaria locale è sincronizzata (SYNCHRONIZED).  Tuttavia, nei nodi A e B viene mantenuto un quorum integro e il gruppo di disponibilità rimane online. Nel nodo A gli aggiornamenti continuano ad essere accettati dalla replica primaria, mentre nel nodo B prosegue la sincronizzazione della replica secondaria con quella primaria. La replica secondaria nel nodo C diventa non sincronizzata e viene persa la sincronizzazione con la replica primaria. Tuttavia, poiché il nodo C è disconnesso, la replica rimane, in modo non corretto, nello stato SYNCHRONIZED.  
+ Ad esempio, si consideri un cluster WSFC in cui un gruppo di disponibilità è ospitato in tre nodi: nel nodo A è ospitata la replica primaria, mentre nei nodi B e C è ospitata una replica secondaria. Il nodo C viene disconnesso dal cluster WSFC mentre la replica secondaria locale è sincronizzata (SYNCHRONIZED).  Tuttavia, nei nodi A e B viene mantenuto un quorum integro e il gruppo di disponibilità rimane online. Nel nodo A gli aggiornamenti continuano ad essere accettati dalla replica primaria, mentre nel nodo B prosegue la sincronizzazione della replica secondaria con quella primaria. La replica secondaria nel nodo C diventa non sincronizzata e viene persa la sincronizzazione con la replica primaria. Tuttavia, poiché il nodo C è disconnesso, la replica rimane, in modo non corretto, nello stato SYNCHRONIZED.  
   
  Se il quorum viene perso e, successivamente, viene forzato nel nodo A, lo stato di sincronizzazione del gruppo di disponibilità nel cluster WSFC deve essere corretto, con la replica secondaria nel nodo C visualizzata come UNSYNCHRONIZED. Tuttavia, se il quorum viene forzato nel nodo C, la sincronizzazione del gruppo di disponibilità non sarà corretta. Nel cluster verrà ripristinato lo stato di sincronizzazione attivo quando il nodo C era disconnesso, con la replica secondaria nel nodo C visualizzata *erroneamente* come SYNCHRONIZED. Poiché tramite i failover manuali pianificati viene garantita la sicurezza dei dati, una volta forzato il quorum non è consentito riportare un gruppo di disponibilità online.  
   
-###  <a name="TrackPotentialDataLoss"></a> Come tenere traccia della potenziale perdita di dati  
+###  <a name="tracking-potential-data-loss"></a><a name="TrackPotentialDataLoss"></a> Come tenere traccia della potenziale perdita di dati  
  Quando nel cluster WSFC è disponibile un quorum integro, è possibile stimare il potenziale rischio corrente di perdita di dati nei database. Per una replica secondaria specifica, il potenziale rischio corrente di perdita di dati dipende dal ritardo dei database secondari locali rispetto ai database primari corrispondenti. Poiché la quantità di ritardo varia nel tempo, è consigliabile tenere traccia periodicamente della perdita di dati potenziale per i database secondari non sincronizzati. Ai fini del rilevamento del ritardo è necessario eseguire il confronto tra LSN ultimo commit e Ora ultimo commit per ogni database primario e i relativi database secondari, come riportato di seguito:  
   
 1.  Connettersi alla replica primaria.  
@@ -285,7 +285,7 @@ ms.locfileid: "67949108"
 > [!IMPORTANT]  
 >  Quando nel cluster WSFC manca il quorum o quest'ultimo è stato forzato, **last_commit_lsn** e **last_commit_time** sono NULL. Per informazioni su come evitare la perdita di dati dopo aver forzato un quorum, vedere "Metodi possibili per evitare la perdita di dati dopo aver forzato il quorum" in [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="ForcedFailoverManagingDataLoss"></a> Gestione della potenziale perdita di dati  
+###  <a name="managing-the-potential-data-loss"></a><a name="ForcedFailoverManagingDataLoss"></a> Gestione della potenziale perdita di dati  
  Dopo aver forzato il failover, tutti i database secondari vengono sospesi. compresi i database primari precedenti. Ciò avviene dopo che la replica primaria precedente torna online e viene ora individuata come replica secondaria. È necessario riprendere manualmente ogni database sospeso singolarmente in ogni replica secondaria.  
   
  Quando la replica primaria precedente diventa disponibile, supponendo che i relativi database non siano danneggiati, è possibile tentare di gestire la potenziale perdita di dati. L'approccio disponibile per la gestione della potenziale perdita di dati dipende dal fatto che la replica primaria originale sia connessa o meno alla nuova replica primaria. Supponendo che la replica primaria originale possa accedere alla nuova istanza primaria, la riconnessione avviene in modo automatico e trasparente.  
@@ -319,7 +319,7 @@ ms.locfileid: "67949108"
 > [!WARNING]  
 >  Il troncamento del log delle transazioni viene ritardato nel database primario, mentre gli eventuali database secondari vengono sospesi. Inoltre, l'integrità di sincronizzazione di una replica secondaria con commit sincrono non potrà passare allo stato HEALTHY finché un database locale qualsiasi rimane sospeso.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare il comportamento del failover**  
   
 -   [Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -346,11 +346,11 @@ ms.locfileid: "67949108"
   
 -   [Forzare l'avvio di un cluster WSFC senza un quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

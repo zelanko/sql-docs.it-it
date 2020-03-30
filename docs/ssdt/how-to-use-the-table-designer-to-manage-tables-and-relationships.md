@@ -15,13 +15,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226829"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procedura: Usare Progettazione tabelle per gestire tabelle e relazioni
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procedura: Utilizzo di Progettazione tabelle per gestire tabelle e relazioni
 
 Progettazione tabelle offre uno strumento visivo insieme all'Editor Transact\-SQL per la creazione e la modifica della struttura della tabella, inclusi oggetti di programmazione specifici della tabella, per i database di SQL Server.  Viene avviata quando si crea una nuova tabella per un progetto o un database connesso o quando si fa doppio clic per modificare una tabella in Esplora oggetti di SQL Server o Esplora soluzioni.  
   

@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939620"
 ---
 # <a name="full-file-backups-sql-server"></a>Backup completi del file (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "67939620"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vantaggi dei backup di file  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> Vantaggi dei backup di file  
  Rispetto ai backup completi del database, i backup di file offrono i seguenti vantaggi:  
   
 -   L'utilizzo dei backup dei file può accelerare il processo di recupero, in quanto consente di ripristinare solo i file danneggiati, anziché l'intero database.  
@@ -58,13 +58,13 @@ ms.locfileid: "67939620"
   
 -   I backup di file offrono maggiore flessibilità nella pianificazione e nella gestione dei supporti rispetto ai backup completi del database, che possono diventare poco gestibili in caso di database di dimensioni molto grandi. La maggiore flessibilità dei backup di file o filegroup risulta utile anche per database di grandi dimensioni che includono dati con caratteristiche di aggiornamento variabili.  
   
-##  <a name="Disadvantages"></a> Svantaggi dei backup di file  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> Svantaggi dei backup di file  
   
 -   Lo svantaggio principale dei backup di file rispetto ai backup del database è un aumento della complessità a livello amministrativo. Il mantenimento e la registrazione di un set completo di questi backup può essere un'attività dispendiosa in termini di tempo e può richiedere uno spazio superiore a quello previsto per i backup completi del database.  
   
 -   Un errore di un supporto può rendere irrecuperabile un intero database se manca un backup di un file danneggiato. È quindi necessario creare un intero set di backup di file e, nel caso del modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, uno o più backup del log che coprano almeno l'intervallo tra il primo backup completo di file e l'ultimo backup completo di file.  
   
-##  <a name="Overview"></a> Panoramica dei backup di file  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> Panoramica dei backup di file  
  Durante un backup completo di file viene creata una copia di backup di tutti i dati presenti in uno o più file o filegroup. Nei backup di file è contenuto, per impostazione predefinita, un numero sufficiente di record del log per il rollforward del file fino al termine dell'operazione di backup.  
   
  Il backup di un file o un filegroup di sola lettura è identico per tutti i modelli di recupero. In base al modello di recupero con registrazione completa, un intero set di backup completi di file corrisponde, insieme a un numero sufficiente di backup del log tale da coprire tutti i backup di file, a un backup completo del database.  
@@ -87,7 +87,7 @@ ms.locfileid: "67939620"
 > [!NOTE]  
 >  In base al modello di recupero con registrazione completa, è necessario eseguire il rollforward del log delle transazioni durante il ripristino di un backup di file di lettura/scrittura, per garantire che il file sia consistente con la parte restante del database. Per evitare il rollforward di numerosi backup del log delle transazioni, è consigliabile utilizzare backup differenziali di file. Per altre informazioni, vedere [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per creare backup di file o filegroup**  
   
 -   [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  

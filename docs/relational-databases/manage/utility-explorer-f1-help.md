@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024493"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
@@ -173,11 +173,11 @@ ms.locfileid: "68024493"
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (True o False)  
+-   Crittografia abilitata: (Vero o Falso)  
   
 -   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ultima ora registrata: questa colonna restituisce la data e l'ora locale del punto di controllo utilità usando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'applicazione del livello dati e all'utilizzo della CPU del computer.  
@@ -250,11 +250,11 @@ ms.locfileid: "68024493"
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (True o False)  
+-   Crittografia abilitata: (Vero o Falso)  
   
 -   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ultima ora registrata: questa colonna restituisce la data e l'ora locale del punto di controllo utilità usando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
  Le informazioni incluse nella vista Istanze gestite di Esplora utilità forniscono dati di utilizzo per singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cronologia di utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di volumi di archiviazione e a livello di istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un computer e per file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per singole istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -307,17 +307,17 @@ ms.locfileid: "68024493"
   
 -   Edizione di SQL Server:  
   
--   Raggruppato: (True o False)  
+-   Cluster: (True o False)  
   
 -   Directory di backup:  
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole/minuscole: (True o False)  
+-   Distinzione maiuscole/minuscole: (Vero o Falso)  
   
 -   Language:  
   
--   Ultima ora registrata: questa colonna restituisce la data e l'ora locale del punto di controllo utilità usando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'utilizzo della CPU del computer.  
@@ -404,13 +404,13 @@ ms.locfileid: "68024493"
   
 -   Edizione di SQL Server:  
   
--   Raggruppato: (True o False)  
+-   Cluster: (True o False)  
   
 -   Directory di backup:  
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole/minuscole: (True o False)  
+-   Distinzione maiuscole/minuscole: (Vero o Falso)  
   
 -   Language:  
 
@@ -492,13 +492,13 @@ Scheda **Data warehouse** - Consente di visualizzare i dettagli relativi alla co
   
  La directory dell'utilità UMDW è configurabile: \<Unità di sistema>:\Programmi\Microsoft SQL Server\MSSQL10_50.<Nome_UCP>\MSSQL\Data\\, dove \<Unità di sistema> è in genere l'unità C:\. Il file di log UMDW_\<GUID>_LOG si trova nella stessa directory.  
   
-> **NOTA** È possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw utilizzando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **NOTA:** è possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw usando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Ritorna ai valori predefiniti  
  Per ripristinare i valori predefiniti delle impostazioni in questa scheda, fare clic sul pulsante **Ripristina impostazioni predefinite** , quindi fare clic su **Applica**.  
  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
  [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Effettuare la connessione a Utilità SQL Server.](../../relational-databases/manage/connect-to-a-sql-server-utility.md)  

@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba9a8f2af9b703b64ffadb597d9eda2edb28a0b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307087"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
@@ -130,7 +130,7 @@ ms.locfileid: "75307087"
  Le istanze nascoste sono istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano solo connessioni della memoria condivisa. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare il flag `HideInstance` per indicare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non deve rispondere inviando alcuna informazione su questa istanza del server.  
   
 ### <a name="using-a-firewall"></a>Utilizzo di un firewall  
- Per comunicare con il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in un server protetto da un firewall, aprire la porta UDP 1434 oltre alla porta TCP usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la porta 1433. Per informazioni sull'utilizzo di un firewall, vedere "Procedura: Configurare un firewall per l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per comunicare con il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in un server protetto da un firewall, aprire la porta UDP 1434 oltre alla porta TCP usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la porta 1433. Per informazioni sull'utilizzo di un firewall, vedere "Procedura: Configurazione di un firewall per l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)  

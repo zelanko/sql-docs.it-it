@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 66780fe3a71f784679e80779985740a3d9069777
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307237"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>Filtrare eventi in una traccia (SQL Server Profiler)
@@ -48,7 +48,7 @@ I filtri consentono di limitare gli eventi raccolti in una traccia. Se non si im
   
          -OPPURE-  
   
-    -   L'opzione**Visualizza valori di data e ora in base alle impostazioni internazionali** sia selezionata nella finestra di dialogo **Opzioni generali** . Per visualizzare la finestra di dialogo **Opzioni generali**, scegliere **Opzioni** dal menu **Strumenti** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+    -   L'opzione**Visualizza valori di data e ora in base alle impostazioni internazionali** sia selezionata nella finestra di dialogo **Opzioni generali** . Per visualizzare la finestra di dialogo **Opzioni generali**, scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Opzioni**dal menu**Strumenti**di**.  
   
          -e-  
   

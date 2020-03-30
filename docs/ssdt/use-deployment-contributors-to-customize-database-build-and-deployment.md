@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256246"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione
@@ -47,8 +47,8 @@ Visual Studio fornisce punti di estendibilità che è possibile utilizzare per m
   
 |**Attività comuni**|**Contenuto di supporto**|  
 |--------------------|--------------------------|  
-|**Altre informazioni sui punti di estendibilità:** altre informazioni sulle classi di base usate per implementare i collaboratori alla compilazione e alla distribuzione.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**Creare collaboratori di esempio:** informazioni sui passaggi necessari per creare un collaboratore alla compilazione o alla distribuzione. Se si utilizzano queste procedure dettagliate, è necessario:<br /><br />- Creare un collaboratore alla compilazione che genera un report in cui sono elencati tutti gli elementi del modello.<br />- Creare un collaboratore alla distribuzione che modifica il piano di distribuzione prima che venga eseguito.<br />- Creare un collaboratore alla distribuzione che genera un report di distribuzione quando si distribuisce un progetto SQL.<br /><br />È possibile creare tutti i collaboratori in un unico assembly o tra più assembly, a seconda di come si desidera che i collaboratori vengano distribuiti al team.|[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**Altre informazioni sui punti di estendibilità**: altre informazioni sulle classi di base usate per implementare i collaboratori alla compilazione e alla distribuzione.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Creare collaboratori di esempio**: informazioni sui passaggi necessari per creare un collaboratore alla compilazione o alla distribuzione. Se si utilizzano queste procedure dettagliate, è necessario:<br /><br />- Creare un collaboratore alla compilazione che genera un report in cui sono elencati tutti gli elementi del modello.<br />- Creare un collaboratore alla distribuzione che modifica il piano di distribuzione prima che venga eseguito.<br />- Creare un collaboratore alla distribuzione che genera un report di distribuzione quando si distribuisce un progetto SQL.<br /><br />È possibile creare tutti i collaboratori in un unico assembly o tra più assembly, a seconda di come si desidera che i collaboratori vengano distribuiti al team.|[Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Procedura dettagliata: estendere la distribuzione del progetto di database per modificare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Definire condizioni personalizzate per unit test SQL](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

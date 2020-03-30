@@ -16,15 +16,15 @@ ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 79438b43ed00fb30b7f70c832ebf8830bf20f7bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251891"
 ---
 # <a name="miscellaneous-files"></a>file esterni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-I file al di fuori di un progetto vengono identificati come *file esterni*. Quando una soluzione è aperta è possibile aprire e modificare i file esterni correlati al progetto. Un file viene classificato come esterno se la sua estensione non è associata all'editor del codice del progetto. In un progetto script [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, i file con estensione txt o mdx verranno trattati come file esterni. In un progetto MDX i file con estensione txt o sql verranno trattati come file esterni. Per associare un'estensione file a un editor del codice, vedere [Procedura: Associare estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+I file al di fuori di un progetto vengono identificati come *file esterni*. Quando una soluzione è aperta è possibile aprire e modificare i file esterni correlati al progetto. Un file viene classificato come esterno se la sua estensione non è associata all'editor del codice del progetto. In un progetto script [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, i file con estensione txt o mdx verranno trattati come file esterni. In un progetto MDX i file con estensione txt o sql verranno trattati come file esterni. Per associare un'estensione di file con un editor di codice, vedere [Procedura: Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 La possibilità di aggiungere file esterni al progetto è utile per diverse ragioni. Un file potrebbe non essere necessariamente uno script riconosciuto e tuttavia essere parte integrante dello sviluppo della soluzione. Note o istruzioni di sviluppo, file di dati e segmenti di codice sono esempi comuni di tali file.  
   

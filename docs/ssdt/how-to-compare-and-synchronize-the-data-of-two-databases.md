@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241576"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedura: confrontare e sincronizzare i dati di due database
@@ -41,7 +41,7 @@ Per altre informazioni, vedere [Confrontare e sincronizzare i dati in una o più
 > [!NOTE]  
 > È inoltre possibile confrontare lo *schema* di due database o di due versioni dello stesso database. Per altre informazioni, vedere [Procedura: Usare il confronto schema per confrontare definizioni di database diverse](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
-## <a name="CompareDatabaseData"></a>Confronto dei dati di database  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Confronto dei dati di database  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>Per confrontare i dati utilizzando la procedura guidata Nuovo confronto dati  
   
@@ -87,7 +87,7 @@ Per altre informazioni, vedere [Confrontare e sincronizzare i dati in una o più
   
     I dati nei database di origine e di destinazione specificati vengono confrontati. I risultati vengono visualizzati in una sessione di Confronto dati. Per altre informazioni sulla visualizzazione dei risultati o sulla sincronizzazione dei dati, vedere [Visualizzazione delle differenze dei dati](#ViewDifferences) e [Sincronizzazione dei dati di database](#Synchronize).  
   
-## <a name="ViewDifferences"></a>Visualizzazione delle differenze dei dati  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>Visualizzazione delle differenze dei dati  
 Una volta completato il confronto dei dati nei due database, in Confronto dati viene elencato ogni *oggetto di database* confrontato e ne viene riportato lo stato. È anche possibile visualizzare i risultati per i record in ogni oggetto, raggruppati in base allo stato. Per altre informazioni sulle designazioni dello stato, vedere [Confrontare e sincronizzare i dati in una o più tabelle e i dati di un database di riferimento](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 Dopo avere visualizzato le differenze, è possibile aggiornare la destinazione in modo corrispondente all'origine per alcuni o tutti gli oggetti o record diversi, mancanti o nuovi. Per altre informazioni, vedere [Sincronizzazione dei dati di database](#Synchronize).  
@@ -102,7 +102,7 @@ Dopo avere visualizzato le differenze, è possibile aggiornare la destinazione i
   
     -   Per visualizzare i risultati per i record in un oggetto specifico, fare clic sull'oggetto nel riquadro principale dei risultati e quindi fare clic su una scheda nel riquadro di visualizzazione dei record. In ogni scheda vengono visualizzati tutti i record nell'oggetto che presenta uno stato particolare: diverso, solo nell'origine, solo nella destinazione e identico. I dati vengono visualizzati per record e per colonna.  
   
-## <a name="Synchronize"></a>Sincronizzazione dei dati di database  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>Sincronizzazione dei dati di database  
 Dopo aver confrontato i dati in due database, è possibile sincronizzarli aggiornando completamente o parzialmente la destinazione in modo che corrisponda all'origine. È possibile confrontare i dati in due tipi di oggetti di database: tabelle e viste.  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>Per aggiornare i dati di destinazione tramite il comando Scrivi aggiornamenti  

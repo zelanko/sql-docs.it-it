@@ -11,15 +11,15 @@ ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b498aaa0a5a82294bc68942a68859939aff0fb7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940872"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Backup in un set di supporti con mirroring (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Questo argomento descrive come usare l'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] per specificare un set di supporti con mirroring durante l'esecuzione del backup di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'istruzione BACKUP specificare il primo mirror nella clausola TO, quindi specificare ogni mirror nella relativa clausola MIRROR TO. È necessario che le clausole TO e MIRROR TO specifichino lo stesso numero e tipo di dispositivo di backup.  
+  Questo argomento descrive come usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ di ](../../t-sql/statements/backup-transact-sql.md) per specificare un set di supporti con mirroring durante l'esecuzione del backup di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'istruzione BACKUP specificare il primo mirror nella clausola TO, quindi specificare ogni mirror nella relativa clausola MIRROR TO. È necessario che le clausole TO e MIRROR TO specifichino lo stesso numero e tipo di dispositivo di backup.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato il set di supporti con mirroring indicato nella figura precedente e viene eseguito il backup del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] su entrambi i mirror.  

@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
 ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307853"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Finestre di dialogo di SQL Server Profiler
@@ -59,7 +59,7 @@ Usare la scheda **Selezione eventi** della finestra di dialogo **Proprietà trac
 
 ## <a name="trace-template-properties"></a>Proprietà modello di traccia 
 ### <a name="new-general-tab"></a>Nuovo (scheda Generale)
-Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per creare nuovi modelli di traccia utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, nel menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] scegliere **Modelli** e quindi fare clic su **Nuovo**.
+Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per creare nuovi modelli di traccia utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, nel menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]File**di** scegliere **Modelli** e quindi fare clic su **Nuovo**.
 
 |Elemento|Descrizione
 |---|---
@@ -69,7 +69,7 @@ Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello
 |**Usa come modello predefinito per il tipo di server selezionato**|Consente di utilizzare il modello corrente per impostazione predefinita per le tracce create per questo tipo di server.  
 
 ### <a name="edit-general-tab"></a>Modifica (scheda Generale)
- Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per visualizzare o modificare i modelli di traccia esistenti utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, scegliere **Modelli** dal menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e quindi fare clic su **Modifica modello**.  
+ Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per visualizzare o modificare i modelli di traccia esistenti utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Modelli**dal menu**File**di** e quindi fare clic su **Modifica modello**.  
 
 |Elemento|Descrizione
 |---|---
@@ -251,7 +251,7 @@ Utilizzare la finestra di dialogo **Organizza colonne** per selezionare le colon
 - A seguito di un'operazione di raggruppamento, vengono organizzate insieme tutte le classi di evento di un tipo specifico nell'area di visualizzazione della finestra di traccia. Gli eventi non vengono tuttavia compressi in corrispondenza del tipo di classe di evento.  
 
 Quando si raggruppano o aggregano gli eventi nell'area di visualizzazione della finestra di traccia, le colonne selezionate per il raggruppamento o l'aggregazione rimangono fisse nella finestra di visualizzazione, ma è possibile scorrere a destra o a sinistra per visualizzare tutte le altre colonne di dati.  
-Per accedere a questa finestra di dialogo, aprire una tabella o un file di traccia esistente e quindi scegliere **Proprietà** dal menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Nella finestra di dialogo **Proprietà traccia** selezionare la scheda **Selezione eventi** e quindi fare clic su **Organizza colonne**. È inoltre possibile fare clic su **Organizza colonne** nella scheda **Selezione eventi** durante la creazione di una nuova traccia.  
+Per accedere a questa finestra di dialogo, aprire una tabella o un file di traccia esistente e quindi scegliere **Proprietà** dal menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]File**di**. Nella finestra di dialogo **Proprietà traccia** selezionare la scheda **Selezione eventi** e quindi fare clic su **Organizza colonne**. È inoltre possibile fare clic su **Organizza colonne** nella scheda **Selezione eventi** durante la creazione di una nuova traccia.  
 Consente di spostare i nomi delle colonne di dati sotto **Gruppi** per raggruppare o aggregare le classi di evento nella finestra di traccia.
 - Per aggregare gli eventi, spostare una colonna di dati all'interno di **Gruppi**. In questo modo, tutti gli eventi di un tipo specifico vengono compressi in corrispondenza del nome del tipo di classe di evento nell'area di visualizzazione della finestra di traccia. A sinistra del nome della classe di evento viene visualizzato un segno più ( **+** ). Fare clic su questo segno per espandere il tipo di classe di evento e visualizzare tutti gli eventi. È possibile attivare e disattivare l'aggregazione e il raggruppamento scegliendo **Visualizzazione aggregata** o **Visualizzazione a gruppi** dal menu **Visualizza** .
 - Per raggruppare gli eventi, spostare più colonne di dati all'interno di **Gruppi**. In questo modo, tutti gli eventi di un tipo specifico vengono raggruppati insieme nell'area di visualizzazione della finestra di traccia, senza venire compressi in corrispondenza di ogni nome del tipo di classe di evento. È possibile passare dalla visualizzazione a gruppi a quella non a gruppi e viceversa scegliendo **Visualizzazione a gruppi** dal menu Visualizza. Se si spostano più colonne di dati all'interno di **Gruppi**, l'opzione che consente di passare a una **visualizzazione aggregata** non è disponibile.
@@ -268,7 +268,7 @@ Utilizzare la finestra di dialogo **Modifica filtro** per creare e modificare i 
  >Per le colonne di dati di tipo stringa, i criteri di filtro saranno visualizzati come un valore di stringa LIKE o NOT LIKE.  
 
 ## <a name="select-template-name"></a>Nome modello
-Utilizzare la finestra di dialogo **Seleziona nome modello** per selezionare un modello di traccia esistente di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ed esportarlo in un file nel sistema operativo. È inoltre possibile utilizzare questa finestra di dialogo per selezionare o immettere un nome diverso per il salvataggio di un modello di traccia, ad esempio quando si modifica un modello di traccia esistente. Per accedere a questa finestra di dialogo durante l'esportazione di un modello, scegliere **Modelli** dal menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e quindi fare clic su **Esporta modello**. Per accedere a questa finestra di dialogo durante la modifica del nome di un modello, scegliere **Modelli** dal menu **File**, quindi scegliere **Modifica modello**e fare clic su **Salva con nome**.  
+Utilizzare la finestra di dialogo **Seleziona nome modello** per selezionare un modello di traccia esistente di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ed esportarlo in un file nel sistema operativo. È inoltre possibile utilizzare questa finestra di dialogo per selezionare o immettere un nome diverso per il salvataggio di un modello di traccia, ad esempio quando si modifica un modello di traccia esistente. Per accedere a questa finestra di dialogo durante l'esportazione di un modello, scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Modelli**dal menu**File**di** e quindi fare clic su **Esporta modello**. Per accedere a questa finestra di dialogo durante la modifica del nome di un modello, scegliere **Modelli** dal menu **File**, quindi scegliere **Modifica modello**e fare clic su **Salva con nome**.  
 
 |Elemento|Descrizione
 |---|---

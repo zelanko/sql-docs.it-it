@@ -15,10 +15,10 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256233"
 ---
 # <a name="registered-servers-f1-help"></a>Guida sensibile al contesto di Server registrati
@@ -63,7 +63,7 @@ ms.locfileid: "75256233"
  **Memorizza password**  
  Consente di archiviare la password immessa. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
-> **NOTA** Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e quindi fare clic su **Salva**.  
+> **NOTA:** Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e fare clic su **Salva**.  
   
  **Nome server registrato**  
  Nome che si desidera venga visualizzato nel componente Server registrati. Non è necessario che questo nome corrisponda a quello indicato nella casella **Nome server** .  

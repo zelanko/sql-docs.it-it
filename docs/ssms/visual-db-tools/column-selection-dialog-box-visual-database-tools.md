@@ -15,10 +15,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 32e7daca1fb5f79f8ac110a28f8b70731349c62d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241244"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Finestra di dialogo Selezione colonne (Visual Database Tools)

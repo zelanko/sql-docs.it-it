@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
 ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246557"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Eseguire simultaneamente istruzioni su più server
@@ -33,7 +33,7 @@ I risultati restituiti dalla query possono essere riuniti in un unico riquadro d
 > **NOTA** Prima di eseguire le procedure seguenti, creare un server di gestione centrale e un gruppo di server. Per altre informazioni, vedere [Creazione di un server di gestione centrale e di un gruppo di server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
 
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Poiché le connessioni gestite da un server di gestione centrale vengono eseguite nel contesto dell'utente, l'utilizzo dell'autenticazione di Windows comporta la possibile variazione delle autorizzazioni effettive per i server registrati. L'utente, ad esempio, potrebbe essere un membro del ruolo predefinito del server sysadmin nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, ma disporre di autorizzazioni limitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>Eseguire istruzioni su più destinazioni di configurazione simultaneamente  

@@ -10,10 +10,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
 ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246879"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Installare versioni in lingua non inglese di SQL Server Management Studio (SSMS)
@@ -53,4 +53,4 @@ Le indicazioni seguenti variano a seconda della versione di Windows disponibile.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Esercitazione: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [Esercitazione su SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)

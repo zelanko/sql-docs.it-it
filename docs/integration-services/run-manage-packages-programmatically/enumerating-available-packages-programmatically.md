@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295763"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerazione dei pacchetti disponibili a livello di codice
@@ -28,7 +28,7 @@ ms.locfileid: "71295763"
 
   <a name="top"></a> Quando si usano i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a livello di programmazione, può essere necessario determinare se esiste un singolo pacchetto o cartella o enumerare i pacchetti salvati disponibili per il caricamento e l'esecuzione. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> dello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> fornisce un'ampia varietà di metodi e classi per soddisfare questi requisiti.    
     
-##  <a name="exists"></a> Verifica dell'esistenza di un pacchetto o di una cartella    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Verifica dell'esistenza di un pacchetto o di una cartella    
  Per determinare a livello di codice se un pacchetto salvato esiste, chiamare uno dei metodi seguenti prima di tentare di caricarlo ed eseguirlo:    
     
 |Posizione di archiviazione|Metodo da chiamare|    
@@ -45,7 +45,7 @@ ms.locfileid: "71295763"
     
  [Torna all'inizio](#top)    
     
-##  <a name="listing"></a> Enumerazione dei pacchetti disponibili    
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Enumerazione dei pacchetti disponibili    
  Per ottenere a livello di codice un elenco dei pacchetti salvati, chiamare uno dei metodi seguenti:    
     
 |Posizione di archiviazione|Metodo da chiamare|    
@@ -55,7 +55,7 @@ ms.locfileid: "71295763"
     
  Gli esempi seguenti sono applicazioni console che dimostrano l'utilizzo di questi metodi.    
     
-###  <a name="listing_store"></a> Esempio (archivio pacchetti SSIS)    
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Esempio (archivio pacchetti SSIS)    
  Utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> per elencare i pacchetti archiviati nell'archivio pacchetti SSIS. I percorsi di archiviazione predefiniti gestiti dall'archivio pacchetti SSIS sono File system e MSDB. In questi percorsi è possibile creare altre cartelle logiche.    
     
 ```vb    
@@ -161,7 +161,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [Torna all'inizio](#top)    
     
-###  <a name="listing_sql"></a> Esempio (SQL Server)    
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Esempio (SQL Server)    
  Utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> per elencare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archiviati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 ```vb    

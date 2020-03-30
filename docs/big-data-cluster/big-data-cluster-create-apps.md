@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253152"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Come distribuire un'app in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -106,7 +106,7 @@ Il comando seguente mostra un esempio del possibile aspetto di questo comando:
 azdata app create --spec ./addpy
 ```
 
-Si presuppone che l'applicazione sia archiviata nella cartella `addpy`. Questa cartella deve contenere anche un file di specifiche per l'applicazione, denominato `spec.yaml`. Per altre informazioni sul file `spec.yaml`, vedere la [pagina sulla distribuzione di applicazioni](concept-application-deployment.md).
+Si presuppone che l'applicazione sia archiviata nella cartella `addpy`. Questa cartella deve contenere anche un file di specifiche per l'applicazione, denominato `spec.yaml`. Per altre informazioni sul file [, vedere la ](concept-application-deployment.md)pagina sulla distribuzione di applicazioni`spec.yaml`.
 
 Per distribuire l'app di esempio, creare i file seguenti in una directory denominata `addpy`:
 

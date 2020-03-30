@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866024"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "74866024"
   
 - Aggiunta automatica del nuovo account al gruppo di server di report creato nel computer locale. Questo gruppo è specificato negli elenchi di controllo di accesso (ACL) utilizzati per la protezione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Aggiornamento automatico delle autorizzazioni di accesso nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per ospitare il database del server di report. Il nuovo account verrà aggiunto a **RSExecRole**.  
+- Aggiornamento automatico delle autorizzazioni di accesso nell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il database del server di report. Il nuovo account verrà aggiunto a **RSExecRole**.  
   
      L'account di accesso al database per l'account precedente non viene rimosso automaticamente. Assicurarsi di rimuovere gli account non più in uso. Per altre informazioni, vedere [Amministrare un database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
   
@@ -56,11 +56,11 @@ ms.locfileid: "74866024"
   
      Se il server di report viene distribuito in una rete che supporta l'autenticazione Kerberos, è necessario registrare il nome dell'entità servizio del server di report con l'account utente di dominio specificato. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
-4. Fare clic su **Applica**.  
+4. Fare clic su **Apply**.  
   
 5. Quando viene richiesto di eseguire il backup della chiave simmetrica, digitare un nome di file e un percorso per la copia di backup della chiave simmetrica, digitare una password per bloccare e sbloccare il file, quindi scegliere **OK**.  
   
-6. Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione vengono aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo **Connessione al database** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere credenziali con l'autorizzazione necessaria per connettersi al database, quindi fare clic su **OK**.  
+6. Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione vengono aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Connessione al database**di**, immettere credenziali con l'autorizzazione necessaria per connettersi al database, quindi fare clic su **OK**.  
   
 7. Quando viene richiesto di ripristinare la chiave simmetrica, digitare la password specificata al passaggio 5, quindi scegliere **OK**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74866024"
 |**Servizio locale**|**Servizio locale** è un account predefinito simile a un account utente locale di Windows autenticato. I servizi eseguiti tramite l'account **Servizio locale** possono accedere alle risorse di rete come sessione Null senza credenziali. Questo account non è adatto per scenari di distribuzione Intranet in cui il server di report deve connettersi a un database del server di report remoto o a un controller di dominio di rete per autenticare un utente prima dell'apertura di un report o dell'elaborazione di una sottoscrizione.|  
 |**Sistema locale**|**Sistema locale** è un account con privilegi elevati, non necessario per l'esecuzione di un server di report. Non utilizzare questo account per le installazioni dei server di report. Scegliere piuttosto un account di dominio o l'account **Servizio di rete** .|  
   
-## <a name="localaccounts"></a> Considerazioni sull'utilizzo di account locali
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> Considerazioni sull'utilizzo di account locali
 
  La considerazione principale relativa all'utilizzo di account locali consiste nel determinare se il server di report dovrà accedere a server di database remoti, server della posta e controller di dominio. Se si configura il server di report per l'esecuzione come account utente locale di Windows, Servizio locale o Sistema locale occorrerà tenere conto di alcune considerazioni correlate all'impostazione di altre opzioni di configurazione e alla creazione e al recapito delle sottoscrizioni:  
   

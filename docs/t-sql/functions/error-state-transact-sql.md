@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094608"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
@@ -52,7 +52,7 @@ ERROR_STATE ( )
  Restituisce NULL se chiamata all'esterno dell'ambito di un blocco CATCH.  
   
 ## <a name="remarks"></a>Osservazioni  
- Alcuni messaggi di errore possono essere generati in più punti del codice del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'errore 1105, ad esempio, può essere generato in risposta a numerose condizioni. A ogni condizione specifica che genera l'errore viene assegnato un codice di stato univoco.  
+ Alcuni messaggi di errore possono essere generati in più punti del codice del [!INCLUDE[msCoName](../../includes/msconame-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'errore 1105, ad esempio, può essere generato in risposta a numerose condizioni. A ogni condizione specifica che genera l'errore viene assegnato un codice di stato univoco.  
   
  Durante la visualizzazione di database contenenti la trattazione di problemi noti, ad esempio la [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, è possibile utilizzare il numero di stato per determinare se il problema registrato è uguale all'errore rilevato. Se, ad esempio, in un articolo della Knowledge Base viene trattato il messaggio di errore 1105 con stato 2 e il messaggio di errore 1105 restituito è associato allo stato 3, è possibile che la causa dell'errore rilevato sia diversa da quella descritta nell'articolo.  
   
@@ -100,7 +100,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizzo di ERROR_STATE in un blocco CATCH con altri strumenti di gestione degli errori  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. Assieme allo stato dell'errore vengono restituite le informazioni relative all'errore stesso.  

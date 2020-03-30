@@ -16,10 +16,10 @@ ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0f7af8a254bea06745c85cfdd0442b28eef876de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013224"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Opzione di configurazione del server Affinity Mask I/O
@@ -50,7 +50,7 @@ ms.locfileid: "68013224"
   
  Un bit 1 nello schema della maschera di affinità di I/O indica che la CPU corrispondente è idonea all'esecuzione di operazioni di I/O su disco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mentre un bit 0 indica che per la CPU corrispondente non deve essere pianificata alcuna operazione di I/O su disco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando tutti i bit sono impostati su zero oppure l'opzione **affinity I/O mask** non è specificata, le operazioni di I/O su disco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono pianificate per una qualsiasi CPU idonea a elaborare i thread di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- L'impostazione dell'opzione **affinity I/O mask** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'attività complessa, che è consigliabile eseguire solo in caso di necessità. Nella maggior parte dei casi l'affinità predefinita di Windows 2000 o Windows Server 2003 garantisce livelli di prestazioni ottimali.  
+ L'impostazione dell'opzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]affinity I/O mask**di** è un'attività complessa, che è consigliabile eseguire solo in caso di necessità. Nella maggior parte dei casi l'affinità predefinita di Windows 2000 o Windows Server 2003 garantisce livelli di prestazioni ottimali.  
   
  Quando si specifica l'opzione **affinity I/O mask** , è necessario usarla insieme all'opzione di configurazione **affinity mask** . Non abilitare la stessa CPU sia nell'opzione **affinity I/O mask** che nell'opzione **affinity mask** . I bit corrispondenti alle singole CPU devono rispettare uno dei tre stati seguenti:  
   

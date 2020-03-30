@@ -15,10 +15,10 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025265"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Rimozione di mirroring del database (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68025265"
 > [!NOTE]  
 >  Per proseguire il mirroring dopo avere arrestato una sessione, è necessario stabilire una nuova sessione di mirroring del database. Se dopo l'arresto del mirroring è stato creato un backup del log, è necessario applicarlo al database mirror prima di riavviare il mirroring.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per rimuovere il mirroring del database**  
   
 -   [Rimuovere il mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  

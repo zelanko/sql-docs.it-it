@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74909033"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
@@ -159,7 +159,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
   
  Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membri del ruolo predefinito del server sysadmin, possono revocare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel server. Gli utenti che dispongono dell'autorizzazione CONTROL in un database, ad esempio i membri del ruolo predefinito del database db_owner, possono revocare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel database. Gli utenti che dispongono dell'autorizzazione CONTROL in uno schema possono revocare qualsiasi autorizzazione per qualsiasi oggetto all'interno dello schema.  
   
-##  <a name="securable"></a> Sintassi specifica delle entità a protezione diretta  
+##  <a name="securable-specific-syntax"></a><a name="securable"></a> Sintassi specifica delle entità a protezione diretta  
  Nella tabella seguente vengono elencate le entità a protezione diretta e gli argomenti in cui viene descritta la relativa sintassi specifica.  
   
 |Entità a protezione diretta|Argomento|  

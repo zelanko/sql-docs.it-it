@@ -17,17 +17,17 @@ ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243391"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Debugger Transact-SQL - Finestra Elenco errori
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-La finestra **Elenco errori** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mostra gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+La finestra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Elenco errori**di** mostra gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 

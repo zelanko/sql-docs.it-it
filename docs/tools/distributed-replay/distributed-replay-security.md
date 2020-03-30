@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307018"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
@@ -33,7 +33,7 @@ Prima di installare e usare la funzionalità Riesecuzione distribuita di [!INCLU
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|Può essere un account utente di dominio o locale. Se si utilizza un account utente locale, il controller, il client e l'istanza di SQL Server di destinazione devono essere tutti eseguiti nello stesso computer.<br /><br /> **\*\* Nota sulla sicurezza \*\*** È consigliabile evitare che l'account sia un membro del gruppo Administrators locale in Windows.|  
 |Account utente interattivo utilizzato per eseguire lo strumento Distributed Replay Administration Tool|Può essere un account utente locale o di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.|  
   
- **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client di Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+ **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
 -   Account utente di dominio  
   

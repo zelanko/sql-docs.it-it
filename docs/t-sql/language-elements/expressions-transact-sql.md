@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70978602"
 ---
 # <a name="expressions-transact-sql"></a>Espressioni (Transact-SQL)
@@ -117,7 +117,7 @@ ms.locfileid: "70978602"
   
  Le regole di confronto di un'espressione che restituisce una stringa di caratteri vengono impostate in base alle regole sulla precedenza delle regole di confronto. Per altre informazioni, vedere [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- In un linguaggio di programmazione come C o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], un'espressione restituisce sempre un unico risultato. Le espressioni in un elenco SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] seguono una variante di questa regola. L'espressione viene valutata singolarmente per ogni riga nel set di risultati. Una stessa espressione può avere un valore diverso in ogni riga del set di risultati, ma ogni riga include un solo valore per l'espressione. Nell'istruzione `SELECT` seguente, ad esempio, il riferimento a `ProductID` e il termine `1+2` nell'elenco di selezione sono entrambi espressioni:  
+ In un linguaggio di programmazione come C o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], un'espressione restituisce sempre un unico risultato. Le espressioni in un elenco di selezione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguono una variante di questa regola, in quanto vengono valutate singolarmente per ogni riga del set di risultati. Una stessa espressione può avere un valore diverso in ogni riga del set di risultati, ma ogni riga include un solo valore per l'espressione. Nell'istruzione `SELECT` seguente, ad esempio, il riferimento a `ProductID` e il termine `1+2` nell'elenco di selezione sono entrambi espressioni:  
   
 ```  
 USE AdventureWorks2012;  

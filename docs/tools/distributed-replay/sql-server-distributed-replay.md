@@ -10,10 +10,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74993421"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
@@ -46,13 +46,13 @@ La funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/
 ## <a name="distributed-replay-concepts"></a>Concetti di base di Distributed Replay  
  I componenti seguenti costituiscono l'ambiente di Distributed Replay:  
   
--   **Strumento di amministrazione Riesecuzione distribuita**: applicazione console, **DReplay.exe**, usata per comunicare con il servizio controller di Riesecuzione distribuita. Utilizzare lo strumento di amministrazione per controllare la riproduzione distribuita.  
+-   **Strumento di amministrazione di Riesecuzione distribuita**: un'applicazione console, **DReplay.exe**, usata per comunicare con il servizio controller di Riesecuzione distribuita. Utilizzare lo strumento di amministrazione per controllare la riproduzione distribuita.  
   
--   **Controller di Riesecuzione distribuita**: computer che esegue il servizio di Windows denominato controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con il controller di Riesecuzione distribuita è possibile orchestrare le azioni dei client Riesecuzione distribuita. In ogni ambiente di Riesecuzione distribuita può essere presente una sola istanza del controller.  
+-   **Controller di Riesecuzione distribuita**: un computer che esegue il servizio Windows denominato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controller di Riesecuzione distribuita. Con il controller di Riesecuzione distribuita è possibile orchestrare le azioni dei client Riesecuzione distribuita. In ogni ambiente di Riesecuzione distribuita può essere presente una sola istanza del controller.  
   
--   **Client Riesecuzione distribuita**: uno o più computer (fisici o virtuali) che eseguono il servizio di Windows denominati client Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I client Riesecuzione distribuita vengono usati insieme per simulare carichi di lavoro in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni ambiente di Riesecuzione distribuita possono essere presenti uno o più client.  
+-   **Client Riesecuzione distribuita**: uno o più computer (fisico o virtuale) che eseguono il servizio Windows denominato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Riesecuzione distribuita. I client Riesecuzione distribuita vengono usati insieme per simulare carichi di lavoro in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni ambiente di Riesecuzione distribuita possono essere presenti uno o più client.  
   
--   **Server di destinazione**: istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che i client Riesecuzione distribuita possono usare per riprodurre i dati di traccia. È consigliabile posizionare il server di destinazione in un ambiente di testing.  
+-   **Server di destinazione**: un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che i client Riesecuzione distribuita possono usare per riprodurre i dati di traccia. È consigliabile posizionare il server di destinazione in un ambiente di testing.  
   
  Distributed Replay Administration Tool, Controller e Client possono essere installati in computer diversi o sullo stesso computer. Sullo stesso computer può essere in esecuzione una sola istanza del servizio Distributed Replay Controller o Client.  
   

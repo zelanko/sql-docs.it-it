@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246446"
 ---
 # <a name="import-into-a-database-project"></a>Eseguire l'importazione in un progetto di database
@@ -37,7 +37,7 @@ ms.locfileid: "75246446"
   
 [Importare oggetti crittografati](#bkmk_import_encrypted)  
   
-## <a name="bkmk_import_source_db"></a>Origine di importazione: database o applicazione livello dati (*.dacpac)  
+## <a name="import-source-database-or-data-tier-application-dacpac"></a><a name="bkmk_import_source_db"></a>Origine di importazione: database o applicazione livello dati (*.dacpac)  
 È possibile importare uno schema da un database o da un file con estensione dacpac solo se non sono presenti oggetti dello schema già definiti nel progetto. Questo non include file refactorlog o script di pre-distribuzione o post-distribuzione.  
   
 Durante l'importazione le definizioni di oggetti verranno inserite in script in file di progetto tramite impostazioni predefinite organizzative di SSDT per i nuovi oggetti, ovvero nuovi file per oggetti di livello superiore, figli gerarchici definiti nello stesso file come il padre o vincoli di tabella o colonna definiti inline quando possibile. Per una visibilità e un controllo più mirati per ogni oggetto, utilizzare Confronto schema anziché Importa.  
@@ -48,7 +48,7 @@ Se contenuti nell'origine di importazione, script di pre-distribuzione o di post
   
 ![Cartella di elementi ignorati durante l'importazione di SSDT](../ssdt/media/ssdt-ignoredonimport.gif "Cartella di elementi ignorati durante l'importazione di SSDT")  
   
-## <a name="bkmk_import_source_script"></a>Origine di importazione: script (*.sql)  
+## <a name="import-source-script-sql"></a><a name="bkmk_import_source_script"></a>Origine di importazione: script (*.sql)  
 Tutti gli oggetti dell'origine di importazione che *non* esistono già nel progetto verranno aggiunti, mentre tutti quelli che *esistono già* nel progetto verranno sovrascritti dalla definizione di oggetto nel progetto.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ Tutti gli oggetti dell'origine di importazione che *non* esistono già nel proge
 Il processo di importazione da script non includerà gli script di pre-distribuzione o di post-distribuzione, i file refactorlog e le variabili SQLCMD. Questi elementi e altri costrutti non supportati rilevati durante l'importazione verranno inseriti in un file **ScriptsIgnoredOnImport.sql** in una cartella **Script** del progetto.  
   
  
-## <a name="bkmk_import_encrypted"></a>Importare oggetti crittografati  
+## <a name="import-encrypted-objects"></a><a name="bkmk_import_encrypted"></a>Importare oggetti crittografati  
 Quando si importano oggetti crittografati in un progetto di database, non è sempre possibile recuperare l'intero corpo della definizione di oggetto dal server. Per questo motivo, quando viene applicata a questa classe di oggetti, il comportamento dell'importazione può essere diverso.  
   
 Quando non è possibile recuperare la definizione dell'intero corpo, l'intestazione o il piè di pagina dell'oggetto verranno inseriti nello script con un corpo fittizio. Questa situazione può verificarsi quando si utilizza l'opzione Importa o Confronto schema in cui l'origine di importazione è un database attivo o un file con estensione dacpac estratto da un database.  
