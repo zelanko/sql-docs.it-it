@@ -14,10 +14,10 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986939"
 ---
 # <a name="sql-server-buffer-manager-object"></a>Oggetto di Gestione buffer di SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "67986939"
 -   La frequenza con cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ricorrere alla lettura dei dati dal disco. Rispetto agli altri tipi di operazioni, ad esempio l'accesso alla memoria, l'I/O fisico richiede una maggiore quantità di tempo. Riducendo al minimo le operazioni di I/O fisico è possibile migliorare le prestazioni delle query.  
   
 ## <a name="buffer-manager-performance-objects"></a>Oggetti prestazioni di Gestione buffer  
- Nella tabella seguente vengono descritti gli oggetti prestazioni **Gestione buffer** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nella tabella seguente vengono descritti gli oggetti prestazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestione buffer**di**.  
   
 |Contatori di Gestione buffer di SQL Server|Descrizione|  
 |----------------------------------------|-----------------|  

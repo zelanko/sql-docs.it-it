@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285211"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introduzione a un esempio semplice di importazione/esportazione guidata

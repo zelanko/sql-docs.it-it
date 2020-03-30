@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244558"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
@@ -147,7 +147,7 @@ ms.locfileid: "75244558"
 ## <a name="user-name-and-password-login"></a>Accesso tramite nome utente e password  
  Quando si seleziona **Usa il nome utente e la password seguenti**, è necessario specificare un nome utente e una password per accedere all'origine dati. Per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le credenziali possono essere relative a un account di accesso al database. Le credenziali vengono passate all'origine dati per l'autenticazione.  
   
-##  <a name="DataSourceConfigurationConnections"></a> Configurazione dell'origine dei dati e connessioni di rete  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Configurazione dell'origine dei dati e connessioni di rete  
  Nella tabella seguente viene illustrato come vengono eseguite le connessioni per combinazioni specifiche di tipi di credenziali ed estensioni per l'elaborazione dati. Se si usa un'estensione per l'elaborazione dati personalizzata, vedere [Specificare le connessioni per le estensioni per l'elaborazione dati personalizzate](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md).  
   
 |**Tipo**|**Contesto per la connessione di rete**|**Tipi di origine dei dati**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  

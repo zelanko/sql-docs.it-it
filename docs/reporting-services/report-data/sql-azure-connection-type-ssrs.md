@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081757"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo di connessione a SQL Azure (SSRS)
@@ -31,7 +31,7 @@ Per altre informazioni, vedere [Documentazione sul database SQL di Azure](https:
   
 Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="Connection"></a> Stringa di connessione
+## <a name="connection-string"></a><a name="Connection"></a> Stringa di connessione
 
 Quando ci si connette a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si esegue la connessione a un oggetto di database nel cloud. Proprio come i database in loco, il database di hosting potrebbe disporre di più schemi aventi più tabelle, viste e stored procedure. L'oggetto di database viene specificato in Progettazione query. Se non si specifica un database nella stringa di connessione, la connessione viene eseguita al database predefinito assegnato dall'amministratore.  
   
@@ -45,7 +45,7 @@ Viene inoltre usata la finestra di dialogo **Proprietà origini dati** per forni
   
 Per altre informazioni ed esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-## <a name="Credentials"></a> Credenziali
+## <a name="credentials"></a><a name="Credentials"></a> Credenziali
 
 L'autenticazione di Windows (sicurezza integrata) non è supportata. Se si tenta di connettersi a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] utilizzando l'autenticazione di Windows, si verificherà un errore. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] supporta solo l'autenticazione di SQL Server (nome utente e password) e gli utenti devono fornire le proprie credenziali (account di accesso e password) ogni volta che si connettono a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -59,7 +59,7 @@ Da un client di creazione di report sono disponibili le opzioni seguenti per la 
   
 Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-## <a name="Query"></a> Query
+## <a name="queries"></a><a name="Query"></a> Query
 
 Una query consente di specificare quali dati recuperare per un set di dati del report. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. Se la query restituisce più set di risultati, nel report viene elaborato solo il primo set di risultati. Anche se esistono alcune differenze tra i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i [!INCLUDE[ssSDS](../../includes/sssds-md.md)], quali ad esempio le dimensioni di database supportate, scrivere query per [!INCLUDE[ssSDS](../../includes/sssds-md.md)]è simile allo scrivere query per database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alcune istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio BACKUP, non sono supportate in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ma non sono quelle che si utilizzano nelle query del report. Per altre informazioni, vedere [Tipo di connessione SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).  
   
@@ -81,7 +81,7 @@ Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazi
   
 La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
-### <a name="QueryText"></a> Utilizzo di query di tipo Text
+### <a name="using-query-type-text"></a><a name="QueryText"></a> Utilizzo di query di tipo Text
 
 Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire i dati in un set di dati. La query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 Quando si esegue la query, i parametri del report corrispondenti ai parametri di query verranno creati automaticamente. Per ulteriori informazioni, vedere [Parametri di query](#Parameters) di seguito in questo argomento.  
   
-### <a name="QueryStoredProcedure"></a> Utilizzo di query di tipo StoredProcedure
+### <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> Utilizzo di query di tipo StoredProcedure
 
 È possibile specificare una stored procedure per una query del set di dati in uno dei seguenti modi:  
   
@@ -126,7 +126,7 @@ Se in una stored procedure è presente un parametro con un valore predefinito, �
   
 Per altre informazioni sulle stored procedure, vedere [Stored procedure (Motore di database)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
-## <a name="Parameters"></a> Parametri
+## <a name="parameters"></a><a name="Parameters"></a> Parametri
 
 Quando il testo della query contiene variabili di query o stored procedure con parametri di input, vengono generati automaticamente i parametri di query corrispondenti per il set di dati e i parametri di report per il report. Il testo della query non deve includere l'istruzione DECLARE per ogni variabile della query.  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
 
 Per impostazione predefinita, ogni parametro del report dispone di tipo di dati Text e un set di dati creato automaticamente per fornire un elenco a discesa di valori disponibili. Dopo aver creato i parametri di report, potrebbe essere necessario modificare i valori predefiniti. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
 
-## <a name="Remarks"></a> Osservazioni
+## <a name="remarks"></a><a name="Remarks"></a> Osservazioni
   
 ###### <a name="alternate-data-extensions"></a>Estensioni per i dati alternative
 
@@ -167,7 +167,7 @@ Questo scenario è supportato quando vengono configurati correttamente gli eleme
 
 ::: moniker-end
 
-## <a name="HowTo"></a> Procedure
+## <a name="how-to-topics"></a><a name="HowTo"></a> Procedure
 
 In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
@@ -177,7 +177,7 @@ In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connes
   
 [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-## <a name="Related"></a> Sezioni correlate
+## <a name="related-sections"></a><a name="Related"></a> Sezioni correlate
 
 In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le procedure per definire, personalizzare e utilizzare parti di un report correlate ai dati.  
   

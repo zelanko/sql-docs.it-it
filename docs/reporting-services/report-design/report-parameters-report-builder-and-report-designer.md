@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68941144"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
@@ -35,7 +35,7 @@ Questo argomento descrive gli usi comuni per i parametri di report [!INCLUDE[ssR
 
 Per provare ad aggiungere un parametro a un report manualmente, vedere [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
 
-## <a name="bkmk_Common_Uses_for_Parameters"></a> Utilizzi comuni per i parametri
+## <a name="common-uses-for-parameters"></a><a name="bkmk_Common_Uses_for_Parameters"></a> Utilizzi comuni per i parametri
 
  Di seguito sono elencate alcune delle modalità più comuni in cui è possibile usare i parametri.  
   
@@ -67,7 +67,7 @@ Per provare ad aggiungere un parametro a un report manualmente, vedere [Esercita
   
     Per altre informazioni, vedere [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
-## <a name="UserInterface"></a> Visualizzazione di un report con parametri
+## <a name="viewing-a-report-with-parameters"></a><a name="UserInterface"></a> Visualizzazione di un report con parametri
 
 Quando si visualizza un report con parametri, ogni parametro viene visualizzato nella barra degli strumenti del visualizzatore di report in modo che gli utenti possano specificarne i valori in modo interattivo. La figura seguente illustra l'area dei parametri di un report contenente i parametri @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota e @SalesDate.  
 
@@ -85,7 +85,7 @@ Quando si visualizza un report con parametri, ogni parametro viene visualizzato 
   
 6. **Visualizza report**  Dopo aver immesso i valori dei parametri, fare clic su **Visualizza report** per eseguire il report. Se tutti i parametri hanno valori predefiniti, il report viene eseguito automaticamente a prima vista.  
   
-## <a name="bkmk_Create_Parameters"></a> Creazione di parametri
+## <a name="creating-parameters"></a><a name="bkmk_Create_Parameters"></a> Creazione di parametri
 
 È possibile creare i parametri dei report in alcuni modi diversi.
   
@@ -142,7 +142,7 @@ Creare manualmente un parametro dal riquadro dei dati del report. È possibile c
   
 - Eseguire il report senza dovere selezionare prima un valore di parametro poiché per il parametro è stato creato un valore predefinito.  
   
-## <a name="bkmk_Report_Parameters"></a> Proprietà dei parametri di report
+## <a name="report-parameter-properties"></a><a name="bkmk_Report_Parameters"></a> Proprietà dei parametri di report
 
  È possibile modificare le proprietà dei parametri di report mediante la finestra di dialogo Proprietà report. Nella tabella riportata di seguito vengono riepilogate le proprietà che è possibile impostare per ogni parametro.  
   
@@ -161,7 +161,7 @@ Creare manualmente un parametro dal riquadro dei dati del report. È possibile c
 |Valori predefiniti|Impostare i valori predefiniti da una query o da un elenco statico.<br /><br /> Il report viene eseguito automaticamente a prima vista quando ogni parametro ha un valore predefinito.|  
 |Avanzate|Impostare l'attributo di definizione del report **UsedInQuery**, un valore che indica se questo parametro influisce direttamente o indirettamente sui dati di un report.<br /><br /> **Determina automaticamente quando eseguire l'aggiornamento**<br /> Scegliere questa opzione se si desidera che l'impostazione per questo valore venga determinata dal componente Elaborazione report. Questo valore è **True** se il componente Elaborazione report rileva una query del set di dati con un riferimento diretto o indiretto a questo parametro oppure se il report contiene sottoreport.<br /><br /> **Aggiorna sempre**<br /> Scegliere questa opzione quando il parametro di report viene usato direttamente o indirettamente in una query del set di dati o in un'espressione del parametro. Questa opzione determina l'impostazione di **UsedInQuery** su True.<br /><br /> **Non aggiornare mai**<br /> Scegliere questa opzione quando il parametro di report non viene usato direttamente o indirettamente in una query del set di dati o in un'espressione del parametro. Questa opzione determina l'impostazione di **UsedInQuery** su False.<br /><br /> **Attenzione** Usare **Non aggiornare mai** con cautela. Nel server di report **UsedInQuery** viene usato per consentire il controllo delle opzioni della cache per i dati dei report sottoposti a rendering e delle opzioni di parametro per i report snapshot. L'impostazione non corretta dell'opzione **Non aggiornare mai** potrebbe determinare la memorizzazione nella cache di report o dati del report non corretti o la presenza di dati non coerenti in un report snapshot. Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).|  
   
-##  <a name="bkmk_Dataset_Parameters"></a> Query del set di dati  
+##  <a name="dataset-query"></a><a name="bkmk_Dataset_Parameters"></a> Query del set di dati  
  Per filtrare i dati nella query del set di dati è possibile includere una clausola di restrizione che limita i dati recuperati specificando i valori da includere o escludere dal set dei risultati.  
   
  Usare Progettazione query per l'origine dati per compilare una query con parametri.  
@@ -170,7 +170,7 @@ Creare manualmente un parametro dal riquadro dei dati del report. È possibile c
   
 -   Per query basate su un'origine di dati multidimensionale quale Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, è possibile specificare se creare un parametro basato su un filtro specificato in Progettazione query. Per altre informazioni, vedere l'argomento relativo alla progettazione query corrispondente all'estensione per i dati in [Strumenti di progettazione query &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
-##  <a name="bkmk_Manage_Parameters"></a> Gestione di parametri per un report pubblicato  
+##  <a name="parameter-management-for-a-published-report"></a><a name="bkmk_Manage_Parameters"></a> Gestione di parametri per un report pubblicato  
  Quando si progetta un report, i parametri corrispondenti vengono salvati nella definizione del report. Quando si pubblica un report, i parametri corrispondenti vengono salvati e gestiti separatamente della definizione del report.  
   
  Per un report pubblicato, è possibile usare gli elementi seguenti:  
@@ -193,7 +193,7 @@ Creare manualmente un parametro dal riquadro dei dati del report. È possibile c
   
  Le opzioni di esecuzione del report possono influire sulle modalità di elaborazione dei parametri. Per un report che viene eseguito come snapshot non è possibile usare parametri derivati da una query, a meno che la query non includa valori predefiniti per i parametri.  
   
-##  <a name="bkmk_Parameters_Subscription"></a> Parametri per una sottoscrizione  
+##  <a name="parameters-for-a-subscription"></a><a name="bkmk_Parameters_Subscription"></a> Parametri per una sottoscrizione  
  È possibile definire una sottoscrizione per un report su richiesta o snapshot e specificare valori di parametri da usare durante l'elaborazione della sottoscrizione.  
   
 -   **Report su richiesta.**  Per un report su richiesta, è possibile specificare un valore del parametro diverso dal valore pubblicato per ogni parametro elencato per il report. Si supponga, ad esempio, di usare il report delle chiamate al servizio di assistenza, per il quale viene usato un parametro *periodo di tempo* che consente di restituire i dati sulle richieste pervenute al servizio di assistenza ai clienti in un determinato giorno, settimana o mese. Se il valore predefinito del parametro per il report è impostato su **oggi**, la sottoscrizione può usare un valore diverso, ad esempio **settimana** o **mese**, per generare un report contenente dati settimanali o mensili.  
@@ -209,7 +209,7 @@ Creare manualmente un parametro dal riquadro dei dati del report. È possibile c
   
  Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-##  <a name="bkmk_Parameters_Security"></a> Parametri e sicurezza dei dati  
+##  <a name="parameters-and-securing-data"></a><a name="bkmk_Parameters_Security"></a> Parametri e sicurezza dei dati  
  Quando si distribuiscono report con parametri che contengono informazioni riservate è necessario fare attenzione. Un utente può facilmente sostituire un parametro di report con un valore diverso, con la conseguente diffusione di informazioni potenzialmente riservate.  
   
  Un'alternativa più sicura all'utilizzo di parametri per i dati personali o relativi ai dipendenti consiste nel selezionare i dati basati su espressioni che includono il campo **UserID** dalla raccolta Users. La raccolta Users consente di ottenere l'identità dell'utente che esegue il report e di usarla per recuperare i dati specifici per l'utente.  
@@ -221,7 +221,7 @@ Creare manualmente un parametro dal riquadro dei dati del report. È possibile c
 >   
 >  Per ridurre il rischio di eseguire inavvertitamente script dannosi, aprire i report visualizzabili solo da origini attendibili. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md).  
 
-##  <a name="bkmk_Related_Topics"></a> Sezioni correlate  
+##  <a name="related-sections"></a><a name="bkmk_Related_Topics"></a> Sezioni correlate  
 
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "Lezione 2: Modifica delle proprietà dell'origine dati del report | Microsoft Docs"
+title: "Lesson 2: Modifying the Report Data Source Properties (Lezione 2: Modifica delle proprietà dell'origine dati del report) | Microsoft Docs"
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,18 +9,18 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651726"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lezione 2: Modifica delle proprietà dell'origine dati del report
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verrà usato il portale Web per selezionare un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
   
 Inoltre, verrà modificato il set di dati e il report per utilizzare un parametro al fine di filtrare il report in `[Order]` in modo che tramite la sottoscrizione sia possibile restituire istanze differenti del report per formati di rendering e ordini specifici.  
   
-## <a name="bkmk_modify_datasource"></a>Per modificare l'origine dati per l'uso delle credenziali archiviate  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>Per modificare l'origine dati per l'uso delle credenziali archiviate  
   
 1.  Accedere al portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con privilegi di amministratore, ad esempio, fare clic con il pulsante destro del mouse sull'icona di Internet Explorer e scegliere **Esegui come amministratore**.  
  
@@ -54,7 +54,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 11. Visualizzare il report per verificare che venga eseguito con le credenziali specificate. .  
   
-## <a name="bkmk_modify_dataset"></a>Per modificare AdventureWorksDataset  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>Per modificare AdventureWorksDataset  
  Nei passaggi successivi si modificherà il set di dati in modo da usare un parametro per filtrare il set di dati in base a un numero di ordine.
 1.  Aprire il report **Ordini vendita** in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -81,7 +81,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 4.  Fare clic su **OK**.  
  Nei passaggi seguenti si aggiungerà un parametro al report.  Il parametro del report determina il parametro del set di dati. 
-## <a name="bkmk_add_reportparameter"></a>Per aggiungere un parametro del report e ripubblicare il report  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>Per aggiungere un parametro del report e ripubblicare il report  
   
 1.  Nel riquadro **Dati report** espandere la cartella dei parametri e fare doppio clic sul parametro **Ordernumber** .  Il parametro è stato creato automaticamente nei passaggi precedenti quando è stato aggiunto al set di dati. Fare clic su **Nuovo** e quindi su **Parametro**  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -103,9 +103,9 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>Ridistribuire il report  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Ridistribuire il report  
   
-1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usate nell'esercitazione relativa alla tabella, vedere la sezione "Per pubblicare il report nel server di report (facoltativo)" di [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usate nell'esercitazione relativa alla tabella, vedere la sezione "Per pubblicare il report nel server di report (facoltativo)" della [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Sulla barra degli strumenti fare clic su **Compila** , quindi scegliere **Distribuisci Tutorial**.  
   

@@ -21,10 +21,10 @@ ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243336"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE - autorizzazioni per entità di database (Transact-SQL)

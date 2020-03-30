@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053569"
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
@@ -31,7 +31,7 @@ Per scrivere query full-text, usare i predicati **CONTAINS** e **FREETEXT** e le
 -   Per trovare i valori corrispondenti a parole e frasi, usare **CONTAINS** e **CONTAINSTABLE**.
 -   Per trovare i valori corrispondenti al significato, ma non all'esatta formulazione delle parole, usare **FREETEXT** e **FREETEXTTABLE** .
 
-## <a name="examples_simple"></a> Esempi di ogni predicato e funzione
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Esempi di ogni predicato e funzione
 
 Gli esempi seguenti usano il database di esempio AdventureWorks. Per la versione finale di AdventureWorks, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Database e script di AdventureWorks per SQL Server 2016 CTP3). Per eseguire le query di esempio, è necessario impostare anche la ricerca full-text. Per altre informazioni, vedere [Introduzione alla ricerca full-text](get-started-with-full-text-search.md). 
 
@@ -172,9 +172,9 @@ Le query che usano una di queste funzioni restituiscono un valore di classificaz
 
 **Altre informazioni**. Per altre informazioni sulla sintassi e sugli argomenti di queste funzioni, vedere [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).
 
-## <a name="examples_specific"></a> Tipi di ricerca specifici
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> Tipi di ricerca specifici
 
-###  <a name="Simple_Term"></a> Ricerca di parole o frasi specifiche (termine semplice)  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> Ricerca di parole o frasi specifiche (termine semplice)  
  È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) per cercare una parola o frase specifica in una tabella. Ad esempio, per eseguire una ricerca nella tabella **ProductReview** del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] per trovare tutti i commenti su un prodotto con la frase "learning curve", è possibile usare il predicato CONTAINS nel modo seguente:  
   
 ```sql
@@ -197,7 +197,7 @@ Ad esempio, "croissant" è una parola, mentre "caffè macchiato" è una frase. L
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) consentono di cercare una corrispondenza esatta per la frase. [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) consentono di suddividere la frase in parole separate.
 
-###  <a name="Prefix_Term"></a> Ricerca di una parola con un prefisso (termine di prefisso)  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a> Ricerca di una parola con un prefisso (termine di prefisso)  
  È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) per cercare parole o frasi con un prefisso specificato. Vengono restituite tutte le voci nella colonna che contengono testo che inizia con il prefisso specificato. È possibile cercare, ad esempio, tutte le righe che contengono il prefisso `top`-, come in `top``ple`, `top``ping`e `top`. La query è simile all'esempio seguente:  
   
 ```sql  
@@ -224,7 +224,7 @@ Un *termine di prefisso* fa riferimento a una stringa aggiunta davanti a una par
 
 Le ricerche con prefisso sono supportate da [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
   
-###  <a name="Inflectional_Generation_Term"></a> Ricerca di forme flessive di una parola specifica (termine di generazione)  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> Ricerca di forme flessive di una parola specifica (termine di generazione)  
 È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) per cercare tutti i diversi tempi e coniugazioni di un verbo o le forme sia singolare sia plurale di un sostantivo (ricerca di forme flessive) oppure i sinonimi di una parola specifica (ricerca thesaurus).  
   
 Nell'esempio seguente vengono cercate tutte le forme del termine "piede" ("piede", "piedi" e così via) presenti nella colonna `Comments` della tabella `ProductReview` nel database `AdventureWorks`: 
@@ -267,7 +267,7 @@ Un *termine di prossimità* indica parole o frasi vicine le une alle altre. È i
 
 Per altre informazioni sulle ricerche di prossimità, vedere [Cercare parole vicine a un'altra parola con NEAR](search-for-words-close-to-another-word-with-near.md).
 
-###  <a name="Weighted_Term"></a> Ricerca di parole o frasi tramite valori ponderati (termine ponderato)  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a> Ricerca di parole o frasi tramite valori ponderati (termine ponderato)  
 È possibile usare [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) per cercare parole o frasi e specificare un valore ponderato. Il peso, espresso come numero compreso tra 0,0 e 1,0, indica l'importanza di ogni parola o frase all'interno di un set di parole o frasi. Il valore 0,0 corrisponde al peso minimo, mentre il valore 1,0 corrisponde al peso massimo.  
   
 Nell'esempio seguente viene illustrata una query per la ricerca di tutti gli indirizzi dei clienti, tramite valori di ponderazione, in cui il testo che inizia con la stringa "Bay" contiene anche la parola "Street" o "View". I risultati assegnano un livello di importanza superiore alle righe che contengono il numero maggiore di parole specificate.  
@@ -297,7 +297,7 @@ Ad esempio, in una query in cui vengono cercati più termini, è possibile asseg
 
 Le ricerche di termini ponderati sono supportate da [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
 
-##  <a name="Using_Boolean_Operators"></a> Usare AND, OR e NOT (operatori booleani)
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> Usare AND, OR e NOT (operatori booleani)
  
 Il predicato CONTAINS e la funzione CONTAINSTABLE utilizzano le stesse condizioni di ricerca. Entrambi supportano la combinazione di più termini di ricerca tramite gli operatori booleani AND, OR e NOT per eseguire operazioni logiche. È ad esempio possibile usare AND per trovare righe che contengono sia "latte" sia "New York-style bagel". È possibile usare AND NOT, ad esempio, per trovare le righe che contengono "bagel", ma non "cream cheese".  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Maiuscole e minuscole, parole non significative, lingua e thesaurus
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> Maiuscole e minuscole, parole non significative, lingua e thesaurus
 
  Quando si scrivono query full-text, è anche possibile specificare le opzioni seguenti:
   
@@ -331,7 +331,7 @@ GO
   
 -   **Thesaurus**. Per impostazione predefinita, le query FREETEXT e FREETEXTTABLE utilizzano il thesaurus. CONTAINS e CONTAINSTABLE supportano un argomento THESAURUS facoltativo. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
-##  <a name="tokens"></a> Controllo dei risultati di tokenizzazione
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a> Controllo dei risultati di tokenizzazione
 
 Dopo aver applicato una determinata combinazione di word breaker, thesaurus ed elenco di parole non significative a una query, è possibile visualizzare il risultato della tokenizzazione della ricerca full-text usando la DMV **sys.dm_fts_parser**. Per altre informazioni, vedere [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

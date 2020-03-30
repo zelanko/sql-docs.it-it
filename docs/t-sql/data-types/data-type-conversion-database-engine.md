@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68697498"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversione del tipo di dati (motore di database)
@@ -135,7 +135,7 @@ Nella tabella seguente vengono descritte le conversioni dei tipi di dati di [!IN
 |**datetime**, **smalldatetime**|**Data**|  
 |Qualsiasi tipo impostato su NULL|**Variant** impostato su Null|  
   
-Tutti i singoli valori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono convertiti in un singolo valore di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], ad eccezione dei valori **binary**, **varbinary** e **image**. Questi valori vengono convertiti in una matrice di **Byte()** unidimensionale in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Questa matrice ha un intervallo di **Byte(** 0 to _length_ 1 **)** dove *length* è il numero di byte nei valori **binary**, **varbinary** o **image** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Tutti i singoli valori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono convertiti in un singolo valore di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], ad eccezione dei valori **binary**, **varbinary** e **image**. Questi valori vengono convertiti in una matrice di **Byte()** unidimensionale in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Questa matrice ha un intervallo di **Byte(** 0 to _length_ 1 **)** dove *length* è il numero di byte nei valori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]binary **,** varbinary**o**image**di**.
   
 Di seguito sono riportate le conversioni dai tipi di dati [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] nei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

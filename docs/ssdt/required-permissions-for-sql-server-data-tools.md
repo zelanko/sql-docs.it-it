@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256987"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Autorizzazioni necessarie per SQL Server Data Tools
@@ -35,7 +35,7 @@ Prima di poter eseguire un'azione in un database in Visual Studio, è necessario
   
 -   [Autorizzazioni per progetti Common Language Runtime di SQL Server (CLR SQL)](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>Autorizzazioni per creare o distribuire un database  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Autorizzazioni per creare o distribuire un database  
 Per creare o distribuire un database è necessario disporre delle autorizzazioni riportate di seguito.  
   
 |||  
@@ -51,10 +51,10 @@ Per creare o distribuire un database è necessario disporre delle autorizzazioni
   
 Per ulteriori informazioni, vedere la documentazione online di SQL Server.  
   
-## <a name="DatabaseRefactoringPermissions"></a>Autorizzazioni per eseguire il refactoring di un database  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>Autorizzazioni per eseguire il refactoring di un database  
 Il *refactoring del database* viene eseguito solo all'interno del progetto di database. È necessario disporre delle autorizzazioni per utilizzare il progetto di database. Le autorizzazioni per un database di destinazione non sono necessarie finché non si distribuiscono le modifiche in tale database.  
   
-## <a name="DatabaseUnitTestingPermissions"></a>Autorizzazioni per eseguire unit test in un database di SQL Server  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Autorizzazioni per eseguire unit test in un database di SQL Server  
 Per eseguire unit test in un database, è necessario disporre delle autorizzazioni seguenti.  
   
 |||  
@@ -66,10 +66,10 @@ Per eseguire unit test in un database, è necessario disporre delle autorizzazio
 |Distribuire le modifiche apportate al database prima di eseguire i test|È necessario utilizzare la connessione al database del contesto autorizzato. Per altre informazioni, vedere [Procedura: Configurare l'esecuzione di unit test di SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
 |Generare dati prima di eseguire i test|È necessario utilizzare la connessione al database del contesto autorizzato. Per altre informazioni, vedere [Procedura: Configurare l'esecuzione di unit test di SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
-## <a name="DataGenerationPermissions"></a>Autorizzazioni per generare dati  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Autorizzazioni per generare dati  
 Per generare dati di test tramite il generatore di dati, è necessario avere le autorizzazioni **INSERT** e **SELECT** per gli oggetti del database di destinazione. Se si eliminano dei dati prima di generarne altri, è necessario avere anche le autorizzazioni **DELETE** per gli oggetti del database di destinazione. Per reimpostare la colonna **IDENTITY** di una tabella, è necessario essere proprietari della tabella oppure membri del ruolo db_owner o db_ddladmin.  
   
-## <a name="SchemaAndDataComparePermissions"></a>Autorizzazioni per confrontare schemi e dati  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Autorizzazioni per confrontare schemi e dati  
 Per confrontare schemi o dati, è necessario disporre delle autorizzazioni seguenti.  
   
 |||  
@@ -82,10 +82,10 @@ Per confrontare schemi o dati, è necessario disporre delle autorizzazioni segue
   
 Per ulteriori informazioni, vedere la documentazione online di SQL Server.  
   
-## <a name="Transact-SQLEditorPermissions"></a>Autorizzazioni per eseguire l'editor Transact\-SQL  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>Autorizzazioni per eseguire l'editor Transact\-SQL  
 Le azioni possibili all'interno dell'editor Transact\-SQL sono determinate dal contesto di esecuzione nel database di destinazione.  
   
-## <a name="SQLCLRPermissions"></a>Autorizzazioni per progetti Common Language Runtime di SQL Server  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>Autorizzazioni per progetti Common Language Runtime di SQL Server  
 Nella tabella seguente sono elencate le autorizzazioni necessarie per effettuare la distribuzione o eseguire il debug di progetti CLR:  
   
 |Azioni|Autorizzazioni necessarie|  

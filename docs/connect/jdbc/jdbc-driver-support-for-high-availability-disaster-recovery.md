@@ -11,10 +11,10 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027948"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Supporto del driver JDBC per il ripristino di emergenza a disponibilità elevata
@@ -69,7 +69,7 @@ Si noti che:
   
 -   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
--   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **multiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Autenticazione Kerberos o Autenticazione di Windows.  
+-   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **multiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè dall'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dall'autenticazione Kerberos o dall’autenticazione di Windows.  
   
 -   Aumentare il valore di **loginTimeout** per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.  
   

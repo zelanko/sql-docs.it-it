@@ -34,10 +34,10 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242594"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informazioni sulla cronologia e sull'intestazione del backup (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "75242594"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> Tabelle di cronologia di backup e ripristino  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Tabelle di cronologia di backup e ripristino  
  In questa sezione vengono fornite informazioni generali sulle tabelle di cronologia in cui vengono archiviati i metadati di backup e ripristino nel database di sistema **msdb** .  
   
 |Tabella di cronologia|Descrizione|  
@@ -82,7 +82,7 @@ ms.locfileid: "75242594"
 > [!NOTE]  
 >  Quando viene eseguito un ripristino, le tabelle di cronologia di backup e le tabelle di cronologia di ripristino vengono modificate.  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> Istruzioni Transact-SQL per l'accesso alla cronologia di backup  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> Istruzioni Transact-SQL per l'accesso alla cronologia di backup  
  Le istruzioni di ripristino di tipo informativo corrispondono alle informazioni archiviate in determinate tabelle di cronologia di backup.  
   
 > [!IMPORTANT]  
@@ -94,7 +94,7 @@ ms.locfileid: "75242594"
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera tutte le informazioni sull'intestazione del backup per tutti i set di backup di un dispositivo specifico. Il risultato dell'esecuzione di RESTORE HEADERONLY è un set di risultati.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione del backup" di seguito in questo argomento.|  
 |[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Restituisce un set di risultati che include informazioni sul supporto di backup su un dispositivo di backup specificato.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione supporto" di seguito in questo argomento.|  
   
-##  <a name="ListDbTlogFiles"></a> File di database e del log delle transazioni  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> File di database e del log delle transazioni  
  Le informazioni visualizzate quando vengono elencati i file di database e i file del log delle transazioni disponibili in un backup includono il nome logico, il nome fisico, il tipo di file (database o log), l'appartenenza a un filegroup, le dimensioni del file in byte, le dimensioni massime consentite del file e l'aumento predefinito delle dimensioni del file in byte. Queste informazioni risultano utili nelle situazioni seguenti per determinare i nomi dei file inclusi in un backup del database prima di eseguire il ripristino:  
   
 -   Non è più possibile utilizzare un'unità disco che include uno o più file relativi a un database.  
@@ -105,7 +105,7 @@ ms.locfileid: "75242594"
   
      La visualizzazione dell'elenco dei file inclusi nel backup consente di individuare i file interessati. Si supponga, ad esempio, che il backup includa un file che deve essere ripristinato nell'unità E e che nel server di destinazione non sia presente questa unità. Durante il ripristino del file, è quindi necessario spostarlo in un altro percorso, ad esempio l'unità Z.  
   
-##  <a name="MediaHeader"></a> Informazioni sull'intestazione supporto  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> Informazioni sull'intestazione supporto  
  La visualizzazione dell'intestazione supporto consente di ottenere informazioni sul supporto stesso anziché sui backup presenti nel supporto. Le informazioni sull'intestazione supporto visualizzate includono il nome del supporto, la descrizione, il nome del software utilizzato per la creazione dell'intestazione e la data di creazione dell'intestazione supporto.  
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ ms.locfileid: "75242594"
   
  Per altre informazioni, vedere [Confronto tra le informazioni sull'intestazione supporto e le informazioni sull'intestazione del backup](#CompareMediaHeaderBackupHeader)più avanti in questo argomento.  
   
-##  <a name="BackupHeader"></a> Informazioni sull'intestazione del backup  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> Informazioni sull'intestazione del backup  
  La visualizzazione dell'intestazione del backup consente di ottenere informazioni su tutti i set di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel supporto. Le informazioni visualizzate includono i tipi di dispositivi di backup utilizzati, i tipi di backup (ad esempio del database, del log delle transazioni, del file o differenziali), nonché la data e l'ora di avvio e di arresto delle operazioni di backup. Queste informazioni risultano utili quando è necessario individuare il set di backup su nastro da ripristinare o i backup presenti sul supporto.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "75242594"
   
  Per ripristinare un determinato set di backup, è sufficiente specificare il numero di posizione del set desiderato. Per ripristinare, ad esempio, il secondo set di backup, specificare 2 come set di backup da ripristinare.  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> Confronto tra le informazioni sull'intestazione supporto e le informazioni sull'intestazione del backup  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> Confronto tra le informazioni sull'intestazione supporto e le informazioni sull'intestazione del backup  
  Nella figura seguente vengono illustrate alcune delle differenze esistenti tra la visualizzazione delle informazioni sull'intestazione del backup e la visualizzazione delle informazioni sull'intestazione supporto. Per visualizzare l'intestazione supporto, è sufficiente recuperare le informazioni dall'inizio del nastro. Per visualizzare l'intestazione del backup, è necessario eseguire l'analisi di tutto il nastro per esaminare l'intestazione di ogni set di backup.  
   
  ![Set di supporti contenente tre set di backup di SQL Server](../../relational-databases/backup-restore/media/bnr-media-label.gif "Set di supporti contenente tre set di backup di SQL Server")  
@@ -140,10 +140,10 @@ ms.locfileid: "75242594"
   
  Per informazioni sulla visualizzazione delle informazioni sull'intestazione del backup per tutti i set di backup in un dispositivo di backup, vedere "Visualizzazione delle informazioni sull'intestazione del backup" più indietro in questo argomento.  
   
-##  <a name="Verification"></a> Verifica di backup  
+##  <a name="backup-verification"></a><a name="Verification"></a> Verifica di backup  
  La verifica di un backup è un'operazione utile, sebbene non necessaria. L'operazione di verifica di un backup controlla che il backup sia fisicamente intatto, al fine di garantire che tutti i file in esso presenti siano leggibili e ripristinabili, e che sia possibile ripristinare il backup nel caso in cui sia necessario utilizzarlo. È importante tenere presente che la verifica di un backup non prevede la verifica della struttura dei dati in esso contenuti. Se tuttavia il backup è stato creato utilizzando WITH CHECKSUMS, la verifica del backup utilizzando WITH CHECKSUMS può offrire una valida indicazione sull'affidabilità dei dati in esso contenuti.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per eliminare le righe meno recenti dalle tabelle di cronologia di backup e ripristino**  
   
 -   [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  

@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243524"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilizzo di condizioni di test in unit test di SQL Server
@@ -75,7 +75,7 @@ Tutti i parametri non specificati vengono ignorati. Passare questi parametri all
   
 Per un esempio di come usare le eccezioni previste e uno unit test negativo di SQL Server, vedere [Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
-## <a name="SpecifyDataChecksum"></a>Specifica di un checksum di dati  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>Specifica di un checksum di dati  
 Per visualizzare la finestra di progettazione unit test di SQL Server, fare doppio clic sul file del codice sorgente dello unit test in **Esplora soluzioni**.  
   
 Dopo avere aggiunto una condizione di test Checksum di dati allo unit test del database, è necessario configurare il valore di checksum previsto utilizzando la procedura seguente:  
@@ -107,7 +107,7 @@ Dopo avere aggiunto una condizione di test Checksum di dati allo unit test del d
   
     Nella colonna **Valore** relativa alla condizione di test viene visualizzato il valore di checksum previsto.  
   
-## <a name="SpecifyExpectedSchema"></a>Specifica di uno schema previsto  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>Specifica di uno schema previsto  
 Dopo aver aggiunto una condizione di test Schema previsto allo unit test di SQL Server, è necessario configurare lo schema previsto usando la procedura seguente:  
   
 #### <a name="to-specify-an-expected-schema"></a>Per specificare uno schema previsto  

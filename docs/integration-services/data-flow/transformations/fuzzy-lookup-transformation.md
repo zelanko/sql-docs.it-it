@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291498"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
@@ -58,7 +58,7 @@ ms.locfileid: "71291498"
   
  Questa trasformazione include un input e un output.  
   
- Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati **nvarchar** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ma non una colonna con tipo di dati **DT_WSTR** e una colonna con tipo di dati **int**.  
+ Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nvarchar**di**, ma non una colonna con tipo di dati **DT_WSTR** e una colonna con tipo di dati **int**.  
   
  È possibile personalizzare questa trasformazione specificando la quantità di memoria massima, l'algoritmo di confronto tra righe, nonché la memorizzazione nella cache delle tabelle di riferimento e degli indici utilizzati dalla trasformazione.  
   
