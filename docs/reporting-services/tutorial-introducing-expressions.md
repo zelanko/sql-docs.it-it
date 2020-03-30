@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295922"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
@@ -31,7 +31,7 @@ Tempo previsto per il completamento di questa esercitazione: 30 minuti.
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice  
 In questa sezione vengono creati un report tabella, un'origine dati e un set di dati. Durante la disposizione della tabella verranno inclusi solo pochi campi. Dopo aver completato la procedura guidata, si aggiungeranno manualmente colonne. La procedura guidata semplifica la definizione del layout della tabella.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 17. Fare clic su **Fine**.  
   
-## <a name="UpdateNames"></a>2. Aggiornare i nomi predefiniti dell'origine dati e del set di dati  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. Aggiornare i nomi predefiniti dell'origine dati e del set di dati  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>Per aggiornare il nome predefinito dell'origine dati  
   
@@ -146,7 +146,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3. Visualizzare iniziale nome e cognome  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Visualizzare iniziale nome e cognome  
 In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** ( **&** ) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
   
 1.  Fare clic con il pulsante destro del mouse sulla colonna **StateProvince** , scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
@@ -191,7 +191,7 @@ In questa sezione, viene usata la funzione **Left** e l'operatore di **concatena
   
 12. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
 
-## <a name="DateFormat"></a>(facoltativo) Formattare le colonne Data e Valuta e la riga di intestazione  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(facoltativo) Formattare le colonne Data e Valuta e la riga di intestazione  
 In questa sezione viene formattata la colonna **Ultimo acquisto** che contiene date, e la colonna Acquisti da inizio anno, che contiene la valuta. Viene anche formattata la riga di intestazione.  
   
 ### <a name="to-format-the-date-column"></a>Per formattare la colonna della data  
@@ -227,7 +227,7 @@ Questo è il report con date formattate, valuta e intestazioni di colonna.
 ![Generatore- report- espressione-esercitazione-anteprima-formattato](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4. Usare colori per visualizzare il sesso  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Usare colori per visualizzare il sesso  
 In questa sezione vengono aggiunti colori per visualizzare il sesso di una persona. Viene aggiunta una nuova colonna per visualizzare il colore e si specifica il colore che verrà visualizzato nella colonna in base al valore del campo Sesso.  
   
 Per conservare il colore che è stato applicato alla cella della tabella durante la creazione di un report a righe alternate evidenziate, aggiungere un rettangolo e applicare un colore di sfondo al rettangolo.  
@@ -309,7 +309,7 @@ Per conservare il colore che è stato applicato alla cella della tabella durante
 
     ![Generatore- report- espressione-esercitazione-anteprima-formattato-m-f-colonna](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5. Cercare il nome CountryRegion  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Cercare il nome CountryRegion  
 In questa sezione viene creato un set di dati PaeseRegione e viene usata la funzione **Lookup** per visualizzare il nome di un paese o di una regione anziché il relativo identificatore.  
   
 ### <a name="to-create-the-countryregion-dataset"></a>Per creare un set di dati CountryRegion  
@@ -379,7 +379,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 11. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Count"></a>6. Contare i giorni dall'ultimo acquisto  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. Contare i giorni dall'ultimo acquisto  
 In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o la variabile globale incorporata `ExecutionTime` per calcolare il numero di giorni dagli ultimi acquisti di un cliente.  
   
 ### <a name="to-add-the-days-ago-column"></a>Per aggiungere la colonna Days Ago  
@@ -419,7 +419,7 @@ In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o
 
 11. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Indicator"></a>7. Utilizzare un indicatore per mostrare il confronto vendite  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. Utilizzare un indicatore per mostrare il confronto vendite  
 In questa sezione viene aggiunta una nuova colonna e viene usato un indicatore per specificare se gli acquisti effettuati da una persona a partire da inizio anno sono superiori o inferiori alla relativa media. La funzione **Round** consente di rimuovere i decimali dai valori.  
   
 La configurazione dell'indicatore e dei relativi stati richiede numerosi passaggi. Se si vuole, è possibile passare direttamente alla procedura "Per configurare l'indicatore" e copiare e incollare le espressioni complete da questa esercitazione nella finestra di dialogo **Espressione**.  
@@ -514,7 +514,7 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
 
     ![Generatore- report- espressione-esercitazione-anteprima-indicatore](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8. Creare un report a righe alternate evidenziate  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Creare un report a righe alternate evidenziate  
 Creare un parametro in modo che gli utenti del report possano specificare il colore da applicare alle righe alternate.  
   
 ### <a name="to-add-a-parameter"></a>Per aggiungere un parametro  
@@ -611,7 +611,7 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
     
     ![Generatore-report-espressione-esercitazione-anteprima-a righe alternate](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>(facoltativo) Aggiungere un titolo al report  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>(facoltativo) Aggiungere un titolo al report  
 Aggiungere un titolo al report.  
   
 ### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
@@ -630,7 +630,7 @@ Aggiungere un titolo al report.
   
 3.  Selezionare un colore per le righe non bianche di un report e fare clic su **Visualizza rapporto**.  
   
-## <a name="Save"></a>(facoltativo) Salvare il report  
+## <a name="optional-save-the-report"></a><a name="Save"></a>(facoltativo) Salvare il report  
 È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale. Per altre informazioni, vedere [Salvataggio di report &#40;Generatore report&#41;](../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  

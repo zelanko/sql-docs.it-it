@@ -11,10 +11,10 @@ ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028033"
 ---
 # <a name="handling-errors"></a>Gestione degli errori
@@ -48,7 +48,7 @@ Per ottenere ulteriori dettagli sull'errore generato dal server, è possibile us
 
 -   `SQLServerError.getLineNumber()` restituisce il numero di riga nel batch dei comandi Transact-SQL o nella stored procedure che ha generato l'errore.
   
- Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene costruita un'istruzione SQL in formato non corretto che non contiene la clausola FROM. L'istruzione viene quindi eseguita con conseguente elaborazione di un'eccezione SQL.  
+ Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] e viene costruita un'istruzione SQL in formato non corretto che non contiene la clausola FROM. L'istruzione viene quindi eseguita con conseguente elaborazione di un'eccezione SQL.  
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   

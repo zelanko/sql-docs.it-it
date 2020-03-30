@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080875"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "77080875"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> Espansione e riduzione di una casella di testo  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Espansione e riduzione di una casella di testo  
  Per impostazione predefinita, le caselle di testo presentano dimensioni fisse. È possibile ridurre o espandere verticalmente una casella di testo in base al contenuto. Per altre informazioni, vedere [Espansione o riduzione di una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="rotating-a-text-box"></a>Rotazione di una casella di testo  
@@ -51,9 +51,9 @@ ms.locfileid: "77080875"
   
  L'orientamento viene impostato sulla casella di testo e si applica a tutto il testo contenuto nella casella. Non è possibile specificare un orientamento diverso per varie parti della casella di testo.  
   
- Per informazioni introduttive, vedere la sezione relativa alla rotazione del testo in [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e [Impostare l'orientamento della casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Per iniziare, vedere la sezione sulla rotazione del testo in [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md) e [Impostare l'orientamento della casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  [Aggiungere, spostare o eliminare una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  

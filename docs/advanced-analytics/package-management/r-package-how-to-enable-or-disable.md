@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485236"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Abilitare o disabilitare la gestione remota dei pacchetti per SQL Server
@@ -31,7 +31,7 @@ L'[abilitazione](#bkmk_enable) di questa funzionalità è un processo che consis
 
 Anche per [disabilitare](#bkmk_disable) la funzionalità di gestione dei pacchetti sono necessari più passaggi. Si rimuovono le autorizzazioni e i pacchetti a livello di database (una volta per ogni database), poi si rimuovono i ruoli dal server (una volta per ogni istanza).
 
-## <a name="bkmk_enable"></a> Abilitare la gestione dei pacchetti
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> Abilitare la gestione dei pacchetti
 
 1. In SQL Server aprire un prompt dei comandi con privilegi elevati e passare alla cartella che contiene l'utilità RegisterRExt.exe. Il percorso predefinito è `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
@@ -76,7 +76,7 @@ Anche per [disabilitare](#bkmk_disable) la funzionalità di gestione dei pacchet
 
 Dopo aver abilitato questa funzionalità, è possibile usare la funzione RevoScaleR per installare o disinstallare i pacchetti da un client R remoto.
 
-## <a name="bkmk_disable"></a> Disabilitare la gestione dei pacchetti
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> Disabilitare la gestione dei pacchetti
 
 1. Da un prompt dei comandi con privilegi elevati, eseguire di nuovo l'utilità RegisterRExt per disabilitare la gestione dei pacchetti a livello di database:
 

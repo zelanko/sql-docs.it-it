@@ -16,10 +16,10 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079521"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formattazione di testo e segnaposto (Generatore report e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77079521"
   
  In questa illustrazione la casella di testo dispone di un bordo e tutto il testo è presente nella stessa casella, sebbene con formattazioni diverse.  
   
- Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

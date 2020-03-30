@@ -11,15 +11,15 @@ ms.technology: application-integration
 ms.topic: reference
 ms.date: 01/09/2019
 ms.openlocfilehash: 671aacd4855afe4d4d5d0a8012fe5565420ff3e2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198488"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Supporto per le versioni Current Branch di Report Viewer
 
-**Si applica a: _Microsoft Report Viewer 150.900.148 e versioni successive_**
+**_Si applica a: Microsoft Report Viewer 150.900.148 e versioni successive_**
 
 Il **controllo Microsoft Report Viewer** è compatibile con SQL Server Reporting Services e Server di report di Power BI che seguono i moderni [criteri del ciclo di vita del supporto](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) di Microsoft. Queste informazioni si applicano alle versioni **ASP.net** e **WinForms** distribuite tramite [NuGet](https://www.nuget.org/). Tutte le versioni rilasciate sono disponibili tramite [NuGet](https://www.nuget.org/). Per le patch, le funzionalità e gli altri aggiornamenti viene eseguito il rollforward alla versione più recente. Per ricevere le modifiche, è necessario applicare le versioni più recenti. Report Viewer continua a ricevere **aggiornamenti per la sicurezza e critici** con un preavviso di almeno un anno nel caso di modifiche ai criteri di supporto.
 

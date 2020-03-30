@@ -15,10 +15,10 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230723"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Ridenominare un'istanza del cluster di failover di SQL Server
@@ -63,7 +63,7 @@ ms.locfileid: "75230723"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Ulteriori considerazioni dopo la ridenominazione dell'operazione  
  Dopo la ridenominazione del nome di rete del cluster di failover, è necessario verificare e applicare le istruzioni riportate di seguito per abilitare tutti gli scenari in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **Servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:** verificare ed eseguire le azioni aggiuntive riportate di seguito per il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio Agent:** verificare ed effettuare le azioni aggiuntive riportate di seguito per il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:  
   
 -   Correggere le impostazioni del Registro di sistema se SQL Agent è configurato per l'inoltro eventi. Per altre informazioni, vedere [Designazione di un server di inoltro eventi &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   

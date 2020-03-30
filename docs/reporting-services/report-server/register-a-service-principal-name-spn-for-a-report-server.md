@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256424"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrare un nome dell'entità servizio (SPN) per un server di report

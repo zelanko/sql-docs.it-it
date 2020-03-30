@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897057"
 ---
 # <a name="asynchronous-operations"></a>Operazioni asincrone
@@ -32,7 +32,7 @@ Benché l'uso di tecniche asincrone con le funzionalità di ADO.NET non richieda
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 [Applicazioni Windows tramite callback](windows-applications-callbacks.md)  
-Include un esempio che illustra come eseguire un comando asincrono in modo sicuro, gestendo correttamente l'interazione con un modulo e il relativo contenuto da un thread separato.  
+Viene reso disponibile un esempio che illustra come eseguire un comando asincrono in modo sicuro, gestendo correttamente l'interazione con un modulo e il relativo contenuto da un thread separato.  
   
 [Applicazioni ASP.NET tramite handle di attesa](aspnet-apps-use-wait-handles.md)  
 Questo documento propone un esempio che spiega come eseguire più comandi simultanei da una pagina ASP.NET, usando gli handle di attesa per gestire l'operazione al completamento di tutti i comandi.  

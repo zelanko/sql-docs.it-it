@@ -9,10 +9,10 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081944"
 ---
 # <a name="report-datasets-ssrs"></a>Set di dati del report (SSRS)
@@ -36,12 +36,12 @@ ms.locfileid: "77081944"
   
  È inoltre possibile aggiungere set di dati a un report aggiungendo parti del report che includono i set di dati da cui dipendono. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Per informazioni su come creare un report in cui visualizzare i dati di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Per creare un report che include i propri dati, vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Per informazioni su come creare un report in cui sono visualizzati i dati di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Per creare un report comprendente i propri dati, vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> Aggiunta di dati del report  
+##  <a name="adding-report-data"></a><a name="Methods"></a> Aggiunta di dati del report  
  In Generatore report è possibile aggiungere dati del report nei modi seguenti.  
   
 -   Aggiungendo parti di report da un server di report al report. Ogni parte di report è autonoma e consente di includere set di dati dipendenti. I set di dati sono predefiniti.  
@@ -76,7 +76,7 @@ ms.locfileid: "77081944"
 -   [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-##  <a name="QuickStart"></a> Aggiunta di dati con parti di report  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> Aggiunta di dati con parti di report  
  Nelle parti di report sono contenuti i set di dati dai quali dipendono. Questi set di dati vengono creati in base alle origini dati condivise disponibili nel server di report. In Generatore report, quando si aggiunge una parte di report al report in uso, i set di dati dipendenti vengono aggiunti al report come se fossero stati aggiunti manualmente. Ad esempio, in un grafico predefinito è contenuto un set di dati. Per vedere i dati, visualizzare l'anteprima del report.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "77081944"
 -   Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) e [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
   
-##  <a name="Queries"></a> Query e Progettazione query  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> Query e Progettazione query  
  Per specificare i dati desiderati da un'origine dati, è necessario compilare un comando di query. Per ciascun tipo di origine dati, è disponibile una finestra *Progettazione query* correlata che consente di compilare la query. che può essere basata sull'interfaccia grafica o su testo. In una finestra Progettazione query con interfaccia grafica, vengono visualizzati i metadati che rappresentano i dati nell'origine dati esterna ed è possibile compilare in modo interattivo una query trascinando campi o entità nell'area di progettazione della query. In una Progettazione query basata su testo, si scrivono o importano query nella sintassi della query supportata dall'origine dati esterna.  
   
  Nella Progettazione query, è possibile eseguire la query per visualizzare i dati di esempio e convalidare la sintassi del comando di query. I nomi di colonna nel set di risultati diventano i nomi campo visualizzati nel riquadro dei dati del report. Il set di risultati deve essere un singolo set di righe e colonne in cui esiste lo stesso numero di valori per ogni riga di dati. Non sono supportati più set di risultati di una singola query. Non sono supportate le gerarchie incomplete che non dispongono di un numero costante di colonne e che possono produrre un numero diverso di valori dei dati per ogni riga.  
@@ -97,7 +97,7 @@ ms.locfileid: "77081944"
  Le comunicazioni tra un'estensione per i dati e l'origine dati esterna sono gestite dai provider di dati. Il supporto per la sintassi del comando di query, per i parametri query e per i tipi di dati per i valori nel set di risultati è determinato da ogni provider di dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di estensione per dati e [Finestre di progettazione query &#40;SSRS&#41;](query-design-tools-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "77081944"
  [Definizione dei parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
   
-##  <a name="Section"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="Section"></a> Contenuto della sezione  
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
  [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

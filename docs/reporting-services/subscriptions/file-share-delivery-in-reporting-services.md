@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72278235"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
@@ -37,7 +37,7 @@ ms.locfileid: "72278235"
   
 -   [Opzioni relative ai file](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Report di caratteristiche recapitati alle cartelle condivise  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> Report di caratteristiche recapitati alle cartelle condivise  
   
 -   A differenza dei report che sono ospitati e gestiti in un server di report, i report che vengono recapitati a una cartella condivisa sono file statici.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72278235"
   
 -   Se si desidera mantenere le funzionalità interattive in un report recapitato, utilizzare il recapito tramite posta elettronica. Il messaggio di posta elettronica contiene un collegamento al report nel server di report e gli utenti possono usare le funzionalità interattive. Per altre informazioni, vedere [Recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a> Cartelle di destinazione  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> Cartelle di destinazione  
  Quando si definisce una sottoscrizione che utilizza il recapito tramite condivisione file, è necessario specificare una cartella esistente come cartella di destinazione. Il server di report non crea automaticamente cartelle nel file system. La cartella specificata deve essere accessibile su una connessione di rete.  
   
  Verificare che gli utenti che **visualizzeranno** i report presenti nella cartella condivisa abbiano l'autorizzazione di lettura.  
@@ -60,17 +60,17 @@ ms.locfileid: "72278235"
   
  Quando si crea la cartella, considerare i limiti della connessione richiesti. Per il server di report sono necessarie due connessioni, ma è necessario includere un numero sufficiente di connessioni per consentire ad altri utenti di visualizzare i report nella cartella condivisa.  
   
-##  <a name="bkmk_file_formats"></a> Formati di file  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Formati di file  
  Il rendering dei report può essere eseguito in vari formati di file, ad esempio HTML, DOCX ed Excel. Per salvare il report in un formato di file specifico, selezionare il formato di rendering desiderato al momento della creazione della sottoscrizione. Se, ad esempio, si sceglie **Excel** , il report viene salvato come file di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Sebbene sia possibile selezionare qualsiasi formato di rendering supportato, alcuni formati risultano più appropriati quando si esegue il rendering in un file.  
   
  Se si utilizza il recapito tramite condivisione file, scegliere un formato che consenta di recapitare il report in un singolo file e di includere nel report tutte le immagini e il contenuto correlato. I formati adatti a questo scopo sono Archivio Web, PDF, TIFF ed Excel. Evitare il formato HTML4.0. Se nel report sono presenti immagini, queste non verranno incluse nel file se si utilizza il formato HTML 4.0.  
   
-##  <a name="bkmk_file_options"></a> Opzioni relative ai file  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> Opzioni relative ai file  
  Quando si crea una sottoscrizione di condivisione file, è possibile configurare la modalità di creazione del nome file e se il file sovrascrive le versioni precedenti del report. Un nome file completo è costituito da tre parti, ovvero il nome, l'estensione e un testo o un numero aggiunto al file per creare un nome file univoco  
   
- **Nome file:** il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
+ **Nome file** : il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
   
- **Sovrascrivi:** È possibile specificare le opzioni di sovrascrittura per riutilizzare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
+ **Sovrascrittura:** è possibile specificare le opzioni di sovrascrittura per riusare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
   
  Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A tale scopo, aggiungere la variabile **\@timestamp** al nome file, ad esempio *CompanySales@timestamp* . In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
   

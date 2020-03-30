@@ -9,10 +9,10 @@ ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68891766"
 ---
 # <a name="planning-for-reporting-services"></a>Pianificazione per Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "68891766"
  ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Configurazione di Reporting Services**  
  [Server di report di Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Elenco di controllo per la distribuzione: Installare Reporting Services in una farm di SharePoint esistente](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
  [Topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   

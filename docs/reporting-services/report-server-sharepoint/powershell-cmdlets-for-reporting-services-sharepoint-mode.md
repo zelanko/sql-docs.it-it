@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892399"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
@@ -83,7 +83,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 |Cmdlet|Descrizione|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Ottiene uno o più oggetti applicazione di servizio Reporting Services.|  
-|New-SPRSServiceApplication|Crea una nuova applicazione di servizio Reporting Services e i database associati.<br /><br /> Parametro LogonType: consente di specificare se nel server di report viene usato un account del pool di applicazioni SSRS o un account di accesso di SQL Server per accedere al database del server di report. I valori validi sono:<br /><br /> 0 Autenticazione di Windows<br /><br /> 1 SQL Server<br /><br /> 2 Account pool applicazioni (impostazione predefinita)|  
+|New-SPRSServiceApplication|Crea una nuova applicazione di servizio Reporting Services e i database associati.<br /><br /> Parametro LogonType: consente di specificare se nel server di report viene utilizzato un account del pool di applicazioni SSRS o un account di accesso di SQL Server per accedere al database del server di report. I valori validi sono:<br /><br /> 0 Autenticazione di Windows<br /><br /> 1 SQL Server<br /><br /> 2 Account pool applicazioni (impostazione predefinita)|  
 |Remove-SPRSServiceApplication|Rimuove l'applicazione di servizio Reporting Services specificata. Vengono rimossi anche i database associati.|  
 |Set-SPRSServiceApplication|Modifica le proprietà di un'applicazione di servizio Reporting Services esistente.|  
 |New-SPRSServiceApplicationProxy|Crea un nuovo proxy dell'applicazione di servizio Reporting Services.|  
@@ -109,7 +109,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 |New-SPRSExtension|Registra una nuova estensione con un'applicazione di servizio Reporting Services.|  
 |Set-SPRSExtension|Imposta le proprietà di un'estensione di Reporting Services esistente.|  
 |Remove-SPRSExtension|Rimuove un'estensione da un'applicazione di servizio Reporting Services.|  
-|Get-SPRSExtension|Ottiene una o più estensioni di Reporting Services per un'applicazione di servizio Reporting Services.<br /><br /> I valori validi sono:<br /><br /> <br /><br /> Recapito<br /><br /> DeliveryUI<br /><br /> Rendering<br /><br /> Data<br /><br /> Security<br /><br /> Authentication<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Finestra di progettazione<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Ottiene una o più estensioni di Reporting Services per un'applicazione di servizio Reporting Services.<br /><br /> I valori validi sono:<br /><br /> <br /><br /> Recapito<br /><br /> DeliveryUI<br /><br /> Rendering<br /><br /> data<br /><br /> Security<br /><br /> Authentication<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Finestra di progettazione<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Ottiene i siti di SharePoint in base all'eventuale abilitazione della funzionalità "ReportingService". Per impostazione predefinita, vengono restituiti i siti in cui la funzionalità "ReportingService" è abilitata.|  
   
 ## <a name="basic-samples"></a>Esempi di base
@@ -290,7 +290,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Elenco di controllo: Usare PowerShell per verificare PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Visualizzare la Guida di SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

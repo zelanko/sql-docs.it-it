@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989022"
 ---
 # <a name="performing-asynchronous-operations"></a>Esecuzione di operazioni asincrone
@@ -64,7 +64,7 @@ ms.locfileid: "67989022"
   
  Le interfacce **IDBAsynchStatus** e **ISSAsynchStatus** possono quindi essere ottenute eseguendo una query sull'interfaccia con più risultati con **QueryInterface**.  
   
- Al termine dell'esecuzione del comando, è possibile usare **IMultipleResults** come di consueto, con un'eccezione rispetto al caso sincrono: è possibile che venga restituito DB_S_ASYNCHRONOUS. In tal caso, è possibile usare **IDBAsynchStatus** o **ISSAsynchStatus** per determinare quando l'operazione viene completata.  
+ Al termine dell'esecuzione del comando, è possibile usare **IMultipleResults** normalmente, con un'eccezione dal caso sincrono: può essere restituito DB_S_ASYNCHRONOUS. In tal caso, è possibile usare **IDBAsynchStatus** o **ISSAsynchStatus** per determinare il momento in cui l'operazione è completata.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'applicazione chiama un metodo non bloccante, esegue altre attività di elaborazione e quindi torna a elaborare i risultati. **ISSAsynchStatus::WaitForAsynchCompletion** resta in attesa dell'oggetto evento interno fino al completamento dell'operazione di esecuzione asincrona o allo scadere della quantità di tempo specificata da *dwMilisecTimeOut*.  

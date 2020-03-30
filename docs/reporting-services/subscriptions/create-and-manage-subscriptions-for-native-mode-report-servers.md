@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971308"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
@@ -33,7 +33,7 @@ ms.locfileid: "76971308"
   
 -   [Per eliminare una sottoscrizione](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a> Requisiti generali per le sottoscrizioni  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_create_subscription"></a> Requisiti generali per le sottoscrizioni  
  Il contenuto in questo articolo spiega come creare sottoscrizioni in un server di report in modalità nativa usando il portale Web in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Dopo avere definito una sottoscrizione, è possibile accedervi nel portale Web tramite la pagina Sottoscrizioni personali oppure la scheda **Sottoscrizioni** di un report specifico.  
   
  [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) illustra come usare le pagine dell'applicazione in un sito di SharePoint per sottoscrivere report in un server di report in modalità SharePoint.  
@@ -46,7 +46,7 @@ ms.locfileid: "76971308"
   
  In questo articolo non viene illustrato come creare una sottoscrizione guidata dai dati. Per istruzioni su come creare una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-## <a name="bkmk_create_fileshare_subscription"></a> Per creare una sottoscrizione con recapito tramite condivisione file  
+## <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a> Per creare una sottoscrizione con recapito tramite condivisione file  
   
 1. Esplorare [il portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -67,15 +67,15 @@ ms.locfileid: "76971308"
 7. In **Destinazione** selezionare **Condivisione file di Windows**.  
   
 8. In **Opzioni di recapito (Condivisione file di Windows)** specificare:  
-   - **Nome del file**: digitare un nome di file per il report.
-   - **Aggiungi estensione file alla creazione del file**: Questa opzione consente di specificare un'estensione di tre caratteri per il nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
+   - **Nome file**: digitare un nome di file per il report.
+   - **Aggiungi estensione file alla creazione del file**: questa opzione consente di aggiungere un'estensione di tre caratteri al nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
    - **Percorso**: digitare il percorso UNC (Universal Naming Convention) di una cartella esistente a cui si vuole che vengano recapitati i report, ad esempio \\<nomeserver\>\<reportpersonali>. Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
   
      ![Sottoscrizione di condivisione file](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Sottoscrizione di condivisione file")  
   
    - **Formato di rendering**: selezionare un formato di output del report per il recapito del file. Selezionare un formato corrispondente all'applicazione desktop che verrà utilizzata per aprire il report. Evitare formati che non eseguono il rendering del report in un singolo flusso o che introducono elementi di interattività non supportati in un file statico, ad esempio il formato HTML 4.0.  
   
-   - **Credenziali**: selezionare questa opzione per usare l'account di condivisione file o le credenziali di un utente di Windows specifico. L'opzione **Usa l'account di condivisione file** è disabilitata se l'amministratore dei report non ha configurato un account di condivisione file. Per altre informazioni, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nelle caselle di testo **Nome utente** e **Password** specificare le credenziali richieste per accedere alla condivisione file usando il formato *\<dominio>*\\*\<nome utente>* per il nome utente.  
+   - **Credenziali**: selezionare questa opzione per usare l'account di condivisione file o le credenziali di un utente di Windows specifico. L'opzione **Usa l'account di condivisione file** è disabilitata se l'amministratore dei report non ha configurato un account di condivisione file. Per altre informazioni, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nelle caselle di testo **Nome utente** e **Password** specificare le credenziali richieste per accedere alla condivisione file usando il formato *\<dominio>* \\ *\<nome utente>* per il nome utente.  
   
    - **Opzioni sovrascrittura**:  
      - **Sovrascrivi un file esistente con una versione più recente**.  
@@ -86,7 +86,7 @@ ms.locfileid: "76971308"
   
 Il report viene recapitato come file statico. Se include funzionalità interattive, ad esempio collegamenti a righe e colonne aggiuntive, tali funzionalità non saranno disponibili.  
   
-##  <a name="bkmk_create_email_subscription"></a> Per creare una sottoscrizione con recapito tramite posta elettronica  
+##  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a> Per creare una sottoscrizione con recapito tramite posta elettronica  
   
 1. Esplorare [il portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -112,7 +112,7 @@ Il report viene recapitato come file statico. Se include funzionalità interatti
      >[!NOTE]  
      > A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
   
-   - **Soggetto**: l'impostazione predefinita è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
+   - **Oggetto**: l'impostazione predefinita è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
   
      ![Sottoscrizione tramite posta elettronica](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "Sottoscrizione tramite posta elettronica")  
 
@@ -124,7 +124,7 @@ Il report viene recapitato come file statico. Se include funzionalità interatti
      >Se entrambe le opzioni vengono deselezionate, verrà inviato solo il testo della notifica nella riga Oggetto.  
   
    - Selezionare un formato di rendering dalla casella di riepilogo **Formato di rendering** . Questa opzione è disponibile se viene selezionato **Includi report** per incorporare o allegare una copia del report.  
-      - Per incorporare il report nel corpo del messaggio di posta elettronica, selezionare **MHTML (archivio Web)**.  
+      - Per incorporare il report nel corpo del messaggio di posta elettronica, selezionare **MHTML (archivio Web)** .  
       - Per inviare il report come allegato, selezionare uno degli altri formati di rendering.  
   
    - Selezionare una priorità dall'elenco di riepilogo **Priorità** . In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Exchange questa impostazione consente di specificare un flag per il livello di importanza del messaggio di posta elettronica.  
@@ -132,10 +132,10 @@ Il report viene recapitato come file statico. Se include funzionalità interatti
   
 9. Per i report con parametri, specificare i parametri da utilizzare per il report di questa sottoscrizione. I parametri specificati possono essere diversi da quelli utilizzati per l'esecuzione del report su richiesta o in altre operazioni pianificate.  
   
-##  <a name="bkmk_modify_subscription"></a> Per modificare una sottoscrizione  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a> Per modificare una sottoscrizione  
  Una sottoscrizione può essere modificata in qualsiasi momento. Se si modifica una sottoscrizione mentre viene elaborata, le impostazioni aggiornate vengono usato solo se vengono salvate nel server di report prima che l'estensione per il recapito riceva i dati della sottoscrizione. In caso contrario, vengono utilizzate le impostazioni esistenti.  
   
- L'utente che crea una sottoscrizione diventa automaticamente il proprietario di tale sottoscrizione e può pertanto modificarla o eliminarla. È possibile modificare il proprietario del report dalla pagina delle proprietà di sottoscrizione oppure è possibile modificare la proprietà a livello di codice. Per altre informazioni, vedere gli argomenti seguenti:   
+ L'utente che crea una sottoscrizione diventa automaticamente il proprietario di tale sottoscrizione e può pertanto modificarla o eliminarla. È possibile modificare il proprietario del report dalla pagina delle proprietà di sottoscrizione oppure è possibile modificare la proprietà a livello di codice. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
@@ -148,7 +148,7 @@ Il report viene recapitato come file statico. Se include funzionalità interatti
 >[!NOTE]  
 > Un amministratore del server di report non può gestire da un'unica posizione tutte le sottoscrizioni individuali che sono utilizzate in un determinato server di report. Può tuttavia accedere a ogni sottoscrizione per modificarla o eliminarla.  
   
-##  <a name="bkmk_delete_subscription"></a> Per eliminare una sottoscrizione  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a> Per eliminare una sottoscrizione  
 Per eliminare una sottoscrizione:  
   
 1. Esplorare [il portale Web di un server di report (modalità nativa SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  

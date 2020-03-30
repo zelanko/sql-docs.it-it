@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843795"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Avviare la procedura guidata Abilitare il database per l'estensione
@@ -45,7 +45,7 @@ ms.locfileid: "73843795"
   
 2.  Fare clic con il pulsante destro del mouse e selezionare **Attività**, **Estendi**e quindi **Abilita** per avviare la procedura guidata.  
   
-##  <a name="Intro"></a> Introduzione  
+##  <a name="introduction"></a><a name="Intro"></a> Introduzione  
  Esaminare lo scopo della procedura guidata e i prerequisiti.  
  
  I prerequisiti importanti includono i seguenti.
@@ -55,7 +55,7 @@ ms.locfileid: "73843795"
   
  ![Pagina Introduzione della procedura guidata Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Pagina Introduzione della procedura guidata Stretch Database")  
   
-##  <a name="Tables"></a> Selezionare le tabelle  
+##  <a name="select-tables"></a><a name="Tables"></a> Selezionare le tabelle  
  Selezionare le tabelle di cui si desidera abilitare l'estensione.  
  
 Le tabelle con un numero elevato di righe vengono visualizzate nella parte superiore dell'elenco ordinato. La procedura guidata, prima di visualizzare l'elenco di tabelle, le analizza per cercare i tipi di dati attualmente non supportati da Stretch Database. 
@@ -102,7 +102,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
 -   Eseguire l'istruzione ALTER TABLE per specificare una funzione di filtro dopo l'uscita dalla procedura guidata. Per i passaggi necessari, vedere [Aggiungere una funzione di filtro dopo l'esecuzione della procedura guidata](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
-##  <a name="Configure"></a> Configura Azure  
+##  <a name="configure-azure"></a><a name="Configure"></a> Configura Azure  
   
 1.  Accedere a Microsoft Azure con un account Microsoft.  
   
@@ -143,7 +143,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
          ![Selezione di un server di Azure esistente - Procedura guidata Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-5.png "Selezione di un server di Azure esistente - Procedura guidata Stretch Database")  
   
-##  <a name="Credentials"></a> Credenziali protette  
+##  <a name="secure-credentials"></a><a name="Credentials"></a> Credenziali protette  
  È necessario disporre di una chiave master del database per proteggere le credenziali usate da Stretch Database per la connessione al database remoto.  
   
  Se esiste già una chiave master del database, immettere la relativa password.  
@@ -156,26 +156,26 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
  Per altre informazioni sulla chiave master del database, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) e [Creazione della chiave master di un database](../../relational-databases/security/encryption/create-a-database-master-key.md). Per altre informazioni sulle credenziali create dalla procedura guidata, vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
-##  <a name="Network"></a> Selezionare l'indirizzo IP  
+##  <a name="select-ip-address"></a><a name="Network"></a> Selezionare l'indirizzo IP  
  Usare l'intervallo di indirizzi IP pubblici della subnet (consigliato) oppure l'indirizzo IP pubblico di SQL Server per creare una regola del firewall in Azure che consenta a SQL Server di comunicare con il server Azure remoto.  
   
  L'indirizzo o gli indirizzi IP forniti in questa pagina indicano al server Azure di consentire a dati, query e operazioni di gestione in ingresso avviate da SQL Server di passare attraverso il firewall di Azure. La procedura guidata non modifica le impostazioni del firewall in SQL Server.  
   
  ![Pagina Selezionare l'indirizzo IP della procedura guidata Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Pagina Selezionare l'indirizzo IP della procedura guidata Stretch Database")  
   
-##  <a name="Summary"></a> Riepilogo  
+##  <a name="summary"></a><a name="Summary"></a> Riepilogo  
  Esaminare i valori immessi e le opzioni selezionate nella procedura guidata e i costi previsti in Azure. Selezionare quindi **Fine** per abilitare l'estensione.  
   
  ![Pagina Riepilogo della procedura guidata Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Pagina Riepilogo della procedura guidata Stretch Database")  
   
-##  <a name="Results"></a> Risultati  
+##  <a name="results"></a><a name="Results"></a> Risultati  
  Esaminare i risultati.  
   
  Per monitorare lo stato della migrazione dei dati, vedere [Monitor and troubleshoot data migration &#40;Stretch Database&#41; (Monitorare e risolvere i problemi relativi alla migrazione dei dati (Estensione database))](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  ![Pagina Risultati della procedura guidata Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Pagina Risultati della procedura guidata Stretch Database")  
   
-##  <a name="KnownIssues"></a> Risoluzione dei problemi relativi alla procedura guidata  
+##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> Risoluzione dei problemi relativi alla procedura guidata  
  **La procedura guidata di Stretch Database non viene eseguita correttamente.**  
  La procedura guidata non viene eseguita correttamente quando Stretch Database non è ancora abilitato a livello di server e non si hanno le necessarie autorizzazioni di amministratore di sistema. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per ulteriori informazioni, vedere [Prerequisito: autorizzazioni per abilitare Stretch Database nel server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   

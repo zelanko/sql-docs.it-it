@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294692"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
@@ -27,7 +27,7 @@ Il tempo stimato per il completare l'esercitazione è di 20 minuti.
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
-## <a name="CreateMatrix"></a>1. Creare un report matrice e un set di dati tramite la Creazione guidata tabella o matrice  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. Creare un report matrice e un set di dati tramite la Creazione guidata tabella o matrice  
 Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare i dati in una tabella.  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
 
 11. Fare clic su **Avanti**.  
   
-## <a name="Groups"></a>2. Organizzare i dati e scegliere il layout dalla Creazione guidata tabella o matrice  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. Organizzare i dati e scegliere il layout dalla Creazione guidata tabella o matrice  
 Utilizzare la procedura guidata per fornire una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della matrice.  
   
 1.  Nella pagina **Disponi campi** trascinare Territory da **Campi disponibili** in **Gruppi di righe**.  
@@ -145,7 +145,7 @@ Utilizzare la procedura guidata per fornire una progettazione iniziale in cui vi
 
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3. Formattare i dati  
+## <a name="3-format-data"></a><a name="FormatData"></a>3. Formattare i dati  
 Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono visualizzati come numero generico e nel campo SalesDate vengono visualizzate le informazioni di data e ora. Questa sezione spiega come formattare il campo Sales in modo che il numero venga visualizzato come valuta e formattare il campo SalesDate in modo che venga visualizzata solo la data. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  
   
 ### <a name="to-format-fields"></a>Per formattare i campi  
@@ -170,7 +170,7 @@ Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono vi
   
 I valori di data verranno visualizzati solo come date mentre i valori delle vendite verranno visualizzati come valuta.  
   
-## <a name="AdjacentGroup"></a>4. Aggiungere un gruppo di colonne adiacente  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. Aggiungere un gruppo di colonne adiacente  
 È possibile annidare gruppi di righe e colonne nelle relazioni padre-figlio oppure gruppi di righe e colonne adiacenti nelle relazioni di pari livello.  
   
 Questa sezione spiega come aggiungere un gruppo di colonne adiacente al gruppo di colonne Subcategory, copiare le celle per popolare il nuovo gruppo di colonne, quindi utilizzare un'espressione per creare il valore dell'intestazione del gruppo di colonne.  
@@ -216,7 +216,7 @@ Nel report sono incluse due colonne denominate Monday e Tuesday. Il set di dati 
 > [!NOTE]  
 > Diversamente, nel report sarebbero state incluse le colonne per gli altri giorni della settimana. Ogni colonna contiene l'intestazione di colonna **Sales**e i totali di vendita per territorio.  
   
-## <a name="Width"></a>5. Modificare la larghezza delle colonne  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5. Modificare la larghezza delle colonne  
 Al momento dell'esecuzione, un report contenente una matrice si espande in genere orizzontalmente e verticalmente. Il controllo di espansione orizzontale è particolarmente importante quando si intende esportare il report in un formato quale Microsoft Word o Adobe PDF utilizzato per i report stampati. Se il report si espande orizzontalmente su più pagine, sarà difficile interpretare il report stampato. Per contenere l'espansione orizzontale, è possibile ridimensionare le colonne alla larghezza minima necessaria per visualizzare i dati su una sola riga. È inoltre possibile rinominare le colonne in modo che i relativi titoli si adattino alla larghezza necessaria per visualizzare i dati.  
   
 ### <a name="to-rename-and-resize-the-columns"></a>Per rinominare e ridimensionare le colonne  
@@ -245,7 +245,7 @@ Al momento dell'esecuzione, un report contenente una matrice si espande in gener
   
 Le colonne che contengono le quantità ora sono più strette e sono denominate QTA.  
   
-## <a name="MergeCells"></a>6. Unire le celle della matrice  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. Unire le celle della matrice  
 L'area dell'angolo si trova in corrispondenza dell'angolo superiore sinistro della matrice. Il numero di celle nell'area dell'angolo varia a seconda del numero di righe e di gruppi di colonne presenti nella matrice. La matrice creata in questa esercitazione dispone di quattro celle nell'area dell'angolo corrispondente. Le celle vengono disposte in due righe e due colonne, in modo da riflettere il livello delle gerarchie di gruppo di righe e colonne. Le quattro celle non vengono utilizzate in questo report e verranno unite in un'unica cella.  
   
 ### <a name="to-merge-matrix-cells"></a>Per unire le celle della matrice  
@@ -268,7 +268,7 @@ L'area dell'angolo si trova in corrispondenza dell'angolo superiore sinistro del
   
 La cella nell'angolo superiore della matrice non è più visibile. 
   
-## <a name="HeaderTitle"></a>7. Aggiungere un'intestazione e un titolo al report  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. Aggiungere un'intestazione e un titolo al report  
 Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione verrà rimossa la casella di testo nella parte superiore del report e verrà aggiunto un titolo all'intestazione.  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>Per aggiungere un'intestazione e un titolo al report  
@@ -293,7 +293,7 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 Nel report visualizzato è incluso il titolo di un report nella relativa intestazione.  
   
-## <a name="Save"></a>8. Salvare il report  
+## <a name="8-save-the-report"></a><a name="Save"></a>8. Salvare il report  
 È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale.  
   
 In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
@@ -324,7 +324,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 4.  Fare clic su **Salva**.  
   
-## <a name="RotateTextBox"></a>9. (Facoltativo) Ruotare una casella di testo di 270 gradi  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Facoltativo) Ruotare una casella di testo di 270 gradi  
 Al momento dell'esecuzione, un report con matrici può espandersi orizzontalmente e verticalmente. La rotazione verticale, o di 270 gradi, delle caselle di testo consente di risparmiare spazio orizzontale. Il report visualizzabile risulterà quindi più stretto e nel caso venga esportato in un formato quale Microsoft Word si adatterà con maggiore facilità alle dimensioni della pagina stampata.  
   
 Il testo in una casella di testo può inoltre essere visualizzato in senso orizzontale e verticale (dall'alto in basso). Per altre informazioni, vedere [Caselle di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  

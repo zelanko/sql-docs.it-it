@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256730"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Aggiungere la web part Visualizzatore di report di SQL Server Reporting Services in una pagina di SharePoint
@@ -56,7 +56,7 @@ Per configurare la web part in modo da puntare al report specifico, eseguire le 
 
     ![Modificare la pagina Web dal menu a discesa della web part.](media/sharepoint-edit-web-part.png)
 
-2. Immettere l'**URL server di report** per il server di report che ospita il report. L'URL dovrebbe essere simile a *https://myrsserver/reportserver*.
+2. Immettere l'**URL server di report** per il server di report che ospita il report. L'URL dovrebbe essere simile a *https://myrsserver/reportserver* .
 
 3. Immettere il percorso e il nome del report che si vuole visualizzare nella web part. Il percorso e il nome dovranno essere simili a */AdventureWorks Sample Reports/Company Sales*. In questo esempio, il report *Company Sales* si trova in una cartella denominata *AdventureWorks Sample Reports*.
 

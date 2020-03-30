@@ -11,10 +11,10 @@ ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974746"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>Metodo setClientInfo (java.util.Properties)

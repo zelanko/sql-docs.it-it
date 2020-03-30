@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078944"
 ---
 # <a name="url-access-ssrs"></a>Accesso con URL (SSRS)

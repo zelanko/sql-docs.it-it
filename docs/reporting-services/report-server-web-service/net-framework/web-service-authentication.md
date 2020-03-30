@@ -14,10 +14,10 @@ ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198533"
 ---
 # <a name="web-service-authentication"></a>Autenticazione del servizio Web

@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265139"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formattazione di stringhe decimali e valori money (driver SQLSRV)
@@ -26,10 +26,10 @@ Per mantenere l'accuratezza, i [tipi decimali o numerici](https://docs.microsoft
 ## <a name="add-leading-zeroes-if-missing"></a>Aggiungere zeri iniziali se mancanti
 A partire dalla versione 5.6.0, l'opzione `FormatDecimals` viene aggiunta ai livelli di connessione e istruzione sqlsrv per consentire all'utente di formattare le stringhe decimali. Questa opzione prevede un valore booleano (true o false) e riguarda solo la formattazione dei valori decimali o numerici nei risultati recuperati. In altri termini, l'opzione `FormatDecimals` non ha effetto su altre operazioni come l'inserimento o l'aggiornamento.
 
-L'impostazione predefinita di `FormatDecimals` è **false**. Se è impostata su true, verranno aggiunti gli zeri iniziali alle stringhe decimali per qualsiasi valore decimale minore di 1.
+L'impostazione predefinita di `FormatDecimals` è **false**. Se è impostato su true, verranno aggiunti gli zeri iniziali alle stringhe decimali per qualsiasi valore decimale minore di 1.
 
 ## <a name="configure-number-of-decimal-places"></a>Configurare il numero di posizioni decimali
-Con l'opzione `FormatDecimals` attivata, un'altra opzione, `DecimalPlaces`, consente agli utenti di configurare il numero di posizioni decimali durante la visualizzazione dei dati money e smallmoney. Accetta i valori interi nell'intervallo [0, 4] e può essere arrotondata quando indicato. I dati di tipo money sottostanti rimangono tuttavia invariati.
+Con l'opzione `FormatDecimals` attivata, un'altra opzione, `DecimalPlaces`, consente agli utenti di configurare il numero di posizioni decimali durante la visualizzazione dei dati money e smallmoney. Accetta i valori interi nell'intervallo [0, 4] e può essere arrotondato quando indicato. I dati di tipo money sottostanti rimangono tuttavia invariati.
 
 Entrambe le opzioni possono essere impostate sul livello di connessione o di istruzione e l'impostazione dell'istruzione esegue sempre l'override dell'impostazione della connessione corrispondente. Si noti che l'opzione `DecimalPlaces` riguarda **solo** i dati di tipo money ed è necessario impostare `FormatDecimals` su true affinché `DecimalPlaces` abbia effetto. In caso contrario, la formattazione viene disattivata indipendentemente dall'impostazione di `DecimalPlaces`.
 

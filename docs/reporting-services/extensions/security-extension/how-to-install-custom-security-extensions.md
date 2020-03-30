@@ -9,10 +9,10 @@ ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68223233"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Come installare estensioni di sicurezza personalizzate
@@ -51,7 +51,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Distribuzione e configurazione
 
-Le configurazioni di base necessarie per l'estensione di sicurezza personalizzata corrispondono a quelle delle versioni precedenti. Sono necessarie modifiche per web.config e rsreportserver.config: Per altre informazioni, vedere [Configurare l'autenticazione personalizzata o basata su form nel server di report](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+Le configurazioni di base necessarie per l'estensione di sicurezza personalizzata corrispondono a quelle delle versioni precedenti. È necessario apportare modifiche per web.config e rsreportserver.config: Per altre informazioni, vedere [Configurare l'autenticazione personalizzata o basata su form nel server di report](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Non è più disponibile un web.config separato per Gestione report. Il portale eredita le stesse impostazioni dell'endpoint di ReportServer.
 

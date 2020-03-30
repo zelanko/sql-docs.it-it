@@ -9,10 +9,10 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72252135"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
@@ -23,14 +23,14 @@ In questa esercitazione viene aggiunto un parametro in un report impaginato di [
 I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report. 
    
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo stimato per il completamento dell'esercitazione: 25 minuti  
+Tempo stimato per il completamento dell'esercitazione: 25 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Creare un report matrice e un set di dati nella Creazione guidata tabella o matrice  
+## <a name="1-create-a-matrix-report-and-dataset-in-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Creare un report matrice e un set di dati nella Creazione guidata tabella o matrice  
 Creare un report matrice, un'origine dati e un set di dati.  
   
 > [!NOTE]  
@@ -82,13 +82,13 @@ Creare un report matrice, un'origine dati e un set di dati.
   
 11. Sulla barra degli strumenti di Progettazione query fare clic su **Esegui** ( **!** ) per visualizzare i dati.   
   
-    Il set di risultati è costituito da 11 righe di dati in cui viene mostrata la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita, illustrati nelle colonne seguenti: StoreID, Subcategory, Quantity. In questa query, il nome del punto vendita non è parte del set di risultati. Più avanti in questa esercitazione, si cercherà il nome del punto vendita che corrisponde all'identificatore del punto vendita in un set di dati separato.  
+    Il set di risultati include 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita nelle colonne seguenti: StoreID, Subcategory, Quantity. Il nome del punto vendita non è incluso nel set di risultati. Più avanti in questa esercitazione, si cercherà il nome del punto vendita che corrisponde all'identificatore del punto vendita in un set di dati separato.  
   
     Questa query non contiene parametri di query. Verranno aggiunti più avanti in questa esercitazione.   
   
 12. Fare clic su **Avanti**.  
   
-## <a name="CompleteWizard"></a>2. Organizzare i dati e scegliere il layout nella procedura guidata  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organizzare i dati e scegliere il layout nella procedura guidata  
 La procedura guidata offre una progettazione iniziale per la visualizzazione dei dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della tabella o della matrice.  
   
 ### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -127,7 +127,7 @@ Il report verrà eseguito nel server di report, con il titolo e l'ora di elabora
   
 Le intestazioni di colonna visualizzano l'identificatore ma non il nome del punto vendita. Più avanti in questa esercitazione, verrà aggiunta un'espressione per cercare il nome del punto vendita in un set di dati che contiene la coppia identificatore/nome del punto vendita.  
   
-## <a name="Query"></a>3. Aggiungere un parametro di query per creare un parametro di report  
+## <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. Aggiungere un parametro di query per creare un parametro di report  
 Quando si aggiunge un parametro di query a una query, in Generatore report viene creato automaticamente un parametro di report a valore singolo con proprietà predefinite per nome, messaggio di richiesta e tipo di dati.  
   
 ### <a name="to-add-a-query-parameter"></a>Per aggiungere un parametro di query  
@@ -162,7 +162,7 @@ Si noti che è ora presente un parametro del report denominato *\@StoreID* e un 
   
 Non è visualizzato un riquadro Parametri? Nel menu **Visualizza** selezionare **Parametri**.  
   
-## <a name="ChangeDefaultProperties"></a>4. Modificare il tipo di dati e altre proprietà predefiniti per un parametro di report  
+## <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. Modificare il tipo di dati e altre proprietà predefiniti per un parametro di report  
 Dopo aver creato un parametro di report, è possibile impostare i valori predefiniti per le proprietà.  
   
 ### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Per modificare il tipo di dati predefinito per un parametro di report  
@@ -185,7 +185,7 @@ Per impostazione predefinita, il parametro creato ha il tipo di dati **Text**. P
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
-## <a name="AddDataset"></a>4a. Aggiungere un set di dati per fornire i valori disponibili e i nomi visualizzati  
+## <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. Aggiungere un set di dati per fornire i valori disponibili e i nomi visualizzati  
 Per assicurarsi che i lettori del report digitino solo valori validi per un parametro, è possibile creare un elenco a discesa di valori tra cui scegliere. I valori possono provenire da un set di dati o da un elenco che si specifica. I valori disponibili devono provenire da un set di dati con una query che non contiene un riferimento al parametro.  
   
 ### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>Per creare un set di dati per i valori validi per un parametro  
@@ -215,7 +215,7 @@ Per assicurarsi che i lettori del report digitino solo valori validi per un para
   
     Nel riquadro Dati report sono visualizzati i campi StoreID e StoreName nel nodo del set di dati **Punti vendita** .  
   
-## <a name="AvailableValues"></a>4b. Specificare i valori disponibili da visualizzare in un elenco 
+## <a name="4b-specify-available-values-to-show-in-a-list"></a><a name="AvailableValues"></a>4b. Specificare i valori disponibili da visualizzare in un elenco 
 Dopo aver creato un set di dati per offrire i valori disponibili, modificare le proprietà del report per specificare il set di dati e il campo da usare per popolare l'elenco a discesa di valori validi nella barra degli strumenti del visualizzatore di report.  
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Per fornire i valori disponibili per un parametro da un set di dati  
@@ -246,7 +246,7 @@ Dopo aver creato un set di dati per offrire i valori disponibili, modificare le 
   
 Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
-## <a name="DefaultValues"></a>4c. Specificare un valore predefinito 
+## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. Specificare un valore predefinito 
 È possibile specificare un valore predefinito per ciascun parametro in modo che il report venga eseguito automaticamente.  
   
 ### <a name="to-specify-a-default-value-from-a-dataset"></a>Per specificare un valore predefinito da un set di dati  
@@ -283,7 +283,7 @@ Per *\@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Cont
   
 Nel visualizzatore di report per *\@StoreID* viene visualizzato "Contoso Catalog Store" poiché si tratta del nome visualizzato per l'identificatore di punto vendita **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
-## <a name="NameValue"></a>4d. Cercare una coppia nome/valore  
+## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. Cercare una coppia nome/valore  
 Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome corrispondente. Quando si dispone solo di un identificatore, è possibile cercare il nome corrispondente in un set di dati creato che include coppie nome/valore.  
   
 ### <a name="to-look-up-a-value-from-a-dataset"></a>Per cercare un valore in un set di dati  
@@ -314,7 +314,7 @@ Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome c
   
 L'intestazione di colonna nella parte superiore di ogni colonna visualizza il nome del punto vendita anziché l'identificatore.  
   
-## <a name="Expression"></a>5. Visualizzare il valore del parametro selezionato nel report  
+## <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. Visualizzare il valore del parametro selezionato nel report  
 Quando un lettore ha delle domande su un report, è utile sapere quali valori di parametri sono stati scelti. È possibile mantenere i valori selezionati dall'utente per ogni parametro nel report. Un modo consiste nel visualizzare i parametri in una casella di testo nel piè di pagina della pagina.  
   
 ### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>Per visualizzare il valore del parametro selezionato e l'etichetta nel piè di pagina di una pagina  
@@ -335,7 +335,7 @@ Quando un lettore ha delle domande su un report, è utile sapere quali valori di
   
 7.  Visualizzare l'anteprima del report.  
   
-## <a name="Filter"></a>6. Utilizzare il parametro del report in un filtro  
+## <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. Utilizzare il parametro del report in un filtro  
 I filtri consentono di controllare quali dati utilizzare in un report dopo averli recuperati da un'origine dati esterna. Per consentire ai lettori del report di controllare i dati visualizzati, è possibile includere il parametro del report in un filtro per la matrice.  
   
 ### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>Per specificare un parametro in un filtro della matrice  
@@ -364,7 +364,7 @@ I filtri consentono di controllare quali dati utilizzare in un report dopo averl
   
 La matrice visualizza dati che corrispondono al punto vendita che è stato selezionato.  
   
-## <a name="Multivalued"></a>7. Modificare il parametro di report in modo che vengano accettati più valori  
+## <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. Modificare il parametro di report in modo che vengano accettati più valori  
 Per modificare un parametro da singolo a multivalore, è necessario modificare la query e tutte le espressioni che contengono un riferimento a quel parametro, inclusi i filtri. Un parametro multivalore è una matrice di valori. In una query del set di dati, la sintassi della query deve verificare l'inclusione di un valore in un set di valori. In un'espressione di report, la sintassi dell'espressione deve accedere a una matrice di valori anziché a un valore singolo.  
   
 ### <a name="to-change-a-parameter-from-single-to-multivalued"></a>Per modificare un parametro da singolo a multivalore  
@@ -424,7 +424,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
     ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
-## <a name="Boolean"></a>8. Aggiungere un parametro booleano per la visibilità condizionale  
+## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. Aggiungere un parametro booleano per la visibilità condizionale  
   
 ### <a name="to-add-a-boolean-parameter"></a>Per aggiungere un parametro booleano  
   
@@ -468,7 +468,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
     Viene visualizzata la casella di testo nel piè di pagina contenente tutti i nomi di punto vendita selezionati.  
   
-## <a name="Title"></a>9. Aggiungere un titolo al report  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Aggiungere un titolo al report  
   
 ### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
 
@@ -478,7 +478,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 2.  Digitare Vendite prodotto con parametri, quindi fare clic all'esterno della casella di testo.  
   
-## <a name="Save"></a>10. Salvare il report  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Salvare il report  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   

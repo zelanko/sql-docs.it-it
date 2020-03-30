@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619697"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Vista ExecutionLog ed ExecutionLog3 del server di report
@@ -23,7 +23,7 @@ ms.locfileid: "65619697"
   
  Nei server di report configurati per la modalità SharePoint possono essere usati anche i log ULS di SharePoint. Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> Visualizzazione delle informazioni sul log di esecuzione  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Visualizzazione delle informazioni sul log di esecuzione  
  Nel server di report vengono registrati i dati sull'esecuzione dei report in una tabella interna del database. Le informazioni della tabella sono disponibili dalle viste SQL Server.  
   
  Il log di esecuzione del report viene archiviato nel database del server di report denominato **ReportServer**per impostazione predefinita. Nelle viste SQL sono incluse le informazioni sul log di esecuzione. Le viste "2" e "3" sono state aggiunte in versioni più recenti e contengono nuovi campi oppure campi con nomi più descrittivi rispetto alle versioni precedenti. Le viste precedenti rimangono nel prodotto, così non vengono influenzate le applicazioni personalizzate basata su di esse. Se non si dispone di una dipendenza da una vista precedente, ad esempio ExecutionLog, si consiglia di usare la vista più recente, ExecutionLog**3**.  
@@ -42,7 +42,7 @@ ms.locfileid: "65619697"
   
 -   [Campi del log (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> Impostazioni di configurazione per un server di report in modalità SharePoint  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> Impostazioni di configurazione per un server di report in modalità SharePoint  
  È possibile abilitare o disabilitare la registrazione per l'esecuzione del report dalle impostazioni di sistema di un'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Per impostazione predefinita, le voci di log vengono mantenute per 60 giorni. Ogni giorno, alle 14.00, vengono rimosse le voci antecedenti . In un'installazione datata saranno disponibili solo 60 giorni di informazioni in qualsiasi momento.  
@@ -69,7 +69,7 @@ ms.locfileid: "65619697"
   
 2.  Impostare **ExecutionLogLevel** su **verbose**(dettagliato). Si tratta di un campo di immissione testo e i due valori possibili sono **verbose** (dettagliato) e **normal**(normale).  
   
-##  <a name="bkmk_native"></a> Impostazioni di configurazione per un server di report in modalità nativa  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> Impostazioni di configurazione per un server di report in modalità nativa  
  È possibile abilitare o disabilitare la registrazione per l'esecuzione del report dalla pagina Proprietà server in SQL Server Management Studio. **EnableExecutionLogging** è la proprietà avanzata.  
   
  Per impostazione predefinita, le voci di log vengono mantenute per 60 giorni. Ogni giorno, alle 14.00, vengono rimosse le voci antecedenti . In un'installazione datata saranno disponibili solo 60 giorni di informazioni in qualsiasi momento.  
@@ -96,7 +96,7 @@ ms.locfileid: "65619697"
   
 2.  Nella sezione **Definito dall'utente** impostare **ExecutionLogLevel** su **verbose**(dettagliato). Si tratta di un campo di immissione testo e i due valori possibili sono **verbose** (dettagliato) e **normal**(normale).  
   
-##  <a name="bkmk_executionlog3"></a> Campi del log (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> Campi del log (ExecutionLog3)  
  In questa vista è stato aggiunto un nodo di diagnostica delle prestazioni all'interno della colonna **AdditionalInfo** basata su XML. La colonna AdditionalInfo contiene una struttura XML di campi aggiuntivi di informazioni in una relazione uno-a-molti. Di seguito è riportato un esempio di istruzione Transact SQL per recuperare righe dalla vista ExecutionLog3. Nell'esempio si presuppone che il database del server di report sia denominato **ReportServer**:  
   
 ```  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RowCount|Numero di righe restituite dalle query.|  
 |AdditionalInfo|Contenitore di proprietà XML in cui sono incluse informazioni aggiuntive sull'esecuzione. Il contenuto può essere diverso per ogni riga.|  
   
-##  <a name="bkmk_additionalinfo"></a> Campo AdditionalInfo  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> Campo AdditionalInfo  
  Il campo AdditionalInfo è un contenitore o struttura di proprietà XML contenente informazioni aggiuntive sull'esecuzione. Il contenuto può essere diverso per ogni riga del log.  
   
  Gli esempi seguenti mostrano il contenuto del campo AddtionalInfo per la registrazione standard e dettagliata:  
@@ -307,7 +307,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> Campi del log (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> Campi del log (ExecutionLog2)  
  In questa vista sono stati aggiunti alcuni campi nuovi e ne sono stati rinominati alcuni altri. Di seguito è riportato un esempio di istruzione Transact SQL per recuperare righe dalla vista ExecutionLog2. Nell'esempio si presuppone che il database del server di report sia denominato **ReportServer**:  
   
 ```  
@@ -338,7 +338,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|Numero di righe restituite dalle query.|  
 |AdditionalInfo|Contenitore di proprietà XML in cui sono incluse informazioni aggiuntive sull'esecuzione.|  
   
-##  <a name="bkmk_executionlog"></a> Campi del log (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> Campi del log (ExecutionLog)  
  Di seguito è riportato un esempio di istruzione Transact SQL per recuperare righe dalla vista ExecutionLog. Nell'esempio si presuppone che il database del server di report sia denominato **ReportServer**:  
   
 ```  

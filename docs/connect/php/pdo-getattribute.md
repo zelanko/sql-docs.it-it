@@ -11,10 +11,10 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916374"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -41,7 +41,7 @@ Nella tabella seguente sono elencati gli attributi supportati.
 |Attributo|Elaborato da|Valori supportati|Descrizione|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Specifica se i nomi di colonna devono essere in lettere maiuscole o minuscole. PDO::CASE_LOWER impone nomi di colonna in lettere minuscole, PDO::CASE_NATURAL lascia i nomi di colonna come restituiti dal database e PDO::CASE_UPPER impone nomi di colonne in lettere maiuscole.<br /><br />Il valore predefinito è PDO::CASE_NATURAL.<br /><br />Questo attributo può essere impostato anche usando PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matrice di stringhe|Descrive le versioni del driver e delle librerie correlate. Restituisce una matrice con gli elementi seguenti: versione ODBC (*MajorVer*.*MinorVer*), nome e versione della DLL di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matrice di stringhe|Descrive le versioni del driver e delle librerie correlate. Restituisce una matrice con gli elementi seguenti: versione (*MajorVer*.*MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome e versione della DLL Native Client, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|Se non è impostato su PDO::PARAM_STR_CHAR, viene restituito PDO::PARAM_STR_NATL.|
 |PDO::ATTR_DRIVER_NAME|PDO|string|Restituisce sempre "sqlsrv".|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|string|Indica la versione [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  

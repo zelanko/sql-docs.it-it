@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581123"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -33,7 +33,7 @@ ms.locfileid: "65581123"
   
 -   [Per modificare un file di configurazione di Reporting Services](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Lettura e utilizzo di valori di configurazione  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Lettura e utilizzo di valori di configurazione  
  In un server di report i file di configurazione vengono letti all'avvio del servizio e tutte le volte in cui il file di configurazione viene salvato. I valori nuovi e quelli modificati diventano effettivi in un nuovo dominio applicazione dopo che quello precedente è scaduto. Tutte le volte in cui è possibile, le richieste attualmente in corso nel dominio applicazione corrente vengono completate. Per alcune impostazioni è necessario tuttavia che venga eseguita immediatamente un'operazione di riciclo del dominio applicazione. In questo caso tutte le richieste attualmente in corso vengono riavviate in un nuovo dominio applicazione.  
   
  Se il server di report rileva un valore non valido, nel registro applicazioni di Windows viene inserito un errore a seconda del quale il server di report non si avvia o utilizza un valore predefinito:  
@@ -44,13 +44,13 @@ ms.locfileid: "65581123"
   
  Tutte le modifiche apportate al file di configurazione, incluse quelle con esito positivo, vengono registrate nel file di log di traccia del server di report. Nel registro eventi applicazioni vengono inseriti solo gli errori.  
   
-##  <a name="bkmk_default_values"></a> Informazioni sui valori predefiniti  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> Informazioni sui valori predefiniti  
  La maggior parte delle impostazioni di configurazione dispone di valori predefiniti specificati internamente nel server di report che li utilizzerà se un valore definito dall'utente non è valido o non è stato specificato. Se è necessario utilizzare un valore predefinito a causa di un'impostazione non valida, nel file di log di traccia verrà registrato un errore.  
   
-##  <a name="bkmk_delete_config_settings"></a> Eliminazione delle impostazioni di configurazione  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Eliminazione delle impostazioni di configurazione  
  Per impostazioni di configurazione cui sono associati valori predefiniti, la rimozione dell'impostazione dal file di configurazione non ha alcun effetto. La maggior parte delle impostazioni di configurazione viene effettivamente definita e configurata internamente. Se si elimina un elemento dal file di configurazione, la copia interna è ancora disponibile e utilizza il valore predefinito specificato.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Per modificare un file di configurazione di Reporting Services  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Per modificare un file di configurazione di Reporting Services  
   
 1.  Individuare il file di configurazione da modificare:  
   
