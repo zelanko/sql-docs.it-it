@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287805"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
@@ -67,7 +67,7 @@ In uno **scenario di log shipping** il server primario invia il log delle transa
 
 In uno **scenario di mirroring del database** tutti gli aggiornamenti di un database (del database principale) vengono immediatamente riprodotti in una copia distinta e completa del database, il database mirror. L'istanza del server principale invia immediatamente i singoli record di log all'istanza del server mirror, che applica i record ricevuti nel database mirror, eseguendone continuamente il roll forward. Per altre informazioni, vedere [Mirroring del database](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Caratteristiche del log delle transazioni
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>Caratteristiche del log delle transazioni
 Caratteristiche del log delle transazioni di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
 -  Il log delle transazioni viene implementato come file o set di file distinto nel database. La cache del log viene gestita separatamente dalla cache buffer per le pagine di dati e, pertanto, produce codice semplice, rapido e affidabile in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Per altre informazioni, vedere [Architettura fisica del log delle transazioni](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 
@@ -79,7 +79,7 @@ Caratteristiche del log delle transazioni di [!INCLUDE[ssDEnoversion](../../incl
 
 Per informazioni sull'architettura e sui meccanismi interni del log delle transazioni, vedere la [Guida sull'architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
-##  <a name="Truncation"></a> Troncamento del log delle transazioni  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> Troncamento del log delle transazioni  
 Il troncamento del log libera spazio nel file di log per consentirne il riutilizzo da parte del log delle transazioni. È necessario troncare periodicamente il log delle transazioni per evitare il riempimento dello spazio allocato. Numerosi fattori possono posticipare il troncamento del log, pertanto è importante monitorare la dimensione del log. Ad alcune operazioni può essere applicata la registrazione minima per ridurre l'impatto sulle dimensioni del log delle transazioni.  
  
 Il troncamento del log elimina i [file di log virtuali (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) inattivi dal log delle transazioni logico di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], liberando spazio nel log logico riusabile dal log delle transazioni fisico. Se un log delle transazioni non viene mai troncato, le sue dimensioni aumenteranno fino a occupare tutto lo spazio su disco allocato ai file di log fisici.  
@@ -95,7 +95,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
 > Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Gestire le dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Tenere tuttavia presenti i [fattori che possono posticipare il troncamento del log](#FactorsThatDelayTruncation). Se dopo una compattazione del log è di nuovo necessario lo spazio di archiviazione, il log delle transazioni torna a crescere e durante tale crescita origina un overhead delle prestazioni.
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Quando i record del log rimangono attivi per molto tempo il troncamento viene posticipato e il log delle transazioni potrebbe riempirsi, come già accennato in precedenza.  
   
 > [!IMPORTANT]
@@ -122,7 +122,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
 |14|OTHER_TRANSIENT|Questo valore non è attualmente utilizzato.|  
 |16|XTP_CHECKPOINT|È necessario eseguire un checkpoint di OLTP in memoria. Per le tabelle ottimizzate per la memoria, viene effettuato un checkpoint automatico quando la dimensione del file di log delle transazioni supera 1,5 GB dopo l'ultimo checkpoint (include sia le tabelle basate su disco che quelle con ottimizzazione per la memoria)<br /> Per altre informazioni, vedere [Operazione su checkpoint per le tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) e [processo di registrazione e Checkpoint per le tabelle con ottimizzazione per la memoria] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
-##  <a name="MinimallyLogged"></a> Operazioni per cui è possibile eseguire la registrazione minima  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Operazioni per cui è possibile eseguire la registrazione minima  
 La*registrazione minima* implica la registrazione nel log delle transazioni delle sole informazioni necessarie per il recupero della transazione stesse senza il supporto del recupero temporizzato. In questo argomento vengono identificate le operazioni con registrazione minima nel [modello di recupero](../backup-restore/recovery-models-sql-server.md) con registrazione minima delle operazioni bulk nonché nel modello di recupero con registrazione minima, ad eccezione dei momenti in cui è in esecuzione un backup.  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ La*registrazione minima* implica la registrazione nel log delle transazioni dell
   
  Per le operazioni seguenti, con registrazione completa nel modello di recupero con registrazione completa, è prevista la registrazione minima nel modello di recupero con registrazione minima e in quello con registrazione minima delle operazioni bulk:  
   
--   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quando la replica transazionale è abilitata, le operazioni `BULK INSERT` vengono registrate completamente, anche nel modello di recupero con registrazione minima delle operazioni bulk.  
   
@@ -159,7 +159,7 @@ Quando la replica transazionale è abilitata, le operazioni `SELECT INTO` vengon
   
     -   Ricompilazione del nuovo heap [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (se pertinente). Durante un'operazione `DROP INDEX` per la deallocazione delle pagine di un indice viene eseguita **sempre** la registrazione completa.
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Gestione del log delle transazioni**  
   
 -   [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

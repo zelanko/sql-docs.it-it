@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056375"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056375"
 > [!IMPORTANT]  
 >  Per i dati in formato nativo, utilizzare i prefissi di lunghezza anziché i caratteri di terminazione del campo. È possibile che si verifichino conflitti tra i caratteri di terminazione e i dati in formato nativo, in quanto per i file di dati in formato nativo viene utilizzato il formato binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="PrefixLengthsExport"></a> Lunghezze del prefisso per l'esportazione bulk  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Lunghezze del prefisso per l'esportazione bulk  
   
 > [!NOTE]  
 >  Il valore predefinito visualizzato alla richiesta della lunghezza del prefisso quando si esegue l'esportazione di un campo rappresenta la lunghezza del prefisso ottimale per il campo.  
@@ -86,7 +86,7 @@ ms.locfileid: "74056375"
   
  \*I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
-##  <a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
  Quando si esegue l'importazione bulk di dati, la lunghezza del prefisso corrisponde al valore specificato al momento della creazione del file di dati. Se il file di dati non è stato creato da un comando **bcp** , i caratteri di prefisso di lunghezza probabilmente non esistono. In tal caso, specificare il valore 0 come lunghezza del prefisso.  
   
 > [!NOTE]  

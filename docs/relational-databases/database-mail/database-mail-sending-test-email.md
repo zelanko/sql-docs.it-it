@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906067"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Inviare un messaggio di prova con Posta elettronica database  
@@ -55,7 +55,7 @@ Usare la finestra di dialogo Invia messaggio di prova per verificare se è possi
     ```
 
 
-##  <a name="RelatedContent"></a> Vedere anche 
+##  <a name="see-also"></a><a name="RelatedContent"></a> Vedere anche 
   
 -   [Oggetti di configurazione di Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [Oggetti di messaggistica di Posta elettronica database](../../relational-databases/database-mail/database-mail-messaging-objects.md)

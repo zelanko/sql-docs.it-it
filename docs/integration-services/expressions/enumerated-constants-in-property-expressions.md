@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297634"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Costanti enumerate in espressioni di proprietà
@@ -47,7 +47,7 @@ ms.locfileid: "71297634"
   
  [Proprietà comuni](#CommonProperties)  
   
-##  <a name="Package"></a> Pacchetto  
+##  <a name="package"></a><a name="Package"></a> Pacchetto  
  Nelle tabelle seguenti vengono elencati i nomi descrittivi e i valori numerici equivalenti per le proprietà dei pacchetti che è possibile impostare utilizzando i valori di un enumeratore.  
   
  Proprietà **PackageType**: impostata usando i valori dell'enumerazione **DTSPackageType**.  
@@ -90,7 +90,7 @@ ms.locfileid: "71297634"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> Vincoli di precedenza  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> Vincoli di precedenza  
  Proprietà **EvalOp**: impostata usando i valori dell'enumerazione **DTSPrecedenceEvalOp**.  
   
 |Nome descrittivo in DTSPrecedenceEvalOp|Valore numerico|  
@@ -109,7 +109,7 @@ ms.locfileid: "71297634"
 |Completion|2|  
 |Cancellati|3|  
   
-##  <a name="Foreach"></a> Enumeratori per il ciclo Foreach  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Enumeratori per il ciclo Foreach  
  Il ciclo Foreach include un set di enumeratori con proprietà che possono essere impostate tramite espressioni di proprietà.  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO Enumerator  
@@ -147,7 +147,7 @@ ms.locfileid: "71297634"
 |Nodo|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Attività  
+##  <a name="tasks"></a><a name="Tasks"></a> Attività  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include numerose attività con proprietà che possono essere impostate tramite espressioni di proprietà.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Attività Esegui DDL Analysis Services  
@@ -479,7 +479,7 @@ ms.locfileid: "71297634"
 |Veloce|1|  
 |Preciso|2|  
   
-##  <a name="MaintenancePlanTasks"></a> Attività Piano di manutenzione  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Attività Piano di manutenzione  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set di attività che consentono di eseguire attività di SQL Server da usare in piani di manutenzione e pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso di queste attività a livello di codice e la documentazione di riferimento per la programmazione non include la documentazione dell'API di tali attività e dei relativi enumeratori.  
@@ -572,7 +572,7 @@ ms.locfileid: "71297634"
 |Indice|2|  
 |Tutti|3|  
   
-##  <a name="CommonProperties"></a> Proprietà comuni  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> Proprietà comuni  
  I pacchetti, le attività e i contenitori Ciclo Foreach, Ciclo For e Sequenza possono utilizzare le enumerazioni seguenti per impostare le proprietà specificate.  
   
  Proprietà **ForceExecutionResult**: impostata usando i valori dell'enumerazione **DTSForcedExecResult**.  

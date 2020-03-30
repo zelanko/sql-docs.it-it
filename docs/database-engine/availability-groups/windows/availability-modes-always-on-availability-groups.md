@@ -18,10 +18,10 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241776"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Differenze tra le modalità di disponibilità per un gruppo di disponibilità Always On
@@ -33,7 +33,7 @@ ms.locfileid: "75241776"
 > [!NOTE]  
 >  Se il periodo di timeout della sessione della replica primaria viene superato da una replica secondaria, la replica primaria passa temporaneamente in modalità con commit asincrono per questa replica secondaria. Quando la replica secondaria si riconnette alla replica primaria, viene ripristinata la modalità con commit sincrono.  
   
-##  <a name="SupportedAvModes"></a> Modalità di disponibilità supportate  
+##  <a name="supported-availability-modes"></a><a name="SupportedAvModes"></a> Modalità di disponibilità supportate  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta tre modalità di disponibilità: con commit asincrono, con commit sincrono e di sola configurazione, come indicato di seguito:  
   
 -   La*modalità con commit asincrono* è una soluzione di ripristino di emergenza che offre risultati ottimali quando le repliche di disponibilità sono distribuite a distanze considerevoli. Se tutte le repliche secondarie vengono eseguite in modalità con commit asincrono, con la replica primaria non si attende che il log venga finalizzato dalle repliche secondarie. Bensì, subito dopo la scrittura del record del log nel file di log locale, tramite la replica primaria viene inviata la conferma della transazione al client. La replica primaria viene eseguita con una latenza della transazione minima a fronte di una replica secondaria configurata in modalità con commit asincrono.  Se la replica primaria corrente è configurata in modalità di disponibilità commit asincrono, eseguirà il commit asincrono delle transazioni per tutte le repliche secondarie indipendentemente dalle singole impostazioni della modalità di disponibilità.  
@@ -61,14 +61,14 @@ ms.locfileid: "75241776"
   
  In genere il nodo 04 come replica con commit asincrono viene distribuito in un sito per il ripristino di emergenza. Il fatto che i nodi 01, 02 e 03 rimangano nella modalità con commit asincrono dopo il failover al nodo 04 contribuisce ad evitare possibili cali delle prestazioni nel gruppo di disponibilità dovute all'elevata latenza di rete tra i due siti.  
   
-##  <a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
+##  <a name="asynchronous-commit-availability-mode"></a><a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
  Nella *modalità con commit asincrono*la replica secondaria non viene mai sincronizzata con la replica primaria. Anche se un determinato database secondario potrebbe essere aggiornato in base al database primario corrispondente, è possibile che un qualsiasi database secondario presenti un ritardo in qualsiasi momento. La modalità con commit asincrono può essere utile in uno scenario di ripristino di emergenza in cui la distanza tra replica primaria e replica secondaria è significativa e in cui si desidera evitare che piccoli errori abbiano un impatto sulla replica primaria oppure in situazioni in cui le prestazioni sono più importanti della protezione dei dati sincronizzati. Poiché inoltre la replica primaria non attende acknowledgement dalla replica secondaria, problemi nella replica secondaria non hanno mai un impatto sulla replica primaria.  
   
  Tramite una replica secondaria con commit asincrono viene effettuato il tentativo di rimanere aggiornata con i record del log ricevuti dalla replica primaria. I database secondari con commit asincrono, tuttavia, rimangono sempre non sincronizzati ed è probabile che presentino un certo ritardo rispetto ai database primari corrispondenti. In genere, il gap tra un database secondario con commit asincrono e il database primario corrispondente è limitato, ma può diventare significativo in caso di overload del server in cui è ospitata la replica secondaria o se la rete è lenta.  
   
  L'unica forma di failover supportata dalla modalità con commit asincrono è il failover forzato (con possibile perdita di dati). Il failover forzato deve essere usato come ultima risorsa solo per le situazioni in cui la replica primaria corrente non sarà disponibile per un lungo periodo di tempo e la disponibilità immediata dei database primari risulti prioritaria rispetto al rischio di una possibile perdita di dati. La destinazione del failover deve essere una replica il cui stato del ruolo deve essere SECONDARY o RESOLVING. La destinazione del failover assume il ruolo primario e le relative copie dei database diventano il database primario. Tutti i database secondari rimanenti, insieme ai database primari precedenti, non appena diventano disponibili, vengono sospesi finché non vengono ripresi singolarmente manualmente. Nella modalità con commit asincrono tutti i log delle transazioni non ancora inviati dalla replica primaria originale alla replica secondaria precedente vanno persi. Ciò significa che in alcuni o in tutti i nuovi database primari potrebbero mancare alcune transazioni di cui è stato eseguito il commit di recente. Per altre informazioni sul funzionamento del failover forzato e sulle procedure consigliate per il relativo uso, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
+##  <a name="synchronous-commit-availability-mode"></a><a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  In modalità di disponibilità con commit sincrono (*modalità con commit sincrono*), dopo la creazione di un join a un gruppo di disponibilità, un database secondario viene aggiornato rispetto al database primario corrispondente e viene impostato sullo stato SYNCHRONIZED. Il database secondario rimane SYNCHRONIZED finché la sincronizzazione dei dati continua. In questo modo, si assicura che ogni transazione sottoposta a commit in un database primario lo sia anche nel database secondario corrispondente. Una volta che tutti i database secondari in una determinata replica secondaria sono sincronizzati, lo stato di integrità della sincronizzazione della replica secondaria nel suo complesso è HEALTHY.  
   
  **Contenuto della sezione**  
@@ -81,7 +81,7 @@ ms.locfileid: "75241776"
   
 -   [Modalità commit sincrono con failover automatico](#SyncCommitWithAuto)  
   
-###  <a name="DisruptSync"></a> Fattori che causano l'interruzione della sincronizzazione dei dati  
+###  <a name="factors-that-disrupt-data-synchronization"></a><a name="DisruptSync"></a> Fattori che causano l'interruzione della sincronizzazione dei dati  
  Una volta che tutti i relativi database sono sincronizzati, una replica secondaria viene impostata sullo stato HEALTHY. La replica secondaria sincronizzata rimane integra finché non si verifica uno degli eventi seguenti:  
   
 -   Un ritardo o un problema della rete o del computer comporta il timeout della sessione tra la replica secondaria e quella primaria.  
@@ -100,7 +100,7 @@ ms.locfileid: "75241776"
 > [!TIP]  
 >  Per visualizzare l'integrità della sincronizzazione di un gruppo di disponibilità, di una replica di disponibilità o di un database di disponibilità, eseguire una query sulla colonna **synchronization_health** o **synchronization_health_desc** di [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md), [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)o [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)rispettivamente.  
   
-###  <a name="HowSyncWorks"></a> Funzionamento della sincronizzazione in una replica secondaria  
+###  <a name="how-synchronization-works-on-a-secondary-replica"></a><a name="HowSyncWorks"></a> Funzionamento della sincronizzazione in una replica secondaria  
  In modalità con commit sincrono, dopo che una replica secondaria è stata unita in join al gruppo di disponibilità ed è stata stabilita una sessione con la replica primaria, la replica secondaria scrive i record del log in entrata su disco (*finalizza il log*) e invia un messaggio di conferma alla replica primaria. Una volta che il log finalizzato nel database secondario viene aggiornato rispetto alla fine del log nel database primario, lo stato del database secondario viene impostato su SYNCHRONIZED. Il tempo necessario per la sincronizzazione dipende essenzialmente dal ritardo del database secondario rispetto al database primario al momento dell'avvio della sessione (misurato in base al numero di record del log ricevuti inizialmente dalla replica primaria), dal carico di lavoro nel database primario e dalla velocità del computer dell'istanza del server che ospita la replica secondaria.  
   
  Il funzionamento sincrono viene mantenuto nel modo seguente:  
@@ -118,10 +118,10 @@ ms.locfileid: "75241776"
   
  Con la modalità con commit sincrono è possibile proteggere i dati richiedendone la sincronizzazione tra due posizioni, ma con un aumento della latenza delle transazioni.  
   
-### <a name="SyncCommitWithManual"></a> Modalità con commit sincrono con solo failover manuale  
+### <a name="synchronous-commit-mode-with-only-manual-failover"></a><a name="SyncCommitWithManual"></a> Modalità con commit sincrono con solo failover manuale  
  Se queste repliche sono connesse e il database è sincronizzato, il failover manuale è supportato. Se la replica secondaria diventa inattiva, la replica primaria non viene influenzata. La replica primaria viene eseguita con esposizione se non è presente alcuna replica con stato SYNCHRONIZED, cioè non vengono inviati dati a una qualsiasi replica secondaria. In caso di perdita della replica primaria, le repliche secondarie vengono impostate sullo stato RESOLVING, ma il proprietario del database può forzare un failover sulla replica secondaria (con possibile perdita di dati). Per altre informazioni, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-###  <a name="SyncCommitWithAuto"></a> Modalità commit sincrono con failover automatico  
+###  <a name="synchronous-commit-mode-with-automatic-failover"></a><a name="SyncCommitWithAuto"></a> Modalità commit sincrono con failover automatico  
  Con il failover automatico si garantisce disponibilità elevata assicurando che il database diventi di nuovo disponibile rapidamente dopo la perdita della replica primaria. Per configurare un gruppo di disponibilità per il failover automatico, è necessario impostare la replica primaria corrente e almeno una replica secondaria sulla modalità con commit sincrono con failover automatico. Si possono avere fino a tre repliche di failover automatico.  
   
  Inoltre, affinché un failover automatico sia possibile in un momento specifico, questa replica secondaria deve essere sincronizzata con la replica primaria (cioè tutti i database secondari sono sincronizzati) e per il cluster WSFC (Windows Server Failover Clustering) deve essere disponibile un quorum. Se la replica primaria non è disponibile in presenza di tali condizioni, si verifica il failover automatico. La replica secondaria assume il ruolo di replica primaria e il relativo database diventa il database primario. Per altre informazioni, vedere la sezione "Failover automatico" dell'argomento [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
@@ -138,7 +138,7 @@ Ciò significa che si verifica della latenza, in genere solo pochi secondi, tra 
 
 Per altre informazioni sull'analisi della latenza di rollforward nella replica secondaria, vedere [Risoluzione dei problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md).
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per modificare la modalità di disponibilità e failover**  
   
 -   [Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -169,7 +169,7 @@ Per altre informazioni sull'analisi della latenza di rollforward nella replica s
   
 -   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

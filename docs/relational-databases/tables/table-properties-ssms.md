@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905947"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905947"
   
 4.  [Pagina Archivio](#Storage)  
 
-##  <a name="GeneralPage"></a> Pagina Generale  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Pagina Generale  
  **Database**  
  Nome del database che contiene la tabella.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72905947"
  **Tabella replicata**  
  Indica se la tabella è stata replicata in un altro database usando la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori possibili sono **True** e **False**.  
   
-##  <a name="ChangeTracking"></a> Pagina Rilevamento modifiche  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Pagina Rilevamento modifiche  
  **Rilevamento delle modifiche**  
  Indica se il rilevamento delle modifiche è abilitato per la tabella. Il valore predefinito è **False**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905947"
   
  Per altre informazioni sul rilevamento delle modifiche, vedere [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> Pagina FileTable  
+##  <a name="filetable-page"></a><a name="FileTable"></a> Pagina FileTable  
  Consente di visualizzare le proprietà della tabella correlate alle tabelle FileTable. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
  **Regole di confronto colonna Name tabella FileTable**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905947"
  **Spazio dei nomi FileTable abilitato**  
  Se impostato su **True**, questo valore indica che la tabella è una tabella FileTable. Se si modifica questo valore in **False**, la tabella FileTable viene modificata in una comune tabella utente. Se in seguito si desidera modificare di nuovo la tabella in tabella FileTable, questa dovrà superare un controllo di coerenza per tabelle FileTable affinché la conversione riesca.  
   
-##  <a name="Storage"></a> Pagina Archivio  
+##  <a name="storage-page"></a><a name="Storage"></a> Pagina Archivio  
  Consente di visualizzare le proprietà relative all'archiviazione della tabella selezionata.  
   
 ### <a name="compression"></a>Compressione  

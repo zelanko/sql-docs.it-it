@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710761"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
@@ -259,7 +259,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
      Per ulteriori informazioni, vedere [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) o [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  La replica consente di utilizzare gli oggetti RMO (Replication Management Objects) per convalidare a livello di programmazione la corrispondenza tra i dati nel Sottoscrittore e quelli nel server di pubblicazione. Gli oggetti utilizzati variano in base al tipo di topologia di replica. La replica transazionale richiede la convalida di tutte le sottoscrizioni di una pubblicazione.  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 5.  Eseguire l'agente di merge per avviare la convalida nella sottoscrizione oppure attendere la successiva esecuzione pianificata dell'agente. Per ulteriori informazioni, vedere [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Il risultato dell'operazione di convalida viene scritto nella cronologia dell'agente, visualizzabile tramite Monitoraggio replica. Per altre informazioni, vedere [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
-###  <a name="RMOExample"></a> Esempio (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> Esempio (RMO)  
  In questo esempio tutte le sottoscrizioni di una pubblicazione transazionale vengono contrassegnate per la convalida mediante il conteggio delle righe.  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

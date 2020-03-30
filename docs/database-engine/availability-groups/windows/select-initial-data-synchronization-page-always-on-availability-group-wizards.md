@@ -15,10 +15,10 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235335"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Pagina Seleziona sincronizzazione dati iniziale (procedure guidate gruppi di disponibilità Always On)
@@ -28,7 +28,7 @@ ms.locfileid: "75235335"
   
  Le scelte possibili includono **Seeding automatico**, **Backup completo di database e log**, **Solo join**, o **Ignora sincronizzazione dati iniziale**. Prima di selezionare **Seeding automatico**, **Completo** o **Solo join**, verificare che l'ambiente soddisfi i prerequisiti.  
     
-##  <a name="Recommendations"></a> Raccomandazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   Sospendere le attività di backup dei log per i database primari durante la sincronizzazione dati iniziale.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "75235335"
   
      Se è necessario proteggere le operazioni di backup e ripristino con una sicurezza elevata, si consiglia di selezionare l'opzione **Solo join** o **Ignora sincronizzazione dati iniziale** .  
   
-## <a name="Auto"></a> Seeding automatico
+## <a name="automatic-seeding"></a><a name="Auto"></a> Seeding automatico
  
  SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo. Disponibile in [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] e versioni successive. Vedere [Inizializzare automaticamente un gruppo di disponibilità Always On](automatically-initialize-always-on-availability-group.md).
 
-##  <a name="Full"></a> Backup completo di database e log 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a> Backup completo di database e log 
  Per ogni database primario, tramite l'opzione **Backup completo di database e log** vengono eseguite diverse operazioni in un flusso di lavoro: creare un backup completo e del log del database primario, creare i database secondari corrispondenti ripristinando i backup in ogni istanza del server in cui è ospitata una replica secondaria e creare un join di ogni database secondario al gruppo di disponibilità.  
   
  Selezionare questa opzione solo se l'ambiente soddisfa i prerequisiti seguenti per l'utilizzo della sincronizzazione dati iniziale completa e si desidera avviare automaticamente la sincronizzazione dati tramite la procedura guidata.  
@@ -75,18 +75,18 @@ ms.locfileid: "75235335"
 > [!IMPORTANT]  
 >  I backup del log faranno parte della catena di backup del log. Archiviare i file di backup.  
   
-##  <a name="Joinonly"></a> Solo join  
+##  <a name="join-only"></a><a name="Joinonly"></a> Solo join  
  Selezionare questa opzione solo se i nuovi database secondari esistono già in ogni istanza del server che ospita una replica secondaria per il gruppo di disponibilità. Per informazioni sulla preparazione dei database secondari, vedere [Per preparare i database secondari manualmente](#PrepareSecondaryDbs), più avanti in questa sezione.  
   
  Se si seleziona **Solo join**, tramite la procedura guidata si tenterà di creare un join di ogni database secondario esistente al gruppo di disponibilità.  
   
-## <a name="Skip"></a> Ignora sincronizzazione dati iniziale  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> Ignora sincronizzazione dati iniziale  
  Selezionare questa opzione se si desidera eseguire backup personalizzati del database e del log di ogni database primario e ripristinarli in ogni istanza del server che ospita una replica secondaria. Dopo la chiusura della procedura guidata, sarà quindi necessario creare un join di ogni database secondario in ogni replica secondaria.  
   
 > [!NOTE]  
 >  Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PrepareSecondaryDbs"></a> Per preparare i database secondari manualmente  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> Per preparare i database secondari manualmente  
  Per preparare i database secondari senza utilizzare alcuna procedura guidata [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , è possibile adottare uno degli approcci seguenti:  
   
 -   Ripristinare manualmente un backup recente del database primario utilizzando RESTORE WITH NORECOVERY, quindi ripristinare ogni successivo backup del log utilizzando RESTORE WITH NORECOVERY. Se i percorsi di file del database primario e del database secondario sono diversi, è necessario utilizzare l'opzione WITH MOVE. Eseguire questa sequenza di ripristino in ogni istanza del server che ospita una replica secondaria per il gruppo di disponibilità.  È possibile utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per eseguire tali operazioni di backup e ripristino.  
@@ -110,7 +110,7 @@ ms.locfileid: "75235335"
   
  Facoltativamente, è possibile preparare tutti i database secondari prima di eseguire la procedura guidata, quindi nella pagina **Specificare la sincronizzazione dati iniziale** della procedura guidata selezionare **Solo join** per creare un join automatico dei nuovi database secondari al gruppo di disponibilità.  
   
-##  <a name="LaunchWiz"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Attività correlate  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

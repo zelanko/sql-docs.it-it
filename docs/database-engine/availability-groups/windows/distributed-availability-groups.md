@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941111"
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
@@ -140,7 +140,7 @@ In altre parole, una replica primaria può far parte di due diversi gruppi di di
 
 ![Aumento delle istanze di lettura con gruppi di disponibilità distribuiti](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-La figura seguente illustra il gruppo di disponibilità AG 1 come replica primaria per due diversi gruppi di disponibilità distribuiti: Gruppo di disponibilità distribuito AG 1 (composto da AG 1 e AG 2) e gruppo di disponibilità distribuito AG 2 (composto da AG 1 e AG 3).
+La figura seguente mostra AG 1 come replica primaria per due gruppi di disponibilità distribuiti diversi: Distributed AG 1, composto da AG 1 e AG 2, e Distributed AG 2, composto da AG 1 e AG 3.
 
 
 ![Altro esempio di aumento delle istanze di lettura con gruppi di disponibilità distribuiti]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)

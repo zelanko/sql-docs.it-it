@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288075"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      È possibile specificare l'ambito o il livello (di esecuzione o di progetto) e il numero di chiavi da eliminare. La dimensione predefinita del batch per l'eliminazione è 1000. Quando si imposta il livello su 2, le chiavi e i certificati vengono eliminati solo se i progetti associati sono stati eliminati.  
   
- Per altre informazioni, vedere l'articolo della Knowledge Base seguente: [CORREZIONE: Problemi di prestazioni quando si usa SSISDB come archivio di distribuzione in SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Per altre informazioni, vedere l'articolo della Knowledge Base [CORREZIONE: Problemi di prestazioni quando si usa SSISDB come archivio di distribuzione in SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente chiama la stored procedure cleanup_server_log.  

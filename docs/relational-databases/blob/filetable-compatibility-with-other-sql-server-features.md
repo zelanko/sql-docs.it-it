@@ -14,17 +14,17 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252705"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Viene descritto il funzionamento delle tabelle FileTable con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="alwayson"></a> Gruppi di disponibilità AlwaysOn e tabelle FileTable  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> Gruppi di disponibilità AlwaysOn e tabelle FileTable  
  Quando il database che contiene dati FILESTREAM o FileTable appartiene a un gruppo di disponibilità AlwaysOn:  
   
 -   La funzionalità FileTable è supportata parzialmente dai [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Dopo un failover, i dati FileTable sono accessibili nella replica primaria, ma non nelle repliche secondarie leggibili.  
@@ -35,26 +35,26 @@ ms.locfileid: "75252705"
   
 -   Ogni accesso a dati FILESTREAM o FileTable tramite le API del file system deve utilizzare VNN anziché nomi computer. Per altre informazioni, vedere [FILESTREAM e FileTable con i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-##  <a name="OtherPartitioning"></a> Partizionamento e tabelle FileTable  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a> Partizionamento e tabelle FileTable  
  Il partizionamento non è supportato nelle tabelle FileTable. Con il supporto per più filegroup FILESTREAM, è possibile gestire i problemi di scalabilità verticale puri senza dovere ricorrere al partizionamento nella maggior parte degli scenari (a differenza di FILESTREAM SQL 2008).  
   
-##  <a name="OtherRepl"></a> Replica e tabelle FileTable  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a> Replica e tabelle FileTable  
  La replica e le funzionalità correlate, quali replica transazionale, replica di tipo merge, Change Data Capture e rilevamento delle modifiche, non sono supportate con le tabelle FileTable.  
   
-##  <a name="OtherIsolation"></a> Semantica delle transazioni e tabelle FileTable  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a> Semantica delle transazioni e tabelle FileTable  
  **applicazioni Windows**  
  Poiché le applicazioni di Windows non riconoscono le transazioni di database, le operazioni di scrittura di Windows non forniscono le proprietà ACID di una transazione di database. I rollback transazionali e il recupero, pertanto, non sono possibili con operazioni di aggiornamento di Windows.  
   
  **Applicazioni Transact-SQL**  
  Per le applicazioni TSQL eseguite nella colonna FILESTREAM (file_stream) in una tabella FileTable, la semantica dell'isolamento è la stessa utilizzata con il tipo di dati FILESTREAM in una normale tabella utente.  
   
-##  <a name="OtherQueryNot"></a> Notifica delle query e tabelle FileTable  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a> Notifica delle query e tabelle FileTable  
  La query non può contenere un riferimento alla colonna FILESTREAM nella tabella FileTable, nella clausola WHERE o in qualunque altra parte della query.  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO e tabelle FileTable  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a> SELECT INTO e tabelle FileTable  
  le istruzioni SELECT INTO da una tabella FileTable non propagheranno la semantica della tabella FileTable nella tabella di destinazione creata (come le colonne FILESTREAM in una normale tabella). Tutte le colonne della tabella di destinazione si comporteranno proprio come normali colonne. A tali colonne non sarà associata alcuna semantica della tabella FileTable.  
   
-##  <a name="OtherTriggers"></a> Trigger e tabelle FileTable  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a> Trigger e tabelle FileTable  
  **Trigger DDL (Data Definition Language)**  
  Non vi sono considerazioni speciali relative ai trigger DDL con tabelle FileTable. Verranno attivati normali trigger DDL per operazioni di creazione/modifica del database, nonché per operazioni CREATE/ALTER TABLE per le tabelle FileTable. I trigger possono recuperare i dati evento effettivi, che includono il testo del comando DDL e altre informazioni, chiamando la funzione EVENTDATA(). Non vi sono nuovi eventi o modifiche per lo schema Eventdata esistente.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252705"
   
 -   L'arresto anomalo di handle Win32, ad esempio la terminazione esplicita di handle Win32 effettuata da un amministratore OPPURE a causa di un arresto del database, provocherà la mancata esecuzione dei trigger utente durante le operazioni di recupero, anche qualora il contenuto di FILESTREAM sia stato modificato dall'applicazione Win32 arrestata in modo anomalo.  
   
-##  <a name="OtherViews"></a> Viste e tabelle FileTable  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> Viste e tabelle FileTable  
  **Visualizzazioni**  
  È possibile creare una vista in una tabella FileTable come in qualsiasi altra tabella. A una vista creata in una tabella FileTable, tuttavia, si applicano le considerazioni seguenti:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75252705"
  **Viste indicizzate**  
  Attualmente le viste indicizzate non possono includere colonne FILESTREAM o colonne calcolate/calcolate persistenti che dipendono dalle colonne FILESTREAM. Questo comportamento è lo stesso anche per le viste definite nella tabella FileTable.  
   
-##  <a name="OtherSnapshots"></a> Isolamento dello snapshot e tabelle FileTable  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> Isolamento dello snapshot e tabelle FileTable  
  L'isolamento dello snapshot e l'isolamento dello snapshot Read Committed si basano sulla possibilità di disporre di uno snapshot dei dati per i lettori, anche quando vengono eseguite operazioni di aggiornamento sui dati. Le tabelle FileTable, tuttavia, consentono l'accesso in scrittura non transazionale ai dati FILESTREAM. Di conseguenza, sussistono le restrizioni seguenti per l'utilizzo di queste funzionalità in database che contengono tabelle FileTable:  
   
 -   Un database che contiene tabelle FileTable può essere modificato per abilitare l'isolamento dello snapshot e/o l'isolamento dello snapshot Read Committed.  
@@ -112,10 +112,10 @@ ms.locfileid: "75252705"
   
     -   L'indicizzazione full-text viene sempre completata, indipendentemente dalle opzioni di database (READ_COMMITTED_SNAPSHOT o ALLOW_SNAPSHOT_ISOLATION).  
   
-##  <a name="readsec"></a> Database secondari leggibili  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a> Database secondari leggibili  
  Ai database secondari leggibili si applicano le stesse considerazioni degli snapshot, come descritto nella sezione precedente, [Isolamento dello snapshot e tabelle FileTable](#OtherSnapshots).  
   
-##  <a name="CDB"></a> Database indipendenti e tabelle FileTable  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> Database indipendenti e tabelle FileTable  
  La funzionalità FILESTREAM da cui dipende la funzionalità FileTable richiede alcuni interventi di configurazione all'esterno del database. Pertanto un database in cui si utilizza FILESTREAM o FileTable non è completamente indipendente.  
   
  È possibile impostare l'indipendenza del database su PARTIAL se si desidera utilizzare alcune funzionalità dei database indipendenti, ad esempio gli utenti indipendenti. In tal caso, tuttavia, è necessario tenere presente che alcune impostazioni del database non sono contenute nel database e non vengono spostate automaticamente quando viene spostato il database.  

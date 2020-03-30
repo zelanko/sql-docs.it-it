@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179282"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -43,7 +43,7 @@ Ogni database include un contatore che viene incrementato a ogni operazione di i
   
 **timestamp** è il sinonimo del tipo di dati **rowversion** ed è conforme al comportamento dei sinonimi dei tipi di dati. Nelle istruzioni DDL usare **rowversion** anziché **timestamp** laddove possibile. Per altre informazioni, vedere [Sinonimi dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Il tipo di dati **timestamp** di [!INCLUDE[tsql](../../includes/tsql-md.md)] è diverso dal tipo di dati **timestamp** definito nello standard ISO.
+Il tipo di dati [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp**di** è diverso dal tipo di dati **timestamp** definito nello standard ISO.
   
 > [!NOTE]  
 >  La sintassi di **timestamp** è deprecata. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  

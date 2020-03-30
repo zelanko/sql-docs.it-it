@@ -33,10 +33,10 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287985"
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
@@ -199,7 +199,7 @@ Per i file e i filegroup sono valide le regole seguenti:
 - Un file può essere membro di un solo filegroup.
 - I file di log delle transazioni non fanno mai parte di un filegroup.
 
-## <a name="Recommendations"></a> Indicazioni
+## <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni
 Vengono riportate di seguito alcune indicazioni di carattere generale relative all'utilizzo di file e filegroup: 
 - La maggior parte dei database funziona in modo ottimale con un singolo file di dati e un unico file di log delle transazioni.
 - Se si utilizzano più file di dati, creare un secondo filegroup per i file aggiuntivi e impostarlo come filegroup predefinito. In questo modo, il file primario conterrà unicamente le tabelle e gli oggetti di sistema.

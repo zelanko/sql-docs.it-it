@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892415"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
@@ -44,7 +44,7 @@ ms.locfileid: "68892415"
   
  Questa sezione include le informazioni necessarie per gestire, modificare e implementare partizioni tramite la **Gestione guidata partizione**.  
   
-##  <a name="Top"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="Top"></a> Contenuto della sezione  
  Le sezioni seguenti forniscono informazioni sulle pagine della **Gestione guidata partizione**.  
   
  [Gestione guidata partizione (pagina Selezionare un'azione relativa alla partizione)](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892415"
   
  [Gestione guidata partizione (pagina Stato)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> Pagina Selezionare un'azione relativa alla partizione  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Pagina Selezionare un'azione relativa alla partizione  
  Usare la pagina **Selezionare un'azione relativa alla partizione** per scegliere l'azione che si desidera eseguire sulla partizione.  
   
 ### <a name="create-a-staging-table"></a>Creazione di una tabella di gestione temporanea  
@@ -91,7 +91,7 @@ ms.locfileid: "68892415"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="SwitchIn"></a> Pagina Seleziona opzioni per l'attivazione della partizione  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Pagina Seleziona opzioni per l'attivazione della partizione  
  Usare la pagina **Seleziona opzioni per l'attivazione della partizione** per selezionare la tabella di staging che si desidera attivare nella tabella partizionata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -106,7 +106,7 @@ ms.locfileid: "68892415"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="SwitchOut"></a> Pagina Seleziona opzioni per la disattivazione della partizione  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Pagina Seleziona opzioni per la disattivazione della partizione  
  Usare la pagina **Seleziona opzioni per la disattivazione della partizione** per selezionare la partizione e la tabella di staging contenente i dati partizionati che si desidera disattivare dalla tabella partizionata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -124,7 +124,7 @@ ms.locfileid: "68892415"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="StagingTableOptions"></a> Pagina Seleziona opzioni per la tabella di gestione temporanea  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Pagina Seleziona opzioni per la tabella di gestione temporanea  
  Usare la pagina **Seleziona opzioni per la tabella di staging** per creare la tabella di staging che si desidera utilizzare per lo spostamento dei dati partizionati.  
   
  Le tabelle di gestione temporanea devono risiedere nello stesso filegroup della partizione selezionata in cui è presente la tabella di origine. La tabella di staging deve riflettere la struttura della tabella di origine e della tabella di destinazione.  
@@ -146,7 +146,7 @@ ms.locfileid: "68892415"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="OutputOption"></a> Pagina Seleziona un'opzione di output  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Pagina Seleziona un'opzione di output  
  Usare la pagina **Seleziona un'opzione di output** per specificare il modo in cui si desidera completare le modifiche alle partizioni.  
   
 ### <a name="create-script"></a>Crea script  
@@ -173,7 +173,7 @@ ms.locfileid: "68892415"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="NewJob"></a> Pagina Nuova pianificazione processo  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Pagina Nuova pianificazione processo  
  Usare la pagina **Nuova pianificazione processo** per visualizzare e modificare le proprietà della pianificazione.  
   
 ### <a name="options"></a>Opzioni  
@@ -256,7 +256,7 @@ ms.locfileid: "68892415"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="Summary"></a> Pagina Riepilogo  
+##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Usare la pagina **Riepilogo** per verificare le opzioni selezionate nelle pagine precedenti.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -265,7 +265,7 @@ ms.locfileid: "68892415"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-##  <a name="Progress"></a> Pagina Stato  
+##  <a name="progress-page"></a><a name="Progress"></a> Pagina Stato  
  Usare la pagina **Stato** per monitorare le informazioni sullo stato delle azioni eseguite nella **Gestione guidata partizione**. A seconda delle opzioni selezionate nella procedura guidata, la pagina **Stato** può contenere una o più azioni. Nella casella superiore viene visualizzato lo stato complessivo della procedura guidata e viene indicato il numero di messaggi di stato, di errore e di avviso restituiti durante l'esecuzione della procedura guidata.  
   
 ### <a name="options"></a>Opzioni  

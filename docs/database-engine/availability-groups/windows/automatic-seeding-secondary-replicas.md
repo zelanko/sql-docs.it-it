@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288545"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usare il seeding automatico per inizializzare una replica secondaria per un gruppo di disponibilità Always On
@@ -46,7 +46,7 @@ Il seeding automatico è un processo a thread singolo in grado di gestire fino a
 
 Per il seeding automatico è possibile usare la compressione, ma è disabilitata per impostazione predefinita. Attivando la compressione si riduce la larghezza di banda di rete e si accelera possibilmente il processo, ma si ottiene in cambio un sovraccarico aggiuntivo del processore. Per usare la compressione durante il seeding automatico, abilitare il flag di traccia 9567. Vedere [Ottimizzare la compressione per un gruppo di disponibilità](tune-compression-for-availability-group.md).
 
-## <a name = "disklayout"></a> Layout dei dischi
+## <a name="disk-layout"></a><a name = "disklayout"></a> Layout dei dischi
 
 In SQL Server 2016 e versioni precedenti la cartella in cui viene creato il database per il seeding automatico deve già esistere e deve essere uguale a quella del percorso per la replica primaria. 
 
@@ -109,7 +109,7 @@ In un'istanza che diventa una replica secondaria, dopo l'aggiunta dell'istanza a
 
 >Alla replica di disponibilità locale per il gruppo di disponibilità 'AGName' non è stata concessa l'autorizzazione per creare i database sebbene `SEEDING_MODE` sia impostato su `AUTOMATIC`. Usare `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` per consentire la creazione di database di cui è stato effettuato il seeding dalla replica di disponibilità primaria.
 
-### <a name = "grantCreate"></a> Concedere le autorizzazioni di creazione di database sulla replica secondaria al gruppo di disponibilità
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> Concedere le autorizzazioni di creazione di database sulla replica secondaria al gruppo di disponibilità
 
 Dopo l'aggiunta, concedere al gruppo di disponibilità l'autorizzazione per la creazione di database nell'istanza di replica secondaria di SQL Server. Per consentire il funzionamento del seeding automatico, il gruppo di disponibilità necessita dell'autorizzazione per la creazione di un database. 
 

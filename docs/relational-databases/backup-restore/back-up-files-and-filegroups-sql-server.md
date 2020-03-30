@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708682"
 ---
 # <a name="back-up-files-and-filegroups"></a>Backup di file e filegroup
@@ -29,9 +29,9 @@ ms.locfileid: "71708682"
   
 Per altre informazioni sul backup dei file, vedere [Backup completi del file &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 - Non è possibile utilizzare l'istruzione BACKUP in una transazione esplicita o implicita.  
   
@@ -39,11 +39,11 @@ Per altre informazioni sul backup dei file, vedere [Backup completi del file &#4
   
 Per altre informazioni sulle limitazioni e restrizioni, vedere [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Raccomandazioni
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni
   
 Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questo caso è possibile eliminare tali voci di log usando il flag di traccia 3226 se nessuno degli script dipende da esse. Vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
-###  <a name="Permissions"></a> Autorizzazioni
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator**.  
   
@@ -154,7 +154,7 @@ Se si utilizza il modello di recupero con registrazione completa, è inoltre nec
 
 Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Esempi
+###  <a name="examples"></a><a name="TsqlExample"></a> Esempi
 Negli esempi seguenti viene eseguito il backup di uno o più file dei filegroup secondari del database `Sales` . Questo database utilizza il modello di recupero con registrazione completa e contiene i filegroup secondari seguenti:  
   
 - Un filegroup denominato `SalesGroup1` che include i file `SGrp1Fi1` e `SGrp1Fi2`.  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> Con PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Con PowerShell
 
 Impostare e usare il [provider SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   

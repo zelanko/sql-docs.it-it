@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908763"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
@@ -23,7 +23,7 @@ ms.locfileid: "72908763"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Prima di iniziare a utilizzare FILESTREAM, è necessario abilitarlo nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In questo argomento viene descritto come abilitare FILESTREAM utilizzando Gestione configurazione SQL Server.  
   
-##  <a name="enabling"></a> Abilitazione di FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Abilitazione di FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Per abilitare e modificare le impostazioni FILESTREAM  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908763"
   
 13. Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-##  <a name="best"></a> Procedure consigliate  
+##  <a name="best-practices"></a><a name="best"></a> Procedure consigliate  
   
-###  <a name="config"></a> Configurazione fisica e manutenzione  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Configurazione fisica e manutenzione  
  Quando si configurano i volumi di archiviazione FILESTREAM, tenere presenti le linee guida seguenti:  
   
 -   Disabilitare i nomi di file brevi nei sistemi FILESTREAM. La creazione di nomi di file brevi richiede tempi sensibilmente più lunghi. Per disabilitare i nomi di file brevi, usare l'utilità **fsutil** di Windows.  
@@ -84,7 +84,7 @@ ms.locfileid: "72908763"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> Progettazione fisica di database  
+###  <a name="physical-database-design"></a><a name="database"></a> Progettazione fisica di database  
  Quando si progetta un database FILESTREAM, tenere presenti le linee guida seguenti:  
   
 -   Le colonne FILESTREAM devono essere associate a una corrispondente colonna ROWGUID **uniqueidentifier**. Questi tipi di tabelle devono inoltre essere associati a un indice univoco. Solitamente questo indice non è cluster. Se la logica di business dei database richiede un indice cluster, è necessario assicurarsi che i valori archiviati nell'indice non siano casuali. In caso contrario, l'indice verrà riordinato ogni volta che viene aggiunta o rimossa una riga dalla tabella.  

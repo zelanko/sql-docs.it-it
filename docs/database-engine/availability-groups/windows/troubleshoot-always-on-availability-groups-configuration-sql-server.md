@@ -15,10 +15,10 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286995"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità Always On (SQL Server)
@@ -44,10 +44,10 @@ ms.locfileid: "79286995"
 |[Attività correlate](#RelatedTasks)|Contiene un elenco di argomenti orientati alle attività nella documentazione online di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] particolarmente rilevanti per risolvere i problemi relativi a una configurazione del gruppo di disponibilità.|  
 |[Contenuto correlato](#RelatedContent)|Contiene un elenco di risorse rilevanti esterne alla documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="IsHadrEnabled"></a> Funzionalità Gruppi di disponibilità Always On non abilitata  
+##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> Funzionalità Gruppi di disponibilità Always On non abilitata  
  La funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deve essere abilitata su ognuna delle istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Accounts"></a> Accounts  
+##  <a name="accounts"></a><a name="Accounts"></a> Accounts  
  È necessario configurare correttamente gli account utilizzati per l'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Autorizzazioni corrette per gli account  
@@ -58,7 +58,7 @@ ms.locfileid: "79286995"
   
 2.  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario utilizzare certificati per l'autenticazione dell'endpoint. Se gli account del servizio utilizzano account di dominio nello stesso dominio, è possibile scegliere di concedere l'accesso CONNECT per ogni account del servizio su tutti i percorsi di replica oppure utilizzare certificati. Per altre informazioni, vedere [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  È necessario configurare correttamente gli endpoint.  
   
 1.  Verificare che ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una replica di disponibilità (ogni *percorso di replica*) disponga di un endpoint del mirroring del database. Per determinare se in una determinata istanza del server è presente un endpoint del mirroring del database, usare la vista del catalogo [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md). Per altre informazioni, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) oppure [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -111,16 +111,16 @@ ms.locfileid: "79286995"
   
     ```  
   
-##  <a name="SystemName"></a> System Name  
+##  <a name="system-name"></a><a name="SystemName"></a> System Name  
  Quale nome di sistema di un'istanza del server in un URL endpoint, è possibile utilizzare qualsiasi nome che identifichi univocamente il sistema. L'indirizzo del server può essere un nome di sistema (se i sistemi si trovano nello stesso dominio), un nome di dominio completo o un indirizzo IP (preferibilmente un indirizzo IP statico). L'utilizzo del nome di dominio completo è una soluzione efficace. Per altre informazioni, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  Ogni istanza del server che ospita una replica di disponibilità deve essere in grado di accedere alla porta di ciascuna altra istanza del server su TCP. Questo requisito è particolarmente importante quando le istanze del server appartengono a domini diversi non trusted.  
   
-##  <a name="Msg1418"></a> Accesso all'endpoint (errore di SQL Server 1418)  
+##  <a name="endpoint-access-sql-server-error-1418"></a><a name="Msg1418"></a> Accesso all'endpoint (errore di SQL Server 1418)  
  Questo messaggio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indica che l'indirizzo di rete del server specificato nell'URL endpoint non è raggiungibile o non esiste, pertanto si consiglia di controllare il nome dell'indirizzo di rete e quindi eseguire nuovamente il comando.  
   
-##  <a name="JoinDbFails"></a> Errore nella creazione del join del database (errore di SQL Server 35250)  
+##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> Errore nella creazione del join del database (errore di SQL Server 35250)  
  In questa sezione vengono illustrate le possibili cause e la risoluzione di un errore nella creazione di join dei database secondari al gruppo di disponibilità perché la connessione alla replica primaria non è attiva.  
   
  **Risoluzione:**  
@@ -129,7 +129,7 @@ ms.locfileid: "79286995"
   
 2.  Controllare se l'account del servizio di rete dispone di autorizzazione CONNECT all'endpoint.  
   
-##  <a name="ROR"></a> Il routing di sola lettura non funziona correttamente  
+##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a> Il routing di sola lettura non funziona correttamente  
  Verificare le seguenti impostazioni relative ai valori di configurazione e correggerle se necessario.  
   
 ||In...|Azione|Commenti|Collegamento|  
@@ -141,7 +141,7 @@ ms.locfileid: "79286995"
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|Verificare che READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) contenga il nome di dominio completo (FQDN) e il numero di porta corretti.|-|[Calcolo di read_only_routing_url per Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Sistema client|Verificare che il driver client supporti il routing di sola lettura.|-|[Connettività client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -157,13 +157,13 @@ ms.locfileid: "79286995"
   
 -   [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

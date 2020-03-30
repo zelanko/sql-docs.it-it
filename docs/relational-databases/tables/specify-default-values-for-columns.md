@@ -1,7 +1,7 @@
 ---
 title: Specificare valori predefiniti per le colonne | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74200493"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448486"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
 
@@ -33,7 +33,7 @@ Se non si assegna un valore predefinito alla colonna e l'utente lascia la colonn
 
 - Se non è stata impostata l'opzione che consente l'immissione di valori Null, la colonna resterà vuota, ma non sarà possibile salvare la riga senza avere fornito un valore per la colonna.
 
-## <a name="Restrictions"></a> Limitazioni e restrizioni
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni
 
 Prima di iniziare, tenere presenti le limitazioni e le restrizioni seguenti:
 
@@ -45,11 +45,11 @@ Prima di iniziare, tenere presenti le limitazioni e le restrizioni seguenti:
 
 - Per specificare un oggetto o una funzione, immetterne il nome senza racchiuderlo tra virgolette.
 
-### <a name="Security"></a> Autorizzazioni di sicurezza
+### <a name="security-permissions"></a><a name="Security"></a> Autorizzazioni di sicurezza
 
 Per le azioni descritte in questo articolo è necessaria l'autorizzazione ALTER per la tabella.
 
-## <a name="SSMSProcedure"></a> Usare SSMS per specificare un valore predefinito
+## <a name="use-ssms-to-specify-a-default"></a><a name="SSMSProcedure"></a> Usare SSMS per specificare un valore predefinito
 
 È possibile usare Esplora oggetti per specificare un valore predefinito per una colonna della tabella.
 
@@ -66,7 +66,7 @@ Per le azioni descritte in questo articolo è necessaria l'autorizzazione ALTER 
 
 4. Nel menu **File** fare clic su **Salva** _nome tabella_.
 
-## <a name="TsqlProcedure"></a> Usare Transact-SQL per specificare un valore predefinito
+## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> Usare Transact-SQL per specificare un valore predefinito
 
 Esistono vari modi per specificare un valore predefinito per una colonna usando SSMS per inviare T-SQL.
 
@@ -84,7 +84,7 @@ Esistono vari modi per specificare un valore predefinito per una colonna usando 
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -106,7 +106,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).

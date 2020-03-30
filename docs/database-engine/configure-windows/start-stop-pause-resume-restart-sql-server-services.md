@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946727"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server
@@ -121,7 +121,7 @@ Poiché Gestione configurazione SQL Server è uno snap-in per il programma Micro
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> Per avviare, arrestare, sospendere, riprendere o riavviare un'istanza del motore di database di SQL Server
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="configmande"></a> Per avviare, arrestare, sospendere, riprendere o riavviare un'istanza del motore di database di SQL Server
 
 1. Avviare Gestione configurazione SQL Server seguendo le istruzioni sopra riportate.
 
@@ -153,7 +153,7 @@ Poiché Gestione configurazione SQL Server è uno snap-in per il programma Micro
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-### <a name="ssmsde"></a> Per avviare, arrestare, sospendere, riprendere o riavviare un'istanza del motore di database di SQL Server
+### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="ssmsde"></a> Per avviare, arrestare, sospendere, riprendere o riavviare un'istanza del motore di database di SQL Server
 
 1. In Esplora oggetti connettersi all'istanza del motore di database, fare clic con il pulsante destro del mouse sull'istanza del motore di database da avviare e quindi scegliere **Avvia**, **Arresta**, **Sospendi**, **Riprendi** o **Riavvia**.
 
@@ -171,11 +171,11 @@ Poiché Gestione configurazione SQL Server è uno snap-in per il programma Micro
 
 3. Quando viene richiesto se si vuole intervenire, fare clic su **Sì**.
 
-## <a name="CommandPrompt"></a> Uso dei comandi net dalla finestra del prompt dei comandi
+## <a name="command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a> Uso dei comandi net dalla finestra del prompt dei comandi
 
 I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi usando i comandi **net** di Microsoft Windows.
 
-### <a name="dbDefault"></a> Per avviare l'istanza predefinita del motore di database
+### <a name="to-start-the-default-instance-of-the-database-engine"></a><a name="dbDefault"></a> Per avviare l'istanza predefinita del motore di database
 
 - Al prompt dei comandi digitare uno dei comandi seguenti:  
   
@@ -185,7 +185,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> Per avviare un'istanza denominata del motore di database
+### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Per avviare un'istanza denominata del motore di database
 
 - Al prompt dei comandi digitare uno dei comandi seguenti. Sostituire *\<instancename>* con il nome dell'istanza da gestire.  
   
@@ -195,7 +195,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
   
     **net start MSSQL$** *instancename*  
   
-### <a name="dbStartup"></a> Per avviare il motore di database con le opzioni di avvio  
+### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> Per avviare il motore di database con le opzioni di avvio  
 
 - Aggiungere le opzioni di avvio alla fine dell'istruzione **net start "SQL Server (MSSQLSERVER)"** , separate da uno spazio. Quando vengono avviate con **net start**, le opzioni di avvio usano una barra (/) anziché un trattino (-).  
   
@@ -208,7 +208,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
   > [!NOTE]
   >  Per altre informazioni sulle opzioni di avvio, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> Per avviare SQL Server Agent nell'istanza predefinita di SQL Server
+###  <a name="to-start-the-sql-server-agent-on-the-default-instance-of-sql-server"></a><a name="agDefault"></a> Per avviare SQL Server Agent nell'istanza predefinita di SQL Server
   
 - Al prompt dei comandi digitare uno dei comandi seguenti:  
   
@@ -218,7 +218,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
   
     **net start SQLSERVERAGENT**
   
-###  <a name="agNamed"></a> Per avviare SQL Server Agent in un'istanza denominata di SQL Server  
+###  <a name="to-start-the-sql-server-agent-on-a-named-instance-of-sql-server"></a><a name="agNamed"></a> Per avviare SQL Server Agent in un'istanza denominata di SQL Server  
   
 - Al prompt dei comandi digitare uno dei comandi seguenti. Sostituire *instancename* con il nome dell'istanza da gestire.  
   
@@ -230,7 +230,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
   
  Per informazioni sull'esecuzione di SQL Server Agent in modalità dettagliata per la risoluzione dei problemi, vedere [Applicazione sqlagent90](../../tools/sqlagent90-application.md).  
 
-### <a name="Browser"></a> Per avviare il servizio SQL Server Browser  
+### <a name="to-start-the-sql-server-browser"></a><a name="Browser"></a> Per avviare il servizio SQL Server Browser  
 
 - Al prompt dei comandi digitare uno dei comandi seguenti:  
   
@@ -240,7 +240,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
   
     **net start SQLBrowser**
   
-### <a name="pauseStop"></a> Per sospendere o arrestare servizi dalla finestra del prompt dei comandi  
+### <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> Per sospendere o arrestare servizi dalla finestra del prompt dei comandi  
 
 - Per sospendere o arrestare servizi, modificare i comandi nei modi seguenti.  
 
@@ -248,7 +248,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
 
 - Per arrestare un servizio, sostituire **net start** con **net stop**.  
 
-## <a name="TsqlProcedure"></a> Transact-SQL
+## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
 È possibile arrestare il motore di database tramite l'istruzione **SHUTDOWN**.  
 
@@ -268,7 +268,7 @@ I servizi di Microsoft SQL Server possono essere avviati, arrestati o sospesi us
 
 Per altre informazioni sull'istruzione **SHUTDOWN**, vedere [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md).  
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 ### <a name="to-start-and-stop-database-engine-services"></a>Per avviare e arrestare i servizi del motore di database
 

@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064678"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -57,10 +57,10 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>Argomenti  
  *ConversationPriorityName*  
- Specifica il nome per la priorità di conversazione. Il nome deve essere univoco nel database corrente e deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Specifica il nome per la priorità di conversazione. Il nome deve essere univoco nel database corrente e deve essere conforme alle regole per gli [!INCLUDE[ssDE](../../includes/ssde-md.md)]identificatori[ di ](../../relational-databases/databases/database-identifiers.md).  
   
  SET  
- Specifica i criteri per determinare se la priorità di conversazione si applica a una conversazione. Se specificato, SET deve contenere almeno un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL. Se SET non è specificato, per tutti e tre i criteri vengono utilizzate le impostazioni predefinite.  
+ Specifica i criteri per determinare se la priorità di conversazione si applica a una conversazione. Se specificato, l'argomento SET deve contenere almeno un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL. Se SET non è specificato, per tutti e tre i criteri vengono utilizzate le impostazioni predefinite.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Viene specificato il nome di un contratto da utilizzare come criterio per determinare se la priorità di conversazione si applica a una conversazione. *ContractName* è un identificatore [!INCLUDE[ssDE](../../includes/ssde-md.md)] e deve specificare il nome di un contratto nel database corrente.  
@@ -218,7 +218,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ```  
   
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. Creazione di tre livelli di priorità per un servizio di destinazione utilizzando i servizi  
- L'esempio seguente supporta un sistema che offre tre livelli di prestazione: Gold (elevato), Silver (medio) e Bronze (basso). È presente un contratto, ma ogni livello prevede un servizio Initiator separato. Tutti i servizi Initiator comunicano con un servizio di destinazione centrale.  
+ L'esempio seguente supporta un sistema che fornisce tre livelli di prestazione: Gold (più elevato), Silver (medio) e Bronze (più basso). È presente un contratto, ma ogni livello prevede un servizio Initiator separato. Tutti i servizi Initiator comunicano con un servizio di destinazione centrale.  
   
 ```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
@@ -260,7 +260,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ```  
   
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. Creazione di tre livelli di priorità per più servizi utilizzando i contratti  
- L'esempio seguente supporta un sistema che offre tre livelli di prestazione: Gold (elevato), Silver (medio) e Bronze (basso). Per ogni livello è presente un contratto separato. Queste priorità si applicano a qualsiasi servizio a cui fanno riferimento le conversazioni che utilizzano i contratti.  
+ L'esempio seguente supporta un sistema che fornisce tre livelli di prestazione: Gold (più elevato), Silver (medio) e Bronze (più basso). Per ogni livello è presente un contratto separato. Queste priorità si applicano a qualsiasi servizio a cui fanno riferimento le conversazioni che utilizzano i contratti.  
   
 ```sql  
 CREATE BROKER PRIORITY GoldPriority  

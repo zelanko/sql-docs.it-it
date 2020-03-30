@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287176"
 ---
 # <a name="snapshot-replication"></a>Replica snapshot
@@ -50,7 +50,7 @@ ms.locfileid: "76287176"
   
  [Agenti di distribuzione e di merge](#DistAgent)  
   
-##  <a name="HowWorks"></a> Funzionamento della replica snapshot  
+##  <a name="how-snapshot-replication-works"></a><a name="HowWorks"></a> Funzionamento della replica snapshot  
  Per impostazione predefinita, tutti e tre i tipi di replica utilizzano uno snapshot per inizializzare i Sottoscrittori. L'agente snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera sempre file di snapshot ma l'agente che recapita i file varia a seconda del tipo di replica in uso. La replica snapshot e la replica transazionale utilizzano l'agente di distribuzione per recapitare i file, mentre la replica di tipo merge utilizza l'agente di merge di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'agente snapshot viene eseguito nel server di distribuzione. L'agente di distribuzione e l'agente di merge vengono eseguiti nel database di distribuzione per le sottoscrizioni push o nei Sottoscrittori per le sottoscrizioni pull.  
   
  Gli snapshot possono essere generati e applicati immediatamente dopo la creazione della sottoscrizione oppure in base a un set di pianificazioni durante la creazione della pubblicazione. L'agente snapshot prepara i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, archivia i file nella cartella snapshot del server di pubblicazione e registra le informazioni di rilevamento nel database di distribuzione del server di distribuzione. Durante la configurazione di un database di distribuzione viene specificata una cartella snapshot predefinita, ma è anche possibile indicare una posizione alternativa per una pubblicazione in aggiunta a quella predefinita o al posto di questa.  
@@ -61,7 +61,7 @@ ms.locfileid: "76287176"
   
  ![Componenti e flusso di dati per la replica snapshot](../../relational-databases/replication/media/snapshot.gif "Componenti e flusso di dati per la replica snapshot")  
   
-##  <a name="SnapshotAgent"></a> agente snapshot  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> agente snapshot  
  Per la replica di tipo merge, viene generato uno snapshot a ogni esecuzione dell'agente snapshot. Per la replica transazionale, la generazione dello snapshot dipende dall'impostazione della proprietà di pubblicazione **immediate_sync**. Se tale proprietà è impostata su TRUE, ovvero il valore predefinito quando si utilizza la Creazione guidata nuova pubblicazione, viene generato uno snapshot ogni volta che viene eseguito l'agente snapshot, che può essere applicato a un Sottoscrittore in qualsiasi momento. Se invece è impostata su FALSE, ovvero il valore predefinito quando si utilizza **sp_addpublication**, lo snapshot viene generato solo se è stata aggiunta una nuova sottoscrizione dopo l'ultima esecuzione dell'agente snapshot. Per poter eseguire la sincronizzazione, è necessario che i sottoscrittori attendano il completamento dell'agente snapshot.  
   
  L'agente snapshot esegue la procedura seguente:  
@@ -86,7 +86,7 @@ ms.locfileid: "76287176"
   
  Durante la generazione degli snapshot, non è possibile apportare modifiche di schema nelle tabelle pubblicate. Dopo avere generato i file di snapshot, è possibile visualizzarli nella cartella snapshot tramite Esplora risorse.  
   
-##  <a name="DistAgent"></a> Agente di distribuzione e di merge  
+##  <a name="distribution-agent-and-merge-agent"></a><a name="DistAgent"></a> Agente di distribuzione e di merge  
  Per le applicazioni snapshot, ogni volta che l'agente di distribuzione viene eseguito per la pubblicazione, un nuovo snapshot viene spostato in ogni Sottoscrittore che non è stato ancora sincronizzato, è stato contrassegnato per la reinizializzazione o include nuovi articoli.  
   
  Per la replica snapshot e transazionale, l'agente di distribuzione esegue la procedura seguente:  

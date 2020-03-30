@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297732"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216898"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
 
@@ -58,7 +58,7 @@ ms.locfileid: "71297732"
   
 5.  Trascinare un **componente di origine** dalla casella degli strumenti alla **finestra di progettazione del flusso di dati** e configurarlo per estrarre dati da un'origine dati.  
   
-    1.  Ai fini della procedura dettagliata, creare un database di test **TestDB** con una tabella **Employee**. Creare la tabella con tre colonne, **ID**, **Nome** e **Cognome**.  
+    1.  Ai fini della procedura dettagliata, creare un database di prova **TestDB** con una tabella **Dipendente**. Creare la tabella con tre colonne, **ID**, **Nome** e **Cognome**.  
   
     2.  Impostare **ID** come chiave primaria.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71297732"
   
     2.  Seguire le istruzioni della procedura guidata per distribuire il progetto nel catalogo SSIS nel server di database locale. L'esempio seguente usa **Power BI** come nome della cartella e **SSISPackagePublishing** come nome del progetto nel catalogo SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Passaggio 2: Usare la Pubblicazione guidata di feed di dati di SSIS per pubblicare il pacchetto SSIS come vista SQL  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Passaggio 2: Usare la Pubblicazione guidata di feed di dati di SSIS per pubblicare il pacchetto SSIS come vista SQL.  
  In questo passaggio verrà usata la Pubblicazione guidata di feed di dati di SQL Server Integration Services (SSIS) per pubblicare il pacchetto SSIS come vista in un database di SQL Server. I dati di output del pacchetto possono essere utilizzati eseguendo query in questa vista.  
   
  La Pubblicazione guidata di feed di dati di SSIS crea un server collegato usando il provider OLE DB per SSIS (SSISOLEDB) e quindi crea una vista SQL costituita da una query di tale server. La query include il nome della cartella, il nome del progetto e il nome del pacchetto nel catalogo SSIS.  
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   Parentesi quadre sinistra e destra ([ and ]): questi caratteri vengono usati per indicare gli spazi iniziale e finale. Ad esempio, "[ alcuni spazi ]" rappresenta la stringa " alcuni spazi " con uno spazio iniziale e uno finale. Se questi caratteri vengono usati nella clausola di query, è necessario sottoporli a escape. Ad esempio \\[ e \\].  
   
 -   Barra (\\): ogni barra usata nella clausola di query deve usare il carattere di escape. Ad esempio, \\\ viene valutato come \ nella clausola di query.  
-  
- Barra (\\): ogni barra usata nella clausola di query deve usare il carattere di escape. Ad esempio, \\\ viene valutato come \ nella clausola di query.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione flusso di dati](../../integration-services/data-flow/data-streaming-destination.md)   

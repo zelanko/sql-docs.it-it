@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548277"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -226,7 +226,7 @@ DELETE
 |[Eliminazione di righe da una tabella remota](#RemoteTables)|Server collegato • funzione per set di righe OPENQUERY • funzione per set di righe OPENDATASOURCE|  
 |[Acquisizione dei risultati dell'istruzione DELETE](#CaptureResults)|Clausola OUTPUT|  
   
-###  <a name="BasicSyntax"></a> Sintassi di base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione DELETE tramite la sintassi minima richiesta.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>R. Utilizzo di DELETE senza una clausola WHERE  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a>Limitazione delle righe eliminate  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a>Limitazione delle righe eliminate  
  Negli esempi riportati in questa sezione viene illustrato come limitare il numero di righe che verranno eliminate.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilizzo della clausola WHERE per eliminare un set di righe  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Eliminazione di righe da una tabella remota  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Eliminazione di righe da una tabella remota  
  Negli esempi riportati in questa sezione viene illustrato come eliminare righe da una tabella remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../../t-sql/functions/rowset-functions-transact-sql.md) per fare riferimento alla tabella remota. Esiste una tabella remota in un server diverso o un'istanza di SQL Server.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> Acquisizione dei risultati dell'istruzione DELETE  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Acquisizione dei risultati dell'istruzione DELETE  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Utilizzo di DELETE con la clausola OUTPUT  
  Nell'esempio seguente viene illustrato come salvare i risultati di un'istruzione `DELETE` in una variabile di tabella nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Eliminare tutte le righe di una tabella  
  Nell'esempio seguente vengono eliminate tutte le righe dalla tabella `Table1` perché non viene utilizzata una clausola WHERE per limitare il numero di righe eliminate.  

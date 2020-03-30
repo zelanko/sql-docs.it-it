@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908874"
 ---
 # <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908874"
     > [!NOTE]  
     >  In alternativa, è possibile attivare manualmente la modalità offline per il file prima di eseguire la sequenza di ripristino. Per ulteriori informazioni, vedere "Attivazione della modalità offline per un database o un file" di seguito in questo argomento.  
   
-##  <a name="taking_db_or_file_offline"></a> Attivazione della modalità offline per un database o un file  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Attivazione della modalità offline per un database o un file  
  Se non si desidera utilizzare il ripristino online, è possibile attivare la modalità offline per il database prima di avviare la sequenza di ripristino utilizzando una delle modalità seguenti:  
   
 -   Con qualsiasi modello di recupero è possibile attivare la modalità offline per il database utilizzando l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) seguente:  
@@ -95,7 +95,7 @@ ms.locfileid: "72908874"
   
 -   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Ripristino di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

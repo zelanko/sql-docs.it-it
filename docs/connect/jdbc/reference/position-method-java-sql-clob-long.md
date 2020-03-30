@@ -16,10 +16,10 @@ ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57b9af31e7701633e7cd73e8aaf0eb498b26c02c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976412"
 ---
 # <a name="position-method-javasqlclob-long"></a>Metodo position (java.sql.Clob, long)

@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287838"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,7 +109,7 @@ Se utilizzato all'esterno di un modulo, l'istruzione non esegue alcuna azione.
   
 È possibile creare uno stack di contesti di esecuzione eseguendo più volte una chiamata all'istruzione EXECUTE AS in più entità. Quando viene chiamata, l'istruzione REVERT imposta il contesto sull'account di accesso o sull'utente nel successivo livello superiore nello stack di contesti. Per una dimostrazione di questo comportamento, vedere l'[esempio A](#_exampleA).  
   
-##  <a name="_user"></a> Indicazione di un nome utente o di un ID di accesso  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Indicazione di un nome utente o di un ID di accesso  
  Il nome utente o l'ID di accesso specificato in EXECUTE AS \<context_specification> deve esistere come entità rispettivamente in **sys.database_principals** o **sys.server_principals**. In caso contrario, l'istruzione EXECUTE AS ha esito negativo. È inoltre necessario concedere le autorizzazioni IMPERSONATE per l'entità. A meno che il chiamante non sia il proprietario del database o membro del ruolo predefinito del server **sysadmin**, l'entità deve esistere anche quando l'utente effettua l'accesso al database o all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'appartenenza a un gruppo di Windows. Si suppongano ad esempio le condizioni seguenti: 
   
 -   Il gruppo **CompanyDomain\SQLUsers** ha accesso al database **Sales**.  
@@ -141,7 +141,7 @@ Se l'utente è reso orfano, ovvero se l'accesso associato non esiste più, e non
   
 ## <a name="examples"></a>Esempi  
   
-###  <a name="_exampleA"></a> A. Utilizzo di EXECUTE AS e REVERT per cambiare contesto  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Utilizzo di EXECUTE AS e REVERT per cambiare contesto  
  Nell'esempio seguente viene creato uno stack di contesti di esecuzione utilizzando più entità. Viene quindi utilizzata l'istruzione `REVERT` per ripristinare il contesto di esecuzione al chiamante precedente. L'istruzione `REVERT` viene eseguita più volte per innalzare di livello lo stack finché il contesto di esecuzione viene impostato sul chiamante originale.  
   
 ```  

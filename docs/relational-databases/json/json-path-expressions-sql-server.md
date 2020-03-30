@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095740"
 ---
 # <a name="json-path-expressions-sql-server"></a>Espressioni di percorso JSON (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74095740"
   
 2.  Il [percorso](#PATH) stesso.  
 
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  All'inizio dell'espressione di percorso, è possibile dichiarare la modalità percorso specificando la parola chiave **lax** o **strict**. Il valore predefinito è **lax**.  
   
 -   Nella modalità **lax** la funzione restituisce valori vuoti se l'espressione di percorso contiene un errore. Se ad esempio si richiede il valore **$.name** e il testo JSON non contiene una chiave **name**, la funzione restituisce Null ma non genera un errore.  
@@ -58,7 +58,7 @@ SET @json=N'{ ... }'
 SELECT * FROM OPENJSON(@json, N'lax $.info')
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  Dopo la dichiarazione facoltativa della modalità percorso, specificare il percorso stesso.  
   
 -   Il segno di dollaro (`$`) rappresenta l'elemento contesto.  

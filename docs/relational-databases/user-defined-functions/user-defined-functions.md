@@ -17,17 +17,17 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78370544"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   In modo analogo alle funzioni dei linguaggi di programmazione, le funzioni definite dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono routine che accettano parametri, eseguono un'azione (ad esempio un calcolo complesso) e restituiscono il risultato dell'azione sotto forma di valore. Il valore restituito può essere un valore scalare singolo o un set di risultati.  
    
-##  <a name="Benefits"></a> Funzioni definite dall'utente  
+##  <a name="user-defined-functions"></a><a name="Benefits"></a> Funzioni definite dall'utente  
 Vantaggi delle funzioni definite dall'utente 
   
 -   Consentono la programmazione modulare.  
@@ -47,7 +47,7 @@ Vantaggi delle funzioni definite dall'utente
 > [!IMPORTANT]
 > Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente nelle query possono essere eseguite solo su un solo thread (piano di esecuzione seriale). Non è quindi possibile un'elaborazione parallela delle query se si usano le funzioni definite dall'utente. Per altre informazioni sull'elaborazione parallela delle query, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
   
-##  <a name="FunctionTypes"></a> Tipi di funzioni  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> Tipi di funzioni  
 **Funzioni scalari**  
  Le funzioni scalari definite dall'utente restituiscono un singolo valore di dati del tipo definito nella clausola RETURNS. Per una funzione scalare inline, il valore scalare restituito corrisponde al risultato di una singola istruzione. Per una funzione scalare con istruzioni multiple, il corpo della funzione può contenere una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un solo valore. Il tipo restituito può essere qualsiasi tipo di dati ad eccezione di **text**, **ntext**, **image**, **cursor**e **timestamp**. 
  **[Esempi.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
@@ -58,7 +58,7 @@ Vantaggi delle funzioni definite dall'utente
 **Funzioni di sistema**  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili molte funzioni di sistema che è possibile utilizzare per eseguire diverse operazioni. Tali funzioni non possono essere modificate. Per altre informazioni, vedere [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funzioni archiviate di sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md), and [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-##  <a name="Guidelines"></a> Linee guida  
+##  <a name="guidelines"></a><a name="Guidelines"></a> Linee guida  
  Gli errori [!INCLUDE[tsql](../../includes/tsql-md.md)] che causano l'annullamento di un'istruzione e l'esecuzione dell'istruzione successiva nel modulo (ad esempio trigger o stored procedure) vengono trattati in modo diverso all'interno di una funzione. Nelle funzioni tali errori arrestano l'esecuzione della funzione, che a sua volta comporta l'interruzione dell'istruzione che ha richiamato la funzione.  
   
  Le istruzioni in un blocco `BEGIN...END` non possono avere effetti collaterali. Gli effetti collaterali di una funzione sono le modifiche permanenti allo stato di una risorsa il cui ambito è al di fuori della funzione, ad esempio la modifica di una tabella di database. Le uniche modifiche che possono essere apportate dalle istruzioni nella funzione sono le modifiche agli oggetti locali rispetto alla funzione, ad esempio variabili o cursori locali. Modifiche a tabelle di database, operazioni su cursori che non sono locali rispetto alla funzione, invio di messaggi di posta elettronica, tentativi di modifica del catalogo e generazione di un set di risultati da restituire all'utente sono esempi di azioni che non possono essere eseguite in una funzione.  
@@ -71,7 +71,7 @@ Vantaggi delle funzioni definite dall'utente
 > [!IMPORTANT]   
 > Per altre informazioni e considerazioni sulle prestazioni sulle funzioni definite dall'utente, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
   
-##  <a name="ValidStatements"></a> Istruzioni valide in una funzione  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a> Istruzioni valide in una funzione  
 I tipi di istruzioni valide in una funzione sono i seguenti:  
   
 -   Istruzioni `DECLARE` per definire variabili di dati e cursori locali rispetto alla funzione.  
@@ -112,7 +112,7 @@ I tipi di istruzioni valide in una funzione sono i seguenti:
   
  Per un elenco delle funzioni di sistema predefinite deterministiche e non deterministiche, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a> Funzioni associate a schema  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> Funzioni associate a schema  
  L'istruzione `CREATE FUNCTION` supporta la clausola `SCHEMABINDING` che associa la funzione allo schema degli oggetti a cui fa riferimento, ad esempio tabelle, viste e altre funzioni definite dall'utente. I tentativi di modifica o eliminazione degli oggetti a cui fa riferimento una funzione associata a schema hanno esito negativo.  
   
  Per poter specificare `SCHEMABINDING` in un'istruzione [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) devono essere soddisfatte le condizioni seguenti:  
@@ -125,10 +125,10 @@ I tipi di istruzioni valide in una funzione sono i seguenti:
   
  È possibile usare l'istruzione `ALTER FUNCTION` per rimuovere l'associazione allo schema. L'istruzione `ALTER FUNCTION` deve ridefinire la funzione senza specificare `WITH SCHEMABINDING`.  
   
-##  <a name="Parameters"></a> Specifica dei parametri  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a> Specifica dei parametri  
  Le funzioni definite dall'utente accettano zero o più parametri di input e restituiscono tabelle o valori scalari. Una funzione può avere al massimo 1024 parametri di input. Quando a un parametro della funzione è associato un valore predefinito, quando si chiama la funzione è necessario specificare la parola chiave DEFAULT per ottenere il valore predefinito. Questa funzionalità risulta diversa per i parametri con valore predefinito nelle stored procedure definite dall'utente in cui l'omissione del parametro implica l'utilizzo del valore predefinito. Le funzioni definite dall'utente non supportano parametri di output.  
   
-##  <a name="Tasks"></a> Altri esempi  
+##  <a name="more-examples"></a><a name="Tasks"></a> Altri esempi  
   
 |||  
 |-|-|  

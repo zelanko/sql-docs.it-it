@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680817"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Informazioni sull'importazione ed esportazione bulk di dati (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "71680817"
 - Per*esportazione bulk* si intende la copia di dati da una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati.
 - L'*importazione in blocco* indica il caricamento di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ad esempio, è possibile esportare dati da un'applicazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel in un file di dati e quindi eseguire l'importazione bulk di tali dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-## <a name="MethodsForBuliIE"></a> Metodi di importazione ed esportazione bulk di dati
+## <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a> Metodi di importazione ed esportazione bulk di dati
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esportazione bulk dei dati da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'importazione bulk dei dati in una tabella o in una vista non partizionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sono disponibili le modalità di base seguenti.
 
@@ -58,7 +58,7 @@ ms.locfileid: "71680817"
 > [!NOTE]
 > Per l'importazione e l'esportazione di file delimitati, Azure SQL DW supporta solo l'utilità bcp.
 
-## <a name="FFs"></a> File di formato
+## <a name="format-files"></a><a name="FFs"></a> File di formato
 
 [utilità bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) supportano l'uso di un *file di formato* specializzato che archivia le informazioni sul formato di ogni campo in un file di dati. Un file di formato può inoltre contenere informazioni sulla tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente. Il file di formato può essere utilizzato per specificare tutte le informazioni sul formato necessarie per l'esportazione e l'importazione bulk dei dati da e verso un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

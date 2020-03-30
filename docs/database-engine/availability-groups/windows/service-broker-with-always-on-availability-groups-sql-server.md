@@ -14,10 +14,10 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822616"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker con i gruppi di disponibilità Always On (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822616"
   In questo argomento sono contenute informazioni sulla configurazione di Service Broker per poter utilizzarlo con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
   
-##  <a name="ReceiveRemoteMessages"></a> Requisiti necessari affinché i messaggi remoti vengano ricevuti da un servizio in un gruppo di disponibilità  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a> Requisiti necessari affinché i messaggi remoti vengano ricevuti da un servizio in un gruppo di disponibilità  
   
 1.  **Assicurarsi che nel gruppo di disponibilità sia disponibile un listener.**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74822616"
   
      Per informazioni sulla creazione di route, vedere [Esempi di routing di Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) nella versione [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] della documentazione online e [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   
-##  <a name="SendRemoteMessages"></a> Requisiti per inviare messaggi a un servizio remoto in un gruppo di disponibilità  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a> Requisiti per inviare messaggi a un servizio remoto in un gruppo di disponibilità  
   
 1.  **Creare una route al servizio di destinazione.**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "74822616"
   
 2.  **Assicurarsi che msdb contenga una route AutoCreatedLocal o una route al servizio specifico.** Per altre informazioni, vedere [Requisiti necessari affinché i messaggi remoti vengano ricevuti da un servizio in un gruppo di disponibilità](#ReceiveRemoteMessages)più indietro in questo argomento.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   

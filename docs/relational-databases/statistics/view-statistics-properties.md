@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908019"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
@@ -38,14 +38,14 @@ ms.locfileid: "72908019"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per visualizzare l'oggetto statistiche, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** o **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72908019"
      Consente di visualizzare il nome dell'oggetto di database in cui sono archiviate le statistiche.  
   
      **Statistiche per l'indice nome_statistiche**  
-     Questa casella di testo consente di visualizzare le proprietà restituite dall'oggetto statistiche. Queste proprietà sono divise in tre sezioni: Stats Header, Density Vector, and Histogram (Intestazione statistiche, Vettore di densità e Istogramma).  
+     Questa casella di testo consente di visualizzare le proprietà restituite dall'oggetto statistiche. Queste proprietà sono divise in tre sezioni: intestazione delle statistiche, vettore di densità e istogramma.  
   
      Tramite le informazioni seguenti vengono descritte le colonne restituite nel set di risultati per l'intestazione delle statistiche.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72908019"
      Tramite le informazioni seguenti vengono descritte le colonne restituite nel set di risultati per il vettore di densità.  
   
      **All Density**  
-     Il valore Density viene calcolato come 1/ *valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A,B) e (A, B, C). Usando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Usando il prefisso (A, B) agli stessi valori di colonna sono associati gli elenchi di valori distinct (3, 5), (4, 4), e (4, 5).  
+     Il valore Density viene calcolato come 1/ *valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A, B) e (A, B, C). Utilizzando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Utilizzando il prefisso (A, B), agli stessi valori di colonna sono associati elenchi di valori distinti (3, 5), (4, 4) e (4, 5).  
   
      **Average Length**  
      Lunghezza media, in byte, per archiviare un elenco di valori di colonna per il prefisso di colonna. Se per ogni valore presente nell'elenco (3, 5, 6), ad esempio, sono necessari 4 byte, la lunghezza media è di 12 byte.  
@@ -134,7 +134,7 @@ ms.locfileid: "72908019"
   
 7.  Fare clic su **OK**.  
 
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   

@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055944"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
@@ -31,7 +31,7 @@ Il servizio Utilità di avvio del daemon filtri full-text di SQL viene usato dal
   
 Il servizio Utilità di avvio del daemon filtri full-text di SQL è un servizio specifico dell'istanza associato a una determinata istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tale servizio propaga le informazioni sull'account del servizio a ogni processo host del daemon di filtri che avvia.  
 
-##  <a name="setting"></a> Impostare l'account del servizio  
+##  <a name="set-the-service-account"></a><a name="setting"></a> Impostare l'account del servizio  
   
 1.  Nel menu **Start** scegliere **Tutti i programmi**, espandere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e quindi fare clic su **Gestione configurazione SQL Server 2016**.  
   
@@ -43,7 +43,7 @@ Il servizio Utilità di avvio del daemon filtri full-text di SQL è un servizio 
   
 ![Proprietà del processo di avvio del daemon filtri full-text di SQL](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> Risolvere i problemi di avvio del servizio Utilità di avvio del daemon filtri full-text di SQL  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> Risolvere i problemi di avvio del servizio Utilità di avvio del daemon filtri full-text di SQL  
  Se il servizio Utilità di avvio del daemon filtri full-text di SQL non viene avviato, verificare le possibili cause seguenti:  
   
 ### <a name="permissions-issues"></a>Problemi con le autorizzazioni
