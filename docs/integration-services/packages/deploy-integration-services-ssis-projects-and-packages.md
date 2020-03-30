@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286825"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
@@ -131,7 +131,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 4.  (Facoltativo) Creare un ambiente per il progetto distribuito. 
   
-###  <a name="convert"></a> Per convertire un progetto nel modello di distribuzione del progetto  
+###  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a> Per convertire un progetto nel modello di distribuzione del progetto  
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], quindi in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Converti nel modello di distribuzione del progetto**.  
   
@@ -141,7 +141,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 2.  Completare la procedura guidata.
   
-###  <a name="deploy"></a> Per distribuire un progetto nel server Integration Services  
+###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> Per distribuire un progetto nel server Integration Services  
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], quindi scegliere **Distribuisci** dal menu **Progetto** per avviare la **Distribuzione guidata Integration Services**.  
   
@@ -164,7 +164,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
 ## <a name="deploy-packages-to-integration-services-server"></a>Distribuire pacchetti nel server Integration Services
   La funzionalità di distribuzione dei pacchetti incrementale introdotta in  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] consente di distribuire uno o più pacchetti in un progetto nuovo o esistente senza distribuire l'intero progetto.  
   
-###  <a name="DeployWizard"></a> Distribuire pacchetti con la Distribuzione guidata Integration Services  
+###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> Distribuire pacchetti con la Distribuzione guidata Integration Services  
   
 1.  Al prompt dei comandi eseguire **isdeploymentwizard.exe** da **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Nei computer a 64 bit è presente anche una versione a 32 bit dello strumento in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
@@ -172,7 +172,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 3.  Completare la procedura guidata. Eseguire i passaggi successivi descritti in [Modello di distribuzione del pacchetto](#PackageModel).  
   
-###  <a name="SSMS"></a> Distribuire pacchetti con SQL Server Management Studio  
+###  <a name="deploy-packages-by-using-sql-server-management-studio"></a><a name="SSMS"></a> Distribuire pacchetti con SQL Server Management Studio  
   
 1.  In SQL Server Management Studio espandere il nodo **Cataloghi di Integration Services** > **SSISDB** in Esplora oggetti.  
   
@@ -184,7 +184,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 5.  Completare la procedura guidata. Eseguire i passaggi successivi descritti in [Modello di distribuzione del pacchetto](#PackageModel).  
   
-###  <a name="SSDT"></a> Distribuire pacchetti con SQL Server Data Tools (Visual Studio)  
+###  <a name="deploy-packages-by-using-sql-server-data-tools-visual-studio"></a><a name="SSDT"></a> Distribuire pacchetti con SQL Server Data Tools (Visual Studio)  
   
 1.  In Visual Studio, con un progetto di Integration Services aperto, selezionare i pacchetti da distribuire.  
   
@@ -192,7 +192,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 3.  Completare la procedura guidata. Eseguire i passaggi successivi descritti in [Modello di distribuzione del pacchetto](#PackageModel).  
   
-###  <a name="StoredProcedure"></a> Distribuire i pacchetti usando la stored procedure deploy_packages  
+###  <a name="deploy-packages-by-using-the-deploy_packages-stored-procedure"></a><a name="StoredProcedure"></a> Distribuire i pacchetti usando la stored procedure deploy_packages  
  Si può usare la stored procedure **[catalog].[deploy_packages]** per distribuire uno o più pacchetti SSIS nel catalogo SSIS. L'esempio di codice seguente mostra come usare questa stored procedure per distribuire pacchetti in un server SSIS. Per altre informazioni, vedere [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md).  
   
 ```cs
@@ -235,7 +235,7 @@ private static void Main(string[] args)
   
 ```  
   
-###  <a name="MOMApi"></a> Distribuire pacchetti con l'API del modello a oggetti di gestione  
+###  <a name="deploy-packages-using-the-management-object-model-api"></a><a name="MOMApi"></a> Distribuire pacchetti con l'API del modello a oggetti di gestione  
  L'esempio di codice seguente mostra come usare l'API del modello a oggetti di gestione per distribuire pacchetti in un server.  
   
 ```cs 
@@ -304,7 +304,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
  
  Le impostazioni in questa pagina sono diverse per ogni modello di distribuzione. Seguire la procedura nella sezione [Project Deployment Model](#ProjectModel) o nella sezione [Package Deployment Model](#PackageModel) in base al modello selezionato in questa pagina.  
   
-###  <a name="ProjectModel"></a> Project Deployment Model  
+###  <a name="project-deployment-model"></a><a name="ProjectModel"></a> Project Deployment Model  
   
 #### <a name="select-source"></a>Selezionare l'origine
 
@@ -322,7 +322,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 
  Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **Salva report...** per salvare i risultati in un file XML oppure su **Chiudi** per uscire dalla procedura guidata.
   
-###  <a name="PackageModel"></a> Package Deployment Model  
+###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>Selezionare l'origine
 
@@ -555,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [Impostare le opzioni nella pagina Esegui conversione](#conversion)  
   
-###  <a name="open_dialog"></a> Aprire la Conversione guidata progetti di Integration Services  
+###  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a> Aprire la Conversione guidata progetti di Integration Services  
  Eseguire una delle operazioni seguenti per aprire la **Conversione guidata progetto di Integration Services** .  
   
 -   Aprire il progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], quindi in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Converti nel modello di distribuzione del progetto**.  
@@ -564,7 +564,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  Le diverse attività di conversione eseguite dalla **Conversione guidata progetto di Integration Services** variano a seconda che la procedura guidata venga eseguita da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
   
-###  <a name="locate"></a> Impostare le opzioni nella pagina Individua pacchetti  
+###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> Impostare le opzioni nella pagina Individua pacchetti  
   
 > [!NOTE]  
 >  La pagina **Individua pacchetti** è disponibile solo quando si esegue la procedura guidata da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Cartella**  
  Digitare il percorso del pacchetto o passare al pacchetto facendo clic su **Sfoglia**.  
   
-###  <a name="selectPackages"></a> Impostare le opzioni nella pagina Seleziona pacchetti  
+###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> Impostare le opzioni nella pagina Seleziona pacchetti  
  **Nome pacchetto**  
  Viene elencato il file del pacchetto.  
   
@@ -621,7 +621,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Aggiorna**  
  Viene aggiornato l'elenco dei pacchetti.  
   
-###  <a name="destination"></a> Impostare le opzioni nella pagina Seleziona destinazione  
+###  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a> Impostare le opzioni nella pagina Seleziona destinazione  
  In questa pagina specificare il nome e il percorso di un nuovo file di distribuzione progetto (con estensione ispac) o selezionare un file esistente.  
   
 > [!NOTE]  
@@ -639,7 +639,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Descrizione progetto**  
  Digitare una descrizione facoltativa per il progetto.  
   
-###  <a name="projectProperties"></a> Impostare le opzioni nella pagina Specificare le proprietà del progetto  
+###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> Impostare le opzioni nella pagina Specificare le proprietà del progetto  
   
 > [!NOTE]  
 >  La pagina **Specifica proprietà del progetto** è disponibile solo quando si esegue la procedura guidata da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
@@ -653,7 +653,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Descrizione progetto**  
  Digitare una descrizione facoltativa del progetto.  
   
-###  <a name="executePackage"></a> Impostare le opzioni nella pagina Aggiorna attività Esegui pacchetto  
+###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> Impostare le opzioni nella pagina Aggiorna attività Esegui pacchetto  
  Aggiornare le attività Esegui pacchetto contenute nei pacchetti al fine di utilizzare un riferimento basato sul progetto. Per altre informazioni, vedere [Editor attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task-editor.md).  
   
  **Pacchetto padre**  
@@ -668,7 +668,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Assegna riferimento**  
  Selezionare un pacchetto figlio archiviato nel progetto.  
   
-###  <a name="configurations"></a> Impostare le opzioni nella pagina Seleziona configurazioni  
+###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> Impostare le opzioni nella pagina Seleziona configurazioni  
  Selezionare le configurazioni del pacchetto che si desidera sostituire con i parametri.  
   
  **Pacchetto**  
@@ -694,7 +694,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  Se non si seleziona questa opzione, vengono rimosse solo le configurazioni selezionate per la sostituzione con i parametri.  
   
-###  <a name="createParameters"></a> Impostare le opzioni nella pagina Crea parametri  
+###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> Impostare le opzioni nella pagina Crea parametri  
  Selezionare il nome e l'ambito del parametro per ogni proprietà di configurazione.  
   
  **Pacchetto**  
@@ -706,7 +706,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Ambito**  
  Selezionare l'ambito del parametro, vale a dire pacchetto o progetto.  
   
-###  <a name="configureParameters"></a> Impostare le opzioni nella pagina Configura parametri  
+###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> Impostare le opzioni nella pagina Configura parametri  
  **Nome**  
  Viene elencato il nome del parametro.  
   
@@ -724,7 +724,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  Nella finestra di dialogo **Imposta dettagli parametri** sono inoltre elencati il tipo di dati del valore del parametro e l'origine del parametro.  
   
-###  <a name="review"></a> Impostare le opzioni nella pagina Verifica  
+###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> Impostare le opzioni nella pagina Verifica  
  Usare la pagina **Verifica** per confermare le opzioni selezionate per la conversione del progetto.  
   
  **Indietro**  
@@ -733,7 +733,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Converti**  
  Fare clic su questa opzione per convertire il progetto nel modello di distribuzione del progetto.  
   
-###  <a name="conversion"></a> Impostare le opzioni nella pagina Esegui conversione  
+###  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a> Impostare le opzioni nella pagina Esegui conversione  
  Nella pagina Esegui conversione viene mostrato lo stato della conversione del progetto.  
   
  **Azione**  

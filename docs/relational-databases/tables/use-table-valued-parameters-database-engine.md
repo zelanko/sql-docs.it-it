@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72796635"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utilizzare parametri con valori di tabella (Motore di database)
@@ -43,7 +43,7 @@ I parametri con valori di tabella sono analoghi alle matrici di parametri in OLE
 
 [Esempio](#Example)
 
-## <a name="Benefits"></a> Vantaggi
+## <a name="benefits"></a><a name="Benefits"></a> Vantaggi
 
 L'ambito di un parametro con valori di tabella è costituito dalla stored procedure, dalla funzione o dal testo [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamico, esattamente come per gli altri parametri. Analogamente, una variabile del tipo di tabella ha lo stesso ambito di qualsiasi altra variabile locale creata utilizzando un'istruzione DECLARE. È possibile dichiarare variabili con valori di tabella all'interno di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamiche e passarle come parametri con valori di tabella a stored procedure e funzioni.
 
@@ -58,10 +58,10 @@ I parametri con valori di tabella offrono maggiore flessibilità e, in alcuni ca
 - Consentono al client di specificare tipo di ordinamento e chiavi univoche.
 - Vengono memorizzati nella cache come una tabella temporanea quando vengono utilizzati in una stored procedure. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], anche i parametri con valori di tabella sono memorizzati nella cache per le query con parametri.
 
-## <a name="Permissions"></a> Autorizzazioni
+## <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 Per creare un'istanza di un tipo di tabella definito dall'utente o chiamare un stored procedure con un parametro con valori di tabella, l'utente deve avere l'autorizzazione EXECUTE per il tipo oppure per lo schema o il database che contiene il tipo.
 
-## <a name="Restrictions"></a> Restrizioni
+## <a name="restrictions"></a><a name="Restrictions"></a> Restrizioni
 
 Ai parametri con valori di tabella si applicano le restrizioni seguenti:
 
@@ -69,7 +69,7 @@ Ai parametri con valori di tabella si applicano le restrizioni seguenti:
 - I parametri con valori di tabella devono essere passati come parametri READONLY di input alle routine [!INCLUDE[tsql](../../includes/tsql-md.md)] . Non è possibile eseguire operazioni DML, ad esempio UPDATE, DELETE o INSERT, su un parametro con valori di tabella nel corpo di una routine.
 - Non è possibile utilizzare un parametro con valori di tabella come destinazione di un'istruzione SELECT INTO o INSERT EXEC. Un parametro con valori di tabella può essere incluso nella clausola FROM di un'istruzione SELECT INTO o nella stringa o stored procedure INSERT EXEC.
 
-## <a name="BulkInsert"></a> Parametri con valori di tabella  e operazioni BULK INSERT
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> Parametri con valori di tabella  e operazioni BULK INSERT
 
 L'utilizzo di parametri con valori di tabella è confrontabile con altre modalità di utilizzo di variabili basate su set, ma può spesso risultare più rapido nel caso di set di dati di notevoli dimensioni. Rispetto alle operazioni bulk, che comportano costi di avvio maggiori, i parametri con valori di tabella garantiscono livelli di prestazioni ottimali per operazioni di inserimento di non oltre 1.000 righe.
 
@@ -77,7 +77,7 @@ I parametri con valori di tabella riutilizzati possono sfruttare il vantaggio de
 
 I parametri con valori di tabella garantiscono livelli di prestazioni analoghi o migliori rispetto all'implementazione di una matrice di parametri equivalente.
 
-## <a name="Example"></a>Esempio
+## <a name="example"></a><a name="Example"></a>Esempio
 
 L'esempio seguente usa [!INCLUDE[tsql](../../includes/tsql-md.md)] e illustra come creare un tipo di parametro con valori di tabella, dichiarare una variabile per farvi riferimento, compilare l'elenco di parametri e quindi passare i valori a una stored procedure nel database AdventureWorks.
 

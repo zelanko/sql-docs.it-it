@@ -12,10 +12,10 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499941"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
@@ -113,7 +113,7 @@ ms.locfileid: "66499941"
   
 8.  Riavviare il server di report per cancellare qualsiasi sessione attualmente aperta.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Risoluzione degli errori di autenticazione Kerberos durante la connessione a un Server di Report  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> Risoluzione degli errori di autenticazione Kerberos durante la connessione a un Server di Report  
  In un server di report configurato per l'autenticazione con negoziazione o Kerberos, se si verifica un errore di autenticazione Kerberos la connessione client al server di report avrà esito negativo. Di seguito vengono riportate le condizioni che indicano la presenza di errori di autenticazione Kerberos:  
   
 -   Il servizio del server di report è in esecuzione come account utente di dominio di Windows, ma non è stato registrato un nome SPN per l'account.  

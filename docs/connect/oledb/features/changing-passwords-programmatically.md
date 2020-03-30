@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989128"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
@@ -42,7 +42,7 @@ ms.locfileid: "67989128"
   
 |Codice di errore di SQL Server|Messaggio di errore|  
 |---------------------------|-------------------|  
-|15113|Accesso non riuscito per l'utente '%.*ls' Motivo: Impossibile convalidare la password. L'account è bloccato.|  
+|15113|Accesso non riuscito per l'utente '%.*ls' Motivo: impossibile convalidare la password. L'account è bloccato.|  
 |18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. Impossibile utilizzare la password in questo momento.|  
 |18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
 |18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  

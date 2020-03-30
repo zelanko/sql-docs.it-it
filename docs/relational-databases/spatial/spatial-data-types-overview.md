@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048518"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
@@ -28,7 +28,7 @@ ms.locfileid: "68048518"
 Esistono due tipi di dati spaziali. Il tipo di dati **geometry** supporta dati planari o euclidei (terra piatta). Il tipo di dati **geometry** è conforme a Open Geospatial Consortium (OGC) Simple Features for SQL Specification versione 1.1.0 e a SQL MM (standard ISO).
 Inoltre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il tipo di dati **geography** , che archivia dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.
 
-##  <a name="objects"></a> Oggetti dati spaziali  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Oggetti dati spaziali  
 I tipi di dati **geometry** e **geography** supportano sedici oggetti dati spaziali o tipi di istanza. Solo per undici di questi tipi di istanza, tuttavia, è possibile *creare istanze*. È possibile creare e usare queste istanze (o crearne un'istanza) in un database. Queste istanze derivano determinate proprietà dai relativi tipi di dati padre che consentono di distinguerle come **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** o come più istanze di **geometry** o **geography** in un oggetto **GeometryCollection**. Il tipo**Geography** dispone di un tipo di istanza aggiuntivo, **FullGlobe**.  
 
 Nella figura seguente viene illustrata la gerarchia **geometry** sulla quale si basano i tipi di dati **geometry** e **geography** . I tipi di **geometry** e **geography** di cui è possibile creare istanze sono indicati in blu.  
@@ -53,7 +53,7 @@ I tipi di raccolta includono:
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> Differenze tra i tipi di dati geometry e geography  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Differenze tra i tipi di dati geometry e geography  
 I due tipi di dati spaziali si comportano spesso in modo simile, ma esistono alcune differenze fondamentali nel modo in cui i dati vengono archiviati e modificati.  
 
 ### <a name="how-connecting-edges-are-defined"></a>Definizione dei bordi di collegamento  
@@ -86,7 +86,7 @@ Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di segu
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Specifiche OGC, accesso semplificato alle caratteristiche Parte 2 - Opzioni SQL)  
 
-##  <a name="circular"></a> Segmenti di arco circolare  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Segmenti di arco circolare  
 Tre tipi di cui è possibile creare istanze possono accettare segmenti di arco circolare: **CircularString**, **CompoundCurve** e **CurvePolygon**.  Un segmento di arco circolare è definito da tre punti in un piano bidimensionale. Il terzo punto non può corrispondere al primo punto.  
 
 Nelle figure A e B vengono illustrati segmenti di arco circolare tipici. Si noti come ognuno dei tre punti giace sul perimetro di un cerchio.  

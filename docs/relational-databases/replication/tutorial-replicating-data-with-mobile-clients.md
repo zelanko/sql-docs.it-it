@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321854"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
@@ -36,7 +36,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > * Aggiungere un sottoscrittore per dispositivi mobili per la pubblicazione di tipo merge.
 > * Sincronizzare la sottoscrizione con la pubblicazione di tipo merge.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Questa esercitazione è destinata agli utenti che hanno familiarità con le operazioni fondamentali relative ai database ma con un'esperienza limitata delle operazioni di replica. Prima di iniziare questa esercitazione è necessario completare l'[Esercitazione: Preparare SQL Server per la replica](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Per completare questa esercitazione, sono necessari SQL Server, SQL Server Management Studio (SSMS) e un database AdventureWorks: 

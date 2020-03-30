@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 7346ee3eb347a756de40a7f7527bbf84ecf2f41c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286105"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216470"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installare R Services per SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
 
 <a name="bkmk2016top"></a>
 
-## <a name="run-setup"></a>Esecuzione del programma di installazione
+## <a name="run-setup"></a>Eseguire l'installazione.
 
 Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.
 

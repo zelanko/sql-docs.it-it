@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981809"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Per altre informazioni sugli elenchi delle proprietà di ricerca, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="change-tracking-no-population"></a> Interazioni del rilevamento delle modifiche con NO POPULATION  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> Interazioni del rilevamento delle modifiche con NO POPULATION  
  Il popolamento dell'indice full-text dipende dal fatto che il rilevamento delle modifiche sia o meno abilitato e che si specifichi o meno WITH NO POPULATION nell'istruzione ALTER FULLTEXT INDEX. Nella tabella seguente è riepilogato il risultato di tale interazione.  
   
 |Rilevamento modifiche|WITH NO POPULATION|Risultato|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Per altre informazioni sul popolamento degli indici full-text, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="change-search-property-rebuild-index"></a> La modifica dell'elenco delle proprietà di ricerca richiede la ricompilazione dell'indice  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> La modifica dell'elenco delle proprietà di ricerca richiede la ricompilazione dell'indice  
  La prima volta in cui un indice full-text viene associato a un elenco delle proprietà di ricerca, è necessario ripopolare l'indice per indicizzare i termini di ricerca specifici delle proprietà. I dati dell'indice esistenti non vengono troncati.  
   
  Se tuttavia si associa l'indice full-text a un elenco delle proprietà diverso, l'indice viene ricompilato. La ricompilazione immediata comporta il troncamento dell'indice full-text, ovvero la rimozione di tutti i dati esistenti, e l'indice deve essere ripopolato. Nel corso del popolamento, le query full-text sulla tabella di base eseguono ricerche solo nelle righe della tabella che sono già state indicizzate dal popolamento. I dati dell'indice ripopolato includeranno metadati dalle proprietà registrate dell'elenco delle proprietà di ricerca appena aggiunto.  

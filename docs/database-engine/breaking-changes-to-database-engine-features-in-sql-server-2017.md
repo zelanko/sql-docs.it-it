@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 2140c54c8954006c4285eaccbb59f2f0c4964577
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074499"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sssqlv14-md"></a>Modifiche di rilievo apportate alle funzionalità del motore di database in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "77074499"
   
 -  Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]. Fino a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], un certificato autofirmato viene creato con SHA1. A partire da [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], un certificato autofirmato viene creato usando SHA2_256.
 
-## <a name="previous-versions"></a> Versioni precedenti  
+## <a name="previous-versions"></a><a name="previous-versions"></a> Versioni precedenti  
 
 - [Modifiche di rilievo apportate alle funzionalità del Motore di database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 

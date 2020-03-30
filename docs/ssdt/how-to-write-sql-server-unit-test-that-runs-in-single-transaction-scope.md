@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246491"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione
@@ -156,7 +156,7 @@ In questo esempio viene usata una transazione di ambiente quando si usa il tipo 
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Per avviare il servizio Distributed Transaction Coordinator  
-Per alcune procedure di questo argomento vengono utilizzati tipi dell'assembly System.Transactions. Prima di utilizzare queste procedure, è necessario assicurarsi che il servizio Distributed Transaction Coordinator sia in esecuzione nel computer in cui si eseguono gli unit test. In caso contrario, se i test non vengono superati, viene visualizzato il messaggio di errore seguente: "Il metodo di test *NomeProgetto*.*NomeTest*.*NomeMetodo* ha generato un'eccezione: System.Data.SqlClient.SqlException: MSDTC sul server '*NomeComputer*' non è disponibile.  
+Per alcune procedure di questo argomento vengono utilizzati tipi dell'assembly System.Transactions. Prima di utilizzare queste procedure, è necessario assicurarsi che il servizio Distributed Transaction Coordinator sia in esecuzione nel computer in cui si eseguono gli unit test. In caso contrario, i test avranno esito negativo e verrà visualizzato il seguente messaggio di errore: "Il metodo di test *ProjectName*.*TestName*.*MethodName* ha generato un'eccezione: System.Data.SqlClient.SqlException: MSDTC sul server '*ComputerName*' non è disponibile".  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Per avviare il servizio Distributed Transaction Coordinator  
   

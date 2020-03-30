@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d520f83f515694bd8852ce11ea13fce7f3213596
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245119"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Usare la gestione connessione Teradata
@@ -67,5 +67,5 @@ Per registrare le chiamate della gestione connessione Teradata al driver Open Da
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Configurare l'[origine di Teradata](teradata-source.md).
-- Configurare la [destinazione di Teradata](teradata-destination.md).
+- Configurare la [destinazione Teradata](teradata-destination.md).
 - Per eventuali domande, visitare la [TechCommunity](https://aka.ms/AA5u35j).

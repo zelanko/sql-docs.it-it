@@ -12,17 +12,17 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558006"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lezione 1: Creare e applicare criteri Disattivata per impostazione predefinita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Tramite i criteri della gestione basata su criteri è possibile amministrare una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o più oggetti dell'istanza, una o più istanze del server, uno o più database o uno o più oggetti di database. Gli amministratori del database desiderano impedire che in determinati server sia abilitato Posta elettronica database. In questa lezione verranno creati una condizione e i criteri per l'impostazione dell'opzione server in questione. Il server verrà quindi testato per verificarne la conformità ai criteri. Si utilizzeranno infine i criteri per riconfigurare il server per renderlo conforme.  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 Per completare questa esercitazione, sono necessari SQL Server Management Studio e l'accesso a un server che esegue SQL Server. 
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

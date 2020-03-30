@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73595486"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Esercitazione: Sviluppare un'applicazione .NET Framework usando Always Encrypted con enclave sicuri
@@ -24,7 +24,7 @@ ms.locfileid: "73595486"
 
 Questa esercitazione illustra come sviluppare una semplice applicazione che esegue query di database che usano un'enclave sicuro lato server per [Always Encrypted con enclave sicuri](encryption/always-encrypted-enclaves.md). 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 Questa esercitazione è la continuazione di [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](./tutorial-getting-started-with-always-encrypted-enclaves.md). Assicurarsi di averla completata prima eseguire le procedure riportate di seguito.
 
 È necessario anche Visual Studio (è consigliata la versione 2019), che può essere scaricato da [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Il computer di sviluppo dell'applicazione deve eseguire .NET Framework 4.7.2 o versione successiva.

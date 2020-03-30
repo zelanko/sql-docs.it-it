@@ -11,10 +11,10 @@ ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028037"
 ---
 # <a name="getting-the-driver-version"></a>Recupero della versione del driver
@@ -22,7 +22,7 @@ ms.locfileid: "69028037"
 
   È possibile individuare la versione installata di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] nei modi seguenti:  
   
--   Chiamando il metodo [getDriverMajorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md) o [getDriverVersion](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md) di [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md).  
+-   Chiamando il metodo [getDriverMajorVersion](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md) o [getDriverVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md) di [SQLServerDatabaseMetaData](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md).  
   
 -   La versione viene visualizzata nel file readme.txt della distribuzione del prodotto.  
   

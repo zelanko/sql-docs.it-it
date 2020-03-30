@@ -1,5 +1,5 @@
 ---
-title: 'Avvio rapido: Eseguire il training di un modello in R'
+title: 'Guida introduttiva: Eseguire il training di un modello in R'
 description: In questo argomento di avvio rapido si creerà ed eseguirà il training di un modello predittivo con T. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,13 +11,13 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831728"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Avvio rapido: Creare un modello predittivo e assegnare punteggi in R con Machine Learning Services per SQL Server
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Guida introduttiva: Creare un modello predittivo e assegnare punteggi in R con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questo argomento di avvio rapido si creerà ed eseguirà il training di un modello predittivo con T. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../what-is-sql-server-machine-learning.md).
@@ -34,7 +34,7 @@ Completando questo argomento di avvio rapido si apprenderà:
 > - Come passare input al codice tramite input nella stored procedure
 > - Come usare le stored procedure per rendere operativi i modelli
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Questo argomento di avvio rapido richiede l'accesso a un'istanza di SQL Server con [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con il linguaggio R installato.
 

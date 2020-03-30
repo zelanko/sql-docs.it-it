@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909553"
 ---
 # <a name="set-index-options"></a>Impostare le opzioni di indice
@@ -52,20 +52,20 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare
 
-### <a name="Restrictions"></a> Limitazioni e restrizioni
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni
 
 - Le opzioni seguenti vengono applicate immediatamente all'indice tramite la clausola SET nell'istruzione ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY e STATISTICS_NORECOMPUTE.
 - Le opzioni seguenti possono essere impostate quando si ricompila un indice tramite ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP e DROP_EXISTING (solo CREATE INDEX).
 
-### <a name="Security"></a> Sicurezza
+### <a name="security"></a><a name="Security"></a> Sicurezza
 
-#### <a name="Permissions"></a> Autorizzazioni
+#### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 È richiesta l'autorizzazione ALTER per la tabella o la vista.
 
-## <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
 
 ### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Per modificare le proprietà di un indice in Progettazione tabelle
 
@@ -89,7 +89,7 @@ In questo argomento si illustra come modificare le proprietà di un indice in [!
 7. Modificare le impostazioni di tutte le proprietà per personalizzare l'indice.
 8. Per aggiungere, rimuovere o modificare la posizione di una colonna dell'indice, selezionare la pagina **Generale** della finestra di dialogo **Proprietà indice -** _nome_indice_. Per altre informazioni, vedere [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
-## <a name="TsqlProcedure"></a> Uso di Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
 
 ### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>Per visualizzare le proprietà di tutti gli indici in una tabella
 

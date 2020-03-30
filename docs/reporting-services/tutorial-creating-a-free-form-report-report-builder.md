@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499556"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
@@ -22,12 +22,12 @@ In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di 
 
 Nel report le informazioni vengono raggruppate per territorio e vengono visualizzati il nome del responsabile vendite del territorio e informazioni dettagliate e riepilogative relative alle vendite. Si inizia con un'area dati elenco come base per il report in formato libero, quindi si aggiunge un pannello decorativo con un'immagine, testo statico contenente dati, una tabella per la visualizzazione di informazioni dettagliate e facoltativamente grafici a torta e istogrammi per la visualizzazione di informazioni di riepilogo.  
   
-Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
+Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="BlankReport"></a>1. Creare un report vuoto, un'origine dati e un set di dati  
+## <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1. Creare un report vuoto, un'origine dati e un set di dati  
   
 > [!NOTE]  
 > Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
@@ -48,11 +48,11 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Origine dati**.  
   
-2.  Nella casella **Nome** digitare: **ListDataSource**  
+2.  Nella casella **Nome** digitare **ListDataSource**  
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<nomeserver>**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
   
     **\<nomeserver>** , ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
   
@@ -64,7 +64,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Set di dati**.  
   
-2.  Nella casella **Nome** digitare: **ListDataset**.  
+2.  Nella casella **Nome** digitare **ListDataset**.  
   
 3.  Fare clic su **Utilizzare un set di dati incorporato nel report**, quindi verificare che l'origine dati sia **ListDataSource**.  
   
@@ -115,7 +115,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="List"></a>2. Aggiungere e configurare un elenco  
+## <a name="2-add-and-configure-a-list"></a><a name="List"></a>2. Aggiungere e configurare un elenco  
 In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] l'area dati elenco è ideale per la creazione di report in formato libero. È basata sull'area dati *tablix* come le tabelle e le matrici. Per altre informazioni, vedere [Creare fatture e moduli con elenchi](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 Verrà usato un elenco per visualizzare le informazioni sulle vendite relative ai territori di vendita in un report simile a un notiziario. Le informazioni vengono raggruppate per territorio. Si aggiungerà un nuovo gruppo di righe per il raggruppamento dei dati per territorio e si eliminerà quindi il gruppo di righe Dettagli incorporato.  
@@ -167,7 +167,7 @@ Verrà usato un elenco per visualizzare le informazioni sulle vendite relative a
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Graphics"></a>3. Aggiungere elementi grafici  
+## <a name="3-add-graphic-elements"></a><a name="Graphics"></a>3. Aggiungere elementi grafici  
 Uno dei vantaggi offerti da un'area dati elenco consiste nella possibilità di aggiungere elementi del report, quali rettangoli e caselle di testo, in qualsiasi posizione, anziché essere limitati a un layout tabulare. L'aggiunta di un elemento grafico, ad esempio un rettangolo colorato, conferirà al report un aspetto più gradevole.  
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>Per aggiungere elementi grafici al report  
@@ -190,7 +190,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
   
 ![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
-## <a name="Text"></a>4. Aggiungere testo in formato libero  
+## <a name="4-add-free-form-text"></a><a name="Text"></a>4. Aggiungere testo in formato libero  
 È possibile aggiungere caselle di testo per visualizzare il testo statico ripetuto in ogni pagina del report, nonché campi dati.  
   
 ### <a name="to-add-text-to-the-report"></a>Per aggiungere testo al report  
@@ -215,7 +215,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
     *  **20 pt**.
     *  **Cremisi**.  
   
-9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
+9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola, per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
  
 10. Trascinare il campo `[FullName]` da ListDataSet nel riquadro dei dati del report nella casella di testo e posizionarlo dopo "Salve", quindi digitare una virgola (,).  
    
@@ -244,7 +244,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
       *  **10 pt**.
       *  **Nero**.  
  
-20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo. 
+20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che verrà aggiunto nel passaggio successivo. 
   
 21. Trascinare il campo Sales nella casella di testo, posizionarlo dopo il testo digitato nel passaggio precedente, quindi digitare un punto esclamativo (!).  
 
@@ -282,7 +282,7 @@ Nel report viene visualizzato il testo statico e in ogni pagina del report sono 
   
 ![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
-## <a name="Table"></a>5. Aggiungere una tabella per la visualizzazione dei dettagli delle vendite  
+## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. Aggiungere una tabella per la visualizzazione dei dettagli delle vendite  
 Utilizzare la procedura guidata Nuova tabella o matrice per aggiungere una tabella al report in formato libero. Dopo avere completato la procedura guidata, si aggiungerà manualmente una riga per i totali.  
   
 ### <a name="to-add-a-table"></a>Per aggiungere una tabella  
@@ -328,7 +328,7 @@ Nel report verrà visualizzata una tabella con i dettagli e i totali delle vendi
   
 ![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
    
-## <a name="Save"></a>6. Salvare il report  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. Salvare il report  
 È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale.  
   
 In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
@@ -359,7 +359,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 4.  Fare clic su **Salva**.  
   
-## <a name="Line"></a>7. (Facoltativo) Aggiungere una linea per separare le aree del report  
+## <a name="7-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>7. (Facoltativo) Aggiungere una linea per separare le aree del report  
 Aggiungere una linea per separare l'area editoriale da quella dei dettagli del report.  
   
 ### <a name="to-add-a-line"></a>Per aggiungere una linea  
@@ -374,7 +374,7 @@ Aggiungere una linea per separare l'area editoriale da quella dei dettagli del r
      * **Larghezza** : selezionare **3** pt.
      * **Colore** : selezionare **Cremisi**.  
   
-## <a name="Visualization"></a>8. (Facoltativo) Aggiungere visualizzazioni dei dati di riepilogo  
+## <a name="8-optional-add-summary-data-visualizations"></a><a name="Visualization"></a>8. (Facoltativo) Aggiungere visualizzazioni dei dati di riepilogo  
 I rettangoli consentono di controllare la modalità di rendering del report. Posizionare un grafico a torta e un istogramma all'interno di un rettangolo per essere certi che il rendering del report venga eseguito nel modo desiderato.  
   
 ### <a name="to-add-a-rectangle"></a>Per aggiungere un rettangolo  

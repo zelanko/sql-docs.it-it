@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285855"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per risorse e servizi cluster
@@ -179,7 +179,7 @@ Per personalizzare i file di configurazione della distribuzione del cluster, è 
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
 
-## <a id="docker"></a> Modificare il registro Docker predefinito, il repository e il tag images
+## <a name="change-default-docker-registry-repository-and-images-tag"></a><a id="docker"></a> Modificare il registro Docker predefinito, il repository e il tag images
 
 I file di configurazione predefiniti, in particolare control.json, includono una sezione `docker` in cui vengono immessi automaticamente il registro contenitori, il repository e il tag images. Per impostazione predefinita, le immagini necessarie per i cluster Big Data si trovano nel registro contenitori di Microsoft (`mcr.microsoft.com`) nel repository `mssql/bdc`:
 
@@ -216,7 +216,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > [!TIP]
 > La distribuzione di cluster Big Data deve avere accesso al registro contenitori e al repository da cui eseguire il pull delle immagini dei contenitori. Se l'ambiente in uso non ha accesso al registro contenitori di Microsoft predefinito, è possibile eseguire un'installazione offline in cui le immagini necessarie vengono inserite prima di tutto in un repository Docker privato. Per altre informazioni sulle installazioni offline, vedere [Eseguire una distribuzione offline di un cluster Big Data di SQL Server](deploy-offline.md). È necessario impostare le [variabili di ambiente](deployment-guidance.md#env) `DOCKER_USERNAME` e `DOCKER_PASSWORD` prima di eseguire la distribuzione per assicurarsi che il flusso di lavoro di distribuzione abbia accesso al repository privato da cui eseguire il pull delle immagini.
 
-## <a id="clustername"></a> Modificare il nome del cluster
+## <a name="change-cluster-name"></a><a id="clustername"></a> Modificare il nome del cluster
 
 Il nome del cluster è sia il nome del cluster Big Data sia lo spazio dei nomi Kubernetes che verrà creato durante la distribuzione. Viene specificato nella parte seguente del file di configurazione della distribuzione `bdc.json`:
 
@@ -236,7 +236,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 > [!IMPORTANT]
 > Il nome del cluster Big Data deve contenere solo caratteri alfanumerici minuscoli, senza spazi. Tutti gli elementi Kubernetes (contenitori, pod, set con stato, servizi) per il cluster verranno creati in uno spazio dei nomi con lo stesso nome del nome del cluster specificato.
 
-## <a id="ports"></a> Aggiornare le porte degli endpoint
+## <a name="update-endpoint-ports"></a><a id="ports"></a> Aggiornare le porte degli endpoint
 
 Gli endpoint per il controller vengono definiti in `control.json`, mentre quelli per il gateway e l'istanza master di SQL Server vengono definiti nelle sezioni corrispondenti di `bdc.json`. La parte seguente del file di configurazione `control.json` mostra le definizioni degli endpoint per il controller:
 
@@ -263,7 +263,7 @@ L'esempio seguente usa il formato JSON inline per modificare la porta per l'endp
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Configurare la scalabilità
+## <a name="configure-scale"></a><a id="replicas"></a> Configurare la scalabilità
 
 Le configurazioni di ogni risorsa, ad esempio il pool di archiviazione, vengono definite nel file di configurazione `bdc.json`. Ad esempio, la parte seguente del file `bdc.json` mostra una definizione della risorsa `storage-0`:
 
@@ -305,7 +305,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!NOTE]
 > Il numero massimo di istanze convalidate per i pool di calcolo e dati è `8` ciascuno. Non è prevista l'applicazione di questo limite in fase di distribuzione, ma non è consigliabile configurare un valore più elevato nelle distribuzioni di produzione.
 
-## <a id="storage"></a> Configurare l'archiviazione
+## <a name="configure-storage"></a><a id="storage"></a> Configurare l'archiviazione
 
 È anche possibile modificare la classe di archiviazione e le caratteristiche usate per ogni pool. L'esempio seguente assegna una classe di archiviazione personalizzata ai pool di archiviazione e dati e aggiorna la dimensione dell'attestazione di volume permanente per l'archiviazione dei dati a 500 GB per HDFS (pool di archiviazione) e 100 GB per il pool di dati. 
 
@@ -369,7 +369,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 > [!NOTE]
 > Un file di configurazione basato su `kubeadm-dev-test` non include una definizione di archiviazione per ogni pool, ma è possibile usare il processo precedente per aggiungerle, se necessario.
 
-## <a id="sparkstorage"></a> Configurare il pool di archiviazione senza Spark
+## <a name="configure-storage-pool-without-spark"></a><a id="sparkstorage"></a> Configurare il pool di archiviazione senza Spark
 
 È anche possibile configurare i pool di archiviazione per l'esecuzione senza Spark e creare un pool Spark separato. Questa configurazione permette di ridimensionare la potenza di calcolo di Spark indipendentemente dall'archiviazione. Per informazioni su come configurare il pool Spark, vedere la sezione [Creare un pool Spark](#sparkpool) in questo articolo.
 
@@ -382,7 +382,7 @@ Poiché per impostazione predefinita `includeSpark` per il pool di archiviazione
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
-## <a id="sparkpool"></a> Creare un pool Spark
+## <a name="create-a-spark-pool"></a><a id="sparkpool"></a> Creare un pool Spark
 
 È possibile creare un pool Spark insieme a o al posto di istanze di Spark in esecuzione nel pool di archiviazione. L'esempio seguente mostra come creare un pool Spark con due istanze applicando patch al file di configurazione `bdc.json`. 
 
@@ -425,7 +425,7 @@ Eseguire quindi il comando `azdata bdc config patch`:
 azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
-## <a id="podplacement"></a> Configurare la posizione dei pod tramite etichette Kubernetes
+## <a name="configure-pod-placement-using-kubernetes-labels"></a><a id="podplacement"></a> Configurare la posizione dei pod tramite etichette Kubernetes
 
 È possibile controllare la posizione dei pod in nodi Kubernetes che includono risorse specifiche per soddisfare i vari tipi di requisiti relativi ai carichi di lavoro. Tramite etichette Kubernetes è possibile personalizzare i nodi del cluster Kubernetes che verranno usati per la distribuzione di risorse cluster Big Data, nonché limitare i nodi usati per risorse specifiche.
 Ad esempio, può essere necessario fare in modo che i pod di risorse del pool di archiviazione siano posizionati in nodi con più capacità di archiviazione o che le istanze master di SQL Server si trovino in nodi con risorse di CPU e memoria più elevate. In questo caso, si creerà prima di tutto un cluster Kubernetes eterogeneo con diversi tipi di hardware e quindi si [assegneranno le etichette dei nodi](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) di conseguenza. Al momento della distribuzione del cluster Big Data, è possibile specificare le stesse etichette a livello di cluster per indicare quali nodi vengono usati per il cluster Big Data tramite l'attributo `clusterLabel` nel file `control.json`. Verranno quindi usate etichette diverse per il posizionamento a livello di host. Queste etichette possono essere specificate nei file di configurazione della distribuzione del cluster Big Data tramite l'attributo `nodeLabel`. Kubernetes assegna i pod nei nodi che corrispondono alle etichette specificate. Le chiavi di etichetta specifiche che devono essere aggiunte ai nodi nel cluster Kubernetes sono `mssql-cluster` (per indicare i nodi usati per il cluster Big Data) e `mssql-resource` (per indicare i nodi specifici in cui vengono posizionati i pod per le varie risorse). I valori di queste etichette possono essere qualsiasi stringa scelta.
@@ -467,7 +467,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 
-## <a id="jsonpatch"></a> Altre personalizzazioni con file di patch JSON
+## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> Altre personalizzazioni con file di patch JSON
 
 I file di patch JSON configurano più impostazioni contemporaneamente. Per altre informazioni sulle patch JSON, vedere [Patch JSON in Python](https://github.com/stefankoegl/python-json-patch) e [JSONPath Online Evaluator](https://jsonpath.com/).
 

@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134683"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
@@ -36,15 +36,15 @@ ms.locfileid: "68134683"
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza del motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** e segnalata nella pagina dei dettagli **Deployed Data-tier Applications** (Applicazioni livello dati distribuite).  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  La registrazione di un'applicazione livello dati può essere effettuata solo per un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. La registrazione di un'applicazione livello dati non può essere eseguita se è stata già registrata un'applicazione livello dati per il database. Se, ad esempio, il database è stato creato distribuendo un'applicazione livello dati, non è possibile eseguire la procedura guidata **Registra applicazione livello dati**.  
   
  Non è possibile registrare un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  La registrazione di un'applicazione livello dati in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] richiede almeno autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION per l'ambito del database, nonché autorizzazioni SELECT su **sys.sql_expression_dependencies**, oltre all'appartenenza al ruolo predefinito del server **dbcreator** . Possono registrare un'applicazione livello dati anche i membri del ruolo predefinito del server **sysadmin** o dell'account amministratore di sistema SQL Server predefinito denominato **sa** . La registrazione di un'applicazione livello dati che non contiene accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **dbmanager** o **serveradmin** . La registrazione di un'applicazione livello dati che contiene account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **loginmanager** o **serveradmin** .  
   
-##  <a name="UsingRegisterDACWizard"></a> Utilizzo della procedura guidata Registra applicazione livello dati  
+##  <a name="using-the-register-data-tier-application-wizard"></a><a name="UsingRegisterDACWizard"></a> Utilizzo della procedura guidata Registra applicazione livello dati  
  **Per registrare un'applicazione livello dati tramite procedura guidata**  
   
 1.  In **Esplora oggetti**espandere il nodo dell'istanza contenente il database per il quale registrare l'applicazione livello dati.  
@@ -63,7 +63,7 @@ ms.locfileid: "68134683"
   
     4.  [Pagina Registra DAC](#Register)  
   
-##  <a name="Introduction"></a> Pagina Introduzione  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la registrazione di un'applicazione livello dati.  
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
@@ -74,7 +74,7 @@ ms.locfileid: "68134683"
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
-##  <a name="Set_properties"></a> Pagina Imposta proprietà  
+##  <a name="set-properties-page"></a><a name="Set_properties"></a> Pagina Imposta proprietà  
  Utilizzare questa pagina per specificare le proprietà a livello di applicazione livello dati quali il nome dell'applicazione e la versione.  
   
  **Nome applicazione** - Stringa che specifica il nome usato per identificare la definizione dell'applicazione livello dati; il campo viene popolato con il nome del database.  
@@ -91,7 +91,7 @@ ms.locfileid: "68134683"
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
-##  <a name="Summary"></a> Pagina Convalida e riepilogo  
+##  <a name="validation-and-summary-page"></a><a name="Summary"></a> Pagina Convalida e riepilogo  
  Utilizzare questa pagina per verificare le azioni eseguite dalla procedura guidata durante la registrazione dell'applicazione livello dati. La pagina passa attraverso tre stati per verificare se un'applicazione livello dati possa essere compilata dagli oggetti contenuti nel database.  
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
@@ -131,7 +131,7 @@ ms.locfileid: "68134683"
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
-##  <a name="Register"></a> Pagina Registra DAC  
+##  <a name="register-dac-page"></a><a name="Register"></a> Pagina Registra DAC  
  In questa pagina viene riportato l'esito positivo o negativo della registrazione.  
   
  **Registrazione dell'applicazione livello dati** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per la registrazione dell'applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
@@ -142,7 +142,7 @@ ms.locfileid: "68134683"
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
-##  <a name="RegisterDACPowerShell"></a> Registrare un'applicazione livello dati tramite PowerShell  
+##  <a name="register-a-dac-using-powershell"></a><a name="RegisterDACPowerShell"></a> Registrare un'applicazione livello dati tramite PowerShell  
  **Per registrare un database come applicazione livello dati usando il metodo Register() in uno script di PowerShell**  
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente il database che si desidera registrare come applicazione livello dati.  

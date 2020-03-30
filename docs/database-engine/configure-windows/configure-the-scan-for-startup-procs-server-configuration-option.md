@@ -13,10 +13,10 @@ ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecccde508e3b83a8c0f6995aeb0d142785766976
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012287"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Configurare l'opzione di configurazione del server scan for startup procs
@@ -40,20 +40,20 @@ ms.locfileid: "68012287"
   
 -   **Completamento:**  [Dopo la configurazione dell'opzione scan for startup procs](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a professionisti dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   È possibile impostare il valore dell'opzione usando **sp_configure**. L'opzione viene tuttavia impostata automaticamente se si usa **sp_procoption**, che consente di contrassegnare o meno impostare le stored procedure eseguite automaticamente. Se si usa **sp_procoption** per contrassegnare la prima stored procedure come procedura automatica, l'opzione viene automaticamente impostata su 1. Se si usa **sp_procoption** per annullare il contrassegno dell'ultima stored procedure come procedura automatica, l'opzione viene automaticamente impostata su 0. Se si usa **sp_procoption** per contrassegnare e annullare il contrassegno di procedure automatiche e se si vuole annullare sempre questo contrassegno prima di eliminarle, non è necessario impostare manualmente questa opzione.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>Per configurare l'opzione scan for startup procs  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68012287"
   
 3.  In **Varie**impostare il valore dell'opzione **Analisi per procedure di avvio** su True o False dall'elenco a discesa.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>Per configurare l'opzione scan for startup procs  
   
@@ -87,7 +87,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione scan for startup procs  
+##  <a name="follow-up-after-you-configure-the-scan-for-startup-procs-option"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione scan for startup procs  
  Per poter rendere effettiva l'impostazione, è necessario riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095319"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095319"
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   In questo argomento viene descritto come amministrare ed eseguire il monitoraggio dell'acquisizione dati delle modifiche.  
   
-## <a name="Capture"></a> Processo di acquisizione
+## <a name="capture-job"></a><a name="Capture"></a> Processo di acquisizione
 
 Il processo di acquisizione viene avviato tramite l'esecuzione della stored procedure senza parametri `sp_MScdc_capture_job`. Questa stored procedure estrae innanzitutto i valori configurati per `maxtrans`, `maxscans`, `continuous` e `pollinginterval` per il processo di acquisizione da msdb.dbo.cdc_jobs. Tali valori configurati vengono quindi passati come parametri alla stored procedure `sp_cdc_scan`, utilizzata per richiamare `sp_replcmds` per l'esecuzione dell'analisi del log.  
   
@@ -71,7 +71,7 @@ In modalità continua il processo di acquisizione richiede l'esecuzione continua
 
 Per il processo di acquisizione è possibile applicare logica aggiuntiva per determinare se una nuova analisi debba iniziare immediatamente o se venga imposta una sospensione prima di avviare una nuova analisi anziché basarsi su un intervallo di polling fisso. La scelta può essere basata solo sull'ora del giorno, applicando eventualmente sospensioni prolungate durante i periodi di attività massima, e prevedere anche il passaggio a un intervallo di polling pari a zero alla fine del giorno quando è importante completare l'elaborazione giornaliera e preparare le esecuzioni notturne. Può inoltre essere necessario monitorare lo stato del processo di acquisizione per determinare il momento in cui tutte le transazioni di cui è stato eseguito il commit entro mezzanotte sono state sottoposte ad analisi e inserite nelle tabelle delle modifiche. Ciò consente il completamento del processo di acquisizione, che verrà riavviato in base a una pianificazione giornaliera. Sostituendo la chiamata di `sp_cdc_scan` da parte del passaggio del processo recapitato con una chiamata a un wrapper scritto dall'utente per `sp_cdc_scan`, è possibile ottenere un comportamento notevolmente personalizzato con un minimo sforzo aggiuntivo.  
 
-## <a name="Cleanup"></a> Processo di pulizia
+## <a name="cleanup-job"></a><a name="Cleanup"></a> Processo di pulizia
 
 In questa sezione vengono fornite informazioni sul funzionamento del processo di pulizia di Change Data Capture.  
   
@@ -90,7 +90,7 @@ Quando viene eseguita una pulizia, il limite minimo per tutte le istanze di acqu
 
  Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Poiché le procedure di pulizia sottostanti sono basate su `lsn` anziché sul tempo, è possibile usare qualsiasi strategia per determinare il valore `lsn` minimo da mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Benché la strategia predefinita applichi lo stesso valore `lsn` per pulire tutte le tabelle delle modifiche dei database è inoltre possibile chiamare la procedura di pulizia sottostante anche per eseguire la pulizia a livello di istanza di acquisizione.  
 
-## <a name="Monitor"></a> Monitoraggio del processo Change Data Capture
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Monitoraggio del processo Change Data Capture
 
 Il monitoraggio del processo Change Data Capture consente di determinare se le modifiche vengono scritte correttamente e con una latenza ragionevole nelle tabelle delle modifiche. L'esecuzione il monitoraggio può consentire anche di identificare gli errori che si potrebbero verificare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse due DMV per monitorare Change Data Capture: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) e [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
@@ -176,7 +176,7 @@ L'agente di raccolta dati disponibile in [!INCLUDE[ssNoVersion](../../includes/s
   
 4. Nel data warehouse configurato nel passaggio 1 trovare la tabella custom_snapshots.cdc_log_scan_data. In questa tabella viene fornito uno snapshot cronologico di dati dalle sessioni di analisi del log. Questi dati possono essere utilizzati per analizzare nel corso del tempo latenza, velocità effettiva e altri indicatori di prestazioni.  
 
-## <a name="ScriptUpgrade"></a> Modalità di aggiornamento script
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> Modalità di aggiornamento script
 
 Quando si applicano gli aggiornamenti cumulativi o Service Pack a un'istanza, è possibile che al riavvio l'istanza passi alla modalità di aggiornamento script. In questa modalità SQL Server potrebbe eseguire un passaggio per analizzare e aggiornare le tabelle CDC interne e questa operazione potrebbe implicare la rigenerazione di oggetti, tra cui gli indici sulle tabelle di acquisizione. A seconda della quantità di dati interessati, questo passaggio potrebbe richiedere tempo o comportare un utilizzo elevato del log delle transazioni per i database CDC abilitati.
 

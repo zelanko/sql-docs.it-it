@@ -11,10 +11,10 @@ ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971717"
 ---
 # <a name="sqlserverconnection-members"></a>Membri di SQLServerConnection
@@ -43,7 +43,7 @@ ms.locfileid: "67971717"
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Cancella tutti gli avvisi segnalati per questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Rilascia immediatamente il database per questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) e le risorse JDBC invece di attendere il rilascio automatico.|  
-|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Impone richieste di annullamento per eventuali istruzioni preparate per l'esecuzione e rimosse in sospeso.| 
+|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Impone richieste di annullamento della preparazione per eventuali istruzioni preparate per l'esecuzione e rimosse in sospeso.| 
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|Rende permanenti tutte le modifiche apportate dal commit o dal rollback precedente e rilascia eventuali blocchi a livello di database attualmente mantenuti da questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|Crea un oggetto **java.sql.Blob** senza dati.|  
 |[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|Crea un oggetto **java.sql.Clob** senza dati.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67971717"
 |[Metodo getClientConnectionID &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Ottiene l'ID connessione del tentativo di connessione più recente, indipendentemente dalla riuscita o meno del tentativo.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|Recupera informazioni relative alle proprietà delle informazioni client supportate dal driver JDBC.|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Restituisce il valore della proprietà di connessione **disableStatementPooling**. Questa impostazione controlla se il pool di istruzioni è abilitato o meno per questa connessione.|
-|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Restituisce il numero di azioni di annullamento della preparazione per istruzioni preparate attualmente in sospeso.|
+|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Restituisce il numero di azioni di annullamento della preparazione per le istruzioni preparate attualmente in attesa.|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|Restituisce il valore della proprietà di connessione **enablePrepareOnFirstPreparedStatementCall**.|
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|Recupera la trattenibilità corrente per gli oggetti [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) creati usando l'oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|Recupera un oggetto [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) che contiene metadati sul database per cui questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) rappresenta una connessione.|  
@@ -67,7 +67,7 @@ ms.locfileid: "67971717"
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|Recupera il primo avviso segnalato dalle chiamate in questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|Indica se questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) è stato chiuso.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|Indica se questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) è in modalità di sola lettura.|  
-|[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|Indica se il pooling dell'istruzione è abilitato o meno per questa connessione.|  
+|[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|Restituisce un valore che indica se il pool di istruzioni è abilitato o meno per questa connessione.|  
 |[isValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|Indica se questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) non è stato chiuso ed è ancora valido.|  
 |[nativeSQL](../../../connect/jdbc/reference/nativesql-method-sqlserverconnection.md)|Converte l'istruzione SQL specificata nella grammatica SQL nativa del server di database.|  
 |[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)|Crea un oggetto [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) per la chiamata delle stored procedure del database.|  
@@ -77,7 +77,7 @@ ms.locfileid: "67971717"
 |[setAutoCommit](../../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)|Imposta la modalità di commit automatico per questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) sullo stato specificato.|  
 |[setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md)|Imposta il nome di catalogo specificato per selezionare uno spazio secondario del database di questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) nel quale lavorare.|  
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|Imposta il valore delle proprietà delle informazioni client.|  
-|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|Imposta il pooling dell'istruzione su true o false.|  
+|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|Imposta il pool di istruzioni su true o false.|  
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|Specifica il nuovo valore della proprietà di connessione **enablePrepareOnFirstPreparedStatementCall**.|  
 |[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|Imposta sul valore specificato la trattenibilità corrente per gli oggetti [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) creati usando l'oggetto [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md).|  
 |[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|Attiva la modalità di sola lettura per questo oggetto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) come hint per il driver JDBC in modo da abilitare le ottimizzazioni del database.|  

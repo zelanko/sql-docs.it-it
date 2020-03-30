@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111184"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Ripristinare un backup del log delle transazioni (SQL Server)
@@ -47,9 +47,9 @@ ms.locfileid: "68111184"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario ripristinare i backup in base all'ordine in cui sono stati creati. Prima di ripristinare un determinato backup del log delle transazioni, è necessario ripristinare i backup precedenti riportati di seguito senza eseguire il rollback delle transazioni di cui non è stato eseguito il commit, ovvero utilizzando WITH NORECOVERY:  
   
@@ -59,12 +59,12 @@ ms.locfileid: "68111184"
   
          Per altre informazioni sui backup di log delle transazioni, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md) e [Applicare backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 > [!WARNING]  
 >  Il normale processo di ripristino prevede la selezione dei backup di log nella finestra di dialogo **Ripristina database** insieme ai backup differenziali e dei dati.  
@@ -191,7 +191,7 @@ ms.locfileid: "68111184"
   
 11. Facoltativamente, specificare un nome per il file standby nella casella di testo **File standby** . Questa opzione è necessaria se il database viene lasciato in modalità sola lettura. È possibile cercare il file standby per selezionarlo oppure digitarne direttamente il percorso nella casella di testo.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 > [!IMPORTANT]  
 >  È consigliabile specificare sempre in modo esplicito WITH NORECOVERY oppure WITH RECOVERY in ogni istruzione RESTORE per evitare ambiguità. Questa precauzione è particolarmente importante durante la scrittura di script.  
@@ -236,7 +236,7 @@ ms.locfileid: "68111184"
     > [!IMPORTANT]  
     >  Se si sta creando un database mirror, omettere il passaggio di recupero. Un database mirror deve rimanere nello stato RESTORING.  
   
-###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
  Per impostazione predefinita, il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilizza il modello di recupero con registrazione minima. Per gli esempi seguenti è necessario modificare questo database in modo da utilizzare il modello di recupero con registrazione completa, come illustrato di seguito:  
   
 ```sql  
@@ -289,7 +289,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   

@@ -24,23 +24,23 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286735"
 ---
 # <a name="statistics"></a>Statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Query Optimizer usa le statistiche per creare piani di query che consentono di migliorare le prestazioni delle query. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive o modificare la progettazione delle query per ottenere risultati ottimali. In questo argomento vengono illustrati i concetti relativi alle statistiche e vengono fornite linee guida per un utilizzo efficace delle statistiche di ottimizzazione delle query.  
   
-##  <a name="DefinitionQOStatistics"></a> Componenti e concetti  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Componenti e concetti  
 ### <a name="statistics"></a>Statistiche  
  Le statistiche di ottimizzazione delle query sono oggetti binari di grandi dimensioni (BLOB) contenenti informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella o di una vista indicizzata. Query Optimizer usa queste statistiche per la stima della *cardinalità* o del numero di righe nel risultato della query. Queste *stime di cardinalità* consentono a Query Optimizer di creare un piano di query di alta qualità. A seconda dei predicati, ad esempio, Query Optimizer può usare le stime della cardinalità per scegliere l'operatore Index Seek anziché l'operatore Index Scan che usa una maggior quantità di risorse, se questa opzione migliora le prestazioni delle query.  
   
  Ogni oggetto statistiche viene creato in un elenco di una o più colonne di tabella e include un *istogramma* in cui è visualizzata la distribuzione dei valori nella prima colonna. Negli oggetti statistiche su più colonne sono inoltre archiviate informazioni statistiche sulla correlazione dei valori tra le colonne. Queste statistiche sulla correlazione o *densità*derivano dal numero di righe distinte di valori di colonna. 
 
-#### <a name="histogram"></a> Istogramma  
+#### <a name="histogram"></a><a name="histogram"></a> Istogramma  
 Un **istogramma** misura la frequenza di occorrenza per ogni valore distinto in un set di dati. Query Optimizer calcola un istogramma nei valori di colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori di colonna tramite il campionamento statistico delle righe o un'analisi completa di tutte le righe della tabella o della vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
 
 > [!NOTE]
@@ -52,7 +52,7 @@ Più in dettaglio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cre
 
 - **Inizializzazione dell'istogramma**: nel primo passaggio viene elaborata una sequenza di valori a partire dall'inizio del set ordinato e vengono raccolti fino a 200 valori di *range_high_key*, *equal_rows*, *range_rows* e *distinct_range_rows* (in questo passaggio *range_rows* e *distinct_range_rows* sono sempre pari a zero). Il primo passaggio termina quando è stato esaurito tutto l'input o quando sono stati trovati 200 valori. 
 - **Analisi con unione di bucket**: nel secondo passaggio viene elaborato ogni valore aggiuntivo della colonna iniziale della chiave delle statistiche in base all'ordinamento. Ogni valore successivo viene aggiunto all'ultimo intervallo o viene creato un nuovo intervallo alla fine (questo è possibile perché i valori di input sono ordinati). Se viene creato un nuovo intervallo, una coppia di intervalli esistenti adiacenti viene compressa in un intervallo singolo. Questa coppia di intervalli viene selezionata per ridurre al minimo la perdita di informazioni. Questo metodo usa un algoritmo per il calcolo della *differenza massima*, per ridurre al minimo il numero di intervalli nell'istogramma, aumentando contemporaneamente la differenza tra i valori limite. Durante questa fase il numero di passaggi dopo la compressione degli intervalli rimane 200.
-- **Consolidamento dell'istogramma**: nel terzo passaggio, può essere eseguita la compressione di più intervalli se non viene persa una quantità significativa di informazioni. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. Pertanto, anche se la colonna ha più di 200 valori univoci, l'istogramma può avere meno di 200 intervalli. Per una colonna costituita solo da valori univoci, quindi, l'istogramma consolidato ha un minimo di tre intervalli.
+- **Consolidamento dell'istogramma**: nel terzo passaggio, può essere effettuata la compressione di più intervalli se non viene persa una quantità significativa di informazioni. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. Pertanto, anche se la colonna ha più di 200 valori univoci, l'istogramma può avere meno di 200 intervalli. Per una colonna costituita solo da valori univoci, quindi, l'istogramma consolidato ha un minimo di tre intervalli.
 
 > [!NOTE]
 > Se l'istogramma è stato creato tramite un campione anziché tramite l'analisi completa, i valori di *equal_rows*, *range_rows*, *distinct_range_rows* e  *average_range_rows* vengono stimati e pertanto non devono necessariamente essere valori integer.
@@ -68,7 +68,7 @@ Per ogni passaggio dell'istogramma sopra citato:
   
 -   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero complessivo dei valori distinti nell'intervallo (*distinct_range_rows*) e il numero complessivo dei valori nell'intervallo (*range_rows*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.   
   
-#### <a name="density"></a>Vettore di densità  
+#### <a name="density-vector"></a><a name="density"></a>Vettore di densità  
 La **densità** è rappresentata da informazioni sul numero di duplicati in una colonna o combinazione di colonne specifica e viene calcolata con la formula 1/(numero di valori distinti). Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Man mano che la densità diminuisce, aumenta la selettività di un valore. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. Un indice basato sul numero di identificazione del veicolo è più selettivo rispetto all'indice basato sul produttore, perché il numero di identificazione del veicolo ha una densità minore rispetto al produttore. 
 
 > [!NOTE]
@@ -88,7 +88,7 @@ Il vettore di densità contiene una densità per ogni prefisso di colonna nell'o
 ### <a name="statistics-options"></a>Opzioni relative alle statistiche  
  Sono disponibili tre opzioni che se impostate influiscono sui tempi e sulle modalità di creazione e aggiornamento delle statistiche. Queste opzioni vengono impostate solo a livello di database.  
   
-#### <a name="AutoUpdateStats"></a>Opzione AUTO_CREATE_STATISTICS  
+#### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>Opzione AUTO_CREATE_STATISTICS  
  Quando l'opzione per la creazione automatica delle statistiche, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics), è impostata su ON, Query Optimizer crea le statistiche necessarie per colonne singole nel predicato di query, per migliorare le stime della cardinalità per il piano di query. Queste statistiche di colonna singola vengono create in colonne che ancora non hanno un [istogramma](#histogram) in un oggetto statistiche esistente. L'opzione AUTO_CREATE_STATISTICS non determina se le statistiche vengono create per gli indici. Questa opzione non genera inoltre statistiche filtrate, ma si applica esclusivamente alle statistiche di colonna singola per la tabella completa.  
   
  Quando Query Optimizer crea statistiche in seguito all'uso dell'opzione AUTO_CREATE_STATISTICS, il nome delle statistiche inizia con `_WA`. Per determinare se Query Optimizer ha creato statistiche per una colonna del predicato di query, è possibile usare la query seguente.  
@@ -155,7 +155,7 @@ Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controll
   
 **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive. 
   
-## <a name="CreateStatistics"></a> Quando creare le statistiche  
+## <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> Quando creare le statistiche  
  Query Optimizer crea già le statistiche nelle modalità seguenti:  
   
 1.  Query Optimizer crea statistiche per gli indici in tabelle o viste, al momento della creazione dell'indice stesso. Tali statistiche vengono create nelle colonne chiave dell'indice. Se l'indice è filtrato, Query Optimizer crea statistiche filtrate nello stesso subset di righe specificato per l'indice filtrato. Per altre informazioni sugli indici filtrati, vedere [Creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md) e [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
@@ -202,7 +202,7 @@ In questo esempio, l'oggetto statistiche `LastFirst` dispone delle densità per 
 ### <a name="query-selects-from-a-subset-of-data"></a>La query effettua la selezione da un subset di dati  
 La creazione di statistiche per indici e colonne singole in Query Optimizer implica la creazione di statistiche per i valori in tutte le righe. Quando le query effettuano la selezione da un subset di righe che dispone di una distribuzione dei dati univoca, le statistiche filtrate possono migliorare i piani di query. È possibile creare le statistiche filtrate usando l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) con la clausola [WHERE](../../t-sql/queries/where-transact-sql.md) per definire l'espressione del predicato del filtro.  
   
-Ad esempio, se si usa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella `Production.Product` appartiene a una delle quattro categorie della tabella `Production.ProductCategory`: Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
+Ad esempio, se si usa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella `Production.Product` appartiene a una delle quattro categorie della tabella `Production.ProductCategory`, ovvero Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
   
 Prendendo come esempio la categoria Bikes, le statistiche filtrate per tutti i pesi consentono di fornire a Query Optimizer statistiche più accurate e di migliorare la qualità del piano di query rispetto alle statistiche di tabella completa o alle statistiche inesistenti nella colonna relativa al peso (Weight). La colonna Weight della categoria Bikes rappresenta un candidato valido per le statistiche filtrate. Nel caso di un numero relativamente ridotto di ricerche correlate al peso, tale colonna non è tuttavia necessariamente un candidato valido per un indice filtrato. È possibile che i vantaggi derivanti dai miglioramenti alle prestazioni delle ricerche offerti da un indice filtrato siano inferiori rispetto agli svantaggi derivanti dai costi di manutenzione e archiviazione supplementari dovuti all'aggiunta di un indice filtrato al database.  
   
@@ -242,7 +242,7 @@ Solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile c
   
  Poiché le statistiche temporanee sono archiviate in **tempdb**, un riavvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta l'indisponibilità di tutte le statistiche temporanee.  
     
-## <a name="UpdateStatistics"></a> Quando aggiornare le statistiche  
+## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> Quando aggiornare le statistiche  
  Query Optimizer determina che le statistiche potrebbero non essere aggiornate, quindi le aggiorna qualora siano necessarie per un piano di query. In alcuni casi, è possibile migliorare il piano di query e le prestazioni di esecuzione delle query aggiornando le statistiche più frequentemente di quanto accada quando [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) è impostata su ON. È possibile aggiornare le statistiche mediante l'istruzione UPDATE STATISTICS o la stored procedure sp_updatestats.  
   
  Sebbene consenta di garantire che le query vengano compilate con statistiche aggiornate, l'aggiornamento delle statistiche causa la ricompilazione delle query. Si consiglia di non aggiornare le statistiche troppo frequentemente perché è necessario mantenere un equilibrio a livello di prestazioni tra la necessità di migliorare i piani di query e il tempo necessario per la ricompilazione delle query. Tale equilibrio dipende dall'applicazione in uso.  
@@ -277,7 +277,7 @@ Solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile c
 
 Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), per gestire automaticamente la deframmentazione dell'indice e gli aggiornamenti delle statistiche per uno o più database. Questa procedura sceglie automaticamente se ricompilare o riorganizzare un indice in base al relativo livello di frammentazione, tra gli altri parametri, e aggiornare le statistiche con una soglia lineare.
   
-##  <a name="DesignStatistics"></a> Query che usano le statistiche in modo efficace  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> Query che usano le statistiche in modo efficace  
  Alcune implementazioni delle query, quali le variabili locali e le espressioni complesse nel predicato di query, possono comportare la definizione di piani di query non ottimali. Per evitare che ciò accada, attenersi alle linee guida relative alla progettazione delle query per un utilizzo efficace delle statistiche. Per altre informazioni sui predicati, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  È possibile migliorare i piani di query applicando le linee guida relative alla progettazione delle query che prevedono un utilizzo efficace delle statistiche, al fine di migliorare le *stime della cardinalità* per espressioni, variabili e funzioni usate nei predicati di query. Se il valore di un'espressione, di una variabile o di una funzione non è noto, Query Optimizer non è in grado di determinare il valore da ricercare nell'istogramma e non può pertanto recuperare la stima della cardinalità ottimale dall'istogramma. In tal caso, la stima della cardinalità di Query Optimizer si basa sul numero medio di righe per valore distinct per tutte le righe campionate nell'istogramma. Ciò comporta stime della cardinalità non ottimali e può causare una riduzione delle prestazioni di esecuzione delle query. Per altre informazioni sugli istogrammi, vedere la sezione [Istogramma](#histogram) in questa pagina o [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md).

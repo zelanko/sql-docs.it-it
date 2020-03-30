@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9bf5e128b054bbea218c6b791666f5698c24c37d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557706"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure
@@ -35,7 +35,7 @@ ms.locfileid: "75557706"
   
  ![security-center-legend](../performance/media/security-center-legend.PNG "security-center-legend")  
   
-##  <a name="Who"></a> Autenticazione: identità dell'utente  
+##  <a name="authentication-who-are-you"></a><a name="Who"></a> Autenticazione: identità dell'utente  
   
 |||  
 |-|-|  
@@ -43,7 +43,7 @@ ms.locfileid: "75557706"
 |**Dove viene eseguita l'autenticazione**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Nel database master: account di accesso e utenti di database<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Nel database utente: utenti di database indipendenti|Autenticazione a livello di database master (account di accesso e utenti di database)<br /><br /> [Creazione di un account di accesso di SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Gestione di database e account di accesso in database SQL di Azure](https://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [Creazione di un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Autenticazione a livello di database utente<br /><br /> [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**Uso di altre identità**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Credenziali<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Esecuzione con un altro account di accesso<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Esecuzione con un altro utente di database|[Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Esecuzione con un altro account di accesso](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Esecuzione con un altro utente di database](../../t-sql/statements/execute-as-transact-sql.md)|  
   
-##  <a name="What"></a> Autorizzazione: operazioni consentite  
+##  <a name="authorization-what-can-you-do"></a><a name="What"></a> Autorizzazione: operazioni consentite  
   
 |||  
 |-|-|  
@@ -51,7 +51,7 @@ ms.locfileid: "75557706"
 |**Sicurezza in base ai ruoli**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Ruoli a livello di server<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Ruoli a livello di database|[Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**Limitazione dell'accesso ai dati agli elementi di dati selezionati**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Limitare l'accesso ai dati con viste/stored procedure<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Sicurezza a livello di riga<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Mascheramento dati dinamici<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Oggetti firmati|Uso di [viste](../../relational-databases/views/views.md) e [routine](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)per limitare l'accesso ai dati<br /><br /> [Sicurezza a livello di riga (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [Sicurezza a livello di riga (Database SQL di Azure)](https://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [Mascheramento dati dinamici (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [Mascheramento dati dinamici (Database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [Oggetti firmati](../../t-sql/statements/add-signature-transact-sql.md)|  
   
-##  <a name="Encrypt"></a> Crittografia: archiviazione dei dati segreti  
+##  <a name="encryption-storing-secret-data"></a><a name="Encrypt"></a> Crittografia: archiviazione dei dati segreti  
   
 |||  
 |-|-|  
@@ -59,14 +59,14 @@ ms.locfileid: "75557706"
 |**Crittografia delle origini**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Modulo Extensible Key Management<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Chiavi archiviate nell'insieme di credenziali di Azure<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Always Encrypted|[Modulo Extensible Key Management](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Chiavi archiviate nell'insieme di credenziali di Azure](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**Crittografia di colonne, dati e chiavi**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Crittografia mediante certificato<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Crittografia mediante chiave simmetrica<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Crittografia mediante chiave asimmetrica<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Crittografia mediante passphrase|[Crittografia mediante certificato](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [Crittografia mediante chiave asimmetrica](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [Crittografia mediante chiave simmetrica](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [Crittografia mediante passphrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [Crittografia di una colonna di dati](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-##  <a name="Connect"></a> Sicurezza della connessione: limitazioni e sicurezza  
+##  <a name="connection-security-restricting-and-securing"></a><a name="Connect"></a> Sicurezza della connessione: limitazioni e sicurezza  
   
 |||  
 |-|-|  
 |**Protezione con firewall**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Impostazioni di Windows Firewall<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Impostazioni del firewall dei servizi di Azure<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Impostazioni del firewall del database|[Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Impostazioni del firewall del database SQL di Azure](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Impostazioni del firewall dei servizi di Azure](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
 |**Crittografia dei dati in transito**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Connessioni SSL forzate<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Connessioni SSL facoltative|[Secure Sockets Layer per il motore di database](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Secure Sockets Layer per il database SQL](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [Supporto di TLS 1.2 per Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
-##  <a name="Audit"></a> Controllo: registrazione dell'accesso  
+##  <a name="auditing-recording-access"></a><a name="Audit"></a> Controllo: registrazione dell'accesso  
   
 |||  
 |-|-|  
@@ -74,7 +74,7 @@ ms.locfileid: "75557706"
 |**Controllo personalizzato**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Trigger|Implementazione di controlli personalizzati: creare [trigger DDL](../../relational-databases/triggers/ddl-triggers.md) e [trigger DML](../../relational-databases/triggers/dml-triggers.md)|  
 |**Conformità**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Conformità|SQL Server:<br />                        [Criteri comuni](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> Database SQL:<br />                        [Centro protezione di Microsoft Azure: conformità per funzionalità](https://azure.microsoft.com/support/trust-center/services/)|  
   
-##  <a name="SQLInjection"></a> Attacco intrusivo nel codice SQL  
+##  <a name="sql-injection"></a><a name="SQLInjection"></a> Attacco intrusivo nel codice SQL  
  In un attacco SQL injection il malware viene inserito in stringhe successivamente passate al [!INCLUDE[ssDE](../../includes/ssde-md.md)] per l'analisi e l'esecuzione. Per la prevenzione degli attacchi di questo tipo è necessario esaminare tutte le procedure che creano istruzioni SQL, poiché in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguite tutte le query sintatticamente valide ricevute. Tutti i sistemi di database sono a rischio di attacchi SQL injection e molte delle vulnerabilità vengono introdotte nell'applicazione che sta eseguendo una query sul [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per contrastare gli attacchi SQL injection è possibile usare stored procedure e comandi con parametri, evitando l'SQL dinamico e limitando le autorizzazioni per tutti gli utenti.  Per altre informazioni, vedere [Attacco intrusivo nel codice SQL](../../relational-databases/security/sql-injection.md).  
   
  Collegamenti aggiuntivi per i programmatori di applicazioni:  

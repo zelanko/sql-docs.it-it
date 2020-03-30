@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286065"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
@@ -35,14 +35,14 @@ Prima di distribuire un cluster Big Data di SQL Server 2019, [installare innanzi
 - Azure Data Studio
 - [Estensione di virtualizzazione dei dati](../azure-data-studio/data-virtualization-extension.md) per Azure Data Studio
 
-## <a id="prereqs"></a> Prerequisiti per Kubernetes
+## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Prerequisiti per Kubernetes
 
 I [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] richiedono la versione minima di Kubernetes 1.13 sia per il server sia per il client (kubectl).
 
 > [!NOTE]
 > Le versioni client e server di Kubernetes devono essere comprese tra le versioni secondarie +1 e -1. Per altre informazioni, vedere [Note sulla versione di Kubernetes e criteri per gli SKU relativi alla differenza tra versioni](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-### <a id="kubernetes"></a> Installazione del cluster Kubernetes
+### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Installazione del cluster Kubernetes
 
 Se è già presente un cluster Kubernetes che soddisfa i prerequisiti indicati sopra, è possibile passare direttamente alla [fase di distribuzione](#deploy). Questa sezione presuppone una conoscenza di base dei concetti relativi a Kubernetes.  Per informazioni dettagliate su Kubernetes, vedere la [documentazione di Kubernetes](https://kubernetes.io/docs/home).
 
@@ -75,13 +75,13 @@ Per la maggior parte delle distribuzioni di cluster Big Data deve essere disponi
 
 Se si esegue la distribuzione nel servizio Azure Kubernetes, non occorre configurare l'archiviazione. Il servizio Azure Kubernetes fornisce classi di archiviazione predefinite con provisioning dinamico. È possibile personalizzare la classe di archiviazione (`default` o `managed-premium`) nel file di configurazione della distribuzione. I profili predefiniti usano una classe di archiviazione `default`. Se si esegue la distribuzione in un cluster Kubernetes distribuito con `kubeadm`, è necessario assicurarsi di disporre di spazio di archiviazione sufficiente per un cluster con la scala desiderata e configurato per l'uso. Se si desidera personalizzare la modalità d'uso dell'archiviazione, è necessario farlo prima di procedere. Vedere [Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes](concept-data-persistence.md).
 
-## <a id="deploy"></a> Panoramica della distribuzione
+## <a name="deployment-overview"></a><a id="deploy"></a> Panoramica della distribuzione
 
 La maggior parte delle impostazioni del cluster Big Data è definita in un file di configurazione della distribuzione JSON. È possibile usare un profilo di distribuzione predefinito per il servizio Azure Kubernetes e cluster Kubernetes creati con `kubeadm` oppure è possibile personalizzare il file di configurazione della distribuzione da usare durante l'impostazione. Per motivi di sicurezza, le impostazioni di autenticazione vengono passate tramite variabili di ambiente.
 
 Le sezioni seguenti forniscono altri dettagli su come configurare le distribuzioni di cluster Big Data, nonché alcuni esempi di personalizzazioni comuni. Inoltre, è sempre possibile modificare il file di configurazione della distribuzione personalizzato usando, ad esempio, un editor come VS Code.
 
-## <a id="configfile"></a> Configurazioni predefinite
+## <a name="default-configurations"></a><a id="configfile"></a> Configurazioni predefinite
 
 Le opzioni di distribuzione dei cluster Big Data sono definite in un file di configurazione della distribuzione JSON. È possibile avviare la personalizzazione della distribuzione del cluster dai profili di distribuzione predefiniti disponibili in `azdata`. 
 
@@ -125,7 +125,7 @@ In questo scenario vengono chieste le impostazioni che non fanno parte della con
 > [!IMPORTANT]
 > Il nome predefinito del cluster Big Data è `mssql-cluster`. Questo dato è importante per eseguire tutti i comandi `kubectl` che specificano lo spazio dei nomi di Kubernetes con il parametro `-n`.
 
-## <a id="customconfig"></a> Configurazioni personalizzate
+## <a name="custom-configurations"></a><a id="customconfig"></a> Configurazioni personalizzate
 
 È anche possibile personalizzare la distribuzione per gestire i carichi di lavoro che si prevede di eseguire. Si noti che non è possibile modificare la scalabilità (numero di repliche) o le impostazioni di archiviazione per i servizi del cluster Big Data dopo la distribuzione e di conseguenza è necessario pianificare attentamente la configurazione della distribuzione per evitare problemi di capacità. Per personalizzare la distribuzione, eseguire queste operazioni:
 
@@ -165,7 +165,7 @@ In questo scenario vengono chieste le impostazioni che non fanno parte della con
 
 > Per altre informazioni sulla struttura di un file di configurazione della distribuzione, vedere [Informazioni di riferimento sul file di configurazione della distribuzione](reference-deployment-config.md). Per altri esempi di configurazione, vedere [Configurare le impostazioni di distribuzione per cluster Big Data](deployment-custom-configuration.md).
 
-## <a id="env"></a> Variabili di ambiente
+## <a name="environment-variables"></a><a id="env"></a> Variabili di ambiente
 
 Le variabili di ambiente seguenti vengono usate per le impostazioni di sicurezza che non sono archiviate in un file di configurazione della distribuzione. Ad eccezione delle credenziali, le impostazioni di Docker possono essere impostate nel file di configurazione.
 
@@ -208,11 +208,11 @@ Tenere presenti le linee guida seguenti:
 - Assicurarsi di racchiudere la password tra virgolette doppie se contiene caratteri speciali. È possibile impostare `AZDATA_PASSWORD` su qualsiasi valore desiderato, ma assicurarsi che la password sia sufficientemente complessa e non contenga i caratteri `!`, `&` e `'`. Le virgolette doppie funzionano come delimitatori solo nei comandi di Bash.
 - L'account di accesso `AZDATA_USERNAME` è un amministratore di sistema nell'istanza master di SQL Server che viene creato durante la configurazione. Dopo aver creato il contenitore SQL Server, la variabile di ambiente `AZDATA_PASSWORD` specificata diventa individuabile eseguendo `echo $AZDATA_PASSWORD` nel contenitore. Per motivi di sicurezza, la procedura consigliata richiede la modifica della password.
 
-## <a id="unattended"></a> Installazione automatica
+## <a name="unattended-install"></a><a id="unattended"></a> Installazione automatica
 
 Per una distribuzione automatica, è necessario impostare tutte le variabili di ambiente obbligatorie, usare un file di configurazione e chiamare il comando `azdata bdc create` con il parametro `--accept-eula yes`. Gli esempi forniti nella sezione precedente mostrano la sintassi per un'installazione automatica.
 
-## <a id="monitor"></a> Monitorare la distribuzione
+## <a name="monitor-the-deployment"></a><a id="monitor"></a> Monitorare la distribuzione
 
 Durante l'avvio automatico del cluster la finestra di comando client restituisce lo stato della distribuzione. Durante il processo di distribuzione dovrebbe essere visualizzata una serie di messaggi che indicano che il processo è in attesa del pod del controller:
 
@@ -239,7 +239,7 @@ Cluster deployed successfully.
 > [!TIP]
 > Il nome predefinito per il cluster Big Data distribuito è `mssql-cluster`, a meno che non venga modificato da una configurazione personalizzata.
 
-## <a id="endpoints"></a> Recuperare gli endpoint
+## <a name="retrieve-endpoints"></a><a id="endpoints"></a> Recuperare gli endpoint
 
 Dopo aver eseguito lo script di distribuzione, è possibile ottenere gli indirizzi degli endpoint esterni per il cluster Big Data completando i passaggi seguenti.
 
@@ -293,7 +293,7 @@ Dopo aver eseguito lo script di distribuzione, è possibile ottenere gli indiriz
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-## <a id="status"></a> Verificare lo stato del cluster
+## <a name="verify-the-cluster-status"></a><a id="status"></a> Verificare lo stato del cluster
 
 Dopo la distribuzione, è possibile controllare lo stato del cluster con il comando [azdata bdc status show](reference-azdata-bdc-status.md).
 
@@ -423,7 +423,7 @@ Sql: ready                                                                      
 
 Oltre a `azdata`, è anche possibile usare Azure Data Studio per trovare sia gli endpoint sia le informazioni sullo stato. Per altre informazioni sulla visualizzazione dello stato del cluster con `azdata` e Azure Data Studio, vedere [Come visualizzare lo stato di un cluster Big Data](view-cluster-status.md).
 
-## <a id="connect"></a> Connettersi al cluster
+## <a name="connect-to-the-cluster"></a><a id="connect"></a> Connettersi al cluster
 
 Per altre informazioni su come connettersi al cluster Big Data, vedere [Connettersi a un cluster Big Data di SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
 

@@ -15,10 +15,10 @@ ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f5d95556fcb02cb559926074edb90fb2749fc958
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286312"
 ---
 # <a name="extending-packages-with-scripting"></a>Estensione di pacchetti tramite scripting
@@ -48,7 +48,7 @@ ms.locfileid: "71286312"
  [Estensione del flusso di dati con il componente script](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
  Viene descritto come creare origini, trasformazioni e destinazioni personalizzate del flusso di dati tramite il componente script. Un componente del flusso di dati viene in genere chiamato una volta per ogni riga di dati che viene elaborata.  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con i relativi nomi simbolici e le descrizioni.  
   

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1f513b93852863d7c3c03ac60289d4ba2bdb4b7b
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256714"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Connettere una web part Filtro o Documenti con una web part Visualizzatore di report di Reporting Services
@@ -39,13 +39,13 @@ Se si usa un prodotto SharePoint è possibile creare un dashboard o una pagina w
   
 4.  Nella categoria **Varie** di **Tutte le web part** selezionare **Visualizzatore report di SQL Server Reporting Services**.  
   
-5.  Scegliere **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
+5.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
 6.  In un'altra area della stessa pagina web part o dello stesso dashboard fare clic su **Aggiungi web part**.  
   
 7.  Nella sezione **Filtri** di **Tutte le web part** selezionare una web part.  
   
-8.  Scegliere **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
+8.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
 9. Nell'area che contiene la web part fare clic sul menu **Modifica** della web part, scegliere **Connessioni**, **Send Filter Values To** (Invia valori filtro a), quindi **Visualizzatore report** - *nome report*.  
   
@@ -61,7 +61,7 @@ Se si usa un prodotto SharePoint è possibile creare un dashboard o una pagina w
   
 4.  Nella sezione **Elenchi e raccolte** di **Tutte le web part** selezionare **Documenti**.  
   
-5.  Scegliere **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
+5.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
 6.  Fare clic sul pulsante **Applica** , disponibile nella parte inferiore del riquadro Strumenti, e quindi scegliere **OK** per chiudere il riquadro.  
   
@@ -69,7 +69,7 @@ Se si usa un prodotto SharePoint è possibile creare un dashboard o una pagina w
   
 8.  Nella categoria **Varie** di **Tutte le web part** selezionare **Visualizzatore report di SQL Server Reporting Services**.  
   
-9. Scegliere **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
+9. Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area.  
   
 10. Nell'area che contiene la web part fare clic sul menu **Modifica** della web part, scegliere **Connessioni**, **Get report definitions from** (Recupera definizioni report da), quindi **Documenti**.  
   

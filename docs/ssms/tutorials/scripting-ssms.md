@@ -20,10 +20,10 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247302"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Creare script per oggetti in SQL Server Management Studio

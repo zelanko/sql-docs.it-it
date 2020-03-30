@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251068"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools
@@ -27,7 +27,7 @@ Per usare una condizione di test creata in una versione precedente a SQL Server 
   
 -   [Installare la condizione di test aggiornata](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>Aggiornare i riferimenti  
+## <a name="update-references"></a><a name="UpdateReferences"></a>Aggiornare i riferimenti  
 Per aggiornare i riferimenti del progetto:  
   
 1.  Solo per Visual Basic, in **Esplora soluzioni** scegliere **Mostra tutti i file**.  
@@ -81,7 +81,7 @@ Per aggiornare i riferimenti del progetto:
   
 La condizione di test a questo punto usa i riferimenti dell'assembly di unit test di SQL Server.  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>Aggiornare gli attributi della classe e i riferimenti di tipo  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>Aggiornare gli attributi della classe e i riferimenti di tipo  
 Sostituire gli attributi precedenti della classe di unit test con nuovi attributi. L'estendibilità degli unit test di SQL Server ora si basa su Managed Extensibility Framework (MEF). È necessario aggiornare alcuni i riferimenti di tipo.  
   
 ### <a name="update-class-attributes"></a>Aggiornare gli attributi della classe  
@@ -128,7 +128,7 @@ Alcuni nomi di tipo sono cambiati nel framework per unit test di SQL Server. Per
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>Installare la condizione di test aggiornata  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>Installare la condizione di test aggiornata  
 Nelle versioni precedenti degli unit test di database, è possibile che veniva richiesto di installare la condizione di test nella Global Assembly Cache o creare un file XML contenente le informazioni sull'assembly. Con gli unit test di SQL Server, questo processo aggiuntivo non è più necessario. Per altre informazioni, vedere [Compilazione del progetto e installazione della condizione di test](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx).  
   
 Una volta aggiornati i riferimenti, verificare che l'assembly sia firmato e compilato.  

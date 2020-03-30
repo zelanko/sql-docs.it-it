@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761895"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
@@ -29,24 +29,24 @@ ms.locfileid: "76761895"
 
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
   
-##  <a name="Background"></a> Background  
+##  <a name="background"></a><a name="Background"></a> Background  
  il quale consente l'accesso a query distribuite ed eterogenee in origini dati OLE DB. Dopo aver creato un server collegato, le query distribuite possono essere eseguite in questo server e consentono di creare un join di tabelle provenienti da più origini dati. Se il server collegato viene definito come un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile eseguire stored procedure remote.  
   
  Le funzionalità e gli argomenti obbligatori del server collegato possono variare in modo significativo. Tra gli esempi contenuti in questo argomento ne viene fornito uno tipico nel quale però non sono descritte tutte le opzioni. Per altre informazioni, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-##  <a name="Security"></a> Sicurezza  
+##  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Quando si utilizzano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] è richiesta l'autorizzazione **ALTER ANY LINKED SERVER** per il server o l'appartenenza nel ruolo predefinito del server **setupadmin** . Quando si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è richiesta l'autorizzazione **CONTROL SERVER** o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="Procedures"></a> Come creare un server collegato  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Come creare un server collegato  
  È possibile utilizzare uno degli elementi seguenti:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Per creare un server collegato a un'altra istanza di SQL Server tramite SQL Server Management Studio  
   
@@ -197,7 +197,7 @@ ms.locfileid: "76761895"
      **Supporta l'operatore 'Like'**  
      Indica che il provider supporta le query che utilizzano la parola chiave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  Per creare un server collegato con [!INCLUDE[tsql](../../includes/tsql-md.md)], usare le istruzioni [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Per creare un server collegato a un'altra istanza di SQL Server tramite Transact-SQL  
@@ -225,7 +225,7 @@ ms.locfileid: "76761895"
   
     ```  
   
-##  <a name="FollowUp"></a> Completamento: Passaggi da effettuare dopo aver creato un server collegato  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> Completamento: passaggi da effettuare dopo aver creato un server collegato  
   
 #### <a name="to-test-the-linked-server"></a>Per testare il server collegato  
   

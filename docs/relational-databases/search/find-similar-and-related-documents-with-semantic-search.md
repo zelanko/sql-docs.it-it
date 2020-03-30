@@ -13,17 +13,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3ee3baa843aee101e5cbea425582a96e32bcd92b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056508"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Trovare documenti simili e correlati tramite la ricerca semantica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Viene descritto come reperire documenti o valori di testo simili o correlati, nonché informazioni relative alla somiglianza o correlazione, in colonne configurate per l'indicizzazione semantica statistica.  
    
-##  <a name="HowToQuerySimilar"></a> Trovare documenti simili o correlati con SEMANTICSIMILARITYTABLE  
+##  <a name="find-similar-or-related-documents-with-semanticsimilaritytable"></a><a name="HowToQuerySimilar"></a> Trovare documenti simili o correlati con SEMANTICSIMILARITYTABLE  
  Per identificare documenti simili o correlati in una colonna specifica, eseguire una query sulla funzione [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
   
  **SEMANTICSIMILARITYTABLE** restituisce una tabella di zero, una o più righe per le colonne il cui contenuto nella colonna specificata è semanticamente simile a un documento specificato. A questa funzione del set di righe è possibile fare riferimento nella clausola FROM di un'istruzione SELECT come normale nome di tabella.  
@@ -35,7 +35,7 @@ ms.locfileid: "74056508"
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  L'esempio seguente recupera i primi 10 candidati simili al candidato specificato da *\@CandidateID* dalla tabella HumanResources.JobCandidate nel database di esempio AdventureWorks2012.  
   
 ```scr  
@@ -50,7 +50,7 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="HowToQuerySimilarity"></a>Trovare informazioni sulla somiglianza o correlazione dei documenti mediante SEMANTICSIMILARITYDETAILSTABLE  
+##  <a name="find-info-about-how-documents-are-similar-or-related-with-semanticsimilaritydetailstable"></a><a name="HowToQuerySimilarity"></a>Trovare informazioni sulla somiglianza o correlazione dei documenti mediante SEMANTICSIMILARITYDETAILSTABLE  
  Per ottenere informazioni sulle frasi chiave che rendono simili o correlati alcuni documenti, è possibile eseguire una query sulla funzione [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** restituisce una tabella di zero, una o più righe di frasi chiave comuni in due documenti, ovvero un documento di origine e un documento corrispondente, il cui contenuto è semanticamente simile. A questa funzione del set di righe è possibile fare riferimento nella clausola FROM di un'istruzione SELECT come normale nome di tabella.  
@@ -60,7 +60,7 @@ GO
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  Nell'esempio seguente vengono recuperate le 5 frasi chiave associate al punteggio di somiglianza più elevato tra i candidati specificati nella tabella **HumanResources.JobCandidate** del database di esempio AdventureWorks2012.  
   
 ```sql  

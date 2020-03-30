@@ -14,10 +14,10 @@ author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287575"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
@@ -26,13 +26,13 @@ ms.locfileid: "79287575"
 
 Questo articolo descrive le procedure consigliate per l'uso di SQL Server Query Store con un carico di lavoro.
 
-## <a name="SSMS"></a> Usare la versione più recente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> Usare la versione più recente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione di Query Store e l'utilizzo dei dati raccolti relativi al carico di lavoro. Scaricare da [qui](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
 Per una rapida descrizione di come usare Query Store in scenari di risoluzione dei problemi, vedere i post relativi a [Query Store nei blog di @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
-## <a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure
+## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure
 
 Se si esegue Query Store nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure, è possibile usare [Informazioni dettagliate prestazioni query](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) per analizzare il consumo delle risorse nel tempo. Anche se è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) per ottenere il consumo dettagliato delle risorse per tutte le query, ad esempio CPU, memoria e I/O, Informazioni dettagliate prestazioni query offre un metodo rapido ed efficace per determinare l'impatto delle query sul consumo di DTU complessivo per il database. Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
@@ -57,7 +57,7 @@ Se si desidera mantenere le impostazioni personalizzate, usare [ALTER DATABASE c
 
 È possibile usare Archivio query in tutti i database, anche in pool molto compressi. Tutti i problemi correlati all'utilizzo eccessivo delle risorse che possono essersi verificati quando Query Store era abilitato per un numero elevato di database nei pool elastici sono stati risolti.
 
-## <a name="Configure"></a> Adattare Query Store al proprio carico di lavoro
+## <a name="keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> Adattare Query Store al proprio carico di lavoro
 
 Configurare l'archivio query in base al carico di lavoro e ai requisiti di risoluzione dei problemi di prestazioni.
 I parametri predefiniti sono sufficienti per iniziare, ma è opportuno monitorare il comportamento di Query Store nel tempo e adattare la configurazione di conseguenza.
@@ -270,7 +270,7 @@ Se si esegue il carico di lavoro in [!INCLUDE[ssSDS](../../includes/sssds-md.md)
 - In alcuni casi si potrebbe applicare la ricompilazione delle statistiche, se c'è una notevole differenza tra il numero stimato di righe nel piano di esecuzione e quello effettivo.
 - Riscrivere le query problematiche, ad esempio per sfruttare i vantaggi della parametrizzazione delle query o per implementare la logica ottimale.
 
-## <a name="Verify"></a> Verificare che Query Store raccolga i dati delle query in modo continuativo
+## <a name="verify-that-query-store-collects-query-data-continuously"></a><a name="Verify"></a> Verificare che Query Store raccolga i dati delle query in modo continuativo
 
 Query Store può cambiare automaticamente la modalità operativa. Monitorare regolarmente lo stato di Query Store per assicurarsi che sia in funzione e per prevenire errori dovuti a cause evitabili. Eseguire questa query per determinare la modalità operativa e visualizzare i parametri più importanti:
 
@@ -374,7 +374,7 @@ La tabella seguente riporta le procedure consigliate:
 |Escludere le query non rilevanti.|Configurare la **modalità di acquisizione di Query Store** su **Auto**.|
 |Eliminare le query meno rilevanti quando vengono raggiunte le dimensioni massime.|Attivare criteri di pulizia basati sulle dimensioni.|
 
-## <a name="Parameterize"></a> Evitare l'uso di query senza parametri
+## <a name="avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> Evitare l'uso di query senza parametri
 
 L'uso di query senza parametri quando non è strettamente necessario non è una procedura consigliata. Un esempio è in caso di analisi ad hoc. Non è possibile usare nuovamente i piani memorizzati nella cache e questo impone a Query Optimizer di compilare query per ogni testo della query univoco. Per altre informazioni, vedere [Linee guida per l'utilizzo della parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
 
@@ -390,11 +390,11 @@ Valutare le opzioni seguenti:
   - Configurare la parametrizzazione forzata usando il comando dell'[opzione di database Parameterization](../../relational-databases/databases/database-properties-options-page.md#miscellaneous), se nel carico di lavoro è presente un numero ridotto di piani di query diversi. Un esempio è quando il rapporto tra il numero di valori query_hash distinti e il numero totale di voci in sys.query_store_query è molto inferiore a 1.
 - Impostare QUERY_CAPTURE_MODE su AUTO per filtrare automaticamente le query ad hoc con un consumo di risorse ridotto.
 
-## <a name="Drop"></a> Evitare il modello DROP e CREATE per gli oggetti contenitore
+## <a name="avoid-a-drop-and-create-pattern-for-containing-objects"></a><a name="Drop"></a> Evitare il modello DROP e CREATE per gli oggetti contenitore
 
 Query Store associa ogni voce di query a un oggetto contenitore, come una stored procedure, una funzione o un trigger. Quando si ricrea un oggetto contenitore, viene generata una nuova voce di query per lo stesso testo della query. Questo impedisce di monitorare le statistiche sulle prestazioni relative a tale query nel tempo e di ricorrere al meccanismo di uso forzato del piano. Per evitare questa situazione, usare il processo `ALTER <object>` per modificare la definizione dell'oggetto contenitore, quando è possibile.
 
-## <a name="CheckForced"></a> Verificare regolarmente lo stato dei piani forzati
+## <a name="check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> Verificare regolarmente lo stato dei piani forzati
 
 L'uso forzato del piano è un meccanismo efficace per risolvere i problemi di prestazioni delle query critiche e renderle più prevedibili. Come accade con gli hint di piano e le guide di piano, forzare un piano non garantisce che poi venga usato nelle esecuzioni successive. In genere, quando lo schema del database viene modificato in modo che gli oggetti a cui fa riferimento il piano di esecuzione vengano modificati o eliminati, l'uso forzato del piano ha esito negativo. In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opta per la ricompilazione delle query, mentre il motivo effettivo dell'errore viene esposto in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La query seguente restituisce informazioni sui piani forzati:
 
@@ -411,13 +411,13 @@ WHERE is_forced_plan = 1;
 
 Per un elenco completo dei motivi, vedere [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). È anche possibile usare l'oggetto XEvent **query_store_plan_forcing_failed** per monitorare e risolvere gli errori di uso forzato del piano.
 
-## <a name="Renaming"></a> Evitare di rinominare i database per query con piani forzati
+## <a name="avoid-renaming-databases-for-queries-with-forced-plans"></a><a name="Renaming"></a> Evitare di rinominare i database per query con piani forzati
 
 I piani di esecuzione fanno riferimento agli oggetti usando nomi in tre parti come `database.schema.object`.
 
 Se si rinomina un database, l'uso forzato del piano ha esito negativo e questo provoca la ricompilazione in tutte le esecuzioni di query successive.
 
-## <a name="Recovery"></a> Usare i flag di traccia nei server cruciali
+## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Usare i flag di traccia nei server cruciali
 
 I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la disponibilità dei database tramite Query Store. Per altre informazioni, vedere [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 

@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094571"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
@@ -84,7 +84,7 @@ ms.locfileid: "74094571"
   
     -   [Pagina Risultati](#Results)  
   
-###  <a name="Introduction"></a> Pagina Introduzione  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la procedura guidata Importa applicazione livello dati.  
   
  **Opzioni**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094571"
   
 -   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
-###  <a name="Import_settings"></a> Pagina Impostazioni di importazione  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Pagina Impostazioni di importazione  
  Utilizzare questa pagina per specificare il percorso del file con estensione bacpac da importare.  
   
 -   **Importa da disco locale**: fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
@@ -106,7 +106,7 @@ ms.locfileid: "74094571"
   
      Per continuare, specificare il file bacpac da importare, quindi fare clic su **Apri**.  
   
-###  <a name="Database_settings"></a> Pagina Impostazioni database  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Pagina Impostazioni database  
  Usare questa pagina per specificare i dettagli del database che verrà creato.  
   
  **Per un'istanza locale di SQL Server:**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094571"
   
  Scegliere **Avanti**per continuare.  
   
-###  <a name="Summary"></a> Pagina Riepilogo  
+###  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di importazione utilizzando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di importazione e chiudere la procedura guidata, fare clic su **Annulla**.  
   
-###  <a name="Progress"></a> Pagina Stato  
+###  <a name="progress-page"></a><a name="Progress"></a> Pagina Stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
   
  Scegliere **Avanti**per continuare.  
   
-###  <a name="Results"></a> Pagina Risultati  
+###  <a name="results-page"></a><a name="Results"></a> Pagina Risultati  
  In questa pagina viene riportato l'esito positivo o negativo delle operazioni di impostazione e creazione del database, con l'indicazione dei risultati positivi o negativi di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
  Fare clic su **Chiudi** per chiudere la procedura guidata.  

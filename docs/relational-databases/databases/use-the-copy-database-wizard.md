@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127124"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
@@ -49,7 +49,7 @@ Copia guidata database consente di spostare o copiare facilmente database e dete
 -   Pianificare lo spostamento o la copia dei database.  
   
 
-##  <a name="Restrictions"></a> Limitazioni e restrizioni  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   La Copia guidata database non è disponibile nell'edizione Express.  
   
@@ -81,7 +81,7 @@ Copia guidata database consente di spostare o copiare facilmente database e dete
 > **IMPORTANTE** Se si usa il metodo di **collegamento e scollegamento** , la proprietà dei database di origine e di destinazione viene impostata sui dati di accesso che eseguono **Copia guidata database**.  Vedere [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) per modificare la proprietà di un database.
   
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
 -   Assicurarsi che SQL Server Agent sia stato avviato nel server di destinazione.  
 
 -   Verificare che le directory dei dati e dei log nel server di origine siano raggiungibili dal server di destinazione.
@@ -90,7 +90,7 @@ Copia guidata database consente di spostare o copiare facilmente database e dete
 
 > **IMPORTANTE** Nel metodo **di collegamento e scollegamento** il processo di copia o spostamento avrà esito negativo se non viene usato un account proxy di Integration Services.  In alcuni casi il database di origine non verrà riassociato al server di origine e tutte le autorizzazioni di protezione NTFS verranno rimosse dai file di dati e di log.  In questo caso, passare ai file, riapplicare le autorizzazioni rilevanti e quindi ricollegare il database all'istanza di SQL Server.
   
-##  <a name="Recommendations"></a> Indicazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Per garantire prestazioni ottimali del database aggiornato, eseguire [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (aggiornamento delle statistiche) sul database aggiornato.  
   
@@ -98,10 +98,10 @@ Copia guidata database consente di spostare o copiare facilmente database e dete
   
 
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario essere membri del ruolo predefinito del server **sysadmin** sia nel server di origine sia in quello di destinazione.  
   
-##  <a name="Overview"></a> Pagine della Copia guidata database 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> Pagine della Copia guidata database 
 Avviare **Copia guidata database** in SQL Server Management Studio da **Esplora oggetti** ed espandere **Database**.  Quindi, fare clic con il pulsante destro del mouse su un database, scegliere **Attività**e quindi **Copia database**.  Se viene visualizzata la pagina iniziale **Copia guidata database** , fare clic su **Avanti**.
 
 
@@ -295,7 +295,7 @@ Visualizza un riepilogo delle opzioni selezionate.  È possibile fare clic su **
 -    **Messaggio**  
 Viene fornito qualsiasi messaggio restituito a ogni passaggio.
 
-##  <a name="Examples"></a> Esempi
+##  <a name="examples"></a><a name="Examples"></a> Esempi
 ### <a name="common-steps"></a>**Passaggi comuni** 
 Indipendentemente dall'operazione scelta tra **spostamento** o **copia**, **collegamento e scollegamento** o **SMO**, i cinque passaggi elencati di seguito saranno uguali.  Per brevità, i passaggi sono elencati in questa pagina una sola volta e tutti gli esempi inizieranno al **passaggio 6**.
 
@@ -384,12 +384,12 @@ In questo esempio il database `Sales` verrà copiato e creato come `SalesCopy` n
 14. Avviare manualmente il processo di SQL Server Agent appena creato `SalesCopy weekly refresh`.  Esaminare la cronologia processo e verificare che `SalesCopy` ora esista nell'istanza.
 
   
-##  <a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database  
  Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità era 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità più basso supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
- ## <a name="Post"></a> Considerazioni successive alla copia o allo spostamento
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> Considerazioni successive alla copia o allo spostamento
  Considerare la possibilità di seguire questa procedura dopo un'operazione di **copia** o **spostamento**:
 -    Modifica della proprietà dei database durante l'uso del metodo di collegamento e scollegamento.
 -    Eliminazione di oggetti server nel server di origine dopo uno **spostamento**.

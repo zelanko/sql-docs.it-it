@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531594"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Come visualizzare lo stato di un cluster Big Data 
@@ -22,7 +22,7 @@ ms.locfileid: "73531594"
 
 Questo articolo descrive come accedere agli endpoint di servizio e visualizzare lo stato dei componenti di un cluster Big Data di SQL Server. È possibile usare sia Azure Data Studio che **azdata** e questo articolo illustra entrambe le tecniche.
 
-## <a id="datastudio"></a> Usare Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Usare Azure Data Studio
 
 Dopo aver scaricato la versione più recente della **build Insider** di [Azure Data Studio](https://aka.ms/getazuredatastudio), e possibile visualizzare gli endpoint di servizio e lo stato di un cluster Big Data con il dashboard dei cluster Big Data di SQL Server. Alcune delle funzionalità seguenti sono inizialmente disponibili solo per la build Insider di Azure Data Studio.
 
@@ -55,7 +55,7 @@ La tabella degli endpoint di servizio espone anche diversi dashboard per il moni
 
 È possibile fare clic direttamente su questi collegamenti. Verrà richiesto di eseguire l'autenticazione quando si accede a questi dashboard. Per i dashboard delle metriche e dei log, fornire le credenziali di amministratore del controller impostate in fase di distribuzione usando le variabili di ambiente **AZDATA_USERNAME** e **AZDATA_PASSWORD**. I dashboard Spark useranno le credenziali del gateway (Knox), ovvero l'identità di Active Directory in un cluster integrato con AD o utente **root** e **AZDATA_PASSWORD** se si usa l'autenticazione di base nel cluster. 
 
-### <a id="notebook"></a> Notebook relativo allo stato del cluster
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook relativo allo stato del cluster
 
 1. È anche possibile visualizzare lo stato del cluster Big Data avviando il notebook relativo allo stato del cluster. Per avviare il notebook, fare clic sull'attività **Stato cluster**.
 

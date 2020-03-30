@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3035fbe469fa70ed6419388107c479e28b2a656b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982489"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
@@ -115,7 +115,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsTrigger|Qualsiasi oggetto con ambito schema|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo di dati di base: **int**|  
 |IsUniqueCnst|Qualsiasi oggetto con ambito schema|Vincolo UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo di dati di base: **int**|  
 |IsUserTable|Tabella|Tabella definita dall'utente.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo di dati di base: **int**|  
-|IsView|Visualizza|Vista.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo di dati di base: **int**|  
+|IsView|Visualizzazione|Vista.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo di dati di base: **int**|  
 |OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:** Il proprietario dello schema non corrisponde necessariamente al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore diverso da Null = ID utente del database del proprietario dell'oggetto.<br /><br /> NULL = Tipo di oggetto non supportato oppure ID di oggetto non valido.<br /><br /> Tipo di dati di base: **int**|  
 |SchemaId|Qualsiasi oggetto con ambito schema|ID dello schema associato all'oggetto.<br /><br /> Valore diverso da Null = ID dello schema dell'oggetto.<br /><br /> Tipo di dati di base: **int**|  
 |SystemDataAccess|Funzione, vista|L'oggetto accede a dati di sistema, cataloghi di sistema o tabelle di sistema virtuali nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Nessuno<br /><br /> 1 = Lettura<br /><br /> Tipo di dati di base: **int**|  
@@ -235,7 +235,7 @@ GO
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-finding-the-base-type-of-an-object"></a>D: Ricerca del tipo di base di un oggetto  
  Nell'esempio seguente viene restituito il tipo di base dell'oggetto `dbo.DimReseller`.  

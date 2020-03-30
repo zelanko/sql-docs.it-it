@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981952"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>Cambio di contesto  
  È possibile utilizzare la clausola `AS { LOGIN | USER } = ' name '` per cambiare il contesto di esecuzione di un'istruzione dinamica. Se il cambio di contesto viene specificato come `EXECUTE ('string') AS <context_specification>`, la durata del cambio di contesto è limitata all'ambito della query in fase di esecuzione.  
   
-###  <a name="_user"></a> Indicazione di un nome utente o di un ID di accesso  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Indicazione di un nome utente o di un ID di accesso  
  Il nome utente o nome account di accesso specificato in `AS { LOGIN | USER } = ' name '` deve esistere come entità rispettivamente in sys.database_principals o sys.server_principals. In caso contrario, l'istruzione avrà esito negativo. È inoltre necessario concedere le autorizzazioni IMPERSONATE per l'entità. A meno che il chiamante non sia il proprietario del database o membro del ruolo predefinito del server sysadmin, l'entità deve esistere anche quando l'utente effettua l'accesso al database o all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'appartenenza a un gruppo di Windows. Si suppongano ad esempio le condizioni seguenti:  
   
 -   Il gruppo CompanyDomain\SQLUsers ha accesso al database Sales.  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>Esempio O: Esecuzione di una routine di base  
  Esecuzione di una stored procedure:  

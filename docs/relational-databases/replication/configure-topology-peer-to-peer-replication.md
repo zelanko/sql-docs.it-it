@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903121"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configura topologia (replica peer-to-peer)
@@ -63,7 +63,7 @@ ms.locfileid: "67903121"
   
 ### <a name="options-for-each-node"></a>Opzioni per ogni nodo  
  **Aggiungi nuova connessione peer**  
- Consente di aggiungere una connessione tra due nodi. Se ad esempio si aggiunge una connessione tra Nodo A e Nodo B, la replica aggiunge due sottoscrizioni: la prima consente a Nodo A di ricevere le modifiche dalla pubblicazione in Nodo B e la seconda consente a Nodo B di ricevere le modifiche dalla pubblicazione in Nodo A.  
+ Consente di aggiungere una connessione tra due nodi. Se, ad esempio, si aggiunge una connessione tra Nodo A e Nodo B, tramite la replica vengono aggiunte due sottoscrizioni: la prima consente a Nodo A di ricevere le modifiche dalla pubblicazione in Nodo B e la seconda consente a Nodo B di ricevere le modifiche dalla pubblicazione in Nodo A.  
   
  **Elimina nodo peer**  
  Consente di rimuovere un nodo dalla topologia. Se, ad esempio, si rimuove Nodo C, la pubblicazione in quel nodo viene rimossa. Vengono rimosse anche le sottoscrizioni tra Nodo A e Nodo C e tra Nodo B e Nodo C. Il database in Nodo C non viene eliminato e la pubblicazione e la distribuzione non vengono disabilitate.  

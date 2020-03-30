@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242702"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
@@ -39,10 +39,10 @@ Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
   
 Dopo il rilevamento di un errore in una stored procedure mediante uno degli unit test, è possibile correggere l'errore ed eseguire nuovamente il test.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per completare questa procedura dettagliata, è necessario essere in grado di connettersi a un server di database (o database LocalDB) per il quale si dispone delle autorizzazioni per la creazione e distribuzione di un database. Per altre informazioni, vedere [Autorizzazioni necessarie per le funzionalità di database di Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
-## <a name="CreateScript"></a>Creare uno script contenente uno schema del database  
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Creare uno script contenente uno schema del database  
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Per creare uno script da cui sia possibile importare uno schema  
   
@@ -222,7 +222,7 @@ Per completare questa procedura dettagliata, è necessario essere in grado di co
   
     Successivamente è possibile creare un progetto di database e importare lo schema dallo script creato.  
   
-## <a name="CreateProjectAndImport"></a>Creare un progetto di database e importare uno schema  
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProjectAndImport"></a>Creare un progetto di database e importare uno schema  
   
 #### <a name="to-create-a-database-project"></a>Per creare un progetto di database  
   
@@ -263,10 +263,10 @@ Per completare questa procedura dettagliata, è necessario essere in grado di co
   
 2.  In **Esplora oggetti di SQL Server** esaminare il database nel nodo Progetti.  
   
-## <a name="DeployDBProj"></a>Distribuzione nel database locale (LocalDB)  
+## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>Distribuzione nel database locale (LocalDB)  
 Per impostazione predefinita, quando si preme F5 il database viene distribuito (o pubblicato) in un database LocalDB. È possibile modificare il percorso del database accedendo alla scheda Debug della pagina delle proprietà del progetto e cambiando la stringa di connessione.  
   
-## <a name="CreateDBUnitTests"></a>Creare unit test di SQL Server  
+## <a name="create-sql-server-unit-tests"></a><a name="CreateDBUnitTests"></a>Creare unit test di SQL Server  
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>Per creare uno unit test di SQL Server per le stored procedure  
   
@@ -297,7 +297,7 @@ Per impostazione predefinita, quando si preme F5 il database viene distribuito (
   
     Il progetto di test viene compilato e viene visualizzata la finestra di progettazione unit test di SQL Server. Successivamente sarà possibile aggiornare la logica del test nello script Transact\-SQL degli unit test.  
   
-## <a name="DefineTestLogic"></a>Definire la logica del test  
+## <a name="define-test-logic"></a><a name="DefineTestLogic"></a>Definire la logica del test  
 In questo database molto semplice sono contenute due tabelle, Customer e Order. L'aggiornamento del database si effettua utilizzando le stored procedure seguenti:  
   
 -   uspNewCustomer: tramite questa stored procedure viene aggiunto un record alla tabella Customer in cui le colonne YTDOrders e YTDSales del cliente vengono impostate su zero.  
@@ -699,7 +699,7 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
   
     A questo punto, è possibile eseguire i test.  
   
-## <a name="RunTests"></a>Eseguire unit test di SQL Server  
+## <a name="run-sql-server-unit-tests"></a><a name="RunTests"></a>Eseguire unit test di SQL Server  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>Per eseguire unit test di SQL Server  
   
@@ -755,7 +755,7 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
   
     Il test viene superato.  
   
-## <a name="NegativeTest"></a>Aggiungere uno unit test negativo  
+## <a name="add-a-negative-unit-test"></a><a name="NegativeTest"></a>Aggiungere uno unit test negativo  
 È possibile creare un test negativo per verificare che un test effettivamente non venga superato quando è previsto che abbia esito negativo. Ad esempio, se si tenta di annullare un ordine già compilato, l'esito del test deve essere negativo. In questa parte della procedura dettagliata verrà creato uno unit test negativo per la stored procedure Sales.uspCancelOrder.  
   
 Per creare e verificare un test negativo, è necessario effettuare le attività seguenti:  

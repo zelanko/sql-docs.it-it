@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572743"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaccia utente della finestra Progettazione query con interfaccia grafica
@@ -30,7 +30,7 @@ ms.locfileid: "65572743"
  .  
   
 ## <a name="graphical-query-designer"></a>Finestra Progettazione query con interfaccia grafica  
- La finestra Progettazione query con interfaccia grafica supporta tre tipi di comandi di query: **Text**, **StoredProcedure** o **TableDirect**. Prima di creare una query per il set di dati, è necessario selezionare l'opzione del tipo di comando nella pagina Query della finestra di dialogo [Proprietà set di dati](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
+ La finestra Progettazione query con interfaccia grafica supporta tre tipi di comandi di query: **Text**, **StoredProcedure**o **TableDirect**. Prima di creare una query per il set di dati, è necessario selezionare l'opzione del tipo di comando nella pagina Query della finestra di dialogo [Proprietà set di dati](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
   
  Sono disponibili le opzioni seguenti per tipo di query:  
   

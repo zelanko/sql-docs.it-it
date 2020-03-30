@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73637989"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
@@ -35,7 +35,7 @@ Il sito Web include istruzioni relative all'estrazione e al ripristino del file 
     
 Per altre informazioni sui requisiti generali, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="DMatrixAndDataset"></a>1. Creare un report drill-through da Creazione guidata tabella o matrice  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. Creare un report drill-through da Creazione guidata tabella o matrice  
 Nella finestra di dialogo Attività iniziali, creare un report matrice tramite **Creazione guidata tabella o matrice**. Nella procedura guidata sono disponibili due modalità: progettazione report e progettazione del set di dati condivisi. In questa esercitazione si utilizzerà modalità progettazione report.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
@@ -50,7 +50,7 @@ Nella finestra di dialogo Attività iniziali, creare un report matrice tramite *
   
 3.  Nel riquadro destro verificare che sia selezionata **Creazione guidata tabella o matrice** .  
   
-## <a name="DConnection"></a>1a. Specificare una connessione dati  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. Specificare una connessione dati  
 Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
@@ -96,7 +96,7 @@ Una connessione dati contiene le informazioni necessarie per connettersi a un'or
   
 14. Fare clic su **Avanti**.  
   
-## <a name="DMDXQuery"></a>1b. Creare una query MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. Creare una query MDX  
 In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
@@ -149,7 +149,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
     > [!NOTE]  
     > Il parametro contiene i nomi di categorie di prodotto. Per visualizzare il report drill-through che viene aperto quando si fa clic sul collegamento drill-through nel report principale, è necessario essere connessi a un server di report.  
   
-### <a name="DSkip"></a>Per creare il set di dati  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>Per creare il set di dati  
   
 1.  Trascinare Nome canale dalla dimensione Canale al riquadro dei dati.  
   
@@ -165,7 +165,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 7.  Fare clic su **Avanti**.  
   
-## <a name="DLayout"></a>1c. Organizzare i dati in gruppi  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organizzare i dati in gruppi  
 Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
   
 #### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -191,7 +191,7 @@ Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matri
   
 6.  Fare clic su **Avanti**.  
   
-## <a name="DTotals"></a>1d. Aggiungere subtotali e totali  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Aggiungere subtotali e totali  
 Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare i valori di aggregazione per i campi. È anche possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
@@ -208,7 +208,7 @@ Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nel
   
 3.  Fare clic su **Esegui (!)** per visualizzare un'anteprima del report.  
   
-## <a name="DFormat"></a>2. Formattare i dati come valuta  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Formattare i dati come valuta  
 Applicare la formattazione della valuta ai campi dell'importo vendite nel report drill-through.  
   
 #### <a name="to-format-data-as-currency"></a>Per formattare i dati come valuta  
@@ -219,7 +219,7 @@ Applicare la formattazione della valuta ai campi dell'importo vendite nel report
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic su **Valuta**.  
   
-## <a name="DSparkline"></a>3. Aggiungere colonne per presentare i valori vendite in grafici sparkline  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. Aggiungere colonne per presentare i valori vendite in grafici sparkline  
 Anziché mostrare vendite e margini di profitto come valori in valuta, il report mostra i valori in un grafico sparkline.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Per aggiungere grafici sparkline alle colonne  
@@ -252,7 +252,7 @@ Anziché mostrare vendite e margini di profitto come valori in valuta, il report
   
 13. Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
-## <a name="DReportTitle"></a>4. Aggiungere un titolo report con nome Product Category  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. Aggiungere un titolo report con nome Product Category  
 Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se il report ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione sarà utilizzata la casella di testo che viene posizionata automaticamente nella parte superiore del corpo del report.  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
@@ -279,7 +279,7 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 Il titolo del report include il nome della prima categoria di prodotto. In un secondo momento, dopo avere eseguito questo report come report drill-through, il nome della categoria di prodotto si modificherà dinamicamente per riflettere il nome della categoria di prodotto selezionata nel report principale.  
   
-## <a name="DParameter"></a>5. Aggiornare le proprietà dei parametri  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Aggiornare le proprietà dei parametri  
 Per impostazione predefinita i parametri sono visibili; questa impostazione non è adatta per questo report. È possibile aggiornare le proprietà dei parametri per il report drill-through.  
   
 #### <a name="to-hide-a-parameter"></a>Per nascondere un parametro:  
@@ -302,7 +302,7 @@ Per impostazione predefinita i parametri sono visibili; questa impostazione non 
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6. Salvare il report in una raccolta di SharePoint  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6. Salvare il report in una raccolta di SharePoint  
 È possibile salvare il report in una raccolta di SharePoint, in un server di report o nel computer locale. Se il report viene salvato nel computer locale, non saranno disponibili alcune caratteristiche di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport. In questa esercitazione verranno illustrate le procedure per il salvataggio del report nella raccolta di SharePoint.  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
@@ -335,7 +335,7 @@ Per impostazione predefinita i parametri sono visibili; questa impostazione non 
   
 7.  Fare clic su **Salva**.  
   
-## <a name="MMatrixAndDataset"></a>1. Creare il report principale con Creazione guidata tabella o matrice  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Creare il report principale con Creazione guidata tabella o matrice  
 Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramite **Creazione guidata tabella o matrice**.  
   
 #### <a name="to-create-the-main-report"></a>Per creare il report principale  
@@ -348,7 +348,7 @@ Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramit
  
 2.  Nella finestra di dialogo **Attività iniziali** verificare che l'opzione **Nuovo report** sia selezionata e fare clic su **Creazione guidata tabella o matrice**.  
   
-## <a name="MConnection"></a>1a. Specificare una connessione dati  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Specificare una connessione dati  
 Verrà aggiunta un'origine dati incorporata al report principale.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
@@ -387,7 +387,7 @@ Verrà aggiunta un'origine dati incorporata al report principale.
   
 14. Fare clic su **Avanti**.  
   
-## <a name="MMDXQuery"></a>1b. Creare una query MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Creare una query MDX  
 Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettazione query per creare filtri, parametri, membri calcolati e il set di dati stesso.  
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
@@ -469,7 +469,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 8.  Nella casella **Nome** digitare  **Fatturato netto**, quindi fare clic su **OK**. Nel riquadro Membri calcolati è elencato il membro calcolato di **Fatturato netto** .  
   
-### <a name="MSkip"></a>Per creare il set di dati  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>Per creare il set di dati  
   
 1.  Trascinare Nome canale dalla dimensione Canale al riquadro dei dati.  
   
@@ -485,7 +485,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 6.  Fare clic su **Avanti**.  
   
-## <a name="MLayout"></a>1c. Organizzare i dati in gruppi  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organizzare i dati in gruppi  
 Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizza dati dettagliati e dati aggregati.  
   
 #### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -504,7 +504,7 @@ Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matri
   
     I passaggi 3 e 4 consentono di specificare i dati da visualizzare nella matrice.  
   
-## <a name="MTotals"></a>1d. Aggiungere subtotali e totali  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Aggiungere subtotali e totali  
 Nei report è possibile mostrare subtotali e totali complessivi. I dati nei report principali sono visualizzati come un indicatore; il totale complessivo verrà rimosso dopo avere completato la procedura guidata.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Per aggiungere subtotali e totali complessivi  
@@ -519,7 +519,7 @@ Nei report è possibile mostrare subtotali e totali complessivi. I dati nei repo
   
 3.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
-## <a name="MGrandTotal"></a>2. Rimuovere la riga Totale complessivo  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. Rimuovere la riga Totale complessivo  
 I valori dei dati vengono mostrati come stati dell'indicatore, includendo i totali del gruppo di colonne. Rimuovere la riga che visualizza il totale complessivo.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Per rimuovere la riga Totale complessivo  
@@ -530,7 +530,7 @@ I valori dei dati vengono mostrati come stati dell'indicatore, includendo i tota
   
 3.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
-## <a name="MDrillthrough"></a>3. Configurare la Casella di testo Azione per il drill-through  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Configurare la Casella di testo Azione per il drill-through  
 Per abilitare il drill-through, specificare un'azione nella casella di testo del report principale.  
   
 #### <a name="to-enable-an-action"></a>Per abilitare un'azione  
@@ -574,7 +574,7 @@ Per abilitare il drill-through, specificare un'azione nella casella di testo del
   
 I nomi della categoria di prodotto sono nel comune formato di collegamento (blu e sottolineato).  
   
-## <a name="MIndicators"></a>4. Sostituire i valori numerici con gli indicatori  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. Sostituire i valori numerici con gli indicatori  
 Utilizzare indicatori per mostrare lo stato di quantità e vendite per i canali Online e Rivenditore.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Per aggiungere un indicatore per i valori Net QTY  
@@ -605,7 +605,7 @@ Utilizzare indicatori per mostrare lo stato di quantità e vendite per i canali 
   
 6.  Per visualizzare l'anteprima del report, fare clic su **Esegui**.  
   
-## <a name="MParameter"></a>5. Aggiornare le proprietà dei parametri  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Aggiornare le proprietà dei parametri  
 Per impostazione predefinita, i parametri sono visibili; questa impostazione non è adatta per questo report. È possibile aggiornare le proprietà dei parametri per rendere il parametro interno.  
   
 #### <a name="to-make-the-parameter-internal"></a>Per rendere interno il parametro  
@@ -620,7 +620,7 @@ Per impostazione predefinita, i parametri sono visibili; questa impostazione non
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6. Aggiungere un titolo al report  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. Aggiungere un titolo al report  
 Aggiungere un titolo a un report principale  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
@@ -635,7 +635,7 @@ Aggiungere un titolo a un report principale
   
 5.  Per visualizzare l'anteprima del report, fare clic su **Esegui**.  
   
-## <a name="MSave"></a>7. Salvare il report principale in una raccolta di SharePoint  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. Salvare il report principale in una raccolta di SharePoint  
 Salvare il report principale in una raccolta di SharePoint  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
@@ -661,7 +661,7 @@ Salvare il report principale in una raccolta di SharePoint
   
 7.  Fare clic su **Salva**.  
   
-## <a name="MRunReports"></a>8. Eseguire i report principali e drill-through  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. Eseguire i report principali e drill-through  
 Eseguire il report principale, quindi fare clic su valori nella colonna della categoria di prodotto per eseguire il report drill-through.  
   
 #### <a name="to-run-the-reports"></a>Per eseguire i report  

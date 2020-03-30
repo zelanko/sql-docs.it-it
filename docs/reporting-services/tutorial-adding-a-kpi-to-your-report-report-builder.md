@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041891"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
@@ -32,7 +32,7 @@ Tempo previsto per il completamento di questa esercitazione: 15 minuti.
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Table"></a>1. Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice  
 Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare i dati in una tabella.  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>Per creare una tabella con un set di dati incorporato  
@@ -99,7 +99,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
 
 11. Fare clic su **Avanti**.  
   
-## <a name="CompleteWizard"></a>2. Organizzare i dati e scegliere il layout nella procedura guidata  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organizzare i dati e scegliere il layout nella procedura guidata  
 La Creazione guidata tabella o matrice offre una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della tabella o della matrice.  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Per organizzare i dati in gruppi e scegliere un layout 
@@ -173,7 +173,7 @@ Allargare le colonne e impostare il formato per date e valuta.
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3. Utilizzare i colori di sfondo per visualizzare un indicatore KPI  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Utilizzare i colori di sfondo per visualizzare un indicatore KPI  
 I colori di sfondo possono essere impostati su un'espressione valutata quando si esegue il report.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Per visualizzare lo stato attuale di un indicatore KPI utilizzando i colori di sfondo  
@@ -198,7 +198,7 @@ Nella riga del subtotale in cui sono visualizzate le vendite per una sottocatego
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4. Visualizzare un indicatore KPI tramite un misuratore  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Visualizzare un indicatore KPI tramite un misuratore  
 Un misuratore raffigura un singolo valore di un set di dati. In questa esercitazione viene usato un misuratore lineare orizzontale poiché la relativa forma e semplicità ne rende facile la lettura anche quando è di piccole dimensioni e viene usato all'interno di una cella della tabella. Per altre informazioni, vedere [Misuratori &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Per visualizzare lo stato attuale di un indicatore KPI utilizzando un misuratore  
@@ -253,7 +253,7 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5. Visualizzare un indicatore KPI tramite un indicatore  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Visualizzare un indicatore KPI tramite un indicatore  
 Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare i valori dei dati in modo immediato. Grazie alle loro dimensioni e alla semplicità, gli indicatori vengono spesso utilizzati nelle tabelle e nelle matrici. Per altre informazioni, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Per visualizzare lo stato attuale di un indicatore KPI utilizzando un indicatore  
@@ -288,7 +288,7 @@ Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6. Aggiungere un titolo al report  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Aggiungere un titolo al report  
 Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa sezione sarà usata la casella di testo che viene automaticamente posizionata nella parte superiore del corpo del report.  
   
 Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -303,7 +303,7 @@ Il testo può essere ulteriormente migliorato applicando stili di carattere, dim
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Save"></a>7. Salvare il report  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Salvare il report  
 Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  

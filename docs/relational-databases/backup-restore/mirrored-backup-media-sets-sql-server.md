@@ -19,10 +19,10 @@ ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033735"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Set di supporti di backup con mirroring (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "68033735"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a> Panoramica dei set di supporti con mirroring  
+##  <a name="overview-of-mirrored-media-sets"></a><a name="OverviewofMirroredMediaSets"></a> Panoramica dei set di supporti con mirroring  
  Il mirroring dei supporti è una proprietà del set di supporti. Un *set di supporti con mirroring* è costituito da più copie (*mirror*) del set di supporti. Un set di supporti contiene uno o più set di supporti, ognuno dei quali corrisponde a un dispositivo di backup. Ad esempio, se la clausola TO di un'istruzione BACKUP DATABASE include tre dispositivi, BACKUP distribuisce i dati tra tre gruppi di supporti, uno per dispositivo. Il numero di gruppi di supporti e di mirror è definito quando viene creato il set di supporti (tramite un'istruzione BACKUP DATABASE che specifica WITH FORMAT).  
   
  Un set di supporti con mirroring include da due a quattro mirror. Ogni mirror include tutti i gruppi di supporti del set di supporti. Per i mirror è necessario lo stesso numero di dispositivi, uno per gruppo di supporti. Per ogni mirror è necessario un dispositivo di backup separato per ogni gruppo di supporti. Ad esempio, per un set di supporti con mirroring costituito da quattro gruppi di supporti con tre mirror sono necessari dodici dispositivi di backup. È necessario che tutti questi dispositivi siano equivalenti, ad esempio unità nastro dello stesso produttore e con lo stesso numero di modello.  
@@ -62,12 +62,12 @@ ms.locfileid: "68033735"
   
  I requisiti relativi alla presenza di tutti i mirror sono diversi in caso di operazioni di backup e di ripristino. Per la scrittura, ovvero la creazione o estensione, di un set di supporti con mirroring da parte di un'operazione di backup, è necessario che siano presenti tutti i mirror. Quando al contrario si esegue il ripristino di un backup da un set di supporti con mirroring, è possibile specificare un solo mirror per ogni gruppo di supporti. È possibile eseguire il ripristino da un numero di dispositivi inferiore a quello dei gruppi, ma ogni gruppo di supporti viene elaborato solo una volta. In presenza di errori, tuttavia, la disponibilità degli altri mirror può consentire una risoluzione rapida di alcuni problemi di ripristino. È possibile sostituire un volume di un supporto danneggiato con il volume corrispondente da un altro mirror. RESTORE e RESTORE VERIFYONLY supportano infatti la sostituzione di supporti danneggiati con il volume di supporti di backup corrispondente disponibile in un altro mirror.  
   
-##  <a name="HardwareReqs"></a> Requisiti hardware per i mirror di backup  
+##  <a name="hardware-requirements-for-backup-mirrors"></a><a name="HardwareReqs"></a> Requisiti hardware per i mirror di backup  
  È possibile eseguire il mirroring sia su disco che su nastro. I dischi tuttavia non supportano i nastri di continuità. Tutti i dispositivi di backup per una singola operazione di backup o di ripristino devono essere dello stesso tipo, vale a dire disco o nastro.  
   
  È inoltre necessario utilizzare dispositivi simili, con le stesse proprietà. Se i dispositivi non sono sufficientemente simili, verrà generato un messaggio di errore (3212). Per evitare il rischio di mancata corrispondenza di un dispositivo, utilizzare dispositivi equivalenti, ad esempio unità dello stesso produttore e con lo stesso numero di modello.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per eseguire il backup su dispositivi di backup con mirroring**  
   
 -   [Backup in un set di supporti con mirroring &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  

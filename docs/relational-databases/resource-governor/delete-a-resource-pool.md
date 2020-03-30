@@ -13,10 +13,10 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903942"
 ---
 # <a name="delete-a-resource-pool"></a>Eliminare un pool di risorse
@@ -28,16 +28,16 @@ ms.locfileid: "72903942"
   
 -   **Per eliminare un pool di risorse usando:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Non è possibile eliminare un pool di risorse contenente gruppi di carico di lavoro.  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Non è possibile eliminare pool di risorse predefiniti o interni di Resource Governor. Non è possibile eliminare un pool di risorse contenente gruppi di carico di lavoro. Per altre informazioni, vedere [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md).  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per eliminare un pool di risorse è necessaria l'autorizzazione CONTROL SERVER.  
   
-##  <a name="DelRPSSMS"></a> Eliminare un pool di risorse utilizzando Esplora oggetti  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Eliminare un pool di risorse utilizzando Esplora oggetti  
  **Per eliminare un pool di risorse utilizzando SQL Server Management Studio**  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**incluso.  
@@ -49,7 +49,7 @@ ms.locfileid: "72903942"
     > [!NOTE]  
     >  Se si tenta di eliminare un pool di risorse in cui è contenuto un gruppo di carico di lavoro, si verificherà un errore.  
   
-##  <a name="DelRPTSQL"></a> Eliminare un pool di risorse utilizzando Transact-SQL  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Eliminare un pool di risorse utilizzando Transact-SQL  
  **Per eliminare un pool di risorse utilizzando Transact-SQL**  
   
 1.  Eseguire l'istruzione **DROP RESOURCE POOL** o **DROP EXTERNAL RESOURCE POOL** specificando il nome del pool di risorse da eliminare.  

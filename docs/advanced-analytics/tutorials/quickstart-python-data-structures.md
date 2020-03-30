@@ -1,5 +1,5 @@
 ---
-title: 'Avvio rapido: Strutture dei dati di Python'
+title: 'Guida introduttiva: Strutture dei dati di Python'
 description: Questo argomento di avvio rapido illustra come usare le strutture di dati e gli oggetti dati in Python e Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,13 +11,13 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831906"
 ---
-# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Avvio rapido: Strutture di dati e oggetti quando si usa Python in Machine Learning Services per SQL Server
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Guida introduttiva: Strutture di dati e oggetti quando si usa Python in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questo argomento di avvio rapido si scoprirà come usare le strutture di dati quando si usa Python in Machine Learning Services per SQL Server.
@@ -35,7 +35,7 @@ Come si può esporre il singolo risultato di un calcolo come frame di dati, se u
 > [!NOTE]
 > Per restituire date, Python in SQL usa DATETIME, che ha un intervallo di date limitato incluso tra 01-01-1753 (-53690) e 31-12-9999 (2958463). 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Questo argomento di avvio rapido richiede l'accesso a un'istanza di SQL Server con [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con il linguaggio Python installato.
 

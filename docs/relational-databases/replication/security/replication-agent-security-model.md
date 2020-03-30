@@ -21,15 +21,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68768471"
 ---
 # <a name="replication-agent-security-model"></a>Modello di sicurezza dell'agente di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Il modello di sicurezza degli agenti di replica garantisce un controllo dettagliato sugli account usati per eseguire gli agenti e stabilire connessioni: Per ogni agente, è possibile specificare un account diverso. Per altre informazioni su come specificare gli account, vedere [Controllo di identità e accesso (replica)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+  Il modello di sicurezza dell'agente di replica consente un controllo accurato degli account utilizzati per l'esecuzione e le connessioni degli agenti. È possibile specificare un account diverso per ogni agente. Per altre informazioni su come specificare gli account, vedere [Controllo di identità e accesso (replica)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
 Il modello di sicurezza dell'agente di replica è leggermente diverso per le istanze gestite del database SQL di Azure, in quanto non sono previsti account di Windows con cui verranno eseguiti gli agenti. Al contrario, è necessario eseguire tutte le operazioni tramite l'autenticazione di SQL Server. 
   
@@ -38,11 +38,11 @@ Il modello di sicurezza dell'agente di replica è leggermente diverso per le ist
   
  Gli agenti di replica, come tutti i file eseguibili, vengono eseguiti nel contesto di un account di Windows. Utilizzano tale account per le connessioni con sicurezza integrata di Windows. L'account con il quale viene eseguito l'agente dipende dalla modalità di avvio di quest'ultimo:  
   
--   Avvio dell'agente da un processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent (impostazione predefinita): quando si utilizza un processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent per avviare un agente di replica, l'agente viene eseguito nel contesto di un account specificato al momento della configurazione della replica. Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e la replica, vedere la sezione "Sicurezza agente in SQL Server Agent" più avanti in questo argomento. Per altre informazioni sulle autorizzazioni necessarie per l'account usato per l'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vedere [Configurare SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
+-   Avvio dell'agente da un processo predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent: quando si utilizza un processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent per avviare un agente di replica, l'agente viene eseguito nel contesto di un account specificato al momento della configurazione della replica. Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e la replica, vedere la sezione "Sicurezza agente in SQL Server Agent" più avanti in questo argomento. Per altre informazioni sulle autorizzazioni necessarie per l'account usato per l'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vedere [Configurare SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
--   Avvio dell'agente da una riga di comando MS-DOS, direttamente o tramite uno script: l'agente viene eseguito nel contesto dell'account dell'utente che esegue l'agente dalla riga di comando.  
+-   Avvio dell'agente da una riga dei comandi MS-DOS, direttamente o tramite uno script: l'agente viene eseguito nel contesto dell'account dell'utente che esegue l'agente dalla riga di comando.  
   
--   Avvio dell'agente da un'applicazione che usa Replication Management Objects (RMO) o un controllo ActiveX: l'agente viene eseguito nel contesto dell'applicazione che chiama gli oggetti RMO o il controllo ActiveX.  
+-   Avvio dell'agente da un'applicazione che utilizza oggetti RMO (Replication Management Objects) o un controllo ActiveX: l'agente viene eseguito nel contesto dell'applicazione che chiama gli oggetti RMO o il controllo ActiveX.  
   
     > [!NOTE]  
     >  I controlli ActiveX sono deprecati.  
@@ -86,7 +86,7 @@ Il modello di sicurezza dell'agente di replica è leggermente diverso per le ist
   
  Durante la configurazione della replica si specificano gli account utilizzati per l'esecuzione degli agenti. Tutti i passaggi del processo, tuttavia, vengono eseguiti nel contesto di sicurezza di un *proxy*e pertanto la replica esegue internamente i mapping seguenti per gli account dell'agente specificati:  
   
--   Prima di tutto viene eseguito il mapping tra l'account e una credenziale usando l'istruzione [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) di [!INCLUDE[tsql](../../../includes/tsql-md.md)]. I proxy di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows.  
+-   Prima di tutto viene eseguito il mapping tra l'account e una credenziale usando l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]CREATE CREDENTIAL[ di ](../../../t-sql/statements/create-credential-transact-sql.md). I proxy di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows.  
   
 -   Viene chiamata la stored procedure [sp_add_proxy](../../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) e le credenziali vengono utilizzate per creare un proxy.  
   

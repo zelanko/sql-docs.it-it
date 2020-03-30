@@ -18,10 +18,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a36d403867699a02adfec0d04c9db4efa803514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281888"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Esercitazione SSIS: Creazione di un pacchetto ETL semplice
@@ -56,7 +56,7 @@ Per eseguire questa esercitazione, è necessario che nel sistema siano installat
     - I pacchetti di esempio presuppongono che i file di dati si trovino nella cartella `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Se il download viene decompresso in un'altra posizione, potrebbe essere necessario aggiornare il percorso del file in più posizioni nei pacchetti di esempio.
 
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
-[Lezione 1: Creare un progetto e un pacchetto di base con SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+[Lezione 1: Creare un progetto e un pacchetto di base](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 In questa lezione viene creato un pacchetto ETL semplice che estrae i dati da un unico file flat, li trasforma usando le trasformazioni Ricerca e infine carica il risultato in una destinazione tabella dei fatti.  
   
 [Lezione 2: Aggiungere cicli con SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
@@ -65,13 +65,13 @@ In questa lezione si espande il pacchetto creato nella lezione 1 per usare le nu
 [Lezione 3: Aggiungere la registrazione con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
 In questa lezione si espande il pacchetto creato nella lezione 2 per usare le nuove funzionalità di registrazione.  
   
-[Lezione 4: Aggiungere il reindirizzamento del flusso degli errori con SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[Lezione 4: Aggiungere il reindirizzamento del flusso errato con SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
 In questa lezione si espande il pacchetto creato nella lezione 3 per usare le nuove configurazioni di output degli errori.  
   
 [Lezione 5: Aggiungere configurazioni del pacchetto SSIS per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
 In questa lezione si espande il pacchetto creato nella lezione 4 per usare le nuove opzioni di configurazione del pacchetto.  
   
-[Lezione 6: Uso dei parametri con il modello di distribuzione del progetto in SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+[Lezione 6: Usare parametri con il modello di distribuzione del progetto in SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
 In questa lezione si espande il pacchetto creato nella lezione 5 per usare i nuovi parametri con il modello di distribuzione del progetto.  
   
   

@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903773"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
@@ -78,7 +77,7 @@ La gestione e il monitoraggio vengono forniti tramite una combinazione di strume
 - Possibilità di creare, aprire ed eseguire notebook compatibili con Jupyter.
 - Procedura guidata di virtualizzazione dei dati per semplificare la creazione di origini dati esterne (funzionalità abilitata dall'**estensione di virtualizzazione dei dati**).
 
-## <a id="architecture"></a> Architettura
+## <a name="architecture"></a><a id="architecture"></a> Architettura
 
 Un cluster Big Data di SQL Server è un cluster di contenitori Linux orchestrati da [Kubernetes](https://kubernetes.io/docs/concepts/).
 
@@ -101,15 +100,15 @@ Il diagramma seguente mostra i componenti di un cluster Big Data per SQL Server.
 
 ![Panoramica dell'architettura](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Controller
+### <a name="controller"></a><a id="controlplane"></a> Controller
 
 Il controller fornisce la gestione e la sicurezza per il cluster. Contiene il servizio di controllo, l'archivio di configurazione e altri servizi a livello di cluster, tra cui Kibana, Grafana ed ElasticSearch.
 
-### <a id="computeplane"></a> Pool di calcolo
+### <a name="compute-pool"></a><a id="computeplane"></a> Pool di calcolo
 
 Il pool di calcolo fornisce risorse di calcolo al cluster. Contiene nodi che eseguono SQL Server in pod Linux. I Pod nel pool di calcolo sono divisi in *istanze di calcolo SQL* per attività di elaborazione specifiche. 
 
-### <a id="dataplane"></a> Pool di dati
+### <a name="data-pool"></a><a id="dataplane"></a> Pool di dati
 
 Il pool di dati viene usato per il salvataggio permanente e la memorizzazione nella cache dei dati. Il pool di dati è costituito da uno o più pod che eseguono SQL Server in Linux. Viene usato per inserire dati da query SQL o processi Spark. I data mart del cluster Big Data di SQL Server vengono salvati in modo permanente nel pool di dati. 
 

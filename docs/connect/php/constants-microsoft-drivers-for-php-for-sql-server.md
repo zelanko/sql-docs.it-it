@@ -13,10 +13,10 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993698"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Costanti (driver Microsoft per PHP per SQL Server)
@@ -152,12 +152,12 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|I dati vengono restituiti come flusso di byte non elaborati proveniente dal server senza alcuna codifica o conversione.|  
 |SQLSRV_ENC_CHAR|I dati vengono restituiti come caratteri a 8 bit come specificato nella tabella codici delle impostazioni locali di Windows impostate nel sistema. Eventuali caratteri multibyte o che non eseguono il mapping in questa tabella codici vengono sostituiti con un carattere punto interrogativo (?) a byte singolo.<br /><br />Si tratta della codifica predefinita.|  
-|"UTF-8"|I dati vengono restituiti nel formato di codifica UTF-8. Questa costante è stata aggiunta nella versione 1.1 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Per altre informazioni sul supporto UTF-8, vedere [Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
+|"UTF-8"|I dati vengono restituiti nel formato di codifica UTF-8. Questa costante è stata aggiunta nella versione 1.1 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Per altre informazioni sul supporto UTF-8, vedere [Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
   
 > [!NOTE]  
 > Quando si usa **SQLSRV_PHPTYPE_STREAM** oppure **SQLSRV_PHPTYPE_STRING**, è necessario specificare la codifica. Se non viene fornito alcun parametro, verrà restituito un errore.  
   
-Per altre informazioni su queste costanti, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md), [Procedura: Recuperare dati di tipo carattere come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
+Per altre informazioni su queste costanti, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md), [Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### <a name="sqltype-constants"></a>Costanti SQLTYPE  
 Nella tabella seguente sono elencate le costanti che vengono usate per descrivere i tipi di dati di SQL Server. Alcune costanti sono simili a funzioni e possono accettare parametri che corrispondono a precisione, scala e lunghezza.  Quando si associano i parametri, è necessario usare le costanti simili a funzioni. Per i confronti dei tipi, sono obbligatorie le costanti standard (non simili a funzioni). Per informazioni sui tipi di dati di SQL Server, vedere [Tipi di dati (Transact-SQL).](../../t-sql/data-types/data-types-transact-sql.md) Per informazioni su precisione, scala e lunghezza, vedere [Precisione, scala e lunghezza (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  

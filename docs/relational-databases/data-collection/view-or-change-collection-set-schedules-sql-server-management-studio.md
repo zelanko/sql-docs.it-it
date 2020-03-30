@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055325"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "74055325"
   
 6.  Fare clic su **OK** per salvare le modifiche e chiudere la finestra di dialogo **Proprietà set di raccolta dati** .  
   
-####  <a name="CollectionSet"></a> Finestra di dialogo Proprietà set di raccolta dati  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Finestra di dialogo Proprietà set di raccolta dati  
  **Pagina Generale**  
   
  Utilizzare questa pagina per configurare la modalità di raccolta e caricamento dei dati, le pianificazioni e i periodi di memorizzazione dei dati nel data warehouse di gestione. Questa pagina inoltre fornisce informazioni sui set di raccolte, quali le frequenze di raccolta e i tipi di agente di raccolta, nonché i parametri di input utilizzati per un set di raccolta.  

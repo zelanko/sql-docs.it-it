@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048093"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Impostazione del mirroring del database (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "68048093"
 >  È consigliabile configurare il mirroring del database durante le fasce orarie di minore attività, in quanto la configurazione può influire sulle prestazioni.  
   
   
-##  <a name="PrepareInstances"></a> Preparazione di un'istanza del server a ospitare un server mirror  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Preparazione di un'istanza del server a ospitare un server mirror  
  Per ogni sessione di mirroring del database:  
   
 1.  È necessario che il server principale, il server mirror e il server di controllo, se presente, siano ospitati in istanze di server distinte, situate in sistemi host distinti. Per ogni istanza del server è necessario un endpoint del mirroring del database. Se è necessario creare un endpoint del mirroring di database, assicurarsi che sia accessibile alle altre istanze del server.  
@@ -48,7 +48,7 @@ ms.locfileid: "68048093"
   
 3.  Sull'istanza del server che ospiterà il database mirror, configurare il resto dell'ambiente richiesto per il database con mirroring. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Cenni preliminari: apertura di una sessione di mirroring del database  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Cenni preliminari: apertura di una sessione di mirroring del database  
  I passaggi di base per stabilire una sessione di mirroring sono i seguenti:  
   
 1.  Creare il database mirror ripristinando i backup seguenti, utilizzando RESTORE WITH NORECOVERY per ogni operazione di ripristino:  
@@ -98,7 +98,7 @@ ms.locfileid: "68048093"
 >  Per un esempio dell'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per configurare il mirroring del database mediante la sicurezza basata su certificati, vedere [Esempio: Impostazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Include un riepilogo della procedura di creazione di un database mirror o di preparazione di un database mirror prima di riprendere una sessione sospesa. Include inoltre collegamenti ad altre procedure.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68048093"
  [Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Descrive la creazione di un account di accesso per un'istanza del server remota che utilizza un account diverso dall'istanza del server locale.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **SQL Server Management Studio**  
   
 -   [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

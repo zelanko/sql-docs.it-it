@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082579"
 ---
 # <a name="rename-columns-database-engine"></a>Ridenominazione di colonne (motore di database)
@@ -42,19 +42,19 @@ ms.locfileid: "68082579"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare
 
-### <a name="Restrictions"></a> Limitazioni e restrizioni
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni
 
 Se una colonna viene ridenominata, i riferimenti a tale colonna non vengono ridenominati automaticamente ed è necessario modificare manualmente tutti gli oggetti che fanno riferimento alla colonna rinominata. Se, ad esempio, si rinomina una colonna di una tabella a cui viene fatto riferimento all'interno di un trigger, è necessario modificare il trigger in base al nuovo nome della colonna. Usare [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) per elencare le dipendenze dall'oggetto prima di rinominarlo.
 
-### <a name="Security"></a> Sicurezza
+### <a name="security"></a><a name="Security"></a> Sicurezza
 
-#### <a name="Permissions"></a> Autorizzazioni
+#### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 È necessario disporre dell'autorizzazione ALTER per l'oggetto.
 
-## <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
 
 ### <a name="to-rename-a-column-using-object-explorer"></a>Per rinominare una colonna utilizzando Esplora oggetti
 
@@ -71,7 +71,7 @@ Se una colonna viene ridenominata, i riferimenti a tale colonna non vengono ride
 > [!NOTE]
 > Per cambiare il nome di una colonna, è anche possibile utilizzare la scheda **Proprietà colonne** . A tale scopo, selezionare la colonna di cui si desidera cambiare il nome e digitare un nuovo valore per **Nome**.
 
-## <a name="TsqlProcedure"></a> Uso di Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
 
 **Per rinominare una colonna**
 

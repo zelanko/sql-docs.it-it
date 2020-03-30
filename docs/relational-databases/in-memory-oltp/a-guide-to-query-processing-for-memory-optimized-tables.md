@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8aae0e199fa1e82116baf0164b0d5c11b68e3711
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112349"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
@@ -263,7 +263,7 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|Elimina|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Questo operatore viene utilizzato sia per le funzioni intrinseche che per le conversioni dei tipi. Non tutte le funzioni e conversioni dei tipi sono supportate nelle stored procedure compilate in modo nativo.|  
 |Join a cicli annidati|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops è l'unico operatore di join supportato nelle stored procedure compilate in modo nativo. In tutti i piani che contengono join viene utilizzato l'operatore Nested Loops, anche se il piano per la stessa query eseguita come codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato contiene un hash join o un merge join.|  
 |Ordina|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
