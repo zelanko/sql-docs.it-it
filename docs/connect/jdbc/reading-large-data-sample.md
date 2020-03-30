@@ -11,10 +11,10 @@ ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 260666488a21b02c0c318d3277b72fc576b0ab08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027819"
 ---
 # <a name="reading-large-data-sample"></a>Esempio di lettura di dati di grandi dimensioni

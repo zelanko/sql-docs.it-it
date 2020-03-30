@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485316"
 ---
 # <a name="install-packages-with-r-tools"></a>Installare i pacchetti con gli strumenti R
@@ -75,7 +75,7 @@ Se l'istanza di SQL Server ha accesso a Internet, è possibile usare gli strumen
 
 Se si dispone di più istanze affiancate di SQL Server, eseguire l'installazione separatamente per ogni istanza in cui si vuole usare il pacchetto. I pacchetti non possono essere condivisi tra istanze.
 
-## <a name = "bkmk_offlineInstall"></a> Installazione offline (senza accesso a Internet)
+## <a name="offline-installation-no-internet-access"></a><a name = "bkmk_offlineInstall"></a> Installazione offline (senza accesso a Internet)
 
 I server che ospitano i database di produzione spesso non hanno una connessione Internet. Per installare i pacchetti R in tale ambiente, scaricare e preparare i pacchetti e le dipendenze in anticipo come file compressi, quindi copiare i file in una cartella nel server. A questo punto i pacchetti possono essere installati offline.
 
@@ -95,7 +95,7 @@ Quando il file ZIP si trova nell'istanza di SQL Server, è possibile installarlo
    ::: moniker-end
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-   Il percorso predefinito per l'istanza predefinita di SQL Server è ad esempio il seguente:
+   Il percorso predefinito per l'istanza predefinita di SQL Server 2017 è ad esempio il seguente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end

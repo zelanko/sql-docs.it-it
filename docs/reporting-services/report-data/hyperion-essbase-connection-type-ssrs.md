@@ -9,10 +9,10 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079024"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77079024"
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Stringa di connessione  
+##  <a name="connection-string"></a><a name="Connection"></a> Stringa di connessione  
  Nella stringa di connessione di esempio seguente viene specificata un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] in un server che utilizza la porta 13080 e XMLA (XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) in Internet tramite SOAP, connettendosi a un catalogo di esempio:  
   
 ```  
@@ -30,7 +30,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Per altre informazioni sugli esempi di stringhe di connessione, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Credenziali  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
@@ -38,7 +38,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Query  
+##  <a name="queries"></a><a name="Query"></a> Query  
  È possibile specificare una query nei modi seguenti:  
   
 -   Compilare una query in modo interattivo. Utilizzare la finestra Progettazione query con interfaccia grafica in modalità progettazione o query per cercare i metadati nell'origine dati esterna e generare una query nella sintassi MDX (Multidimensional Expression).  
@@ -56,14 +56,14 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  L'estensione per l'elaborazione dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] supporta proprietà estese dei campi del set di dati. Si tratta di valori che sono disponibili nell'origine dati esterna e non nel riquadro dei dati del report. Per altre informazioni, vedere [Proprietà di campo estese](#Extended) più avanti in questo argomento.  
   
   
-##  <a name="Parameters"></a> Parametri di query  
+##  <a name="query-parameters"></a><a name="Parameters"></a> Parametri di query  
 
  Per includere parametri di query, creare un filtro nell'area del filtro in Progettazione query e contrassegnarlo come parametro. Viene creato automaticamente un set di dati per fornire i valori disponibili di ogni filtro. Per impostazione predefinita, tali set di dati non vengono visualizzati nel riquadro dei dati del report. Per altre informazioni, vedere [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
 
  Per impostazione predefinita, i dati di ogni parametro di report sono di tipo **Text**. Dopo aver creato i parametri di report, potrebbe essere necessario modificare i valori predefiniti. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Extended"></a> Proprietà di campo estese  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> Proprietà di campo estese  
  L'estensione per l'elaborazione dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] supporta proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto a **Value** e **IsMissing** definite per un campo del set di dati dall'estensione per l'elaborazione dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
   
  Le proprietà di campo estese non vengono visualizzate nel riquadro Dati report come elementi che è possibile trascinare nel layout del report. È invece possibile trascinare nel report il campo padre della proprietà e quindi modificare la proprietà predefinita da **Value** alla proprietà desiderata.  
@@ -105,13 +105,13 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |**FORMAT_STRING**|**Stringa**|Definita in una misura. Si tratta del valore **FormattedValue** disponibile come tipo stringa.|  
   
   
-##  <a name="Remarks"></a> Osservazioni  
+##  <a name="remarks"></a><a name="Remarks"></a> Osservazioni  
  Non tutte le modalità di recapito report sono supportate da questo provider di dati. Il recapito di report tramite sottoscrizioni guidate dai dati non è supportato per questa estensione per l'elaborazione dati. Per altre informazioni, vedere [Usare un'origine dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md). 
   
  Per altre informazioni, vedere [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)(Uso di SQL Server 2005 Reporting Services con Hyperion Essbase).  
   
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  Questa sezione contiene istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati:  
   
  [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -121,7 +121,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Sezioni correlate  
+##  <a name="related-sections"></a><a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

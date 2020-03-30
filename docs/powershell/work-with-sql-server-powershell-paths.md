@@ -10,10 +10,10 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68121345"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utilizzo di percorsi di SQL Server PowerShell
@@ -35,7 +35,7 @@ Dopo essere passati a un nodo in un percorso di provider [!INCLUDE[ssDE](../incl
   
  Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzato per gestire gli oggetti in un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Non viene utilizzato per i dati nei database. Se si è passati a una tabella o una vista, non è possibile utilizzare il provider per selezionare, inserire, aggiornare o eliminare i dati. Usare il cmdlet **Invoke-Sqlcmd** per eseguire una query o per modificare dati in tabelle e viste nell'ambiente di Windows PowerShell. Per altre informazioni, vedere [cmdlet Invoke-Sqlcmd](invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> Elenco di metodi e proprietà  
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> Elenco di metodi e proprietà  
  **Elenco di metodi e proprietà**  
   
  Per visualizzare i metodi e le proprietà disponibili per specifici oggetti o classi di oggetti, usare il cmdlet **Get-Member** .  
@@ -65,7 +65,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a> Utilizzo di metodi e proprietà  
+##  <a name="using-methods-and-properties"></a><a name="UsePropMeth"></a> Utilizzo di metodi e proprietà  
  **Utilizzo di metodi e proprietà SMO**  
   
  Per eseguire operazioni su oggetti di un percorso di provider [!INCLUDE[ssDE](../includes/ssde-md.md)] è possibile utilizzare metodi e proprietà SMO.  

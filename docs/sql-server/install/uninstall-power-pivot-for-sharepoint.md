@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71952731"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Disinstallare PowerPivot per SharePoint
@@ -40,7 +40,7 @@ ms.locfileid: "71952731"
   
 -   [Passaggio 6: Elenco di controllo per la post-disinstallazione](#bkmk_post)  
   
-##  <a name="prereq"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti  
   
 -   È necessario essere un amministratore della farm di SharePoint o dell'applicazione di servizio per disinstallare le funzionalità e le soluzioni della farm.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952731"
   
 -   È necessario essere amministratore di sistema di Analysis Services e membro del gruppo Administrators locale per disinstallare Analysis Services e [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
-##  <a name="bkmk_before"></a> Passaggio 1: Elenco di controllo per la pre-disinstallazione  
+##  <a name="step-1-pre-uninstall-checklist"></a><a name="bkmk_before"></a> Passaggio 1: Elenco di controllo per la pre-disinstallazione  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verrà disabilitato dopo la rimozione dalla farm del software che supporta l'elaborazione di dati e query. È innanzitutto necessario eliminare in modalità preemptive i file e le librerie che non saranno più operativi. In questo modo, sarà possibile affrontare eventuali problemi relativi a dati mancanti prima della disinstallazione del software.  
   
 1.  Eliminare le librerie, i documenti e le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] associati a un'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Né le librerie, né i documenti funzioneranno dopo la disinstallazione del software.  
@@ -65,7 +65,7 @@ ms.locfileid: "71952731"
   
 5.  Facoltativamente, arrestare i servizi e attendere alcuni giorni prima di disinstallare il software. Questo passaggio non è necessario per la disinstallazione, tuttavia consente di riprendere temporaneamente il servizio mentre si tenta di risolvere i problemi di sostituzione della tecnologia e di migrazione dei dati non ancora affrontati.  
   
-##  <a name="bkmk_remove"></a> Passaggio 2: Rimuovere funzionalità e soluzioni da SharePoint  
+##  <a name="step-2-remove-features-and-solutions-from-sharepoint"></a><a name="bkmk_remove"></a> Passaggio 2: Rimuovere funzionalità e soluzioni da SharePoint  
  Usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per rimuovere i servizi e le applicazioni [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] da SharePoint.  
   
 -   È necessario essere amministratore di farm, amministratore del server nell'istanza di Analysis Services e **db_owner** nel database di configurazione della farm.  
@@ -134,7 +134,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  In alternativa, è possibile utilizzare PowerShell per rimuovere funzionalità e soluzioni dalla farm. Per altre informazioni, vedere [Informazioni di riferimento su PowerShell per Power Pivot per SharePoint](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
-##  <a name="bkmk_uninstall"></a> Passaggio 3: Eseguire il programma di installazione di SQL Server per rimuovere i programmi dal computer locale  
+##  <a name="step-3-run-sql-server-setup-to-remove-programs-from-the-local-computer"></a><a name="bkmk_uninstall"></a> Passaggio 3: Eseguire il programma di installazione di SQL Server per rimuovere i programmi dal computer locale  
  L'eliminazione dei file di programma richiede l'esecuzione del programma di installazione di SQL Server per disinstallare il software. La disinstallazione consente di rimuovere sia file sia le voci del Registro di sistema creati dal programma di installazione. È possibile utilizzare la pagina Programmi e funzionalità per disinstallare il software. Un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] fa parte di un'installazione di SQL Server.  
   
  È possibile disinstallare parte dell'installazione senza conseguenze per le altre istanze di SQL Server (o funzionalità nella stessa istanza) già installate. È ad esempio possibile disinstallare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint lasciando installati altri componenti come [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o il motore di database.  
@@ -147,10 +147,10 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Nel programma di installazione è possibile selezionare l'istanza di **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , quindi scegliere **Analysis Services** e **Integrazione Analysis Services SharePoint** per rimuovere solo quella funzionalità, senza modificare altri elementi.  
   
-##  <a name="bkmk_addin"></a> Passaggio 4: Disinstallare il componente aggiuntivo PowerPivot per SharePoint  
+##  <a name="step-4-uninstall-the-power-pivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a> Passaggio 4: Disinstallare il componente aggiuntivo PowerPivot per SharePoint  
  Se la distribuzione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dispone di due o più server ed è stato installato il componente aggiuntivo [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , disinstallare il componente aggiuntivo [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] da ogni server in cui è stato installato per disinstallare completamente tutti i file di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-##  <a name="verify"></a> Passaggio 5: Verificare la disinstallazione  
+##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> Passaggio 5: Verificare la disinstallazione  
   
 1.  In **Gestisci servizi nel server**di Amministrazione centrale connettersi al server da cui è stato disinstallato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
   
@@ -168,7 +168,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  In Impostazioni generali applicazione verificare che **Dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** non sia più presente nella pagina.  
   
-##  <a name="bkmk_post"></a> Passaggio 6: Elenco di controllo per la post-disinstallazione  
+##  <a name="step-6-post-uninstall-checklist"></a><a name="bkmk_post"></a> Passaggio 6: Elenco di controllo per la post-disinstallazione  
  Utilizzare l'elenco seguente per rimuovere il software e i file che non sono stati eliminati durante la disinstallazione.  
   
 1.  Eliminare tutti i file di dati e le sottocartelle da `C:\Program Files\Microsoft SQL Server\MSAS13.PowerPivot`, quindi eliminare la cartella. Durante questo passaggio vengono anche eliminati i file precedentemente memorizzati nella cache nella directory DATA.  

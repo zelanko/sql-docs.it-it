@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ec984cbb220bffecfae5a929ddad103780450285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081057"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parti del report in Progettazione report (SSRS)
@@ -23,9 +23,9 @@ ms.locfileid: "77081057"
   
  In termini generali il funzionamento delle parti di report in Progettazione report e in Generatore report è identico. Per altre informazioni sulle funzionalità di base, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- Esistono differenze fondamentali nel modo in cui le parti di report funzionano in Progettazione report, quale ad esempio il flusso di lavoro. Generatore report consente di eseguire la creazione in collaborazione, vale a dire la creazione e la pubblicazione da parte di un utente di una parte di report che potrà essere riutilizzata, modificata e ripubblicata da un altro utente. In Progettazione report la pubblicazione è unidirezionale, vale a dire che un utente può pubblicare una parte di report da Progettazione report e un altro può riutilizzarla. Tuttavia, il primo utente non può riutilizzare una parte di report esistente in un report disponibile in Progettazione report. In questo argomento, dopo una veloce panoramica delle parti di report, vengono illustrate queste differenze.  
+ Esistono differenze fondamentali nel modo in cui le parti di report funzionano in Progettazione report, quale ad esempio il flusso di lavoro. Generatore report consente di eseguire la creazione in collaborazione, vale a dire la creazione e la pubblicazione da parte di un utente di una parte di report che potrà essere riutilizzata, modificata e ripubblicata da un altro utente. In Progettazione report la pubblicazione è unidirezionale, cioè un utente può pubblicare una parte di report da Progettazione report e un altro può riutilizzarla. Tuttavia, il primo utente non può riutilizzare una parte di report esistente in un report disponibile in Progettazione report. In questo argomento, dopo una veloce panoramica delle parti di report, vengono illustrate queste differenze.  
   
-##  <a name="ComponentWorkflow"></a> Ciclo di vita della pubblicazione di una parte del report  
+##  <a name="life-cycle-of-report-part-publishing"></a><a name="ComponentWorkflow"></a> Ciclo di vita della pubblicazione di una parte del report  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  In Progettazione report un utente A crea un progetto contenente un report con un grafico che dipende da un set di dati incorporato.  
@@ -42,7 +42,7 @@ ms.locfileid: "77081057"
   
 6.  In Generatore report l'utente B accetta il grafico aggiornato dal server. sovrascrivendo così le modifiche che l'utente B ha apportato al grafico nel report dell'utente B.  
   
-##  <a name="PublishingComponents"></a> Pubblicazione di parti di report  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> Pubblicazione di parti di report  
  Quando si pubblica una parte di report, in Progettazione report viene assegnato un ID univoco alla parte. Questo ID non subisce modifiche anche nel caso in cui si apportino modifiche successive alla parte. L'ID consente di collegare l'elemento del report originale nel report alla parte di report. Quando altri autori del report riutilizzano la parte di report in Generatore report, tramite l'ID è anche possibile collegare la parte di report nel report in uso al server di report.  
   
  È possibile pubblicare come parti di report gli elementi di report riportati di seguito.  
@@ -76,12 +76,12 @@ ms.locfileid: "77081057"
  Quando si distribuisce il report, la parte di report viene pubblicata in un sito di SharePoint o in un server di report e altri utenti possono riutilizzarla. Per pubblicare una parte di report, è necessario avere effettuato la connessione a un server di report e disporre di autorizzazioni sufficienti per la distribuzione del report.  
   
   
-##  <a name="SearchReuseComponents"></a> Riutilizzo di parti di report  
+##  <a name="reusing-report-parts"></a><a name="SearchReuseComponents"></a> Riutilizzo di parti di report  
  Diversamente da Generatore report, non è possibile cercare e riutilizzare una parte di report in un progetto diverso da quello in cui è stato creato.  
   
  Gli autori di report che utilizzano Generatore report possono cercare e riutilizzare le parti di report pubblicate nei report che creano.  
   
-##  <a name="RepublishingComponents"></a> Ripubblicazione di parti di report  
+##  <a name="republishing-report-parts"></a><a name="RepublishingComponents"></a> Ripubblicazione di parti di report  
  In Progettazione report è necessario aggiornare una parte di report esistente dall'interno del report nel quale è stata creata. In Generatore report gli autori del report possono riutilizzare la parte di report e pubblicarla coma una nuova parte senza sostituire la parte di report pubblicata. Se dispongono di autorizzazioni sufficienti possono anche aggiornare la parte di report pubblicata. Le parti di report archiviate in una cartella su un sito o sul server possono essere aggiornate da qualsiasi utente dotato di autorizzazioni sufficienti. L'ultimo aggiornamento sovrascrive gli aggiornamenti precedenti.  
   
  È possibile modificare e poi ripubblicare la parte di report nel sito o nel server. In Generatore report gli autori del report che hanno aggiunto la parte a un report vengono informati della modifica alla successiva apertura del report e possono accettare o meno le modifiche.  

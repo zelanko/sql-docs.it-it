@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259359"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Grafici mappa ad albero e radiali in Reporting Services 
 
 Le visualizzazioni mappa ad albero e radiali di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono ideali per la rappresentazione visiva dei dati gerarchici. Questo argomento offre una panoramica su come aggiungere un grafico mappa ad albero o radiale a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'articolo include anche una query di esempio AdventureWorks per iniziare.  
   
-##  <a name="bkmk_treemap_chart"></a> Grafico mappa ad albero  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> Grafico mappa ad albero  
 
 Un grafico mappa ad albero divide l'area del grafico in rettangoli che rappresentano i diversi livelli e le relative dimensioni della gerarchia dei dati. La mappa è simile ai rami degli alberi che iniziano dal tronco e si suddividono via via in rami sempre più piccoli. Ogni rettangolo viene suddiviso in rettangoli più piccoli che rappresentano il livello successivo nella gerarchia. I rettangoli al livello superiore della mappa ad albero sono disposti con il rettangolo più grande nell'angolo superiore sinistro e il rettangolo più piccolo nell'angolo inferiore destro del grafico.  All'interno di ogni rettangolo, il livello successivo del rettangolo superiore presenta rettangoli dalla parte superiore sinistra fino in basso a destra.  
 
@@ -67,7 +67,7 @@ Ad esempio, nell'immagine di esempio seguente del grafico mappa ad albero il ter
   
 7. Il numero di valori di etichetta visualizzati dipende dalle dimensioni del carattere, dalle dimensioni dell'area totale del grafico e dalle dimensioni dei rettangoli specifici. Per visualizzare più etichette, impostare la proprietà **Carattere etichetta** di **LineTotal** su **10 pt** modificando il valore predefinito **8 pt**.  
 
-##  <a name="bkmk_sunburst_chart"></a> Grafico radiale  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> Grafico radiale  
 
 In un grafico radiale la gerarchia è rappresentata da una serie di cerchi. Il livello più alto della gerarchia si trova al centro e i livelli inferiori della gerarchia sono anelli concentrici.  Il livello più basso della gerarchia è rappresentato dall'anello esterno.  
   
@@ -107,7 +107,7 @@ In un grafico radiale la gerarchia è rappresentata da una serie di cerchi. Il l
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> Dati AdventureWorks di esempio
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> Dati AdventureWorks di esempio
 
 Questa sezione include una query di esempio e la procedura di base per la creazione di un'origine e di un set di dati in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Se il report contiene già un'origine e un set di dati, ignorare questa sezione.  
   

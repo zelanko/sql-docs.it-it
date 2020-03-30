@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580832"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
@@ -81,7 +81,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Se il report contiene un parametro del report con un valore predefinito e il valore della proprietà **Prompt** è **false** (ovvero la proprietà Richiesta all'utente non è selezionata in Gestione report), non è possibile passare un valore per tale parametro in un URL. In questo modo, gli amministratori possono impedire agli utenti finali di aggiungere o modificare i valori di determinati parametri dei report.  
   
-##  <a name="bkmk_examples"></a> Esempi aggiuntivi  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Esempi aggiuntivi  
  Nell'esempio di URL seguente sono inclusi spazi e più parametri  
   
 -   Nel nome della cartella "SQL Server User Education Team" sono inclusi spazi che vengono sostituiti dal carattere "+".  

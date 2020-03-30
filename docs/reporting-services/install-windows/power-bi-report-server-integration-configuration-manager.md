@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265636"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integrazione del server di report e di Power BI (Gestione configurazione)
@@ -19,13 +19,13 @@ ms.locfileid: "68265636"
 
 La pagina  **Integrazione di Power BI** in Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene usata per registrare il server di report con il tenant gestito di Azure Active Directory (AD) per consentire agli utenti del server di report di aggiungere gli elementi del report supportati ai dashboard di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Per un elenco di elementi supportati che è possibile aggiungere, vedere [Aggiungere elementi di Reporting Services ai dashboard di Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-## <a name="bkmk_requirements"></a> Requisiti per l'integrazione di Power BI
+## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Requisiti per l'integrazione di Power BI
 
 Oltre a una connessione Internet attiva per passare al servizio [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , i requisiti per l'integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]sono i seguenti.
 
 - **Azure Active Directory:** l'organizzazione deve usare Azure Active Directory, che consente la gestione di identità e directory per applicazioni Web e servizi Azure. Per altre informazioni, vedere [Informazioni su Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Tenant gestito:** il dashboard di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] al quale si vogliono aggiungere gli elementi del report deve far parte di un tenant gestito di Azure AD.  Un tenant gestito viene creato automaticamente la prima volta che l'organizzazione sottoscrive i servizi di Azure, ad esempio Office 365 e Microsoft Intune.   I tenant virali attualmente non sono supportati.  Per altre informazioni vedere le sezioni "Che cos'è un tenant di Azure AD" e "Come ottenere una directory di Azure AD" in [Che cos'è una directory di Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Tenant gestito:** il dashboard di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] al quale si desidera aggiungere gli elementi del report deve far parte di un tenant gestito di Azure AD.  Un tenant gestito viene creato automaticamente la prima volta che l'organizzazione sottoscrive i servizi di Azure, ad esempio Office 365 e Microsoft Intune.   I tenant virali attualmente non sono supportati.  Per altre informazioni vedere le sezioni "Che cos'è un tenant di Azure AD" e "Come ottenere una directory di Azure AD" in [Che cos'è una directory di Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - L'utente che esegue l'integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] deve essere un membro del tenant di Azure AD, un amministratore di sistema di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e un amministratore di sistema per il database del catalogo ReportServer.
 
@@ -39,11 +39,11 @@ Per altre informazioni su come archiviare le credenziali, vedere la sezione "Con
 
 Per altre informazioni l'amministratore può leggere i file di registro di  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Vedrà messaggi simili al seguente. Un ottimo modo per esaminare e monitorare i file di registro di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è applicare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query sui file.  Per altre informazioni e un breve filmato vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERRORE: Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente non sono archiviate nel database del server di report oppure l'origine dati utente è configurata per non richiedere credenziali, ma l'account di esecuzione automatica non è specificato.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERRORE: Errore di recapito di PowerBI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'operazione in corso. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente non sono archiviate nel database del server di report oppure l'origine dati utente è configurata per non richiedere credenziali, ma l'account di esecuzione automatica non è specificato.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERRORE: Errore durante l'elaborazione della sottoscrizione fcdb8581-d763-4b3b-ba3e-8572360df4f9: Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente non sono archiviate nel database del server di report oppure l'origine dati utente è configurata per non richiedere credenziali, ma l'account di esecuzione automatica non è specificato.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERRORE: Errore durante l'elaborazione della sottoscrizione fcdb8581-d763-4b3b-ba3e-8572360df4f9: Errore di recapito di PowerBI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'operazione in corso. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente non sono archiviate nel database del server di report oppure l'origine dati utente è configurata per non richiedere credenziali, ma l'account di esecuzione automatica non è specificato.
 
-## <a name="bkmk_steps2integrate"></a> Per integrare e registrare il server di report
+## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Per integrare e registrare il server di report
 
 Completare i passaggi seguenti da Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
@@ -60,9 +60,9 @@ Completare i passaggi seguenti da Gestione configurazione [!INCLUDE[ssRSnoversio
 
 5. Fare clic sul pulsante **Copia** nella finestra **Risultati** per copiare i dettagli di registrazione negli Appunti di Windows in modo da salvarli come riferimento futuro.
 
-## <a name="bkmk_unregister"></a> Annullare la registrazione su Power BI
+## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> Annullare la registrazione su Power BI
 
-**Annullare la registrazione:** l'annullamento della registrazione del server di report da Azure Active Directory avrà le conseguenze seguenti:
+**Annulla registrazione** : l'annullamento della registrazione del server di report da Azure Active Directory avrà le conseguenze seguenti:
 
 - Il collegamento **Impostazioni personali** non sarà più visibile nella barra dei menu del portale Web.
 
@@ -74,7 +74,7 @@ Completare i passaggi seguenti da Gestione configurazione [!INCLUDE[ssRSnoversio
 
 Dalla pagina **Power BI** di Gestione configurazione fare clic sul pulsante **Annulla registrazione con Power BI** .
 
-##  <a name="bkmk_updateregistration"></a> Aggiornare la registrazione
+##  <a name="update-registration"></a><a name="bkmk_updateregistration"></a> Aggiornare la registrazione
 
 Utilizzare la funzione **Aggiorna registrazione** se la configurazione del server di report è stata modificata, ad esempio se si vuole aggiungere o rimuovere gli URL usati dagli utenti per passare al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
@@ -90,7 +90,7 @@ Utilizzare la funzione **Aggiorna registrazione** se la configurazione del serve
 
      Verrà richiesto di accedere ad Azure AD. La pagina verrà aggiornata e il nuovo URL verrà elencato tra gli **URL di reindirizzamento**.
 
-##  <a name="bkmk_integration_process"></a> Riepilogo del processo di integrazione e di aggiunta di Power BI
+##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Riepilogo del processo di integrazione e di aggiunta di Power BI
 
 In questa sezione vengono riepilogati i passaggi di base e le tecnologie usate per l'integrazione del server di report con [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] e l'aggiunta di un elemento del report a un dashboard.
 
@@ -110,9 +110,9 @@ In questa sezione vengono riepilogati i passaggi di base e le tecnologie usate p
 
  **Quando un utente aggiunge un elemento del report a un dashboard:**
 
-1. Gli utenti visualizzano i report in anteprima nel [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e la prima volta che fanno clic per aggiungere un elemento del report dal [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
+1. Gli utenti visualizzano i report in anteprima nel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e la prima volta che fanno clic per aggiungere un elemento del report dal [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Vengono reindirizzati alla pagina di accesso di Azure AD. Possono anche accedere dalla pagina **Impostazioni personali** del [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Quando gli utenti accedono al tenant gestito di Azure, viene stabilita una relazione tra il loro account Azure e le autorizzazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. Vengono reindirizzati alla pagina di accesso di Azure AD. Possono anche accedere dalla pagina [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]Impostazioni personali**del**. Quando gli utenti accedono al tenant gestito di Azure, viene stabilita una relazione tra il loro account Azure e le autorizzazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Un token di sicurezza utente viene restituito al server di report.
 

@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579009"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -64,7 +64,7 @@ ms.locfileid: "65579009"
   
 -   [Gestione di processi a livello di programmazione](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> Visualizzare e annullare i processi (modalità nativa)  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> Visualizzare e annullare i processi (modalità nativa)  
  È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
   
  È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare o annullare un processo in esecuzione nel server di report. È necessario aggiornare la pagina per recuperare un elenco di processi attualmente in esecuzione oppure per ottenere stato del processo aggiornato dal database del server di report. Quando si esegue la connessione a un server di report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile aprire una cartella Processi per visualizzare un elenco di report che attualmente in esecuzione nel computer server di report. Le informazioni sullo stato per ogni processo vengono visualizzate nella pagina Proprietà processo. Per visualizzare informazioni sullo stato di tutti i processi, aprire la finestra di dialogo Annulla processi server di report.  
@@ -98,7 +98,7 @@ ms.locfileid: "65579009"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configurazione delle impostazioni di frequenza per il recupero dello stato di un processo  
  Un processo in esecuzione viene archiviato nel database temporaneo del server di report. Per controllare la frequenza con la quale il server di report esegue l'analisi dei processi in corso e l'intervallo trascorso il quale lo stato di un processo cambia da nuovo a in esecuzione, è possibile modificare le impostazioni di configurazione nel file RSReportServer.config. L'impostazione **RunningRequestsDbCycle** specifica la frequenza con cui il server di report esegue l'analisi dei processi in esecuzione. Per impostazione predefinita, le informazioni sullo stato vengono registrate ogni 60 secondi. L'impostazione **RunningRequestsAge** specifica l'intervallo dopo il quale un processo passa da nuovo a in esecuzione.  
   
-##  <a name="bkmk_sharepoint"></a> Visualizzare e annullare i processi (modalità SharePoint)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Visualizzare e annullare i processi (modalità SharePoint)  
  La gestione di processi in una distribuzione della modalità SharePoint viene completata utilizzando Amministrazione centrale SharePoint, per ogni applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>Per gestire i processi in modalità SharePoint  
@@ -113,7 +113,7 @@ ms.locfileid: "65579009"
   
 5.  In alternativa, fare clic sulla casella per il processo e scegliere **Elimina** per annullare il processo. L'eliminazione del processo non comporta l'eliminazione della sottoscrizione.  
   
-##  <a name="bkmk_programmatically"></a> Gestione di processi a livello di programmazione  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> Gestione di processi a livello di programmazione  
  I processi possono essere gestiti a livello di programmazione o mediante l'utilizzo di uno script. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -9,10 +9,10 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081676"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081676"
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Stringa di connessione  
+##  <a name="connection-string"></a><a name="Connection"></a> Stringa di connessione  
  La stringa di connessione deve essere un URL che punta al servizio Web, all'applicazione Web o al documento XML disponibile tramite HTTP. I documenti XML devono avere estensione xml. È inoltre possibile utilizzare una stringa di connessione vuota per i dati XML incorporati nella query del set di dati.  
   
  Nell'esempio seguente viene illustrata la sintassi della stringa di connessione, rispettivamente per un servizio Web e per un documento XML. Il protocollo `file://` non è supportato.  
@@ -35,7 +35,7 @@ ms.locfileid: "77081676"
   
  Per altri esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Credenziali  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenziali  
  Le credenziali sono necessarie per eseguire query, nonché per visualizzare l'anteprima del report in locale e dal server di report.  
   
  Dopo aver pubblicato il report, potrebbe essere necessario modificare le credenziali per l'origine dati affinché quando il report viene eseguito nel server di report, le autorizzazioni per il recupero dei dati risultino valide.  
@@ -50,7 +50,7 @@ ms.locfileid: "77081676"
   
  Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-##  <a name="Query"></a> Query  
+##  <a name="queries"></a><a name="Query"></a> Query  
  Una query consente di specificare quali dati recuperare per un set di dati del report. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. In un report viene elaborato solo il primo set di risultati recuperato da una query.  
   
  Per creare la query, è necessario utilizzare la finestra Progettazione query basata su testo. La query deve restituire dati XML.  
@@ -115,7 +115,7 @@ ms.locfileid: "77081676"
   
  Per altre informazioni sulla sintassi delle query, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Per gli esempi, vedere [Reporting Services: uso di origini dati XML e servizio Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisiti per il recupero di dati del servizio Web XML  
  Lo schema non viene rilevato automaticamente dall'estensione per l'elaborazione dati XML. È pertanto necessario essere in grado di individuare i metodi SOAP tramite i quali verranno recuperati i dati desiderati. È inoltre necessario comprendere lo spazio dei nomi o lo schema di indirizzamento che il servizio Web utilizza per i dati.  
@@ -131,17 +131,17 @@ ms.locfileid: "77081676"
   
  Per altre informazioni, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
-##  <a name="Parameters"></a> Parametri  
+##  <a name="parameters"></a><a name="Parameters"></a> Parametri  
  La query non viene analizzata per identificare parametri.  
   
  Per aggiungere i parametri, è necessario crearli manualmente usando la pagina **Parametri** nella finestra di dialogo [Proprietà set di dati](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
   
-##  <a name="Remarks"></a> Osservazioni  
+##  <a name="remarks"></a><a name="Remarks"></a> Osservazioni  
  L'estensione per i dati XML supporta report di dati XML tabulari e non gerarchici. Per altre informazioni, vedere [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
  Non è disponibile alcun supporto predefinito per il recupero di documenti XML da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
  [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,7 +150,7 @@ ms.locfileid: "77081676"
   
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> Sezioni correlate  
+##  <a name="related-sections"></a><a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

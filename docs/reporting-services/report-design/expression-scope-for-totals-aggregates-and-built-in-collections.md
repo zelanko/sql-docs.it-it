@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579817"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ambito di espressioni per totali, aggregazioni e raccolte predefinite
@@ -41,7 +41,7 @@ ms.locfileid: "65579817"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DataScope"></a> Informazioni sull'ambito dei dati e sulla gerarchia di dati  
+##  <a name="understanding-data-scope-and-data-hierarchy"></a><a name="DataScope"></a> Informazioni sull'ambito dei dati e sulla gerarchia di dati  
  L'ambito dei dati consente di specificare un set di dati del report e presenta una gerarchia naturale con una relazione di contenuto inerente. Nella gerarchia, gli ambiti di ordine superiore contengono gli ambiti di ordine inferiore. Nel seguente elenco di ambiti dei dati la gerarchia viene descritta a partire dal numero maggiore di dati:  
   
 -   **Set di dati, dopo l'applicazione dei filtri dei set di dati** Specificano il set di dati del report collegato all'area dati o a un elemento del report nel corpo del report. I dati utilizzati per l'aggregazione provengono dal set di dati del report dopo l'applicazione delle espressioni di filtro del set di dati. Per i set di dati condivisi, ciò significa sia i filtri nella definizione del set di dati condiviso che i filtri nell'istanza del set di dati condiviso nel report.  
@@ -56,7 +56,7 @@ ms.locfileid: "65579817"
   
  Le informazioni sugli ambiti contenitori e gli ambiti contenuti sono importanti quando si scrivono espressioni che includono funzioni di aggregazione.  
   
-##  <a name="Aggregates"></a> Ambito cella ed espressioni  
+##  <a name="cell-scope-and-expressions"></a><a name="Aggregates"></a> Ambito cella ed espressioni  
  Quando si specifica un ambito, si indica all'elaboratore di report quali dati utilizzare per un calcolo di aggregazione. A seconda dell'espressione e della relativa posizione, gli ambiti validi possono essere *ambiti contenitore*, noti anche come ambiti padre o *ambiti contenuti*, noti anche noto come ambiti figlio o nidificati. In generale, non è possibile specificare un'istanza di gruppo singola in un calcolo di aggregazione. È possibile specificare un'aggregazione in tutte le istanze di gruppo.  
   
  Quando l'elaboratore di report consente di combinare i dati di un set di dati del report con l'area dati Tablix, consente di valutare le espressioni di raggruppamento e di creare le righe e le colonne necessarie per rappresentare le istanze di gruppo. Il valore di espressioni in una casella di testo di ogni cella della Tablix viene valutato nel contesto dell'ambito della cella. A seconda della struttura della Tablix, una cella può appartenere a più gruppi di righe e gruppi di colonne. Per le funzioni di aggregazione, è possibile specificare quale ambito utilizzare tramite uno degli ambiti seguenti:  
@@ -77,7 +77,7 @@ ms.locfileid: "65579817"
   
  In ogni argomento della funzione di aggregazione vengono elencati gli ambiti che si possono utilizzare. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-##  <a name="Examples"></a> Espressioni di aggregazione di esempio per un'area dati della tabella  
+##  <a name="example-aggregate-expressions-for-a-table-data-region"></a><a name="Examples"></a> Espressioni di aggregazione di esempio per un'area dati della tabella  
  Per scrivere espressioni che specificano ambiti non predefiniti è necessario conoscere bene la procedura. Per comprendere ambiti diversi, utilizzare la figura e la tabella seguenti. Nella figura viene contrassegnata ogni cella della tabella di informazioni sulle vendite in cui è visualizzata la quantità di articoli venduti su base annuale e trimestrale nonché in base al territorio di vendita. Si notino gli indicatori visivi negli handle di riga e in quelli di colonna che consentono di visualizzare la struttura del gruppo di righe e di colonne, indicando i gruppi nidificati. La tabella presenta la struttura seguente:  
   
 -   Un'intestazione di tabella contenente la cella d'angolo e tre righe che includono le intestazioni del gruppo di colonne.  
@@ -117,7 +117,7 @@ ms.locfileid: "65579817"
  Per altre informazioni sull'interpretazione dei segnali visivi nelle aree dati Tablix, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Per altre informazioni sulle aree dati Tablix, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Per altre informazioni sulle espressioni e le aggregazioni, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
-##  <a name="Sparklines"></a> Sincronizzazione di scale per i grafici sparkline  
+##  <a name="synchronizing-scales-for-sparklines"></a><a name="Sparklines"></a> Sincronizzazione di scale per i grafici sparkline  
  Per confrontare i valori nel tempo sull'asse orizzontale di un grafico sparkline nidificato in una tabella o matrice, è possibile sincronizzare i valori del gruppo categorie. Questa operazione viene chiamata allineamento degli assi. Se si seleziona l'opzione per allineare gli assi, nel report vengono impostati automaticamente i valori minimo e massimo di un asse e vengono forniti i segnaposto per i valori di aggregazione che non esistono in ogni categoria. In questo modo i valori nel grafico sparkline si allineano a ogni categoria e consentono di eseguire confronti con i valori di riga di dati aggregati. Se si seleziona questa opzione, si imposta l'ambito della valutazione dell'espressione sull' *ambito di dominio*. L'impostazione dell'ambito di dominio per un grafico nidificato consente anche di controllare indirettamente l'assegnazione del colore per ogni categoria nella legenda.  
   
  Ad esempio, in un grafico sparkline in cui sono mostrate le tendenze settimanali, supporre che di una città si dispone dei dati di vendita relativi a 3 mesi e di un'altra dei dati di vendita relativi a 12 mesi. Senza scale sincronizzate, nel grafico sparkline per la prima città si disporrebbe solo di 3 barre che risulterebbero molto più ampie e occuperebbero lo stesso spazio del set di barre di 12 mesi per la seconda città.  
@@ -125,13 +125,13 @@ ms.locfileid: "65579817"
  Per altre informazioni, vedere [Allineare i dati in un grafico di una tabella o matrice &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
   
-##  <a name="Indicators"></a> Sincronizzazione di intervalli per gli indicatori  
+##  <a name="synchronizing-ranges-for-indicators"></a><a name="Indicators"></a> Sincronizzazione di intervalli per gli indicatori  
  Per specificare i valori dei dati da utilizzare per un set di indicatori, è necessario specificare un ambito. A seconda del layout dell'area dati che contiene l'indicatore, viene specificato un ambito o un ambito contenitore. Ad esempio, in una riga di intestazione di gruppo associata alle vendite della categoria, un set di frecce (in su, in giù, laterali) può indicare i valori delle vendite relativi a una soglia. L'ambito contenitore è il nome della tabella o matrice contenente gli indicatori.  
   
  Per altre informazioni, vedere [Impostare l'ambito di sincronizzazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
   
-##  <a name="Page"></a> Specifica degli ambiti dall'intestazione o dal piè di pagina  
+##  <a name="specifying-scopes-from-the-page-header-or-page-footer"></a><a name="Page"></a> Specifica degli ambiti dall'intestazione o dal piè di pagina  
  Per visualizzare dati differenti in ogni pagina di un report, si aggiungono espressioni a un elemento del report che deve essere nella pagina di cui è stato eseguito il rendering. Poiché un report viene suddiviso in più pagine mentre ne viene eseguito il rendering, è possibile determinare gli elementi presenti in una pagina solo durante questa fase. Ad esempio, una cella in una riga di dettaglio dispone di una casella di testo contenente molte istanze in una pagina.  
   
  A tale scopo, esiste una raccolta globale chiamata ReportItems. Si tratta del set di caselle di testo nella pagina corrente.  
@@ -139,7 +139,7 @@ ms.locfileid: "65579817"
  Per altre informazioni, vedere [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) e [Riferimenti alla raccolta ReportItems &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).  
   
   
-##  <a name="Toggles"></a> Specifica di un elemento Toggle per il drill-down e la visibilità condizionale  
+##  <a name="specifying-a-toggle-item-for-drilldown-and-conditional-visibility"></a><a name="Toggles"></a> Specifica di un elemento Toggle per il drill-down e la visibilità condizionale  
  Gli elementi Toggle sono le immagini dei segni più e meno che vengono aggiunte a una casella di testo sulle quali un utente può fare clic per mostrare o nascondere altri elementi del report. Nella pagina **Visibilità** , per la maggior parte delle proprietà dell'elemento di report, è possibile specificare a quale elemento del report aggiungere l'elemento Toggle, che deve essere in un ambito di contenuto superiore rispetto all'elemento da mostrare o nascondere.  
   
  In un'area dati Tablix, per creare un effetto del drill-down in cui si fa clic su una casella di testo per espandere la tabella in modo da visualizzare più dati, è necessario impostare la proprietà **Visibilità** nel gruppo e selezionare come elemento Toggle una casella di testo in un'intestazione di gruppo associata a un gruppo contenitore.  
@@ -147,13 +147,13 @@ ms.locfileid: "65579817"
  Per altre informazioni, vedere [Aggiungere un'azione Espandi o Comprimi a un elemento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
   
-##  <a name="Sort"></a> Specifica di un'espressione di ordinamento per la sincronizzazione dell'ordinamento  
+##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Specifica di un'espressione di ordinamento per la sincronizzazione dell'ordinamento  
  Quando si aggiunge un pulsante di ordinamento interattivo a una colonna della tabella, è possibile sincronizzare l'ordinamento per più elementi che dispongono di un ambito contenitore comune. Ad esempio, è possibile aggiungere un pulsante di ordinamento a un'intestazione di colonna in una matrice e specificare l'ambito contenitore come nome del set di dati associato alla matrice. Quando un utente fa clic sul pulsante di ordinamento, insieme alle righe della matrice vengono ordinati anche i gruppi di serie di grafici dei grafici associati allo stesso set di dati. In questo modo, tutte le aree dati che dipendono da quel set di dati possono essere sincronizzate per mostrare lo stesso ordinamento.  
   
  Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
-##  <a name="Nulls"></a> Eliminazione di valori Null o zero in una cella  
+##  <a name="suppressing-null-or-zero-values-in-a-cell"></a><a name="Nulls"></a> Eliminazione di valori Null o zero in una cella  
  Per diversi report i calcoli che presentano i gruppi come ambito possono generare più celle con valori zero (0) o Null. Per evitare disordine nel report, aggiungere un'espressione che consenta di restituire spazi laddove il valore di aggregazione è uguale a 0. Per altre informazioni, vedere "Eliminazione di valori Null o zero in fase di esecuzione" in [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   

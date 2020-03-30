@@ -1,6 +1,6 @@
 ---
 title: SqlDependency in un'applicazione ASP.NET
-description: Viene illustrato l'uso delle notifiche di query da un'applicazione ASP.NET.
+description: Illustra l'uso delle notifiche delle query da un'applicazione ASP.NET.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 8e159a6db1820169cd81caa05e70765ac32f0d56
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896235"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency in un'applicazione ASP.NET
@@ -29,7 +29,7 @@ L'esempio riportato in questa sezione illustra come usare <xref:Microsoft.Data.S
 >  Nell'esempio di codice si presuppone che le notifiche di query siano state abilitate eseguendo gli script descritti in [Abilitazione di notifiche di query](enable-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Informazioni sull'applicazione di esempio  
-Nell'applicazione di esempio viene usata una singola pagina Web ASP.NET per visualizzare in un controllo <xref:System.Web.UI.WebControls.GridView> le informazioni sui prodotti disponibili nel database **AdventureWorks** di SQL Server. Quando la pagina viene caricata il codice scrive l'ora corrente in un controllo <xref:System.Web.UI.WebControls.Label>. Definisce quindi un oggetto <xref:System.Web.Caching.SqlCacheDependency> e imposta le proprietà nell'oggetto <xref:System.Web.Caching.Cache> per archiviare i dati della cache per un massimo di tre minuti. Il codice si connette quindi al database e recupera i dati. Quando la pagina viene caricata e l'applicazione è in esecuzione ASP.NET recupera i dati dalla cache ed è possibile verificarlo osservando che l'ora sulla pagina non cambia. Se i dati monitorati cambiano, ASP.NET invalida la cache e ripopola il controllo `GridView` con i dati aggiornati, adeguando l'ora visualizzata nel controllo `Label`.  
+Nell'applicazione di esempio viene usata una singola pagina Web ASP.NET per visualizzare in un controllo **le informazioni sui prodotti disponibili nel database**AdventureWorks<xref:System.Web.UI.WebControls.GridView> di SQL Server. Quando la pagina viene caricata il codice scrive l'ora corrente in un controllo <xref:System.Web.UI.WebControls.Label>. Definisce quindi un oggetto <xref:System.Web.Caching.SqlCacheDependency> e imposta le proprietà nell'oggetto <xref:System.Web.Caching.Cache> per archiviare i dati della cache per un massimo di tre minuti. Il codice si connette quindi al database e recupera i dati. Quando la pagina viene caricata e l'applicazione è in esecuzione ASP.NET recupera i dati dalla cache ed è possibile verificarlo osservando che l'ora sulla pagina non cambia. Se i dati monitorati cambiano, ASP.NET invalida la cache e ripopola il controllo `GridView` con i dati aggiornati, adeguando l'ora visualizzata nel controllo `Label`.  
   
 ## <a name="creating-the-sample-application"></a>Creazione dell'applicazione di esempio  
 Per creare ed eseguire l'applicazione di esempio, seguire questa procedura:  

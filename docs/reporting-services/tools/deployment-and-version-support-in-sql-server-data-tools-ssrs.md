@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571502"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Distribuzione e supporto della versione in SQL Server Data Tools (SSRS)
@@ -26,14 +26,14 @@ ms.locfileid: "65571502"
   
 -   Distribuzione dei report nei server di report.  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a> Proprietà di configurazione e distribuzione  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> Proprietà di configurazione e distribuzione  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] supporta le configurazioni di progetto. Una configurazione di progetto è costituita da un set di proprietà che consentono di specificare percorsi e comportamenti quando un progetto viene compilato come passaggio nella visualizzazione in anteprima o nella distribuzione dei report. Per ulteriori informazioni sulle configurazioni di progetto, vedere la documentazione di Visual Studio.  
   
  Utilizzare le configurazioni di progetto per controllare l'aggiornamento delle definizioni di report alle versioni dello schema compatibili con i server di report di destinazione. Le proprietà controllate dalle configurazioni di progetto includono il server di report di destinazione, la cartella in cui il processo di compilazione consente di archiviare temporaneamente le definizioni di report per l'anteprima e la distribuzione, nonché i livelli di errore.  
   
  I report vengono compilati prima di essere sottoposti a rendering come anteprime in Progettazione report o di essere distribuiti nel server di report.  
   
- È possibile impostare le proprietà di configurazione nella finestra di dialogo **Proprietà progetto** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ È possibile impostare le proprietà di configurazione nella finestra di dialogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Proprietà progetto**di**.  
   
  Nelle proprietà di compilazione e distribuzione è incluso quanto segue:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65571502"
   
  È possibile aggiungere più di una configurazione di progetto a un progetto; ognuna viene utilizzata per uno scenario differente, ad esempio la distribuzione in versioni diverse di server di report. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) e [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
-##  <a name="bkmk_SupportedVersions"></a> Versioni supportate  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> Versioni supportate  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti server di report, non può essere eseguito in computer basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e non può essere installato nei server basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  

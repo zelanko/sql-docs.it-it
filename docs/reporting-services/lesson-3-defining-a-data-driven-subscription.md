@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Definizione di una sottoscrizione guidata dai dati | Microsoft Docs'
+title: 'Lesson 3: Defining a Data-Driven Subscription (Lezione 3: Definizione di una sottoscrizione guidata dai dati) | Microsoft Docs'
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826863"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lezione 3: Definizione di una sottoscrizione guidata dai dati
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati del portale Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e verrà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
   
 > [!NOTE]  
 > Prima di iniziare, verificare che il servizio **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** sia in esecuzione. Se non è in esecuzione, non è possibile salvare la sottoscrizione.  Un metodo per verificarlo consiste nell'aprire [Gestione configurazione SQL Server](../relational-databases/sql-server-configuration-manager.md).
-In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dei dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
-## <a name="bkmk_startwizard"></a>Avvio di Creazione guidata sottoscrizione guidata dai dati  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Avvio di Creazione guidata sottoscrizione guidata dai dati  
   
 1.  Nel portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] fare clic su **Home**e passare alla cartella contenente il report **Ordini vendita** .  
   
