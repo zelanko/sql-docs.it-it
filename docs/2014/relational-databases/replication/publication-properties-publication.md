@@ -1,5 +1,5 @@
 ---
-title: Proprietà pubblicazione replica di SQL Server-| Microsoft Docs
+title: Proprietà di pubblicazione della replica di SQL Server - Documenti Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022459"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380722"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Proprietà pubblicazione replica di SQL Server 
-  In questa sezione vengono fornite informazioni su tutte le pagine della finestra di dialogo **Proprietà pubblicazione** . 
+# <a name="sql-server-replication-publication-properties"></a>SQL Server Replication Publication Properties 
+  In questa sezione vengono fornite informazioni in tutte le pagine della finestra di dialogo **Proprietà pubblicazione.** 
 
 ## <a name="general"></a>Generale
   La pagina **Generale** della finestra di dialogo **Proprietà pubblicazione** contiene informazioni di base sulla pubblicazione, tra cui il nome, la descrizione e i criteri di scadenza della sottoscrizione.  
@@ -56,7 +56,7 @@ ms.locfileid: "63022459"
  Per altre informazioni, vedere [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **Livello di compatibilità**  
- Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Solo per le pubblicazioni di tipo merge. Consente di selezionare la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minima richiesta per i Sottoscrittori che eseguono la sincronizzazione con la pubblicazione. Il livello di compatibilità viene determinato da una serie di regole associate.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e solo le versioni successive; unire solo le pubblicazioni. Consente di selezionare la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minima richiesta per i Sottoscrittori che eseguono la sincronizzazione con la pubblicazione. Il livello di compatibilità viene determinato da una serie di regole associate.  
 
 ## <a name="filter-rows"></a>Filtra righe
 
@@ -107,18 +107,18 @@ ms.locfileid: "63022459"
  **Trova tabella**  
  Solo per le pubblicazioni di tipo merge. Fare clic su **Trova tabella** per trovare una tabella in un'albero di filtro complesso. In un database con relazioni complesse una tabella può essere unita in join a più tabelle e pertanto può apparire in più posizioni all'interno dell'albero di filtro.  
   
- La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<nometabella>** .  
+ La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<nometabella>**.  
   
  Selezionare un nodo collegamento nel riquadro e fare clic su **Trova tabella** . Il riquadro verrà espanso e la tabella verrà evidenziata. Se si fa clic su **Trova tabella** senza aver selezionato un nodo collegamento verrà visualizzata la finestra di dialogo **Trova tabella** .  
   
- **Filter**  
+ **Filtro**  
  Contiene la definizione [!INCLUDE[tsql](../../includes/tsql-md.md)] del filtro selezionato nel riquadro dei filtri.  
 
 ## <a name="ftp-snapshot-and-internet"></a>Snapshot FTP e Internet
   
 Questa pagina consente di:  
   
--   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per ulteriori informazioni, vedere [trasferire snapshot tramite](transfer-snapshots-through-ftp.md) la documentazione di Windows FTP.  
+-   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per ulteriori informazioni, vedere [Trasferire istantanee tramite](transfer-snapshots-through-ftp.md) la documentazione di Windows FTP.  
   
     > [!NOTE]  
     >  Le modifiche apportate a qualsiasi impostazione relativa al protocollo FTP richiedono la generazione di un nuovo snapshot.  
@@ -132,7 +132,7 @@ Questa pagina consente di:
  La selezione di questa opzione consente ai Sottoscrittori di utilizzare il protocollo FTP per recuperare i file di snapshot, senza tuttavia imporne l'obbligo di utilizzo. Se si seleziona questa opzione, l'impostazione predefinita per la Creazione guidata nuova sottoscrizione viene impostata per consentire al Sottoscrittore di recuperare file di snapshot tramite FTP. Per modificare l'impostazione utilizzare la finestra di dialogo **Proprietà sottoscrizione** . Se si consente ai Sottoscrittori l'accesso ai file di snapshot tramite FTP, specificare la cartella FTP come posizione per i file di snapshot nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione** . In tal modo l'agente snapshot aggiornerà automaticamente i file nella cartella FTP quando viene generato un nuovo snapshot. Se la posizione non è impostata sulla cartella FTP, sarà necessario aggiornare i file manualmente ogni volta che vengono generati nuovi snapshot. Per altre informazioni, vedere [Recapitare uno snapshot tramite FTP](publish/deliver-a-snapshot-through-ftp.md).  
   
  **Sincronizzazione Web**  
- Solo per la replica di tipo merge. Selezionare **I Sottoscrittori possono eseguire la sincronizzazione tramite connessione a un server Web**e specificare l'indirizzo di un server Web per consentire ai Sottoscrittori della replica di tipo merge di utilizzare la sincronizzazione Web. È necessario che il server Web usi SSL (Secure Sockets Layer) e che l'indirizzo Web sia completo, ad esempio https://server.domain.com/synchronize. Per altre informazioni, vedere [Configure Web Synchronization](configure-web-synchronization.md).  
+ Solo per la replica di tipo merge. Selezionare **I Sottoscrittori possono eseguire la sincronizzazione tramite connessione a un server Web**e specificare l'indirizzo di un server Web per consentire ai Sottoscrittori della replica di tipo merge di utilizzare la sincronizzazione Web. È necessario che il server Web usi SSL (Secure Sockets Layer) e che l'indirizzo Web sia completo, ad esempio `https://server.domain.com/synchronize`. Per altre informazioni, vedere [Configure Web Synchronization](configure-web-synchronization.md).  
 
 ## <a name="publication-access-list"></a>Elenco di accesso alla pubblicazione
 
@@ -153,7 +153,7 @@ Questa pagina consente di:
 
   Questa pagina consente di:  
   
--   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per ulteriori informazioni, vedere [trasferire snapshot tramite](transfer-snapshots-through-ftp.md) la documentazione di Windows FTP.  
+-   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per ulteriori informazioni, vedere [Trasferire istantanee tramite](transfer-snapshots-through-ftp.md) la documentazione di Windows FTP.  
   
     > [!NOTE]  
     >  Le modifiche apportate a qualsiasi impostazione relativa al protocollo FTP richiedono la generazione di un nuovo snapshot.  
@@ -167,7 +167,7 @@ Questa pagina consente di:
  La selezione di questa opzione consente ai Sottoscrittori di utilizzare il protocollo FTP per recuperare i file di snapshot, senza tuttavia imporne l'obbligo di utilizzo. Se si seleziona questa opzione, l'impostazione predefinita per la Creazione guidata nuova sottoscrizione viene impostata per consentire al Sottoscrittore di recuperare file di snapshot tramite FTP. Per modificare l'impostazione utilizzare la finestra di dialogo **Proprietà sottoscrizione** . Se si consente ai Sottoscrittori l'accesso ai file di snapshot tramite FTP, specificare la cartella FTP come posizione per i file di snapshot nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione** . In tal modo l'agente snapshot aggiornerà automaticamente i file nella cartella FTP quando viene generato un nuovo snapshot. Se la posizione non è impostata sulla cartella FTP, sarà necessario aggiornare i file manualmente ogni volta che vengono generati nuovi snapshot. Per altre informazioni, vedere [Recapitare uno snapshot tramite FTP](publish/deliver-a-snapshot-through-ftp.md).  
   
  **Sincronizzazione Web**  
- Solo per la replica di tipo merge. Selezionare **I Sottoscrittori possono eseguire la sincronizzazione tramite connessione a un server Web**e specificare l'indirizzo di un server Web per consentire ai Sottoscrittori della replica di tipo merge di utilizzare la sincronizzazione Web. È necessario che il server Web usi SSL (Secure Sockets Layer) e che l'indirizzo Web sia completo, ad esempio https://server.domain.com/synchronize. Per altre informazioni, vedere [Configure Web Synchronization](configure-web-synchronization.md).  
+ Solo per la replica di tipo merge. Selezionare **I Sottoscrittori possono eseguire la sincronizzazione tramite connessione a un server Web**e specificare l'indirizzo di un server Web per consentire ai Sottoscrittori della replica di tipo merge di utilizzare la sincronizzazione Web. È necessario che il server Web usi SSL (Secure Sockets Layer) e che l'indirizzo Web sia completo, ad esempio `https://server.domain.com/synchronize`. Per altre informazioni, vedere [Configure Web Synchronization](configure-web-synchronization.md).  
 
 ## <a name="agent-security"></a>Sicurezza agente
   La pagina **Sicurezza agente** della finestra di dialogo **Proprietà pubblicazione** consente di accedere alle impostazioni relative agli account nell'ambito dei quali gli agenti seguenti vengono eseguiti e si connettono ai computer inclusi in una topologia di replica.  
@@ -183,7 +183,7 @@ Questa pagina consente di:
  Se è stato creato un processo agente, fare clic su **Impostazioni di sicurezza** per accedere a una finestra di dialogo che consente di modificare le impostazioni di sicurezza relative a un agente. Se non è stato creato alcun processo agente, fare clic su **Crea agente** per crearne uno e specificare le relative impostazioni di sicurezza.  
 
 ## <a name="data-partitions"></a>Partizioni dati
-  La pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione** consente di definire le partizioni di dati per pubblicazioni di tipo merge che utilizzano filtri con parametri. Dopo aver definito le partizioni è possibile generare gli snapshot per queste partizioni, specificando set di dati iniziali diversi per Sottoscrittori diversi in base alle proprietà della connessione, ovvero nome dell'account di accesso e/o nome del computer, dei Sottoscrittori. È inoltre possibile consentire ai Sottoscrittori di richiedere il recapito e la generazione di snapshot nel caso in cui questi non dispongano di uno snapshot per la propria partizione al momento della prima sincronizzazione. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+   La pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione** consente di definire le partizioni di dati per pubblicazioni di tipo merge che usano filtri con parametri. Dopo aver definito le partizioni è possibile generare gli snapshot per queste partizioni, specificando set di dati iniziali diversi per Sottoscrittori diversi in base alle proprietà della connessione, ovvero nome dell'account di accesso e/o nome del computer, dei Sottoscrittori. È inoltre possibile consentire ai Sottoscrittori di richiedere il recapito e la generazione di snapshot nel caso in cui questi non dispongano di uno snapshot per la propria partizione al momento della prima sincronizzazione. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Opzioni  
  **Aggiungere**  
@@ -221,7 +221,7 @@ Questa pagina consente di:
  **Percorso dei file di snapshot**  
  Consente di selezionare il percorso per l'archiviazione dei file di snapshot. Questi file possono essere archiviati nel percorso predefinito. È inoltre possibile archiviarli in un percorso alternativo in sostituzione o in aggiunta al percorso predefinito. I file archiviati in un percorso alternativo possono essere archiviati.  
   
--   Selezionare **Inserisci i file nella cartella predefinita** per utilizzare la cartella dello snapshot predefinita per il server di pubblicazione. Il percorso dello snapshot in questa finestra di dialogo è di sola lettura, poiché può essere modificato per il server di pubblicazione solo nella finestra di dialogo **Proprietà server di distribuzione** . Per ulteriori informazioni, vedere [specificare la posizione predefinita degli snapshot](snapshot-options.md#snapshot-folder-locations).   
+-   Selezionare **Inserisci i file nella cartella predefinita** per utilizzare la cartella dello snapshot predefinita per il server di pubblicazione. Il percorso dello snapshot in questa finestra di dialogo è di sola lettura, poiché può essere modificato per il server di pubblicazione solo nella finestra di dialogo **Proprietà server di distribuzione** . Per ulteriori informazioni, vedere [Specificare il percorso predefinito dell'istantanea](snapshot-options.md#snapshot-folder-locations).   
 -   Selezionare **Inserisci i file nella cartella seguente** per specificare un percorso alternativo in sostituzione o in aggiunta al percorso predefinito. Immettere un percorso nella casella di testo oppure fare clic su **Sfoglia** per selezionare un percorso. Selezionare **Comprimi i file di snapshot in questa cartella** per comprimere i file nel percorso dello snapshot alternativo. Il percorso alternativo può trovarsi in un altro server, in un'unità di rete oppure in un supporto rimovibile, ad esempio un CD-ROM o un disco rimovibile. Per ulteriori informazioni, vedere [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) e [Compressed Snapshots](compressed-snapshots.md).  
   
  **Script aggiuntivi**  
@@ -235,11 +235,11 @@ Questa pagina consente di:
 
 
 ## <a name="see-also"></a>Vedere anche  
- [Create a Publication](publish/create-a-publication.md)   
+ [Creare una pubblicazioneCreate a Publication](publish/create-a-publication.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
- [Pubblicare dati e oggetti di database](publish/publish-data-and-database-objects.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Sicurezza replica di SQL Server](security/view-and-modify-replication-security-settings.md)  
- [Inizializzazione di una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   
+ [Pubblicazione di dati e oggetti di databasePublish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)   
+ [SQL Server Replication Security](security/view-and-modify-replication-security-settings.md)  
+ [Inizializzare una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   
   
   

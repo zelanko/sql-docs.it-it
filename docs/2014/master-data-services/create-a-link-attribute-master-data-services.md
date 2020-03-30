@@ -13,27 +13,27 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 055bb2e9bc0bc2f1ef70b8a7a7eee07071929ad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bf324f4e24337503c97e10734f38713ae0f172e6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65479946"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380732"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Creare un attributo di collegamento (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un attributo per il collegamento quando si deve immettere un collegamento ipertestuale come valore di attributo, ad esempio http://www.contoso.com.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un attributo per il collegamento quando si deve immettere un collegamento ipertestuale come valore di attributo, ad esempio `http://www.contoso.com`.  
   
 > [!NOTE]  
 >  Quando gli utenti immettono un valore per un attributo di collegamento, la stringa deve iniziare con **http://** altrimenti viene visualizzato un errore.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [Amministratori &#40;&#41;Master Data Services ](administrators-master-data-services.md).  
   
--   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [creare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
+-   È necessario che sia presente un'entità perché ne venga creato l'attributo. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
 ### <a name="to-create-a-link-attribute"></a>Per creare un attributo di collegamento  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65479946"
   
 7.  Nella pagina **Aggiungi attributo** selezionare l'opzione **Formato libero** .  
   
-8.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco di parole che non vanno usate come nomi di attributo, vedere [Parole riservate &#40;Master Data Services&#41;](../../2014/master-data-services/reserved-words-master-data-services.md).  
+8.  Nella casella **Nome** digitare un nome per l'attributo. Per un elenco delle parole che non devono essere utilizzate come nomi di attributo, vedere [Parole riservate &#40;&#41;Master Data Services ](../../2014/master-data-services/reserved-words-master-data-services.md).  
   
 9. Nella casella **Larghezza in pixel visualizzazione** digitare la larghezza della colonna attributo da visualizzare nella griglia **Esplora** .  
   
@@ -72,9 +72,9 @@ ms.locfileid: "65479946"
 14. Nella pagina **Gestione entità** , fare clic su **Salva entità**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [Modificare il nome di un attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [Creare un attributo basato su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Attributi &#40;&#41;di Master Data ServicesAttributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Modificare un nome di attributo &#40;&#41;Master Data Services](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Creare un attributo basato su dominio &#40;&#41;Master Data ServicesCreate a Domain-Based Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Creare un attributo di file &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   
