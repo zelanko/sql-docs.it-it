@@ -16,10 +16,10 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821997"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Eseguire il ripristino da un errore dell'istanza del cluster di failover
@@ -30,7 +30,7 @@ ms.locfileid: "74821997"
   
 -   [Recuperare da un errore software](#Scenario2)  
   
-##  <a name="Scenario1"></a> Recuperare da un errore irreversibile  
+##  <a name="recover-from-an-irreparable-failure"></a><a name="Scenario1"></a> Recuperare da un errore irreversibile  
  Eseguire i passi di seguito riportati per recuperare da un errore irreversibile. Questo errore può essere provocato, ad esempio, dall'errore di un controller del disco o del sistema operativo. In questo caso il problema dipende da un errore hardware nel nodo 1 di un cluster a due nodi.  
   
 1.  Dopo l'errore del Nodo 1, l'istanza FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera un errore sul Nodo 2.  
@@ -47,7 +47,7 @@ ms.locfileid: "74821997"
   
 7.  Eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per aggiungere il Nodo 1 all'istanza FCI. Per altre informazioni, vedere [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-##  <a name="Scenario2"></a> Recuperare da un errore reversibile  
+##  <a name="recover-from-a-reparable-failure"></a><a name="Scenario2"></a> Recuperare da un errore reversibile  
  Eseguire i passi di seguito riportati per recuperare da un errore reversibile. In questo caso, l'errore dipende dalla mancata disponibilità o dall'interruzione del collegamento del Nodo 1, che tuttavia non è danneggiato. L'errore può essere causato da un errore del sistema operativo, da un errore hardware o da un errore dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Dopo l'errore del Nodo 1, l'istanza FCI genera un errore sul Nodo 2.  

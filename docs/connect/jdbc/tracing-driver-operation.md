@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027589"
 ---
 # <a name="tracing-driver-operation"></a>Creazione di tracce
@@ -59,8 +59,8 @@ ms.locfileid: "69027589"
 |WARNING|Indica un potenziale problema.|  
 |INFO|Fornisce messaggi informativi.|  
 |FINE|Fornisce informazioni di base sulle tracce, incluse la creazione e l'eliminazione di oggetti di base. Fornisce inoltre tutte le eccezioni generate dai metodi pubblici.|  
-|FINER|Fornisce informazioni dettagliate sulle tracce, inclusi tutti i punti di ingresso e di uscita dei metodi pubblici con i tipi di dati dei parametri associati, nonché le proprietà pubbliche per le classi pubbliche. Fornisce inoltre parametri di input, parametri di output e valori restituiti del metodo ad eccezione dei tipi di valori restituiti CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Le categorie di registrazione seguenti erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA, e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). A partire dalla versione 2.0 sono state aggiornate al livello FINER.|  
-|FINEST|Fornisce le informazioni più dettagliate disponibili sulle tracce. È il livello più basso.<br /><br /> Le categorie di registrazione seguenti erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINEST: TDS.DATA e TDS.TOKEN. A partire dalla versione 2.0 hanno mantenuto lo stesso livello di registrazione.|  
+|FINER|Fornisce informazioni dettagliate sulle tracce, inclusi tutti i punti di ingresso e di uscita dei metodi pubblici con i tipi di dati dei parametri associati, nonché le proprietà pubbliche per le classi pubbliche. Fornisce inoltre parametri di input, parametri di output e valori restituiti del metodo ad eccezione dei tipi di valori restituiti CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Le seguenti categorie di registrazione erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). A partire dalla versione 2.0 sono state aggiornate al livello FINER.|  
+|FINEST|Fornisce le informazioni più dettagliate disponibili sulle tracce. È il livello più basso.<br /><br /> Le seguenti categorie di registrazione erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINEST: TDS.DATA e TDS.TOKEN. A partire dalla versione 2.0 hanno mantenuto lo stesso livello di registrazione.|  
 |OFF|Disattiva la registrazione.|  
 |ALL|Abilita la registrazione di tutti i messaggi.|  
   

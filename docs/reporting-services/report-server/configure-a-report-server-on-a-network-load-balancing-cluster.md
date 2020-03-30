@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244396"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
@@ -40,7 +40,7 @@ ms.locfileid: "75244396"
 |6|Configurare **Hostname** e **UrlRoot** per l'utilizzo dell'IP del server virtuale del cluster per il bilanciamento del carico di rete.|[Come configurare Hostname e UrlRoot](#SpecifyingVirtualServerName) in questo argomento.|  
 |7|Verificare che sia possibile accedere ai server tramite il nome host specificato.|[Verificare l'accesso al server di report](#Verify) in questo argomento.|  
   
-## <a name="ViewState"></a> Come configurare la convalida dello stato di visualizzazione
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Come configurare la convalida dello stato di visualizzazione
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il bilanciamento del carico di rete, è necessario configurare la convalida dello stato di visualizzazione in modo che gli utenti possano visualizzare report HTML interattivi.  Questa operazione va eseguita per il servizio Web Server di report.
@@ -92,7 +92,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> Come configurare Hostname e UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Come configurare Hostname e UrlRoot
 
  Per configurare una distribuzione con scalabilità orizzontale del server di report in un cluster per il bilanciamento del carico di rete, è necessario definire un unico nome del server virtuale che fornisce un singolo punto di accesso al cluster di server. Successivamente, registrare il nome del server virtuale con Domain Name Server (DNS) nel proprio ambiente.  
   
@@ -122,7 +122,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
   
 6. Ripetere questi passaggi in ciascun file RSReportServer.config per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
   
-## <a name="Verify"></a> Verificare l'accesso al server di report
+## <a name="verify-report-server-access"></a><a name="Verify"></a> Verificare l'accesso al server di report
 
  Verificare che sia possibile accedere la distribuzione con scalabilità orizzontale tramite il nome del server virtuale (ad esempio, `https://MyVirtualServerName/reportserver` e `https://MyVirtualServerName/reports`).  
   

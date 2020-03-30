@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727465"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Creare una stored procedure con sqlrutils
@@ -21,7 +21,7 @@ ms.locfileid: "73727465"
 
 Questo articolo descrive i passaggi per la conversione del codice R per l'esecuzione come stored procedure T-SQL. Per ottenere i migliori risultati possibili, può essere necessario modificare il codice per garantire che tutti gli input possano essere parametrizzati.
 
-## <a name="bkmk_rewrite"></a>Passaggio 1. Riscrivere lo script R
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>Passaggio 1. Riscrivere lo script R
 
 Per ottenere risultati ottimali, è consigliabile riscrivere il codice R per incapsularlo come funzione singola.
 
@@ -145,7 +145,7 @@ Il processo generale di chiamata della stored procedure SQL preparata è il segu
 2. Definire `$query` o impostare `$value` per ogni parametro di input.
 3. Usare `executeStoredProcedure` per eseguire la stored procedure dall'ambiente di sviluppo R, passando l'elenco di oggetti parametro di input impostato.
 
-## <a name = "samples"></a>Esempio
+## <a name="example"></a><a name = "samples"></a>Esempio
 
 Questo esempio mostra la versione originale e quella modificata di uno script R che ottiene i dati da un database di SQL Server, esegue alcune trasformazioni sui dati e li salva in un altro database.
 

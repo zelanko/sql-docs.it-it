@@ -9,10 +9,10 @@ ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571194"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parti del report e set di dati in Generatore report
@@ -23,14 +23,14 @@ ms.locfileid: "65571194"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Adding"></a> Aggiunta di una parte di report con i set di dati dipendenti al report  
+##  <a name="adding-a-report-part-with-dependent-datasets-to-your-report"></a><a name="Adding"></a> Aggiunta di una parte di report con i set di dati dipendenti al report  
  Quando si aggiunge una parte di report al report, anche i set di dati dipendenti contenuti nella parte di report vengono aggiunti al report. Poiché in una parte di report potrebbe essere incluso un rettangolo contenente molti altri elementi del report, è possibile aggiungere più set di dati dipendenti al report in uso. Ogni set di dati condiviso è un riferimento indipendente; l'origine dati condivisa dalla quale dipende non viene aggiunta al report. A ogni set di dati incorporato viene aggiunta anche l'origine dati incorporata o condivisa dalla quale dipende.  
   
  Le credenziali per un'origine dati incorporata non sono salvate come parte della parte del report. Se un'origine dati incorporata viene aggiunta al report, verranno richieste le credenziali quando si esegue il report. Per evitare questa richiesta, utilizzare le parti di report basate sulle origini dati condivise con le credenziali archiviate.  
   
  Una volta aggiunta una parte di report al report in uso, i set di dati aggiunti non presentano alcuna differenza con i set di dati incorporati o condivisi che sono stati creati. È possibile visualizzare i set di dati aggiuntivi nel riquadro dei dati del report. I set di dati incorporati vengono visualizzati nell'origine dati condivisa corrispondente mentre i set di dati condivisi nella cartella Set di dati condivisi.  
   
-##  <a name="Customizing"></a> Personalizzazione di set di dati dipendenti  
+##  <a name="customizing-dependent-datasets"></a><a name="Customizing"></a> Personalizzazione di set di dati dipendenti  
  Dopo avere aggiunto parti del report al report, è possibile visualizzarlo in anteprima e decidere di apportare alcune modifiche ai dati. Gli elementi modificabili dipendono dal tipo di set di dati che si sta utilizzando.  
   
  Per modificare i dati e le opzioni dati di un set di dati incorporato, è possibile modificare le proprietà del set di dati, inclusa la query, come se si creasse il set di dati personalmente.  
@@ -39,7 +39,7 @@ ms.locfileid: "65571194"
   
  Per altre informazioni sulla modifica della definizione di un set di dati condiviso o su come mostrare le ultime modifiche dei dati per un set di dati condiviso nel report, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
-##  <a name="Publishing"></a> Pubblicazione di set di dati dipendenti come set di dati condivisi  
+##  <a name="publishing-dependent-datasets-as-shared-datasets"></a><a name="Publishing"></a> Pubblicazione di set di dati dipendenti come set di dati condivisi  
  Quando si pubblica un elemento del report che dispone di set di dati dipendenti, è possibile utilizzare l'opzione per pubblicare ogni set di dati come set di dati condiviso o come set di dati incorporato che rimane tale nell'elemento del report.  
   
  Quando si seleziona l'opzione del set di dati condiviso, il set di dati viene salvato nel server di report come definizione del set di dati condiviso. Nel report, ogni elemento del report in cui viene utilizzato il set di dati è aggiornato per puntare al set di dati condiviso che si trova ora sul server di report. Di conseguenza si verificano le seguenti due situazioni:  

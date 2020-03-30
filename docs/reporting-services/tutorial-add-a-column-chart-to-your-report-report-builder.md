@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041401"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
@@ -35,7 +35,7 @@ Tempo previsto per il completamento di questa esercitazione: 15 minuti.
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Creare un report grafico da Creazione guidata grafico  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Creare un report grafico da Creazione guidata grafico  
 In questa sezione si usa Creazione guidata grafico per creare un set di dati incorporato, scegliere un'origine dati condivisa e creare un istogramma.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
   
 9. Fare clic su **Avanti**.  
   
-## <a name="ChartType"></a>2. Scegliere il tipo di grafico  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Scegliere il tipo di grafico  
 È possibile scegliere tra diversi tipi predefiniti di grafico, quindi modificare il grafico dopo aver completato la procedura guidata.  
   
 ### <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
@@ -114,7 +114,7 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
 
 Osservare che sull'asse orizzontale del grafico non viene assegnata un'etichetta a ogni categoria. Per impostazione predefinita, vengono incluse solo le etichette che possono essere posizionate accanto all'asse. 
   
-## <a name="Horizontal"></a>3. Formattare una data sull'asse orizzontale  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3. Formattare una data sull'asse orizzontale  
 Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori in un formato generale che viene ridimensionato automaticamente in base alle dimensioni del grafico.  
   
 1.  Passare alla visualizzazione di progettazione report.  
@@ -159,7 +159,7 @@ Nel grafico le etichette appaiono ruotate.
 
 ![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5. Spostare la legenda  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Spostare la legenda  
 La legenda viene creata automaticamente dai dati di categoria e serie. È possibile spostare la legenda al di sotto dell'area del grafico di un istogramma.  
   
 1.  Passare alla visualizzazione di progettazione report.  
@@ -176,7 +176,7 @@ La legenda viene creata automaticamente dai dati di categoria e serie. È possib
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="ChartTitle"></a>6. Spostare il titolo del grafico  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Spostare il titolo del grafico  
     
 1.  Passare alla visualizzazione di progettazione report.  
   
@@ -184,7 +184,7 @@ La legenda viene creata automaticamente dai dati di categoria e serie. È possib
   
 3.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Vertical"></a>7. Formattare l'asse verticale e assegnare un'etichetta  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7. Formattare l'asse verticale e assegnare un'etichetta  
 Per impostazione predefinita, sull'asse verticale vengono visualizzati valori in un formato generale che viene ridimensionato automaticamente in base alle dimensioni del grafico.   
   
 1.  Passare alla visualizzazione di progettazione report.  
@@ -235,7 +235,7 @@ Si noti che sull'asse x sono visualizzate solo alcune etichette. In questa sezio
     
     Ora il grafico visualizza tutte le etichette.
   
-## <a name="Average"></a>9. Aggiungere una media mobile con una serie calcolata  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9. Aggiungere una media mobile con una serie calcolata  
 
 Una media mobile è una media dei dati della serie calcolata nel tempo. La media mobile favorisce l'identificazione delle tendenze.
   
@@ -261,7 +261,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10. Aggiungere un titolo al report  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Aggiungere un titolo al report  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
@@ -283,7 +283,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 7.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Save"></a>11. Salvare il report  
+## <a name="11-save-the-report"></a><a name="Save"></a>11. Salvare il report  
   
 ### <a name="to-save-the-report"></a>Per salvare il report  
   

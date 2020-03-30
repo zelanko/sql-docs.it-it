@@ -1,6 +1,6 @@
 ---
 title: Dati XML in SQL Server
-description: Viene descritto come usare i dati XML recuperati da SQL Server.
+description: Descrive come usare i dati XML recuperati da SQL Server.
 ms.date: 08/15/2019
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
 ms.prod: sql
@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 039efb5e3e2826fd4c337d2dbdced29295f05fdb
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895876"
 ---
 # <a name="xml-data-in-sql-server"></a>Dati XML in SQL Server

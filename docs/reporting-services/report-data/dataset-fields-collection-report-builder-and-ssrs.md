@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077783"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77077783"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> Campi del set di dati e query  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> Campi del set di dati e query  
  I campi del set di dati vengono specificati dal comando di query del set di dati e da qualsiasi campo calcolato definito dall'utente. La raccolta di campi visualizzata nel report dipende dal tipo di set di dati a disposizione:  
   
 -   **Set di dati condivisi.** La raccolta di campi è costituita dall'elenco di campi per la query presente nella definizione del set di dati condiviso quando il set di dati condiviso è stato aggiunto direttamente al report oppure quando è stata aggiunta una parte di report nella quale era incluso il set di dati condiviso. La raccolta di campi locale non subisce variazioni quando viene modificata la definizione del set di dati condiviso sul server di report. Per aggiornare la raccolta di campi locale, è necessario aggiornare l'elenco per il set di dati condiviso locale.  
@@ -59,7 +59,7 @@ ms.locfileid: "77077783"
 >  Solo alcune proprietà **Field** possono essere usate per tutte le origini dati. Le proprietà **Value** e **IsMissing** vengono definite per tutte le origini dati. Altre proprietà predefinite, ad esempio **Key**, **UniqueName**e **ParentUniqueName** per origini dati multidimensionali, sono supportate solo se sono disponibili nell'origine dati. Le proprietà personalizzate sono supportate da alcuni provider di dati. Per altre informazioni, vedere gli argomenti specifici sulle proprietà di campo estese per il tipo di origine dati in [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ad esempio, per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
-##  <a name="Defaults"></a> Informazioni sulle espressioni predefinite per i campi  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> Informazioni sulle espressioni predefinite per i campi  
  Una casella di testo può essere un elemento di report casella di testo nel corpo del report oppure essere presente in una cella di un'area dati Tablix. Quando si collega un campo a una casella di testo, la posizione di quest'ultima determina l'espressione predefinita per il riferimento di campo. Nel corpo del report un'espressione del valore della casella di testo deve specificare un'aggregazione e un set di dati. Se nel report è presente un unico set di dati, tale espressione predefinita viene creata automaticamente. Per un campo che rappresenta un valore numerico, la funzione di aggregazione predefinita è Sum, mentre per un campo che rappresenta un valore non numerico l'aggregazione predefinita è First.  
   
  In un'area dati Tablix l'espressione predefinita del campo dipende dalle appartenenze a una riga e a un gruppo della casella di testo aggiunta al campo. Se a una casella di testo nella riga di dettaglio di una tabella viene aggiunto il campo Sales, l'espressione relativa è `[Sales]`. Se si aggiunge lo stesso campo a una casella di testo in un'intestazione del gruppo, l'espressione predefinita è `(Sum[Sales])`, poiché nell'intestazione del gruppo vengono visualizzati i valori di riepilogo per il gruppo, non quelli dettagliati. Durante l'esecuzione del report, l'elaboratore di report valuta ogni espressione e sostituisce il risultato nel report.  
@@ -67,7 +67,7 @@ ms.locfileid: "77077783"
  Per altre informazioni sulle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="DataTypes"></a> Tipi di dati dei campi  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> Tipi di dati dei campi  
  Quando si crea un set di dati, i tipi di dati dei campi nell'origine dati potrebbero non corrispondere esattamente ai tipi di dati utilizzati in un report. Ai tipi di dati possono essere applicati uno o due livelli di mapping. L'estensione per l'elaborazione dati o il provider di dati può eseguire il mapping dei tipi di dati dall'origine dati a tipi di dati CLR (Common Language Runtime). I tipi di dati restituiti dalle estensioni per l'elaborazione dei dati vengono su cui viene eseguito il mapping a un subset di tipi di dati CLR da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. I dati presenti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, devono essere di un tipo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , come **nvarchar** o **datetime**. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi utilizzati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
@@ -101,7 +101,7 @@ ms.locfileid: "77077783"
  Per altre informazioni sull'inclusione di riferimenti in un campo del set di dati da un'espressione, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="MissingFields"></a> Rilevamento dei campi mancanti in fase di esecuzione  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> Rilevamento dei campi mancanti in fase di esecuzione  
  Quando il report viene elaborato, il set di risultati per un set di dati potrebbe non contenere valori per tutte le colonne specificate, in quanto tali colonne non sono più disponibili nell'origine dati. È possibile usare la proprietà del campo IsMissing per verificare se i valori di un campo sono stati restituiti in fase di esecuzione. Per altre informazioni, vedere [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   

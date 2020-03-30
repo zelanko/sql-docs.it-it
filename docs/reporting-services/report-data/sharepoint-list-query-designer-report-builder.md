@@ -11,10 +11,10 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500055"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Progettazione query di elenco di SharePoint (Generatore report)
@@ -54,15 +54,15 @@ ms.locfileid: "66500055"
  [Risultati query](#QueryResults)  
  Visualizza i dati di esempio per il set di risultati per la query generata automaticamente.  
   
-###  <a name="DatabaseView"></a> Riquadro Elenchi SharePoint  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a> Riquadro Elenchi SharePoint  
  Nel riquadro Elenchi SharePoint vengono visualizzati i metadati per gli oggetti di database per cui si dispone delle autorizzazioni per la visualizzazione. Tali oggetti sono determinati dalla connessione all'origine dati e dalle credenziali. Nella visualizzazione gerarchica, gli oggetti di database sono organizzati in base allo schema del database. Espandere il nodo di ogni schema per visualizzare tabelle, viste, stored procedure e funzioni con valori di tabella. Espandere la tabella o la vista per visualizzare le colonne.  
   
-###  <a name="SelectedFields"></a> Riquadro Campi selezionati  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Riquadro Campi selezionati  
  Il riquadro Campi selezionati visualizza i campi dell'elemento dell'elenco che si selezionano per gli elementi dell'elenco SharePoint. I campi visualizzati in questo riquadro diventano la raccolta dei campi per il set di dati del report. Dopo aver creato un set di dati e una query, utilizzare il riquadro dei dati del report per visualizzare la raccolta dei campi per un set di dati del report. Questi campi rappresentano i dati che si possono visualizzare in tabelle, grafici e altri elementi del report quando si visualizza un report.  
   
  Per aggiungere o rimuovere campi in questo riquadro, selezionare o deselezionare le caselle di controllo relative ai campi della tabella o della vista nel riquadro Elenchi SharePoint.  
   
-###  <a name="AppliedFilters"></a> Riquadro Filtri applicati  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Riquadro Filtri applicati  
  Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro sono usati per generare una clausola WHERE di [!INCLUDE[tsql](../../includes/tsql-md.md)] . Quando si seleziona l'opzione di parametro, viene creato automaticamente un parametro del report. I parametri del report basati sui parametri di query consentono all'utente di specificare i valori affinché la query controlli i dati nel report.  
   
  Vengono visualizzate le colonne seguenti:  
@@ -75,7 +75,7 @@ ms.locfileid: "66500055"
   
 -   **Parametro** Visualizza l'opzione per aggiungere un parametro di query alla query. Per visualizzare la relazione tra il parametro del report e il parametro della query, utilizzare Proprietà set di dati.  
   
-###  <a name="QueryResults"></a> Riquadro Risultati query  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Riquadro Risultati query  
  Nel riquadro Risultati query vengono visualizzati i risultati della query generata automaticamente in base alle selezioni negli altri riquadri. Le colonne nel set di risultati sono costituite dai campi che si specificano nel riquadro Campi selezionati e i dati di riga sono limitati dai filtri che si specificano nel riquadro Filtri applicati.  
   
  Questi dati rappresentano i valori dell'origine dati al momento dell'esecuzione della query. I dati non sono salvati nella definizione del report. I dati effettivi del report vengono recuperati quando il report viene elaborato.  

@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027846"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Memorizzazione nella cache dei metadati delle istruzioni preparate per il driver JDBC
@@ -39,12 +39,12 @@ Un'altra modifica introdotta a partire dalla versione 6.1.6-anteprima è che in 
  
 |Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|Restituisce il numero di azioni di annullamento della preparazione per le istruzioni preparate attualmente in sospeso.|
+|int getDiscardedServerPreparedStatementCount()|Restituisce il numero di azioni di annullamento della preparazione per le istruzioni preparate attualmente in attesa.|
 |void closeUnreferencedPreparedStatementHandles()|Impone richieste di annullamento della preparazione per eventuali istruzioni preparate per l'esecuzione e rimosse in sospeso.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|Restituisce il comportamento per un'istanza di connessione specifica. Se il valore è false, la prima esecuzione chiama sp_executesql e non prepara un'istruzione. La seconda esecuzione chiama sp_prepexec e imposta effettivamente un handle per l'istruzione preparata. Le esecuzioni seguenti chiamano sp_execute. Viene così eliminata la necessità di sp_unprepare alla chiusura dell'istruzione preparata se l'istruzione viene eseguita una sola volta. L'impostazione predefinita per questa opzione può essere modificata chiamando setDefaultEnablePrepareOnFirstPreparedStatementCall().|
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Indica il comportamento per un'istanza di connessione specifica. Se il valore è false, la prima esecuzione chiama sp_executesql e non prepara un'istruzione. La seconda esecuzione chiama sp_prepexec e imposta effettivamente un handle per l'istruzione preparata. Le esecuzioni seguenti chiamano sp_execute. Viene così eliminata la necessità di sp_unprepare alla chiusura dell'istruzione preparata se l'istruzione viene eseguita una sola volta.|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Specifica il comportamento per un'istanza di connessione specifica. Se il valore è false, la prima esecuzione chiama sp_executesql e non prepara un'istruzione. La seconda esecuzione chiama sp_prepexec e imposta effettivamente un handle per l'istruzione preparata. Le esecuzioni seguenti chiamano sp_execute. Viene così eliminata la necessità di sp_unprepare alla chiusura dell'istruzione preparata se l'istruzione viene eseguita una sola volta.|
 |int getServerPreparedStatementDiscardThreshold()|Restituisce il comportamento per un'istanza di connessione specifica. Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su {@literal >} 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare. L'impostazione predefinita per questa opzione può essere modificata chiamando getDefaultServerPreparedStatementDiscardThreshold().|
-|void setServerPreparedStatementDiscardThreshold(int value)|Indica il comportamento per un'istanza di connessione specifica. Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su > 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare.|
+|void setServerPreparedStatementDiscardThreshold(int value)|Specifica il comportamento per un'istanza di connessione specifica. Questa impostazione consente di controllare il numero di azioni di annullamento di istruzioni preparate (sp_unprepare) in sospeso per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in sospeso nel server. Se l'impostazione è <= 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se è impostata su > 1, queste chiamate vengono raggruppate per evitare un sovraccarico troppo frequente della chiamata di sp_unprepare.|
 
  **SQLServerDataSource**
  
@@ -71,7 +71,7 @@ Ad esempio: `connection.setStatementPoolingCacheSize(10)`
  
 |Nuovo metodo|Descrizione|  
 |-----------|-----------------|  
-|void setDisableStatementPooling(boolean value)|Imposta il pooling dell'istruzione su true o false.|
+|void setDisableStatementPooling(boolean value)|Imposta il pool di istruzioni su true o false.|
 |boolean getDisableStatementPooling()|Restituisce true se il pooling dell'istruzione è disabilitato.|
 |void setStatementPoolingCacheSize(int value)|Specifica le dimensioni della cache delle istruzioni preparate per questa connessione. Un valore inferiore a 1 indica nessuna cache.|
 |int getStatementPoolingCacheSize()|Restituisce le dimensioni della cache delle istruzioni preparate per questa connessione. Un valore inferiore a 1 indica nessuna cache.|

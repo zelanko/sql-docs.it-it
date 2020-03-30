@@ -13,10 +13,10 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198443"
 ---
 # <a name="use-the-winforms-reportviewer-control"></a>Usare il controllo Windows Form ReportViewer
@@ -40,7 +40,7 @@ ms.locfileid: "79198443"
   
  Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **Attività di ReportViewer** che richiede di selezionare un report.  
   
- Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere scelto l'opzione **\<Server di report>** vengono visualizzate due proprietà aggiuntive: **URL server di report** e **Percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
+ Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere scelto l'opzione **\<Server di report>** , vengono visualizzate due proprietà aggiuntive: **URL server di report** e **Percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
   
  ![Selezionare il report del server](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Selezionare il report del server")  
   

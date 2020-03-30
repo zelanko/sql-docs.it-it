@@ -1,6 +1,6 @@
 ---
 title: Statistiche del provider per SQL Server
-description: Descrizione del supporto per ottenere statistiche in fase di esecuzione di SQL Server.
+description: Viene descritto il supporto per ottenere statistiche di runtime di SQL Server.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896599"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiche del provider per SQL Server

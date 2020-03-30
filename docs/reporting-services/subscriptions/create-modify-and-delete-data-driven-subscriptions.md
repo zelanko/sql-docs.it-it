@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140264"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati
@@ -35,14 +35,14 @@ ms.locfileid: "67140264"
   
 -   [Esecuzione della sottoscrizione](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a>Gestione ed eliminazione di una sottoscrizione guidata dai dati  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a>Gestione ed eliminazione di una sottoscrizione guidata dai dati  
  Una sottoscrizione guidata dai dati in corso non può essere arrestata o eliminata tramite il portale Web. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
  Per eliminare una sottoscrizione guidata dai dati selezionare la casella di controllo accanto al report nella pagina **Sottoscrizioni**, quindi selezionare **Elimina**.  
   
  Per istruzioni sull'annullamento di una sottoscrizione guidata dai dati, vedere [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
-##  <a name="bkmk_create_and_modify"></a> Creazione e modifica di una sottoscrizione guidata dai dati  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> Creazione e modifica di una sottoscrizione guidata dai dati  
  Per creare una sottoscrizione guidata dai dati, selezionare un report che utilizza credenziali archiviate o nessuna credenziale. Quando si crea la sottoscrizione guidata dai dati, considerare di utilizzare una convenzione di denominazione per il campo di descrizione in modo da poter facilmente differenziare le sottoscrizioni standard dalle sottoscrizioni guidate dai dati.  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>Per creare una sottoscrizione guidata dai dati (modalità nativa)  
@@ -88,14 +88,14 @@ ms.locfileid: "67140264"
   
 -   **Requisiti per gli utenti**. L'autore della sottoscrizione deve disporre dell'autorizzazione per la gestione dei report e di tutte le sottoscrizioni. Per altre informazioni sulle autorizzazioni per attività a livello di elemento, vedere [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md). L'autore deve inoltre disporre delle credenziali necessarie per l'accesso all'origine dei dati esterna contenente i dati del sottoscrittore.  
   
-##  <a name="bkmk_define_query"></a> Definizione di una query che recupera le informazioni sulla sottoscrizione  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> Definizione di una query che recupera le informazioni sulla sottoscrizione  
  In una sottoscrizione guidata dai dati è necessario specificare una query o un comando che recupera i dati del sottoscrittore. La query dovrebbe produrre una riga per ogni sottoscrittore. Se si utilizza l'estensione per il recapito tramite posta elettronica, la query dovrebbe restituire un alias di posta elettronica valido per ogni sottoscrittore. Il numero di recapiti effettuati si basa sul numero di righe restituite dalla query. Se il set di righe contiene 10.000 righe, significa che la sottoscrizione determina il recapito di 10.000 report.  
   
  Se l'elaborazione della query richiede tempi particolarmente lunghi, è possibile aumentare il valore di timeout per consentire il proseguimento delle operazioni di elaborazione.  
   
  In questo passaggio, è necessario che la query venga convalidata per poter continuare. L'operazione di convalida non determina l'elaborazione della query, ma solo la restituzione dell'elenco di tutte le colonne presenti nel set di righe, in modo che sia possibile fare riferimento alle colonne durante le successive operazioni di selezione. Se la query non viene convalidata, non è possibile proseguire. La query non viene convalidata se la sintassi della query non è corretta o la connessione all'origine dei dati non è valida. Utilizzare il pulsante **Indietro** per apportare correzioni all'origine dei dati.  
   
-##  <a name="bkmk_run_subscription"></a> Esecuzione della sottoscrizione  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> Esecuzione della sottoscrizione  
  È necessario specificare le condizioni per l'elaborazione della sottoscrizione. È possibile specificare una pianificazione oppure fare in modo che la sottoscrizione venga attivata in corrispondenza degli aggiornamenti a uno snapshot dell'esecuzione del report. Le modalità di elaborazione delle sottoscrizioni guidate dai dati sono uguali a quelle delle sottoscrizioni standard.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893457"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contatori delle prestazioni per MSRS 2011 Web Service, oggetti prestazioni
@@ -41,7 +41,7 @@ ms.locfileid: "68893457"
   
 -   [Utilizzare i cmdlet di PowerShell per restituire gli elenchi](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Contatori delle prestazioni per l'oggetto prestazioni MSRS 2011 Web Service  
+##  <a name="msrs-2011-web-service-performance-counters"></a><a name="bkmk_webservice"></a> Contatori delle prestazioni per l'oggetto prestazioni MSRS 2011 Web Service  
  Tramite l'oggetto prestazioni **MSRS 2011 Web Service** vengono monitorate le prestazioni del server di report. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .  
   
  Nella tabella seguente sono elencati i contatori inclusi con l'oggetto prestazioni **MSRS 2011 Web Service** .  
@@ -71,7 +71,7 @@ ms.locfileid: "68893457"
 |**Totale report eseguiti**|Numero totale di report eseguiti dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
 |**Richieste totali**|Numero totale di richieste inviate al server di report dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
   
-##  <a name="bkmk_windowsservice"></a> Contatori delle prestazioni per l'oggetto prestazioni MSRS 2011 Windows Service  
+##  <a name="msrs-2011-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a> Contatori delle prestazioni per l'oggetto prestazioni MSRS 2011 Windows Service  
  Tramite l'oggetto prestazione **MSRS 2011 Windows Service** viene monitorato il servizio Windows ReportServer. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, quali sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche.  
   
  Nella tabella seguente sono elencati i contatori inclusi nell'oggetto prestazioni **MSRS 2011 Windows Service** .  
@@ -110,7 +110,7 @@ ms.locfileid: "68893457"
 |**Richieste totali**|Numero totale di report eseguiti dall'avvio del servizio. Il contatore viene reimpostato dopo il riciclo del dominio applicazione.|  
 |**Totale aggiornamenti snapshot**|Numero totale di aggiornamenti per gli snapshot dell'esecuzione dei report.|  
   
-##  <a name="bkmk_powershell"></a> Utilizzare i cmdlet di PowerShell per restituire gli elenchi  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Utilizzare i cmdlet di PowerShell per restituire gli elenchi  
  ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")Tramite il seguente script di Windows PowerShell vengono restituiti i set di contatori in cui CounterSetName inizia con "msr":  
   
 ```  

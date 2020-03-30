@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082154"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Un'implementazione del server di report basata sulla scalabilità orizzontale fa riferimento a un modello di implementazione dove più istanze del server di report condividono lo stesso database. Un database del server di report può essere utilizzato da qualsiasi istanza del server di report che archivia le relative chiavi simmetriche nel database. Se, ad esempio, un database del server di report contiene le informazioni sulle chiavi per tre istanze del server di report, queste tre istanze verranno considerate membri della stessa implementazione basata sulla scalabilità orizzontale.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unione in join di istanze del server di report nello stesso computer  
- È possibile creare una distribuzione con scalabilità orizzontale da più istanze del server di report installate nello stesso computer. Se si esegue l'unione in join di istanze del server di report installate localmente, non impostare gli argomenti **-u** e **-v** . Gli argomenti **-u** e **-v** vengono infatti usati solo per l'unione in join di un'istanza di un computer remoto. Se si specificano gli argomenti, viene visualizzato l'errore seguente: "Impossibile usare le credenziali utente per le connessioni locali".  
+ È possibile creare una distribuzione con scalabilità orizzontale da più istanze del server di report installate nello stesso computer. Se si esegue l'unione in join di istanze del server di report installate localmente, non impostare gli argomenti **-u** e **-v** . Gli argomenti **-u** e **-v** vengono infatti usati solo per l'unione in join di un'istanza di un computer remoto. Se si specificano tali argomenti, viene visualizzato il messaggio di errore seguente: "Impossibile usare le credenziali dell'utente per le connessioni locali".  
   
  Nell'esempio seguente viene illustrata la sintassi per la creazione di una distribuzione con scalabilità orizzontale utilizzando più istanze locali. In questo esempio <\<**initializedinstance**> è il nome di un'istanza già inizializzata per usare il database del server di report e \<**newinstance**> è il nome dell'istanza che si vuole aggiungere alla distribuzione:  
   

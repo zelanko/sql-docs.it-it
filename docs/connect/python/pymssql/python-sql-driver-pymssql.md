@@ -11,10 +11,10 @@ ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd2162d5e3dff58624b8fb8638734403dbb01bf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200387"
 ---
 # <a name="python-sql-driver---pymssql"></a>Driver Python per SQL - pymssql
@@ -24,7 +24,7 @@ ms.locfileid: "74200387"
 
 * [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Python con pymssql](../../../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md)  
 * [Passaggio 2: Creare un database SQL per lo sviluppo Python con pymssql](../../../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md)  
-* [Passaggio 3: Modello di verifica per la connessione a SQL con pymssql](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
+* [Passaggio 3: Modello di verifica per la connessione a SQL tramite pymssql](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## <a name="documentation"></a>Documentazione
 * [Documentazione di pymssql](https://pypi.org/project/pymssql/)  

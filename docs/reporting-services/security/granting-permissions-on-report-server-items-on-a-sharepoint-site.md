@@ -14,10 +14,10 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580041"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint
@@ -56,7 +56,7 @@ ms.locfileid: "65580041"
  Gli amministratori del server o di una raccolta siti possono impostare le opzioni che determinano se altri proprietari del sito possono impostare le autorizzazioni. A seconda del livello di autorizzazione di cui si dispone, potrebbe non essere possibile creare o personalizzare i livelli di autorizzazione o i gruppi di SharePoint.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Utilizzo dei livelli di autorizzazione e dei gruppi di SharePoint predefiniti  
- Nelle indicazioni incluse nella documentazione relativa al prodotto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] viene consigliato di usare i gruppi di SharePoint standard, ovvero **Proprietari** *nome sito*, **Membri** *nome sito* e **Visitatori** *nome sito*, e di assegnare le autorizzazioni a livello di sito. La maggior parte degli utenti a cui vengono assegnate autorizzazioni devono essere membri dei gruppi **Visitatori** *nome sito* o **Membri** *nome sito*. Le autorizzazioni nel sito padre vengono ereditate in tutta la gerarchia dei siti. È possibile disattivare l'ereditarietà delle autorizzazioni su determinati elementi per i quali è necessario impostare limitazioni.  
+ Nelle indicazioni incluse nella documentazione relativa al prodotto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] viene consigliato di usare i gruppi di SharePoint standard, ovvero *Proprietari* **nome sito**, *Membri* **nome sito** e *Visitatori* **nome sito**, e di assegnare le autorizzazioni a livello di sito. La maggior parte degli utenti a cui vengono assegnate autorizzazioni devono essere membri dei gruppi *Visitatori* **nome sito** o *Membri* **nome sito**. Le autorizzazioni nel sito padre vengono ereditate in tutta la gerarchia dei siti. È possibile disattivare l'ereditarietà delle autorizzazioni su determinati elementi per i quali è necessario impostare limitazioni.  
   
  Di seguito vengono illustrati i livelli di autorizzazione predefiniti per i gruppi di SharePoint:  
   

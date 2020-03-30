@@ -11,10 +11,10 @@ ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e0deaed158a77126033b27c7a407cb25c6e9c6e
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866629"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Driver SQL per Python - pyodbc

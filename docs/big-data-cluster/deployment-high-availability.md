@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286045"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
@@ -127,7 +127,7 @@ Description                                    Endpoint            Name         
 SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-master-readonly  tds
 ```
 
-## <a id="instance-connect"></a> Connettersi all'istanza di SQL Server
+## <a name="connect-to-sql-server-instance"></a><a id="instance-connect"></a> Connettersi all'istanza di SQL Server
 
 Per alcune operazioni come l'impostazione delle configurazioni a livello di server o l'aggiunta manuale di un database al gruppo di disponibilità, è necessario connettersi all'istanza di SQL Server. Nelle versioni precedenti a SQL Server 2019 CU2 le operazioni come `sp_configure`, `RESTORE DATABASE` o qualsiasi DLL dei gruppi di disponibilità richiedono questo tipo di connessione. Per impostazione predefinita, il cluster Big Data non include un endpoint che permette la connessione all'istanza ed è necessario esporre l'endpoint manualmente. 
 

@@ -16,10 +16,10 @@ ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ff7567d85800969eeb5c450bbe0a59753491e2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67984069"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>Metodo getDate (int, java.util.Calendar)
@@ -53,7 +53,7 @@ public java.sql.Date getDate(int index,
 ## <a name="remarks"></a>Osservazioni  
  Questo metodo getDate viene specificato dal metodo getDate nell'interfaccia java.sql.CallableStatement.  
   
- Questo metodo restituisce una parte della data valida di un tipo di dati **datetime** o **smalldatetime** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte dell'ora impostata sull'ora di base 00.00 (mezzanotte) di Java.  
+ Questo metodo restituisce una parte della data valida di un tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**o**smalldatetime**di**, con la parte dell'ora impostata sull'ora di base 00.00 (mezzanotte) di Java.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getDate &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
 ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78937672"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Sviluppare con le API REST per Reporting Services
@@ -32,10 +32,10 @@ La coppia richiesta-risposta di un'API REST può essere suddivisa in cinque comp
 
 * L'**URI della richiesta**, costituito da: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Anche se l'URI della richiesta è incluso nell'intestazione del messaggio di richiesta, viene qui considerato come elemento distinto perché la maggior parte dei linguaggi o dei framework richiede di passarlo separatamente dal messaggio di richiesta.
 
-    * Schema dell'URI: indica il protocollo usato per trasmettere la richiesta. Ad esempio, `http` o `https`.
+    * Schema URI: indica il protocollo usato per trasmettere la richiesta. Ad esempio, `http` o `https`.
     * Host dell'URI: specifica il nome di dominio o l'indirizzo IP del server in cui l'endpoint del servizio REST è ospitato, ad esempio `myserver.contoso.com`.
     * Percorso della risorsa: specifica la risorsa o la raccolta di risorse che può includere più segmenti usati dal servizio per determinare la selezione di queste risorse. Ad esempio: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` può essere usato per ottenere le proprietà specificate per CatalogItem.
-    * Stringa di query (facoltativo): specifica parametri semplici aggiuntivi, ad esempio la versione dell'API o i criteri di selezione delle risorse.
+    * Stringa di query (facoltativo): fornisce parametri semplici aggiuntivi, ad esempio la versione dell'API o i criteri di selezione delle risorse.
 
 * Campi di intestazione del messaggio di richiesta HTTP:
 

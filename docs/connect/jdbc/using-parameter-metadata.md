@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026080"
 ---
 # <a name="using-parameter-metadata"></a>Uso dei metadati dei parametri
@@ -32,8 +32,8 @@ Nell'esempio seguente una connessione aperta al database di esempio [!INCLUDE[ss
 > [!NOTE]  
 > Esistono alcune limitazioni quando si usa la classe SQLServerParameterMetaData con le istruzioni preparate.
 >
-> **Con Microsoft JDBC Driver 6.0 (o versioni successive) per SQL Server**: Quando si usa SQL Server 2008 o 2008 R2, il driver JDBC supporta le istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join.
+> **Con Microsoft JDBC Driver 6.0 (o versioni successive) per SQL Server**: quando si usa SQL Server 2008 o 2008 R2, il driver JDBC supporta le istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join.
 
 Le query MERGE  inoltre non sono supportate per la classe SQLServerParameterMetaData quando si utilizza SQL Server 2008 o 2008 R2. Sono supportati per SQL Server 2012 e versioni successive i metadati del parametro con query complesse.
 
-Il recupero dei metadati dei parametri per le colonne crittografate non è supportato. **Con Microsoft JDBC Driver 4.1 o 4.2 per SQL Server**: Il driver JDBC supporta le istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join. Anche le query MERGE non sono supportate per la classe SQLServerParameterMetaData.
+Il recupero dei metadati dei parametri per le colonne crittografate non è supportato. **Con Microsoft JDBC Driver 4.1 o 4.2 per SQL Server**: il driver JDBC supporta le istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join. Anche le query MERGE non sono supportate per la classe SQLServerParameterMetaData.

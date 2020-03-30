@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041253"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
@@ -34,7 +34,7 @@ Il tempo stimato per il completare l'esercitazione è di 10 minuti.
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Creare un grafico a torta da Creazione guidata grafico  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. Creare un grafico a torta da Creazione guidata grafico  
 In questa sezione si usa la Creazione guidata grafico per creare un set di dati incorporato, scegliere un'origine dati condivisa e creare un grafico a torta.  
 
   
@@ -77,7 +77,7 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
   
 9. Fare clic su **Avanti**.  
   
-## <a name="ChartType"></a>2. Scegliere il tipo di grafico  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Scegliere il tipo di grafico  
 È possibile scegliere tra diversi tipi di grafico predefiniti.  
 
   
@@ -103,7 +103,7 @@ Nel report viene visualizzato il grafico a torta con otto sezioni, una per ogni 
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3. Visualizzare percentuali in ogni sezione  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Visualizzare percentuali in ogni sezione  
 Su ogni sezione della torta, è possibile visualizzare una percentuale per questa sezione rispetto alla torta intera.  
 
   
@@ -130,7 +130,7 @@ Nel report viene visualizzata la percentuale rispetto all'intero per ogni sezion
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4. Combinare le piccole sezioni in una sezione  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Combinare le piccole sezioni in una sezione  
 Tre delle sezioni della torta sono piuttosto sottili. È possibile unire più sezioni piccole in un'unica sezione più grande "Other" che le rappresenta tutte tre.  
 
 1.  Passare alla visualizzazione di progettazione report.  
@@ -155,7 +155,7 @@ Nella legenda è ora presente la categoria "Other". La nuova sezione del grafico
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5. Iniziare la visualizzazione dei valori del grafico a torta dalla parte superiore 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Iniziare la visualizzazione dei valori del grafico a torta dalla parte superiore 
 
 Per impostazione predefinita, nei grafici a torta il primo valore nel set di dati inizia a 90 gradi dalla cima della torta. Ciò è osservabile nel grafico a torta nelle sezioni precedenti.
 
@@ -173,7 +173,7 @@ Le sezioni del grafico a torta sono ora in ordine alfabetico, iniziano dall'alto
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6. Aggiungere un titolo al report  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Aggiungere un titolo al report  
   
 Poiché il grafico a torta è l'unica visualizzazione nel report, il grafico non richiede un titolo. Specificare un titolo per il report.
   
@@ -197,7 +197,7 @@ Poiché il grafico a torta è l'unica visualizzazione nel report, il grafico non
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Save"></a>7. Salvare il report  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Salvare il report  
   
 ### <a name="to-save-the-report"></a>Per salvare il report  
   

@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593384"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
@@ -66,10 +66,10 @@ ms.locfileid: "73593384"
  [Risultati query](#QueryResults)  
  Visualizza i dati di esempio per il set di risultati per la query generata automaticamente.  
   
-###  <a name="DatabaseView"></a> Riquadro Vista di database  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Riquadro Vista di database  
  Nel riquadro Vista di database vengono visualizzati i metadati per gli oggetti di database per cui si dispone delle autorizzazioni per la visualizzazione, determinate dalla connessione all'origine dati e dalle credenziali. Nella visualizzazione gerarchica, gli oggetti di database sono organizzati in base allo schema del database. Espandere il nodo di ogni schema per visualizzare tabelle, viste, stored procedure e funzioni con valori di tabella. Espandere la tabella o la vista per visualizzare le colonne.  
   
-###  <a name="SelectedFields"></a> Riquadro Campi selezionati  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Riquadro Campi selezionati  
  Nel riquadro Campi selezionati sono visualizzati i campi del set di dati del report e i gruppi e le aggregazioni da includere nella query.  
   
  Vengono visualizzate le opzioni seguenti:  
@@ -114,14 +114,14 @@ ms.locfileid: "73593384"
 |Var Distinct|Restituisce varianze statistiche univoche. Implementa una combinazione dell'aggregazione VAR e della parola chiave DISTINCT.|  
 |VarP Distinct|Restituisce varianze statistiche univoche. Implementa una combinazione dell'aggregazione VARP e della parola chiave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Riquadro Parametri di funzione  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Riquadro Parametri di funzione  
  Nel riquadro Parametri di funzione vengono visualizzati i parametri per una stored procedure o una funzione con valori di tabella. Vengono visualizzate le colonne seguenti:  
   
 -   **Nome parametro** Visualizza il nome del parametro definito dalla stored procedure o dalla funzione con valori di tabella.  
   
 -   **Valore** Valore da usare per il parametro quando la query viene eseguita per recuperare dati da visualizzare nel riquadro Risultati query in fase di progettazione. Questo valore non è utilizzato quando il report viene eseguito in fase di esecuzione.  
   
-###  <a name="Relationships"></a> Riquadro Relazioni  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Riquadro Relazioni  
  Il riquadro Relazioni visualizza le relazioni di join. Le relazioni possono essere rilevate automaticamente dalle relazioni di chiave esterna recuperate dai metadati del database o possono essere create manualmente.  
   
  Vengono visualizzate le opzioni seguenti:  
@@ -159,7 +159,7 @@ ms.locfileid: "73593384"
   
 -   **Campi di join** Elenca le coppie di campi di join. Se una relazione presenta più condizioni di join, le coppie di campi di join sono separate da virgole (,).  
   
-###  <a name="AppliedFilters"></a> Riquadro Filtri applicati  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Riquadro Filtri applicati  
  Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro vengono utilizzati per generare una clausola SQL WHERE. Quando si seleziona l'opzione di parametro, viene creato automaticamente un parametro del report. I parametri del report basati sui parametri di query consentono all'utente di specificare i valori affinché la query controlli i dati nel report.  
   
  Vengono visualizzate le colonne seguenti:  
@@ -172,7 +172,7 @@ ms.locfileid: "73593384"
   
 -   **Parametro** Visualizza l'opzione per aggiungere un parametro di query alla query. Per visualizzare la relazione tra il parametro del report e il parametro della query, utilizzare Proprietà set di dati.  
   
-###  <a name="QueryResults"></a> Riquadro Risultati query  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Riquadro Risultati query  
  Nel riquadro Risultati query vengono visualizzati i risultati della query generata automaticamente in base alle selezioni negli altri riquadri. Le colonne nel set di risultati sono costituite dai campi che si specificano nel riquadro Campi selezionati e i dati di riga sono limitati dai filtri che si specificano nel riquadro Filtri applicati. Se la query include aggregazioni, il set di risultati include le nuove colonne di aggregazione. Ad esempio, se la colonna **Colore** viene aggregata usando l'aggregazione Count, i risultati della query includono una nuova colonna. Per impostazione predefinita, questa colonna è denominata **Count_Color**.  
   
  Questi dati rappresentano i valori dell'origine dati al momento dell'esecuzione della query. I dati non sono salvati nella definizione del report. I dati effettivi del report vengono recuperati quando il report viene elaborato.  

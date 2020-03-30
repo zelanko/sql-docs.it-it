@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581251"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Pianificare la progettazione e la distribuzione di report | Reporting Services
@@ -22,7 +22,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
  I file RDL vengono creati in Progettazione report nei progetti di [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] e in Generatore report. I file RDLC vengono creati tramite i controlli ReportViewer inclusi in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
   
-##  <a name="bkmk_rdl_schema_versions"></a> Versioni dello schema RDL  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Versioni dello schema RDL  
  Nella tabella seguente viene fornito un elenco delle versioni dello schema disponibili e delle relative abbreviazioni utilizzate nella parte restante dell'argomento:  
   
 |Abbreviazione|Versione dello schema|  
@@ -43,14 +43,14 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
  Per altre informazioni sui controlli ReportViewer, vedere [Controlli ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> Server di report e supporto dello schema RDL  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Server di report e supporto dello schema RDL  
  In un server di report di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] è possibile distribuire un file di definizione del report nei modi seguenti:  
   
 -   **Progettazione report:** distribuire un report da Progettazione report in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
 -   **Generatore report:** salvare un report nel server di report da Generatore report.  
   
--   **Portale Web:** caricare un report in un server di report in modalità nativa da [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+-   **Portale Web** : caricare un report in un server di report in modalità nativa da [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
 
 ::: moniker-end
   
--   **A livello di codice:** pubblicare un report a livello di programmazione tramite le interfacce API SOAP in un server di report. Per ulteriori informazioni, vedere [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **A livello di programmazione:** pubblicare un report a livello di programmazione tramite le interfacce API SOAP in un server di report. Per ulteriori informazioni, vedere [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Nella tabella seguente viene elencata la versione supportata dello schema rdl in base alla versione del server di report.  
   
@@ -82,7 +82,7 @@ In una distribuzione in modalità SharePoint, passare alla raccolta documenti, s
   
  Per altre informazioni sugli aggiornamenti del report e sulle versioni dello schema supportate, vedere [Aggiornare i report](../reporting-services/install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> Supporto della creazione e della distribuzione di report  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> Supporto della creazione e della distribuzione di report  
  Gli ambienti di creazione di report sono Progettazione report nei progetti di [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] e Generatore report. Gli ambienti di creazione di report forniscono supporto per l'aggiornamento e la progettazione di report, la visualizzazione in anteprima dei report in locale o sul server di report e la distribuzione dei report.  
   
  Nella tabella seguente viene riepilogato il supporto per la creazione e la distribuzione di definizioni di report per le diverse versioni dello schema:  
@@ -101,7 +101,7 @@ In una distribuzione in modalità SharePoint, passare alla raccolta documenti, s
   
 -   [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_reportviewer"></a> Controlli ReportViewer  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> Controlli ReportViewer  
  Un controllo ReportViewer di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] può visualizzare un report con estensione RDLC in modalità di anteprima locale o in modalità remota, il controllo può visualizzare un file con estensione RDL ospitato in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nella tabella seguente è riportato l'elenco delle versioni di RDL supportate dai controlli ReportViewer per l'elaborazione locale (con estensione RDLC). Il supporto RDL lato server è riepilogato nella sezione [Server di report e supporto dello schema RDL](#bkmk_report_server_rdl_schema_support).  
   
 |Controllo ReportViewer nel prodotto|Versione di RDL per l'anteprima locale|  

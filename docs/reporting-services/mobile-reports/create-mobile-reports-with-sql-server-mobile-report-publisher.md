@@ -11,10 +11,10 @@ ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63200550"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creare report per dispositivi mobili con SQL Server Mobile Report Publisher
@@ -31,7 +31,7 @@ Con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]è possibil
 * I report per dispositivi mobili possono essere disposti in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili che si adattano in modo ottimale agli schermi di qualsiasi dimensione. 
 * È quindi possibile salvare i report per dispositivi mobili in un server di Reporting Services, visualizzarli e modificarli in un browser o nell'app Power BI per dispositivi mobili su iPad, iPhone, telefoni e tablet Android e dispositivi Windows 10.
   
-## <a name="create-includessrsnoversion_mdincludesssrsnoversion-mdmd--mobile-reports"></a>Creare report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
+## <a name="create-ssrsnoversion_md--mobile-reports"></a>Creare report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
 Questi articoli includono informazioni utili per iniziare.
 -  Scaricare [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  

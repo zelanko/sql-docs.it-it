@@ -11,10 +11,10 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015074"
 ---
 # <a name="handling-errors-and-warnings"></a>Gestione di errori e avvisi
@@ -31,7 +31,7 @@ Negli argomenti di questa sezione vengono fornite informazioni sulla gestione di
 |[Procedura: Configurare la gestione degli errori e degli avvisi usando il driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Viene illustrato come modificare le impostazioni di configurazione per la gestione degli errori e degli avvisi.|  
 |[Procedura: Gestire errori e avvisi usando il driver SQLSRV](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Illustra come gestire errori e avvisi separatamente.|  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  

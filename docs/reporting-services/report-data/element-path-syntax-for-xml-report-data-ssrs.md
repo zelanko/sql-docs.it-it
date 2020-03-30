@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077657"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
@@ -90,7 +90,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Quando il percorso di elemento è vuoto, per la query viene utilizzato il percorso di elemento predefinito, ovvero il primo percorso di una raccolta di nodi foglia. Nel primo esempio l'utilizzo di un percorso di elemento vuoto corrisponde alla definizione del percorso di elemento /Customers/Customer/Orders/Order. Tutti gli attributi e i valori del nodo nel percorso vengono restituiti nel set di risultati, mentre i nomi degli attributi e del nodo vengono visualizzati come campi del set di dati.  
   
- **Esempio 1**: *vuoto*  
+ **Esempio n. 1**: *vuoto*  
   
 |JSON|Qtà|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  

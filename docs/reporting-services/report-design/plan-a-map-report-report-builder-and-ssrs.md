@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082425"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Pianificare un report mappa (Generatore report e SSRS)
@@ -21,7 +21,7 @@ Report validi presentano informazioni che consentono una migliore comprensione e
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> Specificare lo scopo della mappa  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> Specificare lo scopo della mappa  
  Una buona progettazione di report offre informazioni che facilitano la scelta delle azioni da intraprendere da parte degli utenti per la soluzione dei problemi. Per creare una vista mappa che sia utile e facilmente comprensibile, decidere per quali esigenze la mappa offrirà un supporto. Su una mappa è possibile visualizzare, ad esempio, i seguenti tipi di dati per identificare le opportunità del mercato:  
   
 -   Vendite relative per ogni negozio.  
@@ -34,7 +34,7 @@ Report validi presentano informazioni che consentono una migliore comprensione e
   
  Dopo aver identificato lo scopo della vista mappa, è necessario analizzare i dati necessari. I dati analitici provengono dai set di dati del report. I dati relativi alla posizione provengono dalle origini dei dati spaziali che è necessario specificare.  
   
-##  <a name="Data"></a> Specificare i dati spaziali e quelli analitici  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> Specificare i dati spaziali e quelli analitici  
  L'utente deve specificare i dati spaziali e analitici necessari.  
   
  I dati analitici provengono da un set di dati del report, da dati di esempio inclusi in una mappa della raccolta mappe o da dati analitici inclusi nei dati spaziali in un file di forma ESRI.  
@@ -92,7 +92,7 @@ Report validi presentano informazioni che consentono una migliore comprensione e
   
  Una volta identificati l'origine dati spaziali, i dati spaziali, l'origine dati analitici, i dati analitici e i campi delle corrispondenze, è possibile decidere quale tipo di mappa aggiungere al report.  
   
-##  <a name="MapType"></a> Scegliere un tipo di mappa  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> Scegliere un tipo di mappa  
  Quando si esegue la Creazione guidata mappa, si aggiunge una mappa e il relativo primo livello al report. La procedura guidata consente di aggiungere uno dei seguenti tipi di mappe al report:  
   
 -   Mappa di base che visualizza le posizioni senza dati analitici associati.  
@@ -105,12 +105,12 @@ Report validi presentano informazioni che consentono una migliore comprensione e
   
 |Icona della procedura guidata|Stile del livello|Tipo di livello|Descrizione e opzioni|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mappa di base|Polygon|Mappa che visualizza solo le aree, ad esempio i territori di vendita.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o uso di un solo colore. Una tavolozza è un set predefinito di colori. Una volta assegnati tutti i colori di una tavolozza, vengono assegnate anche le sfumature.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mappa di base|Polygon|Mappa che visualizza solo le aree, ad esempio i territori di vendita.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore. Una tavolozza è un set predefinito di colori. Una volta assegnati tutti i colori di una tavolozza, vengono assegnate anche le sfumature.|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mappa analitica a colori|Polygon|Mappa che visualizza i dati analitici variando il colore, ad esempio i dati di vendita per area.|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mappa a bolle|Polygon|Mappa che visualizza i dati analitici variando le dimensioni delle bolle al centro delle aree, ad esempio i dati di vendita per area.<br /><br /> Opzioni: variazione dei colori dell'area in base a un secondo campo analitico e indicazione delle regole colore.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mappa linea di base|Grafico a linee|Mappa che visualizza solo le linee, ad esempio gli itinerari di recapito.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o uso di un solo colore.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mappa linea di base|Grafico a linee|Mappa che visualizza solo le linee, ad esempio gli itinerari di recapito.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mappa linea analitica|Grafico a linee|Mappa che varia il colore e lo spessore della linea, ad esempio il numero di pacchetti recapitati e le metriche di puntualità per itinerari.<br /><br /> Opzioni: variazione dello spessore della linea in base a un campo analitico, variazione del colore della linea in base a un secondo campo analitico e indicazione delle regole colore.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mappa con marcatori di base|Point|Mappa che visualizza un marcatore per ogni posizione, ad esempio le città.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o uso di un solo colore e modifica dello stile del marcatore.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mappa con marcatori di base|Point|Mappa che visualizza un marcatore per ogni posizione, ad esempio le città.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore e modifica dello stile del marcatore.|  
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mappa con marcatori a bolle|Point|Mappa che visualizza una bolla per ogni posizione e varia le dimensioni della bolla in base a un campo dati analitici, ad esempio i dati di vendita per città.<br /><br /> Opzioni: variazione del colore della bolla in base a un secondo campo analitico e indicazione delle regole colore.|  
 |![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mappa con marcatori analitici|Point|Mappa che visualizza un marcatore per ogni posizione e varia il colore, le dimensioni e il tipo di marcatore in base ai dati analitici, ad esempio prodotti più venduti, margini di profitto e strategie di sconto.<br /><br /> Opzioni: variazione del tipo di marcatore in base a un campo analitico, variazione delle dimensioni del marcatore in base a un secondo campo analitico, variazione del colore del marcatore in base a un terzo campo analitico e indicazione delle regole colore.|  
   
@@ -118,7 +118,7 @@ Report validi presentano informazioni che consentono una migliore comprensione e
   
  È possibile personalizzare la visualizzazione o le opzioni dei dati per ogni livello in modo indipendente. Per altre informazioni sulla personalizzazione di una mappa dopo l'esecuzione di una procedura guidata, vedere [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Pianificare le legende  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> Pianificare le legende  
  Per facilitare l'interpretazione di una mappa da parte degli utenti, è possibile aggiungere più legende di mappa, una scala dei colori e una scala distanza. Quando si progetta una mappa, stabilire il punto in cui si desidera visualizzare le legende. Per ognuna di esse è possibile specificare le informazioni seguenti:  
   
 -   **Posizione della legenda.** Le legende possono essere visualizzate, ad esempio, all'interno o all'esterno del viewport e in 12 posizioni specifiche relative al viewport.  
@@ -135,7 +135,7 @@ Report validi presentano informazioni che consentono una migliore comprensione e
   
  Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) e [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Embedding"></a> Raggiungere un equilibrio tra le dimensioni della definizione del report e il tempo di elaborazione del report  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> Raggiungere un equilibrio tra le dimensioni della definizione del report e il tempo di elaborazione del report  
  Una buona progettazione di report per le mappe richiede un equilibrio tra le opzioni che controllano le prestazioni del report e le dimensioni della definizione del report. Gli elementi della mappa basati sui dati spaziali o le tessere mappa di Bing possono essere statici e incorporati nella definizione del report oppure dinamici e creati ogni volta che viene elaborato il report. È necessario valutare le eventuali conseguenze per i dati della mappa statici o dinamici e trovare l'equilibrio migliore in base alle circostanze. Per prendere tale decisione, considerare le informazioni seguenti:  
   
 -   Gli elementi della mappa incorporati possono aumentare notevolmente le dimensioni della definizione del report, ma riducono il tempo necessario per visualizzare la mappa nel report. Il server di report potrebbe avere dei limiti riguardanti le dimensioni a cui è necessario attenersi.  
@@ -152,6 +152,6 @@ Report validi presentano informazioni che consentono una migliore comprensione e
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Esercitazione: Report mappa &#40;Generatore report&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

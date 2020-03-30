@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081354"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintassi di query XML per i dati del report XML (SSRS)
@@ -61,7 +61,7 @@ ms.locfileid: "77081354"
 |Documento XML che utilizza valori predefiniti.|*Nessuna query*.<br /><br /> Il percorso viene derivato dal documento XML stesso ed è indipendente dallo spazio dei nomi.|  
   
 > [!NOTE]  
->  Nel primo esempio di servizio Web è riportato il contenuto del server di report che usa il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Per eseguire questa query, è necessario creare una nuova origine dati e impostare la stringa di connessione su `https://localhost/reportserver/reportservice2006.asmx`. Il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> accetta due parametri: **Item** e **Recursive**. Impostare il valore predefinito per **Elemento** su **/** e **Ricorsivo** su **1**.  
+>  Nel primo esempio di servizio Web è riportato il contenuto del server di report che usa il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Per eseguire questa query, è necessario creare una nuova origine dati e impostare la stringa di connessione su `https://localhost/reportserver/reportservice2006.asmx`. Il metodo <xref:ReportService2006.ReportingService2006.ListChildren%2A> accetta due parametri: **Elemento** e **Ricorsivo**. Impostare il valore predefinito per **Elemento** su **/** e **Ricorsivo** su **1**.  
   
 ## <a name="specifying-namespaces"></a>Definizione degli spazi dei nomi  
  Usare l'elemento **Query** XML per specificare gli spazi dei nomi usati nei dati XML dell'origine dati. Nella query XML seguente viene usato lo spazio dei nomi **sales**. Nei nodi **ElementPath** XML per `sales:LineItems` e `sales:LineItem` viene usato lo spazio dei nomi **sales**.  

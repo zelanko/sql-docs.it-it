@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578781"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Drill-through, drill-down, sottoreport e aree dati nidificate
@@ -33,7 +33,7 @@ ms.locfileid: "65578781"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> Riepilogo delle caratteristiche  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> Riepilogo delle caratteristiche  
  Nella tabella seguente sono riepilogate le diverse caratteristiche. I dettagli sono descritti in apposite sezioni più avanti in questo argomento. Il drill-down non è incluso in questi confronti poiché la relativa azione per mostrare e nascondere può essere applicata a qualsiasi report.  
   
 |Caratteristica|Sottoreport|Drill-through|annidata|  
@@ -48,36 +48,36 @@ ms.locfileid: "65578781"
 |Visualizzazione|Nel report principale|In un report diverso|Nel report principale|  
   
   
-##  <a name="Details"></a> Dettagli delle caratteristiche  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> Dettagli delle caratteristiche  
   
-###  <a name="Datasets"></a> Set di dati utilizzati  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> Set di dati utilizzati  
  Sottoreport e report drill-through possono utilizzare lo stesso set di dati del report principale o possono utilizzarne uno diverso. Le aree dati nidificate utilizzano lo stesso set di dati.  
   
-###  <a name="RetrieveData"></a> Recupero di dati  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> Recupero di dati  
  Sottoreport e aree dati nidificate recuperano dati contemporaneamente al report principale, al contrario dei report drill-through. Ogni report drill-through recupera dati quando un utente fa clic su ogni collegamento. Questo aspetto è importante se è necessario recuperare contemporaneamente i dati del report principale e del report subordinato.  
   
-###  <a name="ProcessRender"></a> Elaborazione e rendering  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> Elaborazione e rendering  
  Un sottoreport viene elaborato come parte del report principale. Se un sottoreport in cui sono visualizzate informazioni dettagliate su un ordine viene aggiunto, ad esempio, a una cella della tabella nella riga di dettaglio, tale sottoreport verrà elaborato una volta per ogni riga della tabella e ne verrà eseguito il rendering come parte del report principale. L'elaborazione e il rendering di un report drill-through vengono eseguiti solo quando l'utente fa clic sul collegamento drill-through nel report di riepilogo principale.  
   
-###  <a name="Performance"></a> restazioni  
+###  <a name="performance"></a><a name="Performance"></a> restazioni  
  Prima di decidere quale report utilizzare, considerare la possibilità di utilizzare un'area dati anziché un sottoreport, specialmente se il sottoreport non viene utilizzato da più report. Poiché infatti ogni istanza di un sottoreport viene elaborata dal server di report come report distinto, le prestazioni possono risultare rallentate. Le aree dati offrono invece un livello di funzionalità e flessibilità analogo a quello dei sottoreport, ma con prestazioni migliori. Anche i report drill-through offrono prestazioni migliori rispetto ai sottoreport perché non recuperano contemporaneamente tutti i dati insieme al report principale.  
   
-###  <a name="Parameters"></a> Utilizzo di parametri  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> Utilizzo di parametri  
  I report drill-through e i sottoreport includono in genere parametri di report che specificano i dati del report da visualizzare. Quando ad esempio si fa clic sul numero di un ordine di vendita in un report principale, viene visualizzato un report drill-through che accetta il numero dell'ordine di vendita come parametro e che quindi visualizza tutti i dati per tale ordine di vendita. Quando si crea il collegamento nel report principale, specificare i valori da passare come parametri al report drill-through.  
   
  Per creare un report drill-through o un sottoreport, è necessario progettare innanzitutto il report drill-through di destinazione o il sottoreport e quindi creare un'azione drill-through o aggiungere il riferimento al report principale.  
   
-###  <a name="Reusability"></a> Riusabilità  
+###  <a name="reusability"></a><a name="Reusability"></a> Riusabilità  
  Sottoreport e report drill-through sono tipi di report separati. Possono quindi essere utilizzati in numerosi report o visualizzati come report autonomi. Le aree dati nidificate non sono riutilizzabili. Non è possibile salvarli come parti del report perché sono nidificati in un'area dati. È possibile salvare l'area dati che li contiene come parte di un report, ma non l'area dati nidificata.  
   
-###  <a name="Location"></a> Percorso  
+###  <a name="location"></a><a name="Location"></a> Percorso  
  Sottoreport e report drill-through sono entrambi report separati, pertanto vengono archiviati all'esterno del report principale. I sottoreport possono trovarsi nello stesso server di report o in uno diverso, mentre i report drill-through devono essere presenti nello stesso server di report. Le aree dati nidificate fanno parte del report principale.  
   
-###  <a name="Display"></a> Visualizzazione  
+###  <a name="display"></a><a name="Display"></a> Visualizzazione  
  Sottoreport e aree dati nidificate vengono visualizzati nel report principale. I report drill-through vengono visualizzati separatamente.  
   
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  [Report drill-through &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Sono illustrati i report che vengono visualizzati quando un utente fa clic su un collegamento in un report principale.  
   

@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080357"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Espressioni (Generatore report e SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "77080357"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Types"></a> Informazioni sulle espressioni semplici e complesse  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> Informazioni sulle espressioni semplici e complesse  
  Le espressioni iniziano con il segno di uguale (=) e sono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Nelle espressioni può essere inclusa una combinazione di costanti, operatori e riferimenti a valori predefiniti, ad esempio campi, raccolte e funzioni, e a codice esterno o personalizzato.  
   
  Le espressioni possono essere utilizzate per specificare il valore di numerose proprietà dell'elemento del report. Le proprietà più comuni sono valori per caselle di testo e testo segnaposto. In genere, se in una casella di testo è contenuta un'unica espressione, tale espressione è il valore della proprietà della casella di testo. Se in una casella di testo sono contenute più espressioni, ognuna di queste rappresenta il valore di testo segnaposto nella casella di testo.  
@@ -56,7 +56,7 @@ ms.locfileid: "77080357"
   
  Per altre informazioni, vedere [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-## <a name="DisplayText"></a> Informazioni sui simboli di prefissi in espressioni semplici  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a> Informazioni sui simboli di prefissi in espressioni semplici  
 
 Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferimento è a un campo, un parametro, una raccolta predefinita o la raccolta ReportItems. Nella tabella seguente vengono riportati esempi di testo visualizzato e di quello relativo alle espressioni:  
   
@@ -67,7 +67,7 @@ Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferim
 |Campi predefiniti|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |Caratteri letterali utilizzati per il testo visualizzato|`\[Sales\]`|`[Sales]`|  
   
-##  <a name="References"></a> Scrittura di espressioni complesse  
+##  <a name="writing-complex-expressions"></a><a name="References"></a> Scrittura di espressioni complesse  
  Nelle espressioni possono essere inclusi riferimenti a funzioni, operatori, costanti, campi, parametri, elementi di raccolte predefinite nonché a codice personalizzato o assembly personalizzati incorporati.  
   
 > [!NOTE]
@@ -83,7 +83,7 @@ Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferim
 |[Funzioni predefinite di report e di aggregazione](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|Vengono descritte le funzioni predefinite, ad esempio `Sum` o `Previous`, cui è possibile accedere da un'espressione.|`=Previous(Sum(Fields!Sales.Value))`|  
 |[Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Viene descritto come accedere alle classi CLR predefinite <xref:System.Math> e <xref:System.Convert>, ad altre classi CLR, a funzioni della libreria di runtime di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o a metodi da un assembly esterno.<br /><br /> Viene descritto come accedere a codice personalizzato incorporato nel report o compilato e installato come assembly personalizzato sia nel client che nel server di report.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
-##  <a name="Valid"></a> Convalida delle espressioni  
+##  <a name="validating-expressions"></a><a name="Valid"></a> Convalida delle espressioni  
  Quando si crea un'espressione per una proprietà specifica dell'elemento del report, i riferimenti che è possibile includere in un'espressione dipendono dai valori accettati dalla proprietà dell'elemento del report e dall'ambito nel quale viene valutata la proprietà. Ad esempio:  
   
 -   Per impostazione predefinita, l'espressione [Sum] consente di calcolare la somma di dati presenti nell'ambito al momento della valutazione dell'espressione. Per una cella della tabella, l'ambito dipende dalle appartenenze ai gruppi di righe e di colonne. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
@@ -94,7 +94,7 @@ Nelle espressioni semplici vengono utilizzati simboli per indicare se il riferim
   
  Per altre informazioni, vedere [Riferimento dell'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)sottostante.  
   
-##  <a name="Section"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="Section"></a> Contenuto della sezione  
  [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  

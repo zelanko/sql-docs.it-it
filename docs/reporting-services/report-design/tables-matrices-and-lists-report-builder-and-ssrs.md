@@ -34,10 +34,10 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080876"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelle, matrici ed elenchi (Generatore report e SSRS)
@@ -53,12 +53,12 @@ ms.locfileid: "77080876"
   
  ![RS_TableMatrixList](../../reporting-services/report-design/media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Per una rapida introduzione alle tabelle, alle matrici e agli elenchi, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) ed [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Per una rapida introduzione a tabelle, matrici ed elenchi, vedere [Esercitazione: creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Esercitazione: creazione di un report matrice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md), e [Esercitazione: creazione di un report in formato libero &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare tabelle matrici ed elenchi separatamente da un report come parte del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="Table"></a> Tabella  
+##  <a name="table"></a><a name="Table"></a> Tabella  
  Usare una tabella per visualizzare i dati dettaglio, organizzare i dati in gruppi di righe o per eseguire entrambe le operazioni. Il modello Tabella contiene tre colonne con una riga di intestazione di tabella e una riga di dettaglio per i dati. Nella figura seguente viene illustrato il modello di tabella iniziale selezionato nell'area di progettazione:  
   
  ![Modello di tabella selezionato nell'area di progettazione](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Modello di tabella selezionato nell'area di progettazione")  
@@ -69,7 +69,7 @@ ms.locfileid: "77080876"
   
  Per altre informazioni, vedere [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
-##  <a name="Matrix"></a> Matrice  
+##  <a name="matrix"></a><a name="Matrix"></a> Matrice  
  Usare una matrice per visualizzare i riepiloghi dei dati aggregati raggruppati in righe e colonne, analogamente a una tabella pivot o a un report a campi incrociati. Il numero di righe e colonne per i gruppi è determinato dal numero di valori univoci per ogni gruppo di righe e colonne. Nella figura seguente viene illustrato il modello di matrice iniziale selezionato nell'area di progettazione:  
   
  ![Nuova matrice aggiunta dalla casella degli strumenti e selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti e selezionata")  
@@ -82,14 +82,14 @@ ms.locfileid: "77080876"
   
  Per altre informazioni, vedere [Creare una matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
-##  <a name="List"></a> Elenco  
+##  <a name="list"></a><a name="List"></a> Elenco  
  Utilizzare un elenco per creare un layout in formato libero. Non è obbligatorio usare un layout griglia ma è possibile posizionare liberamente i campi all'interno dell'elenco. È possibile usare un elenco per progettare un form per la visualizzazione di molti campi di set di dati o come contenitore per la visualizzazione di più aree dati affiancate per i dati raggruppati. Si può ad esempio definire un gruppo per un elenco, aggiungere una tabella, un grafico e un'immagine, nonché visualizzare i valori in formato tabella e grafico per ogni valore di gruppo, come si farebbe per un record di un dipendente o di un paziente.  
   
  ![Nuovo elenco aggiunto dalla casella degli strumenti e selezionato](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nuovo elenco aggiunto dalla casella degli strumenti e selezionato")  
   
  Per altre informazioni, vedere [Creare fatture e moduli con elenchi].  
   
-##  <a name="PreparingData"></a> Preparazione dei dati  
+##  <a name="preparing-data"></a><a name="PreparingData"></a> Preparazione dei dati  
  Nelle aree dati di tabella, matrice ed elenco vengono visualizzati i dati di un set di dati. È possibile preparare i dati nella query che recupera i dati per il set di dati o impostando proprietà nella tabella, matrice o elenco.  
   
  I linguaggi di query, ad esempio [!INCLUDE[tsql](../../includes/tsql-md.md)], usati per recuperare i dati per i set di dati del report consentono di preparare i dati applicando filtri per includere solo un subset dei dati, sostituendo valori Null o spazi vuoti con costanti che rendono più leggibile il report e ordinando e raggruppando dati.  
@@ -98,19 +98,19 @@ ms.locfileid: "77080876"
   
  Per altre informazioni, vedere [Preparare i dati per la visualizzazione in un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="BuildingConfiguringTableMatrixList"></a> Compilazione e configurazione di una tabella, una matrice o un elenco  
+##  <a name="building-and-configuring-a-table-matrix-or-list"></a><a name="BuildingConfiguringTableMatrixList"></a> Compilazione e configurazione di una tabella, una matrice o un elenco  
  Quando si aggiungono tabelle o matrici al report, è possibile usare la Creazione guidata tabella e la Creazione guidata matrice o compilarle manualmente dai modelli forniti da Generatore report e Progettazione report. Gli elenchi sono compilati manualmente dal modello di elenco.  
   
  Nella procedura guidata vengono descritti i passaggi per compilare rapidamente e configurare una tabella o una matrice. Dopo avere completato la procedura guidata o se si compilano le aree dati Tablix da zero, è possibile configurare e ridefinire ulteriormente tali aree. Le finestre di dialogo, disponibili dai menu di scelta rapida sulle aree dati, facilitano l'impostazione delle proprietà più usate per interruzioni di pagina, ripetibilità e visibilità di intestazioni e piè di pagina, opzioni di visualizzazione, filtri e ordinamento. Tuttavia nell'area dati Tablix vengono fornite numerose proprietà aggiuntive che è possibile impostare solo nel riquadro Proprietà di Generatore report. Ad esempio, se si desidera visualizzare un messaggio quando il set di dati per una tabella, matrice o elenco è vuoto, è possibile specificare il testo del messaggio nella proprietà della Tablix NoRowsMessage nel riquadro Proprietà.  
   
-##  <a name="ChangingBetweenTablixTemplates"></a> Modifica tra modelli Tablix  
+##  <a name="changing-between-tablix-templates"></a><a name="ChangingBetweenTablixTemplates"></a> Modifica tra modelli Tablix  
  La scelta iniziale del modello della Tablix non è vincolante. Nell'aggiungere gruppi, totali ed etichette, si potrebbe voler modificare la progettazione Tablix. Si potrebbe, ad esempio, iniziare con una tabella, quindi eliminare la riga di dettaglio e aggiungere gruppi di colonne. Per altre informazioni, vedere [Esplorazione della flessibilità di un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
  È possibile continuare a sviluppare una tabella, una matrice o un elenco aggiungendo le caratteristiche Tablix desiderate. Nelle caratteristiche Tablix è inclusa la visualizzazione dei dati dettaglio o di aggregazioni per i dati raggruppati in righe e colonne. È inoltre possibile creare gruppi nidificati, gruppi indipendenti o adiacenti o gruppi ricorsivi. I dati raggruppati possono essere filtrati e ordinati e si possono inoltre combinare con semplici operazioni i gruppi includendo più espressioni di raggruppamento in una definizione di gruppo.  
   
  È possibile aggiungere i totali per un gruppo o i totali complessivi per l'area dati. Si possono nascondere le righe o le colonne per semplificare un report e consentire all'utente di attivare la visualizzazione dei dati nascosti, come in un report drill-down. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene illustrato dettagliatamente come usare tabelle, matrici ed elenchi nei report; come visualizzare i dati in righe e colonne, aggiungere ed eliminare colonne, unire celle e includere subtotali per i gruppi di righe e di colonne.  
   
 -   [Aggiungere un gruppo dettagli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md)  
@@ -137,7 +137,7 @@ ms.locfileid: "77080876"
   
 -   [Aggiunta, spostamento o eliminazione di una tabella, una matrice o un elenco &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti sono disponibili ulteriori informazioni sull'utilizzo dell'area dati Tablix.  
   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  

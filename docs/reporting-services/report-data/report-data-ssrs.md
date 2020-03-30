@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190726"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Introduzione ai dati del report in SQL Server Reporting Services (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "74190726"
 6.  **Origini dati esterne** È possibile recuperare i dati da database relazionali, database multidimensionali, elenchi SharePoint o servizi Web.  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> Definizione di termini  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> Definizione di termini  
   
 - **Connessione dati.** Nota anche come *origine dati*. In una connessione dati sono inclusi un nome e le proprietà di connessione che dipendono dal tipo di connessione. In base alle caratteristiche di progettazione, in una connessione dati non sono incluse le credenziali. Una connessione dati non consente di specificare i dati da recuperare dall'origine dati esterna. A tale scopo, è necessario specificare una query durante la creazione di un set di dati.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190726"
   
 - **Credenziali.** Si tratta delle informazioni di autenticazione necessarie per consentire l'accesso ai dati esterni.  
   
-##  <a name="BkMk_ReportDataTips"></a> Suggerimenti per specificare i dati del report
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Suggerimenti per specificare i dati del report
 
  Per progettare una strategia per i dati del report, utilizzare le seguenti informazioni.  
   

@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015696"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - Set di righe dello schema e di data e ora
@@ -32,11 +32,11 @@ ms.locfileid: "68015696"
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |Data|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|Set|0..7|  
+|time|DBTYPE_DBTIME2|Configurazione|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |Datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
+|datetime2|DBTYPE_DBTIMESTAMP|Configurazione|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Configurazione|0..7|  
   
  In COLUMN_FLAGS il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   

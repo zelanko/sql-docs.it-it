@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728582"
 ---
 # <a name="install-azdata-with-apt"></a>Installare `azdata` con apt
@@ -24,11 +24,11 @@ Questo articolo descrive come installare `azdata` per i cluster Big Data di SQL 
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a id="linux"></a>Installare `azdata` per Linux
+## <a name="install-azdata-for-linux"></a><a id="linux"></a>Installare `azdata` per Linux
 
 Il pacchetto di installazione di `azdata` è disponibile per Ubuntu con `apt`.
 
-### <a id="azdata-apt"></a>Installare `azdata` con apt (Ubuntu)
+### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>Installare `azdata` con apt (Ubuntu)
 
 >[!NOTE]
 >Il pacchetto `azdata` non usa l'interprete Python di sistema, ma ne installa uno proprio.

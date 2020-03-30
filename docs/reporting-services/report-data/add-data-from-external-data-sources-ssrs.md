@@ -10,10 +10,10 @@ reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
 ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081840"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Aggiungere dati da origini dati esterne (SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081840"
   
  Per altre informazioni sui tipi di origine dati, vedere [Contenuto della sezione](#InThisSection).  
   
-##  <a name="DataAccess"></a> Informazioni sulla tecnologia di accesso ai dati  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a> Informazioni sulla tecnologia di accesso ai dati  
  Per recuperare dati per un set di dati del report sono necessari più livelli di software per l'accesso ai dati. Nell'elenco seguente viene fornita una semplice descrizione del funzionamento dei report con tecnologie di accesso ai dati:  
   
 -   **Applicazione e interfaccia utente** Applicazione Generatore report che consente di creare un'origine dati, aggiungere un riferimento a un'origine dati condivisa, aggiungere un set di dati condiviso o aggiungere una parte del report che include le origini dati e i set di dati da cui dipende.  
@@ -41,7 +41,7 @@ ms.locfileid: "77081840"
 > [!NOTE]  
 >  Quando non si è connessi a un server di report, è possibile scegliere tra le estensioni per i dati installate con Generatore report. Si accede ai dati come utente singolo utilizzando le credenziali del computer. Quando si è connessi a un server di report, è possibile scegliere tra le estensioni per i dati installate nel server di report. Si accede ai dati come uno degli utenti che eseguono il report e si utilizzano le credenziali nel server di report. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-##  <a name="ReportData"></a> Informazioni sui dati del report  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> Informazioni sui dati del report  
  Nella sua forma più semplice, un report visualizza i dati di un set di dati in un'area dati nella pagina del report, ovvero in una singola tabella, in un grafico, in una matrice o in un altro tipo di area dati del report. I dati di un set di dati del report provengono dal primo set di risultati restituito da un singolo comando di query eseguito dall'accesso in sola lettura a un'origine dati esterna. Ogni area dati può essere espansa in base alle esigenze per visualizzare tutti i dati del set di dati.  
   
  I dati di un set di dati sono soprattutto tabulari. Le colonne sono date dai campi della query del set di dati. Le righe corrispondono alle righe del set di risultati. È possibile utilizzare i tipi di dati generalizzati seguenti in un report:  
@@ -59,11 +59,11 @@ ms.locfileid: "77081840"
 -   I dati ricorsivi sono supportati. Un set di risultati che contiene una gerarchia di dati ricorsivi include tutte le informazioni sulla struttura della gerarchia in un set di risultati rettangolare. Ad esempio, la struttura di relazioni tra i dipendenti di una società può essere rappresentata da una tabella che include due colonne: un dipendente e un responsabile. Ogni responsabile è anch'egli un dipendente con un responsabile. Il massimo dirigente contiene in genere un identificatore Null o di altro tipo a indicare che questo dipendente non ha un responsabile.  
   
   
-##  <a name="DataTypes"></a> Utilizzo dei tipi di dati  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a> Utilizzo dei tipi di dati  
  Quando si crea un set di dati, per i tipi di dati dei campi viene eseguito il mapping a un subset di tipi di dati CLR (Common Language Runtime) da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. I tipi di dati di cui non è possibile eseguire il mapping in modo chiaro vengono restituiti come stringhe. Per altre informazioni sull'uso dei tipi dei dati dei campi, vedere [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md). Quando si crea un parametro, il tipo di dati deve essere supportato dalla definizione del report. Per altre informazioni sull'esecuzione del mapping dei tipi di dati dal provider di dati a un parametro del report, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
  [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "77081840"
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti vengono fornite informazioni su ogni estensione per i dati predefinita.  
   
 |Argomento|Tipo di origine dati|  
@@ -90,7 +90,7 @@ ms.locfileid: "77081840"
 |[Tipo di connessione ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
-##  <a name="Related"></a> Sezioni correlate
+##  <a name="related-sections"></a><a name="Related"></a> Sezioni correlate
 
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   

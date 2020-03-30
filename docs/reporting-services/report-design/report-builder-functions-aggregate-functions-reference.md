@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081324"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funzioni di Generatore report - Informazioni di riferimento sulle funzioni di aggregazione
@@ -47,7 +47,7 @@ ms.locfileid: "77081324"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> Funzioni di aggregazione predefinite  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> Funzioni di aggregazione predefinite  
  Le funzioni predefinite seguenti calcolano i valori di riepilogo relativi a un set di dati numerici non Null nell'ambito predefinito o nell'ambito denominato.  
   
 |**Funzione**|**Descrizione**|  
@@ -66,7 +66,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="Restrictions"></a> Restrizioni relative a campi, raccolte e funzioni di aggregazione predefiniti  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Restrizioni relative a campi, raccolte e funzioni di aggregazione predefiniti  
  Nella tabella seguente sono riepilogate le restrizioni nei percorsi del report in cui è possibile aggiungere espressioni contenenti riferimenti alle raccolte predefinite globali.  
   
 |Percorso nel report|Campi|Parametri|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variables|RenderFormat|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="NestedRestrictions"></a> Restrizioni relative alle aggregazioni nidificate  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Restrizioni relative alle aggregazioni nidificate  
  Nella tabella seguente vengono riepilogate le restrizioni sulle funzioni di aggregazione che consentono la specifica di altre funzioni di aggregazione come aggregazioni nidificate.  
   
 |Context|RunningValue|RowNumber|First (Primo)<br /><br /> Last (Ultimo)|Previous|Sum e altre funzioni di ordinamento preliminare|Aggregazioni ReportItem|Funzioni di ricerca|Funzione di aggregazione|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="CalculatingRunningValues"></a> Calcolo dei valori correnti  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Calcolo dei valori correnti  
  Nelle funzioni predefinite seguenti vengono calcolati i valori correnti per un set di dati. **RowNumber** è simile a **RunningValue** in quanto consente la restituzione del valore corrente di un conteggio che viene incrementato per ogni riga all'interno dell'ambito contenitore. Il parametro di ambito per queste funzioni deve specificare un ambito contenitore che controlla quando deve essere riavviato il conteggio.  
   
 |**Funzione**|**Descrizione**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="RetrievingRowCounts"></a> Recupero di conteggi delle righe  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Recupero di conteggi delle righe  
  La funzione predefinita seguente calcola il numero di righe nell'ambito specificato. Utilizzare questa funzione per conteggiare tutte le righe, incluse quelle con valori Null.  
   
 |**Funzione**|**Descrizione**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="LookupFunctions"></a> Ricerca di valori da un altro set di dati  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Ricerca di valori da un altro set di dati  
  Le funzioni di ricerca seguenti recuperano valori da un set di dati specificato.  
   
 |**Funzione**|**Descrizione**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="RetrievingPostsortValues"></a> Recupero di valori dipendenti dall'ordinamento  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Recupero di valori dipendenti dall'ordinamento  
  Le funzioni predefinite seguenti restituiscono il primo, l'ultimo o il precedente valore all'interno di un ambito specificato. Queste funzioni dipendono dal tipo di ordinamento dei valori dei dati. Utilizzare queste funzioni, ad esempio, per trovare il primo e l'ultimo valore in una pagina o per creare un'intestazione di pagina in formato dizionario. Usare **Previous** per confrontare il valore di una riga con il valore della riga precedente in un ambito specificato, ad esempio per trovare i valori in percentuale anno dopo anno in una tabella.  
   
 |**Funzione**|**Descrizione**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="RetrievingServerAggregates"></a> Recupero di aggregazioni server  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Recupero di aggregazioni server  
  La funzione predefinita seguente recupera aggregazioni personalizzate dal provider di dati. Ad esempio, usando un tipo di origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile recuperare le aggregazioni calcolate sul server dell'origine dati da usare in un'intestazione di gruppo.  
   
 |**Funzione**|**Descrizione**|  
@@ -170,7 +170,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="TestingforScope"></a> Verifica dell'ambito  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Verifica dell'ambito  
  La funzione predefinita seguente controlla il contesto corrente di un elemento del report per verificare se è un membro di un ambito specifico.  
   
 |Funzione|Descrizione|  
@@ -179,7 +179,7 @@ ms.locfileid: "77081324"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio")Torna all'inizio  
   
-##  <a name="RetrievingRecursiveLevel"></a> Recupero del livello ricorsivo  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Recupero del livello ricorsivo  
  La funzione predefinita seguente recupera il livello corrente quando viene elaborata una gerarchia ricorsiva. Usare il risultato di questa funzione con la proprietà **Padding** in una casella di testo per controllare il livello di rientro di una gerarchia visiva per un gruppo ricorsivo. Per altre informazioni, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Funzione|Descrizione|  

@@ -9,10 +9,10 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041183"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
@@ -30,14 +30,14 @@ L'illustrazione seguente visualizza il grafico a barre che verrà creato con le 
   
  
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report di tabelle semplici &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
+Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Creare un report grafico da Creazione guidata grafico  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Creare un report grafico da Creazione guidata grafico  
 Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condivisa e si crea un grafico a barre tramite la Creazione guidata grafico.  
   
 > [!NOTE]  
@@ -87,13 +87,13 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 9. Fare clic su **Avanti**.  
   
-## <a name="ChartType"></a>2. Creare un grafico a barre  
+## <a name="2-create-a-bar-chart"></a><a name="ChartType"></a>2. Creare un grafico a barre  
  
 1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** .  
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
-    Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Nella pagina **Disponi campi del grafico** il riquadro **Campi disponibili** include quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Trascinare LastName nel riquadro Categorie.  
   
@@ -113,7 +113,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 Il grafico a barre visualizza le vendite di ogni venditore per il 2014 e 2015. La lunghezza della barra corrisponde al totale delle vendite.  
   
-## <a name="AllValues"></a>3. Visualizzare tutti i nomi sull'asse verticale  
+## <a name="3-display-all-the-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. Visualizzare tutti i nomi sull'asse verticale  
 Per impostazione predefinita sull'asse verticale vengono visualizzati solo alcuni valori. È possibile modificare il grafico per visualizzare tutte le categorie.  
   
 1.  Passare alla visualizzazione di progettazione report.  
@@ -129,7 +129,7 @@ Per impostazione predefinita sull'asse verticale vengono visualizzati solo alcun
 > [!NOTE]  
 > Se i nomi dei venditori sull'asse verticale non sono leggibili, è possibile aumentare l'altezza del grafico o modificare le opzioni di formattazione per le etichette dell'asse.  
   
-### <a name="CategoryExpression"></a>Visualizzare cognome e nome sull'asse verticale  
+### <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>Visualizzare cognome e nome sull'asse verticale  
 È possibile modificare l'espressione delle categorie per includere il cognome seguito dal nome di ogni venditore.  
   
 1.  Passare alla visualizzazione di progettazione report.  
@@ -155,7 +155,7 @@ Se i nomi non vengono visualizzati quando si esegue il report, è possibile aggi
 > [!NOTE]  
 > Se i nomi dei venditori sull'asse verticale non sono leggibili, è possibile aumentare l'altezza del grafico o modificare le opzioni di formattazione per le etichette dell'asse.  
   
-## <a name="Sort"></a>4. Modificare l'ordinamento sull'asse verticale  
+## <a name="4-change-the-sort-order-on-the-vertical-axis"></a><a name="Sort"></a>4. Modificare l'ordinamento sull'asse verticale  
 Quando si ordinano i dati in un grafico si modifica l'ordine dei valori sull'asse delle categorie.  
   
 1.  Passare alla visualizzazione di progettazione report.  
@@ -176,7 +176,7 @@ Quando si ordinano i dati in un grafico si modifica l'ordine dei valori sull'ass
   
 I nomi sull'asse orizzontale vengono ordinati a partire dalle vendite più alte alle più basse del 2015, con **Zeng** nella parte superiore.  
   
-## <a name="Legend"></a>5. Spostare la legenda  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Spostare la legenda  
 Per migliorare la leggibilità dei valori del grafico, è possibile spostare la legenda del grafico. In un grafico a barre in cui le barre sono visualizzate orizzontalmente, è ad esempio possibile modificare la posizione della legenda in modo che si trovi al di sopra o al di sotto dell'area del grafico. In questo modo lo spazio orizzontale disponibile per le barre risulterà maggiore.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Per visualizzare la legenda al di sotto dell'area del grafico di un grafico a barre  
@@ -195,7 +195,7 @@ Per migliorare la leggibilità dei valori del grafico, è possibile spostare la 
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="ChartTitle"></a>6. Spostare il titolo del grafico  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Spostare il titolo del grafico  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
@@ -205,7 +205,7 @@ Per migliorare la leggibilità dei valori del grafico, è possibile spostare la 
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Horizontal"></a>7. Formattare l'asse orizzontale e assegnare un'etichetta  
+## <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. Formattare l'asse orizzontale e assegnare un'etichetta  
 Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori in un formato generale che viene ridimensionato automaticamente in base alle dimensioni del grafico. È possibile modificarlo nel formato di valuta.  
    
 1.  Passare alla visualizzazione di progettazione report.  
@@ -232,7 +232,7 @@ Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori 
   
 Il report visualizza l'importo delle vendite sull'asse orizzontale come valuta in migliaia senza cifre decimali.  
   
-## <a name="Filter"></a>8. Aggiungere un filtro per visualizzare i primi cinque valori  
+## <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. Aggiungere un filtro per visualizzare i primi cinque valori  
 È possibile aggiungere un filtro al grafico per specificare quali dati del set di dati includere o escludere.   
   
 1.  Passare alla visualizzazione di progettazione report.  
@@ -243,7 +243,7 @@ Il report visualizza l'importo delle vendite sull'asse orizzontale come valuta i
   
 4.  Fare clic su **Filtri**. Nella pagina **Modificare i filtri** può essere visualizzato un elenco di espressioni di filtro. Per impostazione predefinita, tale elenco è vuoto.  
   
-5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
+5.  Fare clic su **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
 6.  In **Espressione**digitare **[Sum(SalesYear2015)]** . Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2015.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
   
@@ -261,7 +261,7 @@ Se i risultati non vengono filtrati quando si esegue il report, sarà possibile 
   
 Nel grafico verranno visualizzati i nomi dei primi cinque venditori dai dati relativi alle vendite del 2015.  
   
-## <a name="Title"></a>9. Aggiungere un titolo al report  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Aggiungere un titolo al report  
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
@@ -281,7 +281,7 @@ Nel grafico verranno visualizzati i nomi dei primi cinque venditori dai dati rel
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Save"></a>10. Salvare il report  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Salvare il report  
   
 1.  Passare alla visualizzazione di progettazione report.  
   

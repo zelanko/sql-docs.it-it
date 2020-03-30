@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080534"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
@@ -28,12 +28,12 @@ ms.locfileid: "77080534"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|string|Predefinito: string<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Predefinito: Boolean|  
-|Integer|Predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Predefinito: Datetime<br /><br /> DateTimeOffset|  
-|Float|Predefinito: Double<br /><br /> Single, Decimal|  
-|Binary|Predefinito: Byte[]|  
+|string|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Valore predefinito: Boolean|  
+|Integer|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Datetime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
+|Float|Valore predefinito: Double<br /><br /> Single, Decimal|  
+|Binary|Valore predefinito: Byte []|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  

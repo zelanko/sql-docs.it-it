@@ -26,10 +26,10 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258957"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerazioni sulla sicurezza per un'installazione di SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "75258957"
 
  La sicurezza rappresenta un fattore importante per ogni prodotto e azienda. Con alcune semplici procedure consigliate è possibile evitare molte vulnerabilità di sicurezza. Questo articolo illustra alcune procedure consigliate per la sicurezza da prendere in considerazione prima dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le indicazioni sulla sicurezza per specifiche funzionalità sono riportate negli articoli di riferimento relativi a tali funzionalità.  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Prima dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>Prima dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Procedure consigliate da eseguire durante la configurazione dell'ambiente server:  
   
 -   [Ottimizzazione della sicurezza fisica](#physical_security)  
@@ -52,7 +52,7 @@ ms.locfileid: "75258957"
   
 -   [Installazione di SQL Server in un controller di dominio](../../sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  La sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è basata sull'isolamento fisico e logico. Per ottimizzare la sicurezza fisica dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , eseguire le operazioni seguenti:  
   
 -   Collocare il server in un'area accessibile solo a persone autorizzate.  
@@ -63,7 +63,7 @@ ms.locfileid: "75258957"
   
 -   Eseguire regolarmente il backup di tutti i dati e archiviare tali backup in un luogo protetto fuori sede.  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  I firewall costituiscono un elemento importante ai fini della protezione dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garantiscono la massima efficienza se vengono rispettate le linee guida seguenti:  
   
 -   Inserire un firewall tra il server e Internet. Abilitare il firewall. Se il firewall è disabilitato, abilitarlo. Se il firewall è abilitato, non disabilitarlo.  
@@ -78,12 +78,12 @@ ms.locfileid: "75258957"
   
  Per altre informazioni sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  L'isolamento dei servizi riduce il rischio che un servizio compromesso venga utilizzato per comprometterne altri. Per isolare i servizi, osservare le linee guida seguenti:  
   
 -   Eseguire servizi separati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con account di Windows separati. Laddove possibile, utilizzare account di Windows o account utente locale con diritti minimi distinti per ogni servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  L'utilizzo del file system corretto garantisce una maggiore sicurezza. Per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario effettuare le operazioni seguenti:  
   
 -   Utilizzare il file system NTFS. NTFS è il file system più appropriato per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in quanto è più stabile e recuperabile rispetto ai file system FAT. NTFS supporta inoltre opzioni di sicurezza quali gli elenchi di controllo di accesso (ACL) a file e directory e la crittografia file Encrypting File System (EFS). Durante l'installazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imposterà elenchi di controllo di accesso appropriati nelle chiavi del Registro di sistema e nei file se rileva il file system NTFS. Queste autorizzazioni non devono essere modificate. Per le versioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non essere supportata l'installazione nei computer con file system di tipo FAT.  
@@ -93,7 +93,7 @@ ms.locfileid: "75258957"
   
 -   Utilizzare un Redundant Array of Independent Disks (RAID) per i file di dati critici.  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  È consigliabile disabilitare tutti i protocolli non necessari sui server della rete perimetrale, ad esempio NetBIOS e SMB (Server Message Block).  
   
  NetBIOS utilizza le porte seguenti:  
@@ -112,7 +112,7 @@ ms.locfileid: "75258957"
   
  I server Web e DNS (Domain Name System) non necessitano di NetBIOS o SMB. In tali server disabilitare entrambi i protocolli per ridurre il rischio di enumerazione degli utenti.  
   
-###  <a name="Install_DC"></a> Installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> Installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio  
  Per motivi di sicurezza, è consigliabile non installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma verranno applicate le limitazioni seguenti:  
   
 -   Non è possibile eseguire servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio utilizzando un account Servizio locale.  
@@ -125,7 +125,7 @@ ms.locfileid: "75258957"
   
 -   Tramite il programma di installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà possibile creare gruppi di sicurezza o fornire account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio di sola lettura. In questo scenario il programma di installazione non verrà completato.  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Durante o dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>Durante o dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Dopo l'installazione, è possibile ottimizzare la sicurezza dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendo le procedure consigliate seguenti per gli account e le modalità di autenticazione.  
   
  **Account di servizio**  

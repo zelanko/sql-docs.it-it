@@ -9,13 +9,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043042"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione del testo (Generatore report)
+# <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
 
 In questa esercitazione verranno illustrati i vari modi in cui è possibile formattare il testo in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . È possibile provare formati diversi. 
 
@@ -25,12 +25,12 @@ Dopo avere impostato il report vuoto con l'origine dati e il set di dati, è pos
   
 In un passaggio si introdurrà intenzionalmente un errore, in modo da comprenderne gli effetti. Si correggerà quindi l'errore per ottenere il risultato desiderato.  
     
-Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
+Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateReport"></a>Creare un report vuoto con un'origine dati e un set di dati  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Creare un report vuoto con un'origine dati e un set di dati  
   
 ### <a name="to-create-a-blank-report"></a>Per creare un report vuoto  
   
@@ -67,7 +67,7 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
   
 2.  Verificare che l'origine dati sia **TextDataSource**.  
   
-3.  Nella casella **Nome** digitare: **TextDataset.**  
+3.  Nella casella **Nome** digitare: **TextDataset**.  
   
 4.  Verificare che il tipo di query **Testo** sia selezionato, quindi fare clic su **Progettazione query**.  
   
@@ -119,7 +119,7 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>Aggiungere un campo all'are di progettazione del report  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Aggiungere un campo all'are di progettazione del report  
 Se si desidera visualizzare un campo del set di dati in un report, è probabile che si scelga innanzitutto di trascinarlo direttamente nell'area di progettazione. In questo esercizio viene indicato perché questo modo di procedere non è corretto e quale operazione è invece necessario eseguire.  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Per aggiungere un campo al report (e ottenere il risultato sbagliato)  
@@ -174,7 +174,7 @@ Se si desidera visualizzare un campo del set di dati in un report, è probabile 
   
 7.  Selezionare la casella di riepilogo e premere CANC.  
   
-## <a name="AddTable"></a>Aggiungere una tabella all'area di progettazione del report  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Aggiungere una tabella all'area di progettazione del report  
 Creare questa tabella per avere un elemento in cui inserire i collegamenti ipertestuali e il testo ruotato.   
   
 1.  Nella scheda **Inserisci** > **Tabella** > **Creazione guidata Tabella**.  
@@ -209,7 +209,7 @@ Creare questa tabella per avere un elemento in cui inserire i collegamenti ipert
     
     ![report-generatore-formato-una sola-totale](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>Aggiungere un collegamento ipertestuale al report  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Aggiungere un collegamento ipertestuale al report  
 In questa sezione si aggiungerà un collegamento ipertestuale al testo incluso nella tabella creata nella sezione precedente.  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
@@ -234,7 +234,7 @@ In questa sezione si aggiungerà un collegamento ipertestuale al testo incluso n
   
 10. Fare clic su un collegamento. Se il computer è connesso a Internet, in una finestra del browser verrà aperto un argomento della Guida di Generatore report.  
   
-## <a name="RotateText"></a>Ruotare il testo nel report  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Ruotare il testo nel report  
 In questa sezione si ruoterà parte del testo incluso nella tabella creata nelle sezioni precedenti.  
  
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
@@ -260,7 +260,7 @@ Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso ve
 
 ![report-generatore-formato-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>Applicare il formato valuta  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>Applicare il formato valuta  
   
 1.  Fare clic su **Progettazione** per passare alla visualizzazione Struttura.  
   
@@ -280,7 +280,7 @@ Nel report verranno visualizzati i dati formattati che rendono più facile la le
 
 ![report-generatore-formato-report](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>Visualizzazione del testo con formattazione HTML  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Visualizzazione del testo con formattazione HTML  
   
 1.  Fare clic su **Progettazione** per passare alla visualizzazione Struttura.  
   
@@ -322,7 +322,7 @@ Il testo nella casella di testo viene visualizzato come un'intestazione, un para
   
 ![report-generatore-formato-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>Salvare il report  
+## <a name="save-the-report"></a><a name="Save"></a>Salvare il report  
 È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale.  
   
 In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
@@ -355,7 +355,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ci sono vari modi per formattare il testo in Generatore report. [Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
+Ci sono vari modi per formattare il testo in Generatore report. L'[Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
 
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
 [Formattazione degli elementi del report](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

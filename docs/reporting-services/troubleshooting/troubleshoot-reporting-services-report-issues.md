@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573872"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Risoluzione dei problemi dei servizi Report di Reporting
@@ -34,7 +34,7 @@ Quando si visualizza un report pubblicato in Gestione report, è possibile che v
   
 Per visualizzare lo stack di chiamate, accedere al server di report usando le credenziali di amministratore locale, fare clic con il pulsante destro del mouse sulla pagina Gestione report e scegliere **Visualizza origine**. Nello stack di chiamate vengono fornite le informazioni dettagliate di contesto per il messaggio di errore.  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] per verificare le query e le credenziali  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] per verificare le query e le credenziali  
 È possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] per convalidare query complesse prima di includerle nel report.   
   
 Per altre informazioni, vedere [Editor di query del Motore di database](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) e [Gestire oggetti tramite Esplora oggetti](~/ssms/object/manage-objects-by-using-object-explorer.md).  

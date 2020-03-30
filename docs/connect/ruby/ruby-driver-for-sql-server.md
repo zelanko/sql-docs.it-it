@@ -11,10 +11,10 @@ ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d35336d1414df78e5d24c3133a176d3d232deadb
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866544"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Driver Ruby per SQL Server

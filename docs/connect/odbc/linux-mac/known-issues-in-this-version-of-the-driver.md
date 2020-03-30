@@ -10,10 +10,10 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286435"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problemi noti per il driver ODBC in Linux e macOS
@@ -36,7 +36,7 @@ Altri problemi verranno pubblicati nel [blog del team di Microsoft ODBC Driver](
 
 Ad esempio se la codifica è UTF-8 e si specifica 1 sia per *BufferLength* sia per *ColumnSize* in **SQLBindParameter** per un parametro out, quindi si prova a recuperare il carattere precedente archiviato in una colonna `char(1)` nel server (usando CP-1252), il driver tenta di convertirlo alla codifica UTF-8 a 3 byte, ma non può adattare il risultato in un buffer di 1 byte. Nella direzione opposta, *ColumnSize* viene confrontato con *BufferLength* in **SQLBindParameter** prima della conversione tra le diverse tabelle codici su client e server. Poiché il valore 1 di *ColumnSize* è minore di un valore *BufferLength* di 3 (ad esempio), il driver genera un errore. Per evitare questo errore, verificare che la lunghezza dei dati dopo la conversione si adatti correttamente al buffer o alla colonna specificati. Si noti che *ColumnSize* non può essere maggiore di 8000 per il tipo `varchar(n)`.
 
-## <a id="connectivity"></a> Risoluzione dei problemi relativi alla connessione  
+## <a name="troubleshooting-connection-problems"></a><a id="connectivity"></a> Risoluzione dei problemi relativi alla connessione  
 
 Se non si riesce a stabilire una connessione a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il driver ODBC, usare le informazioni seguenti per individuare il problema.  
   

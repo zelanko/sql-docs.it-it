@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/16/2019
 ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253312"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Creare un database del server di report, Gestione configurazione SSRS  
@@ -27,7 +27,7 @@ I database vengono creati assieme e associati in base al nome. Con un'istanza di
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-La **modalità SharePoint** di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un terzo database usato per i metadati di avviso dei dati. Vengono creati tre database per ciascuna applicazione di servizio SSRS. I nomi dei database includono per impostazione predefinita un GUID che rappresenta l'applicazione di servizio. 
+La [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modalità SharePoint**di SQL Server** include un terzo database usato per i metadati di avviso dei dati. Vengono creati tre database per ciascuna applicazione di servizio SSRS. I nomi dei database includono per impostazione predefinita un GUID che rappresenta l'applicazione di servizio. 
 
 Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:
 

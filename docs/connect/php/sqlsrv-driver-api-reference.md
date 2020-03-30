@@ -11,10 +11,10 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3d5a6afaa4580623bade5ac6d7dd5b13a4cbdc6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992785"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Riferimento all'API del driver SQLSRV
@@ -54,7 +54,7 @@ Il driver SQLSRV contiene le funzioni seguenti:
 |[sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)|Invia fino a otto kilobyte (8 KB) di dati al server con ogni chiamata alla funzione.|  
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Fornisce informazioni sul server.|  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
 [Manuale PHP](https://php.net/manual)  
   
 ## <a name="see-also"></a>Vedere anche  

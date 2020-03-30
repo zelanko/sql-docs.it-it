@@ -9,10 +9,10 @@ ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080974"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordinamento dei dati in un'area dati (Generatore report e SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "77080974"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "77080974"
   
 4.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "77080974"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "77080974"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo dati. Nella maggior parte dei casi si tratta di un valore aggregato, ad esempio `=Sum(Fields!Quantity.Value)`.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "77080974"
   
 7.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   

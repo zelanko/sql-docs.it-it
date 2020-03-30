@@ -12,10 +12,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 934bd563af82c5fb8ca1d08ae7dc1b17160e3284
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058835"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Installare Microsoft ODBC Driver for SQL Server (Linux)
@@ -24,7 +24,7 @@ Questo articolo illustra come installare Microsoft ODBC Driver for SQL Server in
 
 Questo articolo fornisce i comandi per l'installazione del driver ODBC dalla shell Bash. Se si vogliono scaricare direttamente i pacchetti, vedere [Scaricare ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
-## <a id="17"></a> Microsoft ODBC 17
+## <a name="microsoft-odbc-17"></a><a id="17"></a> Microsoft ODBC 17
 
 Le sezioni seguenti illustrano come installare Microsoft ODBC Driver 17 dalla shell Bash per diverse distribuzioni Linux.
 
@@ -37,7 +37,7 @@ Le sezioni seguenti illustrano come installare Microsoft ODBC Driver 17 dalla sh
 > [!IMPORTANT]
 > Se è stato installato il pacchetto `msodbcsql` v17 rimasto disponibile per poco tempo, rimuoverlo prima di installare il pacchetto `msodbcsql17`. Si eviteranno così conflitti. È possibile installare il pacchetto `msodbcsql17` side-by-side con il pacchetto `msodbcsql` v13.
 
-### <a id="alpine17"></a> Alpine Linux
+### <a name="alpine-linux"></a><a id="alpine17"></a> Alpine Linux
 
 ```bash
 #Download the desired package(s)
@@ -62,7 +62,7 @@ sudo apk add --allow-untrusted mssql-tools_17.5.2.1-1_amd64.apk
 > [!NOTE]
 > È necessaria la versione del driver 17.5 o versione successiva per il supporto di Alpine.
 
-### <a id="debian17"></a> Debian
+### <a name="debian"></a><a id="debian17"></a> Debian
 
 ```bash
 sudo su
@@ -97,7 +97,7 @@ sudo apt-get install libgssapi-krb5-2
 > [!NOTE]
 > È possibile sostituire l'impostazione della variabile di ambiente 'ACCEPT_EULA' impostando invece la variabile 'msodbcsql/ACCEPT_EULA': `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
-### <a id="redhat17"></a> Red Hat Enterprise Server e Oracle Linux
+### <a name="red-hat-enterprise-server-and-oracle-linux"></a><a id="redhat17"></a> Red Hat Enterprise Server e Oracle Linux
 
 ```bash
 sudo su
@@ -126,7 +126,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a id="suse17"></a> SUSE Linux Enterprise Server
+### <a name="suse-linux-enterprise-server"></a><a id="suse17"></a> SUSE Linux Enterprise Server
 
 ```bash
 sudo su
@@ -157,7 +157,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ```
 
-### <a id="ubuntu17"></a> Ubuntu
+### <a name="ubuntu"></a><a id="ubuntu17"></a> Ubuntu
 
 ```bash
 sudo su
@@ -202,7 +202,7 @@ Nelle sezioni seguenti vengono fornite le istruzioni per l'installazione delle v
 - [Microsoft ODBC Driver 13 for SQL Server](#13)
 - [Microsoft ODBC Driver 11 for SQL Server](#11)
 
-## <a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 Le sezioni seguenti illustrano come installare Microsoft ODBC Driver 13.1 dalla shell Bash per diverse distribuzioni Linux.
 
@@ -344,7 +344,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-## <a id="13"></a> ODBC 13
+## <a name="odbc-13"></a><a id="13"></a> ODBC 13
 
 Le sezioni seguenti illustrano come installare Microsoft ODBC Driver 13 dalla shell Bash per diverse distribuzioni Linux.
 
@@ -468,7 +468,7 @@ Dopo aver completato l'installazione del pacchetto, è possibile verificare che 
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
 
-## <a id="11"></a> ODBC 11
+## <a name="odbc-11"></a><a id="11"></a> ODBC 11
 
 Le sezioni seguenti illustrano come installare Microsoft ODBC Driver 11 in Linux. Prima di poter usare il driver, installare Gestione driver unixODBC. Per altre informazioni, vedere [Installazione di Gestione driver](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
 
@@ -519,7 +519,7 @@ Il driver ODBC in Linux include i componenti seguenti:
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X o libmsodbcsql-13.X.so.X.X|File della libreria di collegamento dinamico dell'oggetto condiviso (`so`) che contiene tutte le funzionalità del driver. Questo file viene installato in `/opt/microsoft/msodbcsql17/lib64/` per Driver 17 e in `/opt/microsoft/msodbcsql/lib64/` per Driver 13.|  
 |`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e a odbcss.h nello stesso programma.<br /><br /> msodbcsql.h viene installato in `/opt/microsoft/msodbcsql17/include/` per Driver 17 e in `/opt/microsoft/msodbcsql/include/` per Driver 13. |
+|msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql.h viene installato in `/opt/microsoft/msodbcsql17/include/` per Driver 17 e in `/opt/microsoft/msodbcsql/include/` per Driver 13. |
 |LICENSE.txt|File di testo che contiene i termini del contratto di licenza con l'utente finale. Questo file viene inserito in `/usr/share/doc/msodbcsql17/` per Driver 17 e in `/usr/share/doc/msodbcsql/` per Driver 13.|
 |RELEASE_NOTES|File di testo che contiene le note sulla versione. Questo file viene inserito in `/usr/share/doc/msodbcsql17/` per Driver 17 e in `/usr/share/doc/msodbcsql/` per Driver 13.|
 
@@ -527,7 +527,7 @@ Il driver ODBC in Linux include i componenti seguenti:
 
 Perché possa funzionare, il driver deve caricare il file di risorse. Questo file è denominato `msodbcsqlr17.rll` o `msodbcsqlr13.rll` a seconda della versione del driver. La posizione del file `.rll` dipende dalla posizione del driver stesso (`so` o `dylib`), come indicato nella tabella precedente. A partire dalla versione 17.1 il driver tenterà anche di caricare il file `.rll` dalla directory predefinita se il caricamento dal percorso relativo non riesce. Il percorso del file di risorse predefinito in Linux è `/opt/microsoft/msodbcsql17/share/resources/en_US/`.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 Se non è possibile effettuare una connessione a SQL Server tramite il driver ODBC, vedere l'articolo sui problemi noti dedicato alla [risoluzione dei problemi di connessione](known-issues-in-this-version-of-the-driver.md#connectivity).
 

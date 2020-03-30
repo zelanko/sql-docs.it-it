@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082118"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
@@ -178,12 +178,12 @@ ms.locfileid: "77082118"
   
  ![Diagramma degli elementi del misuratore](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramma degli elementi del misuratore")  
   
- Per ulteriori informazioni sull'utilizzo dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Per altre informazioni sull'uso dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare misuratori separatamente da un report come parti del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="GaugeTypes"></a> Tipi di misuratore  
+##  <a name="gauge-types"></a><a name="GaugeTypes"></a> Tipi di misuratore  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili due tipi di misuratore, ovvero radiale e lineare. Il misuratore radiale viene usato in genere quando si desidera esprimere i dati come velocità. Il misuratore lineare viene invece usato per esprimere i dati come temperatura o valore della scala.  
   
  Le differenze principali tra i due tipi sono la forma complessiva del misuratore e i relativi indicatori di misura disponibili. I misuratori radiali sono circolari, o gradi di cerchio, e sono simili ai tachimetri. Gli indicatori di misura del misuratore spesso sono lancette, ma possono essere marcatori o barre.  
@@ -204,9 +204,9 @@ ms.locfileid: "77082118"
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opzioni del misuratore lineare: Orizzontale, Verticale, Più indicatori di misura a barre, Due scale, Intervallo a tre colori, Logaritmico, Termometro, Termometro Fahrenheit/Celcius e Grafico a bullet.  
+ Opzioni del misuratore lineare: Orizzontale, Verticale, Più indicatori di misura a barre, Due scale, Intervallo a tre colori, Logaritmico, Termometro, Termometro Fahrenheit/Celcius e Grafico bullet.  
   
-##  <a name="AddingData"></a> Aggiunta di dati a un misuratore  
+##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> Aggiunta di dati a un misuratore  
  Dopo avere aggiunto un misuratore all'area di progettazione, trascinare un campo del set di dati nel riquadro dei dati del misuratore. I valori del campo vengono tutti aggregati per impostazione predefinita a un unico valore visualizzato sul misuratore. Tale valore è collegato all'indicatore di misura tramite la proprietà Value. A seconda del tipo di dati del campo, nel misuratore viene usata l'aggregazione SUM o COUNT. Quando si usano dati numerici, appropriati per l'aggiunta, nel misuratore viene usata la funzione SUM. In caso contrario, viene usata l'aggregazione COUNT. Il valore dell'indicatore di misura può usare un'aggregazione diversa o nessuna aggregazione.  
   
  Per visualizzare gruppi singoli o righe singole sul misuratore, è possibile aggiungere raggruppamenti. Quando vengono applicati il raggruppamento e il filtro, viene usato il valore dell'indicatore di misura per visualizzare l'ultimo gruppo o l'ultima riga nel set di dati restituito.  
@@ -248,7 +248,7 @@ ms.locfileid: "77082118"
   
  Potrebbe essere necessario aggiungere un gruppo al misuratore se, ad esempio, si visualizzano più misuratori in una tabella o in un elenco e si desidera visualizzare i dati aggregati per gruppo. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="PositioningData"></a> Posizionamento di elementi in un misuratore  
+##  <a name="positioning-elements-in-a-gauge"></a><a name="PositioningData"></a> Posizionamento di elementi in un misuratore  
  Il pannello del misuratore è il contenitore di livello superiore in cui sono presenti uno o più misuratori. È possibile visualizzare la finestra di dialogo **Proprietà pannello del misuratore** facendo clic all'esterno del misuratore. Ogni misuratore, a sua volta, contiene diversi elementi, ovvero una scala del misuratore, un intervallo del misuratore e un indicatore di misura del misuratore. Per usare il misuratore, è necessario comprendere le modalità di misurazione degli elementi contenuti nel pannello del misuratore per poterne modificare le dimensioni e la posizione.  
   
 ### <a name="understanding-size-and-position-measurements"></a>Informazioni sulle misure di dimensioni e posizione  
@@ -275,7 +275,7 @@ ms.locfileid: "77082118"
 ### <a name="maintaining-aspect-ratio-on-a-linear-gauge"></a>Conservazione delle proporzioni su un misuratore lineare  
  Il misuratore radiale presuppone l'uso di un form circolare e pertanto gestisce di solito valori di larghezza e di altezza identici. Tuttavia, su un misuratore lineare che presuppone un form rettangolare, la proporzione tra larghezza e altezza generalmente non è uniforme. La proporzione di un misuratore determina la proporzione della larghezza rispetto all'altezza che è necessario mantenere quando si ridimensiona il misuratore. Se, ad esempio, questo valore viene impostato su 2, la larghezza del misuratore sarà sempre pari a due volte l'altezza del misuratore, indipendentemente dal ridimensionamento applicato al misuratore. Per impostare la proporzione, è possibile impostare la proprietà AspectRatio dalla finestra di dialogo **Proprietà misuratore lineare** .  
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure che illustrano in modo dettagliato come usare i misuratori nei report, come ottenere i dati da visualizzare in modo efficiente nei misuratori e come aggiungere e configurare i misuratori e i relativi elementi.  
   
 -   [Aggiungere un misuratore a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
@@ -286,7 +286,7 @@ ms.locfileid: "77082118"
   
 -   [Specificare un'immagine come indicatore di misura su un misuratore (Generatore report e SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti sono disponibili ulteriori informazioni sull'utilizzo dei misuratori.  
   
 |||  

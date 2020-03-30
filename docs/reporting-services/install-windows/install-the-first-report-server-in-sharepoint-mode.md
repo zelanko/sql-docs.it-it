@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286175"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installare il primo server di report in modalità SharePoint
@@ -31,7 +31,7 @@ ms.locfileid: "79286175"
   
  L'installazione a server singolo è utile per scenari di sviluppo e di test, ma non è consigliata per ambienti di produzione.  
   
-##  <a name="bkmk_singleserver"></a> Distribuzione a server singolo di esempio
+##  <a name="example-single-server-deployment"></a><a name="bkmk_singleserver"></a> Distribuzione a server singolo di esempio
 
  L'installazione di un unico server è utile per scenari di sviluppo e di test ma l'utilizzo di un server singolo non è consigliato per un ambiente di produzione. Con il termine "ambiente a server singolo" ci si riferisce a un computer singolo con SharePoint e componenti di Reporting Services installati nello stesso computer. In questo argomento non viene illustrata la scalabilità orizzontale con più server di Reporting Services.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "79286175"
 > [!TIP]  
 >  Per esempi di distribuzione più complessi, vedere [Installazione della modalità SharePoint di Reporting Services (SharePoint 2010 e SharePoint 2013)](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
-##  <a name="bkmk_setupaccounts"></a> Account di configurazione
+##  <a name="setup-accounts"></a><a name="bkmk_setupaccounts"></a> Account di configurazione
 
  In questa sezione vengono descritti gli account e le autorizzazioni usati per i passaggi relativi alla distribuzione principale di Reporting Services in modalità SharePoint.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "79286175"
   
      Per motivi di sicurezza è consigliabile che gli account amministratori di farm di SharePoint non siano anche account amministratori del sistema operativo locale. Se si aggiunge un account amministratore di farm al gruppo di amministratori locali durante il processo di installazione, è consigliabile rimuoverlo al termine dell'installazione.  
   
-##  <a name="bkmk_install_SSRS"></a> Passaggio 1: Installare il server di report di Reporting Services in modalità SharePoint
+##  <a name="step-1-install-reporting-services-report-server-in-sharepoint-mode"></a><a name="bkmk_install_SSRS"></a> Passaggio 1: Installare il server di report Reporting Services in modalità SharePoint
 
  Durante questo passaggio vengono installati un server di report di Reporting Services in modalità SharePoint e il componente aggiuntivo Reporting Services per prodotti SharePoint. A seconda degli elementi già installati nel computer, alcune delle pagine di installazione descritte nei passaggi seguenti potrebbero non essere visualizzate.  
  
@@ -163,7 +163,7 @@ ms.locfileid: "79286175"
   
 15. Per l'installazione saranno richiesti diversi minuti. Verrà visualizzata la pagina **Operazione completata** con le funzionalità elencate e il relativo stato. Potrebbe essere visualizzata una finestra di dialogo in cui viene indicata la necessità di riavviare il computer.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Passaggio 2: Registrare e avviare il servizio SharePoint di Reporting Services  
+##  <a name="step-2-register-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a> Passaggio 2: Registrare e avviare il servizio SharePoint di Reporting Services  
  ![Contenuto correlato di PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")  
   
 > [!NOTE]
@@ -209,7 +209,7 @@ ms.locfileid: "79286175"
     > [!IMPORTANT]
     > Se viene visualizzato un messaggio di errore simile al seguente,  
     >   
-    >     Install-SPRSService: il termine "Install-SPRSService" **non è riconosciuto** come nome di cmdlet, funzione, file di script o programma eseguibile. Verificare l'ortografia del nome, che il percorso sia incluso e corretto, quindi riprovare.  
+    >     Install-SPRSService : Il termine 'Install-SPRSService' **non è riconosciuto** come nome di cmdlet, funzione, file di script o programma eseguibile. Verificare l'ortografia del nome, che il percorso sia incluso e corretto, quindi riprovare.  
     >
     > Si è in Windows PowerShell anziché nella shell di gestione SharePoint oppure la modalità SharePoint di Reporting Services non è installata. Per altre informazioni su Reporting Services e PowerShell, vedere [Cmdlet di PowerShell per la modalità SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -224,7 +224,7 @@ ms.locfileid: "79286175"
     > [!NOTE]  
     >  Se il servizio Reporting Services rimane nello stato **Avvio in corso** e non cambia in **Avviato**, verificare che il servizio "Amministrazione SharePoint 2013" venga avviato in Server Manager di Windows.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Passaggio 3: Creare un'applicazione di servizio Reporting Services  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Passaggio 3: Creare un'applicazione di servizio Reporting Services  
  In questa sezione vengono presentati i passaggi per creare un'applicazione di servizio e una descrizione delle proprietà, se è in corso la revisione di un'applicazione di servizio esistente.  
   
 1.  Nel gruppo **Gestione applicazioni** di Amministrazione centrale SharePoint selezionare **Gestisci applicazioni di servizio**.  
@@ -260,7 +260,7 @@ ms.locfileid: "79286175"
   
 -   Argomento [Per creare un'applicazione di servizio Reporting Services con PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="bkmk_powerview"></a>Passaggio 4: Attivare la funzionalità per la raccolta di siti di Power View.
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Passaggio 4: Attivare la funzionalità per la raccolta siti di Power View.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità del componente aggiuntivo di SQL Server 2016 Reporting Services per i prodotti [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, è una funzionalità di raccolta siti. La funzionalità viene attivata automaticamente per raccolte siti radice e raccolte siti create dopo l'installazione del componente aggiuntivo di Reporting Services. Se si intende utilizzare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verificare che la funzionalità sia attivata.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "79286175"
   
  Questa procedura viene completata per ogni raccolta siti. Per altre informazioni, vedere [Attivare le funzionalità di integrazione per Power View e server di report in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
-##  <a name="bkmk_full_script"></a> Script di Windows PowerShell per i passaggi da 1 a 4  
+##  <a name="windows-powershell-script-for-steps-1-4"></a><a name="bkmk_full_script"></a> Script di Windows PowerShell per i passaggi da 1 a 4  
  Lo script di PowerShell in questa sezione è l'equivalente del completamento dei passaggi da 1 a 4 nelle sezioni precedenti. Lo script consente di completare quanto indicato di seguito:  
   
 -   Viene installato il servizio Reporting Services e il proxy del servizio e viene avviato il servizio.  
@@ -383,10 +383,10 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
 ```  
   
-##  <a name="bkmk_additional_config"></a> Configurazione aggiuntiva  
+##  <a name="additional-configuration"></a><a name="bkmk_additional_config"></a> Configurazione aggiuntiva  
  In questa sezione vengono descritti i passaggi di configurazione aggiuntivi che sono importanti nella maggior parte delle distribuzioni SharePoint.  
   
-###  <a name="bkmk_configure_ECS"></a> Configurare Excel Services e Power Pivot  
+###  <a name="configure-excel-services-and-power-pivot"></a><a name="bkmk_configure_ECS"></a> Configurare Excel Services e Power Pivot  
  Per visualizzare i report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View in una cartella di lavoro di Excel 2016 o Excel 2013 in SharePoint, è necessario configurare Excel Services per l'uso di un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità Power Pivot. 
  
  Per SharePoint 2016, è necessario configurare [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) per usare Excel Services. Per informazioni dettagliate, vedere i white paper seguenti.
@@ -403,7 +403,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 L'account di sicurezza del pool di applicazioni usato dall'applicazione di servizio Reporting Services deve anche essere un amministratore del server di Analysis Services.
   
-###  <a name="bkmk_provision_agent"></a> Provisioning per sottoscrizioni e avvisi  
+###  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provision_agent"></a> Provisioning per sottoscrizioni e avvisi  
  Le funzionalità di sottoscrizione e avviso dati di Reporting Services possono richiedere la configurazione di autorizzazioni di SQL Server Agent. Se viene visualizzato un messaggio di errore che indica che SQL Server Agent è richiesto sebbene sia in esecuzione, aggiornare le autorizzazioni. È possibile fare clic sul collegamento **Provisioning di sottoscrizioni e avvisi** nella pagina di creazione dell'applicazione di servizio per passare a un'altra pagina di provisioning di SQL Server Agent. Il passaggio del provisioning è necessario se la distribuzione interessa più computer, ad esempio quando l'istanza di database di SQL Server si trova in un computer diverso. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>Configurare la posta elettronica per le applicazioni di servizio SSRS  
@@ -415,7 +415,7 @@ L'account di sicurezza del pool di applicazioni usato dall'applicazione di servi
 ### <a name="activate-the-report-server-file-sync-feature"></a>Attivare la funzionalità Sincronizzazione file server di report  
  La funzionalità a livello di sito **Sincronizzazione file server di report** è utile quando gli utenti caricano di frequente elementi di report pubblicati direttamente nelle raccolte documenti di SharePoint. La funzionalità di sincronizzazione file consente di sincronizzare il catalogo del server di report con gli elementi nelle raccolte documenti con maggiore frequenza. Per altre informazioni, vedere [Attivare la funzionalità Sincronizzazione file server di report in Amministrazione centrale SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
-##  <a name="bkmk_verify_installation"></a> Verificare l'installazione  
+##  <a name="verify-the-installation"></a><a name="bkmk_verify_installation"></a> Verificare l'installazione  
  Di seguito sono riportati i passaggi e le procedure consigliati per verificare la distribuzione in modalità SharePoint di Reporting Services.  
   
 -   Vedere la sezione di SharePoint nell'argomento di verifica [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  

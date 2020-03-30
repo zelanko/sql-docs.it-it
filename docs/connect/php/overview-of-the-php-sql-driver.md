@@ -11,10 +11,10 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afa9863d955ef7f075ffd8c8c68844130bcfd9ca
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866497"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Panoramica dei driver Microsoft per PHP per SQL Server
@@ -35,7 +35,7 @@ Per usare [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è necessar
 |[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)|Vengono fornite informazioni che possono risultare utili quando si eseguono gli esempi di codice di questa documentazione.|  
 | &nbsp; | &nbsp; |
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Guida di riferimento del driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  

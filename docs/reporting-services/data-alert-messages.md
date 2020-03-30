@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571561"
 ---
 # <a name="data-alert-messages"></a>Messaggi di avviso dati
@@ -22,14 +22,14 @@ ms.locfileid: "65571561"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Gli avvisi sui dati di SQL Server Reporting Services inviano due tipi di messaggi di avviso sui dati tramite posta elettronica: messaggi con risultati degli avvisi sui dati e messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.
+Gli avvisi dati di SQL Server Reporting Services consentono di recapitare tramite posta elettronica due tipi di messaggi di avviso dati: messaggi con risultati degli avvisi dati e messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.
 
 Il proprietario della definizione di avviso dati può inoltre visualizzare le informazioni sull'istanza di avviso dati in Gestione avvisi dati. Per altre informazioni, vedere [Gestione avvisi dati per utenti di SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
   
-##  <a name="DataAlertMessages"></a> Messaggi di avviso dati  
+##  <a name="data-alert-messages"></a><a name="DataAlertMessages"></a> Messaggi di avviso dati  
  Nelle figure seguenti sono illustrati un messaggio di avviso dati con risultati e un messaggio di avviso con una descrizione di un errore.  
   
  **Messaggio dei risultati**  
@@ -59,7 +59,7 @@ Il proprietario della definizione di avviso dati può inoltre visualizzare le in
  L'unica differenza tra i due tipi di messaggi è l'elemento 5, **Risultati degli avvisi**. Se si verifica un errore quando viene creato un messaggio di avviso o un'istanza di avviso dati, in **Risultati degli avvisi** viene visualizzato un messaggio di errore che descrive il problema. Il messaggio di errore, inviato a tutti i destinatari, serve per comunicare che i risultati degli avvisi attesi e che potrebbero essere necessari per prendere decisioni aziendali non sono disponibili.  
   
   
-##  <a name="HowTo"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Attività correlate  
  In questa sezione vengono elencate le procedure in cui viene illustrato come creare e modificare le definizioni di avviso dati che forniscono molte delle informazioni incluse nei messaggi di avviso dati.  
   
 -   [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0fc4e3bd7565d4227da1e2d29853ff65ed2b7ca5
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866408"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
@@ -25,8 +25,8 @@ ms.locfileid: "78866408"
 ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usare lo spazio dei nomi Microsoft.Data.SqlClient per accedere a SQL Server oppure i provider di altri fornitori per accedere ai rispettivi archivi. Usare System.Data.Odbc o System.Data.Oledb per accedere ai dati dai linguaggi .NET mediante altre tecnologie di accesso ai dati. Usare System.Data.Dataset quando è necessaria una cache di dati offline nelle applicazioni client. Offre anche funzionalità per il salvataggio permanente locale e per XML, che possono risultare utili nei servizi Web.  
   
 ## <a name="getting-started"></a>Introduzione  
-* [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
-* [Passaggio 2: Creare un database SQL per lo sviluppo ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+* [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
+* [Passaggio 2: Creare un database SQL per lo sviluppo di ADO.NET](step-2-create-sql-database-ado-net-development.md)  
 * [Passaggio 3: Modello di verifica per la connessione a SQL tramite ADO.NET](step-3-connect-sql-ado-net.md)  
 * [Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
   

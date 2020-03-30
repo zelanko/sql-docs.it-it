@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081625"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Aggiungere un ordinamento interattivo a una tabella o a una matrice (Generatore report e SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "77081625"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a> Contenuto dell'articolo  
+##  <a name="in-this-article"></a><a name="BackToTop"></a> Contenuto dell'articolo  
  [Ordinamento delle righe di dettaglio di una tabella senza gruppi](#SortingDetailRows)  
   
  [Ordinamento di un gruppo di righe padre di livello principale di una tabella o di una matrice](#SortingTopLevelParent)  
@@ -39,7 +39,7 @@ ms.locfileid: "77081625"
   
  [Sincronizzazione dell'ordinamento per più aree dati](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a> Ordinamento delle righe di dettaglio di una tabella senza gruppi  
+##  <a name="sorting-detail-rows-for-a-table-with-no-groups"></a><a name="SortingDetailRows"></a> Ordinamento delle righe di dettaglio di una tabella senza gruppi  
  Aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna in modo che gli utenti possano fare clic su tale intestazione per ordinare le righe di dettaglio in una tabella in base al valore visualizzato nella colonna.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>Per aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna per ordinare la tabella in base a un valore  
@@ -62,7 +62,7 @@ ms.locfileid: "77081625"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a> Ordinamento di un gruppo di righe padre di livello principale di una tabella o di una matrice  
+##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> Ordinamento di un gruppo di righe padre di livello principale di una tabella o di una matrice  
  Aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna in modo che gli utenti possano fare clic su tale intestazione per ordinare le righe del gruppo padre in una tabella o in una matrice in base al valore visualizzato nella colonna. L'ordine dei gruppi figlio rimane invariato.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>Per aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna per ordinare i gruppi  
@@ -86,7 +86,7 @@ ms.locfileid: "77081625"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a> Ordinamento dei gruppi figlio o delle righe di dettaglio di un gruppo  
+##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> Ordinamento dei gruppi figlio o delle righe di dettaglio di un gruppo  
  Aggiungere un pulsante di ordinamento interattivo a una riga di intestazione di gruppo in modo che gli utenti possano ordinare i valori di un gruppo figlio da un gruppo padre o ordinare le righe di dettaglio per il gruppo figlio più interno.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>Per aggiungere un pulsante di ordinamento interattivo a una casella di testo in un'intestazione di riga di gruppo per ordinare gruppi figlio o righe di dettaglio  
@@ -109,7 +109,7 @@ ms.locfileid: "77081625"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a> Ordinamento di righe in base a un'espressione di raggruppamento complessa  
+##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> Ordinamento di righe in base a un'espressione di raggruppamento complessa  
  Aggiungere un pulsante di ordinamento interattivo a un'intestazione di colonna in modo che gli utenti possano fare clic su tale intestazione per ordinare gruppi padre e figlio combinati. Per ottenere questo risultato, è necessario modificare l'espressione di raggruppamento in modo che rappresenti una combinazione di entrambi i gruppi. Si supponga, ad esempio, che una matrice visualizzi i totali delle scorte di un negozio per determinati elementi raggruppati per colore e dimensioni. Per ordinare le righe in base alla combinazione di colore e dimensioni, anziché creare un gruppo distinto per ognuna di queste proprietà, è possibile definire un gruppo basato su tale combinazione. Per altre informazioni sulla definizione delle espressioni di raggruppamento, vedere [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
  I termini nella procedura seguente specificano aree dell'area dati Tablix. Per altre informazioni, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
@@ -166,7 +166,7 @@ ms.locfileid: "77081625"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a> Sincronizzazione dell'ordinamento per più aree dati  
+##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> Sincronizzazione dell'ordinamento per più aree dati  
  Aggiungere un pulsante di ordinamento interattivo in modo che gli utenti possano fare clic su di esso per ordinare più aree dati. Quando si crea un pulsante di ordinamento interattivo, è possibile specificare se sincronizzare l'ordinamento per più aree dati in base allo stesso set di dati del report. Un report può, ad esempio, includere una matrice e un grafico in cui i dati sono rappresentati in forma grafica. Quando un utente modifica l'ordinamento delle righe nella matrice, nel grafico viene automaticamente visualizzato lo stesso ordinamento.  
   
  Per sincronizzare l'ordinamento, è necessario utilizzare espressioni di ordinamento identiche per le aree dati o per i gruppi da ordinare, nonché definire l'ambito dell'ordinamento in modo che rappresenti un predecessore comune a entrambe le aree dati. Il predecessore comune può essere il set di dati al quale vengono collegate entrambe le aree dati o un'area dati contenitore all'interno della quale sono incluse entrambe le aree dati. Si supponga, ad esempio, che un report includa sia una matrice che un grafico in cui sono visualizzati dati provenienti dallo stesso set di dati, all'interno di un elenco. Per sincronizzare l'azione di ordinamento, è necessario specificare l'ordinamento interattivo in una colonna della matrice e impostare l'ambito sull'elenco. Quando l'utente ordina la matrice, viene ordinato anche il grafico.  
@@ -191,7 +191,7 @@ ms.locfileid: "77081625"
   
 8.  Fare clic su **Ordinamento**.  
   
-9. Scegliere **Aggiungi**. Nella griglia delle opzioni di ordinamento verrà aggiunta una nuova riga di ordinamento.  
+9. Fare clic su **Aggiungi**. Nella griglia delle opzioni di ordinamento verrà aggiunta una nuova riga di ordinamento.  
   
 10. Nell'elenco a discesa dell'opzione Ordina per scegliere lo stesso campo selezionato nel passaggio 6 per il raggruppamento.  
   

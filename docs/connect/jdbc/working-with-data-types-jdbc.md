@@ -11,10 +11,10 @@ ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76934437"
 ---
 # <a name="working-with-data-types-jdbc"></a>Uso dei tipi di dati (JDBC)

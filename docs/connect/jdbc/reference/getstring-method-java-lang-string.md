@@ -16,10 +16,10 @@ ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4ff58d1a2f58e044b49767f8fb2982b669a7b78
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979429"
 ---
 # <a name="getstring-method-javalangstring"></a>Metodo getString (java.lang.String)

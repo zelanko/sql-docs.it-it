@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578101"
 ---
 # <a name="schedules"></a>Pianificazioni
@@ -34,7 +34,7 @@ ms.locfileid: "65578101"
  Le pianificazioni condivise sono più semplici da gestire e consentono una maggiore flessibilità nella gestione di operazioni pianificate. È possibile ad esempio sospendere e quindi riprendere una pianificazione condivisa. Inoltre, se si rileva che sono in esecuzione contemporaneamente troppe operazioni pianificate, sarà possibile creare più pianificazioni condivise per eseguirle in orari diversi, quindi modificare le informazioni sulla pianificazione fino a quando il carico di elaborazione non risulterà distribuito in modo equo nel server di report.  
   
   
-##  <a name="bkmk_whatyoucando"></a> Operazioni possibili con le pianificazioni  
+##  <a name="what-you-can-do-with-schedules"></a><a name="bkmk_whatyoucando"></a> Operazioni possibili con le pianificazioni  
  È possibile usare il portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] nelle pagine della modalità nativa e di amministrazione del sito SharePoint in modalità SharePoint per creare e gestire le pianificazioni. È possibile:  
   
 -   Pianificare il recapito di un report in una sottoscrizione standard o guidata dai dati.  
@@ -56,7 +56,7 @@ ms.locfileid: "65578101"
 > [!NOTE]  
 >  Le operazioni sulle pianificazioni sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
-##  <a name="bkmk_compare"></a> Pianificazioni condivise e pianificazioni in base al report  
+##  <a name="comparing-shared-and-report-specific-schedules"></a><a name="bkmk_compare"></a> Pianificazioni condivise e pianificazioni in base al report  
  Dai due tipi di pianificazioni viene generato lo stesso output:  
   
 -   Le**pianificazioni condivise** sono elementi portabili e multifunzione in cui sono contenute informazioni di pianificazione pronte per l'utilizzo. Dato che le pianificazioni condivise sono elementi a livello di sistema, per crearle sono necessarie autorizzazioni a livello di sistema. Per questo motivo, le pianificazioni condivise disponibili nel server di report vengono in genere create da un amministratore del server di report o da un utente con ruolo Gestione contenuto. Le pianificazioni condivise vengono archiviate e gestite nel server di report tramite le impostazioni del portale Web o del sito di SharePoint.  
@@ -71,14 +71,14 @@ ms.locfileid: "65578101"
   
 -   Le**pianificazioni specifiche dei report** sono definite nel contesto di un singolo report, una sottoscrizione o un'operazione di esecuzione di un report per determinare la scadenza della cache o gli aggiornamenti degli snapshot. Queste pianificazioni vengono create direttamente durante la definizione di una sottoscrizione o l'impostazione delle proprietà di esecuzione di un report. È possibile creare una pianificazione in base al report se nessuna pianificazione condivisa offre la frequenza o il criterio di occorrenza desiderato. Per evitare l'esecuzione di un report, è necessario modificare manualmente una pianificazione in base al report. Le pianificazioni in base al report possono essere create dai singoli utenti.  
   
-##  <a name="bkmk_configuredatasources"></a> Configurare le origini dati  
+##  <a name="configure-the-data-sources"></a><a name="bkmk_configuredatasources"></a> Configurare le origini dati  
  Prima di poter pianificare l'elaborazione dei dati o delle sottoscrizioni per un report, è necessario configurare l'origine dati del report in modo da utilizzare le credenziali archiviate o l'account per l'elaborazione automatica dei report. Se si utilizzano credenziali archiviate, sarà possibile archiviare un unico set di credenziali, che verrà utilizzato da tutti gli utenti che eseguono il report. Tali credenziali possono essere costituite da un account utente di Windows o da un account utente del database.  
   
  L'account per l'elaborazione automatica dei report è uno speciale account configurato sul server di report, che viene utilizzato dal server di report per la connessione ai computer remoti quando un'operazione pianificata richiede il recupero o l'elaborazione di un file esterno. Se configurato, tale account può essere utilizzato per la connessione a origini dati esterne che forniscono dati a un report.  
   
  Per specificare credenziali archiviate o l'account per l'elaborazione automatica dei report, modificare le proprietà del report relative alle origini dati. Se invece nel report viene utilizzata un'origine dati condivisa, modificare quest'ultima.  
   
-##  <a name="bkmk_credentials"></a> Archiviare le credenziali e gli account di elaborazione  
+##  <a name="store-credentials-and-processing-accounts"></a><a name="bkmk_credentials"></a> Archiviare le credenziali e gli account di elaborazione  
  Il tipo di operazioni di gestione delle pianificazioni consentite a un determinato utente dipende dalle attività che fanno parte dell'assegnazione di ruolo di tale utente. Se si utilizzano ruoli predefiniti, gli utenti con ruolo Gestione contenuto e gli amministratori di sistema possono creare e gestire qualsiasi pianificazione. Se si utilizzano assegnazioni di ruolo personalizzate, tali assegnazioni devono includere attività che supportano le operazioni pianificate.  
   
 |Per|Includere questa attività|Ruoli predefiniti della modalità nativa|Gruppi della modalità SharePoint|  
@@ -90,7 +90,7 @@ ms.locfileid: "65578101"
   
  Per altre informazioni sulla sicurezza in modalità nativa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md), [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) e [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md). Per la modalità SharePoint, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
-##  <a name="bkmk_how_scheduling_works"></a> Funzionamento di Elaborazione pianificazione e recapito  
+##  <a name="how-scheduling-and-delivery-processing-works"></a><a name="bkmk_how_scheduling_works"></a> Funzionamento di Elaborazione pianificazione e recapito  
  Elaborazione pianificazione e recapito offre le funzionalità seguenti:  
   
 -   Gestisce una coda di eventi e notifiche nel database del server di report. In una distribuzione con scalabilità orizzontale la coda viene condivisa tra tutti i server di report che appartengono alla distribuzione.  
@@ -115,19 +115,19 @@ ms.locfileid: "65578101"
   
  Reporting Services gestisce una coda degli eventi per tutte le operazioni pianificate ed esegue il polling della coda a intervalli regolari per verificare la disponibilità di nuovi eventi. Per impostazione predefinita, l'analisi della coda viene eseguita a intervalli di 10 secondi. Per cambiare l'intervallo, è possibile modificare le impostazioni di configurazione **PollingInterval**, **IsNotificationService**e **IsEventService** nel file RSReportServer.config. In modalità SharePoint viene utilizzato anche RSreporserver.config per queste impostazioni e i valori vengono applicati a tutte le applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-##  <a name="bkmk_serverdependencies"></a> Dipendenze del server  
+##  <a name="server-dependencies"></a><a name="bkmk_serverdependencies"></a> Dipendenze del server  
  Per il funzionamento di Elaborazione pianificazione e recapito è necessario che vengano avviati il servizio del server di report e SQL Server Agent. La funzionalità Elaborazione pianificazione e recapito deve essere abilitata mediante la proprietà **ScheduleEventsAndReportDeliveryEnabled** del facet **Configurazione superficie di attacco per Reporting Services** della gestione basata su criteri. Affinché vengano eseguite le operazioni pianificate, è necessario che SQL Server Agent e il servizio del server di report siano in esecuzione.  
   
 > [!NOTE]  
 >  È possibile utilizzare il facet **Configurazione superficie di attacco per Reporting Services** per arrestare le operazioni pianificate temporaneamente o definitivamente. Anche se è possibile creare e distribuire estensioni personalizzate per il recapito, Elaborazione pianificazione e recapito non è estendibile né è possibile modificare il modo in cui gestisce eventi e notifiche. Per altre informazioni sulla disabilitazione delle funzionalità, vedere la sezione relativa al **recapito e agli eventi pianificati** di [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
-###  <a name="bkmk_stoppingagent"></a> Effetti dell'arresto di SQL Server Agent  
+###  <a name="effects-of-stopping-the-sql-server-agent"></a><a name="bkmk_stoppingagent"></a> Effetti dell'arresto di SQL Server Agent  
  Per l'elaborazione pianificata di report viene utilizzato SQL Server Agent per impostazione predefinita. Se si arresta il servizio, non verranno aggiunte nuove richieste di elaborazione alla coda a meno di aggiungerle a livello di programmazione usando il metodo <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Quando si riavvia il servizio, i processi che creano le richieste di elaborazione di report vengono ripresi. Il server di report non tenterà di ricreare i processi di elaborazione di report riferiti al periodo in cui SQL Server Agent era offline. Se si arresta SQL Server Agent per una settimana, tutte le operazioni pianificate per quella settimana andranno perse.  
   
 > [!NOTE]  
 >  La funzionalità assicurata da SQL Server Agent a Reporting Services può essere sostituita da codice personalizzato che usa il metodo <xref:ReportService2010.ReportingService2010.FireEvent%2A> per aggiungere eventi pianificati alla coda.  
   
-###  <a name="bkmk_stoppingservice"></a> Effetti dell'arresto del servizio del server di report  
+###  <a name="effects-of-stopping-the-report-server-service"></a><a name="bkmk_stoppingservice"></a> Effetti dell'arresto del servizio del server di report  
  Se si arresta il servizio del server di report, SQL Server Agent continuerà ad aggiungere richieste di elaborazione di report alla coda. Le informazioni sullo stato di SQL Server Agent indicano che il processo è stato completato, ma poiché il servizio del server di report è arrestato, non viene effettivamente eseguita alcuna operazione di elaborazione di report. Le richieste continueranno ad accumularsi nella coda finché il servizio non verrà riavviato. Dopo il riavvio del servizio del server di report tutte le richieste di elaborazione di report presenti nella coda verranno elaborate nell'ordine in cui sono state inserite.  
   
 ## <a name="see-also"></a>Vedere anche  

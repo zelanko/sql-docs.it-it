@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080274"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilizzo delle espressioni nei report (Generatore report e SSRS)
@@ -27,7 +27,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> Utilizzo di espressioni semplici  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> Utilizzo di espressioni semplici  
  e vengono visualizzate tra parentesi nell'area di progettazione e nelle finestre di dialogo. Un campo del set di dati viene ad esempio visualizzato come `[ProductID]`. Le espressioni semplici vengono create automaticamente quando si trascina un campo da un set di dati in una casella di testo. Viene creato un segnaposto e l'espressione definisce il valore sottostante. È inoltre possibile digitare le espressioni direttamente in una cella o in una casella di testo dell'area dati, sia nell'area di progettazione che in una finestra di dialogo, ad esempio `[ProductID]`.  
   
  Nella tabella seguente sono elencati esempi delle modalità di utilizzo delle espressioni semplici. Viene fornita la descrizione della funzionalità, della proprietà da impostare, della finestra di dialogo in genere utilizzata per l'impostazione e del valore per la proprietà. È possibile digitare l'espressione semplice direttamente nell'area di progettazione, in una finestra di dialogo o nel riquadro Proprietà oppure modificarla nella finestra di dialogo Espressione, procedendo come per qualsiasi espressione.  
@@ -46,7 +46,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 |Collegare un parametro di query a un parametro di report.|Raccolta di parametri nel set di dati. Usare la finestra di dialogo **Proprietà set di dati, Parametri**.|`[@Category]`<br /><br /> `[@Category]`|  
 |Passare un parametro da un report principale a un sottoreport.|Raccolta di parametri nel sottoreport. Usare la finestra di dialogo **Proprietà sottoreport, Parametri**.|`[@Category]`<br /><br /> `[@Category]`|  
   
-##  <a name="Complex"></a> Utilizzo di espressioni complesse  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> Utilizzo di espressioni complesse  
  Le espressioni complesse possono contenere più riferimenti, operatori e chiamate di funzione predefiniti e vengono visualizzate nell'area di progettazione come `<<Expr>>`. Per visualizzare o modificare il testo dell'espressione, è necessario aprire la finestra di dialogo **Espressione** o digitare direttamente nel riquadro Proprietà. Nella tabella seguente sono elencate le modalità di utilizzo standard di un'espressione complessa per visualizzare o organizzare i dati oppure modificare l'aspetto del report. Vengono ad esempio fornite indicazioni sulla proprietà da impostare, sulla finestra di dialogo in genere usata per l'impostazione e sul valore per la proprietà. È possibile digitare un'espressione direttamente in una finestra di dialogo, nell'area di progettazione o nel riquadro Proprietà.  
   
 |Funzionalità|Proprietà, contesto e finestra di dialogo|Valore proprietà|  

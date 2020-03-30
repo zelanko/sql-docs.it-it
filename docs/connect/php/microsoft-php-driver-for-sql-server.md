@@ -11,10 +11,10 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866521"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Driver Microsoft per PHP per SQL Server
@@ -27,7 +27,7 @@ I driver Microsoft per PHP per SQL Server consentono l'integrazione con SQL Serv
 * [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di PHP](step-1-configure-development-environment-for-php-development.md)  
 * [Passaggio 2: Creare un database per lo sviluppo di PHP](step-2-create-a-sql-database-for-php-development.md)  
 * [Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [Passaggio 4: connettersi in modo resiliente a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
+* [Passaggio 4: Connettere in modo resiliente a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Documentazione  
 * [Per iniziare](getting-started-with-the-php-sql-driver.md)

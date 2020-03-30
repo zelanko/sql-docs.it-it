@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843765"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Ripristino di database abilitati per Stretch (Stretch Database)
@@ -58,7 +58,7 @@ Per ripristinare un database di Azure eliminato nel punto in cui è stato elimin
 5. Specificare un nuovo **Nome database** e fare clic su **Crea**.
 6. Il processo di ripristino del database inizierà e potrà essere monitorato tramite **Notifiche**.
 
-## <a name="reconnect"></a>Ripristinare la connessione tra il database di SQL Server e il database di Azure remoto
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>Ripristinare la connessione tra il database di SQL Server e il database di Azure remoto
 
 1.  Se si prevede di connettersi a un database di Azure ripristinato con un nome diverso o in un'area diversa, eseguire la stored procedure [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) per disconnettersi dal database di Azure precedente.  
   

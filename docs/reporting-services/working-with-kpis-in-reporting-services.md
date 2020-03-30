@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68329367"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
@@ -61,7 +61,7 @@ Verrà visualizzata la schermata **Nuovo indicatore KPI** .
 | Set di tendenze | Valori numerici delimitati da virgole usati per le visualizzazioni dei grafici. Può essere impostato su una colonna di un set di dati con valori che rappresentano la tendenza. |
 | Contenuti correlati | Possibilità di impostare un collegamento drill-through. Questo collegamento può essere un report per dispositivi mobili pubblicato nel portale o un URL personalizzato. |
   
-> **Avviso**: anche se in fase di progettazione è possibile usare il valore in lettere del campo **Stato**, per l'aggiornamento del set di dati è necessario usare il valore numerico. Aggiornando il set di dati con il valore letterale invece che numerico, l'indicatore KPI nel server potrebbe essere danneggiato.  
+> **Avviso**: sebbene in fase di progettazione sia possibile usare il valore in lettere per il campo **Stato** , per l'aggiornamento del set di dati è necessario usare il valore numerico. Aggiornando il set di dati con il valore letterale invece che numerico, l'indicatore KPI nel server potrebbe essere danneggiato.  
 >
 > **Nota**: per i campi **Valore**, **Obiettivo** e **Stato** è possono scegliere solo un valore nella prima riga del risultato di un set di dati. Per il campo **Set di tendenze** è invece possibile scegliere la colonna che riflette la tendenza.  
   

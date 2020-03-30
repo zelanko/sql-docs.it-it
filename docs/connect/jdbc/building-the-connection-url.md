@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004536"
 ---
 # <a name="building-the-connection-url"></a>Costruzione dell'URL della connessione
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Lo spazio all'interno delle parentesi graffe è letterale e non viene eliminato.  
   
-##  <a name="Connectingintegrated"></a> Connessione con autenticazione integrata in Windows  
+##  <a name="connecting-with-integrated-authentication-on-windows"></a><a name="Connectingintegrated"></a> Connessione con autenticazione integrata in Windows  
  Il driver JDBC supporta l'utilizzo dell'autenticazione integrata di tipo 2 nei sistemi operativi Windows tramite la proprietà della stringa di connessione integratedSecurity. Per usare l'autenticazione integrata, copiare il file mssql-jdbc_auth-\<versione>-\<arch>.dll in una directory nel percorso di sistema di Windows nel computer in cui è installato il driver JDBC.  
   
  I file mssql-jdbc_auth-\<versione>-\<arch>.dll sono installati nella posizione seguente:  

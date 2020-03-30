@@ -22,10 +22,10 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080524"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "77080524"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> Modificare le opzioni per la mappa  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> Modificare le opzioni per la mappa  
  Su un elemento del report con mappe, è possibile controllare quanto segue:  
   
 -   Aggiungere più titoli.  
@@ -69,7 +69,7 @@ ms.locfileid: "77080524"
   
  Per modificare queste opzioni fare clic con il pulsante destro del mouse sulla mappa, scegliere **Mappa**e apportare quindi le modifiche.  
   
-##  <a name="Viewport"></a> Modificare le opzioni per il viewport  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> Modificare le opzioni per il viewport  
  Utilizzare le opzioni del viewport per modificare la vista della mappa visualizzata nel report.  
   
  L'origine dei dati spaziali potrebbe fornire più aree da visualizzare nel report di quelle necessarie. È possibile utilizzare il viewport per impostare il centro, il livello di zoom e ritagliare l'area per la mappa.  
@@ -88,7 +88,7 @@ ms.locfileid: "77080524"
   
  Per modificare queste opzioni, fare clic con il pulsante destro del mouse su viewport mappa, usare la [finestra di dialogo Proprietà viewport mappa, la pagina Generale](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) e le pagine correlate.  
   
-##  <a name="Legends"></a> Modificare le opzioni per le legende  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> Modificare le opzioni per le legende  
  Le legende consentono agli utenti di interpretare i dati di una mappa.  
   
  Per impostazione predefinita, tutte le regole specificate per un livello aggiungono elementi alla prima legenda. Inoltre, tutte le regole colore visualizzano valori nella scala dei colori.  
@@ -99,7 +99,7 @@ ms.locfileid: "77080524"
   
  Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Layer"></a> Modificare le opzioni per il livello  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> Modificare le opzioni per il livello  
  Per visualizzare i livelli per una mappa, fare clic sulla mappa per selezionarla. Viene visualizzato il riquadro della mappa. Per modificare le opzioni per un livello, fare clic con il pulsante destro del mouse sul livello e utilizzare il menu di scelta rapida.  
   
  Un livello può essere di tre tipi a seconda dei dati spaziali restituiti dalla relativa origine: un livello poligono, un livello linea o un livello punto.  
@@ -116,14 +116,14 @@ ms.locfileid: "77080524"
   
  Per altre informazioni sui livelli, vedere [aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="DataGrouping"></a> Modificare il raggruppamento dati per il livello  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> Modificare il raggruppamento dati per il livello  
  È possibile personalizzare la modalità di aggregazione dei dati spaziali per forme proprie. Per impostare le proprietà di gruppo per un livello, selezionare il livello nel riquadro della mappa e nel riquadro Proprietà per il livello fare clic su **Gruppo** e quindi sui puntini di sospensione (...) per aprire Proprietà gruppo. In questa finestra di dialogo è possibile specificare le espressioni di raggruppamento, creare variabili di gruppo nonché filtrare dati utilizzati per il raggruppamento.  
   
  L'espressione di raggruppamento consente di specificare come vengono aggregati i dati analitici che hanno una relazione con i dati spaziali per ogni elemento della mappa sul livello. Per impostazione predefinita, l'espressione di raggruppamento è il set di campi delle corrispondenze specificato per la relazione tra i dati spaziali e i dati analitici. Ad esempio, per una mappa a bolle in cui sono visualizzati i percorsi delle città e le dimensioni della popolazione per regione o area, i campi delle corrispondenze includono il nome della città [Città] e il nome dell'area [Area] dal momento che possono esistere più città con lo stesso nome. Nell'espressione di raggruppamento corrispondente sono inclusi due campi: [City] e [Region].  
   
  Per altre informazioni, vedere la pagina relativa ai [suggerimenti sulle mappe relativi alle modalità di importazione dei file di forma in SQL Server e di aggregazione dei dati spaziali](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
-##  <a name="MapElements"></a> Modificare le opzioni per gli elementi della mappa sul livello  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Modificare le opzioni per gli elementi della mappa sul livello  
  Gli elementi della mappa sono i punti, le linee o i poligoni di un livello basati sui dati spaziali. Per gli elementi della mappa è possibile impostare le opzioni seguenti. Queste opzioni si applicano a tutti gli elementi della mappa del livello indipendentemente se siano o meno incorporati:  
   
 -   Etichette, visibilità e offset delle etichette e formattazione.  
@@ -138,7 +138,7 @@ ms.locfileid: "77080524"
   
  Per modificare queste opzioni, fare clic con il pulsante destro del mouse sull'elemento della mappa e utilizzare la finestra di dialogo delle proprietà incorporata. Ad esempio, per un poligono incorporato, utilizzare la pagina Generale della finestra di dialogo Proprietà poligono incorporato e le pagine correlate.  
   
-##  <a name="Precedence"></a> Informazioni sulla priorità delle opzioni di visualizzazione  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> Informazioni sulla priorità delle opzioni di visualizzazione  
  Quando si desidera controllare il tipo di visualizzazione di un punto, una linea o un poligono su un livello mappa, è necessario capire dove sia possibile impostare le opzioni di visualizzazione e quali opzioni abbiano una priorità più alta. Le seguenti opzioni di visualizzazione sono elencate a partire da quella con priorità più bassa. Le opzioni di visualizzazione più in alto ignorano le opzioni di visualizzazione riportate più in basso in questo elenco:  
   
 -   Opzioni dei livelli.  

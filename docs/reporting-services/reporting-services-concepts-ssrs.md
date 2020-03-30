@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078178"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77078178"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
-##  <a name="bkmk_ReportServerConcepts"></a> Concetti relativi ai server di report  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Concetti relativi ai server di report  
  Un server di report è un computer con un'istanza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installata. Un server di report archivia internamente elementi quali report impaginati e per dispositivi mobili, elementi e risorse correlati al report, pianificazioni e sottoscrizioni. È possibile configurare un server di report come un server singolo autonomo o come una farm con scalabilità orizzontale o può essere integrato con SharePoint Server. Si interagisce con gli elementi del server di report tramite il servizio Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il provider WMI, l'accesso con URL o a livello di codice tramite script. La modalità di interazione con un server di report dipende dalla topologia di distribuzione e dalla configurazione.  
   
 ### <a name="native-mode-report-servers"></a>Server di report in modalità nativa
@@ -59,7 +59,7 @@ ms.locfileid: "77078178"
  Per l'elenco di strumenti da usare per interagire con il server di report, vedere [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md).  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> Concetti relativi a report ed elementi correlati  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> Concetti relativi a report ed elementi correlati  
 ### <a name="reports-and-report-definitions"></a>Report e definizioni dei report
 
 
@@ -145,7 +145,7 @@ ms.locfileid: "77078178"
  Un avviso dati è un elemento archiviato internamente in un database di avviso. Una definizione di avviso dei dati include quali dati usare dai feed di dati del report esistenti, le condizioni da soddisfare e i destinatari dell'avviso. Gli avvisi dati sono disponibili solo nei report pubblicati su un server di report integrato con SharePoint Server. Gli avvisi dati non sono disponibili su un'installazione del server di report nativo. Per altre informazioni, vedere [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
   
-##  <a name="bkmk_TypesofReports"></a> Tipi di report impaginati di Reporting Services  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Tipi di report impaginati di Reporting Services  
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], il termine *report* si può applicare a un tipo specifico di elemento del server di report, una progettazione del layout o una progettazione della soluzione. Un singolo report impaginato di Reporting Services può avere più tipi di caratteristiche; ad esempio, un report può essere, contemporaneamente, un report autonomo, un sottoreport a cui fa riferimento un report principale, la destinazione di un report drill-through in un report principale diverso e un report collegato.  
   
 ### <a name="drilldown-reports"></a>Report drill-down 
@@ -183,7 +183,7 @@ ms.locfileid: "77078178"
  Un report aggiornato è una definizione del report pubblicata che viene convertita in uno schema più recente quando un server di report viene aggiornato da una versione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a una versione successiva. La definizione di report originale viene salvata. Il report viene aggiornato in memoria, compilato e la versione compilata viene salvata internamente. Per altre informazioni, vedere [Upgrade Reporting Services Reports](../reporting-services/install-windows/upgrade-reports.md)(Aggiornare i report di Reporting Services).  
   
   
-##  <a name="bkmk_StagesofReports"></a> Passaggi dei report impaginati di Reporting Services  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Passaggi dei report impaginati di Reporting Services  
  Una definizione di report può essere creata, pubblicata o salvata, compilata, elaborata, memorizzata nella cache, se ne può eseguire il rendering, può essere visualizzata, esportata e salvata come cronologia. Durante l'esecuzione di un report, il server di report elabora il report in tre passaggi, ovvero elaborazione del report, elaborazione dei dati e rendering. L'elaborazione dei dati e del report viene eseguita in base a una definizione del report; il risultato è un formato interno temporaneo. Per i report in formato temporaneo viene eseguito il rendering in un formato di visualizzazione specifico. Nel diagramma seguente vengono mostrati le fasi e gli elementi dell'elaborazione di report.  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "diagramma relativo all'elaborazione dei report")  

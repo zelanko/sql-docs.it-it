@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026938"
 ---
 # <a name="using-spatial-datatypes"></a>Uso dei tipi di dati spaziali
@@ -117,8 +117,8 @@ Nelle classi **SQLServerPreparedStatement**, **SQLServerResultSet**, **Geometry*
 |boolean hasZ()| Restituisce se l'oggetto contiene un valore Z (innalzamento).
 |Double getX()| Restituisce il valore della coordinata X.
 |Double getY()| Restituisce il valore della coordinata Y.
-|Double getM()| Restituisce il valore M (misura) dell'oggetto .
-|Double getZ()| Restituisce il valore Z (innalzamento) dell'oggetto .
+|Double getM()| Restituisce il valore M (misura) dell'oggetto.
+|Double getZ()| Restituisce il valore Z (innalzamento) dell'oggetto.
 |int getSrid()| Restituisce il valore dell'identificatore SRID.
 |boolean isNull()| Restituisce se l'oggetto Geometry è Null.
 |int STNumPoints()| Restituisce il numero di punti nell'oggetto Geometry.

@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989461"
 ---
 # <a name="data-source-wizard-screen-4"></a>Creazione guidata origine dati - Schermata 4
@@ -33,7 +33,7 @@ Se questa opzione è selezionata, i dati passati tramite connessioni stabilite u
 
 ### <a name="trust-server-certificate"></a>Certificato server attendibile
 
-Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati**. Se selezionato, il certificato del server non viene convalidato per avere il nome host corretto del server e deve essere emesso da un'autorità di certificazione attendibile. 
+Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati**. Se questa opzione è selezionata, non viene verificato che il certificato del server abbia il nome host corretto del server e sia emesso da un'autorità di certificazione attendibile. 
 
 ### <a name="perform-translation-for-character-data"></a>Converti dati caratteri
 

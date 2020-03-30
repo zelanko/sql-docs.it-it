@@ -12,10 +12,10 @@ ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080847"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Informazioni sui gruppi (Generatore report e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77080847"
  Un gruppo è composto da un nome e da un set di espressioni di raggruppamento specificate dall'utente. Il set di espressioni di raggruppamento può essere un riferimento di campo del set di dati singolo o una combinazione di più espressioni. In fase di esecuzione, le espressioni di raggruppamento vengono combinate, se il gruppo ha più espressioni, e vengono applicate ai dati in un gruppo. Si supponga ad esempio di avere un gruppo che utilizza un campo data per organizzare i dati nell'area dati. In fase di esecuzione, i dati vengono organizzati in base alla data; quindi i valori degli altri set di dati vengono visualizzati e sommati per ogni data.  
   
 ## <a name="when-do-i-create-groups"></a>Creazione dei gruppi  
- Nella maggior parte dei casi Generatore report e Progettazione report consentono di creare automaticamente un gruppo durante la progettazione di un'area dati. Per una tabella, una matrice o un elenco, i gruppi vengono creati al momento del rilascio dei campi nel riquadro di raggruppamento. Per un grafico, i gruppi vengono creati al momento del rilascio dei campi nelle aree di rilascio del grafico. Per un misuratore, è necessario utilizzare la finestra di dialogo Proprietà misuratore. Per una tabella, una matrice o un elenco, è possibile anche creare manualmente un gruppo. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Per un esempio di aggiunta di gruppi durante la creazione di un report, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Creare un report tabella semplice &#40;Esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ Nella maggior parte dei casi Generatore report e Progettazione report consentono di creare automaticamente un gruppo durante la progettazione di un'area dati. Per una tabella, una matrice o un elenco, i gruppi vengono creati al momento del rilascio dei campi nel riquadro di raggruppamento. Per un grafico, i gruppi vengono creati al momento del rilascio dei campi nelle aree di rilascio del grafico. Per un misuratore, è necessario utilizzare la finestra di dialogo Proprietà misuratore. Per una tabella, una matrice o un elenco, è possibile anche creare manualmente un gruppo. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Per un esempio di aggiunta di gruppi durante la creazione di un report, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Modalità di modifica di un gruppo  
  Dopo aver creato un gruppo, è possibile impostare proprietà specifiche dell'area dati, ad esempio le espressioni di filtro e di ordinamento, le interruzioni di pagina e le variabili di gruppo per conservare i dati specifici dell'ambito. Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  

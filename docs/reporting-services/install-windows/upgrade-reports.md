@@ -17,10 +17,10 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082278"
 ---
 # <a name="upgrade-reports-ssrs"></a>Aggiornare i report (SSRS)
@@ -37,7 +37,7 @@ I file di definizione del report (con estensione rdl) esistenti vengono aggiorna
   
  Per altre informazioni sulle nuove funzionalità per [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], vedere [Novità di SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
-##  <a name="bkmk_versionsupported"></a> Versioni supportate per l'aggiornamento  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Versioni supportate per l'aggiornamento  
  I report creati in qualsiasi versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere aggiornati. Sono incluse le versioni seguenti:  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
@@ -48,7 +48,7 @@ I file di definizione del report (con estensione rdl) esistenti vengono aggiorna
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a> File di definizione del report (con estensione rdl) e Progettazione report  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> File di definizione del report (con estensione rdl) e Progettazione report  
  Un file di definizione del report include un riferimento allo spazio dei nomi RDL che specifica la versione dello schema di definizione del report utilizzata per convalidare il file con estensione rdl.  
   
  Quando si apre un file con estensione rdl in Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se il report è stato creato per uno spazio dei nomi precedente, viene creato automaticamente un file di backup e aggiornato il report allo spazio dei nomi corrente. Questo è l'unico modo in cui è possibile aggiornare un file di definizione del report.  
@@ -59,30 +59,30 @@ I file di definizione del report (con estensione rdl) esistenti vengono aggiorna
   
  Per identificare lo schema RDL corrente relativo a un report per un server di report o per Progettazione report, vedere [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> Report pubblicati e snapshot dei report  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Report pubblicati e snapshot dei report  
  Al primo utilizzo, il server di report tenta di aggiornare i report pubblicati e gli snapshot del report esistenti al nuovo schema di definizione del report, senza richiedere alcun intervento da parte dell'utente. Quando un report o uno snapshot del report viene visualizzato da un utente o quando il server di report elabora una sottoscrizione, viene eseguito il tentativo di aggiornamento. La definizione del report non viene sostituita, ma continua a essere archiviata nel server di report nello schema originale. Se non può essere aggiornato, il report viene eseguito in modalità di compatibilità con le versioni precedenti.  
   
-##  <a name="bkmk_backcompat"></a> Modalità di compatibilità con le versioni precedenti  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Modalità di compatibilità con le versioni precedenti  
  Un report aggiornato in modo corretto viene elaborato dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Se non può essere aggiornato, il report viene elaborato dal componente Elaborazione report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità di compatibilità con le versioni precedenti. Un report non può essere elaborato da entrambi i componenti di elaborazione. Al primo utilizzo, un report viene aggiornato correttamente o viene contrassegnato per la compatibilità con le versioni precedenti.  
   
  Solo il componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] supporta le nuove funzionalità. Se un report non può essere aggiornato, è comunque possibile visualizzarlo, ma le nuove funzionalità non sono disponibili. Per utilizzare le nuove funzionalità, è necessario che un report sia aggiornato correttamente.  
   
-##  <a name="bkmk_subreports"></a> Aggiornamento di un report con sottoreport  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Aggiornamento di un report con sottoreport  
  Se in un report sono contenuti sottoreport, durante l'aggiornamento può verificarsi una delle quattro situazioni seguenti:  
   
 -   Il report principale e tutti i sottoreport possono essere aggiornati correttamente e vengono quindi elaborati dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
   
 -   Il report principale e tutti i sottoreport non possono essere aggiornati e vengono elaborati dal componente Elaborazione report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   Il report principale può essere aggiornato, ma uno o più sottoreport non possono essere aggiornati. Il report principale viene elaborato dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], ma nel report visualizzabile viene visualizzato il messaggio "Errore: impossibile elaborare il sottoreport" nella posizione in cui dovrebbe essere visualizzato il sottoreport che non è stato possibile aggiornare.  
+-   Il report principale può essere aggiornato, ma uno o più sottoreport non possono essere aggiornati. In questo caso il report principale viene elaborato dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , mentre per il report visualizzabile viene generato un messaggio che indica l'impossibilità di elaborare il sottoreport nella posizione destinata al sottoreport che non è stato possibile aggiornare.  
   
--   Il report principale non può essere aggiornato, mentre uno o più sottoreport possono essere aggiornati. Il report principale viene elaborato dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], ma nel report visualizzabile viene visualizzato il messaggio "Errore: impossibile elaborare il sottoreport" nella posizione in cui dovrebbe essere visualizzato il sottoreport.  
+-   Il report principale non può essere aggiornato, mentre uno o più sottoreport possono essere aggiornati. Il report principale viene elaborato dal componente Elaborazione report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , mentre per il report visualizzabile viene generato un messaggio che indica l'impossibilità di elaborare il sottoreport nella posizione destinata al sottoreport.  
   
- Se viene visualizzato l'errore "Errore: impossibile elaborare il sottoreport" è necessario modificare la definizione del report principale o del sottoreport in modo che i report possano essere elaborati dalla stessa versione di Elaborazione report.  
+ Se viene visualizzato l'errore che indica l'impossibilità di elaborare il sottoreport, è necessario modificare la definizione del report principale o del sottoreport in modo che i report possano essere elaborati dalla stessa versione di Elaborazione report.  
   
  Ai report drill-through non viene applicata questa limitazione poiché vengono elaborati come report indipendenti.  
   
-##  <a name="bkmk_CRIs"></a> Aggiornamento di un report con elementi del report personalizzati  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Aggiornamento di un report con elementi del report personalizzati  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]I report di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono contenere elementi del report personalizzati resi disponibili da fornitori di software di terze parti e installati dall'amministratore di sistema nel computer di creazione dei report e nel server di report. I report che contengono elementi del report personalizzati possono essere aggiornati nei modi seguenti:  
   
 -   Un server di report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene aggiornato a un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. I report pubblicati nel server di report vengono aggiornati automaticamente al primo utilizzo.  
@@ -108,14 +108,14 @@ I file di definizione del report (con estensione rdl) esistenti vengono aggiorna
 |--------------|----------------------------------|  
 |Elementi del report personalizzati di terze parti|Aggiornamento non eseguito.<br /><br /> Elaborazione eseguita dal componente Elaborazione report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
-###  <a name="OpeningaReport"></a> Apertura di un report con elementi del report personalizzati in Progettazione report  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Apertura di un report con elementi del report personalizzati in Progettazione report  
  Se si apre un report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con elementi del report personalizzati in Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], questo report viene aggiornato al nuovo schema di definizione del report. In base agli elementi del report personalizzati contenuti nel report, verrà effettuata una delle azioni seguenti:  
   
 -   Vengono rilevati elementi del report personalizzati di terze parti. Se la versione di tali elementi installata nel computer di creazione del report non è compatibile con il nuovo schema RDL, nell'area di progettazione viene visualizzata una casella di testo con una lettera X rossa. È necessario contattare l'amministratore di sistema per installare nuove versioni degli elementi del report personalizzati di fornitori di terze parti compatibili con il nuovo schema RDL.  
   
  Il salvataggio di un report dopo che il report è stato aggiornato nell'ambiente di creazione rappresenta l'unico modo per aggiornare un report esistente al nuovo schema di definizione del report.  
   
-###  <a name="bkmk_convertCRIdialog"></a> Finestra di dialogo per la conversione dell'elemento del report personalizzato  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a> Finestra di dialogo per la conversione dell'elemento del report personalizzato  
  In questo report sono contenuti elementi del report personalizzati con funzionalità non supportate. Gli elementi del report personalizzati sono estensioni del linguaggio RDL (Report Definition Language) che supportano gli oggetti personalizzati che consentono di visualizzare i dati in un report e contengono componenti della fase di progettazione e della fase di esecuzione resi disponibili dai fornitori di software di terze parti.  
   
 > [!NOTE]  
