@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257663"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
@@ -27,7 +27,7 @@ Questo argomento descrive come creare, compilare e gestire gli indici full-text 
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Prerequisito - Creare un catalogo full-text
 Prima di poter creare un indice full-text è necessario che sia disponibile un catalogo full-text. Il catalogo è un contenitore virtuale per uno o più indici full-text. Per altre informazioni, vedere [Creare e gestire cataloghi full-text](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-##  <a name="tasks"></a> Creare, modificare o eliminare un indice full-text  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> Creare, modificare o eliminare un indice full-text  
 ### <a name="create-a-full-text-index"></a>Creare un indice full-text  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ Il processo di creazione e gestione di un indice full-text è definito *popolame
 
 Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).
 
-##  <a name="view"></a> Visualizzare le proprietà di un indice full-text
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> Visualizzare le proprietà di un indice full-text
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Visualizzare le proprietà di un indice full-text con Transact-SQL
 
 |Catalogo o vista a gestione dinamica|Descrizione|  
@@ -80,7 +80,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] per salvare le modifiche e uscire dalla finestra di dialogo **Proprietà indice full-text**.  
   
-##  <a name="props"></a> Visualizzare le proprietà di tabelle e colonne indicizzate  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> Visualizzare le proprietà di tabelle e colonne indicizzate  
  Per ottenere il valore di diverse proprietà di indicizzazione full-text, è possibile utilizzare varie funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] come OBJECTPROPERTYEX. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente sono elencate le proprietà full-text relative a tabelle e colonne indicizzate e le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] correlate.  
@@ -102,7 +102,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
 |**TableFulltextPopulateStatus**|Stato popolamento di una tabella full-text.|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|Indica se una tabella include un indice full-text attivo.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> Ottenere informazioni sulla colonna chiave full-text  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> Ottenere informazioni sulla colonna chiave full-text  
  In genere, il risultato della funzione con valori del set di righe CONTAINSTABLE o FREETEXTTABLE deve essere unito in join alla tabella di base. In questi casi, è necessario conoscere il nome della colonna chiave univoca. È possibile verificare se un determinato indice univoco viene utilizzato come chiave full-text e ottenere l'identificatore della colonna chiave full-text.  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Determinare se un determinato indice univoco viene usato come colonna chiave full-text  
@@ -183,7 +183,7 @@ Per creare un indice full-text in una colonna **varbinary(max)** , il motore di 
   
  Per altre informazioni sull'indicizzazione e l'esecuzione di query su una colonna **xml** , vedere [Usare la ricerca full-text con colonne XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Disabilitare o riabilitare l'indicizzazione full-text per una tabella   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> Disabilitare o riabilitare l'indicizzazione full-text per una tabella   
  Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutti i database creati dall'utente sono abilitati per la funzionalità full-text. Una tabella viene inoltre abilitata automaticamente per l'indicizzazione full-text dopo la creazione di un indice full-text nella tabella e l'aggiunta di una colonna all'indice. L'indicizzazione full-text viene disabilitata automaticamente nella tabella quando l'ultima colonna viene eliminata dall'indice full-text.  
   
  In una tabella che dispone di un indice full-text è possibile disabilitare o riabilitare manualmente una tabella per indicizzazione full-text utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -194,7 +194,7 @@ Per creare un indice full-text in una colonna **varbinary(max)** , il motore di 
   
 3.  Scegliere **Indice full-text**, quindi fare clic su **Disabilita indicizzazione full-text** o **Abilita indicizzazione full-text**.  
   
-##  <a name="remove"></a> Rimuovere un indice full-text da una tabella  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Rimuovere un indice full-text da una tabella  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella contenente l'indice full-text che si desidera eliminare.  
   

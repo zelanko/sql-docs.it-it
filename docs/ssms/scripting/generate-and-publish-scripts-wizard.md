@@ -44,10 +44,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253897"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
@@ -61,17 +61,17 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
 ## <a name="before-you-begin"></a>Prima di iniziare  
  I database di origine e di destinazione possono trovarsi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
   
-###  <a name="PubHostSvc"></a> Pubblicazione in un servizio ospitato  
+###  <a name="publishing-to-a-hosted-service"></a><a name="PubHostSvc"></a> Pubblicazione in un servizio ospitato  
  Oltre a creare script, la procedura guidata **Genera e pubblica script** può essere usata per pubblicare un database in un tipo specifico di servizio Web di SQL Server ospitato. SQL Server Hosting Toolkit include Database Publishing Services come progetto di origine condiviso su CodePlex. Il progetto Database Publishing Services può essere usato dai provider di hosting Web per compilare un set di servizi Web per facilitare la distribuzione di database nel servizio Web da parte dei clienti. Per altre informazioni sul download di SQL Server Hosting Toolkit, vedere [Database Publishing Services di SQL Server](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  Per pubblicare un database in un servizio di hosting Web, selezionare l'opzione **Pubblica su servizio Web** nella pagina **Imposta opzioni di generazione script** della procedura guidata.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'autorizzazione minima per pubblicare un database è l'appartenenza al ruolo predefinito del database db_ddladmin per il database di origine. L'autorizzazione minima per pubblicare uno script del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al provider di hosting è l'appartenenza al ruolo predefinito del database db_ddladmin sul database di destinazione.  
   
  È inoltre necessario fornire un nome utente e una password per accedere all'account del provider di hosting ed eseguire la pubblicazione guidata. Il database di destinazione deve essere creato nel provider di hosting prima della pubblicazione del database di origine. La pubblicazione sovrascrive gli oggetti presenti nel database esistente.  
   
-##  <a name="GenPubScriptWiz"></a> Utilizzo della procedura guidata Genera e pubblica script  
+##  <a name="using-the-generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Utilizzo della procedura guidata Genera e pubblica script  
  **Per generare o pubblicare uno script**  
   
 1.  In **Esplora oggetti**espandere il nodo dell'istanza contenente il database per il quale generare lo script.  
@@ -92,14 +92,14 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
     -   [Pagina Riepilogo](#Summary)   
     -   [Pagina Salva o pubblica script](#SavePubScripts)  
   
-###  <a name="Introduction"></a> Pagina Introduzione  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la generazione o la pubblicazione di uno script.  
   
  **Non visualizzare più questa pagina** : consente di non visualizzare più questa pagina al successivo avvio della procedura guidata **Genera e pubblica script**.  
   
   ![Pagina Introduzione](media/generate-and-publish-scripts-wizard/intro.png)
   
-###  <a name="ChooseObjects"></a> Pagina Seleziona oggetti  
+###  <a name="choose-objects-page"></a><a name="ChooseObjects"></a> Pagina Seleziona oggetti  
  Usare questa pagina per scegliere quali oggetti si desidera includere negli script generati dalla procedura guidata. Nella pagina successiva della procedura guidata, è possibile salvare gli script nel percorso desiderato oppure usarli per pubblicare oggetti di database su un provider di hosting Web remoto in cui sia installato [Database Publishing Services di SQL Server](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  **Opzione Genera script per intero database** : fare clic per generare script per tutti gli oggetti nel database e includere uno script per il database stesso. 
@@ -116,7 +116,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
 
    ![Script per database specifico](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
-###  <a name="SetScriptOpt"></a> Pagina Imposta opzioni di generazione script  
+###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> Pagina Imposta opzioni di generazione script  
  Usare questa pagina per specificare se si desidera che tramite la procedura guidata gli script vengano salvati nel percorso prescelto o vengano usati per pubblicare oggetti di database in un provider di hosting Web remoto. Ai fini della pubblicazione, è necessario avere accesso a un servizio Web installato usando il servizio Web Database Publishing Services.  
   
  **Opzioni** : se si vuole che gli script vengano salvati in un percorso specifico, selezionare **Salva script in un percorso specifico**. È possibile eseguire in un secondo momento gli script in a un'istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Se si desidera pubblicare gli oggetti di database in un provider di hosting Web remoto tramite una procedura guidata, selezionare **Pubblica su servizio Web**.  
@@ -141,7 +141,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
 -   **Database di destinazione** : consente di selezionare il database di destinazione nel quale pubblicare gli oggetti selezionati. È necessario selezionare un provider prima di selezionare un database di destinazione.  
   
-###  <a name="AdvScriptOpt"></a> Pagina Opzioni di generazione script avanzate  
+###  <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> Pagina Opzioni di generazione script avanzate  
  Usare questa pagina per specificare come si desidera che vengano generati gli script tramite la procedura guidata. Sono disponibili molte opzioni diverse. Le opzioni sono disattivate se non sono supportate dalla versione di SQL Server o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specificata in **Tipo di motore di database**.  
 
 ![Opzioni avanzate](media/generate-and-publish-scripts-wizard/advanced.png)
@@ -214,7 +214,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
 -   **Script per chiavi univoche** : consente di generare script per la creazione di chiavi univoche nelle tabelle. Le chiavi univoche impediscono l'immissione di dati duplicati. Il valore predefinito è **True**. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
-###  <a name="MgProviders"></a> Pagina Gestisci provider  
+###  <a name="manage-providers-page"></a><a name="MgProviders"></a> Pagina Gestisci provider  
  Usare questa finestra di dialogo per visualizzare, aggiungere, modificare, eliminare o testare le connessioni del provider di hosting. Un provider di hosting specifica le informazioni di connessione per un servizio Web creato tramite il progetto Database Publishing Service in SQL Server Hosting Toolkit su CodePlex.  
   
  **Provider configurati** : consente di elencare il nome e l'indirizzo del servizio **Web** di ciascun provider di hosting salvato.  
@@ -231,7 +231,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
  **Annulla** : consente di annullare tutte le modifiche apportate alla finestra di dialogo **Provider di hosting** .  
   
-###  <a name="AdvPubOpts"></a> Pagina Opzioni di pubblicazione avanzate  
+###  <a name="advanced-publishing-options-page"></a><a name="AdvPubOpts"></a> Pagina Opzioni di pubblicazione avanzate  
  Usare questa pagina per specificare il modo in cui si desidera pubblicare un database tramite la procedura guidata. Sono disponibili molte opzioni diverse. Le opzioni sono disattivate se non sono supportate dalla versione di SQL Server o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] specificata in **Tipo di motore di database**.  
 
   ![Pubblicazione avanzata](media/generate-and-publish-scripts-wizard/advancedpublish.png)
@@ -288,7 +288,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
 9. **Pubblica opzioni di compressione dati** : consente di includere le opzioni di compressione dati nel processo di pubblicazione, se sono configurate nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **True**. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-###  <a name="ProvConfig"></a> Pagina Configurazione del provider  
+###  <a name="provider-configuration-page"></a><a name="ProvConfig"></a> Pagina Configurazione del provider  
  Usare questa finestra di dialogo per visualizzare o modificare le impostazioni per il provider di hosting. È possibile usare questa finestra di dialogo per eseguire le operazioni seguenti:  
   
 -   Visualizzazione, aggiunta o modifica delle informazioni di connessione per un provider di hosting.  
@@ -321,12 +321,12 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
  **Annulla** : consente di annullare tutte le modifiche apportate in questa finestra di dialogo e di tornare alla procedura guidata.  
   
-###  <a name="Summary"></a> Pagina Riepilogo  
+###  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  In questa pagina vengono riepilogate le opzioni selezionate nella procedura guidata. Per modificare un'opzione, fare clic su **Indietro**. Per avviare la generazione di script da salvare o pubblicare, fare clic su **Avanti**.  
   
  **Verificare le selezioni** : consente di visualizzare le opzioni selezionate per ogni pagina della procedura guidata. Espandere un nodo per visualizzare le opzioni selezionate per la pagina corrispondente.  
   
-###  <a name="SavePubScripts"></a> Pagina Salva o pubblica script  
+###  <a name="save-or-publish-scripts-page"></a><a name="SavePubScripts"></a> Pagina Salva o pubblica script  
  Usare questa pagina per monitorare lo stato di avanzamento della procedura guidata durante l'esecuzione.  
   
  **Dettagli** : consente di visualizzare la colonna **Azione** per vedere lo stato di avanzamento della procedura guidata. Dopo avere generato gli script, la procedura guidata li salva in un file o li usano per la pubblicazione su un servizio Web, a seconda delle selezioni. Al termine di ciascuno di questi passaggi, fare clic sul valore nella colonna **Risultato** per vedere il risultato del passaggio corrispondente.  

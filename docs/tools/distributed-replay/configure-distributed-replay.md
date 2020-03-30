@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307041"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
@@ -30,7 +30,7 @@ ms.locfileid: "75307041"
   
 -   [File di configurazione della riproduzione](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> File di configurazione del controller: DReplayController.config  
+##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> File di configurazione del controller: DReplayController.config  
  All'avvio del servizio Distributed Replay Controller di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene caricato il livello di registrazione dal file di configurazione del controller, ovvero `DReplayController.config`. Questo file si trova nella cartella in cui è stato installato il servizio Distributed Replay Controller:  
   
  **\<percorso installazione controller>\DReplayController.config**  
@@ -51,7 +51,7 @@ ms.locfileid: "75307041"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> File di configurazione del client: DReplayClient.config  
+##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> File di configurazione del client: DReplayClient.config  
  All'avvio del servizio client Distributed Replay di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vengono caricate le impostazioni di configurazione dal file di configurazione del client, ovvero `DReplayClient.config`. Questo file si trova in ogni client, nella cartella in cui è stato installato il servizio client Distributed Replay:  
   
  **\<percorso installazione client>\DReplayClient.config**  
@@ -78,7 +78,7 @@ ms.locfileid: "75307041"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> File di configurazione della pre-elaborazione: DReplay.exe.preprocess.config  
+##  <a name="preprocess-configuration-file-dreplayexepreprocessconfig"></a><a name="PreprocessConfig"></a> File di configurazione della pre-elaborazione: DReplay.exe.preprocess.config  
  Quando si utilizza lo strumento di amministrazione per avviare la fase di pre-elaborazione, lo strumento di amministrazione carica le impostazioni di pre-elaborazione dal file di configurazione della pre-elaborazione, ovvero `DReplay.exe.preprocess.config`.  
   
  Usare il file di configurazione predefinito o il parametro **-c** dello strumento di amministrazione per specificare il percorso di un file di configurazione di pre-elaborazione modificato. Per altre informazioni sull'uso dell'opzione preprocess dello strumento di amministrazione, vedere [Opzione preprocess &#40;strumento di amministrazione Riesecuzione distribuita&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
@@ -107,7 +107,7 @@ ms.locfileid: "75307041"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> File di configurazione della riproduzione: DReplay.exe.replay.config  
+##  <a name="replay-configuration-file-dreplayexereplayconfig"></a><a name="ReplayConfig"></a> File di configurazione della riproduzione: DReplay.exe.replay.config  
  Quando si utilizza lo strumento di amministrazione per avviare la fase di riproduzione dell'evento, lo strumento di amministrazione carica le impostazioni di riproduzione dal file di configurazione della riproduzione, ovvero `DReplay.exe.replay.config`.  
   
  Usare il file di configurazione predefinito o il parametro **-c** dello strumento di amministrazione per specificare il percorso di un file di configurazione della riproduzione modificato. Per altre informazioni sull'uso dell'opzione replay dello strumento di amministrazione, vedere [Opzione replay &#40;strumento di amministrazione Riesecuzione distribuita&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  

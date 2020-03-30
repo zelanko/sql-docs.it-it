@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67898598"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
@@ -53,9 +53,9 @@ ms.locfileid: "67898598"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Benefits"></a> Vantaggi di un indice univoco  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Vantaggi di un indice univoco  
   
 -   Gli indici univoci a più colonne consentono di garantire che ogni combinazione di valori nella chiave dell'indice sia univoca. Ad esempio, se si crea un indice univoco basato su una combinazione delle colonne **LastName**, **FirstName**e **MiddleName** , non è possibile che nella tabella siano incluse due righe in cui è presente la stessa combinazione di valori per queste colonne.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67898598"
   
 -   Gli indici univoci forniscono informazioni aggiuntive utili a Query Optimizer tramite cui è possibile produrre piani di esecuzione più efficienti.  
   
-###  <a name="Implementations"></a> Modalità di implementazione tipiche  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Modalità di implementazione tipiche  
  Gli indici univoci vengono implementati nei modi seguenti:  
   
 -   **Vincolo PRIMARY KEY o UNIQUE**  
@@ -86,18 +86,18 @@ ms.locfileid: "67898598"
   
      Per creare una vista indicizzata, viene definito un indice cluster univoco in una o più colonne della vista. La vista viene eseguita e il set di risultati viene archiviato nel livello foglia allo stesso modo in cui vengono archiviati i dati della tabella in un indice cluster. Per altre informazioni, vedere [Creare viste indicizzate](../../relational-databases/views/create-indexed-views.md).  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Se nei dati sono presenti valori di chiave duplicati, non è possibile creare un indice univoco, un vincolo UNIQUE o un vincolo PRIMARY KEY.  
   
 -   In un indice non cluster univoco possono essere contenute colonne non chiave. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Per creare un indice univoco tramite Progettazione tabelle  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67898598"
   
 10. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Per creare un indice univoco per una tabella  
   

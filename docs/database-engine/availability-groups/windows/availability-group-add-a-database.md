@@ -15,10 +15,10 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991496"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Aggiungere un database a un gruppo di disponibilità Always On
@@ -34,10 +34,10 @@ ms.locfileid: "67991496"
 -   È necessario che il database risieda nell'istanza del server che ospita la replica primaria e sia conforme ai prerequisiti e alle restrizioni per i database di disponibilità. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
 
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -58,7 +58,7 @@ ms.locfileid: "67991496"
   
          Dopo avere utilizzato la finestra di dialogo **Proprietà gruppo di disponibilità** per aggiungere un database a un gruppo di disponibilità, è necessario configurare il database secondario corrispondente su ogni istanza del server che ospita una replica secondaria. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Usare Transact-SQL  
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> Usare Transact-SQL  
 
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.    
@@ -79,7 +79,7 @@ ms.locfileid: "67991496"
   
 3.  Dopo avere aggiunto un database a un gruppo di disponibilità, è necessario configurare il database secondario corrispondente su ogni istanza del server che ospita una replica secondaria. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Usare PowerShell  
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> Usare PowerShell  
 
   
 1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica primaria.  
@@ -106,7 +106,7 @@ ms.locfileid: "67991496"
   
  Per un esempio completo, vedere [Esempio (PowerShell)](#PSExample), di seguito.  
   
-###  <a name="PSExample"></a> Esempio (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> Esempio (PowerShell)  
  Nel seguente esempio si illustra il processo completo di preparazione di un database secondario da un database nell'istanza del server che ospita la replica primaria di un gruppo di disponibilità, aggiungendo il database a un gruppo di disponibilità (come database primario), quindi creando un join del database secondario al gruppo di disponibilità. Nell'esempio si esegue innanzitutto il backup del database e del relativo log delle transazioni. Successivamente si ripristinano i backup del database e del log nelle istanze del server che ospitano una replica secondaria.  
   
  Nell'esempio viene chiamato due volte **Add-SqlAvailabilityDatabase** , la prima volta nella replica primaria per aggiungere il database al gruppo di disponibilità, successivamente nella replica secondaria per creare un join del database secondario in quella replica al gruppo di disponibilità. Se si dispone di più di una replica secondaria, ripristinare e creare un join del database secondario in ognuna di esse.  
