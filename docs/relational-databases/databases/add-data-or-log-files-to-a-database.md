@@ -19,10 +19,10 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137400"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Aggiungere file di dati o file di log a un database
@@ -43,20 +43,20 @@ ms.locfileid: "68137400"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Non è possibile aggiungere o rimuovere un file durante l'esecuzione di un'istruzione BACKUP.  
   
 -   Per ogni database è possibile specificare un massimo di 32.767 file e 32.767 filegroup.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Per aggiungere file di dati o file di log a un database  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68137400"
   
 12. Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Per aggiungere file di dati o file di log a un database  
   

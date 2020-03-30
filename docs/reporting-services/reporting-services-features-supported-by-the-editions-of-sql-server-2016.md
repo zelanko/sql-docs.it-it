@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516602"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Funzionalità di SQL Server Reporting Services supportate nelle diverse edizioni
@@ -27,7 +27,7 @@ Questo argomento illustra le funzionalità di SQL Server Reporting Services (SSR
  - [Novità di SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
  - [Funzionalità supportate dalle edizioni di SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> SQL Server Reporting Services  
 
 Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere la colonna dell'edizione SQL Server Enterprise nella tabella seguente.
 
@@ -83,7 +83,7 @@ Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere la
 |Express with Advanced Services|Express with Advanced Services (solo locale)|  
 |Versione di valutazione|Versione di valutazione|  
   
-##  <a name="BIC"></a> Client di business intelligence  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a> Client di business intelligence  
 Le applicazioni client software seguenti sono disponibili nell'Area download Microsoft. Consentono di creare documenti di business intelligence eseguiti in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando questi documenti vengono ospitati in un ambiente server, usare un'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportata per tale tipo di documento. Nella tabella seguente viene indicata l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contenente le funzionalità del server richieste per ospitare i documenti creati in queste applicazioni client.  
   
 |Nome dello strumento|Enterprise|Standard|Web|Express with Advanced Services|Developer|  

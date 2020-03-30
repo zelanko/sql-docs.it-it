@@ -16,10 +16,10 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f0b73bf44f4990b94ad44e450214099760901134
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014377"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Rimuovere una replica secondaria da un gruppo di disponibilità (SQL Server)
@@ -27,19 +27,19 @@ ms.locfileid: "68014377"
   In questo argomento viene illustrato come rimuovere una replica secondaria da un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
  
    
-##  <a name="Restrictions"></a> Limitazioni e restrizioni  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Questa attività è supportata solo nella replica primaria.    
 -   È possibile rimuove solo una replica secondaria da un gruppo di disponibilità.  
   
-## <a name="Prerequisites"></a> Prerequisiti  
+## <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria del gruppo di disponibilità.  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per rimuovere una replica secondaria**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -58,7 +58,7 @@ ms.locfileid: "68014377"
   
 6.  Nella finestra di dialogo **Rimozione delle repliche secondarie dal gruppo di disponibilità** scegliere **OK**per rimuovere tutte le repliche secondarie elencate. Se non si desidera rimuovere tutte le repliche elencate, fare clic su **Annulla**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per rimuovere una replica secondaria**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -75,7 +75,7 @@ ms.locfileid: "68014377"
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Con PowerShell  
  **Per rimuovere una replica secondaria**  
   
 1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica primaria.  
@@ -96,7 +96,7 @@ ms.locfileid: "68014377"
   
 -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> Completamento: Dopo la rimozione di una replica secondaria  
+##  <a name="follow-up-after-removing-a-secondary-replica"></a><a name="PostBestPractices"></a> Completamento: Dopo la rimozione di una replica secondaria  
  Se si specifica una replica che non è attualmente disponibile, quando viene portata online viene rilevato che è stata rimossa.  
   
  La rimozione di una replica ne arresta la ricezione di dati. Dopo la conferma della rimozione dall'archivio globale di una replica secondaria, la replica rimuove le impostazioni del gruppo di disponibilità dai relativi database che rimangono nell'istanza del server locale nello stato RECOVERING.  

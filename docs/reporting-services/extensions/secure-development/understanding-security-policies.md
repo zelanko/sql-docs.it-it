@@ -20,10 +20,10 @@ ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6649017002fb3dd5df2dc3ee68a0d759ded24887
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193394"
 ---
 # <a name="understanding-security-policies"></a>Informazioni sui criteri di sicurezza
@@ -36,7 +36,7 @@ ms.locfileid: "63193394"
  Le estensioni del server di report sono estensioni per dati personalizzati, per il recapito, per il rendering e di sicurezza create dall'utente o da terze parti per estendere le funzionalità di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. È necessario concedere l'autorizzazione **FullTrust** a queste estensioni o al codice assembly nei file di configurazione dei criteri associati al componente di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a cui viene applicata l'estensione. Le estensioni incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono firmate con la chiave pubblica del server di report e ricevono il set di autorizzazioni **FullTrust**.  
   
 > [!IMPORTANT]  
->  Per concedere l'autorizzazione **FullTrust** alle estensioni di terze parti è necessario modificare i file di configurazione dei criteri di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Se non si aggiunge un gruppo di codice con autorizzazione **FullTrust** per le estensioni personalizzate, queste non potranno essere usate dal server di report.  
+>  Per concedere l'autorizzazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]FullTrust**alle estensioni di terze parti è necessario modificare i file di configurazione dei criteri di**. Se non si aggiunge un gruppo di codice con autorizzazione **FullTrust** per le estensioni personalizzate, queste non potranno essere usate dal server di report.  
   
  Per altre informazioni sui file di configurazione dei criteri in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vedere [Uso di file di criteri di sicurezza di Reporting Services](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
   

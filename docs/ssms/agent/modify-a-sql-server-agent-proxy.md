@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cacb540800fed3fe08b450b6d1a9909912a24e93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252373"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
@@ -31,9 +31,9 @@ ms.locfileid: "75252373"
 
 Questo argomento descrive come modificare un proxy di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Restrictions"></a>Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitazioni e restrizioni  
   
 -   I proxy di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows. L'utente specificato nella credenziale deve disporre dell'autorizzazione "accesso come processo batch" sul computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -41,12 +41,12 @@ Questo argomento descrive come modificare un proxy di [!INCLUDE[msCoName](../../
   
 -   Se l'account di accesso per l'utente viene utilizzato per l'accesso al proxy oppure se l'utente appartiene a un qualsiasi ruolo che prevede l'accesso al proxy, l'utente potrà utilizzare il proxy in un passaggio di processo.  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorizzazioni  
 Gli account proxy possono essere creati, modificati o eliminati unicamente dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-modify-a-ssnoversion-agent-proxy"></a>Per modificare un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
@@ -60,11 +60,11 @@ Gli account proxy possono essere creati, modificati o eliminati unicamente dai m
   
 5.  Fare clic con il pulsante destro del mouse sull'account proxy da modificare e scegliere **Proprietà**.  
   
-6.  Nella finestra di dialogo **Proprietà account proxy**_nome\_proxy_ apportare le modifiche necessarie all'account proxy. Per altre informazioni sulle opzioni della finestra di dialogo, vedere [Creazione di un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+6.  Nella finestra di dialogo _Proprietà account proxy\__ nome**proxy** apportare le modifiche necessarie all'account proxy. Per altre informazioni sulle opzioni della finestra di dialogo, vedere [Creazione di un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 7.  Al termine, fare clic su **OK**.  
   
-## <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-modify-a-ssnoversion-agent-proxy"></a>Per modificare un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   

@@ -11,10 +11,10 @@ author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090499"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
@@ -142,9 +142,9 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)
 
 **Nuove distribuzioni supportate**: sono supportati OS X 10.11 e macOS 10.12 nella prima versione del driver ODBC in macOS. È ora supportato anche Ubuntu 16.10 insieme a Red Hat 6, 7 e SUSE 12. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e la configurazione. Per altre informazioni, vedere le istruzioni per l'installazione del driver ODBC per [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) e [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
-**Modifiche al supporto di Gestione driver unixODBC 2.3.1**: il driver ODBC non dipende più dai pacchetti personalizzati per Gestione driver unixODBC (tranne in RedHat 6) e si basa invece sulla gestione dei pacchetti di distribuzione per risolvere la dipendenza UnixODBC dai repository di distribuzione.
+**Modifiche del supporto di Gestione driver unixODBC 2.3.1**: il driver ODBC non dipende più dai pacchetti personalizzati per Gestione driver unixODBC (tranne su RedHat 6) e si basa invece sulla gestione dei pacchetti di distribuzione per risolvere la dipendenza UnixODBC dai repository di distribuzione.
 
-**Supporto per l'API BCP**: il driver ODBC per Linux e macOS supporta ora l'uso delle [funzioni dell'API BCP (**bcp_init** e così via)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md).
+**Supporto per l'API BCP**: il driver ODBC per Linux e macOS supporta ora l'uso delle [funzioni API BCP (**bcp_init** e così via.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
 ## <a name="130-for-ssnoversion-on-linux"></a>13.0, per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux
 
@@ -154,7 +154,7 @@ Con Microsoft ODBC Driver 13.0 for SQL Server, sono ora supportati anche SQL Ser
 
 Ubuntu è ora supportato, insieme a Red Hat e SUSE. Ogni piattaforma ha un pacchetto piattaforma pertinente (RPM o DEB) per semplificare l'installazione e la configurazione.  Per le istruzioni di installazione, vedere l'articolo relativo all'[installazione del driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-**Supporto di Gestione driver unixODBC 2.3.1**: oltre a una versione più recente di Gestione driver, è disponibile un pacchetto per l'installazione di questa dipendenza che semplifica l'installazione e la configurazione.  
+**Supporto di gestione Driver unixODBC 2.3.1**: oltre a una versione più recente di Gestione driver, è disponibile un pacchetto per l'installazione di questa dipendenza che semplifica l'installazione e la configurazione.  
 
 **Risoluzione dell'IP di rete trasparente**: Risoluzione dell'IP di rete trasparente è una revisione della funzionalità di failover su più subnet esistente che interessa la sequenza di connessione del driver nel caso in cui il primo indirizzo IP risolto del nome host non risponda e siano presenti più indirizzi IP associati al nome host.
 
@@ -166,6 +166,6 @@ Il driver ODBC in SUSE Linux (anteprima) supporta SUSE Linux Enterprise 11 Servi
 
 Il driver ODBC in Linux supporta [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per altre informazioni, vedere [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md) (Supporto del driver ODBC in Linux per disponibilità elevata e ripristino di emergenza).  
 
-Il driver ODBC in Linux supporta le connessioni al database SQL di Microsoft Azure. Per altre informazioni, vedere [Procedura: stabilire la connessione al database SQL di Azure tramite ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Il driver ODBC in Linux supporta le connessioni al database SQL di Microsoft Azure. Per altre informazioni, vedere la pagina relativa alla [procedura di connessione al database SQL di Azure usando ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 L'opzione `-l` (timeout di accesso) è stata aggiunta a `bcp`. Per altre informazioni, vedere [Connessione a **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

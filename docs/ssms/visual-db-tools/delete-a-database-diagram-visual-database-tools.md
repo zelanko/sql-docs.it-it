@@ -17,10 +17,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 5ebe7109bd97f4e06b708436bbcbe90e690ca1c4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244181"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Eliminazione di un diagramma di database (Visual Database Tools)

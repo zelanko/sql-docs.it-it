@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091768"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Parole chiave riservate (Transact-SQL)
@@ -70,22 +70,22 @@ ms.locfileid: "68091768"
 |CURRENT|LOAD|TABLESAMPLE|  
 |CURRENT_DATE|MERGE|TEXTSIZE|  
 |CURRENT_TIME|NATIONAL|THEN|  
-|CURRENT_TIMESTAMP|NOCHECK|TO|  
-|CURRENT_USER|NONCLUSTERED|TOP|  
+|CURRENT_TIMESTAMP|NOCHECK|A|  
+|CURRENT_USER|NONCLUSTERED|Torna all'inizio|  
 |CURSOR|NOT|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|Elimina|ATTIVA|UNION|  
 |NEGA|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|USER|  
-|DROP|OR|VALUES|  
+|DROP|o|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -163,7 +163,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
 |**CORRESPONDING**|**LAST**|**TEMPORARY**|  
 |**COUNT**|**LEADING**|**THEN**|  
-|**CREATE**|**LEFT**|**TIME**|  
+|**CREATE**|**LEFT**|**ORA**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
@@ -249,7 +249,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 |CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|NO|TIMEZONE_MINUTE|  
-|CURRENT_PATH|NONE|TRAILING|  
+|CURRENT_PATH|Nessuno|TRAILING|  
 |CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
 |CURRENT_SCHEMA|NUMERIC|TRANSLATION|  
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
@@ -260,9 +260,9 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|VALORE|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|PARAMETER|VAR_SAMP|  
+|DEREF|PARAMETRO|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  

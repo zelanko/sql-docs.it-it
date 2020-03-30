@@ -14,10 +14,10 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991137"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Pagina Connetti a repliche secondarie esistenti - gruppi di disponibilità Always On
@@ -40,7 +40,7 @@ ms.locfileid: "67991137"
  **Annulla**  
  Fare clic per annullare la procedura guidata. Nella pagina **Connetti a repliche secondarie esistenti** l'annullamento della procedura guidata ne provoca la chiusura senza eseguire alcuna azione.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

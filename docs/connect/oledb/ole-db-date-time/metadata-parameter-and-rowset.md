@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995102"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadati - Parametro e set di righe
@@ -42,11 +42,11 @@ ms.locfileid: "67995102"
 |Tipo di parametro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |Data|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Configurazione|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Configurazione|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Configurazione|  
   
  Tenere presente che in alcuni casi gli intervalli di valori non sono continui Ciò è dovuto all'aggiunta di un separatore decimale quando la precisione frazionaria è maggiore di zero.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "67995102"
 |Tipo di colonna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
 |Data|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Configurazione|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Configurazione|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Configurazione|  
   
  In DBCOLUMN_FLAGS il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   
@@ -121,11 +121,11 @@ ms.locfileid: "67995102"
 |Tipo di parametro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
 |Data|DBTYPE_DBDATE|6|10|0|Clear|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Configurazione|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Configurazione|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Configurazione|  
   
  In *dwFlags* il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   

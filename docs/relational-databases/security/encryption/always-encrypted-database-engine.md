@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254827"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
@@ -93,7 +93,7 @@ Per aggiornare correttamente la colonna, procedere come segue:
  >[!IMPORTANT]
  > In questo scenario, i dati verranno decrittografati quando vengono inviati di nuovo al server perché la colonna di destinazione è di tipo varchar regolare e non accetta dati crittografati. 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a> Selezione della crittografia deterministica o casuale  
+## <a name="selecting-deterministic-or-randomized-encryption"></a><a name="selecting--deterministic-or-randomized-encryption"></a> Selezione della crittografia deterministica o casuale  
  Il motore di database non agisce mai sui dati in testo non crittografato archiviati in colonne crittografate, ma supporta alcune query sui dati crittografati, a seconda del tipo di crittografia per la colonna. Crittografia sempre attiva supporta due tipi di crittografia: crittografia casuale e crittografia deterministica.  
   
 - La crittografia deterministica genera sempre lo stesso valore crittografato per ogni valore specifico di testo non crittografato. L'uso della crittografia deterministica consente le ricerche di punti, join di uguaglianza, raggruppamento e indicizzazione di colonne crittografate. Tuttavia, può anche consentire a utenti non autorizzati di indovinare le informazioni sui valori crittografati esaminando gli schemi presenti nella colonna crittografata, soprattutto in presenza di un set di possibili valori crittografati di dimensioni ridotte, ad esempio True/False o Nord/Sud/Est/Ovest. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.

@@ -18,10 +18,10 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c29717713a6b2e41456288f026b46e220be8b229
-ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78261705"
 ---
 # <a name="connect-to-server-database-engine"></a>Connetti al server (Motore di database)
@@ -30,7 +30,7 @@ ms.locfileid: "78261705"
 Usare questa finestra di dialogo per visualizzare o specificare le opzioni per la connessione a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. Nella maggior parte dei casi è possibile connettersi specificando il nome del computer del server di database nella casella **Nome server** e facendo clic su **Connetti**. Se si sta eseguendo la connessione a un'istanza denominata, usare il nome del computer seguito da una barra rovesciata e dal nome dell'istanza. Ad esempio: `mycomputer\myinstance`. Se ci si connette a [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], usare il nome del computer seguito da **\sqlexpress**.  
   
 Molti fattori possono incidere sulla possibilità di connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni, vedere le risorse seguenti:  
-- [Esercitazione - Lezione 1: Connessione al motore di database](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+- [Esercitazione - Lezione 1: Connessione al motore di base](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 - [Risolvere i problemi di connessione al motore di database di SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
 - [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server) (Risoluzione di errori di connettività a SQL Server)   
   

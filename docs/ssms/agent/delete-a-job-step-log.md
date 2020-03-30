@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77ba028a1ee140985a35b513c5c338981f2837e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246331"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
@@ -46,17 +46,17 @@ In questo argomento viene illustrato come eliminare un log dei passaggi di proce
   
     [SQL Server Management Objects](#SMO)  
   
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Restrictions"></a>Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitazioni e restrizioni  
 Il log di output dei passaggi di processo eliminati viene eliminato automaticamente.  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorizzazioni  
 È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** .  
   
-## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Per eliminare un log dei passaggi di processo di SQL Server Agent  
   
@@ -66,7 +66,7 @@ Il log di output dei passaggi di processo eliminati viene eliminato automaticame
   
 3.  Nella finestra di dialogo **Proprietà processo** eliminare il passaggio di processo selezionato.  
   
-## <a name="TSQL"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Per eliminare un log dei passaggi di processo di SQL Server Agent  
   
@@ -89,7 +89,7 @@ Il log di output dei passaggi di processo eliminati viene eliminato automaticame
   
 .Per altre informazioni, vedere [sp_delete_jobsteplog (Transact-SQL)](https://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
   
-## <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 Usare i metodi **DeleteJobStepLogs** della classe **Job** tramite un linguaggio di programmazione a scelta, ad esempio Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  

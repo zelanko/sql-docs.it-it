@@ -20,10 +20,10 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68138738"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Ripristini di file (modello di recupero con registrazione minima)
@@ -56,7 +56,7 @@ ms.locfileid: "68138738"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Overview"></a> Panoramica del ripristino di file e filegroup nel modello di recupero con registrazione minima  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Panoramica del ripristino di file e filegroup nel modello di recupero con registrazione minima  
  Uno scenario di ripristino di file consiste in un'unica sequenza di ripristino che consente di eseguire la copia, il rollforward e il recupero dei dati appropriati come descritto di seguito:  
   
 1.  Ripristinare ogni file danneggiato dal backup di file più recente.  
@@ -86,7 +86,7 @@ ms.locfileid: "68138738"
   
 -   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare file e filegroup**  
   
 -   [Ripristinare file e filegroup sovrascrivendo file esistenti &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  

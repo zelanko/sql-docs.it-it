@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68661210"
 ---
 # <a name="metadata-visibility-configuration"></a>Configurazione della visibilità dei metadati
@@ -45,7 +45,7 @@ GO
   
 |||  
 |-|-|  
-|Viste del catalogo|Stored procedure **sp_help** del [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
+|Viste del catalogo|Stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**del**|  
 |Metadati che espongono funzioni predefinite|Viste degli schemi delle informazioni|  
 |Viste di compatibilità|Proprietà estese|  
   
@@ -65,7 +65,7 @@ GO
   
 -   È possibile che le funzioni predefinite per la creazione di metadati quali OBJECTPROPERTYEX restituiscano NULL.  
   
--   È possibile che le stored procedure **sp_help** del [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituiscano solo un subset di righe o NULL.  
+-   È possibile che le stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**del** restituiscano solo un subset di righe o NULL.  
   
  I moduli SQL, ad esempio le stored procedure e i trigger, vengono eseguiti nel contesto di sicurezza del chiamante e pertanto la relativa accessibilità ai metadati è limitata. Nel codice di esempio seguente, quando la stored procedure tenta di accedere ai metadati relativi alla tabella `myTable` per la quale il chiamante non dispone di alcun diritto, viene restituito un set di risultati vuoto. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene invece restituita una riga.  
   

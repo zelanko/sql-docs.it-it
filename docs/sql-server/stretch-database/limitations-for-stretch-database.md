@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843790"
 ---
 # <a name="limitations-for-stretch-database"></a>Limitazioni di Stretch Database
@@ -26,7 +26,7 @@ ms.locfileid: "73843790"
 
   Informazioni sulle limitazioni per le tabelle basate sull'estensione e sulle limitazioni che attualmente impediscono l'abilitazione dell'estensione per una tabella.  
   
-##  <a name="Caveats"></a> Limitazioni per le tabelle abilitate per Estensione  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> Limitazioni per le tabelle abilitate per Estensione  
   
 Le tabelle abilitate per l'estensione presentano le limitazioni seguenti.  
   
@@ -43,7 +43,7 @@ Le tabelle abilitate per l'estensione presentano le limitazioni seguenti.
   
 -   I filtri sugli indici [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono propagati alla tabella remota.  
   
-##  <a name="Limitations"></a> Limitazioni che attualmente impediscono l'abilitazione dell'Estensione per una tabella  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> Limitazioni che attualmente impediscono l'abilitazione dell'Estensione per una tabella  
    
  Gli elementi seguenti attualmente impediscono l'abilitazione dell'estensione per una tabella.  
   

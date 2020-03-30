@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571547"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gestione avvisi dati per gli amministratori di avvisi
@@ -41,7 +41,7 @@ SQL Server Reporting Services include Gestione avvisi dati per consentire agli a
 > [!NOTE]  
 >  Un amministratore di avvisi può concedere agli Information Worker l'autorizzazione per accedere alle funzionalità di avviso dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Per informazioni sulle autorizzazioni richieste, vedere [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
-##  <a name="ViewingAlerts"></a> Visualizzazione delle informazioni sugli avvisi dati  
+##  <a name="viewing-data-alert-information"></a><a name="ViewingAlerts"></a> Visualizzazione delle informazioni sugli avvisi dati  
  Se Reporting Services viene installato e configurato in SharePoint, nella pagina Impostazioni sito di SharePoint sono incluse le opzioni di **Reporting Services** . Per aprire Gestione avvisi dati, gli amministratori di avvisi possono fare clic sull'opzione **Gestisci avvisi dati** disponibile in Reporting Services. Nella figura seguente viene illustrata la posizione nella pagina Impostazioni sito da cui è possibile aprire Gestione avvisi dati.  
   
  ![Sezione Reporting Services della pagina Impostazioni sito](../reporting-services/media/rs-sitesettings.gif "Sezione Reporting Services della pagina Impostazioni sito")  
@@ -62,7 +62,7 @@ SQL Server Reporting Services include Gestione avvisi dati per consentire agli a
  È possibile visualizzare tutti gli avvisi creati dagli utenti del sito. È necessario scegliere un utente, quindi scegliere se visualizzare tutti i relativi avvisi o solo quelli per un report specifico.  
   
   
-##  <a name="DeleteAlerts"></a> Eliminare avvisi dati  
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a> Eliminare avvisi dati  
  Le definizioni di avviso dati vengono eliminate da Gestione avvisi dati. Ogni definizione di avviso dati dispone di un proprietario, ovvero l'utente di SharePoint da cui è stata creata. I proprietari possono eliminare solo le definizioni di avviso che hanno creato. Per altre informazioni, vedere [Gestire gli avvisi dati in Gestione avvisi dati](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  Gli amministratori di avvisi di SharePoint possono elencare e quindi eliminare le definizioni di avviso create da tutti gli utenti del sito. Per altre informazioni, vedere [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
@@ -70,7 +70,7 @@ SQL Server Reporting Services include Gestione avvisi dati per consentire agli a
  Dopo aver eliminato la definizione di avviso, non verranno inviati ulteriori avvisi. Se tuttavia si esegue una query sul database di avvisi, è possibile trovare ancora la definizione di avviso. Il servizio avvisi consente di eseguire la pulizia in base a una pianificazione e la definizione di avviso verrà eliminata definitivamente alla successiva operazione di pulizia. L'intervallo di pulizia predefinito è impostato su 20 minuti. Questo e altri intervalli di pulizia sono configurabili. Per altre informazioni, vedere [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
   
-##  <a name="HowTo"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Attività correlate  
  In questa sezione è elencata una procedura tramite cui viene illustrata la modalità di gestione degli avvisi.  
   
 -   [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  

@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095105"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza  
@@ -41,17 +41,17 @@ I criteri di controllo di Windows possono influire sul controllo di [!INCLUDE[ss
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non potrà rilevare che il sistema non è in grado di registrare gli eventi nel registro di sicurezza, causando una perdita potenziale di eventi di controllo  
 -   Dopo che l'amministratore ha apportato correzioni al registro di sicurezza, il comportamento relativo alla registrazione tornerà normale.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  Gli amministratori del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono comprendere che le impostazioni locali relative al registro di sicurezza possono essere sovrascritte da criteri del dominio. In questo caso i criteri del dominio potrebbero sovrascrivere l'impostazione della sottocategoria (**auditpol/get/subcategory:"application generated"** ). Questa condizione può influire sulla possibilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di registrare eventi senza disporre di alcuna modalità per rilevare che gli eventi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sta tentando di controllare non verranno registrati.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario essere amministratore di Windows per configurare queste impostazioni.  
   
-##  <a name="auditpolAccess"></a> Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante auditpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a> Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante auditpol  
   
 1.  Aprire un prompt dei comandi con autorizzazioni amministrative.  
   
@@ -67,7 +67,7 @@ I criteri di controllo di Windows possono influire sul controllo di [!INCLUDE[ss
   
 3.  Chiudere la finestra del prompt dei comandi.  
   
-##  <a name="secpolAccess"></a> Per concedere l'autorizzazione di generazione dei controlli di sicurezza a un account mediante secpol  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> Per concedere l'autorizzazione di generazione dei controlli di sicurezza a un account mediante secpol  
   
 1.  Per qualsiasi sistema operativo Windows, scegliere **Esegui** dal menu **Start**.  
   
@@ -87,7 +87,7 @@ I criteri di controllo di Windows possono influire sul controllo di [!INCLUDE[ss
   
 9. Riavviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per abilitare questa impostazione.  
   
-##  <a name="secpolPermission"></a> Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante secpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Per configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante secpol  
   
 1.  Se si utilizza un sistema operativo precedente a [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, scegliere **Esegui** dal menu **Start**.  
   

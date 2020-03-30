@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123753"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
@@ -26,7 +26,7 @@ ms.locfileid: "68123753"
 
 Questo articolo descrive come creare relazioni di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una relazione tra due tabelle consente di stabilire un'associazione tra le righe di una tabella e le righe di un'altra tabella.
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare Limitazioni e restrizioni
+## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Prima di iniziare Limitazioni e restrizioni
 
 - Un vincolo di chiave esterna può anche non essere collegato esclusivamente al vincolo di chiave primaria di un'altra tabella. Può infatti essere definito in modo da fare riferimento alle colonne di un vincolo UNIQUE in un'altra tabella.
 - I valori diversi da NULL immessi nella colonna di un vincolo FOREIGN KEY devono essere presenti nella colonna a cui viene fatto riferimento. In caso contrario, viene restituito un messaggio di errore di violazione della chiave esterna. Per assicurarsi che tutti i valori di un vincolo di chiave esterna composto vengano verificati, specificare NOT NULL in tutte le colonne coinvolte.
