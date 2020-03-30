@@ -16,10 +16,10 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953459"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Metodo getCatalogs (SQLServerDatabaseMetaData)
@@ -44,7 +44,7 @@ public java.sql.ResultSet getCatalogs()
  Questo metodo getCatalogs viene specificato dal metodo getCatalogs nell'interfaccia java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  In SQL Azure è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases per ottenere i cataloghi. Per informazioni sul comportamento **SQLServerDatabaseMetaData.getCatalogs** in SQL Azure, vedere la discussione sulle autorizzazioni in [sys.database_usage (database SQL di Azure)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md).  
+>  In SQL Azure è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases per ottenere i cataloghi. Per informazioni sul comportamento [SQLServerDatabaseMetaData.getCatalogs](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) in SQL Azure, vedere la discussione sulle autorizzazioni in **sys.database_usage (database SQL di Azure)** .  
   
  Il set di risultati restituito dal metodo getCatalogs conterrà le informazioni seguenti:  
   

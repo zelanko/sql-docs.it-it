@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Recuperare i parametri di output usando il driver SQLSRV | Microsoft Docs'
+title: 'Procedura: Recuperare i parametri di output mediante il driver SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993397"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di output mediante il driver SQLSRV
@@ -32,7 +32,7 @@ Il troncamento dei dati può verificarsi quando vengono usati tipi di flusso, ad
 L'esempio seguente effettua una chiamata a una stored procedure che restituisce le vendite da inizio anno di un dipendente specificato. La variabile PHP *$lastName* è un parametro di input e *$salesYTD* è un parametro di output.  
   
 > [!NOTE]  
-> L'inizializzazione di *$salesYTD* su 0.0 imposta il valore PHPTYPE restituito su **float**. Per garantire l'integrità del tipo di dati, i parametri di output devono essere inizializzati prima di chiamare la stored procedure. In alternativa, è necessario specificare il valore di PHPTYPE desiderato. Per informazioni sull'impostazione di PHPTYPE, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md).  
+> L'inizializzazione di *$salesYTD* su 0.0 imposta il valore PHPTYPE restituito su **float**. Per garantire l'integrità del tipo di dati, i parametri di output devono essere inizializzati prima di chiamare la stored procedure. In alternativa, è necessario specificare il valore di PHPTYPE desiderato. Per informazioni sull'impostazione di PHPTYPE, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Poiché la stored procedure restituisce un solo risultato, *$salesYTD* contiene il valore del parametro di output restituito immediatamente dopo l'esecuzione della stored procedure.  
   

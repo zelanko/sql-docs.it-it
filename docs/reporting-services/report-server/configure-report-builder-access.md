@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68255177"
 ---
 # <a name="configure-report-builder-access"></a>Configurare l'accesso a Generatore report
@@ -101,7 +101,7 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 
     4. In Descrizione immettere una descrizione per il ruolo in modo da indicare lo scopo del ruolo agli utenti del portale Web.  
 
-    5. Aggiungere le attività seguenti: **Utilizzo di report**, **Visualizzazione di report**, **Visualizzazione di modelli**, **Visualizzazione di risorse**, **Visualizzazione di cartelle** e **Gestione di sottoscrizioni individuali**.  
+    5. Aggiungere le attività seguenti: **Utilizzo di report**, **Visualizzazione di report**, **Visualizzazione di modelli**, **Visualizzazione di risorse**, **Visualizzazione di cartelle**e **Gestione di sottoscrizioni individuali**.  
 
     6. Fare clic su **OK** per salvare il ruolo.  
 

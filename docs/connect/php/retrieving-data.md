@@ -11,10 +11,10 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2dd99b2195cb4f44725ff813bc79c70ec5ffc44b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935897"
 ---
 # <a name="retrieving-data"></a>Recupero di dati

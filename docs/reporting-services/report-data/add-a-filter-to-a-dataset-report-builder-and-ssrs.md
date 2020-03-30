@@ -9,10 +9,10 @@ ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67fb8bd61f337c4de0476c8a3fdb8265202b0161
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081665"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Aggiungere un filtro a un set di dati (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "77081665"
   
 3.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-4.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+4.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 5.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081665"
   
 3.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-4.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+4.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 5.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896951"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerazione di istanze di SQL Server (ADO.NET)
@@ -49,7 +49,7 @@ La tabella restituita dalla chiamata al metodo contiene le colonne seguenti, tut
 |**ServerName**|Nome del server.|  
 |**InstanceName**|Nome dell'istanza del server. Vuota se il server è in esecuzione come istanza predefinita.|  
 |**IsClustered**|Indica se il server fa parte di un cluster.|  
-|**Versione**|Versione del server Ad esempio:<br /><br /> -   9.00.x (SQL Server 2005)<br />-   10.0.xx (SQL Server 2008)<br />-   10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
+|**Version**|Versione del server Ad esempio:<br /><br /> -   9.00.x (SQL Server 2005)<br />-   10.0.xx (SQL Server 2008)<br />-   10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitazioni di enumerazione  
 È possibile che non siano elencati tutti i server disponibili. L'elenco può variare in base a fattori quali timeout e traffico di rete. Ciò può determinare elenchi diversi in due chiamate consecutive. Verranno elencati solo i server nella stessa rete. I pacchetti broadcast in genere non attraversano i router. Ecco perché è possibile che un server non sia visibile nell'elenco, ma sarà stabile tra le diverse chiamate.  

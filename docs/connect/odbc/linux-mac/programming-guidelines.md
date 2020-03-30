@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285865"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
@@ -122,13 +122,13 @@ Esistono alcune differenze di conversione della codifica tra Windows e varie ver
 
 In ODBC Driver 13 e 13.1, quando caratteri multibyte UTF-8 o caratteri sostitutivi UTF-16 vengono suddivisi tra buffer SQLPutData, i dati vengono danneggiati. Usare i buffer per i flussi SQLPutData che non terminano con la codifica parziale di caratteri. Questa restrizione è stata eliminata con ODBC Driver 17.
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 A partire dalla versione 17.4, il driver carica OpenSSL in modo dinamico, consentendone l'esecuzione all'interno di sistemi dotati della versione 1.0 o 1.1 senza che siano necessari file di driver distinti. Quando sono presenti più versioni di OpenSSL, il driver tenta di caricare quello più recente. Il driver supporta attualmente OpenSSL 1.0.x e 1.1.x
 
 > [!NOTE]  
 > Può verificarsi un conflitto se l'applicazione che usa il driver (o uno dei suoi componenti) è collegata a una versione diversa di OpenSSL o la carica in modo dinamico. Se nel sistema sono presenti diverse versioni di OpenSSL e l'applicazione usa OpenSSL, è consigliabile prestare particolare attenzione affinché la versione caricata dall'applicazione e il driver corrispondano. In caso contrario, infatti, gli errori possono danneggiare la memoria e non presentarsi necessariamente in modo ovvio o coerente.
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 Al momento della stesura di questo articolo, la dimensione predefinita dello stack in MUSL è 128 KB, sufficiente per le funzionalità di base del driver ODBC. A seconda delle operazioni svolte dall'applicazione, tuttavia, non è difficile superare questo limite, soprattutto quando si chiama il driver da più thread. È consigliabile compilare un'applicazione ODBC in Alpine Linux con `-Wl,-z,stack-size=<VALUE IN BYTES>` per aumentare la dimensione dello stack. Per riferimento, la dimensione predefinita dello stack nella maggior parte dei sistemi GLIBC è di 2 MB.
 
 ## <a name="additional-notes"></a>Note aggiuntive  

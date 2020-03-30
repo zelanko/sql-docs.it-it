@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896249"
 ---
 # <a name="sql-server-express-user-instances"></a>Istanze utente di SQL Server Express
@@ -47,7 +47,7 @@ sp_configure 'user instances enabled','0'
 Il protocollo di rete per le istanze utente deve essere Named Pipes locale. Non è possibile avviare un'istanza utente in un'istanza remota di SQL Server e gli account di accesso di SQL Server non sono consentiti.  
   
 ## <a name="connecting-to-a-user-instance"></a>Connessione a un'istanza utente  
-Le parole chiave `User Instance` e `AttachDBFilename`<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> consentono la connessione di <xref:Microsoft.Data.SqlClient.SqlConnection> a un'istanza utente. Le istanze utente sono supportate anche dalle proprietà `UserInstance` e `AttachDBFilename` di <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>.  
+Le parole chiave `User Instance` e `AttachDBFilename`<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> consentono la connessione di <xref:Microsoft.Data.SqlClient.SqlConnection> a un'istanza utente. Le istanze utente sono supportate anche dalle proprietà <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> e `UserInstance` di `AttachDBFilename`.  
   
 Si noti quanto segue per la stringa di connessione di esempio riportata di seguito:  
   
@@ -68,7 +68,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Per compilare una stringa di connessione in fase di esecuzione, è anche possibile usare le proprietà <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> di <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>.  
+>  Per compilare una stringa di connessione in fase di esecuzione, è anche possibile usare le proprietà <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> e <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> di <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Uso della stringa di sostituzione &#124;DataDirectory&#124;  
 `DataDirectory` viene usata insieme a `AttachDbFileName` per indicare un percorso relativo di un file di dati, consentendo agli sviluppatori di creare stringhe di connessione basate su un percorso relativo dell'origine dati senza che sia necessario specificare un percorso completo.  

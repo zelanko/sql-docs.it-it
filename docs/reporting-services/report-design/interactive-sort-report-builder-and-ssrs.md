@@ -9,10 +9,10 @@ ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d87ccdb5cc240f73dc22c132bf4d3f88685919c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081984"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordinamento interattivo (Generatore report e SSRS)

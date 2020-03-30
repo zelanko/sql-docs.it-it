@@ -10,10 +10,10 @@ ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ffa11ae9d6c0d539accb4bbf6d796019cbc3371e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254603"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Visualizzare i valori in percentuale in un grafico a torta (Generatore report e SSRS)
@@ -21,7 +21,7 @@ Nei report impaginati [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-m
 
 ![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
- L'[Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) spiega come aggiungere le percentuali alle sezioni, se per iniziare si preferisce provare con dati di esempio.
+ L'[Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)spiega come aggiungere le percentuali alle sezioni, se per iniziare si preferisce provare con dati di esempio.
  
   
 ## <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>Per visualizzare valori in percentuale come etichette in un grafico a torta  
