@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 64f39be7193fdbfc72b009f58b4fe0047eceef1e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989036"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Supporto del driver OLE DB per SQL Server per Local DB
@@ -33,7 +33,7 @@ ms.locfileid: "67989036"
   
  Riepilogando, il database locale consente di:  
   
--   Usare **sqllocaldb.exe i** per individuare il nome dell'istanza predefinita.  
+-   Usare **sqllocaldb.exe** per individuare il nome dell'istanza predefinita.  
   
 -   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza di Local DB quando l'applicazione viene chiusa.  
   

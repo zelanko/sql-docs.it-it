@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822553"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Pagina Riepilogo (procedure guidate gruppi di disponibilità Always On)
@@ -29,7 +29,7 @@ ms.locfileid: "74822553"
   
   In questo argomento della Guida vengono descritte le opzioni della pagina **Riepilogo** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare la griglia di questa pagina per rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una o più modifiche, fare clic su **Indietro** per tornare alla pagina o alle pagine pertinenti. Al termine, fare clic su **Avanti** per tornare alla pagina **Riepilogo** . Dopo avere effettuato le scelte desiderate, fare clic su **Fine**.  
   
-##  <a name="PageOptions"></a> Opzioni della pagina Riepilogo  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Opzioni della pagina Riepilogo  
  **Script**  
  Fare clic per generare uno script [!INCLUDE[tsql](../../../includes/tsql-md.md)] per le azioni elencate nella griglia di riepilogo. Sarà richiesto di specificare una destinazione per lo script.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822553"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [&#91;Torna all'inizio&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

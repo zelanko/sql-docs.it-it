@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287824"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
@@ -58,7 +58,7 @@ ms.locfileid: "76287824"
   
 -   [Impostare valore soglia e avvisi per una pubblicazione di snapshot](#Snapshot)  
   
-##  <a name="Transactional"></a> Per impostare soglie e avvisi per una pubblicazione transazionale  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> Per impostare soglie e avvisi per una pubblicazione transazionale  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287824"
   
 5.  Fare clic su **Close**.  
   
-##  <a name="Merge"></a> Impostare valore soglia e avvisi per una pubblicazione di tipo merge  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> Impostare valore soglia e avvisi per una pubblicazione di tipo merge  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287824"
   
 5.  Fare clic su **Close**.  
   
-##  <a name="Snapshot"></a> Impostare valore soglia e avvisi per una pubblicazione di snapshot  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> Impostare valore soglia e avvisi per una pubblicazione di snapshot  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   

@@ -9,10 +9,10 @@ ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfcf8ddd7b77132a1658c2ea1d55f7a220c336d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082253"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Raccogliere piccole sezioni in un grafico a torta (Generatore report e SSRS)
@@ -20,7 +20,7 @@ I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco ch
  
  Per raccogliere le piccole sezioni in un'unica sezione, determinare innanzitutto se la soglia deve essere misurata come percentuale del grafico a torta o come valore fisso. 
  
- L'[Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) spiega come raccogliere più sezioni di piccole dimensioni in un'unica sezione, se per iniziare si preferisce provare con dati di esempio.
+ L'[Esercitazione: Aggiungere un grafico a torta al report (Generatore report)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)spiega come raccogliere più sezioni di piccole dimensioni in un'unica sezione, se per iniziare si preferisce provare con dati di esempio.
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   

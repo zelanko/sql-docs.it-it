@@ -12,10 +12,10 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575237"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aggiornare un database del server di report
@@ -56,7 +56,7 @@ Il database del server di report fornisce archiviazione per una o più istanze d
  Oltre al database del server di report, un server di report utilizza anche un database temporaneo. Il database temporaneo viene aggiornato automaticamente durante l'aggiornamento del database del server di report.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Autorizzazioni richieste per aggiornare un database del server di report  
- Se si sta aggiornando un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che include un database del server di report, potrebbe essere visualizzato un messaggio di errore se l'aggiornamento del database viene eseguito con autorizzazioni insufficienti. Per impostazione predefinita, nel programma di installazione viene utilizzato il token di sicurezza dell'utente che sta eseguendo il programma di installazione per connettersi all'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiornare lo schema. Se si hanno le autorizzazioni **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il server di database che ospita i database del server di report, l'aggiornamento del database avrà esito positivo. Allo stesso modo, se si esegue il programma di installazione dal prompt dei comandi e si specificano gli argomenti RSUPGRADEDATABASEACCOUNT e RSUPGRADEPASSWORD per un account che ha l'autorizzazione **sysadmin** per modificare lo schema nel computer remoto, l'aggiornamento del database avrà esito positivo.  
+ Se si sta aggiornando un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che include un database del server di report, potrebbe essere visualizzato un messaggio di errore se l'aggiornamento del database viene eseguito con autorizzazioni insufficienti. Per impostazione predefinita, nel programma di installazione viene utilizzato il token di sicurezza dell'utente che sta eseguendo il programma di installazione per connettersi all'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiornare lo schema. Se si hanno le autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin**di** per il server di database che ospita i database del server di report, l'aggiornamento del database avrà esito positivo. Allo stesso modo, se si esegue il programma di installazione dal prompt dei comandi e si specificano gli argomenti RSUPGRADEDATABASEACCOUNT e RSUPGRADEPASSWORD per un account che ha l'autorizzazione **sysadmin** per modificare lo schema nel computer remoto, l'aggiornamento del database avrà esito positivo.  
   
  Se invece non si ha l'autorizzazione **sysadmin** per il database nel computer remoto, la connessione verrà rifiutata con l'errore seguente:  
   

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077437"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
@@ -59,7 +59,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Riavviare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>Riavviare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Dopo aver abilitato i gruppi di disponibilità, come in Windows, è necessario riavviare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. A tale scopo, eseguire il comando seguente:
 
 ```bash
@@ -316,7 +316,7 @@ In questo esempio vengono creati i certificati per una configurazione a tre nodi
 
 Questa sezione illustra come usare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL per creare il gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Utilizzare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
+### <a name="use-ssmanstudiofull-md"></a>Utilizzare [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
 
 Questa sezione illustra come creare un gruppo di disponibilità con un tipo di cluster esterno usando SSMS con la Creazione guidata gruppo di disponibilità.
 
@@ -533,7 +533,7 @@ Questo esempio illustra la creazione di una configurazione a due repliche che us
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Creare l'account di accesso di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e le autorizzazioni per Pacemaker
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Creare l'account di accesso di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e le autorizzazioni per Pacemaker
 
 Un cluster a disponibilità elevata Pacemaker sottostante a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux deve poter accedere all'istanza di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e deve avere le autorizzazioni per il gruppo di disponibilità stesso. La procedura seguente crea l'account di accesso e le autorizzazioni associate, oltre a un file che indica a Pacemaker come accedere a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 

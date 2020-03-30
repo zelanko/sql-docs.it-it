@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256997"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78256997"
 
   Le applicazioni che utilizzano il rilevamento delle modifiche devono essere in grado di ottenere le modifiche registrate, di applicare tali modifiche a un altro archivio dati e di aggiornare il database di origine. In questo argomento viene descritto come eseguire queste attività e viene illustrato il ruolo svolto dal rilevamento delle modifiche quando si verifica un failover ed è necessario ripristinare un database da un backup.  
   
-##  <a name="Obtain"></a> Utilizzo delle funzioni di rilevamento delle modifiche per ottenere le modifiche  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Utilizzo delle funzioni di rilevamento delle modifiche per ottenere le modifiche  
  Viene descritto come utilizzare le funzioni di rilevamento delle modifiche per ottenere le modifiche apportate al database e le informazioni relative.  
   
 ### <a name="about-the-change-tracking-functions"></a>Informazioni sulle funzioni di rilevamento delle modifiche  
@@ -295,7 +295,7 @@ Se si abilita l'isolamento dello snapshot e il rilevamento delle modifiche nello
 > [!NOTE]  
 >  Poiché la scelta dell'approccio più efficiente per l'applicazione quando si utilizza il rilevamento delle modifiche o qualsiasi meccanismo di rilevamento personalizzato richiede l'esecuzione di un'analisi approfondita, l'utilizzo dell'isolamento dello snapshot è notevolmente più semplice.  
   
-##  <a name="Handles"></a> Gestione delle modifiche in un database da parte del rilevamento delle modifiche  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> Gestione delle modifiche in un database da parte del rilevamento delle modifiche  
  Alcune applicazioni che utilizzano il rilevamento delle modifiche eseguono la sincronizzazione bidirezionale con un altro archivio dati. Questo significa che le modifiche apportate al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono aggiornate nell'altro archivio dati, mentre le modifiche apportate all'archivio vengono aggiornate nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Quando aggiorna il database locale in base alle modifiche di un altro archivio dati, un'applicazione deve effettuare le operazioni seguenti:  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  È possibile che la riga in fase di aggiornamento all'interno della transazione snapshot sia stata aggiornata in un'altra transazione dopo l'avvio della transazione stessa. In questo caso, si verifica un conflitto nell'aggiornamento dell'isolamento dello snapshot e la transazione verrà terminata. Se si verifica questa situazione, riprovare a eseguire l'aggiornamento. In questo modo verrà individuato un conflitto nel rilevamento delle modifiche e nessuna riga verrà modificata.  
   
-##  <a name="DataRestore"></a> Rilevamento delle modifiche e ripristino dei dati  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> Rilevamento delle modifiche e ripristino dei dati  
  Le applicazioni che richiedono la sincronizzazione è necessario considerare il caso in cui un database con il rilevamento delle modifiche abilitato viene ripristinato a una versione precedente dei dati. Questa situazione può verificarsi dopo il ripristino di un database da un backup, quando si verifica un failover a un database mirror asincrono o quando si verifica un errore durante l'utilizzo del log shipping. Nel seguente scenario viene illustrato il problema:  
   
 1.  Nella tabella T1 è attivato il rilevamento delle modifiche e la versione minima valida della tabella è 50.  

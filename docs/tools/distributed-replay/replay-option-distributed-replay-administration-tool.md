@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: b1db107bc9d426036f5831ad8f49f5fc5f7edddc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306990"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opzione replay (strumento di amministrazione Distributed Replay)
@@ -93,7 +93,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Il parametro **-d** specifica il percorso del file intermedio nel controller, `c:\WorkingDir`.  
   
--   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile usare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
+-   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile utilizzare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
   
 -   Il parametro **-w** specifica che i computer compresi tra `client1` e `client4` partecipano come client alla riesecuzione distribuita.  
   

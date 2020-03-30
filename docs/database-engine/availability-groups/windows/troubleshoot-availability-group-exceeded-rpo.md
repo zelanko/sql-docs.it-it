@@ -11,10 +11,10 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822188"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO
@@ -29,7 +29,7 @@ ms.locfileid: "74822188"
   
 2.  [Un collo di bottiglia a livello di I/O del disco rallenta la finalizzazione dei log nella replica secondaria](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> Una latenza elevata o una velocità effettiva bassa della rete causa un accumulo di log nella replica primaria  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> Una latenza elevata o una velocità effettiva bassa della rete causa un accumulo di log nella replica primaria  
  La causa più comune del superamento dell'obiettivo RPO da parte dei database è l'impossibilità di inviarli alla replica secondaria con una rapidità sufficiente.  
   
 ### <a name="explanation"></a>Spiegazione  
@@ -63,7 +63,7 @@ ms.locfileid: "74822188"
 Per risolvere questo problema, provare ad aggiornare la larghezza di banda di rete o a rimuovere o ridurre traffico di rete non necessario.  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> Un collo di bottiglia a livello di I/O del disco rallenta la finalizzazione dei log nella replica secondaria  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> Un collo di bottiglia a livello di I/O del disco rallenta la finalizzazione dei log nella replica secondaria  
  A seconda della distribuzione dei file di database, la finalizzazione dei log può rallentare a causa di una contesa I/O con il carico di lavoro di creazione di report.  
   
 ### <a name="explanation"></a>Spiegazione  

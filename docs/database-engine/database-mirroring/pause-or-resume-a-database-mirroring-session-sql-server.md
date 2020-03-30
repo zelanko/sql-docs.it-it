@@ -18,10 +18,10 @@ ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9d36b4818aa54a6f63b0b38a353cf69840519b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244162"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Sospendere o riprendere una sessione di mirroring del database (SQL Server)
@@ -42,18 +42,18 @@ ms.locfileid: "75244162"
   
 -   **Completamento:**  [Dopo la sospensione o ripresa del mirroring del database](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  È possibile sospendere una sessione di mirroring del database in qualsiasi momento. Questa operazione potrebbe migliorare le prestazioni in caso di colli di bottiglia. Inoltre, la sessione può essere ripresa in qualsiasi momento.  
   
 > [!CAUTION]  
 >  Dopo un servizio forzato, quando il server principale originale esegue nuovamente la connessione, il mirroring viene sospeso. Se si riprende il mirroring in questa situazione, è possibile che si verifichi una perdita di dati nel server principale originale. Per informazioni sulla gestione della potenziale perdita di dati, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Per sospendere o riprendere una sessione di mirroring del database, utilizzare la pagina **Proprietà database - Mirroring** .  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>Per sospendere o riprendere il mirroring del database  
@@ -72,7 +72,7 @@ ms.locfileid: "75244162"
   
 5.  Per riprendere la sessione fare clic su **Riprendi**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>Per sospendere il mirroring del database  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75244162"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la sospensione o ripresa del mirroring del database  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a> Completamento: Dopo la sospensione o ripresa del mirroring del database  
   
 -   **Dopo la sospensione del mirroring del database**  
   
@@ -120,7 +120,7 @@ ms.locfileid: "75244162"
   
      Quando si riprende una sessione di mirroring del database, il database con mirroring viene posto in stato SYNCHRONIZING. Se il livello di sicurezza corrisponde a FULL, il database mirror viene aggiornato in base al database principale e lo stato del database mirror diventa SYNCHRONIZED. A questo punto è possibile che si verifichi un failover. Se il server di controllo del mirroring è presente e in stato ON, è possibile che si verifichi un failover automatico. Se invece tale server non è presente, è possibile che si verifichi un failover manuale.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Rimuovere il mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   

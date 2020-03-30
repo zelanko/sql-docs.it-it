@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530947"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
@@ -382,7 +382,7 @@ L'istruzione RESTORE consente inoltre di eseguire ripristini in posizioni altern
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse tabelle cronologiche per backup e ripristini in cui viene tenuta traccia dell'attività di backup e ripristino per ogni istanza del server. Quando si effettua un'operazione di ripristino, vengono modificate anche le tabelle di cronologia di backup. Per informazioni su queste tabelle, vedere [Informazioni sulla cronologia e sull'intestazione del backup](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
-## <a name="REPLACEoption"></a> Impatto dell'opzione REPLACE
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> Impatto dell'opzione REPLACE
 L'opzione REPLACE deve essere utilizzata raramente e solo dopo un'attenta valutazione. In genere, il ripristino impedisce la sovrascrittura accidentale di un database con un altro. Se il database specificato in un'istruzione RESTORE esiste già nel server corrente e il GUID del gruppo di database specificato è diverso da quello registrato nel set di backup, il database non verrà ripristinato. Questa misura di sicurezza è importante.
 
 L'opzione REPLACE ignora diversi controlli di sicurezza importanti, eseguiti generalmente durante il ripristino. I controlli ignorati riguardano le operazioni seguenti:
@@ -434,7 +434,7 @@ Se il database da ripristinare non esiste, l'utente deve avere le autorizzazioni
 
 Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database `db_owner` non dispongono delle autorizzazioni per l'istruzione RESTORE.
 
-## <a name="examples"></a> Esempi
+## <a name="examples"></a><a name="examples"></a> Esempi
 
 In tutti gli esempi si presuppone che sia stato eseguito un backup completo del database.
 
@@ -455,7 +455,7 @@ Sono disponibili gli esempi seguenti per l'istruzione RESTORE:
 > [!NOTE]
 > Per altri esempi, vedere gli argomenti relativi alle procedure di ripristino elencati in [Panoramica del ripristino e del recupero](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-### <a name="restoring_full_db"></a> A. Ripristino di un database completo
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> A. Ripristino di un database completo
 
 Nell'esempio seguente viene ripristinato un backup completo del database dal dispositivo di backup logico `AdventureWorksBackups`. Per un esempio della creazione di questo dispositivo, vedere [Dispositivi di backup](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> B. Ripristino di backup completi e differenziali del database
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> B. Ripristino di backup completi e differenziali del database
 
 Nell'esempio seguente viene ripristinato un backup completo del database seguito da un backup differenziale dal dispositivo di backup `Z:\SQLServerBackups\AdventureWorks2012.bak`, in cui sono entrambi contenuti. Il backup completo del database da ripristinare rappresenta il sesto set di backup nel dispositivo (`FILE = 6`), mentre il backup differenziale del database rappresenta il nono set di backup nel dispositivo (`FILE = 9`). Il database viene recuperato al termine del recupero del backup differenziale.
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> C. Ripristino di un database con la sintassi RESTART
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> C. Ripristino di un database con la sintassi RESTART
 
 Nell'esempio seguente viene utilizzata l'opzione `RESTART` per riavviare un'operazione `RESTORE` interrotta a causa di un'interruzione dell'alimentazione del server.
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="restoring_db_n_move_files"></a> D. Ripristino di un database e spostamento dei file
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> D. Ripristino di un database e spostamento dei file
 
 Nell'esempio seguente vengono ripristinati un database completo e il log delle transazioni. Il database ripristinato viene quindi spostato nella directory `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="copying_db_using_bnr"></a> E. Copia di un database tramite BACKUP e RESTORE
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> E. Copia di un database tramite BACKUP e RESTORE
 
 Nell'esempio seguente vengono utilizzate le istruzioni `BACKUP` e `RESTORE` per creare una copia del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. L'istruzione `MOVE` consente di ripristinare i file di dati e di log nelle posizioni specificate. L'istruzione `RESTORE FILELISTONLY` viene utilizzata per determinare il numero e i nomi dei file del database da ripristinare. Alla nuova copia del database viene assegnato il nome `TestDB`. Per altre informazioni, vedere [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
 
@@ -540,7 +540,7 @@ GO
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> F. Ripristino temporizzato tramite STOPAT
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> F. Ripristino temporizzato tramite STOPAT
 
 Nell'esempio seguente viene ripristinato lo stato del database corrispondente alle ore `12:00 AM` del giorno `April 15, 2020` e viene illustrata un'operazione di ripristino di più backup del log. Nel dispositivo di backup, `AdventureWorksBackups`, il backup completo del database da ripristinare è il terzo set di backup (`FILE = 3`), il primo backup del log è il quarto set di backup (`FILE = 4`) e il secondo backup del log è il quinto set di backup (`FILE = 5`).
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. Ripristino del log delle transazioni fino a un contrassegno
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. Ripristino del log delle transazioni fino a un contrassegno
 
 Nell'esempio seguente viene ripristinato il log delle transazioni fino al contrassegno nella transazione contrassegnata denominata `ListPriceUpdate`.
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. Ripristino con la sintassi TAPE
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. Ripristino con la sintassi TAPE
 
 Nell'esempio seguente viene ripristinato un backup completo del database da un dispositivo di backup di tipo `TAPE`.
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. Ripristino con la sintassi FILE e FILEGROUP
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. Ripristino con la sintassi FILE e FILEGROUP
 
 Nell'esempio seguente viene ripristinato un database denominato `MyDatabase` che include due file, un filegroup secondario e un log delle transazioni. Per il database viene utilizzato il modello di recupero con registrazione completa.
 
@@ -656,7 +656,7 @@ GO
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. Ripristino da uno snapshot del database
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. Ripristino da uno snapshot del database
 
 Nell'esempio seguente viene eseguito il ripristino di un database con uno snapshot del database. Nell'esempio si presuppone che per il database esista un solo snapshot. Per un esempio di come creare lo snapshot di questo database, vedere [Creare uno snapshot del database](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).
 
@@ -673,7 +673,7 @@ Per altre informazioni, vedere [Ripristinare un database a uno snapshot del data
 
 [&#91;Inizio degli esempi&#93;](#examples)
 
-### <a name="Azure_Blob"></a> K. Ripristino dal servizio di archiviazione BLOB di Microsoft Azure
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. Ripristino dal servizio di archiviazione BLOB di Microsoft Azure
 
 I tre esempi seguenti prevedono l'uso del servizio di archiviazione di Microsoft Azure. Il nome dell'account di archiviazione è `mystorageaccount`, mentre Il contenitore per i file di dati è denominato `myfirstcontainer`. Il contenitore per i file di backup è denominato `mysecondcontainer`. Sono stati creati criteri di accesso archiviati con diritti di lettura, scrittura, eliminazione ed elenco per ogni contenitore. Le credenziali di SQL Server sono state create usando una firma di accesso condiviso associata ai criteri di accesso archiviati. Per informazioni specifiche sul backup e sul ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database `db_owner` non dispongono delle autorizzazioni per l'istruzione RESTORE.
 
-## <a name="examples"></a> Esempi
+## <a name="examples"></a><a name="examples"></a> Esempi
 
 L'esempio seguente ripristina un backup di database di sola copia da URL, inclusa la creazione di una credenziale.
 
-### <a name="restore-mi-database"></a> A. Ripristinare il database da quattro dispositivi di backup
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> A. Ripristinare il database da quattro dispositivi di backup
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> B. Ripristinare il database specificato tramite la variabile
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> B. Ripristinare il database specificato tramite la variabile
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> C. Tenere traccia dello stato dell'istruzione RESTORE
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> C. Tenere traccia dello stato dell'istruzione RESTORE
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

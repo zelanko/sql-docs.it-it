@@ -11,10 +11,10 @@ ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
 ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244046"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>Esercitazione: Sviluppare un'applicazione .NET usando Always Encrypted con enclave sicuri
@@ -25,7 +25,7 @@ ms.locfileid: "75244046"
 
 Questa esercitazione illustra come sviluppare una semplice applicazione che esegue query di database che usano un'enclave sicuro lato server per [Always Encrypted con enclave sicuri](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Questa esercitazione è la continuazione di [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md). Assicurarsi di averla completata prima eseguire le procedure successive.
 

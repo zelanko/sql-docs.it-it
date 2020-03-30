@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322148"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
@@ -52,7 +52,7 @@ ms.locfileid: "75322148"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> Utilizzo della programmazione della replica  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> Utilizzo della programmazione della replica  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>Per creare e distribuire un gestore della logica di business  
   
@@ -114,7 +114,7 @@ ms.locfileid: "75322148"
   
 1.  Eseguire [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **\@publication**, **\@article**, il valore **article_resolver** per **\@property** e il nome descrittivo del gestore della logica di business per **\@value**.  
   
-###  <a name="TsqlExample"></a> Esempi (programmazione della replica)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Esempi (programmazione della replica)  
  In questo esempio è illustrato un gestore della logica di business che crea un log di controllo.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322148"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
   
 #### <a name="to-create-a-business-logic-handler"></a>Per creare un gestore della logica di business  
   
@@ -220,7 +220,7 @@ ms.locfileid: "75322148"
   
 6.  Impostare il nome descrittivo del gestore della logica di business per <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Si tratta del valore della proprietà <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> specificato durante la registrazione del gestore della logica di business.  
   
-###  <a name="PShellExample"></a> Esempi (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio è illustrato un gestore della logica di business che registra informazioni sulle operazioni di inserimento, aggiornamento ed eliminazione nel Sottoscrittore.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

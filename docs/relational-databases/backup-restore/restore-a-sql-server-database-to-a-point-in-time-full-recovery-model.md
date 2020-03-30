@@ -15,10 +15,10 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908883"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup (modello di recupero con registrazione completa)
@@ -41,22 +41,22 @@ ms.locfileid: "72908883"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   Utilizzo dell'opzione STANDBY per la ricerca di un punto sconosciuto nel tempo  
   
 -   Impostazione del punto nel tempo all'inizio di una sequenza di ripristino  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per ripristinare un database fino a un punto nel tempo**  
   
 1.  Stabilire una connessione all'istanza appropriata di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere l'albero di server in Esplora oggetti.  
@@ -125,7 +125,7 @@ ms.locfileid: "72908883"
   
 14. Selezionare **Chiedi conferma prima del ripristino di ogni backup** se si desidera ricevere una richiesta di conferma prima di ciascuna operazione di ripristino. L'operazione non è normalmente necessaria, a meno che le dimensioni del database siano elevate e si desideri monitorare lo stato dell'operazione di ripristino.  
 
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Prima di iniziare**  
   
  Un momento specifico viene sempre ripristinato da un backup del log. In ogni istruzione RESTORE LOG della sequenza di ripristino, è necessario specificare l'ora o la transazione di destinazione in una clausola STOPAT identica. Come prerequisito per un ripristino temporizzato, è necessario innanzitutto ripristinare un backup completo del database il cui endpoint sia precedente rispetto al momento di ripristino di destinazione. Il backup completo del database può essere precedente rispetto al backup completo del database più recente purché vengano ripristinati tutti i backup del log successivi, fino al backup del log contenente la data e ora specifica di destinazione compreso.  
@@ -159,7 +159,7 @@ ms.locfileid: "72908883"
     > [!NOTE]  
     >  Le opzioni RECOVERY e STOPAT. Se il backup del log delle transazioni non contiene i dati corrispondenti all'ora richiesta, ad esempio se l'ora specificata è successiva al periodo di tempo gestito dal log delle transazioni, viene generato un messaggio di avviso e il database non viene recuperato.  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Nell'esempio seguente viene ripristinato lo stato del database corrispondente alle ore `12:00 AM` del giorno `April 15, 2020` e viene illustrata un'operazione di ripristino di più backup del log. Nel dispositivo di backup, `AdventureWorksBackups`, il backup completo del database da ripristinare è il terzo set di backup (`FILE = 3`), il primo backup del log è il quarto set di backup (`FILE = 4`) e il secondo backup del log è il quinto set di backup (`FILE = 5`).  
   
 > [!IMPORTANT]  
@@ -182,7 +182,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

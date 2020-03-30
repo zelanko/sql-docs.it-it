@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258802"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Aggiornare SQL Server usando l'Installazione guidata (programma di installazione)
@@ -41,7 +41,7 @@ L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 > * [Aggiornare Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Aggiornare Power Pivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 È necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio che disponga di autorizzazioni di lettura ed esecuzione per questa condivisione remota e che a eseguire l'operazione sia un amministratore locale.  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ## <a name="procedure"></a>Procedura  
   
-### <a name="to-upgrade-includessnoversionincludesssnoversion-mdmd"></a>Per eseguire l'aggiornamento a [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-ssnoversion"></a>Per eseguire l'aggiornamento a [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, passare alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   

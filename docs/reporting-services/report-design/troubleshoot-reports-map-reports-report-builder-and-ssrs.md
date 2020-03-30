@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080837"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi dei report: Report mappa (Generatore report e SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77080837"
  * Inserire un problema o un suggerimento in [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
 
   
-##  <a name="Embedded"></a> Problemi relativi alle dimensioni della definizione del report  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> Problemi relativi alle dimensioni della definizione del report  
  Usare questa sezione per risolvere i problemi relativi alle dimensioni della definizione del report.  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>Informazioni sulla riduzione delle dimensioni della definizione del report.  
@@ -49,7 +49,7 @@ ms.locfileid: "77080837"
   
  Gli elementi della mappa di un report della raccolta mappe saranno sempre incorporati in un livello mappa.  
   
-##  <a name="Spatial"></a> Problemi relativi ai dati spaziali  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> Problemi relativi ai dati spaziali  
  Usare questa sezione per risolvere i problemi relativi ai dati spaziali.  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>Nell'area di progettazione, vengono visualizzati dati spaziali di esempio  
@@ -100,7 +100,7 @@ ms.locfileid: "77080837"
   
 -   Se i dati spaziali provengono da un database di SQL Server, modificare la query per usare le funzioni spaziali e limitare così i dati a un'area più piccola.  
   
-##  <a name="Viewport"></a> Problemi relativi all'allineamento al centro e alla vista  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> Problemi relativi all'allineamento al centro e alla vista  
  Usare questa sezione per risolvere i problemi relativi alle opzioni del viewport.  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>Impossibile impostare le opzioni di allineamento al centro e di visualizzazione per un elemento della mappa incorporato.  
@@ -122,7 +122,7 @@ ms.locfileid: "77080837"
   
 -   Incorporare i dati spaziali nel report ed eliminare le posizioni che non si desidera includere.  
   
-##  <a name="Layers"></a> Problemi relativi ai livelli  
+##  <a name="layer-issues"></a><a name="Layers"></a> Problemi relativi ai livelli  
  Usare questa sezione per risolvere i problemi relativi alle opzioni dei livelli.  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>Uno o più livelli della mappa non vengono visualizzati.  
@@ -144,7 +144,7 @@ ms.locfileid: "77080837"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Nonostante l'impostazione di un filtro sul livello mappa, non si riscontra alcun effetto.  
  Per filtrare i dati per un livello, è necessario specificare il tipo di dati nell'espressione di filtro. Verificare che sia stato specificato il tipo di dati sottostanti corretto in modo che l'equazione di filtro valuti correttamente la condizione specificata. Per altre informazioni, vedere [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Problemi relativi alla legenda, alla scala dei colori e alle regole  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> Problemi relativi alla legenda, alla scala dei colori e alle regole  
  Usare questa sezione per risolvere i problemi relativi alle opzioni delle regole, della legenda e della scala dei colori.  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>Informazioni sul controllo dei valori nella legenda della mappa.  
@@ -175,7 +175,7 @@ ms.locfileid: "77080837"
   
  Per visualizzare la scala dei colori, specificare regole colore per un livello o un elemento incorporato della mappa. Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Tile"></a> Problemi relativi alle sezioni  
+##  <a name="tile-issues"></a><a name="Tile"></a> Problemi relativi alle sezioni  
  Usare questa sezione per risolvere i problemi relativi alle opzioni dello sfondo a sezioni.  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>Lo sfondo a tessere mappa di Bing non viene visualizzato.  
@@ -196,7 +196,7 @@ ms.locfileid: "77080837"
   
  Per includere un livello sezione senza testo, selezionare la vista **Aereo** .  
   
-##  <a name="Tooltip"></a> Problemi relativi alle descrizioni comandi e alle etichette  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> Problemi relativi alle descrizioni comandi e alle etichette  
  Usare questa sezione per risolvere i problemi relativi alle opzioni delle etichette e delle descrizioni comandi.  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Quando si imposta un'etichetta o una descrizione comando su un'espressione, viene restituito un errore di espressione relativo all'ambito del set di dati.  

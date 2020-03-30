@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e11a4ac0bcbb66d6b3216d8c2f7a4a3b15cedfb8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246873"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Distribuire un cluster Big Data di SQL Server con un notebook di Azure Data Studio
@@ -27,7 +27,7 @@ Introdotti inizialmente come progetto open source, i [notebook](notebooks-guidan
 
 È possibile usare notebook per distribuire cluster Big Data per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per avviare il notebook, è necessario soddisfare i prerequisiti seguenti:
 

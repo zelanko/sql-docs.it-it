@@ -21,35 +21,35 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821942"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene illustrato come eseguire un failover manuale pianificato o un failover manuale forzato (failover forzato) su un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Se si esegue il failover su a una replica secondaria con stato SYNCHRONIZED, tramite la procedura guidata viene eseguito un failover manuale pianificato (senza perdita di dati). Se si esegue il failover su una replica secondaria con stato UNSYNCHRONIZED o NOT SYNCHRONIZING, la procedura guidata esegue un failover manuale forzato, noto anche come *failover forzato* (con possibile perdita di dati). In entrambe le forme di failover manuale la replica secondaria a cui si è connessi assume il ruolo primario. Con un failover manuale pianificato attualmente comporta il passaggio della replica primaria precedente al ruolo secondario. Dopo un failover forzato, quando la replica primaria precedente torna online assume il ruolo secondario.  
 
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Prima del primo failover manuale pianificato, vedere la sezione "Prima di iniziare" in [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
  Prima del primo failover forzato, vedere le sezioni "Prima di iniziare" e "Completamento: Attività essenziali dopo un failover forzato" in [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Un comando del failover viene restituito non appena la replica secondaria di destinazione ha accettato il comando. Tuttavia, il recupero del database si verifica in modo asincrono dopo che il gruppo di disponibilità ha completato il failover.  
     
-###  <a name="Prerequisites"></a> Prerequisiti relativi all'utilizzo della Creazione guidata Gruppo di disponibilità di failover  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> Prerequisiti relativi all'utilizzo della Creazione guidata Gruppo di disponibilità di failover  
   
 -   È necessario essere connessi all'istanza del server che ospita una replica di disponibilità attualmente disponibile.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per utilizzare la Creazione guidata Gruppo di disponibilità di failover**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata una replica secondaria del gruppo di disponibilità di cui è necessario eseguire il failover ed espandere l'albero di server.  
@@ -93,7 +93,7 @@ ms.locfileid: "74821942"
   
  Le altre pagine di questa procedura guidata condividono la Guida con una o più procedure guidate relative ai gruppi di disponibilità AlwaysOn e sono documentate in argomenti della Guida sensibile al contesto distinti.  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  In questa sezione vengono descritte le opzioni della pagina **Seleziona nuova replica primaria** . Utilizzare questa pagina per selezionare la replica secondaria (destinazione del failover) sulla quale verrà eseguito il failover del gruppo di disponibilità. La replica diventerà la nuova replica primaria.  
   
 #### <a name="page-options"></a>Opzioni della pagina  
@@ -159,7 +159,7 @@ ms.locfileid: "74821942"
  **Annulla**  
  Fare clic per annullare la procedura guidata. Nella pagina **Seleziona nuova replica primaria** l'annullamento della procedura guidata ne provoca la chiusura senza eseguire alcuna azione.  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  In questa sezione vengono descritte le opzioni della pagina **Conferma potenziale perdita di dati** visualizzata solo se si esegue un failover forzato. Questo argomento viene utilizzato solo nella [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Utilizzare questa pagina per indicare se si è disposti per a rischiare una possibile perdita di dati per forzare il failover del gruppo di disponibilità.  
   
 #### <a name="confirm-potential-data-loss-options"></a>Opzioni di Conferma potenziale perdita di dati  
@@ -171,7 +171,7 @@ ms.locfileid: "74821942"
  **Annulla**  
  Fare clic per annullare la procedura guidata. Nella pagina **Conferma potenziale perdita di dati** l'annullamento della procedura guidata ne provoca la chiusura senza eseguire alcuna azione.  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  In questa sezione vengono descritte le opzioni della pagina **Connetti alla replica** della [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Questa pagina viene visualizzata solo se non si è connessi alla replica secondaria di destinazione. Utilizzare questa pagina per connettersi alla replica secondaria selezionata come nuova replica primaria.  
   
 #### <a name="page-options"></a>Opzioni della pagina  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094500"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database
@@ -30,20 +30,20 @@ ms.locfileid: "74094500"
   
 -   **Per archiviare messaggi e log di Posta elettronica database utilizzando:**  [SQL Server Agent](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Le nuove tabelle per archiviare i dati dell'archivio possono trovarsi in un database di archiviazione speciale. In alternativa le righe possono essere esportate in un file di testo.  
    
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
  Nell'ambiente di produzione è consigliabile aggiungere un ulteriore controllo degli errori e inviare un messaggio di posta elettronica agli operatori se l'esecuzione del processo non viene completata.  
   
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario essere membri del ruolo predefinito del server **sysadmin** per eseguire le stored procedure descritte in questo argomento.  
   
   
-###  <a name="Process_Overview"></a> Panoramica del processo  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> Panoramica del processo  
   
 -   La prima procedura consente di creare un processo denominato Archive Database Mail effettuando i passaggi riportati di seguito.  
   

@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 64f5c5956f69eb1127b8eb5f895476ca7e6cadb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252295"
 ---
 # <a name="create-a-wmi-event-alert"></a>Creare un avviso per evento WMI
@@ -30,9 +30,9 @@ ms.locfileid: "75252295"
 In questo argomento viene descritto come creare un avviso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che viene generato quando si verifica un evento specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitorato dal provider WMI per eventi del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 Per informazioni sull'uso del provider WMI per il monitoraggio degli eventi del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md). Per informazioni sulle autorizzazioni necessarie per ricevere notifiche di avviso per eventi WMI, vedere [Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md). Per altre informazioni su WQL, vedere [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md).  
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Restrictions"></a>Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitazioni e restrizioni  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi ed è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
   
@@ -40,12 +40,12 @@ Per informazioni sull'uso del provider WMI per il monitoraggio degli eventi del 
   
 -   Sono supportati solo gli spazi dei nomi WMI sul computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Autorizzazioni  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorizzazioni  
 Per impostazione predefinita, solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_alert**.  
   
-## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-wmi-event-alert"></a>Per creare un avviso per evento WMI  
   
@@ -67,7 +67,7 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 9. Fare clic su **OK**.  
   
-## <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-wmi-event-alert"></a>Per creare un avviso per evento WMI  
   

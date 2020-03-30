@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Informazioni su come usare i notebook SQL in Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575434"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448447"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Come usare i notebook in Azure Data Studio
 
@@ -32,14 +32,14 @@ In Azure Data Studio è anche possibile premere F1, quindi fare clic su **Nuova 
 
 Ci sono diversi modi per avviare un nuovo notebook.
 
-1. Passare al **menu File**in Azure Data Studio e quindi fare clic su **New Notebook** (Nuovo notebook).
+* Passare al **menu File**in Azure Data Studio e quindi fare clic su **New Notebook** (Nuovo notebook).
 
     ![immagine3](media/sql-notebooks/file-new-notebook.png)
 
-2. Fare clic con il pulsante destro del mouse sulla connessione a **SQL Server** e quindi avviare **New Notebook** (Nuovo notebook). 
+* Fare clic con il pulsante destro del mouse sulla connessione a **SQL Server** e quindi avviare **New Notebook** (Nuovo notebook).
     ![immagine3](media/sql-notebooks/server-new-notebook.png)
 
-3. Aprire il riquadro comandi (**CTRL+MAIUSC+P**) e quindi digitare **New Notebook** (Nuovo notebook). Verrà aperto un nuovo file denominato `Notebook-1.ipynb`.
+* Aprire il riquadro comandi (**CTRL+MAIUSC+P**) e quindi digitare **New Notebook** (Nuovo notebook). Verrà aperto un nuovo file denominato `Notebook-1.ipynb`.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Contesto di collegamento e kernel supportati
 

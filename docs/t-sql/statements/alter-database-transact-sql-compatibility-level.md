@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288665"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
@@ -121,7 +121,7 @@ Per il flusso di lavoro consigliato per l'aggiornamento del livello di compatibi
 ## <a name="compatibility-levels-and-stored-procedures"></a>Livelli di compatibilità e stored procedure
 Quando si esegue una stored procedure, viene utilizzato il livello di compatibilità corrente del database in cui la procedura è definita. Se si modifica l'impostazione di compatibilità di un database, tutte le relative stored procedure vengono ricompilate automaticamente al fine di riflettere tale modifica.
 
-## <a name="backwardCompat"></a> Uso del livello di compatibilità per garantire la compatibilità con le versioni precedenti
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> Uso del livello di compatibilità per garantire la compatibilità con le versioni precedenti
 L'impostazione [Livello di compatibilità database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) garantisce la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in relazione a [!INCLUDE[tsql](../../includes/tsql-md.md)] e ai comportamenti di ottimizzazione delle query solo per il database specificato, non per l'intero server.  
 
 A partire dalla modalità di compatibilità 130, tutte le nuove funzionalità e le correzioni con effetti sul piano di query sono state aggiunte intenzionalmente solo al nuovo livello di compatibilità. In questo modo si riduce al minimo il rischio che si corre durante gli aggiornamenti di ridurre il livello delle prestazioni per modifiche apportate al piano di query potenzialmente introdotte dai nuovi comportamenti di ottimizzazione query.      

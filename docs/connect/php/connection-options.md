@@ -11,10 +11,10 @@ ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44843dedfe42374f832bb4ff03d819f5d08fbc7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916384"
 ---
 # <a name="connection-options"></a>Opzioni di connessione
@@ -31,7 +31,7 @@ Questo argomento elenca le opzioni consentite nella matrice associativa (quando 
 |ApplicationIntent|string|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **ReadOnly** e **ReadWrite**.<br /><br />Per altre informazioni sul supporto di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] per [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere [Supporto per disponibilità elevata e ripristino di emergenza](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|
 |AttachDBFileName|string|Specifica il file di database a cui associare il server.|Non impostato.|
 |Authentication|Una delle stringhe seguenti:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**|Specifica la modalità di autenticazione.<br /><br />Per altre informazioni, vedere [Connettersi con l'autenticazione di Azure Active Directory](../../connect/php/azure-active-directory.md)|Non impostato.|
-|CharacterSet<br /><br />(non supportato nel driver PDO_SQLSRV)|string|Specifica il set di caratteri usato per l'invio di dati al server.<br /><br />I valori possibili sono SQLSRV_ENC_CHAR e UTF-8. Per altre informazioni, vedere [Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(non supportato nel driver PDO_SQLSRV)|string|Specifica il set di caratteri usato per l'invio di dati al server.<br /><br />I valori possibili sono SQLSRV_ENC_CHAR e UTF-8. Per altre informazioni, vedere [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|Una delle stringhe seguenti:<br /><br />**Enabled**<br /><br />**Disabilitato**<br /><br />Stringa che identifica il protocollo di attestazione e l'URL per l'attestazione dell'enclave|Specifica se la funzionalità Always Encrypted è abilitata o meno. Se vengono specificati un URL e un protocollo di attestazione, Always Encrypted con enclave sicuri è abilitato, purché siano soddisfatti gli altri requisiti, come descritto [qui](../../connect/php/always-encrypted-secure-enclaves.md).|Disabled|  
 |ConnectionPooling|1 o **true** per il pool di connessioni attivato.<br /><br />0 o **false** per il pool di connessioni disattivato.|Specifica se la connessione viene assegnata da un pool di connessioni (1 o **true**) o no (0 o **false**).<sup>1</sup>|**true** (1)|  
 |ConnectRetryCount|Numero intero compreso tra 0 e 255 inclusi|Numero massimo di tentativi di ristabilire una connessione interrotta prima di rinunciare. Per impostazione predefinita, viene fatto un solo tentativo di ristabilire una connessione interrotta. Il valore 0 indica che non verrà tentata alcuna riconnessione.|1|  

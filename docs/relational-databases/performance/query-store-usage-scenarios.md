@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288455"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
@@ -110,7 +110,7 @@ Nel piano dopo la creazione dell'indice mancante (plan_id = 15, sotto) ora è pr
   
 In base all'analisi è consigliabile mantenere l'indice visto che le prestazioni delle query sono state migliorate.  
   
-## <a name="CEUpgrade"></a> Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Prima di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], gli utenti erano esposti al rischio di regressione delle prestazioni durante l'aggiornamento alla versione più recente della piattaforma. Il motivo era che la versione più recente di Query Optimizer si attivava subito dopo l'installazione dei nuovi bit.  
   
 A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tutte le modifiche di Query Optimizer sono associate al [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) più recente, quindi i piani non vengono modificati esattamente al momento di aggiornamento, ma quando un utente modifica `COMPATIBILITY_LEVEL` in un livello più recente. Questa funzionalità, in combinazione con Archivio query, offre un alto livello di controllo sulle prestazioni delle query nel processo di aggiornamento. Il flusso di lavoro di aggiornamento consigliato è illustrato nella figura seguente:  

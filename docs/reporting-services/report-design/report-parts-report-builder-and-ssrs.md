@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081112"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "77081112"
   
  La parte di report aggiunta al report in uso consente di gestire una relazione con l'istanza della parte di report sul sito o sul server tramite un ID univoco. Dopo aver aggiunto delle parti a un report da un sito o un server, è possibile modificarle indipendentemente dalla parte di report originale sul sito o sul server. È possibile accettare aggiornamenti che altri utenti hanno apportato alla parte di report sul sito o sul server e salvare di nuovo la parte di report modificata nel sito o nel server, aggiungendone una nuova o scrivendo sull'originale, se si dispone delle autorizzazioni sufficienti.  
   
-##  <a name="ComponentWorkflow"></a> Ciclo di vita di una parte di report  
+##  <a name="life-cycle-of-a-report-part"></a><a name="ComponentWorkflow"></a> Ciclo di vita di una parte di report  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Un utente A crea un report con un grafico che dipende da un set di dati incorporato.  
@@ -42,7 +42,7 @@ ms.locfileid: "77081112"
 6.  L'utente B accetta il grafico aggiornato dal server sovrascrivendo così le modifiche che l'utente B ha apportato al grafico nel report dell'utente B.  
   
   
-##  <a name="PublishingComponents"></a> Pubblicazione di parti di report  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> Pubblicazione di parti di report  
  Quando si pubblica una parte di report, Generatore report consente di assegnarle un ID univoco, che è diverso dal nome della parte di report, e di gestirlo, a prescindere dalle modifiche che si stanno apportando alla parte di report. L'ID consente di collegare l'elemento del report originale nel report alla parte di report. Quando altri autori del report riutilizzano la parte di report, tramite l'ID è anche possibile collegare la parte di report nel report in uso alla parte di report sul server di report.  
   
  È possibile pubblicare come parti di report gli elementi di report riportati di seguito.  
@@ -81,7 +81,7 @@ ms.locfileid: "77081112"
  È possibile modificare anche la descrizione nel riquadro Proprietà.  
   
   
-##  <a name="ReusingComponents"></a> Riutilizzo di parti di report  
+##  <a name="reusing-report-parts"></a><a name="ReusingComponents"></a> Riutilizzo di parti di report  
  Il modo più semplice per creare un report consiste nell'aggiungere una parte di report esistente, ad esempio una tabella o un grafico, al report in uso dalla raccolta relativa alle parti di report. Dopo avere aggiunto la parte di report, è possibile modificarla in base alle necessità o accettare gli aggiornamenti provenienti dal server. La modifica dell'elemento del report nel report non influirà sull'istanza della parte di report pubblicata nel sito o nel server, né interromperà la relazione tra l'istanza nel report e sul sito o server. Se si dispone di autorizzazioni sufficienti, è possibile salvare di nuovo la copia aggiornata nel sito o nel server. Se un altro utente modifica la copia nel sito o nel server, è possibile decidere di tenere la copia invariata o di aggiornarla in modo che sia identica alla copia che si trova nel sito o nel server.  
   
 ### <a name="searching-for-report-parts"></a>Ricerca di parti di report  
@@ -103,7 +103,7 @@ ms.locfileid: "77081112"
  Quando si aggiunge un'altra parte di report che utilizza un set di dati identico a un altro già presente nel report, la procedura guidata non consente di aggiungere un'altra versione di quel set di dati al report reindirizzando i riferimenti nella parte di report al set di dati esistente. Per altre informazioni, vedere [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
   
-##  <a name="UpdatingComponents"></a> Aggiornamento di parti di report con modifiche dal server  
+##  <a name="updating-report-parts-with-changes-from-the-server"></a><a name="UpdatingComponents"></a> Aggiornamento di parti di report con modifiche dal server  
  Ogni volta che si apre un report in Generatore report, viene eseguita la verifica dello stato di aggiornamento delle istanze del server delle parti di report in quel report. Consente di verificare inoltre le modifiche negli elementi dipendenti delle parti di report, ad esempio nel set di dati e nei parametri. Se eventuali parti di report pubblicate o le relative dipendenze sono state aggiornate sul server, in una barra informazioni del report in uso viene visualizzato il numero di quelle interessate dall'aggiornamento. È possibile scegliere di visualizzare e accettare, o rifiutare, gli aggiornamenti oppure di ignorare la barra informazioni. Se si sceglie di visualizzare gli aggiornamenti, viene visualizzata un'anteprima della parte di report con la data e il nome dell'autore dell'ultima modifica. È quindi possibile accettare alcuni o tutti gli elementi aggiornati.  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "77081112"
  Per ripristinare la versione sul server, è sufficiente eliminare la versione che si ha nel report per poi aggiungerla nuovamente.  
   
   
-##  <a name="RepublishingComponents"></a> Aggiornamento di parti di report già sul server  
+##  <a name="updating-report-parts-already-on-the-server"></a><a name="RepublishingComponents"></a> Aggiornamento di parti di report già sul server  
  È possibile scegliere di aggiornare una parte di report esistente nel server o pubblicarla come nuova parte di report senza sostituire quella esistente. Quando si aggiorna la parte di report nel server, le copie della parte di report negli altri report non vengono modificate automaticamente. Se altri autori del report hanno aggiunto quella parte di report a un report, vengono informati della modifica alla successiva apertura di quel report e possono accettare o meno le modifiche.  
   
  Se si sceglie di pubblicarla come nuova parte di report, a quest'ultima sarà assegnato un nuovo ID univoco e verrà eliminato il collegamento alla parte di report originale.  
@@ -128,10 +128,10 @@ ms.locfileid: "77081112"
  Se il set di dati è incorporato nella parte di report, ogni volta che si pubblica la parte di report, il set di dati sarà visualizzato nella finestra di dialogo **Pubblica parti di report** . I set di dati condivisi non sono visualizzati nella finestra di dialogo **Pubblica parti di report** .  
   
   
-##  <a name="RptPartsRptDesigner"></a> Utilizzo di parti di report in Progettazione report  
+##  <a name="working-with-report-parts-in-report-designer"></a><a name="RptPartsRptDesigner"></a> Utilizzo di parti di report in Progettazione report  
  Le parti di report funzionano in modo diverso in Progettazione report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Progettazione report la pubblicazione è unidirezionale: è possibile pubblicare una parte di report, ma non è possibile riutilizzare una parte di report esistente. Per altre informazioni, vedere [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
  [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

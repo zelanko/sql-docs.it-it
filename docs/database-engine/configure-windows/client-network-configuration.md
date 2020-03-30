@@ -19,10 +19,10 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012965"
 ---
 # <a name="client-network-configuration"></a>Configurazione di rete dei client
@@ -43,7 +43,7 @@ ms.locfileid: "68012965"
   
 -   Client DB-Library  
   
-     Queste applicazioni includono l'utilità del prompt dei comandi **isql** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e client scritti in DB-Library. Il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le applicazioni client che usano DB-Library è limitato alle funzionalità di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
+     Queste applicazioni includono l'utilità del prompt dei comandi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]isql**di** e client scritti in DB-Library. Il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le applicazioni client che usano DB-Library è limitato alle funzionalità di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
   
 > [!NOTE]  
 >  Nonostante supporti connessioni da applicazioni esistenti tramite le API DB-Library ed Embedded SQL, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non include i file o la documentazione necessari per svolgere attività di programmazione per le applicazioni che utilizzano tali API. In una versione futura del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà eliminato il supporto per le connessioni da applicazioni DB-Library o Embedded SQL. Non utilizzare pertanto DB-Library o Embedded SQL per sviluppare nuove applicazioni. Quando si modificano applicazioni esistenti, rimuovere tutte le dipendenze da DB-Library o Embedded SQL. Invece di queste API, usare lo spazio dei nomi SQLClient o un'API, ad esempio OLE DB o ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è inclusa la DLL DB-Library necessaria per eseguire queste applicazioni. Per eseguire applicazioni DB-Library o Embedded SQL è necessario disporre della DLL DB-Library di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288275"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
@@ -42,7 +42,7 @@ Nella tabella seguente vengono elencati i tipi di pagina utilizzati nei file di 
 
 |Tipo di pagina | Sommario |
 |-------|-------|
-|Data |Righe di dati con tutti i dati, ad eccezione di dati text, ntext, image, nvarchar (max), varchar (max), varbinary (max) e xml, quando il testo nella riga è impostato su ON. |
+|data |Righe di dati con tutti i dati, ad eccezione di dati text, ntext, image, nvarchar (max), varchar (max), varbinary (max) e xml, quando il testo nella riga è impostato su ON. |
 |Indice |Voci di indice. |
 |Text/Image |Tipi di dati Large Object: (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) e dati xml) <br> Colonne a lunghezza variabile quando la riga di dati supera 8 KB: (varchar, nvarchar, varbinary e sql_variant) |
 |Mappa di allocazione globale (GAM, Global Allocation Map), Mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) |Informazioni che indicano se gli extent sono allocati. |

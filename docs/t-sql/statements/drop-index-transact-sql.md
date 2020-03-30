@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982166"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -162,7 +162,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  Specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  I blocchi di tabella a lungo termine non vengono mantenuti. Ciò consente il proseguimento delle query o degli aggiornamenti nella tabella sottostante.  
   
  OFF  

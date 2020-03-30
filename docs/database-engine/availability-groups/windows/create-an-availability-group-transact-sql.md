@@ -13,10 +13,10 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252967"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Creare un gruppo di disponibilità Always On con Transact-SQL (T-SQL)
@@ -30,17 +30,17 @@ ms.locfileid: "75252967"
 >  In alternativa all'utilizzo di [!INCLUDE[tsql](../../../includes/tsql-md.md)], è possibile utilizzare la procedura guidata Crea gruppo di disponibilità o i cmdlet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md), o [Creare un gruppo di disponibilità &#40; SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
 
   
-## <a name="PrerequisitesRestrictions"></a> Prerequisiti, restrizioni e raccomandazioni  
+## <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> Prerequisiti, restrizioni e raccomandazioni  
   
 -   Prima di creare un gruppo di disponibilità, verificare che le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospitano repliche di disponibilità si trovino in un nodo del Clustering di failover di Windows Server (Windows Server Failover Clustering, WSFC) diverso all'interno dello stesso cluster di failover WSFC. Inoltre, verificare che ciascuna delle istanze del server soddisfi tutti gli altri prerequisiti [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per altre informazioni, si consiglia di leggere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL per creare e configurare un gruppo di disponibilità 
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> Utilizzo di Transact-SQL per creare e configurare un gruppo di disponibilità 
 
-###  <a name="SummaryTsqlStatements"></a> Riepilogo delle attività e istruzioni Transact-SQL corrispondenti  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> Riepilogo delle attività e istruzioni Transact-SQL corrispondenti  
  Nella tabella seguente sono elencate le attività di base necessarie per la creazione e la configurazione di un gruppo di disponibilità e vengono indicate le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] da utilizzare per queste attività. È necessario eseguire le attività [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nell'ordine con cui sono elencate nella tabella.  
   
 |Attività|Istruzione/i Transact-SQL|Posizione in cui eseguire l'attività **&#42;**|  
@@ -67,7 +67,7 @@ ms.locfileid: "75252967"
   
 5.  Creare un join di ogni nuovo database secondario al gruppo di disponibilità. Per altre informazioni, vedere [Creare un join di una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Esempio: Configurazione di un gruppo di disponibilità che usa l'autenticazione di Windows  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> Esempio: Configurazione di un gruppo di disponibilità che usa l'autenticazione di Windows  
  In questo esempio viene creata una procedura di configurazione [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] di esempio in cui viene utilizzato [!INCLUDE[tsql](../../../includes/tsql-md.md)] per configurare endpoint del mirroring del database in cui viene utilizzata l'autenticazione di Windows, nonché per creare e configurare un gruppo di disponibilità e i relativi database secondari.  
   
  In questo esempio sono incluse le sezioni seguenti:  
@@ -78,7 +78,7 @@ ms.locfileid: "75252967"
   
 -   [Esempio di codice completo per la procedura di configurazione di esempio](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a> Prerequisiti per l'utilizzo della procedura di configurazione di esempio  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> Prerequisiti per l'utilizzo della procedura di configurazione di esempio  
  Questa procedura di esempio prevede i requisiti seguenti:  
   
 -   Le istanze del server devono supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "75252967"
   
  [&#91;TopOfExample&#93;](#ExampleConfigAGWinAuth)  
   
-###  <a name="SampleProcedure"></a> Procedura di configurazione di esempio  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> Procedura di configurazione di esempio  
  In questa configurazione di esempio sarà creata la replica di disponibilità in due istanze del server autonome i cui account del servizio vengono eseguiti in domini differenti, ma trusted,`DOMAIN1` e `DOMAIN2`.  
   
  Nella tabella seguente sono riepilogati i valori utilizzati in questa configurazione di esempio.  
@@ -290,7 +290,7 @@ ms.locfileid: "75252967"
   
     ```  
   
-###  <a name="CompleteCodeExample"></a> Esempio di codice completo per la procedura di configurazione di esempio  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> Esempio di codice completo per la procedura di configurazione di esempio  
  Nell'esempio seguente vengono uniti gli esempi di codice di tutti i passaggi della procedura di configurazione di esempio. Nella tabella seguente sono riepilogati i valori segnaposto utilizzati nell'esempio di codice. Per ulteriori informazioni sui passaggi di questo esempio di codice, vedere [Prerequisiti per l'utilizzo della procedura di configurazione di esempio](#PrerequisitesForExample) e [Procedura di configurazione di esempio](#SampleProcedure), precedentemente in questo argomento.  
   
 |Segnaposto|Descrizione|  
@@ -446,7 +446,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare le proprietà della replica e del gruppo di disponibilità**  
   
 -   [Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -505,7 +505,7 @@ GO
   
 -   [Risolvere i problemi relativi a una operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   **Blog:**  
   

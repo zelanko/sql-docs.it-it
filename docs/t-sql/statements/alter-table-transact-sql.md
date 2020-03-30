@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288305"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -663,7 +663,7 @@ Per altre informazioni, vedere [Configurazione di operazioni parallele sugli ind
 ONLINE **=** { ON | **OFF** } \<come si applica a drop_clustered_constraint_option>  
 Specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF. È possibile eseguire REBUILD come operazione ONLINE.
 
-ATTIVA  
+ON  
 I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. Questo comportamento consente l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un breve periodo. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, se viene creato un indice non cluster. In alternativa, viene acquisito un blocco di modifica dello schema (SCH-M) quando un indice cluster viene creato o eliminato online e quando un indice cluster o non cluster viene ricompilato. L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale. È consentita solo l'operazione di ricompilazione dell'heap a thread singolo.
 
 Per eseguire l'istruzione DDL per un'operazione **SWITCH** o la ricompilazione dell'indice online, è necessario completare tutte le transazioni bloccanti attive in esecuzione in una specifica tabella. Durante l'esecuzione, l'operazione **SWITCH** o di ricompilazione impedisce l'avvio di nuove transazioni e può influire in modo significativo sulla velocità effettiva del carico di lavoro e ritardare temporaneamente l'accesso alla tabella sottostante.
@@ -823,7 +823,7 @@ Per ricompilare contemporaneamente più partizioni, vedere [index_option](../../
 ONLINE **=** { ON | **OFF** } \<come si applica a single_partition_rebuild_option>  
 Specifica se una singola partizione delle tabelle sottostanti e degli indici associati è disponibile per le query e le modifiche dei dati durante l'operazione sull'indice. Il valore predefinito è OFF. È possibile eseguire REBUILD come operazione ONLINE.
 
-ATTIVA  
+ON  
 I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. È necessario un blocco condiviso (S) sulla tabella all'inizio della ricompilazione dell'indice e un blocco di modifica schema (Sch-M) sulla tabella alla fine della ricompilazione dell'indice online. Sebbene entrambi i blocchi siano blocchi di metadati brevi, il blocco Sch-M deve attendere il completamento di tutte le transazioni bloccanti. Durante il tempo di attesa, il blocco Sch-M impedisce tutte le altre transazioni in attesa dietro il blocco stesso per l'accesso alla stessa tabella.
 
 > [!NOTE]
@@ -930,7 +930,7 @@ Tempo di attesa, espresso con un valore intero specificato in minuti, dell'opera
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Nessuno  
+NONE  
 Continuare ad attendere il blocco con priorità normale (regolare).
 
 SELF  
@@ -1054,7 +1054,7 @@ Se nell'istruzione ALTER TABLE sono state definite colonne di tipo Common Langua
 
 Per aggiungere una colonna con la quale vengono aggiornate le righe della tabella è necessaria l'autorizzazione **UPDATE** per la tabella, ad esempio per aggiungere una colonna **NOT NULL** con un valore predefinito o una colonna Identity quando la tabella non è vuota.
 
-## <a name="Example_Top"></a> Esempi
+## <a name="examples"></a><a name="Example_Top"></a> Esempi
 
 |Category|Elementi di sintassi inclusi|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ Per aggiungere una colonna con la quale vengono aggiornate le righe della tabell
 |[Disabilitazione e abilitazione di vincoli e trigger](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>Aggiunta di colonne e vincoli
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>Aggiunta di colonne e vincoli
 
 Negli esempi di questa sezione viene illustrata l'aggiunta di colonne e vincoli a una tabella.
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>Eliminazione di colonne e vincoli
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>Eliminazione di colonne e vincoli
 
 Negli esempi di questa sezione viene illustrata l'eliminazione di colonne e vincoli.
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Esempi](#Example_Top)
 
-### <a name="alter_column"></a> Modifica della definizione di una colonna
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> Modifica della definizione di una colonna
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>R. Modifica del tipo di dati di una colonna
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> Modifica della definizione di una tabella
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> Modifica della definizione di una tabella
 
 Negli esempi di questa sezione viene illustrato come modificare la definizione di una tabella.
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a> Disabilitazione e abilitazione di vincoli e trigger
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a> Disabilitazione e abilitazione di vincoli e trigger
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>R. Disabilitazione e riabilitazione di un vincolo
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>Operazioni online
+### <a name="online-operations"></a><a name="online"></a>Operazioni online
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>R. Ricompilazione dell'indice online usando le opzioni di attesa con priorità bassa
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> Controllo delle versioni di sistema
+### <a name="system-versioning"></a><a name="system_versioning"></a> Controllo delle versioni di sistema
 
 I quattro esempi riportati di seguito consentono di acquisire familiarità con la sintassi per l'uso del controllo delle versioni di sistema. Per altre istruzioni, vedere [Introduzione alle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 

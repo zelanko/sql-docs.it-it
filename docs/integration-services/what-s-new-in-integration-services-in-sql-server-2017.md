@@ -11,10 +11,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296463"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novità&#39; di Integration Services in SQL Server 2017
@@ -31,7 +31,7 @@ Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate 
 
 Di seguito sono elencate le principali nuove funzionalità di Integration Services in SQL Server 2017.
 
--   **Scale Out**. Consente di distribuire più facilmente l'esecuzione di pacchetti SSIS su più computer del ruolo di lavoro e gestire le esecuzioni e i ruoli di lavoro da un singolo computer master. Per altre informazioni, vedere [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+-   **Aumentare il numero di istanze**. Consente di distribuire più facilmente l'esecuzione di pacchetti SSIS su più computer del ruolo di lavoro e gestire le esecuzioni e i ruoli di lavoro da un singolo computer master. Per altre informazioni, vedere [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
 
 -   **Integration Services in Linux**. Consente di eseguire pacchetti SSIS in computer Linux. Per altre informazioni, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
 

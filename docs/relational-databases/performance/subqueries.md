@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113282"
 ---
 # <a name="subqueries-sql-server"></a>Sottoquery (SQL Server)
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> Nozioni fondamentali sulle sottoquery
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> Nozioni fondamentali sulle sottoquery
 Le sottoquery sono dette anche query interne o istruzioni SELECT interne. L'istruzione che include una sottoquery è detta anche query esterna o istruzione SELECT esterna.   
 
 Molte istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che includono sottoquery possono essere formulate anche come join. Altre domande possono essere poste solo in forma di sottoquery. In [!INCLUDE[tsql](../../includes/tsql-md.md)] non si rileva in genere alcuna differenza nelle prestazioni tra un'istruzione che include una sottoquery e una versione equivalente dal punto di vista semantico ma priva di sottoquery. In alcuni casi in cui è necessario verificare l'esistenza di dati specifici, tuttavia, l'utilizzo di un join consente di ottenere prestazioni migliori. Se non si utilizza un join, è necessario assicurarsi che i duplicati vengano eliminati elaborando la query nidificata per ogni risultato della query esterna. In questi casi, l'utilizzo del join consente di ottenere risultati migliori. L'esempio seguente illustra un'istruzione `SELECT` con una sottoquery e un'istruzione `SELECT` con un join che restituiscono lo stesso set di risultati:
@@ -92,7 +92,7 @@ Sono disponibili tre tipi di sottoquery di base, ovvero:
 -   Sottoquery introdotte da un operatore di confronto non modificato le quali devono restituire un solo valore.
 -   Sottoquery che corrispondono a test di esistenza introdotte da `EXISTS`.
 
-## <a name="rules"></a> Regole delle sottoquery
+## <a name="subquery-rules"></a><a name="rules"></a> Regole delle sottoquery
 Le sottoquery sono soggette alle seguenti restrizioni: 
 -   L'elenco di selezione di una sottoquery introdotta da un operatore di confronto può includere una sola espressione o un solo nome di colonna, ad eccezione dei casi in cui `EXISTS` e `IN` vengono usati rispettivamente in `SELECT *` o in un elenco.   
 -   Se la clausola `WHERE` di una query esterna include un nome di colonna, questo deve essere compatibile a livello di join con la colonna dell'elenco di selezione della sottoquery.   
@@ -104,7 +104,7 @@ Le sottoquery sono soggette alle seguenti restrizioni:
 -   Le viste create utilizzando una sottoquery non possono essere aggiornate.   
 -   Per convenzione, l'elenco di selezione di una sottoquery introdotta da `EXISTS` include un asterisco (\*) anziché un singolo nome di colonna. Le regole valide per una sottoquery introdotta da `EXISTS` corrispondono a quelle seguite per un elenco di selezione standard poiché una sottoquery introdotta da `EXISTS` crea un test di esistenza e non restituisce dati, ma TRUE o FALSE.   
 
-## <a name="qualifying"></a> Qualificazione dei nomi delle colonne nelle sottoquery
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> Qualificazione dei nomi delle colonne nelle sottoquery
 Nell'esempio seguente la colonna *BusinessEntityID* specificata nella clausola `WHERE` della query esterna viene qualificata in modo implicito con il nome della tabella indicato nella clausola `FROM` della query esterna, ovvero *Sales.Store*. Il riferimento a *CustomerID* nell'elenco di selezione della sottoquery viene qualificato dalla clausola `FROM` della sottoquery, ovvero dalla tabella *Sales.Customer*.
 
 ```sql
@@ -140,7 +140,7 @@ GO
 > [!IMPORTANT]
 > Se viene fatto riferimento a una colonna in una sottoquery che non è inclusa nella tabella cui viene fatto riferimento nella clausola `FROM` della sottoquery, ma che è invece inclusa in una tabella cui viene fatto riferimento nella clausola `FROM` della query esterna, la query viene eseguita senza errori. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualifica in modo implicito la colonna nella sottoquery con il nome della tabella indicato nella query esterna.   
 
-## <a name="nesting"></a> Più livelli di nidificazione
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> Più livelli di nidificazione
 Una sottoquery può includere una o più sottoquery. Un'istruzione supporta qualsiasi numero di livelli di nidificazione di sottoquery.   
 
 La query seguente consente di trovare i nomi dei dipendenti che operano anche come venditori.   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> Sottoquery correlate
+## <a name="correlated-subqueries"></a><a name="correlated"></a> Sottoquery correlate
 In molti casi per valutare le query è possibile eseguire una volta la sottoquery e sostituire quindi i valori ottenuti a quelli specificati nella clausola `WHERE` della query esterna. Nelle query che includono una sottoquery correlata (nota anche come sottoquery ripetuta), i valori della sottoquery variano in base ai valori della query esterna. Ciò significa che la sottoquery viene eseguita ripetutamente, una volta per ogni riga selezionata dalla query esterna.
 La query seguente recupera un'istanza di ogni nome e cognome di dipendente per il quale il premio di produzione nella tabella *SalesPerson* è pari a 5000 e per il quale sono presenti numeri di matricola corrispondenti nelle tabelle *Employee* e *SalesPerson*.
 
@@ -259,7 +259,7 @@ La riga relativa a `Syed Abbas` non rispetta la condizione specificata e non vie
 
 Le sottoquery correlate possono anche includere funzioni con valori di tabella nella clausola `FROM` se un argomento di tali funzioni fa riferimento a colonne di una tabella della query esterna. In questo caso, per ogni riga della query esterna, la funzione viene valutata in base alla sottoquery.    
   
-## <a name="types"></a> Tipi di sottoquery
+## <a name="subquery-types"></a><a name="types"></a> Tipi di sottoquery
 È possibile specificare sottoquery in numerose posizioni: 
 -   Con alias. Per altre informazioni, vedere [Sottoquery con alias](#aliases).
 -   Con `IN` o `NOT IN`. Per altre informazioni, vedere [Sottoquery con IN](#in) e [Sottoquery con NOT IN](#notin).
@@ -269,7 +269,7 @@ Le sottoquery correlate possono anche includere funzioni con valori di tabella n
 -   Con `EXISTS` o `NOT EXISTS`. Per altre informazioni, vedere [Sottoquery con EXISTS](#exists) e [Sottoquery con NOT EXISTS](#notexists).
 -   In sostituzione di un'espressione. Per altre informazioni, vedere [Sottoquery usate in sostituzione di un'espressione](#expression).
 
-### <a name="aliases"></a> Sottoquery con alias
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> Sottoquery con alias
 Molte istruzioni in cui la sottoquery e la query esterna fanno riferimento alla stessa tabella possono essere formulate come self-join, ovvero join che uniscono una tabella a se stessa. Ad esempio, è possibile trovare indirizzi di dipendenti di un particolare stato utilizzando una sottoquery:   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 Gli alias espliciti evidenziano in modo chiaro che un riferimento alla tabella *Person.Address* nella sottoquery non corrisponde al riferimento incluso nella query esterna.   
 
-### <a name="in"></a> Sottoquery con IN
+### <a name="subqueries-with-in"></a><a name="in"></a> Sottoquery con IN
 Il risultato di una sottoquery introdotta da `IN` (o da `NOT IN`) è un elenco di zero o più valori. I risultati restituiti dalla sottoquery vengono utilizzati dalla query esterna.    
 La query seguente trova i nomi di tutti i prodotti con nome "Wheels" creati da Adventure Works Cycles.     
 
@@ -468,7 +468,7 @@ GO
 
 Un join può sempre essere espresso come sottoquery. Spesso, ma non sempre, una sottoquery può essere espressa come join. Ciò è possibile perché i join sono simmetrici, ovvero l'unione in join delle tabelle A e B restituisce sempre gli stessi risultati indipendentemente dall'ordine delle tabelle nel join. Questo non avviene invece quando si utilizza una sottoquery.    
 
-### <a name="notin"></a> Sottoquery con NOT IN
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> Sottoquery con NOT IN
 Le sottoquery introdotte dalla parola chiave NOT IN restituiscono un elenco di zero o più valori.   
 La query seguente trova i nomi dei prodotti che non sono biciclette finite.   
 
@@ -488,7 +488,7 @@ GO
 
 Non è possibile convertire questa istruzione in un join. Il join di disuguaglianza corrispondente ha infatti un significato diverso perché trova i nomi dei prodotti inclusi in una sottocategoria che non corrisponde a una bicicletta finita.      
 
-### <a name="upsert"></a> Sottoquery in istruzioni UPDATE, DELETE e INSERT
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> Sottoquery in istruzioni UPDATE, DELETE e INSERT
 Le sottoquery possono essere nidificate nelle istruzioni DML `UPDATE`, `DELETE`, `INSERT` e `SELECT`.    
 
 L'esempio seguente raddoppia il valore della colonna *ListPrice* della tabella *Production.Product*. La sottoquery nella clausola `WHERE` fa riferimento alla tabella *Purchasing.ProductVendor* per limitare le righe aggiornate nella tabella *Product* a quelle fornite da *BusinessEntity* 1540.
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> Sottoquery con operatori di confronto
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> Sottoquery con operatori di confronto
 Le sottoquery possono essere introdotte da un operatore di confronto, ovvero =, < >, >, > =, <, ! >, ! < o < =).   
 
 Analogamente alle sottoquery introdotte da `ANY`, le sottoquery introdotte da un operatore di confronto non modificato, ovvero non seguito dalla parola chiave `ALL` o `IN`, devono restituire un solo valore anziché un elenco di valori. Se una sottoquery di questo tipo restituisce più valori, SQL Server visualizza un messaggio di errore.    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> Operatori di confronto modificati da ANY, SOME o ALL
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> Operatori di confronto modificati da ANY, SOME o ALL
 Gli operatori di confronto che introducono una sottoquery possono essere modificati tramite le parole chiave ALL o ANY. SOME è un equivalente dello standard ISO per `ANY`.     
 
 Le sottoquery introdotte da un operatore di confronto modificato restituiscono un elenco di zero o più valori e possono includere una clausola `GROUP BY` o `HAVING`. Queste sottoquery possono essere riformulate con `EXISTS`.     
@@ -667,7 +667,7 @@ Per lo stesso motivo, se si usa `NOT IN` nella query, nei risultati non sarà in
 
 È possibile ottenere gli stessi risultati usando l'operatore `<>ALL`, che equivale a `NOT IN`.   
 
-### <a name="exists"></a> Sottoquery con EXISTS
+### <a name="subqueries-with-exists"></a><a name="exists"></a> Sottoquery con EXISTS
 Le sottoquery introdotte dalla parola chiave `EXISTS` fungono da test di esistenza dei dati. La clausola `WHERE` della query esterna verifica l'esistenza delle righe restituite dalla sottoquery. La sottoquery non restituisce dati, ma TRUE o FALSE.   
 
 Per specificare una sottoquery introdotta da EXISTS, usare la sintassi seguente:   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> Sottoquery con NOT EXISTS
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> Sottoquery con NOT EXISTS
 La parola chiave `NOT EXISTS` funziona in modo analogo a `EXISTS`, con la differenza che la clausola `WHERE` in cui è specificata viene soddisfatta se la sottoquery non restituisce alcuna riga.    
 
 Per trovare, ad esempio, i nomi dei prodotti che non fanno parte della sottocategoria wheels:   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> Sottoquery usate in sostituzione di un'espressione
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> Sottoquery usate in sostituzione di un'espressione
 In [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile usare una sottoquery in qualsiasi punto in cui è possibile inserire un'espressione nelle istruzioni `SELECT`, `UPDATE`, `INSERT` e `DELETE`, ad eccezione di un elenco `ORDER BY`.    
 
 Nell'esempio seguente viene illustrata la modalità di utilizzo di questa funzione. La query trova i prezzi di tutte le mountain bike, il prezzo medio e la differenza di prezzo delle singole biciclette rispetto al prezzo medio.    

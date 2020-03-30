@@ -15,10 +15,10 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e9a628b725222d0e77ed7fcb55b80ec8de153a55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558126"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Visualizzare o modificare le proprietà di una condizione della gestione basata su criteri
@@ -27,14 +27,14 @@ ms.locfileid: "75558126"
   
 
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
 
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>Per visualizzare o modificare le proprietà di una condizione  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75558126"
   
 6.  Al termine, fare clic su **OK**.  
 
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-a-conditions-properties"></a>Per visualizzare le proprietà di una condizione  
   

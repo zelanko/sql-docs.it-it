@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71974358"
 ---
 # <a name="how-query-store-collects-data"></a>Modalità di raccolta dei dati di Query Store
@@ -31,7 +31,7 @@ SQL Server Query Store funge da vera e propria scatola nera, raccogliendo costan
  ![Viste del processo Query Store](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Descrizioni delle viste**  
   
-|Visualizza|Descrizione|  
+|Visualizzazione|Descrizione|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Presenta i testi delle singole query univoche eseguite sul database. I commenti e gli spazi prima e dopo il testo della query vengono ignorati. I commenti e gli spazi all'interno del testo non vengono ignorati. Ogni istruzione del batch genera una voce diversa nell'elenco dei testi di query.|  
 |**sys.query_context_settings**|Presenta combinazioni univoche di impostazioni che influiscono sul piano e con cui sono eseguite le query. Lo stesso testo della query eseguito con impostazioni diverse che influiscono sul piano genera una voce di query separata in Query Store in quanto `context_settings_id` fa parte della chiave della query.|  

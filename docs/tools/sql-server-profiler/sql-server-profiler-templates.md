@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307848"
 ---
 # <a name="sql-server-profiler-templates"></a>Modelli di SQL Server Profiler
@@ -51,7 +51,7 @@ ms.locfileid: "75307848"
 ## <a name="default-template"></a>Modello predefinito  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] specifica automaticamente il modello **Standard** come modello predefinito applicato a qualsiasi nuova traccia. Tuttavia è possibile modificare il modello predefinito in qualsiasi altro modello, predefinito o definito dall'utente. Per modificare il modello predefinito, selezionare la casella di controllo **Usa come modello predefinito per il tipo di server selezionato** quando si crea o modifica un modello utilizzando la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** .  
   
- Per spostarsi alla finestra di dialogo **Proprietà modello di traccia**, scegliere **Modelli** dal menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e quindi fare clic su **Nuovo modello** o su **Modifica modello**.  
+ Per spostarsi alla finestra di dialogo **Proprietà modello di traccia**, scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Modelli**dal menu**File**di** e quindi fare clic su **Nuovo modello** o su **Modifica modello**.  
   
 > [!NOTE]  
 >  Il modello predefinito è specifico per un determinato tipo di server. La modifica del modello predefinito per un tipo di server non ha effetto sul modello predefinito per gli altri tipi. Per altre informazioni sull'impostazione di un modello predefinito per un server specifico, vedere [Impostare i valori predefiniti per una definizione di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  

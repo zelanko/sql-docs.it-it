@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073139"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Il database segnalerà eventuali errori Java che si verificano nell'origine dati esterna durante l'esportazione dei dati.  
   
-##  <a name="GeneralRemarks"></a> Osservazioni generali  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Osservazioni generali  
  Eseguita l'istruzione CETAS, è possibile eseguire query [!INCLUDE[tsql](../../includes/tsql-md.md)] sulla tabella esterna. Queste operazioni consentono di importare i dati nel database per la durata della query a meno che non si esegua l'importazione usando l'istruzione CREATE TABLE AS SELECT.  
   
  Il nome e la definizione della tabella esterna vengono archiviati nei metadati del database. I dati vengono archiviati nell'origine dati esterna.  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>Blocco  
  Accetta un blocco condiviso per l'oggetto SCHEMARESOLUTION.  
   
-##  <a name="Examples"></a> Esempi  
+##  <a name="examples"></a><a name="Examples"></a> Esempi  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>R. Creare una tabella di Hadoop usando CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  L'esempio seguente crea una nuova tabella esterna denominata `hdfsCustomer` usando le definizioni e i dati delle colonne della tabella di origine `dimCustomer`.  

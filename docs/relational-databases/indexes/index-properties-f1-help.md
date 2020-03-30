@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68476297"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
@@ -43,7 +43,7 @@ ms.locfileid: "68476297"
   
  [Pagina Filtro di Proprietà indice](#Filter)  
   
-##  <a name="General"></a> Pagina Generale di Proprietà indice  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Pagina Generale di Proprietà indice  
  Usare la pagina Generale per visualizzare o modificare le proprietà di indice per la tabella o la vista selezionata. Le opzioni per ogni pagina possono cambiare a seconda del tipo di indice selezionato.  
   
  **Nome tabella**  
@@ -55,7 +55,7 @@ ms.locfileid: "68476297"
  Consente di visualizzare il nome dell'indice. Per un indice esistente questo campo è di sola lettura. Quando si crea un nuovo indice, digitare il nome dell'indice.  
   
  **Tipo di indice**  
- Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **XML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster** o **Columnstore non cluster**.  
+ Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **AML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster**o **Columnstore non cluster**.  
   
  **Nota** È consentito un solo indice cluster per ogni tabella. È consentito un solo indice columnstore con ottimizzazione per la memoria xVelocity per ogni tabella.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68476297"
  **included_columns**  
  Consente di includere colonne non chiave nell'indice non cluster. Questa opzione consente di ignorare i limiti dell'indice corrente relativi alle dimensioni totali di una chiave di indice e il numero massimo di colonne che fanno parte di una chiave di indice aggiungendo colonne come colonne non chiave nel livello foglia dell'indice non cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-##  <a name="Columns"></a> Finestra di dialogo Seleziona colonne (Indice)  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> Finestra di dialogo Seleziona colonne (Indice)  
  Usare questa pagina per aggiungere colonne alla pagina Generale di **Proprietà indice** durante la creazione o la modifica di un indice.  
   
  **Casella di controllo**  
@@ -134,7 +134,7 @@ ms.locfileid: "68476297"
  **Consenti valori NULL**  
  Il valore indicato è **Sì** se la definizione della tabella consente valori Null per la colonna. oppure **No** se la definizione della tabella non consente valori Null per la colonna.  
 
-##  <a name="Options"></a> Opzioni nella pagina Opzioni
+##  <a name="options-page-options"></a><a name="Options"></a> Opzioni nella pagina Opzioni
  Usare questa pagina per visualizzare o modificare le varie opzioni per l'indice.
 
 ### <a name="general-options"></a>Opzioni generali
@@ -203,7 +203,7 @@ False o fillfactor non è specificato<br>
 Le pagine di livello intermedio vengono riempite poco al di sotto della capacità massima, in modo che lo spazio residuo sia sufficiente per almeno una riga della dimensione massima supportata dall'indice, in base al set di chiavi nelle pagine intermedie.
 
 
-##  <a name="Storage"></a> Opzioni della pagina Archiviazione  
+##  <a name="storage-page-options"></a><a name="Storage"></a> Opzioni della pagina Archiviazione  
  Usare questa pagina per visualizzare o modificare proprietà di filegroup o di schemi di partizione per l'indice selezionato. Vengono mostrate solo le opzioni correlate al tipo di indice.  
   
  **Filegroup**  
@@ -234,7 +234,7 @@ Le pagine di livello intermedio vengono riempite poco al di sotto della capacit�
 > [!NOTE]  
 >  Se la colonna della tabella è una colonna calcolata, l'opzione **Tipo di dati colonna** visualizza "colonna calcolata".  
   
-##  <a name="Spatial"></a> Opzioni di indice della pagina Spaziale  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> Opzioni di indice della pagina Spaziale  
  Usare la pagina **Spaziale** per visualizzare o specificare i valori delle proprietà spaziali. Per altre informazioni, vedere [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Riquadro  
@@ -292,7 +292,7 @@ Le pagine di livello intermedio vengono riempite poco al di sotto della capacit�
  **Livello 4**  
  Densità della griglia di quarto livello.  
   
-##  <a name="Filter"></a> Pagina Filtro  
+##  <a name="filter-page"></a><a name="Filter"></a> Pagina Filtro  
  Usare questa pagina per immettere il predicato del filtro per un indice filtrato. Per altre informazioni, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Espressione filtro**  

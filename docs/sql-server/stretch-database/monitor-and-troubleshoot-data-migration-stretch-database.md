@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843784"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Monitoraggio e risoluzione dei problemi di migrazione dei dati (Stretch Database)
@@ -33,10 +33,10 @@ ms.locfileid: "73843784"
   
  ![Monitoraggio di Stretch Database](../../sql-server/stretch-database/media/stretch-monitor.PNG "Monitoraggio di Stretch Database")  
   
-##  <a name="Migration"></a> Controllare lo stato della migrazione dei dati in una DMV  
+##  <a name="check-the-status-of-data-migration-in-a-dynamic-management-view"></a><a name="Migration"></a> Controllare lo stato della migrazione dei dati in una DMV  
  Aprire la DMV **sys.dm_db_rda_migration_status** per visualizzare il numero di batch e righe di dati di cui è stata eseguita la migrazione. Per altre informazioni, vedere [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
-##  <a name="Firewall"></a> Risolvere i problemi relativi alla migrazione dei dati  
+##  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> Risolvere i problemi relativi alla migrazione dei dati  
  **Non viene eseguita la migrazione in Azure delle righe dalla tabella abilitata per l'estensione. Qual è il problema?**  
  Esistono diversi problemi che possono influire sulla migrazione. Verificare quanto segue.  
   

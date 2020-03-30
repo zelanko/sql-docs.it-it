@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286165"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Progettare report impaginati di Reporting Services con progettazione Report (SSRS)
@@ -37,7 +37,7 @@ I progetti report costituiscono il contenitore per le definizioni e le risorse d
  Usare le informazioni contenute in questo argomento per progettare report impaginati ed elementi correlati per un unico progetto di report in una soluzione di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Per altre informazioni sulle soluzioni e più progetti in SQL Server Data Tools, vedere [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Origini dati condivise  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> Origini dati condivise  
  Utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per definire e distribuire origini dati condivise per una soluzione di report. Le origini dati condivise possono essere distribuite indipendentemente dagli altri elementi di un progetto tramite le proprietà **OverwriteDataSources** e **TargetDataSourceFolder** . Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  In Progettazione report per definire le origini dati utilizzate in un report è possibile utilizzare sia il riquadro dei dati del report che Esplora soluzioni. Per altre informazioni, vedere [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Non è possibile utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per aprire origini dati pubblicate in un server di report o in un sito di SharePoint, ma non incluse nella soluzione di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Per tale caratteristica, usare [Ambiente di creazione di Generatore report &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
@@ -46,14 +46,14 @@ I progetti report costituiscono il contenitore per le definizioni e le risorse d
   
  Per altre informazioni, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_SharedDatasets"></a> Set di dati condivisi  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> Set di dati condivisi  
  Utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per definire e distribuire set di dati condivisi per una soluzione di report. I set di dati condivisi possono essere distribuiti indipendentemente dagli altri elementi di un progetto tramite le proprietà **OverwriteDatasets** e **TargetDatasetFolder** . Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  In Progettazione report per definire i set di dati condivisi utilizzati in un report è possibile utilizzare sia il riquadro dei dati del report che Esplora soluzioni. Per altre informazioni, vedere [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Non è possibile utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per aprire i set di dati pubblicati direttamente da un server di report o da un sito di SharePoint. Per tale caratteristica, usare [Ambiente di creazione di Generatore report &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md) in modalità Set di dati condiviso.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è uno strumento client. È possibile utilizzare le finestre Progettazione query per creare e testare i risultati delle query localmente in Anteprima. Dopo la distribuzione è possibile gestire i set di dati condivisi indipendentemente dalle origini dati condivise e dai report dai quali dipendono. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Strumenti di progettazione query &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) e [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-##  <a name="bkmk_Reports"></a> Report impaginati  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> Report impaginati  
 I report impaginati sono file archiviati in un progetto report. I report possono essere utilizzati come report autonomi, sottoreport o destinazioni per azioni drill-through dai report principali. I report possono essere distribuiti indipendentemente da altri elementi di un progetto tramite **TargetReportFolder** e altre proprietà. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ I report impaginati sono file archiviati in un progetto report. I report possono
   
      Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).  
   
-##  <a name="bkmk_ReportParts"></a> Parti del report  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> Parti del report  
  In Progettazione report, dopo aver creato tabelle, grafici e altri elementi impaginati del report in un progetto, è possibile pubblicarli come *parti di report* in un server di report o in un sito di SharePoint integrato con un server di report in modo da permetterne il riutilizzo in altri report. Per altre informazioni, vedere [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
  Le parti del report possono essere distribuite indipendentemente da altri elementi di un progetto tramite **TargetReportPartFolder** e altre proprietà. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
-##  <a name="bkmk_Resources"></a> Risorse  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Risorse  
  È possibile aggiungere al progetto file correlati al report, ma non elaborati dal server di report. È ad esempio possibile aggiungere immagini per le immagini o file di forma ESRI per i dati spaziali. Per altre informazioni, vedere [Risorse](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Layout del report impaginato  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> Layout del report impaginato  
  Per creare il layout del report, trascinare gli elementi e le aree dati del report dalla casella degli strumenti nell'area di progettazione e disporli. Trascinare i campi del set di dati sugli elementi dell'area di progettazione per aggiungere dati al report. Per organizzare i dati in gruppi in un'area dati Tablix, trascinare i campi del set di dati nel riquadro di raggruppamento. Poiché gli strumenti per la creazione di report costituiscono essenzialmente un modo per creare definizioni di report, l'approccio alla progettazione di report di Generatore report e Progettazione report è piuttosto simile.  
    
-##  <a name="bkmk_Preview"></a> Visualizzare in anteprima un report impaginato  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> Visualizzare in anteprima un report impaginato  
  Utilizzare **Anteprima** per verificare i dati del report e la progettazione del layout. Quando un report viene visualizzato in anteprima, il componente Elaborazione report convalida lo schema di definizione del report e la sintassi dell'espressione ed elenca i problemi nella finestra [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
   
     -   Layout del report che deve essere modificato per essere più leggibile nel formato di stampa.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Salvare e distribuire report impaginati  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> Salvare e distribuire report impaginati  
  In Progettazione report è possibile salvare report e altri file di progetto in locale oppure distribuirli in un server di report o in un sito di SharePoint. È possibile distribuire origini dati condivise, set di dati condivisi, report, risorse del report e parti del report singolarmente o insieme a seconda delle proprietà di distribuzione del progetto configurate. Per altre informazioni, vedere [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  In Progettazione report è importante tenere presente che si progetta un report utilizzando lo schema di definizione del report supportato dalla versione corrente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando si impostano le proprietà di distribuzione del progetto per un server di report o un sito di SharePoint specifico e si salva il report, in Progettazione report la definizione del report viene salvata nella directory di compilazione nello schema che corrisponde alla versione sul server di report di destinazione. Per creare report pubblicabili su un server di report di livello inferiore, in Progettazione report gli elementi del report non esistenti nello schema di destinazione vengono rimossi. Ciò si verifica automaticamente, senza richiesta di conferma. Quando ciò si verifica, la definizione di report originale viene mantenuta nella cartella del progetto. La definizione di report modificata che viene distribuita si trova nella cartella di compilazione.  
@@ -159,7 +159,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>Esportare un report impaginato in un formato di file diverso  
  I report possono essere esportati in diversi formati, dai quali dipende il funzionamento di alcune funzionalità relative all'interattività e al layout del report. Per altre informazioni sulle considerazioni relative alla progettazione per i diversi formati di output, vedere [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Convalida del report e livelli di errore  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Convalida del report e livelli di errore  
  I report vengono convalidati prima dell'anteprima e durante la distribuzione. Durante la compilazione dei report si possono verificare diversi problemi. I report potrebbero ad esempio contenere stringhe quali espressioni o query incompatibili con la versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specificata nella configurazione del progetto.  
   
  Usare la proprietà ErrorLevel per gestire avvisi ed errori relativi alla compilazione. La proprietà ErrorLevel può contenere un valore da 0 a 4 incluso. Il valore determina quali problemi di compilazione vengono segnalati come errori e quali come avvisi. Il valore predefinito è 2. Gli avvisi e gli errori vengono scritti nella finestra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output).  

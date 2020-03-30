@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485266"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Usare T-SQL (CREATE EXTERNAL LIBRARY) per installare i pacchetti R in SQL Server

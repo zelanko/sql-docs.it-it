@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287925"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).  
 
-## <a name="Simple"></a> Semplici esempi
+## <a name="simple-examples"></a><a name="Simple"></a> Semplici esempi
 
 Per iniziare, ecco due rapidi esempi:  
 `SELECT DB_NAME() AS ThisDB;` restituisce il nome del database corrente.  
@@ -464,7 +464,7 @@ GO
   
  Per le stored procedure CLR è necessaria la proprietà dell'assembly a cui viene fatto riferimento nella clausola EXTERNAL NAME oppure l'autorizzazione **REFERENCES** per tale assembly.  
   
-##  <a name="mot"></a> CREATE PROCEDURE e tabelle ottimizzate per la memoria  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE e tabelle ottimizzate per la memoria  
  È possibile accedere alle tabelle ottimizzate per la memoria da stored procedure compilate sia in modo tradizionale che in modo nativo. Nella maggior parte dei casi, le stored procedure native sono più efficienti.
 Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) (Stored procedure compilate in modo nativo).  
   
@@ -487,7 +487,7 @@ GO
   
  Per informazioni sulla programmabilità nelle stored procedure compilate in modo nativo, sulla superficie di attacco delle query supportata e sugli operatori, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-## <a name="Examples"></a> Esempi  
+## <a name="examples"></a><a name="Examples"></a> Esempi  
   
 |Category|Elementi di sintassi inclusi|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[Ricompilazione forzata della procedura](#Recompile)|WITH RECOMPILE|  
 |[Impostazione del contesto di sicurezza](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> Sintassi di base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione CREATE PROCEDURE tramite la sintassi minima necessaria.  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>R. Creazione di una procedura Transact-SQL semplice  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> Passaggio di parametri  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> Passaggio di parametri  
  Negli esempi di questa sezione viene illustrato l'utilizzo dei parametri di input e di output per il passaggio di valori a e da una stored procedure.  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. Creazione di una procedura con parametri di input  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> Modifica dei dati tramite una stored procedure  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> Modifica dei dati tramite una stored procedure  
  Negli esempi contenuti in questa sezione viene illustrato come inserire o modificare i dati di tabelle o viste includendo un'istruzione DML (Data Manipulation Language) nella definizione della procedura.  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. Utilizzo di UPDATE in una stored procedure  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> Gestione degli errori  
+###  <a name="error-handling"></a><a name="Error"></a> Gestione degli errori  
  Negli esempi contenuti in questa sezione vengono illustrati i metodi per gestire gli errori che potrebbero verificarsi durante l'esecuzione della stored procedure.  
   
 #### <a name="j-using-trycatch"></a>J. Utilizzo di TRY...CATCH  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> Offuscamento della definizione della procedura  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> Offuscamento della definizione della procedura  
  Negli esempi contenuti in questa sezione viene illustrato come offuscare la definizione della stored procedure.  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. Utilizzo dell'opzione WITH ENCRYPTION  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> Ricompilazione forzata della procedura  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> Ricompilazione forzata della procedura  
  Negli esempi contenuti in questa sezione viene usata la clausola WITH RECOMPILE per forzare la ricompilazione della procedura a ogni esecuzione.  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. Utilizzo dell'opzione WITH RECOMPILE  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> Impostazione del contesto di sicurezza  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> Impostazione del contesto di sicurezza  
  Negli esempi contenuti in questa sezione viene usata la clausola EXECUTE AS per impostare il contesto di sicurezza in cui viene eseguita la stored procedure.  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. Utilizzo della clausola EXECUTE AS  

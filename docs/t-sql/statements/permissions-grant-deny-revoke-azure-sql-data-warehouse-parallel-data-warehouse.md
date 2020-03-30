@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255471"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -225,7 +225,7 @@ REVOKE
   
 -   ALTER  
   
--   Elimina  
+-   DELETE  
   
 -   EXECUTE  
   
@@ -263,7 +263,7 @@ REVOKE
   
 -   L'istruzione **USE** non richiede autorizzazioni. Tutte le entità di sicurezza possono eseguire l'istruzione **USE** in qualsiasi database.  
   
-##  <a name="Examples"></a> Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>R. Concessione di un'autorizzazione a livello di server a un account di accesso  
  Le due istruzioni seguenti concedono un'autorizzazione a livello di server a un account di accesso.  

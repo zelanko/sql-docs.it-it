@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957015"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle tramite [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle tramite [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Questa esercitazione illustra come abilitare un widget di informazioni dettagliate nel dashboard del database, offrendo una vista immediata dell'uso dello spazio da parte di tutte le tabelle di un database. In questa esercitazione verranno illustrate le procedure per:
 
@@ -26,14 +26,14 @@ Questa esercitazione illustra come abilitare un widget di informazioni dettaglia
 > * Visualizzare i dettagli relativi allo spazio usato dalle tabelle
 > * Filtrare i dati e visualizzare i dettagli dell'etichetta in un grafico di informazioni dettagliate
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 
 * [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Connettersi ed eseguire query nel database SQL di Azure con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Attivare le informazioni dettagliate sulla gestione nel dashboard del database di [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Attivare le informazioni dettagliate sulla gestione nel dashboard del database di [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] include un widget di esempio predefinito per monitorare lo spazio usato dalle tabelle in un database.
 

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401583"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
@@ -61,7 +61,7 @@ Per ulteriori informazioni, vedere gli argomenti seguenti.
   
 -  [E. Esportazione bulk di dati XML](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>Importazione bulk di dati XML come flusso di byte binario  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>Importazione bulk di dati XML come flusso di byte binario  
  Quando si esegue un'importazione bulk di dati XML da un file contenente una dichiarazione di codifica che si desidera applicare, specificare l'opzione SINGLE_BLOB nella clausola OPENROWSET(BULK...). L'opzione SINGLE_BLOB garantisce che il parser XML di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importi i dati in base allo schema di codifica specificato nella dichiarazione XML.  
   
 #### <a name="sample-table"></a>Tabella di esempio  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;Torna all'inizio&#93;](#top)  
   
-##  <a name="existing_row"></a> Importazione bulk di dati XML in una riga esistente  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> Importazione bulk di dati XML in una riga esistente  
  In questo esempio viene utilizzato il provider di set di righe con lettura bulk `OPENROWSET` per aggiungere un'istanza XML a una o più righe esistenti nella tabella di esempio `T`.  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;Torna all'inizio&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> Importazione bulk di dati XML da un file contenente una definizione DTD  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> Importazione bulk di dati XML da un file contenente una definizione DTD  
   
 > [!IMPORTANT]  
 >  È consigliabile non abilitare il supporto per le definizioni DTD (Document Type Definition) se non è necessario nell'ambiente XML utilizzato. L'attivazione del supporto DTD aumenta la superficie di attacco del server esposta a rischi e può esporre quest'ultimo a un attacco Denial-of-Service. Se è necessario abilitare il supporto DTD, è possibile ridurre questo rischio per la sicurezza limitando l'elaborazione a documenti XML attendibili.  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;Torna all'inizio&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> Definizione esplicita del carattere di terminazione del campo tramite un file di formato  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> Definizione esplicita del carattere di terminazione del campo tramite un file di formato  
  Nell'esempio seguente viene descritta la procedura per l'importazione bulk del documento XML `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>File di dati di esempio  
@@ -252,7 +252,7 @@ GO
   
  [&#91;Torna all'inizio&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> Esportazione bulk di dati XML  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> Esportazione bulk di dati XML  
  Nell'esempio seguente viene usata l'utilità [bcp](../../tools/bcp-utility.md) per l'esportazione bulk di dati XML dalla tabella creata nell'esempio precedente usando lo stesso file di formato XML. Nel comando `bcp` seguente, `<server_name>` e `<instance_name>` rappresentano segnaposto da sostituire con valori appropriati:  
   
 ```cmd

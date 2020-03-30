@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253587"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Configurazione del mirroring del database tramite certificati (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253587"
   
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  
   
-##  <a name="ExampleH2"></a>Esempio  
+##  <a name="example"></a><a name="ExampleH2"></a>Esempio  
  Nell'esempio seguente vengono descritte le operazioni necessarie in un partner che risiede in HOST_A. Nell'esempio i due partner sono le istanze predefinite del server in tre sistemi. Le due istanze server vengono eseguite in domini Windows non trusted, quindi è necessaria l'autenticazione basata sui certificati.  
   
  Il ruolo principale viene inizialmente assunto da HOST_A e il ruolo di server mirror da HOST_B.  
@@ -62,7 +62,7 @@ ms.locfileid: "75253587"
   
 4.  [Configurazione dei partner del mirroring](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Configurazione delle connessioni in uscita  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> Configurazione delle connessioni in uscita  
  **Per configurare Host_A per le connessioni in uscita**  
   
 1.  Nel database master creare la chiave master del database, se necessaria.  
@@ -156,7 +156,7 @@ ms.locfileid: "75253587"
   
  [&#91;Inizio dell'esempio &#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> Configurazione delle connessioni in ingresso  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> Configurazione delle connessioni in ingresso  
  **Per configurare Host_A per le connessioni in ingresso**  
   
 1.  In HOST_A creare un account di accesso per HOST_B.  
@@ -233,7 +233,7 @@ ms.locfileid: "75253587"
 ### <a name="creating-the-mirror-database"></a>Creazione del database mirror  
  Per informazioni su come creare un database mirror, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-###  <a name="ConfigureMirroringPartners"></a> Configurazione dei partner del mirroring  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> Configurazione dei partner del mirroring  
   
 1.  Nell'istanza del server mirror in HOST_B, impostare l'istanza del server in HOST_A come partner (rendendola l'istanza iniziale del server principale). Specificare un indirizzo di rete valido per `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253587"
   
  [&#91;Inizio dell'esempio &#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

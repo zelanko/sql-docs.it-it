@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74947111"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Distribuire un progetto SSIS con PowerShell
@@ -47,9 +47,9 @@ Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni 
 5. Fare clic su **Mostra stringhe di connessione del database**.
 6. Esaminare l'intera stringa di connessione **ADO.NET**.
 
-## <a name="supported-authentication-method"></a>Metodo di autenticazione supportata
+## <a name="supported-authentication-method"></a>Metodo di autenticazione supportato
 
-Vedere [Metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Vedere i [metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="ssis-powershell-provider"></a>Provider PowerShell per SSIS
 Specificare i valori appropriati per le variabili nella parte superiore dello script seguente e quindi eseguire lo script per distribuire il progetto SSIS.
