@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412662"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Risoluzione dei problemi per gli indici hash per tabelle ottimizzate per la memoria
@@ -232,6 +232,6 @@ I carichi di lavoro OLTP si focalizzano su singole righe. Le scansioni complete 
   - Prolungamento del tempo necessario per l'analisi completa dell'indice hash.  
   
 
-##  <a name="Additional_Reading"></a> Ulteriori informazioni  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Ulteriori informazioni  
  [Indici hash per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Indice non cluster per tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

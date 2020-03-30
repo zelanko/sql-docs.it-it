@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946962"
 ---
 # <a name="create-a-new-plan-guide"></a>Creare una nuova guida di piano
@@ -27,7 +27,7 @@ Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunt
 
 Una guida di piano applica a una query un piano di query fisso e/o hint per la query.
   
-##  <a name="Restrictions"></a> Limitazioni e restrizioni  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
 -   Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si forniscono valori per i parametri di **sp_create_plan_guide**, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ad esempio si specifica **@name =** , è necessario specificare anche **@stmt =** , **@type =** e così via. Analogamente, se si omette **@name =** e viene specificato soltanto il valore del parametro, è necessario omettere anche i nomi dei parametri restanti e specificarne solo il valore. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
   
 -   È possibile creare più guide di piano OBJECT o SQL per la stessa query e batch o modulo. Tuttavia è possibile abilitare una sola guida di piano alla volta.  
@@ -36,10 +36,10 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
   
 -   Se si tenta di eliminare o modificare una funzione, una stored procedure o un trigger DML a cui viene fatto riferimento in una guida di piano abilitata o disabilitata, viene generato un errore. Viene generato un errore anche se si cerca di eliminare una tabella per la quale è stato definito un trigger a cui una guida di piano fa riferimento.  
 
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare una guida di piano di tipo OBJECT, è necessaria l'autorizzazione ALTER per l'oggetto a cui si fa riferimento. Per creare una guida di piano di tipo SQL o TEMPLATE, è necessaria l'autorizzazione ALTER per il database corrente.  
   
-##  <a name="SSMSProcedure"></a> Per creare una guida di piano usando SSMS  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> Per creare una guida di piano usando SSMS  
 1.  Fare clic sul segno più per espandere il database in cui si desidera creare una guida di piano, quindi fare clic sul segno più per espandere la cartella **Programmabilità** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Guide di piano** e selezionare **Nuova guida di piano…** . ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
@@ -70,7 +70,7 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> Creare una guida di piano usando T-SQL  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> Creare una guida di piano usando T-SQL  
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  

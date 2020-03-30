@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401699"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  Le impostazioni di connessione consentono di connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP proteggendo i dati relativi a nome utente e password tramite SSL, ma inviando i dati effettivi in testo non crittografato. In questo caso, un utente malintenzionato può intercettare il testo dell'istruzione CREATE REMOTE TABLE, che contiene il nome utente e la password per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per accedere all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP. Per evitare questo rischio, usare la crittografia dei dati per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP.  
   
-##  <a name="Examples"></a> Esempi  
+##  <a name="examples"></a><a name="Examples"></a> Esempi  
   
 ### <a name="a-creating-a-remote-table"></a>R. Creazione di una tabella remota  
  Questo esempio crea una tabella remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP `MyOrdersTable` nel database `OrderReporting` e nello schema `Orders`. Il database `OrderReporting` si trova in un server denominato `SQLA` in ascolto sulla porta predefinita 1433. La connessione al server usa le credenziali dell'utente `David`, la cui password è `e4n8@3`.  

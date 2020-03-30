@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846510"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinizializzare una sottoscrizione
@@ -30,7 +30,7 @@ ms.locfileid: "70846510"
 
 
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Il processo di reinizializzazione di una sottoscrizione è articolato in due parti.  
   
 1.  Una singola sottoscrizione o tutte le sottoscrizioni di una pubblicazione vengono *contrassegnate* per la reinizializzazione. Contrassegnare le sottoscrizioni per la reinizializzazione nella finestra di dialogo **Reinizializza sottoscrizioni**, accessibile dalla cartella **Pubblicazioni locali** e dalla cartella **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È inoltre possibile contrassegnare le sottoscrizioni nella scheda **Tutte le sottoscrizioni** e nel nodo delle pubblicazioni in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Quando si contrassegna una sottoscrizione per la reinizializzazione, sono disponibili le opzioni seguenti:  
@@ -98,7 +98,7 @@ ms.locfileid: "70846510"
   
 3.  Nella finestra di dialogo **Reinizializza sottoscrizioni** selezionare le opzioni desiderate e quindi fare clic su **Contrassegna per la reinizializzazione**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile reinizializzare le sottoscrizioni a livello di programmazione tramite le stored procedure di replica. La stored procedure utilizzata dipende dal tipo di sottoscrizione, ovvero push o pull, nonché dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Per reinizializzare una sottoscrizione pull in una pubblicazione transazionale  
@@ -157,7 +157,7 @@ ms.locfileid: "70846510"
   
      Per altre informazioni, vedere [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  È possibile contrassegnare singole sottoscrizioni per la reinizializzazione in modo che nel corso della successiva sincronizzazione venga applicato un nuovo snapshot. Le sottoscrizioni possono essere reinizializzate a livello di programmazione tramite gli oggetti RMO (Replication Management Objects). Le classi utilizzate dipendono dal tipo di pubblicazione a cui appartiene la sottoscrizione e dal tipo di sottoscrizione, ovvero push o pull.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Per reinizializzare una sottoscrizione pull in una pubblicazione transazionale  
@@ -226,7 +226,7 @@ ms.locfileid: "70846510"
   
 5.  Sincronizzare la sottoscrizione push. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione push](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Esempi (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene eseguita la reinizializzazione di una sottoscrizione pull in una pubblicazione transazionale.  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

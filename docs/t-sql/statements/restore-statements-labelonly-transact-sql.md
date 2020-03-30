@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742953"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Istruzioni RESTORE - LABELONLY (Transact-SQL)
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|Nome del software di backup con cui è stata scritta l'etichetta.|  
 |**SoftwareVendorId**|**int**|Numero di identificazione univoco del produttore del software che ha scritto il backup.|  
 |**MediaDate**|**datetime**|Data e ora in cui è stata scritta l'etichetta.|  
-|**Mirror_Count**|**int**|Numero di mirror nel set (1-4).<br /><br /> Nota: Le etichette scritte per mirror diversi in un set sono identiche.|  
+|**Mirror_Count**|**int**|Numero di mirror nel set (1-4).<br /><br /> Nota: le etichette scritte per mirror diversi in un set sono identiche.|  
 |**IsCompressed**|**bit**|Specifica se il backup è compresso:<br /><br /> 0 = non compresso<br /><br /> 1 = compresso|  
   
 > [!NOTE]  

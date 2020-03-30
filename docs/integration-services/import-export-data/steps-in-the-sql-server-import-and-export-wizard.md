@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296210"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Passaggi dell'Importazione/Esportazione guidata SQL Server
@@ -43,7 +43,7 @@ Per esaminare rapidamente le diverse schermate visualizzate durante una normale 
 > [!TIP]
 > Premere il tasto F1 da qualsiasi pagina o finestra di dialogo della procedura guidata per visualizzare la documentazione relativa alla pagina corrente.
 
-## <a name="related"></a> Attività e argomenti correlati  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Attività e argomenti correlati  
 Ecco alcune altre attività di base.
 -   **Vedere un rapido esempio sul funzionamento della procedura guidata.**
 

@@ -11,13 +11,13 @@ ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957065"
 ---
-# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettere [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server usando l'autenticazione di Windows - Kerberos 
+# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettere [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server usando l'autenticazione di Windows - Kerberos 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] supporta la connessione a SQL Server mediante Kerberos.
 
@@ -167,7 +167,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Eseguire la connessione usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-name-sos"></a>Eseguire la connessione usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * Creare un nuovo profilo di connessione
 

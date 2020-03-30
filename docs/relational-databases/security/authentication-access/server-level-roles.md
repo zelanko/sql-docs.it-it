@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68116785"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
@@ -50,7 +50,7 @@ ms.locfileid: "68116785"
 |------------------------------|-----------------|  
 |**sysadmin**|I membri del ruolo predefinito del server **sysadmin** possono eseguire qualsiasi attività nel server.|  
 |**serveradmin**|I membri del ruolo predefinito del server **serveradmin** sono autorizzati a modificare le opzioni di configurazione a livello di server e ad arrestare il server.|  
-|**securityadmin**|I membri del ruolo predefinito del server **securityadmin** gestiscono gli account di accesso e le relative proprietà. Possono `GRANT`, `DENY`, e `REVOKE` le autorizzazioni a livello di server. Inoltre, possono `GRANT`, `DENY`, e `REVOKE` le autorizzazioni a livello di database se hanno accesso a un database. Questi membri sono inoltre autorizzati a reimpostare le password per gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** la possibilità di concedere l'accesso al [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e di configurare autorizzazioni utente consente all'amministratore responsabile della sicurezza di assegnare la maggior parte delle autorizzazioni server. Il ruolo **securityadmin** deve essere considerato equivalente al ruolo **sysadmin** .|  
+|**securityadmin**|I membri del ruolo predefinito del server **securityadmin** gestiscono gli account di accesso e le relative proprietà. Possono `GRANT`, `DENY`, e `REVOKE` le autorizzazioni a livello di server. Inoltre, possono `GRANT`, `DENY`, e `REVOKE` le autorizzazioni a livello di database se hanno accesso a un database. Questi membri sono inoltre autorizzati a reimpostare le password per gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** La possibilità di concedere l'accesso al [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e di configurare autorizzazioni utente consente all'amministratore responsabile della sicurezza di assegnare la maggior parte delle autorizzazioni server. Il ruolo **securityadmin** deve essere considerato equivalente al ruolo **sysadmin** .|  
 |**processadmin**|I membri del ruolo predefinito del server **processadmin** sono autorizzati a terminare processi in esecuzione in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**setupadmin**|I membri del ruolo predefinito del server **setupadmin** sono autorizzati ad aggiungere e rimuovere server collegati usando istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'appartenenza a **sysadmin** è necessaria per l'uso di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].|  
 |**bulkadmin**|I membri del ruolo predefinito del server **bulkadmin** sono autorizzati a eseguire l'istruzione `BULK INSERT`.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68116785"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  L'autorizzazione **CONTROL SERVER** è simile ma non identica al ruolo predefinito del server **sysadmin** . Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, **CONTROL SERVER** non implica o l'appartenenza al ruolo predefinito del server **sysadmin**. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi **DBCC** e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server **sysadmin**. Per un elenco delle 171 stored procedure di sistema che richiedono l'appartenenza a **sysadmin** , vedere il post di blog di Andreas Wolter sulle [avvertenze relative ad autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema ed escalation dei privilegi di CONTROL SERVER e sysadmin/sa](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
+>  L'autorizzazione **CONTROL SERVER** è simile ma non identica al ruolo predefinito del server **sysadmin** . Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, **CONTROL SERVER** non implica o l'appartenenza al ruolo predefinito del server **sysadmin** . Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi **DBCC** e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server **sysadmin**. Per un elenco delle 171 stored procedure di sistema che richiedono l'appartenenza a **sysadmin** , vedere il post di blog di Andreas Wolter sulle [avvertenze relative ad autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema ed escalation dei privilegi di CONTROL SERVER e sysadmin/sa](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Autorizzazioni a livello di server  
  Ai ruoli del server definiti dall'utente è possibile aggiungere solo autorizzazioni a livello di server. Per elencare le autorizzazioni a livello di server, eseguire la seguente istruzione. Di seguito sono elencate le autorizzazioni a livello di server:  

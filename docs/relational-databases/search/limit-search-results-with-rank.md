@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132280"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitazione dei risultati della ricerca mediante RANK
@@ -36,7 +36,7 @@ ms.locfileid: "68132280"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordina le corrispondenze per pertinenza e restituisce solo il numero specificato di righe. Questa opzione può comportare un miglioramento significativo delle prestazioni. Una query che normalmente restituisce 100.000 righe di una tabella che contiene un milione di righe, ad esempio, viene elaborata più rapidamente se vengono richieste solo le prime 100 righe.  
   
-##  <a name="examples"></a> Esempi di utilizzo di RANK per limitare i risultati della ricerca  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Esempi di utilizzo di RANK per limitare i risultati della ricerca  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio A: Ricerca delle prime tre corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire solo le prime tre corrispondenze.  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Classificazione per pertinenza dei risultati delle query di ricerca  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Classificazione per pertinenza dei risultati delle query di ricerca  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la ricerca full-text può generare un punteggio facoltativo (o valore di pertinenza) che indica la pertinenza dei dati restituiti da una query full-text. Questo valore di pertinenza viene calcolato in ogni riga e può essere utilizzato come criteri di ordinamento del set di risultati di una query basato sulla pertinenza. Il valore di pertinenza indica solo un ordine di pertinenza relativo delle righe nel set di risultati. I valori effettivi sono senza importanza e in genere variano ogni volta che viene eseguita la query. Il valore di pertinenza non mantiene alcun significato nelle query.  
   
 ### <a name="statistics-for-ranking"></a>Statistiche per il calcolo della pertinenza  

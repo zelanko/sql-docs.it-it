@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282162"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione
@@ -33,7 +33,7 @@ ms.locfileid: "71282162"
   
  In alternativa, è possibile eseguire un pacchetto remoto da un computer locale in cui è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Caricamento ed esecuzione di un pacchetto locale a livello di programmazione](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
-##  <a name="top"></a> Esecuzione di un pacchetto remoto nel computer remoto  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> Esecuzione di un pacchetto remoto nel computer remoto  
  Come accennato in precedenza, è possibile eseguire un pacchetto remoto in un server remoto in vari modi:  
   
 -   [Usare SQL Server Agent per eseguire il pacchetto remoto a livello di programmazione](#agent)  
@@ -42,7 +42,7 @@ ms.locfileid: "71282162"
   
  Quasi tutti i metodi usati in questo argomento per caricare e salvare pacchetti richiedono un riferimento all'assembly **Microsoft.SqlServer.ManagedDTS**. Fa eccezione l'approccio ADO.NET illustrato in questo argomento per l'esecuzione della stored procedure **sp_start_job**, che richiede solo un riferimento a **System.Data**. Dopo aver aggiunto il riferimento all'assembly **Microsoft.SqlServer.ManagedDTS** in un nuovo progetto, importare lo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> con un'istruzione **using** o **Imports**.  
   
-###  <a name="agent"></a> Uso di SQL Server Agent per eseguire un pacchetto remoto a livello di programmazione nel server  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Uso di SQL Server Agent per eseguire un pacchetto remoto a livello di programmazione nel server  
  Nell'esempio di codice seguente è illustrato come utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a livello di programmazione per eseguire un pacchetto remoto nel server. Il codice di esempio chiama la stored procedure di sistema **sp_start_job**, che avvia un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il processo avviato dalla stored procedure è denominato `RunSSISPackage` e si trova nel computer remoto. Il processo `RunSSISPackage` esegue quindi il pacchetto nel computer remoto.  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ namespace LaunchSSISPackageAgent_CS
 }  
 ```  
   
-###  <a name="service"></a> Uso di un servizio Web o un componente remoto per eseguire un pacchetto remoto a livello di programmazione  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Uso di un servizio Web o un componente remoto per eseguire un pacchetto remoto a livello di programmazione  
  La soluzione precedente per l'esecuzione dei pacchetti a livello di programmazione nel server non richiede codice personalizzato nel server. Tuttavia, può essere preferibile una soluzione che non si basa su SQL Server Agent per l'esecuzione dei pacchetti. Nell'esempio seguente sono illustrati un servizio Web che è possibile creare nel server per avviare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in locale e un'applicazione di test che è possibile utilizzare per chiamare il servizio Web da un computer client. Se si preferisce creare un componente remoto anziché un servizio Web, è possibile usare lo stesso codice con poche modifiche in un computer remoto. Tuttavia, un componente remoto può richiedere una configurazione più estesa rispetto a un servizio Web.  
   
 > [!IMPORTANT]  

@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946991"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
@@ -59,8 +59,8 @@ Sono implementate tecniche per identificare una query che risulta più lenta con
 
 Nel 1998 è stato incluso un aggiornamento importante della stima di cardinalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, per cui il livello di compatibilità era 70. Questa versione del modello di stima di cardinalità si basa su quattro presupposti:
 
--  **Indipendenza:** si presuppone che le distribuzioni dei dati in colonne diverse siano indipendenti una dall'altra, a meno che siano disponibili e utilizzabili informazioni di correlazione.
--  **Uniformità:** i valori Distinct sono divisi uniformemente e hanno tutti la stessa frequenza. Più precisamente, all'interno di ogni intervallo dell'[istogramma](../../relational-databases/statistics/statistics.md#histogram), i valori distinct sono distribuiti uniformemente e hanno tutti la stessa frequenza. 
+-  **Indipendenza:** si presuppone che le distribuzioni dei dati in colonne diverse siano indipendenti una dall'altro, a meno che siano disponibili e utilizzabili informazioni di correlazione.
+-  **Uniformità:** i valori distinct sono divisi uniformemente e hanno tutti la stessa frequenza. Più precisamente, all'interno di ogni intervallo dell'[istogramma](../../relational-databases/statistics/statistics.md#histogram), i valori distinct sono distribuiti uniformemente e hanno tutti la stessa frequenza. 
 -  **Indipendenza (semplice):** gli utenti eseguono una query per i dati esistenti. Ad esempio, per un join di uguaglianza tra due tabelle, considerare la selettività di join <sup>1</sup> in ogni istogramma di input prima di creare un join di istogrammi e stimarne la selettività. 
 -  **Inclusione:** per i predicati di filtro dove `Column = Constant`, si presuppone che la costante sia effettivamente esistente nella colonna associata. Se un intervallo dell'istogramma corrispondente non è vuoto, si presuppone che uno dei valori distinct dell'intervallo corrisponda al valore del predicato.
 
@@ -69,9 +69,9 @@ Nel 1998 è stato incluso un aggiornamento importante della stima di cardinalit�
 Gli aggiornamenti successivi sono iniziati con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], con livelli di compatibilità 120 e superiori. Gli aggiornamenti della stima di cardinalità per i livelli 120 e superiori integrano presupposti e algoritmi aggiornati che funzionano bene nel data warehousing moderno e nei carichi di lavoro OLTP. Dopo i presupporti della stima di cardinalità per i livelli 70, con la stima di cardinalità per i livelli 120 sono stati modificati i presupposti del modello seguenti:
 
 -  **Indipendenza** diventa **correlazione:** la combinazione dei diversi valori di colonna che non sono necessariamente indipendenti. Può assomigliare all'esecuzione di query sui dati più reali.
--  **Indipendenza semplice** diventa **indipendenza di base:** gli utenti possono eseguire query per dati che non esistono. Ad esempio, per un join di uguaglianza tra due tabelle, si usano gli istogrammi delle tabelle di base per stimare la selettività di join e considerare la selettività dei predicati.
+-  **Indipendenza semplice** diventa **contenimento di base:** gli utenti possono eseguire la query per dati che non esistono. Ad esempio, per un join di uguaglianza tra due tabelle, si usano gli istogrammi delle tabelle di base per stimare la selettività di join e considerare la selettività dei predicati.
   
-**Livello di compatibilità:** è possibile assicurarsi che il database sia impostato su un determinato livello usando il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Livello di compatibilità:** per assicurarsi che il database sia impostato su un determinato livello, è possibile usare il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -131,7 +131,7 @@ SET QUERY_STORE CLEAR;
 > [!TIP] 
 > Si consiglia di installare la versione più recente di [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) e di aggiornarlo spesso.  
   
-Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**. Il codice di esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguente viene eseguito su [!INCLUDE[tsql](../../includes/tsql-md.md)]. Scrive un file con estensione xel in `C:\Temp\`. Il percorso è comunque modificabile. Quando si apre il file con estensione xel in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], le informazioni dettagliate sono visualizzate in modo intuitivo.  
+Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**. Il codice di esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene eseguito su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scrive un file con estensione xel in `C:\Temp\`. Il percorso è comunque modificabile. Quando si apre il file con estensione xel in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], le informazioni dettagliate sono visualizzate in modo intuitivo.  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  

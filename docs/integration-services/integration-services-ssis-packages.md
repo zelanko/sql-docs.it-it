@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296191"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
@@ -90,8 +90,8 @@ ms.locfileid: "71296191"
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
-|**PackageStart**|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
-|**Fine pacchetto**|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
+|**PackageStart**|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
+|**Fine pacchetto**|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
 |**Diagnostic**|Offre informazioni sulla configurazione del sistema che influisce sull'esecuzione dei pacchetti, ad esempio il numero di file eseguibili che è possibile eseguire simultaneamente.|  
   
 ## <a name="set-the-properties-of-a-package"></a>Impostare le proprietà di un pacchetto  

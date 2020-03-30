@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822258"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74822258"
 >  Per informazioni sui concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
   
-##  <a name="WSFC"></a> Clustering di failover di Windows Server e gruppi di disponibilità  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a> Clustering di failover di Windows Server e gruppi di disponibilità  
  La distribuzione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] richiede un cluster WSCF (Windows Server Failover Clustering). Per essere abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve trovarsi in un nodo WSFC e il nodo e il cluster WSFC devono essere online. Inoltre, ogni replica di disponibilità di un gruppo di disponibilità deve risiedere in un nodo diverso da quello del cluster WSFC. L'unica eccezione è che quando viene eseguita la migrazione a un altro cluster WSFC, un gruppo di disponibilità può risiedere temporaneamente in due cluster.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] si basa sul cluster WSFC (Windows Server Failover Clustering) per monitorare e gestire i ruoli correnti delle repliche di disponibilità che appartengono a un determinato gruppo di disponibilità e per determinare in che modo un evento di failover influisce sulle repliche di disponibilità. Il gruppo di risorse WSFC viene creato per ogni gruppo di disponibilità che viene creato. Il cluster WSFC esegue il monitoraggio del gruppo di risorse per valutare lo stato di integrità della replica primaria.  
@@ -49,7 +49,7 @@ ms.locfileid: "74822258"
   
  Per informazioni sull'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nei nodi WSFC e sul quorum WSFC, vedere [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - Istanze del cluster di failover (FCI) e gruppi di disponibilità  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - Istanze del cluster di failover (FCI) e gruppi di disponibilità  
  È possibile configurare un secondo livello di failover a livello di istanza del server implementando un'istanza FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insieme al cluster WSFC. Una replica di disponibilità può essere ospitata da un'istanza autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o da un'istanza FCI. Solo un partner di un'istanza del cluster di failover può ospitare una replica per un gruppo di disponibilità. Quando una replica di disponibilità viene eseguita in un'istanza del cluster di failover, l'elenco dei possibili proprietari per il gruppo di disponibilità conterrà solo il nodo FCI attivo.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipende da alcun mezzo di archiviazione condivisa. Tuttavia, se si utilizza un'istanza del cluster di failover (FCI) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ospitare una o più repliche di disponibilità, per ognuna di queste FCI sarà richiesta l'archiviazione condivisa in base all'installazione dell'istanza del cluster di failover di SQL Server standard.  
@@ -97,7 +97,7 @@ ms.locfileid: "74822258"
   
  Per altre informazioni sulle istanze FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-##  <a name="FCMrestrictions"></a> Le restrizioni sull'utilizzo di Gestione cluster di failover WSFC con i gruppi di disponibilità  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a> Le restrizioni sull'utilizzo di Gestione cluster di failover WSFC con i gruppi di disponibilità  
  Non utilizzare Gestione cluster di failover per modificare i gruppi di disponibilità, ad esempio:  
   
 -   Non aggiungere o rimuovere risorse nel servizio del cluster (gruppo di risorse) per il gruppo di disponibilità.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822258"
   >[!WARNING]
   > L'uso di Gestione cluster di failover per lo spostamento di un'*istanza di cluster di failover* che ospita un gruppo di disponibilità in un nodo che *ospita già* una replica dello stesso gruppo di disponibilità può causare la perdita della replica del gruppo di disponibilità, impedendo che venga portato online sul nodo di destinazione. Un singolo nodo di un cluster di failover non può ospitare più di una replica dello stesso gruppo di disponibilità. Per altre informazioni su come si verifica questa situazione e sulle misure da adottare, vedere il blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replica rilasciata in modo inatteso nel gruppo di disponibilità). 
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   **Blog:**  
   

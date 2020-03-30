@@ -14,10 +14,10 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093401"
 ---
 # <a name="sql-server-memory-manager-object"></a>Oggetto Memory Manager di SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "68093401"
 -   È possibile migliorare le prestazioni delle query aggiungendo memoria o rendendo disponibile una maggiore quantità di memoria per la cache dei dati o le strutture interne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="memory-manager-counters"></a>Contatori Memory Manager  
- Nella tabella seguente vengono descritti i contatori dell'oggetto **Memory Manager** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nella tabella seguente vengono descritti i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Memory Manager**di**.  
   
 |Contatori Memory Manager di SQL Server|Descrizione|  
 |----------------------------------------|-----------------|  
@@ -39,10 +39,10 @@ ms.locfileid: "68093401"
 |**Memoria disponibile (KB)**|Specifica la quantità di memoria allocata attualmente non utilizzata dal server.|  
 |**Memoria area di lavoro concessa (KB)**|Specifica la quantità totale di memoria concessa per l'esecuzione di processi, quali operazioni di hashing, ordinamento, copia bulk e creazione di indici.|  
 |**Blocchi di blocco**|Specifica il numero corrente di blocchi di blocco in uso nel server (valore aggiornato periodicamente). Un blocco di blocco rappresenta una singola risorsa bloccata, ad esempio una tabella, una pagina o una riga.|  
-|**Blocchi di blocco allocati**|Specifica il numero corrente di blocchi di blocco allocati. All'avvio del server il numero dei blocchi di blocco allocati più il numero dei blocchi dei proprietari di blocco allocati varia a seconda dell'opzione di configurazione **Locks** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se è necessario un maggior numero di blocchi di blocco, il valore aumenta.|  
+|**Blocchi di blocco allocati**|Specifica il numero corrente di blocchi di blocco allocati. All'avvio del server il numero dei blocchi di blocco allocati più il numero dei blocchi dei proprietari di blocco allocati varia a seconda dell'opzione di configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Locks**di**. Se è necessario un maggior numero di blocchi di blocco, il valore aumenta.|  
 |**Memoria blocchi (KB)**|Specifica la quantità totale di memoria dinamica utilizzata dal server per i blocchi.|  
 |**Blocchi proprietari di blocco**|Specifica il numero di blocchi dei proprietari di blocco in uso nel server (valore aggiornato periodicamente). Un blocco di proprietario di blocco rappresenta la detenzione della proprietà di un blocco su un oggetto da parte di un singolo thread. Di conseguenza, se tre thread dispongono ciascuno di un blocco condiviso (S) su una pagina, saranno presenti tre blocchi dei proprietari di blocco.|  
-|**Blocchi proprietari di blocco allocati**|Specifica il numero corrente di blocchi dei proprietari di blocco allocati. All'avvio del server il numero dei blocchi dei proprietari di blocco allocati e il numero dei blocchi di blocco allocati varia a seconda dell'opzione di configurazione **Locks** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se è necessario un maggior numero di blocchi dei proprietari di blocco, il valore aumenta in modo dinamico.|  
+|**Blocchi proprietari di blocco allocati**|Specifica il numero corrente di blocchi dei proprietari di blocco allocati. All'avvio del server il numero dei blocchi dei proprietari di blocco allocati e il numero dei blocchi di blocco allocati varia a seconda dell'opzione di configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Locks**di**. Se è necessario un maggior numero di blocchi dei proprietari di blocco, il valore aumenta in modo dinamico.|  
 |**Memoria del pool del log (KB)**|Quantità totale di memoria dinamica usata dal server per il pool del log.| 
 |**Memoria massima area di lavoro (KB)**|Indica la quantità massima di memoria disponibile per l'esecuzione di processi, quali operazioni di hashing, ordinamento, copia bulk e creazione di indici.|  
 |**Concessioni di memoria in attesa**|Specifica il numero totale di processi a cui è stata concessa memoria per l'area di lavoro.|  

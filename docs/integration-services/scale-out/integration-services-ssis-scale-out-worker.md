@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082075"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)
@@ -56,7 +56,7 @@ Scale Out Worker esegue il servizio Scale Out Worker per eseguire il pull di att
 |AgentId|ID agente worker di Scale Out Worker|Generato automaticamente|
 ||||    
 
-## <a name="view-the-scale-out-worker-log"></a>Visualizzare il log Scale Out Worker
+## <a name="view-the-scale-out-worker-log"></a>Visualizzare il log di Scale Out Worker
 Il file di log del servizio Scale Out Worker si trova nella cartella `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent`.
 
 Il percorso del log di ogni singola attività è configurato nel file `WorkerSettings.config` in `TasksRootFolder`. Se non è specificato alcun valore, il log si trova nella cartella `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. 

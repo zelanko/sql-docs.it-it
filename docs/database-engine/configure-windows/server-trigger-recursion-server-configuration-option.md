@@ -15,10 +15,10 @@ ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dcd67a89ea5605647d6736d9d28a6e070a483c16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68027617"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>Opzione di configurazione del server server trigger recursion

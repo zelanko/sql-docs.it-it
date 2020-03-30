@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295121"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
 
-## <a name="add_viewer"></a> Aggiunta di un visualizzatore dati a un flusso di dati
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> Aggiunta di un visualizzatore dati a un flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta e la configurazione di un visualizzatore dati in un flusso di dati. In un visualizzatore dati vengono visualizzati i dati in transito tra due componenti flusso di dati, ad esempio i dati estratti da un'origine dei dati prima che vengano modificati da una trasformazione del flusso di dati.  
   
  Un percorso collega i componenti in un flusso di dati connettendo l'output di un componente all'input dell'altro.  

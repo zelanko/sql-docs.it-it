@@ -19,10 +19,10 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74820900"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74820900"
  Dopo aver stabilito il monitoraggio per un database con mirroring, un amministratore di sistema può configurare soglie di avviso su alcune metriche chiave delle prestazioni. Un amministratore può inoltre configurare avvisi su questi e altri eventi di mirroring del database.  
   
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> Misurazioni delle prestazioni e delle soglie di avviso  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> Misurazioni delle prestazioni e delle soglie di avviso  
  Nella tabella seguente vengono elencate le misurazioni delle prestazioni per cui è possibile configurare avvisi, vengono descritte le soglie di avviso corrispondenti ed elencate le etichette di Monitoraggio mirroring del database corrispondenti.  
   
 |Misurazione delle prestazioni|Valore soglia avvisi|Etichetta di Monitoraggio mirroring del database|  
@@ -44,7 +44,7 @@ ms.locfileid: "74820900"
   
  Per qualsiasi di queste misurazioni delle prestazioni, un amministratore di sistema può specificare una soglia su un database con mirroring. Per ulteriori informazioni, vedere [Impostazione e gestione delle soglie di avviso](#SetUpManageWarningThresholds), più avanti in questo argomento.  
   
-##  <a name="SetUpManageWarningThresholds"></a> Impostazione e gestione delle soglie di avviso  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> Impostazione e gestione delle soglie di avviso  
  Un amministratore di sistema può configurare uno o più soglie di avviso per le misurazioni chiave delle prestazioni di mirroring. È consigliabile impostare una soglia per un determinato avviso su entrambi i partner per assicurare che l'avviso persista in caso di failover del database. La soglia appropriata per ogni partner dipende dalle capacità in termini di prestazioni del sistema di tale partner.  
   
  È possibile configurare e gestire le soglie di avviso utilizzando uno degli elementi seguenti:  
@@ -80,7 +80,7 @@ ms.locfileid: "74820900"
 >   
 >  argomento.  
   
-##  <a name="UseAlerts"></a> Utilizzo di avvisi per un database con mirroring  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a> Utilizzo di avvisi per un database con mirroring  
  Una parte importante del monitoraggio di un database con mirroring consiste nella configurazione di avvisi sugli eventi significativi di mirroring del database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera i tipi seguenti di eventi del mirroring del database:  
   
 -   Eventi di soglia delle prestazioni  
@@ -101,7 +101,7 @@ ms.locfileid: "74820900"
 > [!IMPORTANT]  
 >  Per tutte le sessioni di mirroring, è consigliabile configurare il database per l'invio di un avviso per qualsiasi evento di modifica di stato. A meno che non sia prevista una modifica dello stato in seguito a una modifica manuale della configurazione, si è verificato un evento che potrebbe compromettere i dati. Per proteggere i dati, identificare e correggere la causa della modifica imprevista dello stato.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per creare un avviso utilizzando SQL Server Management Studio**  
   
 -   [Creazione di un avviso utilizzando un numero di errore](../../ssms/agent/create-an-alert-using-an-error-number.md)  

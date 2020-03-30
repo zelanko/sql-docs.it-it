@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212291"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "70212291"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> Monitoraggio dello stato di mirroring  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> Monitoraggio dello stato di mirroring  
  Per impostare e gestire il monitoraggio per uno o più database con mirroring in un'istanza del server, è possibile utilizzare Monitoraggio mirroring del database o le stored procedure di sistema **dbmmonitor** . È possibile monitorare un database con mirroring durante una sessione di mirroring per verificare se i dati fluiscono correttamente.  
   
  In particolare, il monitoraggio di un database con mirroring consente di:  
@@ -63,7 +63,7 @@ ms.locfileid: "70212291"
   
      Se una nuova riga di stato contiene un valore superiore a una soglia, viene inviato un evento informativo al registro eventi di Windows. Un amministratore di sistema può quindi configurare manualmente gli avvisi in base a questi eventi. Per altre informazioni, vedere [Usare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> Strumenti per il monitoraggio dello stato di mirroring del database  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> Strumenti per il monitoraggio dello stato di mirroring del database  
  Lo stato di mirroring può essere monitorato usando Monitoraggio mirroring del database o la stored procedure di sistema **sp_dbmmonitorresults** . Questi strumenti possono essere usati per monitorare il mirroring del database in qualsiasi database con mirroring nell'istanza del server locale sia parte degli amministratori di sistema, ovvero i membri del ruolo predefinito del server **sysadmin** , sia da parte dell'utente aggiunto al ruolo predefinito del database **dbm_monitor** nel database **msdb** da un amministratore di sistema. Utilizzando questi strumenti, un amministratore di sistema può anche aggiornare manualmente lo stato di mirroring.  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ ms.locfileid: "70212291"
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>Eliminazione di Processo di Monitoraggio mirroring del database  
  **Processo di Monitoraggio mirroring del database**rimane presente finché non viene eliminato. Il processo di monitoraggio deve essere gestito dall'amministratore di sistema. Per eliminare il **Processo di Monitoraggio mirroring del database**, usare **sp_dbmmonitordropmonitoring**. Per altre informazioni, vedere [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md).  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> Stato visualizzato da Monitoraggio mirroring del database  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> Stato visualizzato da Monitoraggio mirroring del database  
  Nella pagina **Stato** di Monitoraggio mirroring del database vengono descritti i partner e lo stato della sessione di mirroring. Lo stato include la metrica relativa alle prestazioni, ad esempio lo stato del log delle transazioni, e altre informazioni utili per consentire la valutazione effettiva del tempo necessario per completare un failover, nonché della potenziale perdita di dati, se la sessione non è sincronizzata. In questa pagina, inoltre, vengono visualizzati lo **stato** e informazioni generali relative alla sessione di mirroring.  
   
 > [!NOTE]  
@@ -248,7 +248,7 @@ ms.locfileid: "70212291"
   
     -   Protezione elevata con failover automatico (sincrona)  
   
-##  <a name="AdditionalSources"></a> Fonti di informazioni aggiuntive su un database con mirroring  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> Fonti di informazioni aggiuntive su un database con mirroring  
  Oltre all'utilizzo di Monitoraggio mirroring del database e delle stored procedure dbmmonitor per monitorare un database con mirroring e impostare avvisi sulle variabili delle prestazioni monitorate, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono disponibili viste del catalogo, contatori delle prestazioni e notifiche di eventi per il mirroring del database.  
   
  **Contenuto della sezione**  
@@ -259,7 +259,7 @@ ms.locfileid: "70212291"
   
 -   [Notifiche degli eventi di mirroring del database](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> Metadati di mirroring del database  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> Metadati di mirroring del database  
  Ogni sessione di mirroring del database viene descritta nei metadati esposti tramite le viste a gestione dinamica o del catalogo seguenti:  
   
 -   **sys.database_mirroring**  
@@ -280,7 +280,7 @@ ms.locfileid: "70212291"
   
      Per altre informazioni, vedere [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md).  
   
-###  <a name="DbmPerfCounters"></a> Contatori delle prestazioni di mirroring del database  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> Contatori delle prestazioni di mirroring del database  
  I contatori delle prestazioni consentono di monitorare le prestazioni di mirroring del database. Ad esempio, è possibile esaminare il contatore **Ritardo transazioni** per verificare se il mirroring del database sta influenzando le prestazioni sul server principale. È possibile esaminare i contatori **Coda rollforward** e **Coda invii log** per verificare se il database mirror è in grado di mantenersi aggiornato rispetto al database principale. Il contatore **Byte log inviati/sec** consente di monitorare il numero di eventi di log inviati al secondo.  
   
  In Performance Monitor su ogni partner, i contatori delle prestazioni sono disponibili nell'oggetto prestazione del mirroring del database (**SQLServer:Database Mirroring**). Per altre informazioni, vedere [Oggetto Database Mirroring di SQL Server](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
@@ -289,7 +289,7 @@ ms.locfileid: "70212291"
   
 -   [Avviare il Monitoraggio di sistema &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> Notifiche degli eventi di mirroring del database  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> Notifiche degli eventi di mirroring del database  
  Le notifiche degli eventi sono un tipo speciale di oggetto di database. Le notifiche degli eventi vengono eseguite in risposta a una serie di istruzioni DDL (Data Definition Language) Transact-SQL ed eventi di Traccia SQL e inviano informazioni su eventi di server e database a un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Per il mirroring del database sono disponibili gli eventi seguenti:  
@@ -302,7 +302,7 @@ ms.locfileid: "70212291"
   
      Segnala i messaggi di controllo correlati alla sicurezza di trasporto per il mirroring del database. Per altre informazioni, vedere [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Usare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054560"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Pianificare l'esecuzione dei pacchetti di SQL Server Integration Services (SSIS) distribuiti in Azure
@@ -36,13 +36,13 @@ ms.locfileid: "68054560"
 - [Pianificare un pacchetto indirettamente nell'ambito di una pipeline di Azure Data Factory](#activity)
 
 
-## <a name="ssms"></a> Pianificare un pacchetto con SSMS
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> Pianificare un pacchetto con SSMS
 
 In SQL Server Management Studio (SSMS) è possibile fare clic con il pulsante destro del mouse su un pacchetto distribuito nel database del catalogo SSIS, SSISDB, e scegliere **Pianifica** per aprire la finestra di dialogo **Nuova pianificazione**. Per altre informazioni, vedere [Pianificare pacchetti SSIS in Azure con SQL Server Management Studio](ssis-azure-schedule-packages-ssms.md).
 
 Questa funzionalità richiede SQL Server Management Studio 17.7 o versione successiva. Per ottenere la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="elastic"></a> Pianificare un pacchetto con i processi elastici del database SQL
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Pianificare un pacchetto con i processi elastici del database SQL
 
 Per altre informazioni sui processi elastici del database SQL, vedere [Gestione dei database cloud con scalabilità orizzontale](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> Pianificare un pacchetto con SQL Server Agent in locale
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> Pianificare un pacchetto con SQL Server Agent in locale
 
 Per altre informazioni su SQL Server Agent, vedere [Processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).
 
@@ -160,7 +160,7 @@ Per pianificare un pacchetto con SQL Server Agent in locale, creare un processo 
 
 6.  Completare la configurazione e la pianificazione del processo.
 
-## <a name="activity"></a> Pianificare un pacchetto nell'ambito di una pipeline di Azure Data Factory
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Pianificare un pacchetto nell'ambito di una pipeline di Azure Data Factory
 
 È possibile pianificare un pacchetto indirettamente tramite un trigger per l'esecuzione di una pipeline di Azure Data Factory in cui viene eseguito un pacchetto SSIS.
 

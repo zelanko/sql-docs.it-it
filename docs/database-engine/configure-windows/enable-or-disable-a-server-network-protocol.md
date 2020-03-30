@@ -21,10 +21,10 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011825"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Abilitare o disabilitare un protocollo di rete del server
@@ -45,7 +45,7 @@ ms.locfileid: "68011825"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
   
 #### <a name="to-enable-a-server-network-protocol"></a>Per abilitare un protocollo di rete del server  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68011825"
   
 5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** _\<nome istanza>_ **)** , quindi scegliere **Riavvia** per arrestare e riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di SQL Server PowerShell  
+##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di SQL Server PowerShell  
   
 #### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Per abilitare un protocollo di rete del server utilizzando PowerShell  
   

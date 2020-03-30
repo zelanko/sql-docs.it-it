@@ -11,10 +11,10 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822110"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Usare buffer circolari per ottenere informazioni sull'integrità dei gruppi di disponibilità Always On
@@ -62,7 +62,7 @@ ORDER BY record.value('(./Record/@time)[1]','bigint') DESC
 GO  
 ```  
   
-##  <a name="BKMK_RingBufferTypes"></a> Tipi di buffer circolari dei gruppi di disponibilità  
+##  <a name="availability-groups-ring-buffer-types"></a><a name="BKMK_RingBufferTypes"></a> Tipi di buffer circolari dei gruppi di disponibilità  
  In sys.dm_os_ring_buffers esistono quattro buffer circolari dei gruppi di disponibilità. La tabella seguente descrive i tipi di buffer circolari e propone un esempio del contenuto della colonna Record per ogni tipo di buffer circolare.  
   
  **RING_BUFFER_HADRDBMGR_API**  

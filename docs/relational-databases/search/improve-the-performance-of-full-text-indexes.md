@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021227"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Questo argomento descrive alcune delle cause comuni della riduzione delle prestazioni per gli indici e le query full-text. Vengono inoltre forniti alcuni suggerimenti per limitare i problemi e migliorare le prestazioni.
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Problemi relativi alle risorse hardware
 Le prestazioni di esecuzione dell'indicizzazione e delle query full-text possono dipendere da risorse hardware quali memoria e velocità del disco e della CPU, nonché dall'architettura del computer.  
 
@@ -57,7 +57,7 @@ La causa principale del calo delle prestazioni di esecuzione dell'indicizzazione
   
     L'unione nell'indice master di una grande quantità di dati può comportare la creazione di una transazione con esecuzione prolungata, con il conseguente ritardo del troncamento del log delle transazioni durante il checkpoint. In questo caso, le dimensioni del log delle transazioni potrebbero aumentare notevolmente, se si utilizza il modello di recupero con registrazione completa. È consigliabile verificare che il log delle transazioni contenga spazio sufficiente per una transazione con esecuzione prolungata prima di riorganizzare un indice full-text di grandi dimensioni in un database in cui viene utilizzato il modello di recupero con registrazione completa. Per altre informazioni, vedere [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="tuning"></a> Ottimizzare le prestazioni degli indici full-text  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> Ottimizzare le prestazioni degli indici full-text  
 Per ottimizzare le prestazioni degli indici full-text, implementare le procedure consigliate seguenti:  
   
 -   Per usare al meglio tutti i processori o i core CPU, impostare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' sul numero di CPU nel sistema. Per informazioni su questa opzione di configurazione, vedere [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ Per ottimizzare le prestazioni degli indici full-text, implementare le procedure
 
 -   Se si usa il popolamento incrementale basato su una colonna timestamp, compilare un indice secondario sulla colonna **timestamp** per migliorare le prestazioni di esecuzione del popolamento incrementale.  
   
-##  <a name="full"></a> Risolvere i problemi relativi alle prestazioni di popolamenti completi  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> Risolvere i problemi relativi alle prestazioni di popolamenti completi  
 ### <a name="review-the-full-text-crawl-logs"></a>Esaminare i log di ricerca per indicizzazione full-text
  Per diagnosticare problemi di prestazioni, analizzare i log della ricerca per indicizzazione full-text.
  
@@ -140,7 +140,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
 2.  500 MB è una stima della memoria necessaria per gli altri processi del sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
 3.  .*ism_size* sia 8 MB per le piattaforme x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: stima dei requisiti di memoria di fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: Stima dei requisiti di memoria di fdhost.exe  
   
  Questo esempio è relativo a un computer a 64 bit con 8 GB di RAM e 4 processori dual core. Il primo calcolo consente di stimare i requisiti di memoria di fdhost.exe, ovvero*F*. Il numero di intervalli di ricerca per indicizzazione è `8`.  
   
@@ -150,7 +150,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Esempio: impostazione della memoria massima del server  
+ #### <a name="example-setting-max-server-memory"></a>Esempio: Impostazione del valore max server memory  
   
  Questo esempio usa le istruzioni [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare **max server memory** sul valore calcolato per *M* nell'esempio precedente, `7052`:  
   
@@ -195,7 +195,7 @@ Le prestazioni di esecuzione dei popolamenti completi non sono ottimali quando l
   
          Per ridurre la frammentazione, è possibile riorganizzare o ricompilare l'indice cluster. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-##  <a name="filters"></a> Risolvere i problemi relativi all'indicizzazione lenta dei documenti
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> Risolvere i problemi relativi all'indicizzazione lenta dei documenti
 
 > [!NOTE]
 > Questa sezione descrive un problema che riguarda solo gli utenti che indicizzano documenti (ad esempio documenti di Microsoft Word) in cui sono incorporati altri tipi di documento.

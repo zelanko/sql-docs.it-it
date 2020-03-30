@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099976"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>Nome delle regole di confronto di SQL Server (Transact-SQL)
@@ -70,7 +70,7 @@ WHERE name LIKE 'SQL%';
 ```
 
 > [!NOTE]
-> Per l'ID del tipo di ordinamento 80, usare le regole di confronto di Windows desiderate con la tabella codici 1250 e l'ordinamento binario, Ad esempio: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
+> Per l'ID del tipo di ordinamento 80, usare le regole di confronto di Windows desiderate con la tabella codici 1250 e l'ordinamento binario, ad esempio Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
 
 ## <a name="see-also"></a>Vedere anche
 

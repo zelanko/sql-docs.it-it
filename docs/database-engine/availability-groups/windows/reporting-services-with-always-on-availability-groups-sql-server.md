@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243617"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75243617"
   
  Per informazioni generali sui [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere la [Documentazione di SQL Server (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
 
-##  <a name="bkmk_requirements"></a> Requisiti per l'uso di Reporting Services e dei gruppi di disponibilità AlwaysOn  
+##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Requisiti per l'uso di Reporting Services e dei gruppi di disponibilità AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e il Server di report di Power BI usano .NET Framework 4.0 e supportano le proprietà della stringa di connessione [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per l'uso con le origini dati.  
   
  Per usare i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 e versioni precedenti, è necessario scaricare e installare un hotfix per .Net 3.5 SP1. L'hotfix aggiunge supporto a SQL Client per le funzionalità dei gruppi di disponibilità e per le proprietà della stringa di connessione **ApplicationIntent** e **MultiSubnetFailover**. Se l'hotfix non viene installato in ogni computer in cui si trova il server di report, allora gli utenti che provano a visualizzare un'anteprima dei report visualizzeranno un messaggio di errore simile a quello di seguito riportato e questo verrà scritto nel log di traccia del server di report:  
@@ -46,7 +46,7 @@ ms.locfileid: "75243617"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] file di configurazione come **RSreportserver.config** non sono supportati come parte della funzionalità dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se si apportano modifiche manuali a un file di configurazione in uno dei server di report, sarà necessario aggiornare manualmente le repliche.  
   
-##  <a name="bkmk_reportdatasources"></a> Origine dati del report e gruppi di disponibilità  
+##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Origine dati del report e gruppi di disponibilità  
  Il comportamento delle origini dati [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] basate sui [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] può variare a seconda di come l'amministratore esegue la configurazione dell'ambiente dei gruppi di disponibilità.  
   
  Per usare i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per le origini dati dei report, è necessario configurare la stringa di connessione delle origini dati dei report per usare il *Nome DNS listener*del gruppo di disponibilità. Vengono di seguito riportate le origini dati supportate:  
@@ -91,7 +91,7 @@ ms.locfileid: "75243617"
   
  Quando si usano una replica secondaria di sola lettura come origine dati [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , è importante assicurare che la latenza di aggiornamento soddisfi le esigenze degli utenti del report.  
   
-##  <a name="bkmk_reportdesign"></a> Progettazione report e gruppi di disponibilità  
+##  <a name="report-design-and-availability-groups"></a><a name="bkmk_reportdesign"></a> Progettazione report e gruppi di disponibilità  
  Durante la progettazione di report in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o di un progetto report in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un utente può configurare una stringa di connessione dell'origine dati del report in modo che contenga nuove proprietà di connessione fornite dai [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Il supporto per le nuove proprietà di connessione dipende da dove l'utente visualizza l'anteprima del report.  
   
 -   **Anteprima locale:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] e [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usano .Net Framework 4.0 e supportano le proprietà della stringa di connessione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "75243617"
   
 > **Messaggio di errore:** "Parola chiave non supportata 'applicationintent'"  
   
-##  <a name="bkmk_reportserverdatabases"></a> Database del server di report e gruppi di disponibilità  
+##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> Database del server di report e gruppi di disponibilità  
  Reporting Services e il Server di report di Power BI offrono supporto limitato nell'uso dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con i database del server di report. I database del server di report possono essere configurati nel gruppo di disponibilità in modo da far parte di una replica; tuttavia, quando si verifica un failover, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non verrà usata automaticamente una replica diversa per i database del server di report. L'utilizzo di MultiSubnetFailover con i database del server di report non è supportato.  
   
  Le azioni manuali o gli script di automazione personalizzati devono essere usati per completare il failover e il recupero. Fino al completamento di queste azioni, alcune funzionalità del server di report potrebbero non funzionare correttamente dopo il failover dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
@@ -108,7 +108,7 @@ ms.locfileid: "75243617"
 > [!NOTE]  
 >  Quando si pianifica un failover e un ripristino di emergenza per i database del server di report, si consiglia di eseguire sempre una copia di backup della chiave di crittografia del server di report.  
   
-###  <a name="bkmk_differences_in_server_mode"></a> Differenza tra la modalità nativa e SharePoint  
+###  <a name="differences-between-sharepoint-native-mode"></a><a name="bkmk_differences_in_server_mode"></a> Differenza tra la modalità nativa e SharePoint  
  In questa sezione vengono riepilogate le differenze tra la modalità di interazione dei server di report della modalità SharePoint e della modalità Nativa con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  Tramite un server di report SharePoint vengono creati **3** database per ciascuna applicazione di servizio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] creata. La connessione ai database del server di report in modalità SharePoint viene configurata in Amministrazione centrale SharePoint quando si crea l'applicazione di servizio. Nei nomi predefiniti dei database è incluso un GUID associato all'applicazione di servizio. Di seguito sono riportati i nomi di database di esempio per un server di report in modalità SharePoint:  
@@ -134,7 +134,7 @@ ms.locfileid: "75243617"
 > -   Il processo di sincronizzazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rileverà le differenze tra l'elenco di elementi nel database del contenuto e i database del server di report.  
 > -   Il processo di sincronizzazione eliminerà o aggiornerà gli elementi nel database del contenuto.  
   
-###  <a name="bkmk_prepare_databases"></a> Preparare i database del server di report per i gruppi di disponibilità  
+###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> Preparare i database del server di report per i gruppi di disponibilità  
  Vengono di seguito riportati i passaggi di base per la preparazione e l'aggiunta dei database del server di report ai [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 -   Creare il proprio gruppo di disponibilità e configurare un *Nome DNS del listener*.  
@@ -147,7 +147,7 @@ ms.locfileid: "75243617"
   
 -   Aggiornare la connessione al database per usare il nome DNS del listener. Per i server di report in modalità nativa, cambiare il **Nome database del server di report** in Gestione configurazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Per la modalità SharePoint, cambiare il **Nome del server di database** per le applicazioni di servizio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
-###  <a name="bkmk_steps_to_complete_failover"></a> Passaggi per completare il ripristino di emergenza dei database del server di report  
+###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> Passaggi per completare il ripristino di emergenza dei database del server di report  
  È necessario completare i seguenti passaggi dopo un failover dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in una replica secondaria:  
   
 1.  Arrestare l'istanza del servizio SQL Agent in uso da parte del motore di database primario in cui si trovano i database di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
@@ -164,7 +164,7 @@ ms.locfileid: "75243617"
   
 5.  Verificare che i report possano essere eseguiti nella nuova replica primaria.  
   
-###  <a name="bkmk_failover_behavior"></a> Comportamento del server di report quando si verifica un failover  
+###  <a name="report-server-behavior-when-a-failover-occurs"></a><a name="bkmk_failover_behavior"></a> Comportamento del server di report quando si verifica un failover  
  Quando si verifica il failover dei database del server di report e l'ambiente del server di report è stato aggiornato per usare la nuova replica primaria, ci sono alcuni problemi operativi che risultano dal processo di failover e recupero. L'impatto di questi problemi varia in base al carico di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] al momento del failover e al tempo necessario per l'esecuzione del failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in una replica secondaria e per l'aggiornamento da parte dell'amministratore del server di report dell'ambiente di gestione dei report per usare la nuova replica primaria.  
   
 -   L'esecuzione dell'elaborazione in background potrebbe verificarsi più di una volta a causa della logica di riesecuzione e l'incapacità del server di report di indicare il lavoro programmato come completato durante il periodo di failover.  

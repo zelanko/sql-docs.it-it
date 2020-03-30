@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251128"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure
@@ -35,7 +35,7 @@ ms.locfileid: "75251128"
   
 -   **Configurazione di SQL Server per la gestione dei backup in Microsoft Azure** : configurare SQL Server in modo da gestire la strategia di backup e pianificare i backup per un singolo database o più database oppure per impostare i valori predefiniti a livello di istanza. Questa funzionalità viene definita **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Per altre informazioni, vedere [Backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Questa funzionalità è disponibile in SQL Server 2014 o versione successiva.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Vantaggi dell'uso del servizio BLOB di Microsoft Azure per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>Vantaggi dell'uso del servizio BLOB di Microsoft Azure per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Archiviazione flessibile, affidabile e illimitata in una posizione esterna: l'archiviazione dei backup nel servizio BLOB di Microsoft Azure può essere una soluzione esterna utile, flessibile e di facile accesso. La creazione dell'archiviazione in una posizione esterna per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere semplice quanto la modifica degli script o dei processi esistenti. Generalmente, l'archiviazione in una posizione esterna deve essere sufficientemente lontana dalla posizione del database di produzione per impedire che una singola situazione di emergenza possa influire sia sulla posizione esterna sia su quella del database di produzione. Scegliendo la replica a livello geografico dell'archiviazione BLOB si dispone di un ulteriore livello di protezione in caso di evento di emergenza che potrebbe influire sull'intera area. Inoltre, i backup sono disponibili sempre e in qualsiasi punto e possono essere facilmente utilizzati per i ripristini.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251128"
   
 -   Vantaggi economici: si paga solo il servizio utilizzato. Può rivelarsi una soluzione economica per il backup e l'archiviazione fuori sede. Per altre informazioni e per i collegamenti, vedere la sezione [Considerazioni sui costi di Microsoft Azure](#Billing) .  
   
-##  <a name="Billing"></a> Considerazioni sui costi di Microsoft Azure:  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Considerazioni sui costi di Microsoft Azure:  
  Conoscendo i costi correlati all'archiviazione di Microsoft Azure è possibile prevedere il costo della creazione e dell'archiviazione dei backup in Microsoft Azure.  
   
  Per stimare i costi, è possibile usare il [calcolatore dei costi di Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) .  
@@ -69,6 +69,6 @@ ms.locfileid: "75251128"
 
 [Esercitazione: Uso del servizio di archiviazione BLOB di Windows Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
-[Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
+[Backup di SQL Server in un URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   

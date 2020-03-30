@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68300432"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
@@ -48,14 +48,14 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> Panoramica delle caratteristiche  
+##  <a name="feature-overview"></a><a name="FeatureOverview"></a> Panoramica delle caratteristiche  
  Gli snapshot del database operano a livello di pagine di dati. Prima che una pagina del database di origine venga modificata per la prima volta, la pagina originale viene copiata dal database di origine allo snapshot. Nello snapshot viene archiviata la pagina originale, mantenendo i record di dati nello stato corrispondente al momento in cui è stato creato lo snapshot. Lo stesso processo viene ripetuto per ogni pagina modificata per la prima volta. All'utente uno snapshot del database appare sempre come non modificato, in quanto le operazioni di lettura nello snapshot del database accedono sempre alle pagine di dati originali, indipendentemente dalla posizione.  
   
  Per archiviare le pagine originali copiate, lo snapshot utilizza uno o più *file sparse*. All'inizio un file sparse è un file essenzialmente vuoto che non contiene alcun dato utente e in cui non è stato allocato spazio su disco per i dati utente. Man mano che una sempre maggiore quantità di pagine viene aggiornata nel database di origine, la dimensione del file aumenta. Nella figura seguente vengono illustrati gli effetti di due modelli di aggiornamento diversi sulle dimensioni di uno snapshot. Il modello di aggiornamento A rappresenta un ambiente in cui solo il 30% delle pagine originali è stato aggiornato durante la vita dello snapshot. Il modello di aggiornamento B rappresenta un ambiente in cui durante la vita dello snapshot è stato aggiornato l'80% delle pagine originali.  
   
  ![Modelli di aggiornamento alternativi e dimensioni dello snapshot](../../relational-databases/databases/media/dbview-04.gif "Modelli di aggiornamento alternativi e dimensioni dello snapshot")  
   
-##  <a name="Benefits"></a> Vantaggi degli snapshot del database  
+##  <a name="benefits-of-database-snapshots"></a><a name="Benefits"></a> Vantaggi degli snapshot del database  
   
 -   È possibile utilizzare gli snapshot per la generazione di report.  
   
@@ -96,7 +96,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
      In un ambiente di testing, può essere utile, durante l'esecuzione ripetuta di un protocollo di test, che il database contenga dati identici all'inizio di ogni sessione di test. Prima di eseguire la prima sessione, uno sviluppatore o un tester di applicazioni può creare uno snapshot del database nel database di prova. Dopo ogni test, sarà possibile ripristinare rapidamente lo stato precedente del database ripristinando il relativo snapshot.  
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termini e definizioni  
  database snapshot  
  Vista statica, di sola lettura e consistente dal punto di vista transazionale di un database (di origine).  
   
@@ -106,7 +106,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
  file sparse  
  File fornito dal file system NTFS che richiede molto meno spazio su disco rispetto allo spazio necessario per una modalità di gestione diversa. Un file di tipo sparse viene utilizzato per archiviare pagine copiate in uno snapshot del database. Un file di tipo sparse appena creato richiede poco spazio su disco. Man mano che i dati vengono scritti in uno snapshot del database, lo spazio su disco viene allocato gradualmente dal file system NTFS nel file di tipo sparse corrispondente.  
   
-##  <a name="LimitationsRequirements"></a> Prerequisiti e limitazioni per gli snapshot del database  
+##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> Prerequisiti e limitazioni per gli snapshot del database  
  **Contenuto della sezione**  
   
 -   [Prerequisiti](#Prerequisites)  
@@ -119,7 +119,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
 -   [Snapshot del database con filegroup offline](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Il database di origine, in cui può essere utilizzato qualsiasi modello di recupero, deve soddisfare i prerequisiti seguenti:  
   
 -   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui sono supportati gli snapshot del database. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -141,7 +141,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
 > [!NOTE]  
 >  Tutti i modelli di recupero supportano gli snapshot del database.  
   
-###  <a name="LimitsOnSourceDb"></a> Limitazioni del database di origine  
+###  <a name="limitations-on-the-source-database"></a><a name="LimitsOnSourceDb"></a> Limitazioni del database di origine  
  In presenza di snapshot del database, al database di origine dello snapshot si applicano le limitazioni seguenti:  
   
 -   Non è possibile eliminare, scollegare o ripristinare il database.  
@@ -153,7 +153,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
 -   Non è possibile eliminare file dal database di origine o da uno snapshot.  
   
-###  <a name="LimitsOnDbSS"></a> Limitazioni degli snapshot del database  
+###  <a name="limitations-on-database-snapshots"></a><a name="LimitsOnDbSS"></a> Limitazioni degli snapshot del database  
  Agli snapshot del database si applicano le limitazioni seguenti:  
   
 -   È necessario creare e mantenere uno snapshot del database sulla stessa istanza del server in cui si trova il database di origine.  
@@ -199,7 +199,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
 -   Se le statistiche relative a uno snapshot di sola lettura mancano o non sono aggiornate, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in tempdb. Per altre informazioni, vedere l'articolo relativo alle [statistiche](../../relational-databases/statistics/statistics.md).  
   
-###  <a name="DiskSpace"></a> Requisiti relativi allo spazio su disco  
+###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a> Requisiti relativi allo spazio su disco  
  Gli snapshot del database richiedono spazio su disco. Se uno snapshot del database esaurisce lo spazio su disco, viene contrassegnato come sospetto e deve essere eliminato. Il database di origine, tuttavia, non viene influenzato e continua a funzionare normalmente. Gli snapshot tuttavia utilizzano lo spazio su disco in maniera molto più efficiente rispetto a una copia completa di un database. Uno snapshot richiede esclusivamente lo spazio necessario per le pagine che vengono modificate durante la sua durata. Poiché in genere gli snapshot vengono conservati per periodi di tempo limitati, le loro dimensioni non rappresentano un problema.  
   
  Più a lungo viene conservato uno snapshot, più è probabile che utilizzi tutto lo spazio disponibile. Le dimensioni massime cui un file sparse può arrivare sono quelle del file del database di origine corrispondente al momento della creazione dello snapshot. Se uno snapshot del database esaurisce lo spazio su disco, deve essere eliminato.  
@@ -207,7 +207,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
 > [!NOTE]  
 >  Tranne che per lo spazio del file, uno snapshot del database utilizza approssimativamente le stesse risorse di un database.  
   
-###  <a name="OfflineFGs"></a> Snapshot del database con filegroup offline  
+###  <a name="database-snapshots-with-offline-filegroups"></a><a name="OfflineFGs"></a> Snapshot del database con filegroup offline  
  I filegroup offline nel database di origine influenzano gli snapshot del database quando si tenta di eseguire una delle operazioni seguenti:  
   
 -   Creare uno snapshot  
@@ -226,7 +226,7 @@ Uno snapshot del database è una vista statica di sola lettura di un database [!
   
      Il ripristino di uno snapshot del database come database di origine richiede che tutti i filegroup siano online, fatta eccezione per quelli offline al momento della creazione dello snapshot.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

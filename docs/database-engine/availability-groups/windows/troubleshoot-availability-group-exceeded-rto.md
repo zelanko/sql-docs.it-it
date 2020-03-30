@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013739"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO
@@ -28,7 +28,7 @@ ms.locfileid: "68013739"
   
 2.  [Il thread di rollforward è in ritardo a causa di una contesa di risorse](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> Un carico di lavoro di creazione di report blocca l'esecuzione del thread di rollforward  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Un carico di lavoro di creazione di report blocca l'esecuzione del thread di rollforward  
  L'esecuzione di modifiche DDL (Data Definition Language) del thread di rollforward nella replica secondaria viene bloccata da una query di sola lettura con esecuzione prolungata.  
   
 ### <a name="explanation"></a>Spiegazione  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  È possibile lasciar finire il carico di lavoro di creazione di report, e a questo punto il thread di rollforward viene sbloccato, oppure è possibile sbloccare il thread di rollforward immediatamente eseguendo il comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) sull'ID di sessione che causa il blocco.  
   
-##  <a name="BKMK_CONTENTION"></a> Il thread di rollforward è in ritardo a causa di una contesa di risorse  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> Il thread di rollforward è in ritardo a causa di una contesa di risorse  
  Un carico di lavoro di creazione di report di grandi dimensioni nella replica secondaria ha rallentato le prestazioni della replica secondaria stessa e il thread di rollforward è in ritardo.  
   
 ### <a name="explanation"></a>Spiegazione  

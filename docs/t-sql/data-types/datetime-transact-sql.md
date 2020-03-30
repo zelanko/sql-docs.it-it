@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113719"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -93,7 +93,7 @@ I valori **datetime** vengono arrotondati con incrementi di 0,000, 0,003 o 0,007
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformità agli standard ANSI e ISO 8601  
 **datetime** non è conforme agli standard ANSI e ISO 8601.
   
-##  <a name="_datetime"></a>Conversione dei dati relativi alla data e all'ora  
+##  <a name="converting-date-and-time-data"></a><a name="_datetime"></a>Conversione dei dati relativi alla data e all'ora  
 Quando si esegue la conversione in tipi di dati di data e ora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta tutti i valori che non può riconoscere come date o ore. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>Conversione di altri tipi di data e ora nel tipo di dati datetime 

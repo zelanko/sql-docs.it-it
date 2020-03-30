@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084098"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
@@ -90,7 +90,7 @@ ms.locfileid: "68084098"
     
 ## <a name="how-to-control-transaction-durability"></a>Come controllare la durabilità delle transazioni    
     
-###  <a name="bkmk_DbControl"></a> Controllo a livello di database    
+###  <a name="database-level-control"></a><a name="bkmk_DbControl"></a> Controllo a livello di database    
  L'amministratore del database può controllare se gli utenti possono utilizzare le transazioni con durabilità ritardata in un database con l'istruzione seguente. È necessario impostare il valore per la durabilità ritardata con ALTER DATABASE.    
     
 ```sql    
@@ -106,7 +106,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  Con questa impostazione, ogni transazione di cui viene eseguito il commit nel database è con durabilità ritardata. Indipendentemente dal fatto che venga specificata una transazione completamente durevole (DELAYED_DURABILITY = OFF) o non venga specificata alcuna impostazione, la transazione è con durabilità ritardata. Tale impostazione risulta utile quando è necessario specificare le transazioni con durabilità ritardata per un database e non si desidera modificare il codice dell'applicazione.    
     
-###  <a name="CompiledProcControl"></a> Controllo a livello di blocco atomico: stored procedure compilate in modo nativo    
+###  <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> Controllo a livello di blocco atomico: stored procedure compilate in modo nativo    
  Il codice seguente va inserito nel blocco atomico.    
     
 ```sql    
@@ -141,7 +141,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Il blocco atomico avvia una nuova transazione completamente durevole.|Il blocco atomico crea un punto di salvataggio nella transazione esistente, quindi avvia una nuova transazione.|    
 |**DELAYED_DURABILITY = ON**|Il blocco atomico avvia una nuova transazione con durabilità ritardata.|Il blocco atomico crea un punto di salvataggio nella transazione esistente, quindi avvia una nuova transazione.|    
     
-###  <a name="bkmk_T-SQLControl"></a> Controllo a livello di COMMIT -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="commit-level-control--tsql"></a><a name="bkmk_T-SQLControl"></a> Controllo a livello di COMMIT -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  La sintassi di COMMIT viene estesa in modo da poter forzare le transazioni con durabilità ritardata. Se DELAYED_DURABILITY è DISABLED o FORCED a livello di database (vedere sopra) questa opzione di COMMIT viene ignorata.    
     
 ```sql    
@@ -172,7 +172,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   Eseguire la stored procedure di sistema `sp_flush_log`. In questo modo viene forzato lo scaricamento su disco dei record del log di tutte transazioni con durabilità ritardata di cui è stato eseguito il commit in precedenza. Per altre informazioni, vedere [sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md).    
     
-##  <a name="bkmk_OtherSQLFeatures"></a>Durabilità ritardata e altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
+##  <a name="delayed-durability-and-other-ssnoversion-features"></a><a name="bkmk_OtherSQLFeatures"></a>Durabilità ritardata e altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
  **Rilevamento delle modifiche e Change Data Capture**    
  Tutte le transazioni con rilevamento delle modifiche sono completamente durevoli. Una transazione dispone della proprietà di rilevamento delle modifiche se esegue operazioni di scrittura in tabelle abilitate per il rilevamento delle modifiche. L'uso di durabilità posticipata non è supportato per i database che usano Change Data Capture (CDC).    
     
@@ -197,13 +197,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Backup del log**    
  Solo le transazioni che sono diventate durevoli vengono incluse nel backup.    
     
-##  <a name="bkmk_DataLoss"></a> Quando può verificarsi una perdita di dati?    
+##  <a name="when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> Quando può verificarsi una perdita di dati?    
  Se si implementa la durabilità ritardata in una delle tabelle, è importante comprendere che in determinate circostanze può verificarsi una perdita di dati. Se non è possibile tollerare un'eventuale perdita di dati, è consigliabile non usare la durabilità ritardata nelle tabelle.    
     
 ### <a name="catastrophic-events"></a>Eventi irreversibili    
  Nel caso di un evento irreversibile, come ad esempio un arresto anomalo del server, si verificherà una perdita di dati per tutte le transazioni di cui è stato eseguito il commit che non sono state salvate su disco. Le transazioni con durabilità ritardata vengono salvate su disco ogni volta che in una tabella del database (durevole ottimizzata per la memoria o basata su disco) viene eseguita una transazione completamente durevole o viene chiamato `sp_flush_log`. Se si usano le transazioni con durabilità ritardata, è possibile creare una tabella di piccole dimensioni nel database da aggiornare periodicamente oppure è possibile chiamare periodicamente `sp_flush_log` per salvare tutte le transazioni in sospeso di cui è stato eseguito il commit. Inoltre, il log delle transazioni viene scaricato ogni volta che diventa pieno, condizione che però è difficile da prevedere e impossibile da controllare.    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Arresto e riavvio di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
+### <a name="ssnoversion-shutdown-and-restart"></a>Arresto e riavvio di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
  Per la durabilità ritardata non esiste alcuna differenza tra un arresto imprevisto e un arresto/riavvio previsto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Analogamente agli eventi irreversibili, occorre prevedere la possibilità di una perdita di dati. In un arresto/riavvio pianificato alcune transazioni che non sono state scritte su dico possono essere prima salvate su disco ma non è una condizione che è possibile pianificare. Considerare un arresto/riavvio, indipendentemente che sia pianificato o meno, allo stesso modo di un evento irreversibile in cui può verificarsi una perdita di dati.    
     
 ## <a name="see-also"></a>Vedere anche    

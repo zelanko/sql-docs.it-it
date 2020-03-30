@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006339"
 ---
 # <a name="database-mirroring-sql-server"></a>Mirroring del database (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "68006339"
 >  Per informazioni sul supporto per il mirroring del database, nonché su restrizioni, prerequisiti e consigli per la configurazione dei server partner e per la distribuzione del mirroring del database, vedere [Prerequisiti, restrizioni e indicazioni per il mirroring del database](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
   
-##  <a name="Benefits"></a> Vantaggi del mirroring del database  
+##  <a name="benefits-of-database-mirroring"></a><a name="Benefits"></a> Vantaggi del mirroring del database  
  Il mirroring del database è una semplice strategia che offre i vantaggi seguenti:  
   
 -   Maggiore disponibilità di un database.  
@@ -53,14 +53,14 @@ ms.locfileid: "68006339"
   
      Il mirroring del database offre una ridondanza dei dati completa o quasi completa, in base al fatto che la modalità operativa sia a protezione elevata o a prestazioni elevate. Per ulteriori informazioni, vedere [Modalità operative](#OperatingModes)di seguito in questo argomento.  
   
-     Un partner di mirroring di database in esecuzione in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive cerca di risolvere alcuni tipi di errori che impediscono la lettura di una pagina di dati. Il partner che non è in grado di leggere una pagina ne richiede una copia aggiornata all'altro. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia e l'errore viene risolto. Per altre informazioni, vedere [Correzione automatica della pagina &#40;Gruppi di disponibilità: Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+     Un partner di mirroring di database in esecuzione in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive cerca di risolvere alcuni tipi di errori che impediscono la lettura di una pagina di dati. Il partner che non è in grado di leggere una pagina ne richiede una copia aggiornata all'altro. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia e l'errore viene risolto. Per ulteriori informazioni, vedere [Correzione automatica della pagina &#40;Gruppi di disponibilità/Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Migliore disponibilità del database di produzione durante gli aggiornamenti.  
   
      Per contenere il tempo di inattività di un database con mirroring, è possibile aggiornare in sequenza le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospitano i partner di failover. Ciò genererà il tempo di inattività di un solo failover. Questa modalità di aggiornamento è noto come *aggiornamento in sequenza*. Per altre informazioni, vedere [Aggiornamento di istanze con mirroring](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni del mirroring del database  
+##  <a name="database-mirroring-terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termini e definizioni del mirroring del database  
  failover automatico  
  Processo attraverso il quale, quando il server principale non è disponibile, il server mirror assume il ruolo di server principale e attiva la modalità online per la propria copia del database come database principale.  
   
@@ -109,13 +109,13 @@ ms.locfileid: "68006339"
  All'avvio o alla ripresa di una sessione di mirroring, processo in cui i record di log del database principale accumulati nel server principale vengono inviati al server mirror, che li scrive sul disco il più rapidamente possibile in modo da non rimanere indietro rispetto al server principale.  
   
  Livello di sicurezza delle transazioni  
- Proprietà del database specifica del mirroring che determina l'esecuzione della sessione di mirroring del database in modalità sincrona o asincrona. Esistono due livelli di sicurezza: FULL e OFF.  
+ Proprietà del database specifica del mirroring che determina l'esecuzione della sessione di mirroring del database in modalità sincrona o asincrona. Esistono due livelli di protezione: FULL e OFF.  
   
  Controllo  
  Per l'utilizzo nella sola modalità a sicurezza elevata. Istanza facoltativa di SQL Server che consente al server mirror di stabilire quando avviare un failover automatico. A differenza dei due partner di failover, il server di controllo del mirroring non rende disponibile il database. Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
   
   
-##  <a name="HowWorks"></a> Panoramica del mirroring del database  
+##  <a name="overview-of-database-mirroring"></a><a name="HowWorks"></a> Panoramica del mirroring del database  
  Il mirroring del database gestisce due copie di un singolo database che devono trovarsi su istanze del server diverse di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In genere, tali istanze del server risiedono su computer ubicati in posizioni diverse. L'avvio del mirroring del database su un database comporta l'avvio di una relazione, nota come *sessione del mirroring del database*, tra queste istanze del server.  
   
  Un'istanza del server gestisce il database per i client (il *server principale*). L'altra istanza agisce come server warm standby o hot standby (il *server mirror*), a seconda della configurazione e dello stato della sessione di mirroring. Quando viene sincronizzata una sessione di mirroring del database, il mirroring del database rende disponibile un server di hot standby che supporta il failover rapido senza perdita di dati da transazioni di cui è stato eseguito il commit. Quando la sessione non è sincronizzata, il server mirror è in genere disponibile come server warm standby e ciò può causare perdite di dati.  
@@ -140,7 +140,7 @@ ms.locfileid: "68006339"
 -   [Effetti della sospensione di una sessione sul log delle transazioni principale](#ImpactOfPausing)  
   
   
-###  <a name="OperatingModes"></a> Modalità operative  
+###  <a name="operating-modes"></a><a name="OperatingModes"></a> Modalità operative  
  Una sessione di mirroring del database può essere eseguita in un'operazione sincrona o asincrona. In modalità asincrona il commit delle transazioni viene eseguito senza attendere che il server mirror salvi il log su disco, ottimizzando così le prestazioni. L'operazione sincrona assicura che il commit di una transazione venga eseguito su entrambi i partner, ma con il rischio di aumentare la latenza delle transazioni.  
   
  Per il mirroring del database sono disponibili due modalità operative. Una di esse, la *modalità a protezione elevata* supporta l'operazione sincrona. In modalità a protezione elevata, all'avvio di una sessione, il server mirror sincronizza il database mirror con il database principale il più rapidamente possibile. Quando i database sono sincronizzati, il commit di una transazione viene eseguito su entrambi i partner, ma con il rischio di aumentare la latenza delle transazioni.  
@@ -165,7 +165,7 @@ ms.locfileid: "68006339"
 >  Per avviare una nuova sessione di mirroring o aggiungere un server di controllo del mirroring a una configurazione di mirroring esistente, è necessario che in tutte le istanze server coinvolte venga eseguita la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, quando viene eseguito l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o a una versione successiva, possono verificarsi variazioni nelle istanze coinvolte. Per altre informazioni, vedere [Aggiornamento di istanze con mirroring](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
   
-####  <a name="TxnSafety"></a> Sicurezza delle transazioni e modalità operative  
+####  <a name="transaction-safety-and-operating-modes"></a><a name="TxnSafety"></a> Sicurezza delle transazioni e modalità operative  
  La modalità operativa può essere sincrona o asincrona in base all'impostazione del livello di protezione delle transazioni. Se si utilizza esclusivamente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per configurare il mirroring del database, le impostazioni di protezione delle transazioni vengono configurate automaticamente quando si seleziona la modalità operativa.  
   
  Se si utilizza [!INCLUDE[tsql](../../includes/tsql-md.md)] per configurare il mirroring del database, è necessario conoscere la procedura di impostazione della protezione delle transazioni. La protezione delle transazioni è controllata dalla proprietà SAFETY dell'istruzione ALTER DATABASE. In un database sottoposto a mirroring, la proprietà SAFETY può essere impostata su FULL o su OFF.  
@@ -177,7 +177,7 @@ ms.locfileid: "68006339"
  Per altre informazioni, vedere [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
   
-###  <a name="RoleSwitching"></a> Cambio di ruolo  
+###  <a name="role-switching"></a><a name="RoleSwitching"></a> Cambio di ruolo  
  Nel contesto di una sessione di mirroring del database, in genere i ruoli principale e mirror sono intercambiabili tramite un processo denominato *cambio di ruolo*. Il cambio di ruolo comporta il trasferimento del ruolo principale al server mirror. In un cambio di ruolo, il server mirror funge da *partner di failover* per il server principale. Quando si verifica un cambio di ruolo, il server mirror assume il ruolo principale e attiva la modalità online per la propria copia del database come nuovo database principale. Il server principale precedente, quando disponibile, assume il ruolo di mirror e il suo database diventa il nuovo database mirror. Potenzialmente, i ruoli possono essere scambiati ripetutamente nei due sensi.  
   
  Esistono le tre forme seguenti di cambio di ruolo.  
@@ -202,7 +202,7 @@ ms.locfileid: "68006339"
  In qualsiasi scenario di cambio di ruolo, quando il nuovo database principale è online, le applicazioni client possono eseguire un rapido recupero tramite la riconnessione al database.  
   
   
-###  <a name="ConcurrentSessions"></a> Sessioni simultanee  
+###  <a name="concurrent-sessions"></a><a name="ConcurrentSessions"></a> Sessioni simultanee  
  Una determinata istanza del server può prendere parte a più sessioni di mirroring del database simultanee (una volta per ogni database con mirroring) con la stessa istanza o istanze diverse del server. Spesso, un'istanza del server funge esclusivamente da server partner o da server di controllo del mirroring in tutte le relative sessioni di mirroring del database. Poiché tuttavia ogni sessione è indipendente dalle altre, un'istanza del server può fungere da server partner in alcune sessioni e da server di controllo del mirroring in altre. Si considerino ad esempio le quattro sessioni seguenti tra tre istanze del server (`SSInstance_1`, `SSInstance_2`e `SSInstance_3`). Ogni istanza del server funge da partner in alcune sessioni e da server di controllo del mirroring in altre:  
   
 |Istanza del server|Sessione per il database A|Sessione per il database B|Sessione per il database C|Sessione per il database D|  
@@ -224,19 +224,19 @@ ms.locfileid: "68006339"
 > [!NOTE]  
 >  I database con mirroring sono indipendenti tra loro, quindi non possono eseguire il failover come gruppo.  
   
-###  <a name="ClientConnections"></a> Connessioni client  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> Connessioni client  
  Le connessioni client per le sessioni di mirroring del database sono supportate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
   
-###  <a name="ImpactOfPausing"></a> Effetti della sospensione di una sessione sul log delle transazioni principale  
+###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a> Effetti della sospensione di una sessione sul log delle transazioni principale  
  Il proprietario del database può sospendere una sessione in qualsiasi momento e, in questo modo, preservare lo stato della sessione mentre si rimuove il mirroring. Quando una sessione viene sospesa, il server principale non invia nuovi record del log al server mirror. Tali record restano attivi e si accumulano nel log delle transazioni del database principale. Inoltre, finché la sessione di mirroring del database rimane sospesa, non è possibile troncare il log delle transazioni. Se la sessione di mirroring del database resta sospesa troppo a lungo, dunque, lo spazio del log può esaurirsi.  
   
  Per ulteriori informazioni, vedere [Sospensione e ripresa del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md).  
   
-##  <a name="SettingUpDbmSession"></a> Impostazione di una sessione di mirroring per un database  
+##  <a name="setting-up-database-mirroring-session"></a><a name="SettingUpDbmSession"></a> Impostazione di una sessione di mirroring per un database  
  Prima di iniziare una sessione di mirroring, è necessario che il proprietario del database oppure l'amministratore di sistema crei il database mirror, imposti gli endpoint e gli account di accesso e, in alcuni casi, crei e imposti i certificati. Per ulteriori informazioni, vedere [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="InterOp"></a> Interoperabilità e coesistenza con altre funzionalità del motore di database  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="InterOp"></a> Interoperabilità e coesistenza con altre funzionalità del motore di database  
  È possibile utilizzare il mirroring del database con i componenti e le caratteristiche seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   [Log shipping](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
@@ -247,7 +247,7 @@ ms.locfileid: "68006339"
   
 -   [Replica](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  [Prerequisiti, restrizioni e indicazioni per il mirroring del database](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Vengono descritti i prerequisiti e le indicazioni per la configurazione del mirroring del database.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "68006339"
  Contiene informazioni sull'uso di Monitoraggio mirroring del database o delle stored procedure **dbmmonitor** per monitorare le sessioni o il mirroring del database.  
   
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 ### <a name="configuration-tasks"></a>Attività di configurazione  
  **Utilizzo di SQL Server Management Studio**  
@@ -344,9 +344,9 @@ ms.locfileid: "68006339"
   
 ## <a name="see-also"></a>Vedere anche  
  [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Correzione automatica della pagina &#40;Gruppi di disponibilità: Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Correzione automatica della pagina &#40;Gruppi di disponibilità/Mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Mirroring del database: interoperabilità e coesistenza &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Mirroring del database: Interoperabilità e coesistenza &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Prerequisiti restrizioni e indicazioni per il mirroring del database](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  

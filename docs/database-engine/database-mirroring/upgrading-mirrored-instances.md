@@ -15,10 +15,10 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050636"
 ---
 # <a name="upgrading-mirrored-instances"></a>Aggiornamento di istanze con mirroring
@@ -31,13 +31,13 @@ ms.locfileid: "68050636"
 ## <a name="prerequisites"></a>Prerequisites  
  Prima di iniziare, esaminare le informazioni seguenti:  
   
--   [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server in uso. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Scegliere un metodo di aggiornamento del motore di database](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti della versione e dell'edizione supportate e anche agli altri componenti installati nell'ambiente interessato per aggiornare i componenti nell'ordine corretto.  
+-   [Scegliere un Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selezionare il metodo di aggiornamento appropriato e i passaggi in base alla verifica degli aggiornamenti di versione ed edizione supportati e anche in base agli altri componenti installati nell'ambiente interessato per aggiornare i componenti di ordine corretto.  
   
--   [Pianificare e testare il piano di aggiornamento del motore di database](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti, l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
+-   [Pianificare e testare il piano di aggiornamento del motore di database](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti e l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
   
--   [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
+-   [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
   
 ## <a name="recommended-preparation-best-practices"></a>Preparazione consigliata (procedure consigliate)  
  Prima di avviare un aggiornamento in sequenza, si consiglia di effettuare le operazioni seguenti:  
@@ -97,7 +97,7 @@ ms.locfileid: "68050636"
   
 ### <a name="to-perform-the-rolling-upgrade"></a>Per eseguire l'aggiornamento in sequenza  
   
-1.  Per ridurre al minimo i tempi di inattività, si consiglia di: Avviare l'aggiornamento in sequenza aggiornando qualsiasi server partner di mirroring che è attualmente il server mirror in tutte le relative sessioni di mirroring. In questa fase potrebbe essere necessario aggiornare più istanze del server.  
+1.  Per ridurre al minimo i tempi di inattività, si consiglia di applicare la seguente procedura: avviare l'aggiornamento in sequenza aggiornando qualsiasi server partner di mirroring che è attualmente il server mirror in tutte le sue sessioni di mirroring. In questa fase potrebbe essere necessario aggiornare più istanze del server.  
   
     > [!NOTE]  
     >  Un server di controllo del mirroring può essere aggiornato in qualsiasi punto nel processo di aggiornamento in sequenza. Ad esempio, se un'istanza del server è un server mirror nella sessione 1 e un server di controllo del mirroring nella sessione 2, è possibile aggiornare l'istanza del server.  
@@ -139,9 +139,9 @@ ms.locfileid: "68050636"
   
 1.  Facoltativamente, tornare alla modalità a elevate prestazioni utilizzando uno dei metodi seguenti:  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Prestazioni elevate (asincrona)** usando la [pagina Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database**.  
+    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Prestazioni elevate (asincrona)** usando la [pagina Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database** .  
   
-    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) per impostare la protezione della transazione su OFF.  
+    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)per impostare la protezione della transazione su OFF.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Per aggiungere un server di controllo nuovamente in una sessione di mirroring  
   

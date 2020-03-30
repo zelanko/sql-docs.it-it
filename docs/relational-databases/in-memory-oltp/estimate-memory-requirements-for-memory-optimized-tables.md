@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412691"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
@@ -52,7 +52,7 @@ Quando è presente un carico di lavoro attivo, è necessaria altra memoria per t
   
 - [Memoria in caso di aumento delle dimensioni](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> Esempio di tabella ottimizzata per la memoria  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> Esempio di tabella ottimizzata per la memoria  
 
 Si consideri il seguente schema di tabella ottimizzata per la memoria:
   
@@ -83,7 +83,7 @@ GO
 
 Utilizzando questo schema sarà possibile stabilire la memoria minima necessaria per questa tabella ottimizzata per la memoria.  
   
-###  <a name="bkmk_MemoryForTable"></a> Memoria per la tabella  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> Memoria per la tabella  
 
 La riga di una tabella ottimizzata per la memoria è costituita da tre parti:
   
@@ -102,7 +102,7 @@ Di seguito è riportato un calcolo di dimensioni per 5.000.000 (5 milioni) di ri
   
 Dai calcoli sopra riportati, le dimensioni di ogni riga della tabella ottimizzata per la memoria sono pari a 24 + 32 + 200, vale a dire 256 byte.  Dal momento che sono presenti 5 milioni di righe, per la tabella verranno utilizzati 5.000.000 * 256 byte, vale a dire 1.280.000.000 di byte, circa 1,28 GB.  
   
-###  <a name="bkmk_IndexMeemory"></a> Memoria per gli indici  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> Memoria per gli indici  
 
 #### <a name="memory-for-each-hash-index"></a>Memoria per ogni indice hash  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> Memoria per il controllo delle versioni delle righe
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Memoria per il controllo delle versioni delle righe
 
 Per evitare blocchi, tramite OLTP in memoria viene utilizzata la concorrenza ottimistica durante l'aggiornamento o l'eliminazione di righe. Pertanto, quando una riga viene aggiornata, viene creata una versione aggiuntiva della riga. Inoltre, le eliminazioni sono logiche: la riga esistente viene contrassegnata come eliminata, ma non viene rimossa immediatamente. Il sistema mantiene disponibili le versioni precedenti delle righe (comprese quelle eliminate) fino al termine dell'esecuzione di tutte le transazioni che potrebbero usare una versione. 
   
@@ -181,13 +181,13 @@ I requisiti di memoria per righe non aggiornate vengono quindi stimati moltiplic
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> Memoria per le variabili di tabella
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> Memoria per le variabili di tabella
   
 La memoria utilizzata per una variabile di tabella viene rilasciata solo quando la variabile di tabella abbandona l'ambito. Le righe eliminate, incluse quelle eliminate come parte di un aggiornamento, da una variabile di tabella non vengono sottoposte a Garbage Collection. Finché la variabile di tabella non abbandona l'ambito, la memoria non viene rilasciata.  
   
 Le variabili di tabella definite in un batch SQL di grandi dimensioni, a differenza di un ambito di procedura, utilizzate in molte transazioni, possono richiedere una grande quantità di memoria. Poiché non vengono sottoposte a Garbage Collection, le righe eliminate in una variabile di tabella possono utilizzare una grande quantità di memoria e influire negativamente sulle prestazioni poiché le operazioni di lettura devono eseguire l'analisi delle righe eliminate.  
   
-###  <a name="bkmk_MemoryForGrowth"></a> Memoria in caso di aumento delle dimensioni
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> Memoria in caso di aumento delle dimensioni
 
 Con i calcoli sopra riportati vengono stimati i requisiti di memoria della tabella attuale. Oltre a questa memoria, è necessario stimare la crescita della tabella e fornire una memoria sufficiente per gestire questa crescita.  Ad esempio, se si prevede una crescita del 10%, sarà necessario moltiplicare i risultati precedenti per 1,1 per ottenere la memoria totale necessaria per la tabella.  
   

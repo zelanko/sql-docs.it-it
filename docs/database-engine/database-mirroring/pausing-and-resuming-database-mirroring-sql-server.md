@@ -18,10 +18,10 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254147"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Sospensione e ripresa del mirroring del database (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75254147"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a> Impatto della sospensione e ripresa sul troncamento del log  
+##  <a name="how-pausing-and-resuming-affect-log-truncation"></a><a name="EffectOnLogTrunc"></a> Impatto della sospensione e ripresa sul troncamento del log  
  In genere, quando su un database viene eseguito un checkpoint automatico, il relativo log delle transazioni viene troncato in corrispondenza di tale checkpoint dopo il successivo backup del log. Durante il periodo in cui una sessione di mirroring del database rimane sospesa, tutti i record del log corrente restano attivi poiché il server principale è in attesa di inviarli al server mirror. I record del log non inviati si accumulano nel log delle transazioni del database principale fino alla ripresa della sessione e al momento dell'invio dei record del log dal server principale al server mirror.  
   
  Quando la sessione viene ripresa, il server principale inizia immediatamente a inviare i record del log accumulati al server mirror. Dopo la conferma da parte del server mirror che il record del log corrispondente al checkpoint automatico meno recente è stato accodato, il server principale tronca il log del database principale fino a tale checkpoint. Il server mirror tronca la coda di rollforward in corrispondenza dello stesso record del log. Poiché questo processo viene ripetuto per ogni checkpoint successivo, il log viene troncato in più fasi per i singoli checkpoint.  
@@ -51,7 +51,7 @@ ms.locfileid: "75254147"
 > [!NOTE]  
 >  Per altre informazioni sui checkpoint e sul troncamento del log, vedere [Checkpoint di database &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-##  <a name="AvoidFullLog"></a> Evitare il riempimento del log delle transazioni  
+##  <a name="avoid-a-full-transaction-log"></a><a name="AvoidFullLog"></a> Evitare il riempimento del log delle transazioni  
  Se il log si riempie, perché raggiunge le dimensioni massime o l'istanza del server esaurisce lo spazio, il database non può eseguire ulteriori aggiornamenti. Per evitare questo problema, è possibile procedere in due modi:  
   
 -   Riprendere la sessione di mirroring del database prima che il log esaurisca lo spazio, oppure aggiungere spazio di log. Se si riprende il mirroring, il server principale invia il log cumulativo attivo al server mirror e il database mirror viene posto in stato SYNCHRONIZING. Il server mirror può quindi salvare il log su disco e avviarne il rollforward.  
@@ -60,7 +60,7 @@ ms.locfileid: "75254147"
   
      A differenza della sospensione di una sessione, la rimozione del mirroring provoca l'eliminazione di tutte le informazioni relative alla sessione di mirroring. Ogni istanza del server partner mantiene la sua copia del database. Se recuperata, pertanto, la copia precedente del database mirror può risultare diversa dalla copia precedente del database principale e indicare un periodo di tempo inferiore rispetto a quello trascorso dalla sospensione della sessione. Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per sospendere o riprendere il mirroring del database**  
   
 -   [Sospendere o riprendere una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  

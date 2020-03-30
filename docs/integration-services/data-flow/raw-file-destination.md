@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292185"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
@@ -149,13 +149,13 @@ ms.locfileid: "71292185"
   
 -   [Impostare le opzioni nella scheda Colonne](#mapping)  
   
-###  <a name="open"></a> Aprire l'Editor destinazione file non elaborato  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Aprire l'Editor destinazione file non elaborato  
   
 1.  Aggiungere la destinazione file non elaborato in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Fare clic con il pulsante destro del mouse sul componente e quindi scegliere **Modifica**.  
   
-###  <a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
  **Modalità di accesso**  
  Selezionare come il nome file viene specificato. Selezionare **Nome file** per immettere direttamente il nome file e il percorso o **Nome file da variabile** per specificare una variabile che contiene il nome file.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292185"
   
  Quando si fa clic su **Genera file non elaborato iniziale**, viene visualizzata una finestra di messaggio. Fare clic su **OK** per procedere con la creazione del file. Fare clic su **Annulla** per selezionare un elenco diverso di colonne nella pagina **Colonne** .  
   
-###  <a name="mapping"></a> Impostare le opzioni nella scheda Colonne  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Impostare le opzioni nella scheda Colonne  
  **Colonne di input disponibili**  
  Selezionare uno o più colonne di input per scrivere nel file non elaborato.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292185"
   
 -   [Impostare le opzioni nella scheda Colonne](#mapping)  
   
-###  <a name="open"></a> Aprire l'Editor destinazione file non elaborato  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Aprire l'Editor destinazione file non elaborato  
   
 1.  Aggiungere la destinazione file non elaborato in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Fare clic con il pulsante destro del mouse sul componente e quindi scegliere **Modifica**.  
   
-###  <a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Impostare le opzioni nella scheda Gestione connessione  
  **Modalità di accesso**  
  Selezionare come il nome file viene specificato. Selezionare **Nome file** per immettere direttamente il nome file e il percorso o **Nome file da variabile** per specificare una variabile che contiene il nome file.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292185"
   
  Quando si fa clic sul pulsante, viene visualizzato un elenco delle colonne. È possibile fare clic su Annulla e modificare le colonne o fare clic su OK per procedere con la creazione del file.  
   
-###  <a name="mapping"></a> Impostare le opzioni nella scheda Colonne  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Impostare le opzioni nella scheda Colonne  
  **Colonne di input disponibili**  
  Selezionare uno o più colonne di input per scrivere nel file non elaborato.  
   

@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285123"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Impostazione query di origine (Importazione/Esportazione guidata SQL Server)
@@ -59,7 +59,7 @@ Se l'origine dati è Excel, vedere [Specificare una query di origine per Excel](
  **Sfoglia**  
  Selezionare un file salvato contenente il testo di una query SQL usando la finestra di dialogo **Apri**. La selezione di un file copia il testo dal file alla casella di testo **Istruzione SQL** .  
  
-## <a name="excelQueries"></a> Specificare una query di origine per Excel
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Specificare una query di origine per Excel
 
 > [!IMPORTANT]
 > Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

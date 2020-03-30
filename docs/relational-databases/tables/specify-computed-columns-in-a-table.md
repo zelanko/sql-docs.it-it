@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082558"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Specificare le colonne calcolate in una tabella
@@ -40,22 +40,22 @@ Una colonna calcolata è una colonna virtuale che non viene archiviata fisicamen
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare
 
-### <a name="Limitations"></a> Limitazioni e restrizioni
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Limitazioni e restrizioni
 
 - Una colonna calcolata non può essere utilizzata come definizione di vincolo DEFAULT o FOREIGN KEY o con la definizione di vincolo NOT NULL. È tuttavia possibile utilizzare una colonna calcolata come colonna chiave di un indice o come parte di un vincolo PRIMARY KEY o UNIQUE, a condizione che il valore della colonna calcolata sia definito da un'espressione deterministica e il tipo di dati del risultato sia supportato nelle colonne dell'indice. Se, ad esempio, la tabella contiene le colonne di tipo integer a e b, è possibile indicizzare la colonna calcolata a + b, ma non la colonna calcolata a+DATEPART(dd, GETDATE()), in quanto durante chiamate successive il valore potrebbe cambiare.
 - Non è possibile usare una colonna calcolata in un'istruzione INSERT o UPDATE.
 
-### <a name="Security"></a> Sicurezza
+### <a name="security"></a><a name="Security"></a> Sicurezza
 
-#### <a name="Permissions"></a> Autorizzazioni
+#### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 È necessario disporre dell'autorizzazione ALTER per la tabella.
 
-## <a name="SSMSProcedure"></a> Con SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio
 
-### <a name="NewColumn"></a> Per aggiungere una nuova colonna calcolata
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Per aggiungere una nuova colonna calcolata
 
 1. In **Esplora oggetti**espandere la tabella per cui si desidera aggiungere la nuova colonna calcolata. Fare clic con il pulsante destro del mouse su **Colonne** e scegliere **Nuova colonna**.
 2. Immettere il nome della colonna e accettare il tipo di dati predefinito,**nchar**(10). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina il tipo di dati della colonna calcolata applicando le regole sulla precedenza dei tipi di dati alle espressioni specificate nella formula. Ad esempio, se la formula fa riferimento a una colonna di tipo **money** e una colonna di tipo **int**, la colonna calcolata sarà di tipo **money** perché tale tipo di dati ha precedenza maggiore. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
@@ -75,7 +75,7 @@ Una colonna calcolata è una colonna virtuale che non viene archiviata fisicamen
 2. Fare clic con il pulsante destro del mouse sulla colonna per cui si vuole specificare una formula di colonna calcolata e scegliere **Elimina**. Fare clic su **OK**.
 3. Aggiungere una nuova colonna e specificare la formula della colonna calcolata attenendosi alla procedura precedente per aggiungere una nuova colonna calcolata.
 
-## <a name="TsqlProcedure"></a> Con Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>Per aggiungere una colonna calcolata quando si crea una tabella
 

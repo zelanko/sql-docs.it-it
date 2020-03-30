@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295701"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificazione dell'origine dei pacchetti con firme digitali
@@ -47,7 +47,7 @@ ms.locfileid: "71295701"
   
 > **NOTA:** il valore facoltativo **BlockedSignatureStates** del Registro di sistema può specificare un'impostazione più restrittiva rispetto all'opzione per la firma digitale impostata in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o nella riga di comando **dtexec** . In questo caso, l'impostazione del Registro di sistema più restrittiva ha la precedenza rispetto ad altre impostazioni.  
 
-## <a name="registry"></a> Implementare criteri per le firme tramite l'impostazione di un valore del Registro di sistema
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> Implementare criteri per le firme tramite l'impostazione di un valore del Registro di sistema
   È possibile utilizzare un valore facoltativo del Registro di sistema per gestire i criteri dell'organizzazione per il caricamento dei pacchetti firmati o non firmati. Se si utilizza questo valore del Registro di sistema, è necessario crearlo in ogni computer in cui verranno eseguiti i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e in cui si desidera applicare i criteri. Dopo l'impostazione del valore del Registro di sistema, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] controllerà o verificherà le firme prima di caricare i pacchetti.  
   
  La procedura in questo argomento descrive come aggiungere il valore facoltativo DWORD **BlockedSignatureStates** alla chiave del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS. Il valore dei dati in **BlockedSignatureStates** determina se un pacchetto debba essere bloccato se contiene una firma non attendibile o non valida oppure se non è firmato. In relazione allo stato delle firme usate per firmare i pacchetti, il valore del Registro di sistema **BlockedSignatureStates** usa le definizioni seguenti:  
@@ -92,7 +92,7 @@ ms.locfileid: "71295701"
   
 9. Scegliere **Esci** dal menu **File**.    
 
-## <a name="cert"></a> Firmare un pacchetto con un certificato digitale
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> Firmare un pacchetto con un certificato digitale
   Questo argomento illustra come firmare un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con un certificato digitale. È possibile utilizzare una firma digitale, insieme ad altre impostazioni, per evitare il caricamento e l'esecuzione di pacchetti non validi.  
   
  Prima di poter firmare un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è necessario effettuare le attività seguenti:  
@@ -137,7 +137,7 @@ ms.locfileid: "71295701"
   
      Anche se il pacchetto è stato firmato, è necessario configurare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per controllare o verificare la firma digitale prima del caricamento del pacchetto.  
 
-## <a name="signing_dialog"></a> Riferimento all'interfaccia utente della finestra di dialogo Firma digitale
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a> Riferimento all'interfaccia utente della finestra di dialogo Firma digitale
   Utilizzare la finestra di dialogo **Firma digitale** per apporre una firma digitale a un pacchetto o rimuovere quella esistente. Per accedere alla finestra di dialogo **Firma digitale** , scegliere l'opzione **Firma digitale** dal menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Per altre informazioni, vedere [Firmare un pacchetto con un certificato digitale](#cert).  

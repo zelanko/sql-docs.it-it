@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291837"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Impostazione delle proprietà di un componente del flusso di dati
@@ -122,7 +122,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 -   [Colonne di output](#outputcolumns)  
   
  
-###  <a name="components"></a> Component properties  
+###  <a name="component-properties"></a><a name="components"></a> Component properties  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
  Nella tabella seguente vengono descritte le proprietà dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -142,7 +142,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |ValidateExternalMetadata|Boolean|Indica se i metadati delle colonne esterne sono convalidati. Il valore predefinito di questa proprietà è **True**.|  
 |Versione|Integer|Versione di un componente.|  
   
-###  <a name="inputs"></a> Proprietà degli input  
+###  <a name="input-properties"></a><a name="inputs"></a> Proprietà degli input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le trasformazioni e le destinazioni includono input. L'input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  Nella tabella seguente vengono descritte le proprietà degli input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -162,7 +162,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Le destinazioni e alcune trasformazioni non supportano gli output degli errori e le proprietà ErrorRowDisposition e TruncationRowDisposition di questi componenti sono di sola lettura.  
   
-###  <a name="inputcolumns"></a> Proprietà delle colonne di input  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> Proprietà delle colonne di input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un input contiene una raccolta di colonne di input. Una colonna di input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -186,7 +186,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Le colonne di input includono anche le proprietà del tipo di dati descritte in "Proprietà del tipo di dati".  
   
-###  <a name="outputs"></a> Proprietà degli output  
+###  <a name="output-properties"></a><a name="outputs"></a> Proprietà degli output  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le origini e le trasformazioni includono output. L'output di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  Nella tabella seguente vengono descritte le proprietà degli output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -207,7 +207,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |SynchronousInputID|Integer|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
   
-###  <a name="outputcolumns"></a> Proprietà delle colonne di output  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> Proprietà delle colonne di output  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un output contiene una raccolta di colonne di output. Una colonna di output di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  

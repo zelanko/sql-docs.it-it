@@ -12,10 +12,10 @@ ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 385deb9dd689c6716ab8addaa64d8bf8bd62ed97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085387"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Creazione di applicazioni client per dati FILESTREAM
@@ -31,7 +31,7 @@ ms.locfileid: "68085387"
 > [!NOTE]  
 >  Gli esempi riportati in questo argomento richiedono il database e la tabella abilitati per FILESTREAM creati in [Creare un database abilitato per FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md) e [Creare una tabella per archiviare dati FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md).  
   
-##  <a name="func"></a> Funzioni per l'utilizzo di Dati FILESTREAM  
+##  <a name="functions-for-working-with-filestream-data"></a><a name="func"></a> Funzioni per l'utilizzo di Dati FILESTREAM  
  Se si utilizza FILESTREAM per archiviare dati di oggetti binari di grandi dimensioni (BLOB), è possibile utilizzare API Win32 per usare i file. Per supportare l'utilizzo dei dati BLOB FILESTREAM nelle applicazioni Win32, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce le seguenti funzioni e API:  
   
 -   [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) restituisce un percorso come token a un BLOB. In un'applicazione viene utilizzato questo token per ottenere un handle Win32 e operare sui dati BLOB.  
@@ -40,23 +40,23 @@ ms.locfileid: "68085387"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) restituisce un token che rappresenta la transazione corrente di una sessione. In un'applicazione viene utilizzato questo token per associare le operazioni di flusso file system FILESTREAM alla transazione.  
   
--   Un handle di file Win32 è ottenuto in [API OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) . L'applicazione usa l'handle per trasmettere i dati FILESTREAM e può passare l'handle alle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se l'applicazione chiama qualsiasi altra API utilizzando l'handle, viene restituito un errore ERROR_ACCESS_DENIED. L'applicazione deve chiudere l'handle usando [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
+-   Un handle di file Win32 è ottenuto in [API OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) . L'applicazione usa l'handle per trasmettere i dati FILESTREAM e può passare l'handle alle seguenti API Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se l'applicazione chiama qualsiasi altra API utilizzando l'handle, viene restituito un errore ERROR_ACCESS_DENIED. L'applicazione deve chiudere l'handle usando [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
   
  L'accesso al contenitore di tutti i dati FILESTREAM viene eseguito in una transazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] possono essere eseguite nella stessa transazione per mantenere la coerenza tra i dati SQL e i dati FILESTREAM.  
   
-##  <a name="steps"></a> Passaggi per l'accesso a dati FILESTREAM  
+##  <a name="steps-for-accessing-filestream-data"></a><a name="steps"></a> Passaggi per l'accesso a dati FILESTREAM  
   
-###  <a name="path"></a> Lettura del percorso del file FILESTREAM  
+###  <a name="reading-the-filestream-file-path"></a><a name="path"></a> Lettura del percorso del file FILESTREAM  
  A ogni cella di una tabella FILESTREAM è associato un percorso del file. Per leggere il percorso, usare la proprietà **PathName** di una colonna **varbinary(max)** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'esempio seguente illustra come leggere il percorso del file di una colonna **varbinary(max)** .  
   
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
-###  <a name="trx"></a> Lettura del contesto di transazione  
- Per ottenere il contesto di transazione corrente, usare la funzione [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nell'esempio seguente si illustra come iniziare una transazione e come leggere il contesto di transazione corrente.  
+###  <a name="reading-the-transaction-context"></a><a name="trx"></a> Lettura del contesto di transazione  
+ Per ottenere il contesto di transazione corrente, usare la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]GET_FILESTREAM_TRANSACTION_CONTEXT()[ di ](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md). Nell'esempio seguente si illustra come iniziare una transazione e come leggere il contesto di transazione corrente.  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
-###  <a name="handle"></a> Ottenere un handle di file Win32  
+###  <a name="obtaining-a-win32-file-handle"></a><a name="handle"></a> Ottenere un handle di file Win32  
  Per ottenere un handle di file Win32, chiamare l'API OpenSqlFilestream. Tale API viene esportata dal file sqlncli.dll. L'handle restituito può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Negli esempi seguenti si illustra come ottenere un handle di file Win32 e come utilizzarlo per leggere e scrivere dati in un oggetto BLOB FILESTREAM.  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
@@ -65,7 +65,7 @@ ms.locfileid: "68085387"
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/create-client-applicatio_5.cpp)]  
   
-##  <a name="best"></a> Procedure consigliate per la progettazione e l'implementazione di applicazioni  
+##  <a name="best-practices-for-application-design-and-implementation"></a><a name="best"></a> Procedure consigliate per la progettazione e l'implementazione di applicazioni  
   
 -   Quando si progettano e implementano applicazioni che utilizzano FILESTREAM, tenere presenti le linee guida seguenti:  
   
