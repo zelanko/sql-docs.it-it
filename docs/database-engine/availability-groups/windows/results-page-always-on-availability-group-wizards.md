@@ -16,10 +16,10 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235452"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Pagina Risultati (procedure guidate gruppi di disponibilità Always On)
@@ -27,7 +27,7 @@ ms.locfileid: "75235452"
 
   In questo argomento della Guida vengono descritte le opzioni della pagina **Risultati** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare questa pagina per visualizzare i risultati della procedura guidata.  
   
-##  <a name="PageOptions"></a> Opzioni della pagina Risultati  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> Opzioni della pagina Risultati  
  La griglia **Riepilogo** include le colonne seguenti:  
   
  **Nome**  
@@ -41,7 +41,7 @@ ms.locfileid: "75235452"
 |**Error (Errore) (Error (Errore)e)**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
 |**Success**|Indica che il passaggio di convalida è riuscito.|  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

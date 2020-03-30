@@ -16,10 +16,10 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516552"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
@@ -46,12 +46,12 @@ ms.locfileid: "76516552"
   
      [Risolvere gli errori di ricompilazione](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  Quando vengono ricompilati, i database di sistema master, model, msdb e tempdb vengono eliminati e ricreati nel percorso originale. Se nell'istruzione di ricompilazione vengono specificate nuove regole di confronto, i database di sistema vengono creati utilizzando tale impostazione delle regole di confronto. Le eventuali modifiche apportate dall'utente ai database vanno perdute. Ad esempio, è possibile che siano presenti oggetti definiti dall'utente nel database master, processi pianificati nel database msdb o modifiche alle impostazioni predefinite nel database modello.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Prima di ricompilare i database di sistema, effettuare le attività seguenti per assicurarsi che sia possibile ripristinare le impostazioni correnti dei database.  
   
 1.  Registrare tutti i valori di configurazione a livello di server.  
@@ -87,7 +87,7 @@ ms.locfileid: "76516552"
   
 7.  Verificare che le copie dei file modello di log e dati dei database master, modello e msdb esistano nel server locale. Il percorso predefinito per i file modello è C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates. Questi file vengono utilizzati durante il processo di ricompilazione e devono essere presenti affinché l'installazione venga completata correttamente. Se non sono disponibili, eseguire la caratteristica Ripristina del programma di installazione oppure copiarli manualmente dal supporto di installazione. Per individuare i file nel supporto di installazione, passare alla directory della piattaforma appropriata (x86 o x64), quindi a setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   
-##  <a name="RebuildProcedure"></a> Ricompilare database di sistema  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> Ricompilare database di sistema  
  La procedura seguente consente di ricompilare i database di sistema master, modello, msdb e tempdb. Non è possibile specificare i database di sistema da ricompilare. Per le istanze cluster, questa procedura deve essere eseguita nel nodo attivo e la risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel gruppo di applicazioni cluster corrispondente deve essere portata offline prima di eseguire la procedura.  
   
  Con questa procedura non viene ricompilato il database delle risorse (resource). Vedere la sezione "Procedura per la ricompilazione del database resource" più avanti in questo argomento.  
@@ -106,13 +106,13 @@ ms.locfileid: "76516552"
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
     |/INSTANCENAME=*InstanceName*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per l'istanza predefinita, immettere MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Specifica i gruppi o i singoli account di Windows da aggiungere al ruolo predefinito del server **sysadmin** . Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser**. Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Ad esempio, immettere **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account **sa** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
+    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa**di**. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo e, Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importante \*\*** La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Specifica il numero di file di dati di tempdb. Questo valore può essere aumentato fino al valore più elevato tra 8 e il numero di core.<br /><br /> Valore predefinito: 8 o il numero di core, a seconda di quale dei due valori risulta inferiore.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali di ogni file di dati tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni di ogni file di dati tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali del file di log tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8.<br /><br /> Intervallo consentito: min = 8, max = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni del file di log tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64<br /><br /> Intervallo consentito: min = 8, max = 1024.|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Specifica le dimensioni iniziali del file di log tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8.<br /><br /> Intervallo consentito: Min = 8, max = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Specifica l'incremento in MB dell'aumento delle dimensioni del file di log tempdb. Un valore 0 indica che l'opzione per l'aumento automatico è disattivata e non è consentito spazio aggiuntivo. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 64<br /><br /> Intervallo consentito: Min = 8, max = 1024.|  
     |[ /SQLTEMPDBDIR=Directories ]|Viene specificata la directory per i file di dati di tempdb. Se si specificano più directory, separarle con uno spazio vuoto. Se vengono specificate più directory, i file di dati tempdb verranno distribuiti tra le directory secondo uno schema round-robin.<br /><br /> Valore predefinito: directory dei dati di sistema|  
     |[ /SQLTEMPDBLOGDIR=Directory ]|Specifica la directory per il file di log tempdb.<br /><br /> Valore predefinito: directory dei dati di sistema|  
   
@@ -139,7 +139,7 @@ ms.locfileid: "76516552"
   
 -   Verificare che i valori di configurazione a livello di server corrispondano ai valori registrati in precedenza.  
   
-##  <a name="Resource"></a> Ricompilare il database resource  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> Ricompilare il database resource  
  Con la procedura seguente viene ricompilato il database di sistema delle risorse. Quando si ricompila il database delle risorse, tutti gli hotfix vanno persi e pertanto devono essere riapplicati.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Per ricompilare il database di sistema resource:  
@@ -156,7 +156,7 @@ ms.locfileid: "76516552"
   
 6.  Nella pagina **Ripristino** scegliere **Ripristina**. Nella pagina Operazione completata è indicato che l'operazione è stata completata.  
   
-##  <a name="CreateMSDB"></a> Creare un nuovo database msdb  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Creare un nuovo database msdb  
  Se il database **msdb** è danneggiato e non si dispone di una copia di backup del database **msdb** , è possibile creare un nuovo database **msdb** utilizzando lo script **instmsdb** .  
   
 > [!WARNING]  
@@ -186,7 +186,7 @@ ms.locfileid: "76516552"
   
 10. Eseguire il backup del database **msdb** .  
   
-##  <a name="Troubleshoot"></a> Risolvere gli errori di ricompilazione  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Risolvere gli errori di ricompilazione  
  Gli errori di sintassi e altri errori di runtime vengono visualizzati nella finestra del prompt dei comandi. Esaminare l'istruzione di installazione per rilevare gli errori di sintassi seguenti:  
   
 -   Barra (/) mancante prima di ogni nome di parametro.  

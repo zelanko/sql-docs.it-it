@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056178"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gestione e monitoraggio della ricerca full-text per un'istanza del server
@@ -31,7 +31,7 @@ ms.locfileid: "74056178"
   
 -   Configurazione di un database utente per la ricerca full-text. Include la creazione di uno o più cataloghi full-text per il database e la definizione di un indice full-text in ciascuna tabella o vista indicizzata in cui eseguire query full-text.  
   
-##  <a name="props"></a> Visualizzazione e modifica delle proprietà del server per la ricerca full-text  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Visualizzazione e modifica delle proprietà del server per la ricerca full-text  
  È possibile visualizzare le proprietà full-text di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Per visualizzare e modificare le proprietà del server per la ricerca full-text  
@@ -69,7 +69,7 @@ ms.locfileid: "74056178"
         > [!NOTE]  
         >  L'opzione di aggiornamento full-text può anche essere impostata con l'azione [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** .  
   
-##  <a name="metadata"></a> Visualizzazione di proprietà server full-text aggiuntive  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Visualizzazione di proprietà server full-text aggiuntive  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] È possibile usare le funzioni per ottenere il valore di varie proprietà a livello server della ricerca full-text. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente solo elencate le proprietà full-text di un'istanza del server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] correlate.  
@@ -81,7 +81,7 @@ ms.locfileid: "74056178"
 |**LoadOSResources**|Indica se i word breaker e i filtri del sistema operativo sono registrati e utilizzati in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Specifica se il motore di ricerca full-text deve caricare solo i file binari firmati.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Monitoraggio dell'attività di ricerca full-text  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Monitoraggio dell'attività di ricerca full-text  
  Numerose funzioni e viste a gestione dinamica consentono di monitorare l'attività di ricerca full-text in un'istanza del server.  
   
  **Per visualizzare informazioni sui cataloghi full-text con un'attività di popolamento in corso**  

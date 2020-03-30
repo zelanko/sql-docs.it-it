@@ -15,10 +15,10 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252775"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Configurare gli account di accesso per il mirroring del database in gruppi di disponibilità AlwaysOn
@@ -35,7 +35,7 @@ ms.locfileid: "75252775"
     > [!IMPORTANT]  
     >  Per creare un ambiente più sicuro, provare a utilizzare account del dominio distinti per ogni istanza del server.  
   
-##  <a name="CreateLogin"></a> Creare un account di accesso per un account diverso  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a> Creare un account di accesso per un account diverso  
  Se due istanze del server vengono eseguite con account diversi, l'amministratore di sistema deve usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE LOGIN per creare un accesso per l'account del servizio di avvio dell'istanza remota di ogni istanza del server. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
 > [!IMPORTANT]  
@@ -52,10 +52,10 @@ ms.locfileid: "75252775"
 > [!NOTE]  
 >  Per connettersi all'account del servizio di rete, è possibile utilizzare l'account del computer anziché di un utente del dominio. Se si utilizza l'account del computer, è necessario aggiungerlo come utente nell'altra istanza del server.  
   
-##  <a name="GrantConnect"></a> Concedere l'autorizzazione di connessione  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a> Concedere l'autorizzazione di connessione  
  Dopo avere creato un account di accesso in un'istanza del server, è necessario concedere a tale account l'autorizzazione a connettersi all'endpoint del mirroring del database dell'istanza del server. L'autorizzazione di connessione viene concessa dall'amministratore di sistema tramite un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Per altre informazioni, vedere [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
   

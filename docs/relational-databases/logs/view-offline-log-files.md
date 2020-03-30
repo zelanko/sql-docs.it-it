@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908561"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
@@ -46,7 +46,7 @@ ms.locfileid: "72908561"
   
 -   [SqlErrorLogFile Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) Questo argomento mostra come recuperare le informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorizzazioni  
  Per connettersi a un file di log offline, è necessario disporre delle autorizzazioni seguenti nei computer locale e remoto:  
   
 -   Accesso in lettura allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account. Per ulteriori informazioni, vedere la procedura "Per verificare le autorizzazioni WMI" più avanti in questa sezione.  

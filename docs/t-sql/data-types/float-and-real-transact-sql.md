@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682015"
 ---
 # <a name="float-and-real-transact-sql"></a>float e real (Transact-SQL)
@@ -48,7 +48,7 @@ Tipi di dati numerici approssimati da utilizzare con dati numerici a virgola mob
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta *n* come uno dei due valori possibili. Se **1**<=n<=**24**, *n* viene interpretato come **24**. Se **25**<=n<=**53**, *n* viene interpretato come **53**.  
   
-Il tipo di dati **float**[ **(n)** ] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è conforme allo standard ISO per tutti i valori di *n*, da **1** a **53**. Il sinonimo di **double precision** è **float(53)** .
+Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]float **[** (n) **] di**  è conforme allo standard ISO per tutti i valori di *n*, da **1** a **53**. Il sinonimo di **double precision** è **float(53)** .
   
 ## <a name="remarks"></a>Osservazioni  
   

@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287475"
 ---
 # <a name="joins-sql-server"></a>Join (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "79287475"
 -   Hash join   
 -   Join adattivi (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
-## <a name="fundamentals"></a> Nozioni di base sui join
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> Nozioni di base sui join
 I join consentono di recuperare dati da due o più tabelle in base alle relazioni logiche esistenti tra le tabelle stesse. I join indicano la modalità d'uso dei dati di una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la selezione di righe in un'altra tabella.    
 
 Una condizione di join definisce il modo in cui due tabelle sono correlate in una query in base agli elementi seguenti:    
@@ -108,7 +108,7 @@ La maggior parte delle query che includono un join possono essere riformulate sp
 > Ad esempio, `SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` esegue un inner join tra due tabelle sui primi 20 caratteri di ogni colonna di tipo text delle tabelle t1 e t2.   
 > È possibile anche confrontare colonne di tipo ntext e text di due tabelle confrontando la lunghezza delle colonne con una clausola `WHERE`, come illustrato nell'esempio seguente: `WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`
 
-## <a name="nested_loops"></a> Informazioni sui join a cicli annidati
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> Informazioni sui join a cicli annidati
 Se l'input di un join è ridotto (inferiore a 10 righe) e l'input dell'altro join è molto esteso e indicizzato in base alle rispettive colonne di join, l'operazione di join più rapida è rappresentata dai nested loop join indicizzati poiché questi richiedono la minore quantità di I/O e il minor numero di operazioni di confronto. 
 
 Il join a cicli annidati, detto anche *iterazione nidificata*, usa un input di join come tabella di input esterna, visualizzata come input superiore nel piano di esecuzione grafico, e un input di join come tabella di input interna (inferiore). Il ciclo esterno elabora la tabella di input esterna, una riga alla volta. Il ciclo interno, eseguito per ogni riga esterna, cerca le righe corrispondenti nella tabella di input interna.   
@@ -119,7 +119,7 @@ Un nested loop join è particolarmente efficace se l'input esterno è di dimensi
 
 Quando l'attributo OPTIMIZED dell'operatore di join a cicli annidati viene impostato su **True**, significa che vengono usati cicli annidati ottimizzati (o l'ordinamento in batch) per ridurre al minimo le operazioni di I/O quando la tabella interna è di grandi dimensioni, indipendentemente dal fatto che sia parallelizzata o meno. La presenza di questa ottimizzazione in un determinato piano potrebbe non essere ovvia durante l'analisi di un piano di esecuzione, dato che l'ordinamento stesso è un'operazione nascosta. La presenza dell'attributo OPTIMIZED nel codice XML del piano, tuttavia, indica che il join a cicli annidati potrebbe tentare di riordinare le righe di input per migliorare le prestazioni di I/O.
 
-## <a name="merge"></a> Informazioni sui merge join
+## <a name="understanding-merge-joins"></a><a name="merge"></a> Informazioni sui merge join
 Se i due input di join non sono di dimensioni ridotte, ma sono ordinati in base alla rispettiva colonna di join (ad esempio, se sono stati ottenuti tramite l'analisi di indici ordinati), l'operazione di join più rapida è rappresentata dal merge join. Se entrambi gli input di join sono di dimensioni notevoli e analoghe, un merge join con ordinamento eseguito in precedenza e un hash join offrono prestazioni simili. Le operazioni di hash join, tuttavia, risultano spesso molto più rapide se le dimensioni dei due input differiscono in modo significativo.       
 
 Per i merge join è necessario che entrambi gli input siano ordinati in base alle colonne di merge, definite dalle clausole di uguaglianza (ON) del predicato di join. In genere Query Optimizer esegue l'analisi di un indice, se questo esiste nel set di colonne, oppure inserisce un operatore di ordinamento sotto il merge join. In rari casi possono esistere più clausole di uguaglianza, ma le colonne di merge vengono ricavate soltanto da alcune delle clausole disponibili.    
@@ -132,7 +132,7 @@ Se è presente un predicato residuo, tutte le righe conformi al predicato di mer
 
 Il merge join è di per sé un'operazione molto rapida, ma può essere una scelta onerosa se sono necessarie operazioni di ordinamento. Se tuttavia il volume dei dati è elevato ed è possibile ottenere i dati desiderati già ordinati da indici ad albero B esistenti, il merge join risulta spesso l'algoritmo di join più veloce.    
 
-## <a name="hash"></a> Informazioni sugli hash join
+## <a name="understanding-hash-joins"></a><a name="hash"></a> Informazioni sugli hash join
 Gli hash join consentono l'elaborazione efficiente di input di grandi dimensioni, non ordinati e non indicizzati. Tali join sono utili per ottenere risultati intermedi in query complesse, in quanto:
 -   I risultati intermedi non sono indicizzati, a meno che non vengano salvati esplicitamente su disco e quindi indicizzati, e spesso non vengono ordinati in modo adeguato per l'operazione successiva nel piano di query.
 -   Query Optimizer stima esclusivamente le dimensioni dei risultati intermedi. Poiché le stime relative a query complesse possono essere estremamente imprecise, è necessario non solo che gli algoritmi di elaborazione dei risultati intermedi siano efficienti, ma anche che vengano ridotti gradualmente nel caso in cui un risultato intermedio risulti molto più grande del previsto.   
@@ -145,13 +145,13 @@ Gli hash join vengono utilizzati per vari tipi di operazioni di corrispondenza t
 
 Nelle sezioni seguenti vengono descritti i diversi tipi di hash join: hash join in memoria, grace hash join e hash join ricorsivo.    
 
-### <a name="inmem_hash"></a> Hash join in memoria
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> Hash join in memoria
 L'hash join esegue in primo luogo l'analisi o il calcolo dell'intero input di compilazione, quindi compila una tabella hash in memoria. Ogni riga viene inserita in un hash bucket in base al valore hash calcolato per la chiave hash. Se l'intero input di compilazione è inferiore alla memoria disponibile, tutte le righe possono essere inserite nella tabella hash. A questa fase di compilazione segue la fase probe. Viene eseguita l'analisi o il calcolo dell'intero input probe, una riga alla volta. Per ogni riga probe viene calcolato il valore della chiave hash, viene eseguita l'analisi dell'hash bucket corrispondente e vengono prodotte le corrispondenze.    
 
-### <a name="grace_hash"></a> Grace hash join
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> Grace hash join
 Se le dimensioni dell'input di compilazione sono superiori a quelle della memoria disponibile, l'hash join viene eseguito in vari passaggi. In questo caso, l'hash join viene definito grace hash join. Ogni passaggio prevede una fase di compilazione e una fase probe. L'input di compilazione e l'input probe vengono inizialmente analizzati e partizionati in più file, tramite una funzione di hashing sulle chiavi hash. L'utilizzo della funzione di hashing sulle chiavi hash garantisce che ogni coppia di record su cui si basa il join si trovi nella stessa coppia di file. In tal modo il join di due input di grandi dimensioni risulta convertito in più istanze di dimensioni ridotte della stessa attività. L'hash join viene quindi applicato a ogni coppia di file partizionati.    
 
-### <a name="recursive_hash"></a> Hash join ricorsivo
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> Hash join ricorsivo
 Se l'input di compilazione ha dimensioni tali per cui gli input per un'unione esterna standard richiedono più livelli di unione, saranno necessari più passaggi di partizionamento e più livelli di partizionamento. Se soltanto alcune partizioni sono di grandi dimensioni, i passaggi di partizionamento aggiuntivi vengono utilizzati soltanto per tali partizioni. Per velocizzare al massimo i passaggi di partizionamento vengono utilizzate operazioni di I/O asincrone di grandi dimensioni, per cui un unico thread può tenere occupate più unità disco.    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ Se Query Optimizer non prevede correttamente quale dei due input è il più picc
 > [!NOTE]
 > L'inversione dei ruoli si verifica in maniera indipendente da qualsiasi struttura o hint per la query e inoltre non viene visualizzata nel piano di query. Quando si verifica, l'inversione dei ruoli è un'operazione trasparente all'utente.
 
-### <a name="hash_bailout"></a> hash bailout
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> hash bailout
 Il termine hash bailout è talvolta usato per descrivere grace hash join o hash join ricorsivi.    
 
 > [!NOTE]
@@ -172,8 +172,8 @@ Il termine hash bailout è talvolta usato per descrivere grace hash join o hash 
 
 Per altre informazioni sugli hash bailout, vedere [Hash Warning - classe di evento](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
-## <a name="adaptive"></a> Informazioni sui join adattivi
-[Modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) I join adattivi consentono di rimandare a **dopo** la scansione del primo input la scelta tra l'esecuzione di un metodo [hash join](#hash) e l'esecuzione di un metodo join a [cicli annidati](#nested_loops). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione, un piano di query può pertanto passare a una strategia di join più efficace senza dover essere ricompilato. 
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> Informazioni sui join adattivi
+[Modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) I join adattivi consentono di rimandare a [dopo](#hash) la scansione del primo input la scelta tra l'esecuzione di un metodo [hash join](#nested_loops) e l'esecuzione di un metodo join a **cicli annidati**. L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione, un piano di query può pertanto passare a una strategia di join più efficace senza dover essere ricompilato. 
 
 > [!TIP]
 > Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia. 
 
-## <a name="nulls_joins"></a> Valori Null e join
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> Valori Null e join
 Gli eventuali valori Null presenti nelle colonne delle tabelle da unire in join non possono essere associati ad altri valori. La presenza di valori Null in una colonna di una delle tabelle da unire in join viene restituita solo se si usa un outer join, a meno che la clausola `WHERE` non escluda i valori Null.     
 
 Le due tabelle riportate di seguito includono entrambe un valore Null nella colonna interessata dal join:     

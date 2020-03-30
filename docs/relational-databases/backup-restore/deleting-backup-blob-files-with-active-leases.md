@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908940"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminare i file BLOB di backup con lease attivi
@@ -42,7 +42,7 @@ Nei passaggi seguenti viene descritto come effettuare una rimozione dopo un back
   
 1. **Eliminare il BLOB:** per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
 
-###  <a name="Code_Example"></a> Esempio di script di PowerShell  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Esempio di script di PowerShell  
   
 > [!IMPORTANT]
 > Se si esegue PowerShell 2.0 potrebbero verificarsi dei problemi durante il caricamento dell'assembly Microsoft.WindowsAzure.Storage.dll. È consigliabile eseguire l'aggiornamento di [Powershell](https://docs.microsoft.com/powershell/) per risolvere il problema. È anche possibile usare la soluzione seguente per creare o modificare il file powershell.exe.config per caricare gli assembly .NET 2.0 e .NET 4.0 in fase di esecuzione come segue:  

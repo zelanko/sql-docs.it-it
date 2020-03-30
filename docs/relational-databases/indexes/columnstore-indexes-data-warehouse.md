@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761929"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Indici columnstore - Data warehouse
@@ -63,7 +63,7 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Esempio: usare un indice non cluster per imporre un vincolo di chiave primaria su una tabella columnstore  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Esempio: usare un indice non cluster per imporre un vincolo di chiave primaria su un indice columnstore.  
  Da progettazione, una tabella columnstore non consente vincoli di chiave primaria. È ora possibile imporre un vincolo di chiave primaria su una tabella columnstore tramite un indice non cluster. Una chiave primaria è equivalente a un vincolo UNIQUE su una colonna non NULL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa un vincolo UNIQUE come indice non cluster. Combinando questi fatti, l'esempio seguente definisce un vincolo UNIQUE sulla colonna non NULL accountkey. Il risultato è un indice non cluster che impone un vincolo di chiave primaria come vincolo UNIQUE su una colonna non NULL.  
   
  La tabella viene quindi convertita in un indice columnstore cluster. Durante la conversione l'indice non cluster diventa permanente. Il risultato è un indice columnstore cluster con un indice non cluster che impone un vincolo di chiave primaria. Poiché qualsiasi aggiornamento o inserimento nella tabella columnstore influirà anche sull'indice non cluster, tutte le operazioni che violano il vincolo UNIQUE e la caratteristica non NULL causeranno l'esito negativo dell'intera operazione.  

@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72930277"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
@@ -40,7 +40,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  Attraverso le query full-text è possibile eseguire ricerche linguistiche sui dati di testo contenuti negli indici full-text, usando parole e frasi in base alle regole di una determinata lingua, come ad esempio l'inglese o il giapponese. Le query full-text possono contenere semplici parole e frasi oppure più forme di una parola o frase. Una query full-text restituisce qualsiasi documento contenente almeno una corrispondenza, nota anche come *riscontro*. Si ottiene una corrispondenza quando un documento di destinazione contiene tutti i termini specificati nella query full-text e soddisfa qualsiasi altra condizione di ricerca, come ad esempio la distanza entro i termini corrispondenti.    
   
-##  <a name="queries"></a> Query di ricerca full-text  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> Query di ricerca full-text  
  Dopo l'aggiunta delle colonne a un indice full-text, gli utenti e le applicazioni possono eseguire query full-text sul testo contenuto all'interno delle colonne. Queste query possono consentire la ricerca degli elementi seguenti:  
   
 -   Una o più parole o frasi specifiche (*termine semplice*)  
@@ -78,10 +78,10 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md).  
   
-##  <a name="like"></a> Query di ricerca full-text a confronto con il predicato LIKE
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> Query di ricerca full-text a confronto con il predicato LIKE
  Contrariamente alla ricerca full-text, il predicato [LIKE](../../t-sql/language-elements/like-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] funziona unicamente con i modelli di caratteri. Non è inoltre possibile utilizzare il predicato LIKE per eseguire query su dati binari formattati. Inoltre, l'esecuzione di una query LIKE su una grande quantità di dati di testo non strutturati è molto più lenta dell'esecuzione di una query full-text equivalente sugli stessi dati. Una query LIKE eseguita su milioni di righe di dati di testo può richiedere diversi minuti, mentre per una query full-text sugli stessi dati possono essere necessari al massimo pochi secondi, a seconda del numero di righe restituite.  
   
-##  <a name="architecture"></a> Architettura della ricerca full-text
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> Architettura della ricerca full-text
  L'architettura della ricerca full-text è costituita dai processi seguenti:  
   
 -   Processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe).  
@@ -94,7 +94,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  ![architettura della ricerca full-text](../../relational-databases/search/media/ifts-arch.gif "architettura della ricerca full-text")  
 
-###  <a name="sqlprocess"></a> Processo di SQL Server  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> Processo di SQL Server  
  Nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono utilizzati i componenti seguenti per la ricerca full-text:  
   
 -   **Tabelle utente.** In queste tabelle sono contenuti i dati da inserire nell'indice full-text.  
@@ -116,7 +116,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
 -   **Strumento di gestione del daemon di filtri.** Lo strumento di gestione del daemon di filtri consente di monitorare lo stato dell'host del daemon di filtri per il motore di ricerca full-text.  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  L'host del daemon di filtri è un processo avviato dal motore di ricerca full-text e consente l'esecuzione dei componenti della ricerca full-text seguenti, responsabili dell'accesso, del filtraggio e del word breaking di dati dalle tabelle, nonché del word breaking e dello stemming dell'input della query.  
   
  I componenti dell'host del daemon di filtri sono i seguenti:  
@@ -127,10 +127,10 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
 -   **Word breaker e stemmer.** Un word breaker è un componente specifico della lingua che consente di trovare i delimitatori di parola in base alle regole lessicali di una determinata lingua (*word breaking*). Ogni word breaker è associato a uno stemmer specifico della lingua che coniuga i verbi ed esegue le espansioni flessionali. In fase di indicizzazione, l'host del daemon di filtri utilizza un word breaker e uno stemmer per eseguire l'analisi linguistica sui dati testuali di una colonna di tabella specificata. Il word breaker e lo stemmer utilizzati per l'indicizzazione della colonna sono determinati dalla lingua associata a una colonna di tabella nell'indice full-text. Per altre informazioni, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="processing"></a> Elaborazione della ricerca full-text  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> Elaborazione della ricerca full-text  
  La ricerca full-text è supportata dal motore di ricerca full-text che svolge due ruoli, vale a dire il supporto per l'indicizzazione e quello per l'esecuzione di query.  
   
-###  <a name="indexing"></a> Processo di indicizzazione full-text  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> Processo di indicizzazione full-text  
  Quando viene iniziato un popolamento full-text, noto anche come ricerca per indicizzazione, tramite il motore di ricerca full-text viene eseguito il push di batch di grandi dimensioni di dati in memoria e viene inviata una notifica all'host del daemon di filtri. L'host filtra ed esegue il word breaking dei dati ed esegue inoltre la conversione dei dati convertiti in elenchi di parole invertiti. La ricerca full-text effettua quindi il pull dei dati convertiti dagli elenchi di parole, elabora i dati per rimuovere le parole non significative e salva in modo permanente gli elenchi di parole per un batch in uno o più indici invertiti.  
   
  Durante l'indicizzazione dei dati archiviati in una colonna **varbinary(max)** o **image** , il filtro, che implementa l'interfaccia **IFilter** , estrae testo in base al formato file specificato per tali dati, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Per i componenti filtro talvolta i dati di tipo **varbinary(max)** o **image** devono essere scritti nella cartella filterdata e non deve esserne eseguito il push in memoria.  
@@ -141,7 +141,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  Al termine di un popolamento, viene attivato un processo di unione conclusivo che associa i frammenti di indice in un singolo indice full-text master. Ciò consente prestazioni di query superiori poiché è necessario eseguire query solo sull'indice master anziché su alcuni frammenti di indice ed è possibile utilizzare statistiche di punteggio migliori per la classificazione della pertinenza.  
   
-###  <a name="querying"></a> Processo di esecuzione di query full-text  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> Processo di esecuzione di query full-text  
  Query Processor consente di passare le parti full-text di una query al motore di ricerca full-text affinché vengano elaborate. Il motore di ricerca full-text esegue il word breaking e, facoltativamente, le espansioni del thesaurus, lo stemming e l'elaborazione delle parole non significative. Le parti full-text della query vengono rappresentate come operatori SQL, principalmente come funzioni di flusso con valori di tabella. Durante l'esecuzione della query, queste funzioni accedono all'indice invertito per recuperare i risultati corretti. I risultati vengono restituiti al client immediatamente oppure dopo essere stati ulteriormente elaborati.  
 
 ## <a name="full-text-index-architecture"></a>Architettura degli indici full-text
@@ -151,7 +151,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
 È consentito un solo indice full-text per tabella. Per creare un indice full-text su una tabella, quest'ultima deve contenere una colonna singola, univoca e non Null. È possibile compilare un indice full-text su colonne di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**e **varbinary(max)** . La creazione di un indice full-text in colonne con tipo di dati  **varbinary**, **varbinary(max)** , **image**o **xml** richiede la specifica di una colonna del tipo. Una *colonna del tipo* è una colonna di tabella in cui è possibile archiviare l'estensione file (doc, pdf, xls e così via) del documento in ogni riga.  
 
-###  <a name="structure"></a> Struttura di un indice full-text  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> Struttura di un indice full-text  
  Comprendere a fondo la struttura di un indice full-text è fondamentale per comprendere il funzionamento del motore di ricerca full-text. In questo argomento viene usato come esempio l'estratto seguente della tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] . In questo estratto sono visualizzate solo due colonne, la colonna **DocumentID** e la colonna **Title** , e tre righe della tabella.  
   
  In questo esempio si suppone che nella colonna **Title** sia stato creato un indice full-text.  
@@ -195,7 +195,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  La colonna **Occurrence** contiene un valore di tipo integer. Per ogni valore DocId è presente un elenco di valori di occorrenza corrispondenti agli offset relativi di una particolare parola chiave all'interno di DocId. I valori di occorrenza sono utili per determinare le corrispondenze di frase o prossimità, ad esempio frasi con valori di occorrenza numericamente adiacenti. Sono inoltre utili per calcolare i punteggi di pertinenza, ad esempio il numero di occorrenze di una parola chiave in un DocId può essere utilizzato per l'assegnazione del punteggio.   
   
-###  <a name="fragments"></a> Frammenti di indice full-text  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> Frammenti di indice full-text  
  L'indice full-text logico viene in genere suddiviso tra più tabelle interne. Ogni tabella interna viene definita un frammento di indice full-text. Alcuni di questi frammenti potrebbero contenere dati più recenti di altri. Ad esempio, se un utente aggiorna la riga seguente il cui DocId è 3 e per la tabella è impostato il rilevamento automatico delle modifiche, viene creato un nuovo frammento.  
   
 |DocumentID|Titolo|  
@@ -238,7 +238,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
 |L'aggiunta di dati a indici full-text, definita *popolamento*, può essere richiesta in modo specifico, tramite pianificazione oppure può avvenire in modo automatico con l'aggiunta di nuovi dati.|Vengono automaticamente aggiornati quando si inseriscono, aggiornano o eliminano dati.|  
 |Sono raggruppati all'interno dello stesso database in uno o più cataloghi full-text.|Non sono raggruppati.|  
 
-##  <a name="components"></a> Componenti linguistici e supporto per la lingua nella ricerca full-text
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> Componenti linguistici e supporto per la lingua nella ricerca full-text
  La ricerca full-text supporta quasi 50 lingue, tra cui inglese, spagnolo, cinese, giapponese, arabo, bengali e hindi. Per un elenco completo delle lingue full-text supportate, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). A ognuna delle colonne contenute nell'indice full-text è associato un identificatore delle impostazioni locali (LCID) di Microsoft Windows che corrisponde a una lingua supportata dalla ricerca full-text. L'identificatore LCID 1033, ad esempio, corrisponde all'inglese americano, mentre l'identificatore LCID 2057 corrisponde all'inglese britannico. Per ogni lingua full-text supportata, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono forniti componenti linguistici che supportano l'indicizzazione e l'esecuzione di query su dati full-text archiviati in quella lingua.  
   
  Tra i componenti specifici della lingua sono inclusi gli elementi seguenti:  

@@ -10,10 +10,10 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242554"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
@@ -66,7 +66,7 @@ ms.locfileid: "75242554"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Per aggiungere a un elemento del report un'azione per espandere e comprimere  
   
-1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere e scegliere **Proprietà** *\<elemento del report*. Viene visualizzata la finestra di dialogo **Proprietà** *\<elemento del report>* relativa all'elemento del report.  
+1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere e scegliere *Proprietà\<* **elemento del report**. Viene visualizzata la finestra di dialogo *Proprietà\<* **elemento del report>** relativa all'elemento del report.  
   
 2.  Fare clic su **Visibilità**.  
   

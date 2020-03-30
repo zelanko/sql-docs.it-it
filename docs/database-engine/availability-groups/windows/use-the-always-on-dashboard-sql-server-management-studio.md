@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822669"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
@@ -85,7 +85,7 @@ ms.locfileid: "74822669"
 > [!TIP]  
 >  Fare clic sulle intestazioni di colonna per ordinare le informazioni sul gruppo di disponibilità in base al nome del gruppo di disponibilità, all'istanza primaria, alla modalità di failover o al problema.  
   
-##  <a name="AvGroupDetails"></a> Dettagli del gruppo di disponibilità  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> Dettagli del gruppo di disponibilità  
  Le informazioni dettagliate riportate di seguito vengono visualizzate per il gruppo di disponibilità selezionato nello schermata di riepilogo:  
   
  **Stato gruppo di disponibilità**  
@@ -104,7 +104,7 @@ ms.locfileid: "74822669"
  **Stato cluster**  
  Nome e stato del cluster in cui l'istanza del server connesso e del gruppo di disponibilità è un nodo membro.  
   
-##  <a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
 
 Quando si è connessi alla replica principale, **Dettagli replica di disponibilità** visualizza le informazioni da tutte le repliche nel gruppo di disponibilità. Quando si è connessi a una replica secondaria, vengono visualizzate solo le informazioni della replica connessa.  
 

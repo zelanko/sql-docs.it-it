@@ -13,10 +13,10 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299019"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Finestra di dialogo Sfoglia tutte le entità
@@ -32,7 +32,7 @@ ms.locfileid: "71299019"
   
 -   [Configurare le opzioni](#options)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Sfoglia tutte le entità  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> Aprire la finestra di dialogo Sfoglia tutte le entità  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71299019"
   
 5.  Selezionare la pagina **Autorizzazioni** , quindi fare clic su **Sfoglia**.  
   
-##  <a name="options"></a> Configurare le opzioni  
+##  <a name="configure-the-options"></a><a name="options"></a> Configurare le opzioni  
  In questa pagina vengono visualizzate le entità della vista del catalogo sys.database_principals del database SSISDB.  
   
  Tramite la selezione le entità vengono aggiunte all'elenco **Account di accesso o ruoli** nella pagina **Autorizzazioni** della finestra di dialogo padre quando si fa clic su **OK** e si chiude la finestra di dialogo **Sfoglia tutte le entità** . Dopo aver aggiunto le entità all'elenco **Account di accesso o ruoli** , è possibile modificare le autorizzazioni per il progetto selezionato.  

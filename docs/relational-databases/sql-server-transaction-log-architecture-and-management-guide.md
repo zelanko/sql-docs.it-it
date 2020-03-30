@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287085"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "79287085"
   In ogni database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è incluso un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Il log delle transazioni è un componente fondamentale del database e, in caso di errore di sistema, può essere necessario per ripristinare la coerenza del database. In questa guida vengono fornite informazioni sull'architettura fisica e logica del log delle transazioni. Le informazioni sull'architettura consentono di gestire più efficacemente i log delle transazioni.  
 
   
-##  <a name="Logical_Arch"></a> Architettura logica del log delle transazioni  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a> Architettura logica del log delle transazioni  
  Il log delle transazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funziona in modo logico come se si trattasse di una stringa di record di log. Ogni record di log è identificato da un numero di sequenza del file di log (LSN). Ogni nuovo record di log viene scritto nell'estremità finale logica del log con un LSN maggiore di quello del record precedente. I record di log vengono memorizzati in una sequenza seriale, dato che vengono creati in modo tale che se LSN2 è maggiore di LSN1, la modifica descritta dal record di log cui fa riferimento LSN2 si verifica dopo la modifica descritta dal record di log cui fa riferimento LSN1. Ogni record di log contiene l'ID della transazione a cui appartiene. Tutti i record di log associati a ogni transazione sono collegati singolarmente in una catena tramite puntatori ai record precedenti che consentono di eseguire più rapidamente il rollback della transazione.  
   
  Nei record di log relativi alle modifiche dei dati vengono registrate le operazioni logiche eseguite oppure immagini dei dati precedenti e successive alla modifica. Un'immagine precedente la modifica è una copia dei dati eseguita prima dell'operazione, mentre un'immagine successiva alla modifica è una copia dei dati eseguita dopo l'operazione.  
@@ -69,7 +69,7 @@ Nel log delle transazioni vengono registrati molti tipi di operazioni, tra cui:
 
 Backup dei log e differenziali spostano il database ripristinato a un momento successivo, corrispondente a un LSN maggiore. 
   
-##  <a name="physical_arch"></a> Architettura fisica del log delle transazioni  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> Architettura fisica del log delle transazioni  
 Del log delle transazioni di un database viene eseguito il mapping su uno o più file fisici. Concettualmente, il file di log è una stringa di record di log. Fisicamente, la sequenza di record di log viene archiviata in modo efficiente nel set di file fisici che implementano il log delle transazioni. È necessario che sia disponibile almeno un file di log per ogni database.  
   
 In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ogni file di log fisico viene diviso internamente in diversi file di log virtuali. I file di log virtuali non hanno dimensioni fisse e non è previsto un numero fisso di file di log virtuali per un file di log fisico. Il [!INCLUDE[ssDE](../includes/ssde-md.md)] definisce dinamicamente le dimensioni dei file di log virtuali durante la creazione o l'estensione. Il [!INCLUDE[ssDE](../includes/ssde-md.md)] tende a mantenere ridotto il numero di file virtuali. Le dimensioni dei file virtuali dopo l'estensione di un file di log corrispondono alla somma delle dimensioni del log esistente e del nuovo incremento del file. Le dimensioni o il numero di file di log virtuali non possono essere configurati o impostati dagli amministratori.  
@@ -130,14 +130,14 @@ Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`
   
  Il troncamento del log può essere posticipato da diversi fattori. Se si verifica un ritardo elevato nel troncamento del log, lo spazio del log delle transazioni può esaurirsi. Per informazioni, vedere [Fattori che possono posticipare il troncamento del log](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) e [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
-##  <a name="WAL"></a> Log delle transazioni write-ahead  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a> Log delle transazioni write-ahead  
  In questa sezione viene descritto il ruolo del log delle transazioni write-ahead nella registrazione delle modifiche dei dati sul disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un algoritmo di log write-ahead (WAL) che garantisce che le modifiche apportate ai dati non vengano scritte nel disco prima del record di log corrispondente. In questo modo, è possibile mantenere le proprietà ACID per una transazione.  
   
  Per comprendere il funzionamento dei log write-ahead, è importante conoscere la modalità con cui i dati modificati vengono scritti sul disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantiene una cache buffer in cui vengono lette le pagine di dati quando questi ultimi devono essere recuperati. Quando una pagina viene modificata nella cache buffer, non viene immediatamente riscritta nel disco, ma viene contrassegnata come *dirty*. A una pagina di dati possono essere associate più scritture logiche prima di essere scritta fisicamente sul disco. Per ogni scrittura logica, viene inserito un record del log delle transazioni nella cache del log, per registrare la modifica. I record di log devono essere scritti sul disco prima che la pagina dirty associata venga rimossa dalla cache buffer e scritta sul disco. Tramite il processo di gestione dei checkpoint viene eseguita periodicamente l'analisi della cache buffer alla ricerca di buffer con pagine di un database specifico e tutte le pagine dirty vengono scritte nel disco. I checkpoint consentono di risparmiare tempo durante un successivo recupero, grazie alla creazione di un punto in cui è certo che tutte le pagine dirty siano state scritte sul disco.  
   
  La scrittura di una pagina di dati modificata dalla cache buffer al disco viene definita scaricamento della pagina. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone della logica tramite cui viene impedito lo scaricamento di una pagina dirty prima della scrittura del record di log associato. I record di log vengono scritti su disco quando i buffer di log vengono scaricati.  Ciò si verifica ogni volta che viene eseguito il commit di una transazione o che i buffer di log sono pieni.  
   
-##  <a name="Backups"></a> Backup di log delle transazioni  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a> Backup di log delle transazioni  
  In questa sezione vengono introdotti concetti relativi al backup e al ripristino, vale a dire all'applicazione, di log delle transazioni. In base ai modelli di recupero con registrazione completa e con registrazione minima delle operazioni bulk, per poter recuperare i dati è necessario eseguire backup di routine dei log delle transazioni (*backup del log*). È possibile eseguire il backup del log mentre è in esecuzione un qualsiasi backup completo. Per altre informazioni sui modelli di recupero, vedere [Backup e ripristino di database SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Prima di creare il primo backup del log, è necessario creare un backup completo, ad esempio un backup del database oppure il primo di un set di backup di file. Il ripristino di un database solo tramite backup di file può essere un'operazione complessa. Quando possibile, è pertanto consigliabile iniziare con un backup completo del database. Eseguire quindi regolarmente il backup del log delle transazioni. In questo modo, è possibile non solo limitare al minimo il rischio di perdita dei dati, ma anche abilitare il troncamento del log delle transazioni. In genere, il troncamento del log delle transazioni viene eseguito dopo ogni backup del log convenzionale,  

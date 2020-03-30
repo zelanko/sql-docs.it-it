@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245267"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importare dati da Excel a SQL Server o al database SQL di Azure
@@ -45,7 +45,7 @@ Una descrizione completa degli strumenti e dei servizi complessi come Azure Data
 
 Se SQL Server non è installato o è installato senza SQL Server Management Studio, vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-## <a name="wiz"></a> Importazione/Esportazione guidata SQL Server
+## <a name="sql-server-import-and-export-wizard"></a><a name="wiz"></a> Importazione/Esportazione guidata SQL Server
 
 È possibile importare i dati direttamente dai file di Excel scorrendo le pagine dell'Importazione/Esportazione guidata SQL Server. Facoltativamente, salvare le impostazioni come pacchetto di SQL Server Integration Services (SSIS) che è possibile personalizzare e riusare in seguito.
 
@@ -67,7 +67,7 @@ Per un esempio di come usare la procedura guidata per l'importazione da Excel a 
 
 Per informazioni su altri modi di avviare la procedura di importazione ed esportazione guidata, vedere [Avviare l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
-## <a name="ssis"></a> SQL Server Integration Services (SSIS)
+## <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)
 
 Se si ha familiarità con SSIS e si preferisce non eseguire l'Importazione/Esportazione guidata di SQL Server, creare un pacchetto SSIS che usa Excel come origine e SQL Server come destinazione nel flusso di dati.
 
@@ -80,7 +80,7 @@ Per istruzioni su come creare pacchetti SSIS, vedere l'esercitazione [Creazione 
 
 ![Componenti del flusso di dati](media/excel-to-sql-data-flow.png)
 
-## <a name="openrowset"></a> OPENROWSET e server collegati
+## <a name="openrowset-and-linked-servers"></a><a name="openrowset"></a> OPENROWSET e server collegati
 
 > [!IMPORTANT]
 > Nel database SQL di Azure non è possibile eseguire l'importazione direttamente da Excel. È necessario prima esportare i dati in un file di testo (CSV). Per alcuni esempi, vedere [Esempi](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
@@ -183,7 +183,7 @@ Per altri esempi e informazioni sia sui server collegati che sulle query distrib
 - [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries) (Come usare Excel con server collegati e query distribuite di SQL Server)
 - [Come importare dati da Excel a SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## <a name="prereq"></a> Prerequisito: salvare i dati di Excel come testo
+## <a name="prerequisite---save-excel-data-as-text"></a><a name="prereq"></a> Prerequisito: salvare i dati di Excel come testo
 
 Per usare i restanti metodi descritti in questa pagina, ovvero l'istruzione BULK INSERT, lo strumento BCP o Azure Data Factory, è prima di tutto necessario esportare i dati di Excel in un file di testo.
 
@@ -194,7 +194,7 @@ Se si vuole esportare più fogli di lavoro dalla cartella di lavoro, selezionare
 > [!TIP]
 > Per ottenere risultati ottimali con gli strumenti per l'importazione dei dati, salvare fogli che contengono solo le intestazioni di colonna e le righe di dati. Se i dati salvati contengono titoli di pagina, righe vuote, note e così via, possono verificarsi risultati imprevisti in un secondo momento quando si importano i dati.
 
-## <a name="import-wiz"></a> Procedura guidata Importa file flat
+## <a name="the-import-flat-file-wizard"></a><a name="import-wiz"></a> Procedura guidata Importa file flat
 
 È possibile importare i dati salvati come file di testo seguendo le varie pagine della procedura guidata Importa file flat.
 
@@ -202,7 +202,7 @@ Come descritto in precedenza nella sezione [Prerequisito](#prereq), è necessari
 
 Per altre informazioni sulla procedura guidata Importa File Flat, vedere [Procedura guidata per l'importazione di file flat in SQL](import-flat-file-wizard.md).
 
-## <a name="bulk-insert"></a> Comando BULK INSERT
+## <a name="bulk-insert-command"></a><a name="bulk-insert"></a> Comando BULK INSERT
 
 `BULK INSERT` è un comando Transact-SQL che è possibile eseguire da SQL Server Management Studio. L'esempio seguente carica i dati dal file con valori delimitati da virgole `Data.csv` in una tabella di database esistente.
 
@@ -224,7 +224,7 @@ Per altre informazioni ed esempi per SQL Server e il database SQL di Azure, vede
 - [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET (BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp"></a> Strumento BCP
+## <a name="bcp-tool"></a><a name="bcp"></a> Strumento BCP
 
 BCP è un programma eseguibile dal prompt dei comandi. L'esempio seguente carica i dati dal file con valori delimitati da virgole `Data.csv` nella tabella di database `Data_bcp` esistente.
 
@@ -243,7 +243,7 @@ Per altre informazioni su BCP, vedere gli argomenti seguenti:
 - [Utilità bcp](../../tools/bcp-utility.md)
 - [Preparare i dati per l'importazione o l'esportazione bulk](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="adf-wiz"></a> Copia guidata (Azure Data Factory)
+## <a name="copy-wizard-azure-data-factory"></a><a name="adf-wiz"></a> Copia guidata (Azure Data Factory)
 
 È possibile importare i dati salvati come file di testo seguendo le varie pagine della Copia guidata di Azure Data Factory.
 
@@ -254,7 +254,7 @@ Per altre informazioni sulla Copia guidata, vedere gli argomenti seguenti:
 - [Copia guidata di data factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [Esercitazione: Creare una pipeline con l'attività di copia usando la Copia guidata di Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
-## <a name="adf"></a> Azure Data Factory
+## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
 Se si ha familiarità con Azure Data Factory e si preferisce non eseguire la Copia guidata, creare una pipeline con un'attività di copia dal file di testo a SQL Server o al database SQL di Azure.
 

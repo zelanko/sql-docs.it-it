@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76315621"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
@@ -54,7 +54,7 @@ SYSTEM_USER
   
  Se il nome utente e il nome dell'account di accesso sono diversi, SYSTEM_USER restituisce il nome dell'account di accesso.  
   
- Se l'utente corrente ha eseguito l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, SYSTEM_USER restituisce il nome di identificazione dell'account di accesso Windows nel formato: *DOMAIN*\\*nome_account_utente*. Se l'utente invece è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di SQL Server, SYSTEM_USER restituisce il nome dell'identificazione dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `WillisJo` per un utente connesso come `WillisJo`.  
+ Se l'utente corrente è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di Windows, SYSTEM_USER restituisce il nome di identificazione dell'account di accesso di Windows nel formato: *DOMAIN*\\*user_login_name*. Se l'utente invece è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di SQL Server, SYSTEM_USER restituisce il nome dell'identificazione dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `WillisJo` per un utente connesso come `WillisJo`.  
   
  SYSTEM_USER restituisce il nome del contesto di esecuzione corrente. Se l'istruzione EXECUTE AS è stata utilizzata per cambiare contesto, SYSTEM_USER restituirà il nome del contesto rappresentato.  
 
@@ -129,7 +129,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C: Utilizzo di SYSTEM_USER per recuperare il nome utente di sistema corrente  
  L'esempio seguente restituisce il valore corrente di `SYSTEM_USER`.  

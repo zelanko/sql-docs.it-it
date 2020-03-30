@@ -10,10 +10,10 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903938"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Connettersi a origini dati con l'Importazione/Esportazione guidata SQL Server
@@ -40,7 +40,7 @@ Fare clic su un collegamento per altre informazioni sulla connessione a una dell
 ## <a name="connect-to-other-data-providers"></a>Connettersi ad altri provider di dati
 Per informazioni su come connettersi a un'origine dati non elencata qui, vedere [The Connection Strings Reference](https://www.connectionstrings.com/) (Riferimenti alle stringhe di connessione). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="related"></a> Attività e argomenti correlati  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Attività e argomenti correlati  
 Ecco alcune altre attività di base.
 -   **Vedere un rapido esempio sul funzionamento della procedura guidata.**
 

@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287645"
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287645"
   
  Per altre informazioni, vedere [Accesso al servizio Integration Services](#service).  
 
-## <a name="files"></a> Accesso ai file utilizzati dai pacchetti
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> Accesso ai file utilizzati dai pacchetti
   Il livello di protezione del pacchetto non protegge i file archiviati al di fuori del pacchetto. ovvero i file seguenti:  
   
 -   File di configurazione  
@@ -128,7 +128,7 @@ ms.locfileid: "79287645"
 ### <a name="log-files"></a>File di log  
  Anche le voci di log scritte nel file system dovrebbero essere protette tramite un elenco di controllo di accesso. È inoltre possibile archiviare le voci di log nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e proteggerle con gli strumenti di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le voci di log possono infatti includere informazioni riservate. Se ad esempio il pacchetto contiene un'attività Esegui SQL che genera un'istruzione SQL che fa riferimento a un numero di telefono, la voce di log per l'istruzione SQL conterrà tale numero di telefono. L'istruzione SQL potrebbe inoltre esporre informazioni private sui nomi di tabelle e colonne nei database. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="service"></a> Accesso al servizio Integration Services
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Accesso al servizio Integration Services
   Tramite i livelli di protezione dei pacchetti è possibile limitare gli utenti a cui è consentito modificare ed eseguire un pacchetto. Per limitare gli utenti a cui è consentito visualizzare l'elenco di pacchetti attualmente in esecuzione in un server e arrestare i pacchetti attualmente in esecuzione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è necessaria una protezione aggiuntiva.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per visualizzare l'elenco dei pacchetti in esecuzione. I membri del gruppo Administrators di Windows possono visualizzare e arrestare tutti i pacchetti in esecuzione. Gli utenti che non appartengono a questo gruppo possono visualizzare e arrestare solo i pacchetti che hanno avviato personalmente.  

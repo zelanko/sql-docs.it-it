@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981781"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -60,7 +60,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
  Se chiamata senza argomenti, la funzione SUSER_SNAME restituisce il nome del contesto di sicurezza corrente. Se chiamata senza argomenti all'interno di un batch che ha cambiato contesto tramite EXECUTE AS, la funzione SUSER_SNAME restituisce il nome del contesto rappresentato. Se chiamata da un contesto rappresentato, ORIGINAL_LOGIN restituisce il nome del contesto originale.  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-remarks"></a>Osservazioni su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+## <a name="sssdsfull-remarks"></a>Osservazioni su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
  SUSER_NAME restituisce sempre il nome dell'account di accesso per il contesto di sicurezza corrente.  
   
  L'istruzione SUSER_SNAME non supporta l'esecuzione con un contesto di sicurezza rappresentato tramite EXECUTE AS.  
@@ -127,7 +127,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-suser_sname"></a>E. Utilizzo di SUSER_SNAME  
  Nell'esempio seguente viene restituito il nome dell'account di accesso corrispondente all'ID di sicurezza `0x01`.  

@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245433"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
@@ -34,7 +34,7 @@ ms.locfileid: "75245433"
   
  La crittografia dei backup assicura maggiore sicurezza ed è possibile impostare una pianificazione personalizzata per controllare quando verranno eseguiti i backup. Per altre informazioni sui vantaggi derivanti dall'uso dell'archivio BLOB di Microsoft Azure per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="Prereqs"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> Prerequisiti  
  Archiviazione di Microsoft Azure è usata da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per l'archiviazione dei file di backup. Sono richiesti i prerequisiti seguenti:  
   
 |Prerequisito|Descrizione|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245433"
 > Il backup gestito di SQL Server non è supportato con i server proxy.
 >
   
-##  <a name="support_limits"></a> Facilità di supporto  
+##  <a name="supportability"></a><a name="support_limits"></a> Facilità di supporto  
  Le seguenti considerazioni e limitazioni del supporto sono specifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   Il backup di database di sistema **master**, **model**e **msdb** è supportato. Il backup di **tempdb** non è supportato. 

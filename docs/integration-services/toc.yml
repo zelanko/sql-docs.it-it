@@ -927,7 +927,7 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: Scalabilità orizzontale
+- name: Aumento del numero di istanze
   items:
     - name: Panoramica
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
@@ -1175,7 +1175,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: Set
+    - name: Configurazione
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md

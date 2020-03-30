@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982222"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -411,7 +411,7 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
   
  Per eseguire INSERT con l'opzione BULK della funzione OPENROWSET, è necessario essere un membro del ruolo predefinito del server **sysadmin** o **bulkadmin**.  
   
-##  <a name="InsertExamples"></a> Esempi  
+##  <a name="examples"></a><a name="InsertExamples"></a> Esempi  
   
 |Category|Elementi di sintassi inclusi|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
 |[Override del comportamento predefinito di Query Optimizer tramite hint](#TableHints)|Hint di tabella|  
 |[Acquisizione dei risultati dell'istruzione INSERT](#CaptureResults)|Clausola OUTPUT|  
   
-###  <a name="BasicSyntax"></a> Sintassi di base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione INSERT tramite la sintassi minima richiesta.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>R. Inserimento di una sola riga di dati  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> Gestione dei valori di colonna  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> Gestione dei valori di colonna  
  Negli esempi contenuti in questa sezione vengono illustrati i metodi di inserimento dei valori nelle colonne definite con una proprietà IDENTITY, un valore DEFAULT oppure definite con tipi di dati quali **uniqueidentifer** o colonne di tipo definito dall'utente.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Inserimento di dati in una tabella con colonne che presentano valori predefiniti  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> Inserimento di dati da altre tabelle  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> Inserimento di dati da altre tabelle  
  Negli esempi contenuti in questa sezione vengono illustrati i metodi per l'inserimento di righe da una tabella in un'altra.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Utilizzo delle opzioni SELECT ed EXECUTE per inserire dati da altre tabelle  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> Indicazione di oggetti di destinazione diversi dalle tabelle standard  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Indicazione di oggetti di destinazione diversi dalle tabelle standard  
  Negli esempi contenuti in questa sezione viene illustrato come inserire righe specificando una vista o una variabile di tabella.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Inserimento di dati specificando una vista  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Inserimento di righe in una tabella remota  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> Inserimento di righe in una tabella remota  
  Gli esempi di questa sezione illustrano come inserire righe in una tabella di destinazione remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../../t-sql/functions/rowset-functions-transact-sql.md) per fare riferimento alla tabella remota.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Inserimento di dati in una tabella remota tramite un server collegato  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> Caricamento bulk di dati da tabelle o file di dati  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> Caricamento bulk di dati da tabelle o file di dati  
  Negli esempi di questa sezione vengono illustrati due metodi per eseguire il caricamento bulk dei dati in una tabella tramite l'istruzione INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Inserimento di dati in un heap con registrazione minima  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> Override del comportamento predefinito di Query Optimizer tramite hint  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Override del comportamento predefinito di Query Optimizer tramite hint  
  Gli esempi contenuti in questa sezione illustrano come usare gli [hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) per eseguire temporaneamente l'override del comportamento predefinito di Query Optimizer durante l'elaborazione dell'istruzione INSERT.  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> Acquisizione dei risultati dell'istruzione INSERT  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> Acquisizione dei risultati dell'istruzione INSERT  
  Gli esempi contenuti in questa sezione illustrano come usare la [clausola OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) per restituire informazioni da (o espressioni basate su) ogni riga interessata da un'istruzione INSERT. Questi risultati possono essere restituiti all'applicazione di elaborazione per l'utilizzo nei messaggi di errore, l'archiviazione e altri scopi simili dell'applicazione.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Uso della clausola OUTPUT con un'istruzione INSERT  

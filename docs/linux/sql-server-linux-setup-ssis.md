@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162642"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installare SQL Server Integration Services (SSIS) in Linux
@@ -26,7 +26,7 @@ Per installare SQL Server Integration Services (**mssql-server-is**) in Linux, s
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Installare SSIS in Ubuntu
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> Installare SSIS in Ubuntu
 
 Per installare il pacchetto **mssql-server-is** in Ubuntu, seguire questa procedura:
 
@@ -118,7 +118,7 @@ Per rimuovere **mssql-server-is**, eseguire il comando seguente:
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> Installare SSIS in RHEL
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a> Installare SSIS in RHEL
 Per installare il pacchetto **mssql-server-is** in RHEL, seguire questa procedura:
 
 <!--SQL Server 2017 on Linux-->

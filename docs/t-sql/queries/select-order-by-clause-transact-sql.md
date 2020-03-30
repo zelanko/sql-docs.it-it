@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981718"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Clausola SELECT - ORDER BY (Transact-SQL)
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[Limitazione del numero di righe restituite](#Offset)|OFFSET • FETCH|  
 |[Utilizzo di ORDER BY con UNION, EXCEPT e INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> Sintassi di base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base della clausola ORDER BY utilizzando la sintassi minima necessaria.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>R. Specifica di una singola colonna definita nell'elenco di selezione  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> Specifica dell'ordinamento crescente e decrescente  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> Specifica dell'ordinamento crescente e decrescente  
   
 #### <a name="a-specifying-a-descending-order"></a>R. Specifica di un ordine decrescente  
  Nell'esempio seguente il set di risultati viene ordinato in base alla colonna numerica `ProductID` in ordine decrescente.  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> Specifica di regole di confronto  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> Specifica di regole di confronto  
  Nell'esempio seguente viene illustrato come la specifica di regole di confronto nella clausola ORDER BY possa modificare l'ordine in cui vengono restituiti i risultati della query. Viene creata una tabella contenente una colonna definita tramite regole di confronto che non fanno distinzione tra maiuscole e minuscole e tra i vari accenti. I valori vengono inseriti con una varietà di differenze di caso e accento. Poiché nella clausola ORDER BY non vengono specificate regole di confronto, la prima query utilizza le regole di confronto della colonna quando si ordinano i valori. Nella seconda query, nella clausola ORDER BY, vengono specificate regole di confronto che fanno distinzione tra maiuscole e minuscole e tra gli accenti che comportano la modifica dell'ordine in cui vengono restituite le righe.  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> Specifica di un ordine condizionale  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> Specifica di un ordine condizionale  
  Negli esempi seguenti viene usata l'espressione CASE in una clausola ORDER BY per determinare in modo condizionale l'ordinamento delle righe in base a un valore di colonna specificato. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'Stati Uniti' e in base a `CountryRegionName` per tutte le altre righe.  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> Utilizzo di ORDER BY in una funzione di rango  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> Utilizzo di ORDER BY in una funzione di rango  
  Nell'esempio seguente la clausola ORDER BY viene utilizzata nelle funzioni di rango ROW_NUMBER, RANK, DENSE_RANK e NTILE.  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> Limitazione del numero di righe restituite  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> Limitazione del numero di righe restituite  
  Negli esempi seguenti vengono utilizzate le clausole OFFSET e FETCH per limitare il numero di righe restituite da una query.  
   
 **SI APPLICA A**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> Utilizzo di ORDER BY con UNION, EXCEPT e INTERSECT  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> Utilizzo di ORDER BY con UNION, EXCEPT e INTERSECT  
  Quando una query utilizza l'operatore UNION, EXCEPT o INTERSECT, è necessario specificare la clausola ORDER BY alla fine dell'istruzione e i risultati delle query combinate vengono ordinati. Nell'esempio seguente vengono restituiti tutti i prodotti rossi o gialli e questo elenco combinato viene ordinato in base alla colonna `ListPrice`.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente viene illustrato l'ordinamento di un set di risultati in base alla colonna `EmployeeKey` numerica in ordine crescente.  
   
 ```sql

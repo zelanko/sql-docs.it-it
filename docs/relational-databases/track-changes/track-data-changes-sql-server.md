@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095421"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095421"
 |Modifiche apportate a una colonna|Sì|Sì|  
 |Tipo DML|Sì|Sì|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="change-data-capture"></a><a name="Capture"></a> Change Data Capture  
  Change Data Capture fornisce informazioni cronologiche sulle modifiche per una tabella utente acquisendo l'esecuzione di modifiche DML e le modifiche effettive apportate ai dati. Le modifiche vengono acquisite utilizzando un processo asincrono che legge il log delle transazioni senza un impatto significativo sul sistema.  
   
  Come illustrato nella figura seguente, le modifiche apportate alle tabelle utente vengono acquisite nella tabella delle modifiche corrispondente. In tali tabelle è disponibile una vista cronologica delle modifiche nel tempo. Le funzioni di [Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di usare i dati delle modifiche in modo semplice e sistematico.  
@@ -137,7 +137,7 @@ ms.locfileid: "74095421"
   
  È possibile usare [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) per rimuovere Change Data Capture da un database collegato o ripristinato.  
   
-##  <a name="Tracking"></a> Rilevamento delle modifiche  
+##  <a name="change-tracking"></a><a name="Tracking"></a> Rilevamento delle modifiche  
  Il rilevamento delle modifiche consente di acquisire l'esecuzione di modifiche alle righe di una tabella, ma non di acquisire i dati modificati. In questo modo le applicazioni sono in grado di determinare le righe che sono state modificate con gli ultimi dati delle righe ottenuti direttamente dalle tabelle utente. Di conseguenza, il rilevamento delle modifiche è più limitato nelle richieste relative alla cronologia cui è in grado di rispondere rispetto a Change Data Capture. Per le applicazioni che non richiedono le informazioni cronologiche, tuttavia, l'overhead di archiviazione relativo al rilevamento delle modifiche è notevolmente minore poiché i dati modificati non vengono acquisiti. Per tenere traccia delle modifiche, viene utilizzato un meccanismo di rilevamento sincrono appositamente progettato per consentire un overhead minimo per le operazioni DML.  
   
  Nella figura seguente viene illustrato uno scenario di sincronizzazione per cui sarebbe più vantaggioso utilizzare il rilevamento delle modifiche. In tale scenario un'applicazione richiede tutte le righe della tabella modificate dall'ultima sincronizzazione della tabella e solo i dati della riga correnti. Poiché per tenere traccia delle modifiche viene utilizzato un meccanismo sincrono, un'applicazione può eseguire una sincronizzazione bidirezionale e rilevare qualsiasi conflitto che potrebbe essersi verificato in modo affidabile.  

@@ -157,7 +157,7 @@ Le istanze FCI possono essere usate per il ripristino di emergenza. Come con un 
 ### <a name="log-shipping"></a>Log shipping
 Il log shipping è uno dei metodi usati da più tempo per il ripristino di emergenza dei database di SQL Server. Il log shipping viene spesso usato in combinazione con i gruppi di disponibilità e le istanze FCI per offrire un ripristino di emergenza semplice ed economico in situazioni che possono essere complesse a causa dell'ambiente, delle competenze amministrative o del budget. Analogamente alla disponibilità elevata per il log shipping, molti ambienti ritardano il caricamento di un log delle transazioni per tenere conto dell'errore umano.
 
-## <a name = "Migrations"></a> Migrazioni e aggiornamenti
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> Migrazioni e aggiornamenti
 
 Quando in un'azienda si distribuiscono nuove istanze o si aggiornano quelle meno recenti, non si possono tollerare interruzioni prolungate. Questa sezione spiega come usare le funzionalità di disponibilità di SQL Server per ridurre al minimo il tempo di inattività durante processi pianificati come la modifica dell'architettura, il passaggio da un server a un altro, la modifica della piattaforma (ad esempio da Windows Server a Linux o viceversa) o durante l'applicazione di patch.
 
@@ -224,7 +224,7 @@ Se un gruppo di disponibilità è configurato con un tipo di cluster None, è in
 
 Poiché il log shipping si basa essenzialmente su backup e ripristino, non esistono differenze nei database, nelle strutture di file e così via tra SQL Server in Windows Server e SQL Server in Linux. Ciò significa che è possibile configurare il log shipping tra un'installazione di SQL Server basata su Windows Server e una di Linux nonché tra le distribuzioni Linux. Tutti gli altri elementi rimangono invariati. L'unico problema è che il log shipping, proprio come un gruppo di disponibilità, non funziona se la versione principale di SQL Server dell'origine è successiva alla versione di SQL Server della destinazione. 
 
-## <a name = "ReadScaleOut"></a>Scalabilità in lettura
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a>Scalabilità in lettura
 
 Da quando sono state introdotte in SQL Server 2012, le repliche secondarie possono essere usate per le query di sola lettura. L'operazione può essere eseguita in due modi con un gruppo di disponibilità: consentendo l'accesso diretto alla replica secondaria e [configurando il routing di sola lettura](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), che richiede l'uso del listener.  SQL Server 2016 ha introdotto la possibilità di bilanciare il carico delle connessioni di sola lettura attraverso il listener usando un algoritmo round robin, che consente la diffusione delle richieste di sola lettura in tutte le repliche leggibili. 
 
@@ -245,7 +245,7 @@ Un aspetto da considerare per tutti gli scenari di scalabilità in lettura con g
 
 ## <a name="summary"></a>Summary
 
-Le istanze e i database di SQL Server 2017 possono essere resi altamente disponibili usando le stesse funzionalità sia in Windows Server che in Linux. Oltre ai normali scenari di disponibilità per disponibilità elevata e ripristino di emergenza a livello locale, è possibile ridurre i tempi di inattività associati gli aggiornamenti e alle migrazioni con le funzionalità di disponibilità di SQL Server. I gruppi di disponibilità consentono inoltre di avere a disposizione copie aggiuntive di un database come parte della stessa architettura per scalare orizzontalmente le copie leggibili. Se si distribuisce una nuova soluzione usando SQL Server 2017 o si prevede di eseguire un aggiornamento, SQL Server 2017 offre la disponibilità e l'affidabilità necessarie.
+Le istanze e i database di SQL Server 2017 possono essere resi altamente disponibili usando le stesse funzionalità sia in Windows Server che in Linux. Oltre ai normali scenari di disponibilità per disponibilità elevata e ripristino di emergenza a livello locale, è possibile ridurre i tempi di inattività associati gli aggiornamenti e alle migrazioni con le funzionalità di disponibilità di SQL Server. I gruppi di disponibilità consentono inoltre di avere a disposizione copie aggiuntive di un database come parte della stessa architettura per aumentare il numero di istanze per le copie leggibili. Se si distribuisce una nuova soluzione usando SQL Server 2017 o si prevede di eseguire un aggiornamento, SQL Server 2017 offre la disponibilità e l'affidabilità necessarie.
  
 [SimpleAG]:media\sql-server-ha-story\image1.png
 [SSMSAGOptions]:media\sql-server-ha-story\image2.png

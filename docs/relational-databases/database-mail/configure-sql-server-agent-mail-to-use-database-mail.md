@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095773"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
@@ -34,12 +34,12 @@ ms.locfileid: "74095773"
   
 -   [Attività di completamento](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
   > [!NOTE]
   > SQL Agent su Istanza gestita è sempre configurato per l'uso di Posta elettronica database, quindi questo contenuto non è applicabile in Istanza gestita. In Istanza gestita è necessario disporre di un profilo che deve essere chiamato **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** per associare SQL Agent a Posta elettronica database. 
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   [Abilitare Posta elettronica database](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095773"
   
 -   Impostare il profilo come predefinito per il database **msdb** .  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare gli account dei profili ed eseguire le stored procedure è necessario che l'utente sia un membro del ruolo predefinito del server sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per configurare SQL Server Agent Mail per l'utilizzo di Posta elettronica database**  
   
 -   In Esplora oggetti espandere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -71,7 +71,7 @@ ms.locfileid: "74095773"
   
 -   Riavviare SQL Server Agent.  
   
-##  <a name="Follow_Up"></a> Attività di completamento  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> Attività di completamento  
  Le attività seguenti sono necessarie per completare la configurazione dell'agent per inviare avvisi e notifiche.  
   
 -   [Avvisi](../../ssms/agent/alerts.md)  

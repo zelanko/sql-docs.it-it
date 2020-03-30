@@ -13,10 +13,10 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055173"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
@@ -33,20 +33,20 @@ ms.locfileid: "74055173"
   
 -   [Creazione di un piano di manutenzione tramite l'area di progettazione del piano di manutenzione](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Per creare un piano di manutenzione multiserver, è necessario configurare un ambiente multiserver composto da un server master e uno o più server di destinazione. I piani di manutenzione multiserver devono essere creati e gestiti nel server master. Questi piani possono essere visualizzati, ma non gestiti, nei server di destinazione.  
   
 -   I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i privilegi a **sysadmin**. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I pacchetti possono essere eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo che usino un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare o gestire piani di manutenzione, è necessario essere membro del ruolo predefinito del server **sysadmin** . In Esplora oggetti il nodo **Piani di manutenzione** viene visualizzato solo per gli utenti membri del ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo dell'area di progettazione del piano di manutenzione  
+##  <a name="using-maintenance-plan-design-surface"></a><a name="SSMSProcedure"></a> Utilizzo dell'area di progettazione del piano di manutenzione  
   
 #### <a name="to-create-a-maintenance-plan"></a>Per creare un piano di manutenzione  
   
@@ -161,10 +161,10 @@ ms.locfileid: "74055173"
          Consente di definire il funzionamento di un vincolo tra due attività.  
   
          Elenco**Operazione valutazione**  
-         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
+         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono **Vincolo**, **Espressione**, **Espressione e vincolo**e **Espressione o vincolo**.  
   
          Elenco**Valore**  
-         Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**. Il valore predefinito è**Esito positivo** .  
+         Consente di specificare il valore di vincolo, ovvero **Operazione completata**, **Errore**oppure **Completamento**. Il valore predefinito è**Esito positivo** .  
   
         > [!NOTE]  
         >  La riga del vincolo di precedenza è verde in caso di **Esito positivo**, rossa in caso di **Esito negativo**e blu in caso di **Completamento**.  

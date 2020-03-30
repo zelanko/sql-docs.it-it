@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288575"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288575"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il backup e il ripristino possono essere usati in tutti i sistemi operativi supportati. Per informazioni sui sistemi operativi supportati, vedere [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-##  <a name="RestoreScenariosOv"></a> Panoramica degli scenari di ripristino  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> Panoramica degli scenari di ripristino  
  Uno *scenario di ripristino* in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è il processo di ripristino dei dati da uno o più backup, seguito dal recupero del database. Gli scenari di ripristino supportati dipendono dal modello di recupero del database e dall'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Nella tabella seguente vengono descritti i possibili scenari di ripristino supportati per modelli di recupero diversi.  
@@ -85,7 +85,7 @@ Per ripristinare un database, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 
   
 -   Se in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue un'operazione di ripristino del file o della pagina, è possibile mantenere online altri dati del database durante l'operazione di ripristino.  
 
-## <a name="TlogAndRecovery"></a> Ripristino e log delle transazioni
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Ripristino e log delle transazioni
 Per la maggior parte degli scenari di ripristino, è necessario applicare un backup del log delle transazioni e consentire al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di eseguire il **processo di recupero** affinché il database sia disponibile online. Il recupero è il processo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa per avviare ogni database in uno stato coerente a livello di transazione o in uno stato originario.
 
 Se si verifica un errore o una chiusura anomala, è possibile che il database sia in un stato in cui alcune modifiche ai database non siano state scritte dalla cache del buffer ai file di dati e che transazioni incomplete abbiano apportato modifiche al file di dati. Quando viene avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene eseguito un recupero di ogni database che comprende tre fasi, sulla base dell'ultimo [checkpoint del database](../../relational-databases/logs/database-checkpoints-sql-server.md):
@@ -96,7 +96,7 @@ Se si verifica un errore o una chiusura anomala, è possibile che il database si
 
 -   **Fase di rollback**: si esegue il rollback di tutte le transazioni incomplete rilevate nella tabella delle transazioni attive per assicurare l'integrità del database. Dopo il rollback il database passa nello stato online, dopodiché non è possibile applicare alcun altro backup del log delle transazioni al database.
 
-Le informazioni sullo stato di avanzamento di ogni fase di recupero del database vengono registrate nel [log degli errori](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È anche possibile rilevare lo stato di avanzamento del recupero del database usando gli eventi estesi. Per altre informazioni, vedere il post di blog [New extended events for database recovery progress](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/) (Nuovi eventi estesi per lo stato di avanzamento del recupero del database).
+Le informazioni sullo stato di avanzamento di ogni fase di recupero del database vengono registrate nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]log degli errori[ di ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). È anche possibile rilevare lo stato di avanzamento del recupero del database usando gli eventi estesi. Per altre informazioni, vedere il post di blog [New extended events for database recovery progress](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/) (Nuovi eventi estesi per lo stato di avanzamento del recupero del database).
 
 > [!NOTE]
 > In uno scenario di ripristino a fasi, se un filegroup di sola lettura è stato tale fin da prima della creazione del backup del file, l'applicazione dei backup del log al filegroup non è necessaria e non viene eseguita dal ripristino del file. 
@@ -105,7 +105,7 @@ Le informazioni sullo stato di avanzamento di ogni fase di recupero del database
 > [!NOTE]
 > Per ottimizzare la disponibilità dei database in un ambiente aziendale, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition può rendere disponibile un database online dopo la fase di rollforward mentre è ancora in esecuzione la fase di rollback. Questo processo è noto come recupero rapido.
 
-##  <a name="RMsAndSupportedRestoreOps"></a> Modelli di recupero e operazioni di ripristino supportate  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> Modelli di recupero e operazioni di ripristino supportate  
  Le operazioni di ripristino disponibili per un database variano in base al relativo modello di recupero. Nella tabella seguente vengono riepilogati i casi e la misura in cui ognuno dei modelli di recupero supporta uno scenario di ripristino specifico.  
   
 |Operazione di ripristino|Modello di recupero con registrazione completa|Modello di recupero con registrazione minima delle operazioni bulk|Modello di recupero con registrazione minima|  
@@ -123,7 +123,7 @@ Le informazioni sullo stato di avanzamento di ogni fase di recupero del database
 > [!IMPORTANT]  
 > Indipendentemente dal modello di recupero di un database, un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere ripristinato da una versione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] precedente a quella usata per creare il backup.  
   
-## <a name="RMsimpleScenarios"></a> Scenari di ripristino nel modello di recupero con registrazione minima  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> Scenari di ripristino nel modello di recupero con registrazione minima  
  Il modello di recupero con registrazione minima impone le restrizioni seguenti sulle operazioni di ripristino:  
   
 -   Il ripristino del file e il ripristino a fasi sono disponibili solo per gruppi di file secondari in modalità di sola lettura. Per informazioni su questi scenari di ripristino, vedere [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) e [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
@@ -137,7 +137,7 @@ Le informazioni sullo stato di avanzamento di ogni fase di recupero del database
 > [!IMPORTANT]  
 > Indipendentemente dal modello di recupero di un database, un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere ripristinato da una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a quella tramite cui è stato creato il backup.  
   
-##  <a name="RMblogRestore"></a> Ripristino nel modello di recupero con registrazione minima delle operazioni bulk  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> Ripristino nel modello di recupero con registrazione minima delle operazioni bulk  
  In questa sezione vengono fornite informazioni sul ripristino proprie del modello di recupero con registrazione minima delle operazioni bulk da intendersi esclusivamente come integrazione del modello di recupero con registrazione completa.  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ Le informazioni sullo stato di avanzamento di ogni fase di recupero del database
   
  Per informazioni su come eseguire un ripristino online, vedere [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
-##  <a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
 Tramite Database Recovery Advisor viene semplificata la costruzione di piani di ripristino mediante i quali vengono implementate ottime sequenze di ripristino corrette. Molti problemi noti di ripristino del database sono stati risolti e sono stati apportati molti miglioramenti richiesti dai clienti. Di seguito sono riportati i miglioramenti principali introdotti da Database Recovery Advisor:  
   
 -   **Algoritmo del piano di ripristino:**  l'algoritmo utilizzato per costruire i piani di ripristino è stato migliorato in modo significativo, in particolare per gli scenari di ripristino complessi. Molti casi limite, inclusi gli scenari di fork nei ripristini temporizzati, vengono gestititi in modo più efficiente rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -173,12 +173,12 @@ Tramite Database Recovery Advisor viene semplificata la costruzione di piani di 
   
 Per ulteriori informazioni su Database Recovery Advisor, vedere i seguenti blog relativi alla facilità di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Recovery Advisor: pagina di introduzione](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Pagina relativa all'introduzione a Recovery Advisor](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Pagina relativa all'utilizzo di SSMS per creare/ripristinare backup divisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Pagina relativa a Recovery Advisor in cui viene illustrato l'utilizzo di SSMS per creare/ripristinare backup divisi](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> Ripristino accelerato del database
-Il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) è disponibile in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il [processo di recupero](#TlogAndRecovery) del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Un database in cui è abilitato il ripristino accelerato del database completa il processo di recupero in modo considerevolmente più veloce dopo un failover o una chiusura anomala. Se abilitato, il ripristino accelerato del database completa anche il rollback delle transazioni con esecuzione prolungata annullate in modo significativamente più veloce.
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> Ripristino accelerato del database
+Il [ripristino accelerato del database](/azure/sql-database/sql-database-accelerated-database-recovery/) è disponibile in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ripristino accelerato del database consente di migliorare considerevolmente la disponibilità del database, in particolare in presenza di transazioni a esecuzione prolungata, riprogettando il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]processo di recupero[ del ](#TlogAndRecovery). Un database in cui è abilitato il ripristino accelerato del database completa il processo di recupero in modo considerevolmente più veloce dopo un failover o una chiusura anomala. Se abilitato, il ripristino accelerato del database completa anche il rollback delle transazioni con esecuzione prolungata annullate in modo significativamente più veloce.
 
 È possibile abilitare il ripristino accelerato del database per ogni database in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] usando la sintassi seguente:
 
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > Il ripristino accelerato del database è abilitato per impostazione predefinita in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-## <a name="RelatedContent"></a> Vedere anche  
+## <a name="see-also"></a><a name="RelatedContent"></a> Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

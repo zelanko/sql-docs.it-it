@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981934"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
@@ -38,7 +38,7 @@ ms.locfileid: "73981934"
   
  È possibile creare un utente del database con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Informazioni sui tipi di utenti  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Informazioni sui tipi di utenti  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] offre 6 opzioni per la creazione di un utente di database. Nella figura seguente le 6 opzioni sono indicate nel riquadro verde insieme a informazioni su cosa rappresentano.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981934"
   
 > **SUGGERIMENTO** Per le persone all'interno dell'organizzazione, l'autenticazione di Windows è una scelta migliore, perché non dovranno ricordare un'altra password e perché l'autenticazione di Windows offre funzionalità di sicurezza aggiuntive, come Kerberos.  
   
-##  <a name="Restrictions"></a> Background  
+##  <a name="background"></a><a name="Restrictions"></a> Background  
  Un utente è un'entità di sicurezza a livello di database. Affinché gli account di accesso possano eseguire la connessione al database, è necessario eseguirne il mapping a un utente di database. È possibile eseguire il mapping di un account di accesso a database diversi come utenti diversi, ma come un singolo utente per ogni database. In un database parzialmente indipendente, può essere creato un utente che non dispone di un account di accesso. Per altre informazioni sugli utenti di database indipendenti, vedere [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Se è abilitato l'utente guest in un database, un account di accesso di cui non è stato eseguito il mapping a un utente del database può accedere al database come utente guest.  
   
 > **IMPORTANTE** L'utente guest è in genere disabilitato. Non abilitarlo, a meno che non sia strettamente necessario.  
   
  È possibile concedere autorizzazioni agli utenti, in quanto entità di sicurezza. L'ambito di un utente è il database. Affinché un account di accesso possa eseguire la connessione a un database specifico nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario eseguirne il mapping a un utente del database. Le autorizzazioni all'interno del database vengono concesse e negate all'utente del database, non all'account di accesso.  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Richiede l'autorizzazione **ALTER ANY USER** per il database.  
   
-##  <a name="SSMSProcedure"></a> Creare un utente con SSMS  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> Creare un utente con SSMS  
   
  
 1.  In Esplora oggetti espandere la cartella **Database** .  
@@ -140,7 +140,7 @@ ms.locfileid: "73981934"
      **Elimina**  
      Consente di eliminare la proprietà estesa selezionata.  
   
-##  <a name="TsqlProcedure"></a> Creare un utente mediante T-SQL  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> Creare un utente mediante T-SQL  
     
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

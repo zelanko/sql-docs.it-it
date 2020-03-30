@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190124"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
@@ -114,7 +114,7 @@ Di seguito sono disponibili altre informazioni su alcune delle pagine della proc
   
  **Percorso e nome file di log** : consente di specificare il percorso completo e il nome del file di log. La casella viene popolata con il percorso e il nome file predefiniti. Modificare la stringa nella casella per modificare l'impostazione predefinita oppure usare il pulsante **Sfoglia** per passare alla cartella in cui si desidera salvare il file di log.  
   
-###  <a name="Summary"></a> Pagina Riepilogo  
+###  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Usare questa pagina per controllare le azioni che verranno eseguite dalla procedura guidata durante la distribuzione del pacchetto di applicazione livello dati.  
   
  **Le impostazioni seguenti saranno usate per implementare l'applicazione livello dati.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella finestra viene visualizzato il pacchetto di applicazione livello dati selezionato e il nome selezionato per l'istanza di applicazione livello dati distribuita. Nella finestra vengono inoltre visualizzate le impostazioni che verranno usate durante la creazione del database associato al pacchetto di applicazione livello dati.  
