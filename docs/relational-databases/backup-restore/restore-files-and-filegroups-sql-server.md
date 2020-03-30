@@ -18,10 +18,10 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908853"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Ripristino di file e filegroup (SQL Server)
@@ -43,9 +43,9 @@ ms.locfileid: "72908853"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   L'amministratore di sistema che esegue il ripristino di file e di filegroup deve essere l'unico utente attualmente collegato al database da ripristinare.  
   
@@ -57,14 +57,14 @@ ms.locfileid: "72908853"
   
 -   Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-restore-files-and-filegroups"></a>Per ripristinare file e filegroup  
   
@@ -154,7 +154,7 @@ ms.locfileid: "72908853"
   **File di rollback**  
   Specificare un nome per il file standby nella casella di testo **File di rollback** . Questa opzione è necessaria se il database viene lasciato in modalità sola lettura (RESTORE WITH STANDBY).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-restore-files-and-filegroups"></a>Per ripristinare file e filegroup  
   
@@ -180,7 +180,7 @@ ms.locfileid: "72908853"
   
          Nei backup del log delle transazioni, se applicati, deve essere incluso il periodo di tempo intercorso dall'ultimo backup di file e filegroup fino alla fine del log, a meno che non vengano ripristinati TUTTI i file di database.  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio vengono ripristinati i file e i filegroup per il database `MyDatabase` . Per ripristinare il database all'ora corrente, verranno applicati due log delle transazioni.  
   
 ```sql  

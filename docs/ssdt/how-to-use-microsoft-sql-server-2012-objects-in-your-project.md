@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244247"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Usare oggetti di Microsoft SQL Server 2012 nel progetto
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Utilizzo di oggetti di Microsoft SQL Server 2012 nel progetto
 
 In questo esempio, si aggiungerà un oggetto Sequence a un progetto di database per Microsoft SQL Server 2012.  
   
@@ -44,9 +44,9 @@ Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è 
     CACHE 10  
     ```  
   
-4.  Se la piattaforma di destinazione del progetto non è impostata su Microsoft SQL Server 2012, nell'**Elenco errori** verrà visualizzato un errore di sintassi per l'istruzione `CREATE SEQUENCE`. Per correggerlo, seguire l'argomento [Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per cambiare la piattaforma di destinazione di conseguenza.  
+4.  Se la piattaforma di destinazione del progetto non è impostata su Microsoft SQL Server 2012, nell'**Elenco errori** verrà visualizzato un errore di sintassi per l'istruzione `CREATE SEQUENCE`. Per correggerlo, seguire l'argomento [Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per modificare la piattaforma di destinazione di conseguenza.  
   
-5.  Seguire l'argomento [Procedura: Cambiare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per pubblicare il progetto in un database nel server Microsoft SQL Server 2012 connesso.  
+5.  Seguire l'argomento [Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per pubblicare il progetto in un database nel server Microsoft SQL Server 2012 connesso.  
   
 ### <a name="to-use-the-new-sequence-object"></a>Per utilizzare il nuovo oggetto Sequence  
   

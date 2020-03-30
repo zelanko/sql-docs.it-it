@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322160"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementazione di un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge
@@ -36,7 +36,7 @@ ms.locfileid: "75322160"
   
      [Un sistema di risoluzione basato su COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile scrivere un sistema di risoluzione dei conflitti personalizzato come stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] in ogni server di pubblicazione. Durante la sincronizzazione, questa stored procedure viene richiamata quando vengono rilevati conflitti in un articolo per il quale il sistema di risoluzione è stato registrato. Le informazioni sulla riga con conflitti vengono passate dall'agente di merge ai parametri obbligatori della procedura. I sistemi di risoluzione dei conflitti personalizzati basati su stored procedure vengono sempre creati nel server di pubblicazione.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322160"
   
 2.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **\@publication**, **\@article**, il valore **resolver_info** per **\@property** e il nome della stored procedure che implementa la logica del sistema di risoluzione dei conflitti per **\@value**.  
   
-##  <a name="COM"></a> Uso di un sistema di risoluzione personalizzato basato su COM  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> Uso di un sistema di risoluzione personalizzato basato su COM  
  Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi e i risolvere conflitti che si verificano durante il processo di sincronizzazione della replica di tipo merge. Per altre informazioni, vedere [Implementare un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Per risolvere i conflitti, è inoltre possibile scrivere una logica di business personalizzata basata su codice nativo. Tale logica viene compilata come un componente COM in DLL, usando prodotti quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Questo tipo di sistema di risoluzione dei conflitti personalizzato basato su COM deve implementare l'interfaccia **ICustomResolver**, specificamente progettata per la risoluzione dei conflitti.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Per creare e registrare un sistema di risoluzione dei conflitti personalizzato basato su COM  

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121591"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transazioni (SQL Data Warehouse)
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>Comportamento di blocco  
  Per garantire l'integrità delle transazioni e mantenere la coerenza dei database se più utenti accedono simultaneamente ai dati, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usa la funzionalità di blocco. Il blocco viene usato sia dalle transazioni implicite che dalle transazioni esplicite. Ogni transazione richiede blocchi di tipo diverso per le risorse, ad esempio per le tabelle o i database di quali dipende. Tutti i blocchi di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sono a livello di tabella o superiore. I blocchi impediscono alle altre transazioni di modificare le risorse in modo tale da creare problemi alla transazione che richiede il blocco. Ogni transazione rilascia i propri blocchi quando non ha più una dipendenza dalle risorse bloccate. Le transazioni esplicite mantengono blocchi finché la transazione non viene completata tramite commit o rollback.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>R. Uso di una transazione esplicita  
   

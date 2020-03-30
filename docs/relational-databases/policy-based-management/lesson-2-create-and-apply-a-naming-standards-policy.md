@@ -12,10 +12,10 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558696"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lezione 2: Creare e applicare criteri per gli standard di denominazione
@@ -23,7 +23,7 @@ ms.locfileid: "75558696"
 Alcuni tipi di criteri della gestione basata su criteri possono creare trigger per l'applicazione della conformità successiva tramite i criteri. In questa lezione verranno creati criteri per l'applicazione di uno standard di denominazione per le tabelle. Si verificheranno quindi i criteri tentando di creare una tabella che violi i criteri.  
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 Per completare questa esercitazione, sono necessari SQL Server Management Studio e l'accesso a un server che esegue SQL Server.
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

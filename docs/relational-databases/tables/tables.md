@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287745"
 ---
 # <a name="tables"></a>Tabelle
@@ -44,7 +44,7 @@ Nelle tabelle partizionate, i dati vengono suddivisi orizzontalmente in unità c
 Le tabelle temporanee vengono archiviate in **tempdb**. Esistono due tipi di tabelle temporanee, ovvero le tabelle locali e le tabelle globali. I due tipi differiscono per i nomi, la visibilità e la disponibilità. Le tabelle temporanee locali contengono un solo simbolo di cancelletto (#) come primo carattere del nome, sono visibili solo durante la connessione utente corrente e vengono eliminate quando l'utente chiude la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le tabelle temporanee globali contengono due simboli di cancelletto (##) come primi caratteri del nome, una volta create sono visibili per tutti gli utenti e vengono eliminate quando tutti gli utenti che fanno riferimento alla tabella chiudono la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 
-#### <a name="ctp23"></a> Riduzione delle ricompilazioni per carichi di lavoro che usano tabelle temporanee in più ambiti
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> Riduzione delle ricompilazioni per carichi di lavoro che usano tabelle temporanee in più ambiti
 
 In [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] con tutti i livelli di compatibilità del database vengono ridotte le ricompilazioni per carichi di lavoro che usano tabelle temporanee in più ambiti. Questa funzionalità è abilitata anche nel database SQL di Azure con il livello di compatibilità del database 150 per tutti i modelli di distribuzione.  Prima di questa funzionalità, quando si faceva riferimento a una tabella temporanea con un'istruzione DML (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), se la tabella temporanea era stata creata da un batch di ambito esterno, l'istruzione DML veniva ricompilata ogni volta che veniva eseguita. Grazie a questo miglioramento, SQL Server esegue semplici controlli aggiuntivi per evitare ricompilazioni non necessarie:
 

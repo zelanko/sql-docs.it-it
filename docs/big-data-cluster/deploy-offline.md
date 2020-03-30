@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531977"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione offline di un cluster Big Data di SQL Server
@@ -55,7 +55,7 @@ I passaggi seguenti descrivono come eseguire il pull delle immagini dei contenit
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> Immagini dei contenitori dei cluster Big Data
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> Immagini dei contenitori dei cluster Big Data
 
 Per un'installazione offline, sono necessarie le immagini dei contenitori dei cluster Big Data seguenti:
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ Per un'installazione offline, sono necessarie le immagini dei contenitori dei cl
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> Script automatico
+## <a name="automated-script"></a><a id="automated"></a> Script automatico
 
 È possibile usare uno script Python automatico che effettua automaticamente il pull di tutte le immagini dei contenitori necessarie e il push in un repository privato.
 
@@ -120,7 +120,7 @@ Per un'installazione offline, sono necessarie le immagini dei contenitori dei cl
 
 Le distribuzioni di cluster Big Data richiedono diversi strumenti, tra cui **Python**, `azdata` e **kubectl**. Usare le procedure seguenti per installare questi strumenti in un server offline.
 
-### <a id="python"></a> Installare Python offline
+### <a name="install-python-offline"></a><a id="python"></a> Installare Python offline
 
 1. In un computer con accesso a Internet, scaricare uno dei file compressi seguenti contenenti Python:
 
@@ -138,7 +138,7 @@ Le distribuzioni di cluster Big Data richiedono diversi strumenti, tra cui **Pyt
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> Installare azdata offline
+### <a name="install-azdata-offline"></a><a id="azdata"></a> Installare azdata offline
 
 1. In un computer con accesso a Internet e con [Python](https://wiki.python.org/moin/BeginnersGuide/Download) eseguire il comando seguente per scaricare tutti i pacchetti di `azdata` nella cartella corrente.
 
@@ -154,7 +154,7 @@ Le distribuzioni di cluster Big Data richiedono diversi strumenti, tra cui **Pyt
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> Installare kubectl offline
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> Installare kubectl offline
 
 Per installare **kubectl** in un computer offline, seguire questa procedura.
 

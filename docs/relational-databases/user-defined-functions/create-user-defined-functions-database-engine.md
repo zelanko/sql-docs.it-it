@@ -20,19 +20,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287995"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Creazione di funzioni definite dall'utente (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   In questo argomento viene descritto come creare una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Non è possibile utilizzare funzioni definite dall'utente per eseguire azioni che modificano lo stato del database.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "79287995"
   
     -   `SEND`  
   
-###  <a name="Security"></a> Autorizzazioni 
+###  <a name="permissions"></a><a name="Security"></a> Autorizzazioni 
 
 È necessario disporre dell'autorizzazione `CREATE FUNCTION` nel database e dell'autorizzazione `ALTER` per lo schema in cui la funzione è in fase di creazione. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione `EXECUTE` per tale tipo.  
   
-##  <a name="Scalar"></a> Funzioni scalari  
+##  <a name="scalar-functions"></a><a name="Scalar"></a> Funzioni scalari  
  Nell'esempio seguente viene creata una **funzione scalare** con istruzioni multiple nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La funzione accetta un valore di input, un valore `ProductID`e restituisce un singolo valore di dati, la quantità aggregata del prodotto specificato nelle scorte.  
   
 ```sql  
@@ -104,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > [!NOTE]  
 > Per altre informazioni ed esempi di funzioni scalari, vedere [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
-##  <a name="TVF"></a> Funzioni con valori di tabella  
+##  <a name="table-valued-functions"></a><a name="TVF"></a> Funzioni con valori di tabella  
 Nell'esempio seguente viene creata una **funzione inline con valori di tabella** nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La funzione accetta un parametro di input, un ID (punto vendita) cliente e restituisce le colonne `ProductID`, `Name`e l'aggregazione delle vendite per l'anno in corso come valore `YTD Total` per ogni prodotto venduto al punto vendita.  
   
 ```sql  

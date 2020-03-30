@@ -14,10 +14,10 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 640a24917c1bcb8b7b707308693f658de8dd33e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211365"
 ---
 # <a name="create-a-database-mail-account"></a>Creare un account di Posta elettronica database.
@@ -30,15 +30,15 @@ ms.locfileid: "70211365"
   
 -   **Completamento:**  [Passaggi successivi per configurare Posta elettronica database](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   Determinare il nome del server e il numero di porta per il server SMTP (Simple Mail Transfer Protocol) utilizzato per inviare e-mail. Se il server SMTP richiede l'autenticazione, determinare il nome utente e la password per il server SMTP.  
   
 -   Se lo si desidera, è possibile specificare il tipo e il numero di porta del server. Il tipo di server per la posta in uscita è sempre SMTP. La maggior parte dei server SMTP utilizza la porta predefinita, ovvero la 25.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo della Configurazione guidata Posta elettronica database  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Utilizzo della Configurazione guidata Posta elettronica database  
  **Per creare un account di Posta elettronica database utilizzando una procedura guidata**  
   
 -   In Esplora oggetti, connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su cui si desidera configurare Posta elettronica database ed espandere l'albero di server.  
@@ -55,7 +55,7 @@ ms.locfileid: "70211365"
   
 -   Per completare la creazione del nuovo account, rivedere le azioni da eseguire nella pagina **Completamento procedura guidata** quindi fare clic su **Fine** .  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per creare un account di Posta elettronica database utilizzando Transact-SQL**  
   
  Eseguire la stored procedure **msdb.dbo.sysmail_add_account_sp** per creare l'account, specificando le seguenti informazioni:  
@@ -85,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Passaggi successivi per configurare Posta elettronica database  
+##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a> Completamento: Passaggi successivi per configurare Posta elettronica database  
   
 -   [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   

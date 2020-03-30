@@ -9,10 +9,10 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971380"
 ---
 # <a name="install-report-builder"></a>Installare Generatore report
@@ -52,7 +52,7 @@ ms.locfileid: "76971380"
   
  Vedere la sezione **Requisiti di sistema** della [pagina di download di Generatore report](https://go.microsoft.com/fwlink/?LinkID=734968) nell'Area download Microsoft.
   
-##  <a name="download"></a> Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal sito di download  
+##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal sito di download  
   
 1.  Nella [pagina Generatore report dell'Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968) fare clic su **Download**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76971380"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>Per installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dalla riga di comando 
 
- È anche possibile eseguire un'installazione dalla riga di comando di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci MSI standard, è possibile usare i parametri personalizzati specifici di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL specifica il server di report predefinito usato da [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per salvare i report.  
+ È anche possibile eseguire un'installazione dalla riga di comando di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci di MSI standard, è possibile usare i parametri personalizzati specifici di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL specifica il server di report predefinito usato da [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per salvare i report.  
   
  Se si vuole eseguire un'installazione invisibile all'utente che non richiede interazioni con l'interfaccia utente, specificare l'opzione **/quiet** . In base alle caratteristiche di progettazione, il flag dell'opzione quiet elimina la visualizzazione degli errori di installazione. Quando si usa questa opzione è quindi consigliabile includere l'opzione **/l** che specifica la registrazione.   
   

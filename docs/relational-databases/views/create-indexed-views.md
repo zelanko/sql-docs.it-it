@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325513"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
@@ -31,7 +31,7 @@ ms.locfileid: "75325513"
 
 Questo articolo descrive come creare indici in una vista. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare
 
 Per la creazione e la corretta implementazione di una vista indicizzata, è fondamentale effettuare le operazioni seguenti:
 
@@ -47,7 +47,7 @@ Per la creazione e la corretta implementazione di una vista indicizzata, è fond
 >
 > <sup>1</sup> Ad esempio, operazioni UPDATE, DELETE o INSERT.
 
-### <a name="Restrictions"></a> Opzioni SET necessarie per le viste indicizzate
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> Opzioni SET necessarie per le viste indicizzate
 
 La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, dopo aver impostato l'opzione SET `CONCAT_NULL_YIELDS_NULL` su ON, l'espressione `'abc' + NULL` restituisce il valore `NULL`. Tuttavia, dopo aver impostato `CONCAT_NULL_YIELDS_NULL` su OFF, la stessa espressione produce `'abc'`.
 
@@ -131,13 +131,13 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
 > [!IMPORTANT]
 > Le viste indicizzate non sono supportate sulle query temporali, ovvero quelle che usano la clausola `FOR SYSTEM_TIME`.
 
-### <a name="Recommendations"></a> Raccomandazioni
+### <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni
 
 Quando si fa riferimento a valori letterali stringa **datetime** e **smalldatetime** nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle espressioni deterministiche e non deterministiche, vedere la sezione [Considerazioni](#nondeterministic) in questa pagina.
 
 Durante l'esecuzione di DML, ad esempio di `UPDATE`, `DELETE` o `INSERT`, in una tabella cui viene fatto riferimento da un numero elevato di viste indicizzate o da un numero minore di viste indicizzate molto complesse, è necessario aggiornare anche le viste indicizzate. Di conseguenza, è possibile che le prestazioni delle query DML si riducano notevolmente o, in alcuni casi, non venga prodotto un piano di query. In questi scenari, testare le query DML prima dell'uso in produzione, analizzare il piano di query e ottimizzare/semplificare l'istruzione DML.
 
-### <a name="Considerations"></a> Considerazioni
+### <a name="considerations"></a><a name="Considerations"></a> Considerazioni
 
 L'impostazione dell'opzione **large_value_types_out_of_row** delle colonne di una vista indicizzata è ereditata dall'impostazione della colonna corrispondente nella tabella di base. Questo valore viene impostato mediante [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). L'impostazione predefinita per le colonne generate da espressioni è 0. Ciò significa che i tipi per valori di grandi dimensioni vengono archiviati all'interno delle righe.
 
@@ -151,13 +151,13 @@ Tutti gli indici di una vista vengono eliminati con la rimozione della vista. Tu
 
 <a name="nondeterministic"></a> Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati **datetime** o **smalldatetime** sono considerate non deterministiche. Per altre informazioni, vedere [Conversione non deterministica di stringhe di valori letterali in valori DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
-### <a name="Security"></a> Sicurezza
+### <a name="security"></a><a name="Security"></a> Sicurezza
 
-#### <a name="Permissions"></a> Autorizzazioni
+#### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 Richiede l'autorizzazione **CREATE VIEW** per il database e l'autorizzazione **ALTER** per lo schema in cui viene creata la vista.
 
-## <a name="TsqlProcedure"></a> Con Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>Per creare una vista indicizzata
 

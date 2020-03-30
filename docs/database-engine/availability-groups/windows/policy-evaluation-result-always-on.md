@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235444"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Pagina Risultato di valutazione criteri (dashboard Always On)
@@ -25,7 +25,7 @@ ms.locfileid: "75235444"
 
   Usare la pagina **Risultato di valutazione criteri** del dashboard Always On per visualizzare qualsiasi problema corrente relativo ai criteri.  
     
-##  <a name="Options"></a> Opzioni della finestra di dialogo  
+##  <a name="dialog-box-options"></a><a name="Options"></a> Opzioni della finestra di dialogo  
  **Problema rilevato**  
  Visualizza una riga per ogni problema rilevato. L'icona associata a un problema agisce da indicatore visivo per indicare la gravità del problema, come segue:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75235444"
  **Altre informazioni**  
  Fare clic su questo collegamento per aprire l'argomento della Guida per il problema selezionato.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

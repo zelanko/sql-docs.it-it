@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286305"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Backup e ripristino di database abilitati per Stretch (Stretch Database)
@@ -46,7 +46,7 @@ Il servizio SQL Server Stretch Database in Azure protegge i database remoti con 
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure riduce il rischio di perdita di dati con la ridondanza geografica  
 I backup dei database di Azure vengono memorizzati nell'archiviazione con ridondanza geografica e accesso in lettura (RA-GRS) di Azure e hanno quindi ridondanza geografica per impostazione predefinita. L'archiviazione con ridondanza geografica replica i dati in un'area secondaria a centinaia di miglia di distanza dall'area primaria. Nelle aree primaria e secondaria i dati vengono replicati tre volte in domini di errore e domini di aggiornamento separati. Ciò garantisce la durabilità dei dati anche in caso di interruzione o guasto totale che rende una delle aree di Azure non disponibile.
 
-### <a name="stretchRPO"></a>Stretch Database riduce il rischio di perdita dei dati di Azure grazie al mantenimento temporaneo delle righe migrate
+### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database riduce il rischio di perdita dei dati di Azure grazie al mantenimento temporaneo delle righe migrate
 Dopo che Stretch Database ha eseguito la migrazione delle righe idonee da SQL Server in Azure, conserva le righe nella tabella di gestione temporanea per un minimo di 8 ore. Se si ripristina un backup del database di Azure, Stretch Database usa le righe salvate nella tabella di gestione temporanea per riconciliare i database SQL Server e di Azure.
 
 Dopo aver ripristinato un backup dei dati di Azure, è necessario eseguire la stored procedure [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) per riconnettere il database di SQL Server abilitato per l'estensione al database di Azure remoto. Quando si esegue **sys.sp_rda_reauthorize_db**, Stretch Database riconosce automaticamente i database SQL Server e i database di Azure.

@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729925"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -292,10 +292,10 @@ Crea l'indice specificato nel filegroup predefinito.
   
 In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]** . Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="GenRemarks"></a> Osservazioni generali  
+##  <a name="general-remarks"></a><a name="GenRemarks"></a> Osservazioni generali  
 È possibile creare un indice columnstore per una tabella temporanea. Quando si elimina la tabella o termina la sessione, viene eliminato anche l'indice.  
 
 È possibile creare un indice columnstore cluster ordinato per colonne con qualsiasi tipo di dati supportato in Azure SQL Data Warehouse, ad eccezione delle colonne stringa.  
@@ -331,7 +331,7 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
   
  Per altre informazioni sugli indici filtrati, vedere [Creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitazioni e restrizioni  
+##  <a name="limitations-and-restrictions"></a><a name="LimitRest"></a> Limitazioni e restrizioni  
 
 **Ogni colonna di un indice columnstore deve contenere dati di business di uno dei seguenti tipi comuni:** 
 -   datetimeoffset [ ( *n* ) ]  
@@ -406,7 +406,7 @@ Le limitazioni seguenti si applicano solo a [!INCLUDE[ssSQL14](../../includes/ss
   
  Per informazioni sui vantaggi a livello di prestazioni e sulle limitazioni degli indici columnstore, vedere [Indici columnstore - Panoramica](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
-##  <a name="Metadata"></a> Metadati  
+##  <a name="metadata"></a><a name="Metadata"></a> Metadati  
  Tutte le colonne di un indice columnstore vengono archiviate nei metadati come colonne incluse. L'indice columnstore non contiene colonne chiave. Nelle seguenti viste di sistema sono fornite informazioni sugli indici columnstore.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
@@ -416,7 +416,7 @@ Le limitazioni seguenti si applicano solo a [!INCLUDE[ssSQL14](../../includes/ss
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a> Esempi per la conversione di una tabella rowstore in columnstore  
+##  <a name="examples-for-converting-a-rowstore-table-to-columnstore"></a><a name="convert"></a> Esempi per la conversione di una tabella rowstore in columnstore  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>R. Convertire un heap in un indice columnstore cluster  
  In questo esempio viene creata una tabella come heap, che viene poi convertita in un indice columnstore cluster denominato cci_Simple. In questo modo viene modificata l'archiviazione dell'intera tabella da rowstore a columnstore.  
@@ -601,7 +601,7 @@ REBUILD PARTITION = ALL
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-##  <a name="nonclustered"></a> Esempi per gli indici columnstore non cluster  
+##  <a name="examples-for-nonclustered-columnstore-indexes"></a><a name="nonclustered"></a> Esempi per gli indici columnstore non cluster  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>R. Creare un indice columnstore come indice secondario per una tabella rowstore  
  Questo esempio consente di creare un indice columnstore non cluster in una tabella rowstore. In questa situazione può essere creato solo un indice columnstore. L'indice columnstore richiede memoria aggiuntiva poiché contiene una copia dei dati nella tabella rowstore. In questo esempio vengono creati una tabella e un indice cluster semplici, quindi viene illustrata la sintassi di creazione di un indice columnstore non cluster.  
@@ -651,7 +651,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
     WHERE EndDate IS NOT NULL;  
 ```  
   
-###  <a name="ncDML"></a> D. Modificare i dati in un indice columnstore non cluster  
+###  <a name="d-change-the-data-in-a-nonclustered-columnstore-index"></a><a name="ncDML"></a> D. Modificare i dati in un indice columnstore non cluster  
    Si applica a: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
  Dopo aver creato un indice columnstore non cluster in una tabella, non è possibile modificare i dati direttamente nella tabella. Una query eseguita con INSERT, UPDATE, DELETE o MERGE ha esito negativo e restituisce un messaggio di errore. Per aggiungere o modificare i dati nella tabella, è possibile effettuare una delle operazioni seguenti:  
@@ -668,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Passare una partizione della tabella con l'indice columnstore in una tabella di staging vuota. Se è presente un indice columnstore nella tabella di staging, disabilitare l'indice columnstore. Eseguire gli aggiornamenti. Compilare o ricompilare l'indice columnstore. Passare la tabella di staging nuovamente nella partizione (ora vuota) della tabella principale.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>R. Modificare un indice cluster in un indice columnstore cluster  
  Usando l'istruzione CREATE CLUSTERED COLUMNSTORE INDEX con DROP_EXISTING = ON, è possibile:  

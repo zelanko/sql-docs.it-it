@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578233"
 ---
 # <a name="project-property-pages-dialog-box"></a>pagine delle proprietà del progetto - finestra di dialogo
@@ -28,8 +28,8 @@ ms.locfileid: "65578233"
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>Opzioni  
- **Configuration**  
- Consente di selezionare la configurazione da modificare. Sono inizialmente disponibili tre configurazioni: **Debug**, **DebugLocal** e **Release**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)** .  
+ **Configurazione**  
+ Consente di selezionare la configurazione da modificare. Sono inizialmente disponibili tre configurazioni: **Debug**, **DebugLocal**e **Release**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)** .  
   
  Per visualizzare le proprietà per più configurazioni contemporaneamente, selezionare **Tutte le configurazioni** o **Più configurazioni**.  
   

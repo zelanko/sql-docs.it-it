@@ -22,10 +22,10 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 481cac0715f00c7d29a92b77101c4a09a28056a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298043"
 ---
 # <a name="sql-server-destination"></a>SQL Server - destinazione
@@ -39,7 +39,7 @@ ms.locfileid: "71298043"
  Gli utenti che eseguono pacchetti che includono la destinazione SQL Server devono disporre dell'autorizzazione "Creazione oggetti globali", che può essere concessa tramite lo strumento Criteri di sicurezza locali, accessibile dal menu **Strumenti di amministrazione** . Se durante l'esecuzione di un pacchetto che utilizza la destinazione SQL Server viene visualizzato un messaggio di errore, verificare che l'account utilizzato per eseguire il pacchetto disponga dell'autorizzazione "Creazione oggetti globali".  
   
 ## <a name="bulk-inserts"></a>Inserimenti bulk  
- Se si tenta di usare la destinazione SQL Server per il caricamento bulk dei dati in un database remoto di SQL Server, potrebbe venire visualizzato un messaggio di errore simile al seguente: "È disponibile un record OLE DB. Origine: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descrizione: "Impossibile eseguire il caricamento bulk perché non è stato possibile aprire l'oggetto di mapping dei file SSIS 'Global\DTSQLIMPORT'. Codice di errore del sistema operativo 2 (Impossibile trovare il file specificato). Verificare che l'accesso venga effettuato a un server locale tramite la sicurezza di Windows.""  
+ Se si tenta di utilizzare la destinazione SQL Server per il caricamento bulk dei dati in un database remoto di SQL Server, potrebbe venire visualizzato un messaggio di errore simile a "È disponibile un record OLE DB. Origine: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descrizione: "Impossibile eseguire il caricamento bulk perché non è stato possibile aprire l'oggetto di mapping dei file SSIS 'Global\DTSQLIMPORT'. Codice di errore del sistema operativo 2 (Impossibile trovare il file specificato). Verificare che l'accesso venga effettuato a un server locale tramite la sicurezza di Windows.""  
   
  La destinazione SQL Server offre lo stesso tipo di inserimento dei dati ad alta velocità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantito dall'attività Inserimento bulk. Se si usa la destinazione SQL Server, tuttavia, un pacchetto può applicare le trasformazioni ai dati delle colonne prima che vengano caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

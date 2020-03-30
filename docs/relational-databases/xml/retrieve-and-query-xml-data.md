@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995264"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   In questo argomento vengono descritte le opzioni query che è necessario specificare per eseguire query sui dati XML. Vengono inoltre descritte le parti di istanze XML che non vengono mantenute quando vengono archiviate nei database.  
   
-##  <a name="features"></a> Caratteristiche di un'istanza XML non mantenute  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Caratteristiche di un'istanza XML non mantenute  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il contenuto dell'istanza XML, ma non mantiene gli aspetti dell'istanza XML che non sono considerati significativi nel modello di dati XML. Ciò significa che un'istanza XML recuperata potrebbe non essere identica all'istanza archiviata nel server, ma conterrà le stesse informazioni.  
   
 ### <a name="xml-declaration"></a>Dichiarazione XML  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Impostazione di opzioni query obbligatorie  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Impostazione di opzioni query obbligatorie  
  Quando si esegue una query su variabili o colonne di tipo **xml** usando i metodi per il tipo di dati **xml** , è necessario impostare le opzioni seguenti come illustrato.  
   
 |Opzioni SET|Valori richiesti|  

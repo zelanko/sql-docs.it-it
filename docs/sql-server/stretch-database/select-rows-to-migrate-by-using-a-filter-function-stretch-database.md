@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844547"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Usare una funzione di filtro per selezionare righe di cui eseguire la migrazione (Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>Aggiungere una funzione del filtro dopo l'esecuzione della procedura guidata  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Aggiungere una funzione del filtro dopo l'esecuzione della procedura guidata  
   
 Se si vuole usare una funzione che non è possibile creare nell' **Abilitazione guidata del database per l'estensione** , è possibile eseguire l'istruzione **ALTER TABLE** per specificare una funzione, dopo l'uscita dalla procedura guidata. Prima di applicare una funzione, tuttavia, è necessario interrompere la migrazione dei dati in corso e ripristinare i dati migrati. Per altre informazioni sul perché è necessario, vedere [Sostituire una funzione di filtro esistente](#replacePredicate).
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  Se la funzione restituisce un risultato non vuoto per la riga, la riga è idonea per la migrazione.  
   
-## <a name="replacePredicate"></a>Sostituire una funzione di filtro esistente  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>Sostituire una funzione di filtro esistente  
  Per sostituire una funzione di filtro specificata in precedenza, eseguire di nuovo l'istruzione **ALTER TABLE** e specificare un valore nuovo per il parametro **FILTER_PREDICATE** . Ad esempio:  
   
 ```sql  

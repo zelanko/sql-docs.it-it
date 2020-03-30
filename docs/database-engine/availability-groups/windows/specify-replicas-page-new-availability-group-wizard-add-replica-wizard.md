@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822567"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Procedura guidata Aggiungi replica)
@@ -32,7 +32,7 @@ ms.locfileid: "74822567"
 |[Preferenze di backup](#BackupPreferencesTab)|Usare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso e le priorità di backup per le singole repliche di disponibilità.|  
 |[Listener](#Listener)|Utilizzare questa scheda, se disponibile, per creare un listener del gruppo di disponibilità. Per impostazione predefinita, non viene creato un listener.<br /><br /> Questa scheda è disponibile solo se si esegue la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP è disabilitato quando il tipo di cluster è EXTERNAL o NESSUNO. |  
   
-##  <a name="ReplicasTab"></a> Scheda Repliche  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> Scheda Repliche  
  **Istanza del server**  
  Consente di visualizzare il nome dell'istanza del server che ospiterà la replica di disponibilità.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822567"
  **Rimuovi replica**  
  Fare clic per rimuovere la replica secondaria selezionata dal gruppo di disponibilità.  
   
-##  <a name="EndpointsTab"></a> Scheda Endpoint  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> Scheda Endpoint  
  Per ogni istanza del server in cui verrà ospitata una replica di disponibilità, nella scheda **Endpoint** vengono visualizzati i valori effettivi dell'endpoint del mirroring del database esistente, se presente, oppure i valori suggeriti per un nuovo endpoint potenziale in cui verrebbe utilizzata l'autenticazione di Windows. Sia per gli endpoint esistenti che per quelli potenziali, nella griglia Valori endpoint vengono visualizzate le informazioni seguenti:  
   
  **Nome server**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822567"
   
      Se si lascia aperta la pagina **Specifica repliche** durante la configurazione degli endpoint, tornare alla scheda **Endpoint** e fare clic su **Aggiorna** per aggiornare la griglia **Valori endpoint** .  
   
-##  <a name="BackupPreferencesTab"></a> Scheda Preferenze di backup  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> Scheda Preferenze di backup  
  Per specificare dove eseguire i backup, scegliere una delle opzioni seguenti:  
   
  **Preferisco secondario**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822567"
  **Escludi replica**  
  Evita che questa replica di disponibilità venga scelta per l'esecuzione di backup. Ciò si rivela utile, ad esempio, per una replica di disponibilità remota in cui non si desidera eseguire mai il failover dei backup.  
   
-##  <a name="Listener"></a> Scheda Listener  
+##  <a name="listener-tab"></a><a name="Listener"></a> Scheda Listener  
  Specificare la preferenza per un[listener del gruppo di disponibilità](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)che fornirà un punto di connessione client. I valori possibili sono:  
   
  **Non creare ora un listener del gruppo di disponibilità.**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822567"
 >  -   Chiedere all'amministratore di rete di riservare l'indirizzo IP del listener per un uso esclusivo. Fornire il nome host DNS del listener agli sviluppatori dell'applicazione in modo da essere usato nelle stringhe di connessione per la richiesta di connessioni client al gruppo di disponibilità.  
 > -   Fornire il nome host DNS del listener agli sviluppatori dell'applicazione in modo da essere usato nelle stringhe di connessione per la richiesta di connessioni client al gruppo di disponibilità.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

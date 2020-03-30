@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708730"
 ---
 # <a name="back-up-a-transaction-log"></a>Eseguire il backup di un log delle transazioni
@@ -26,17 +26,17 @@ ms.locfileid: "71708730"
   In questo argomento viene descritto come eseguire il backup di un log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
 
 ## <a name="before-you-begin"></a>Prima di iniziare
-### <a name="Restrictions"></a> Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 Non è possibile usare l'istruzione `BACKUP` in una transazione esplicita o [implicita](../../t-sql/statements/set-implicit-transactions-transact-sql.md). Per transazione esplicita si intende una transazione di cui vengono definiti in modo esplicito l'inizio e la fine.
 
-### <a name="Recommendations"></a> Raccomandazioni  
+### <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 - Se un database usa il [modello di recupero](recovery-models-sql-server.md) con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, è necessario eseguire il backup del log delle transazioni con una frequenza sufficiente per garantire la protezione dei dati e per evitare il [riempimento del log delle transazioni](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) stesso. Tronca il log e supporta il ripristino del database in corrispondenza di uno specifico punto nel tempo. 
   
 - Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questo caso è possibile eliminare tali voci di log usando il flag di traccia 3226, se nessuno degli script dipende da esse. Vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-### <a name="Permissions"></a> Autorizzazioni
+### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` richieste vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator**. Controllare che le autorizzazioni siano corrette prima di iniziare.
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Con PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Con PowerShell
 
 Impostare e usare il [provider SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Usare il cmdlet **Backup-SqlDatabase** e specificare **Log** per il valore del parametro **-BackupAction** .  
   
@@ -160,7 +160,7 @@ L'esempio seguente consente di creare un backup del log del database di `<myData
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

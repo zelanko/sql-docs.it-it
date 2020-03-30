@@ -13,17 +13,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 64060ae1662d9d1448695426da9e555afbf6869a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056193"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Trovare frasi chiave nei documenti mediante ricerca semantica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Viene descritto come individuare le frasi chiave nei documenti o nelle colonne di testo configurati per l'indicizzazione semantica statistica.  
 
-##  <a name="howtofind"></a> Individuare le frasi chiave nei documenti con SEMANTICKEYPHRASETABLE  
+##  <a name="find-the-key-phrases-in-documents-with-semantickeyphrasetable"></a><a name="howtofind"></a> Individuare le frasi chiave nei documenti con SEMANTICKEYPHRASETABLE  
  Per identificare le frasi chiave in documenti specifici o identificare documenti che contengono frasi chiave specifiche, eseguire una query sulla funzione [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
   
  SEMANTICKEYPHRASETABLE restituisce una tabella con zero, una o più righe per le frasi chiave associate alle colonne nella tabella specificata. A questa funzione per i set di righe è possibile fare riferimento nella clausola FROM di un'istruzione SELECT come se fosse un normale nome di tabella.  
@@ -36,7 +36,7 @@ ms.locfileid: "74056193"
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
  L'esempio seguente recupera le prime 10 frasi chiave dal documento specificato tramite la variabile @DocumentId nella colonna Document della tabella Production.Document del database di esempio AdventureWorks. La variabile @DocumentId rappresenta un valore della colonna chiave dell'indice full-text.  
   
 ```sql  
@@ -53,7 +53,7 @@ GO
   
  La funzione **SEMANTICKEYPHRASETABLE** recupera in modo efficiente questi risultati tramite una ricerca nell'indice anziché un'analisi della tabella.  
   
-###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
  Nell'esempio seguente vengono recuperati i primi 25 documenti che contengono la frase chiave "Bracket" dalla colonna Documento della tabella Production.Document del database di esempio AdventureWorks.  
   
 ```sql  

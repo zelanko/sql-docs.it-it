@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112276"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
@@ -144,13 +144,13 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   Entrambe le versioni del provider hanno lo stesso ID. Per specificare se il runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve usare la versione a 64 bit del provider, è necessario impostare la proprietà Run64BitRuntime del progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se la proprietà Run64BitRuntime è impostata su **true**, il runtime trova e usa il provider a 64 bit, se invece Run64BitRuntime è impostata su **false**, il runtime trova e usa il provider a 32 bit. Per altre informazioni sulle proprietà che è possibile impostare in progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Integration Services (SSIS) e ambienti Studio](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Aggiungere una gestione connessione
-###  <a name="wizard"></a> Aggiungere una gestione connessione durante la creazione di un pacchetto  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Aggiungere una gestione connessione durante la creazione di un pacchetto  
   
 -   Utilizzare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Oltre a creare e configurare una gestione connessione, tramite la procedura guidata è anche possibile creare e configurare le origini e le destinazioni in cui è utilizzata la gestione connessione. Per altre informazioni, vedere [Creare pacchetti in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a> Aggiungere una gestione connessione a un pacchetto esistente  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> Aggiungere una gestione connessione a un pacchetto esistente  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -194,7 +194,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
 6.  Per salvare il pacchetto aggiornato scegliere **Salva elementi selezionati** dal menu **File** .  
   
-###  <a name="project"></a> Aggiungere una gestione connessione al livello del progetto  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> Aggiungere una gestione connessione al livello del progetto  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -243,14 +243,14 @@ Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per sel
  **Aggiungere**  
  Consente di specificare le proprietà della connessione utilizzando l'editor per ogni tipo di connessione.  
    
-##  <a name="parameter"></a> Creare un parametro per una proprietà della gestione connessione  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> Creare un parametro per una proprietà della gestione connessione  
   
 1.  Nell'area **Gestioni connessioni** fare clic con il pulsante destro del mouse sulla gestione connessione per cui creare un parametro e scegliere **Imposta parametri**.  
   
 2.  Configurare le impostazioni dei parametri nella finestra di dialogo **Imposta parametri** . Per altre informazioni, vedere [Finestra di dialogo Imposta parametri](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Eliminare una gestione connessione 
-###  <a name="DeletePackageLevel"></a> Eliminare una gestione connessione da un pacchetto  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> Eliminare una gestione connessione da un pacchetto  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
@@ -270,7 +270,7 @@ Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per sel
   
 5.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-###  <a name="DeleteProjectLevel"></a> Eliminare una gestione connessione condivisa (gestione connessione al livello del progetto)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Eliminare una gestione connessione condivisa (gestione connessione al livello del progetto)  
   
 1.  Per eliminare una gestione connessione al livello del progetto, fare clic con il pulsante destro del mouse sotto il nodo **Gestioni connessioni** nella finestra **Esplora soluzioni** , quindi scegliere **Elimina**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] visualizza il messaggio di avviso seguente:  
   

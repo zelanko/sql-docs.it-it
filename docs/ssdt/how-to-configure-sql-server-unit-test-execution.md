@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241572"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedura: Configurare l'esecuzione di unit test di SQL Server
@@ -32,7 +32,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
     > [!NOTE]  
     > I test non vengono eseguiti nella cartella della soluzione, ma in una cartella distinta sul disco rigido locale. Sebbene sia possibile configurare gli aspetti della distribuzione di test, in genere questa operazione non è necessaria per gli unit test. Per altre informazioni sulla distribuzione di test, vedere [Esecuzione di test](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
-## <a name="SpecifyConnectionStrings"></a>Specificare stringhe di connessione  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Specificare stringhe di connessione  
   
 #### <a name="to-specify-database-connection-strings"></a>Per specificare stringhe di connessione al database  
   
@@ -54,7 +54,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
   
 4.  Ricompilare il progetto di test per applicare le modifiche alla configurazione.  
   
-## <a name="DeployingDBSchema"></a>Distribuire uno schema di database  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>Distribuire uno schema di database  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>Per distribuire a un database lo schema di un progetto di database  
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 024f76fd4f87f353908fc634ec486f579f2e7e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286928"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Visualizzazione e modifica delle proprietà delle sottoscrizioni pull
@@ -40,7 +40,7 @@ ms.locfileid: "76286928"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Visualizzare le proprietà delle sottoscrizioni pull dal server di pubblicazione o dal Sottoscrittore nella finestra di dialogo **Proprietà sottoscrizione - \<ServerPubblicazione>: \<DatabasePubblicazione>** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nel Sottoscrittore è disponibile un numero maggiore di proprietà ed è inoltre possibile modificare le proprietà. Le proprietà possono inoltre essere visualizzate sul server di pubblicazione nella scheda **Tutte le sottoscrizioni** , disponibile in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Per visualizzare le proprietà delle sottoscrizioni pull dal server di pubblicazione in Management Studio  
@@ -73,7 +73,7 @@ ms.locfileid: "76286928"
   
 4.  Visualizzare le proprietà e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile modificare le sottoscrizioni pull e accedere alle relative proprietà a livello di programmazione utilizzando stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di una sottoscrizione pull di una pubblicazione snapshot o transazionale  
@@ -121,7 +121,7 @@ ms.locfileid: "76286928"
   
 1.  Nel Sottoscrittore eseguire [sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md). Specificare `@publication`, `@publisher`, `@publisher_db`, la proprietà della sottoscrizione da modificare come `@property` e il nuovo valore come `@value`.  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  Le classi RMO utilizzate per la visualizzazione o la modifica delle proprietà di una sottoscrizione pull dipendono dal tipo di pubblicazione per cui viene creata la sottoscrizione pull.  
   
 #### <a name="to-view-or-modify-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare o modificare le proprietà di una sottoscrizione pull di una pubblicazione snapshot o transazionale  

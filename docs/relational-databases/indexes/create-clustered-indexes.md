@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024994"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
@@ -45,9 +45,9 @@ ms.locfileid: "68024994"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Implementations"></a> Modalità di implementazione tipiche  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Modalità di implementazione tipiche  
  Gli indici cluster vengono implementati nei modi seguenti:  
   
 -   **Vincoli PRIMARY KEY e UNIQUE**  
@@ -62,7 +62,7 @@ ms.locfileid: "68024994"
   
      È possibile creare un indice cluster in una colonna diversa dalla colonna chiave primaria a condizione che sia stato specificato un vincolo di chiave primaria non cluster.  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Quando viene creata una struttura dell'indice cluster, è necessario spazio su disco per la struttura vecchia (origine) e per quella nuova (destinazione) nei file e filegroup appropriati. La struttura vecchia non viene deallocata fino a quando non viene eseguito il commit della transazione completa. Potrebbe inoltre essere necessario spazio su disco aggiuntivo temporaneo per l'ordinamento. Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
@@ -72,12 +72,12 @@ ms.locfileid: "68024994"
   
 -   La chiave di indice di un indice cluster non può contenere colonne di tipo **varchar** con dati esistenti nell'unità di allocazione ROW_OVERFLOW_DATA. Se viene creato un indice cluster in una colonna **varchar** e i dati esistenti si trovano nell'unità di allocazione IN_ROW_DATA, le azioni di inserimento o aggiornamento successive eseguite nella colonna che comporterebbero lo spostamento dei dati all'esterno delle righe avranno esito negativo. Per ottenere informazioni sulle tabelle che potrebbero contenere dati di overflow della riga, usare la funzione a gestione dinamica [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Per creare un indice cluster tramite Esplora oggetti  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68024994"
   
 10. Dal menu **File** scegliere **Salva**_nome\_tabella_.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Per creare un indice cluster  
   

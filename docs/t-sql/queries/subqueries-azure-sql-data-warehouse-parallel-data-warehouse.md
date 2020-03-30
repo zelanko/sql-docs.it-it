@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244827"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Sottoquery (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -32,7 +32,7 @@ ms.locfileid: "75244827"
   
 -   [Esempi: SQL Data Warehouse e Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a> Nozioni di base  
+##  <a name="basics"></a><a name="Basics"></a> Nozioni di base  
  Sottoquery  
  Una sottoquery è una query nidificata in un'istruzione SELECT, INSERT, UPDATE o DELETE o in un'altra sottoquery. Viene anche denominata query interna o istruzione SELECT interna.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75244827"
  Sottoquery correlata  
  Una sottoquery che fa riferimento a una tabella nella query esterna.  
   
-##  <a name="Examples"></a> Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Questa sezione contiene esempi di sottoquery supportate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>R. TOP e ORDER BY in una sottoquery  

@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287859"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitoraggio della replica a livello di programmazione
@@ -56,7 +56,7 @@ ms.locfileid: "76287859"
   
  [Oggetti RMO (Replication Management Objects)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Per monitorare i server di pubblicazione, le pubblicazioni e le sottoscrizioni dal database di distribuzione  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287859"
   
     -   Un valore **1** per **\@mode** per abilitare la metrica del valore soglia di monitoraggio o un valore **2** per disabilitarla.  
   
-##  <a name="RMO"></a> Oggetti RMO (Replication Management Objects)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Oggetti RMO (Replication Management Objects)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Per monitorare una sottoscrizione di una pubblicazione di tipo merge nel Sottoscrittore  
   

@@ -16,10 +16,10 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115834"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opzioni dell'attività Backup database per il piano di manutenzione
@@ -38,7 +38,7 @@ ms.locfileid: "68115834"
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
- Consente di specificare i database su cui verrà eseguita l'attività. Quando questa opzione è selezionata, nell'elenco a discesa sono disponibili le opzioni seguenti: **Tutti i database**, **Tutti i database di sistema**, **Tutti i database utente**, **Database specifici**.  
+ Consente di specificare i database su cui verrà eseguita l'attività. Quando viene selezionato, l'elenco a discesa include le opzioni seguenti: **Tutti i database**, **Tutti i database di sistema**, **Tutti i database utente**, **Database specifici**.  
   
  **Tutti i database**  
  Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -123,10 +123,10 @@ ms.locfileid: "68115834"
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
  **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di Windows.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  

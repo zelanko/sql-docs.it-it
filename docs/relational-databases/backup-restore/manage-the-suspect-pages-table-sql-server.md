@@ -19,10 +19,10 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908917"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gestione della tabella suspect_pages (SQL Server)
@@ -59,9 +59,9 @@ ms.locfileid: "72908917"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
   
 -   **Errori registrati nella tabella suspect_pages**  
   
@@ -116,12 +116,12 @@ ms.locfileid: "72908917"
   
      L'amministratore del database può inoltre inserire o aggiornare i record. Ad esempio, l'aggiornamento di una riga potrebbe essere utile se l'amministratore del database è certo che una determinata pagina sospetta è in realtà rimasta invariata, ma desidera mantenere temporaneamente il record.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages** . Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Per gestire la tabella suspect_pages  
   
@@ -133,7 +133,7 @@ ms.locfileid: "72908917"
   
 4.  Nella finestra Query, modificare, aggiornare o eliminare le righe desiderate.  
 
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Per gestire la tabella suspect_pages  
   

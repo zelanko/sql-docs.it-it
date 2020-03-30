@@ -34,10 +34,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074446"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
@@ -126,11 +126,11 @@ Nella tabella seguente vengono descritte le colonne restituite nel set di risult
 |DISTINCT_RANGE_ROWS|Numero stimato di righe con un valore distinct di colonna compreso in un intervallo dell'istogramma, escluso il limite superiore.|  
 |AVG_RANGE_ROWS|Numero medio di righe con un valore di colonna duplicato compreso in un intervallo dell'istogramma, escluso il limite superiore. Quando DISTINCT_RANGE_ROWS è maggiore di 0, AVG_RANGE_ROWS viene calcolato dividendo RANGE_ROWS per DISTINCT_RANGE_ROWS. Quando DISTINCT_RANGE_ROWS è 0, AVG_RANGE_ROWS restituisce 1 per l'intervallo dell'istogramma.| 
   
-## <a name="Remarks"></a> Osservazioni 
+## <a name="remarks"></a><a name="Remarks"></a> Osservazioni 
 
 La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](#histogram) e al [vettore di densità](#density), non nei metadati. Quando non viene letto alcun dato per generare i dati delle statistiche, il BLOB di statistiche non viene creato e la data non è disponibile. La colonna *updated* è NULL. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
   
-## <a name="histogram"></a> Istogramma  
+## <a name="histogram"></a><a name="histogram"></a> Istogramma  
 Un istogramma misura la frequenza di occorrenza per ogni valore distinct in un set di dati. Query Optimizer calcola un istogramma nei valori di colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori di colonna tramite il campionamento statistico delle righe o un'analisi completa di tutte le righe della tabella o della vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
   
 Per creare l'istogramma, Query Optimizer ordina i valori di colonna, calcola il numero di valori che corrispondono a ogni valore distinct di colonna, quindi aggrega i valori di colonna in un massimo di 200 intervalli contigui dell'istogramma. Ogni intervallo comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Nell'insieme sono inclusi tutti i possibili valori di colonna compresi tra i valori limite, esclusi questi ultimi. Il minore tra i valori di colonna ordinati costituisce il limite superiore per il primo intervallo dell'istogramma.
@@ -146,7 +146,7 @@ Per ogni intervallo dell'istogramma:
   
 Query Optimizer definisce gli intervalli dell'istogramma in base al relativo significato statistico e utilizza un algoritmo per il calcolo della differenza massima per ridurre al minimo il numero di intervalli nell'istogramma, aumentando contemporaneamente la differenza tra i valori limite. Il numero massimo di intervalli è 200. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. A una colonna con 100 valori distinct, ad esempio, può essere associato un istogramma con un numero di punti limite inferiore a 100.
   
-## <a name="density"></a> Vettore di densità  
+## <a name="density-vector"></a><a name="density"></a> Vettore di densità  
 Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Il vettore di densità contiene una densità per ogni prefisso di colonna nell'oggetto statistiche. Se in un oggetto statistiche, ad esempio, sono presenti le colonne chiave `CustomerId`, `ItemId` e `Price`, la densità viene calcolata per ognuno dei prefissi di colonna seguenti.
   
 |Prefisso di colonna|Densità calcolata su|  

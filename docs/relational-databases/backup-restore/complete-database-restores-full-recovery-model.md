@@ -18,10 +18,10 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908964"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione completa)
@@ -41,7 +41,7 @@ ms.locfileid: "72908964"
 
 Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
-##  <a name="PointOfFailure"></a> Ripristino di un database fino al momento dell'errore  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> Ripristino di un database fino al momento dell'errore  
 
  Il recupero dello stato di un database fino al momento dell'errore in genere include i passaggi seguenti:  
   
@@ -69,7 +69,7 @@ Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssN
 > [!NOTE]  
 >  Se si ripristina un backup del database in un'istanza del server diversa, vedere [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Sintassi Transact-SQL di base per RESTORE  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintassi Transact-SQL di base per RESTORE  
  La sintassi di base [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] per la sequenza di ripristino nell'illustrazione precedente è la seguente:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
@@ -82,7 +82,7 @@ Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssN
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Esempio: ripristino fino al momento dell'errore (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Esempio: ripristino fino al momento dell'errore (Transact-SQL)  
  Nell'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente vengono illustrate le opzioni fondamentali di una sequenza di ripristino del database fino al momento dell'errore. Nell'esempio viene creato un backup della parte finale del log del database. Vengono quindi ripristinati un backup completo del database e un backup del log, quindi il backup della parte finale del log. Il database viene infine recuperato in un passaggio finale separato.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> Ripristino di un database fino a un punto all'interno di un backup del log  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> Ripristino di un database fino a un punto all'interno di un backup del log  
  Nel modello di recupero con registrazione completa, un ripristino del database completo può essere generalmente recuperato in un punto nel tempo, in una transazione contrassegnata o in un LSN all'interno di un backup del log. Quando si utilizza il modello di recupero con registrazione minima delle operazioni bulk, se il backup del log contiene modifiche con registrazione minima delle operazioni bulk, il recupero temporizzato non è tuttavia possibile.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Scenari di ripristino temporizzato di esempio  
@@ -145,7 +145,7 @@ GO
 > [!NOTE]  
 >  Per un esempio di ripristino temporizzato, vedere [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare un backup completo del database**  
   
 -   [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  

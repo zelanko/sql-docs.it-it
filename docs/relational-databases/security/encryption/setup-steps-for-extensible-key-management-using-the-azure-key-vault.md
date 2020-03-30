@@ -15,10 +15,10 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557533"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione
@@ -238,7 +238,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
  > L'insieme di credenziali delle chiavi supporta più versioni della stessa chiave denominata, ma le chiavi da usare con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non devono essere con controllo delle versioni o rollback. Se l'amministratore vuole eseguire il rollback della chiave usata per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sarà necessario creare una nuova chiave con un nome diverso nell'insieme di credenziali e usarla per crittografare la chiave DEK.  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>Parte 3: Installare il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iii-install-the-ssnoversion-connector"></a>Parte 3: Installare il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  È possibile scaricare il Connettore SQL Server dall' [Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700). Questa operazione deve essere eseguita dall'amministratore del computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 -   [C. Spiegazione dei codici di errore per Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Parte 4: Configurare[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-ssnoversion"></a>Parte 4: Configurare[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Vedere [B. Domande frequenti](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) per visualizzare una nota sui livelli minimi di autorizzazione necessari per ogni azione in questa sezione.  
   
 1.  **Avviare sqlcmd.exe o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198408"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lezione 1: Creare ed eseguire query per oggetti di database
@@ -34,14 +34,14 @@ Il codice viene eseguito in [!INCLUDE[ssDE](../includes/ssde-md.md)] nello stess
   
 Per eseguire le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], aprire [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 Per completare questa esercitazione è necessario avere SQL Server Management Studio e l'accesso a un'istanza di SQL Server. 
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se non è disponibile un'istanza di SQL Server, crearne una. Per crearne una, selezionare la piattaforma nei collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
-- **Windows**: [Scaricare SQL Server 2017 Developer](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Creazione di un database
 Analogamente a molte altre istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], l'istruzione [`CREATE DATABASE`](statements/create-database-transact-sql.md) ha un parametro obbligatorio, ovvero il nome del database. ` CREATE DATABASE` include anche molti parametri facoltativi, ad esempio il percorso su disco in cui si vogliono inserire i file del database. Quando si esegue `CREATE DATABASE` senza parametri facoltativi, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa i valori predefiniti per molti di tali parametri.
@@ -108,7 +108,7 @@ Dopo aver creato la tabella **Products** è possibile inserirvi dati con l'istru
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3 mm Bracket|0.52||  
   
-La sintassi di base è la seguente: INSERT, nome tabella, elenco colonne, VALUES, quindi un elenco dei valori da inserire. I due trattini davanti a una riga indicano che si tratta di un commento il cui testo verrà ignorato dal compilatore. In questo caso il commento descrive una variazione consentita della sintassi.  
+La sintassi di base è INSERT, nome tabella, elenco colonne, VALUES, a cui segue quindi un elenco dei valori da inserire. I due trattini davanti a una riga indicano che si tratta di un commento il cui testo verrà ignorato dal compilatore. In questo caso il commento descrive una variazione consentita della sintassi.  
   
 ### <a name="insert-data-into-a-table"></a>Inserire dati in una tabella  
   

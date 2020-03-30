@@ -22,10 +22,10 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76315591"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
@@ -81,8 +81,8 @@ ms.locfileid: "76315591"
 |DATABASE_CHANGE_GROUP|Questo evento viene generato quando un database viene creato, modificato o eliminato. viene creato, modificato o eliminato. Equivale a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Questo evento viene generato per segnalare i messaggi di controllo correlati alla sicurezza del trasporto del mirroring del database. Equivale a [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato a ogni accesso a oggetti di database, ad esempio tipi di messaggio, assembly e contratti. Questo evento viene generato per qualsiasi accesso a qualsiasi database. Nota: questo può provocare la creazione di record di controllo di dimensioni elevate.<br /><br /> Equivale a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. L'evento viene generato ogni volta che un oggetto di database viene creato, modificato o eliminato. Nota: questo può provocare la creazione di un numero elevato di record di controllo.<br /><br /> Equivale a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato a ogni accesso a oggetti di database, ad esempio tipi di messaggio, assembly e contratti. Questo evento viene generato per qualsiasi accesso a qualsiasi database. Nota: questa situazione potrebbe provocare la creazione di record di controllo di grandi dimensioni.<br /><br /> Equivale a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. L'evento viene generato ogni volta che un oggetto di database viene creato, modificato o eliminato. Nota: questa situazione potrebbe provocare la creazione di grandi quantità di record di controllo.<br /><br /> Equivale a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Questo evento viene generato in caso di modifica del proprietario di oggetti nell'ambito del database. Questo evento viene generato in caso di qualsiasi modifica del proprietario di oggetti per qualsiasi database del server. Equivale a [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Questo evento viene generato quando è stata eseguita un'istruzione GRANT, REVOKE o DENY per oggetti di database, ad esempio assembly o schemi. Questo evento viene generato per qualsiasi modifica alle autorizzazioni per gli oggetti per qualsiasi database del server. Equivale a [Audit Database Object GDR Event Class](../../../relational-databases/event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Questo evento viene generato quando vengono effettuate operazioni in un database, ad esempio il checkpoint o la sottoscrizione di notifiche di query. nonché in caso di qualsiasi operazione effettuata su qualsiasi database. Equivale a [Audit Database Operation Event Class](../../../relational-databases/event-classes/audit-database-operation-event-class.md).|  

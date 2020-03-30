@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75304948"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Proprietà - SQL Server Integration Services (scheda Servizio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Usare la scheda **Servizio** nella finestra di dialogo **Proprietà** di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per visualizzare o specificare le opzioni seguenti.  
+  Usare la scheda **Servizio** nella finestra di dialogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Proprietà**di** per visualizzare o specificare le opzioni seguenti.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  

@@ -12,10 +12,10 @@ ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 97725acacdd4486ebd92a4424704288c5e4efd3e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907474"
 ---
 # <a name="delete-a-plan-guide"></a>Eliminare una guida di piano
@@ -34,14 +34,14 @@ ms.locfileid: "72907474"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'eliminazione di una guida di piano OBJECT richiede l'autorizzazione ALTER per l'oggetto (ad esempio funzione, stored procedure) a cui fa riferimento la guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-a-plan-guide"></a>Per eliminare una guida di piano  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72907474"
   
 4.  Nella finestra di dialogo **Elimina oggetto** verificare che venga selezionata la guida di piano corretta, quindi fare clic su **OK**.  
 
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-delete-a-single-plan-guide"></a>Per eliminare una singola guida di piano:  
   
