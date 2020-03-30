@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288185"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
@@ -65,9 +65,9 @@ ms.locfileid: "79288185"
 |----------------------|-----------------|  
 |Non salva i dati sensibili (**DontSaveSensitive**)|Quando si salva il pacchetto, i valori delle proprietà riservate vengono eliminati. Con questo livello di protezione i dati non vengono crittografati, ma le proprietà contrassegnate come riservate non vengono salvate insieme al pacchetto. Di conseguenza i dati riservati non sono disponibili ad altri utenti, i quali dovranno specificarli quando aprono il pacchetto.<br /><br /> Se usato con l'utilità **dtutil** (dtutil.exe), questo livello di protezione corrisponde al valore 0.|  
 |Crittografa tutti i dati con una password (**EncryptAllWithPassword**)|Viene utilizzata una password per crittografare l'intero pacchetto. Il pacchetto viene crittografato con una password specificata dall'utente in fase di creazione o di esportazione del pacchetto. Per aprire il pacchetto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o per eseguirlo con l'utilità del prompt dei comandi **dtexec** , l'utente deve specificare la password del pacchetto. Se non specifica la password corretta, l'utente non può né aprire né eseguire il pacchetto.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 3.|  
-|Crittografa tutti i dati con una chiave utente (**EncryptAllWithUserKey**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare l'intero pacchetto. Il pacchetto può essere aperto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o eseguito con l'utilità del prompt dei comandi **dtexec** solo dall'utente che lo ha creato o esportato.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 4.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono usati gli standard DPAPI. Per altre informazioni su DPAPI, vedere MSDN Library all'indirizzo [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408).|  
+|Crittografa tutti i dati con una chiave utente (**EncryptAllWithUserKey**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare l'intero pacchetto. Il pacchetto può essere aperto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o eseguito con l'utilità del prompt dei comandi **dtexec** solo dall'utente che lo ha creato o esportato.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 4.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gli standard DPAPI. Per altre informazioni su DPAPI, vedere MSDN Library all'indirizzo [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Crittografa tutti i dati sensibili con una password (**EncryptSensitiveWithPassword**)|Viene utilizzata una password per crittografare solo i valori delle proprietà riservate nel pacchetto. Per la crittografia viene utilizzato DPAPI. I dati riservati vengono salvati come parte del pacchetto, ma crittografati tramite una password specificata dall'utente corrente in fase di creazione o di esportazione del pacchetto. Per poter aprire il pacchetto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , l'utente deve specificare la password. Se non specifica la password, il pacchetto viene aperto senza i dati riservati e l'utente corrente deve specificare nuovi valori per questi dati. I tentativi di esecuzione del pacchetto senza specificare la password hanno esito negativo. Per altre informazioni sulle password e sull'esecuzione dell'utilità della riga di comando, vedere [Utilità dtexec](../../integration-services/packages/dtexec-utility.md).<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 2.|  
-|Crittografa tutti i dati sensibili con una chiave utente (**EncryptSensitiveWithPassword**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare solo i valori delle proprietà riservate nel pacchetto. Il pacchetto può essere caricato solo da uno stesso utente in base allo stesso profilo. Gli altri utenti che aprono il pacchetto dovranno immettere le informazioni riservate. I tentativi di esecuzione del pacchetto hanno esito negativo. Per la crittografia viene utilizzato DPAPI.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 1.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono usati gli standard DPAPI. Per altre informazioni su DPAPI, vedere MSDN Library all'indirizzo [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408).|  
+|Crittografa tutti i dati sensibili con una chiave utente (**EncryptSensitiveWithPassword**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare solo i valori delle proprietà riservate nel pacchetto. Il pacchetto può essere caricato solo da uno stesso utente in base allo stesso profilo. Gli altri utenti che aprono il pacchetto dovranno immettere le informazioni riservate. I tentativi di esecuzione del pacchetto hanno esito negativo. Per la crittografia viene utilizzato DPAPI.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 1.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gli standard DPAPI. Per altre informazioni su DPAPI, vedere MSDN Library all'indirizzo [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Usa l'archiviazione su server per la crittografia (**ServerStorage**)|Protegge l'intero pacchetto tramite ruoli del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione è supportata quando i pacchetti vengono salvati nel database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Anche il catalogo SSISDB usa il livello di protezione **ServerStorage** .<br /><br /> Questa opzione non è supportata quando un pacchetto viene salvato nel file system da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Impostazione del livello di protezione e catalogo SSISDB  
@@ -86,7 +86,7 @@ ms.locfileid: "79288185"
   
 3.  Dopo che i pacchetti sono stati distribuiti all'ambiente di produzione, il team di gestione può crittografare nuovamente i pacchetti distribuiti assegnando una password complessa nota solo dal team stesso. In alternativa, può crittografare i pacchetti distribuiti selezionando **EncryptSensitiveWithUserKey** o **EncryptAllWithUserKey**e usando le credenziali locali dell'account per l'esecuzione dei pacchetti.  
 
-## <a name="set_protection"></a> Impostazione o modifica del livello di protezione dei pacchetti
+## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> Impostazione o modifica del livello di protezione dei pacchetti
   Per controllare l'accesso al contenuto dei pacchetti e ai valori sensibili contenuti, ad esempio password, impostare il valore della proprietà **ProtectionLevel** . Per poter compilare il progetto, ai pacchetti contenuti in un progetto deve essere assegnato lo stesso livello di protezione del progetto. Se si modifica l'impostazione della proprietà **ProtectionLevel** nel progetto, è necessario aggiornare manualmente l'impostazione delle proprietà per i pacchetti.  
   
  Per informazioni generali sulle funzionalità di sicurezza in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Panoramica della sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
@@ -136,7 +136,7 @@ ms.locfileid: "79288185"
   
          Se si utilizza un comando simile in un file batch, immettere il segnaposto del file "% f" come "%% f" nel file batch.  
 
-## <a name="protection_dialog"></a> Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto
+## <a name="package-project-protection-level-dialog-box"></a><a name="protection_dialog"></a> Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto
   Utilizzare la finestra di dialogo **Livello di protezione pacchetto** per aggiornare il livello di protezione di un pacchetto. Il livello di protezione determina il metodo di protezione, la password o chiave utente e l'ambito di protezione del pacchetto. La protezione può includere tutti i dati o solo i dati sensibili.  
   
  Per comprendere i requisiti e le opzioni relative alla sicurezza dei pacchetti, vedere [Panoramica della sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
@@ -151,7 +151,7 @@ ms.locfileid: "79288185"
  **Conferma password**  
  Digitare di nuovo la password.  
 
-## <a name="password_dialog"></a> Finestra di dialogo Password pacchetto
+## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Finestra di dialogo Password pacchetto
   Utilizzare la finestra di dialogo **Password pacchetto** per specificare la password del pacchetto per un pacchetto crittografato con una password. È necessario specificare una password se il pacchetto utilizza il livello di protezione **Crittografa tutti i dati riservati con una password**oppure **Crittografa tutti i dati con una password** .  
   
 ### <a name="options"></a>Opzioni  

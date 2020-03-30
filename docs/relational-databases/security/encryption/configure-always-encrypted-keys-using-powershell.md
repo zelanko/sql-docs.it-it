@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594467"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>Effettuare il provisioning di chiavi Always Encrypted con PowerShell
@@ -27,7 +27,7 @@ Per una panoramica della gestione delle chiavi Always Encrypted, incluse alcune 
 Per informazioni su come usare il modulo PowerShell SqlServer per Always Encrypted, vedere [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 
-## <a name="KeyProvisionWithoutRoles"></a> Provisioning delle chiavi senza separazione dei ruoli
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> Provisioning delle chiavi senza separazione dei ruoli
 
 Il metodo di provisioning delle chiavi descritto in questa sezione non supporta la separazione dei ruoli tra amministratori della sicurezza e amministratori di database. Alcuni dei passaggi che seguono includono operazioni sulle chiavi fisiche e operazioni sui metadati delle chiavi. Questo metodo di provisioning delle chiavi è quindi consigliato per le organizzazioni che usano il modello DevOps oppure se il database è ospitato nel cloud e l'obiettivo principale consiste nel limitare l'accesso ai dati sensibili agli amministratori del cloud escludendo gli amministratori di database locali. Questo metodo non è consigliato nel caso in cui eventuali concorrenti includano amministratori di database oppure se gli amministratori di database non devono avere accesso ai dati sensibili.
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> Provisioning delle chiavi con separazione dei ruoli
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> Provisioning delle chiavi con separazione dei ruoli
 
 In questa sezione sono elencati i passaggi per la configurazione della crittografia per i casi in cui gli amministratori della sicurezza non hanno accesso al database e gli amministratori di database non hanno accesso all'archivio chiavi o alle chiavi di testo non crittografato.
 

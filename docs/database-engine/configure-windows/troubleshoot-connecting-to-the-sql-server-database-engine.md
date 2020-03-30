@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866379"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
@@ -78,7 +78,7 @@ Per verificare che l'istanza sia in esecuzione, in Gestione configurazione osser
 
 Se l'istanza è arrestata, fare clic con il pulsante destro del mouse sull'istanza e quindi scegliere **Avvia**. L'istanza del server viene avviata e l'indicatore mostra una freccia verde.
 
-## <a name = "startbrowser"></a> Verificare che il servizio SQL Server Browser sia in esecuzione
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> Verificare che il servizio SQL Server Browser sia in esecuzione
 
 Per connettersi a un'istanza denominata, il servizio SQL Server Browser deve essere in esecuzione. In Gestione configurazione individuare il servizio **SQL Server Browser** e verificare che sia in esecuzione. In caso contrario, avviarlo. Il servizio SQL Server Browser non è necessario per le istanze predefinite.
 
@@ -129,7 +129,7 @@ Ottenere l'indirizzo IP del computer che ospita l'istanza di SQL Server.
 
   >SQL Server può stabilire la connessione usando la versione 4 o la versione 6 del protocollo IP. È possibile che la rete supporti uno dei due protocolli o entrambi. Nella maggior parte dei casi la risoluzione dei problemi viene iniziata con l'indirizzo **IPv4** . È più breve e più facile da digitare.
 
-## <a name = "getTCP"></a>Ottenere la porta TCP dell'istanza di SQL Server
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>Ottenere la porta TCP dell'istanza di SQL Server
 
 Nella maggior parte dei casi si stabilisce la connessione al motore di database da un altro computer usando il protocollo TCP.
 
@@ -142,7 +142,7 @@ Questo messaggio indica che l'istanza di SQL Server è in attesa su tutti gli in
   > [!NOTE]
   > Verrà probabilmente indicato `IP address 127.0.0.1`. Si tratta dell'indirizzo dell'adapter di loopback e solo i processi nello stesso computer possono usarlo per connettersi. Può essere utile per la risoluzione dei problemi, ma non può essere usato per la connessione da un altro computer.
 
-## <a name = "enableprotocols"></a>Abilitare i protocolli
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>Abilitare i protocolli
 
 In alcune installazioni di SQL Server la connessione al motore di database da un altro computer non è abilitata, a meno che non venga abilitata da un amministratore usando Gestione configurazione. Per abilitare le connessioni da un altro computer:
 
@@ -150,7 +150,7 @@ In alcune installazioni di SQL Server la connessione al motore di database da un
 1. In Gestione configurazione nel riquadro sinistro espandere **Configurazione di rete SQL Server**e quindi selezionare l'istanza di SQL Server a cui si vuole connettersi. Nel riquadro destro sono elencati i protocolli di connessione disponibili. Il protocollo Shared Memory è in genere abilitato. Poiché può essere usato solo dallo stesso computer, il protocollo Shared Memory è abilitato nella maggior parte delle installazioni. La connessione a SQL Server da un altro computer avviene in genere tramite TCP/IP. Se TCP/IP non è abilitato, fare clic con il pulsante destro del mouse su **TCP/IP**e quindi fare clic su **Abilita**.
 1. Se si modifica l'impostazione di abilitazione per un protocollo, è necessario riavviare il motore di database. Nel riquadro sinistro selezionare **Servizi di SQL Server**. Nel riquadro destro fare clic con il pulsante destro del mouse sull'istanza del motore di database e quindi fare clic su **Riavvia**.
 
-## <a name="testTCPIP"></a>Test della connettività TCP/IP
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>Test della connettività TCP/IP
 
 Per connettersi a SQL Server tramite TCP/IP è necessario che Windows sia in grado di stabilire la connessione. Usare lo strumento `ping` per testare la connettività TCP.
 

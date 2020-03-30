@@ -22,10 +22,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
 ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258281"
 ---
 # <a name="dta-utility"></a>dta - utilità
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|Nessuno|Nessuna struttura esistente.|  
+|NONE|Nessuna struttura esistente.|  
 |ALL|Tutte le strutture esistenti.|  
 |ALIGNED|Tutte le strutture con partizionamento allineato.|  
 |CL_IDX|Tutti gli indici cluster nelle tabelle.|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|Nessuno|Nessun partizionamento.|  
+|NONE|Nessun partizionamento.|  
 |FULL|Partizionamento completo (scegliere questo valore per ottimizzare le prestazioni).|  
 |ALIGNED|Solo partizionamento allineato (scegliere questo valore per ottimizzare la gestione).|  
   
@@ -259,7 +259,7 @@ dta -d AdventureWorks2012 ...
 |valore|Descrizione|  
 |-----------|-----------------|  
 |OFF|Le strutture di progettazione fisica indicate non possono essere create online.|  
-|ATTIVA|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
+|ON|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
 |MIXED|Ottimizzazione guidata motore di database indica le strutture di progettazione fisica che possono essere create online quando possibile.|  
   
  Se gli indici vengono creati online, ONLINE = ON viene aggiunto alla relativa definizione di oggetto.  

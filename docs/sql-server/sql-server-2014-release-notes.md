@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155693"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -115,7 +115,7 @@ La versione errata di StreamInsight.msi e StreamInsightClient.msi si trova nel p
   
 **Soluzione alternativa:** Scaricare e installare la versione corretta dalla [pagina per il download di SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
-### <a name="ProdDoc"></a>Documentazione del prodotto RTM
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>Documentazione del prodotto RTM
   
 Il contenuto di Generatore report e PowerPivot non è disponibile in alcune lingue. 
 
@@ -148,7 +148,7 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il contenuto era disponibile 
   
 **Soluzione alternativa:** No.  
   
-### <a name="DBEngine"></a>Motore di database (RTM)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>Motore di database (RTM)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>Modifiche apportate all'edizione Standard in SQL Server 2014 RTM  
 SQL Server 2014 Standard presenta le seguenti modifiche:  
@@ -288,7 +288,7 @@ Se si è già verificato il problema relativo ai valori instance_id non corrispo
   
     `update` sysdac_history_internal `set` instance_id = '\<valore del passaggio 3\>' `where` \<espressione corrispondente alle righe da aggiornare\>  
   
-### <a name="SSRS"></a>Reporting Services (RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Il server di report in modalità nativa SQL Server 2012 Reporting Services non può essere eseguito side-by-side con componenti di SharePoint di SQL Server 2014 Reporting Services  
 **Problema:** il servizio Windows in modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SQL Server Reporting Services (ReportingServicesService.exe) non viene avviato quando sono presenti componenti di SharePoint di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installati nello stesso server.  
@@ -334,7 +334,7 @@ Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi rela
   
 Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi relativi a SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM in macchine virtuali di Microsoft Azure  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a>SQL Server 2014 RTM in macchine virtuali di Microsoft Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>La procedura guidata Aggiungi replica Azure restituisce un errore durante la configurazione di un listener del gruppo di disponibilità in Azure  
 **Problema:** se un gruppo di disponibilità ha un listener, la procedura guidata Aggiungi replica Azure restituisce un errore durante il tentativo di configurare il listener in Azure.  
@@ -349,7 +349,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 2.  Al termine della procedura guidata, sarà necessario completare la configurazione del listener in Azure come descritto in [Configurazione del listener per i gruppi di disponibilità AlwaysOn in Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
-### <a name="SSAS"></a>Analysis Services (RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>È necessario scaricare, installare e registrare MSOLAP.5 per una nuova farm SharePoint 2010 configurata con SQL Server 2014  
 **Problema:**  
@@ -394,7 +394,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 -    Se la lunghezza serializzata della pianificazione dell'aggiornamento è inferiore alla pianificazione originale, quando si aggiorna una pianificazione dell'aggiornamento dati per una cartella di lavoro le dimensioni del buffer non vengono aggiornate correttamente e le informazioni sulla nuova pianificazione vengono unite a quelle della pianificazione precedente con il conseguente danneggiamento della pianificazione.  
   
-### <a name="DQS"></a>Data Quality Services (RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Nessun supporto tra versioni di Data Quality Services in Master Data Services  
 **Problema:** Non sono supportati gli scenari seguenti:  
@@ -405,7 +405,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 **Soluzione alternativa:** usare la stessa versione di Master Data Services del database del motore di database e di Data Quality Services.  
   
-### <a name="UA"></a>Problemi di Gestione spazio aggiornamenti (RTM)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>Problemi di Gestione spazio aggiornamenti (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Gestione spazio aggiornamenti di SQL Server 2014 segnala problemi di aggiornamento irrilevanti per SQL Server Reporting Services  
 **Problema:** Preparazione aggiornamento di SQL Server fornito con i supporti di SQL Server 2014 segnala erroneamente più errori durante l'analisi del server SQL Server Reporting Services.  

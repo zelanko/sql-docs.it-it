@@ -23,10 +23,10 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288045"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
@@ -37,10 +37,10 @@ ms.locfileid: "79288045"
   
 -   **Per aggiornare un'applicazione livello dati tramite la:**  [Procedura guidata Aggiorna applicazione livello dati](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Un aggiornamento dell'applicazione livello dati è un processo sul posto che consente di modificare lo schema del database esistente affinché corrisponda allo schema definito in una nuova versione dell'applicazione livello dati. La nuova versione dell'applicazione livello dati è fornita in un file del pacchetto di applicazione livello dati. Per altre informazioni sulla creazione di un pacchetto di applicazione livello dati, vedere [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md).  
   
-###  <a name="ChoseDACUpgOptions"></a> Scelta delle opzioni di aggiornamento dell'applicazione livello dati  
+###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> Scelta delle opzioni di aggiornamento dell'applicazione livello dati  
  Sono disponibili quattro opzioni per un aggiornamento sul posto:  
   
 -   **Ignora perdita dati**: se è **True**, l'aggiornamento prosegue anche se alcune delle operazioni implicano la perdita di dati. Se è **False**, queste operazioni comporteranno l'interruzione dell'aggiornamento. Ad esempio, se una tabella nel database corrente non è presente nello schema della nuova applicazione livello dati, la tabella viene rilasciata se è specificato **True** . L'impostazione predefinita è **True**.  
@@ -51,10 +51,10 @@ ms.locfileid: "79288045"
   
 -   **Ignora convalida criteri**: se è **True**, i criteri di selezione server dell'applicazione livello dati non vengono valutati. Se è If **False**, i criteri vengono valutati e l'aggiornamento si arresta in caso di errore di convalida. L'impostazione predefinita è **False**.  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  È possibile eseguire aggiornamenti dell'applicazione livello dati solo in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  È consigliabile eseguire un backup completo del database prima di avviare l'aggiornamento. Se durante un aggiornamento viene rilevato un errore e non è possibile eseguire il rollback di tutte le relative modifiche, potrebbe essere necessario ripristinare il backup.  
   
  Prima di dare inizio all'aggiornamento, è necessario intraprendere diverse azioni per la convalida del pacchetto di applicazione livello dati e delle azioni di aggiornamento. Per altre informazioni su come eseguire questi controlli, vedere [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md).  
@@ -69,13 +69,13 @@ ms.locfileid: "79288045"
   
  Assicurarsi che ci sia abbastanza spazio del log delle transazioni disponibile per registrare tutte le modifiche.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un pacchetto di applicazione livello dati senza password. Quando il pacchetto viene distribuito o aggiornato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Un'applicazione livello dati può essere aggiornata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure tramite account di accesso nel ruolo predefinito del server **dbcreator** con autorizzazioni ALTER ANY LOGIN. È necessario che l'accesso venga eseguito come proprietario del database esistente. È anche possibile aggiornare un'applicazione livello dati con l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
-##  <a name="UsingDACUpgradeWizard"></a> Utilizzo della procedura guidata Aggiorna applicazione di livello dati  
+##  <a name="using-the-upgrade-data-tier-application-wizard"></a><a name="UsingDACUpgradeWizard"></a> Utilizzo della procedura guidata Aggiorna applicazione di livello dati  
  **Per aggiornare un'applicazione livello dati tramite una procedura guidata**  
   
 1.  In **Esplora oggetti**espandere il nodo dell'istanza contenente l'applicazione livello dati da aggiornare.  
@@ -100,7 +100,7 @@ ms.locfileid: "79288045"
   
     7.  [Pagina Aggiorna applicazione livello dati](#Upgrade)  
   
-##  <a name="Introduction"></a> Pagina Introduzione  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per l'aggiornamento di un'applicazione livello dati.  
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
@@ -109,7 +109,7 @@ ms.locfileid: "79288045"
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
-##  <a name="Select_dac_package"></a> Pagina Seleziona pacchetto  
+##  <a name="select-package-page"></a><a name="Select_dac_package"></a> Pagina Seleziona pacchetto  
  Utilizzare questa pagina per specificare il pacchetto di applicazione livello dati contenente la nuova versione dell'applicazione livello dati. La pagina passa attraverso due stati.  
   
 ### <a name="select-the-dac-package"></a>Selezionare pacchetto di applicazione livello dati  
@@ -140,7 +140,7 @@ ms.locfileid: "79288045"
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
-##  <a name="Review_policy"></a> Pagina Verifica criteri  
+##  <a name="review-policy-page"></a><a name="Review_policy"></a> Pagina Verifica criteri  
  Usare questa pagina per controllare il risultato della valutazione degli eventuali criteri di selezione dei server dell'applicazione livello dati. I criteri di selezione dei server del pacchetto DAC sono facoltativi e sono assegnati a un pacchetto DAC creato in Microsoft Visual Studio. I facet dei criteri di selezione dei server vengono usati per specificare le condizioni che un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve soddisfare per ospitare il pacchetto DAC.  
   
  **Risultati della valutazione delle condizioni dei criteri** : report di sola lettura che indica se le valutazioni delle condizioni dei criteri di selezione del server di applicazione livello dati sono soddisfatte. I risultati della valutazione di ogni condizione sono riportati in una riga distinta.  
@@ -153,7 +153,7 @@ ms.locfileid: "79288045"
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
-##  <a name="Detect_change"></a> Pagina Rileva modifiche  
+##  <a name="detect-change-page"></a><a name="Detect_change"></a> Pagina Rileva modifiche  
  In questa pagina vengono visualizzati i risultati dei controlli effettuati dalla procedura guidata sulle modifiche apportate al database che rendono lo schema diverso rispetto alla relativa definizione archiviata nei metadati dell'applicazione livello dati di **msdb**. Viene segnalato ad esempio se sono state utilizzate istruzioni CREATE, ALTER o DROP per aggiungere, modificare o rimuovere oggetti dal database dopo la distribuzione originale dell'applicazione livello dati. Nella pagina viene dapprima visualizzato un indicatore di stato, quindi vengono visualizzati i risultati dell'analisi.  
   
  **Rilevamento delle modifiche in corso. L'operazione potrebbe richiedere alcuni minuti** : viene visualizzato un indicatore di stato che indica il rilevamento delle differenze tra lo schema corrente del database e gli oggetti nella definizione di applicazione livello dati.  
@@ -187,7 +187,7 @@ ms.locfileid: "79288045"
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
-##  <a name="ReviewUpgPlan"></a> Pagina Revisione del piano di aggiornamento  
+##  <a name="review-the-upgrade-plan-page"></a><a name="ReviewUpgPlan"></a> Pagina Revisione del piano di aggiornamento  
  Utilizzare questa pagina per controllare le azioni che verranno eseguite tramite il processo di aggiornamento. Continuare solo se si è sicuri che l'aggiornamento non crei problemi.  
   
  **Le azioni seguenti saranno utilizzate per aggiornare l'applicazione livello dati.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella colonna **Azione** sono visualizzate le azioni, ad esempio le istruzioni Transact-SQL, che verranno eseguite per eseguire l'aggiornamento. Nella colonna **Perdita di dati** sarà contenuto un avviso qualora l'azione associata possa comportare l'eliminazione di dati.  
@@ -208,7 +208,7 @@ ms.locfileid: "79288045"
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
-##  <a name="Summary"></a> Pagina Riepilogo  
+##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per effettuare una verifica finale delle azioni eseguite dalla procedura guidata durante l'aggiornamento dell'applicazione livello dati.  
   
  **Per aggiornare l'applicazione livello dati saranno utilizzate le seguenti impostazioni.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella finestra viene visualizzata l'applicazione livello dati selezionata per l'aggiornamento e il pacchetto di applicazione livello dati che contiene la nuova versione dell'applicazione. Viene inoltre indicato se la versione corrente del database corrisponde alla definizione dell'applicazione livello dati corrente o se il database è stato modificato.  
@@ -219,7 +219,7 @@ ms.locfileid: "79288045"
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
-##  <a name="Upgrade"></a> Pagina Aggiorna applicazione livello dati  
+##  <a name="upgrade-dac-page"></a><a name="Upgrade"></a> Pagina Aggiorna applicazione livello dati  
  In questa pagina viene riportato l'esito positivo o negativo dell'operazione di aggiornamento.  
   
  **Aggiornamento del pacchetto DAC** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per l'aggiornamento dell'applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
@@ -228,7 +228,7 @@ ms.locfileid: "79288045"
   
  **Fine** : consente di terminare la procedura guidata.  
   
-##  <a name="UpgradeDACPowerShell"></a> Utilizzo di PowerShell  
+##  <a name="using-powershell"></a><a name="UpgradeDACPowerShell"></a> Utilizzo di PowerShell  
  **Per aggiornare un'applicazione livello dati usando il metodo IncrementalUpgrade() in uno script di PowerShell**  
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da aggiornare.  

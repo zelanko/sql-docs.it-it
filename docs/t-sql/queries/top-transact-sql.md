@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948245"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -161,7 +161,7 @@ Non è possibile combinare TOP con OFFSET e FETCH nella stessa espressione di qu
 |[Inclusione di valori equivalenti](#tie)|WITH TIES|  
 |[Limitazione delle righe interessate da DELETE, INSERT o UPDATE](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a> Sintassi di base  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintassi di base  
 Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base della clausola ORDER BY utilizzando la sintassi minima necessaria.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>R. Utilizzo di TOP con un valore costante  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> Inclusione di valori equivalenti  
+###  <a name="including-tie-values"></a><a name="tie"></a> Inclusione di valori equivalenti  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>R. Utilizzo di WITH TIES per includere righe corrispondenti ai valori nell'ultima riga  
 L'esempio seguente recupera il primo `10`% di tutti i dipendenti con lo stipendio più alto e restituisce i dipendenti in ordine decrescente in base allo stipendio. Specificando `WITH TIES`, nel set di risultati vengono inclusi anche i dipendenti con stipendio pari allo stipendio più basso restituito (ultima riga), anche se in questo modo il set di risultati supera il `10`% dei dipendenti.  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> Limitazione delle righe interessate da DELETE, INSERT o UPDATE  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> Limitazione delle righe interessate da DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>R. Utilizzo di TOP per limitare il numero di righe eliminate  
 Quando si usa una clausola TOP (*n*) con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di *n* righe. In altre parole, l'istruzione DELETE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. L'esempio seguente elimina `20` righe con scadenze precedenti al 1° luglio 2002 dalla tabella `PurchaseOrderDetail`.  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 L'esempio seguente restituisce le prime 31 righe corrispondenti ai criteri di query. La clausola **ORDER BY** garantisce che le 31 righe restituite siano le prime 31 righe in base all'ordinamento alfabetico della colonna `LastName`.  
   
 Uso di **TOP** senza specificare i valori equivalenti.  

@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078575"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
@@ -100,17 +100,17 @@ ms.locfileid: "77078575"
   
  Per altre informazioni sulle mappe, vedere [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Per istruzioni dettagliate sull'aggiunta di una mappa a un report, vedere [Esercitazione: Report mappa &#40;Generatore report&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
   
-##  <a name="SpatialDataSource"></a> Scegliere un'origine dati spaziali  
+##  <a name="choose-a-source-of-spatial-data"></a><a name="SpatialDataSource"></a> Scegliere un'origine dati spaziali  
  In questa pagina specificare l'origine dati spaziali e i dati spaziali da includere. I dati spaziali possono provenire dalla raccolta mappe, da un file di forma ESRI o da una query del set di dati che specifica i dati spaziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusi in un database di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o di una versione successiva.  
   
  È possibile utilizzare la stessa origine dati spaziali o una diversa per ogni livello, tuttavia è necessario specificare l'origine ogni volta che si aggiunge un livello. Se i dati spaziali provengono dalla raccolta mappe o da un file di forma ESRI, l'origine dati spaziali non è un elemento del report distinto e non viene visualizzata nel riquadro dei dati del report.  
   
-###  <a name="SpatialData"></a> Informazioni sui dati spaziali  
+###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> Informazioni sui dati spaziali  
  I dati spaziali contengono le coordinate che definiscono gli elementi geografici o geometrici. In una mappa, i dati spaziali definiscono gli *elementi della mappa*: poligoni per aree o forme, linee per route o percorsi e punti per marcatori o puntine da disegno. I dati spaziali vengono archiviati in formato binario nell'origine dati e vengono specificati come set di coordinate. Ad esempio un punto è indicato dalle coordinate X e Y (X Y), una linea da due set di coordinate [(X1 Y1), (X2 Y2)], mentre un poligono viene indicato da almeno quattro set di coordinate dove il primo e l'ultimo set sono uguali [(X1 Y1) (X3 Y3) (X2 Y2)].  
   
  Per ulteriori informazioni, vedere la documentazione relativa al tipo di dati spaziali utilizzato.  
   
-###  <a name="MapGallery"></a> What is the map gallery?  
+###  <a name="what-is-the-map-gallery"></a><a name="MapGallery"></a> What is the map gallery?  
  La raccolta mappe contiene le mappe dei report presenti nella cartella della raccolta mappe per l'ambiente di creazione del report. Le mappe della raccolta rappresentano un modo rapido per aggiungere una mappa al report. Le mappe predefinite della raccolta vengono fornite da un provider di mappe.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "77078575"
   
  Per estendere la raccolta mappe, è possibile aggiungere o rimuovere report dalla directory della raccolta mappe e aggiungere cartelle per organizzare le mappe. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
  Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<nomefile>* .shp che contiene i dati spaziali e un file di supporto *\<nomefile>* .dbf.  
   
  Quando si specifica come origine dati spaziali un file di forma posizionato nel computer locale, i dati spaziali vengono incorporati automaticamente nel report. Per utilizzare in modo dinamico i dati spaziali di un file ESRI, è necessario eseguire le operazioni seguenti:  
@@ -127,10 +127,10 @@ ms.locfileid: "77078575"
   
  In Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aggiungere sia il file con estensione shp sia il file con estensione dbf al progetto report, quindi specificare il nome del file con estensione shp come origine dati spaziali.  
   
-###  <a name="GetShapefiles"></a> Dove è possibile ottenere i file di forma ESRI  
+###  <a name="where-can-i-get-esri-shapefiles"></a><a name="GetShapefiles"></a> Dove è possibile ottenere i file di forma ESRI  
  I file di forma ESRI sono disponibili sul Web. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
-###  <a name="SqlServerSpatial"></a> Informazioni su una query spaziale di SQL Server  
+###  <a name="what-is-a-sql-server-spatial-query"></a><a name="SqlServerSpatial"></a> Informazioni su una query spaziale di SQL Server  
  Una query spaziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è una query del set di dati che specifica dati che possono essere di tipo SQLGeometry o SQLGeography di un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ ms.locfileid: "77078575"
   
  Per altre informazioni, vedere [Tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-##  <a name="MapView"></a> Scegli opzioni di dati spaziali e vista mappa  
+##  <a name="choose-spatial-data-and-map-view-options"></a><a name="MapView"></a> Scegli opzioni di dati spaziali e vista mappa  
  In questa pagina è possibile impostare le opzioni seguenti:  
   
 -   Impostare il livello di allineamento al centro e zoom della vista per i dati spaziali selezionati nella pagina della procedura guidata precedente. La vista impostata si applica a tutta la mappa.  
@@ -153,12 +153,12 @@ ms.locfileid: "77078575"
   
 -   Specificare se includere uno sfondo a tessere mappa di Bing di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-###  <a name="Viewport"></a> Informazioni sulla vista o sul viewport mappa  
+###  <a name="what-is-the-map-view-or-viewport"></a><a name="Viewport"></a> Informazioni sulla vista o sul viewport mappa  
  Il viewport mappa definisce l'area della mappa da visualizzare per tutti i livelli nel report.  
   
  Per impostazione predefinita, la scala dei colori e la scala distanza vengono visualizzate all'interno del viewport, mentre la legenda della mappa all'esterno. Queste opzioni relative al viewport possono essere modificate dopo aver completato la procedura guidata.  
   
-###  <a name="Resolution"></a> Informazioni sulla risoluzione e ottimizzazione della mappa  
+###  <a name="what-is-map-resolution-and-optimization"></a><a name="Resolution"></a> Informazioni sulla risoluzione e ottimizzazione della mappa  
  Quando si modifica la risoluzione per i dati spaziali che rappresentano linee o poligoni, si specifica il livello di dettaglio con cui si desidera che la mappa sia disegnata. Ad esempio, per le viste aeree di un'area, è necessaria una granularità fino a cento metri di superficie sulla terra oppure una risoluzione di 1,5 km è sufficiente?  
   
  Se i dati spaziali sono incorporati nel report, una risoluzione maggiore aumenta il numero di elementi necessario per disegnare i dettagli con quella risoluzione. Se i dati spaziali non sono incorporati nel report, una risoluzione maggiore aumenta il tempo richiesto dall'elaboratore di report per calcolare le linee per la mappa con quella risoluzione ogni volta che si visualizza il report.  
@@ -167,14 +167,14 @@ ms.locfileid: "77078575"
   
  Quando si regola il dispositivo di scorrimento, i dati dell'anteprima nel riquadro della procedura guidata vengono aggiornati per fornire all'utente un'indicazione dell'effetto. Dopo aver aggiunto la mappa al report, è possibile regolare questo valore modificando le opzioni del viewport mappa.  
   
-###  <a name="Embed"></a> Funzione dell'incorporamento dei dati spaziali  
+###  <a name="what-does-embedding-spatial-data-do"></a><a name="Embed"></a> Funzione dell'incorporamento dei dati spaziali  
  Quando si incorporano gli elementi della mappa o le tessere mappa di Bing in un report, i dati spaziali vengono archiviati nella definizione del report.  
   
  Un report con una mappa può utilizzare i dati spaziali o le tessere mappa di Bing che vengono recuperati in modo dinamico durante l'elaborazione del report o in fase di progettazione e quindi incorporati nella definizione del report. Gli elementi della mappa incorporati possono aumentare notevolmente le dimensioni della definizione del report, ma riducono il tempo necessario per visualizzare la mappa nel report. Gli elementi dinamici della mappa riducono le dimensioni della definizione del report, ma aumentano il tempo necessario per elaborare e visualizzare la mappa.  
   
  Una buona progettazione di report richiede una valutazione dei compromessi per i dati della mappa statici o dinamici e l'individuazione dell'equilibrio migliore in base alle circostanze. Generalmente, più dati indicano che la definizione del report e il report compilato richiedono uno spazio maggiore per l'archiviazione sul server di report e tempi di elaborazione più lunghi. Pertanto, è consigliabile limitare i dati spaziali, oltre agli altri dati del report, alle sole informazioni necessarie per il report.  
   
-###  <a name="Tiles"></a> Informazioni su uno sfondo a tessere mappa di Bing  
+###  <a name="what-is-a-bing-map-tile-background"></a><a name="Tiles"></a> Informazioni su uno sfondo a tessere mappa di Bing  
  Per aggiungere uno sfondo con un'immagine geografica alla mappa, selezionare l'opzione relativa allo sfondo a tessere mappa di Bing. L'elaboratore di report scarica le sezioni dai servizi Web di Bing Maps per l'area della mappa e la risoluzione specificata in questa pagina della procedura guidata. È possibile specificare uno dei seguenti tipi di sezioni:  
   
 -   **Strada.** Visualizza uno stile per la mappa stradale con sfondo bianco.  
@@ -189,12 +189,12 @@ ms.locfileid: "77078575"
   
  Per altre informazioni su come personalizzare un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="Visualization"></a> Scegli vista mappa  
+##  <a name="choose-map-visualization"></a><a name="Visualization"></a> Scegli vista mappa  
  In questa pagina scegliere il tipo di mappa o il livello mappa da aggiungere al report. La prima esecuzione della procedura guidata comporta l'aggiunta della mappa e del relativo primo livello al report. Una mappa può contenere più livelli. Ognuno di essi visualizza un tipo specifico di dati spaziali: poligoni, linee o punti.  
   
  Il tipo di mappa da scegliere dipende dallo scopo della mappa e dai dati a disposizione.  
   
-###  <a name="MapType"></a> Differenza tra una mappa di base, una mappa a bolle e una mappa analitica  
+###  <a name="what-is-the-difference-among-a-basic-map-a-bubble-map-and-an-analytical-map"></a><a name="MapType"></a> Differenza tra una mappa di base, una mappa a bolle e una mappa analitica  
  Una **Mappa di base** visualizza solo le posizioni. È possibile variare i colori delle aree sulla mappa usando le sfumature, tuttavia il colore non rappresenta i valori dei dati analitici.  
   
  Una **Mappa a bolle** fornisce il valore relativo per una singola aggregazione di dati analitici usando le dimensioni delle bolle, ad esempio per le vendite dei negozi. È possibile creare mappe a bolle per i poligoni o i punti. Per i poligoni, impostare le proprietà del punto centrale del poligono; per i punti, impostare le proprietà del marcatore.  
@@ -203,29 +203,29 @@ ms.locfileid: "77078575"
   
  Per altre informazioni, vedere [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AnalyticalData"></a> Scegli il set di dati analitici  
+##  <a name="choose-the-analytical-dataset"></a><a name="AnalyticalData"></a> Scegli il set di dati analitici  
  In questa pagina specificare dove acquisire i dati analitici da visualizzare su questo livello mappa.  
   
  Per visualizzare i dati del report o qualsiasi altro dato analitico sullo sfondo della mappa, è necessario specificare dove si trovano i dati e il modo in cui sono correlati ai dati spaziali. I dati possono provenire da un set di dati del report esistente o da un nuovo set di dati per cui si compila una query. I dati analitici esistenti potrebbero essere inclusi nel file di forma ESRI che contiene i dati spaziali.  
   
-###  <a name="Diff"></a> Differenze tra dati spaziali e dati analitici  
+###  <a name="what-is-the-difference-between-spatial-data-and-analytical-data"></a><a name="Diff"></a> Differenze tra dati spaziali e dati analitici  
  I dati spaziali sono costituiti da set di coordinate che specificano punti, linee e poligoni. Gli elementi della mappa si basano sui dati spaziali.  
   
  I dati analitici sono dati numerici o categorici utilizzati per variare l'aspetto della mappa. I dati analitici possono provenire da un set di dati del report o potrebbero essere inclusi con i dati spaziali di una mappa della raccolta mappe o di un file di forma ESRI.  
   
-##  <a name="SpecifyMatchFields"></a> Specifica campi delle corrispondenze  
+##  <a name="specify-the-match-fields"></a><a name="SpecifyMatchFields"></a> Specifica campi delle corrispondenze  
  In questa pagina compilare una relazione tra i dati spaziali e i dati analitici.  
   
-###  <a name="MatchFields"></a> Informazioni sui campi delle corrispondenze  
+###  <a name="what-are-match-fields"></a><a name="MatchFields"></a> Informazioni sui campi delle corrispondenze  
  I campi delle corrispondenze consentono all'elaboratore di report di compilare una relazione tra i dati analitici e i dati spaziali e specificano valori univoci all'interno dei dati analitici. Il nome del negozio, ad esempio, potrebbe non essere univoco all'interno dei dati, pertanto è possibile specificare sia una città sia il nome del negozio.  
   
-##  <a name="ThemeandVisualization"></a> Scegliere combinazione di colori e visualizzazione dati  
+##  <a name="choose-color-theme-and-data-visualization"></a><a name="ThemeandVisualization"></a> Scegliere combinazione di colori e visualizzazione dati  
  In questa pagina specificare come visualizzare i dati sullo sfondo della mappa, il tema della mappa, i campi da visualizzare e gli elementi da variare, quali colore, dimensioni e/o tipo di marcatore.  
   
-###  <a name="Theme"></a> Funzione del tema  
+###  <a name="what-does-the-theme-do"></a><a name="Theme"></a> Funzione del tema  
  Il tema scelto imposta i valori predefiniti per colore, bordo e carattere. Queste opzioni possono essere modificate dopo aver completato la procedura guidata.  
   
-###  <a name="Legends"></a> Utilizzo delle legende e delle scale in Anteprima mappe  
+###  <a name="what-are-the-legends-and-scales-in-map-preview-for"></a><a name="Legends"></a> Utilizzo delle legende e delle scale in Anteprima mappe  
  Le legende consentono a un utente di interpretare i dati visualizzati su una mappa. Una mappa presenta un intervallo di colori, una scala distanza e una legenda.  
   
 -   **Intervallo di colori.** L'intervallo di colori visualizza una barra dei colori con una scala che fornisce un supporto per gli intervalli di dati determinati dall'elaboratore di report in base alle regole specificate per il livello.  
@@ -234,7 +234,7 @@ ms.locfileid: "77078575"
   
 -   **Legenda.** La legenda fornisce un supporto per l'interpretazione dei colori, delle dimensioni e dei tipi di marcatori su una mappa. Per impostazione predefinita, tutte le regole dei livelli visualizzano gli intervalli di dati nella prima legenda. È possibile personalizzare questa legenda e aggiungerne altre dopo aver aggiunto la mappa al report.  
   
-###  <a name="Rules"></a> Informazioni sulle regole  
+###  <a name="what-are-rules"></a><a name="Rules"></a> Informazioni sulle regole  
  Le regole sono calcoli utilizzati dall'elaboratore di report per suddividere i dati analitici in intervalli. È possibile specificare regole diverse per ogni livello. Il tipo di regole che è possibile specificare dipende dal tipo di dati spaziali presenti nel livello:  
   
 -   **Poligoni.** È possibile specificare regole colore.  

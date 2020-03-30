@@ -1,5 +1,5 @@
 ---
-title: 'Avvio rapido: Connettersi ed eseguire query in PostgreSQL'
+title: 'Guida introduttiva: Connettersi ed eseguire query in PostgreSQL'
 titleSuffix: Azure Data Studio
 description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi a PostgreSQL ed eseguire una query
 ms.custom: seodec18
@@ -11,16 +11,16 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71127246"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query in PostgreSQL con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>Guida introduttiva: Connettersi ed eseguire query in PostgreSQL con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Questo argomento di avvio rapido illustra come usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a Postgres e come usare istruzioni SQL per creare il database *tutorialdb* ed eseguire query su di esso.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questo argomento di avvio rapido sono necessari [!INCLUDE[name-sos](../includes/name-sos-short.md)], l'estensione PostgreSQL per [!INCLUDE[name-sos](../includes/name-sos-short.md)] e l'accesso a un server PostgreSQL.
 

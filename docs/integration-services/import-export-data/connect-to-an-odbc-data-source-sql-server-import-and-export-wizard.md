@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608030"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati ODBC (Importazione/Esportazione guidata SQL Server)
@@ -65,7 +65,7 @@ Nel passaggio successivo vengono specificate le informazioni di connessione per 
 
 Se si specifica una stringa di connessione, la pagina **Scelta origine dati** o **Scelta destinazione** visualizza tutte le informazioni di connessione che verranno usate dalla procedura guidata per la connessione all'origine dati, ad esempio il nome del server e del database e il metodo di autenticazione. Se si specifica un DSN, queste informazioni non sono visibili.
 
-## <a name="odbc_dsn"></a> Opzione 1 - Specificare un DSN
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> Opzione 1 - Specificare un DSN
 Se si vuole specificare le informazioni di connessione con un DSN (nome dell'origine dati), usare l'applet **Amministrazione origine dati ODBC** per trovare il nome del DSN esistente o creare un nuovo DSN.
 1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel menu Start o nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)** .
 2.  Avviare l'applet. Viene visualizzata la finestra **Amministrazione origine dati ODBC**. L'applet ha l'aspetto seguente.
@@ -88,7 +88,7 @@ Se si vuole specificare le informazioni di connessione con un DSN (nome dell'ori
     
 8.  Tornare alla procedura guidata e immettere il nome DSN nel campo **Dsn** nella pagina **Scelta origine dati** o **Scelta destinazione**. Continuare con il passaggio successivo della procedura guidata.
 
-## <a name="odbc_connstring"></a> Opzione 2 - Specificare una stringa di connessione
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> Opzione 2 - Specificare una stringa di connessione
 Se si vuole specificare le informazioni di connessione con una stringa di connessione, la parte rimanente di questo argomento descrive come ottenere la stringa di connessione necessaria.
 
 L'esempio seguente usa la stringa di connessione seguente che stabilisce la connessione a Microsoft SQL Server. L'esempio di database usato è **WideWorldImporters** e ci si connette a SQL Server sul computer locale.

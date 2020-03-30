@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634546"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aggiornare i componenti di Machine Learning (R e Python) nelle istanze di SQL Server
@@ -106,7 +106,7 @@ Di seguito è riportata una sintesi dei passaggi da eseguire per configurare il 
 
 A livello di esperienza utente, la tecnologia e la modalità d'uso rimangono invariate. L'unica differenza è data dalla presenza di pacchetti con versioni più recenti ed eventualmente di pacchetti aggiuntivi, originariamente non disponibili tramite SQL Server.
 
-## <a name="bkmk_BindWizard"></a>Eseguire il binding a MLS tramite il programma di installazione
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>Eseguire il binding a MLS tramite il programma di installazione
 
 Il programma di installazione di Microsoft Machine Learning rileva le funzionalità e la versione di SQL Server esistenti e richiama l'utilità SqlBindR.exe per modificare il binding. A livello interno, l'utilità SqlBindR è concatenata al programma di installazione e viene usata indirettamente. In un secondo momento è comunque possibile chiamare SqlBindR direttamente dalla riga di comando per selezionare opzioni specifiche.
 
@@ -210,7 +210,7 @@ Le istruzioni seguenti illustrano come posizionare i file per un'installazione o
 
 1. Eseguire ServerSetup.exe e seguire le istruzioni visualizzate per completare l'installazione.
 
-## <a name="bkmk_BindCmd"></a>Operazioni da riga di comando
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>Operazioni da riga di comando
 
 Dopo l'esecuzione di Microsoft Machine Learning Server, diventa disponibile un'utilità della riga di comando denominata SqlBindR.exe che è possibile usare per altre operazioni di binding. Se, ad esempio, si decide di annullare un binding, è possibile eseguire nuovamente il programma di installazione oppure usare l'utilità della riga di comando. È inoltre possibile usare questo strumento per verificare la disponibilità e la compatibilità delle istanze.
 
@@ -229,7 +229,7 @@ Dopo l'esecuzione di Microsoft Machine Learning Server, diventa disponibile un'u
 
 4. Al termine dell'aggiornamento, riavviare il servizio Launchpad associato a qualsiasi istanza modificata.
 
-## <a name="bkmk_Unbind"></a>Annullare il binding di un'istanza
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>Annullare il binding di un'istanza
 
 È possibile annullare un'istanza con binding e ripristinare un'installazione iniziale dei componenti R e Python, come configurata dal programma di installazione di SQL Server. Il processo di ripristino del modello di manutenzione di SQL Server prevede tre passaggi.
 
@@ -243,7 +243,7 @@ Dopo l'esecuzione di Microsoft Machine Learning Server, diventa disponibile un'u
 
 Per eseguire il rollback del binding sono disponibili due opzioni: eseguire nuovamente il programma di installazione o usare l'utilità della riga di comando SqlBindR.
 
-#### <a name="bkmk_wizunbind"></a> Annullare il binding con il programma di installazione
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> Annullare il binding con il programma di installazione
 
 1. Individuare il programma di installazione per Machine Learning Server. Se il programma di installazione è stato rimosso, può essere necessario scaricarlo di nuovo o copiarlo da un altro computer.
 2. Assicurarsi di eseguire il programma di installazione nel computer in cui è presente l'istanza di cui si vuole annullare il binding.
@@ -252,7 +252,7 @@ Per eseguire il rollback del binding sono disponibili due opzioni: eseguire nuov
 4. Accettare il contratto di licenza. È necessario indicare che si accettano le condizioni di licenza anche durante l'installazione.
 5. Fare clic su **Fine**. L'esecuzione del processo richiede alcuni minuti.
 
-#### <a name="bkmk_cmdunbind"></a> Annullare il binding tramite la riga di comando
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> Annullare il binding tramite la riga di comando
 
 1. Aprire un prompt dei comandi e passare alla cartella contenente **sqlbindr.exe**, come descritto nella sezione precedente.
 

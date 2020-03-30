@@ -15,17 +15,17 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908704"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
   
-##  <a name="BasicsLoadNew"></a> Caricamento o migrazione di file in tabelle FileTable  
+##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> Caricamento o migrazione di file in tabelle FileTable  
  Il metodo scelto per il caricamento o la migrazione di file in una tabella FileTable dipende dalla posizione in cui sono attualmente archiviati i file.  
   
 |Attuale posizione dei file|Opzioni per migrazione|  
@@ -33,7 +33,7 @@ ms.locfileid: "72908704"
 |I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di conoscenza dei file.|Poiché una tabella FileTable viene visualizzata come cartella nel file system di Windows, è possibile caricare facilmente file in un nuova tabella FileTable tramite alcuni dei metodi disponibili per lo spostamento o la copia di file. Questi metodi includono Esplora risorse, opzioni della riga di comando, ad esempio xcopy e robocopy, nonché applicazioni o script personalizzati.<br /><br /> Non è possibile convertire una cartella esistente in tabella FileTable.|  
 |I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include una tabella di metadati contenente puntatori ai file.|Il primo passaggio consiste nello spostare o copiare i file tramite uno dei metodi indicati in precedenza.<br /><br /> Il secondo passaggio consiste nell'aggiornare la tabella esistente di metadati in modo che punti alla nuova posizione dei file.<br /><br /> Per altre informazioni, vedere [Esempio: Migrazione di file dal file system in una tabella FileTable](#HowToMigrateFiles) in questo articolo.|  
   
-###  <a name="HowToLoadNew"></a> Procedura: Caricare file in una tabella FileTable  
+###  <a name="how-to-load-files-into-a-filetable"></a><a name="HowToLoadNew"></a> Procedura: Caricare file in una tabella FileTable  
 Per caricare i file in una tabella FileTable è possibile usare i metodi seguenti:  
   
 -   Trascinare e rilasciare file dalle cartelle di origine alla nuova cartella FileTable in Esplora risorse.  
@@ -42,7 +42,7 @@ Per caricare i file in una tabella FileTable è possibile usare i metodi seguent
   
 -   Scrivere un'applicazione personalizzata per spostare o copiare i file in C# o Visual Basic.NET. Chiamare metodi dallo spazio dei nomi **System.IO**.  
   
-###  <a name="HowToMigrateFiles"></a> Esempio: Migrazione di file dal file system in una tabella FileTable  
+###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> Esempio: Migrazione di file dal file system in una tabella FileTable  
  In questo scenario i file vengono archiviati nel file system ed è disponibile una tabella di metadati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente puntatori ai file. Si desidera spostare i file in una tabella FileTable, quindi sostituire il percorso UNC originale per ogni file nei metadati con il percorso UNC della tabella FileTable. La funzione [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) consente di raggiungere tale obiettivo.  
   
  Per questo esempio, si supponga la disponibilità di una tabella di database esistente, denominata **PhotoMetadata**, che contiene dati su fotografie. Questa tabella include una colonna **UNCPath** di tipo **varchar**(512) contenente il percorso UNC effettivo di un file con estensione jpg.  
@@ -77,7 +77,7 @@ UPDATE PhotoMetadata
     SET pathlocator = GetPathLocator(UNCPath);  
 ```  
   
-##  <a name="BasicsBulkLoad"></a> Caricamento bulk di file in una tabella FileTable  
+##  <a name="bulk-loading-files-into-a-filetable"></a><a name="BasicsBulkLoad"></a> Caricamento bulk di file in una tabella FileTable  
  Una tabella FileTable si comporta come una normale tabella per operazioni bulk, con le caratteristiche seguenti:  
   
  Una tabella FileTable include vincoli definiti dal sistema che garantiscono l'integrità dello spazio dei nomi di file e directory. È necessario verificare questi vincoli per i dati caricati in bulk nella tabella FileTable. Poiché alcune operazioni di inserimento bulk consentono di ignorare i vincoli di tabella, si applicano i requisiti seguenti.  
@@ -98,7 +98,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) con la clausola IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Procedura: Eseguire il caricamento bulk di file in una tabella FileTable  
+###  <a name="how-to-bulk-load-files-into-a-filetable"></a><a name="HowToBulkLoad"></a> Procedura: Eseguire il caricamento bulk di file in una tabella FileTable  
  È possibile utilizzare diversi metodi per eseguire il caricamento bulk di file in una tabella FileTable:  
   
 -   **bcp**  
@@ -121,7 +121,7 @@ UPDATE PhotoMetadata
   
  Per informazioni su come disabilitare i vincoli FileTable, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Procedura: Disabilitare vincoli FileTable per eseguire il caricamento bulk  
+###  <a name="how-to-disable-filetable-constraints-for-bulk-loading"></a><a name="disabling"></a> Procedura: Disabilitare vincoli FileTable per eseguire il caricamento bulk  
  Per eseguire il caricamento bulk di file in una tabella FileTable senza la necessità di applicare vincoli definiti dal sistema, è possibile disabilitare temporaneamente i vincoli. Per altre informazioni, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="see-also"></a>Vedere anche  

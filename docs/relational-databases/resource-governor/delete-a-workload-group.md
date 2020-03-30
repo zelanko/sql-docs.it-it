@@ -13,10 +13,10 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b4b322231f546871d5581de470fdc894ed4fe41e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099263"
 ---
 # <a name="delete-a-workload-group"></a>Eliminare un gruppo di carico di lavoro
@@ -27,10 +27,10 @@ ms.locfileid: "68099263"
   
 -   **Per eliminare un gruppo del carico di lavoro usando:**  [Esplora oggetti](#DelWGObjEx), [le proprietà di Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Non è possibile eliminare un gruppo di carico di lavoro contenente sessioni attive.  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Se in un gruppo di carico di lavoro sono contenute sessioni attive, non sarà possibile eliminare o spostare tale gruppo in un pool di risorse diverso quando viene chiamata l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE per l'applicazione della modifica. Per evitare il problema, eseguire una delle azioni seguenti:  
   
 -   Attendere la disconnessione di tutte le sessioni relative al gruppo interessato, quindi eseguire nuovamente l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE.  
@@ -39,10 +39,10 @@ ms.locfileid: "68099263"
   
 -   Riavviare il server. Una volta completato il processo di riavvio, il gruppo eliminato non verrà creato e in un gruppo spostato verrà utilizzata la nuova assegnazione del pool di risorse.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per eliminare un gruppo di carico di lavoro è necessaria l'autorizzazione CONTROL SERVER.  
   
-##  <a name="DelWGObjEx"></a> Eliminare un gruppo di carico di lavoro utilizzando Esplora oggetti  
+##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> Eliminare un gruppo di carico di lavoro utilizzando Esplora oggetti  
  **Per eliminare un gruppo di carico di lavoro utilizzando Esplora oggetti**  
   
 1.  In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Pool di risorse**incluso.  
@@ -53,7 +53,7 @@ ms.locfileid: "68099263"
   
 4.  Nella finestra **Elimina oggetto** il gruppo di carico di lavoro viene indicato nell'elenco **Oggetto da eliminare** . Per eliminare il gruppo di carico di lavoro, fare clic su **OK**.  
   
-##  <a name="DelWGRGProp"></a> Eliminare un gruppo di carico di lavoro utilizzando Proprietà di Resource Governor  
+##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> Eliminare un gruppo di carico di lavoro utilizzando Proprietà di Resource Governor  
  **Per eliminare un gruppo di carico di lavoro utilizzando la pagina Proprietà di Resource Governor**  
   
 1.  In Esplora oggetti espandere in modo ricorsivo il nodo **Gestione** fino a **Pool di risorse**compreso.  
@@ -64,7 +64,7 @@ ms.locfileid: "68099263"
   
 4.  Per eliminare il gruppo di carico di lavoro, fare clic su **OK**.  
   
-##  <a name="DelWGTSQL"></a> Eliminare un gruppo di carico di lavoro utilizzando Transact-SQL  
+##  <a name="delete-a-workload-group-using-transact-sql"></a><a name="DelWGTSQL"></a> Eliminare un gruppo di carico di lavoro utilizzando Transact-SQL  
  **Per eliminare un gruppo di carico di lavoro utilizzando Transact-SQL**  
   
 1.  Eseguire l'istruzione **DROP WORKLOAD GROUP** specificando il nome del gruppo di carico di lavoro da eliminare.  

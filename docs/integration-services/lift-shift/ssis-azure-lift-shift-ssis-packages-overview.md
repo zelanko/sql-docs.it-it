@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896187"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud
@@ -28,7 +28,7 @@ ms.locfileid: "67896187"
 Spostare i carichi di lavoro SSIS locali in Azure presenta i potenziali vantaggi seguenti:
 -   **Riduzione dei costi operativi** e riduzione delle attività di gestione dell'infrastruttura svolte quando si esegue SSIS in locale o in macchine virtuali di Azure.
 -   **Aumento della disponibilità elevata** con la possibilità di specificare più nodi per cluster, nonché le funzionalità di disponibilità elevata di Azure e del database SQL di Azure.
--   **Aumento della scalabilità** con la possibilità di specificare più core per nodo (scalabilità verticale) e più nodi per cluster (scalabilità orizzontale).
+-   **Aumento della scalabilità** con la possibilità di specificare più core per nodo (riduzione del numero di istanze) e più nodi per cluster (aumento del numero di istanze).
 
 ## <a name="architecture-of-ssis-on-azure"></a>Architettura di SSIS in Azure
 Nella tabella seguente vengono evidenziate le differenze tra SSIS in locale e SSIS in Azure.
@@ -54,7 +54,7 @@ La differenza più significativa è la separazione dell'archiviazione dal runtim
 > [!NOTE]
 > Il runtime di integrazione Azure-SSIS non è ancora disponibile in tutte le aree di Azure. Per informazioni sulle aree supportate, vedere i [prodotti Microsoft Azure disponibili in base all'area geografica](https://azure.microsoft.com/regions/services/).
 
-**Scalabilità verticale e orizzontale**. Quando si esegue il provisioning del runtime di integrazione Azure-SSIS è possibile applicare la scalabilità verticale e orizzontale specificando valori per le opzioni seguenti:
+**Scalabilità verticale e orizzontale**. Quando si esegue il provisioning del runtime di integrazione Azure-SSIS, è possibile aumentare e ridurre il numero di istanze specificando i valori per le opzioni seguenti:
 -   La dimensione del nodo, incluso il numero di core, e il numero di nodi del cluster.
 -   L'istanza esistente del database SQL di Azure per ospitare il database del catalogo SSIS (SSISDB) e il livello di servizio per il database.
 -   Le esecuzioni parallele massime per ogni nodo.
@@ -93,7 +93,7 @@ Con il database SQL di Azure è possibile usare solo le transazioni elastiche. P
 
 Per iniziare, vedere [Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 Per distribuire pacchetti SSIS in Azure è necessario avere una delle versioni seguenti di SQL Server Data Tools (SSDT):
 -   Per Visual Studio 2017, versione 15.3 o successiva.

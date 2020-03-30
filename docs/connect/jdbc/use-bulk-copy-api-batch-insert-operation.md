@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027100"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso dell'API di copia bulk per un'operazione di inserimento batch
@@ -25,7 +25,7 @@ Microsoft JDBC Driver 7.0 per SQL Server supporta l'uso dell'API di copia bulk p
 
 Questa funzionalità è applicabile solo alle API `executeBatch()` & `executeLargeBatch()` di PreparedStatement e CallableStatement.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 L'abilitazione dell'API di copia bulk per l'inserimento batch presenta due prerequisiti.
 

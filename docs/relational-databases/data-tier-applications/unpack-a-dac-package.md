@@ -14,10 +14,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909528"
 ---
 # <a name="unpack-a-dac-package"></a>Decompressione di un pacchetto di applicazione livello dati
@@ -28,10 +28,10 @@ ms.locfileid: "72909528"
   
 2.  **Per decomprimere un'applicazione livello dati tramite la**  [Finestra di dialogo per la decompressione dell'applicazione livello dati](#UnpackDACDial), [Verifica del contenuto di un pacchetto di applicazione livello dati](#ExamDACPack)  
 
-##  <a name="Security"></a> Sicurezza  
+##  <a name="security"></a><a name="Security"></a> Sicurezza  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di utilizzare un pacchetto di applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirlo in un'istanza di prova isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], decomprimere il pacchetto di applicazione livello dati ed esaminare il codice, ad esempio stored procedure o altro codice definito dall'utente.  
   
-##  <a name="UnpackDACDial"></a> la finestra di dialogo per la decompressione dell'applicazione livello dati  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> la finestra di dialogo per la decompressione dell'applicazione livello dati  
  **Per decomprimere un file del pacchetto di applicazione livello dati**  
   
 -   In **Esplora risorse**passare al percorso di un file del pacchetto di applicazione livello dati (con estensione dacpac).  
@@ -48,7 +48,7 @@ ms.locfileid: "72909528"
   
     -   [Sfoglia cartella](#Browse)  
   
-###  <a name="Unpack"></a> Decomprimi file di pacchetto DAC di Microsoft SQL Server  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> Decomprimi file di pacchetto DAC di Microsoft SQL Server  
  Utilizzare questa pagina per specificare la cartella di destinazione nella quale copiare i file decompressi, quindi eseguire l'operazione di decompressione.  
   
  **I file verranno decompressi nella cartella seguente** : consente di specificare il percorso completo della cartella per i file decompressi. Se la cartella esiste e se ne conosce il percorso completo, digitare il percorso nella casella. In caso contrario, fare clic sul pulsante **Sfoglia** per passare a una cartella o crearne una nuova.  
@@ -59,7 +59,7 @@ ms.locfileid: "72909528"
   
  **Annulla** : chiude la finestra di dialogo senza decomprimere il pacchetto di applicazione livello dati.  
   
-###  <a name="Browse"></a> Sfoglia cartella  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> Sfoglia cartella  
  Utilizzare questa pagina per scegliere la cartella di destinazione per l'operazione di decompressione. Facoltativamente, è inoltre possibile creare una nuova cartella.  
   
  **Elenco di cartelle** : visualizza la gerarchia dei file per il computer. Espandere i nodi per passare alla cartella nella quale decomprimere il pacchetto DAC. Fare clic sulla cartella e quindi scegliere **OK**.  
@@ -70,7 +70,7 @@ ms.locfileid: "72909528"
   
  **Annulla** : chiude la finestra di dialogo senza selezionare una cartella.  
   
-##  <a name="ExamDACPack"></a> la verifica del contenuto di un pacchetto di applicazione livello dati  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> la verifica del contenuto di un pacchetto di applicazione livello dati  
  Dopo aver decompresso il pacchetto, è possibile esaminare i file generati dalla finestra di dialogo per la **decompressione dell'applicazione livello dati** . Tramite questa finestra di dialogo è possibile compilare i file seguenti nella cartella di destinazione selezionata:  
   
 1.  Uno script Transact-SQL contenente le istruzioni per la creazione degli oggetti definiti nell'applicazione livello dati. Il nome del file è *NomeDAC*.sql, dove *NomeDAC* indica il nome del pacchetto DAC.  

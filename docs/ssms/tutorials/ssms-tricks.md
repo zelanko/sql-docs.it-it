@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245513"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Suggerimenti e consigli per l'uso di SQL Server Management Studio (SSMS)
@@ -37,7 +37,7 @@ Questo articolo offre alcuni suggerimenti e consigli per l'uso di SQL Server Man
 > * Accedere al log degli errori di SQL Server
 > * Trovare il nome dell'istanza di SQL Server
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per provare le procedure descritte in questo articolo, sono necessari SQL Server Management Studio, l'accesso a un'istanza di SQL Server e un database AdventureWorks. 
 
@@ -231,7 +231,7 @@ Il percorso per il log degli errori di SQL Server può variare a seconda delle i
 
 6. Aprire il file errorlog.log nel Blocco note. 
 
-## <a name="determine-sql-server-name"></a>Trovare il nome dell'istanza di SQL Server
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Trovare il nome dell'istanza di SQL Server
 
 Per trovare il nome dell'istanza di SQL Server prima e dopo la connessione a SQL Server sono disponibili alcune opzioni.  
 

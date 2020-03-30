@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082612"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77082612"
 > [!NOTE]  
 >  È possibile salvare mappe separatamente da un report come parti del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="Process"></a> Aggiunta di una mappa al report  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> Aggiunta di una mappa al report  
  Per aggiungere una mappa al report, attenersi al seguente elenco di passaggi generali:  
   
 -   Determinare i dati analitici che si desidera visualizzare e i tipi di dati spaziali necessari. Ad esempio per visualizzare le vendite annuali relative di un negozio su una mappa a bolle, è necessario disporre del nome e delle vendite del negozio per i dati analitici, nonché del nome e della posizione del negozio, ad esempio latitudine e longitudine, per i dati spaziali.  
@@ -49,7 +49,7 @@ ms.locfileid: "77082612"
   
  Per altre informazioni, vedere [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AddingData"></a> Aggiunta di dati a una mappa  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> Aggiunta di dati a una mappa  
  Una mappa usa due tipi di dati: spaziali e analitici. I dati spaziali definiscono l'aspetto della mappa mentre i dati analitici forniscono i valori associati alla mappa. Ad esempio i dati spaziali definiscono le posizioni delle città in un'area, mentre i dati analitici forniscono le informazioni sulla popolazione di ogni città.  
   
  Una mappa deve necessariamente disporre di dati spaziali, mentre quelli analitici sono facoltativi. Ad esempio è possibile aggiungere una mappa che visualizza solo le posizioni dei negozi in una città.  
@@ -136,12 +136,12 @@ ms.locfileid: "77082612"
   
  In questo esempio, il nome della città da solo non è sufficiente per identificare in modo univoco la popolazione. Ad esempio ci sono molte città di nome Albany negli Stati Uniti. Per assegnare un nome a una città specifica, è necessario specificare l'area oltre al nome della città.  
   
-##  <a name="Viewport"></a> Informazioni sul viewport mappa  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Informazioni sul viewport mappa  
  Dopo aver specificato i dati della mappa per un report, è possibile limitare l'area di visualizzazione della mappa specificando un *viewport*mappa. Per impostazione predefinita, il viewport è la stessa area della mappa intera. Per ritagliare la mappa, è possibile specificare il centro, il livello di zoom e le coordinate massime e minime che definiscono l'area che si desidera includere nel report. Per migliorare la visualizzazione della mappa nel report, è possibile spostare le legende, la scala distanza e la scala dei colori all'esterno del viewport. Nella figura seguente viene illustrato un viewport:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> Aggiunta di un livello tessere mappe di Bing  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Aggiunta di un livello tessere mappe di Bing  
  È possibile aggiungere un livello per le tessere mappa di Bing che fornisce uno sfondo geografico per la vista mappa corrente come definito dal viewport. Per aggiungere un livello sezione, è necessario specificare il sistema di coordinate **geografico** e il tipo di proiezione **Mercator**. Le sezioni che corrispondono al centro del viewport e al livello di zoom selezionato vengono recuperate automaticamente dai servizi Web di Bing Maps.  
   
  È possibile personalizzare il livello specificando le opzioni seguenti:  
@@ -162,7 +162,7 @@ ms.locfileid: "77082612"
   
  Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
-##  <a name="MapLayers"></a> Informazioni sugli elementi e sui livelli mappa  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> Informazioni sugli elementi e sui livelli mappa  
  Una mappa può disporre di più livelli, tre sono quelli disponibili. Ogni livello visualizza un tipo di dati spaziali:  
   
 -   **Livello poligono.** Visualizza le strutture delle aree o i marcatori per il punto centrale del poligono che viene calcolato automaticamente per ogni poligono.  
@@ -208,7 +208,7 @@ ms.locfileid: "77082612"
   
  Per altre informazioni, vedere [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
-##  <a name="Legends"></a> Informazioni sulle legende della mappa, sulla scala dei colori e sulla scala distanza  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> Informazioni sulle legende della mappa, sulla scala dei colori e sulla scala distanza  
  È possibile aggiungere diverse legende al report per facilitare l'interpretazione di una mappa da parte degli utenti. Nelle mappe possono essere inclusi i seguenti elementi:  
   
 -   **Legende.** È possibile creare più legende. Gli elementi elencati in una legenda vengono generati automaticamente in base alle regole specificate per gli elementi della mappa in ogni livello. Per ogni regola, si specifica la legenda da usare per visualizzare gli elementi correlati. In questo modo, è possibile assegnare elementi da più livelli alla stessa legenda o a legende diverse.  
@@ -219,14 +219,14 @@ ms.locfileid: "77082612"
   
  Le legende, la scala dei colori e la scala distanza possono essere posizionate in punti specifici all'interno o all'esterno del viewport. Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Risoluzione dei problemi relativi alle mappe  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> Risoluzione dei problemi relativi alle mappe  
  I report con mappe usano dati spaziali e analitici di diverse origini dati. Ogni livello mappa può usare origini dati differenti. Le proprietà di visualizzazione per ogni livello seguono una priorità specifica basata sulle proprietà dei livelli, sulle regole e sulle proprietà degli elementi della mappa.  
   
  Le cause radici del mancato ottenimento del risultato desiderato quando si visualizza un report con mappe possono essere molteplici. Per isolare e analizzare ogni problema, può essere utile usare un livello alla volta. Usare il riquadro Mappa per selezionare un livello e attivare o disattivare facilmente la visibilità.  
   
  Per altre informazioni sui report con mappe, vedere [Risoluzione dei problemi relativi alle parti del report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure che illustrano in dettaglio le modalità di utilizzo delle mappe e dei relativi livelli nei report.  
   
 -   [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082612"
   
 -   [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="Section"></a> Contenuto della sezione  
  [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

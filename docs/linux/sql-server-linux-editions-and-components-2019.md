@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288555"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2019 in Linux
@@ -77,7 +77,7 @@ Per le funzionalità supportate dalle edizioni Developer Edition, Enterprise Cor
 
 La versione Developer Edition continua a supportare un solo client per la [Riesecuzione distribuita di Microsoft SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Limiti di scalabilità  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Limiti di scalabilità  
   
 |Funzionalità|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +90,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
   
 <sup>1</sup> La licenza basata su Enterprise Edition con Server + Licenza CAL (Client Access License), non disponibile per nuovi contratti, è limitata a un massimo di 20 core per istanza di SQL Server. Non sono previsti limiti nel modello di licenza server basato su core. Per altre informazioni, vedere [Limiti della capacità di calcolo per edizione di SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> Disponibilità elevata RDBMS  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> Disponibilità elevata RDBMS  
   
 |Funzionalità|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +118,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 
 <sup>3</sup> Standard Edition supporta i gruppi di disponibilità di base. Un gruppo di disponibilità di base supporta due repliche, con un database. Per altre informazioni sui gruppi di disponibilità di base, vedere [Gruppi di disponibilità di base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> Scalabilità e prestazioni RDBMS  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Scalabilità e prestazioni RDBMS  
   
 |Funzionalità|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +143,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 
 <sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo del processo (DOP) per le compilazioni di indici sono limitati a 2 per Standard Edition e a 1 per le Web Edition ed Express Edition. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle ottimizzate per la memoria.
 
-##  <a name="RDBMSS"></a> Sicurezza RDBMS  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> Sicurezza RDBMS  
   
 |Funzionalità|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +157,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |Database indipendenti|Sì|Sì|Sì|Sì| 
 |Crittografia per backup|Sì|Sì|No|No|  
 
-##  <a name="RDBMSM"></a> Gestione RDBMS  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Gestione RDBMS  
   
 |Funzionalità|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +176,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |Verifica di coerenza parallela|Sì|No|No|No| 
 |Punto di controllo dell'Utilità SQL Server|Sì|No|No|No|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Funzionalità|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +197,11 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 
 <sup>1</sup> La scalabilità orizzontale con più nodi di calcolo richiede un nodo head.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 Per informazioni sulle funzionalità di Integration Services (SSIS) supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], vedere [Funzionalità di Integration Services supportate dalle edizioni di SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Servizi spaziali e basati sulla posizione  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Servizi spaziali e basati sulla posizione  
   
 |Nome funzionalità|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -210,7 +210,7 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
 |Librerie spaziali avanzate|Sì|Sì|Sì|Sì|   
 |Importazione/esportazione di formati di dati spaziali standard del settore|Sì|Sì|Sì|Sì|   
 
-## <a name="Unsupported"></a> Funzionalità e servizi non supportati
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Funzionalità e servizi non supportati
 
 Le funzionalità e i servizi seguenti non sono disponibili per SQL Server 2019 in Linux. Il supporto di queste funzionalità aumenterà nel corso del tempo.
 

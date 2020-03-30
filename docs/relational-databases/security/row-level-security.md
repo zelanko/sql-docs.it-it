@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288979"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
@@ -43,7 +43,7 @@ Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURIT
 > [!NOTE]
 > Azure SQL Data Warehouse supporta solo predicati di filtro. I predicati di blocco non sono attualmente supportati in Azure SQL Data Warehouse.
 
-## <a name="Description"></a> Descrizione
+## <a name="description"></a><a name="Description"></a> Descrizione
 
 La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.  
   
@@ -89,7 +89,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 - Non sono state modificate le API in blocco, compresa l'API BULK INSERT. Questo significa che i predicati di blocco AFTER INSERT verranno applicati alle operazioni di inserimento in blocco come se fossero operazioni di inserimento regolari.  
   
-## <a name="UseCases"></a> Modalità di utilizzo comuni
+## <a name="use-cases"></a><a name="UseCases"></a> Modalità di utilizzo comuni
 
  Di seguito sono riportati degli esempi di progettazione relativi alle modalità di utilizzo della sicurezza a livello di riga:  
   
@@ -103,7 +103,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
  In termini più formali, la sicurezza a livello di riga introduce il controllo degli accessi basato su predicato. Tale controllo include una valutazione flessibile e centralizzata basata su predicato. Il predicato può essere basato su metadati o su qualsiasi altro criterio considerato appropriato dall'amministratore. Il predicato viene usato come criterio per determinare se l'utente dispone dell'accesso appropriato ai dati in base agli attributi utente. Il controllo di accesso basato su etichetta può essere implementato usando il controllo di accesso basato su predicato.  
   
-## <a name="Permissions"></a> Autorizzazioni
+## <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
  La creazione, la modifica o l'eliminazione dei criteri di sicurezza richiede l'autorizzazione **ALTER ANY SECURITY POLICY** . La creazione o l'eliminazione dei criteri di sicurezza richiede l'autorizzazione **ALTER** nello schema.  
   
@@ -119,7 +119,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
  Se i criteri di sicurezza vengono creati con `SCHEMABINDING = OFF`, per eseguire query sulla tabella di destinazione gli utenti devono avere l'autorizzazione  **SELECT** o **EXECUTE** sulla funzione di predicato e su qualsiasi tabella, vista o funzione aggiuntiva usata nella funzione di predicato. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = ON` (impostazione predefinita), questi controlli delle autorizzazioni vengono ignorati quando gli utenti eseguono query sulla tabella di destinazione.  
   
-## <a name="Best"></a> Procedure consigliate  
+## <a name="best-practices"></a><a name="Best"></a> Procedure consigliate  
   
 - È consigliabile creare uno schema separato per gli oggetti con sicurezza a livello di riga, vale a dire funzioni di predicato e criteri di sicurezza. In questo modo si separano le autorizzazioni necessarie per questi oggetti speciali dalle tabelle di destinazione. La separazione aggiuntiva per diversi criteri e funzioni di predicato può essere necessaria nei database multi-tenant, ma non rappresenta uno standard per ogni caso.
   
@@ -141,7 +141,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 - Le funzioni di predicato non devono confrontare stringhe concatenate con **NULL**, perché questo comportamento è influenzato dall'opzione [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
 
-## <a name="SecNote"></a> Nota sulla sicurezza: Attacchi side-channel
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a> Nota sulla sicurezza: Attacchi side-channel
 
 ### <a name="malicious-security-policy-manager"></a>Gestore dei criteri di sicurezza malintenzionato
 
@@ -151,7 +151,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
 
 È possibile causare perdite di informazioni mediante l'utilizzo di query appositamente create. Ad esempio, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` consentirebbe a un utente malintenzionato di sapere che lo stipendio di John Doe ammonta a 100.000 dollari. Anche se è disponibile un predicato di sicurezza per impedire le query dirette di un utente malintenzionato relative allo stipendio degli altri dipendenti, l'utente può determinare quando la query restituisce un'eccezione di divisione per zero.  
 
-## <a name="Limitations"></a> Compatibilità tra funzionalità
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> Compatibilità tra funzionalità
 
  In generale la sicurezza a livello di riga funziona tra varie funzionalità nel modo previsto. Esistono tuttavia alcune eccezioni a questa regola. Questa sezione contiene diverse note e avvertenze per l'uso della sicurezza a livello di riga con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -177,9 +177,9 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 - **Tabelle temporali:** le tabelle temporali sono compatibili con la sicurezza a livello di riga. I predicati di sicurezza nella tabella corrente non vengono tuttavia replicati automaticamente nella tabella di cronologia. Per applicare un criterio di sicurezza alla tabella della cronologia e alla tabella corrente, è necessario aggiungere singolarmente un predicato di sicurezza in ogni tabella.  
   
-## <a name="CodeExamples"></a> Esempi  
+## <a name="examples"></a><a name="CodeExamples"></a> Esempi  
   
-### <a name="Typical"></a> A. Scenari per gli utenti che eseguono l'autenticazione nel database
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> A. Scenari per gli utenti che eseguono l'autenticazione nel database
 
  In questo esempio vengono creati tre utenti, quindi viene creata e popolata una tabella con sei righe. Vengono quindi creati una funzione inline con valori di tabella e criteri di sicurezza per la tabella. L'esempio mostra poi in che modo le istruzioni Select vengono filtrate per i diversi utenti.  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Scenari per l'uso della sicurezza a livello di riga in una tabella esterna di Azure SQL Data Warehouse
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Scenari per l'uso della sicurezza a livello di riga in una tabella esterna di Azure SQL Data Warehouse
 
 Questo breve esempio crea tre utenti e una tabella esterna con sei righe. Vengono quindi creati una funzione inline con valori di tabella e criteri di sicurezza per la tabella esterna. L'esempio mostra in che modo le istruzioni Select vengono filtrate per i diversi utenti.
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> C. Scenari per gli utenti che si connettono al database tramite un'applicazione di livello intermedio
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Scenari per gli utenti che si connettono al database tramite un'applicazione di livello intermedio
 
 > [!NOTE]
 > In questo esempio, la funzionalità di predicati di blocco non è attualmente supportata per Azure SQL Data Warehouse, quindi l'inserimento di righe per l'ID utente errato non viene bloccato con Azure SQL Data Warehouse.

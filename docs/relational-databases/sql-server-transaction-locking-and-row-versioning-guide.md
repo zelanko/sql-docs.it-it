@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287175"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
@@ -33,7 +33,7 @@ Nei sistemi con numerosi utenti, la gestione delle transazioni nei database spes
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (da [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], se non specificato diversamente) e [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
   
-##  <a name="Basics"></a> Nozioni fondamentali sulle transazioni  
+##  <a name="transaction-basics"></a><a name="Basics"></a> Nozioni fondamentali sulle transazioni  
  Una transazione è una sequenza di operazioni eseguite in un'unica unità logica di lavoro. Per essere considerata una transazione, un'unità logica di lavoro deve includere quattro proprietà, dette ACID (atomicità, consistenza, isolamento e durata):  
   
  **Atomicità**  
@@ -94,7 +94,7 @@ Nei sistemi con numerosi utenti, la gestione delle transazioni nei database spes
 |-|-|-|  
 |MODIFICA TABELLA|FETCH|REVOKE|  
 |CREATE|GRANT|SELECT|  
-|Elimina|INSERT|TRUNCATE TABLE|  
+|DELETE|INSERT|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
 -  **Transazioni con ambito batch**  
@@ -174,7 +174,7 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```   
   
-##  <a name="Lock_Basics"></a> Nozioni fondamentali sui blocchi e sul controllo delle versioni delle righe  
+##  <a name="locking-and-row-versioning-basics"></a><a name="Lock_Basics"></a> Nozioni fondamentali sui blocchi e sul controllo delle versioni delle righe  
  Per garantire l'integrità delle transazioni e mantenere la consistenza dei database se più utenti accedono simultaneamente ai dati, nel [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] vengono utilizzati i meccanismi seguenti:  
   
 -  **Blocco**    
@@ -328,7 +328,7 @@ GO
   
  Per le transazioni snapshot, le applicazioni chiamano `SQLSetConnectAttr` con l'opzione Attribute impostata su SQL_COPT_SS_TXN_ISOLATION e l'opzione ValuePtr impostata su SQL_TXN_SS_SNAPSHOT. È possibile recuperare una transazione snapshot utilizzando SQL_COPT_SS_TXN_ISOLATION oppure SQL_ATTR_TXN_ISOLATION.  
   
-##  <a name="Lock_Engine"></a> Blocchi nel motore di database  
+##  <a name="locking-in-the-database-engine"></a><a name="Lock_Engine"></a> Blocchi nel motore di database  
  I blocchi costituiscono un meccanismo utilizzato nel [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per sincronizzare l'accesso allo stesso dato eseguito contemporaneamente da più utenti.  
   
  Prima che una transazione acquisisca una dipendenza sullo stato corrente del dato, ad esempio mediante un'operazione di lettura o modifica dei dati, deve proteggersi dagli effetti di un'altra transazione che esegue operazioni di modifica sugli stessi dati. A tale scopo, la transazione richiede il blocco del dato. I blocchi sono caratterizzati da diverse modalità e possono ad esempio essere condivisi o esclusivi. La modalità di blocco consente di definire il livello di dipendenza della transazione sui dati. Non è possibile concedere a una transazione un blocco che determina un conflitto con la modalità di blocco già concessa a un'altra transazione. Se una transazione richiede una modalità di blocco in conflitto con un blocco già concesso sugli stessi dati, l'istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] metterà in pausa la transazione richiedente fino al rilascio del primo blocco.  
@@ -361,7 +361,7 @@ GO
 > [!NOTE]  
 > Gli HoBT e i blocchi TABLE possono essere interessati dall'opzione LOCK_ESCALATION di [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="lock_modes"></a> Modalità di blocco  
+### <a name="lock-modes"></a><a name="lock_modes"></a> Modalità di blocco  
  Nel [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] le risorse vengono bloccate in base a modalità blocco diverse, che determinano il modo in cui le transazioni simultanee possono accedere alle risorse.  
   
  Nella tabella seguente sono incluse le modalità blocco delle risorse utilizzate in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
@@ -376,20 +376,20 @@ GO
 |**Aggiornamento bulk (BU)**|Blocco usato durante le operazioni di copia bulk dei dati in una tabella quando viene specificato l'hint **TABLOCK**.|  
 |**Intervalli di chiavi**|Modalità che consente di proteggere l'intervallo di righe lette da una query quando si utilizza il livello di isolamento della transazione Serializable. Garantisce che le altre transazioni non possano inserire righe da includere nelle query della transazione serializzabile se le query sono state nuovamente eseguite.|  
   
-#### <a name="shared"></a> Blocchi condivisi  
+#### <a name="shared-locks"></a><a name="shared"></a> Blocchi condivisi  
  I blocchi condivisi (S) consentono la lettura (SELECT) di una risorsa da parte di transazioni simultanee con il controllo della concorrenza pessimistica. senza che altre transazioni possano modificare i dati mentre il blocco condiviso (S) è applicato alla risorsa. I blocchi condivisi applicati a una risorsa vengono rilasciati non appena viene completata l'operazione di lettura, a meno che il livello di isolamento della transazione non sia stato impostato su Repeatable Read o superiore oppure non sia in uso l'hint di blocco per mantenere attivo il blocco per l'intera durata della transazione.  
   
-#### <a name="update"></a> Blocchi di aggiornamento  
+#### <a name="update-locks"></a><a name="update"></a> Blocchi di aggiornamento  
  I blocchi di aggiornamento (U) impediscono il verificarsi di una forma comune di deadlock. Durante una transazione Repeatable Read o Serializable la transazione legge i dati, acquisisce un blocco condiviso (S) sulla risorsa (pagina o riga) e modifica quindi i dati. Quest'ultima operazione comporta la conversione del blocco in blocco esclusivo (X). Se due transazioni acquisiscono blocchi in modalità condivisa su una risorsa e quindi eseguono un tentativo simultaneo di aggiornamento dei dati, una delle due transazioni eseguirà il tentativo di conversione del blocco in blocco esclusivo. La conversione di un blocco da condiviso a esclusivo non può essere eseguita immediatamente, in quanto il blocco esclusivo relativo a una transazione non è compatibile con il blocco condiviso relativo all'altra transazione. Si verifica pertanto un'attesa di blocco. La seconda transazione tenta di acquisire un blocco esclusivo (X) per la propria operazione di aggiornamento. Poiché, tuttavia, entrambe le transazioni eseguono una conversione in blocco esclusivo (X) e ogni transazione è in attesa che l'altra rilasci il blocco condiviso, si verifica un deadlock.  
   
  Per evitare questo problema, vengono utilizzati i blocchi di aggiornamento (U). Un blocco di aggiornamento (U) per una risorsa può essere acquisito da una sola transazione per volta. Se una transazione modifica una risorsa, il blocco di aggiornamento (U) viene convertito in blocco esclusivo (X).  
   
-#### <a name="exclusive"></a> Blocchi esclusivi  
+#### <a name="exclusive-locks"></a><a name="exclusive"></a> Blocchi esclusivi  
  I blocchi esclusivi (X) impediscono l'accesso a una risorsa da parte di transazioni simultanee. Con un blocco esclusivo (X), nessun'altra transazione può modificare dati. Le operazioni di lettura possono essere eseguite solo utilizzando l'hint NOLOCK o il livello di isolamento Read Uncommitted.  
   
  Le istruzioni di modifica dei dati, ad esempio INSERT, UPDATE e DELETE, combinano entrambe le operazioni di modifica e di lettura. L'istruzione esegue innanzitutto le operazioni di lettura per acquisire dati prima di eseguire le operazioni di modifica necessarie. Le istruzioni di modifica dei dati, pertanto, richiedono in genere blocchi sia condivisi che esclusivi. Un'istruzione UPDATE, ad esempio, potrebbe comportare la modifica di righe in una tabella basata su un join con un'altra tabella. In questo caso, l'istruzione UPDATE richiede blocchi condivisi sulle righe lette nella tabella di join, nonché blocchi esclusivi sulle righe aggiornate.  
   
-#### <a name="intent"></a> Blocchi preventivi  
+#### <a name="intent-locks"></a><a name="intent"></a> Blocchi preventivi  
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] vengono utilizzati blocchi preventivi per proteggere l'applicazione di un blocco condiviso (S) o esclusivo (X) su una risorsa di livello inferiore nella gerarchia di blocchi. I blocchi preventivi, in inglese "intent lock", sono così denominati in quanto vengono acquisiti prima di un blocco a un livello inferiore e, pertanto, indicano l'intenzione di applicare blocchi a livelli inferiori.  
   
  I blocchi preventivi rispondono ai due obiettivi seguenti:  
@@ -410,14 +410,14 @@ GO
 |**Condiviso preventivo aggiornamento (SIU)**|Combinazione di blocchi S e IU, in seguito all'acquisizione di tali blocchi in modo distinto e simultaneo mantenendo entrambi i blocchi. Una transazione, ad esempio, esegue una query con l'hint PAGLOCK e quindi effettua un'operazione di aggiornamento. La query con l'hint PAGLOCK acquisisce il blocco S, mentre l'operazione di aggiornamento acquisisce il blocco IU.|  
 |**Aggiornamento preventivo esclusivo (UIX)**|Combinazione di blocchi U e IX, in seguito all'acquisizione di tali blocchi in modo distinto e simultaneo mantenendo entrambi i blocchi.|  
   
-#### <a name="schema"></a> Blocchi di schema  
+#### <a name="schema-locks"></a><a name="schema"></a> Blocchi di schema  
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] i blocchi di modifica dello schema (Sch-M) vengono utilizzati durante un'operazione DDL (Data Definition Language) su una tabella, ad esempio l'aggiunta di una colonna o l'eliminazione di una tabella. Finché viene mantenuto attivo, il blocco Sch-M impedisce l'accesso simultaneo alla tabella, ovvero blocca tutte le operazioni esterne.  
   
  Alcune operazioni DML (Data Manipulation Language), ad esempio il troncamento delle tabelle, utilizzano i blocchi Sch-M per impedire l'accesso alle tabelle interessate da parte di operazioni simultanee.  
   
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] vengono utilizzati i blocchi di stabilità dello schema (Sch-S) durante la compilazione e l'esecuzione delle query. Questo tipo di blocco non esclude i blocchi transazionali, inclusi i blocchi esclusivi (X). Durante la compilazione di una query è pertanto possibile continuare l'esecuzione di altre transazioni, incluse quelle che prevedono blocchi X su tabelle. Non è tuttavia possibile eseguire su tabelle operazioni DDL e DML simultanee che acquisiscono blocchi Sch-M.  
   
-#### <a name="bulk_update"></a> Blocchi di aggiornamento bulk  
+#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Blocchi di aggiornamento bulk  
  I blocchi aggiornamenti bulk consentono a più thread di eseguire operazioni simultanee di caricamento bulk dei dati nella stessa tabella, impedendo l'accesso alla tabella ai processi che non eseguono il caricamento bulk. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza i blocchi di aggiornamento bulk quando vengono soddisfatte entrambe le condizioni seguenti.  
   
 -   Si usa l'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT o la funzione OPENROWSET(BULK) oppure si usa uno dei comandi Bulk Insert dell'API, ad esempio .NET SqlBulkCopy, le API Fast Load di OLEDB o le API Bulk Copy di ODBC per eseguire la copia bulk dei dati in una tabella.  
@@ -426,10 +426,10 @@ GO
 > [!TIP]  
 > A differenza dell'istruzione BULK INSERT, che contiene un blocco di aggiornamento bulk meno restrittivo, l'istruzione INSERT INTO...SELECT con l'hint TABLOCK contiene un blocco esclusivo (X) sulla tabella che non consente di inserire righe utilizzando operazioni di inserimento parallele.  
   
-#### <a name="key_range"></a> Blocchi di intervalli di chiavi  
+#### <a name="key-range-locks"></a><a name="key_range"></a> Blocchi di intervalli di chiavi  
  I blocchi di intervalli di chiavi consentono di proteggere un intervallo di righe incluse in modo implicito in un set di record letto da un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in fase di utilizzo del livello di isolamento Serializable della transazione. Il blocco di intervalli di chiavi impedisce le letture fantasma, Tramite la protezione degli intervalli di chiavi tra righe, tali blocchi impediscono inserimenti o eliminazioni fantasma in un recordset a cui accede una transazione.  
   
-### <a name="lock_compatibility"></a> Compatibilità tra blocchi  
+### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Compatibilità tra blocchi  
  La compatibilità tra blocchi consente di stabilire se più transazioni possono acquisire blocchi sulla stessa risorsa contemporaneamente. Se una risorsa è già bloccata da un'altra transazione, è possibile autorizzare una nuova richiesta di blocco solo se la modalità di blocco richiesta è compatibile con quella esistente. In caso contrario, la transazione che richiede il nuovo blocco deve attendere il rilascio del blocco esistente oppure la scadenza dell'intervallo di timeout del blocco. Non vi sono, ad esempio, modalità di blocco compatibili con i blocchi esclusivi. In caso di presenza di un blocco esclusivo (X), nessun'altra transazione può acquisire altri blocchi di qualsiasi tipo, ovvero condivisi, di aggiornamento o esclusivi, sulla stessa risorsa fino a quando il blocco esclusivo (X) non viene rilasciato. Se invece è stato applicato a una risorsa un blocco condiviso (S), le altre transazioni possono acquisire un blocco condiviso o un blocco di aggiornamento (U) sullo stesso elemento anche prima del completamento della prima transazione. Le altre transazioni, tuttavia, possono acquisire un blocco esclusivo solo dopo il rilascio del blocco condiviso.  
   
 <a name="lock_compat_table"></a> La tabella seguente illustra la compatibilità delle modalità di blocco più comuni.  
@@ -458,7 +458,7 @@ GO
   
  Il blocco di intervalli di chiavi viene applicato a un indice specificando i valori iniziale e finale delle chiavi. In questo modo si impedisce ogni tentativo di inserimento, aggiornamento o eliminazione di una riga con un valore di chiave che rientra nell'intervallo in quanto tali operazioni dovrebbero acquisire un blocco sull'indice. Ad esempio, una transazione serializzabile può eseguire un'istruzione `SELECT` che legge tutte le righe i cui valori di chiave corrispondono alla condizione `BETWEEN 'AAA' AND 'CZZ'`. Un blocco di intervalli di chiavi applicato ai valori di chiave compresi tra **'** AAA **'** e **'** CZZ **'** impedisce ad altre transazioni di inserire righe con valori di chiave all'interno di tale intervallo, ad esempio **'** ADG **'** , **'** BBD **'** o **'** CAL **'** .  
   
-#### <a name="key_range_modes"></a> Modalità di blocco di intervalli di chiavi  
+#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Modalità di blocco di intervalli di chiavi  
  I blocchi di intervalli di chiavi includono sia un componente intervallo sia un componente riga nel formato intervallo-riga:  
   
 -   Intervallo indica la modalità di blocco che protegge l'intervallo di righe compreso tra due voci di indice consecutive.  
@@ -488,7 +488,7 @@ GO
 |**RangeI-N**|Sì|Sì|Sì|No|No|Sì|No|  
 |**RangeX-X**|No|No|No|No|No|No|No|  
   
-#### <a name="lock_conversion"></a> Blocchi di conversione  
+#### <a name="conversion-locks"></a><a name="lock_conversion"></a> Blocchi di conversione  
  I blocchi di conversione vengono creati quando un blocco di intervalli di chiavi è sovrapposto a un altro blocco.  
   
 |Blocco 1|Blocco 2|Blocco di conversione|  
@@ -565,7 +565,7 @@ INSERT mytable VALUES ('Dan');
   
  Il blocco di intervalli di chiavi in modalità RangeI-N viene inserito nella voce di indice corrispondente al nome David per verificare l'intervallo. Se il blocco viene concesso, viene inserita la voce `Dan` e viene impostato un blocco esclusivo (X) sul valore `Dan`. Il blocco di intervalli di chiavi in modalità RangeI-N è necessario solo per verificare l'intervallo e non viene mantenuto attivo per l'intera durata della transazione che esegue l'operazione di inserimento. Altre transazioni possono inserire o eliminare valori prima o dopo il valore inserito `Dan`. Le transazioni che tuttavia tentano di leggere, inserire o eliminare il valore `Dan` sono bloccate fino a quando non viene eseguito il commit o il rollback della transazione di inserimento.  
   
-### <a name="dynamic_locks"></a> Blocco dinamico  
+### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Blocco dinamico  
  L'utilizzo dei blocchi a basso livello, ad esempio blocchi di riga, aumenta la concorrenza riducendo la probabilità che due transazioni richiedano i blocchi sullo stesso elemento di dati contemporaneamente. L'utilizzo dei blocchi a basso livello inoltre aumenta il numero dei blocchi e delle risorse necessarie a gestirli. I blocchi di tabella e di pagina ad alto livello comportano invece una diminuzione dell'overhead, ma a spese della concorrenza.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -580,7 +580,7 @@ INSERT mytable VALUES ('Dan');
   
  A partire da [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], il comportamento dell'escalation dei blocchi è stato modificato con l'introduzione dell'opzione `LOCK_ESCALATION`. Per altre informazioni, vedere l'opzione `LOCK_ESCALATION` di [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="deadlocks"></a> Deadlock  
+## <a name="deadlocks"></a><a name="deadlocks"></a> Deadlock  
  Un deadlock si verifica quando due o più attività si bloccano reciprocamente in modo permanente, in quanto ognuna delle attività prevede un blocco su una risorsa che le altre attività stanno cercando di bloccare. Ad esempio:  
   
 -   La transazione A acquisisce un blocco di condivisione nella riga 1.  
@@ -616,7 +616,7 @@ INSERT mytable VALUES ('Dan');
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] rileva automaticamente i cicli di deadlock in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sceglie una delle sessioni come vittima del deadlock e la transazione corrente viene terminata con un errore per interrompere il deadlock.  
   
-#### <a name="deadlock_resources"></a> Risorse che possono causare un deadlock  
+#### <a name="resources-that-can-deadlock"></a><a name="deadlock_resources"></a> Risorse che possono causare un deadlock  
  Per conto di ogni sessione utente possono essere in esecuzione una o più attività e ogni attività può acquisire o attendere di acquisire risorse diverse. Di seguito sono elencati i tipi di risorse che possono causare blocchi che potrebbero provocare un deadlock.  
   
 -   **Blocchi**. L'attesa di acquisizione di blocchi sulle risorse, ad esempio oggetti, pagine, righe, metadati e applicazioni, può causare deadlock. La transazione T1, ad esempio, prevede un blocco condiviso (S) sulla riga r1 ed è in attesa di ottenere un blocco esclusivo (X) su r2. La transazione T2 prevede un blocco condiviso (S) su r2 ed è in attesa di ottenere un blocco esclusivo (X) sulla riga r1. Il risultato è un ciclo di blocco in cui T1 e T2 attendono che le risorse bloccate vengano rilasciate dall'altra attività.  
@@ -646,7 +646,7 @@ INSERT mytable VALUES ('Dan');
   
  ![LogicFlowExamplec](../relational-databases/media/udb9_LogicFlowExamplec.png)  
   
-### <a name="deadlock_detection"></a> Rilevamento di deadlock  
+### <a name="deadlock-detection"></a><a name="deadlock_detection"></a> Rilevamento di deadlock  
  Tutte le risorse elencate nella sezione precedente fanno parte dello schema di rilevamento dei deadlock di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Il rilevamento dei deadlock viene eseguito da un thread di monitoraggio dei blocchi tramite il quale viene periodicamente iniziata una ricerca in tutte le attività in un'istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Il processo di ricerca è descritto dai punti seguenti:  
   
 -   L'intervallo predefinito è 5 secondi.  
@@ -664,10 +664,10 @@ INSERT mytable VALUES ('Dan');
   
  Quando si utilizza l'ambiente CLR, tramite la funzionalità di monitoraggio vengono automaticamente rilevati i deadlock per le  risorse di sincronizzazione, ovvero monitor, blocchi di lettura/scrittura e join di thread, a cui viene eseguito l'accesso all'interno di procedure gestite. Il deadlock viene tuttavia risolto generando un'eccezione nella procedura selezionata come vittima del deadlock. È importante comprendere che l'eccezione non comporta il rilascio automatico delle risorse attualmente di proprietà della vittima, ma le risorse devono essere rilasciate esplicitamente. In modo coerente con il comportamento dell'eccezione, l'eccezione utilizzata per identificare una vittima del deadlock può essere intercettata e ignorata.  
   
-### <a name="deadlock_tools"></a> Strumenti di informazione sui deadlock  
+### <a name="deadlock-information-tools"></a><a name="deadlock_tools"></a> Strumenti di informazione sui deadlock  
  Per la visualizzazione di informazioni sui deadlock, il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] offre strumenti di monitoraggio costituiti dalla sessione xEvent system\_health, da due flag di traccia e dall'evento Deadlock Graph in SQL Profiler.  
 
-#### <a name="deadlock_xevent"></a> Evento deadlock esteso
+#### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Evento deadlock esteso
 A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è consigliabile usare l'evento esteso `xml_deadlock_report` (xEvent) anziché la classe di evento Deadlock Graph in SQL Trace o SQL Profiler.
 
 Inoltre, a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando si verificano deadlock, la sessione system\_health acquisisce tutte gli xEvent `xml_deadlock_report` che contengono il grafico del deadlock. Dato che la sessione system\_health è abilitata per impostazione predefinita, non è necessario configurare una sessione xEvent separata per l'acquisizione delle informazioni sul deadlock. 
@@ -769,7 +769,7 @@ END
 
 Per altre informazioni, vedere [Usare la sessione system_health](../relational-databases/extended-events/use-the-system-health-session.md)
 
-#### <a name="deadlock_traceflags"></a> Flag di traccia 1204 e flag di traccia 1222  
+#### <a name="trace-flag-1204-and-trace-flag-1222"></a><a name="deadlock_traceflags"></a> Flag di traccia 1204 e flag di traccia 1222  
  In caso di deadlock, il flag di traccia 1204 e il flag di traccia 1222 restituiscono informazioni che vengono riportate nel log degli errori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il flag di traccia 1204 riporta informazioni sui deadlock formattate per ogni nodo interessato dal deadlock. Il flag di traccia 1222 formatta le informazioni sui deadlock, prima per processi e poi per risorse. È possibile attivare entrambi i flag di traccia per ottenere due diverse rappresentazioni dello stesso evento di deadlock.  
 
 > [!IMPORTANT]
@@ -909,7 +909,7 @@ Per altre informazioni sull'esecuzione dell'evento Deadlock Graph di SQL Profile
   
  È consigliabile sospendere brevemente l'applicazione prima di reinviarne la query. In questo modo, la transazione interessata dal deadlock può completare e rilasciare i relativi blocchi che formano parte del ciclo di deadlock. Ciò riduce la probabilità che il deadlock si verifichi di nuovo quando la query reinviata ne richiede i blocchi.  
   
-### <a name="deadlock_minimizing"></a> Riduzione dei deadlock  
+### <a name="minimizing-deadlocks"></a><a name="deadlock_minimizing"></a> Riduzione dei deadlock  
  I deadlock non possono essere evitati completamente. È tuttavia possibile ridurre il rischio di insorgenza di un deadlock attenendosi a determinate convenzioni di codifica. La riduzione del numero di deadlock comporta un aumento della velocità effettiva delle transazioni e una diminuzione dell'overhead del sistema, in quanto il numero di transazioni su cui è necessario eseguire le operazioni seguenti risulta minimo:  
   
 -   Rollback, con il conseguente annullamento del lavoro eseguito.  
@@ -955,7 +955,7 @@ Per altre informazioni sull'esecuzione dell'evento Deadlock Graph di SQL Profile
 #### <a name="use-bound-connections"></a>Usare le connessioni associate  
  L'utilizzo di connessioni associate garantisce la cooperazione tra due o più connessioni aperte dalla stessa applicazione. I blocchi acquisiti dalle connessioni secondarie vengono gestiti come se fossero stati acquisiti dalla connessione primaria e viceversa. Di conseguenza non si verificano blocchi reciproci tra le connessioni.  
   
-## <a name="lock_partitioning"></a> Partizionamento di blocchi  
+## <a name="lock-partitioning"></a><a name="lock_partitioning"></a> Partizionamento di blocchi  
  Nei sistemi di computer di grandi dimensioni, i blocchi su oggetti di riferimento utilizzati di frequente può creare colli di bottiglia a livello delle prestazioni poiché l'acquisizione e il rilascio di blocchi determina la contesa nelle risorse di blocco interne. Il partizionamento dei blocchi migliora le prestazioni poiché suddivide una singola risorsa di blocco in più risorse di blocco. Questa caratteristica è disponibile unicamente per i sistemi con 16 o più CPU, viene abilitata automaticamente e non è possibile disabilitarla. È possibile partizionare solo i blocchi degli oggetti. I blocchi di oggetti che includono un sottotipo non vengono partizionati. Per altre informazioni, vedere [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 ### <a name="understanding-lock-partitioning"></a>Informazioni sul partizionamento dei blocchi  
@@ -1066,7 +1066,7 @@ BEGIN TRANSACTION
     WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
-##  <a name="Row_versioning"></a> Livelli di isolamento basati sul controllo delle versioni delle righe nel [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##  <a name="row-versioning-based-isolation-levels-in-the-ssdenoversion"></a><a name="Row_versioning"></a> Livelli di isolamento basati sul controllo delle versioni delle righe nel [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  A partire da [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] include un'implementazione di un livello di isolamento della transazione esistente, Read Committed, che offre uno snapshot a livello di istruzione tramite il controllo delle versioni delle righe. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] offre anche un livello di isolamento della transazione, ovvero uno snapshot, che offre uno snapshot a livello di transazione anch'esso tramite il controllo delle versioni delle righe.  
   
  Il controllo delle versioni delle righe è un framework generale in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che richiama un meccanismo copy-on-write quando una riga viene modificata o eliminata. È pertanto necessario che durante l'esecuzione della transazione, la versione precedente della riga sia disponibile per le transazioni che richiedono un precedente stato consistente dal punto di vista transazionale. Il controllo delle versioni delle righe utilizzato per eseguire quanto segue:  
@@ -1510,7 +1510,7 @@ ALTER DATABASE AdventureWorks2016
 |----------------------------------------------------------------|-----------------|  
 |OFF|Il supporto per le transazioni di isolamento dello snapshot non è attivato. Non è consentita alcuna transazione di isolamento dello snapshot.|  
 |PENDING_ON|Il supporto per le transazioni di isolamento dello snapshot è in stato di transizione (da OFF a ON). Le transazioni aperte devono essere completate.<br /><br /> Non è consentita alcuna transazione di isolamento dello snapshot.|  
-|ATTIVA|Il supporto per le transazioni di isolamento dello snapshot è attivato.<br /><br /> Le transazioni snapshot sono consentite.|  
+|ON|Il supporto per le transazioni di isolamento dello snapshot è attivato.<br /><br /> Le transazioni snapshot sono consentite.|  
 |PENDING_OFF|Il supporto per le transazioni di isolamento dello snapshot è in stato di transizione (da ON a OFF).<br /><br /> Le transazioni snapshot avviate dopo questo momento non possono accedere al database. Le transazioni di aggiornamento subiscono le conseguenze negative del controllo delle versioni nel database. Le transazioni snapshot esistenti possono continuare ad accedere al database senza problemi. Lo stato PENDING_OFF non viene modificato in OFF fino al termine di tutte le transazioni snapshot attive quando lo stato di isolamento dello snapshot del database era impostato su ON.|  
   
  Utilizzare la vista del catalogo `sys.databases` per determinare lo stato di entrambe le opzioni di database per il controllo delle versioni delle righe.  
@@ -1710,7 +1710,7 @@ GO
   
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] l'opzione `LOCK_ESCALATION` di `ALTER TABLE` può non accettare blocchi di tabella e attivare i blocchi HoBT sulle tabelle partizionate. Questa opzione non è un hint di blocco, ma può essere usata per ridurre l'escalation dei blocchi. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
-###  <a name="Customize"></a> Personalizzazione dei blocchi per un indice  
+###  <a name="customizing-locking-for-an-index"></a><a name="Customize"></a> Personalizzazione dei blocchi per un indice  
  La strategia di blocco dinamico utilizzata dal [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] prevede la selezione automatica del livello di granularità dei blocchi ottimale per le query nella maggior parte dei casi. Si consiglia di non ignorare i livelli di blocco predefiniti, in cui è attivato il blocco a livello di pagina e di riga, a meno che i modelli di accesso a tabelle e indici non siano chiari e coerenti ed esista un problema di contesa tra risorse da risolvere. Se un livello di blocco viene ignorato, è possibile che l'accesso simultaneo a una tabella o a un indice venga ostacolato. Se ad esempio si specificano solo blocchi a livello di tabella in una tabella di notevoli dimensioni usata molto frequentemente, è possibile che si verifichino colli di bottiglia perché gli utenti devono attendere il rilascio del blocco a livello di tabella prima di accedere alla tabella.  
   
  In alcuni casi, se i modelli di accesso sono chiari e coerenti, la disattivazione del blocco a livello di pagina o di riga può risultare vantaggioso. Si supponga, ad esempio, che un'applicazione di database utilizzi una tabella di ricerca che viene aggiornata con frequenza settimanale in un processo batch. L'accesso alla tabella da parte di utenti simultanei avviene con un blocco condiviso, mentre quello dell'aggiornamento batch settimanale con un blocco esclusivo (X). Se il blocco a livello di pagina e di riga viene disattivato sulla tabella, l'overhead dei blocchi risulta ridotto nell'intera settimana, consentendo agli utenti di accedere simultaneamente alla tabella tramite blocchi a livello di tabella condivisi. Quando viene eseguito, il processo batch può essere completato in modo efficiente, in quanto ottiene un blocco esclusivo sulla tabella.  
@@ -1727,7 +1727,7 @@ GO
 |A livello di riga|Blocchi a livello di pagina e di tabella|  
 |A livello di pagina e di riga|Blocchi a livello di tabella|  
   
-##  <a name="Advanced"></a> Informazioni avanzate sulle transazioni  
+##  <a name="advanced-transaction-information"></a><a name="Advanced"></a> Informazioni avanzate sulle transazioni  
   
 ### <a name="nesting-transactions"></a>Nidificazione delle transazioni  
  Le transazioni esplicite possono essere nidificate. Ciò consente principalmente il supporto delle transazioni all'interno di stored procedure che è possibile richiamare sia da un processo già incluso in una transazione che da processi privi di transazioni attive.  
@@ -1816,7 +1816,7 @@ GO
 ### <a name="coding-efficient-transactions"></a>Codifica di transazioni efficienti  
  È importante mantenere le transazioni il più brevi possibile. Quando viene avviata una transazione, un sistema di gestione di database (DBMS, Database Management System) deve tenere occupate molte risorse fino alla fine della transazione in modo da proteggerne le proprietà di atomicità, consistenza, isolamento e durevolezza (ACID, Atomicity, Consistency, Isolation and Durability). Se i dati vengono modificati, le righe modificate devono essere protette con blocchi esclusivi che ne impediscono la lettura da parte di altre transazioni. Tali blocchi devono essere mantenuti attivi fino al commit o al rollback della transazione. In base alle impostazioni del livello di isolamento della transazione, le istruzioni `SELECT` possono acquisire blocchi che è necessario mantenere attivi fino a quando non è stato eseguito il commit o il rollback della transazione. Nei sistemi con numerosi utenti è necessario mantenere le transazioni più brevi possibile per ridurre la possibilità che si verifichino contese di risorse tra connessioni simultanee. Le transazioni non efficienti che richiedono tempi di esecuzione prolungati potrebbero non presentare alcun problema se il numero di utenti è ridotto, mentre sono assolutamente da evitare in sistemi con migliaia di utenti. A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta le transazioni durevoli ritardate. Tali transazioni non garantiscono la durabilità. Per altre informazioni, vedere l'argomento [Durabilità delle transazioni](../relational-databases/logs/control-transaction-durability.md).  
   
-#### <a name="guidelines"></a> Linee guida per la codifica  
+#### <a name="coding-guidelines"></a><a name="guidelines"></a> Linee guida per la codifica  
  Di seguito vengono riportate alcune linee guida per la codifica di transazioni efficienti.  
   
 -   Evitare di richiedere l'input dell'utente durante una transazione.  
@@ -1869,7 +1869,7 @@ GO
 #### <a name="stopping-a-transaction"></a>Arresto di una transazione  
  Potrebbe essere necessario utilizzare l'istruzione KILL. Eseguire l'istruzione con cautela, soprattutto quando sono in esecuzione processi importanti. Per altre informazioni, vedere [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
-##  <a name="Additional_Reading"></a> Ulteriori informazioni   
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Ulteriori informazioni   
 [Overhead del controllo delle versioni delle righe](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
 [Eventi estesi](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     

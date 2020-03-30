@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71823556"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
@@ -42,7 +42,7 @@ ms.locfileid: "71823556"
 |Scollega database|Il database associato viene scollegato. L'istanza del Motore di database non potrà fare riferimento al database, ma i file di dati e di log rimarranno invariati.|  
 |Elimina database|Il database associato viene eliminato. I file di dati e di log vengono eliminati.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Non esistono meccanismi automatici per ripristinare i metadati della definizione o il database dell'applicazione livello dati dopo l'eliminazione dell'applicazione. Il metodo per ricompilare manualmente l'istanza di applicazione livello dati dipende dall'opzione di eliminazione scelta.  
   
 |Opzione|Metodo di ricompilazione dell'istanza di applicazione livello dati|  
@@ -54,10 +54,10 @@ ms.locfileid: "71823556"
 > [!WARNING]  
 >  La ricompilazione di un'istanza di applicazione livello dati mediante la registrazione di un'applicazione livello dati da un database ripristinato o ricollegato non implica la ricreazione di alcune parti dell'applicazione originale, quali i criteri di selezione dei server.  
   
-###  <a name="Permissions"></a> Autorizzazioni  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Un'applicazione livello dati può essere eliminata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure dal proprietario del database. È inoltre possibile avviare la procedura guidata usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
-##  <a name="UsingDeleteDACWizard"></a> Utilizzo della procedura guidata Elimina applicazione livello dati  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> Utilizzo della procedura guidata Elimina applicazione livello dati  
  **Per eliminare un'applicazione livello dati tramite una procedura guidata**  
   
 1.  In **Esplora oggetti**espandere il nodo dell'istanza contenente l'applicazione livello dati da eliminare.  
@@ -78,7 +78,7 @@ ms.locfileid: "71823556"
   
     4.  [Elimina applicazione livello dati](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> Pagina Introduzione  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per l'eliminazione di un'applicazione livello dati.  
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
@@ -89,7 +89,7 @@ ms.locfileid: "71823556"
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
-##  <a name="Choose_method"></a> Pagina Seleziona metodo  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a> Pagina Seleziona metodo  
  Utilizzare questa pagina per specificare l'opzione per la gestione del database associato all'applicazione livello dati da eliminare.  
   
  **Elimina registrazione** : consente di rimuovere i metadati che definiscono l'applicazione livello dati lasciando intatto il database associato.  
@@ -110,7 +110,7 @@ ms.locfileid: "71823556"
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
-##  <a name="Summary"></a> Pagina Riepilogo  
+##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per verificare le azioni eseguite dalla procedura guidata in caso di eliminazione dell'istanza di applicazione livello dati.  
   
  **Controlla selezioni** : consente di verificare l'applicazione livello dati, il database e il metodo di eliminazione visualizzato nella casella. Se le informazioni sono corrette, selezionare **Avanti** o **Fine** per eliminare l'applicazione livello dati. Se l'applicazione livello dati e le informazioni del database non sono corrette, selezionare **Annulla** , quindi l'applicazione livello dati corretta. Se il metodo di eliminazione non è corretto, scegliere **Indietro** per tornare alla pagina **Seleziona metodo** e selezionare un altro metodo.  
@@ -123,7 +123,7 @@ ms.locfileid: "71823556"
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
-##  <a name="Delete_datatier_application"></a> Pagina Elimina applicazione livello dati  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a> Pagina Elimina applicazione livello dati  
  In questa pagina viene indicato l'esito positivo o negativo dell'operazione di eliminazione.  
   
  **Eliminazione dell'applicazione livello dati** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per l'eliminazione dell'istanza di applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
@@ -134,7 +134,7 @@ ms.locfileid: "71823556"
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> Utilizzo di PowerShell  
+##  <a name="using-powershell"></a><a name="DeleteDACPowerShell"></a> Utilizzo di PowerShell  
 
 1. Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da eliminare.  
   

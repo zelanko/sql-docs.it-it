@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082131"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
@@ -64,7 +64,7 @@ Lo stato di Scale Out Worker viene visualizzato nella pagina **Dashboard**. È p
 
 ![Strumento di gestione dei ruoli di lavoro del portale](media/portal-worker-manager-new.PNG)
 
-### <a name="add-a-scale-out-worker"></a>Aggiungere un'istanza Scale Out Worker
+### <a name="add-a-scale-out-worker"></a>Aggiungere un'istanza di Scale Out Worker
 Per aggiungere un'istanza di Scale Out Worker, fare clic sul pulsante **+** nella parte inferiore dell'elenco Scale Out Worker. 
 
 Immettere il nome computer dell'istanza di Scale Out Worker che si vuole aggiungere e fare clic su **Convalida**. Scale Out Manager verifica se l'utente corrente dispone di accesso agli archivi certificati nei computer che eseguono Scale Out Master e Scale Out Worker

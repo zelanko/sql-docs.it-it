@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957035"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 La creazione e l'esecuzione di query, stored procedure, script e così via sono le attività principali dei professionisti dei database. Questa esercitazione illustra le funzionalità principali dell'editor T-SQL per la creazione di oggetti di database.
 
@@ -29,7 +29,7 @@ In questa esercitazione si apprenderà come usare [!INCLUDE[name-sos-short](../i
 > * Visualizzare i dettagli degli oggetti di database usando *Visualizza definizione* e *Vai a definizione*
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 

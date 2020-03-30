@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909503"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
@@ -34,9 +34,9 @@ ms.locfileid: "72909503"
   
 -   **Per ripristinare un database a uno snapshot del database tramite:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  Il ripristino da snapshot non è supportato nei casi seguenti:  
   
 -   Sono disponibili più snapshot per il database. Per il ripristino deve essere presente un solo snapshot con cui ripristinare il database.  
@@ -67,7 +67,7 @@ ms.locfileid: "72909503"
   
 -   Il ripristino causa l'eliminazione di tutti i cataloghi full-text.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Assicurarsi che il database di origine e lo snapshot del database soddisfino i prerequisiti seguenti:  
   
 -   Verificare che il database non sia stato danneggiato.  
@@ -79,12 +79,12 @@ ms.locfileid: "72909503"
   
 -   Eliminare qualsiasi altro snapshot del database attualmente presente nel database. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)o a un'istanza diversa.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Qualsiasi utente con autorizzazioni RESTORE DATABASE sul database di origine può ripristinarne lo stato corrispondente al momento in cui è stato creato lo snapshot.  
   
-##  <a name="TsqlProcedure"></a> Come ripristinare un database a uno snapshot del database (tramite Transact-SQL)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> Come ripristinare un database a uno snapshot del database (tramite Transact-SQL)  
  **Per ripristinare un database a uno snapshot del database**  
   
 > [!NOTE]  
@@ -118,14 +118,14 @@ ms.locfileid: "72909503"
   
 6.  Facoltativamente, eseguire il backup del database ripristinato, in particolare se viene utilizzato il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Per eseguire il backup di un database, vedere [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
 
-###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questa sezione sono inclusi i seguenti esempi di ripristino di un database a uno snapshot del database:  
   
 -   R. [Ripristino di uno snapshot nel database AdventureWorks](#Reverting_AW)  
   
 -   B. [Ripristino di uno snapshot del database Sales](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. Ripristino di uno snapshot nel database AdventureWorks  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. Ripristino di uno snapshot nel database AdventureWorks  
  Nell'esempio si presuppone che per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esista un solo snapshot. Per l'esempio in cui viene creato lo snapshot usato per il ripristino, vedere [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -136,7 +136,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> B. Ripristino di uno snapshot del database Sales  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> B. Ripristino di uno snapshot del database Sales  
  In questo esempio si suppone che esistano attualmente due snapshot del database **Sales** : **sales_snapshot0600** e **sales_snapshot1200**. Nell'esempio viene eliminato lo snapshot meno recente e il database viene ripristinato in base allo snapshot più recente.  
   
  Per il codice di creazione del database di esempio e degli snapshot su cui si basa questo esempio, vedere:  
@@ -158,7 +158,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

@@ -33,10 +33,10 @@ author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75831819"
 ---
 # <a name="collation-and-unicode-support"></a>Supporto Unicode e delle regole di confronto
@@ -49,7 +49,7 @@ Quando si selezionano le regole di confronto per un server, un database, una col
     
 Per usare in modo ottimale il supporto delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si dovrebbe approfondire la conoscenza dei termini specificati in questo argomento e di come si correlano alle caratteristiche dei dati.    
     
-##  <a name="Terms"></a> Termini delle regole di confronto    
+##  <a name="collation-terms"></a><a name="Terms"></a> Termini delle regole di confronto    
     
 -   [Regole di confronto](#Collation_Defn) 
     - [Set di regole di confronto](#Collation_sets)
@@ -58,7 +58,7 @@ Per usare in modo ottimale il supporto delle regole di confronto di [!INCLUDE[ss
 -   [Tabella codici](#Code_Page_Defn)    
 -   [Ordinamento](#Sort_Order_Defn)    
     
-###  <a name="Collation_Defn"></a> Confronto    
+###  <a name="collation"></a><a name="Collation_Defn"></a> Confronto    
 Le regole di confronto specificano gli schemi di bit che rappresentano i diversi caratteri in un set di dati. Le regole di confronto determinano inoltre le regole in base alle quali i dati vengono ordinati e confrontati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'archiviazione di oggetti con regole di confronto diverse in un singolo database. Per le colonne non Unicode, l'impostazione delle regole di confronto specifica la tabella codici dei dati e i caratteri che possono essere rappresentati. Per i dati spostati tra colonne non Unicode, è necessaria la conversione dalla tabella codici di origine a quella di destinazione.    
     
 I risultati di un'istruzione[!INCLUDE[tsql](../../includes/tsql-md.md)] possono variare se l'istruzione viene eseguita nel contesto di database diversi che utilizzano impostazioni diverse per le regole di confronto. Se possibile, usare regole di confronto standardizzate per l'organizzazione. In questo modo, non è necessario specificare le regole di confronto in ogni carattere o espressione Unicode. Se è necessario usare oggetti con impostazioni diverse per tabelle codici e regole di confronto, codificare le query in modo da considerare la precedenza delle regole di confronto. Per altre informazioni, vedere [Precedenza delle regole di confronto (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
@@ -110,7 +110,7 @@ Le regole di confronto sono costituite da una serie di suffissi che definiscono 
 
 <sup>2</sup> L'aggiunta dell'opzione UTF-8 (\_UTF8) consente la codifica dei dati Unicode con UTF-8. Per altre informazioni, vedere la sezione [Supporto di UTF-8](#utf8) in questo articolo. 
 
-### <a name="Collation_sets"></a> Set di regole di confronto
+### <a name="collation-sets"></a><a name="Collation_sets"></a> Set di regole di confronto
 
 In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i seguenti set di regole di confronto:    
 
@@ -118,10 +118,10 @@ In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i se
 -  [Regole di confronto binarie](#Binary-collations)
 -  [Regole di confronto di SQL Server](#SQL-collations)
     
-#### <a name="Windows-collations"></a> Regole di confronto di Windows    
+#### <a name="windows-collations"></a><a name="Windows-collations"></a> Regole di confronto di Windows    
 Le regole di confronto di Windows definiscono regole per l'archiviazione dei dati di tipo carattere basate sulle impostazioni locali del sistema Windows associate. Per le regole di confronto di Windows, è possibile implementare un confronto dei dati non Unicode mediante lo stesso algoritmo dei dati Unicode. Le regole di confronto di base di Windows specificano l'alfabeto o la lingua da usare quando viene applicato l'ordinamento del dizionario. Le regole specificano anche la tabella codici usata per l'archiviazione di dati di tipo carattere non Unicode. Sia l'ordinamento Unicode che quello non Unicode sono compatibili con i confronti di stringhe di una versione specifica di Windows. In questo modo viene garantita la coerenza tra i tipi di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli sviluppatori possono ordinare le stringhe all'interno delle applicazioni mediante le stesse regole usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Windows_collation_name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
-#### <a name="Binary-collations"></a> Regole di confronto binarie    
+#### <a name="binary-collations"></a><a name="Binary-collations"></a> Regole di confronto binarie    
 Le regole di confronto binarie ordinano i dati in base alla sequenza di valori codificati definiti dalle impostazioni locali e dal tipo di dati. Supportano la distinzione tra maiuscole e minuscole. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le regole di confronto binarie definiscono le impostazioni locali e la tabella codici ANSI usata. In questo modo viene applicato un ordinamento binario. Grazie alla loro semplicità, le regole di confronto binarie consentono di migliorare le prestazioni dell'applicazione. Per i tipi di dati non Unicode, il confronto dei dati è basato sui punti di codice definiti nella tabella codici ANSI. Per i tipi di dati Unicode, il confronto dei dati è basato sui punti di codice Unicode. Per le regole di confronto binarie nei tipi di dati Unicode, le impostazioni locali non vengono considerate ai fini dell'ordinamento dei dati. Ad esempio, l'uso di **Latin_1_General_BIN** e **Japanese_BIN** su dati Unicode restituisce risultati di ordinamento identici. Per altre informazioni, vedere [Windows_collation_name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).   
     
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ci sono due tipi di regole di confronto binarie:
@@ -130,7 +130,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ci sono due tipi di
 
 -  Le regole di confronto **BIN2** più recenti, che implementano un confronto tra punti di codice puro. Nelle regole di confronto BIN2 tutti i caratteri vengono ordinati in base ai relativi punti di codice. Poiché la piattaforma Intel ha un'architettura little endian, i caratteri di codice Unicode vengono sempre archiviati con i byte scambiati.     
     
-#### <a name="SQL-collations"></a> Regole di confronto di SQL Server    
+#### <a name="sql-server-collations"></a><a name="SQL-collations"></a> Regole di confronto di SQL Server    
 Le regole di confronto[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) garantiscono la compatibilità di ordinamento con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le regole di ordinamento del dizionario per i dati non Unicode sono incompatibili con qualsiasi routine di ordinamento fornita dai sistemi operativi Windows. Tuttavia l'ordinamento dei dati Unicode è compatibile con una versione specifica di regole di ordinamento di Windows. Dato che le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono per i dati non Unicode e i dati Unicode, confrontando gli stessi dati vengono visualizzati risultati diversi, a seconda del tipo di dati sottostante. Per altre informazioni, vedere [Nome delle regole di confronto di SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md). 
 
 Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'impostazione di installazione predefinita per le regole di confronto è determinata dalle impostazioni locali del sistema operativo. È possibile modificare le regole di confronto a livello di server durante l'installazione oppure modificando le impostazioni locali del sistema operativo prima dell'installazione. Per motivi di compatibilità con le versioni precedenti, le regole di confronto predefinite sono impostate sulla versione disponibile meno recente associata a impostazioni locali specifiche. Non sempre, quindi, si tratta delle regole di confronto consigliate. Per sfruttare tutti i vantaggi delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modificare le impostazioni di installazione predefinite per usare le regole di confronto di Windows. Ad esempio, per le impostazioni locali del sistema operativo "Inglese (Stati Uniti)" (tabella codici 1252), le regole di confronto predefinite durante l'installazione sono impostate su **SQL_Latin1_General_CP1_CI_AS** ed è possibile modificare l'impostazione scegliendo la controparte di Windows più simile, **Latin1_General_100_CI_AS_SC**.
@@ -141,7 +141,7 @@ Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 > -   Il codice dell'applicazione dipende dal comportamento di regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti.    
 > -   È necessario archiviare dati di tipo carattere in più lingue.    
     
-### <a name="Collation_levels"></a> Livelli delle regole di confronto
+### <a name="collation-levels"></a><a name="Collation_levels"></a> Livelli delle regole di confronto
 L'impostazione delle regole di confronto è supportata ai seguenti livelli di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
 
 -  [Regole di confronto a livello di server](#Server-level-collations)
@@ -149,7 +149,7 @@ L'impostazione delle regole di confronto è supportata ai seguenti livelli di un
 -  [Regole di confronto a livello di colonna](#Column-level-collations)
 -  [Regole di confronto a livello di espressione](#Expression-level-collations)
 
-#### <a name="Server-level-collations"></a> Regole di confronto a livello di server   
+#### <a name="server-level-collations"></a><a name="Server-level-collations"></a> Regole di confronto a livello di server   
 Le regole di confronto del server predefinite vengono determinate durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e diventano le regole predefinite per i database di sistema e per tutti i database utente. 
 
 La tabella seguente illustra le designazioni delle regole di confronto predefinite determinate dalle impostazioni locali del sistema operativo, inclusi i relativi identificatori delle impostazioni locali (LCID) di Windows e SQL:
@@ -388,7 +388,7 @@ Per eseguire una query sul server per tutte le regole di confronto disponibili, 
 SELECT * FROM sys.fn_helpcollations();
 ```
     
-#### <a name="Database-level-collations"></a> Regole di confronto a livello di database    
+#### <a name="database-level-collations"></a><a name="Database-level-collations"></a> Regole di confronto a livello di database    
 Quando si crea o si modifica un database, è possibile usare la clausola `COLLATE` dell'istruzione `CREATE DATABASE` o `ALTER DATABASE` per specificare le regole di confronto predefinite del database. Se non viene specificata alcuna regola di confronto, al database vengono assegnate le regole di confronto del server.    
     
 Non è possibile modificare le regole di confronto dei database di sistema a meno che non vengano modificate per il server.
@@ -413,7 +413,7 @@ ALTER DATABASE myDB COLLATE Greek_CS_AI;
 SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ```
 
-#### <a name="Column-level-collations"></a> Regole di confronto a livello di colonna    
+#### <a name="column-level-collations"></a><a name="Column-level-collations"></a> Regole di confronto a livello di colonna    
 Quando una tabella viene creata o modificata, è possibile specificare regole di confronto per ciascuna colonna di stringhe di caratteri usando la clausola `COLLATE`. Se non si specificano regole di confronto, alla colonna verranno assegnate le regole di confronto predefinite del database.    
 
 È possibile modificare le regole di confronto di una colonna usando un'istruzione `ALTER TABLE` simile alla seguente:
@@ -422,23 +422,23 @@ Quando una tabella viene creata o modificata, è possibile specificare regole di
 ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
 ```
     
-#### <a name="Expression-level-collations"></a> Regole di confronto a livello di espressione    
+#### <a name="expression-level-collations"></a><a name="Expression-level-collations"></a> Regole di confronto a livello di espressione    
 Le regole di confronto a livello di espressione vengono impostate al momento dell'esecuzione di un'istruzione e interessano la modalità di restituzione di un set di risultati. In questo modo i risultati dell'ordinamento di `ORDER BY` possono essere specifici delle impostazioni locali. Per implementare regole di confronto a livello di espressione, usare una clausola `COLLATE` simile alla seguente:    
     
 ```sql    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
-###  <a name="Locale_Defn"></a> Impostazioni locali    
+###  <a name="locale"></a><a name="Locale_Defn"></a> Impostazioni locali    
 Le impostazioni locali rappresentano un set di informazioni associate a un paese o a una lingua. Queste informazioni possono includere il nome e l'identificatore della lingua parlata, l'alfabeto usato per la scrittura della lingua e le convenzioni culturali. Le regole di confronto possono essere associate a uno o più set di impostazioni locali. Per altre informazioni, vedere [ID delle impostazioni locali assegnati da Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
-###  <a name="Code_Page_Defn"></a> Tabella codici    
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a> Tabella codici    
 Una tabella codici è un set ordinato di caratteri di uno script specifico nel quale a ogni carattere viene associato un indice numerico o un valore punto di codice. Per tabella codici di Windows si intende in genere un *set di caratteri* o *charset*. Queste tabelle vengono usate per supportare i set di caratteri e i layout di tastiera impiegati per le diverse impostazioni locali di Windows.     
  
-###  <a name="Sort_Order_Defn"></a> Ordinamento    
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> Ordinamento    
 L'ordinamento specifica il modo in cui vengono ordinati i valori dei dati. L'ordine influisce sui risultati del confronto dei dati stessi. I dati vengono ordinati tramite regole di confronto e possono essere ottimizzati tramite indici.    
     
-##  <a name="Unicode_Defn"></a> Supporto Unicode    
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Supporto Unicode    
 Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non sono necessarie tabelle codici diverse per gestire set di caratteri diversi.
 
 ### <a name="unicode-basics"></a>Nozioni fondamentali su Unicode
@@ -505,7 +505,7 @@ Nella tabella seguente sono riportate informazioni sull'uso di dati multilingue 
 |Non Unicode|Unicode|Non si tratta di una configurazione ideale per l'uso di dati multilingue. Non è possibile scrivere dati Unicode nel server non Unicode e potrebbero verificarsi problemi all'invio dei dati ai server che non rientrano nella tabella codici del server.|    
 |Non Unicode|Non Unicode|Si tratta di uno scenario che presenta numerose limitazioni per i dati multilingue. È possibile usare solo una tabella codici.|    
     
-##  <a name="Supplementary_Characters"></a> Caratteri supplementari    
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> Caratteri supplementari    
 L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo 000000-10FFFF. I caratteri usati più di frequente hanno valori dei punti di codice nell'intervallo 000000-00FFFF (65.535 caratteri), compresi in una parola a 8 bit o a 16 bit in memoria e su disco. Questo intervallo viene in genere designato come Basic Multilingual Plane (BMP). 
 
 L'Unicode Consortium ha tuttavia stabilito 16 "piani" aggiuntivi di caratteri, ognuno con le stesse dimensioni di BMP. Questa definizione offre a Unicode la possibilità di rappresentare 1.114.112 caratteri (ovvero, 2<sup>16</sup> * 17 caratteri) nell'intervallo di punti di codice 000000-10FFFF. I caratteri con valori di punti di codice maggiori di 00FFFF richiedono da due a quattro parole a 8 bit consecutive (UTF-8) o due parole a 16 bit consecutive (UTF-16). Questi caratteri posizionati oltre BMP sono denominati *caratteri supplementari* e le parole a 8 bit o a 16 bit consecutive aggiuntive sono denominate *coppie di surrogati*. Per altre informazioni su caratteri supplementari, surrogati e coppie di surrogati, vedere lo [standard Unicode](http://www.unicode.org/standard/standard.html).    
@@ -544,7 +544,7 @@ Nella tabella seguente viene confrontato il comportamento di alcune funzioni per
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Restituisce un punto di codice UTF-16 nell'intervallo 0-0x10FFFF.|Restituisce un punto di codice UCS-2 nell'intervallo 0-0xFFFF.|    
 |[Carattere jolly per corrispondenze di singoli caratteri](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Carattere jolly per la mancata corrispondenza dei caratteri](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Sono supportati caratteri supplementari per tutte le operazioni con caratteri jolly.|Non sono supportati caratteri supplementari per queste operazioni con caratteri jolly. Sono supportati altri operatori jolly.|    
     
-## <a name="GB18030"></a> Supporto GB18030    
+## <a name="gb18030-support"></a><a name="GB18030"></a> Supporto GB18030    
 GB18030 è uno standard separato usato nella Repubblica popolare cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per i caratteri con codifica GB18030 consentendone il riconoscimento al momento dell'ingresso nel server da un'applicazione client e la conversione e archiviazione come caratteri Unicode a livello nativo. Dopo essere stati archiviati nel server, questi caratteri vengono trattati come caratteri Unicode in tutte le operazioni successive. 
 
 È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello \_100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie di surrogati), è possibile usare le regole di confronto SC disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per migliorare la ricerca e l'ordinamento.    
@@ -552,7 +552,7 @@ GB18030 è uno standard separato usato nella Repubblica popolare cinese per la c
 > [!NOTE]
 > Assicurarsi che gli strumenti client, come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], usino il tipo di carattere Dengxian per visualizzare correttamente le stringhe contenenti caratteri con codifica GB18030.
     
-## <a name="Complex_script"></a> Supporto di lingue con alfabeti non latini    
+## <a name="complex-script-support"></a><a name="Complex_script"></a> Supporto di lingue con alfabeti non latini    
 In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere supportata l'immissione, l'archiviazione, la modifica e la visualizzazione di lingue con alfabeti non latini. Le lingue con alfabeti non latini includono i siti seguenti:    
     
 -   Lingue che presentano una combinazione di testo scritto sia da destra verso sinistra sia da sinistra verso destra, ad esempio una combinazione di testo in arabo e inglese.    
@@ -561,7 +561,7 @@ In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere supporta
     
 Le applicazioni di database che interagiscono con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono usare controlli che supportano le lingue con alfabeti non latini. I form standard di Windows creati in codice gestito sono abilitati per le lingue con alfabeti non latini.    
 
-## <a name="Japanese_Collations"></a> Regole di confronto per il giapponese aggiunte in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> Regole di confronto per il giapponese aggiunte in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], sono supportate nuove famiglie di regole di confronto per il giapponese, con permutazioni di varie opzioni (\_CS, \_AS, \_KS, \_WS e \_VSS). 
 
@@ -578,12 +578,12 @@ Queste regole di confronto sono supportate negli indici del [!INCLUDE[ssde_md](.
 
 <a name="ctp23"></a>
 
-## <a name="utf8"></a> Supporto di UTF-8
+## <a name="utf-8-support"></a><a name="utf8"></a> Supporto di UTF-8
 In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione e come regola di confronto di livello database o colonna per i dati di tipo stringa. La codifica UTF-8 è consentita nei tipi di dati **char** e **varchar** ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto che ha il suffisso *UTF8*. Un esempio è la modifica di **LATIN1_GENERAL_100_CI_AS_SC** in **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 è disponibile solo per le regole di confronto di Windows che supportano i caratteri supplementari. Questa funzionalità è stata introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. I tipi di dati **nchar** e **nvarchar** consentono solo la codifica UCS-2 o UTF-16 e rimangono invariati.
 
-### <a name="storage_differences"></a> Differenze nell'archiviazione tra UTF-8 e UTF-16
+### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> Differenze nell'archiviazione tra UTF-8 e UTF-16
 L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo 000000-10FFFF. Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], sono disponibili entrambe le codifiche UTF-8 e UTF-16 per rappresentare l'intera gamma:    
 -  Con la codifica UTF-8, i caratteri nell'intervallo ASCII (000000-00007F) richiedono 1 byte, i punti di codice nell'intervallo 000080-0007FF richiedono 2 byte, i punti di codice nell'intervallo 000800-00FFFF richiedono 3 byte e i punti di codice nell'intervallo 0010000-0010FFFF richiedono 4 byte. 
 -  Con la codifica UTF-16, i punti di codice nell'intervallo 000000-00FFFF richiedono 2 byte e i punti di codice nell'intervallo 0010000-0010FFFF richiedono 4 byte. 
@@ -616,7 +616,7 @@ Prima di scegliere se usare la codifica UTF-8 o UTF-16 per un database o una col
 
 Per altre considerazioni, vedere [Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
-### <a name="converting"></a> Conversione a UTF-8
+### <a name="converting-to-utf-8"></a><a name="converting"></a> Conversione a UTF-8
 Dato che in [CHAR (*n*) e VARCHAR (*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) o in [NCHAR (*n*) e NVARCHAR (*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) il segnaposto *n* definisce le dimensioni di archiviazione in byte e non il numero di caratteri che è possibile archiviare, è importante determinare le dimensioni del tipo di dati in cui è necessario eseguire la conversione, per evitare il troncamento dei dati. 
 
 Si consideri ad esempio una colonna definita come **NVARCHAR(100)** che archivia 180 byte di caratteri giapponesi. In questo esempio i dati della colonna sono attualmente codificati con UCS-2 o UTF-16, che usa 2 byte per carattere. La conversione del tipo di colonna in **VARCHAR(200)** non è sufficiente per impedire il troncamento dei dati, perché il nuovo tipo di dati può archiviare solo 200 byte, ma i caratteri giapponesi richiedono 3 byte quando sono codificati in UTF-8. Pertanto la colonna deve essere definita come **VARCHAR(270)** per evitare la perdita di dati a causa del troncamento.
@@ -627,7 +627,7 @@ Per modificare le regole di confronto e il tipo di dati delle colonne in una tab
 
 Per modificare le regole di confronto del database consentendo a nuovi oggetti di ereditarle per impostazione predefinita o per modificare le regole di confronto del server consentendo ai nuovi database di ereditare le regole di confronto di sistema per impostazione predefinita, vedere la sezione [Attività correlate](#Related_Tasks) di questo articolo. 
 
-##  <a name="Related_Tasks"></a> Related tasks    
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> Related tasks    
     
 |Attività|Argomento|    
 |----------|-----------|    
@@ -638,7 +638,7 @@ Per modificare le regole di confronto del database consentendo a nuovi oggetti d
 |Viene descritto come scrivere istruzioni Transact-SQL più portabili da un linguaggio a un altro o in grado di supportare più linguaggi con maggiore facilità|[Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |Viene descritto come modificare la lingua dei messaggi di errore e le preferenze di uso e visualizzazione dei dati di tipo data, ora e valuta|[Impostazione di una lingua di sessione](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related content    
+##  <a name="related-content"></a><a name="Related_Content"></a> Related content    
 Per altre informazioni, vedere i seguenti contenuti correlati:
 * [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
 * [Usare il formato carattere Unicode per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)

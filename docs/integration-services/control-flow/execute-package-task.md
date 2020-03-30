@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294186"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
@@ -137,13 +137,13 @@ ms.locfileid: "71294186"
   
 -   [Impostare le opzioni nella pagina Associazioni di parametro](#parameter)  
   
-###  <a name="open"></a> Aprire l'editor attività Esegui pacchetto  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> Aprire l'editor attività Esegui pacchetto  
   
 1.  Aprire un progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] contenente un'attività Esegui pacchetto.  
   
 2.  Fare clic con il pulsante destro del mouse sull'attività disponibile in Progettazione SSIS, quindi scegliere **Modifica**.  
   
-###  <a name="general"></a> Impostare le opzioni nella pagina Generale  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Impostare le opzioni nella pagina Generale  
  **Nome**  
  Specificare un nome univoco per l'attività Esegui pacchetto. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294186"
  **Descrizione**  
  Digitare una descrizione dell'attività Esegui pacchetto.  
   
-###  <a name="package"></a> Impostare le opzioni nella pagina Pacchetto  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> Impostare le opzioni nella pagina Pacchetto  
  **ReferenceType**  
  Selezionare **Riferimento al progetto** per pacchetti figlio inclusi nel progetto. Selezionare **Riferimento esterno** per pacchetti figlio posizionati esternamente al pacchetto  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294186"
  **PackageNameReadOnly**  
  Viene visualizzato il nome del pacchetto.  
   
-###  <a name="parameter"></a> Impostare le opzioni nella pagina Associazioni di parametro  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> Impostare le opzioni nella pagina Associazioni di parametro  
  È possibile passare i valori del pacchetto padre o del progetto al pacchetto figlio. Il progetto deve utilizzare il modello di distribuzione del progetto e il pacchetto figlio deve essere contenuto nello stesso progetto in cui è contenuto il pacchetto padre.  
   
  Per informazioni sulla conversione dei progetti nel modello di distribuzione del progetto, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  

@@ -4,18 +4,18 @@ ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
-description: L'estensione per il rendering di Word consente di eseguire il rendering di report impaginati nel formato  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (con estensione docx). Il formato è Office Open XML.
+description: L'estensione per il rendering di Word consente di eseguire il rendering di report impaginati nel formato Microsoft Word (con estensione docx). Il formato è Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75df880cf51df8670671331ddd6de2738b0bba54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079408"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342875"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 
@@ -30,14 +30,14 @@ ms.locfileid: "77079408"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItemsWord"></a> Elementi del report in Word  
+##  <a name="report-items-in-word"></a><a name="ReportItemsWord"></a> Elementi del report in Word  
  I report esportati in Word vengono visualizzati sotto forma di una tabella nidificata che rappresenta il corpo del report. Il rendering di un'area dati Tablix viene eseguito come tabella nidificata che riflette la struttura dell'area dati nel report, mentre quello di caselle di testo e rettangoli viene eseguito come celle all'interno della tabella. Il valore della casella di testo viene visualizzato all'interno della cella.  
   
  Il rendering di immagini, grafici, barre di dati, grafici sparkline, mappe, indicatori e misuratori viene eseguito come immagini statiche all'interno delle celle della tabella. Vengono sottoposti a rendering i collegamenti ipertestuali e i collegamenti drill-through presenti in questi elementi del report. Le mappe e le aree su cui è possibile fare clic all'interno di un grafico non sono supportate.  
   
  I report a colonne in formato newsletter non vengono sottoposti a rendering in Word. Il rendering di colori e immagini di sfondo delle pagine e del corpo del report non viene eseguito.  
   
-##  <a name="Pagination"></a> Paginazione  
+##  <a name="pagination"></a><a name="Pagination"></a> Paginazione  
  Dopo l'apertura in Word, l'intero report viene rimpaginato in base alle dimensioni della pagina. La rimpaginazione può causare l'inserimento di interruzioni di pagina in posizioni non previste e, in alcuni casi, la presenza nel report esportato di due interruzioni di pagina consecutive in una riga o l'aggiunta di pagine vuote. È possibile tentare di modificare la paginazione di Word regolando i margini della pagina.  
   
  Questo renderer supporta solo interruzioni di pagina logiche.  
@@ -50,7 +50,7 @@ ms.locfileid: "77079408"
   
  Dopo il rendering, la larghezza del report aumenta se necessario fino a un massimo di 56 centimetri, per consentire la visualizzazione del contenuto. La larghezza minima del report è basata sulla proprietà RDL Width nel riquadro Proprietà.  
   
-##  <a name="DocumentProperties"></a> Proprietà del documento  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Proprietà del documento  
  Il renderer di Word consente di scrivere i metadati seguenti nel file DOCX.  
   
 |Proprietà degli elementi del report|Descrizione|  
@@ -59,7 +59,7 @@ ms.locfileid: "77079408"
 |Report.Author|Autore|  
 |Report.Description|Commenti|  
   
-##  <a name="ReportHeadersFooters"></a> Intestazioni di pagina e piè di pagina  
+##  <a name="page-headers-and-footers"></a><a name="ReportHeadersFooters"></a> Intestazioni di pagina e piè di pagina  
  Per le intestazioni e i piè di pagina il rendering viene eseguito come aree di intestazione e piè di pagina in Word. Se nell'intestazione o nel piè di pagina è visualizzato un numero di pagina o un'espressione che indica il numero complessivo di pagine del report, questi valori vengono convertiti in un campo di Word. In questo modo, nel report visualizzabile appare il numero di pagina preciso. L'eventuale impostazione nel report dell'altezza dell'intestazione o del piè di pagina non è supportata in Word. In alcune circostanze, la proprietà PrintOnFirstPage può specificare se il testo di un'intestazione e di un piè di pagina viene stampato nella prima pagina di un report. Se il report visualizzabile è costituito da più pagine e in ognuna di esse è presente un'unica sezione, la proprietà PrintOnFirstPage può essere impostata su False in modo che il testo venga eliminato dalla prima pagina; in caso contrario, il testo viene stampato indipendentemente dal valore della proprietà PrintOnFirstPage.  
   
  Tramite il renderer di Word viene tentata l'analisi di tutte le espressioni delle intestazioni e dei piè di pagina quando i report vengono esportati in Word. Molte forme di espressioni vengono analizzate correttamente e i valori previsti vengono visualizzati nei piè di pagina e nelle intestazioni di tutte le pagine dei report.  
@@ -78,7 +78,7 @@ ms.locfileid: "77079408"
   
  Per evitare questo problema, usare più sequenze di testo invece di una sola espressione complessa quando si usano espressioni nei piè di pagina e nelle intestazioni. Le due espressioni seguenti sono equivalenti. La prima è un'espressione complessa, mentre nella seconda vengono utilizzate sequenze di testo. Il renderer di Word consente di analizzare correttamente solo la seconda espressione.  
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  Alcuni elementi interattivi sono supportati in Word. Di seguito è riportata una descrizione di comportamenti specifici.  
   
 ### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
@@ -96,7 +96,7 @@ ms.locfileid: "77079408"
 ### <a name="bookmarks"></a>Segnalibri  
  Per i segnalibri del report viene eseguito il rendering come segnalibri di Word. Il rendering dei collegamenti a un segnalibro viene eseguito come collegamenti ipertestuali che consentono di accedere alle etichette di segnalibro all'interno del documento. Le etichette di segnalibro devono contenere meno di 40 caratteri. L'unico carattere speciale che è possibile utilizzare in queste etichette è il carattere di sottolineatura (_). I caratteri speciali non supportati vengono rimossi dal nome dell'etichetta di segnalibro. Il nome viene inoltre troncato se costituito da più di 40 caratteri. Se il report contiene nomi di segnalibro duplicati, il rendering dei segnalibri non verrà eseguito in Word.  
   
-##  <a name="WordStyleRendering"></a> Rendering dello stile in Word  
+##  <a name="word-style-rendering"></a><a name="WordStyleRendering"></a> Rendering dello stile in Word  
  Di seguito è riportata una breve descrizione della modalità di rendering degli stili in Word.  
   
 ### <a name="color-palette"></a>Tavolozza dei colori  
@@ -105,7 +105,7 @@ ms.locfileid: "77079408"
 ### <a name="border"></a>Bordo  
  Per i bordi degli elementi del report, ad eccezione del bordo della pagina, viene eseguito il rendering come bordi di celle di tabella di Word.  
   
-##  <a name="SquigglyLines"></a> Righe ondulate nei report esportati  
+##  <a name="squiggly-lines-in-exported-reports"></a><a name="SquigglyLines"></a> Righe ondulate nei report esportati  
  Quando esportati e visualizzati in Word, costanti o dati del report potrebbero essere sottolineati con righe ondulate rosse o verdi. Con le righe ondulate rosse vengono identificati gli errori di ortografia, con quelle verdi gli errori grammaticali. Questa situazione si verifica quando nel report sono incluse parole non conformi agli strumenti di correzione (controllo ortografia e grammatica) della lingua di modifica specificata in Word. Ad esempio, i titoli in inglese di colonne del report probabilmente saranno sottolineati con righe ondulate rosse se viene eseguito il rendering del report in una versione spagnola di Word. Gli errori ortografici percepiti sono più comuni nei report rispetto a quelli grammaticali in quanto nei report sono inclusi in genere solo testi brevi, non paragrafi o frasi intere.  
   
  La presenza di righe ondulate nei report implica la presenza di errori nel report che probabilmente non esistono. È possibile rimuovere le righe ondulate cambiando la lingua degli strumenti di correzione per il report. Per cambiare la lingua degli strumenti di correzione, selezionare il contenuto del report e specificare la lingua appropriata per tale contenuto. È possibile selezionare una parte o l'intero contenuto. In Word, l'opzione relativa alla lingua, **Imposta lingua di modifica** , si trova nella scheda **Rivedere** nell'area **Lingua** . Al termine dell'aggiornamento del contenuto, è necessario salvare di nuovo il documento.  
@@ -121,7 +121,7 @@ ms.locfileid: "77079408"
 > [!NOTE]  
 >  Quando si cambia la lingua di modifica nella finestra di dialogo **Preferenze di lingua di Microsoft Office** o **Opzioni di Word** in Word, la modifica viene applicata a tutti i programmi di Office.  
   
-##  <a name="WordLimitations"></a> Limitazioni di Word  
+##  <a name="word-limitations"></a><a name="WordLimitations"></a> Limitazioni di Word  
  In [!INCLUDE[ofprword](../../includes/ofprword-md.md)]vengono applicate le limitazioni seguenti:  
   
 -   Le tabelle di Word supportano un massimo di 63 colonne. Se il report contiene più di 63 colonne e si tenta di eseguirne il rendering, la tabella viene divisa in Word. Le colonne aggiuntive vengono posizionate accanto alle 63 colonne visualizzate nel corpo del report. Pertanto, è possibile che le colonne del report non siano allineate come previsto.  
@@ -138,7 +138,7 @@ ms.locfileid: "77079408"
   
 -   Quando viene esportato in Word, il testo con effetti carattere in alcuni tipi di carattere può generare glifi imprevisti o mancanti nel report visualizzabile.  
   
-##  <a name="WordBenefits"></a> Vantaggi dell'utilizzo del renderer di Word  
+##  <a name="benefits-of-using-the-word-renderer"></a><a name="WordBenefits"></a> Vantaggi dell'utilizzo del renderer di Word  
  Oltre a rendere disponibili per i report esportati le nuove funzionalità di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] , i file con estensione *docx tendono anche a essere più piccoli. I report esportati tramite il renderer di Word sono in genere notevolmente più piccoli rispetto agli stessi report esportati utilizzando il renderer di Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilità con le versioni precedenti di report esportati  
@@ -146,7 +146,7 @@ ms.locfileid: "77079408"
   
  Se si disabilita la modalità di compatibilità e si salva di nuovo un report, il relativo layout potrebbe cambiare in modo imprevisto.  
   
-##  <a name="AvailabilityWord"></a> Rendering di Word 2003  
+##  <a name="the-word-2003-renderer"></a><a name="AvailabilityWord"></a> Rendering di Word 2003  
   
 > [!IMPORTANT]  
 >  L'estensione doc per il rendering di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 è deprecata. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
@@ -186,7 +186,7 @@ ms.locfileid: "77079408"
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Differenze tra i renderer di Word e Word 2003  
  I report, visualizzabili tramite i renderer di Word o Word 2003, tendono a essere non distinguibili da un punto di vista visivo. Tuttavia, è possibile riscontrare piccole differenze tra i due tipi di formati Word o Word 2003.  
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  Modificando le impostazioni relative alle informazioni sul dispositivo, è possibile modificare alcune impostazioni predefinite per questo renderer, ad esempio omettere collegamenti ipertestuali e collegamenti drill-through o espandere tutti gli elementi la cui visibilità può essere attivata o disattivata indipendentemente dal relativo stato originale durante il rendering. Per altre informazioni, vedere [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).  
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -24,10 +24,10 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258656"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258656"
 >  I backup con mirroring consentono di disporre di un massimo di quattro copie (mirror) di set di supporti, offrendo copie alternative per il recupero in caso di errori che dipendono da supporti danneggiati. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
   
-##  <a name="BckChecksums"></a> Checksum di backup  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Checksum di backup  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati tre tipi di checksum: della pagine, dei blocchi dei log e del backup. Durante la generazione di un checksum del backup, l'istruzione BACKUP verifica che i dati letti dal database siano consistenti con l'eventuale indicazione di checksum o di pagina incompleta presente nel database.  
   
  L'istruzione BACKUP consente di eseguire il calcolo facoltativo di un checksum del backup nel flusso del backup stesso. Se in una pagina specifica sono presenti informazioni relative al checksum della pagina o a una pagina incompleta, durante il backup della pagina verrà inoltre verificato lo stato del checksum e della pagina incompleta, nonché l'ID della pagina. Non verranno aggiunti checksum alle pagine durante la creazione di un checksum del backup. Il backup delle pagine viene eseguito solo se queste esistono nel database e non implica la modifica delle pagine stesse.  
@@ -75,7 +75,7 @@ ms.locfileid: "75258656"
   
 4.  Visualizza un messaggio per indicare che il backup è stato generato correttamente, ma contiene errori di pagina.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per abilitare o disabilitare i checksum per i backup**  
   
 -   [Abilitare o disabilitare il checksum di backup durante il backup o il ripristino &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

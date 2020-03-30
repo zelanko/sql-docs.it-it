@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903829"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
@@ -77,7 +77,7 @@ Per configurare la ricerca full-text con una procedura guidata, vedere [Usare l'
 
     Per altre informazioni, vedere [Creare e gestire indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md).
 
-##  <a name="options"></a> Scegliere le opzioni per un indice full-text 
+##  <a name="choose-options-for-a-full-text-index"></a><a name="options"></a> Scegliere le opzioni per un indice full-text 
   
 ### <a name="choose-a-language"></a>Scegliere una lingua  
  Per informazioni sulla scelta della lingua delle colonne, vedere [Scegliere una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  

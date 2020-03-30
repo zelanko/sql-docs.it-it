@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200394"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemi noti in Machine Learning Services di SQL Server
@@ -125,7 +125,7 @@ Questo problema è stato risolto nella versione finale. Questa limitazione non s
 
 **Si applica a:** SQL Server 2017 con Python
 
-### <a name="bkmk_sqlbindr"></a> Avviso di versione non compatibile quando ci si connette a una versione precedente di R Services per SQL Server da un client che usa [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a> Avviso di versione non compatibile quando ci si connette a una versione precedente di R Services per SQL Server da un client che usa [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 Quando si esegue codice R in un contesto di calcolo SQL Server 2016, è possibile che venga visualizzato l'errore seguente:
 
@@ -332,7 +332,7 @@ Se è necessario usare modelli più grandi, sono disponibili le soluzioni altern
 
     Dopo aver abilitato FileTable, per scrivere il modello è necessario ottenere un percorso da SQL tramite l'API FileTable e quindi scrivere il modello in tale posizione dal codice. Quando è necessario leggere il modello, ottenere il percorso da SQL e quindi chiamare il modello usando il percorso dallo script. Per altre informazioni, vedere [Accedere alle tabelle FileTable con API di input/output dei file](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7. Evitare di cancellare i dati delle aree di lavoro durante l'esecuzione di codice R in un contesto di calcolo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7. Evitare di cancellare i dati delle aree di lavoro durante l'esecuzione di codice R in un contesto di calcolo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Se si usa un comando R per cancellare oggetti dall'area di lavoro durante l'esecuzione di codice R in un contesto di calcolo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure si cancellano i dati dell'area di lavoro nell'ambito di uno script R chiamato tramite [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), è possibile che venga visualizzato questo errore: *workspace object revoScriptConnection not found*(oggetto revoScriptConnection dell'area di lavoro non trovato).
 

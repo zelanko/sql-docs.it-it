@@ -21,10 +21,10 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115689"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Creazione di un punto di controllo dell'utilità di SQL Server (Utilità SQL Server)
@@ -122,14 +122,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   [Creazione del punto di controllo dell'utilità](#Creating_UCP)  
   
-##  <a name="Welcome"></a> Introduzione alla procedura guidata Crea punto di controllo dell'utilità  
+##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> Introduzione alla procedura guidata Crea punto di controllo dell'utilità  
  Se si apre Esplora utilità e non è presente alcun punto di controllo dell'utilità connesso, è necessario connettersi a uno di quelli presenti o crearne uno nuovo.  
   
  **Connessione a un punto di controllo dell'utilità esistente**: se è già presente un punto di controllo dell'utilità nella distribuzione, è possibile connettersi a questo punto facendo clic sul pulsante ![](../../relational-databases/manage/media/connect-to-utility.gif "Connetti a utilità")**Connetti a utilità** nella parte superiore del riquadro Esplora utilità. Per connettersi a un punto di controllo dell'utilità esistente, è necessario disporre delle credenziali di amministratore o essere membro del ruolo Utility Reader. Si noti che può esistere un solo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è possibile essere connessi a un solo punto di controllo dell'utilità da un'istanza di SSMS.  
   
  **Creazione di un nuovo punto di controllo dell'utilità**: per creare un nuovo punto di controllo dell'utilità, fare clic sul pulsante ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Crea punto di controllo dell'utilità** nella parte superiore del riquadro Esplora utilità. Per creare un nuovo punto di controllo dell'utilità, è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornire le credenziali di amministratore nella finestra di dialogo della connessione. Si tenga presente che per ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può esistere un solo punto di controllo dell'utilità.  
   
-##  <a name="Instance_name"></a> Specifica istanza  
+##  <a name="specify-instance"></a><a name="Instance_name"></a> Specifica istanza  
  Specificare le informazioni seguenti sul punto di controllo dell'utilità che si desidera creare:  
   
 -   **Nome istanza**: per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza.  
@@ -138,7 +138,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Connection_dialog"></a> Finestra di dialogo di connessione  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Finestra di dialogo di connessione  
  Nella finestra di dialogo Connetti al server, verificare il tipo di server, il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Per continuare, fare clic su **Connetti**.  
   
-##  <a name="Agent_configuration"></a> Account set di raccolta utilità  
+##  <a name="utility-collection-set-account"></a><a name="Agent_configuration"></a> Account set di raccolta utilità  
  Specificare un account di dominio di Windows per eseguire il set di raccolta di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo account viene utilizzato come account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per il set di raccolta di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In alternativa, è possibile utilizzare l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esistente. Per soddisfare i requisiti della convalida, utilizzare le linee guida seguenti per specificare l'account.  
   
  Se si specifica l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
@@ -155,7 +155,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Validation_rules"></a> Regole di convalida  
+##  <a name="validation-rules"></a><a name="Validation_rules"></a> Regole di convalida  
  In questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le condizioni seguenti devono essere vere per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui verrà creato il punto di controllo dell'utilità:  
   
 |Regola di convalida|Azione correttiva|  
@@ -181,7 +181,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Scegliere **Avanti**per continuare.  
   
-##  <a name="Summary"></a> Riepilogo  
+##  <a name="summary"></a><a name="Summary"></a> Riepilogo  
  Nella pagina di riepilogo vengono visualizzate le informazioni fornite sul punto di controllo dell'utilità:  
   
 -   Il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il punto di controllo dell'utilità.  
@@ -192,7 +192,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Per modificare le impostazioni di configurazione del punto di controllo dell'utilità, fare clic su **Indietro**. Scegliere **Avanti**per continuare.  
   
-##  <a name="Creating_UCP"></a> Creazione del punto di controllo dell'utilità  
+##  <a name="creating-the-utility-control-point"></a><a name="Creating_UCP"></a> Creazione del punto di controllo dell'utilità  
  Durante l'operazione per la creazione del punto di controllo dell'utilità, nella procedura guidata verranno visualizzati i passaggi e lo stato:  
   
 -   Preparazione dell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la creazione del punto di controllo dell'utilità.  
@@ -217,7 +217,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Per altre informazioni su come registrare istanze aggiuntive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md). Per rimuovere il punto di controllo dell'utilità come istanza gestita da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Istanze gestite** nel riquadro **Esplora utilità** per popolare la visualizzazione elenco di istanze gestite, fare clic con il pulsante destro del mouse sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella visualizzazione elenco **Contenuto Esplora utilità** e quindi scegliere **Rendi istanza non gestita**.  
   
-##  <a name="PowerShell_create_UCP"></a> Creazione di un nuovo punto di controllo dell'utilità utilizzando PowerShell  
+##  <a name="create-a-new-utility-control-point-using-powershell"></a><a name="PowerShell_create_UCP"></a> Creazione di un nuovo punto di controllo dell'utilità utilizzando PowerShell  
  Utilizzare l'esempio seguente per creare un nuovo punto di controllo dell'utilità:  
   
 ```  

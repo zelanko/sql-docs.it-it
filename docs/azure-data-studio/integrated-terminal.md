@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959530"
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
@@ -87,7 +87,7 @@ Ad esempio, per abilitare l'esecuzione di bash come shell di accesso (che esegue
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Tasti di scelta rapida del terminale
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>Tasti di scelta rapida del terminale
 
 Il comando **Visualizza: Attiva/Disattiva terminale integrato** è associato a **CTRL+`** per includere o escludere rapidamente il pannello terminale integrato dalla visualizzazione.
 

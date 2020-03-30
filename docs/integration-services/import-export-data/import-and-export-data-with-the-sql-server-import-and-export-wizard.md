@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287435"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
@@ -45,7 +45,7 @@ Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes
     \- o \-
 -   **Vedere un esempio.** Per esaminare rapidamente le diverse schermate visualizzate durante una normale sessione, vedere questo semplice esempio illustrato in una singola pagina: [Introduzione a un esempio semplice di importazione/esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
-##  <a name="wizardSources"></a> Quali origini e destinazioni è possibile usare?  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> Quali origini e destinazioni è possibile usare?  
  L'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare dati dalle e nelle origini dati elencate nella tabella seguente. Per connettersi ad alcune di queste origini dati potrebbe essere necessario scaricare e installare file aggiuntivi.
  
 | Origine dati | È necessario scaricare file aggiuntivi? |
@@ -87,7 +87,7 @@ Per informazioni su come connettersi a un'origine dati non elencata qui, vedere 
 > [!TIP]
 > Premere il tasto F1 da qualsiasi pagina o finestra di dialogo della procedura guidata per visualizzare la documentazione relativa alla pagina corrente.   
   
-##  <a name="wizardSSIS"></a> La procedura guidata usa SQL Server Integration Services (SSIS)  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> La procedura guidata usa SQL Server Integration Services (SSIS)  
  La procedura guidata usa SQL Server Integration Services (SSIS) per copiare i dati. SSIS è uno strumento per l'estrazione, la trasformazione e il caricamento di dati. Le pagine della procedura guidata usano alcuni dei termini specifici di SSIS.
   
  In SSIS il **pacchetto**rappresenta l'unità di base. La procedura guidata crea un pacchetto SSIS in memoria mentre ci si sposta tra le pagine della procedura guidata e si specificano le opzioni.    

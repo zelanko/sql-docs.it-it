@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286115"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216490"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installare SQL Server Machine Learning Services (Python e R) in Windows
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286115"
 
 Informazioni su come installare Machine Learning Services per SQL Server in Windows. È possibile usare Machine Learning Services per eseguire gli script Python e R nel database.
 
-## <a name="bkmk_prereqs"> </a> Elenco di controllo preliminare all'installazione
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a> Elenco di controllo preliminare all'installazione
 
 + È necessaria un'istanza del motore di database. Non è possibile installare solo le funzionalità di Python o R, ma è possibile aggiungerle in modo incrementale a un'istanza esistente.
 
@@ -59,7 +59,7 @@ Per altre informazioni su quali edizioni di SQL Server supportano l'integrazione
 Per altre informazioni su quali edizioni di SQL Server supportano l'integrazione di Python e R con Machine Learning Services, vedere [Edizioni e funzionalità supportate di SQL Server 2019 (15.x)](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15).
 ::: moniker-end
 
-## <a name="run-setup"></a>Esecuzione del programma di installazione
+## <a name="run-setup"></a>Eseguire l'installazione.
 
 Per le installazioni locali, è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.
 

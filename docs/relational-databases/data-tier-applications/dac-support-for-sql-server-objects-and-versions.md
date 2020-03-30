@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68810583"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "68810583"
   
 -   [Considerazioni aggiuntive per le azioni di distribuzione](#Considerations)  
   
-##  <a name="SupportedObjects"></a> Oggetti di SQL Server supportati  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a> Oggetti di SQL Server supportati  
  Durante la creazione o la modifica di un'applicazione livello dati, è possibile specificare solo oggetti supportati. Non è possibile estrarre, registrare o importare un'applicazione livello dati da un database esistente che contiene oggetti non supportati in un'applicazione livello dati. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] i seguenti oggetti sono supportati in un'applicazione livello dati.  
   
 |||  
@@ -63,7 +63,7 @@ ms.locfileid: "68810583"
 |TIPO: tipo di tabella definito dall'utente|USER|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a> Supporto dell'applicazione livello dati con le versioni di SQL Server  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a> Supporto dell'applicazione livello dati con le versioni di SQL Server  
  Le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano operazioni di applicazione livello dati a livelli diversi. Tutte le operazioni dell'applicazione livello dati supportate da una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportate da tutte le edizioni di tale versione.  
   
  Le istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] supportano le seguenti operazioni dell'applicazione livello dati:  
@@ -88,7 +88,7 @@ ms.locfileid: "68810583"
   
  Un pacchetto di applicazione livello dati o un file di esportazione compilato con una versione di Framework applicazione livello dati può essere elaborato da qualsiasi versione successiva di Framework applicazione livello dati. Ad esempio, un pacchetto di applicazione livello dati estratto utilizzando gli strumenti client di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] può essere distribuito utilizzando gli strumenti client di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 o versione successiva.  
   
-##  <a name="DeploymentLimitations"></a> Limitazioni sulla distribuzione dei dati  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a> Limitazioni sulla distribuzione dei dati  
  Si notino le seguenti limitazioni di fedeltà nel motore di distribuzione dati di DAC Framework in SQL Server 2012 SP1. Le limitazioni si applicano alle azioni di DAC Framework seguenti: distribuzione o pubblicazione di un file con estensione dacpac e importazione di un file con estensione bacpac.  
   
 1.  Perdita di metadati in determinate situazioni e per alcuni tipi di base nelle colonne sql_variant. Nei casi interessati verrà visualizzato un avviso con il messaggio seguente:  **Determinate proprietà in tipi di dati specifici utilizzati in una colonna sql_variant non vengono mantenute se distribuite mediante DAC Framework.**  
@@ -113,7 +113,7 @@ ms.locfileid: "68810583"
   
     -   Tipo di base DECIMAL, NUMERIC: quando la precisione del valore è maggiore di 28.  
   
-##  <a name="Considerations"></a> Considerazioni aggiuntive per le azioni di distribuzione  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a> Considerazioni aggiuntive per le azioni di distribuzione  
  Si tengano presenti le considerazioni seguenti per le azioni di distribuzione dati di DAC Framework:  
   
 -   **Estrazione/Esportazione**: queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. L'utente visualizzerà anche il messaggio di riepilogo seguente nel log:  **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [questo argomento](https://go.microsoft.com/fwlink/?LinkId=267086).  

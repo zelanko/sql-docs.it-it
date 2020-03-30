@@ -13,10 +13,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198381"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: Usare l'autenticazione di Azure Active Directory con SQL Server in Linux
@@ -46,11 +46,11 @@ Prima di configurare l'autenticazione di Active Directory, è necessario:
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> Aggiungere l'host di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] al dominio di Active Directory
+## <a name="join-ssnoversion-host-to-ad-domain"></a><a id="join"></a> Aggiungere l'host di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] al dominio di Active Directory
 
 Aggiungere l'host di SQL Server in Linux a un controller di dominio Active Directory. Aggiungere un host di SQL Server in Linux a un dominio di Active DirectoryPer informazioni sull'aggiunta a un dominio Active Directory, vedere [Aggiungere un host di SQL Server in Linux a un dominio di Active Directory](sql-server-linux-active-directory-join-domain.md).
 
-## <a id="createuser"></a> Creare un utente di Active Directory (o un account del servizio gestito) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare il nome dell'entità servizio (SPN)
+## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> Creare un utente di Active Directory (o un account del servizio gestito) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare il nome dell'entità servizio (SPN)
 
 > [!NOTE]
 > Nella procedura seguente viene usato il [nome di dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se si è in **Azure**, è necessario **[crearne uno](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** prima di procedere.
@@ -80,14 +80,14 @@ Aggiungere l'host di SQL Server in Linux a un controller di dominio Active Direc
 
 Per altre informazioni, vedere [Registrare un nome dell'entità servizio per le connessioni Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a id="configurekeytab"></a> Configurare il keytab del servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="configure-ssnoversion-service-keytab"></a><a id="configurekeytab"></a> Configurare il keytab del servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 La configurazione dell'autenticazione di Active Directory per SQL Server in Linux richiede un account AD (account del servizio gestito o account utente di Active Directory) e il nome dell'entità servizio creata nella sezione precedente.
 
 > [!IMPORTANT]
 > Se si cambia la password dell'account di Active Directory o la password dell'account a cui sono assegnati i nomi dell'entità servizio, è necessario aggiornare il keytab con la nuova password e il numero di versione della chiave. Alcuni servizi potrebbero anche cambiare automaticamente le password a rotazione. Esaminare i criteri di rotazione delle password per gli account in questione e allinearli alle attività di manutenzione pianificata per evitare tempi di inattività imprevisti.
 
-### <a id="spn"></a> Voci del keytab SPN
+### <a name="spn-keytab-entries"></a><a id="spn"></a> Voci del keytab SPN
 
 1. Verificare il numero di versione della chiave per l'account di Active Directory creato nel passaggio precedente. In genere è 2, ma potrebbe essere un altro numero intero se la password dell'account è stata cambiata più volte. Nel computer host SQL Server eseguire i comandi seguenti:
 
@@ -164,7 +164,7 @@ La configurazione dell'autenticazione di Active Directory per SQL Server in Linu
 
 A questo punto si è pronti per usare gli account di accesso basati su Active Directory in SQL Server.
 
-## <a id="createsqllogins"></a> Creare account di accesso basati su AD in Transact-SQL
+## <a name="create-ad-based-logins-in-transact-sql"></a><a id="createsqllogins"></a> Creare account di accesso basati su AD in Transact-SQL
 
 1. Connettersi a SQL Server e creare un nuovo account di accesso basato su Active Directory:
 
@@ -178,7 +178,7 @@ A questo punto si è pronti per usare gli account di accesso basati su Active Di
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> Connettersi a SQL Server usando l'autenticazione di Active Directory
+## <a name="connect-to-sql-server-using-ad-authentication"></a><a id="connect"></a> Connettersi a SQL Server usando l'autenticazione di Active Directory
 
 Accedere a un computer client usando le credenziali del proprio dominio. A questo punto è possibile connettersi a SQL Server senza immettere nuovamente la password usando l'autenticazione di Active Directory. Se si crea un account di accesso per un gruppo di Active Directory, qualsiasi utente di Active Directory che sia membro di tale gruppo potrà connettersi nello stesso modo.
 
@@ -213,7 +213,7 @@ La tabella seguente contiene alcuni consigli per altri driver client:
 | **ODBC** | Usare l'autenticazione integrata SQL. |
 | **ADO.NET** | Sintassi della stringa di connessione. |
 
-## <a id="additionalconfig"></a> Opzioni di configurazione aggiuntive
+## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> Opzioni di configurazione aggiuntive
 
 Se si usano utilità di terze parti, come [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) o [Centrify](https://www.centrify.com/), per aggiungere l'host Linux al dominio di Active Directory e si vuole forzare SQL Server a usare direttamente la libreria openldap, è possibile configurare l'opzione **disablesssd** con **mssql-conf** come indicato di seguito:
 

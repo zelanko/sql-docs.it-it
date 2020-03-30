@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249733"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -556,7 +556,7 @@ In questa sezione vengono presentati i seguenti concetti di backup fondamentali:
 > [!NOTE]
 > Per un'introduzione al backup in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Panoramica del backup](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="Backup_Types"></a> Tipi di backup
+### <a name="backup-types"></a><a name="Backup_Types"></a> Tipi di backup
 
 I tipi di backup supportati dipendono dal modello di recupero del database utilizzato, in base a quanto indicato di seguito.
 
@@ -579,14 +579,14 @@ I tipi di backup supportati dipendono dal modello di recupero del database utili
 
 - Un *backup di sola copia* è un backup completo o un backup del log per scopi speciali indipendente dalla normale sequenza di backup convenzionali. Per creare un backup di sola copia, specificare l'opzione COPY_ONLY nell'istruzione BACKUP. Per altre informazioni, vedere [Backup di sola copia](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-### <a name="Tlog_Truncation"></a> Troncamento del log delle transazioni
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> Troncamento del log delle transazioni
 
 Per evitare di esaurire lo spazio nel log delle transazioni di un database, è essenziale eseguire backup di routine. Con il modello di recupero con registrazione minima il troncamento del log si verifica automaticamente dopo il backup del database, mentre con il modello di recupero con registrazione completa si verifica dopo il backup del log delle transazioni. A volte, tuttavia, il processo di troncamento può essere ritardato. Per informazioni sui fattori che possono ritardare il troncamento del log, vedere [Log delle transazioni](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
 > [!NOTE]
 > Le opzioni `BACKUP LOG WITH NO_LOG` e `WITH TRUNCATE_ONLY` non sono più disponibili. Se si utilizza il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk ed è necessario rimuovere la catena dei backup del log da un database, passare al modello di recupero con registrazione minima. Per altre informazioni, vedere [Visualizzazione o modifica del modello di recupero di un database](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).
 
-### <a name="Formatting_Media"></a> Formattazione dei supporti di backup
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a> Formattazione dei supporti di backup
 
 I supporti di backup vengono formattati tramite l'istruzione BACKUP esclusivamente quando si verifica una delle condizioni seguenti:
 
@@ -594,7 +594,7 @@ I supporti di backup vengono formattati tramite l'istruzione BACKUP esclusivamen
 - I supporti sono vuoti.
 - Viene eseguita un'operazione di scrittura in un nastro di continuità.
 
-### <a name="Backup_Devices_and_Media_Sets"></a> Uso di dispositivi di backup e set di supporti
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> Uso di dispositivi di backup e set di supporti
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Dispositivi di backup in un set di supporti con striping (set di striping)
 Un *set di striping* è un set di file su disco in cui i dati sono divisi in blocchi e distribuiti in base a un ordine prestabilito. Il numero di dispositivi di backup usati in un set di striping deve rimanere invariato, a meno che i supporti non vengano reinizializzati tramite `FORMAT`.
@@ -653,13 +653,13 @@ Se per ogni mirror vengono specificati più dispositivi, l'ordine dei dispositiv
 
 Per altre informazioni sui set di supporti con mirroring, vedere [Set di supporti di backup con mirroring](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Per altre informazioni sui set di supporti e i gruppi di supporti in generale, vedere [Set di supporti, gruppi di supporti e set di backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
 
-### <a name="Restoring_Backups"></a> Ripristino di backup di SQL Server
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> Ripristino di backup di SQL Server
 
 Per ripristinare un database e, facoltativamente, recuperarlo per portarlo online oppure per ripristinare un file o un filegroup, usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) o le attività **Restore** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Panoramica del ripristino e del recupero](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-## <a name="Additional_Considerations"></a> Considerazioni aggiuntive sulle opzioni BACKUP
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> Considerazioni aggiuntive sulle opzioni BACKUP
 
-### <a name="Interactions_SKIP_etc"></a> Interazione tra SKIP, NOSKIP, INIT e NOINIT
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a> Interazione tra SKIP, NOSKIP, INIT e NOINIT
 
 Questa tabella descrive le interazioni tra le opzioni { **NOINIT** | INIT } e { **NOSKIP** | SKIP }.
 
@@ -737,7 +737,7 @@ Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazion
 
 Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.
 
-## <a name="examples"></a> Esempi
+## <a name="examples"></a><a name="examples"></a> Esempi
 
 Questa sezione contiene gli esempi seguenti:
 
@@ -755,7 +755,7 @@ Questa sezione contiene gli esempi seguenti:
 > [!NOTE]
 > Ulteriori esempi sono inclusi negli argomenti relativi alle procedure di backup. Per altre informazioni, vedere [Panoramica del backup](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="backing_up_db"></a> A. Backup di un database completo
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> A. Backup di un database completo
 
 L'esempio seguente esegue il backup del database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] in un file su disco.
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> B. Backup del database e del log
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> B. Backup del database e del log
 
 Nell'esempio seguente viene eseguito il backup del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], per il quale viene utilizzato per impostazione predefinita il modello di recupero con registrazione minima. Per consentire il backup del log, il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene modificato per l'utilizzo del modello di recupero con registrazione completa.
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > Per i database di produzione, eseguire il backup del log regolarmente. La frequenza dei backup del log dovrà essere tale da consentire una protezione sufficiente per evitare perdite di dati.
 
-### <a name="full_file_backup"></a> C. Creazione di un backup completo dei filegroup secondari
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> C. Creazione di un backup completo dei filegroup secondari
 
 Nell'esempio seguente viene creato un backup completo di ogni file presente in entrambi i filegroup secondari.
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> D. Creazione di un backup differenziale dei filegroup secondari
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> D. Creazione di un backup differenziale dei filegroup secondari
 
 Nell'esempio seguente viene creato un backup differenziale di ogni file presente in entrambi i filegroup secondari.
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> E. Creazione di un set di supporti con mirroring con un singolo gruppo di supporti ed esecuzione di un backup in tale set
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> E. Creazione di un set di supporti con mirroring con un singolo gruppo di supporti ed esecuzione di un backup in tale set
 
 Nell'esempio seguente viene creato un set di supporti con mirroring contenente un singolo gruppo di supporti e quattro mirror, quindi viene eseguito il backup del database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] in tali supporti.
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> F. Creazione di un set di supporti con mirroring con più gruppi di supporti ed esecuzione di un backup in tale set
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> F. Creazione di un set di supporti con mirroring con più gruppi di supporti ed esecuzione di un backup in tale set
 
 Nell'esempio seguente viene creato un set di supporti con mirroring in cui ogni mirror è composto da due gruppi di supporti. Viene quindi eseguito il backup del database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] in entrambi i mirror.
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. Backup in un set di supporti con mirroring esistente
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. Backup in un set di supporti con mirroring esistente
 
 Nell'esempio seguente un set di backup viene accodato al set di supporti creato nell'esempio precedente.
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > L'opzione predefinita NOINIT viene specificata in modo esplicito nell'istruzione per maggiore chiarezza.
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. Creazione di un backup compresso in un nuovo set di supporti
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. Creazione di un backup compresso in un nuovo set di supporti
 
 Nell'esempio seguente vengono formattati i supporti, creando un nuovo set di supporti, e viene eseguito un backup compresso completo del database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. Eseguire il backup nel servizio di archiviazione BLOB di Microsoft Azure
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. Eseguire il backup nel servizio di archiviazione BLOB di Microsoft Azure
 
 L'esempio esegue un backup completo del database di `Sales` nel servizio di archiviazione BLOB di Microsoft Azure. Il nome dell'account di archiviazione è `mystorageaccount`, mentre il nome del contenitore è `myfirstcontainer`. Sono stati creati criteri di accesso archiviati con diritti di lettura, scrittura ed elenco. Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, sono stati create usando una firma di accesso condiviso associata a criteri di accesso archiviati. Per informazioni sul backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. Monitorare lo stato dell'istruzione di backup
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. Monitorare lo stato dell'istruzione di backup
 
 La query seguente restituisce informazioni sulle istruzioni di backup attualmente in esecuzione:
 ```sql
@@ -1095,7 +1095,7 @@ Le autorizzazioni BACKUP DATABASE vengono assegnate per impostazione predefinita
 
 Eventuali problemi correlati alla proprietà e alle autorizzazioni per l'URL possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura.
 
-## <a name="examples"></a> Esempi
+## <a name="examples"></a><a name="examples"></a> Esempi
 
 L'esempio esegue un backup COPY_ONLY di `Sales` nel servizio di archiviazione BLOB di Microsoft Azure. Il nome dell'account di archiviazione è `mystorageaccount`, mentre il nome del contenitore è `myfirstcontainer`. Sono stati creati criteri di accesso archiviati con diritti di lettura, scrittura ed elenco. Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, sono stati create usando una firma di accesso condiviso associata a criteri di accesso archiviati. Per informazioni sul backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -1254,7 +1254,7 @@ Per eseguire un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue pri
 
 Acquisisce un blocco ExclusiveUpdate nell'oggetto DATABASE.
 
-## <a name="Security"></a> Sicurezza
+## <a name="security"></a><a name="Security"></a> Sicurezza
 
 I backup di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] non vengono archiviati nell'appliance. Pertanto, il team IT è responsabile della gestione di tutti gli aspetti della sicurezza dei backup. Questi aspetti includono ad esempio la gestione della sicurezza dei dati di backup, del server usato per l'archiviazione dei backup e dell'infrastruttura di rete che connette il server di backup all'appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 

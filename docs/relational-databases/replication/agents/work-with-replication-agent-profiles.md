@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288238"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utilizzo dei profili agenti di replica
@@ -65,9 +65,9 @@ ms.locfileid: "76288238"
   
 -   **Completamento:**  [dopo avere modificato i parametri degli agenti](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-###  <a name="Access_SSMS"></a> Per accedere alla finestra di dialogo Profili agenti da SQL Server Management Studio  
+###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> Per accedere alla finestra di dialogo Profili agenti da SQL Server Management Studio  
   
 1.  Nella pagina **Generale** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** fare clic su **Impostazioni predefinite profili**.  
 
@@ -81,7 +81,7 @@ ms.locfileid: "76288238"
   
     2.  Per i profili dell'agente di distribuzione e dell'agente di merge, fare clic con il pulsante destro del mouse su una sottoscrizione nella scheda **Tutte le sottoscrizioni** e quindi scegliere **Profilo agente**. Per gli altri agenti, fare clic con il pulsante destro del mouse sull'agente nella scheda **Agenti** , quindi scegliere **Profilo agente**.  
   
-###  <a name="Specify_SSMS"></a> Per specificare un profilo per un agente  
+###  <a name="to-specify-a-profile-for-an-agent"></a><a name="Specify_SSMS"></a> Per specificare un profilo per un agente  
   
 1.  Se nella finestra di dialogo **Profili agenti** vengono visualizzati i profili di più agenti, selezionare un agente.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "76288238"
   
 3.  Per specificare che tutti gli agenti del tipo selezionato per le pubblicazioni o le sottoscrizioni esistenti devono utilizzare questo profilo, fare clic su **Modifica agenti esistenti**.  
   
-###  <a name="Modify_SSMS"></a> Per visualizzare e modificare i parametri associati a un profilo  
+###  <a name="to-view-and-edit-the-parameters-associated-with-a-profile"></a><a name="Modify_SSMS"></a> Per visualizzare e modificare i parametri associati a un profilo  
   
 1.  Se nella finestra di dialogo **Profili agenti** vengono visualizzati i profili di più agenti, selezionare un agente.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "76288238"
   
 4.  Fare clic su **Close**.  
   
-###  <a name="Create_SSMS"></a> Per creare un profilo definito dall'utente  
+###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> Per creare un profilo definito dall'utente  
   
 1.  Se nella finestra di dialogo **Profili agenti** vengono visualizzati i profili di più agenti, selezionare un agente.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "76288238"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-###  <a name="Delete_SSMS"></a> Per eliminare un profilo definito dall'utente  
+###  <a name="to-delete-a-user-defined-profile"></a><a name="Delete_SSMS"></a> Per eliminare un profilo definito dall'utente  
   
 1.  Se nella finestra di dialogo **Profili agenti** vengono visualizzati i profili di più agenti, selezionare un agente.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "76288238"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
-###  <a name="Create_tsql"></a> Per creare un nuovo profilo agente  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_tsql"></a> Per creare un nuovo profilo agente  
   
 1.  Nel database di distribuzione eseguire [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Specificare **\@name**, il valore **1** per **\@profile_type** e uno dei valori seguenti per **\@agent_type**:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "76288238"
   
 2.  Una volta creato il nuovo profilo, è possibile personalizzarlo aggiungendo, rimuovendo o modificando i parametri predefiniti.  
   
-###  <a name="Modify_tsql"></a> Per modificare un profilo agente esistente  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_tsql"></a> Per modificare un profilo agente esistente  
   
 1.  Nel database di distribuzione eseguire [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specificare uno dei valori seguenti per **\@agent_type**:  
   
@@ -185,7 +185,7 @@ ms.locfileid: "76288238"
   
     -   Nel database di distribuzione eseguire [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). Specificare l'identificatore del profilo ottenuto nel passaggio 1 per **\@profile_id**, il nome di un parametro valido da aggiungere per **\@parameter_name** e il valore del parametro per **\@parameter_value**.  
   
-###  <a name="Delete_tsql"></a> Per eliminare un profilo agente  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_tsql"></a> Per eliminare un profilo agente  
   
 1.  Nel database di distribuzione eseguire [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specificare uno dei valori seguenti per **\@agent_type**:  
   
@@ -203,7 +203,7 @@ ms.locfileid: "76288238"
   
 2.  Nel database di distribuzione eseguire [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). Specificare l'identificatore del profilo ottenuto nel passaggio 1 per **\@profile_id**.  
   
-###  <a name="Synch_tsql"></a> Per utilizzare i profili agenti durante la sincronizzazione  
+###  <a name="to-use-agent-profiles-during-synchronization"></a><a name="Synch_tsql"></a> Per utilizzare i profili agenti durante la sincronizzazione  
   
 1.  Nel database di distribuzione eseguire [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specificare uno dei valori seguenti per **\@agent_type**:  
   
@@ -223,14 +223,14 @@ ms.locfileid: "76288238"
   
 3.  Quando si avvia l'agente dal prompt dei comandi, specificare il valore di **profile_name** ottenuto nel passaggio 1 dopo il parametro della riga di comando **-ProfileName** .  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio viene creato un profilo personalizzato per l'agente di merge denominato **custom_merge**, viene modificato il valore del parametro **-UploadReadChangesPerBatch** , viene aggiunto un nuovo parametro **-ExchangeType** e vengono restituite informazioni sul profilo creato.  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO  
+##  <a name="using-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO  
   
-###  <a name="Create_RMO"></a> Per creare un nuovo profilo agente  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_RMO"></a> Per creare un nuovo profilo agente  
   
 1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -254,7 +254,7 @@ ms.locfileid: "76288238"
   
 6.  Per assegnare il profilo a un processo dell'agente di replica esistente, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> . Passare il nome del database di distribuzione per *distributionDBName* e l'ID del processo per *agentID*.  
   
-###  <a name="Modify_RMO"></a> Per modificare un profilo agente esistente  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> Per modificare un profilo agente esistente  
   
 1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -274,7 +274,7 @@ ms.locfileid: "76288238"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> : modifica l'impostazione di un parametro esistente nel profilo, dove *name* è il nome del parametro dell'agente e *newValue* è il valore nel quale viene modificato il parametro. Per enumerare tutti i parametri dell'agente corrente definiti per il profilo, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> . Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> che rappresentano il parametro esistente per il profilo. Per enumerare tutte le impostazioni del parametro dell'agente supportate, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> . Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> che rappresentano i valori supportati per tutti i parametri.  
   
-###  <a name="Delete_RMO"></a> Per eliminare un profilo agente  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_RMO"></a> Per eliminare un profilo agente  
   
 1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -286,7 +286,7 @@ ms.locfileid: "76288238"
   
 5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> per rimuovere dal server il profilo definito dall'utente rappresentato da questo oggetto.  
   
-##  <a name="FollowUp"></a> Completamento: dopo avere modificato i parametri degli agenti  
+##  <a name="follow-up-after-changing-agent-parameters"></a><a name="FollowUp"></a> Completamento: dopo avere modificato i parametri degli agenti  
 Le modifiche apportate al parametro dell'agente verranno applicate al successivo avvio dell'agente. Se l'agente viene eseguito in modo continuo, è necessario arrestarlo e riavviarlo. A partire da SQL Server 2017 CU3, alcune modifiche dei parametri degli agenti hanno effetto senza che sia necessario riavviare gli agenti. 
   
 ## <a name="see-also"></a>Vedere anche  

@@ -9,17 +9,17 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65105932"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lezione 5: Formattazione di un report (Reporting Services)
 
 Dopo avere aggiunto un'area dati e alcuni campi al report Sales Orders, è possibile formattare i campi relativi a data e valuta e le intestazioni di colonna.
 
-## <a name="bkmk_format_date"></a>Formattare la data
+## <a name="format-the-date"></a><a name="bkmk_format_date"></a>Formattare la data
 
 Per impostazione predefinita, l'espressione del campo Date visualizza le informazioni di data e ora. È possibile formattare tale campo in modo da visualizzare solo la data.
 
@@ -30,7 +30,7 @@ Per impostazione predefinita, l'espressione del campo Date visualizza le informa
 5. Selezionare **OK** per applicare la formattazione.
 6. Visualizzare l'anteprima del report per verificare la modifica della formattazione del campo `[Date]` e quindi tornare alla visualizzazione Progettazione.
 
-## <a name="bkmk_format_currency"></a>Formattare la valuta
+## <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Formattare la valuta
 
 L'espressione del campo LineTotal visualizza un numero generico. È possibile formattare il campo in modo da visualizzare il numero come valuta.
 
@@ -44,7 +44,7 @@ L'espressione del campo LineTotal visualizza un numero generico. È possibile fo
 5. Selezionare **OK** per applicare la formattazione.
 6. Visualizzare l'anteprima del report per verificare la modifica apportata alla colonna dell'espressione `[LineTotal]` e quindi tornare alla visualizzazione Progettazione.  
 
-## <a name="bkmk_change_textstyle"></a>Modifica dello stile del testo e della larghezza delle colonne
+## <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Modifica dello stile del testo e della larghezza delle colonne
 
 È possibile formattare ulteriormente il report evidenziando la riga di intestazione e modificando la larghezza delle colonne di dati.
 

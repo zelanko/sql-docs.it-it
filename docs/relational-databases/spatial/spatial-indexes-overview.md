@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909294"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
@@ -26,9 +26,9 @@ ms.locfileid: "72909294"
 > [!IMPORTANT]  
 >  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluse le funzionalità che incidono sugli indici spaziali, scaricare il white paper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Nuove funzionalità spaziali in SQL Server 2012).  
   
-##  <a name="about"></a> Informazioni sugli indici spaziali  
+##  <a name="about-spatial-indexes"></a><a name="about"></a> Informazioni sugli indici spaziali  
   
-###  <a name="decompose"></a> Scomposizione dello spazio indicizzato in una gerarchia di griglie  
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Scomposizione dello spazio indicizzato in una gerarchia di griglie  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gli indici spaziali vengono compilati utilizzando alberi B, pertanto gli indici devono rappresentare i dati spaziali bidimensionali nell'ordine lineare degli alberi B. Pertanto, prima della lettura di dati in un indice spaziale, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di implementare una scomposizione gerarchica uniforme dello spazio. Il processo di creazione dell'indice *scompone* lo spazio in una *gerarchia di griglie*a quattro livelli. Questi livelli vengono indicati come *livello 1* (il livello principale), *livello 2*, *livello 3*e *livello 4*.  
   
  Ogni livello successivo scompone ulteriormente il livello precedente, pertanto ogni cella di livello superiore contiene una griglia completa al livello successivo. Su un livello specificato, tutte le griglie hanno lo stesso numero di celle lungo entrambi gli assi (ad esempio, 4x4 o 8x8) e le celle hanno tutte la stessa dimensione.  
@@ -62,7 +62,7 @@ ms.locfileid: "72909294"
 > [!NOTE]  
 >  Le densità della griglia di un indice spaziale sono visibili nelle colonne level_1_grid, level_2_grid, level_3_grid e level_4_grid della vista del catalogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) quando il livello di compatibilità del database è impostato su 100 o su un valore inferiore. Le opzioni dello schema a mosaico **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** non popolano queste colonne. La vista del catalogo sys.spatial_index_tessellations ha valori **NULL** per queste colonne quando si usano le opzioni della griglia automatiche.  
   
-###  <a name="tessellation"></a> Suddivisione a mosaico  
+###  <a name="tessellation"></a><a name="tessellation"></a> Suddivisione a mosaico  
  Dopo la scomposizione di uno spazio indicizzato in una gerarchia di griglie, l'indice spaziale legge i dati dalla colonna spaziale, riga per riga. Al termine della lettura dei dati per un oggetto spaziale (o istanza), l'indice spaziale esegue un *processo di suddivisione a mosaico* per l'oggetto. Il processo di suddivisione a mosaico adatta l'oggetto nella gerarchia di griglie associandolo a un set di celle della griglia interessate dall'oggetto stesso (*celle interessate*). Partendo dal livello 1 della gerarchia di griglie, la suddivisione a mosaico procede *prima in profondità* attraverso il livello. Potenzialmente, il processo può continuare per tutti i quattro livelli, uno dopo l'altro.  
   
  L'output del processo a mosaico è un set di celle interessate registrate nell'indice spaziale per l'oggetto. Riferendosi a queste celle registrate, l'indice spaziale può trovare l'oggetto nello spazio in relazione ad altri oggetti nella colonna spaziale che sono archiviati anche nell'indice.  
@@ -112,7 +112,7 @@ ms.locfileid: "72909294"
   
  ![Ottimizzazione della cella più in basso](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Ottimizzazione della cella più in basso")  
   
-###  <a name="schemes"></a> Schemi a mosaico  
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> Schemi a mosaico  
  Il comportamento di un indice spaziale dipende parzialmente dal relativo *schema a mosaico*. Lo schema a mosaico è specifico per il tipo di dati. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gli indici spaziali supportano due schemi a mosaico:  
   
 -   *Mosaico per griglia di geometria*, ovvero lo schema per il tipo di dati **geometry** .  
@@ -178,9 +178,9 @@ ms.locfileid: "72909294"
   
  ![Griglia di geografia di livello 1](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "Griglia di geografia di livello 1")  
   
-##  <a name="methods"></a> Metodi supportati dagli indici spaziali  
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a> Metodi supportati dagli indici spaziali  
   
-###  <a name="geometry"></a> Metodi di geometria supportati da indici spaziali  
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a> Metodi di geometria supportati da indici spaziali  
  In determinate condizioni, gli indici spaziali supportano i seguenti metodi di geometria orientati ai set: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE o JOIN ON di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
   
  *geometry1*.*nome_metodo*(*geometry2*)*operatore_confronto**numero_valido*  
@@ -205,7 +205,7 @@ ms.locfileid: "72909294"
   
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
-###  <a name="geography"></a> Metodi di geografia supportati da indici spaziali  
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a> Metodi di geografia supportati da indici spaziali  
  In alcuni casi, gli indici spaziali supportano i seguenti metodi di geografia orientati ai set: STIntersects(),STEquals() e STDistance(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
   
  *geography1*.*nome_metodo*(*geography2*)*operatore_confronto**numero_valido*  

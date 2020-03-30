@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252744"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Disponibilità Always On per il mirroring dei database con sicurezza del trasporto
@@ -40,7 +40,7 @@ ms.locfileid: "75252744"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Authentication"></a> Autenticazione  
+##  <a name="authentication"></a><a name="Authentication"></a> Autenticazione  
  L'autenticazione è il processo di verifica che un utente sia effettivamente colui che dichiara di essere. Per le connessioni tra endpoint del mirroring del database è necessaria l'autenticazione. Le richieste di connessione da parte del partner o del server di controllo del mirroring devono essere autenticate.  
   
  Il tipo di autenticazione utilizzata da un'istanza del server per il mirroring del database o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] è una proprietà dell'endpoint del mirroring del database. Per gli endpoint del mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows (Security Support Provider Interface, SSPI) e l'autenticazione basata su certificati.  
@@ -64,7 +64,7 @@ ms.locfileid: "75252744"
   
  In un'istanza del server viene utilizzata la chiave privata del proprio certificato per stabilire la propria identità durante la configurazione di una connessione. Nell'istanza del server che riceve la richiesta di connessione viene utilizzata la chiave pubblica del certificato del mittente per autenticare l'identità del mittente. Considerare, ad esempio, due istanze del server, Server_A e Server_B. In Server_A viene utilizzata la propria chiave privata per crittografare l'intestazione di connessione prima di inviare una richiesta di connessione a Server_B. Server_B utilizza la chiave pubblica del certificato di Server_A per decrittografare l'intestazione di connessione. Se l'intestazione decrittografata è corretta, Server_B sa che l'intestazione è stata crittografata da Server_A e la connessione viene autenticata. Se l'intestazione decrittografata non è corretta, Server_B sa che la richiesta di connessione non è autentica e rifiuta la connessione.  
   
-##  <a name="DataEncryption"></a> Crittografia dei dati  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> Crittografia dei dati  
  Per impostazione predefinita, un endpoint del mirroring del database richiede la codifica dei dati inviati in connessioni per il mirroring. In questo caso, l'endpoint può connettersi solo a endpoint che utilizzano la crittografia. A meno che non si sia assolutamente certi della sicurezza della rete, per le connessioni per il mirroring del database è consigliabile richiedere la crittografia. È tuttavia possibile disabilitare la crittografia oppure fare in modo che sia supportata ma non necessaria. Se la crittografia viene disabilitata, i dati non vengono mai crittografati e l'endpoint non può connettersi ad altri endpoint che la richiedono. Se la crittografia è supportata, i dati vengono crittografati solo se l'endpoint opposto supporta o richiede la crittografia.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "75252744"
   
  Per informazioni sulla sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] per la specifica della crittografia, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare la sicurezza del trasporto per un endpoint del mirroring del database**  
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

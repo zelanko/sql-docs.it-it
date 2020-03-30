@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286225"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
@@ -68,7 +68,7 @@ Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE
 
 Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu3"></a> CU3 (marzo 2020)
+## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3 (marzo 2020)
 
 Aggiornamento cumulativo 3 (CU3) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4023.6.
 
@@ -83,7 +83,7 @@ SQL Server 2019 CU3 risolve i problemi seguenti dalle versioni precedenti.
 - [Distribuzione con repository privato](#deployment-with-private-repository)
 - [Possibile esito negativo dell'aggiornamento a causa di un timeout](#upgrade-may-fail-due-to-timeout)
 
-## <a id="cu2"></a> CU2 (feb 2020)
+## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2 (feb 2020)
 
 Aggiornamento cumulativo 2 (CU2) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4013.40.
 
@@ -91,7 +91,7 @@ Aggiornamento cumulativo 2 (CU2) per SQL Server 2019. La versione del motore di 
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a id="cu1"></a> CU1 (gennaio 2020)
+## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1 (gennaio 2020)
 
 Versione Cumulative Update 1 (CU1) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4003.23.
 
@@ -99,7 +99,7 @@ Versione Cumulative Update 1 (CU1) per SQL Server 2019. La versione del motore d
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a id="rtm"></a> GDR1 (novembre 2019)
+## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1 (novembre 2019)
 
 SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilità generale per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. La versione del motore di database di SQL Server per questa versione è 15.0.2070.34.
 

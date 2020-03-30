@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68889837"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
@@ -25,14 +25,14 @@ ms.locfileid: "68889837"
   
  Per un'introduzione alla progettazione di report, vedere [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
-##  <a name="bkmk_SolutionsandProjects"></a> Soluzioni e progetti  
+##  <a name="solutions-and-projects"></a><a name="bkmk_SolutionsandProjects"></a> Soluzioni e progetti  
  Un progetto report costituisce il contenitore per le definizioni e le risorse del report. Tutti i file inclusi nel progetto report vengono pubblicati nel server di report al momento della distribuzione del progetto. Quando si crea un progetto per la prima volta, viene creata anche una soluzione come contenitore per il progetto. A una singola soluzione è possibile aggiungere più progetti.  
   
   
-##  <a name="bkmk_Configurations"></a> Configurazioni  
+##  <a name="configurations"></a><a name="bkmk_Configurations"></a> Configurazioni  
  Per creare più set di proprietà di progetto per distribuzioni diversificate, ad esempio server di report aziendali di test e produzione, utilizzare Gestione configurazione. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
-##  <a name="bkmk_ReportServerProjects"></a> Progetti server di report  
+##  <a name="report-server-projects"></a><a name="bkmk_ReportServerProjects"></a> Progetti server di report  
  Dopo l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]sono disponibili i modelli di progetto seguenti:  
   
 -   **Progetto server di report.** Quando si seleziona un progetto server di report, verrà aperto Progettazione report. Un progetto server di report è un modello di progetti Business Intelligence installato da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e disponibile nella finestra di dialogo **Nuovo progetto** . Per altre informazioni, vedere [Aggiungere un report nuovo o esistente a un progetto report &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Le proprietà dei progetti server di report sono applicabili a tutti i report e a tutte le origini dati condivise di un progetto di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Queste proprietà includono l'URL del server di report e i nomi di cartella per i report e le origini dati condivise. Usare la finestra di dialogo delle **pagine delle proprietà del progetto** per visualizzare i valori correnti delle proprietà. Per aprire questa finestra di dialogo, scegliere **Proprietà** dal menu **Progetto**.  
@@ -42,10 +42,10 @@ ms.locfileid: "68889837"
  ![Nuovi modelli di progetto in SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
   
   
-##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Finestre e riquadri Progettazione report  
+##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> Finestre e riquadri Progettazione report  
  Progettazione report supporta due visualizzazioni: **Progettazione** per definire i dati e il layout del report e **Anteprima** per mostrare una visualizzazione del report di cui è stato eseguito il rendering. In ogni visualizzazione è possibile aprire più finestre per progettare o visualizzare un report visualizzabile.  
   
-###  <a name="bkmk_ReportDataPane"></a> Riquadro Dati report  
+###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> Riquadro Dati report  
  Nel riquadro dei dati del report vengono visualizzati campi predefiniti, origini dati, set di dati, raccolte di campi, parametri di report e immagini.  
   
  Utilizzare il riquadro dei dati del report per visualizzare quanto segue:  
@@ -68,7 +68,7 @@ ms.locfileid: "68889837"
 >  Se non è possibile visualizzare il riquadro dei dati del report, fare clic nell'area di progettazione e scegliere **Dati report** dal menu **Visualizza**. Se il riquadro dei dati del report è mobile, è possibile ancorarlo. Per altre informazioni, vedere [Ancorare il riquadro dei dati del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
   
-###  <a name="bkmk_GroupingPane"></a> Riquadro di raggruppamento  
+###  <a name="grouping-pane"></a><a name="bkmk_GroupingPane"></a> Riquadro di raggruppamento  
  Utilizzare il riquadro di raggruppamento per definire i gruppi per un'area dati Tablix. È possibile definire gruppi di righe e gruppi di dettagli per le tabelle, nonché gruppi di righe e colonne per le matrici. Non è possibile utilizzare il riquadro di raggruppamento per definire gruppi per grafici o altre aree dati. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  Il riquadro di raggruppamento presenta due modalità:  
@@ -85,10 +85,10 @@ ms.locfileid: "68889837"
  Per altre informazioni, vedere [Raggruppamento date](../../reporting-services/tools/grouping-pane.md).  
   
   
-###  <a name="bkmk_Toolbox"></a> Casella degli strumenti  
+###  <a name="toolbox"></a><a name="bkmk_Toolbox"></a> Casella degli strumenti  
  La casella degli strumenti contiene elementi del report che è possibile trascinare nell'area di progettazione. Le aree dati sono elementi del report che è possibile utilizzare per organizzare i dati nel report. Tabelle, matrici, elenchi, grafici, misuratori, barre dei dati, grafici sparkline e indicatori sono aree dati. Altri elementi del report sono Mappa, Casella di testo, Rettangolo, Riga, Immagine e Sottoreport. In questo elenco possono anche essere inclusi elementi del report personalizzati, se sono stati installati e registrati dall'amministratore del sistema.  
   
-###  <a name="bkmk_PropertiesPane"></a> Riquadro delle proprietà  
+###  <a name="properties-pane"></a><a name="bkmk_PropertiesPane"></a> Riquadro delle proprietà  
  Il riquadro Proprietà è una finestra standard di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] in cui vengono visualizzati i nomi e i valori delle proprietà relative all'elemento del report attualmente selezionato nell'area di progettazione. Nella maggior parte dei casi i nomi delle proprietà corrispondono agli elementi e agli attributi contenuti nel file RDL (Report Definition Language). Le proprietà utilizzate più di frequente possono essere impostate utilizzando la finestra di dialogo Proprietà relativa all'elemento selezionato. Per aprire la finestra di dialogo corrispondente, fare clic sul pulsante **Pagine delle proprietà** sulla barra degli strumenti del riquadro Proprietà. Gli utenti esperti possono impostare i valori delle proprietà direttamente nel riquadro Proprietà.  
   
  Utilizzare il riquadro Proprietà per:  
@@ -102,25 +102,25 @@ ms.locfileid: "68889837"
  Per visualizzare il riquadro Proprietà, scegliere **Finestra Proprietà** dal menu **Visualizza**. È possibile annullare l'ancoraggio a questo riquadro e spostarlo in un'altra area della finestra di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oppure aprirlo come visualizzazione a schede nell'area di progettazione.  
   
   
-###  <a name="bkmk_SolutionExplorer"></a> Esplora soluzioni  
+###  <a name="solution-explorer"></a><a name="bkmk_SolutionExplorer"></a> Esplora soluzioni  
  Esplora soluzioni è un componente standard di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] in cui vengono visualizzati tutti gli elementi del progetto. Per un progetto server di report, questo componente include cartelle per organizzare origini dati condivise, set di dati condivisi, report e risorse. Gli elementi della cartella vengono automaticamente disposti in ordine alfabetico quando si apre il file di soluzione. Per visualizzare le proprietà dell'elemento nel riquadro Proprietà, selezionare questo elemento.  
   
-###  <a name="bkmk_Output"></a> Output  
+###  <a name="output"></a><a name="bkmk_Output"></a> Output  
  Nella finestra di output vengono visualizzati gli errori di elaborazione che si verificano durante la visualizzazione dell'anteprima di un report e gli errori di pubblicazione che si verificano quando si distribuisce un report o un'origine dati condivisa.  
   
  Utilizzare la finestre di output e la finestra Struttura documento per eseguire il debug degli errori contenuti nelle espressioni.  
   
   
-###  <a name="bkmk_DocumentOutline"></a> Struttura documento.  
+###  <a name="document-outline"></a><a name="bkmk_DocumentOutline"></a> Struttura documento.  
  Nella finestra Struttura documento viene visualizzato un elenco gerarchico di tutti gli elementi del report inclusi nella definizione del report. Per aprire il riquadro Struttura documento, scegliere **Altre finestre** dal menu **Visualizza** e quindi fare clic sulla **finestra del documento**.  
   
  Utilizzare il riquadro Struttura documento per identificare le caselle di testo e altri elementi del report in base al nome. Quando si seleziona un elemento in Struttura documento, questo elemento viene anche selezionato nell'area di progettazione.  
   
-###  <a name="bkmk_TaskList"></a> Elenco attività  
+###  <a name="task-list"></a><a name="bkmk_TaskList"></a> Elenco attività  
  Nella finestra Elenco attività vengono visualizzati gli errori di compilazione relativi alle funzionalità non supportate quando si importa un report da un'altra applicazione, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.  
   
   
-##  <a name="bkmk_ReportDesignerDesignView"></a> Visualizzazione Progettazione di Progettazione report  
+##  <a name="report-designer-design-view"></a><a name="bkmk_ReportDesignerDesignView"></a> Visualizzazione Progettazione di Progettazione report  
  Per impostazione predefinita, quando si crea un progetto server di report, Progettazione report viene aperto in visualizzazione Progettazione e consente di visualizzare l'area di progettazione. Per impostazione predefinita, nell'area di progettazione vengono visualizzati il corpo e lo sfondo del report.  
   
  Il menu di scelta rapida sullo sfondo include le opzioni per l'aggiunta di un'intestazione e un piè di pagina, mentre dal menu Visualizza è possibile visualizzare un righello e il riquadro di raggruppamento.  
@@ -130,7 +130,7 @@ ms.locfileid: "68889837"
  Per progettare un report, trascinare gli elementi del report dalla casella degli strumenti all'area di progettazione, configurare quindi le proprietà di questi elementi e modificarne la disposizione nel report.  
   
   
-##  <a name="bkmk_ReportDesignerPreview"></a> Anteprima di Progettazione report  
+##  <a name="report-designer-preview"></a><a name="bkmk_ReportDesignerPreview"></a> Anteprima di Progettazione report  
  Utilizzare Anteprima per eseguire il report e aprire il report visualizzabile nel visualizzatore di report. Con l'anteprima i dati del report vengono memorizzati nella cache in locale. È anche possibile impostare le proprietà di configurazione in modo da eseguire il report in modalità debug, tramite un browser.  
   
  Quando si visualizza l'anteprima di un report, Progettazione report si connette alle origini dati del report, esegue le query del set di dati, memorizza i dati nella cache del computer locale, elabora il report per combinare dati e layout ed esegue il rendering del report. È possibile visualizzare il report nella scheda Anteprima oppure configurare le proprietà del progetto per visualizzarlo in modalità debug e aprirlo direttamente in un browser.  
@@ -144,10 +144,10 @@ ms.locfileid: "68889837"
 -   **Monitoraggio del riquadro di output per individuare i messaggi di errore.** Quando si visualizza l'anteprima di un report e viene rilevato un problema, il componente Elaborazione report scrive i messaggi di errore nel riquadro di output.  
   
   
-##  <a name="bkmk_ReportDesignerMenus"></a> Menu di Progettazione report  
+##  <a name="report-designer-menus"></a><a name="bkmk_ReportDesignerMenus"></a> Menu di Progettazione report  
  Quando in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]è attivo un progetto di Progettazione report, alla barra degli strumenti principale vengono aggiunte le barre degli strumenti seguenti. I menu di Progettazione report sono visibili solo in visualizzazione Progettazione.  
   
-###  <a name="FormatMenu"></a> Menu Formato  
+###  <a name="format-menu"></a><a name="FormatMenu"></a> Menu Formato  
  Quando si seleziona un elemento nell'area di progettazione, il menu **Formato** contiene le opzioni seguenti:  
   
 -   **Colore primo piano** Selezionare un colore per il testo. Il colore predefinito è il nero.  
@@ -170,7 +170,7 @@ ms.locfileid: "68889837"
   
 -   **Ordina** Consente di spostare sullo sfondo o in primo piano gli oggetti selezionati.  
   
-###  <a name="ReportMenu"></a> Menu Report  
+###  <a name="report-menu"></a><a name="ReportMenu"></a> Menu Report  
  Quando l'area di progettazione report ha lo stato attivo, il menu **Report** contiene le opzioni seguenti:  
   
 -   **Proprietà report** Selezionare questa opzione per aprire la finestra di dialogo **Proprietà report** , in cui è possibile assegnare proprietà generali del report come il nome dell'autore e la spaziatura della griglia, nonché proprietà per il layout come il numero di colonne e le dimensioni pagina. È inoltre possibile includere codice personalizzato, riferimenti ad assembly e classi e i nomi di elementi di output dei dati, trasformazioni dati e schemi dati.  
@@ -183,7 +183,7 @@ ms.locfileid: "68889837"
   
 -   **Riquadro di raggruppamento** Consente di visualizzare o nascondere il riquadro Raggruppamento.  
   
-###  <a name="ViewMenu"></a> Menu Visualizza  
+###  <a name="view-menu"></a><a name="ViewMenu"></a> Menu Visualizza  
  Usare il menu **Visualizza** per visualizzare finestre e barre degli strumenti di Progettazione report.  
   
 -   **Elenco errori** Usare questa opzione per visualizzare gli errori rilevati durante la pubblicazione o l'anteprima di un report.  
@@ -202,7 +202,7 @@ ms.locfileid: "68889837"
   
 -   **Dati report** Usare questa opzione per visualizzare il riquadro dei dati del report, in cui è possibile aggiungere parametri, origini dati, set di dati e immagini del report.  
   
-###  <a name="ProjectMenu"></a> Menu Progetto  
+###  <a name="project-menu"></a><a name="ProjectMenu"></a> Menu Progetto  
  Usare il menu **Progetto** per gestire origini dati condivise e report in un progetto. Quando si aggiungono o rimuovono elementi dal progetto, la vista gerarchica degli elementi del progetto in Esplora soluzioni viene automaticamente aggiornata.  
   
 -   **Aggiungi nuovo elemento** Consente di aggiungere una nuova origine dati condivisa o un nuovo report al progetto.  
@@ -220,7 +220,7 @@ ms.locfileid: "68889837"
 -   **Proprietà** Consente di aprire la finestra di dialogo **Pagine delle proprietà** per il progetto. Per altre informazioni, vedere [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
   
-##  <a name="bkmk_ReportDesignerToolbars"></a> Barre degli strumenti di Progettazione report  
+##  <a name="report-designer-toolbars"></a><a name="bkmk_ReportDesignerToolbars"></a> Barre degli strumenti di Progettazione report  
  In Progettazione report sono disponibili le seguenti barre degli strumenti speciali da utilizzare per la progettazione di report:  
   
 -   **Report** Consente di aggiungere un'intestazione o un piè di pagina, impostare le proprietà del report, attivare e disattivare il righello o il riquadro Raggruppamento oppure usare lo zoom per cambiare la visualizzazione del report.  
@@ -236,16 +236,16 @@ ms.locfileid: "68889837"
  Usare il menu **Visualizza** per controllare se visualizzare o meno queste barre degli strumenti. È possibile che altre barre degli strumenti di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] siano disabilitate se le relative funzionalità non sono applicabili alle funzionalità di Progettazione report.  
   
 
-##  <a name="bkmk_SourceControl"></a> Controllo del codice sorgente  
+##  <a name="source-control"></a><a name="bkmk_SourceControl"></a> Controllo del codice sorgente  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo **Opzioni** per specificare il plug-in e configurare le proprietà.  
   
-##  <a name="bkmk_CustomReportTemplates"></a> Modelli di report personalizzati  
+##  <a name="custom-report-templates"></a><a name="bkmk_CustomReportTemplates"></a> Modelli di report personalizzati  
  Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella si trova nel percorso seguente: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  
   
  È inoltre possibile aggiungere stili personalizzati alla procedura guidata del report.  
   
   
-##  <a name="bkmk_CommandLineSupportForssdt"></a> Supporto della riga di comando per SQL Server Data Tools  
+##  <a name="command-line-support-for-sql-server-data-tools"></a><a name="bkmk_CommandLineSupportForssdt"></a> Supporto della riga di comando per SQL Server Data Tools  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è basato su [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e sull'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
   
 -   Proprietà del progetto per OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder e TargetServerURL.  
@@ -274,7 +274,7 @@ ms.locfileid: "68889837"
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2015\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
   
-##  <a name="bkmk_KeyboardShortcuts"></a> Tasti di scelta rapida di Reporting Services  
+##  <a name="keyboard-shortcuts-in-reporting-services"></a><a name="bkmk_KeyboardShortcuts"></a> Tasti di scelta rapida di Reporting Services  
  Utilizzare i tasti di scelta rapida per:  
   
 -   Controllare le finestre e le modalità di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]:  

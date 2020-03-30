@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934197"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
@@ -41,7 +41,7 @@ Per altri modi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
@@ -50,7 +50,7 @@ Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], v
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> Requisito di installazione patch
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> Requisito di installazione patch
 
 Microsoft ha identificato un problema con i file binari di Microsoft Visual C++ 2013 Runtime che vengono installati come prerequisito da SQL Server 2016 e 2017. È disponibile un aggiornamento per risolvere questo problema. Se l'aggiornamento dei file binari di Visual C++ Runtime non viene installato, potrebbero verificarsi problemi di stabilità di SQL Server in determinati scenari. Prima di installare SQL Server, seguire le istruzioni in [Note sulla versione di SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) per vedere se il computer richiede una patch per i file binari di Visual C++ Runtime. 
 

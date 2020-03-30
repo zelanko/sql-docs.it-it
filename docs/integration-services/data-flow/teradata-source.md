@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245093"
 ---
 # <a name="connect-to-the-teradata-source"></a>Connettersi all'origine Teradata
@@ -21,7 +21,7 @@ ms.locfileid: "75245093"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 L'origine Teradata estrae i dati dai database Teradata usando:
-- Una tabella o una vista.
+- Una tabella o una vista:
 - Risultato di un'istruzione SQL.
 
 L'origine usa la gestione connessione Teradata per connettersi all'origine Teradata. Per altre informazioni, vedere [Usare la gestione connessione Teradata](teradata-connection-manager.md).
@@ -30,7 +30,7 @@ L'origine usa la gestione connessione Teradata per connettersi all'origine Terad
 
 È possibile registrare le chiamate eseguite dall'origine Teradata all'API Teradata Parallel Transporter (TPT). A tale scopo abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello di pacchetto.
 
-È possibile registrare le chiamate ODBC (Open Database Connectivity) che l'origine Teradata esegue al driver ODBC Teradata abilitando la traccia di Gestione driver ODBC. Per altre informazioni, vedere [Come generare una traccia ODBC con l'amministratore origine dati ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+È possibile registrare le chiamate ODBC (Open Database Connectivity) che l'origine Teradata esegue al driver ODBC Teradata abilitando la traccia di Gestione driver ODBC. Per altre informazioni, vedere [Come generare un'analisi ODBC con l'amministratore origine dati ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
 
 ## <a name="parallelism"></a>Parallelismo
 
@@ -38,7 +38,7 @@ L'origine Teradata supporta il parallelismo, in cui i processi di esportazione p
 
 ## <a name="teradata-source-custom-properties"></a>Proprietà personalizzate dell'origine Teradata
 
-Le proprietà personalizzate dell'interfaccia Teradata sono elencate nella tabella seguente. Tutte le proprietà sono di lettura/scrittura.
+Le proprietà dell'interfaccia Teradata sono elencate nella tabella seguente. Tutte le proprietà sono di lettura/scrittura.
 
 |Nome proprietà|Tipo di dati|Descrizione|
 |:-|:-|:-|

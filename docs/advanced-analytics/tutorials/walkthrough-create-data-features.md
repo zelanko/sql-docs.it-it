@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73723854"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Creare caratteristiche dei dati usando R e SQL Server (procedura dettagliata)
@@ -31,7 +31,7 @@ In questo passaggio vengono illustrati due metodi diversi per la creazione di un
 
 Lo scopo è quello di creare un nuovo set di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che include le colonne originali più la nuova caratteristica numerica *direct_distance*.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Questo passaggio presuppone una sessione R in corso basata sui passaggi precedenti di questa procedura dettagliata. Usa le stringhe di connessione e gli oggetti origine dati creati in tali passaggi. Per eseguire lo script vengono usati gli strumenti e i pacchetti seguenti.
 

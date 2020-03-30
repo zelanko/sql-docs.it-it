@@ -20,10 +20,10 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244372"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Prerequisiti restrizioni e indicazioni per il mirroring del database
@@ -35,13 +35,13 @@ ms.locfileid: "75244372"
  In questo argomento vengono descritti i prerequisiti e le indicazioni per l'impostazione del mirroring del database. Per un'introduzione al mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
   
-##  <a name="DbmSupport"></a> Supporto per il mirroring del database  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> Supporto per il mirroring del database  
  Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Edizioni e funzionalità supportate in SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
  Si noti che il mirroring del database funziona con qualsiasi livello di compatibilità del database supportato. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità di ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   Affinché venga stabilita una sessione di mirroring, i partner e il server di controllo, se presente, devono essere in esecuzione nella stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75244372"
     >  Se il mirroring del database è stato arrestato, prima di poterlo riavviare è necessario che eventuali backup di log successivi eseguiti sul database principale vengano applicati al database mirror.  
   
   
-##  <a name="Restrictions"></a> Restrizioni  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Restrizioni  
   
 -   Il mirroring può essere eseguito solo dei database utente. Non è possibile eseguire il mirroring dei database **master**, **msdb**, **tempdb**o **model** .  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75244372"
 -   Il mirroring del database non è supportato né nelle transazioni tra database né nelle transazioni distribuite. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
   
-##  <a name="RecommendationsForPartners"></a> Indicazioni per la configurazione dei server partner  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> Indicazioni per la configurazione dei server partner  
   
 -   È consigliabile che i partner siano eseguiti in sistemi simili, in grado di gestire carichi di lavoro identici.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75244372"
 -   Non vengono date indicazioni sull'affidabilità di una rete WAN (Wide Area Network) per il mirroring del database in modalità a sicurezza elevata. Se si decide di utilizzare la modalità a protezione elevata in una rete WAN, fare attenzione in caso di aggiunta di un server di controllo del mirroring alla sessione, in quanto potrebbero verificarsi failover automatici indesiderati. Per altre informazioni, vedere [Indicazioni per la distribuzione del mirroring del database](#RecommendationsForDeploying)di seguito in questo argomento.  
   
   
-##  <a name="RecommendationsForDeploying"></a> Indicazioni per la distribuzione del mirroring del database  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> Indicazioni per la distribuzione del mirroring del database  
  L'operazione asincrona consente di ottenere prestazioni ottimali per il mirroring del database. Le prestazioni di una sessione di mirroring che utilizza l'operazione asincrona possono essere rallentate quando il relativo carico di lavoro genera notevoli quantità di dati del log delle transazioni.  
   
  Negli ambienti di prova è consigliabile analizzare tutte le modalità operative per valutare le prestazioni del mirroring del database. Tuttavia, prima di distribuire il mirroring in un ambiente di produzione, accertarsi di aver compreso il funzionamento della rete in condizioni normali nel mondo reale.  

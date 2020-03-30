@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000452"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -88,7 +88,7 @@ ms.locfileid: "68000452"
   
  Il formato predefinito dei valori letterali stringa utilizzato per i client legacy risulterà compatibile con il formato standard SQL, definito come hh:mm:ss[.nnnnnnn]. Questo formato assomiglia alla definizione ISO 8601 per TIME che esclude i secondi frazionari.  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> Compatibilità con le versioni precedenti dei client  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> Compatibilità con le versioni precedenti dei client  
  Alcune versioni precedenti dei client non supportano i tipi di dati **time**, **date**, **datetime2** e **datetimeoffset**. Nella tabella seguente viene illustrato il mapping del tipo tra un'istanza di livello principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i client legacy.  
   
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato predefiniti dei valori letterali stringa passati al client legacy|ODBC delle versioni precedenti|OLEDB delle versioni precedenti|JDBC delle versioni precedenti|SQLCLIENT delle versioni precedenti|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> B. Inserimento dei valori letterali stringa dell'ora validi in una colonna time(7)  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> B. Inserimento dei valori letterali stringa dell'ora validi in una colonna time(7)  
  Nella tabella seguente sono elencati i diversi valori letterali stringa che possono essere inseriti in una colonna del tipo di dati **time(7)** con i valori che sono archiviati in tale colonna.  
   
 |Tipo di formato dei valori letterali stringa|Valore letterale stringa inserito|Valore time(7) archiviato|Descrizione|  

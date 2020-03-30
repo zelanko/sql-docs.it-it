@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680829"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -262,7 +262,7 @@ Specifica l'elenco di colonne o di nomi di variabile da aggiornare nella tabella
   
 Per altre informazioni sugli argomenti di questa clausola, vedere [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md). L'impostazione di una variabile sullo stesso valore di una colonna non è supportata.  
   
-Elimina  
+DELETE  
 Specifica che le righe corrispondenti alle righe di *target_table* vengono eliminate.  
   
 \<merge_not_matched>  

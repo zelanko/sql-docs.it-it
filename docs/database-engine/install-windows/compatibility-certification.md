@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632938"
 ---
 # <a name="compatibility-certification"></a>Certificazione di compatibilità
@@ -57,7 +57,7 @@ Se l'applicazione non richiede l'uso dei miglioramenti disponibili solo in un li
 
 Per i nuovi progetti di sviluppo o quando un'applicazione esistente richiede l'uso di nuove funzionalità come l'[elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md) oltre a nuovi elementi [!INCLUDE[tsql](../../includes/tsql-md.md)], pianificare l'aggiornamento del livello di compatibilità del database a quello più recente disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e certificare l'applicazione per l'uso di questo livello di compatibilità. Per altre informazioni sull'aggiornamento del livello di compatibilità del database, vedere [Procedure consigliate per aggiornare il livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
    
-### <a name="queryplan_shape"></a> Che cos'è la forma del piano di query?      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> Che cos'è la forma del piano di query?      
 La forma del piano di query si riferisce alla rappresentazione visiva dei diversi operatori che costituiscono un piano di query. Sono inclusi operatori quali seeks, scans, joins e sorts, nonché le connessioni fra tali operatori, che indicano il flusso di dati e l'ordine delle operazioni da eseguire per produrre il set di risultati desiderato. La forma del piano di query è determinata da Query Optimizer.
 
 Per mantenere prevedibili le prestazioni delle query durante un aggiornamento, è fondamentale garantire che venga usata la stessa forma del piano di query. Questo obiettivo può essere raggiunto evitando di modificare il livello di compatibilità del database subito dopo un aggiornamento, anche se nel [!INCLUDE[ssde_md](../../includes/ssde_md.md)] sottostante sono presenti versioni diverse. Se nell'ecosistema di esecuzione delle query non sono state apportate altre modifiche, ad esempio modifiche significative nelle risorse disponibili o nella distribuzione dei dati sottostanti, le prestazioni delle query rimangono invariate. 

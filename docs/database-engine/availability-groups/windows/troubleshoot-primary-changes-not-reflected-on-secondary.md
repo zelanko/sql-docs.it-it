@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243005"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinare il motivo per cui le modifiche apportate alla replica primaria non vengono eseguite nella replica secondaria per un gruppo di disponibilità Always On
@@ -50,7 +50,7 @@ ms.locfileid: "75243005"
 Le sezioni seguenti descrivono le cause comuni della mancata copia nella replica secondaria delle modifiche alla replica primaria per le query di sola lettura.  
 
 
-##  <a name="BKMK_OLDTRANS"></a> Transazioni attive con esecuzione prolungata  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> Transazioni attive con esecuzione prolungata  
  Una transazione con esecuzione prolungata nella replica primaria impedisce la lettura nella replica secondaria degli aggiornamenti.  
   
 ### <a name="explanation"></a>Spiegazione  
@@ -59,7 +59,7 @@ Le sezioni seguenti descrivono le cause comuni della mancata copia nella replica
 ### <a name="diagnosis-and-resolution"></a>Diagnosi e risoluzione  
  Nella replica primaria, usare [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) per visualizzare le transazioni attive meno recenti e verificare se è possibile eseguirne il rollback. Dopo il rollback delle transazioni attive meno recenti e la sincronizzazione di queste con la replica secondaria, i carichi di lavoro di lettura nella replica secondaria possono vedere gli aggiornamenti nel database di disponibilità fino all'inizio della transazione attiva meno recente di quel momento.  
   
-##  <a name="BKMK_LATENCY"></a> Una latenza elevata o una velocità effettiva bassa della rete causa un accumulo di log nella replica primaria  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> Una latenza elevata o una velocità effettiva bassa della rete causa un accumulo di log nella replica primaria  
  Una latenza elevata o un velocità effettiva bassa della rete può impedire un invio sufficientemente rapido dei log alla replica secondaria.  
   
 ### <a name="explanation"></a>Spiegazione  
@@ -92,7 +92,7 @@ Le sezioni seguenti descrivono le cause comuni della mancata copia nella replica
   
  Per risolvere questo problema, provare ad aggiornare la larghezza di banda di rete o a rimuovere o ridurre traffico di rete non necessario.  
   
-##  <a name="BKMK_REDOBLOCK"></a> Un altro carico di lavoro di creazione di report blocca l'esecuzione del thread di rollforward  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Un altro carico di lavoro di creazione di report blocca l'esecuzione del thread di rollforward  
  L'esecuzione di modifiche DDL (Data Definition Language) del thread di rollforward nella replica secondaria viene bloccata da una query di sola lettura con esecuzione prolungata. Per poter rendere disponibili altri aggiornamenti al carico di lavoro di lettura, il thread di rollforward deve essere sbloccato.  
   
 ### <a name="explanation"></a>Spiegazione  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  È possibile lasciar finire il carico di lavoro di creazione di report, e a questo punto il thread di rollforward viene sbloccato, oppure è possibile sbloccare il thread di rollforward immediatamente eseguendo il comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) sull'ID di sessione che causa il blocco.  
   
-##  <a name="BKMK_REDOBEHIND"></a> Il thread di rollforward è in ritardo a causa di una contesa di risorse  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> Il thread di rollforward è in ritardo a causa di una contesa di risorse  
  Un carico di lavoro di creazione di report di grandi dimensioni nella replica secondaria ha rallentato le prestazioni della replica secondaria stessa e il thread di rollforward è in ritardo.  
   
 ### <a name="explanation"></a>Spiegazione  

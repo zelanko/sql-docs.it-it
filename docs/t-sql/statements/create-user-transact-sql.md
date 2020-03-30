@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056809"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -277,7 +277,7 @@ Quando si crea l'utente nel database dell'istanza gestita di database SQL, login
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
-##  <a name="SyntaxSummary"></a> Riepilogo della sintassi  
+##  <a name="syntax-summary"></a><a name="SyntaxSummary"></a> Riepilogo della sintassi  
  **Utenti basati su account di accesso nel database master**  
   
  Nell'elenco seguente viene illustrata la sintassi possibile per gli utenti basati su account di accesso. Le opzioni dello schema predefinito non sono elencate.  
@@ -388,7 +388,7 @@ CREATE USER JinghaoLiu FOR CERTIFICATE CarnationProduction50;
 GO   
 ```  
   
-###  <a name="withoutLogin"></a> D. Creazione e uso di un utente senza un account di accesso  
+###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. Creazione e uso di un utente senza un account di accesso  
  Nell'esempio seguente viene creato un utente del database `CustomApp` che non esegue il mapping a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'esempio viene concessa l'autorizzazione`adventure-works\tengiz0` di un utente per rappresentare l'utente `CustomApp`.  
   
 ```  

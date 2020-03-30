@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727140"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Esercitazione: Distribuire un modello in Python per suddividere in categorie i clienti con Machine Learning Services per SQL Server
@@ -41,7 +41,7 @@ Nella [seconda parte](python-clustering-model-prepare-data.md) si è appreso com
 
 Nella [parte tre](python-clustering-model-build.md) si è appreso come creare ed eseguire il training di un modello di clustering K-Means in Python.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 * Nella quarta parte di questa esercitazione si presuppone che siano stati soddisfatti i prerequisiti della [**prima parte**](python-clustering-model.md) e che siano stati completati i passaggi descritti nella [**seconda parte**](python-clustering-model-prepare-data.md) e nella [**terza parte**](python-clustering-model-build.md).
 

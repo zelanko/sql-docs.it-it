@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287385"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Eseguire pacchetti di Integration Services (SSIS)
@@ -111,7 +111,7 @@ ms.locfileid: "79287385"
   
      Utilizzare le stored procedure per eseguire il pacchetto. Fare clic su **Script** per generare l'istruzione Transact-SQL tramite cui viene creata e avviata un'istanza dell'esecuzione. Nell'istruzione è inclusa una chiamata alle stored procedure catalog.create_execution, catalog.set_execution_parameter_value e catalog.start_execution. Per altre informazioni su queste stored procedure, vedere [catalog.create_execution &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) e [catalog.start_execution &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
 
-## <a name="execute_package_dialog"></a> Finestra di dialogo Esecuzione pacchetto
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> Finestra di dialogo Esecuzione pacchetto
   Usare la finestra di dialogo **Esegui pacchetto** per eseguire un pacchetto archiviato nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  È possibile che in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] siano contenuti i parametri con i valori archiviati nelle variabili di ambiente. Prima di eseguire tale pacchetto, è necessario specificare l'ambiente che sarà utilizzato per fornire i valori della variabile di ambiente. Un progetto può contenere più ambienti, ma solo un ambiente può essere utilizzato per l'associazione di valori della variabile di ambiente al momento dell'esecuzione. Se nel pacchetto non viene utilizzata alcuna variabile di ambiente, non sarà necessario alcun ambiente.  
@@ -130,7 +130,7 @@ ms.locfileid: "79287385"
   
 -   [Creazione di script per le opzioni contenute nella finestra di dialogo Esegui pacchetto](#script)  
   
-###  <a name="open_dialog"></a> Aprire la finestra di dialogo Esegui pacchetto  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> Aprire la finestra di dialogo Esegui pacchetto  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287385"
   
 5.  Fare clic con il pulsante destro del mouse sul pacchetto, quindi scegliere **Esegui**.  
   
-###  <a name="general"></a> Impostare le opzioni nella pagina Generale  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Impostare le opzioni nella pagina Generale  
  Selezionare **Ambiente** per specificare l'ambiente che viene applicato quando si esegue il pacchetto.  
   
-###  <a name="parameters"></a> Impostare le opzioni nella scheda Parametri  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> Impostare le opzioni nella scheda Parametri  
  Usare la scheda **Parametri** per modificare i valori dei parametri usati quando si esegue il pacchetto.  
   
-###  <a name="connection"></a> Impostare le opzioni nella scheda Gestioni connessioni  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> Impostare le opzioni nella scheda Gestioni connessioni  
  Utilizzare la scheda Gestione connessioni per impostare le proprietà della gestione connessione del pacchetto.  
   
-###  <a name="advanced"></a> Impostare le opzioni nella scheda Avanzate  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> Impostare le opzioni nella scheda Avanzate  
  Utilizzare la scheda Avanzate per gestire le proprietà e le altre impostazioni del pacchetto.  
   
  **Aggiungi**, **Modifica**, **Rimuovi**  
@@ -168,7 +168,7 @@ ms.locfileid: "79287385"
  **Runtime a 32 bit**  
  Specificare che il pacchetto verrà eseguito in un sistema a 32 bit.  
   
-###  <a name="script"></a> Creazione di script per le opzioni contenute nella finestra di dialogo Esegui pacchetto  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> Creazione di script per le opzioni contenute nella finestra di dialogo Esegui pacchetto  
  Mentre si è nella finestra di dialogo **Esegui pacchetto** , è inoltre possibile usare il pulsante **Script** nella barra degli strumenti per scrivere automaticamente codice [!INCLUDE[tsql](../../includes/tsql-md.md)] . Lo script generato chiama le stored procedure [catalog.start_execution &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) con le stesse opzioni selezionate nella finestra di dialogo **Esegui pacchetto**. Lo script verrà visualizzato in una nuova finestra dello script di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
 
 ## <a name="see-also"></a>Vedere anche  

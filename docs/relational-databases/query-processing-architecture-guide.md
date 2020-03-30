@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288385"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510202"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Di seguito viene illustrata la procedura di base necessaria per elaborare una si
 4. Il motore relazionale avvia l'esecuzione del piano di esecuzione. Man mano che vengono elaborati i passaggi che richiedono i dati delle tabelle di base, il motore relazionale richiede al motore di archiviazione di passare i dati dei set di righe richiesti dal motore relazionale stesso.
 5. Il motore relazionale elabora i dati restituiti dal motore di archiviazione nel formato definito per il set di risultati e restituisce il set di risultati al client.
 
-### <a name="ConstantFolding"></a> Valutazione delle espressioni ed elaborazione delle costanti 
+### <a name="constant-folding-and-expression-evaluation"></a><a name="ConstantFolding"></a> Valutazione delle espressioni ed elaborazione delle costanti 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alcune espressioni costanti vengono valutate in una fase preliminare per migliorare le prestazioni delle query. Questo comportamento viene denominato elaborazione delle costanti in fase di compilazione. Una costante è un valore letterale [!INCLUDE[tsql](../includes/tsql-md.md)], ad esempio `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` o `0x12345678`.
 
 #### <a name="foldable-expressions"></a>Espressioni per cui è possibile eseguire l'elaborazione delle costanti in fase di compilazione
@@ -181,7 +181,7 @@ Se l'opzione di database `PARAMETERIZATION` non è impostata su `FORCED` per la 
 
 Se `dbo.f` è invece una funzione scalare definita dall'utente, per l'espressione `dbo.f(100)` non viene eseguita l'elaborazione delle costanti in fase di compilazione, in quanto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa operazione non è possibile per le espressioni che implicano funzioni definite dall'utente, anche se deterministiche. Per altre informazioni sulla parametrizzazione, vedere [Parametrizzazione forzata](#ForcedParam) più avanti in questo articolo.
 
-#### <a name="ExpressionEval"></a>Valutazione delle espressioni 
+#### <a name="expression-evaluation"></a><a name="ExpressionEval"></a>Valutazione delle espressioni 
 Alcune espressioni per cui non viene eseguita l'elaborazione delle costanti ma i cui argomenti sono noti in fase di compilazione, sia che si tratti di parametri o di costanti, vengono valutate tramite lo strumento per la stima delle dimensioni del set di risultati (cardinalità) incluso in Query Optimizer durante l'ottimizzazione.
 
 In particolare, se tutti gli input sono noti, in fase di compilazione vengono valutati gli operatori speciali e le funzioni predefinite seguenti: `UPPER`, `LOWER`, `RTRIM`,`DATEPART( YY only )`, `GETDATE`, `CAST` e `CONVERT`. Anche gli operatori seguenti vengono valutati in fase di compilazione se tutti i relativi input sono noti:
@@ -550,9 +550,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ GO
 Verificare ancora il contenuto che è possibile trovare nella cache dei piani. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -599,10 +599,10 @@ GO
 Verificare ancora il contenuto che è possibile trovare nella cache dei piani. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -690,7 +690,7 @@ La colonna `recompile_cause` dell'XEvent `sql_statement_recompile` contiene un c
 > [!NOTE]
 > Quando l'opzione di database `AUTO_UPDATE_STATISTICS` è impostata su `ON`, le query vengono ricompilate quando sono indirizzate a tabelle o viste indicizzate le cui statistiche sono state aggiornate o le cui cardinalità sono state modificate in modo significativo dall'ultima esecuzione. Questo comportamento si applica alle tabelle standard definite dall'utente, alle tabelle temporanee e alle tabelle inserite ed eliminate, create dai trigger DML. Se le prestazioni delle query sono influenzate da un numero eccessivo di ricompilazioni, è possibile modificare l'impostazione su `OFF`. Quando l'opzione `AUTO_UPDATE_STATISTICS` del database è impostata su `OFF`, non vengono eseguite ricompilazioni in base alle statistiche o alle modifiche delle cardinalità, ad eccezione delle tabelle inserite ed eliminate create dai trigger DML `INSTEAD OF`. Poiché tali tabelle vengono create in tempdb, la ricompilazione delle query che vi accedono dipende dall'impostazione di `AUTO_UPDATE_STATISTICS` in tempdb. Si noti che nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti alla 2005, la ricompilazione delle query continua in base alle modifiche delle cardinalità delle tabelle inserite ed eliminate del trigger DML, anche quando l'impostazione è `OFF`.
 
-### <a name="PlanReuse"></a> Parametri e riutilizzo del piano di esecuzione
+### <a name="parameters-and-execution-plan-reuse"></a><a name="PlanReuse"></a> Parametri e riutilizzo del piano di esecuzione
 L'utilizzo dei parametri, inclusi i marcatori di parametro nelle applicazioni ADO, OLE DB e ODBC, può comportare un maggiore riutilizzo dei piani di esecuzione. 
 
 > [!WARNING] 
@@ -758,7 +758,7 @@ WHERE AddressID = 1 + 2;
 
 La query può tuttavia essere parametrizzata in base alle regole di parametrizzazione semplice. Quando un tentativo di parametrizzazione forzata ha esito negativo, viene successivamente tentata la parametrizzazione semplice.
 
-### <a name="SimpleParam"></a> Parametrizzazione semplice
+### <a name="simple-parameterization"></a><a name="SimpleParam"></a> Parametrizzazione semplice
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'uso di parametri o di marcatori di parametro nelle istruzioni Transact-SQL aumenta la capacità del motore relazionale di trovare una corrispondenza tra le nuove istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e i piani di esecuzione esistenti compilati in precedenza.
 
 > [!WARNING] 
@@ -793,7 +793,7 @@ In base al comportamento predefinito della parametrizzazione semplice, in [!INCL
 
 In alternativa, è possibile specificare la parametrizzazione di una singola query e di tutte le altre con sintassi equivalente ma che differiscono solo per i valori dei parametri. 
 
-### <a name="ForcedParam"></a> Parametrizzazione forzata
+### <a name="forced-parameterization"></a><a name="ForcedParam"></a> Parametrizzazione forzata
 È possibile ignorare il comportamento predefinito di parametrizzazione semplice di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificando la parametrizzazione di tutte le istruzioni `SELECT`, `INSERT`, `UPDATE` e `DELETE` di un database in base a limiti specifici. La parametrizzazione forzata viene attivata impostando l'opzione `PARAMETERIZATION` su `FORCED` nell'istruzione `ALTER DATABASE` . La parametrizzazione forzata può offrire un miglioramento delle prestazioni di alcuni database riducendo la frequenza delle operazioni di compilazione e ricompilazione delle query. I database che possono essere soggetti a un miglioramento delle prestazione grazie alla parametrizzazione forzata sono in genere quelli che ricevono volumi elevati di query simultanee da origini quali le applicazioni POS.
 
 Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, qualsiasi valore letterale visualizzato in un'istruzione `SELECT`, `INSERT`, `UPDATE`o `DELETE` , inviato in qualsiasi forma, viene convertito in un parametro durante la compilazione delle query. Le eccezioni consistono in valori letterali presenti nei costrutti di query seguenti: 
@@ -842,7 +842,7 @@ Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono paramet
 * I valori letterali binari vengono parametrizzati in varbinary(8000) se il valore letterale non supera gli 8000 byte. Se il valore letterale è maggiore di 8000 byte, viene convertito in varbinary(max).
 * I valori letterali di tipo money vengono parametrizzati in money.
 
-#### <a name="ForcedParamGuide"></a> Linee guida per l'utilizzo della parametrizzazione forzata
+#### <a name="guidelines-for-using-forced-parameterization"></a><a name="ForcedParamGuide"></a> Linee guida per l'utilizzo della parametrizzazione forzata
 Quando si desidera impostare l'opzione `PARAMETERIZATION` su FORCED, considerare gli aspetti seguenti:
 
 * Tramite la parametrizzazione forzata, in pratica, le costanti letterali incluse in una query vengono modificate in parametri durante la compilazione di una query. È pertanto possibile che in Query Optimizer vengano scelti piani non ottimali per le query. In particolare, è meno probabile che Query Optimizer associ la query a una vista indicizzata o a un indice in una colonna calcolata. Potrebbero inoltre essere scelti piani non ottimali per le query formulate nelle tabelle partizionate e nelle viste partizionate distribuite. Non utilizzare la parametrizzazione forzata negli ambienti basati in modo significativo su viste indicizzate e indici in colonne calcolate. In generale l'opzione `PARAMETERIZATION FORCED` deve essere usata solo da amministratori di database esperti dopo avere determinato che le prestazioni non subiranno alcun impatto negativo.
@@ -894,7 +894,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il modello di prepara
 * L'applicazione può controllare il momento della creazione del piano di esecuzione e del suo riutilizzo.
 * Il modello di preparazione/esecuzione è utilizzabile con altri database, incluse le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="ParamSniffing"></a> Analisi dei parametri
+### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> Analisi dei parametri
 Il termine "analisi dei parametri" si riferisce a un processo in base al quale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] individua i valori dei parametri correnti durante la compilazione o ricompilazione e li passa a Query Optimizer in modo che possano essere usati per generare piani di esecuzione di query potenzialmente più efficienti.
 
 I valori dei parametri vengono individuati durante la compilazione o ricompilazione per i seguenti tipi di batch:
@@ -903,7 +903,7 @@ I valori dei parametri vengono individuati durante la compilazione o ricompilazi
 -  Query inviate tramite sp_executesql 
 -  Query preparate
 
-Per altre informazioni sulla risoluzione dei problemi di analisi dei parametri, vedere [Risolvere i problemi di query con problemi di piani di esecuzione di query sensibili ai parametri](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
+Per altre informazioni sulla risoluzione dei problemi di analisi dei parametri, vedere [Risolvere i problemi di query con problemi di piani di esecuzione di query sensibili ai parametri](/azure/sql-database/sql-database-monitor-tune-overview).
 
 > [!NOTE]
 > Per le query che usano l'hint `RECOMPILE`, vengono individuati sia i valori dei parametri che i valori correnti delle variabili locali. I valori individuati (dei parametri e delle variabili locali) sono quelli esistenti nella posizione all'interno del batch prima dell'istruzione con l'hint `RECOMPILE`. In particolare, per i parametri, non vengono individuati i valori passati con la chiamata del batch.
@@ -945,7 +945,7 @@ Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoV
 * Un piano di esecuzione seriale è considerato più veloce di ogni possibile piano di esecuzione parallela per la query in esame.
 * La query contiene operatori scalari o relazionali che non possono essere eseguiti in parallelo. Alcuni operatori possono richiedere l'esecuzione seriale di una sezione della query o dell'intero piano.
 
-### <a name="DOP"></a> Grado di parallelismo
+### <a name="degree-of-parallelism"></a><a name="DOP"></a> Grado di parallelismo
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rileva automaticamente il grado di parallelismo ottimale per ogni istanza di esecuzione parallela di una query o di operazione DDL sull'indice, utilizzando i criteri seguenti: 
 
 1. Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è **in esecuzione in un computer con più microprocessori o CPU**, ad esempio un computer SMP (Symmetric Multiprocessing). Solo i computer con più CPU possono utilizzare le query parallele. 
@@ -1285,12 +1285,12 @@ Sebbene negli esempi precedenti venga suggerito un modo semplice per allocare i 
 
 Per illustrare un altro esempio, si supponga che la tabella dispone di quattro partizioni nella colonna A con punti limite (10, 20, 30), un indice nella colonna B e che la query include una clausola `WHERE B IN (50, 100, 150)`del predicato. Dal momento che partizioni della tabella sono basate sui valori di A, i valori di B possono trovarsi in qualsiasi partizione della tabella. Di conseguenza Query Processor ricercherà ciascuno dei tre valori di B (50, 100, 150) in ognuna delle quattro partizioni della tabella e assegnerà proporzionatamente i thread di lavoro in modo da eseguire ciascuna delle 12 analisi della query in parallelo.
 
-|Partizioni della tabella basate sulla colonna A |Ricerca della colonna B in ogni partizione della tabella |
+|Partizioni della tabella basate sulla colonna A    |Ricerca della colonna B in ogni partizione della tabella |
 |----|----|
-|Partizione di tabella 1: A < 10   |B=50, B=100, B=150 |
-|Partizione di tabella 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
-|Partizione di tabella 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
-|Partizione di tabella 4: A >= 30  |B=50, B=100, B=150 |
+|Partizione di tabella 1: A < 10     |B=50, B=100, B=150 |
+|Partizione di tabella 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|Partizione di tabella 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|Partizione di tabella 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Procedure consigliate
 
@@ -1374,7 +1374,7 @@ SET STATISTICS XML OFF;
 GO
 ```
 
-##  <a name="Additional_Reading"></a> Ulteriori informazioni  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Ulteriori informazioni  
  [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)  
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  

@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246233"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
@@ -74,7 +74,7 @@ Se l'opzione SET ANSI_PADDING è impostata su OFF quando si esegue l'istruzione 
 > Ogni colonna non Null varchar(max) o nvarchar(max) richiede 24 byte di allocazione fissa aggiuntiva che concorre al raggiungimento del limite delle righe di 8.060 byte durante un'operazione di ordinamento. Ciò può creare un limite implicito per il numero di colonne non Null varchar(max) o nvarchar(max) che è possibile creare in una tabella.
 Non vengono segnalati errori particolari (oltre il normale avviso che indica che le dimensioni massime per le righe superano il valore massimo consentito di 8.060 byte) durante la creazione della tabella o l'inserimento dei dati. Queste dimensioni elevate delle righe possono causare errori (ad esempio, l'errore 512) durante alcune operazioni normali, ad esempio un aggiornamento della chiave dell'indice cluster, o operazioni di ordinamento dell'intero set di colonne e si verificano solo nel corso dell'esecuzione di un'operazione.
 
-## <a name="_character"></a> Conversione dei dati di tipo carattere
+## <a name="converting-character-data"></a><a name="_character"></a> Conversione dei dati di tipo carattere
 
 Se un'espressione di caratteri viene convertita in un tipo di dati carattere di dimensioni diverse, i valori troppo lunghi per il nuovo tipo di dati vengono troncati. Ai fini della conversione da un'espressione di caratteri, il tipo **uniqueidentifier** viene considerato un tipo carattere ed è quindi soggetto alle regole di troncamento per la conversione in tipo carattere. Vedere la sezione Esempi riportata di seguito.
 

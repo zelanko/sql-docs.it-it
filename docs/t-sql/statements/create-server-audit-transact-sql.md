@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982997"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> C. Creazione di un controllo del server contenente una clausola WHERE  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> C. Creazione di un controllo del server contenente una clausola WHERE  
  Nell'esempio seguente vengono creati un database, uno schema e due tabelle per l'esempio. Nella tabella denominata `DataSchema.SensitiveData` sono contenuti i dati riservati mentre l'accesso alla tabella deve essere registrato nel controllo. Nella tabella denominata `DataSchema.GeneralData` non sono contenuti dati riservati. La specifica del controllo del database consente di controllare l'accesso a tutti gli oggetti nello schema `DataSchema`. Il controllo del server viene creato con una clausola WHERE che consente di limitare il controllo del server solo alla tabella `SensitiveData`. Per il controllo del server si presuppone l'esistenza di una cartella del controllo in `C:\SQLAudit`.  
   
 ```sql  

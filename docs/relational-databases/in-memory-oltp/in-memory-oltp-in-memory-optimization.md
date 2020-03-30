@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401648"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>OLTP in memoria e ottimizzazione per la memoria
@@ -84,7 +84,7 @@ Questa sezione include collegamenti ad altri siti Web che contengono informazion
   
 -   [Blog di OLTP in memoria](https://go.microsoft.com/fwlink/?LinkId=311696)  
 
-## <a name="anchorname-17minute-video"></a>Video di 17 minuti, indicizzato
+## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>Video di 17 minuti, indicizzato
 
 - _Titolo del video:_ &nbsp; **In-Memory OLTP in SQL Server 2016** (OLTP in memoria in SQL Server 2016)
 - _Data di pubblicazione:_ &nbsp; 10-03-2019 su `YouTube.com`.
@@ -103,7 +103,7 @@ I passaggi generali illustrati nel video sono i seguenti:
 2. Viene quindi visualizzata un'edizione ottimizzata per la memoria della tabella che viene creata e popolata con pochi clic in SQL Server Management Studio (SSMS.exe).
 3. La demo viene quindi rieseguita con la tabella ottimizzata per la memoria. Il miglioramento della velocità misurato è enorme.
 
-### <a name="anchorname-index-17minute-video"></a>Indice per ogni sezione del video
+### <a name="index-to-each-section-in-the-video"></a><a name="anchorname-index-17minute-video"></a>Indice per ogni sezione del video
 
 | Collegamento al contrassegno temporale | Titolo della sezione |
 | :------------- | :------------ |

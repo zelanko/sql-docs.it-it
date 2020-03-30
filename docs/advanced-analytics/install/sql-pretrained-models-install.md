@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727554"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installare modelli di Machine Learning con training preliminare in SQL Server
@@ -30,7 +30,7 @@ Per usare i modelli con training preliminare, chiamare le funzioni elencate nell
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera un punteggio di sentiment positivo-negativo rispetto a input di testo. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Estrae informazioni in formato testo da input di file di immagine. |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Gli algoritmi di Machine Learning comportano un utilizzo elevato delle risorse di calcolo. Per un carico di lavoro da basso a moderato sono consigliati 16 GB di RAM, incluso il completamento delle procedure dettagliate delle esercitazioni con tutti i dati di esempio.
 

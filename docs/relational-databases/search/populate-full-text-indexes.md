@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903875"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 Un indice full-text supporta i tipi di popolamento seguenti:
 -   Popolamento **completo**
 -   Popolamento automatico o manuale basato sul **rilevamento delle modifiche**
@@ -171,7 +171,7 @@ In alcuni casi una richiesta di popolamento incrementale comporta un popolamento
   
  Per eseguire un popolamento incrementale, eseguire un'istruzione `ALTER FULLTEXT INDEX` usando la clausola `START INCREMENTAL POPULATION`.  
   
-###  <a name="create"></a> Creare o modificare una pianificazione per un popolamento incrementale   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> Creare o modificare una pianificazione per un popolamento incrementale   
   
 1.  In Management Studio espandere il server in Esplora oggetti.  
   
@@ -208,7 +208,7 @@ In alcuni casi una richiesta di popolamento incrementale comporta un popolamento
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> Risolvere i problemi relativi agli errori in un popolamento full-text (ricerca per indicizzazione)  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> Risolvere i problemi relativi agli errori in un popolamento full-text (ricerca per indicizzazione)  
 Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per impostazione predefinita, i log di ricerca per indicizzazione per un'istanza specifica, ad esempio l'istanza predefinita, si trovano nella cartella `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
  
 Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazione seguente:  

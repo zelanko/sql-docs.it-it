@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558526"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Gestire un'istanza del cluster di failover RHEL per SQL Server
@@ -39,7 +39,7 @@ Il diagramma seguente illustra i componenti in un cluster Linux con SQL Server.
 
 Per altre informazioni sulla configurazione del cluster, sulle opzioni degli agenti delle risorse e sulla gestione, vedere la [documentazione di riferimento di RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a> Effettuare il failover manuale del cluster
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a> Effettuare il failover manuale del cluster
 
 Il comando `resource move` crea un vincolo che forza l'avvio della risorsa nel nodo di destinazione.  Dopo l'esecuzione del comando `move`, l'esecuzione di `clear` per la risorsa rimuoverà il vincolo e sarà possibile spostare nuovamente la risorsa o effettuare il failover automatico della risorsa. 
 

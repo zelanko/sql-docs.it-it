@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254861"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
 
 Il log di traccia del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un file di testo ASCII che contiene informazioni dettagliate relative alle operazioni del servizio del server di report.  Le informazioni nei file includono le operazioni eseguite dal servizio Web ReportServer, dal portale Web e dall'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione, ad esempio durante la risoluzione dei problemi relativi alle sottoscrizioni.  
 
-## <a name="bkmk_view_log"></a> Dove si trovano i file di log del server di report?
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> Dove si trovano i file di log del server di report?
 
 I file di log di traccia sono `ReportServerService_<timestamp>.log` e `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` e si trovano nella cartella seguente:
 
@@ -28,7 +28,7 @@ I file di log di traccia sono `ReportServerService_<timestamp>.log` e `Microsoft
 
 I log di traccia vengono creati quotidianamente, a partire dalla prima voce registrata dopo la mezzanotte (ora locale) e tutte le volte in cui il servizio viene riavviato. Il timestamp si basa su l'ora UTC (Coordinated Universal Time). Il file è in formato en-US Per impostazione predefinita, i log di traccia possono occupare uno spazio massimo di 32 MB e vengono eliminati dopo 14 giorni.  
 
-## <a name="bkmk_trace_configuration_settings"></a> Impostazioni di configurazione della traccia
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> Impostazioni di configurazione della traccia
 
 Il comportamento del log di traccia viene gestito nel file di configurazione **ReportingServicesService.exe.config**. Il file di configurazione si trova nel seguente percorso:  
   
@@ -68,7 +68,7 @@ Il comportamento del log di traccia viene gestito nel file di configurazione **R
 |**Categoria del componente**|Specifica i componenti per i quali vengono generate informazioni nel log di traccia e il livello di traccia nel formato seguente:<br /><br /> \<categoria componente>:\<livellotraccia><br /><br /> È possibile specificare tutti i componenti o solo alcuni (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Se non si desidera generare informazioni per un componente specifico, è possibile disabilitare la traccia per tale componente (ad esempio "SemanticModelGenerator:0"). Non disabilitare la funzionalità di traccia per il componente **all**.<br /><br /> È possibile impostare "SemanticQueryEngine:4" se si desidera visualizzare le istruzioni Transact-SQL che vengono generate per ogni query semantica. Le istruzioni Transact-SQL vengono registrate nel log di traccia. Nell'esempio seguente viene illustrata l'impostazione di configurazione per l'aggiunta delle istruzioni Transact-SQL al log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Le categorie dei componenti possono essere impostate nei modi seguenti:<br /><br /> <br /><br /> Il valore**All** viene usato per tracciare l'attività generale del server di report per tutti i processi che non sono suddivisi in categorie specifiche.<br /><br /> Il valore**RunningJobs** viene usato per tracciare un report o un'operazione di sottoscrizione in corso.<br /><br /> Il valore**SemanticQueryEngine** viene usato per tracciare una query semantica elaborata quando un utente esegue un'esplorazione dei dati ad hoc in un report basato su modello.<br /><br /> Il valore**SemanticModelGenerator** viene usato per tracciare la generazione del modello.<br /><br /> Il valore**http** viene usato per abilitare il file di log HTTP del server di report. Per ulteriori informazioni, vedere [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
 |Valore**tracelevel** per categorie di componenti|\<categoria componente>:\<livellotraccia><br /><br /> <br /><br /> Se non si aggiunge un livello di traccia dopo il nome del componente, verrà usato il valore specificato per **DefaultTraceSwitch** . Ad esempio, se si specifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", per tutti i componenti verrà utilizzato il livello di traccia predefinito.|I valori validi del livello di traccia sono i seguenti:<br /><br /> <br /><br /> 0= Disabilita la funzionalità di traccia<br /><br /> 1= Eccezioni e riavvii<br /><br /> 2= Eccezioni, riavvii, avvisi<br /><br /> 3= Eccezioni, riavvii, avvisi, messaggi di stato (valore predefinito)<br /><br /> 4= Modalità dettagliata<br /><br /> Il valore predefinito per il server di report è: "all:3".|  
   
-## <a name="bkmk_add_custom"></a> Aggiunta di un'impostazione di configurazione personalizzata per specificare il percorso del file di dump  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> Aggiunta di un'impostazione di configurazione personalizzata per specificare il percorso del file di dump  
 È possibile aggiungere un'impostazione personalizzata per definire la directory di archiviazione utilizzata dallo strumento Dr. Watson per Windows per archiviare i file di dump. L'impostazione personalizzata è **Directory**. L'esempio seguente illustra come specificare questa impostazione di configurazione nella sezione **RStrace** :  
 
 ```
@@ -77,7 +77,7 @@ Il comportamento del log di traccia viene gestito nel file di configurazione **R
   
 Per ulteriori informazioni, vedere l' [articolo della Knowledge Base 913046](https://support.microsoft.com/?kbid=913046) nel sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-##  <a name="bkmk_log_file_fields"></a> Campi del file di log
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> Campi del file di log
 
 Nei log di traccia sono disponibili i campi seguenti:  
   

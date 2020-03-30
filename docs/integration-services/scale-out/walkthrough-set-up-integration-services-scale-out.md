@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288745"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procedura dettagliata: Installare Integration Services (SSIS) Scale Out
@@ -43,7 +43,7 @@ Installare [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSI
 
 * [Abilitare il ruolo di lavoro di scalabilità orizzontale](#EnableWorker)
 
-## <a name="InstallMaster"></a> Installare il master di scalabilità orizzontale
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> Installare il master di scalabilità orizzontale
 
 Per impostare Scale Out Master, è necessario installare i servizi del motore di database, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)], e la funzionalità Scale Out Master di SSIS durante l'installazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. 
 
@@ -91,7 +91,7 @@ Seguire le istruzioni riportate in [Installazione di SQL Server dal prompt dei c
     > [!NOTE]
     > Se Scale Out Master non è installato insieme al motore di database e l'istanza del motore di database è un'istanza denominata, è necessario configurare `SqlServerName` nel file di configurazione del servizio di Scale Out Master dopo l'installazione. Per altre informazioni, vedere [Scale Out Master](integration-services-ssis-scale-out-master.md).
 
-## <a name="InstallWorker"></a> Installare il ruolo di lavoro di scalabilità orizzontale
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> Installare il ruolo di lavoro di scalabilità orizzontale
  
 Per impostare Scale Out Worker, è necessario installare [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] e la funzionalità Scale Out Worker durante la procedura di installazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
@@ -142,20 +142,20 @@ Seguire le istruzioni riportate in [Installazione di SQL Server dal prompt dei c
     -   `/ISWORKERSVCMASTER` (facoltativo)
     -   `/ISWORKERSVCCERT` (facoltativo)
  
-## <a name="InstallCert"></a> Installare il certificato client del ruolo di lavoro di scalabilità orizzontale
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> Installare il certificato client del ruolo di lavoro di scalabilità orizzontale
 
 Durante l'installazione di Scale Out Worker, nel computer viene creato e installato automaticamente un certificato del ruolo di lavoro. Viene anche installato un certificato client corrispondente, SSISScaleOutWorker.cer, in `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`. Per consentire a Scale Out Master di autenticare l'istanza di Scale Out Worker, è necessario aggiungere questo certificato client all'archivio radice del computer locale in cui è installato Scale Out Master.
   
 Per aggiungere il certificato client all'archivio radice, fare doppio clic sul file con estensione cer e quindi fare clic su **Installa certificato** nella finestra di dialogo Certificato. Viene visualizzata l'**Importazione guidata certificati** .  
 
-## <a name="Firewall"></a> Aprire la porta del firewall
+## <a name="open-firewall-port"></a><a name="Firewall"></a> Aprire la porta del firewall
 
 Nel computer con Scale Out Master aprire la porta specificata durante l'installazione dell'istanza di Scale Out Master e la porta di SQL Server (1433 per impostazione predefinita) usando Windows Firewall.
 
 > [!Note]
 > Dopo aver aperto la porta del firewall, è anche necessario riavviare il servizio Scale Out Worker.
     
-## <a name="Start"></a> Avviare i servizi Master di scalabilità orizzontale e Ruolo di lavoro di scalabilità orizzontale di SQL Server
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a> Avviare i servizi Master di scalabilità orizzontale e Ruolo di lavoro di scalabilità orizzontale di SQL Server
 
 Se il tipo di avvio dei servizi non è stato impostato su **Automatico** durante l'installazione, avviare i servizi seguenti:
 
@@ -163,18 +163,18 @@ Se il tipo di avvio dei servizi non è stato impostato su **Automatico** durante
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> Abilitare il master di scalabilità orizzontale
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> Abilitare il master di scalabilità orizzontale
 
 Quando si crea il catalogo SSISDB in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], fare clic su **Abilita questo server come SSIS Scale Out Master** nella finestra di dialogo **Crea catalogo**.
 
 Dopo aver creato il catalogo, è possibile abilitare Scale Out Master con [Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 
-## <a name="EnableAuth"></a> Abilitare la modalità di autenticazione di SQL Server
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> Abilitare la modalità di autenticazione di SQL Server
 Se l'autenticazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] non è stata abilitata durante l'installazione del motore di database, abilitare la modalità di autenticazione di SQL Server nell'istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] che ospita il catalogo SSISDB. 
 
 Quando l'autenticazione di SQL Server è disabilitata, l'esecuzione dei pacchetti non viene bloccata. Il log di esecuzione non può tuttavia scrivere nel database SSISDB.
 
-## <a name="EnableWorker"></a> Abilitare il ruolo di lavoro di scalabilità orizzontale
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> Abilitare il ruolo di lavoro di scalabilità orizzontale
 
 È possibile abilitare Scale Out Worker con [Scale Out Manager](integration-services-ssis-scale-out-manager.md), che offre un'interfaccia utente grafica, o con una stored procedure.
 

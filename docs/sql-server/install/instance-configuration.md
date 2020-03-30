@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286565"
 ---
 # <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
@@ -192,7 +192,7 @@ Le directory predefinite della tabella seguente sono configurabili dall'utente d
 * Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md)  
 * [Autorizzazioni NTFS e di condivisione per un file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
-## Pagina <a name="serverconfig"></a> Configurazione del motore di database - Configurazione del server
+## <a name="database-engine-configuration---server-configuration-page"></a>Pagina <a name="serverconfig"></a> Configurazione del motore di database - Configurazione del server
 
 Usare questa pagina per impostare la modalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiungere utenti o gruppi di Windows come amministratori del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -271,7 +271,7 @@ Per altre informazioni sulla scelta tra l'autenticazione di Windows e l'autentic
 
 Per altre informazioni sulla scelta di un account per l'esecuzione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-## Pagina <a name ="datadir"></a> Configurazione del motore di database - Directory dati
+## <a name="database-engine-configuration---data-directories-page"></a>Pagina <a name ="datadir"></a> Configurazione del motore di database - Directory dati
 
 Usare questa pagina per specificare il percorso di installazione per i file di dati e di programma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
   
@@ -330,7 +330,7 @@ Ai file server SMB si applicano le indicazioni seguenti:
   * In una directory in cui si trovano i file di sistema
   * In un'unità di rete di cui è stato eseguito il mapping in un'istanza del cluster di failover  
   
-## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a>Pagina <a name="tempdb"><a/> Configurazione del motore di database - TempDB
+## <a name="a-nametempdb-database-engine-configuration---tempdb-page"></a>Pagina <a name="tempdb"><a/> Configurazione del motore di database - TempDB
 
 Usare questa pagina per specificare posizione, dimensioni, impostazioni di espansione e numero di file di log e di dati di **tempdb** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
   
@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Pagina Configurazione del motore di database - MaxDOP
+## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Pagina Configurazione del motore di database - MaxDOP
 
 L'opzione relativa al **massimo grado di parallelismo (MaxDOP)** determina il numero massimo di processori che una singola istruzione può usare. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] offre la possibilità di configurare questa opzione durante l'installazione. Inoltre, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] rileva automaticamente l'impostazione MaxDOP consigliata per il server in base al numero di core.  
 
@@ -427,7 +427,7 @@ Se questa pagina viene ignorata durante l'installazione, il valore predefinito d
 
 * **Massimo grado di parallelismo (MaxDOP)** è il valore relativo al numero massimo di processori da usare durante l'esecuzione parallela di una singola istruzione. Il valore predefinito verrà allineato con le linee guida relative all'opzione max degree of parallelism riportate in [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
-## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> Pagina Configurazione del motore di database - Memoria
+## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> Pagina Configurazione del motore di database - Memoria
 
 **min server memory** determina il limite minimo di memoria che userà [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per il pool di buffer e altre cache. Il valore predefinito è 0 e anche il valore consigliato è 0. Per altre informazioni sugli effetti di **min server memory**, vedere [Guida sull'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 

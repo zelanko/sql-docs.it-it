@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557946"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Esecuzione di passaggi di Windows PowerShell in SQL Server Agent
@@ -37,13 +37,13 @@ Sono disponibili molti tipi di passaggi del processo di [!INCLUDE[ssNoVersion](.
 
 - Usare un passaggio del processo del prompt dei comandi per eseguire PowerShell.exe e specificare uno script che importa il modulo **sqlps** .
 
-### <a name="LimitationsRestrictions"></a> Attenzione all'utilizzo della memoria
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> Attenzione all'utilizzo della memoria
 
 Ogni passaggio del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent che esegue PowerShell con il modulo **sqlps** avvia un processo che usa circa **20 MB** di memoria. L'esecuzione simultanea di numerosi passaggi del processo di Windows PowerShell può avere un impatto negativo sulle prestazioni.  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> Creare un passaggio del processo di PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> Creare un passaggio del processo di PowerShell  
  **Per creare un passaggio del processo di PowerShell**  
   
 1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](../ssms/agent/create-jobs.md).  
@@ -60,7 +60,7 @@ Ogni passaggio del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
   
 7.  Fare clic sulla pagina **Avanzate** per impostare le opzioni seguenti relative al passaggio di processo: l'azione da eseguire in caso di esito positivo o negativo del passaggio, il numero di tentativi di esecuzione del passaggio che devono essere effettuati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent e gli intervalli tra tentativi successivi.  
   
-##  <a name="CmdExecJob"></a> Creare un passaggio del processo del prompt dei comandi  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> Creare un passaggio del processo del prompt dei comandi  
  **Per creare un passaggio del processo di CmdExec**  
   
 1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](../ssms/agent/create-jobs.md).  

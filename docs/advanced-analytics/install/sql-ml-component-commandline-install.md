@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727585"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare dalla riga di comando i componenti R e Python di SQL Server per il Machine Learning
@@ -89,7 +89,7 @@ In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../..
 | /MPYCACHEDIRECTORY | Riservato per utilizzi futuri. Usare %TEMP% per archiviare i file CAB dei componenti Python per l'installazione in computer privi di connessione Internet. |
 ::: moniker-end
 
-## <a name="indb"></a> Installazioni di istanze nel database
+## <a name="in-database-instance-installations"></a><a name="indb"></a> Installazioni di istanze nel database
 
 Le funzionalità di analisi nel database sono disponibili per le istanze del motore di database, che sono quindi necessarie per aggiungere la funzionalità **AdvancedAnalytics** all'installazione. È possibile installare un'istanza del motore di database insieme alla funzionalità di analisi avanzata oppure [aggiungere questa funzionalità a un'istanza esistente](#add-existing). 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> Configurazione successiva all'installazione (obbligatoria)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> Configurazione successiva all'installazione (obbligatoria)
 
 Si applica solo alle installazioni nel database.
 
@@ -159,7 +159,7 @@ Per completare l'installazione è necessario eseguire altre due attività:
 1. SQL Server R Services: abilitare gli script esterni prima di poter usare la funzionalità. Come passaggio successivo, seguire le istruzioni riportate in [Installare SQL Server R Services (In-Database)](sql-r-services-windows-install.md). 
 ::: moniker-end
 
-## <a name="add-existing"></a> Aggiungere la funzionalità di analisi avanzata a un'istanza del motore di database esistente
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> Aggiungere la funzionalità di analisi avanzata a un'istanza del motore di database esistente
 
 Quando si aggiunge la funzionalità di analisi avanzata nel database a un'istanza del motore di database esistente, specificare il nome dell'istanza. Se, ad esempio, in precedenza è stato installato un motore di database SQL Server 2017 o versione successiva insieme a Python, è possibile usare questo comando per aggiungere R.
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> Installazione invisibile all'utente
+## <a name="silent-install"></a><a name="silent"></a> Installazione invisibile all'utente
 
 Nell'installazione invisibile all'utente viene omessa la verifica dei percorsi dei file con estensione cab. Per questo motivo, è necessario specificare il percorso in cui devono essere decompressi questi file. Per Python, i file CAB devono trovarsi in %TEMP*. Per R, è possibile impostare il percorso usando la directory temp.
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> Installazioni del server autonomo
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> Installazioni del server autonomo
 
 Un server autonomo è una "funzionalità condivisa" non associata a un'istanza del motore di database. Gli esempi seguenti mostrano la sintassi valida per l'installazione del server autonomo.
 

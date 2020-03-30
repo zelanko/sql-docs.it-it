@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947280"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di data science e modelli di soluzioni
@@ -96,7 +96,7 @@ Ogni soluzione include dati di esempio, codice R o codice Python e stored proced
 **Modalità:** Questo modello usa R Services per SQL Server per stimare la domanda di energia elettrica. Il modello usato per la stima è un modello di regressione di foreste casuale basato su **rxDForest**, un algoritmo di Machine Learning ad alte prestazioni incluso in Microsoft R Server. La soluzione include un simulatore di domanda, tutto il codice R e T-SQL necessario per il training del modello e le stored procedure da usare per generare le previsioni e includerle in report. 
 
 
-## <a name="bkmk_HowTo"></a>Come usare i modelli
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>Come usare i modelli
 
 Per scaricare i file inclusi in ogni modello è possibile usare i comandi di GitHub oppure aprire il collegamento e fare clic su **Download Zip** (Scarica zip) per salvare tutti i file nel computer.  Dopo che è stata scaricata, la soluzione contiene in genere le seguenti cartelle:
   

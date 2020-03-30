@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
 ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288962"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -409,7 +409,7 @@ Imposta i comportamenti di Transact-SQL e dell'elaborazione delle query in modo 
 |**10**| Applica i comportamenti Transact-SQL e di elaborazione delle query prima dell'introduzione del supporto del livello di compatibilità.|
 |**20**| Primo livello di compatibilità che include i comportamenti di elaborazione delle query e Transact-SQL controllati. |
 
-## <a name="Permissions"></a> Autorizzazioni
+## <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 Richiede `ALTER ANY DATABASE SCOPE CONFIGURATION` per il database. Questa autorizzazione può essere concessa da un utente con autorizzazione CONTROL in un database.
 

@@ -12,17 +12,17 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242850"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
 [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impediscono ai cluster WSFC di eseguire aggiornamenti sul posto del sistema operativo, limitando la versione consentita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per i cluster. Dopo aver aggiornato il cluster almeno alla versione [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il cluster rimarrà aggiornato.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 -   Prima di eseguire una delle strategie di migrazione, è necessario preparare un cluster Windows Server Failover Cluster (WSFC) parallelo con Windows Server 2016/2012 R2. Tutti i nodi che comprendono istanze di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono essere aggiunti al cluster Windows con le istanze del cluster di failover parallele installate. I computer autonomi **non devono** essere aggiunti al cluster WSFC prima della migrazione. I database utente devono essere sincronizzati nel nuovo ambiente prima della migrazione.
 -   Tutte le istanze di destinazione devono eseguire la stessa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dell'istanza parallela corrispondente nell'ambiente originale, con gli stessi nomi e ID di istanza, e devono essere installate con le stesse funzionalità. I percorsi di installazione e la struttura di directory devono essere identici nei computer di destinazione. Ciò non vale per i nomi rete virtuale delle istanze di cluster di failover, che devono essere diversi prima della migrazione. Tutte le funzionalità abilitate dall'istanza originale (Always On, FILESTREAM e così via) devono essere abilitate nell'istanza di destinazione.

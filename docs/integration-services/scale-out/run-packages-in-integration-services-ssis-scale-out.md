@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305079"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
@@ -32,7 +32,7 @@ Dopo aver distribuito i pacchetti nel server Integration Services, è possibile 
 
 -   [SQL Server Agent - processi](#sql_agent)
 
-## <a name="scale_out_dialog"></a>Eseguire i pacchetti con la finestra di dialogo Esegui pacchetto in Scale Out
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a>Eseguire i pacchetti con la finestra di dialogo Esegui pacchetto in Scale Out
 
 1. Aprire la finestra di dialogo Esegui pacchetto in Scale Out.
 
@@ -61,7 +61,7 @@ Dopo aver distribuito i pacchetti nel server Integration Services, è possibile 
 
     Fare clic su **OK** per avviare le esecuzioni dei pacchetti. Per visualizzare il report di esecuzione relativo a un pacchetto, fare clic con il pulsante destro del pacchetto in Esplora oggetti, fare clic su **Report**, **Tutte le esecuzioni**e trovare l'esecuzione.
     
-## <a name="stored_proc"></a> Eseguire i pacchetti con le stored procedure
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> Eseguire i pacchetti con le stored procedure
 
 1.  Creare le esecuzioni.
 
@@ -124,7 +124,7 @@ Dopo aver impostato la modalità di esecuzione predefinita, non è più necessar
 
 Per impostare nuovamente la modalità di esecuzione predefinita sulla modalità non Scale Out, impostare **Modalità di esecuzione predefinita a livello di server** su **Server**.
 
-## <a name="sql_agent"></a>Eseguire un pacchetto in un processo di SQL Server Agent
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a>Eseguire un pacchetto in un processo di SQL Server Agent
 In un processo di SQL Server Agent è possibile eseguire un pacchetto SSIS come un passaggio del processo. Per eseguire il pacchetto in Scale Out, impostare la modalità di esecuzione predefinita su **Scale Out**. Dopo aver impostato la modalità di esecuzione predefinita su **Scale Out**, i pacchetti nei processi di SQL Server Agent verranno eseguiti in modalità Scale Out.
 
 ## <a name="next-steps"></a>Passaggi successivi

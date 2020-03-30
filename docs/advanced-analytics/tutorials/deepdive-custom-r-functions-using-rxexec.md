@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15e8eb433ac10c5f187b7483f55ccf47ae74220a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76910553"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>Eseguire funzioni R personalizzate in SQL Server usando rxExec (esercitazione per SQL Server e RevoScaleR)
@@ -27,7 +27,7 @@ In questa esercitazione si useranno dati simulati per illustrare l'esecuzione di
 
 La funzione **rxExec** in **RevoScaleR** fornisce un meccanismo per l'esecuzione di qualsiasi script R necessario. Inoltre, **rxExec** è in grado di distribuire in modo esplicito il lavoro tra più core in un singolo server, aggiungendo scalabilità a script altrimenti limitati ai vincoli di risorse del motore R nativo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 + [Machine Learning Services per SQL Server 2016 (con R)](../install/sql-machine-learning-services-windows-install.md) o [R Services per SQL Server 2016 (In-Database)](../install/sql-r-services-windows-install.md)
   

@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041203"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
@@ -26,7 +26,7 @@ Tempo stimato per il completamento dell'esercitazione: 20 minuti.
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Creare un report usando una procedura guidata  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1. Creare un report usando una procedura guidata  
 Creare un report di tabella con la Creazione guidata tabella o matrice. Sono disponibili due modalità: progettazione report e progettazione del set di dati condivisa. Nella modalità progettazione report si specificano i dati nel riquadro dei dati del report e il layout del report nell'area di progettazione. Nella modalità progettazione del set di dati condivisa, si creano query del set di dati da condividere con altri. In questa esercitazione si utilizzerà modalità progettazione report.  
   
 ### <a name="to-create-a-report"></a>Per creare un report  
@@ -41,7 +41,7 @@ Creare un report di tabella con la Creazione guidata tabella o matrice. Sono dis
   
 3.  Nel riquadro di destra selezionare **Creazione guidata tabella o matrice**.  
   
-## <a name="DataConnection"></a>1a. Specificare una connessione dati in Creazione guidata tabella  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. Specificare una connessione dati in Creazione guidata tabella  
 Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In genere, le informazioni di connessione e il tipo di credenziali da utilizzare vengono fornite dal proprietario dell'origine dati. Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report.  
   
 In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -76,7 +76,7 @@ In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre in
   
 9. Fare clic su **Avanti**.  
   
-## <a name="Query"></a>1b. Creare una query in Creazione guidata tabella  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. Creare una query in Creazione guidata tabella  
 In un report, è possibile usare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da usare solo in questo report. In questa esercitazione si creerà un set di dati incorporato.  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ In un report, è possibile usare un set di dati condiviso che dispone di una que
   
 4.  Fare clic su **Avanti**.  
   
-## <a name="Groups"></a>1c. Organizzare dati in gruppi in Creazione guidata tabella  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. Organizzare dati in gruppi in Creazione guidata tabella  
 Quando si selezionano dei campi da raggruppare, si progetta una tabella con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
   
 ### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -159,7 +159,7 @@ Quando si selezionano dei campi da raggruppare, si progetta una tabella con righ
   
 6.  Fare clic su **Avanti**.  
   
-## <a name="Subtotals"></a>1d. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
 Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare valori di aggregazione per i campi. È possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 ### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
@@ -186,7 +186,7 @@ Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe n
   
 La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
-## <a name="FormatCurrency"></a>2. Formattare i dati come valuta  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. Formattare i dati come valuta  
 Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un numero generico. È possibile formattare tale numero come valuta.   
   
 ### <a name="to-format-a-currency-field"></a>Per formattare un campo di tipo valuta  
@@ -203,7 +203,7 @@ Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un n
   
 I valori di riepilogo per Sales vengono visualizzati come valuta.  
   
-## <a name="FormatDate"></a>3. Formattare i dati come data  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. Formattare i dati come data  
 Per impostazione predefinita, nel campo SalesDate vengono visualizzate sia la data che l'ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>Per formattare un campo relativo alla data utilizzando il formato predefinito  
@@ -242,7 +242,7 @@ I valori SalesDate vengono visualizzati nel formato di data predefinito.
   
 Il valore SalesDate indica il nome anziché il numero del mese.  
   
-## <a name="Width"></a>4. Modificare la larghezza delle colonne  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4. Modificare la larghezza delle colonne  
 Per impostazione predefinita, in ogni cella della tabella è contenuta una casella di testo. Una casella di testo si espande verso il basso per adattarsi al testo digitato quando la pagina viene sottoposta al rendering. Nel report visualizzabile, ogni riga si espande fino all'altezza della casella di testo visualizzabile più alta nella riga. L'altezza della riga nell'area di progettazione non ha alcun effetto sull'altezza della riga nel report visualizzabile.  
   
 Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larghezza della colonna per adattare su un'unica riga il contenuto previsto delle caselle di testo nella colonna.  
@@ -259,7 +259,7 @@ Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larg
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-## <a name="Title"></a>5. Aggiungere un titolo al report  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5. Aggiungere un titolo al report  
 Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione sarà utilizzata la casella di testo che viene posizionata automaticamente nella parte superiore del corpo del report.  
   
 Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -282,7 +282,7 @@ Il testo può essere ulteriormente migliorato applicando stili di carattere, dim
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6. Salvare il report  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. Salvare il report  
 Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
@@ -311,7 +311,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 4.  Fare clic su **Salva**.  
   
-## <a name="Export"></a>7. Esportare il report  
+## <a name="7-export-the-report"></a><a name="Export"></a>7. Esportare il report  
 I report possono essere esportati in formati differenti, ad esempio come file Microsoft Excel e CSV. Per altre informazioni, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 In questa esercitazione, si esporterà il report in Excel e si imposterà una proprietà nel report per fornire un nome personalizzato per la scheda della cartella di lavoro.  

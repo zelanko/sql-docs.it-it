@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299003"
 ---
 # <a name="configure-dialog-box"></a>Finestra di dialogo Configura
@@ -36,7 +36,7 @@ ms.locfileid: "71299003"
   
 -   [Impostare le opzioni nella pagina Riferimenti](#references)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Configura  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> Aprire la finestra di dialogo Configura  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71299003"
   
 5.  Fare clic con il pulsante destro del mouse sul pacchetto o sul progetto, quindi scegliere **Configura**.  
   
-##  <a name="parameter"></a> Impostare le opzioni nella pagina Parametri  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> Impostare le opzioni nella pagina Parametri  
  Utilizzare la pagina **Parametri** per visualizzare i nomi dei parametri e i valori e per modificare i valori.  
   
  Selezionare l'ambito dei parametri visualizzato nelle schede **Parametri** e **Gestioni connessioni** nell'elenco a discesa **Ambito** .  
@@ -80,7 +80,7 @@ ms.locfileid: "71299003"
  **Valore**  
  Viene elencato il valore assegnato alla proprietà della gestione connessione. Fare clic sul pulsante con i puntini di sospensione per modificare il valore nella finestra di dialogo **Imposta valore parametro** . È possibile immettere un valore letterale, eseguire il mapping di una variabile di ambiente contenente il valore da utilizzare oppure utilizzare il valore predefinito dal pacchetto.  
   
-##  <a name="references"></a> Impostare le opzioni nella pagina Riferimenti  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> Impostare le opzioni nella pagina Riferimenti  
  Utilizzare la pagina **Riferimenti** per aggiungere e rimuovere i riferimenti agli ambienti e accedere alle proprietà dell'ambiente.  
   
  Un ambiente specifica i valori di runtime per i pacchetti contenuti nei progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

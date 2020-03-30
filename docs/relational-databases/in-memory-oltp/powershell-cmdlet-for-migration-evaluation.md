@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68698309"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Cmdlet di PowerShell per la valutazione della migrazione
@@ -70,7 +70,7 @@ Viceversa, se _non_ si specifica `-InputObject`, è necessario specificare `-Ser
 | Username | Obbligatorio quando si esegue la connessione tramite l'autenticazione di SQL Server, anziché l'autenticazione di Windows. In caso contrario, omettere. |
 | &nbsp; | &nbsp; |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di poter eseguire questo cmdlet, è necessario installare il modulo denominato **SqlServer**:
 

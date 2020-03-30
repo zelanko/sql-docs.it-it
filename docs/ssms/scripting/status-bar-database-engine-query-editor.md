@@ -12,10 +12,10 @@ ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a579eeeb12795c76bbe585a982a159d6e069813d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243453"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
@@ -32,13 +32,13 @@ La barra di stato delle finestre dell'editor di query di [!INCLUDE[ssDE](../../i
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
-##  <a name="StatusBarColors"></a> Colori della barra di stato
+##  <a name="status-bar-colors"></a><a name="StatusBarColors"></a> Colori della barra di stato
 
 È possibile associare un colore della barra di stato a uno specifico nodo server in **Esplora oggetti** o **Server registrati**. È possibile specificare i colori solo per nodi server connessi a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], non ai nodi server per altre tecnologie SQL Server. È inoltre possibile specificare anche un colore della barra di stato personalizzato ogni volta che si connette una nuova finestra dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È quindi possibile aprire una finestra dell'editor di query utilizzando il colore di stato definito per il nodo server oppure specificare un colore univoco per la finestra in questione.  
 
 L'impostazione di un colore della barra di stato personalizzato per un nodo server in Esplora oggetti deve essere effettuata al momento di effettuare la connessione. Per modificare il colore associato a un nodo server esistente, è necessario disconnettersi e quindi riconnettersi specificando il nuovo colore.  
 
-##  <a name="SetOEServerColor"></a> Impostare il colore di stato per un server in Esplora oggetti
+##  <a name="set-the-status-color-for-a-server-in-object-explorer"></a><a name="SetOEServerColor"></a> Impostare il colore di stato per un server in Esplora oggetti
 
 **Per impostare un colore di stato per un server in Esplora oggetti**  
   
@@ -54,7 +54,7 @@ L'impostazione di un colore della barra di stato personalizzato per un nodo serv
   
 6.  Immettere le altre informazioni di connessione, quindi fare clic sul pulsante **Connetti** .  
   
-##  <a name="SetRegServerColor"></a> Impostare il colore di stato per un server registrato  
+##  <a name="set-the-status-color-for-a-registered-server"></a><a name="SetRegServerColor"></a> Impostare il colore di stato per un server registrato  
  **Per impostare il colore di stato per un server registrato**  
   
 1.  In **Server registrati** fare clic con il pulsante destro del mouse sul nodo server desiderato, quindi scegliere **Proprietà...**  
@@ -69,7 +69,7 @@ L'impostazione di un colore della barra di stato personalizzato per un nodo serv
   
 6.  Fare clic sul pulsante **Salva** nella finestra di dialogo **Modifica proprietà registrazione server** .  
   
-##  <a name="OpenServerColor"></a> Aprire un editor utilizzando un colore di server  
+##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> Aprire un editor utilizzando un colore di server  
  **Per aprire una finestra di editor utilizzando un colore di server**  
   
 -   Fare clic con il pulsante destro del mouse su un nodo server in **Esplora oggetti** o **Server registrati**, quindi scegliere **Nuova query**.  
@@ -78,7 +78,7 @@ L'impostazione di un colore della barra di stato personalizzato per un nodo serv
   
 -   La barra di stato della finestra dell'editor utilizzerà il colore definito per il server associato.  
   
-##  <a name="OpenSpecColor"></a> Aprire un editor specificando un colore di stato  
+##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> Aprire un editor specificando un colore di stato  
  **Per aprire una finestra di editor specificando un colore di stato**  
   
 -   Scegliere **Nuovo** dal menu **File**, quindi selezionare **Query del motore di database**.  

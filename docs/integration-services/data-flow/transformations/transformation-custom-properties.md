@@ -42,10 +42,10 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291128"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
@@ -76,7 +76,7 @@ ms.locfileid: "71291128"
 ### <a name="transformations-without-custom-properties"></a>Trasformazioni senza proprietà personalizzate  
  Le trasformazioni seguenti non includono proprietà personalizzate a livello di componente, di input o di output: [Trasformazione Unione](../../../integration-services/data-flow/transformations/merge-transformation.md), [Trasformazione Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md) e [Trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation.md). Tali trasformazioni utilizzano solo le proprietà comuni a tutti i componenti del flusso di dati.  
   
-##  <a name="aggregate"></a> Proprietà personalizzate della trasformazione Aggregazione  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> Proprietà personalizzate della trasformazione Aggregazione  
  La trasformazione Aggregazione include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Aggregazione. Tutte le proprietà sono di lettura/scrittura.  
@@ -111,7 +111,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Aggregazione](../../../integration-services/data-flow/transformations/aggregate-transformation.md).  
   
-##  <a name="audit"></a> Proprietà personalizzate della trasformazione Controllo  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> Proprietà personalizzate della trasformazione Controllo  
  La trasformazione Aggregazione include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Controllo. Tutte le proprietà sono di lettura/scrittura.  
@@ -124,7 +124,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Controllo](../../../integration-services/data-flow/transformations/audit-transformation.md).  
   
-##  <a name="cachetransform"></a> Proprietà personalizzate della trasformazione Trasformazione cache  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> Proprietà personalizzate della trasformazione Trasformazione cache  
  La trasformazione Trasformazione cache include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà della trasformazione Trasformazione cache. Tutte le proprietà sono di lettura/scrittura.  
@@ -137,7 +137,7 @@ ms.locfileid: "71291128"
 |InputColumns|string|Elenco delle colonne di input selezionate.|  
 |CacheColumnName|string|Specifica il nome della colonna a cui viene eseguito il mapping a una colonna di input selezionata.<br /><br /> Il nome della colonna nella proprietà CacheColumnName deve corrispondere al nome della colonna corrispondente indicato nella pagina **Colonne** di **Editor gestione connessione della cache**.<br /><br /> Per altre informazioni, vedere [Editor gestione connessione cache](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
   
-##  <a name="charmap"></a> Proprietà personalizzate della trasformazione Mappa caratteri  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> Proprietà personalizzate della trasformazione Mappa caratteri  
  La trasformazione Mappa caratteri include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Mappa caratteri. Tutte le proprietà sono di lettura/scrittura.  
@@ -151,7 +151,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Mappa caratteri](../../../integration-services/data-flow/transformations/character-map-transformation.md).  
   
-##  <a name="condsplit"></a> Proprietà personalizzate della trasformazione Suddivisione condizionale  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> Proprietà personalizzate della trasformazione Suddivisione condizionale  
  La trasformazione Suddivisione condizionale include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate dell'output della trasformazione Suddivisione condizionale. Tutte le proprietà sono di lettura/scrittura.  
@@ -167,7 +167,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Suddivisione condizionale](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
-##  <a name="copymap"></a> Proprietà personalizzate della trasformazione Copia colonna  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> Proprietà personalizzate della trasformazione Copia colonna  
  La trasformazione Copia colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Copia colonna. Tutte le proprietà sono di lettura/scrittura.  
@@ -180,7 +180,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Copia colonna](../../../integration-services/data-flow/transformations/copy-column-transformation.md).  
   
-##  <a name="dataconv"></a> Proprietà personalizzate della trasformazione Conversione dati  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> Proprietà personalizzate della trasformazione Conversione dati  
  La trasformazione Conversione dati include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Conversione dati. Tutte le proprietà sono di lettura/scrittura.  
@@ -194,7 +194,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Conversione dati](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-##  <a name="dmquery"></a> Proprietà personalizzate della trasformazione Query di data mining  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> Proprietà personalizzate della trasformazione Query di data mining  
  La trasformazione Query di data mining include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Query di data mining. Tutte le proprietà sono di lettura/scrittura.  
@@ -213,7 +213,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Query di data mining](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md).  
   
-##  <a name="derived"></a> Proprietà personalizzate della trasformazione Colonna derivata  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> Proprietà personalizzate della trasformazione Colonna derivata  
  La trasformazione Colonna derivata include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input e delle colonne di output della trasformazione Colonna derivata. Quando si sceglie di aggiungere la colonna derivata come nuova colonna, le proprietà personalizzate seguenti vengono applicate alla nuova colonna di output. Quando si sceglie di sostituire il contenuto di una colonna di input esistente con i risultati derivati, le proprietà personalizzate vengono applicate alla colonna di input esistente. Tutte le proprietà sono di lettura/scrittura.  
@@ -227,7 +227,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Colonna derivata](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-##  <a name="extract"></a> Proprietà personalizzate della trasformazione Esporta colonna  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> Proprietà personalizzate della trasformazione Esporta colonna  
  La trasformazione Esporta colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input della trasformazione Esporta colonna. Tutte le proprietà sono di lettura/scrittura.  
@@ -243,7 +243,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Esporta colonna](../../../integration-services/data-flow/transformations/export-column-transformation.md).  
   
-##  <a name="insert"></a> Proprietà personalizzate della trasformazione Importa colonna  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> Proprietà personalizzate della trasformazione Importa colonna  
  La trasformazione Importa colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input della trasformazione Importa colonna. Tutte le proprietà sono di lettura/scrittura.  
@@ -257,7 +257,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Importa colonna](../../../integration-services/data-flow/transformations/import-column-transformation.md).  
   
-##  <a name="fgroup"></a> Proprietà personalizzate della trasformazione Raggruppamento fuzzy  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> Proprietà personalizzate della trasformazione Raggruppamento fuzzy  
  La trasformazione Raggruppamento fuzzy include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Raggruppamento fuzzy. Tutte le proprietà sono di lettura/scrittura.  
@@ -290,7 +290,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-##  <a name="flookup"></a> Proprietà personalizzate della trasformazione Ricerca fuzzy  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> Proprietà personalizzate della trasformazione Ricerca fuzzy  
  La trasformazione Ricerca fuzzy include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca fuzzy. Tutte le proprietà, ad eccezione di **ReferenceMetadataXML** , sono di lettura/scrittura.  
@@ -335,7 +335,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md).  
   
-##  <a name="lookup"></a> Proprietà personalizzate della trasformazione Ricerca  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> Proprietà personalizzate della trasformazione Ricerca  
  La trasformazione Ricerca include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca. Tutte le proprietà, ad eccezione di **ReferenceMetadataXML** , sono di lettura/scrittura.  
@@ -369,7 +369,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Ricerca](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-##  <a name="mjoin"></a> Proprietà personalizzate della trasformazione Merge Join  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> Proprietà personalizzate della trasformazione Merge Join  
  La trasformazione Merge Join include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Merge Join.  
@@ -391,7 +391,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md).  
   
-##  <a name="oledbcmd"></a> Proprietà personalizzate della trasformazione Comando OLE DB  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> Proprietà personalizzate della trasformazione Comando OLE DB  
  La trasformazione Comando OLE DB include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Comando OLE DB.  
@@ -412,7 +412,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Comando OLE DB](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
-##  <a name="percent"></a> Proprietà personalizzate della trasformazione Campionamento percentuale  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> Proprietà personalizzate della trasformazione Campionamento percentuale  
  La trasformazione Campionamento percentuale include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Campionamento percentuale.  
@@ -432,7 +432,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Campionamento percentuale](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
-##  <a name="pivot"></a> Proprietà personalizzate della trasformazione tramite Pivot  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> Proprietà personalizzate della trasformazione tramite Pivot  
  Nella tabella seguente si descrivono le proprietà di componenti personalizzati della trasformazione Pivot.  
   
 |Proprietà|Tipo di dati|Descrizione|  
@@ -454,7 +454,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione pivot](../../../integration-services/data-flow/transformations/pivot-transformation.md).  
   
-##  <a name="rowcount"></a> Proprietà personalizzate della trasformazione Conteggio righe  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> Proprietà personalizzate della trasformazione Conteggio righe  
  La trasformazione Conteggio righe include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Conteggio righe. Tutte le proprietà sono di lettura/scrittura.  
@@ -467,7 +467,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Conteggio righe](../../../integration-services/data-flow/transformations/row-count-transformation.md).  
   
-##  <a name="rowsamp"></a> Proprietà personalizzate della trasformazione Campionamento righe  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> Proprietà personalizzate della trasformazione Campionamento righe  
  La trasformazione Campionamento righe include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Campionamento righe. Tutte le proprietà sono di lettura/scrittura.  
@@ -493,7 +493,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Campionamento righe](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
   
-##  <a name="script"></a> Proprietà personalizzate della trasformazione Componente script  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> Proprietà personalizzate della trasformazione Componente script  
  La trasformazione Componente script include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati. Le stesse proprietà personalizzate sono disponibili se la trasformazione Componente script funziona come origine, trasformazione o destinazione.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Componente script. Tutte le proprietà sono di lettura/scrittura.  
@@ -507,7 +507,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Componente script](../../../integration-services/data-flow/transformations/script-component.md).  
   
-##  <a name="scd"></a> Proprietà personalizzate della trasformazione Dimensione a modifica lenta  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> Proprietà personalizzate della trasformazione Dimensione a modifica lenta  
  La trasformazione Dimensione a modifica lenta include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Dimensione a modifica lenta. Tutte le proprietà sono di lettura/scrittura.  
@@ -533,7 +533,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Dimensione a modifica lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-##  <a name="sort"></a> Proprietà personalizzate della trasformazione Ordinamento  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> Proprietà personalizzate della trasformazione Ordinamento  
  La trasformazione Ordinamento include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ordinamento. Tutte le proprietà sono di lettura/scrittura.  
@@ -560,7 +560,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione ordinamento](../../../integration-services/data-flow/transformations/sort-transformation.md).  
   
-##  <a name="textract"></a> Proprietà personalizzate della trasformazione Estrazione termini  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> Proprietà personalizzate della trasformazione Estrazione termini  
  La trasformazione Estrazione termini include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Estrazione termini. Tutte le proprietà sono di lettura/scrittura.  
@@ -580,7 +580,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Estrazione termini](../../../integration-services/data-flow/transformations/term-extraction-transformation.md).  
   
-##  <a name="tlookup"></a> Proprietà personalizzate della trasformazione Ricerca termini  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> Proprietà personalizzate della trasformazione Ricerca termini  
  La trasformazione Ricerca termini include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca termini. Tutte le proprietà sono di lettura/scrittura.  
@@ -607,7 +607,7 @@ ms.locfileid: "71291128"
   
  Per altre informazioni, vedere [Trasformazione Ricerca termini](../../../integration-services/data-flow/transformations/term-lookup-transformation.md).  
   
-##  <a name="unpivot"></a> Proprietà personalizzate delle trasformazioni tramite UnPivot  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> Proprietà personalizzate delle trasformazioni tramite UnPivot  
  La trasformazione tramite UnPivot include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
 > [!NOTE]  

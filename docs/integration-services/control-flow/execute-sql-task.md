@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298310"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
@@ -272,7 +272,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
 -   [Recupero dei valori dei codici restituiti](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> Nomi e marcatori di parametro  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> Nomi e marcatori di parametro  
  Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Per il tipo di gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ad esempio, l'indicatore di parametro usato nel comando SQL deve avere il formato **\@varParameter**, mentre per il tipo di connessione OLE DB l'indicatore di parametro deve essere costituito da un punto interrogativo (?).  
   
  Anche i nomi che è possibile utilizzare come nomi di parametro nei mapping tra variabili e parametri variano a seconda del tipo di gestione connessione. Il tipo di gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa ad esempio un nome definito dall'utente con prefisso \@, mentre il tipo di gestione connessione OLE DB richiede nomi di parametro costituiti dal valore numerico di un ordinale in base 0.  
@@ -307,7 +307,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
  Quando si utilizza una gestione connessione OLE DB, non è possibile utilizzare sottoquery con parametri, perché l'attività Esegui SQL non può derivare le informazioni sui parametri tramite il provider OLE DB. Tuttavia, è possibile utilizzare un'espressione per concatenare i valori dei parametri nella stringa di query e impostare la proprietà SqlStatementSource dell'attività.  
   
-###  <a name="Date_and_time_data_types"></a> Usare parametri con i tipi di dati di data e ora  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> Usare parametri con i tipi di dati di data e ora  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri di data e ora con le gestioni connessioni ADO.NET e ADO  
  Durante la lettura dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **time** and **datetimeoffset**, un'attività Esegui SQL che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADO prevede i requisiti aggiuntivi seguenti:  
@@ -356,7 +356,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
   
-###  <a name="WHERE_clauses"></a> Usare parametri nelle clausole WHERE  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> Usare parametri nelle clausole WHERE  
  I comandi SELECT, INSERT, UPDATE e DELETE includono spesso la clausola WHERE per specificare filtri che definiscono le condizioni che ogni riga nelle tabelle di origine deve soddisfare per essere qualificata per un comando SQL. I parametri specificano i valori del filtro per la clausola WHERE.  
   
  È possibile utilizzare marcatori di parametro per specificare dinamicamente i valori dei parametri. Le regole che determinano se è possibile utilizzare marcatori di parametro e nomi di parametro in un'istruzione SQL dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  
@@ -377,7 +377,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
 -   Per il tipo di connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] vengono usati i nomi di parametro \@parmMinProductID e \@parmMaxProductID.  
   
-###  <a name="Stored_procedures"></a> Usare parametri con le stored procedure  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> Usare parametri con le stored procedure  
  Anche i comandi SQL che eseguono stored procedure possono utilizzare il mapping dei parametri. Come avviene per le regole delle query con parametri, anche le regole che determinano la modalità di utilizzo di marcatori di parametro e nomi di parametro dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  
   
  Nella tabella seguente sono elencati esempi di comandi EXEC per tipo di gestione connessione. Gli esempi eseguono la stored procedure **uspGetBillOfMaterials** nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. La stored procedure usa i parametri di **input** `@StartProductID` e `@CheckDate`.  
@@ -464,7 +464,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
   
 14. Fare clic su **OK**.  
 
-##  <a name="Return_codes"></a> Recuperare i valori dei codici restituiti  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> Recuperare i valori dei codici restituiti  
  Una stored procedure può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per implementare codici restituiti nell'attività Esegui SQL, è necessario usare parametri di tipo **ReturnValue** .  
   
  Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene usato un parametro di **input** . Le regole che determinano la modalità d'uso di indicatori di parametro e nomi di parametro sono identiche per tutti i tipi di parametro:**Input**, **Output**e **ReturnValue**.  
@@ -493,7 +493,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
   
 -   [Popolamento di una variabile con un set di risultati](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> Specificare un tipo di set di risultati  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> Specificare un tipo di set di risultati  
  L'attività Esegui SQL supporta i tipi di set di risultati seguenti:  
   
 -   Se la query non restituisce risultati, sarà usato il set di risultati **Nessuno** . Questo set di risultati può essere usato ad esempio per le query che aggiungono, modificano ed eliminano record in una tabella.  
@@ -506,7 +506,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
   
  Se nell'attività Esegui SQL è usato il **Set dei risultati completo** e la query restituisce più set di righe, l'attività restituisce solo il primo di tali set. Se questo set di righe genera un errore, l'attività segnala l'errore. Se altri set di righe generano errori, l'attività non li segnala.  
   
-###  <a name="Populate_variable_with_result_set"></a> Popolare una variabile con un set di risultati  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> Popolare una variabile con un set di risultati  
  Se il set di risultati restituito da una query è una riga singola, un set di righe o di tipo XML, sarà possibile associarlo a una variabile definita dall'utente.  
   
  Se il tipo di set di risultati è **Riga singola**, è possibile associare una colonna nel risultato restituito a una variabile usando il nome della colonna come nome del set di risultati oppure usare la posizione ordinale della colonna nell'elenco di colonne come nome del set di risultati. Il nome del set di risultati per la query `SELECT Color FROM Production.Product WHERE ProductID = ?` , ad esempio, potrebbe essere **Color** o **0**. Se la query restituisce più colonne e si desidera accedere ai valori in tutte le colonne, è necessario associare ogni colonna a una variabile diversa. Se si esegue il mapping delle colonne alle variabili usando numeri come nomi del set di risultati, i numeri riflettono l'ordine in cui le colonne vengono visualizzate nell'elenco di colonne della query. Nella query `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, ad esempio, viene usato 0 per la colonna **Color** e 1 per la colonna **ListPrice** . La possibilità di usare un nome di colonna come nome di un set di risultati dipende dal provider per il quale l'attività è configurata. Non tutti i provider permettono l'uso di nomi di colonna.  

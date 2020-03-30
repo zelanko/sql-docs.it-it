@@ -20,16 +20,16 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893419"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Disabilitare o sospendere l'elaborazione di report e sottoscrizioni  
 Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report e sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli approcci descritti in questo articolo vanno dalla disabilitazione di una sottoscrizione all'interruzione della connessione all'origine dati. Non tutti gli approcci sono possibili con entrambe le modalità server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le tabelle seguenti riassumono i metodi e le modalità di server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supportate:  
   
-##  <a name="bkmk_top"></a> Contenuto dell'articolo  
+##  <a name="in-this-article"></a><a name="bkmk_top"></a> Contenuto dell'articolo  
   
 ||Modalità server supportata|  
 |-|---------------------------|  
@@ -40,7 +40,7 @@ Esistono diversi approcci per disabilitare o sospendere l'elaborazione di report
 |[Rimuovere le autorizzazioni per la gestione della sottoscrizione dal ruolo (modalità nativa)](#bkmk_remove_manage_subscriptions_permission)|Modalità nativa|  
 |[Disabilitare le estensioni per il recapito](#bkmk_disable_extensions)|Modalità nativa e modalità SharePoint|  
   
-##  <a name="bkmk_disable_subscription"></a>Abilitare e disabilitare le sottoscrizioni  
+##  <a name="enable-and-disable-subscriptions"></a><a name="bkmk_disable_subscription"></a>Abilitare e disabilitare le sottoscrizioni  
   
 >[!TIP]  
 >Novità di SQL 2016 Reporting Services: *abilitare e disabilitare le sottoscrizioni*. Sono disponibili nuove opzioni dell'interfaccia utente che consentono di abilitare e disabilitare rapidamente le sottoscrizioni. Le sottoscrizioni disabilitate mantengono le rispettive proprietà di configurazione, ad esempio la pianificazione, e possono essere riabilitate con facilità. È possibile abilitare e disabilitare le sottoscrizioni o controllare le sottoscrizioni disabilitate anche a livello di codice.  
@@ -117,14 +117,14 @@ ForEach ($subscription in $subscriptions)
 }  
 ```  
   
-##  <a name="bkmk_pause_schedule"></a> Sospendere una pianificazione condivisa  
+##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Sospendere una pianificazione condivisa  
  Se una sottoscrizione o un report viene eseguito in base a una pianificazione condivisa, è possibile sospendere la pianificazione per impedire l'elaborazione del report o della sottoscrizione. Tutte le operazioni di elaborazione del report o della sottoscrizione eseguite in base alla pianificazione verranno posticipate fino a quando verrà ripresa la pianificazione.  
   
 -   **Modalità SharePoint:** ![Impostazioni di SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint") in **Impostazioni sito** selezionare **Gestione di pianificazioni condivise**. Selezionare la pianificazione e fare clic su **Sospendi pianificazioni selezionate**.  
   
 -   **Modalità nativa:** nel portale Web selezionare il pulsante **Impostazioni** ![pulsante Impostazioni](media/ssrs-portal-settings-gear.png) dalla barra dei menu nella parte superiore della schermata del portale Web e selezionare **Impostazioni sito** dal menu a discesa. Selezionare la scheda **Pianificazioni** per visualizzare la pagina Pianificazioni. Selezionare le caselle di controllo accanto alle pianificazioni da abilitare o disabilitare, quindi selezionare il pulsante **Abilita** o **Disabilita** rispettivamente per eseguire l'azione desiderata. La colonna dello stato sarà aggiornata con "Disabilitato" o Abilitato" rispettivamente.  
   
-##  <a name="bkmk_disable_shared_datasource"></a> Disabilitare un'origine dati condivisa  
+##  <a name="disable-a-shared-data-source"></a><a name="bkmk_disable_shared_datasource"></a> Disabilitare un'origine dati condivisa  
  Uno dei vantaggi dell'utilizzo di origini dei dati condivise è rappresentato dalla possibilità di disabilitarle per impedire l'esecuzione di un report o di una sottoscrizione guidata dai dati. Quando si disabilita un'origine dei dati condivisa, il report viene disconnesso dalla relativa origine dei dati esterna. Dopo la disabilitazione l'origine dei dati non sarà più disponibile per tutti i report e le sottoscrizioni che la utilizzano.  
   
  Si noti che il report viene caricato anche se la relativa origine dati non è disponibile. Il report non conterrà dati, ma gli utenti con le autorizzazioni appropriate potranno accedere alle pagine delle proprietà, alle impostazioni di sicurezza, alla cronologia e alle informazioni di sottoscrizione associate al report.  
@@ -133,12 +133,12 @@ ForEach ($subscription in $subscriptions)
   
 -   **Modalità nativa:** per disabilitare un'origine dati condivisa in un server di report in modalità nativa, aprire l'origine dati nel portale Web e deselezionare la casella di controllo **Abilita questa origine dati**.  
   
-##  <a name="bkmk_modify_role_assignment"></a> Modificare le assegnazioni di ruolo per impedire l'accesso a un report (modalità nativa)  
+##  <a name="modify-role-assignments-to-prevent-access-to-a-report-native-mode"></a><a name="bkmk_modify_role_assignment"></a> Modificare le assegnazioni di ruolo per impedire l'accesso a un report (modalità nativa)  
 Un modo per rendere non disponibile un report consiste nel rimuovere temporaneamente l'assegnazione di ruolo che consente l'accesso al report. Questa strategia può essere utilizzata con tutti i report, indipendentemente dalla modalità di connessione all'origine dei dati. L'operazione ha effetto solo sul report in questione, non su altri report o elementi.  
   
  Per rimuovere l'assegnazione di ruolo, aprire la pagina **Sicurezza** del report nel portale Web. Se il report eredita la sicurezza da un elemento padre, è possibile selezionare **Personalizza sicurezza** e quindi selezionare **Conferma** nella finestra di dialogo **Modifica sicurezza elemento** per creare criteri di sicurezza restrittivi privi di assegnazioni di ruolo che consentono l'accesso a numerosi utenti. È possibile, ad esempio, rimuovere un'assegnazione di ruolo che consente l'accesso al gruppo Everyone e mantenere l'assegnazione di ruolo che consente l'accesso a un gruppo ristretto di utenti, ad esempio Administrators.  
   
-##  <a name="bkmk_remove_manage_subscriptions_permission"></a> Rimuovere le autorizzazioni per la gestione della sottoscrizione dal ruolo (modalità nativa)  
+##  <a name="remove-manage-subscription-permissions-from-role-native-mode"></a><a name="bkmk_remove_manage_subscriptions_permission"></a> Rimuovere le autorizzazioni per la gestione della sottoscrizione dal ruolo (modalità nativa)  
  Per impedire agli utenti di creare sottoscrizioni, deselezionare l'attività **Gestione di sottoscrizioni individuali** per il ruolo. Se si rimuove questa attività, le pagine per le sottoscrizioni non saranno disponibili. Nel portale Web la pagina Sottoscrizioni personali risulta vuota e non può essere eliminata, anche se in precedenza conteneva sottoscrizioni. La rimozione di attività relative alle sottoscrizioni impedisce agli utenti di creare e modificare sottoscrizioni, ma non comporta l'eliminazione delle sottoscrizioni esistenti che continuano a essere eseguite finché non vengono eliminate. Per rimuovere l'autorizzazione:  
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
@@ -156,7 +156,7 @@ Un modo per rendere non disponibile un report consiste nel rimuovere temporaneam
 7.  Selezionare **OK** per applicare le modifiche.
 
   
-##  <a name="bkmk_disable_extensions"></a> Disabilitare le estensioni per il recapito  
+##  <a name="disable-delivery-extensions"></a><a name="bkmk_disable_extensions"></a> Disabilitare le estensioni per il recapito  
  Tutte le estensioni per il recapito installate in un server di report sono disponibili per qualsiasi utente autorizzato a creare una sottoscrizione per un determinato report. Sono disponibili le seguenti estensioni per il recapito configurate automaticamente:  
   
 -   Condivisione file di Windows  

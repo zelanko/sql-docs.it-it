@@ -14,10 +14,10 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77568084"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack di Integration Services (SSIS) per Azure
@@ -125,7 +125,7 @@ Sono state sottoposte a test le build di Java seguenti.
 >
 >![heap JVM](media/azure-feature-pack-jvm-heap-size.png)
 >
-> Esempio: impostare la variabile *`_JAVA_OPTIONS`* con il valore *`-Xms256m -Xmx16g`*. Il flag Xms specifica il pool di allocazione della memoria iniziale per Java Virtual Machine (JVM), mentre Xmx specifica il pool di allocazione della memoria massima. JVM verrà quindi avviato con una quantità di memoria pari a *`Xms`* e potrà usare una quantità massima di memoria pari a *`Xmx`*. Per impostazione predefinita, viene usata una quantità di memoria minima pari a 64 MB e una quantità di memoria massima pari a 1 GB.
+> Esempio: impostare la variabile *`_JAVA_OPTIONS`* con il valore *`-Xms256m -Xmx16g`* . Il flag Xms specifica il pool di allocazione della memoria iniziale per Java Virtual Machine (JVM), mentre Xmx specifica il pool di allocazione della memoria massima. JVM verrà quindi avviato con una quantità di memoria pari a *`Xms`* e potrà usare una quantità massima di memoria pari a *`Xmx`* . Per impostazione predefinita, viene usata una quantità di memoria minima pari a 64 MB e una quantità di memoria massima pari a 1 GB.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Configurare OpenJDK di Zulu in Azure-SSIS Integration Runtime
 
@@ -152,7 +152,7 @@ powershell.exe -file install_openjdk.ps1
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
-> Il flag Xms specifica il pool di allocazione della memoria iniziale per Java Virtual Machine (JVM), mentre Xmx specifica il pool di allocazione della memoria massima. JVM verrà quindi avviato con una quantità di memoria pari a *`Xms`* e potrà usare una quantità massima di memoria pari a *`Xmx`*. Per impostazione predefinita, viene usata una quantità di memoria minima pari a 64 MB e una quantità di memoria massima pari a 1 GB.
+> Il flag Xms specifica il pool di allocazione della memoria iniziale per Java Virtual Machine (JVM), mentre Xmx specifica il pool di allocazione della memoria massima. JVM verrà quindi avviato con una quantità di memoria pari a *`Xms`* e potrà usare una quantità massima di memoria pari a *`Xmx`* . Per impostazione predefinita, viene usata una quantità di memoria minima pari a 64 MB e una quantità di memoria massima pari a 1 GB.
 
 **install_openjdk.ps1**
 
