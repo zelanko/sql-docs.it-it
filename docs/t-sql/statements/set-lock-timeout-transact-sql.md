@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97bdfbe485c129e7040235db7fffe296bb16897a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67928904"
 ---
 # <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -65,7 +65,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: Impostare il timeout blocco su 1800 millisecondi  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. Impostare il timeout di blocco su 1800 millisecondi.  
  Nell'esempio seguente il timeout per l'attesa del blocco viene impostato su `1800` millisecondi.  
   
 ```sql  
@@ -73,7 +73,7 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Impostare il timeout di blocco sull'attesa infinita per il rilascio di un blocco.  
  Nell'esempio seguente il timeout di blocco è impostato per l'attesa infinita e non ha scadenza. Questo comportamento predefinito è già impostato all'inizio di ogni connessione.  

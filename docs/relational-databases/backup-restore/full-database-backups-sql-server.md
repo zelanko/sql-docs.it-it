@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68890071"
 ---
 # <a name="full-database-backups-sql-server"></a>Backup completo del database (SQL Server)
@@ -46,12 +46,12 @@ ms.locfileid: "68890071"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="DbBuRMs"></a> Backup del database nel modello di recupero con registrazione minima  
+##  <a name="database-backups-under-the-simple-recovery-model"></a><a name="DbBuRMs"></a> Backup del database nel modello di recupero con registrazione minima  
  Se si utilizza il modello di recupero con registrazione minima, dopo ogni backup, il database è esposto al rischio di perdita di dati nel caso si verifichi un'emergenza. Questo rischio aumenta a ogni aggiornamento fino al backup successivo, quando il rischio torna a essere zero e inizia un nuovo ciclo. Il rischio di perdita dei dati cresce nel tempo che intercorre tra un backup e l'altro. Nella figura seguente viene illustrato il rischio di perdita di dati per una strategia di backup che utilizza solo backup completi di database.  
   
  ![Rischio di perdita di lavoro tra due backup del database](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Rischio di perdita di lavoro tra due backup del database")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Esempio ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>Esempio ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  Nell'esempio seguente viene illustrato come creare un backup completo del database utilizzando WITH FORMAT per sovrascrivere eventuali backup esistenti e creare un nuovo set di supporti.  
   
 ```  
@@ -62,14 +62,14 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="DbBuRMf"></a> Backup del database nel modello di recupero con registrazione completa  
+##  <a name="database-backups-under-the-full-recovery-model"></a><a name="DbBuRMf"></a> Backup del database nel modello di recupero con registrazione completa  
  Per i database che utilizzano il modello di recupero con registrazione completa e il modello di recupero con registrazione minima delle operazioni bulk, i backup del database sono necessari, ma non sufficienti. Sono inoltre necessari i backup del log delle transazioni. Nella figura seguente viene illustrata la strategia di backup più semplice possibile quando si utilizza il modello di recupero con registrazione completa.  
   
  ![Serie di backup completi del database e backup del log](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Serie di backup completi del database e backup del log")  
   
  Per informazioni sulle modalità di creazione dei backup di log, vedere [Backup di log delle transazioni &#40; SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Esempio ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>Esempio ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  Nell'esempio seguente viene illustrato come creare un backup completo del database utilizzando WITH FORMAT per sovrascrivere eventuali backup esistenti e creare un nuovo set di supporti. Viene quindi eseguito il backup del log delle transazioni. In una situazione reale sarebbe necessario eseguire una serie di backup del log regolari. In questo caso il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene impostato per l'utilizzo del modello di recupero con registrazione completa.  
   
 ```  
@@ -86,12 +86,12 @@ BACKUP LOG AdventureWorks2012 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012F
 GO  
 ```  
   
-##  <a name="RestoreDbBu"></a> Utilizzare un backup completo del database per ripristinare il database  
+##  <a name="use-a-full-database-backup-to-restore-the-database"></a><a name="RestoreDbBu"></a> Utilizzare un backup completo del database per ripristinare il database  
  È possibile ricreare un intero database in un solo passaggio ripristinando il database da un backup completo del database in qualsiasi posizione. Nel backup è inclusa una parte del log delle transazioni sufficiente per consentire il recupero del database fino al momento in cui è terminato il backup. Lo stato del database ripristinato corrisponde allo stato del database originale al termine del backup del database, escluse eventuali transazioni di cui non è stato eseguito il commit. Nel modello di recupero completo, ripristinare tutti i successivi backup del log delle transazioni. Quando il database viene recuperato, viene effettuato il rollback delle transazioni di cui non è stato eseguito il commit.  
   
  Per altre informazioni, vedere [Ripristini di database completi &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) o [Ripristini di database completi &#40;modello di recupero con registrazione completa &#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per creare un backup completo del database**  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

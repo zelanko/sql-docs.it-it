@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705876"
 ---
 # <a name="data-compression"></a>Compressione dei dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supportano la compressione delle righe e delle pagine per gli indici e le tabelle rowstore e la compressione dell'archivio columnstore e columnstore per le tabelle e gli indici columnstore.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supportano la compressione delle righe e delle pagine per gli indici e le tabelle rowstore e la compressione dell'archivio columnstore e columnstore per le tabelle e gli indici columnstore.  
   
  Per le tabelle e gli indici rowstore, utilizzare la funzionalità di compressione dei dati per ridurre le dimensioni del database. Oltre a risparmiare spazio, la compressione dei dati migliora le prestazioni dei carichi di lavoro di I/O a utilizzo elevato di memoria perché i dati vengono archiviati in un numero inferiore di pagine e le query devono leggere un numero inferiore di pagine dal disco. Sono tuttavia necessarie risorse della CPU aggiuntive nel server di database per comprimere e decomprimere i dati, mentre i dati vengono scambiati con l'applicazione. È possibile configurare la compressione di righe e pagine sugli oggetti di database seguenti:   
 -   Un'intera tabella archiviata come heap.  
@@ -185,10 +185,10 @@ Nella tabella seguente vengono illustrate le impostazioni di replica che control
   
 |Operazione che l'utente intende eseguire|Replica dello schema di partizione per una tabella o un indice|Replica delle impostazioni di compressione|Comportamento a livello di script|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
-|Replicare lo schema di partizione e abilitare la compressione sulla partizione nel Sottoscrittore.|True |True |Inserisce nello script lo schema di partizione e le impostazioni di compressione.|  
-|Replicare lo schema di partizione senza comprimere i dati nel Sottoscrittore.|True |False|Inserimento nello script dello schema di partizione, ma non delle impostazioni di connessione per la partizione.|  
+|Replicare lo schema di partizione e abilitare la compressione sulla partizione nel Sottoscrittore.|True|True|Inserisce nello script lo schema di partizione e le impostazioni di compressione.|  
+|Replicare lo schema di partizione senza comprimere i dati nel Sottoscrittore.|True|False|Inserimento nello script dello schema di partizione, ma non delle impostazioni di connessione per la partizione.|  
 |Non replicare lo schema di partizione né comprimere i dati nel Sottoscrittore.|False|False|Non inserisce nello script né la partizione né le impostazioni di compressione.|  
-|Comprimere la tabella nel Sottoscrittore se tutte le partizioni sono compresse nel server di pubblicazione, senza replicare lo schema di partizione.|False|True |Controlla se tutte le partizioni sono abilitate per la compressione.<br /><br /> Inserisce nello script la compressione a livello di tabella.|  
+|Comprimere la tabella nel Sottoscrittore se tutte le partizioni sono compresse nel server di pubblicazione, senza replicare lo schema di partizione.|False|True|Controlla se tutte le partizioni sono abilitate per la compressione.<br /><br /> Inserisce nello script la compressione a livello di tabella.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Impatto della compressione su altri componenti di SQL Server 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])).  

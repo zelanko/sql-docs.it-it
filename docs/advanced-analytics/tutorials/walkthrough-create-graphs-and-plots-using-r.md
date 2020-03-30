@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73724013"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Creare grafici e tracciati con SQL e R (procedura dettagliata)
@@ -21,7 +21,7 @@ ms.locfileid: "73724013"
 
 In questa parte della procedura dettagliata vengono illustrate le tecniche per generare grafici e mappe usando R con dati di SQL Server. Si creerà un istogramma semplice e quindi si svilupperà un tracciato mappa più complesso.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Questo passaggio presuppone una sessione R in corso basata sui passaggi precedenti di questa procedura dettagliata. Usa le stringhe di connessione e gli oggetti origine dati creati in tali passaggi. Per eseguire lo script vengono usati gli strumenti e i pacchetti seguenti.
 

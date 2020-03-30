@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713273"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurare le transazioni distribuite per un gruppo di disponibilità Always On
@@ -41,7 +41,7 @@ In una transazione distribuita, le applicazioni client funzionano con Microsoft 
 
 DTC non è coinvolto nell'elaborazione del gruppo di disponibilità a meno che un database non sia anche membro di un cluster di failover. All'interno di un gruppo di disponibilità, la coerenza tra le repliche viene gestita dalla logica del gruppo di disponibilità: Il database primario non completa il commit né conferma il commit al chiamante fino a quando il database secondario non ha riconosciuto che i record del log sono stati salvati in modo permanente in un archivio durevole. Solo a questo punto il database primario dichiara il completamento della transazione. In modalità asincrona, non è prevista l'attesa del riconoscimento da parte della replica secondaria ed esiste esplicitamente la possibilità che una piccola quantità di dati vada persa.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di configurare un gruppo di disponibilità per supportare le transazioni distribuite, è necessario soddisfare i prerequisiti seguenti:
 
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transazioni distribuite - concetti tecnici
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>Transazioni distribuite - concetti tecnici
 
 Una transazione distribuita si estende su due o più database. DTC in qualità di strumento di gestione transazioni coordina la transazione tra le istanze di SQL Server e altre origini dati. Ogni istanza del motore di database di [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] può operare come strumento di gestione delle risorse. Quando un gruppo di disponibilità è configurato con `DTC_SUPPORT = PER_DB`, i database possono operare come strumenti di gestione delle risorse. Per ulteriori informazioni, vedere la documentazione di MS DTC.
 

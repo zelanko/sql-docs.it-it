@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140218"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ I report e le pianificazioni specifiche della sottoscrizione vengono eliminati q
 
 Una pianificazione in base al report rimane associata al report anche se scaduta. È possibile determinare se una pianificazione è scaduta verificandone la data di fine. Le pianificazioni condivise scadute rimangono comunque nell'elenco della pagina Pianificazioni condivise. Il campo Stato indica se la pianificazione è scaduta. È possibile riattivare la pianificazione posticipando la data di fine oppure rimuovere il riferimento alla pianificazione se non è più necessario.
 
-## <a name="bkmk_native"></a> Creare, eliminare o modificare una pianificazione condivisa (portale Web)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> Creare, eliminare o modificare una pianificazione condivisa (portale Web)
  Le operazioni di creazione e modifica di una pianificazione consistono nell'impostazione delle opzioni di frequenza che determinano quando deve essere eseguita la pianificazione.
 
  Le pianificazioni possono essere create o modificate in qualsiasi momento. Tuttavia, se l'esecuzione di una pianificazione inizia prima del completamento delle modifiche, verrà utilizzata la versione precedente della pianificazione. La pianificazione modificata ha effetto solo dopo essere stata salvata.
@@ -114,7 +114,7 @@ Fare clic su **Annulla**.
 
  Se si elimina una pianificazione condivisa utilizzata da più report e sottoscrizioni, nel server di report vengono create singole pianificazioni per ogni report e sottoscrizione da cui è stata utilizzata in precedenza la pianificazione condivisa. Ogni nuova pianificazione conterrà la data, l'ora e il criterio di occorrenza specificati nella pianificazione condivisa.
 
-##  <a name="bkmk_sharepoint"></a>Creare e gestire le pianificazioni condivise (modalità SharePoint)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>Creare e gestire le pianificazioni condivise (modalità SharePoint)
  Per creare, modificare o eliminare pianificazioni condivise in un sito di SharePoint, è necessario essere un amministratore del sito.
 
  È possibile identificare una pianificazione specifica in base al nome descrittivo corrispondente. Se non è specificato alcun nome, verrà creato un nome predefinito basato sulle caratteristiche della pianificazione, ad esempio il criterio di occorrenza o le date e gli orari di esecuzione.

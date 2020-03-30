@@ -1,5 +1,5 @@
 ---
-title: 'Avvio rapido: Backup e ripristino nel servizio Archiviazione BLOB di Azure'
+title: 'Guida introduttiva: Backup e ripristino nel servizio Archiviazione BLOB di Azure'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165519"
 ---
-# <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Avvio rapido: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure
+# <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Guida introduttiva: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Questa guida di avvio rapido contiene nozioni utili sulla scrittura di backup nel servizio Archiviazione BLOB di Azure e sul ripristino dallo stesso.  L'articolo illustra come creare un contenitore BLOB di Azure, scrivere un backup nel servizio BLOB e quindi eseguire un ripristino.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per completare questa guida di avvio rapido è necessario conoscere i concetti di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e la sintassi T-SQL.  Sono necessari un account di archiviazione di Azure, SQL Server Management Studio (SSMS) e l'accesso a un server che esegue SQL Server o un'istanza gestita del database SQL di Azure. Inoltre, l'account utente usato per eseguire i comandi BACKUP e RESTORE deve essere incluso nel ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale**. 
 
 - Ottenere un [account Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuito.
@@ -122,7 +122,7 @@ Usare l'interfaccia utente grafica di SQL Server Management Studio per creare le
 ## <a name="back-up-database"></a>Eseguire il backup del database
 In questo passaggio si eseguirà il backup del database `SQLTestDB` nell'account di Archiviazione BLOB di Azure usando l'interfaccia utente grafica all'interno di SQL Server Management Studio o Transact-SQL (T-SQL). 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Se la procedura guidata **Backup database** non è aperta, espandere il nodo **Database** all'interno di **Esplora oggetti** in [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Fare clic con il pulsante destro del mouse sul nuovo database `SQLTestDB`, passare il puntatore del mouse su **Attività** e quindi selezionare **Backup...** per avviare la procedura guidata **Backup database**. 
@@ -141,7 +141,7 @@ In questo passaggio si eseguirà il backup del database `SQLTestDB` nell'account
    > È possibile creare uno script del codice Transact-SQL alla base di questo comando selezionando **Script** nella parte superiore della procedura guidata **Back up database**: ![Comando Script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Per eseguire il backup del database tramite Transact-SQL, eseguire il comando seguente: 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>Elimina database
 In questo passaggio si eliminerà il database prima di eseguire il ripristino. Questo passaggio è necessario solo per gli scopi di questa esercitazione, ma è improbabile che venga usato nelle normali procedure di gestione del database. È possibile ignorare questo passaggio, ma in questo caso è necessario modificare il nome del database durante il ripristino in un'istanza gestita oppure eseguire il comando di ripristino `WITH REPLACE` per ripristinare correttamente il database in locale. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Espandere il nodo **Database** in **Esplora oggetti**, fare clic con il pulsante destro del mouse sul database `SQLTestDB` e selezionare Elimina per avviare la procedura guidata **Elimina oggetto**. 
 1. In un'istanza gestita selezionare **OK** per eliminare il database. In locale selezionare la casella di controllo accanto a **Chiudi connessioni esistenti** e quindi selezionare **OK** per eliminare il database. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Per eliminare il database, eseguire il comando Transact-SQL seguente:
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>Ripristina database 
 In questo passaggio si ripristinerà il database usando l'interfaccia utente grafica in SQL Server Management Studio o tramite Transact-SQL. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Fare clic con il pulsante destro del mouse sul nodo **Database** in **Esplora oggetti** all'interno di SQL Server Management Studio e selezionare **Ripristina database**. 
 1. Selezionare **Dispositivo** e quindi i puntini di sospensione (...) per scegliere il dispositivo. 
@@ -216,7 +216,7 @@ In questo passaggio si ripristinerà il database usando l'interfaccia utente gra
 1. Selezionare **OK** per chiudere la finestra di dialogo **Seleziona dispositivi di backup**. 
 1. Selezionare **OK** per ripristinare il database. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Per ripristinare il database locale da Archiviazione BLOB di Azure, modificare il comando Transact-SQL seguente in modo da usare il proprio account di archiviazione e quindi eseguirlo in una nuova finestra di query. 
 

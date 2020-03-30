@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287305"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
@@ -62,7 +62,7 @@ Identificatore valido per l'espressione di tabella comune. *expression_name* dev
  *CTE_query_definition*  
  Specifica un'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune. L'istruzione SELECT per *CTE_query_definition* deve soddisfare gli stessi requisiti necessari per creare una vista, con la differenza che una CTE non può definire un'altra CTE. Per altre informazioni, vedere la sezione Osservazioni e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se si definiscono più elementi *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Se si definiscono più *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
 ## <a name="remarks"></a>Osservazioni  
   
@@ -497,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Utilizzo di funzioni analitiche in un'espressione CTE ricorsiva  
+###  <a name="i-using-analytical-functions-in-a-recursive-cte"></a><a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Utilizzo di funzioni analitiche in un'espressione CTE ricorsiva  
  Nell'esempio seguente viene illustrata una trappola in cui si può cadere quando si utilizza una funzione analitica o di aggregazione nella parte ricorsiva di un'espressione CTE.  
   
 ```sql  

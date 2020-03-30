@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258369"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Creare, modificare o eliminare indici XML selettivi secondari
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Viene descritto come creare un nuovo indice XML selettivo secondario oppure modificarne o eliminarne uno esistente.  
   
-##  <a name="create"></a> Creazione di un indice XML selettivo secondario  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> Creazione di un indice XML selettivo secondario  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>Procedura: Creare un indice XML selettivo secondario  
  **Creare un indice XML selettivo secondario tramite Transact-SQL**  
@@ -42,7 +42,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> Modifica di un indice XML selettivo secondario  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> Modifica di un indice XML selettivo secondario  
  L'istruzione ALTER non è supportata per gli indici XML selettivi secondari. Per modificare un indice XML selettivo secondario, eliminare l'indice esistente e ricrearlo.  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Procedura: Modificare un indice XML selettivo secondario  
@@ -68,7 +68,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> Eliminazione di un indice XML selettivo secondario  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> Eliminazione di un indice XML selettivo secondario  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Procedura: Eliminare un indice XML selettivo secondario  
  **Eliminare un indice XML selettivo secondario tramite Transact-SQL**  

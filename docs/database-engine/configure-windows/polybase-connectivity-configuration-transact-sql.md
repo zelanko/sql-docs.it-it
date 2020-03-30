@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997922"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configurazione della connettività di PolyBase (Transact-SQL)
@@ -88,7 +88,7 @@ RECONFIGURE
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-##  <a name="ResultSets"></a> Set di risultati  
+##  <a name="result-sets"></a><a name="ResultSets"></a> Set di risultati  
  Se eseguita senza parametri, **sp_configure** restituisce un set di risultati con cinque colonne.  
   
 |Nome colonna|Tipo di dati|Descrizione|  

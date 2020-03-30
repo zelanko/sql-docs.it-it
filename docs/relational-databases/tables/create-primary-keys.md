@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259389"
 ---
 # <a name="create-primary-keys"></a>Creazione di chiavi primarie
@@ -26,23 +26,23 @@ ms.locfileid: "76259389"
 
 È possibile definire una chiave primaria in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con la creazione di una chiave primaria è possibile creare automaticamente un indice cluster univoco o un indice non cluster corrispondente in base a quanto specificato.
 
-## <a name="BeforeYouBegin"></a> Prima di iniziare
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare
 
-### <a name="Restrictions"></a> Limitazioni e restrizioni
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni
 
 - In una tabella è possibile includere un solo vincolo PRIMARY KEY.
 
 - Tutte le colonne specificate in un vincolo PRIMARY KEY devono essere definite come NOT NULL. Se non si specifica il supporto di valori Null, per tutte le colonne coinvolte in un vincolo PRIMARY KEY viene impostato NOT NULL.
 
-### <a name="Security"></a> Sicurezza
+### <a name="security"></a><a name="Security"></a> Sicurezza
 
-#### <a name="Permissions"></a> Autorizzazioni
+#### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
 Per la creazione di una nuova tabella con una chiave primaria è richiesta l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.
 
 Per la creazione di una chiave primaria in una tabella esistente è richiesta l'autorizzazione ALTER per la tabella.
 
-## <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>Per creare una chiave primaria
 
@@ -59,7 +59,7 @@ Se una chiave primaria è composta da più colonne, è consentita la presenza di
 
 Se si definisce una chiave composta, l'ordine delle colonne nella chiave primaria corrisponderà all'ordine delle colonne come visualizzate nella tabella. È comunque possibile modificare l'ordine delle colonne dopo la creazione della chiave primaria. Per altre informazioni, vedere [Modifica chiavi primarie](../../relational-databases/tables/modify-primary-keys.md).
 
-## <a name="TsqlProcedure"></a> Uso di Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>Per creare una chiave primaria in una tabella esistente
 

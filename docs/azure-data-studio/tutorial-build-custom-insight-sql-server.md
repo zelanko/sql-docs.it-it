@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959093"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget di informazioni dettagliate personalizzato
@@ -28,7 +28,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > * Aggiungere il grafico a un dashboard di server o database
 > * Aggiungere dettagli al widget di informazioni dettagliate personalizzato
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 

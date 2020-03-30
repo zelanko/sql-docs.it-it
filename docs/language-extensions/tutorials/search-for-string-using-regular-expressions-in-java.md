@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73658796"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Esercitazione: cercare una stringa usando espressioni regolari (regex) in Java
@@ -24,7 +24,7 @@ Per un determinato testo nella colonna di testo inviata alla classe Java, il cod
 
 Il codice di esempio usa un'espressione regolare che controlla se un testo contiene la parola "Java" o "java".
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 + Istanza del motore di database di SQL Server 2019 con il framework di estendibilità e l'estensione di programmazione Java [in Windows](../install/install-sql-server-language-extensions-on-windows.md) o [in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). Per altre informazioni, vedere [Estensione del linguaggio in SQL Server 2019](../language-extensions-overview.md). Per altre informazioni sui requisiti di codifica, vedere [Come chiamare Java in SQL Server](../how-to/call-java-from-sql.md).
 

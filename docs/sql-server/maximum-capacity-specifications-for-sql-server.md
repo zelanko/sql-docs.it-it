@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3436ac152de56d06d5e928d271f8b143b695ba70
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79126004"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510222"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
 
@@ -36,7 +36,7 @@ Questo articolo mostra le dimensioni e i numeri massimi dei diversi oggetti defi
 >[!NOTE]
 >Oltre alle informazioni contenute in questo articolo, possono essere utili anche le informazioni nei collegamenti seguenti:
 >
->* [Download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [Download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [Requisiti hardware e software per l'installazione di SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [Parametri di controllo di Controllo configurazione sistema](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >
@@ -45,7 +45,7 @@ Questo articolo mostra le dimensioni e i numeri massimi dei diversi oggetti defi
 
 La tabella seguente indica le dimensioni e i numeri massimi dei diversi oggetti definiti nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a cui si fa riferimento nelle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] .
 
-|Oggetto [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Quantità/dimensioni massime [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bit)|Informazioni aggiuntive|
+|Oggetto [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../includes/ssde-md.md)]||Quantità/dimensioni massime [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bit)|Informazioni aggiuntive|
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|
 |Dimensioni dei batch||65.536 <sup>*</sup> (Dimensioni del pacchetto di rete)|Le dimensioni del pacchetto di rete indicano le dimensioni dei pacchetti TDS (Tabular Data Stream) usati per le comunicazioni tra le applicazioni e il [!INCLUDE[ssDE](../includes/ssde-md.md)] relazionale. La dimensione predefinita del pacchetto è 4 KB e viene controllata dall'opzione di configurazione delle dimensioni del pacchetto di rete.|
 |Byte per ogni colonna di stringhe brevi||8\.000||

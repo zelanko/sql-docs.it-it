@@ -16,10 +16,10 @@ ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 2507328ccc1d2a8baa47e97353c17ccc0345d3d7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957435"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Abilitare TDE in SQL Server con EKM
@@ -29,9 +29,9 @@ ms.locfileid: "74957435"
  TDE esegue la crittografia dell'archiviazione di un intero database usando una chiave simmetrica detta "chiave di crittografia del database". È anche possibile proteggere la chiave di crittografia del database usando un certificato protetto dalla chiave master del database master. Per altre informazioni sulla protezione della chiave di crittografia del database tramite la chiave master del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Per informazioni sulla configurazione di TDE quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in esecuzione in una macchina virtuale di Azure, vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Per informazioni sulla configurazione di Transparent Data Encryption usando una chiave nell'insieme di credenziali delle chiavi di Azure, vedere [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Per creare una chiave di crittografia del database e crittografare un database, è necessario essere un utente con privilegi elevati, ad esempio un amministratore di sistema, che possa essere autenticato dal modulo EKM.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "74957435"
   
 -   Le opzioni e i parametri richiesti dal provider EKM possono differire da quanto indicato nell'esempio di codice seguente. Per altre informazioni, rivolgersi al provider EKM.  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  In questo articolo vengono usate le autorizzazioni seguenti:  
   
 -   Per modificare un'opzione di configurazione ed eseguire l'istruzione RECONFIGURE, è necessario disporre dell'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
@@ -56,7 +56,7 @@ ms.locfileid: "74957435"
   
 -   È necessaria l'autorizzazione CONTROL nel database per crittografare il database.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>Per abilitare Transparent Data Encryption tramite Extensible Key Management  
   

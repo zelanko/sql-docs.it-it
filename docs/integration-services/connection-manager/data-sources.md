@@ -13,10 +13,10 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29c4fe9779b30066a188b9270e920ffd6339421b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298618"
 ---
 # <a name="data-sources"></a>Origini dati
@@ -28,7 +28,7 @@ ms.locfileid: "71298618"
   
  Un oggetto di origine dati è un riferimento a una connessione in cui sono inclusi almeno una stringa di connessione e l'identificatore di un'origine dati. Può includere anche metadati aggiuntivi quali una descrizione, un nome, un nome utente e una password.  
   
-> **NOTA** È possibile aggiungere le origini dati solo ai progetti configurati per utilizzare il modello di distribuzione del pacchetto. Se un progetto è configurato per utilizzare il modello di distribuzione del progetto, è possibile utilizzare le gestioni connessioni create a livello di progetto per condividere le connessioni anziché le origini dati.  
+> **NOTA:** è possibile aggiungere origini dati solo a progetti configurati per l'uso del modello di distribuzione del pacchetto. Se un progetto è configurato per utilizzare il modello di distribuzione del progetto, è possibile utilizzare le gestioni connessioni create a livello di progetto per condividere le connessioni anziché le origini dati.  
 >   
 >  Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](../packages/deploy-integration-services-ssis-projects-and-packages.md). Per altre informazioni sulla conversione di un progetto nel modello di distribuzione del progetto, vedere [Distribuire progetti nel server Integration Services](https://msdn.microsoft.com/library/hh231102.aspx).  
   

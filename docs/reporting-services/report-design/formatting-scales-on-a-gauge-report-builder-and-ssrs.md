@@ -9,10 +9,10 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079629"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formattazione di scale su un misuratore (Generatore report e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "77079629"
   
  Per iniziare rapidamente con la formattazione delle scale, vedere [Impostare un valore minimo o massimo su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
-##  <a name="DefiningMinMax"></a> Definizione dei valori minimo e massimo e degli intervalli su una scala  
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> Definizione dei valori minimo e massimo e degli intervalli su una scala  
  Un misuratore viene spesso utilizzato per visualizzare indicatori di prestazione chiave (KPI) misurati in percentuali comprese tra 0 e 100, pertanto questi sono i valori predefiniti assegnati alle proprietà Minimum e Maximum sul misuratore. È tuttavia possibile che questi valori non rappresentino la scala di valori che si intende mostrare. Poiché non c'è nessuna logica incorporata che consenta di determinare quello che viene rappresentato dal campo dati KPI, il misuratore non calcola automaticamente i valori minimo e massimo. Se il campo dati KPI non è un valore compreso tra 0 e 100, è necessario impostare in modo esplicito i valori per le proprietà Minimum e Maximum per fornire contesto all'unico valore visualizzato sul misuratore.  
   
  Sulla scala sono presenti segni di graduazione principali e secondari. Sono inoltre presenti etichette che vengono generalmente associate ai segni di graduazione principali. I segni di graduazione principali su una scala potrebbero, ad esempio, trovarsi su 0, 20, 40, 60, 80 e 100. Le etichette devono corrispondere a questi segni di graduazione. La differenza tra i valori di etichetta viene definita intervallo di scala. In questo esempio l'intervallo di scala è impostato su 20. È possibile impostare la proprietà Interval nella finestra di dialogo **Proprietà scala radiale** o **Proprietà scala lineare** .  
@@ -47,13 +47,13 @@ ms.locfileid: "77079629"
   
  L'offset intervallo determina il numero di unità che verranno ignorate prima che venga mostrata la prima etichetta. Tutte le etichette e tutti i segni di graduazione principali successivi che verranno visualizzati sulla scala utilizzeranno l'intervallo specificato. Assegnare il valore 0 agli intervalli di etichette o dei segni di graduazione equivale a reimpostare l'intervallo su Automatico.  
   
-##  <a name="ReducingCollisions"></a> Riduzione dei conflitti delle etichette con i moltiplicatori  
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> Riduzione dei conflitti delle etichette con i moltiplicatori  
  Se i valori contengono molte cifre, il misuratore potrebbe diventare poco leggibile. È possibile utilizzare un moltiplicatore di scala per aumentare o ridurre la scala dei valori. Quando viene specificato un moltiplicatore di scala, ogni valore originale sulla scala viene moltiplicato dal moltiplicatore prima di essere visualizzato sulla scala. Per ridurre la scala dei valori, è necessario specificare un numero decimale. Se ad esempio la scala va da 0 a 10000 ma si desidera mostrare i numeri da 0 a 10 sul misuratore, è possibile utilizzare un valore del moltiplicatore di 0,001.  
   
 > [!NOTE]  
 >  L'utilizzo di un moltiplicatore non determina la moltiplicazione del valore effettivo del campo aggregato utilizzato dal misuratore. Vengono moltiplicati solo i valori delle etichette visualizzati sul misuratore dopo che sono stati definiti i valori minimo, massimo e gli intervalli. Quando si utilizza un moltiplicatore, è consigliabile impostare come automatici i calcoli degli intervalli.  
   
-##  <a name="SpecifyingScaleBar"></a> Specifica della larghezza della barra della scala, del raggio e degli angoli su una scala radiale  
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> Specifica della larghezza della barra della scala, del raggio e degli angoli su una scala radiale  
  Utilizzare la pagina **Layout** della finestra di dialogo **Proprietà scala radiale** per impostare la larghezza della barra della scala, il raggio l'angolo iniziale e l'angolo di apertura della scala. È possibile utilizzare queste proprietà per personalizzare le dimensioni e il formato della scala. Se ad esempio si posizionano etichette della scala esternamente alla scala, sarà necessario modificare le dimensioni del raggio della scala in modo che le etichette si adattino al misuratore.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "77079629"
   
  L'angolo di apertura è il numero di gradi, compreso tra 0 e 360, di apertura della scala in un cerchio. Un angolo di apertura di 360 gradi produce una scala che è un cerchio completo. Ciò si rivela utile se si desidera progettare un misuratore che abbia l'aspetto di un orologio.  
   
-##  <a name="PositioningLabels"></a> Posizionamento di etichette su una scala lineare o radiale  
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> Posizionamento di etichette su una scala lineare o radiale  
  Sono disponibili due proprietà che determinano la posizione delle etichette. La proprietà della posizione delle etichette specifica se le etichette vengono visualizzate all'interno, all'esterno della barra della scala o al di sopra di essa. La proprietà della distanza imposta la distanza delle etichette dalla scala, a partire dalla barra della scala. Se si desidera posizionare le etichette all'interno della barra della scala, specificare un numero negativo. Se ad esempio le etichette si trovano all'esterno della scala ed è stata impostata una distanza dalla scala di 10, le etichette verranno mostrate più all'esterno di 10 unità rispetto a dove sarebbero state normalmente posizionate, dove 1 unità corrisponde a:  
   
 -   1% del diametro del misuratore su un misuratore radiale oppure  

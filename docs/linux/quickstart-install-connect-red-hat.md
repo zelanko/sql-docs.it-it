@@ -11,13 +11,13 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507539"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Avvio rapido: Installare SQL Server e creare un database in Red Hat
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Guida introduttiva: Installare SQL Server e creare un database in Red Hat
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -37,7 +37,7 @@ In questa guida di avvio rapido si installerà SQL Server 2019 in Red Hat Enterp
 > [!TIP]
 > Questa esercitazione richiede l'input dell'utente e una connessione Internet. Se si è interessati alle procedure di installazione [automatica](sql-server-linux-setup.md#unattended) o [offline](sql-server-linux-setup.md#offline), vedere [Linee guida per l'installazione di SQL Server in Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
@@ -62,7 +62,7 @@ Per altri requisiti di sistema, vedere [Requisiti di sistema per SQL Server su L
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Installare SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installare SQL Server
 
 Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale per installare il pacchetto **mssql-server**:
 
@@ -116,7 +116,7 @@ A questo punto, SQL Server è in esecuzione nel computer RHEL ed è pronto per l
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Installare SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installare SQL Server
 
 > [!NOTE]
 > I comandi seguenti per SQL Server 2019 puntano al repository RHEL 8. RHEL 8 non viene preinstallato con python2, richiesto per SQL Server. Per altre informazioni, vedere il blog seguente sull'installazione di python2 e sulla relativa configurazione come interprete predefinito: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
@@ -166,7 +166,7 @@ SQL Server 2019 è ora in esecuzione nel computer RHEL ed è pronto per l'uso.
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
 
 Per creare un database, è necessario connettersi con uno strumento in grado di eseguire istruzioni Transact-SQL nel server SQL. La procedura seguente installa gli strumenti da riga di comando di SQL Server [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
 
@@ -201,7 +201,7 @@ Per creare un database, è necessario connettersi con uno strumento in grado di 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
 
 Per creare un database, è necessario connettersi con uno strumento in grado di eseguire istruzioni Transact-SQL nel server SQL. La procedura seguente installa gli strumenti da riga di comando di SQL Server [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
 

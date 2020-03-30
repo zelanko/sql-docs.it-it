@@ -56,10 +56,10 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
 ms.openlocfilehash: 7a4c7733bd346f0631d353af228955dbd8e0b46b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288835"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
@@ -307,7 +307,7 @@ Sono supportati i nomi di hint seguenti:
   **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   Abilita l'inlining di funzioni scalari definite dall'utente. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).     
-  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
+  **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * 'DISALLOW_BATCH_MODE'    
   Disabilita l'esecuzione in modalità batch. Per altre informazioni, vedere [Modalità di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
   **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
@@ -563,7 +563,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Specifica di hint di tabella che influiscono sulla semantica  
-L'esempio seguente contiene due hint di tabella nella query: NOLOCK, che influisce sulla semantica, e INDEX, che non influisce sulla semantica. Per mantenere la semantica della query l’hint NOLOCK viene specificato nella clausola OPTIONS della guida di piano. Oltre all'hint NOLOCK, specificare gli hint INDEX e FORCESEEK e sostituire l'hint INDEX che non influisce sulla semantica nella query quando l'istruzione viene compilata e ottimizzata. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+Nell'esempio seguente sono contenuti due hint di tabella nella query: NOLOCK, che influisce sulla semantica, e INDEX, che non influisce sulla semantica. Per mantenere la semantica della query l’hint NOLOCK viene specificato nella clausola OPTIONS della guida di piano. Oltre all'hint NOLOCK, specificare gli hint INDEX e FORCESEEK e sostituire l'hint INDEX che non influisce sulla semantica nella query quando l'istruzione viene compilata e ottimizzata. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6c33925b1a518cb975ebd427c252d0538cfb6ed2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287648"
 ---
 # <a name="delete-a-publication"></a>Eliminazione di una pubblicazione
@@ -37,7 +37,7 @@ ms.locfileid: "76287648"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Eliminare le pubblicazioni dalla cartella **Pubblicazioni locali** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-delete-a-publication"></a>Per eliminare una pubblicazione  
@@ -48,7 +48,7 @@ ms.locfileid: "76287648"
   
 3.  Fare clic con il pulsante destro del mouse sulla pubblicazione che si desidera eliminare e quindi scegliere **Elimina**.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile eliminare pubblicazioni a livello di programmazione tramite le stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione eliminato.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "76287648"
   
 3.  (Facoltativo) Nel database di sottoscrizione del Sottoscrittore eseguire [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) per rimuovere gli eventuali metadati di replica rimanenti nel database di sottoscrizione.  
   
-###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio viene illustrato come rimuovere una pubblicazione transazionale e disabilitare la pubblicazione transazionale per un database. Si presuppone che in precedenza siano state rimosse tutte le sottoscrizioni. Per ulteriori informazioni, vedere [Delete a Pull Subscription](../../../relational-databases/replication/delete-a-pull-subscription.md) o [Delete a Push Subscription](../../../relational-databases/replication/delete-a-push-subscription.md).  
   
  [!code-sql[HowTo#sp_droppublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_1.sql)]  
@@ -93,7 +93,7 @@ ms.locfileid: "76287648"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  È possibile eliminare pubblicazioni a livello di programmazione tramite gli oggetti RMO (Replication Management Objects). Le classi RMO utilizzate per rimuovere una pubblicazione dipendono dal tipo di pubblicazione rimossa.  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>Per rimuovere una pubblicazione snapshot o transazionale  
@@ -144,7 +144,7 @@ ms.locfileid: "76287648"
   
 7.  Chiudere le connessioni.  
   
-###  <a name="PShellExample"></a> Esempi (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Esempi (RMO)  
  Nell'esempio seguente viene eliminata una pubblicazione transazionale. Se per il database non esistono altre pubblicazioni transazionali, verrà anche disabilitata la pubblicazione transazionale.  
   
  [!code-cs[HowTo#rmo_DropTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpub)]  

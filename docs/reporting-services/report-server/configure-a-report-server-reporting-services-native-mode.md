@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67313973"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurare un server di report (modalità nativa di Reporting Services)
@@ -27,7 +27,7 @@ ms.locfileid: "67313973"
   
 -   Un database del server di report che archivia i dati dell'applicazione, i report e altri elementi.  
   
- Il programma di installazione configura le impostazioni minime se si seleziona una delle opzioni di installazione seguenti: Configurazione predefinita in modalità nativa o configurazione predefinita in modalità integrata SharePoint. Se il server di report è stato installato in modalità "solo file", ovvero è stata selezionata l'opzione **Installa senza configurare il server di report** nell'Installazione guidata, viene configurato solo l'account del servizio. L'URL del servizio Web e il database del server di report devono essere configurati al termine dell'installazione.  
+ Durante l'installazione vengono configurate le impostazioni minime se si seleziona una delle modalità di installazione seguenti: configurazione predefinita in modalità nativa o configurazione predefinita in modalità di integrazione con SharePoint. Se il server di report è stato installato in modalità "solo file", ovvero è stata selezionata l'opzione **Installa senza configurare il server di report** nell'Installazione guidata, viene configurato solo l'account del servizio. L'URL del servizio Web e il database del server di report devono essere configurati al termine dell'installazione.  
   
 È consigliabile configurare il portale Web in modo che sia possibile concedere l'accesso utente al server di report e gestire il contenuto del server di report. Se il server di report è distribuito in modalità integrata SharePoint, usare il front-end Web di un server di SharePoint per concedere l'accesso.  
   

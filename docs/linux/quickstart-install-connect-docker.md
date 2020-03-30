@@ -14,10 +14,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
 ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198396"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guida introduttiva: Eseguire immagini del contenitore di SQL Server con Docker
@@ -48,7 +48,7 @@ In questa guida di avvio rapido si usa Docker per il pull e l'esecuzione dell'im
 
 Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubuntu 18.04. Può essere usata con il motore Docker 1.8 o versione successiva su Linux o in Docker per Mac/Windows. Questa guida di avvio rapido illustra specificamente l'uso dell'immagine di SQL Server in **Linux**. L'immagine Windows non è argomento di questa guida, ma è possibile ottenere informazioni su di essa nella [pagina mssql-server-windows-developer dell'hub Docker](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Prerequisiti
+## <a name="prerequisites"></a><a id="requirements"></a> Prerequisiti
 
 - Motore Docker 1.8 o versione successiva in qualsiasi distribuzione di Linux supportata oppure Docker per Mac/Windows. Per altre informazioni, vedere [Installare Docker](https://docs.docker.com/engine/installation/).
 - Driver di archiviazione **overlay2** Docker. Si tratta dell'impostazione predefinita per la maggior parte degli utenti. Se non si sta usando questo provider di archiviazione ed è necessario cambiarlo, vedere le istruzioni e gli avvisi nella [documentazione di Docker per la configurazione di overlay2.](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)
@@ -60,7 +60,7 @@ Questa immagine è costituita da SQL Server in esecuzione su Linux basato su Ubu
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a> Eseguire il pull dell'immagine del contenitore ed eseguirla
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2017"></a> Eseguire il pull dell'immagine del contenitore ed eseguirla
 
 Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shell preferita (Bash, PowerShell o cmd) all'inizio di questo articolo.
 
@@ -179,7 +179,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a> Eseguire il pull dell'immagine del contenitore ed eseguirla
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2019"></a> Eseguire il pull dell'immagine del contenitore ed eseguirla
 
 Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shell preferita (Bash, PowerShell o cmd) all'inizio di questo articolo.
 
@@ -294,7 +294,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a id="sapassword"></a> Cambiare la password dell'amministratore di sistema
+## <a name="change-the-sa-password"></a><a id="sapassword"></a> Cambiare la password dell'amministratore di sistema
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
@@ -443,7 +443,7 @@ A questo punto, eseguire una query per restituire i dati dalla tabella `Inventor
 
 2. Per uscire dal prompt dei comandi interattivo nel contenitore, digitare `exit`. Dopo la chiusura della shell Bash interattiva, il contenitore continua l'esecuzione.
 
-## <a id="connectexternal"></a> Eseguire la connessione dall'esterno del contenitore
+## <a name="connect-from-outside-the-container"></a><a id="connectexternal"></a> Eseguire la connessione dall'esterno del contenitore
 
 È anche possibile connettersi all'istanza di SQL Server nel computer che esegue Docker da uno strumento esterno Linux, Windows o macOS che supporti le connessioni SQL.
 

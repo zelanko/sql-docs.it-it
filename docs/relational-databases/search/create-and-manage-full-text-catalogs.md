@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903859"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
@@ -26,7 +26,7 @@ Un catalogo full-text è un contenitore logico per un gruppo di indici full-text
 
 Un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup.
   
-##  <a name="creating"></a> Creare un catalogo full-text  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> Creare un catalogo full-text  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Creare un catalogo full-text con Transact-SQL
 Usare [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Ad esempio:
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> Ottenere le proprietà di un catalogo full-text  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> Ottenere le proprietà di un catalogo full-text  
 Usare la funzione di [!INCLUDE[tsql](../../includes/tsql-md.md)]**FULLTEXTCATALOGPROPERTY** per ottenere il valore di varie proprietà correlate ai cataloghi full-text. Per altre info, vedere [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Ad esempio, eseguire la query seguente per ottenere il conteggio degli indici nel catalogo full-text `Catalog1`.
@@ -77,7 +77,7 @@ Nella tabella seguente sono elencate le proprietà correlate ai cataloghi full-t
 |**PopulateStatus**|Stato popolamento.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|Numero di chiavi univoche nel catalogo full-text.| 
 
-##  <a name="rebuildone"></a> Ricompilare un catalogo full-text  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> Ricompilare un catalogo full-text  
 
 Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) oppure eseguire le operazioni seguenti in SQL Server Management Studio (SSMS).
@@ -92,7 +92,7 @@ Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
   
 5.  Nella finestra di dialogo **Ricompila catalogo full-text** fare clic su **Chiudi**.  
    
-##  <a name="rebuildall"></a> Ricompilare tutti i cataloghi full-text per un database  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Ricompilare tutti i cataloghi full-text per un database  
 
 1.  In SSMS, in Esplora oggetti espandere il server, quindi **Database** e infine il database contenente i cataloghi full-text da ricompilare.  
   
@@ -106,7 +106,7 @@ Eseguire l'istruzione Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
   
   
   
-##  <a name="removing"></a> Rimuovere un catalogo full-text da un database  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> Rimuovere un catalogo full-text da un database  
 
 Eseguire l'istruzione Transact-SQL [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) oppure eseguire le operazioni seguenti in SQL Server Management Studio (SSMS).

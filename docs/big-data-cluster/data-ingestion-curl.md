@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73706634"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Usare curl per caricare dati nel sistema HDFS di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>Usare curl per caricare dati nel sistema HDFS di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo illustra come usare **curl** per caricare dati nel sistema HDFS di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-## <a id="prereqs"></a> Prerequisiti
+## <a name="prerequisites"></a><a id="prereqs"></a> Prerequisiti
 
 - [Caricare dati di esempio nel cluster Big Data](tutorial-load-sample-data.md)
 

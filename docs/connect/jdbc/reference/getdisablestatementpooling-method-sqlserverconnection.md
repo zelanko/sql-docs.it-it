@@ -16,10 +16,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2da0a2f04fa90b2d25dbd68baf7b769d5afdcf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983630"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverconnection"></a>Metodo getDisableStatementPooling (SQLServerConnection)

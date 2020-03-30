@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570954"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Metodo di ConfigurationSetting - GetDatabaseVersionDisplayName
@@ -31,7 +31,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *Versione*  
+ *Version*  
  Stringa che contiene la stringa di versione per un database del server di report.  
   
  *DisplayName*  
@@ -43,7 +43,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente viene mostrato il mapping dalla versione del database alla stringa visualizzata.  
   
-|**Versione**|**Versione**|**Nome visualizzato**|  
+|**Versione**|**Version**|**Nome visualizzato**|  
 |-----------------|-----------------|----------------------|  
 |RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
 |RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  

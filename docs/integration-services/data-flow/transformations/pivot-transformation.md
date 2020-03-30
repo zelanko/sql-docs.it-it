@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291218"
 ---
 # <a name="pivot-transformation"></a>Pivot - trasformazione
@@ -49,7 +49,7 @@ ms.locfileid: "71291218"
   
  I dati di input potrebbero contenere righe duplicate, provocando l'errore della trasformazione Pivot. Per righe duplicate si intendono righe che contengono gli stessi valori nelle colonne chiave del set e nelle colonne pivot. Per evitare l'errore è possibile configurare la trasformazione in modo che le righe con esito negativo vengano reindirizzate a un output degli errori, oppure preaggregare i valori per assicurarsi che non siano presenti righe duplicate.  
   
-##  <a name="options"></a> Opzioni della finestra di dialogo Pivot  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> Opzioni della finestra di dialogo Pivot  
  L'operazione pivot può essere configurata impostando le opzioni nella finestra di dialogo **Pivot** . Per aprire la finestra di dialogo **Pivot** , aggiungere la trasformazione Pivot al pacchetto in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]e quindi fare clic con il pulsante destro del mouse sul componente e scegliere **Modifica**.  
   
  L'elenco seguente descrive le opzioni nella finestra di dialogo **Pivot** .  

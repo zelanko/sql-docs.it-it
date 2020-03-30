@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727351"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Domande frequenti sull'installazione e sull'aggiornamento di SQL Server Machine Learning o R Server
@@ -92,7 +92,7 @@ In generale, il processo di aggiornamento è il seguente:
 
 La disinstallazione di una versione non definitiva dei componenti di Machine Learning di SQL Server può essere complessa e potrebbe richiedere l'esecuzione di uno script speciale. Contattare il supporto tecnico.
 
-###  <a name="bkmk_Uninstall"></a> Eseguire la disinstallazione prima dell'aggiornamento da una versione precedente di Microsoft R Server
+###  <a name="uninstall-prior-to-upgrading-from-an-older-version-of-microsoft-r-server"></a><a name="bkmk_Uninstall"></a> Eseguire la disinstallazione prima dell'aggiornamento da una versione precedente di Microsoft R Server
 
 Se è installata una versione non definitiva di Microsoft R Server, è necessario disinstallarla prima dell'aggiornamento a una versione più recente.
 

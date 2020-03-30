@@ -10,10 +10,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258098"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "75258098"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> Ricerca e visualizzazione di report in Generatore report  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> Ricerca e visualizzazione di report in Generatore report  
  Per trovare un report che si desidera utilizzare o per selezionare un'origine dati condivisa, un'immagine o un sottoreport da utilizzare in un report, esplorare il computer, le cartelle in un server di report o il sito di SharePoint integrato con Reporting Services.  
   
  Per trovare i report su un server di report, è necessario specificare un URL per il server di report e disporre delle autorizzazioni appropriate nelle cartelle in modo da poter leggere e salvare gli elementi del report. Per ottenere l'URL e le autorizzazioni necessarie, rivolgersi all'amministratore di sistema del server di report.  
@@ -49,7 +49,7 @@ ms.locfileid: "75258098"
 -   **Visualizzazione dei report** Un report viene visualizzato in anteprima in Generatore report durante la creazione o l'aggiornamento di report. Quando Generatore report è connesso a un server di report, quest'ultimo carica ed elabora il report; in caso contrario, i report vengono elaborati in locale. Il report visualizzabile viene mostrato nel visualizzatore di report di Generatore report.  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> Visualizzazione e gestione dei report in un server di report  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> Visualizzazione e gestione dei report in un server di report  
  È possibile usare il portale Web per visualizzare e gestire i report nel server di report. Esplorare le cartelle nel server per individuare i report, eseguire i report in modo da visualizzarli in un browser ed eseguire attività di gestione.  
   
  Il portale Web può essere utile con le attività di gestione seguenti:  
@@ -90,7 +90,7 @@ Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad es
 |Combinazione di tasti CTRL+F5|Produce lo stesso risultato che si ottiene facendo clic sul pulsante **Aggiorna** sulla barra degli strumenti dei report.|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> Visualizzazione e gestione degli elementi di un server di report da un sito di SharePoint  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> Visualizzazione e gestione degli elementi di un server di report da un sito di SharePoint  
  La configurazione di un server di report da parte dell'amministratore di sistema per l'esecuzione nella modalità integrata SharePoint consente di visualizzare e gestire i report e altri elementi del server di report da un sito di SharePoint.  
   
  Nel sito di SharePoint sono incluse pagine per l'impostazione di proprietà delle origini dati, della cronologia dei report, di opzioni relative all'elaborazione dei report, di pianificazioni, di sottoscrizioni e di parametri dei report, nonché per la creazione di pianificazioni condivise. È possibile creare e gestire elementi di un server di report in un sito di SharePoint esattamente come avviene con gli altri strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -119,11 +119,11 @@ Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad es
  ![Comandi di menu per gli elementi del server di report](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Comandi di menu per gli elementi del server di report")  
   
   
-##  <a name="DeskTop"></a> Visualizzazione di report in un'applicazione desktop  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> Visualizzazione di report in un'applicazione desktop  
  È possibile saltare completamente il passaggio di visualizzazione nel browser e usare direttamente un'applicazione desktop, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, come visualizzatore di report. A tale scopo, definire una sottoscrizione che specifichi un formato di applicazione desktop e una cartella condivisa di destinazione. Il server di report genererà il report come file di applicazione, aggiungerà un'estensione di file e salverà il report come file sul disco rigido. Sarà quindi possibile usare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (o un'altra applicazione) invece di un browser per visualizzare il report.  
   
   
-##  <a name="AboutUserSessions"></a> Informazioni sulle sessioni utente  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> Informazioni sulle sessioni utente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usate le sessioni del browser per garantire la coerenza durante la visualizzazione dei report. Le sessioni si basano sulle connessioni tramite browser, non sugli utenti autenticati. Ogni volta che un utente apre un report in una nuova finestra del browser, viene creata una nuova sessione. Dopo aver stabilito una sessione del browser, si continuerà a utilizzare la versione del report aperta all'inizio della sessione, anche se in seguito il report viene modificato nel server di report. Se ad esempio si apre un report alle 23.00 e l'autore del report pubblica nuovamente lo stesso report alle 23.01, per tutta la durata della sessione sarà disponibile la versione del report aperta alle 23.00.  
   
  Se si aggiorna un report all'interno della stessa sessione tramite il pulsante **Aggiorna** del browser, verrà visualizzata la versione del report della sessione originale. Se si aggiorna un report su richiesta tramite il pulsante **Aggiorna** sulla barra degli strumenti del report, il report verrà eseguito nuovamente e verranno visualizzati gli eventuali nuovi dati.  
@@ -131,7 +131,7 @@ Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad es
  Le informazioni sulle sessioni vengono archiviate nel database temporaneo del server di report. Per il server di report non viene usata la gestione delle sessioni di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Se si riavvia il server oppure si esegue un'operazione di recupero del database, lo stato delle sessioni non verrà ripristinato. Per altre informazioni sulla gestione delle sessioni, vedere [Identificazione dello stato di esecuzione](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
  
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  Negli articoli seguenti sono disponibili informazioni aggiuntive sulla visualizzazione e sulla gestione dei report.  
   
  [Trovare, visualizzare e gestire report](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

@@ -16,10 +16,10 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295804"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
@@ -43,7 +43,7 @@ ms.locfileid: "71295804"
   
 -   [Risoluzione dei problemi dei pacchetti pianificati](#trouble)  
   
-##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è il servizio installato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente di automatizzare e pianificare le attività eseguendo processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile eseguire automaticamente processi solo se il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione. Per altre informazioni, vedere [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent).  
   
  Il nodo **SQL Server Agent** viene visualizzato in Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quando ci si connette a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "71295804"
   
  È possibile migliorare il processo impostando opzioni di notifica, ad esempio aggiungendo avvisi o specificando l'operatore che deve inviare un messaggio di posta elettronica al completamento del processo. Per altre informazioni, vedere [Avvisi](https://docs.microsoft.com/sql/ssms/agent/alerts).  
   
-##  <a name="packages"></a> Scheduling Integration Services Packages  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Quando si crea un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per pianificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è necessario aggiungere almeno un passaggio e impostare il tipo di passaggio su **Pacchetto SQL Server Integration Services**. In un processo possono essere inclusi più passaggi che consentono di eseguire pacchetti diversi.  
   
  L'esecuzione di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da un passaggio di processo è simile all'esecuzione di un pacchetto tramite le utilità **dtexec** (dtexec.exe) e **DTExecUI** (dtexecui.exe). Le opzioni di runtime per un pacchetto non vengono impostate tramite opzioni della riga di comando o nella finestra di dialogo **Utilità di esecuzione pacchetti** , ma nella finestra di dialogo **Nuovo passaggio di processo** . Per altre informazioni sulle opzioni per l'esecuzione di un pacchetto, vedere [Utilità dtexec](../../integration-services/packages/dtexec-utility.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "71295804"
   
  Per visualizzare un video in cui viene illustrato come usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di un pacchetto, vedere la home page del video [Procedura: Automazione dell'esecuzione di un pacchetto usando SQL Server Agent (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) in MSDN Library.  
   
-##  <a name="trouble"></a> Risoluzione dei problemi  
+##  <a name="troubleshooting"></a><a name="trouble"></a> Risoluzione dei problemi  
  Un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non riuscire ad avviare un pacchetto anche se il pacchetto viene eseguito correttamente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e dalla riga di comando. Per questo problema esistono alcuni motivi comuni e diverse soluzioni consigliate. Per ulteriori informazioni, vedere le risorse seguenti.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](https://support.microsoft.com/kb/918760)  
@@ -100,7 +100,7 @@ ms.locfileid: "71295804"
   
     Per altre informazioni sui report Panoramica, Tutti i messaggi e Prestazioni di esecuzione, vedere [Report per il server Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
 
-## <a name="schedule"></a> Pianificare un pacchetto tramite SQL Server Agent
+## <a name="schedule-a-package-by-using-sql-server-agent"></a><a name="schedule"></a> Pianificare un pacchetto tramite SQL Server Agent
   Nella procedura riportata di seguito vengono illustrati i passaggi per automatizzare l'esecuzione di un pacchetto tramite un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il pacchetto.  
   
 ### <a name="to-automate-package-execution-by-using-sql-server-agent"></a>Per automatizzare l'esecuzione dei pacchetti tramite SQL Server Agent  

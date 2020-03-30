@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286625"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
@@ -29,7 +29,7 @@ I messaggi di avviso dati vengono inviati tramite posta elettronica. A seconda d
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
-##  <a name="AlertingWF"></a> Architettura e flusso di lavoro degli avvisi dati
+##  <a name="data-alerts-architecture-and-workflow"></a><a name="AlertingWF"></a> Architettura e flusso di lavoro degli avvisi dati
 
 Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :
 
@@ -113,7 +113,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Per altre informazioni, vedere [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
-##  <a name="InstallAlerting"></a> Installare avvisi dati  
+##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> Installare avvisi dati  
  La funzionalità relativa agli avvisi dati è disponibile solo se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è installato in modalità SharePoint. Quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, tramite l'installazione vengono creati automaticamente il database di avvisi in cui vengono archiviati i metadati di avviso e le definizioni di avviso dati, nonché due pagine di SharePoint per la gestione degli avvisi e la finestra di progettazione Avviso dati viene aggiunta al sito di SharePoint. Non vi sono passaggi specifici da eseguire o opzioni da impostare per gli avvisi durante l'installazione.  
   
  Per altre informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, inclusi il servizio condiviso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che rappresenta una novità in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e l'applicazione del servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è necessario creare e configurare per poter usare le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in MSDN Library.  
@@ -122,7 +122,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  È possibile utilizzare la pagina **Avvisi e sottoscrizioni provisioning** in Amministrazione centrale SharePoint per verificare se SQL Server Agent è in esecuzione e per creare e scaricare script [!INCLUDE[tsql](../includes/tsql-md.md)] personalizzati da eseguire per concedere autorizzazioni a SQL Server Agent. È anche possibile generare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] tramite PowerShell. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
-##  <a name="ConfigAlert"></a> Configurare avvisi dati  
+##  <a name="configure-data-alerts"></a><a name="ConfigAlert"></a> Configurare avvisi dati  
  A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , le impostazioni per le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , inclusi gli avvisi dati, vengono distribuite tra il file di configurazione del server di report (rsreportserver.config) e un database di configurazione di SharePoint quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint. Quando si crea l'applicazione di servizio come passaggio nell'installazione e nella configurazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], viene creato automaticamente il database di configurazione di SharePoint. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [File di configurazione di Reporting Services](../reporting-services/report-server/reporting-services-configuration-files.md).  
   
  Le impostazioni per gli avvisi dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includono gli intervalli per la pulizia dei metadati e dei dati di avviso e il numero di tentativi di invio dei messaggi di avviso dati tramite posta elettronica. È possibile aggiornare il file di configurazione e il database di configurazione per utilizzare valori diversi per le impostazioni di avviso dati.  
@@ -177,7 +177,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 -   SmtpStatusCode.MailboxUnavailable  
   
-###  <a name="bkmk_disablealerts"></a> Disabilitare avvisi dati  
+###  <a name="disable-data-alerts"></a><a name="bkmk_disablealerts"></a> Disabilitare avvisi dati  
  Se si desidera disabilitare la funzionalità relativa agli avvisi dati, aggiornare la sezione Service del file di configurazione. Il codice della sezione Service del file di configurazione è indicato di seguito.  
   
  `<Service>`  
@@ -196,7 +196,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Per disabilitare gli avvisi, modificare True in False in `<IsAlertingService>True</IsAlertingService>`.  
   
-##  <a name="Permissions"></a> Autorizzazioni per gli avvisi dati  
+##  <a name="permissions-for-data-alerts"></a><a name="Permissions"></a> Autorizzazioni per gli avvisi dati  
  Prima di poter creare avvisi dati per i report, è necessario disporre dell'autorizzazione per l'esecuzione del report e la creazione di avvisi nel sito di SharePoint. Per ulteriori informazioni sulle autorizzazioni per i report, vedere quanto riportato di seguito.  
   
 -   [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
@@ -210,7 +210,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
 |Information Worker|Visualizzazione elementi<br /><br /> Creare avvisi|Visualizzare elementi come i report e creare avvisi dati per i report. Modificare ed eliminare gli avvisi.|  
 |Amministratore di avvisi|Gestione avvisi|Visualizzare un elenco di tutti gli avvisi dati salvati nel sito di SharePoint ed eliminare gli avvisi.|  
   
-##  <a name="DiagnosticsLogging"></a> Diagnostica e registrazione  
+##  <a name="diagnostics-and-logging"></a><a name="DiagnosticsLogging"></a> Diagnostica e registrazione  
  Gli avvisi dati consentono agli Information Worker e agli amministratori di tenere traccia degli avvisi in diversi modi e di comprendere il motivo per il quale gli avvisi non hanno esito positivo e consentono agli amministratori di utilizzare i log per acquisire informazioni sui destinatari dei messaggi di avviso, sul numero di istanze di avviso inviate e così via.  
   
 ### <a name="data-alert-manager"></a>Gestione avvisi dati  
@@ -254,7 +254,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
 #### <a name="report-server-trace-log"></a>Log di traccia del server di report  
  Il log di traccia del server di report contiene informazioni estremamente dettagliate relative alle operazioni del servizio del server di report, ad esempio operazioni eseguite dal servizio Web ReportServer ed elaborazione in background. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione. Per altre informazioni, vedere [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
-##  <a name="PerformanceCounters"></a> Contatori delle prestazioni  
+##  <a name="performance-counters"></a><a name="PerformanceCounters"></a> Contatori delle prestazioni  
  Gli avvisi dati forniscono contatori delle prestazioni specifici. Tutti i contatori delle prestazioni tranne uno sono correlati a un evento che fa parte del servizio di runtime di avvisi. Il contatore delle prestazioni correlato alla coda di eventi indica la lunghezza della coda di tutti gli eventi attivi.  
   
 |Evento o coda di eventi|Contatore delle prestazioni|  
@@ -270,14 +270,14 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce contatori delle prestazioni per altre funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Contatori delle prestazioni per gli oggetti prestazioni ReportServer:Service e ReportServerSharePoint:Service](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 Web Service e MSRS 2011 Windows Service &#40;modalità nativa&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) e [Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 Web Service SharePoint Mode e MSRS 2011 Windows Service SharePoint Mode &#40;modalità SharePoint&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
-##  <a name="SupportForSSL"></a> Supporto per SSL  
+##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> Supporto per SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] consente di usare il servizio SSL (Secure Sockets Layer) HTTP per stabilire connessioni crittografate a un server di report o a un sito di SharePoint.  
   
  Il servizio di runtime di avvisi e l'interfaccia utente degli avvisi dati supportano SSL e funzionano in modo analogo sia con SSL che con HTTP, anche se vi sono alcune piccole differenze. Quando la definizione di avviso dati viene creata utilizzando una connessione SSL, viene utilizzato SSL anche per l'URL di collegamento alla raccolta di SharePoint dal messaggio di avviso dati. È possibile identificare la connessione SSL in quanto nell'URL viene utilizzato HTTPS anziché HTTP. Analogamente, se la definizione di avviso dati è stata creata utilizzando una connessione HTTP, per il collegamento al sito di SharePoint viene utilizzato HTTP. Se la definizione di avviso è stata creata utilizzando SSL o HTTP, l'esperienza per utenti e amministratori di avvisi è identica in caso di utilizzo della finestra di progettazione Avviso dati o di Gestione avvisi dati. In caso di modifica del protocollo (HTTP o SSL) tra il momento della creazione della definizione di avviso e quello dell'aggiornamento o del nuovo salvataggio, il protocollo originale viene mantenuto e utilizzato negli URL di collegamento.  
   
  Se si crea un avviso dati in un sito di SharePoint configurato per utilizzare SSL e quindi si rimuove il requisito SSL l'avviso continua a funzionare sul sito. Se il sito viene eliminato, viene invece utilizzato il sito dell'area predefinita.  
   
-##  <a name="UserInterface"></a> Interfaccia utente degli avvisi dati  
+##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> Interfaccia utente degli avvisi dati  
  Gli avvisi dati forniscono pagine di SharePoint per la gestione degli avvisi e una finestra di progettazione per la creazione e la modifica delle definizioni di avviso dati.  
   
 -   **Finestra di progettazione Avviso dati** , per la creazione e la modifica di definizioni di avviso dati. Per altre informazioni, vedere [Finestra di progettazione Avviso dati](../reporting-services/data-alert-designer.md), [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md) e [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
@@ -290,7 +290,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 -   **Avvisi dati e sottoscrizioni provisioning** , per stabilire se tramite Reporting Services è possibile utilizzare SQL Server Agent per gli avvisi dati e per scaricare script che consentono l'accesso a SQL Server Agent. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
-##  <a name="Globalization"></a> Globalizzazione degli avvisi dati  
+##  <a name="globalization-of-data-alerts"></a><a name="Globalization"></a> Globalizzazione degli avvisi dati  
  Determinati script, come l'arabo e l'ebraico, sono scritti da destra a sinistra. Gli avvisi dati supportano script sia da destra a sinistra che da sinistra a destra. Gli avvisi dati sono in grado di rilevare le impostazioni cultura e modificare di conseguenza l'aspetto e il comportamento dell'interfaccia utente e il layout dei messaggi di avviso dati. Le impostazioni cultura sono derivate dalle impostazioni internazionali del sistema operativo nel computer dell'utente. Le impostazioni cultura vengono salvate ogni volta che si aggiorna e quindi si salva di nuovo la definizione di avviso dati.  
   
  Il fatto che i dati soddisfino le regole nella definizione di avviso può dipendere dalle impostazioni cultura nella definizione di avviso. Le regole specifiche delle impostazioni cultura influiscono generalmente sui confronti di stringa.  
@@ -301,7 +301,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  A seconda dell'interfaccia utente di avviso dati utilizzata, il supporto per il testo scritto da destra a sinistra varia. La finestra di progettazione Avviso dati supporta la scrittura di script da destra a sinistra nelle caselle di testo, ma il layout della finestra di progettazione non è da destra a sinistra, bensì da sinistra a destra, come per gli altri strumenti. Se una definizione di avviso viene creata con orientamento del testo da destra a sinistra, quindi modificata in un ambiente in cui viene utilizzato l'orientamento da sinistra a destra, l'orientamento del testo da destra a sinistra viene mantenuto quando si salva la definizione di avviso. Gestione avvisi dati si comporta come una pagina di SharePoint. Il suo layout è da destra a sinistra, come le altre pagine di SharePoint. I messaggi di avviso dati basati sulle definizioni di avviso dati da destra a sinistra prevedono la visualizzazione del testo del messaggio da destra a sinistra e il layout del messaggio è da sinistra a destra.  
   
-##  <a name="HowTo"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Attività correlate  
   
 -   [Salvare un report in una raccolta di SharePoint &#40;Generatore report&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   

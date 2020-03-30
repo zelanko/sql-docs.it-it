@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056266"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurare e gestire word breaker e stemmer per la ricerca (SQL Server)
@@ -53,7 +53,7 @@ Per visualizzare l'elenco delle lingue supportate dalla ricerca full-text di [!I
 SELECT * FROM sys.fulltext_languages
 ```
 
-##  <a name="register"></a> Ottenere l'elenco dei word breaker registrati
+##  <a name="get-the-list-of-registered-word-breakers"></a><a name="register"></a> Ottenere l'elenco dei word breaker registrati
 
 Per potere usare i word breaker di una determinata lingua per la ricerca full-text, è necessario registrarli. Per i word breaker registrati, anche le risorse linguistiche associate, ovvero stemmer, parole non significative e thesaurus, diventano disponibili per le operazioni di indicizzazione e query full-text.
 
@@ -69,7 +69,7 @@ Per altre opzioni e ulteriori informazioni, vedere [sp_help_fulltext_system_comp
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>Se si aggiunge o rimuove un word breaker  
 Se si aggiunge, rimuove o modifica un word breaker, è necessario aggiornare l'elenco degli identificatori delle impostazioni locali (LCID) di Microsoft Windows supportati per l'indicizzazione e le query full-text. Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="default"></a> Impostare l'opzione default full-text language  
+##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> Impostare l'opzione default full-text language  
  Per le versioni localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imposta l'opzione **default full-text language** sulla lingua del server, se esiste una corrispondenza appropriata. Per le versioni non localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione **default full-text language** è impostata sull'inglese.  
   
  Quando si crea o modifica un indice full-text, è possibile specificare una lingua diversa per ogni colonna di indicizzazione full-text. Se per una colonna non è stata specificata alcuna lingua, il valore predefinito è quello dell'opzione di configurazione **default full-text language**.  
@@ -77,7 +77,7 @@ Se si aggiunge, rimuove o modifica un word breaker, è necessario aggiornare l'e
 > [!NOTE]  
 >  È necessario che a tutte le colonne elencate in una singola clausola di funzione per query full-text venga applicata la stessa lingua, a meno che nella query l'opzione LANGUAGE non sia specificata. La lingua utilizzata per la colonna indicizzata full-text oggetto della query determina l'analisi linguistica eseguita sugli argomenti dei predicati ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) e delle funzioni ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)) delle query full-text.  
   
-##  <a name="lang"></a> Scegliere la lingua per una colonna indicizzata  
+##  <a name="choose-the-language-for-an-indexed-column"></a><a name="lang"></a> Scegliere la lingua per una colonna indicizzata  
  Quando si crea un indice full-text, è consigliabile specificare una lingua per ogni colonna indicizzata. Se non viene specificata alcuna lingua per una colonna, viene utilizzata quella predefinita di sistema. La lingua di una colonna determina il word breaker e lo stemmer utilizzati per l'indicizzazione di quella colonna. Anche il file del thesaurus di quella lingua verrà utilizzato dalle query full-text sulla colonna.  
   
  Quando si crea un indice full-text, è necessario considerare alcuni aspetti relativi alla scelta della lingua delle colonne. Tali considerazioni riguardano il modo in cui il testo viene suddiviso in token e quindi indicizzato dal motore di ricerca full-text. Per altre informazioni, vedere [Scelta di una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
@@ -90,7 +90,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 Per altre opzioni e ulteriori informazioni, vedere [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
-##  <a name="tshoot"></a> Risolvere i problemi relativi agli errori di timeout del word breaking  
+##  <a name="troubleshoot-word-breaking-time-out-errors"></a><a name="tshoot"></a> Risolvere i problemi relativi agli errori di timeout del word breaking  
  Un errore di timeout del word breaking può verificarsi in diverse situazioni. Per informazioni su queste situazioni e su come rispondere, vedere [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>Informazioni sull'errore MSSQLSERVER_30053
@@ -130,7 +130,7 @@ Per altre opzioni e ulteriori informazioni, vedere [sys.fulltext_index_columns &
 |La configurazione del processo del daemon di filtri non è corretta.|Assicurarsi che venga utilizzata la password corrente e che i criteri di dominio non stiano impedendo l'accesso dell'account del daemon di filtri.|  
 |Nell'istanza del server è in esecuzione un carico di lavoro molto elevato di query.|Provare a eseguire nuovamente la query in un carico ridotto.|  
 
-##  <a name="impact"></a> Informazioni sull'impatto dei word breaker aggiornati  
+##  <a name="understand-the-impact-of-updated-word-breakers"></a><a name="impact"></a> Informazioni sull'impatto dei word breaker aggiornati  
  Ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include in genere nuovi word breaker con regole linguistiche migliori e maggiore accuratezza rispetto alle versioni precedenti. È possibile che il comportamento dei nuovi word breaker sia leggermente diverso da quello dei word breaker negli indici full-text importati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 Questo aspetto è rilevante se si importa un catalogo full-text al momento dell'aggiornamento di un database alla versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una o più lingue utilizzate dagli indici full-text nel catalogo full-text potrebbero essere associate ai nuovi word breaker. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  

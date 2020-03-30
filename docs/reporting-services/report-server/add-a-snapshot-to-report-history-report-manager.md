@@ -9,10 +9,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
 ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68251934"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Aggiungere uno snapshot alla cronologia del report
@@ -33,7 +33,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
     > [!NOTE]
     > Per abilitare la creazione degli snapshot, è necessario che l'amministratore configuri la cronologia del report su **Consenti creazione manuale della cronologia del report**. Per altre informazioni, vedere [Limitare la cronologia dei report &#40;Gestione report&#41;](../reports/limit-report-history-report-manager.md).
 
-4. Fare clic su **Applica**.
+4. Fare clic su **Apply**.
   
 ## <a name="to-automatically-add-all-snapshots-to-report-history"></a>Per aggiungere automaticamente tutti gli snapshot alla cronologia del report  
   
@@ -47,7 +47,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 5. Selezionare la casella di controllo **Archivia tutti gli snapshot dell'esecuzione del report nella cronologia**.  
   
-6. Fare clic su **Applica**.  
+6. Fare clic su **Apply**.  
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>Per aggiungere automaticamente snapshot alla cronologia del report in base a una pianificazione  
   
@@ -63,7 +63,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
 
     - Selezionare **Pianificazione condivisa**. Dall'elenco selezionare la pianificazione preferita.  
 
-5. Fare clic su **Applica**.  
+5. Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -112,7 +112,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
     > [!NOTE]  
     > Per abilitare la creazione degli snapshot, è necessario che l'amministratore configuri la cronologia del report su **Consenti creazione manuale della cronologia del report**. Per altre informazioni, vedere [Limitare la cronologia del report (portale Web)](../../reporting-services/reports/limit-report-history-report-manager.md).
 
-9.  Fare clic su **Applica**.
+9.  Fare clic su **Apply**.
 
 ## <a name="to-automatically-add-all-snapshots-to-report-history"></a>Per aggiungere automaticamente tutti gli snapshot alla cronologia del report  
   
@@ -152,7 +152,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
 
     - Selezionare **Pianificazione condivisa**. Dall'elenco selezionare la pianificazione preferita.  
 
-5. Fare clic su **Applica**.  
+5. Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -20,10 +20,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 08384619502a5fdd3452f90e30ba994d3780c578
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255742"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
@@ -49,12 +49,12 @@ Tramite le risposte ai processi gli amministratori del database vengono informat
   
     Usare la risposta soltanto se si è certi che non sarà necessario rieseguire il processo.  
   
-## <a name="BeforeYouBegin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Sicurezza  
+### <a name="security"></a><a name="Security"></a>Sicurezza  
 Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-automatically-delete-a-job"></a>Per eliminare automaticamente un processo  
   
@@ -72,7 +72,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
     -   Selezionare **Al termine del processo** per eliminare il processo indipendentemente dall'esito con cui viene completato.  
   
-## <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 **Per eliminare automaticamente un processo**  
   
 Usare la proprietà **DeleteLevel** della classe **Job** tramite un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

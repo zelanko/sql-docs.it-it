@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278317"
 ---
 # <a name="create-a-database-mail-profile"></a>Creare un profilo di Posta elettronica database
@@ -31,18 +31,18 @@ ms.locfileid: "72278317"
   
 -   **Per creare un profilo pubblico di Posta elettronica database tramite la**  [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Creare uno o più account di Posta elettronica database per il profilo. Per altre informazioni sulla creazione di account di Posta elettronica database, vedere [Creare un account di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  Gli utenti in grado di accedere al database **msdb** possono usare un profilo pubblico per inviare messaggi di posta elettronica. Un profilo privato può essere utilizzato da un utente o da un ruolo. Concedendo ai ruoli l'accesso ai profili viene creata un'architettura gestita in modo più semplice. Solo un membro del ruolo **DatabaseMailUserRole** del database **msdb** con accesso ad almeno un profilo di Posta elettronica database può inviare messaggi di posta elettronica.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per creare gli account dei profili ed eseguire le stored procedure è necessario che l'utente sia un membro del ruolo predefinito del server sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo della Configurazione guidata Posta elettronica database  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Utilizzo della Configurazione guidata Posta elettronica database  
  **Per creare un profilo di Posta elettronica database**  
   
 -   In Esplora oggetti, connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su cui si desidera configurare Posta elettronica database ed espandere l'albero di server.  
@@ -85,7 +85,7 @@ ms.locfileid: "72278317"
   
 ## <a name="using-transact-sql"></a>Uso di Transact-SQL  
   
-###  <a name="PrivateProfile"></a> Per creare un profilo privato di Posta elettronica database  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a> Per creare un profilo privato di Posta elettronica database  
   
 -   Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -153,7 +153,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-###  <a name="PublicProfile"></a> Per creare un profilo pubblica di Posta elettronica database  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a> Per creare un profilo pubblica di Posta elettronica database  
   
 -   Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -19,10 +19,10 @@ ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822410"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Ripartire i backup supportati nelle repliche secondarie di un gruppo di disponibilità
@@ -34,7 +34,7 @@ ms.locfileid: "74822410"
 >  Le istruzioni RESTORE non sono consentite nei database primari o secondari di un gruppo di disponibilità.  
   
  
-##  <a name="SupportedBuTypes"></a> Tipi di backup supportati nelle repliche secondarie  
+##  <a name="backup-types-supported-on-secondary-replicas"></a><a name="SupportedBuTypes"></a> Tipi di backup supportati nelle repliche secondarie  
   
 -   **BACKUP DATABASE** supporta solo i backup completi di sola copia di database, file o filegroup quando viene eseguito nelle repliche secondarie. I backup di sola copia non influenzano la catena di log e non cancellano la mappa di bit differenziale.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "74822410"
 
 In un gruppo di disponibilità distribuito è possibile eseguire i backup sulle repliche secondarie nello stesso gruppo di disponibilità della replica primaria attiva oppure sulla replica primaria di qualsiasi gruppo di disponibilità secondario. Non è possibile eseguire i backup su una replica secondaria in un gruppo di disponibilità secondario perché le repliche secondarie comunicano solo con la replica primaria nel proprio gruppo di disponibilità. Solo le repliche che comunicano direttamente con la replica primaria globale possono eseguire le operazioni di backup.
 
-##  <a name="WhereBuJobsRun"></a> Configurazione del percorso di esecuzione dei processi di backup  
+##  <a name="configuring-where-backup-jobs-run"></a><a name="WhereBuJobsRun"></a> Configurazione del percorso di esecuzione dei processi di backup  
  L'esecuzione di backup su una replica secondaria per ripartire il carico di lavoro di backup dal server di produzione primario comporta notevoli vantaggi, tuttavia rende più complessa la selezione dei percorsi di esecuzione dei processi di backup. Per risolvere questo problema, configurare dove eseguire i processi di backup come segue:  
   
 1.  Configurare il gruppo di disponibilità per specificare le repliche di disponibilità per cui si desidera venga eseguito il backup. Per altre informazioni, vedere i parametri *AUTOMATED_BACKUP_PREFERENCE* e *BACKUP_PRIORITY* in [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) o [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
 2.  Creare processi di backup controllati da script per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità che è un candidato per l'esecuzione del backup. Per altre informazioni, vedere la sezione "Completamento: Dopo avere configurato il backup su repliche secondarie" di [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare il backup delle repliche secondarie**  
   
 -   [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  

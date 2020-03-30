@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287945"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
@@ -124,7 +124,7 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria rientr
 |Memoria stack di thread|Sì|Sì|
 |Allocazioni dirette da Windows|Sì|Sì|
 
-## <a name="dynamic-memory-management"></a> Gestione della memoria dinamica
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> Gestione della memoria dinamica
 Il comportamento predefinito per la gestione della memoria del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consiste nell'acquisire la quantità di memoria necessaria senza causare insufficienza di memoria nel sistema. In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] questo comportamento è reso possibile tramite l'utilizzo delle API di notifica della memoria di Microsoft Windows.
 
 Quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza la memoria in modo dinamico, esegue query periodiche sul sistema per determinare la quantità di memoria libera disponibile. Il mantenimento di tale memoria libera impedisce il paging del sistema operativo. Se è disponibile una quantità minore di memoria libera, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rilascia memoria al sistema operativo. Se è disponibile una quantità maggiore di memoria libera, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può essere allocata più memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aggiunge memoria solo se richiesto dal relativo carico di lavoro. In un server non operativo non vengono aumentate le dimensioni del proprio spazio degli indirizzi virtuali.  
@@ -203,7 +203,7 @@ L'opzione di configurazione *min memory per query* consente di specificare la qu
 >    
 > Per consigli sull'uso di questa configurazione, vedere [Configurare l'opzione di configurazione del server min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### <a name="memory-grant-considerations"></a>Considerazioni sulla concessione di memoria
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>Considerazioni sulla concessione di memoria
 Per l'**esecuzione in modalità riga** la concessione di memoria iniziale non può essere superata in qualsiasi condizione. Se è necessaria più memoria della concessione iniziale per l'esecuzione di operazioni di **hash** o **ordinamento**, verrà eseguito lo spill su disco. Un'operazione di hash con spill è supportata da un file di lavoro in TempDB, mentre un'operazione di ordinamento con spill è supportata da una [tabella di lavoro](../relational-databases/query-processing-architecture-guide.md#worktables).   
 
 Un evento spill che si verifica durante un'operazione di ordinamento è noto come [avviso di ordinamento](../relational-databases/event-classes/sort-warnings-event-class.md). Gli avvisi di ordinamento indicano operazioni di ordinamento per cui la memoria disponibile risulta insufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola `ORDER BY` in un'istruzione `SELECT`, e non per le operazioni di ordinamento che implicano la creazione di indici.

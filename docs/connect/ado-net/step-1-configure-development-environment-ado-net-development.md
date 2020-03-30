@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 6ef7c4e9a1040783f535f58e595b0c9840e94cec
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895844"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo ADO.NET

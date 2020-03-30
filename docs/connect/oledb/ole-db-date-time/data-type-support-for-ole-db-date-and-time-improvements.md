@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995116"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB
@@ -28,7 +28,7 @@ ms.locfileid: "67995116"
   Questo articolo offre informazioni sui tipi OLE DB (OLE DB Driver per SQL Server) che supportano i tipi di dati data/ora di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapping dei tipi di dati in set di righe e parametri  
- OLE DB specifica due nuovi tipi di dati per supportare i nuovi tipi di server: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. Nella tabella seguente viene illustrato il mapping completo per il tipo di server:  
+ OLE DB fornisce due nuovi tipi di dati per supportare i nuovi tipi di server: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. Nella tabella seguente viene illustrato il mapping completo per il tipo di server:  
   
 |Tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo di dati OLE DB|valore|  
 |-----------------------------------------|----------------------|-----------|  

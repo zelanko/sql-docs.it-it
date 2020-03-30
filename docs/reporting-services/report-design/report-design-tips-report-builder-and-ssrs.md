@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081094"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081094"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> Progettazione di report  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> Progettazione di report  
   
 -   Un report ben progettato fornisce le informazioni che determinano un'azione. Identificare le domande che potranno essere risposte mediante il report. Tenere presenti tali domande durante la progettazione del report.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081094"
   
  Per altre informazioni sui fattori da considerare per la progettazione di un report, vedere [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
-##  <a name="NamingConventions"></a> Convenzioni di denominazione per report, origini dati e set di dati  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> Convenzioni di denominazione per report, origini dati e set di dati  
   
 -   Usare convenzioni di denominazione per le origini dati e i set di dati che documentano l'origine dei dati.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081094"
   
 -   Utilizzare i caratteri di sottolineatura anziché gli spazi nei nomi dei report. Se si scarica un report da un portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , gli spazi vengono sostituiti da caratteri di sottolineatura. Se si usa la funzionalità di download per salvare i report in modalità locale, includendoli quindi in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilizzo dei caratteri di sottolineatura consente di preservare le dipendenze del report per i sottoreport e i collegamenti drill-through.  
   
-##  <a name="Data"></a> Utilizzo dei dati  
+##  <a name="working-with-data"></a><a name="Data"></a> Utilizzo dei dati  
   
 -   Come primo passaggio, visualizzare nel riquadro dei dati del report tutti i dati che si desidera utilizzare. Man mano che si ridefiniscono le domande a cui il report dovrà fornire le risposte, limitare i dati presenti nei set di dati del report solo a quelli necessari.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081094"
   
 -   A seconda dei requisiti è possibile visualizzare nomi e percorsi delle origini dati del report, testo di comandi di query del set di dati e valori di parametri nel report. La prima domanda che molti nuovi utenti si pongono riguarda l'origine dei dati. Per ridurre il disordine nel report, è possibile nascondere in modo condizionale le caselle di testo con questo tipo di informazioni e consentire agli utenti di scegliere se visualizzarle o meno. Provare ad aggiungere queste informazioni nell'ultima pagina del report. Impostare la visibilità delle caselle di testo in base a un parametro modificabile dall'utente.  
   
-##  <a name="DesignSurface"></a> Interazione con l'area di progettazione del report  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> Interazione con l'area di progettazione del report  
  L'area di progettazione del report non è WYSIWIG. Quando si posizionano gli elementi del report nell'area di progettazione, la posizione relativa influisce sulla modalità di visualizzazione degli elementi nella pagina del report visualizzabile. Lo spazio vuoto viene mantenuto.  
   
 -   Utilizzare le guide di allineamento e i pulsanti di layout per allineare e disporre gli elementi nell'area di progettazione del report. È ad esempio possibile allineare le parti superiori o i bordi degli elementi selezionati, espandere un elemento affinché corrisponda alle dimensioni di un altro elemento oppure regolare la spaziatura tra gli elementi.  
@@ -88,7 +88,7 @@ ms.locfileid: "77081094"
   
 -   Per trascinare i campi dal riquadro dei dati del report nel riquadro di raggruppamento, evitare di trascinare il campo attraverso altri elementi del report nell'area di progettazione perché in questo modo vengono selezionati gli altri elementi e viene deselezionata l'area dati Tablix. Trascinare il campo nel riquadro dei dati del report e successivamente nel riquadro di raggruppamento.  
   
-###  <a name="Selecting"></a> Selezione degli elementi  
+###  <a name="selecting-items"></a><a name="Selecting"></a> Selezione degli elementi  
  Per agevolare la selezione dell'oggetto desiderato nell'area di progettazione del report, utilizzare il tasto ESC, il menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse su un elemento, il riquadro Proprietà e il riquadro di raggruppamento.  
   
 -   -   Premere ESC per scorrere l'insieme di elementi del report che occupano lo stesso spazio nell'area di progettazione.  
@@ -101,31 +101,31 @@ ms.locfileid: "77081094"
   
  In Progettazione report di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è possibile effettuare una selezione da un elenco a discesa di oggetti sulla barra degli strumenti del riquadro Proprietà o dalla vista gerarchica di elementi del report nella finestra Struttura documento. È possibile selezionare gli elementi in questo riquadro e visualizzare quali elementi sono selezionati nell'area di progettazione. Per aprire la finestra Struttura documento, scegliere **Altre finestre** dal menu **Visualizza**, quindi fare clic su **Struttura documento**.  
   
-##  <a name="ReportItems"></a> Utilizzo di tipi specifici di elementi del report  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> Utilizzo di tipi specifici di elementi del report  
   
-###  <a name="Parameters"></a> Utilizzo dei parametri  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> Utilizzo dei parametri  
   
 -   Lo scopo principale dei parametri del report è filtrare dati nell'origine dati e recuperare solo quelli necessari per il report.  
   
 -   Per i parametri del report, trovare un equilibrio tra interattività e possibilità per un utente di ottenere i risultati desiderati. È possibile ad esempio impostare i valori predefiniti di un parametro sui valori che vengono utilizzati più di frequente.  
   
-###  <a name="Text"></a> Utilizzo del testo  
+###  <a name="working-with-text"></a><a name="Text"></a> Utilizzo del testo  
   
 -   Quando viene incollato in una casella di testo, il testo su più righe viene aggiunto come un'unica sequenza. Ogni sequenza di testo può essere solo formattata come unità. Per formattare ogni riga in modo indipendente, inserirne una nuova premendo INVIO nella sequenza di testo in base alle esigenze. La formattazione e gli stili possono essere applicati a ogni riga indipendente del testo nella casella di testo.  
   
 -   È possibile impostare proprietà e azioni del formato in una casella di testo o in un testo segnaposto della casella di testo. Se è presente una sola riga di testo, risulta più efficace impostare le proprietà nella casella di testo anziché nel testo.  
   
-###  <a name="Expressions"></a> Utilizzo delle espressioni  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> Utilizzo delle espressioni  
   
 -   Conoscere i formati di espressioni semplici e complesse. È possibile digitare il formato di espressioni semplici direttamente nelle caselle di testo, le proprietà nel riquadro Proprietà o in percorsi in finestre di dialogo che accettano un'espressione. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 -   Quando si crea un'espressione, può essere opportuno creare ogni parte indipendentemente e verificarne il valore. È possibile quindi combinare tutte le parti in un'espressione finale. Una tecnica utile è aggiungere una casella di testo in una cella di matrice, visualizzare ogni parte dell'espressione e impostare la visibilità condizionale nella casella di testo. Per controllare il colore e lo stile del bordo quando la casella di testo è nascosta, posizionare innanzitutto la casella di testo in un rettangolo, quindi impostare il colore e lo stile del bordo del rettangolo in modo da corrispondere alla matrice.  
   
-###  <a name="Indicators"></a> Utilizzo di indicatori  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> Utilizzo di indicatori  
   
 -   Per impostazione predefinita, un indicatore mostra almeno tre stati. Dopo avere aggiunto un indicatore a un report, è possibile configurarlo aggiungendo o rimuovendo stati. Per agevolare la visualizzazione agli utenti, scegliere un indicatore che possa variare in base al colore e alla forma.  
   
-##  <a name="Rendering"></a> Controllo del rendering degli elementi del report nella pagina del report  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> Controllo del rendering degli elementi del report nella pagina del report  
   
 -   Nell'area di progettazione del report le dimensioni degli elementi del report aumentano per adattarsi al contenuto su cui viene eseguito il mapping a l set di dati, all'espressione, al sottoreport o al testo associati.  
   

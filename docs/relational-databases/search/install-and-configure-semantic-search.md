@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: cac6ecd59b270feecea3590c33c9dc8c41f1edcc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73638033"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installazione e configurazione della ricerca semantica
@@ -25,7 +25,7 @@ ms.locfileid: "73638033"
   
 ## <a name="install-semantic-search"></a>Installare la ricerca semantica  
   
-###  <a name="HowToCheckInstalled"></a> Controllare se la ricerca semantica è installata  
+###  <a name="check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a> Controllare se la ricerca semantica è installata  
  Eseguire una query sulla proprietà **IsFullTextInstalled** della funzione per i metadati [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md).  
   
  Se viene restituito il valore 1, la ricerca full-text e la ricerca semantica sono installate. Se viene restituito il valore 0, le ricerche non sono installate.  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> Installare la ricerca semantica  
+###  <a name="install-semantic-search"></a><a name="BasicsSemanticSearch"></a> Installare la ricerca semantica  
  Per installare la ricerca semantica, selezionare **Estrazioni full-text e semantiche per la ricerca** nella pagina **Funzionalità da installare** durante l'installazione di SQL Server.  
   
  La ricerca semantica statistica dipende dalla ricerca full-text. Queste due funzionalità facoltative di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installate insieme.  
@@ -43,7 +43,7 @@ GO
 ## <a name="install-the-semantic-language-statistics-database"></a>Installare il database di statistiche lingua semantica  
  La ricerca semantica dispone di una dipendenza esterna aggiuntiva denominata database di statistiche lingua semantica. Questo database contiene i modelli di lingua statistici richiesti dalla ricerca semantica. Un singolo database di statistiche lingua semantica contiene i modelli di lingua per tutte le lingue supportate per l'indicizzazione semantica.  
   
-###  <a name="HowToCheckDatabase"></a> Controllare se il database di statistiche lingua semantica è installato  
+###  <a name="check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a> Controllare se il database di statistiche lingua semantica è installato  
  Eseguire una query sulla vista del catalogo [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
  Se il database di statistiche lingua semantica è installato e registrato per l'istanza, i risultati della query conterranno una sola riga di informazioni sul database.  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> Installare, collegare e registrare il database di statistiche lingua semantica  
+###  <a name="install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a> Installare, collegare e registrare il database di statistiche lingua semantica  
  Il database di statistiche lingua semantica non viene installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per configurare il database di statistiche lingua semantica come prerequisito per l'indicizzazione semantica, eseguire le operazioni seguenti:  
   
  **1. Installare il database di statistiche lingua semantica.**  
@@ -100,7 +100,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
 
-##  <a name="reqinstall"></a> Requisiti e restrizioni per il database di statistiche lingua semantica  
+##  <a name="requirements-and-restrictions-for-the-semantic-language-statistics-database"></a><a name="reqinstall"></a> Requisiti e restrizioni per il database di statistiche lingua semantica  
   
 -   È possibile collegare e registrare un solo database di statistiche lingua semantica in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -112,7 +112,7 @@ GO
   
 -   È possibile scollegare o eliminare il database di statistiche lingua semantica. Se ad alcune operazioni di indicizzazione attive sono applicati blocchi in lettura per il database, lo scollegamento o l'eliminazione non riuscirà o si verificherà un timeout. Questo aspetto è coerente con il comportamento esistente. In seguito alla rimozione del database, qualsiasi operazione di indicizzazione semantica non riuscirà.  
  
-##  <a name="HowToUnregister"></a> Rimuovere il database di statistiche lingua semantica  
+##  <a name="remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a> Rimuovere il database di statistiche lingua semantica  
 
 ###  <a name="unregister-detach-and-remove-the-semantic-language-statistics-database"></a>Annullare la registrazione, scollegare e rimuovere il database di statistiche lingua semantica 
 
@@ -143,7 +143,7 @@ GO
   
 ## <a name="install-optional-support-for-newer-document-types"></a>Installare supporto facoltativo per i tipi di documento più nuovi  
   
-###  <a name="office"></a> Installare i filtri più recenti per tipi di documento di Microsoft Office e altri documenti Microsoft  
+###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> Installare i filtri più recenti per tipi di documento di Microsoft Office e altri documenti Microsoft  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati i word breaker e gli stemmer [!INCLUDE[msCoName](../../includes/msconame-md.md)] più recenti, ma non vengono installati i filtri più recenti per i documenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e altri tipi di documento [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Questi filtri sono necessari per l'indicizzazione di documenti creati con le versioni recenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e di altre applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Per scaricare i filtri più recenti, vedere [Microsoft Office 2010 Filter Pack](https://www.microsoft.com/download/details.aspx?id=17062). (Non sembra essere disponibile una versione del Filter Pack per Office 2013 o Office 2016.)
   
   

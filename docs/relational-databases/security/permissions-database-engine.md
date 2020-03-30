@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995857"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
@@ -40,7 +40,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Convenzioni di denominazione delle autorizzazioni  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> Convenzioni di denominazione delle autorizzazioni  
  Di seguito vengono descritte le convenzioni generali adottate per la denominazione delle autorizzazioni:  
   
 -   CONTROL  
@@ -96,7 +96,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 ## <a name="chart-of-sql-server-permissions"></a>Grafico delle autorizzazioni di SQL Server  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> Autorizzazioni applicabili a particolari entità a protezione diretta  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Autorizzazioni applicabili a particolari entità a protezione diretta  
  Nella tabella seguente vengono elencati le classi principali di autorizzazione e i tipi di entità a protezione diretta a cui possono essere applicati.  
   
 |Autorizzazione|Si applica a|  
@@ -118,7 +118,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 > [!CAUTION]  
 >  Le autorizzazioni predefinite concesso a oggetti di sistema durante l'installazione vengono valutati attentamente per individuare possibili minacce e non è quindi necessario modificarli per implementare misure di protezione avanzata dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eventuali modifiche alle autorizzazioni per gli oggetti di sistema possono limitare o compromettere la funzionalità e potrebbero lasciare l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno stato non supportato.  
   
-##  <a name="_permissions"></a> Autorizzazioni di SQL Server  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> Autorizzazioni di SQL Server  
  La tabella seguente contiene un elenco completo delle autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni del[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sono disponibili solo per entità a protezione diretta supportate. Non è possibile concedere autorizzazioni a livello di server in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], tuttavia in alcuni casi sono disponibili invece autorizzazioni di database.  
   
 |Entità a protezione diretta di base|Autorizzazioni di granularità sull'entità a protezione diretta di base|Codice tipo di autorizzazione|Entità a protezione diretta contenente l'entità a protezione diretta di base|Autorizzazione sull'entità a protezione diretta contenente che implica un'autorizzazione di granularità sull'entità a protezione diretta di base|  
@@ -361,7 +361,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Riepilogo delle informazioni sull'algoritmo di controllo delle autorizzazioni  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Riepilogo delle informazioni sull'algoritmo di controllo delle autorizzazioni  
  Il controllo delle autorizzazioni può essere complesso. L'algoritmo di controllo delle autorizzazioni include le appartenenze a gruppi sovrapposti e il concatenamento di proprietà, nonché autorizzazioni esplicite e implicite. È inoltre possibile che le autorizzazioni per le classi di entità a protezione diretta contenenti l'entità a protezione diretta abbiano impatto su tale algoritmo. Il processo generale dell'algoritmo consiste nel raccogliere tutte le autorizzazioni rilevanti. Se non viene individuato alcun blocco DENY, l'algoritmo cerca un'istruzione GRANT che fornisce accesso sufficiente. L'algoritmo contiene tre elementi fondamentali, ovvero il **contesto di sicurezza**, lo **spazio di autorizzazione**e l' **autorizzazione necessaria**.  
   
 > [!NOTE]  
@@ -423,7 +423,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Un'istruzione GRANT a livello di colonna esegue l'override di un'istruzione DENY a livello di tabella. Tuttavia, un'istruzione DENY successiva a livello di tabella rimuoverà l'istruzione GRANT a livello di colonna. 
   
-##  <a name="_examples"></a> Esempi  
+##  <a name="examples"></a><a name="_examples"></a> Esempi  
  Negli esempi inclusi in questa sezione viene illustrato come recuperare le informazioni sulle autorizzazioni.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  

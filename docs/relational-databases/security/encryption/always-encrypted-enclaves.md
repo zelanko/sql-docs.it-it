@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558034"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
@@ -87,7 +87,7 @@ Per altre informazioni sui tipi di crittografia, vedere [Crittografia Always Enc
 
 La tabella seguente riepiloga le funzionalità disponibili per le colonne crittografate, a seconda che le colonne usino le chiavi di crittografia di colonna abilitate per l'enclave e un tipo di crittografia.
 
-| **operazione**| **La colonna NON è abilitata per l'enclave** |**La colonna NON è abilitata per l'enclave**| **La colonna è abilitata per l'enclave**  |**La colonna è abilitata per l'enclave** |
+| **Operazione**| **La colonna NON è abilitata per l'enclave** |**La colonna NON è abilitata per l'enclave**| **La colonna è abilitata per l'enclave**  |**La colonna è abilitata per l'enclave** |
 |:---|:---|:---|:---|:---|
 | | **Crittografia casuale**  | **Crittografia deterministica**     | **Crittografia casuale**      | **Crittografia deterministica**     |
 | **Crittografia sul posto** | Non supportato  | Non supportato   | Supportato         | Supportato    |
@@ -139,7 +139,7 @@ Le considerazioni sulla sicurezza seguenti si applicano ad Always Encrypted con 
 - La crittografia di una colonna tramite la crittografia casuale con una chiave CEK abilitata per l'enclave può comportare la divulgazione dell'ordine dei dati archiviati nella colonna, in quanto tali colonne supportano i confronti degli intervalli. Ad esempio, se una colonna crittografata che contiene gli stipendi dei dipendenti dispone di un indice, un amministratore di database malintenzionato potrebbe analizzare l'indice per trovare il valore crittografato dello stipendio massimo e identificare la persona con lo stipendio massimo (presupponendo che il nome della persona non sia crittografato). 
 - Se si usa Always Encrypted per proteggere i dati sensibili dall'accesso non autorizzato da parte degli amministratori di database, non condividere le chiavi master della colonna o le chiavi di crittografia della colonna con gli amministratori di database. Un amministratore di database può gestire gli indici nelle colonne crittografate senza avere accesso diretto alle chiavi, sfruttando la cache delle chiavi di crittografia di colonna all'interno dell'enclave.
 
-## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considerazioni sui gruppi di disponibilità e sulla migrazione dei database
+## <a name="considerations-for-availability-groups-and-database-migration"></a><a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considerazioni sui gruppi di disponibilità e sulla migrazione dei database
 
 Quando si configura un gruppo di disponibilità Always On che è richiesto per supportare le query che usano gli enclave, è necessario assicurarsi che tutte le istanze di SQL Server che ospitano i database nel gruppo di disponibilità supportino Always Encrypted con enclave sicuri e che sia stato configurato un enclave. Se gli enclave sono supportati dal database primario, ma non da una replica secondaria, qualsiasi query che tenta di usare la funzionalità Always Encrypted con enclave sicuri avrà esito negativo.
 

@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146299"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> Aggiungere il database nella replica secondaria del secondo gruppo di disponibilità
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> Aggiungere il database nella replica secondaria del secondo gruppo di disponibilità
 Quando il database nella replica secondaria del secondo gruppo di disponibilità è in uno stato di ripristino, è necessario aggiungerlo manualmente al gruppo di disponibilità.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> Failover su un gruppo di disponibilità secondario  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> Failover su un gruppo di disponibilità secondario  
 
 In questo momento è supportato solo il failover manuale. Per eseguire il failover manuale di un gruppo di disponibilità distribuito:
 

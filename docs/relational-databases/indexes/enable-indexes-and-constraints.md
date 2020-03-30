@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107115"
 ---
 # <a name="enable-indexes-and-constraints"></a>Abilitazione di indici e vincoli
@@ -44,9 +44,9 @@ ms.locfileid: "68107115"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Dopo la ricompilazione dell'indice, sarà necessario abilitare manualmente tutti i vincoli disabilitati in seguito alla disabilitazione dell'indice. Per abilitare i vincoli PRIMARY KEY e UNIQUE, è necessario ricompilare l'indice associato. Ricompilare e abilitare questo indice prima di abilitare i vincoli FOREIGN KEY che fanno riferimento al vincolo PRIMARY KEY o UNIQUE. Per abilitare i vincoli FOREIGN KEY, utilizzare l'istruzione ALTER TABLE CHECK CONSTRAINT.  
   
@@ -73,12 +73,12 @@ ms.locfileid: "68107115"
 
 -   Durante la ricompilazione di indici non cluster compressi disabilitati, data_compression avrà come valore predefinito 'none' a indicare che gli indici saranno non compressi. Sulla base delle impostazioni di compressione, i metadati vengono persi quando gli indici non cluster sono disabilitati. Per risolvere questo problema, è necessario specificare la compressione dei dati esplicita nell'istruzione di ricompilazione.
 
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. Se si usa DBCC DBREINDEX, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>Per abilitare un indice disabilitato  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68107115"
   
  Le informazioni seguenti sono disponibili nella finestra di dialogo **Ricompila indici** :  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Per abilitare un indice disabilitato utilizzando ALTER INDEX  
   

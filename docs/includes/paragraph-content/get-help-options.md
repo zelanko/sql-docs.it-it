@@ -1,4 +1,4 @@
-## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Ottenere aiuto
+## <a name="info_tip-get-help"></a>![info_tip](../media/info-tip.png) Ottenere aiuto
 
 - [UserVoice: suggerimenti per migliorare SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Configurazione e aggiornamento: forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)

@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d92555fba1d9e0a380ffdc9051817ddfae9ca4b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381764"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configurazione di UDL (Universal Data Link)
@@ -37,7 +37,7 @@ Nella scheda Connessione, specifica del provider, vengono visualizzate solo le p
 |Nome utente|Digitare l'ID utente da usare per l'autenticazione quando si accede all'origine dati.|
 |Password|Digitare la password da usare per l'autenticazione quando si accede all'origine dati.|
 |Nessuna password|Se è selezionata, questa opzione consente al provider specificato di usare una password vuota nella stringa di connessione.|
-|Consenti salvataggio password|Se è selezionata, questa opzione consente di salvare la password con la stringa di connessione. L'eventuale inclusione della password nella stringa di connessione dipende dalle funzionalità dell'applicazione chiamante. <br/><br/>**NOTA** se salvata, la password viene restituita e salvata non mascherata e non crittografata.|
+|Consenti salvataggio password|Se è selezionata, questa opzione consente di salvare la password con la stringa di connessione. L'eventuale inclusione della password nella stringa di connessione dipende dalle funzionalità dell'applicazione chiamante. <br/><br/>**NOTA:** se salvata, la password viene restituita e salvata non mascherata e non crittografata.|
 |Usa crittografia avanzata per i dati|Se questa opzione è selezionata, i dati passati attraverso la connessione verranno crittografati.|
 |Certificato server attendibile|Se questa opzione è selezionata, il certificato del server verrà convalidato. Il certificato del server deve avere il nome host corretto del server e deve essere emesso da un'autorità di certificazione attendibile.|
 |Selezionare il database|Selezionare o digitare il nome del database a cui si vuole accedere.|

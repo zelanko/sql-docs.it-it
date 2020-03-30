@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d35c339798b4385cb903d8a4a83f13184bbf4db3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381749"
 ---
 # <a name="sql-server-login-dialog-box"></a>Finestra di dialogo di accesso a SQL Server
@@ -35,7 +35,7 @@ Quando si tenta di connettersi senza specificare informazioni sufficienti, il dr
 |Opzione|Descrizione|
 |---   |---        |
 |Server|Nome di un'istanza di SQL Server in rete. Selezionare un nome di server o di istanza nell'elenco oppure digitarlo nella casella **Server**. Facoltativamente, è possibile creare un alias del server nel computer client tramite **Gestione configurazione SQL Server** e digitarlo nella casella **Server**. <br/><br/>È possibile immettere "(locale)" quando si usa lo stesso computer in cui è presente SQL Server. È quindi possibile connettersi a un'istanza locale di SQL Server anche in caso di esecuzione di una versione non in rete di SQL Server.<br/><br/>Per altre informazioni sui nomi dei server per i diversi tipi di rete, vedere [Installazione di SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
-|Modalità di autenticazione|Dall'elenco a discesa è possibile selezionare le opzioni di autenticazione seguenti:<br/><ul><li>`Windows Authentication:` Autenticazione per SQL Server con le credenziali dell'account di Windows dell'utente attualmente connesso.</li><li>`SQL Server Authentication:` Autenticazione con ID di accesso e password.</li><li>`Active Directory - Integrated:` Autenticazione integrata con un'identità di Azure Active Directory. Questa modalità può essere usata anche per l'autenticazione di Windows per SQL Server.</li><li>`Active Directory - Password:`Autenticazione di ID utente e password con un'identità di Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Autenticazione interattiva con un'identità di Azure Active Directory. Questa modalità supporta l'autenticazione a più fattori (MFA) di Azure.</li></ul>|
+|Modalità di autenticazione|Dall'elenco a discesa è possibile selezionare le opzioni di autenticazione seguenti:<br/><ul><li>`Windows Authentication:` Autenticazione per SQL Server con le credenziali dell'account di Windows dell'utente attualmente connesso.</li><li>`SQL Server Authentication:` Autenticazione con ID di accesso e password.</li><li>`Active Directory - Integrated:` Autenticazione integrata con un'identità di Azure Active Directory. Questa modalità può essere usata anche per l'autenticazione di Windows per SQL Server.</li><li>`Active Directory - Password:` Autenticazione di ID utente e password con un'identità di Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Autenticazione interattiva con un'identità di Azure Active Directory. Questa modalità supporta l'autenticazione a più fattori (MFA) di Azure.</li></ul>|
 |SPN server|Se si utilizza una connessione trusted, è possibile specificare un nome dell'entità servizio (SPN) per il server.|
 |ID accesso|Immettere l'ID di accesso da usare per la connessione. La casella di testo ID accesso è abilitata solo se `Authentication Mode` è impostata su `SQL Server Authentication`, `Active Directory - Password` o `Active Directory - Universal with MFA support`.|
 |Password|Specifica la password usata per la connessione. La casella di testo della password è abilitata solo se `Authentication Mode` è impostata su `SQL Server Authentication` o `Active Directory - Password`.|

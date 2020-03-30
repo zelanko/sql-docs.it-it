@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014685"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
@@ -436,7 +436,7 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
  È possibile visualizzare la cronologia processo per controllare i risultati della valutazione. Anche gli errori di valutazione vengono registrati nel registro applicazioni di Windows (nel Visualizzatore eventi) con l'ID evento 34052. È anche possibile configurare SQL Server Agent per l'invio di avvisi in caso di errori dei criteri. Per altre informazioni, vedere [Configure alerts to notify policy administrators of policy failures](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md) (Configurare avvisi per notificare agli amministratori eventuali errori dei criteri).  
   
-##  <a name="BKMK_SCENARIOS"></a> Scenari di risoluzione dei problemi relativi alle prestazioni  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Scenari di risoluzione dei problemi relativi alle prestazioni  
  Nella tabella seguente sono elencati gli scenari comuni di risoluzione dei problemi relativi alle prestazioni.  
   
 |Scenario|Descrizione|  
@@ -445,7 +445,7 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
 |[Risolvere i problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Dopo aver eseguito un failover manuale forzato, la perdita di dati è maggiore dell'obiettivo RPO. In alternativa, quando si calcola la potenziale perdita di dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
 |[Risolvere i problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
   
-##  <a name="BKMK_XEVENTS"></a> Eventi estesi utili  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> Eventi estesi utili  
  Gli eventi estesi seguenti sono utili quando vengono risolti i problemi delle repliche che hanno lo stato **Sincronizzazione in corso**.  
   
 |Nome evento|Category|Channel|replica di disponibilità|  

@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952477"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Aggiungere elementi del report impaginato di Reporting Services ai dashboard in Power BI
@@ -28,7 +28,7 @@ ms.locfileid: "75952477"
 
 È possibile aggiungere l'elemento di un report impaginato di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in locale a un dashboard nel servizio [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] come nuovo riquadro.   Per aggiungere elementi, l'amministratore deve innanzitutto integrare il server di report con Azure Active Directory e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
-##  <a name="bkmk_requirements_to_pin"></a> Requisiti per l'aggiunta  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> Requisiti per l'aggiunta  
   
 -   Il server di report è configurato per l'integrazione di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Se il server di report non è stato configurato, il pulsante **Aggiungi al dashboard di Power BI** non verrà visualizzato nella barra degli strumenti del Visualizzatore report.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75952477"
  
     Vedere la sezione "Configurare le credenziali archiviate per un'origine dati specifica del report (modalità nativa)" di [Archiviare le credenziali in un'origine dati di Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
-##  <a name="bkmk_supported_items"></a> Elementi che è possibile aggiungere  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> Elementi che è possibile aggiungere  
  I seguenti elementi del report possono essere aggiunti a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Non è possibile aggiungere elementi annidati all'interno di un'area dati. Ad esempio, non è possibile aggiungere un elemento annidato all'interno di una tabella o un elenco di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Grafici  
@@ -54,7 +54,7 @@ ms.locfileid: "75952477"
 -   Gli elementi devono far parte del corpo del report.  Non è possibile aggiungere elementi presenti nell'intestazione o nel piè di pagina.  
 -   È possibile aggiungere singoli elementi presenti all'interno di un rettangolo di livello superiore, ma non come unico gruppo.  
   
-##  <a name="bkmk_to_pin"></a> Per aggiungere un elemento del report  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> Per aggiungere un elemento del report  
   
 1. Verificare di aver eseguito l'accesso a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] selezionare la voce di menu **Impostazioni personali** ed eseguire l'accesso. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
@@ -78,7 +78,7 @@ ms.locfileid: "75952477"
   
 6. Fare clic su **Chiudi** per tornare alla visualizzazione normale del report.  
   
-##  <a name="bkmk_in_the_dashboard"></a> Nel dashboard
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> Nel dashboard
 
 Dopo l'aggiunta dell'elemento del report nel dashboard, l'aspetto del riquadro è simile a quello di altri riquadri del dashboard e non è presente alcuna indicazione visibile riguardo la sua provenienza da [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. L'elenco seguente riepiloga in che modo le proprietà del riquadro vengono popolate dall'elemento del report.  
   
@@ -94,7 +94,7 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> Risolvere eventuali problemi  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> Risolvere eventuali problemi  
   
 -   **Nessun pulsante di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] nella barra degli strumenti del Visualizzatore report:**  questo messaggio indica che il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
@@ -118,7 +118,7 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
 
 -   **I riquadri nelle app Power BI mostrano dati non aggiornati:** Se si aggiunge un elemento del report di Reporting Services a un dashboard e quindi si distribuisce il dashboard in un'app, l'elemento del report aggiunto in tale dashboard non verrà aggiornato. 
 
-##  <a name="bkmk_subscription_management"></a> Gestione delle sottoscrizioni  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> Gestione delle sottoscrizioni  
  Oltre ai problemi relativi alle sottoscrizioni descritti nella sezione sulla risoluzione dei problemi, le informazioni seguenti aiuteranno a mantenere le sottoscrizioni relative a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
 -   **Nome dell'elemento modificato:** se un elemento del report aggiunto viene rinominato o eliminato, il riquadro di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] non verrà più aggiornato e verrà visualizzato un messaggio di errore simile al seguente.  Se si ripristina il nome originale dell'elemento, la sottoscrizione inizierà a funzionare di nuovo e il riquadro verrà aggiornato nella pianificazione delle sottoscrizioni.  
