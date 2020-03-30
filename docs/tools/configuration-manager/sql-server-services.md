@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d37291b7626e3a8f3fb47555d66af2e5e21feea2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306754"
 ---
 # <a name="sql-server-services"></a>Servizi di SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "75306754"
 >  Se si apre **Gestione configurazione SQL Server** in un nodo di un cluster che non ospita le risorse, i servizi risultano arrestati.  
   
 > [!NOTE]  
->  Se i nodi di Servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono popolati con i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili sul computer, è possibile che non si disponga di autorizzazioni sufficienti per accedere a Strumentazione gestione Windows (WMI). Per configurare le autorizzazioni su WMI, cercare nella documentazione online l'argomento "Procedura: Configurare WMI per mostrare lo stato del server in Strumenti SQL Server".  
+>  Se i nodi di Servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono popolati con i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili sul computer, è possibile che non si disponga di autorizzazioni sufficienti per accedere a Strumentazione gestione Windows (WMI). Per configurare le autorizzazioni su WMI, cercare la documentazione online sull'argomento, "Procedura: Configurazione di WMI per mostrare lo stato del server in Strumenti di SQL Server".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di Gestione configurazione SQL Server](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  

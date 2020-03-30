@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000713"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Indici XML selettivi
@@ -33,7 +33,7 @@ ms.locfileid: "68000713"
   
  La funzionalità degli indici XML selettivi supporta inoltre indici XML selettivi secondari nei nodi indicizzati da un indice XML selettivo. Questi indici selettivi secondari risultano particolarmente efficaci e implicano un miglioramento delle prestazioni delle query.  
   
-##  <a name="benefits"></a> Vantaggi degli indici XML selettivi  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> Vantaggi degli indici XML selettivi  
  Di seguito sono indicati i vantaggi offerti dagli indici XML selettivi.  
   
 1.  Prestazioni delle query notevolmente migliorate sul tipo di dati XML per carichi di query tipici.  
@@ -45,7 +45,7 @@ ms.locfileid: "68000713"
 4.  Nessuna necessità di aggiornare le applicazioni per ricavare vantaggi dagli indici XML selettivi.  
   
   
-##  <a name="compare"></a> Indici XML selettivi e indici XML primari  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> Indici XML selettivi e indici XML primari  
   
 > [!IMPORTANT]  
 >  Creare un indice XML selettivo anziché un indice XML comune nella maggior parte dei casi per migliorare le prestazioni e usufruire di uno spazio di archiviazione più efficiente.  
@@ -57,7 +57,7 @@ ms.locfileid: "68000713"
 -   Vengono supportate le query per elementi sconosciuti o in una posizione sconosciuta nella struttura del documento.  
   
   
-##  <a name="example"></a> Semplice esempio di un indice XML selettivo  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> Semplice esempio di un indice XML selettivo  
  Considerare il frammento XML indicato di seguito come un documento XML in una tabella di circa 500.000 righe:  
   
 ```xml  
@@ -101,7 +101,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>Funzionalità supportate, prerequisiti e limitazioni  
   
-###  <a name="features"></a> Funzionalità XML supportate  
+###  <a name="supported-xml-features"></a><a name="features"></a> Funzionalità XML supportate  
  Gli indici XML selettivi supportano l'espressione XQuery, a sua volta supportata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei metodi exist(), value() e nodes().  
   
 -   Per i metodi exist(), value() e nodes(), gli indici XML selettivi contengono informazioni sufficienti a trasformare l'intera espressione.  
@@ -113,7 +113,7 @@ FOR
 -   Per il metodo modify(), gli indici XML selettivi non vengono utilizzati per aggiornare i documenti XML.  
   
   
-###  <a name="unsupported"></a> Funzionalità XML non supportate  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> Funzionalità XML non supportate  
  Gli indici XML selettivi non supportano le seguenti funzionalità supportate nell'implementazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di XML:  
   
 -   Indicizzazione dei nodi con tipi XS complessi: tipi unione, tipi sequenza e tipi elenco.  
@@ -129,7 +129,7 @@ FOR
 -   Specifica e recupero dell'identificatore di un nodo mediante la funzione id().  
   
   
-###  <a name="prereq"></a> Prerequisiti  
+###  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti  
  Sono necessari i prerequisiti indicati di seguito per poter creare un indice XML selettivo per una colonna XML in una tabella utente:  
   
 -   È necessario che esista un indice cluster sulla chiave primaria della tabella utente.  
@@ -139,7 +139,7 @@ FOR
 -   La chiave di clustering della tabella utente è limitata a 15 colonne quando viene utilizzata con gli indici XML selettivi.  
   
   
-###  <a name="limits"></a> Limitazioni  
+###  <a name="limitations"></a><a name="limits"></a> Limitazioni  
  **Requisiti e limitazioni generali**  
   
 -   Ogni indice XML selettivo deve necessariamente essere creato su una singola colonna XML.  
@@ -191,7 +191,7 @@ FOR
 -   Gli indici XML selettivi e gli indici XML selettivi secondari non sono supportati nell'ottimizzazione guidata motore di database.  
   
   
-##  <a name="reltasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Attività correlate  
   
 |||  
 |-|-|  

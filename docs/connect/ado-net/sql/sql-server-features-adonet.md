@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896261"
 ---
 # <a name="sql-server-features-and-adonet"></a>Funzionalità di SQL Server e ADO.NET
@@ -33,10 +33,10 @@ Viene descritto come enumerare le istanze attive di SQL Server.
 Viene descritto il supporto per ottenere statistiche di runtime di SQL Server.  
   
 [Istanze utente di SQL Server Express](sql-server-express-user-instances.md)  
-Viene descritto il supporto per le istanze utente di SQL Server Express.  
+Descrive il supporto per le istanze utente di SQL Server Express.  
   
 [Mirroring del database in SQL Server](database-mirroring-sql-server.md)  
-Viene descritta la funzionalità di mirroring del database.  
+Descrive la funzionalità di mirroring del database.  
 
 [Connessione di contesto](context-connection.md)  
 Viene descritta la connessione di contesto.  
@@ -51,7 +51,7 @@ Viene descritto il supporto per l'isolamento dello snapshot, un meccanismo di co
 Viene descritto il supporto di SqlClient per gruppi di disponibilità AlwaysOn per il ripristino di emergenza a disponibilità elevata.  
   
 [Supporto di SqlClient per Local DB](sqlclient-support-localdb.md)  
-Viene descritto il supporto di SqlClient per i database LocalDB.
+Descrive il supporto di SqlClient per i database Local DB.
 
 [Supporto di SqlClient per Always Encrypted](sqlclient-support-always-encrypted.md)  
 Viene descritto il supporto di SqlClient per la funzionalità Always Encrypted.

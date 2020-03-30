@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264986"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -33,7 +33,7 @@ ms.locfileid: "68264986"
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
    
-##  <a name="bkmk_known_issues"></a> Problemi di aggiornamento noti e procedure consigliate  
+##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> Problemi di aggiornamento noti e procedure consigliate  
  Per un elenco dettagliato delle edizioni e delle versioni supportate che è possibile aggiornare, vedere [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
@@ -42,13 +42,13 @@ ms.locfileid: "68264986"
 >  -   [Note sulla versione di SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
-##  <a name="bkmk_side_by_side"></a> Installazioni side-by-side  
+##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Installazioni side-by-side  
  È possibile eseguire l'installazione side-by-side della modalità nativa di SQL Server Reporting Services con una distribuzione in modalità nativa di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Le distribuzioni side-by-side di SQL Server Reporting Services in modalità SharePoint e di qualsiasi versione precedente dei componenti della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non sono supportate.  
   
   
-##  <a name="bkmk_inplace_upgrade"></a> Aggiornamento sul posto  
+##  <a name="in-place-upgrade"></a><a name="bkmk_inplace_upgrade"></a> Aggiornamento sul posto  
  L'aggiornamento viene completato tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare uno o tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Durante l'installazione vengono rilevate le istanze esistenti e viene richiesto di eseguire l'aggiornamento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione offre diverse opzioni di aggiornamento che è possibile specificare come argomento della riga di comando o nell'Installazione guidata.  
   
  Quando si esegue il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile selezionare l'opzione che consente di eseguire l'aggiornamento da una delle versioni seguenti oppure installare una nuova istanza di SQL Server Reporting Services che esegue le installazioni side-by-side esistenti:  
@@ -68,7 +68,7 @@ ms.locfileid: "68264986"
 * [Installazione di SQL Server 2016 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
   
-##  <a name="bkmk_upgrade_checklist"></a> Elenco di controllo preliminare all'aggiornamento  
+##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> Elenco di controllo preliminare all'aggiornamento  
  Prima dell'aggiornamento a SQL Server Reporting Services, verificare quanto segue:  
   
 -   Rivedere i requisiti per determinare se l'hardware e il software in uso supportano [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Per altre informazioni, vedere [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "68264986"
   
 -   Eseguire il backup di eventuali personalizzazioni nelle directory virtuali di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] esistenti in IIS.  
   
--   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  Se i certificati non sono validi, l'aggiornamento non sarà eseguito correttamente e nel file di log di Reporting Services verrà visualizzato un messaggio di errore simile al seguente: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Nel sito Web non è configurato un certificato SSL (Secure Sockets Layer).**  
+-   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  I certificati non validi causano l'esito negativo dell'aggiornamento e un messaggio di errore simile al seguente verrà scritto nel file di registro di Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Nel sito Web non è configurato un certificato SSL (Secure Sockets Layer)** .  
   
  Prima di aggiornare un ambiente di produzione, eseguire sempre un aggiornamento di prova in un ambiente di pre-produzione che abbia la stessa configurazione dell'ambiente di produzione.  
   
@@ -100,8 +100,8 @@ ms.locfileid: "68264986"
 -   Si desidera eseguire la migrazione di una distribuzione di SharePoint 2010 di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SharePoint 2013/2016. SharePoint 2013/2016 non supporta l'aggiornamento sul posto da SharePoint 2010. Per altre informazioni, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
   
-##  <a name="bkmk_native_scenarios"></a> Scenari di aggiornamento e migrazione della modalità nativa  
- **Aggiornamento:** l'aggiornamento sul posto per la modalità nativa prevede lo stesso processo per ognuna delle versioni supportate elencate in precedenza in questo argomento. Eseguire l'Installazione guidata di SQL Server o l'installazione da riga di comando. Al termine dell'installazione il database del server di report verrà aggiornato automaticamente al nuovo schema del database del server di report. Per altre informazioni, vedere la sezione [Aggiornamento sul posto](#bkmk_inplace_upgrade) in questo argomento.  
+##  <a name="native-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_native_scenarios"></a> Scenari di aggiornamento e migrazione della modalità nativa  
+ **Aggiornamento** : l'aggiornamento sul posto per la modalità nativa prevede lo stesso processo per ognuna delle versioni supportate elencate in precedenza in questo argomento. Eseguire l'Installazione guidata di SQL Server o l'installazione da riga di comando. Al termine dell'installazione il database del server di report verrà aggiornato automaticamente al nuovo schema del database del server di report. Per altre informazioni, vedere la sezione [Aggiornamento sul posto](#bkmk_inplace_upgrade) in questo argomento.  
   
  Il processo di aggiornamento viene avviato quando si seleziona un'istanza del server di report esistente da aggiornare.  
   
@@ -129,10 +129,10 @@ ms.locfileid: "68264986"
   
 8.  Il programma di installazione unisce le impostazioni nei file di configurazione. Usando come base i file di configurazione dell'installazione corrente, vengono aggiunte nuove voci. Le voci obsolete non vengono rimosse, ma non verranno più lette dal server di report al termine dell'aggiornamento. L'aggiornamento non comporta l'eliminazione dei file di log precedenti, del file RSWebApplication.config obsoleto o delle impostazioni delle directory virtuali in IIS. L'aggiornamento non comporta la rimozione di versioni precedenti di Progettazione report, Management Studio o altri strumenti client. Se non sono più necessari, accertarsi di rimuovere i file e gli strumenti al termine dell'aggiornamento.  
   
- **Migrazione:** la migrazione di una versione precedente di un'installazione in modalità nativa a SQL Server Reporting Services prevede gli stessi passaggi per tutte le versioni supportate elencate in precedenza in questo argomento. Per altre informazioni, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migrazione**: la migrazione di una versione precedente di un'installazione in modalità nativa a SQL Server Reporting Services prevede gli stessi passaggi per tutte le versioni supportate elencate in precedenza in questo argomento. Per altre informazioni, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
   
-##  <a name="bkmk_native_scaleout"></a> Aggiornare una distribuzione con scalabilità orizzontale in modalità nativa di Reporting Services  
+##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Aggiornare una distribuzione con scalabilità orizzontale in modalità nativa di Reporting Services  
  Di seguito viene illustrato come aggiornare una distribuzione in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con scalabilità orizzontale a più di un server di report. Questo processo implica tempi di inattività della distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 1.  Eseguire il backup dei database e delle chiavi di crittografia del server di report. Per altre informazioni, vedere [Operazioni di backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
@@ -145,7 +145,7 @@ ms.locfileid: "68264986"
   
      Per ogni server, ripetere i passaggi di aggiornamento e scalabilità orizzontale.  
   
-##  <a name="bkmk_sharePoint_scenarios"></a> Scenari di aggiornamento e migrazione della modalità SharePoint  
+##  <a name="sharepoint-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_sharePoint_scenarios"></a> Scenari di aggiornamento e migrazione della modalità SharePoint  
  Nelle sezioni seguenti vengono descritti i problemi e i passaggi di base necessari per eseguire l'aggiornamento o la migrazione da versioni specificate della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] alla modalità SharePoint di SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Esistono due componenti di installazione per aggiornare una distribuzione della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -167,7 +167,7 @@ ms.locfileid: "68264986"
   
  **Ambiente finale:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016 non supporta l'aggiornamento sul posto da SharePoint 2010. Tuttavia, la procedura di **aggiornamento del collegamento di un database**  è supportata.
+-   **SharePoint 2013/2016** : SharePoint 2013/2016 non supporta l'aggiornamento sul posto da SharePoint 2010. Tuttavia, la procedura di **aggiornamento del collegamento di un database**  è supportata.
   
      Se si dispone di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrata con SharePoint 2010, non è possibile eseguire l'aggiornamento sul posto del server SharePoint. È tuttavia possibile eseguire la migrazione dei database del contenuto e di quelli dell'applicazione di servizio dalla farm di SharePoint 2010 a una di SharePoint 2013/2016.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "68264986"
   
  **Ambiente finale:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016 non supporta l'aggiornamento sul posto da SharePoint 2010. Tuttavia, la procedura di **aggiornamento del collegamento di un database**  è supportata.
+-   **SharePoint 2013/2016** : SharePoint 2013/2016 non supporta l'aggiornamento sul posto da SharePoint 2010. Tuttavia, la procedura di **aggiornamento del collegamento di un database**  è supportata.
   
      Se si dispone di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrata con SharePoint 2010, non è possibile eseguire l'aggiornamento sul posto del server SharePoint. È tuttavia possibile eseguire la migrazione dei database del contenuto e di quelli dell'applicazione di servizio dalla farm di SharePoint 2010 a una di SharePoint 2013/2016.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "68264986"
   
  **Ambiente finale:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.  
  
--   **SharePoint 2013/2016:** SharePoint 2013/2016 non supporta l'aggiornamento sul posto da SharePoint 2010. Tuttavia, la procedura di **aggiornamento del collegamento di un database**  è supportata.
+-   **SharePoint 2013/2016** : SharePoint 2013/2016 non supporta l'aggiornamento sul posto da SharePoint 2010. Tuttavia, la procedura di **aggiornamento del collegamento di un database**  è supportata.
 
     Prima di aggiornare Reporting Services, è necessario eseguire la migrazione di SharePoint.
   
@@ -194,7 +194,7 @@ ms.locfileid: "68264986"
 -   Eseguire l'installazione di SQL Server Reporting Services per aggiornare la modalità SharePoint per ogni "server di report". L'installazione guidata di SQL Server installerà il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e creerà una nuova applicazione di servizio. 
   
   
-##  <a name="bkmk_migration_considerations"></a> Considerazioni sulla migrazione  
+##  <a name="considerations-for-a-migration"></a><a name="bkmk_migration_considerations"></a> Considerazioni sulla migrazione  
  Quando si spostano dati dell'applicazione, è necessario tenere presente i problemi e le restrizioni seguenti:  
   
 -   La sicurezza della chiave di crittografia include un valore hash in cui è incorporata l'identità del computer.  
@@ -225,7 +225,7 @@ ms.locfileid: "68264986"
 -   Se il numero di elementi non è elevato, è possibile ripubblicare report e origini dati condivise da Progettazione report, Progettazione modelli e Generatore report nel nuovo server di report. È necessario ricreare assegnazioni di ruolo, sottoscrizioni, pianificazioni condivise, pianificazioni dello snapshot del report, proprietà personalizzate impostate nei report o in altri elementi, sicurezza degli elementi dei modelli e proprietà impostate nel server di report. La cronologia del report e i dati del log di esecuzione dei report saranno persi.  
   
   
-##  <a name="bkmk_additional_resources"></a> Risorse aggiuntive  
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> Risorse aggiuntive  
   
 > [!NOTE]  
 >  Per altre informazioni sull'aggiornamento del collegamento di un database di SharePoint, vedere gli argomenti seguenti:  
