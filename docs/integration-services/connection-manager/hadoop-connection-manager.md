@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903788"
 ---
 # <a name="hadoop-connection-manager"></a>Gestione connessione Hadoop
@@ -69,7 +69,7 @@ Esistono due opzioni per configurare l'ambiente locale per poter usare l'autenti
 -   Opzione 1: [Aggiungere il computer SSIS all'area di autenticazione Kerberos](#kerberos-join-realm)
 -   Opzione 2: [Abilitare il trust reciproco tra il dominio Windows e l'area di autenticazione Kerberos](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>Opzione 1: Aggiungere il computer SSIS all'area di autenticazione Kerberos
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Opzione 1: Aggiungere il computer SSIS all'area di autenticazione Kerberos
 
 #### <a name="requirements"></a>Requisiti:
 
@@ -99,7 +99,7 @@ Nel computer SSIS:
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>Opzione 2: Abilitare il trust reciproco tra il dominio Windows e l'area di autenticazione Kerberos
+### <a name="option-2-enable-mutual-trust-between-the-windows-domain-and-the-kerberos-realm"></a><a name="kerberos-mutual-trust"></a>Opzione 2: Abilitare il trust reciproco tra il dominio Windows e l'area di autenticazione Kerberos
 
 #### <a name="requirements"></a>Requisiti:
 -   Il computer gateway deve fare parte di un dominio Windows.

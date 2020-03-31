@@ -15,18 +15,16 @@
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Installazione
   items:
-    - name: Modifiche per l'isolamento in SQL Server 2019
-      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Installare ML Services in Windows
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: Installare ML Services in Linux
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+    - name: Installare ML Services in Docker
+      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+    - name: Modifiche per l'isolamento in SQL Server 2019
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Installare R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: Installare un server autonomo
-      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-    - name: Installare modelli con training preliminare
-      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: Eseguire l'installazione offline (senza Internet)
       items:
         - name: Eseguire l'installazione senza accesso a Internet
@@ -35,6 +33,8 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: Configurazione prompt dei comandi
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+    - name: Installare modelli con training preliminare
+      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: Aggiornare Python e R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: Notebook di Azure Data Studio
@@ -45,6 +45,8 @@
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Installare in una macchina virtuale di Azure
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+    - name: Installare un server autonomo
+      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: Avvi rapidi
   items:
     - name: Python

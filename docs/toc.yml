@@ -707,7 +707,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: Visualizzare le proprietà del listener
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: Operazione
+            - name: Operazioni
               items:
                 - name: Aggiungi database
                   items:
@@ -751,6 +751,8 @@
                   href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
                 - name: Visualizzare lo stato di integrità con criteri
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+                - name: Connettersi al listener
+                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
         - name: Concetti
           items:
             - name: Configurazione
@@ -789,12 +791,12 @@
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
             - name: Connettività
               items:
-                - name: Connessione client
+                - name: Listener
+                  href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+                - name: Tipi di connessione client
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: Connettività client
+                - name: Supporto di driver e client
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-                - name: 'Listener, client e failover'
-                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
             - name: Interoperabilità
               items:
                 - name: 'Replica, rilevamento delle modifiche e CDC'
@@ -4196,7 +4198,7 @@
           items:
             - name: SQL Server 2019
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-            - name: SQL Server 2017 e versioni precedenti
+            - name: SQL Server 2016 e 2017
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: Considerazioni relative alla sicurezza
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
@@ -6166,15 +6168,6 @@
                       href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
         - name: Gestione del log delle transazioni
           items:
-            - name: Visualizzatore file di log
-              href: relational-databases/logs/log-file-viewer.md
-              items:
-                - name: Apri
-                  href: relational-databases/logs/open-log-file-viewer.md
-                - name: Visualizzare offline
-                  href: relational-databases/logs/view-offline-log-files.md
-                - name: Guida sensibile al contesto
-                  href: relational-databases/logs/log-file-viewer-f1-help.md
             - name: Log delle transazioni
               href: relational-databases/logs/the-transaction-log-sql-server.md
               items:
@@ -8401,6 +8394,15 @@
               href: ssms/ssms-utility.md
             - name: Tasti di scelta rapida di SSMS
               href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: Visualizzatore file di log
+              href: relational-databases/logs/log-file-viewer.md
+              items:
+                - name: Guida sensibile al contesto
+                  href: relational-databases/logs/log-file-viewer-f1-help.md
+                - name: Apri
+                  href: relational-databases/logs/open-log-file-viewer.md
+                - name: Visualizzare offline
+                  href: relational-databases/logs/view-offline-log-files.md
             - name: SQL Server Agent
               items:
                 - name: SQL Server Agent
@@ -9842,7 +9844,7 @@
             - name: Installare SQL Server Machine Learning Services
               href: linux/sql-server-linux-setup-machine-learning.md
             - name: Installare Machine Learning Services per SQL Server in Docker
-              href: linux/sql-server-setup-machine-learning-docker.md
+              href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: Installare le estensioni del linguaggio di SQL Server
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: Configurare i repository
@@ -15895,7 +15897,7 @@
                   href: t-sql/language-elements/create-diagnostics-session-transact-sql.md
                 - name: NULL e UNKNOWN
                   href: t-sql/language-elements/null-and-unknown-transact-sql.md
-                - name: USA
+                - name: USE
                   href: t-sql/language-elements/use-transact-sql.md
                 - name: Barra rovesciata (continuazione di riga)
                   href: t-sql/language-elements/sql-server-utilities-statements-backslash.md
@@ -16045,7 +16047,7 @@
                       href: t-sql/language-elements/like-transact-sql.md
                     - name: NOT
                       href: t-sql/language-elements/not-transact-sql.md
-                    - name: o
+                    - name: OR
                       href: t-sql/language-elements/or-transact-sql.md
                     - name: SOME | ANY
                       href: t-sql/language-elements/some-any-transact-sql.md
@@ -16124,7 +16126,7 @@
                   href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: Costruttore di valori di tabella
                   href: t-sql/queries/table-value-constructor-transact-sql.md
-                - name: Torna all'inizio
+                - name: TOP
                   href: t-sql/queries/top-transact-sql.md
                 - name: UPDATETEXT
                   href: t-sql/queries/updatetext-transact-sql.md
@@ -16188,7 +16190,7 @@
                   href: t-sql/statements/add-sensitivity-classification-transact-sql.md
                 - name: BULK INSERT
                   href: t-sql/statements/bulk-insert-transact-sql.md
-                - name: Elimina
+                - name: DELETE
                   href: t-sql/statements/delete-transact-sql.md
                 - name: DISABLE TRIGGER
                   href: t-sql/statements/disable-trigger-transact-sql.md
@@ -17068,5 +17070,3 @@
               href: xquery/string-search-in-xquery.md
             - name: Gestione degli spazi dei nomi in XQuery
               href: xquery/handling-namespaces-in-xquery.md
-- name: Supporto della Knowledge Base
-  href: kb-support/toc.yml

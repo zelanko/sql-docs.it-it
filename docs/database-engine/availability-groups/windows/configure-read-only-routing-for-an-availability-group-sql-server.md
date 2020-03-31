@@ -18,10 +18,10 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286685"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurare il routing di sola lettura per un gruppo di disponibilità Always On
@@ -34,7 +34,7 @@ Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../include
 >  Per informazioni su come configurare una replica secondaria leggibile, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
 
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario che il gruppo di disponibilità disponga di un listener del gruppo di disponibilità. Per altre informazioni, vedere [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
@@ -44,7 +44,7 @@ Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../include
 
 -   Se si usa un account di accesso SQL, assicurarsi che l'account sia configurato correttamente. Per altre informazioni, vedere [Gestione di account di accesso e processi per i database di un gruppo di disponibilità (SQL Server)](logins-and-jobs-for-availability-group-databases.md).
   
-##  <a name="RORReplicaProperties"></a> Proprietà della replica da configurare per il supporto del routing di sola lettura  
+##  <a name="what-replica-properties-do-you-need-to-configure-to-support-read-only-routing"></a><a name="RORReplicaProperties"></a> Proprietà della replica da configurare per il supporto del routing di sola lettura  
   
 -   Per ogni replica secondaria leggibile che deve supportare il routing di sola lettura, è necessario specificare un *URL di routing di sola lettura*. L'URL viene usato solo quando la replica locale viene eseguita nel ruolo secondario. L'URL di routing di sola lettura deve essere specificato per ogni singola replica in base alle esigenze. Ogni URL di routing di sola lettura viene usato per il routing delle richieste di connessione con finalità di lettura a una replica secondaria leggibile specifica. In genere, a ogni replica secondaria leggibile viene assegnato un URL di routing di sola lettura.  
   
@@ -58,14 +58,14 @@ Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../include
 > [!NOTE]  
 >  Per informazioni sui listener del gruppo di disponibilità e altre informazioni sul routing di sola lettura, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
 |Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Per configurare le repliche durante la creazione di un gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare una replica di disponibilità|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 ### <a name="configure-a-read-only-routing-list"></a>Configurare un elenco di routing di sola lettura  
  Usare la procedura seguente per configurare il routing di sola lettura con Transact-SQL. Per un esempio di codice, vedere [Esempio (Transact-SQL)](#TsqlExample), più avanti in questa sezione.  
@@ -103,7 +103,7 @@ Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../include
         > [!NOTE]  
         >  È necessario impostare l'URL del routing di sola lettura prima di configurare l'elenco di routing di sola lettura.  
   
-###  <a name="loadbalancing"></a> Configurare il bilanciamento del carico tra le repliche di sola lettura  
+###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> Configurare il bilanciamento del carico tra le repliche di sola lettura  
  A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], è possibile configurare il bilanciamento del carico in un set di repliche di sola lettura. In precedenza, il routing di sola lettura indirizzava sempre il traffico alla prima replica disponibile nell'elenco di routing. Per sfruttare i vantaggi di questa funzionalità, usare un livello di parentesi nidificate per racchiudere le istanze del server **READ_ONLY_ROUTING_LIST** nei comandi **CREATE AVAILABILITY GROUP** o **ALTER AVAILABILITY GROUP** .  
   
  Ad esempio, l'elenco di routing seguente bilancia il carico della richiesta di connessione con finalità di lettura tra due repliche di sola lettura, `Server1` e `Server2`. Le parentesi nidificate che racchiudono questi server identificano il set con carico bilanciato. Se nessuna replica è disponibile in tale set, verrà eseguito il tentativo di connettersi in modo sequenziale alle altre repliche, `Server3` e `Server4`, nell'elenco di routing di sola lettura.  
@@ -120,7 +120,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
   
  È supportato solo un livello di parentesi nidificate.  
   
-###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Nell'esempio seguente vengono modificate due repliche di disponibilità di un gruppo di disponibilità esistente, `AG1` , per supportare il routing di sola lettura se a una di queste repliche è attualmente assegnato il ruolo primario. Per identificare le istanze del server che ospitano la replica di disponibilità, in questo esempio vengono specificati i nomi delle istanze, `COMPUTER01` e `COMPUTER02`.  
   
 ```  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
 ### <a name="configure-a-read-only-routing-list"></a>Configurare un elenco di routing di sola lettura  
  Usare la procedura seguente per configurare il routing di sola lettura con PowerShell. Per un esempio di codice, vedere [Esempio (PowerShell)](#PSExample), più avanti in questa sezione.  
@@ -184,7 +184,7 @@ GO
   
 -   [Visualizzare la Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-###  <a name="PSExample"></a> Esempio (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> Esempio (PowerShell)  
  Nell'esempio seguente vengono configurate la replica primaria e una replica secondaria in un gruppo di disponibilità per il routing di sola lettura. Innanzi tutto, nell'esempio viene assegnato un URL di routing di sola lettura a ciascuna replica. L'elenco di routing di sola lettura viene quindi impostato sulla replica primaria. Le connessioni la cui proprietà "ReadOnly" è impostata nella stringa di connessione verranno reindirizzate alla replica secondaria. Se la replica secondaria non è leggibile (in base all'impostazione **ConnectionModeInSecondaryRole** ), la connessione verrà nuovamente indirizzata alla replica primaria.  
   
 ```  
@@ -197,13 +197,13 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione del routing di sola lettura  
+##  <a name="follow-up-after-configuring-read-only-routing"></a><a name="FollowUp"></a> Completamento: Dopo la configurazione del routing di sola lettura  
  Una volta configurate la replica primaria corrente e le repliche secondarie leggibili per supportare il routing di sola lettura in entrambi i ruoli, le repliche secondarie leggibili potranno ricevere richieste di connessione con finalità di lettura dai client che si connettono tramite il listener del gruppo di disponibilità.  
   
 > [!TIP]  
 >  Quando si usa [bcp Utility](../../../tools/bcp-utility.md) o [sqlcmd Utility](../../../tools/sqlcmd-utility.md), è possibile specificare l'accesso in sola lettura a qualsiasi replica secondaria abilitata per l'accesso in sola lettura specificando l'opzione **-K ReadOnly** .  
   
-###  <a name="ConnStringReqsRecs"></a> Requisiti e indicazioni per le stringhe di connessione del client  
+###  <a name="requirements-and-recommendations-for-client-connection-strings"></a><a name="ConnStringReqsRecs"></a> Requisiti e indicazioni per le stringhe di connessione del client  
  Per consentire a un'applicazione client di utilizzare il routing di sola lettura, è necessario che la relativa stringa di connessione soddisfi i requisiti seguenti:  
   
 -   Utilizzare il protocollo TCP.  
@@ -227,7 +227,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>Se il routing di sola lettura non funziona correttamente  
  Per informazioni sulla risoluzione dei problemi di una configurazione di routing di sola lettura, vedere [Il routing di sola lettura non funziona correttamente](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR).  
   
-##  <a name="RelatedTasks"></a> Passaggi successivi 
+##  <a name="next-steps"></a><a name="RelatedTasks"></a> Passaggi successivi 
 **Per visualizzare le configurazioni del routing di sola lettura**  
   
 -   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  

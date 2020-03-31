@@ -12,10 +12,10 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581253"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accesso agli elementi del server di report utilizzando l'accesso tramite URL
@@ -29,7 +29,7 @@ ms.locfileid: "65581253"
 ## <a name="access-a-report"></a>Accedere a report  
  Per visualizzare un report nel browser, usare il parametro *rs:Command*=*Render* . Ad esempio:  
   
- - **Nativo** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **Native** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
