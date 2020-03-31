@@ -96,7 +96,7 @@
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: Impostazione delle opzioni di conversione e migrazione
   href: setting-conversion-and-migration-options-accesstosql.md
-- name: risoluzione dei problemi
+- name: Risoluzione dei problemi
   href: troubleshooting-accesstosql.md
 - name: Comandi di menu e tasti di scelta rapida
   href: menu-commands-and-other-shortcut-keys-accesstosql.md

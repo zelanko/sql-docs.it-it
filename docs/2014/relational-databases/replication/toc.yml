@@ -432,7 +432,7 @@
                   href: non-sql/backup-and-restore-for-oracle-publishers.md
                 - name: Oggetti creati
                   href: non-sql/objects-created-on-the-oracle-publisher.md
-                - name: risoluzione dei problemi
+                - name: Risoluzione dei problemi
                   href: non-sql/troubleshooting-oracle-publishers.md
         - name: Sottoscrittori non SQL
           href: non-sql/non-sql-server-subscribers.md
@@ -452,7 +452,7 @@
       href: tutorial-replicating-data-between-continuously-connected-servers.md
     - name: Configurare la replica di tipo merge
       href: tutorial-replicating-data-with-mobile-clients.md
-- name: Riferimento
+- name: Informazioni di riferimento
   items:
     - name: Proprietà degli oggetti di replica
       items:

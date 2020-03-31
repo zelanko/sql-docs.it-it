@@ -48,7 +48,7 @@
               href: ../dmx/select-from-model-dmx.md
             - name: SELECT FROM <structure>.CASES
               href: ../dmx/select-from-structure-cases.md
-            - name: Elimina
+            - name: DELETE
               href: ../dmx/delete-dmx.md
             - name: INSERT INTO
               href: ../dmx/insert-into-dmx.md
@@ -189,7 +189,7 @@
               href: ../dmx/and-dmx.md
             - name: NOT
               href: ../dmx/not-dmx.md
-            - name: o
+            - name: OR
               href: ../dmx/or-dmx.md
             - name: + (positivo)
               href: ../dmx/positive-dmx.md

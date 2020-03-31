@@ -94,17 +94,17 @@
       href: invalid-characters-and-escape-rules.md
     - name: Utilizzo della modalità RAW con FOR XML
       href: use-raw-mode-with-for-xml.md
-    - name: 'Esempio: recupero delle informazioni relative al modello del prodotto in formato XML'
+    - name: 'Esempio: Recupero delle informazioni relative al modello del prodotto in formato XML'
       href: example-retrieving-product-model-information-as-xml.md
     - name: 'Esempio: specifica di XSINIL con la direttiva ELEMENTS'
       href: example-specifying-xsinil-with-the-elements-directive.md
     - name: 'Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA'
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-    - name: 'Esempio: recupero di dati binari'
+    - name: 'Esempio: Recupero di dati binari'
       href: example-retrieving-binary-data.md
-    - name: 'Esempio: ridenominazione dell''elemento <row>'
+    - name: 'Esempio: Ridenominazione dell''elemento <row>'
       href: example-renaming-the-row-element.md
-    - name: 'Esempio: specifica di un elemento radice per codice XML generato da FOR XML'
+    - name: 'Esempio: Specifica di un elemento radice per codice XML generato da FOR XML'
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
     - name: 'Esempio: esecuzione di query sulle colonne di tipo XML'
       href: example-querying-xmltype-columns.md
@@ -114,29 +114,29 @@
       href: use-the-binary-base64-option.md
     - name: Approccio euristico della modalità AUTO per la determinazione della struttura dei valori XML restituiti
       href: auto-mode-heuristics-in-shaping-returned-xml.md
-    - name: Esempi di utilizzo della modalità AUTO
+    - name: 'Esempi: Uso della modalità AUTO'
       href: examples-using-auto-mode.md
     - name: Utilizzo della modalità EXPLICIT con FOR XML
       href: use-explicit-mode-with-for-xml.md
     - name: 'Esempio: Recupero di informazioni sui dipendenti'
       href: example-retrieving-employee-information.md
-    - name: 'Esempio: specifica della direttiva ELEMENT'
+    - name: 'Esempio: Specifica della direttiva ELEMENT'
       href: example-specifying-the-element-directive.md
     - name: 'Esempio: specifica della direttiva ELEMENTXSINIL'
       href: example-specifying-the-elementxsinil-directive.md
-    - name: 'Esempio: Creazione di elementi di pari livello utilizzando la modalità EXPLICIT'
+    - name: 'Esempio: Creazione di elementi di pari livello con la modalità EXPLICIT'
       href: example-constructing-siblings-with-explicit-mode.md
-    - name: 'Esempio: specifica delle direttive ID, IDREF'
+    - name: 'Esempio: Specifica delle direttive ID e IDREF'
       href: example-specifying-the-id-and-idref-directives.md
-    - name: 'Esempio: specifica delle direttive ID, IDREFS'
+    - name: 'Esempio: Specifica delle direttive ID e IDREFS'
       href: example-specifying-the-id-and-idrefs-directives.md
     - name: 'Esempio: specifica della direttiva HIDE'
       href: example-specifying-the-hide-directive.md
-    - name: 'Esempio: specifica della direttiva ELEMENT e della codifica di entità'
+    - name: 'Esempio: Specifica della direttiva ELEMENT e della codifica di entità'
       href: example-specifying-the-element-directive-and-entity-encoding.md
-    - name: 'Esempio: specifica della direttiva CDATA'
+    - name: 'Esempio: Specifica della direttiva CDATA'
       href: example-specifying-the-cdata-directive.md
-    - name: 'Esempio: specifica della direttiva XMLTEXT'
+    - name: 'Esempio: Specifica della direttiva XMLTEXT'
       href: example-specifying-the-xmltext-directive.md
     - name: Utilizzare la modalità PATH con FOR XML
       href: use-path-mode-with-for-xml.md
@@ -154,7 +154,7 @@
       href: columns-that-contain-a-null-value-by-default.md
     - name: Supporto dello spazio dei nomi in modalità di PATH
       href: namespace-support-in-path-mode.md
-    - name: Esempi di utilizzo della modalità PATH
+    - name: 'Esempi: Uso della modalità PATH'
       href: examples-using-path-mode.md
     - name: Direttiva TYPE in query FOR XML
       href: type-directive-in-for-xml-queries.md
@@ -191,7 +191,7 @@
 - name: OPENXML
   href: openxml-sql-server.md
   items:
-    - name: 'Esempi: utilizzo di OPENXML'
+    - name: 'Esempi: Uso di OPENXML'
       href: examples-using-openxml.md
     - name: Impostazione di metaproprietà in OPENXML
       href: specify-metaproperties-in-openxml.md

@@ -150,7 +150,7 @@
   items:
     - name: Colonne di tipo text e image associate e non associate
       href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
-    - name: Confronto tra modifiche registrate e non registrate
+    - name: Modifiche registrate e non registrate
       href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
     - name: 'Colonne data-at-execution di tipo text, ntext o image'
       href: ../../native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Chiamare SQLColumns su un tabella con colonne di tipo sparse
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 'Procedura: Inserimento di righe in colonne geografiche (ODBC)'
+    - name: 'Procedura: Inserire righe in colonne geografiche (ODBC)'
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Ottenere l'autenticazione Kerberos reciproca
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

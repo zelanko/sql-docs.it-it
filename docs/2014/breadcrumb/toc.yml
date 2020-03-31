@@ -190,7 +190,7 @@
                 - name: Importazione ed esportazione dati
                   tocHref: /sql/integration-services/import-export-data/
                   topicHref: /sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard
-                - name: risoluzione dei problemi
+                - name: Risoluzione dei problemi
                   tocHref: /sql/integration-services/troubleshooting/
                   topicHref: /sql/integration-services/troubleshooting/troubleshooting-tools-for-package-development
                 - name: Gestione connessione
@@ -369,7 +369,7 @@
                 - name: Riferimento al provider WMI
                   tocHref: /sql/reporting-services/wmi-provider-library-reference/
                   topicHref: /sql/reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs
-                - name: risoluzione dei problemi
+                - name: Risoluzione dei problemi
                   tocHref: /sql/reporting-services/troubleshooting/
                   topicHref: /sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services
                 - name: Integrazione di applicazioni

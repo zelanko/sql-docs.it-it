@@ -10,10 +10,10 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287245"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
@@ -5307,11 +5307,11 @@ ORDER BY message_id
 |   13231   |   10  |   No  |   modifica il mapping   |
 |   13232   |   10  |   No  |   INSERT  |
 |   13233   |   10  |   No  |   UPDATE  |
-|   13234   |   10  |   No  |   Elimina  |
+|   13234   |   10  |   No  |   DELETE  |
 |   13235   |   10  |   No  |   WHEN MATCHED    |
 |   13236   |   10  |   No  |   WHEN NOT MATCHED    |
 |   13237   |   10  |   No  |   WHEN SOURCE NOT MATCHED  |
-|   13238   |   10  |   No  |   Torna all'inizio |
+|   13238   |   10  |   No  |   TOP |
 |   13239   |   10  |   No  |   GROUP BY    |
 |   13240   |   10  |   No  |   HAVING  |
 |   13241   |   10  |   No  |   ORDER BY    |

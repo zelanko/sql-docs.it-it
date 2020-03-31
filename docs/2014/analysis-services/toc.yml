@@ -307,7 +307,7 @@
 - name: Riferimenti a errori ed eventi (PowerPivot per SharePoint)
   href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
   items:
-    - name: 'Errore durante il tentativo di stabilire una connessione all''origine dati esterna. Impossibile aggiornare le connessioni seguenti: Dati PowerPivot'
+    - name: 'Errore durante il tentativo di stabilire una connessione all''origine dati esterna. Impossibile aggiornare le connessioni seguenti: Dati di PowerPivot'
       href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
     - name: Impossibile caricare il file o l'assembly 'Microsoft.Data.Services'
       href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -315,7 +315,7 @@
       href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
     - name: Il percorso della connessione dati nella cartella di lavoro fa riferimento a un file nell'unità locale o è un URI non valido
       href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-    - name: 'Per la connessione dati viene utilizzata l''autenticazione di Windows e le credenziali utente non possono essere delegate. Impossibile aggiornare le connessioni seguenti: Dati PowerPivot'
+    - name: 'Per la connessione dati viene utilizzata l''autenticazione di Windows e le credenziali utente non possono essere delegate. Impossibile aggiornare le connessioni seguenti: Dati di PowerPivot'
       href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
     - name: 'Le funzionalità seguenti non sono supportate in Excel Services e potrebbero non venire visualizzate del tutto o parzialmente: Commenti, forme o altri oggetti'
       href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
@@ -352,7 +352,7 @@
           href: rename-columns.md
         - name: 'Lezione 4: Contrassegna come tabella data'
           href: lesson-3-mark-as-date-table.md
-        - name: 'Lezione 5: Creare relazioni'
+        - name: 'Lezione 5: Crea relazioni'
           href: lesson-4-create-relationships.md
         - name: 'Lezione 6: Creare colonne calcolate'
           href: lesson-5-create-calculated-columns.md
@@ -366,7 +366,7 @@
           href: lesson-9-create-hierarchies.md
         - name: 'Lezione 11: Creare partizioni'
           href: lesson-10-create-partitions.md
-        - name: 'Lezione 12: Creare ruoli'
+        - name: 'Lezione 12: Creazione di ruoli'
           href: lesson-11-create-roles.md
         - name: 'Lezione 13: Analizza in Excel'
           href: lesson-12-analyze-in-excel.md
@@ -425,7 +425,7 @@
               href: lesson-3-4-modifying-the-date-dimension.md
             - name: Esplorazione di un cubo distribuito
               href: lesson-3-5-browsing-the-deployed-cube.md
-        - name: 'Lezione 4: Definizione di attributo avanzato e proprietà dimensione'
+        - name: 'Lezione 4: Definizione delle proprietà avanzate di attributi e dimensioni'
           href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
           items:
             - name: Utilizzo di una versione modificata del progetto Analysis Services Tutorial

@@ -122,7 +122,7 @@
           href: auditing/sql-server-audit-action-groups-and-actions.md
         - name: Record di controllo
           href: auditing/sql-server-audit-records.md
-- name: Riferimento
+- name: Informazioni di riferimento
   items:
     - name: Pagina Autorizzazioni o Entità a sicurezza diretta
       href: permissions-or-securables-page.md

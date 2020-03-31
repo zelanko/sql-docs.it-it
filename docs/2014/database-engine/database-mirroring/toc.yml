@@ -109,7 +109,7 @@
           href: the-database-mirroring-endpoint-sql-server.md
         - name: Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn
           href: transport-security-database-mirroring-always-on-availability.md
-- name: Riferimento
+- name: Informazioni di riferimento
   items:
     - name: Configurazione guidata sicurezza mirroring del database
       href: start-the-configuring-database-mirroring-security-wizard.md

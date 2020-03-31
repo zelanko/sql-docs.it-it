@@ -257,25 +257,25 @@
       href: job-properties-new-job-general-page.md
     - name: Proprietà processo - Nuovo processo (pagina Passaggi)
       href: job-properties-new-job-steps-page.md
-    - name: Proprietà processo - Nuovo processo (pagina Pianificazioni)
+    - name: 'Proprietà processo: Nuovo processo (pagina Pianificazioni)'
       href: job-properties-new-job-schedules-page.md
-    - name: Proprietà processo - Nuovo processo (pagina Avvisi)
+    - name: 'Proprietà processo: Nuovo processo (pagina Avvisi)'
       href: job-properties-new-job-alerts-page.md
-    - name: Proprietà processo- Nuovo processo (pagina Notifiche)
+    - name: 'Proprietà processo: Nuovo processo (pagina Notifiche)'
       href: job-properties-new-job-notifications-page.md
-    - name: Proprietà processo - Nuovo processo (pagina Server di destinazione)
+    - name: 'Proprietà processo: Nuovo processo (pagina Destinazioni)'
       href: job-properties-new-job-targets-page.md
     - name: Proprietà Categorie di processi e Nuova categoria di processi
       href: job-categories-properties-new-job-category.md
-    - name: Categorie di processi - Gestisci categorie di processi
+    - name: 'Categorie di processi: Gestisci categorie di processi'
       href: job-categories-manage-job-categories.md
-    - name: Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
+    - name: 'Proprietà passaggio processo: Nuovo passaggio di processo (pagina Generale)'
       href: job-step-properties-new-job-step-general-page.md
-    - name: Proprietà passaggio processo - Nuovo passaggio di processo (pagina Avanzate)
+    - name: 'Proprietà passaggio processo: Nuovo passaggio di processo (pagina Avanzate)'
       href: job-step-properties-new-job-step-advanced-page.md
     - name: Seleziona pianificazione per il processo
       href: pick-schedule-for-job.md
-    - name: Nuova pianificazione processo - Proprietà pianificazione processo
+    - name: 'Nuova pianificazione processo: Proprietà pianificazione processo'
       href: new-job-schedule-job-schedule-properties.md
     - name: Gestione pianificazioni
       href: manage-schedules.md
@@ -289,7 +289,7 @@
       href: alert-properties-new-alert-general-page.md
     - name: Proprietà avviso/Nuovo avviso (pagina Risposta)
       href: alert-properties-new-alert-response-page.md
-    - name: Proprietà avviso - Nuovo avviso (pagina Opzioni)
+    - name: 'Proprietà avviso: Nuovo avviso (pagina Opzioni)'
       href: alert-properties-new-alert-options-page.md
     - name: Proprietà avviso (pagina Cronologia)
       href: alert-properties-history-page.md
@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: Proprietà Operatore e Nuovo operatore (pagina Generale)
       href: operator-properties-new-operator-general-page.md
-    - name: Proprietà Operatore - Nuovo operatore (pagina Notifiche)
+    - name: 'Proprietà operatore: Nuovo operatore (pagina Notifiche)'
       href: operator-properties-new-operator-notifications-page.md
     - name: Proprietà Operatore (pagina Cronologia)
       href: operator-properties-history-page.md

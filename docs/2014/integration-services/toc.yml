@@ -244,7 +244,7 @@
           href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
         - name: 'Passaggio 7: Aggiunta e configurazione della destinazione OLE DB'
           href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
-        - name: 'Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1'
+        - name: 'Passaggio 8: Semplificazione del pacchetto della lezione 1'
           href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
         - name: 'Passaggio 9: Test del pacchetto creato nella lezione 1 dell''esercitazione'
           href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
@@ -292,7 +292,7 @@
           href: lesson-5-3-modifying-the-directory-property-configuration-value.md
         - name: 'Passaggio 4: Test del pacchetto creato nell''esercitazione della lezione 5'
           href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
-    - name: 'Lezione 6: Utilizzo di parametri con il modello di distribuzione del progetto'
+    - name: 'Lezione 6: Uso di parametri con il modello di distribuzione del progetto'
       href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
         - name: 'Passaggio 1: Copia del pacchetto della lezione 5'
@@ -315,7 +315,7 @@
           href: lesson-1-2-creating-the-deployment-project.md
         - name: 'Passaggio 3: Aggiunta di pacchetti e altri file'
           href: lesson-1-3-adding-packages-and-other-files.md
-        - name: 'Passaggio 4: Aggiunta delle configurazioni dei pacchetti'
+        - name: 'Passaggio 4: Aggiunta di configurazioni pacchetto'
           href: lesson-1-4-adding-package-configurations.md
         - name: 'Passaggio 5: Test dei pacchetti aggiornati'
           href: lesson-1-5-testing-the-updated-packages.md
@@ -326,7 +326,7 @@
           href: lesson-2-1-building-the-deployment-utility.md
         - name: 'Passaggio 2: Verifica del pacchetto di distribuzione'
           href: lesson-2-2-verifying-the-deployment-bundle.md
-    - name: 'Lezione 3: Installazione dei pacchetti'
+    - name: 'Lezione 3: Installazione di pacchetti'
       href: lesson-3-install-ssis-package.md
       items:
         - name: 'Passaggio 1: Copia del pacchetto di distribuzione'
