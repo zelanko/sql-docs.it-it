@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833585"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>File di dati di SQL Server in Microsoft Azure
@@ -109,7 +109,7 @@ Per altre informazioni, vedere [Gestire l'accesso in lettura anonimo a contenito
 - SQL Server in esecuzione in una macchina virtuale di Azure: se si installa [SQL Server in una macchina virtuale di Azure](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), installare SQL Server 2016 o aggiornare l'istanza esistente. Analogamente, è possibile creare una nuova macchina virtuale in Azure usando un'immagine della piattaforma di SQL Server 2016.
 
   
-###  <a name="bkmk_Limitations"></a> Limitazioni  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Limitazioni  
   
 - Nella versione corrente di questa funzionalità, l'archiviazione dei dati **FileStream** in Archiviazione di Azure non è supportata. È possibile archiviare dati **FileStream** in un database contenente anche file di dati archiviati in Archiviazione di Azure, ma tutti i file di dati FileStream devono essere archiviati in un archivio locale.  Poiché i dati FileStream devono risiedere in un archivio locale, non possono essere spostati tra computer usando Archiviazione di Azure. È quindi consigliabile continuare a usare le [tecniche tradizionali](../../relational-databases/blob/move-a-filestream-enabled-database.md) per spostare i dati associati a FileStream tra computer diversi.  
   
@@ -154,7 +154,7 @@ Per altre informazioni, vedere [Gestire l'accesso in lettura anonimo a contenito
 
 - Una nuova colonna **int** , **credential_id**, nella vista di sistema **sys.master_files** . La colonna **credential_id** viene usata per abilitare i file di dati del servizio di archiviazione di Azure in modo che possano essere riassociati a `sys.credentials` con un riferimento incrociato per le credenziali create per i file stessi. È possibile usarla per la risoluzione dei problemi, ad esempio quando una credenziale non può essere eliminata se usata da un file di database.  
   
-##  <a name="bkmk_Troubleshooting"></a> Risoluzione dei problemi della funzionalità relativa ai file di dati di SQL Server in Microsoft Azure  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Risoluzione dei problemi della funzionalità relativa ai file di dati di SQL Server in Microsoft Azure  
  Per evitare errori a causa di limitazioni o funzionalità non supportate, rivedere innanzitutto [Limitazioni](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations).  
   
  Di seguito è riportato l'elenco di errori che possono verificarsi durante l'uso della funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure.  
