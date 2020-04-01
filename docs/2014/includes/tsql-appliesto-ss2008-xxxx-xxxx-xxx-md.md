@@ -1,1 +1,1 @@
-**Questo argomento si applica a:** ![Sì](media/yes.png "sì")SQL Server \(a partire\) da 2008 ![No](media/no.png "no")database SQL di Azure ![No](media/no.png "no")Azure SQL data warehouse ![Nessun](media/no.png "no")data warehouse parallelo
+**QUESTO TOPIC SI collega a:** ![sì](media/yes-icon.png "sì")SQL Server \(a partire con 2008\) ![nessun](media/no-icon.png "no")database SQL di Azure ![nessun](media/no-icon.png "no")Azure SQL Data Warehouse ![nessun](media/no-icon.png "no")parallel Data Warehouse
