@@ -1,5 +1,6 @@
 ---
 title: Risolvere i problemi di connettività di PolyBase Kerberos | Microsoft Docs
+description: Per risolvere i problemi di autenticazione per PolyBase con un cluster Hadoop protetto con Kerberos, è possibile usare la diagnostica interattiva integrata in PolyBase.
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
@@ -10,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909148"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215856"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Risolvere i problemi di connettività di PolyBase Kerberos
 
@@ -30,7 +31,7 @@ Questo articolo può essere usato come guida per eseguire il debug dei problemi 
 > Questo strumento consentirà di escludere i problemi non correlati a SQL Server per concentrarsi sulla risoluzione dei problemi di configurazione di HDFS Kerberos, identificando in particolare i problemi di errata configurazione di nome utente/password e di errata configurazione dei cluster Kerberos.      
 > Questo strumento è completamente indipendente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È disponibile come Jupyter Notebook e richiede Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] o versione successiva con PolyBase installato
 1. Un cluster Hadoop (Cloudera o Hortonworks) protetto con Kerberos (Active Directory o MIT)

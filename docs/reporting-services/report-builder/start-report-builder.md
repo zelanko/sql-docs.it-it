@@ -1,5 +1,6 @@
 ---
 title: Avviare Generatore report | Microsoft Docs
+description: Generatore report è un ambiente di creazione di report autonomo. Al primo avvio l'Area download Microsoft richiede di scaricarlo.
 ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd186252204a82e115387b625503945c50604460
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721386"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290767"
 ---
 # <a name="start-report-builder"></a>Avviare Generatore report
 
@@ -37,7 +38,7 @@ ms.locfileid: "75721386"
   
  Quando si avvia [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal portale Web o dal sito di SharePoint, se si apre una versione precedente di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , contattare l'amministratore, che può aggiornare la versione sul portale Web o sul sito di SharePoint.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Per avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>Per avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dal portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  Digitare l'URL per il server di report nella barra degli indirizzi del browser. L'URL predefinito è https://\<*nomeserver*>/reports.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "75721386"
   
      In seguito viene aperto [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ed è possibile creare un report impaginato o aprire un report dal server di report.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>Per avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] in modalità integrata SharePoint  
+## <a name="to-start-ssrbnoversion-in-sharepoint-integrated-mode"></a>Per avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] in modalità integrata SharePoint  
   
 1.  Accedere al sito di SharePoint che contiene la raccolta desiderata.  
   

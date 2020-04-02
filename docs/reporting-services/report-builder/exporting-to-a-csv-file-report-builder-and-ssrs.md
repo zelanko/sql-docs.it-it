@@ -1,5 +1,6 @@
 ---
 title: Esportazione in un file CSV (Generatore report) | Microsoft Docs
+description: In Generatore report, l'estensione per il rendering CSV consente di eseguire il rendering dei report impaginati in un formato di testo normale leggibile e compatibile con molte applicazioni.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078371"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342886"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
   L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report impaginati come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.  
@@ -27,7 +28,7 @@ ms.locfileid: "77078371"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Rendering CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Rendering CSV  
  Se il rendering viene eseguito usando le impostazioni predefinite, il report CSV avrà le caratteristiche seguenti:  
   
 -   Il delimitatore di campo predefinito è la virgola (,).  
@@ -95,7 +96,7 @@ ms.locfileid: "77078371"
  Per altre informazioni, vedere [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="RenderingModes"></a> Modalità del renderer  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modalità del renderer  
  L'estensione per il rendering CSV può operare in due modalità: una è ottimizzata per Excel, mentre l'altra è ottimizzata per applicazioni di terze parti che richiedono una rigida conformità alla specifica CSV del documento RFC 4180. Le aree dati di pari livello vengono gestite in modo diverso a seconda della modalità usata.  
   
 ### <a name="default-mode"></a>Modalità predefinita  
@@ -119,7 +120,7 @@ ms.locfileid: "77078371"
 #### <a name="formatting"></a>Formattazione  
  I valori non vengono formattati.  
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  L'interattività non è supportata da nessuno dei formati CSV generati da questo renderer. Non viene eseguito il rendering dei seguenti elementi interattivi:  
   
 -   Collegamenti ipertestuali  
@@ -137,7 +138,7 @@ ms.locfileid: "77078371"
 -   Segnalibri  
   
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile cambiare alcune impostazioni predefinite per questo renderer, tra cui la modalità in cui eseguire il rendering, i caratteri da usare come delimitatori e i caratteri da usare come stringa predefinita del qualificatore di testo, modificando le impostazioni relative alle informazioni sui dispositivi. Per altre informazioni, vedere [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   

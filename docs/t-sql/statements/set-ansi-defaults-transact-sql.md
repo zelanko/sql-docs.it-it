@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9fa8bd2c029ea65bb03e21543212dd11b65f2242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67913947"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80345462"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,13 +44,14 @@ SET ANSI_DEFAULTS { ON | OFF }
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse and Parallel Data Warehouse
 
 SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>Osservazioni  
-ANSI_DEFAULTS è un'impostazione sul lato server che il client non modifica. Il client gestisce apposite impostazioni che per impostazione predefinita costituiscono l'opposto delle impostazioni del server. L'impostazione del server non deve essere modificata dagli utenti. Per modificare il comportamento del client, gli utenti devono utilizzare SQL_COPT_SS_PRESERVE_CURSORS. Per altre informazioni, vedere [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ANSI_DEFAULTS è un'impostazione lato server che consente di abilitare il comportamento per tutte le connessioni client. Il client richiede in genere l'impostazione al momento dell'inizializzazione della connessione o della sessione. L'impostazione del server non deve essere modificata dagli utenti.   
+Per modificare il comportamento del client, gli utenti devono usare metodi specifici del client come `SQL_COPT_SS_PRESERVE_CURSORS`. Per altre informazioni, vedere [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).
   
 Quando è attivata (ON), questa opzione attiva le seguenti impostazioni di ISO:  
   
@@ -63,9 +64,9 @@ Quando è attivata (ON), questa opzione attiva le seguenti impostazioni di ISO:
   
 L'insieme di queste opzioni SET ISO standard definisce l'ambiente di elaborazione della query per l'intera durata della sessione di lavoro dell'utente o dell'esecuzione di un trigger o di una stored procedure. Queste opzioni SET tuttavia non includono tutte le opzioni necessarie per la conformità allo standard ISO.  
   
-Quando si utilizzano indici in colonne calcolate e viste indicizzate, quattro delle opzioni predefinite, ovvero ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS e QUOTED_IDENTIFIER, devono essere impostate su ON. Queste opzioni predefinite fanno parte delle sette opzioni SET a cui devono essere assegnati i valori richiesti durante la creazione e la modifica degli indici in colonne calcolate e viste indicizzate. Le altre opzioni SET sono ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) e NUMERIC_ROUNDABORT (OFF). Per altre informazioni sulle impostazioni dell'opzione SET necessarie per viste indicizzate e indici nelle colonne calcolate, vedere [Considerazioni sull'uso delle istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
+Quando si gestiscono indici su colonne calcolate e viste indicizzate, quattro di queste impostazioni predefinite (`ANSI_NULLS`, `ANSI_PADDING`, `ANSI_WARNINGS`e `QUOTED_IDENTIFIER`) devono essere impostate su ON. Queste opzioni predefinite fanno parte delle sette opzioni SET a cui devono essere assegnati i valori richiesti durante la creazione e la modifica degli indici in colonne calcolate e viste indicizzate. Le altre opzioni SET sono `ARITHABORT` (ON), `CONCAT_NULL_YIELDS_NULL` (ON) e `NUMERIC_ROUNDABORT` (OFF). Per altre informazioni sulle impostazioni dell'opzione SET necessarie per viste indicizzate e indici nelle colonne calcolate, vedere [Considerazioni sull'uso delle istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
   
-Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione ANSI_DEFAULTS su ON al momento della connessione. Il driver e il provider impostano quindi le opzioni CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS su OFF. È possibile configurare le opzioni CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS impostandole su OFF nelle origini dati ODBC, negli attributi di connessione ODBC o nelle proprietà di connessione OLE DB impostate nell'applicazione prima della connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione predefinita per ANSI_DEFAULTS è OFF per le connessioni da applicazioni DB-Library.  
+Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione ANSI_DEFAULTS su ON al momento della connessione. Il driver e il provider impostano quindi le opzioni CURSOR_CLOSE_ON_COMMIT e IMPLICIT_TRANSACTIONS su OFF. Le impostazioni OFF per `CURSOR_CLOSE_ON_COMMIT` e `IMPLICIT_TRANSACTIONS` possono essere configurate nelle origini dei dati ODBC, negli attributi di connessione ODBC o nelle proprietà di connessione OLE DB impostate nell'applicazione prima della connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione predefinita per `ANSI_DEFAULTS` è OFF per le connessioni da applicazioni DB-Library.  
   
 Quando si esegue SET ANSI_DEFAULTS, l'opzione QUOTED_IDENTIFIER viene impostata in fase di analisi e le opzioni seguenti vengono impostate in fase di esecuzione:  
   

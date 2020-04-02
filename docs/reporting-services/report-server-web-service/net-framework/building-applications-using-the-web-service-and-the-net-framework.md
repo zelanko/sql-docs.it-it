@@ -1,5 +1,6 @@
 ---
 title: Compilazione di applicazioni tramite servizio Web e .NET Framework | Microsoft Docs
+description: Un client del servizio Web ReportServer comunica con un server di report tramite SOAP. Usare .NET Framework per creare client di servizi Web per lavorare con qualsiasi servizio Web.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 37d6552c328daff4793ea65d9670752378e1ab3b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284650"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509762"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Compilazione di applicazioni tramite servizio Web e .NET Framework
   Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile usare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente, per usare i servizi Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  

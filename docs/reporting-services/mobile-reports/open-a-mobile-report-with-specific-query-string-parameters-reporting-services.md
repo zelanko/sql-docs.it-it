@@ -1,5 +1,6 @@
 ---
 title: Aprire un report per dispositivi mobili con parametri della stringa di query specifici | Microsoft Docs
+description: Per un report per dispositivi mobili di Reporting Services con parametri e un'origine dati, è possibile usare i parametri di query nell'URL del report per aprirlo con i valori specificati.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62500013"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448399"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Aprire un report per dispositivi mobili con parametri della stringa di query specifici | Reporting Services
 Se si ha un report per dispositivi mobili [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con parametri e [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] come origine dati, è possibile includere i parametri della stringa di query nell'URL del report in modo che si apra automaticamente con i valori specificati. 
@@ -27,7 +28,7 @@ Se si ha un report per dispositivi mobili [!INCLUDE[ssRSnoversion_md](../../incl
     
 2.  La sintassi dell'URL dipende dall'origine dati. 
 
-     **Se l'origine dati è SQL Server Analysis Services**: compilare un URL con parametro della stringa di query nel formato seguente:
+     **Se l'origine dati è SQL Server Analysis Services**: Creare un URL con un parametro della stringa di query in questo formato:
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 

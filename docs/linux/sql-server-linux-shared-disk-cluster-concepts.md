@@ -1,6 +1,6 @@
 ---
 title: Istanze del cluster di failover - SQL Server in Linux
-description: ''
+description: I concetti relativi alle istanze del cluster di failover di SQL Server in Linux includono il livello di clustering, il numero di istanze, l'indirizzo IP, il nome e l'archiviazione condivisa.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59cc941e9ea278bc0e6e679c0691fcf7b65bce2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68032394"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216225"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Istanze del cluster di failover - SQL Server in Linux
 

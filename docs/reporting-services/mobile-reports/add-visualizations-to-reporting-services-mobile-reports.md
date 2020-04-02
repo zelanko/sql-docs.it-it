@@ -1,5 +1,6 @@
 ---
 title: Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services | Microsoft Docs
+description: 'Informazioni sui tre tipi di grafico di base che è possibile usare nei report per dispositivi mobili di Reporting Services: ora, categoria e totali e i corrispondenti grafici di confronto.'
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316643"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447986"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services
 I grafici sono una parte essenziale della visualizzazione dati. Informazioni sui grafici da usare nei report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per coprire una gamma di scenari. 

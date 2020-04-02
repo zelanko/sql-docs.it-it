@@ -1,5 +1,6 @@
 ---
 title: Report di Reporting Services | Microsoft Docs
+description: Informazioni dettagliate sui report di Reporting Services, inclusi i vantaggi dei report, su come creare report impaginati e su come visualizzare i report.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082435"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510062"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
   I report impaginati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report impaginato diventa un elemento di report archiviato nel server di report o nel sito di SharePoint. I report impaginati sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È anche possibile [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -45,7 +46,7 @@ ms.locfileid: "77082435"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> Fasi dell'elaborazione del report  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Fasi dell'elaborazione del report  
  Quando si crea un report, si definisce un file di definizione del report (con estensione rdl) in formato XML. Questo file contiene tutte le informazioni necessarie per permettere all'elaboratore di report di combinare i dati e il layout del report. Quando si visualizza un report, il processo percorre le fasi seguenti:  
   
 -   **Compilazione.** Si valutano le espressioni nella definizione del report e il formato intermedio compilato viene archiviato internamente sul server di report.  
@@ -155,7 +156,7 @@ ms.locfileid: "77082435"
   
  Per altre informazioni sulle prestazioni, vedere [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md).  
   
-##  <a name="bkmk_SecureReportsSummary"></a> Proteggere i report  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Proteggere i report  
  Per proteggere un report:  
   
 Come amministratore del server di report, identificare l'autorizzazione e il sistema di autenticazione usati per l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si usano autenticazione di Windows, sicurezza integrata e assegnazione di ruolo per consentire di controllare l'accesso ai report pubblicati. Per altre informazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) e [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  

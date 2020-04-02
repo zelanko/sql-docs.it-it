@@ -1,5 +1,6 @@
 ---
 title: Librerie di classi dell'elemento del report personalizzato | Microsoft Docs
+description: Informazioni sulle librerie di classi dell'elemento del report personalizzato e sull'uso di esempi di codice per comprendere come usare queste classi.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f30b581c67eb161bd0d221b9a4aa341d90ab7148
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194107"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216947"
 ---
 # <a name="custom-report-item-class-libraries"></a>Librerie di classi dell'elemento del report personalizzato
   Gli elementi del report personalizzati usano le classi dello spazio dei nomi **Microsoft.ReportDesigner**. Le classi utilizzate per implementare un elemento del report personalizzato possono essere suddivise in due categorie principali: le classi univoche progettate per supportare l'infrastruttura dell'elemento del report personalizzato e le classi wrapper gestite che incapsulano la funzionalità degli elementi RDL (Report Definition Language) rilevanti. Per un esempio di codice sull'uso di queste classi, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  

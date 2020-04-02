@@ -1,6 +1,6 @@
 ---
 title: Eseguire una copia bulk dei dati in SQL Server in Linux
-description: ''
+description: Questo articolo descrive l'utilità bcp. Usare bcp per importare un numero elevato di righe in tabelle di SQL Server oppure per esportare dati da tabelle di SQL Server a file di dati.
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cd1af76a6cd22e8f8004c869127585f66e03badc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68127316"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216610"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Eseguire una copia bulk dei dati con bcp in SQL Server in Linux
 

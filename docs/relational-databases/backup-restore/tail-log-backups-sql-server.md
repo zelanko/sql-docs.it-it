@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 22fda4d5e11b562ea3162ed14766ed085977200e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68041346"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510042"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backup della parte finale del log [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68041346"
   
 > **NOTA** Non in tutti gli scenari di ripristino è necessario un backup della parte finale del log. Se il punto di recupero è contenuto in un backup del log precedente, non è necessario un backup della parte finale del log. Non è inoltre necessario eseguire il backup della parte finale del log se il punto di recupero è incluso in un backup del log precedente o se si sta spostando o sostituendo (sovrascrivendo) il database e non è necessario ripristinarlo fino a un punto nel tempo dopo l'ultimo backup.  
   
-   ##  <a name="TailLogScenarios"></a> Scenari in cui è necessario un backup della parte finale del log  
+   ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> Scenari in cui è necessario un backup della parte finale del log  
  È consigliabile eseguire un backup della parte finale del log negli scenari seguenti:  
   
 -   Se il database è online e si intende eseguire un'operazione di ripristino sul database, iniziare eseguendo il backup della parte finale del log. Per evitare un errore per un database online, è necessario usare... Opzione WITH NORECOVERY dell'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -47,10 +47,10 @@ ms.locfileid: "68041346"
   
 |Opzione BACKUP LOG|Commenti|  
 |-----------------------|--------------|  
-|NORECOVERY|Utilizzare NORECOVERY ogni volta che si intende procedere con un'operazione di ripristino sul database. NORECOVERY porta il database nello stato di ripristino. Questo assicura che il database non si modifichi dopo il backup della parte finale del log. Il log verrà troncato a meno che non venga specificata anche l'opzione NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante:** non usare NO_TRUNCATE, a meno che il database non sia danneggiato.|  
+|NORECOVERY|Utilizzare NORECOVERY ogni volta che si intende procedere con un'operazione di ripristino sul database. NORECOVERY porta il database nello stato di ripristino. Questo assicura che il database non si modifichi dopo il backup della parte finale del log. Il log verrà troncato a meno che non venga specificata anche l'opzione NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante:** non usare NO_TRUNCATE, a meno che il database non sia danneggiato. Potrebbe essere necessario attivare la [modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md) per il database per ottenere l'accesso esclusivo prima di eseguire il ripristino con NORECOVERY. Dopo il ripristino, impostare di nuovo il database sulla modalità multiutente. |  
 |CONTINUE_AFTER_ERROR|Utilizzare CONTINUE_AFTER_ERROR solo se si sta eseguendo il backup della parte finale di un database danneggiato.<br /><br /> Quando si utilizza il backup della parte finale di un database danneggiato, alcuni dei metadati normalmente acquisiti nei backup dei log potrebbero essere non disponibili. Per altre informazioni, vedere [Backup della parte finale del log con metadati di backup incompleti](#IncompleteMetadata)in questo argomento.|  
   
-##  <a name="IncompleteMetadata"></a> Backup della parte finale del log con metadati di backup incompleti  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> Backup della parte finale del log con metadati di backup incompleti  
  I backup della parte finale del log consentono di acquisire la parte finale del log anche quando il database è offline, è danneggiato oppure è privo di alcuni file di dati. Questo può causare metadati incompleti nei comandi di ripristino delle informazioni e in **msdb**. Tuttavia, solo i metadati sono incompleti. Il log acquisito è completo e utilizzabile.  
   
  Se un backup della parte finale del log include metadati incompleti, nella tabella [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)**has_incomplete_metadata** è impostato su **1**. Inoltre, nell'output di [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), **HasIncompleteMetadata** è impostato su **1**.  
@@ -63,7 +63,7 @@ ms.locfileid: "68041346"
 -   **type_desc**  
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  Per creare un backup della parte finale del log, vedere [Esecuzione del backup del log delle transazioni quando il database è danneggiato &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
  Per ripristinare un backup del log delle transazioni, vedere [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  

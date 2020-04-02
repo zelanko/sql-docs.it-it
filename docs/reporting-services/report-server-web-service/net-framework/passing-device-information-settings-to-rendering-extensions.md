@@ -1,5 +1,6 @@
 ---
 title: Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering | Microsoft Docs
+description: Ai parametri di rendering viene passata un'estensione per il rendering. Specificare le impostazioni relative alle informazioni sul dispositivo tramite il metodo Render, come parametro URL, o nei file di configurazione.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c8dc233904cb94520d9074924c3aabc30be85a7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128885"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509772"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]le impostazioni relative alle informazioni sul dispositivo vengono usate per passare i parametri di rendering a un'estensione per il rendering. Le impostazioni nel servizio Web ReportServer vengono passate come elemento XML **DeviceInfo** ed elaborate dal server di report. Poiché le impostazioni delle informazioni sul dispositivo dispongono di valori predefiniti, sono considerate argomenti facoltativi nel processo di rendering. È tuttavia possibile usare le impostazioni delle informazioni sul dispositivo per personalizzare il rendering ed eseguire l'override dei valori predefiniti forniti dal server.  

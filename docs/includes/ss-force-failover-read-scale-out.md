@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "70963578"
+ms.locfileid: "80408094"
 ---
 Ogni gruppo di disponibilità include solo una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile effettuare il failover. In un gruppo di disponibilità per disponibilità elevata, il processo di failover è automatizzato da Gestione cluster. In un gruppo di disponibilità con tipo di cluster NONE, il processo di failover è manuale. 
 
@@ -76,19 +76,26 @@ Per effettuare il failover manuale senza perdita di dati:
    ```
 
    Questa impostazione assicura che per ogni transazione attiva venga eseguito il commit della replica primaria e di almeno una replica secondaria sincrona. 
-
-4. Abbassare il livello della replica primaria a replica secondaria. Dopo aver abbassato di livello la replica primaria, la replica è in sola lettura. Per aggiornare il ruolo in `SECONDARY`, eseguire il comando seguente nell'istanza di SQL Server che ospita la replica primaria:
-
+   >[!NOTE]
+   >Questa impostazione non è specifica del failover e deve essere impostata in base ai requisiti dell'ambiente.
+   
+4. Portare offline la replica primaria in preparazione delle modifiche del ruolo.
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
 5. Alzare il livello della replica secondaria di destinazione a replica primaria. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ```  
+   ``` 
+
+6. Aggiornare il ruolo della replica primaria precedente in `SECONDARY` ed eseguire il comando seguente nell'istanza di SQL Server che ospita la replica primaria:
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
+   ```
 
    > [!NOTE] 
    > Per eliminare un gruppo di disponibilità, usare [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Per un gruppo di disponibilità creato con il tipo di cluster NONE o EXTERNAL, eseguire il comando su tutte le repliche che fanno parte del gruppo di disponibilità.

@@ -1,5 +1,6 @@
 ---
 title: Gestire sessioni di eventi in Esplora oggetti
+description: In Esplora oggetti è possibile eseguire azioni che hanno effetto sugli eventi estesi, ad esempio creare, avviare o arrestare, esportare, importare, modificare o eliminare le sessioni di eventi estesi.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234526"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434088"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
 
@@ -116,7 +117,7 @@ STATE = STOP
   
 4.  Dopo avere completato l'esame della sessione eventi, fare clic su **OK**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Creare uno script per la definizione di una sessione eventi tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Creare uno script per la definizione di una sessione eventi tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Sia nella Creazione guidata nuova sessione che nella finestra di dialogo Nuova sessione è presente un'opzione Script che consente di generare codice [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire la sessione Eventi estesi.  
   
  Per accedere a [!INCLUDE[tsql](../../includes/tsql-md.md)] per una sessione Eventi estesi esistente, fare clic con il pulsante destro del mouse sul nome della sessione, scegliere **Crea script per sessione**e selezionare quindi **Genera codice per istruzione CREATE in**.  

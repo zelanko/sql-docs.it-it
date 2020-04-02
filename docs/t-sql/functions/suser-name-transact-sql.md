@@ -24,12 +24,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9b0e4e37eef574fd50d28e02c4f92ee1805c953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 63eb298fab5e2c62ac9403325368b008efa95dab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117623"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526746"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,6 +58,9 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0 l'ID d
 SUSER_NAME restituisce un nome di account di accesso solo per gli account a cui corrisponde una voce nella tabella di sistema **syslogins**.  
   
 È possibile usare SUSER_NAME nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Usare le parentesi dopo SUSER_NAME, anche se non viene specificato alcun parametro.  
+
+> [!NOTE]
+> Anche se la funzione SUSER_NAME è supportata nel database SQL di Azure, l'uso di *Execute As* con SUSER_NAME non è supportato nel database SQL di Azure. 
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente viene restituito il nome di identificazione dell'account di accesso dell'utente il cui numero di identificazione dell'account di accesso è `1`.  

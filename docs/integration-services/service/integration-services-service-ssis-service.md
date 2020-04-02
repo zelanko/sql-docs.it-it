@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296944"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216910"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servizio Integration Services (servizio SSIS)
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296944"
   
  Se il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene arrestato, è possibile continuare a eseguire pacchetti tramite l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , l'Utilità di esecuzione pacchetti e l'utilità del prompt dei comandi **dtexec** (dtexec.exe). Non è tuttavia possibile eseguire il monitoraggio dei pacchetti in esecuzione.  
   
- Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene eseguito nel contesto dell'account NETWORK SERVICE.  
+ Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene eseguito nel contesto dell'account NETWORK SERVICE. È consigliabile eseguire il servizio SQL Server Integration Services con un account con autorizzazioni limitate, ad esempio l'account NETWORK SERVICE. L'esecuzione del servizio SQL Server Integration Services con un account con privilegi elevati rappresenta un potenziale rischio per la sicurezza. 
   
  Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esegue registrazioni nel registro eventi di Windows. È possibile visualizzare gli eventi del servizio in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È anche possibile visualizzare gli eventi del servizio utilizzando il Visualizzatore eventi di Windows.  
   

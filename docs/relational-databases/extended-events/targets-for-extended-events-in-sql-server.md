@@ -1,5 +1,6 @@
 ---
 title: Destinazioni per gli eventi estesi in SQL Server
+description: Questo articolo illustra le destinazioni package0 per gli eventi estesi in SQL Server. Vengono fornite informazioni sulle funzionalità delle destinazioni per la raccolta e la creazione di report sui dati e sui parametri di destinazione.
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501985"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487519"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 
@@ -34,7 +35,7 @@ Questo articolo illustra quando e come usare le destinazioni package0 per gli ev
 La [sezione ring_buffer](#h2_target_ring_buffer) include un esempio d'uso di [XQuery in Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) per copiare una stringa XML in un set di righe relazionale.
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 
 - Avere una certa familiarità con le nozioni di base relative agli eventi estesi, come descritto in [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).

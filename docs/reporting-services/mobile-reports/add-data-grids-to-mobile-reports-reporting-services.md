@@ -1,5 +1,6 @@
 ---
 title: Aggiungere griglie dati a report per dispositivi mobili | Reporting Services | Microsoft Docs
+description: È possibile presentare i dati in una griglia in SQL Server Mobile Report Publisher. Scegliere una griglia dati semplice, una griglia dati indicatore o una griglia dati grafico.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280447"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448315"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Aggiungere griglie dati a report per dispositivi mobili | Reporting Services
 La visualizzazione migliore, talvolta, è proprio quella dei dati. Per visualizzare i dati in *sono disponibili tre*griglie dati [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], o tabelle:

@@ -1,5 +1,6 @@
 ---
 title: Ricerca e visualizzazione di report con un browser (Generatore report) | Microsoft Docs
+description: È possibile visualizzare un report con un Web browser con una connessione diretta a un server di report. Il report include la barra degli strumenti dei report, in modo che sia possibile spostarsi ed eseguire ricerche.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc69666eaecfcacea21291dec13f6356e0f18d13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 489d91bc5f410b6bdce4ef61bd694861bd1c1a7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079256"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342821"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report con un browser (Generatore report e SSRS)
   È possibile utilizzare qualsiasi browser supportato per visualizzare un report tramite una connessione diretta a un server di report. A ogni report è associato un indirizzo URL che rimanda a un server di report. È possibile immettere l'indirizzo Web di un report per aprirlo in una finestra del browser indipendentemente da un'applicazione Web. Il report viene aperto in formato HTML e include la barra degli strumenti del report, pertanto è possibile navigare tra le pagine o effettuare ricerche nei valori dei dati all'interno del report. È possibile impostare i parametri nell'URL per nascondere la barra degli strumenti o selezionare il formato di output del report.  

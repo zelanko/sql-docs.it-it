@@ -9,12 +9,12 @@ ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190589"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487619"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory
 
@@ -77,19 +77,19 @@ L'account del servizio di dominio del cluster Big Data deve essere in grado di c
 
     ![immagine15](./media/deploy-active-directory/image15.png)
 
-1. Fare clic su **Aggiungi** e aggiungere l'utente **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**
+1. Fare clic su **Aggiungi** e aggiungere l'utente **bdcDSA**
 
     ![immagine16](./media/deploy-active-directory/image16.png)
 
     ![immagine17](./media/deploy-active-directory/image17.png)
 
-1. Selezionare l'utente **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** e deselezionare tutte le autorizzazioni, quindi fare clic su **Avanzate**
+1. Selezionare l'utente **bdcDSA** e deselezionare tutte le autorizzazioni, quindi fare clic su **Avanzate**
 
 1. Fare clic su **Aggiungi**
 
     ![immagine18](./media/deploy-active-directory/image18.png)
 
-    - Fare clic su **Selezionare un'entità**, immettere **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** e fare clic su OK
+    - Fare clic su **Selezionare un'entità**, immettere **bdcDSA** e fare clic su OK
 
     - Impostare **Tipo** su **Consenti**
 
@@ -113,7 +113,7 @@ L'account del servizio di dominio del cluster Big Data deve essere in grado di c
 
 - Fare clic su **Aggiungi**
 
-    - Fare clic su **Selezionare un'entità**, immettere **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** e fare clic su OK
+    - Fare clic su **Selezionare un'entità**, immettere **bdcDSA** e fare clic su OK
 
     - Impostare **Tipo** su **Consenti**
 
@@ -127,7 +127,7 @@ L'account del servizio di dominio del cluster Big Data deve essere in grado di c
 
 - Fare clic su **Aggiungi**
 
-    - Fare clic su **Selezionare un'entità**, immettere **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** e fare clic su OK
+    - Fare clic su **Selezionare un'entità**, immettere **bdcDSA** e fare clic su OK
 
     - Impostare **Tipo** su **Consenti**
 
@@ -166,7 +166,7 @@ Per l'integrazione di Active Directory sono necessari i parametri seguenti. Aggi
 
 - `security.activeDirectory.ouDistinguishedName`: nome distinto di un'unità organizzativa (OU) in cui verranno aggiunti tutti gli account Active Directory creati tramite la distribuzione del cluster. Se il dominio è denominato `contoso.local`, il nome distinto dell'unità organizzativa è: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: elenco di indirizzi IP dei controller di dominio
+- `security.activeDirectory.dnsIpAddresses`: contiene l'elenco di indirizzi IP dei server DNS del dominio. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: elenco di nomi di dominio completi del controller di dominio. Il nome di dominio completo contiene il nome computer/host del controller di dominio. Se sono presenti più controller di dominio, è possibile fornirne un elenco qui. Esempio: `HOSTNAME.CONTOSO.LOCAL`
 
@@ -250,7 +250,7 @@ Qui è possibile trovare uno script di esempio per la [distribuzione di un clust
 
 A questo punto, sono stati impostati tutti i parametri necessari per una distribuzione del cluster Big Data con l'integrazione di Active Directory.
 
-Per la documentazione completa su come distribuire [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], fare riferimento alla [documentazione ufficiale](deployment-guidance.md).
+È ora possibile distribuire il cluster BDC integrato con Active Directory usando il comando `azdata` e il profilo di distribuzione kubeadm-prod. Per la documentazione completa su come distribuire [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], vedere [Come distribuire cluster Big Data di SQL Server in Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Verificare la voce DNS inversa per il controller di dominio
 
@@ -325,3 +325,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Al momento è consentito un solo BDC per dominio (Active Directory). L'abilitazione di più cluster Big Data per dominio verrà introdotta in una versione futura.
 
 - Nessuno dei gruppi AD specificati nelle configurazioni di sicurezza può avere l'ambito DomainLocal. È possibile controllare l'ambito di un gruppo di Active Directory seguendo [queste istruzioni](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+
+- Gli account di AD utilizzabili per l'accesso a BDC sono consentiti dallo stesso dominio configurato per BDC. L'abilitazione di account di accesso da un altro dominio attendibile è prevista per una versione futura

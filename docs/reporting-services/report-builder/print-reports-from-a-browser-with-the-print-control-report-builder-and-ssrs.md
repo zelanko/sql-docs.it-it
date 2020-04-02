@@ -1,5 +1,6 @@
 ---
 title: Stampare i report da un browser con il controllo di stampa (Generatore report) | Microsoft Docs
+description: Per migliorare la qualità di stampa dei report visualizzati in un browser e per stampare più pagine, usare le funzionalità di stampa sul lato client in SQL Server Reporting Services.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5eabd755bec6c25c16b3974efe267cf3e27c72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b469ea664d5205844993a9d232990b1832bd648
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082536"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290916"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Stampare i report da un browser con il controllo di stampa (Generatore report e SSRS)
   Benché un browser sia l'applicazione client più comune per visualizzare un report, le funzionalità di stampa dei browser non sono tra le più adatte per la stampa dei report, in quanto sono state progettate per la stampa di pagine Web. Le pagine stampate da un browser includono in genere tutti gli elementi visivi presenti nella pagina Web, più le informazioni dell'intestazione e del piè di pagina che identificano la pagina o il sito Web. Se si avvia la stampa dal browser, viene stampato il contenuto della finestra corrente. Per i report a più pagine, il browser stampa al massimo la prima pagina e, se la pagina del report è più grande delle dimensioni di una pagina stampata, il risultato non risulta completo.  

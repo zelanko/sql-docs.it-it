@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.openlocfilehash: 0309fab947502e6aece3cd369392a7f5e2d1aa29
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074459"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215961"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -48,41 +48,49 @@ Include tutte le informazioni di connessione necessarie per l'accesso remoto ai 
 OPENROWSET
 ( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
    | 'provider_string' }
-   , {   [ catalog. ] [ schema. ] object
-       | 'query'
-     }
+   , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
 } )
 
+<table_or_view> ::= [ catalog. ] [ schema. ] object
+
 <bulk_options> ::=
-   [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
+
    [ , DATASOURCE = 'data_source_name' ]
+
    [ , ERRORFILE = 'file_name' ]
    [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , MAXERRORS = maximum_errors ]
+
    [ , FIRSTROW = first_row ]
    [ , LASTROW = last_row ]
-   [ , MAXERRORS = maximum_errors ]
    [ , ROWS_PER_BATCH = rows_per_batch ]
    [ , ORDER ( { column [ ASC | DESC ] } [ ,...n ] ) [ UNIQUE ] ]
   
    -- bulk_options related to input file format
+   [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
+   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
 ```
 
 ## <a name="arguments"></a>Argomenti
 
 ### <a name="provider_name"></a>'*provider_name*'
-Stringa di caratteri che rappresenta il nome descrittivo (o PROGID) del provider OLE DB specificato nel Registro di sistema. *provider_name* non ha un valore predefinito.
+Stringa di caratteri che rappresenta il nome descrittivo (o PROGID) del provider OLE DB specificato nel Registro di sistema. *provider_name* non ha un valore predefinito. Sono esempi di nomi di provider `Microsoft.Jet.OLEDB.4.0`, `SQLNCLI` o `MSDASQL`.
 
-*datasource* è una costante stringa che corrisponde a un'origine dati OLE DB specifica. *datasource* è la proprietà DBPROP_INIT_DATASOURCE da passare all'interfaccia IDBProperties del provider per l'inizializzazione di quest'ultimo. In genere questa stringa include il nome del file di database, il nome di un server di database o un nome riconosciuto dal provider per individuare il database o i database.
+### <a name="datasource"></a>'*datasource*'
+Costante stringa che corrisponde a un'origine dati OLE DB specifica. *datasource* è la proprietà DBPROP_INIT_DATASOURCE da passare all'interfaccia IDBProperties del provider per l'inizializzazione di quest'ultimo. In genere questa stringa include il nome del file di database, il nome di un server di database o un nome riconosciuto dal provider per individuare il database o i database.
+L'origine dati può essere il percorso di file `C:\SAMPLES\Northwind.mdb'` per il provider `Microsoft.Jet.OLEDB.4.0` o la stringa di connessione `Server=Seattle1;Trusted_Connection=yes;` per il provider `SQLNCLI`.
 
-*user_id* è una costante stringa che rappresenta il nome utente passato al provider OLE DB specificato. *user_id* consente di specificare il contesto di sicurezza per la connessione e viene passato come proprietà DBPROP_AUTH_USERID per l'inizializzazione del provider. *user_id* non può essere un ID di accesso di Microsoft Windows.
+### <a name="user_id"></a>'*user_id*'
+Costante stringa che rappresenta il nome utente passato al provider OLE DB specificato. *user_id* consente di specificare il contesto di sicurezza per la connessione e viene passato come proprietà DBPROP_AUTH_USERID per l'inizializzazione del provider. *user_id* non può essere un ID di accesso di Microsoft Windows.
 
-*password* è una costante stringa che rappresenta la password utente da passare al provider OLE DB. *password* viene passato come proprietà DBPROP_AUTH_PASSWORD durante l'inizializzazione del provider. *password* non può essere una password di Microsoft Windows.
+### <a name="password"></a>'*password*'
+Costante stringa che rappresenta la password utente da passare al provider OLE DB. *password* viene passato come proprietà DBPROP_AUTH_PASSWORD durante l'inizializzazione del provider. *password* non può essere una password di Microsoft Windows.
 
 ```sql
 SELECT a.*
@@ -93,21 +101,29 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-*provider_string* è una stringa di connessione specifica del provider che viene passata come proprietà DBPROP_INIT_PROVIDERSTRING per l'inizializzazione del provider OLE DB. In *provider_string* sono incluse in genere tutte le informazioni di connessione necessarie per inizializzare il provider. Per un elenco di parole chiave riconosciute dal provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vedere [Proprietà di inizializzazione e di autorizzazione](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
-
-*catalog* è il nome del catalogo o del database contenente l'oggetto specificato.
-
-*schema* è il nome dello schema o del proprietario dell'oggetto specificato.
-
-*object* è il nome dell'oggetto che identifica in modo univoco l'oggetto da utilizzare.
+### <a name="provider_string"></a>'*provider_string*'
+Stringa di connessione specifica del provider passata come proprietà DBPROP_INIT_PROVIDERSTRING per l'inizializzazione del provider OLE DB. In *provider_string* sono incluse in genere tutte le informazioni di connessione necessarie per inizializzare il provider. Per un elenco di parole chiave riconosciute dal provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vedere [Proprietà di inizializzazione e di autorizzazione](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
 ```sql
-SELECT a.*
+SELECT d.*
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
-                 AdventureWorks2012.HumanResources.Department) AS a;
+                            Department) AS d;
 ```
 
-*query* è una costante stringa inviata al provider ed eseguita da questo. L'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non elabora questa query, ma i risultati della query restituiti dal provider (query pass-through). Le query pass-through risultano utili quando vengono utilizzate in provider che non espongono i dati tabulari tramite i nomi di tabella, ma solo attraverso un linguaggio di comando. Le query pass-through sono supportate nel server remoto, a condizione che il provider di query supporti l'oggetto OLE DB Command e le relative interfacce obbligatorie. Per altre informazioni, vedere [Informazioni di riferimento di SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
+### <a name="table_or_view"></a><table_or_view>
+Tabella o vista remota che contiene i dati che devono essere letti da `OPENROWSET`. Può essere un oggetto con nome in tre parti con i componenti seguenti:
+- *catalogo* (facoltativo) - Nome del catalogo o del database contenente l'oggetto specificato.
+- *schema* (facoltativo) - Nome dello schema o del proprietario dell'oggetto specificato.
+- *oggetto* - Nome dell'oggetto che identifica in modo univoco l'oggetto da usare.
+
+```sql
+SELECT d.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS d;
+```
+
+### <a name="query"></a>'*query*'
+Costante stringa inviata al provider ed eseguita da questo. L'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non elabora questa query, ma i risultati della query restituiti dal provider (query pass-through). Le query pass-through risultano utili quando vengono utilizzate in provider che non espongono i dati tabulari tramite i nomi di tabella, ma solo attraverso un linguaggio di comando. Le query pass-through sono supportate nel server remoto, a condizione che il provider di query supporti l'oggetto OLE DB Command e le relative interfacce obbligatorie. Per altre informazioni, vedere [Informazioni di riferimento di SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
 ```sql
 SELECT a.*
@@ -131,19 +147,96 @@ Gli argomenti dell'opzione BULK consentono un controllo significativo su dove in
 
 Per informazioni sulla preparazione dei dati per le operazioni di importazione bulk, vedere [Preparazione dei dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
-*data_file* è il percorso completo del file di dati i cui dati devono essere copiati nella tabella di destinazione.
+#### <a name="bulk-data_file"></a>BULK '*data_file*'
+Percorso completo del file di dati i cui dati devono essere copiati nella tabella di destinazione.
+
+```sql
+SELECT * FROM OPENROWSET(
+   BULK 'C:\DATA\inv-2017-01-19.csv',
+   SINGLE_CLOB) AS DATA;
+```
+
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file può essere presente nell'archivio BLOB di Azure. Per alcuni esempi, vedere [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
 > Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
-\<bulk_options> specifica uno o più argomenti per l'opzione BULK.
+#### <a name="bulk-error-handling-options"></a>Opzioni di gestione degli errori BULK
 
-CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } specifica la tabella codici dei dati contenuti nel file. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di 127 o minori di 32.
+##### <a name="errorfile"></a>ERRORFILE
+`ERRORFILE`='*file_name*' specifica il file usato per raccogliere le righe che contengono errori di formattazione e non possono essere convertite in un set di righe OLE DB. Tali righe vengono copiate nel file degli errori dal file di dati così come sono.
+
+Il file di errori viene creato all'inizio dell'esecuzione del comando. Se il file esiste già viene generato un errore. Viene inoltre creato un file di controllo con estensione ERROR.txt. Questo file contiene un riferimento a ogni riga nel file degli errori e fornisce informazioni di diagnostica. Dopo la correzione degli errori, i dati possono essere caricati.
+**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` può essere presente nell'archiviazione BLOB di Azure.
+
+##### <a name="errorfile_data_source_name"></a>ERRORFILE_DATA_SOURCE_NAME
+**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+Origine dati esterna denominata che punta alla posizione di archiviazione BLOB di Azure del file degli errori rilevati durante l'importazione. L'origine dati esterna deve essere creata tramite l'opzione `TYPE = BLOB_STORAGE` aggiunta in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+
+##### <a name="maxerrors"></a>MAXERRORS
+`MAXERRORS` =*maximum_errors* specifica il numero massimo di errori di sintassi o righe non conformi, definite nel file di formato, che possono verificarsi prima che OPENROWSET generi un'eccezione. Fino al raggiungimento di MAXERRORS, OPENROWSET ignora ogni riga non conforme, non caricandola, e conteggia la riga non conforme come un errore.
+
+Il valore predefinito per *maximum_errors* è 10.
+
+> [!NOTE]
+> `MAX_ERRORS` non si applica ai vincoli CHECK o alla conversione dei tipi di dati **money** e **bigint**.
+
+#### <a name="bulk-data-processing-options"></a>Opzioni di elaborazione dei dati BULK
+
+##### <a name="firstrow"></a>FIRSTROW
+`FIRSTROW` =*first_row* specifica il numero della prima riga da caricare. Il valore predefinito è 1. Questo valore indica la prima riga nel file di dati specificato. I numeri di riga sono determinati dal conteggio dei caratteri di terminazione. FIRSTROW è in base 1.
+
+##### <a name="lastrow"></a>LASTROW
+`LASTROW` =*last_row* specifica il numero dell'ultima riga da caricare. Il valore predefinito è 0. Questo valore indica l'ultima riga nel file di dati specificato.
+
+##### <a name="rows_per_batch"></a>ROWS_PER_BATCH
+`ROWS_PER_BATCH` =*rows_per_batch* specifica il numero approssimativo di righe di dati nel file di dati. Questo valore deve essere dello stesso ordine del numero effettivo di righe.
+
+`OPENROWSET` importa sempre un file di dati come batch singolo. Se tuttavia si specifica *rows_per_batch* con un valore > 0, Query Processor usa il valore di *rows_per_batch* come hint per l'allocazione delle risorse nel piano di query.
+
+Per impostazione predefinita, il valore ROWS_PER_BATCH è sconosciuto. La specifica di ROWS_PER_BATCH = 0 equivale all'omissione di ROWS_PER_BATCH.
+
+##### <a name="order"></a>ORDER
+`ORDER` ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] ) Suggerimento facoltativo che specifica la modalità di ordinamento dei dati nel file. Per impostazione predefinita, per l'operazione bulk si presume che il file di dati non sia ordinato. Se l'ordine specificato può essere sfruttato da Query Optimizer per generare un piano di query più efficiente, le prestazioni possono migliorare. Di seguito vengono riportati alcuni esempi di situazioni in cui può essere utile specificare l'ordinamento:
+
+- Inserimento di righe in una tabella con un indice cluster, in cui i dati del set di righe sono ordinati in base alla chiave dell'indice cluster.
+- Unione del set di righe con un'altra tabella, in cui le colonne di ordinamento e di join corrispondono.
+- Aggregazione dei dati del set di righe tramite le colonne dell'ordinamento.
+- Utilizzo del set di righe come tabella di origine nella clausola FROM di una query, in cui le colonne di ordinamento e di join corrispondono.
+
+##### <a name="unique"></a>UNIQUE
+`UNIQUE` specifica che il file di dati non ha voci duplicate.
+
+Se le righe effettive del file di dati non sono ordinate in base all'ordine specificato o se l'hint UNIQUE viene specificato e sono presenti chiavi duplicate, viene restituito un errore.
+
+Gli alias di colonna sono richiesti quando si utilizza ORDER. L'elenco di alias di colonna deve fare riferimento alla tabella derivata a cui è possibile accedere tramite la clausola BULK. I nomi di colonna specificati nella clausola ORDER si riferiscono a questo elenco di alias di colonna. Non è possibile specificare colonne di tipi valore di grandi dimensioni (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml**) e di tipi Large Object (LOB) (**text**, **ntext** e **image**).
+
+##### <a name="single_blob"></a>SINGLE_BLOB
+Restituisce il contenuto di *data_file* come set di righe a riga singola e a colonna singola di tipo **varbinary(max)** .
 
 > [!IMPORTANT]
-> CODEPAGE non è un'opzione supportata in Linux.
+> Per l'importazione di dati XML è consigliabile utilizzare solo l'opzione SINGLE_BLOB anziché SINGLE_CLOB e SINGLE_NCLOB, in quanto solo SINGLE_BLOB supporta tutti i tipi di conversione di codifica di Windows.
+
+##### <a name="single_clob"></a>SINGLE_CLOB
+Leggendo *data_file* come ASCII, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)** , usando le regole di confronto del database corrente.
+
+##### <a name="single_nclob"></a>SINGLE_NCLOB
+Leggendo *data_file* come UNICODE, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)** , usando le regole di confronto del database corrente.
+
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
+#### <a name="bulk-input-file-format-options"></a>Opzioni di formato del file di input BULK
+
+##### <a name="codepage"></a>CODEPAGE
+`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } Specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di 127 o minori di 32.
+
+> [!IMPORTANT]
+> `CODEPAGE` non è un'opzione supportata in Linux.
 
 > [!NOTE]
 > È consigliabile specificare un nome di regole di confronto per ogni colonna in un file di formato tranne quando si vuole assegnare all'opzione 65001 la priorità sulla specifica delle regole di confronto o della tabella codici.
@@ -155,64 +248,8 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } specifica la tabella codici de
 |RAW|Non vengono eseguite conversioni tra tabelle codici. Si tratta dell'opzione più rapida.|
 |*code_page*|Indica la tabella codici di origine in cui vengono codificati i dati di tipo carattere del file di dati, ad esempio 850.<br /><br /> **Importante** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
 
-ERRORFILE ='*file_name*' specifica il file usato per raccogliere le righe che contengono errori di formattazione e non possono essere convertite in un set di righe OLE DB. Tali righe vengono copiate nel file degli errori dal file di dati così come sono.
-
-Il file di errori viene creato all'inizio dell'esecuzione del comando. Se il file esiste già viene generato un errore. Viene inoltre creato un file di controllo con estensione ERROR.txt. Questo file contiene un riferimento a ogni riga nel file degli errori e fornisce informazioni di diagnostica. Dopo la correzione degli errori, i dati possono essere caricati.
-**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` può essere presente nell'archiviazione BLOB di Azure.
-
-'errorfile_data_source_name' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Origine dati esterna denominata che punta alla posizione di archiviazione BLOB di Azure del file degli errori rilevati durante l'importazione. L'origine dati esterna deve essere creata tramite l'opzione `TYPE = BLOB_STORAGE` aggiunta in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
-
-FIRSTROW =*first_row* specifica il numero della prima riga da caricare. Il valore predefinito è 1. Questo valore indica la prima riga nel file di dati specificato. I numeri di riga sono determinati dal conteggio dei caratteri di terminazione. FIRSTROW è in base 1.
-
-LASTROW =*last_row* specifica il numero dell'ultima riga da caricare. Il valore predefinito è 0. Questo valore indica l'ultima riga nel file di dati specificato.
-
-MAXERRORS =*maximum_errors* specifica il numero massimo di errori di sintassi o righe non conformi, definite nel file di formato, che possono verificarsi prima che OPENROWSET generi un'eccezione. Fino al raggiungimento di MAXERRORS, OPENROWSET ignora ogni riga non conforme, non caricandola, e conteggia la riga non conforme come un errore.
-
-Il valore predefinito per *maximum_errors* è 10.
-
-> [!NOTE]
-> MAX_ERRORS non si applica ai vincoli CHECK o alla conversione dei tipi di dati **money** e **bigint**.
-
-ROWS_PER_BATCH =*rows_per_batch* specifica il numero approssimativo di righe di dati nel file. Questo valore deve essere dello stesso ordine del numero effettivo di righe.
-
-OPENROWSET importa sempre un file di dati come batch singolo. Se tuttavia si specifica *rows_per_batch* con un valore > 0, Query Processor usa il valore di *rows_per_batch* come hint per l'allocazione delle risorse nel piano di query.
-
-Per impostazione predefinita, il valore ROWS_PER_BATCH è sconosciuto. La specifica di ROWS_PER_BATCH = 0 equivale all'omissione di ROWS_PER_BATCH.
-
-ORDER ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] ) è un suggerimento facoltativo che specifica la modalità di ordinamento dei dati nel file. Per impostazione predefinita, per l'operazione bulk si presume che il file di dati non sia ordinato. Se l'ordine specificato può essere sfruttato da Query Optimizer per generare un piano di query più efficiente, le prestazioni possono migliorare. Di seguito vengono riportati alcuni esempi di situazioni in cui può essere utile specificare l'ordinamento:
-
-- Inserimento di righe in una tabella con un indice cluster, in cui i dati del set di righe sono ordinati in base alla chiave dell'indice cluster.
-- Unione del set di righe con un'altra tabella, in cui le colonne di ordinamento e di join corrispondono.
-- Aggregazione dei dati del set di righe tramite le colonne dell'ordinamento.
-- Utilizzo del set di righe come tabella di origine nella clausola FROM di una query, in cui le colonne di ordinamento e di join corrispondono.
-
-UNIQUE specifica che il file di dati non ha voci duplicate.
-
-Se le righe effettive del file di dati non sono ordinate in base all'ordine specificato o se l'hint UNIQUE viene specificato e sono presenti chiavi duplicate, viene restituito un errore.
-
-Gli alias di colonna sono richiesti quando si utilizza ORDER. L'elenco di alias di colonna deve fare riferimento alla tabella derivata a cui è possibile accedere tramite la clausola BULK. I nomi di colonna specificati nella clausola ORDER si riferiscono a questo elenco di alias di colonna. Non è possibile specificare colonne di tipi valore di grandi dimensioni (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml**) e di tipi Large Object (LOB) (**text**, **ntext** e **image**).
-
-SINGLE_BLOB restituisce il contenuto di *data_file* come set di righe a riga singola e a colonna singola di tipo **varbinary(max)** .
-
-> [!IMPORTANT]
-> Per l'importazione di dati XML è consigliabile utilizzare solo l'opzione SINGLE_BLOB anziché SINGLE_CLOB e SINGLE_NCLOB, in quanto solo SINGLE_BLOB supporta tutti i tipi di conversione di codifica di Windows.
-
-SINGLE_CLOB
-
-Leggendo *data_file* come ASCII, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)** , usando le regole di confronto del database corrente.
-
-SINGLE_NCLOB, leggendo *data_file* come UNICODE, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **nvarchar(max)** , in base alle regole di confronto del database corrente.
-
-```sql
-SELECT *
-   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
-```
-
-### <a name="input-file-format-options"></a>Opzioni di formato del file di input
-
-FORMAT **=** 'CSV' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+##### <a name="format"></a>FORMAT
+`FORMAT` **=** 'CSV' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifica un file di valori separati da virgole conforme allo standard [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
 ```sql
@@ -223,7 +260,8 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMAT='CSV') AS cars;
 ```
 
-FORMATFILE ='*format_file_path*' specifica il percorso completo di un file di formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: XML e non XML.
+##### <a name="formatfile"></a>FORMATFILE
+`FORMATFILE` ='*format_file_path*' Specifica il percorso completo di un file di formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: XML e non XML.
 
 Un file di formato è necessario per definire i tipi di colonna nel set di risultati. L'unica eccezione si verifica quando viene specificato SINGLE_CLOB, SINGLE_BLOB o SINGLE_NCLOB. In questo caso, il file di formato non è necessario.
 
@@ -232,7 +270,8 @@ Per informazioni sui file di formato, vedere [Usare un file di formato per l'imp
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path può essere presente nell'archiviazione BLOB di Azure. Per alcuni esempi, vedere [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
-FIELDQUOTE **=** 'field_quote' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+##### <a name="fieldquote"></a>FIELDQUOTE
+`FIELDQUOTE` **=** 'field_quote' **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Specifica il carattere da usare come carattere virgolette nel file CSV. Se non viene specificato alcun carattere, viene usato il carattere virgolette (") in base alla definizione dello standard [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
 ## <a name="remarks"></a>Osservazioni
@@ -289,7 +328,7 @@ Per l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Le autorizzazioni `OPENROWSET` sono determinate dalle autorizzazioni del nome utente che viene passato al provider OLE DB. L'uso dell'opzione `BULK` richiede l'autorizzazione `ADMINISTER BULK OPERATIONS`.
+Le autorizzazioni `OPENROWSET` sono determinate dalle autorizzazioni del nome utente che viene passato al provider OLE DB. L'uso dell'opzione `BULK` richiede l'autorizzazione `ADMINISTER BULK OPERATIONS` o `ADMINISTER DATABASE BULK OPERATIONS`.
 
 ## <a name="examples"></a>Esempi
 

@@ -1,5 +1,6 @@
 ---
 title: Proprietà di sistema del server di report | Microsoft Docs
+description: Le proprietà di sistema sono globali per il database del server di report. È possibile leggere o modificare numerose di queste proprietà utilizzando i metodi del servizio Web.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128812"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509633"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Proprietà di Reporting Services - Proprietà di sistema del server di report
   I nomi di proprietà di sistema seguenti sono riservati. Non è possibile creare proprietà definite dall'utente con lo stesso nome. È possibile leggere o modificare numerose di queste proprietà utilizzando i metodi del servizio Web.  

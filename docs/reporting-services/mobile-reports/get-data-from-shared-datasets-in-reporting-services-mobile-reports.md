@@ -1,5 +1,6 @@
 ---
 title: Ottenere dati da un set di dati condivisi nei report di Reporting Services per dispositivi mobili | Microsoft Docs
+description: SQL Server Mobile Report Publisher può accedere ai dati da quasi tutte le origini usando un'origine dati condivisa, configurata in un portale Web di Reporting Services.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4cc5e1538d1575e05e1eecd3959c98404cdbf5d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63061153"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448243"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Ottenere dati da un set di dati condivisi nei report di Reporting Services per dispositivi mobili
 Oltre a [caricare dati da file di Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), SQL Server Mobile Report Publisher può anche accedere ai dati di quasi tutte le origini. L'accesso ai dati richiede un'origine dati condivisa, configurata in un portale Web di Reporting Services. Altre informazioni sulla [creazione di origini dati condivise](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e sulla [creazione di set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md).  

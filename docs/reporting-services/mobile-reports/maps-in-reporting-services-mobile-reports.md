@@ -1,5 +1,6 @@
 ---
 title: Eseguire il mapping nei report di Reporting Services per dispositivi mobili | Microsoft Docs
+description: SQL Server Mobile Report Publisher include tre diversi tipi di viste mappa e mappe predefinite per i continenti e per alcuni paesi singoli.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b7635b0af96f0009ef6220fc8360a1373d2f998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62683721"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448432"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Esegue il mapping nei report di Reporting Services per dispositivi mobili
 Le mappe sono un ottimo modo per visualizzare dati geografici. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] include tre diversi tipi di viste mappa e mappe predefinite per i continenti e per alcuni paesi singoli. È anche possibile [caricare e usare mappe personalizzate](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   

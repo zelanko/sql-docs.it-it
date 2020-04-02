@@ -1,5 +1,6 @@
 ---
 title: Accesso agli assembly personalizzati tramite espressioni | Microsoft Docs
+description: Dopo aver creato un assembly personalizzato, informazioni su come accedere alle classi nell'assembly personalizzato usando le espressioni di report.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 101af9d59d4a3f1e48d85859c91f77c8be2e4719
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e77b3df959230b7ecb8bb20874d61e9191074285
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194368"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217040"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accesso agli assembly personalizzati tramite espressioni
   Dopo aver creato un assembly personalizzato, averlo reso disponibile in Progettazione report o nel server di report, aver aggiunto i criteri di sicurezza appropriati e aver aggiunto un riferimento all'assembly personalizzato nella definizione del report, è possibile accedere ai membri delle classi nell'assembly utilizzando le espressioni di report. Per fare riferimento al codice personalizzato in un'espressione, è necessario chiamare il membro di una classe nell'assembly. La modalità di esecuzione di tale operazione dipende dal tipo di metodo, ovvero statico o basato su istanze.  

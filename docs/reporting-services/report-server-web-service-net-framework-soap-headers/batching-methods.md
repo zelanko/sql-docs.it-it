@@ -1,5 +1,6 @@
 ---
 title: Metodi di invio in batch | Microsoft Docs
+description: Informazioni su come usare le intestazioni SOAP in Reporting Services per includere più metodi di servizio Web in un'unica operazione.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcafb334e32a1b98d10c57d8f31fe321d0b7f182
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dcc18839d2e10a35a35289a5950cab566afea23a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991482"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215590"
 ---
 # <a name="batching-methods"></a>Metodi di invio in batch
   L'utilizzo di intestazioni SOAP in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di includere più metodi del servizio Web in una singola operazione. I metodi vengono eseguiti nell'ambito di un'unica transazione di database, nell'ordine con cui vengono chiamati.  

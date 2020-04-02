@@ -1,5 +1,6 @@
 ---
 title: Finestra di dialogo per la conversione degli elementi del report personalizzati (Generatore report) | Microsoft Docs
+description: Generatore report richiede di convertire alcuni elementi del report personalizzati, che hanno funzionalità non supportate, nel nuovo formato di definizione del report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 16d2e745c923e719699c8295e186d5f91e7462da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5c3d7ece0e4bccf6bea6426391498005887ef6c8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580800"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342903"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Finestra di dialogo per la conversione degli elementi del report personalizzati (Generatore report)
 

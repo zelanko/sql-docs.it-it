@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e67682a25768e80469aa13a027099bacc515f8a7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75259037"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448107"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "75259037"
   
 -   **Per creare un endpoint del mirroring del database usando:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
  I metodi di autenticazione e crittografia dell'istanza del server sono stabiliti dall'amministratore di sistema.  
   
 > [!IMPORTANT]  
 >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>Per creare un endpoint del mirroring del database in cui viene utilizzata l'autenticazione di Windows  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75259037"
   
     -   *\<algorithm>* consente di specificare gli standard di crittografia per l'endpoint. Il valore di *\<algorithm>* può essere uno degli algoritmi o delle combinazioni di algoritmi seguenti: RC4, AES, AES RC4 o RC4 AES.  
   
-         AES RC4 indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza a quello AES. RC4 AES indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza all'algoritmo RC4. Se i due endpoint specificano entrambi gli algoritmi, ma con un ordine diverso, l'algoritmo verrà definito dall'endpoint che accetta la connessione.  
+         AES RC4 indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza a quello AES. RC4 AES indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza all'algoritmo RC4. Se i due endpoint specificano entrambi gli algoritmi, ma con un ordine diverso, l'algoritmo verrà definito dall'endpoint che accetta la connessione. Fornire lo stesso algoritmo in modo esplicito per evitare errori di connessione tra server diversi.
   
         > [!NOTE]  
         >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
@@ -139,7 +139,7 @@ ms.locfileid: "75259037"
     > [!NOTE]  
     >  Per modificare un endpoint esistente, usare [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a> Esempio: Creazione di endpoint per supportare il mirroring del database (Transact-SQL)  
+###  <a name="example-creating-endpoints-to-support-for-database-mirroring-transact-sql"></a><a name="TsqlExample"></a> Esempio: Creazione di endpoint per supportare il mirroring del database (Transact-SQL)  
  Nell'esempio seguente si creano endpoint del mirroring del database per le istanze del server predefinite in tre sistemi di computer distinti:  
   
 |Ruolo dell'istanza del server|Nome del computer host|  
@@ -179,7 +179,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per configurare un endpoint del mirroring del database**  
   
 -   [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  

@@ -1,5 +1,6 @@
 ---
 title: Rendering in formato HTML (Generatore report) | Microsoft Docs
+description: In Generatore report l'estensione per il rendering HTML esegue il rendering dei report impaginati in formato HTML. Può produrre pagine HTML complete o frammenti da incorporare in altre pagine.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082479"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290874"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
   L'estensione per il rendering HTML esegue il rendering di un report impaginato in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.  
@@ -27,11 +28,11 @@ ms.locfileid: "77082479"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Rendering in formato MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Rendering in formato MHTML  
  L'estensione per il rendering HTML può inoltre consentire l'esecuzione del rendering dei report in formato MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML estende HTML per incorporare oggetti codificati, ad esempio immagini, in documenti HTML. Tale estensione consente di incorporare risorse, quali immagini, documenti o altri file binari, come strutture MIME nel codice HTML del report, in un singolo file. I report MHTML sono utili anche per l'incorporamento di elementi in messaggi di posta elettronica, in quanto tutte le risorse vengono incluse nel report. Sebbene il rendering MHTML venga eseguito dall'estensione per il rendering HTML, talvolta questa funzionalità viene denominata anche estensione per il rendering MHTML.  
   
   
-##  <a name="BrowserSupport"></a> Supporto browser  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> Supporto browser  
  Questa estensione per il rendering supporta le seguenti versioni di browser:  
   
 -   Internet Explorer 5.5 e versioni successive  
@@ -43,7 +44,7 @@ ms.locfileid: "77082479"
  In considerazione delle caratteristiche dei diversi browser, è possibile che il report visualizzabile sia leggermente diverso a seconda del browser. Ad esempio, la casella di testo contiene una proprietà chiamata WritingMode. non supportata in Firefox.  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> Regole di rendering specifiche di HTML  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> Regole di rendering specifiche di HTML  
  Durante il rendering vengono applicate le seguenti regole specifiche di HTML:  
   
 -   Il renderer compila una struttura di tabella HTML in cui inserire tutti gli elementi di ogni raccolta **ReportItems** , se ne esiste più di una.  
@@ -61,7 +62,7 @@ ms.locfileid: "77082479"
 -   Tutte le coordinate e le dimensioni degli elementi del report vengono convertite in millimetri. Tutte le altre dimensioni, incluse le proprietà dello stile, mantengono le unità di misura originali. Le differenze di dimensioni e posizioni inferiori a 0,2 mm vengono considerate come 0 mm.  
   
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  In HTML sono supportati alcuni elementi interattivi. Di seguito è riportata una descrizione di comportamenti specifici.  
   
 ### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
@@ -84,10 +85,10 @@ ms.locfileid: "77082479"
   
  Ulteriori funzionalità di ricerca vengono fornite dal controllo Web Form ReportViewer.  
   
-##  <a name="FontsOnClient"></a> Tipi di carattere nel computer client
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> Tipi di carattere nel computer client
  Quando nel report è usato un tipo di carattere personalizzato, questo tipo di carattere deve essere installato nel computer usato per visualizzare il report, ovvero il computer client, per garantire una corretta visualizzazione del report. Se il tipo di carattere non è installato nel computer client, nel report verrà visualizzato un tipo di carattere predefinito di sistema invece di quello personalizzato.
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  Modificando le impostazioni relative alle informazioni sul dispositivo, è possibile modificare alcune impostazioni predefinite per questo renderer, tra cui la modalità di rendering. Per altre informazioni, vedere [Impostazioni relative alle informazioni sul dispositivo HTML](../../reporting-services/html-device-information-settings.md).  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Monitoraggio delle prestazioni con Query Store | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288465"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448172"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 La funzionalità Archivio query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi di prestazioni in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. Archivio query acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva per la consultazione. I dati vengono separati in base a intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. Per configurare l'archivio query, è possibile usare l'opzione [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -32,7 +32,7 @@ Per informazioni sul funzionamento di Query Store nel [!INCLUDE[ssSDS](../../inc
 > [!IMPORTANT]
 > Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile.
 
-## <a name="Enabling"></a> Abilitazione di Archivio query
+## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Abilitazione di Archivio query
 
  Per impostazione predefinita, la funzionalità Archivio query non è attiva per i nuovi database.
 
@@ -63,7 +63,7 @@ Per altre opzioni della sintassi correlate a Query Store, vedere [Opzioni ALTER 
 > [!IMPORTANT]
 > Per informazioni sull'abilitazione di Query Store e su come mantenerlo allineato al carico di lavoro, vedere [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
-## <a name="About"></a> Informazioni presenti in Archivio query
+## <a name="information-in-the-query-store"></a><a name="About"></a> Informazioni presenti in Archivio query
 
 I piani di esecuzione per query specifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere cambiano nel tempo per motivi diversi, quali modifiche delle statistiche, modifiche dello schema, creazione/eliminazione di indici e così via. Nella cache delle procedure, dove sono archiviati i piani di query memorizzati nella cache, viene archiviato solo il piano di esecuzione più recente. La rimozione dei piani dalla cache dei piani può dipendere anche da problemi di memoria. Di conseguenza, le regressioni delle prestazioni di esecuzione delle query causate da modifiche del piano di esecuzione possono essere rilevanti e richiedere tempo per la risoluzione.
 
@@ -109,7 +109,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;
 ```
 
-## <a name="Regressed"></a> Usare la funzionalità Query regredite
+## <a name="use-the-regressed-queries-feature"></a><a name="Regressed"></a> Usare la funzionalità Query regredite
 
 Dopo aver abilitato Query Store, aggiornare la parte del database del riquadro Esplora oggetti per aggiungere la sezione **Query Store**.
 
@@ -123,7 +123,7 @@ Selezionare un piano per visualizzare il piano di query con interfaccia grafica.
 
 Per forzare un piano, selezionare una query e un piano, quindi fare clic su **Forza piano**. È possibile forzare solo piani che sono stati salvati dalla funzionalità del piano di query e che sono ancora presenti nella relativa cache.
 
-## <a name="Waiting"></a> Ricerca di query in attesa
+## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Ricerca di query in attesa
 
 A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], in Query Store sono disponibili le statistiche di attesa per ogni query nel corso del tempo.
 
@@ -151,7 +151,7 @@ Di seguito sono descritti alcuni esempi su come ottenere informazioni dettagliat
 |Attese di PAGEIOLATCH_SH elevate per database|Attese di I/O del buffer elevate in Query Store per query specifiche|Trovare le query con un numero elevato di letture fisiche in Query Store. Se corrispondono alle query con attese di I/O elevate, provare a introdurre un indice nell'entità sottostante, in modo da eseguire ricerche anziché analisi e ridurre così al minimo il sovraccarico di I/O delle query.|
 |Attese di SOS_SCHEDULER_YIELD elevate per database|Attese di CPU elevate in Query Store per query specifiche|Individuare la prime query per utilizzo CPU in Query Store. Tra queste query identificare quelle in cui la tendenza di utilizzo CPU elevato è correlata ad attese di CPU elevate per le query interessate. Concentrarsi sull'ottimizzazione di queste query: considerare la possibilità di una regressione del piano o la mancanza di un indice.|
 
-## <a name="Options"></a> Opzioni di configurazione
+## <a name="configuration-options"></a><a name="Options"></a> Opzioni di configurazione
 
 Le opzioni seguenti sono disponibili per la configurazione dei parametri di Query Store.
 
@@ -177,7 +177,7 @@ Per determinare le opzioni correnti di Query Store, eseguire una query sulla vis
 
 Per altre informazioni sull'impostazione di opzioni con istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Gestione delle opzioni](#OptionMgmt).
 
-## <a name="Related"></a> Viste, funzioni e procedure correlate
+## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Viste, funzioni e procedure correlate
 
 È possibile visualizzare e gestire Archivio query con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oppure usando le viste e le procedure seguenti.
 
@@ -211,9 +211,9 @@ Per configurare Query Store vengono usate le stored procedure.
 |[sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
 |sp_query_store_consistency_check &#40;Transact-SQL&#41;||
 
-## <a name="Scenarios"></a> Principali scenari di utilizzo
+## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Principali scenari di utilizzo
 
-### <a name="OptionMgmt"></a> Gestione delle opzioni
+### <a name="option-management"></a><a name="OptionMgmt"></a> Gestione delle opzioni
 
 Questa sezione fornisce alcune linee guida per la gestione della funzionalità Archivio query.
 
@@ -303,35 +303,44 @@ In alternativa, è possibile cancellare solo dati di query ad hoc perché sono m
 
 **Eliminare query ad hoc**
 
-È possibile eliminare le query che sono state eseguite solo una volta e che risalgono a più di 24 ore prima.
+Questa operazione rimuove definitivamente le query ad hoc e interne dall'archivio query ogni 3 minuti, in modo che l'archivio query non esaurisca lo spazio e non rimuova le query di cui è necessario tenere traccia
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 Per la cancellazione dei dati non più necessari, è possibile definire procedure personalizzate con logiche diverse.
@@ -341,7 +350,7 @@ Per rimuovere i dati non necessari, nell'esempio precedente viene usata la store
 - **sp_query_store_reset_exec_stats** per cancellare le statistiche di runtime per un piano specifico.
 - **sp_query_store_remove_plan** per rimuovere un singolo piano.
 
-### <a name="Peformance"></a> Controllo delle prestazioni e risoluzione dei problemi
+### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Controllo delle prestazioni e risoluzione dei problemi
 
 Archivio query conserva la cronologia delle metriche relative a compilazione e runtime per tutte le esecuzioni delle query e questo consente di ottenere facilmente informazioni sul carico di lavoro.
 
@@ -580,7 +589,7 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);
 ```
 
-### <a name="Stability"></a> Misure per garantire la stabilità delle prestazioni di query
+### <a name="maintaining-query-performance-stability"></a><a name="Stability"></a> Misure per garantire la stabilità delle prestazioni di query
 
 Per le query eseguite più volte è possibile notare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa piani diversi che comportano durate e utilizzi diversi delle risorse. Archivio query consente di rilevare il momento in cui si verifica una regressione delle prestazioni di esecuzione delle query e di determinare il piano ottimale in un periodo di interesse. È quindi possibile forzare il piano ottimale per le future esecuzioni delle query.
 
@@ -596,7 +605,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 Se si usa **sp_query_store_force_plan** , è possibile forzare solo piani che sono stati registrati da Archivio query come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire tale query mentre Archivio query era attivo.
 
-#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Supporto dell'uso forzato del piano per cursori fast forward e statici
+#### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Supporto dell'uso forzato del piano per cursori fast forward e statici
 
 A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e database SQL di Azure (tutti i modelli di distribuzione), Query Store consente di forzare i piani di esecuzione query per i cursori API e [!INCLUDE[tsql](../../includes/tsql-md.md)] Fast Forward e statici. A tale scopo, è possibile usare `sp_query_store_force_plan` o i report di Query Store di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 

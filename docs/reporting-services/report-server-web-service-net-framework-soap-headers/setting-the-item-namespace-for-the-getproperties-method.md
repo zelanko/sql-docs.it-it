@@ -1,5 +1,6 @@
 ---
 title: Impostazione dello spazio dei nomi degli elementi per il metodo GetProperties | Microsoft Docs
+Description: Informazioni su come recuperare le proprietà in base al percorso o all'ID di un elemento usando il metodo GetProperties e l'intestazione SOAP ItemNamespaceHeader.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d415d1f8b8dc25143fc704c19b3d1d0c755aa02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc0dee4442b18913521deb97c0c9655188f64631
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026161"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216250"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Impostazione dello spazio dei nomi degli elementi per il metodo GetProperties
   È possibile utilizzare l'intestazione SOAP <xref:ReportService2010.ItemNamespaceHeader> in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per recuperare le proprietà degli elementi in base a due identificatori diversi, ovvero il percorso completo dell'elemento o l'ID dell'elemento.  

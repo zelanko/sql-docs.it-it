@@ -1,5 +1,6 @@
 ---
 title: Creare un report per dispositivi mobili a schede usando il drill-through | Report per dispositivi mobili di Reporting Services | Microsoft Docs
+description: Informazioni su come creare un report per dispositivi mobili di Reporting Services analogo a un report a schede in termini di aspetto e funzionamento usando il drill-through e parametri.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99e176988287a457738a05a4a7ab71653b281070
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63061819"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448038"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Creare un report per dispositivi mobili a schede usando il drill-through
 Informazioni su come creare un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] analogo a un report a schede in termini di aspetto e funzionamento usando il drill-through e parametri.

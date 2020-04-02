@@ -1,5 +1,5 @@
 ---
-title: 'Avvio rapido: Strutture di dati, tipi di dati e oggetti R'
+title: 'Guida introduttiva: Strutture di dati, tipi di dati e oggetti R'
 description: In questo argomento di avvio rapido si scoprirà come usare le strutture di dati, i tipi di dati e gli oggetti quando si usa R in Machine Learning Services per SQL Server. Si apprenderà come trasferire i dati tra R e SQL Server e verranno illustrati i problemi comuni che potrebbero verificarsi.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,14 +10,14 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76916409"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380802"
 ---
-# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Avvio rapido: Strutture di dati, tipi di dati e oggetti quando si usa R in Machine Learning Services per SQL Server
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Guida introduttiva: Strutture di dati, tipi di dati e oggetti quando si usa R in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questo argomento di avvio rapido si scoprirà come usare le strutture di dati e i tipi di dati quando si usa R in Machine Learning Services per SQL Server. Si apprenderà come trasferire i dati tra R e SQL Server e verranno illustrati i problemi comuni che potrebbero verificarsi.
@@ -29,7 +29,7 @@ I problemi comuni da tenere in considerazione includono:
 - In alcuni casi sono necessarie operazioni cast e convert
 - R e SQL usano oggetti dati differenti
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Questo argomento di avvio rapido richiede l'accesso a un'istanza di SQL Server con [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con il linguaggio R installato.
 
@@ -70,7 +70,7 @@ Perché i risultati sono così diversi?
 
 La risposta può essere trovata usando il comando `str()` di R. Aggiungere la funzione `str(object_name)` in qualsiasi punto dello script R per fare in modo che lo schema dati dell'oggetto R specificato venga restituito come messaggio informativo. Per visualizzare i messaggi, vedere il riquadro **Messaggi** di Visual Studio Code o la scheda **Messaggi** in SSMS.
 
-Per capire come mai l'Esempio 1 e l'Esempio 2 producano risultati così diversi, inserire la riga `str(OutputDataSet)` alla fine della definizione di variabile _@script_ in ogni istruzione, come riportato di seguito:
+Per capire come mai l'Esempio 1 e l'Esempio 2 producano risultati così diversi, inserire la riga `str(OutputDataSet)` alla fine della definizione di variabile `@script` in ogni istruzione, come riportato di seguito:
 
 **Esempio 1 con la funzione str aggiunta**
 

@@ -1,5 +1,6 @@
 ---
 title: Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL | Microsoft Docs
+description: È possibile aggiungere il drill-through da qualsiasi misuratore, grafico o griglia dati di un report per dispositivi mobili di Reporting Services a un altro report o URL personalizzato.
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280744"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448326"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL
 È possibile aggiungere il drill-through da qualsiasi misuratore, grafico o griglia dati di un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a un altro report o URL personalizzato. 
@@ -26,7 +27,7 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**Suggerimento**: creare prima il report di destinazione e salvarlo in un portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Se si prevede di passare i parametri dal report di origine, aggiungere quindi i parametri anche al report di destinazione. A questo punto è possibile impostare il drill-through dal report di origine al report di destinazione. [Aggiungere parametri a un report per dispositivi mobili](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Suggerimento**: creare prima il report di destinazione e salvarlo in un portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Se si prevede di passare i parametri dal report di origine, aggiungere quindi i parametri anche al report di destinazione. A questo punto è possibile impostare il drill-through dal report di origine al report di destinazione. [Aggiungere parametri a un report per dispositivi mobili](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Impostare il drill-through in un report per dispositivi mobili  
 
@@ -37,7 +38,7 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
 2. Nel riquadro **Proprietà visive** selezionare **Destinazione del drill-through** > **Report per dispositivi mobili**.  
 3. Selezionare il server e il report per dispositivi mobili di destinazione.  
 
-   >Note: se il report per dispositivi mobili di destinazione non si trova nello stesso server del report per dispositivi mobili di origine, connettersi ad esso con un URL personalizzato, come illustrato nella sezione seguente.  
+   >Nota: se il report per dispositivi mobili di destinazione non si trova nello stesso server del report per dispositivi mobili di origine, connettersi ad esso con un URL personalizzato, come illustrato nella sezione seguente.  
  
 4. Dopo aver selezionato un report per dispositivi mobili di destinazione, verranno visualizzati i parametri di input disponibili, incluse le proprietà che possono essere associate ai controlli di selezione e i parametri configurati nei set di dati del report per dispositivi mobili di destinazione.  
 
@@ -58,7 +59,7 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
   
    *Drill-through a proprietà personalizzate dell'URL*  
   
-4. Fare clic su **Apply**.  
+4. Fare clic su **Applica**.  
 
   
 Quando si visualizza l'anteprima di un report per dispositivi mobili in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)], se si fa clic su una visualizzazione con drill-through, viene visualizzato un messaggio in cui si informa l'utente che drill-through è disabilitato. È infatti possibile eseguire il drill-through alla destinazione solo dopo aver salvato, pubblicato e visualizzato un report per dispositivi mobili, non dal layout o dalla modalità di anteprima di [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] .  

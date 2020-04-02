@@ -1,6 +1,6 @@
 ---
 title: Disponibilità elevata di SQL Server per le distribuzioni Linux
-description: Informazioni sulle diverse opzioni di disponibilità elevata presenti per SQL Server in Linux, ad esempio gruppi di disponibilità Always On, istanze del cluster di failover e log shipping.
+description: Informazioni sulle opzioni di disponibilità elevata per SQL Server in Linux, ad esempio gruppi di disponibilità Always On, istanze del cluster di failover e log shipping.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656610"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216681"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656610"
 
 A partire da [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] è supportato sia in Linux che in Windows. Come nelle distribuzioni di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basate su Windows, i database e le istanze di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] devono garantire la disponibilità elevata anche in Linux. Questo articolo illustra gli aspetti tecnici della pianificazione e della distribuzione di database e istanze di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basate su Linux a disponibilità elevata, oltre ad alcune delle differenze rispetto alle installazioni basate su Windows. Poiché i professionisti Linux potrebbero non avere familiarità con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e i professionisti [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] potrebbero non avere familiarità con Linux, l'articolo introduce a volte concetti che potrebbero essere più noti ad alcuni e meno ad altri.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Opzioni di disponibilità di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] per le distribuzioni Linux
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>Opzioni di disponibilità di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] per le distribuzioni Linux
 Oltre al backup e al ripristino, in Linux sono presenti le stesse tre funzionalità di disponibilità delle distribuzioni basate su Windows:
 -   Gruppi di disponibilità Always On
 -   Istanze del cluster di failover Always On
@@ -51,7 +51,7 @@ Di seguito sono elencati alcuni comandi comuni, ognuno dei quali ha diverse opzi
 -   `systemctl`: avvia, arresta o abilita i servizi
 -   Comandi dell'editor di testo. In Linux sono disponibili diverse opzioni dell'editor di testo, ad esempio vi ed emacs.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Attività comuni per le configurazioni della disponibilità di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Attività comuni per le configurazioni della disponibilità di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux
 Questa sezione illustra le attività comuni a tutte le distribuzioni di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basate su Linux.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Assicurarsi che i file possano essere copiati
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installare i pacchetti [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] per la disponibilità
+### <a name="install-ssnoversion-md-packages-for-availability"></a>Installare i pacchetti [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] per la disponibilità
 In un'installazione di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basata su Windows alcuni componenti, a differenza di altri, vengono installati anche in un'installazione del motore di base. In Linux durante il processo di installazione viene installato solo il motore di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Tutti gli altri elementi sono facoltativi. Per le istanze di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] a disponibilità elevata in Linux, con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] o consigliabile installare due pacchetti: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) e il pacchetto a disponibilità elevata (*mssql-server-ha*). [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], nonostante sia tecnicamente facoltativo, è l'utilità di pianificazione di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] per i processi ed è necessario per il log shipping, quindi è consigliabile installarlo. Nelle installazioni basate su Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] non è facoltativo.
 
 >[!NOTE]
@@ -204,10 +204,10 @@ I percorsi dei log per i cluster Pacemaker variano a seconda della distribuzione
 
 Per cambiare il percorso di registrazione predefinito, modificare `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Pianificare i cluster Pacemaker per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>Pianificare i cluster Pacemaker per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Questa sezione illustra i punti di pianificazione importanti per un cluster Pacemaker.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualizzazione dei cluster Pacemaker basati su Linux per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>Virtualizzazione dei cluster Pacemaker basati su Linux per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 L'uso di macchine virtuali per eseguire le distribuzioni di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basate su Linux per i gruppi di disponibilità e le istanze del cluster di failover è soggetto alle stesse regole delle controparti basate su Windows. Microsoft mette a disposizione un set di regole di base per supportare le distribuzioni di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] virtualizzate nell'articolo della [Knowledge Base 956893 del supporto tecnico Microsoft](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Possono esserci delle differenze a seconda dell'hypervisor, ad esempio Hyper-V di Microsoft ed ESXi di VMware, dovute alle caratteristiche specifiche delle piattaforme.
 
 Quando si tratta di gruppi di disponibilità e di istanze del cluster di failover soggetti a virtualizzazione, verificare che l'anti-affinità per i nodi di un determinato cluster Pacemaker sia impostata. Se configurate per la disponibilità elevata in una configurazione di gruppo di disponibilità o di istanza del cluster di failover, le macchine virtuali che ospitano [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] non devono mai essere eseguite nello stesso host dell'hypervisor. Se ad esempio viene distribuita un'istanza del cluster di failover a due nodi, dovranno essere presenti *almeno* tre host di hypervisor, in modo che sia disponibile uno spazio in cui trasferire una delle macchine virtuali che ospitano un nodo in caso di errore dell'host, soprattutto se si usano funzionalità come Live Migration o vMotion.

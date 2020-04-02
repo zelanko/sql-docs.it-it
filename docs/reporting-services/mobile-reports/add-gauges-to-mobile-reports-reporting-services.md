@@ -1,5 +1,6 @@
 ---
 title: Aggiungere indicatori ai report per dispositivi mobili | Reporting Services | Microsoft Docs
+description: È possibile aggiungere misuratori a un report per dispositivi mobili di Reporting Services. I misuratori visualizzano un singolo valore in un set di dati da solo o rispetto a un obiettivo.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280552"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448288"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Aggiungere indicatori ai report per dispositivi mobili | Reporting Services
 I misuratori sono gli oggetti visivi più semplici e più usati nei report per dispositivi mobili. Visualizzano un singolo valore in un set di dati: soltanto il valore oppure il valore rispetto a un obiettivo.

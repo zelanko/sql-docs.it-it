@@ -1,5 +1,6 @@
 ---
 title: Identificazione dello stato di esecuzione | Microsoft Docs
+description: Informazioni su come usare Reporting Services per identificare lo stato di esecuzione in modo che sia possibile interagire con il report in diversi modi.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0977cc384dac80f28d6b7c5b7a0149ba200f1794
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991601"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215600"
 ---
 # <a name="identifying-execution-state"></a>Identificazione dello stato di esecuzione
   HTTP (Hypertext Transfer Protocol) è un protocollo senza connessione e senza stato, ovvero non indica automaticamente se diverse richieste provengono dallo stesso client o se una singola istanza di un browser continua a visualizzare attivamente una pagina o un sito. Le sessioni creano una connessione logica per gestire lo stato tra server e client tramite HTTP. Le informazioni specifiche dell'utente relative a una particolare sessione sono note come stato della sessione.  

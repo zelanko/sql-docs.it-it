@@ -1,5 +1,6 @@
 ---
 title: Pubblicare un report in una raccolta di SharePoint | Microsoft Docs
+description: Informazioni su come pubblicare un report in una raccolta di SharePoint impostando le proprietà del progetto in Progettazione report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 093837d7d7d2c6833b4c7dce8fabbf554d634290
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571043"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510112"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Pubblicare un report in una raccolta di SharePoint
   Per pubblicare un report in un sito di SharePoint configurato per l'integrazione con SharePoint, è necessario impostare le proprietà del progetto in Progettazione report. Nelle proprietà del progetto tutti i riferimenti a server, report e origini dati condivise devono essere URL completi. Nella definizione di un report tutti i riferimenti a sottoreport, report drill-through e risorse quali immagini basate su Web devono essere rappresentati da URL completi.  

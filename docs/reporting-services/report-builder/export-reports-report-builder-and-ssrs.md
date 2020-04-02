@@ -1,5 +1,6 @@
 ---
 title: Esportare report (Generatore report) | Microsoft Docs
+description: È possibile esportare un report di Reporting Services in un altro formato di file, ad esempio PowerPoint o PDF, usando Generatore report, Progettazione report o il server di report.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078494"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342921"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Esportare report (Generatore Report e SSRS)
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078494"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> Per esportare un report da Generatore report
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> Per esportare un report da Generatore report
 
 1.  Eseguire o visualizzare in anteprima il report.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078494"
   
      Verrà visualizzata la finestra di dialogo **Salva con nome** . Per impostazione predefinita, il nome del file è quello del report esportato. Se lo si desidera, tale nome può essere modificato.  
   
-##  <a name="bkmk_export_from_rm"></a> Per esportare un report dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> Per esportare un report dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  Dalla pagina [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Home **del portale Web di** passare al report da esportare.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078494"
   
      Il report verrà visualizzato o salvato con l'applicazione associata al formato scelto. Se si fa clic su **Salva**, verrà richiesto di specificare un percorso in cui salvare il report.  
   
-##  <a name="bkmk_export_from_sharepoint"></a> Per esportare un report da una raccolta di SharePoint  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> Per esportare un report da una raccolta di SharePoint  
   
 1.  Visualizzare l'anteprima del report.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078494"
   
      **Nota** Se non è possibile aprire il report nel formato selezionato perché non è stato associato alcun programma a questo tipo di file, verrà richiesto di salvare il report esportato o di individuare un programma online con cui aprirlo.  
   
-##  <a name="RendererTypes"></a> Tipi di estensioni per il rendering  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> Tipi di estensioni per il rendering  
  Sono disponibili tre tipi di estensioni per il rendering [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   **Estensioni per il renderer di dati** Le estensioni per il rendering di dati rimuovono tutte le informazioni di formattazione e layout dal report e visualizzano solo i dati. Il file risultante può essere usato per importare i dati del report non elaborati in un altro tipo di file, ad esempio Excel, in un altro database, in un messaggio di dati XML o in un'applicazione personalizzata. I renderer di dati non supportano le interruzioni di pagina.  
@@ -106,7 +107,7 @@ ms.locfileid: "77078494"
   
      Sono supportate le estensioni per il rendering di interruzione di pagina manuale seguenti: TIFF e PDF.  
   
-##  <a name="ExportFormats"></a> Formati che è possibile esportare durante la visualizzazione dei report  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> Formati che è possibile esportare durante la visualizzazione dei report  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili estensioni per il rendering per l'esecuzione del rendering dei report in formati diversi. È consigliabile ottimizzare la progettazione del report per il formato di file scelto.  La tabella seguente elenca i formati che è possibile esportare dall'interfaccia utente.  Esistono altri formati che è possibile usare con le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o se si esporta dall'accesso con URL.  Vedere la sezione [Altri modi di esportare report](#OtherWaysExportingReports)in questo argomento.  
   
 |Format|Tipi di estensione per il rendering|Descrizione|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078494"
 |WORDOPENXML|Interruzione di pagina automatica|Visualizzato come "Word" nel menu di esportazione durante la visualizzazione dei report. L'estensione per il rendering di Word consente di eseguire il rendering di un report in formato Word (con estensione docx) compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Per altre informazioni, vedere [Esportazione in Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Data|L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, usato come messaggio di dati XML o inviato a un'applicazione personalizzata.<br/><br/> Per altre informazioni, vedere [Esportazione in XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> Generazione di feed di dati da un report  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> Generazione di feed di dati da un report  
  Per generare feed di dati da un report, eseguire il report nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e quindi fare clic sull'icona **Generazione di feed di dati** sulla barra degli strumenti del portale Web. Verrà chiesto se si desidera salvare o aprire il file. Se si sceglie **Apri**, il documento di servizio Atom verrà aperto nell'applicazione associata all'estensione di file atomsvc. Se si sceglie **Salva**, il documento verrà salvato come file con estensione atomsvc. Per impostazione predefinita, il nome del file corrisponde al nome del report. È possibile modificare il nome per renderlo più descrittivo.  
   
  Salvare il documento di servizio Atom nel computer. In un secondo momento sarà possibile caricarlo in un server di report o in un altro server per renderlo disponibile ad altri utenti. Per altre informazioni, vedere [Generazione di feed di dati dai report ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) e [Generare i feed di dati da un report](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Risoluzione dei problemi relativi ai report esportati  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> Risoluzione dei problemi relativi ai report esportati  
  Dopo averli esportati in un formato diverso, i report possono presentare un aspetto diverso o non funzionare nel modo desiderato. Questo dipende dal fatto che al renderer potrebbero applicarsi determinate regole e limitazioni. È possibile superare molte limitazioni semplicemente tenendole presenti durante la creazione del report. Potrebbe essere necessario usare un layout leggermente diverso nel report, allineare con cura gli elementi all'interno del report, limitare i piè di pagina del report a una sola riga di testo e così via.  
   
  Se il report include testo Unicode con numeri arabi o include date in arabo, il rendering di date e numeri non sarà eseguito correttamente quando si esporta il report in uno dei formati seguenti o si stampa il report.  
@@ -163,7 +164,7 @@ ms.locfileid: "77078494"
   
  È inoltre possibile utilizzare l'elemento globale predefinito RenderFormat per applicare in modo condizionale differenti layout del report per renderer diversi. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
 
-##  <a name="OtherWaysExportingReports"></a> Altri modi di esportare report  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> Altri modi di esportare report  
  L'esportazione di un report è un'attività su richiesta che viene eseguita con il report aperto nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o in Generatore report. Se si desidera automatizzare un'operazione di esportazione, ad esempio per esportare un report in una cartella condivisa con un tipo di file specifico su base periodica, sarà necessario creare una sottoscrizione per il recapito del report nella cartella condivisa. Per ulteriori informazioni, vedere [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
  Per i report visualizzati in anteprima negli strumenti per la creazione di report o aperti in un browser, ad esempio il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il rendering viene sempre eseguito in formato HTML. Non è possibile specificare un'estensione di rendering diversa come impostazione predefinita per la visualizzazione. È tuttavia possibile creare una sottoscrizione che generi un report nel formato di rendering desiderato per il successivo recapito nella Posta in arrivo o in una cartella condivisa. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) e [Creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  

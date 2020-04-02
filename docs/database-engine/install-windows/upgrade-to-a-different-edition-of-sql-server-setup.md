@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258788"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434128"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server (programma di installazione)
 
@@ -31,7 +31,7 @@ Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 > [!NOTE]  
 > **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza cluster di failover:** è sufficiente eseguire l'aggiornamento dell'edizione in uno dei nodi dell'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo nodo può essere attivo o passivo e il motore non imposta le risorse offline durante l'aggiornamento dell'edizione. Dopo l'aggiornamento dell'edizione è necessario per riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o eseguire il failover a un nodo diverso.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura per tale condivisione.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ Per le installazioni locali è necessario eseguire il programma di installazione
   
 ## <a name="procedure"></a>Procedura  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>Per eseguire l'aggiornamento a un'edizione diversa di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>Per eseguire l'aggiornamento a un'edizione diversa di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic su setup.exe o avviare Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da Strumenti di configurazione. Per eseguire l'installazione da una condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
@@ -78,7 +78,15 @@ Per le installazioni locali è necessario eseguire il programma di installazione
 -   Le dimensioni e la modalità di recupero per i database di sistema tempdb e modello rimarranno invariate dopo l'aggiornamento. Riconfigurare queste impostazioni in base alle esigenze. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   I database modello rimarranno nel computer dopo l'aggiornamento.  
-  
+
+> [!NOTE]  
+> Se la procedura ha esito negativo a causa della regola Engine_SqlEngineHealthCheck, è possibile usare l'opzione di installazione della riga di comando per ignorare questa regola specifica per consentire il completamento del processo di aggiornamento. Per ignorare la verifica della regola, aprire un prompt dei comandi e passare al percorso che contiene il file di installazione di SQL Server (Setup.exe). Digitare quindi il comando seguente: 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

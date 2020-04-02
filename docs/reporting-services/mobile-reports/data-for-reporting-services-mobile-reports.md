@@ -1,5 +1,6 @@
 ---
 title: Dati per report di Reporting Services per dispositivi mobili | Microsoft Docs
+description: Dopo aver importato i dati in SQL Server Mobile Report Publisher, la creazione e la progettazione di report per dispositivi mobili sono uguali, indipendentemente dal fatto che i dati provengano da file di Excel o da set di dati condivisi.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3c022631d0f21c4e23756e39e4824fe9f52ef3b5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63129736"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447867"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Dati per report di Reporting Services per dispositivi mobili
 Il modello di dati [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] è semplice. I dati vengono importati in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] come raccolta di set di dati. Non sono necessarie relazioni formali tra i set di dati. È possibile eseguire ricerche da un set di dati a un altro fino a quando i valori chiave corrispondono. Le aggregazioni data/ora vengono gestite dal runtime del report per dispositivi mobili e corrisponderanno tra diversi set di dati, anche se la granularità dei dati data/ora differisce tra i set di dati.   

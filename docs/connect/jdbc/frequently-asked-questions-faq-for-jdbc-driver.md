@@ -1,7 +1,7 @@
 ---
-title: Domande frequenti sul driver JDBC | Microsoft Docs
+title: Domande frequenti sul driver JDBC
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: b91e728eb9ea3403db0f0b40c5d32ce16f542408
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903618"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271377"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti sul driver JDBC
 
@@ -31,17 +31,17 @@ Il driver JDBC è open source e il codice sorgente è disponibile in [GitHub](ht
 **Quali versioni di SQL Server e Java sono supportate dal driver?**  
 Vedere la pagina [Matrice di supporto di Microsoft JDBC Driver per SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) per altri dettagli.
 
-**Qual è la differenza tra i pacchetti driver JDBC disponibili nell'Area download Microsoft e il driver JDBC disponibile in GitHub?**  
-I file del driver JDBC disponibili nel repository GitHub per Microsoft JDBC Driver sono la parte fondamentale del driver JDBC e sono coperti dalla licenza open source elencata nel repository. I pacchetti driver nell'Area download Microsoft includono librerie aggiuntive per l'autenticazione integrata di Windows e per l'abilitazione delle transazioni XA con il driver JDBC. Queste librerie aggiuntive sono coperte dalla licenza inclusa nel pacchetto scaricabile.
+**Qual è la differenza tra i pacchetti del driver JDBC disponibili nella [pagina di download Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) e il driver JDBC disponibile in GitHub?**  
+I file del driver JDBC disponibili nel repository GitHub per Microsoft JDBC Driver sono la parte fondamentale del driver JDBC e sono coperti dalla licenza open source elencata nel repository. I pacchetti del driver nella [pagina di download Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) includono librerie aggiuntive per l'autenticazione integrata di Windows e per l'abilitazione delle transazioni XA con il driver JDBC. Queste librerie aggiuntive sono coperte dalla licenza inclusa nel pacchetto scaricabile.
 
 **Quali informazioni sono necessarie prima di aggiornare il driver?**  
 Microsoft JDBC Driver 8.2 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e include tre librerie di classi JAR nel pacchetto di installazione, come descritto di seguito:
 
 | JAR                        | Specifica JDBC            | Versione JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.2.jre13.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.2.jre11.jar | JDBC 4.3 (parzialmente) e 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.4 supporta le specifiche JDBC 4.2 e 4.3 (parzialmente) e include tre librerie di classi JAR nel pacchetto di installazione, come descritto di seguito:
@@ -111,7 +111,7 @@ Microsoft JDBC Driver per SQL Server è disponibile gratuitamente.
 I driver JDBC 6.0, 6.2, 6.4 e 7.0 sono ridistribuibili. Esaminare la clausola "Codice distribuibile" nei contratti di licenza.
 
 **È possibile usare il driver per accedere a Microsoft SQL Server da un computer Linux?**  
- Sì. È possibile usare il driver per accedere a SQL Server da Unix, Linux e altre piattaforme non Windows. Per altre informazioni, vedere [Matrice di supporto di Microsoft JDBC Driver per SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
+Sì. È possibile usare il driver per accedere a SQL Server da Unix, Linux e altre piattaforme non Windows. Per altre informazioni, vedere [Matrice di supporto di Microsoft JDBC Driver per SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
 **Il driver supporta la crittografia Secure Sockets Layer (SSL)?**  
 A partire dalla versione 1.2, il driver supporta la crittografia Secure Sockets Layer (SSL). Per altre informazioni, vedere[Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md).

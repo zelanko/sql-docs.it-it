@@ -1,7 +1,7 @@
 ---
-title: Note sulla versione per il driver JDBC | Microsoft Docs
+title: Note sulla versione per il driver JDBC
 ms.custom: ''
-ms.date: 02/26/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,60 +10,64 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 76607fbe96ef954ce90c7d24daf9a12b69a3fce6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 960f62117c77bbf94d4dba1fdb0599ba130922f2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903739"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271357"
 ---
-# <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Note sulla versione per il driver Microsoft JDBC
-
-[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+# <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Note sulla versione per Microsoft JDBC Driver per SQL Server
 
 Questo articolo elenca le versioni del _driver Microsoft JDBC per SQL Server_. Per ogni versione sono elencate e descritte le modifiche.
 
-## <a name="821"></a>8.2.1
+## <a name="82"></a><a id="82"></a> 8.2
+
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 8.2 per SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 8.2 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)**  
+
+Numero di versione: 8.2.2 Data di rilascio: 24 marzo 2020
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file ZIP: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)  
 
 ### <a name="compliance"></a>Conformità
 
-26 febbraio 2020
-
 | Modifica di conformità | Dettagli |
 | :---------------- | :------ |
-| Scaricare gli aggiornamenti più recenti per il driver JDBC 8.2. | &bull; &nbsp; [Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub, 8.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Completamente conforme alla specifica API JDBC 4.2. | I file JAR nel pacchetto 8.2 sono denominati in base alla compatibilità delle versioni di Java.<br/><br/>Ad esempio, il file mssql-jdbc-8.2.1.jre11.jar dal pacchetto 8.2 deve essere usato con Java 11. |
+| Scaricare gli aggiornamenti più recenti per il driver JDBC 8.2. | &bull; &nbsp; [GitHub, 8.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Completamente conforme alla specifica API JDBC 4.2. | I file JAR nel pacchetto 8.2 sono denominati in base alla compatibilità delle versioni di Java.<br/><br/>Ad esempio, il file mssql-jdbc-8.2.2.jre11.jar dal pacchetto 8.2 deve essere usato con Java 11. |
 | Compatibile con Java Development Kit (JDK) versione 13.0, 11.0 e JDK 1.8. | Il driver Microsoft JDBC 8.2 per SQL Server è ora compatibile con Java Development Kit (JDK) versione 13.0, oltre a JDK 11.0 e 1.8. |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-13"></a>Supporto per JDK 13
 
-Il driver Microsoft JDBC 8.2.1 per SQL Server è ora compatibile con Java Development Kit (JDK) versione 13.0, oltre a JDK 11.0 e 1.8.
+Il driver Microsoft JDBC 8.2 per SQL Server è ora compatibile con Java Development Kit (JDK) versione 13.0, oltre a JDK 11.0 e 1.8.
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 
 | Modifica per Always Encrypted | Dettagli |
 | :--------- | :------ |
-| Microsoft JDBC Driver 8.2.1 per SQL Server ora supporta Always Encrypted con enclave sicure. Qui sono disponibili informazioni dettagliate: Always Encrypted con enclave sicuri. |
+| Microsoft JDBC Driver 8.2 per SQL Server ora supporta Always Encrypted con enclave sicure. Qui sono disponibili informazioni dettagliate: Always Encrypted con enclave sicuri. |
 | Ulteriori dettagli e codice di esempio. | Vedere [Always Encrypted con enclave sicuri](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server"></a>Miglioramento delle prestazioni durante il recupero di tipi di dati temporali da SQL Server
+### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>Miglioramento delle prestazioni durante il recupero di tipi di dati temporali da SQL Server <sup>1</sup>
 
 | Modifica per i tipi di dati temporali | Dettagli |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.2.1 per SQL Server ha migliorato le prestazioni durante il recupero dei tipi di dati temporali da SQL Server. | Questa modifica elimina le conversioni dei tipo di dati temporali superflue eliminando l'uso di java.util.Calendar laddove possibile. |
+| Microsoft JDBC Driver 8.2 per SQL Server ha migliorato le prestazioni durante il recupero dei tipi di dati temporali da SQL Server. | Questa modifica elimina le conversioni dei tipo di dati temporali superflue eliminando l'uso di java.util.Calendar laddove possibile. |
 | Di seguito è riportato un elenco dei tipi di dati temporali interessati da questo miglioramento delle prestazioni, con il tipo di dati in formato SQL Server seguito dal tipo Java corrispondente. | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp) e time (java.sql.Time). |
 | &nbsp; | &nbsp; |
 
-> [!NOTE]
-> A causa delle differenze nel modo in cui vengono gestiti i fusi orari tra l'API java.util.Calendar e java.time.LocalDateTime, i tipi di dati temporali con associato un oggetto java.util.Calendar fornito dall'utente o i tipi di dati microsoft.sql.DateTimeOffset non traggono vantaggio da questo miglioramento.
+<sup>1</sup> A causa delle differenze nel modo in cui vengono gestiti i fusi orari tra l'API java.util.Calendar e java.time.LocalDateTime, i tipi di dati temporali con associato un oggetto java.util.Calendar fornito dall'utente o i tipi di dati microsoft.sql.DateTimeOffset non traggono vantaggio da questo miglioramento.
 
 ### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Distribuzione di mssql-jdbc_auth-\<versione>-\<arch>.dll (in precedenza sqljdbc_auth.dll) nel repository Maven
 
 | Modifica di sqljdbc_auth.dll | Dettagli |
 | :------------------- | :------ |
-| A partire da Microsoft JDBC Driver 8.2.1 per SQL Server, il driver si basa su mssql-jdbc_auth-\<versione>-\<arch>.dll anziché sqljdbc_auth.dll per usare la funzionalità di autenticazione di Azure Active Directory. | &nbsp; |
+| A partire da Microsoft JDBC Driver 8.2 per SQL Server, il driver si basa su mssql-jdbc_auth-\<versione>-\<arch>.dll anziché sqljdbc_auth.dll per usare la funzionalità di autenticazione di Azure Active Directory. | &nbsp; |
 | La DLL è stata inoltre caricata nel repository Maven per semplificare l'accesso. | Vedere [questa pagina](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 
@@ -74,15 +78,25 @@ Il driver Microsoft JDBC 8.2.1 per SQL Server è ora compatibile con Java Develo
 | Quando si usa Always Encrypted con enclave sicure con Java 8. | Gli utenti devono includere il provider BouncyCastle come dipendenza o eseguire il mapping o il caricamento di un provider di sicurezza che supporta l'algoritmo di firma RSASSA-PSS. |
 | &nbsp; | &nbsp; |
 
-## <a name="741"></a>7.4.1
+## <a name="previous-releases"></a>Versioni precedenti
+
+## <a name="a-id74-741"></a><a id="74"> 7.4.1
+
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 7.4.1 per SQL Server (EXE autoestraente)](https://go.microsoft.com/fwlink/?linkid=2122712)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 7.4.1 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122613)**  
+
+Numero di versione: 7.4.1  
+Resa disponibile: 2 agosto 2019
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file EXE autoestraente: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40a)  
 
 ### <a name="compliance"></a>Conformità
 
-2 agosto 2019
-
 | Modifica di conformità | Dettagli |
 | :---------------- | :------ |
-| Scaricare gli aggiornamenti più recenti per il driver JDBC 7.4. | &bull; &nbsp; [Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Scaricare gli aggiornamenti più recenti per il driver JDBC 7.4. | &bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Completamente conforme alla specifica API JDBC 4.2. | I file JAR nel pacchetto 7.4 sono denominati in base alla compatibilità delle versioni di Java.<br/><br/>Ad esempio, il file mssql-jdbc-7.4.1.jre11.jar dal pacchetto 7.4 deve essere usato con Java 11. |
 | Compatibile con Java Development Kit (JDK) versione 12.0, 11.0 e JDK 1.8. | Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Development Kit (JDK) versione 12.0, oltre a JDK 11.0 e 1.8. |
 | &nbsp; | &nbsp; |
@@ -124,15 +138,23 @@ Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Developm
 | Quando si usa useFmtOnly. | Esistono alcuni problemi con la funzionalità causati da malfunzionamenti nella logica di analisi di SQL. Vedere [Uso di useFmtOnly](../../connect/jdbc/using-usefmtonly.md) per altri dettagli e suggerimenti per la soluzione. |
 | &nbsp; | &nbsp; |
 
-## <a name="722"></a>7.2.2
+## <a name="a-id72-722"></a><a id="72"> 7.2.2
+
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 7.2.2 per SQL Server (EXE autoestraente)](https://go.microsoft.com/fwlink/?linkid=2122435)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 7.2.2 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122434)**  
+
+Numero di versione: 7.2.2  
+Resa disponibile: 16 aprile 2019
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file EXE autoestraente: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40a)  
 
 ### <a name="compliance"></a>Conformità
 
-16 aprile 2019
-
 | Modifica di conformità | Dettagli |
 | :---------------- | :------ |
-| Scaricare gli aggiornamenti più recenti per il driver JDBC 7.2. | &bull; &nbsp; [Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Scaricare gli aggiornamenti più recenti per il driver JDBC 7.2. | &bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Completamente conforme alla specifica API JDBC 4.2. | I file JAR nel pacchetto 7.2 sono denominati in base alla compatibilità delle versioni di Java.<br/><br/>Ad esempio, il file mssql-jdbc-7.2.2.jre11.jar dal pacchetto 7.2 deve essere usato con Java 11. |
 | Compatibile con Java Development Kit (JDK) versione 11.0 oltre a JDK 1.8. | Il driver Microsoft JDBC 7.2 per SQL Server è ora compatibile con Java Development Kit (JDK) versione 11.0, oltre a JDK 1.8. |
 | &nbsp; | &nbsp; |
@@ -141,7 +163,7 @@ Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Developm
 > È stato rilevato un problema con l'analisi delle istruzioni SQL nel driver JDBC 7.2 Release To Web (RTW) rilasciato il 31 gennaio 2019. È stato eseguito il rollback della modifica e sono stati rilasciati nuovi file JAR (versione 7.2.1) in data 11 febbraio 2019.
 >
 > È stato pubblicato un altro aggiornamento del driver per risolvere i problemi relativi alla pulizia non corretta di ActivityId. I nuovi file JAR (versione 7.2.2) sono stati rilasciati il 16 aprile 2019.
-> 
+>
 > È consigliabile aggiornare i progetti per l'uso dei file JAR della versione 7.2.2. Per altre informazioni, vedere le note sulla versione per [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) e [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
 ### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Autenticazione dell'_identità del servizio gestita_ di Active Directory
@@ -195,6 +217,16 @@ Il driver Microsoft JDBC 7.4 per SQL Server è ora compatibile con Java Developm
 | &nbsp; | &nbsp; |
 
 ## <a name="70"></a>7.0
+
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 7.0 per SQL Server (EXE autoestraente)](https://go.microsoft.com/fwlink/?linkid=2122713)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 7.0 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122614)**  
+
+Numero di versione: 7.0.0  
+Resa disponibile: 31 luglio 2018
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file EXE autoestraente: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122713&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122614&clcid=0x40a)  
 
 Il driver Microsoft JDBC 7.0 per SQL Server è completamente conforme alla specifica API JDBC 4.2. I file JAR nel pacchetto 7.0 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-7.0.0.jre10.jar dal pacchetto 7.0 deve essere usato con Java 10.
 
@@ -253,6 +285,16 @@ Il driver Microsoft JDBC 7.0 per SQL Server ha aggiornato la dipendenza di Maven
 
 ## <a name="64"></a>6.4
 
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 6.4 per SQL Server (EXE autoestraente)](https://go.microsoft.com/fwlink/?linkid=2122436)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 6.4 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122537)**  
+
+Numero di versione: 6.4.0  
+Resa disponibile: 27 febbraio 2018
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file EXE autoestraente: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122436&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122537&clcid=0x40a)  
+
 Il driver Microsoft JDBC 6.4 per SQL Server è completamente conforme alla specifica JDBC 4.1 e 4.2. I file JAR nel pacchetto 6.4 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, il file mssql-jdbc-6.4.0.jre8.jar dal pacchetto 6.4 deve essere usato con Java 8.
 
 ### <a name="support-for-jdk-9"></a>Supporto per JDK 9
@@ -283,12 +325,12 @@ Il driver supporta ora i tipi di dati `datetime` e `smallDatetime` quando si usa
 
 Il driver JDBC supporta ora i tipi di dati `sql_variant` da usare con SQL Server. Il tipo di dati `sql_variant` è supportato anche con funzionalità quali parametri con valori di tabella e copia bulk con le limitazioni seguenti:
 
-* **Per i valori di data**: 
+* **Per i valori di data**:
 
   Quando si usano parametri con valori di tabella per popolare una tabella che contiene valori `datetime`, `smalldatetime` o `date` archiviati in una colonna `sql_variant`, la chiamata del metodo `getDateTime()`, `getSmallDateTime()` o `getDate()` sul set di risultati non funziona e genera l'eccezione seguente:
 
   `java java.lang.String cannot be cast to java.sql.Timestamp`
-    
+
   In alternativa, usare il metodo `getString()` o `getObject()`.
 
 * **Uso di TVP con sql_variant per valori null**:
@@ -309,14 +351,24 @@ Il driver JDBC ha aggiornato la dipendenza di Maven da "Microsoft Azure Active D
 
 ## <a name="62"></a>6.2
 
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 6.2 per SQL Server (EXE autoestraente)](https://go.microsoft.com/fwlink/?linkid=2122616)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 6.2 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122615)**  
+
+Numero di versione: 6.2.2  
+Resa disponibile: 29 settembre 2017
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file EXE autoestraente: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122616&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40a)  
+
 Il driver Microsoft JDBC 6.2 per SQL Server è completamente conforme alla specifica JDBC 4.1 e 4.2. I file JAR nel pacchetto 6.2 sono denominati in base alla compatibilità delle versioni di Java. Ad esempio, è consigliato l'uso del file mssql-jdbc-6.2.2.jre8.jar dal pacchetto 6.2 con Java 8.
 
 > [!NOTE]  
-> È stato rilevato un problema con il miglioramento della memorizzazione nella cache dei metadati nella versione JDBC 6.2 RTW rilasciata il 29 giugno 2017. È stato eseguito il rollback del miglioramento e sono stati rilasciati nuovi file JAR (versione 6.2.1) in data 17 luglio 2017. 
+> È stato rilevato un problema con il miglioramento della memorizzazione nella cache dei metadati nella versione JDBC 6.2 RTW rilasciata il 29 giugno 2017. È stato eseguito il rollback del miglioramento e sono stati rilasciati nuovi file JAR (versione 6.2.1) in data 17 luglio 2017.
 >
 > Un altro miglioramento ha aggiornato la versione della libreria dipendente da Azure Key Vault alla versione 1.0.0 e sono stati rilasciati nuovi file JAR (versione 6.2.2) in data 19 ottobre 2017.
 >
-> Scaricare gli aggiornamenti più recenti per il driver JDBC 6.2 dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?linkid=852460), da [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) e da [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Aggiornare i progetti per l'uso dei file JAR della versione 6.2.2. Per altre informazioni, vedere le note sulla versione per le versioni [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) e [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
+> Scaricare gli aggiornamenti più recenti per il driver JDBC 6.2 tramite i collegamenti precedenti, [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) o [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Aggiornare i progetti per l'uso dei file JAR della versione 6.2.2. Per altre informazioni, vedere le note sulla versione per le versioni [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) e [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
 
 ### <a name="azure-ad-support-for-linux"></a>Supporto di Azure AD per Linux
 
@@ -330,22 +382,35 @@ Connettere le applicazioni Linux al database SQL di Azure con l'autenticazione d
 
 Il driver JDBC include ora il supporto per:
 
-- Metodo basato su entità di sicurezza/password per le applicazioni in cui la configurazione di Kerberos non può essere modificata o non è possibile recuperare un nuovo token o keytab. Questo metodo può essere usato per l'autenticazione in un'istanza di SQL Server che consente solo l'autenticazione Kerberos.
-- Autenticazione tra aree di autenticazione che usa l'autenticazione integrata Kerberos senza impostare in modo esplicito il nome dell'entità servizio (SPN) del server. Il driver calcola ora automaticamente l'area di autenticazione anche quando non viene fornita.
-- Delega vincolata Kerberos con l'accettazione di credenziali utente rappresentate come oggetto credenziali GSS tramite l'origine dati. Queste credenziali rappresentate vengono poi usate per stabilire una connessione Kerberos.
+* Metodo basato su entità di sicurezza/password per le applicazioni in cui la configurazione di Kerberos non può essere modificata o non è possibile recuperare un nuovo token o keytab. Questo metodo può essere usato per l'autenticazione in un'istanza di SQL Server che consente solo l'autenticazione Kerberos.
+* Autenticazione tra aree di autenticazione che usa l'autenticazione integrata Kerberos senza impostare in modo esplicito il nome dell'entità servizio (SPN) del server. Il driver calcola ora automaticamente l'area di autenticazione anche quando non viene fornita.
+* Delega vincolata Kerberos con l'accettazione di credenziali utente rappresentate come oggetto credenziali GSS tramite l'origine dati. Queste credenziali rappresentate vengono poi usate per stabilire una connessione Kerberos.
 
 ### <a name="added-timeouts"></a>Aggiunta dei timeout
 
 Il driver JDBC supporta ora i timeout configurabili seguenti. È possibile modificarli in base alle esigenze dell'applicazione.
 
-- Timeout delle query per controllare il numero di secondi di attesa prima che si verifichi un timeout durante l'esecuzione di una query.
-- Timeout del socket per specificare il numero di millisecondi di attesa prima che si verifichi un timeout per un'operazione di lettura o accettazione del socket.
+* Timeout delle query per controllare il numero di secondi di attesa prima che si verifichi un timeout durante l'esecuzione di una query.
+* Timeout del socket per specificare il numero di millisecondi di attesa prima che si verifichi un timeout per un'operazione di lettura o accettazione del socket.
 
 ## <a name="61"></a>6.1
 
-Il driver Microsoft JDBC 6.1 per SQL Server è completamente conforme alla specifica JDBC 4.1 e 4.2. Questa è la versione open source iniziale del driver JDBC. Contiene i file mssql-jdbc-6.1.0.jre8.jar e mssql-jdbc-6.1.0.jre7.jar, che corrispondono alla compatibilità delle versioni di Java.
+Numero di versione: 6.1.0  
+Resa disponibile: 17 novembre 2016  
+
+Il driver Microsoft JDBC 6.1 per SQL Server è completamente conforme alla specifica JDBC 4.1 e 4.2. Questa è la versione open source iniziale del driver JDBC. Il codice sorgente è disponibile nel [tag GitHub v6.1.0](https://github.com/microsoft/mssql-jdbc/releases/tag/v6.1.0). Compila i file mssql-jdbc-6.1.0.jre8.jar e mssql-jdbc-6.1.0.jre7.jar, che corrispondono alla compatibilità delle versioni di Java.
 
 ## <a name="60"></a>6.0
+
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 6.0 per SQL Server (EXE autoestraente)](https://go.microsoft.com/fwlink/?linkid=2122617)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 6.0 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122714)**  
+
+Numero di versione: 6.0.8112  
+Resa disponibile: 17 gennaio 2017
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file EXE autoestraente: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122617&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122714&clcid=0x40a)  
 
 Il driver Microsoft JDBC 6.0 per SQL Server è completamente conforme alla specifica JDBC 4.1 e 4.2. I file JAR nel pacchetto 6.0 sono denominati in base alla relativa conformità con la versione dell'API JDBC. Ad esempio, il file sqljdbc42.jar dal pacchetto 6.0 è conforme all'API JDBC 4.2. Analogamente, il file sqljdbc41.jar è conforme all'API JDBC 4.1.
 
@@ -370,7 +435,7 @@ Il driver supporta ora il recupero dei metadati dei parametri con istruzioni pre
 
 ### <a name="azure-active-directory"></a>Azure Active Directory
 
-L'autenticazione di Azure AD è un meccanismo di connessione al database SQL di Azure v12 tramite identità in Azure AD. Usare l'autenticazione di Azure AD per gestire centralmente le identità degli utenti del database e come alternativa all'autenticazione di SQL Server. 
+L'autenticazione di Azure AD è un meccanismo di connessione al database SQL di Azure v12 tramite identità in Azure AD. Usare l'autenticazione di Azure AD per gestire centralmente le identità degli utenti del database e come alternativa all'autenticazione di SQL Server.
 
 È possibile usare il driver JDBC 6.0 per specificare le credenziali di Azure AD nella stringa di connessione JDBC per connettersi al database SQL di Azure. Per informazioni dettagliate, vedere la proprietà di autenticazione nell'articolo [Impostazione delle proprietà delle connessioni](../../connect/jdbc/setting-the-connection-properties.md).
 
@@ -383,6 +448,16 @@ I parametri con valori di tabella offrono un modo semplice per effettuare il mar
 Il driver supporta ora le connessioni trasparenti ai gruppi di disponibilità Always On. Il driver individua rapidamente la topologia AlwaysOn corrente dell'infrastruttura server e si connette in modo trasparente al server attivo corrente.
 
 ## <a name="42"></a>4.2
+
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 4.2 per SQL Server (EXE autoestraente)](https://go.microsoft.com/fwlink/?linkid=2122538)**  
+**[![Download](../../ssms/media/download-icon.png) Scaricare Microsoft JDBC Driver 4.2 per SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122437)**  
+
+Numero di versione: 4.2.8112  
+Resa disponibile: 24 agosto 2015
+
+Se è necessario scaricare il driver in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver in un file EXE autoestraente: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122538&clcid=0x40a)  
+Per il driver in un file tar.gz: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2122437&clcid=0x40a)  
 
 Il driver Microsoft JDBC 4.2 per SQL Server è completamente conforme alla specifica JDBC 4.1 e 4.2. I file JAR nel pacchetto 4.2 sono denominati in base alla relativa conformità con la versione dell'API JDBC. Ad esempio, il file sqljdbc42.jar dal pacchetto 4.2 è conforme all'API JDBC 4.2. Analogamente, il file sqljdbc41.jar è conforme all'API JDBC 4.1.
 
@@ -415,13 +490,16 @@ Il driver usa una nuova proprietà di connessione per aumentare la flessibilità
 
 ## <a name="41"></a>4.1
 
+Numero di versione: 4.1.8112  
+Resa disponibile: 12 dicembre 2014
+
 ### <a name="support-for-jdk-7"></a>Supporto per JDK 7
 
 Il driver supporta JDK versione 7.0, oltre a JDK 6.0 e 5.0.
 
-## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>Le applicazioni JDBC Driver 6.4, 6.0, 4.2 e 4.1 non supportano i computer Itanium
+## <a name="itanium-not-supported-for-jdbc-driver-applications"></a>Itanium non supportato per le applicazioni JDBC Driver
 
-Le applicazioni Microsoft JDBC Driver 6.4, 6.0, 4.2 e 4.1 per SQL Server non supportano i computer Itanium.
+Le applicazioni Microsoft JDBC Driver per SQL Server non supportano i computer Itanium.
 
 ## <a name="see-also"></a>Vedere anche
 

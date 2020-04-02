@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173566"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215745"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
@@ -33,6 +33,8 @@ Ecco alcuni aspetti importanti di cui tenere conto quando si pianifica la config
 - Se lo strumento di provisioning dell'archiviazione per la classe di archiviazione specificata nella configurazione non supporta il provisioning dinamico, è necessario creare in anticipo i volumi permanenti. Ad esempio, lo strumento di provisioning `local-storage` non consente il provisioning dinamico. Vedere questo [script di esempio](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) per informazioni su come eseguire questa operazione in un cluster Kubernetes distribuito con `kubeadm`.
 
 - Quando si distribuisce un cluster Big Data, è possibile configurare la stessa classe di archiviazione perché venga usata da tutti i componenti del cluster. Tuttavia, come procedura consigliata per una distribuzione di produzione, diversi componenti richiederanno configurazioni di archiviazione diverse per gestire i vari carichi di lavoro in termini di dimensioni o velocità effettiva. È possibile sovrascrivere la configurazione dell'archiviazione predefinita specificata nel controller per ognuna delle istanze master di SQL Server, per i set di dati e per i pool di archiviazione. Questo articolo contiene alcuni esempi su come eseguire questa operazione.
+
+- Quando si calcolano i requisiti di dimensionamento del pool di archiviazione, è necessario prendere in considerazione il fattore di replica con cui è configurato HDFS.  Il fattore di replica può essere configurato in fase di distribuzione nel file di configurazione della distribuzione del cluster. Il valore predefinito per i profili dev.test, (ovvero `aks-dev-test` o `kubeadm-dev-test`), è 2 e per i profili consigliati per le distribuzioni di produzione (ovvero `kubeadm-prod`), il valore predefinito è 3. La procedura consigliata prevede la configurazione della distribuzione di produzione del cluster Big Data con un fattore di replica per HDFS di almeno 3. Il valore del fattore di replica influirà sul numero di istanze nel pool di archiviazione. Come minimo, è necessario distribuire un numero di istanze del pool di archiviazione pari almeno al valore del fattore di replica. Inoltre, è necessario ridimensionare la risorsa di archiviazione di conseguenza e prevedere che i dati vengano replicati in HDFS lo stesso numero di volte del valore del fattore di replica. Altre informazioni sulla replica dei dati in HDFS sono disponibili [qui](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
 - Dalla versione SQL Server 2019 CU1 non è possibile modificare un'impostazione di configurazione dell'archiviazione dopo la distribuzione. Questo vincolo impedisce non solo di apportare modifiche alle dimensioni dell'attestazione di volume permanente per ogni istanza, ma anche di ridimensionare le operazioni dopo la distribuzione. È quindi molto importante pianificare il layout di archiviazione prima di distribuire un cluster Big Data.
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 Questo processo crea due file, `bdc.json` e `control.json`, che si possono personalizzare modificandoli manualmente o usando il comando `azdata bdc config`. È possibile usare una combinazione di librerie jsonpath e jsonpatch per fornire modi per modificare i file di configurazione.
 
 
-### <a id="config-samples"></a> Configurare il nome della classe di archiviazione e/o le dimensioni delle attestazioni
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> Configurare il nome della classe di archiviazione e/o le dimensioni delle attestazioni
 
 Per impostazione predefinita, la dimensione delle attestazioni di volume permanente di cui è stato effettuato il provisioning per ognuno dei pod di cui è stato effettuato il provisioning nel cluster è 10 gigabyte (GB). È possibile aggiornare questo valore in base ai carichi di lavoro in esecuzione in un file di configurazione personalizzato prima della distribuzione del cluster.
 

@@ -1,5 +1,6 @@
 ---
 title: Modificare una sessione Eventi estesi
+description: Usare la Creazione guidata Eventi estesi SQL Server per modificare una sessione Eventi estesi. Le modifiche che è possibile apportare variano a seconda che la sessione sia attiva o inattiva.
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32a57c46cebb17df257f2002c25ab5f1d7107379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1bb15ced32815913f8de0b20a7ce9bf174cbdc68
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255767"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434018"
 ---
 # <a name="alter-an-extended-events-session"></a>Modificare una sessione Eventi estesi
 

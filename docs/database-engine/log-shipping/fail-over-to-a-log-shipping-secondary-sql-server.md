@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90e200cba5cf2b8c367dfdb97b5ae5e192773e44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74822422"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510012"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover su un database secondario per il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "74822422"
   
 2.  Applicare in sequenza i backup del log delle transazioni non ancora applicati a ogni database secondario. Per altre informazioni, vedere [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-3.  Se il database primario è accessibile, eseguire il backup del log delle transazioni attivo e applicarlo ai database secondari.  
+3.  Se il database primario è accessibile, eseguire il backup del log delle transazioni attivo e applicarlo ai database secondari. Potrebbe essere necessario impostare il database sulla [modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md) per ottenere l'accesso esclusivo prima di eseguire il comando di ripristino e quindi tornare alla modalità multiutente al termine del ripristino.  
   
      Se l'istanza del server primario originale non è danneggiata, eseguire il backup della parte finale del log delle transazioni del database primario tramite WITH NORECOVERY. In questo modo il database resta nella stato di ripristino e pertanto non disponibile agli utenti. Infine è possibile eseguirne il rollforward applicando i backup del log delle transazioni del database primario da sostituire.  
   
-     Per altre informazioni, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+     Per altre informazioni, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).   
   
 4.  Dopo la sincronizzazione dei server secondari, è possibile eseguire il failover su qualsiasi server recuperando il relativo database secondario e reindirizzando i client a quell'istanza del server. L'operazione di recupero consente di rendere consistente il database e di portarlo online.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822422"
   
      Se non è disponibile un altro database secondario, vedere [Configurare il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Modificare i ruoli tra i server primario e secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   

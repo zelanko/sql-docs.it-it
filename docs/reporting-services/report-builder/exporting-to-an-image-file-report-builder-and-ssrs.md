@@ -1,5 +1,6 @@
 ---
 title: Esportazione in un file di immagine (Generatore report) | Microsoft Docs
+description: In Generatore report, l'estensione per il rendering delle immagini genera bitmap o metafile dei report impaginati. Il valore predefinito è un file TIFF visualizzabile in più pagine.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5a3bd0cd2dfdba8b34ff6dc97f56fb3eaf53306
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081385"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342849"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Esportazione in un file di immagine (Generatore report e SSRS)
   L'estensione per il rendering delle immagini genera bitmap o metafile dei report impaginati. Per impostazione predefinita, l'estensione per il rendering delle immagini crea un file TIFF del report, che può essere visualizzato in più pagine. Nel client l'immagine può essere visualizzata in un visualizzatore di immagini e stampata. In questo argomento vengono fornite informazioni specifiche sul renderer di immagini e vengono descritte le eccezioni alle regole di rendering.  
@@ -23,7 +24,7 @@ ms.locfileid: "77081385"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> Formati di immagine supportati  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> Formati di immagine supportati  
  Nella tabella seguente sono illustrati l'estensione di file e il tipo MIME per ogni formato del renderer di immagini.  
   
 |**Tipo**|**Estensione**|**MIMEType**|  
@@ -37,11 +38,11 @@ ms.locfileid: "77081385"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> Rendering di più pagine  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> Rendering di più pagine  
  L'unico formato che supporta documenti a più pagine in un unico file è TIFF. Altri formati, ad esempio JPG o PNG, generano una pagina alla volta e richiedono una chiamata distinta all'estensione per il rendering per ogni pagina.  
   
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  L'interattività non è supportata in alcun formato di immagine generato da questo renderer. Non viene eseguito il rendering dei seguenti elementi interattivi:  
   
 -   Collegamenti ipertestuali  
@@ -59,7 +60,7 @@ ms.locfileid: "77081385"
 -   Segnalibri  
   
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo. Per ulteriori informazioni, vedere [Image Device Information Settings](../../reporting-services/image-device-information-settings.md).  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Gestione di avvisi e casi che non causano eccezioni | Microsoft Docs
+description: Informazioni su come gestire gli avvisi e i casi che non causano eccezioni in modo da poter eseguire un'azione appropriata.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5939d2ea37a36af991ce6dd8edab33036ed24b02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5dd1c9335db348aeb3cb979079d3f1bd929f008a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63162302"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216390"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>Gestione di avvisi e casi che non provocano eccezioni
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non vengono generate eccezioni per gli avvisi e per determinati errori. Quando, ad esempio, si utilizza il metodo <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> per pubblicare un nuovo report in un server di report, gli avvisi vengono restituiti come matrice di oggetti <xref:ReportService2010.Warning>. Questi avvisi devono essere gestiti e visualizzati in modo che sia possibile eseguire l'azione appropriata.  

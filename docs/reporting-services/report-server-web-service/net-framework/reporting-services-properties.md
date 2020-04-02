@@ -1,5 +1,6 @@
 ---
 title: Proprietà di Reporting Services | Microsoft Docs
+description: Un server di report definisce proprietà di sistema globali e proprietà di singoli elementi. Le applicazioni possono aggiungere proprietà definite dall'utente a proprietà di sistema e di elemento.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36a105d3220755dd03ff05a50dd403d4bac25d3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7240bf3e987c5817489035d94879817f5f39569b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62703838"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509712"
 ---
 # <a name="reporting-services-properties"></a>Proprietà di Reporting Services
   Il server di report definisce un set di proprietà di sistema globali del server di report e un set di proprietà degli elementi associate a un singolo elemento archiviato nel database del server di report. Le proprietà definite dal server di report non possono essere eliminate e in alcuni casi sono di sola lettura. Un'applicazione consente di estendere le proprietà di sistema e degli elementi aggiungendo a queste proprietà ulteriori proprietà definite dall'utente.  

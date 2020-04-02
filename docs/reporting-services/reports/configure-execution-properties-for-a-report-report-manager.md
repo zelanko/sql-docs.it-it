@@ -1,5 +1,6 @@
 ---
 title: Configurare le proprietà di esecuzione per un report - Reporting Services | Microsoft Docs
+description: Informazioni su come impostare le opzioni di elaborazione del report per specificare quando recuperare i dati del report per evitare il sovraccarico del recupero degli stessi dati ogni volta che viene richiesto un report.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f30c3e123c80b9a16fd020e3126a3c40f366834
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492746"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510172"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Configurare le proprietà di esecuzione per un report
   È possibile impostare le opzioni di elaborazione di un report per specificare il momento in cui i dati vengono recuperati per un report specifico. Questa operazione risulta utile per pianificare l'elaborazione dei dati per un report se l'origine dati esterna viene aggiornata a intervalli stabiliti (ad esempio se un data warehouse viene aggiornato su base giornaliera o settimanale) e si desidera evitare l'overhead dovuto al recupero degli stessi dati ogni volta che un report viene richiesto. La pianificazione dell'elaborazione dei dati è utile anche se si desidera controllare il carico di elaborazione nel server di database esterno o quando si desidera fornire risultati coerenti per più utenti che devono utilizzare set di dati identici. Con dati volatili, un report su richiesta può generare risultati diversi anche a differenza di pochi minuti. Uno snapshot del report, invece, consente di eseguire confronti validi con altri report o strumenti analitici contenenti dati riferiti allo stesso momento nel tempo.  

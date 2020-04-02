@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558633"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487609"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Avvio rapido: Installare SQL Server e creare un database in SUSE Linux Enterprise Server
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Guida introduttiva: Installare SQL Server e creare un database in SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,14 +31,14 @@ In questa guida di avvio rapido si installerà SQL Server 2017 o SQL Server 2019
 In questa guida di avvio rapido si installerà SQL Server 2019 in SUSE Linux Enterprise Server (SLES) v12. Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
 
 > [!IMPORTANT]
-> SQL Server 2019 è supportato in SUSE Linux Enterprise Server v12 SP2, SP3 o SP4.
+> SQL Server 2019 è supportato in SUSE Linux Enterprise Server v12 SP2, SP3, SP4 o SP5.
 
 ::: moniker-end
 
 > [!TIP]
 > Questa esercitazione richiede l'input dell'utente e una connessione Internet. Se si è interessati alle procedure di installazione [automatica](sql-server-linux-setup.md#unattended) o [offline](sql-server-linux-setup.md#offline), vedere [Linee guida per l'installazione di SQL Server in Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -50,7 +50,7 @@ In questa guida di avvio rapido si installerà SQL Server 2019 in SUSE Linux Ent
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-È necessario un computer SLES v12 SP2, SP3 o SP4 con **almeno 2 GB** di memoria. Il file system deve essere **XFS** o **EXT4**. Altri file system, come **BTRFS**, non sono supportati.
+È necessario un computer SLES v12 SP2, SP3, SP4 o SP5 con **almeno 2 GB** di memoria. Il file system deve essere **XFS** o **EXT4**. Altri file system, come **BTRFS**, non sono supportati.
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ Per altri requisiti di sistema, vedere [Requisiti di sistema per SQL Server su L
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Installare SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installare SQL Server
 
 Per configurare SQL Server in SLES, eseguire i comandi seguenti in un terminale per installare il pacchetto **mssql-server**:
 
@@ -125,7 +125,7 @@ A questo punto, SQL Server è in esecuzione nel computer SLES ed è pronto per l
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Installare SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installare SQL Server
 
 Per configurare SQL Server in SLES, eseguire i comandi seguenti in un terminale per installare il pacchetto **mssql-server**:
 
@@ -173,7 +173,7 @@ SQL Server 2019 è ora in esecuzione nel computer SLES ed è pronto per l'uso.
 ::: moniker-end
 
 
-## <a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
 
 Per creare un database, è necessario connettersi con uno strumento in grado di eseguire istruzioni Transact-SQL nel server SQL. La procedura seguente installa gli strumenti da riga di comando di SQL Server [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
 

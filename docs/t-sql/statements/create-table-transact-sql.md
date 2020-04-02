@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287665"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380672"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ Prima di creare una tabella partizionata con CREATE TABLE, è necessario creare 
 - I vincoli FOREIGN KEY possono fare riferimento solo a tabelle di un singolo database nello stesso server. L'integrità referenziale tra database diversi deve essere implementata tramite trigger. Per altre informazioni, vedere [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
 - I vincoli FOREIGN KEY possono fare riferimento a un'altra colonna nella stessa tabella. Questo tipo di vincolo viene definito autoreferenziale.
 - La clausola REFERENCES di un vincolo FOREIGN KEY a livello di colonna può includere una sola colonna di riferimento. Il tipo di dati di tale colonna deve essere uguale al tipo di dati della colonna in cui viene definito il vincolo.
-- La clausola REFERENCES di un vincolo FOREIGN KEY a livello di tabella deve includere lo stesso numero di colonne di riferimento di quelle presenti nell'elenco di colonne del vincolo. Il tipo di dati di ogni colonna di riferimento deve inoltre essere uguale a quello della colonna corrispondente nell'elenco di colonne.
+- La clausola REFERENCES di un vincolo FOREIGN KEY a livello di tabella deve includere lo stesso numero di colonne di riferimento di quelle presenti nell'elenco di colonne del vincolo. Il tipo di dati di ogni colonna di riferimento deve inoltre essere uguale a quello della colonna corrispondente nell'elenco di colonne. Le colonne di riferimento devono essere specificate nello stesso ordine usato quando si specificano le colonne del vincolo PRIMARY KEY o UNIQUE nella tabella a cui si fa riferimento.
 - Non è possibile specificare CASCADE, SET NULL o SET DEFAULT se una colonna di tipo **timestamp** fa parte della chiave esterna o della chiave a cui si fa riferimento.
 - È possibile combinare le azioni CASCADE, SET NULL, SET DEFAULT e NO ACTION in tabelle con relazioni referenziali reciproche. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] rileva l'azione NO ACTION, l'operazione viene arrestata e viene eseguito il rollback delle azioni CASCADE, SET NULL e SET DEFAULT correlate. Quando un'istruzione DELETE genera una combinazione di azioni CASCADE, SET NULL, SET DEFAULT e NO ACTION, tutte le azioni CASCADE, SET NULL e SET DEFAULT vengono applicate prima che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifichi l'esistenza di azioni NO ACTION.
 - Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non prevede un limite predefinito per il numero di vincoli FOREIGN KEY che possono essere inclusi in una tabella e che fanno riferimento ad altre tabelle o per il numero di vincoli FOREIGN KEY di proprietà di altre tabelle che fanno riferimento a una tabella specifica.

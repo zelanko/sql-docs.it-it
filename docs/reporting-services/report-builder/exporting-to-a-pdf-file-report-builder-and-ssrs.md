@@ -1,5 +1,6 @@
 ---
 title: Esportazione in un file PDF (Generatore report) | Microsoft Docs
+description: In Generatore report l'estensione per il rendering PDF consente di eseguire il rendering di un report impaginato in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti.
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078273"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342852"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Esportazione in un file PDF (Generatore report e SSRS)
   L'estensione per il rendering PDF consente di eseguire il rendering di un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 11.0 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. Per visualizzare o stampare i report in formato PDF è tuttavia necessario disporre di visualizzatori PDF, ad esempio Adobe Acrobat.  
@@ -25,7 +26,7 @@ ms.locfileid: "77078273"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Incorporamento dei tipi di carattere  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> Incorporamento dei tipi di carattere  
  Se possibile, l'estensione per il rendering in PDF incorpora il subset di ogni tipo di carattere necessario per la visualizzazione del report nel file PDF. I tipi di carattere usati nel report devono essere installati nel server di report. Quando il server di report genera un report in formato PDF, vengono usate le informazioni archiviate nel tipo di carattere a cui fa riferimento il report per creare i mapping dei caratteri nel file PDF. Se il tipo di carattere a cui viene fatto riferimento non è installato nel server di report, il file PDF risultante potrebbe non contenere i mapping appropriati e non essere visualizzato correttamente.  
   
  I tipi di carattere vengono incorporati nel file PDF quando si verificano le condizioni seguenti:  
@@ -54,7 +55,7 @@ ms.locfileid: "77078273"
   
  I tipi di carattere incorporati nel file PDF sono inclusi come metadati nella proprietà Fonts salvata con il file.  
   
-##  <a name="Metadata"></a> Metadati  
+##  <a name="metadata"></a><a name="Metadata"></a> Metadati  
  Oltre al layout del report, l'estensione per il rendering in PDF scrive i metadati seguenti nel dizionario di informazioni del documento PDF.  
   
 |Proprietà PDF|Creata da|  
@@ -67,7 +68,7 @@ ms.locfileid: "77078273"
 |**CreationDate**|Data e ora di esecuzione del report nel formato PDF **datetime** .|  
   
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  In PDF sono supportati alcuni elementi interattivi. Di seguito è riportata una descrizione di comportamenti specifici.  
   
 ### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
@@ -88,7 +89,7 @@ ms.locfileid: "77078273"
  Il rendering dei collegamenti ipertestuali dei report viene eseguito come collegamenti su cui è possibile fare clic nel file PDF. Quando si fa clic, da Acrobat verrà aperto il browser client predefinito in corrispondenza dell'URL del collegamento ipertestuale.  
   
   
-##  <a name="Compression"></a> Compressione  
+##  <a name="compression"></a><a name="Compression"></a> Compressione  
  La compressione dell'immagine è basata sul tipo di file originale dell'immagine. L'estensione per il rendering in PDF comprime i file PDF per impostazione predefinita.  
   
  Per mantenere la compressione per le immagini incluse nel file PDF, quando possibile, le immagini JPEG vengono archiviate in formato JPEG e tutti gli altri tipi di immagine in formato BMP.  
@@ -97,7 +98,7 @@ ms.locfileid: "77078273"
 >  I file PDF non supportano l'incorporamento di immagini PNG.  
   
   
-##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo. Per altre informazioni, vedere [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   

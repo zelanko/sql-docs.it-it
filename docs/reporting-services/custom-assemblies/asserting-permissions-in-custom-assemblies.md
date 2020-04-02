@@ -1,5 +1,6 @@
 ---
 title: Asserzione di autorizzazioni negli assembly personalizzati | Microsoft Docs
+description: Informazioni su come usare l'asserzione di autorizzazioni in modo che sia possibile implementare un assembly personalizzato che effettua chiamate protette a risorse protette all'interno del sistema di sicurezza.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2b3f4600c4c03fe356f5694f0d9a6cd5bc7afb98
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194329"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217061"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Asserzione di autorizzazioni negli assembly personalizzati
   Per impostazione predefinita, il codice degli assembly personalizzati viene eseguito con il set di autorizzazioni **Execution** limitato. In alcuni casi, potrebbe essere necessario implementare un assembly personalizzato per l'esecuzione di chiamate protette alle risorse protette all'interno del sistema di sicurezza (ad esempio un file o il Registro di sistema). A tale scopo, è necessario effettuare le operazioni seguenti:  

@@ -1,5 +1,6 @@
 ---
 title: 'Accedere ai dati esterni: MongoDB - PolyBase'
+description: L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in MongoDB. Creare tabelle esterne per fare riferimento ai dati esterni.
 ms.date: 12/13/2019
 ms.metadata: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255426"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215875"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurare PolyBase per l'accesso a dati esterni in MongoDB
 
@@ -22,7 +23,7 @@ ms.locfileid: "75255426"
 
 L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in MongoDB.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md).
 

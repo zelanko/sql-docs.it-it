@@ -1,5 +1,6 @@
 ---
 title: Mantenere la formattazione della data per i dati di Analysis Services nei report per dispositivi mobili | Reporting Services | Microsoft Docs
+description: In Mobile Report Publisher aggiungere una misura a un set di dati condiviso in Generatore report in modo che le date nelle origini dati di Analysis Services mantengano il tipo di dati.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62503029"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448452"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>Mantieni date (formattazione) per Analysis Services nei report per dispositivi mobili
 Aggiungere una misura a un set di dati condiviso in Generatore report in modo che le date nelle origini dati di [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] mantengano il tipo di dati in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)].

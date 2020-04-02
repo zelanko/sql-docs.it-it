@@ -1,5 +1,6 @@
 ---
 title: Raggruppare i dati in colonne o righe in un report per dispositivi mobili | Reporting Services | Microsoft Docs
+description: In Mobile Report Publisher è possibile organizzare i dati per colonne o per righe in diversi tipi di grafici. Questo articolo illustra i dati strutturati in base alle colonne o alle righe.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63200908"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448238"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Raggruppare i dati in colonne o righe in un report per dispositivi mobili | Reporting Services
 È possibile organizzare i dati per colonne o per righe in diversi tipi di grafici in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Seguire questa procedura dettagliata.

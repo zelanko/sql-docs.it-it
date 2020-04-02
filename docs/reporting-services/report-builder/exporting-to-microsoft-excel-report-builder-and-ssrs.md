@@ -1,5 +1,6 @@
 ---
 title: Esportazione in Microsoft Excel (Generatore report) | Microsoft Docs
+description: In Generatore report l'estensione per il rendering di Excel esegue il rendering di un report impaginato nel formato Office Open XML da usare con Microsoft Excel.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079583"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342896"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginato nel formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx). Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  
@@ -29,7 +30,7 @@ ms.locfileid: "77079583"
 >   
 >  Per ridurre il rischio di eseguire inavvertitamente script dannosi, aprire i report visualizzabili solo da origini attendibili. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md).  
   
-##  <a name="ExcelLimitations"></a> Limitazioni di Excel  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Limitazioni di Excel  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] sono previste limitazioni in relazione ai report esportati che dipendono dalle funzionalità di Excel e dai relativi formati file. Di seguito vengono elencate le limitazioni più importanti:  
   
 -   La larghezza massima delle colonne è limitata a 255 caratteri o 1726,5 punti. Nel renderer non viene verificato se la larghezza della colonna sia inferiore a tale limite.  
@@ -178,7 +179,7 @@ ms.locfileid: "77079583"
   
  Poiché nel report viene impostata in modo esplicito l'altezza della riga, l'altezza della riga predefinita influisce solo su righe ridimensionate automaticamente durante l'esportazione in Excel.  
   
-##  <a name="ReportItemsExcel"></a> Elementi del report in Excel  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Elementi del report in Excel  
  Il rendering di rettangoli, sottoreport, del corpo del report e delle aree dati viene eseguito come intervallo di celle di Excel. Il rendering di caselle di testo, immagini, grafici, barre dei dati, grafici sparkline, mappe, misuratori e indicatori deve essere eseguito all'interno di una cella di Excel che potrebbe risultare unita a seconda del layout della parte restante del report.  
   
  Immagini, grafici, barre dei dati, grafici sparkline, mappe, misuratori, indicatori e linee vengono posizionati all'interno di una cella di Excel, ma vengono inseriti sopra la griglia di celle. Il rendering delle linee viene eseguito come bordi della cella.  
@@ -192,7 +193,7 @@ ms.locfileid: "77079583"
   
  Se non viene trovata alcuna corrispondenza, vengono usate le dimensioni di pagina predefinite per la stampante. Se la larghezza della pagina è inferiore all'altezza, l'orientamento verrà impostato su Verticale. In caso contrario, verrà impostato su Orizzontale.  
   
-##  <a name="WorksheetTabNames"></a> Nomi delle schede dei fogli di lavoro  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> Nomi delle schede dei fogli di lavoro  
  Quando si esporta un report in Excel, le pagine del report create dalle interruzioni di pagina vengono esportate in fogli di lavoro differenti. Se è stato specificato un nome della pagina iniziale per il report, ogni foglio di lavoro della cartella di lavoro di Excel avrà questo nome per impostazione predefinita. Il nome viene visualizzato sulla scheda del foglio di lavoro. Tuttavia, poiché ogni foglio di lavoro in una cartella di lavoro deve avere un nome univoco, al nome della pagina iniziale di ogni foglio di lavoro aggiuntivo viene aggiunto un numero intero a partire da 1 e aumentato di 1. Se ad esempio il nome della pagina iniziale è **Report di vendite per anno fiscale**, il secondo foglio di lavoro verrebbe denominato **Report di vendite per anno fiscale 1**mentre il terzo **Report di vendite per anno fiscale 2**e così via.  
   
  Se per tutte le pagine del report create dalle interruzioni di pagina vengono specificati nomi di pagina nuovi, ogni foglio di lavoro avrà il nome della pagina associato. Tuttavia, questi nomi di pagina non sarebbero univoci. In tal caso, i fogli di lavoro sono denominati con la stessa modalità dei nomi di pagina iniziali. Se ad esempio il nome della pagina di due gruppi è **Vendite di NW**, una scheda del foglio di lavoro avrà il nome **Vendite di NW**mentre l'altra avrà **Vendite di NW 1**.  
@@ -201,7 +202,7 @@ ms.locfileid: "77079583"
   
  Reporting Services fornisce proprietà per impostare report, aree dati, gruppi e rettangoli per facilitare la creazione di report esportabili in Excel in una modalità desiderata. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="DocumentProperties"></a> Proprietà del documento  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Proprietà del documento  
  Il renderer di Excel scrive i metadati seguenti nel file di Excel.  
   
 |Proprietà degli elementi del report|Descrizione|  
@@ -211,7 +212,7 @@ ms.locfileid: "77079583"
 |Descrizione|Report.Description|  
 |LastSaved|Data e ora di esecuzione del report espresse come valore data/ora ISO.|  
   
-##  <a name="PageHeadersFooters"></a> Intestazioni di pagina e piè di pagina  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> Intestazioni di pagina e piè di pagina  
  Il rendering dell'intestazione di pagina può essere eseguito in due diversi modi a seconda dell'impostazione SimplePageHeaders delle informazioni sul dispositivo, ovvero sopra la griglia di celle di ogni foglio di lavoro oppure nell'effettiva sezione di intestazione del foglio di lavoro di Excel. Per impostazione predefinita, il rendering dell'intestazione viene eseguito nella griglia di celle del foglio di lavoro di Excel.  
   
  Il rendering del piè di pagina viene sempre eseguito nella sezione effettiva del piè di pagina di foglio di lavoro di Excel, indipendentemente dal valore dell'impostazione SimplePageHeaders.  
@@ -227,7 +228,7 @@ ms.locfileid: "77079583"
   
  A causa delle limitazioni di Excel, le caselle di testo sono l'unico elemento del report di cui è possibile eseguire il rendering nella sezione dell'intestazione o del piè di pagina di Excel.  
   
-##  <a name="Interactivity"></a> Interattività  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interattività  
  Alcuni elementi interattivi sono supportati in Excel. Di seguito è riportata una descrizione di comportamenti specifici.  
   
 ### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
@@ -262,7 +263,7 @@ ms.locfileid: "77079583"
 ### <a name="bookmarks"></a>Segnalibri  
  Il rendering dei collegamenti a segnalibro visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti a segnalibro per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un segnalibro, si passa alla cella di Excel in cui viene eseguito il rendering dell'elemento di report con segnalibro.  
   
-##  <a name="ConditionalFormat"></a> Modifica dei report in fase di esecuzione  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> Modifica dei report in fase di esecuzione  
  Se per un report è necessario eseguire il rendering in più formati e non è possibile creare un layout del report che consenta di eseguire il rendering nel modo desiderato in tutti i formati necessari, considerare la possibilità di usare il valore incluso nell'elemento globale predefinito RenderFormat per modificare in modo condizionale l'aspetto del report in fase di esecuzione. In questo modo è possibile nascondere o rendere visibili gli elementi del report a seconda del renderer usato per ottenere i migliori risultati in ogni formato. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  

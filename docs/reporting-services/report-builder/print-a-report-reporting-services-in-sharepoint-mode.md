@@ -1,5 +1,6 @@
 ---
 title: Stampare un report (Reporting Services in modalità SharePoint) | Microsoft Docs
+description: Se un server di report viene eseguito in modalità SharePoint, è possibile stampare un report da un'applicazione Web di SharePoint da un sito di SharePoint, da un browser o da un'applicazione di destinazione.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eb3511714f893e4513c8a5ba1c215807003e6534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65875197"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290812"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Stampare un report (Reporting Services in modalità SharePoint)
   In un server di report in esecuzione in SharePoint è possibile stampare un report da un'applicazione Web di SharePoint nei tre modi seguenti:  

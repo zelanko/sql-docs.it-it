@@ -1,8 +1,8 @@
 ---
-title: Inlining di funzioni definite dall'utente scalari nei database SQL di Microsoft | Microsoft Docs
-description: Funzionalità di inlining di funzioni definite dall'utente scalari per migliorare le prestazioni delle query che richiamano funzioni definite dall'utente scalari in SQL Server (a partire da SQL Server 2019) e nel database SQL di Azure.
+title: Inlining di funzioni definite dall'utente scalari in Microsoft SQL Server | Microsoft Docs
+description: Funzionalità di inlining di funzioni definite dall'utente scalari per migliorare le prestazioni delle query che richiamano funzioni definite dall'utente scalari in SQL Server (a partire da SQL Server 2019).
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287405"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486551"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funzioni definite dall'utente scalari T-SQL
 Le funzioni definite dall'utente (UDF) implementate in [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un unico valore di dati sono dette funzioni definite dall'utente scalari T-SQL. Le funzioni definite dall'utente T-SQL consentono di riusare e modulare il codice in più query [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo elegante. Alcuni calcoli (ad esempio regole business complesse) sono più facili da esprimere nella forma imperativa delle funzioni definite dall'utente. Le funzioni definite dall'utente consentono di creare una logica complessa senza richiedere l'esperienza necessaria per la scrittura di query SQL complesse.

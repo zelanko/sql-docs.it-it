@@ -1,5 +1,6 @@
 ---
 title: Sicurezza (Generatore report) | Microsoft Docs
+description: Le funzionalità di sicurezza di Generatore report sono correlate alle posizioni di pubblicazione, ai report pubblicati, alle origini dati esterne e ai modelli basati su di esse, nonché alle funzionalità interattive.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190102"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290831"
 ---
 # <a name="security-report-builder"></a>Sicurezza (Generatore report)
   Generatore report è un'applicazione client di creazione di report progettata per utilizzare un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il server di report può essere configurato per lavorare in modalità nativa come server autonomo o in modalità integrata SharePoint per supportare i report in un sito di SharePoint.  
@@ -34,7 +35,7 @@ ms.locfileid: "74190102"
   
  Rivedere le informazioni in questo argomento per capire meglio come utilizzare le caratteristiche di sicurezza per gestire e proteggere i report e gli elementi correlati al report.  
   
-##  <a name="ReportServers"></a> Informazioni sulla sicurezza per i server di report  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Informazioni sulla sicurezza per i server di report  
  La pubblicazione e la visualizzazione di report sono operazioni privilegiate. Un amministratore di server di report concede autorizzazioni per garantire che solo gli utenti autorizzati possano pubblicare e visualizzare report in uno dei tipi seguenti di server di report:  
   
 -   Server di report configurato in modalità nativa  
@@ -54,7 +55,7 @@ ms.locfileid: "74190102"
      Se non è possibile connettersi o passare a un sito di SharePoint o a un sito secondario, contattare l'amministratore del sito di SharePoint.  
   
   
-##  <a name="Reports"></a> Informazioni sulla sicurezza per i report pubblicati e gli elementi correlati al report  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Informazioni sulla sicurezza per i report pubblicati e gli elementi correlati al report  
  La sicurezza per i report e gli elementi correlati al report è gestita dall'amministratore del server di report. Gli elementi correlati al report includono le origini dati condivise e incorporate che includono credenziali, set di dati condivisi, parametri, parti del report e modelli.  
   
  In un server di report o sito di SharePoint, i report, gli elementi correlati al report e le operazioni sono entità a protezione diretta. L'autorizzazione per l'accesso a elementi e operazioni viene concessa tramite criteri di sicurezza che consentono di eseguire il mapping di un account utente o di gruppo a un determinato livello di autorizzazione, relativamente a un elemento specifico. Per ridurre la complessità e l'overhead della gestione di un numero elevato di criteri, le autorizzazioni su un contenitore, quale una cartella, sono ereditate dagli elementi nel contenitore. Ad esempio, se un utente dispone dell'autorizzazione di visualizzazione dei report specifica su una cartella, dispone dell'autorizzazione di visualizzazione dei report sugli elementi nella cartella.  
@@ -81,7 +82,7 @@ ms.locfileid: "74190102"
  Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="Data"></a> Informazioni sulla sicurezza dei dati dei report e delle origini dati esterne  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Informazioni sulla sicurezza dei dati dei report e delle origini dati esterne  
  Per accedere a dati da ogni origine dati esterna in un report, occorre creare un'origine dati incorporata o aggiungere un riferimento a un'origine dati condivisa o un set di dati condiviso nel report.  
   
  Per ogni origine dati esterna, è necessario fornire delle credenziali che siano sufficienti per accedere all'origine e ai dati sottostanti. Il proprietario dell'origine dati specifica il tipo di credenziali di accesso.  
@@ -96,13 +97,13 @@ ms.locfileid: "74190102"
  Per altre informazioni sulle origini dati, vedere [Creare stringhe di connessione dati - Generatore report e SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Models"></a> Informazioni sui modelli e sui filtri di sicurezza  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Informazioni sui modelli e sui filtri di sicurezza  
  Quando i dati vengono recuperati da un modello di report basato su dati esterni, è possibile applicare dei filtri di sicurezza nel modello. Si tratta di una valida soluzione per proteggere i dati in modo che ogni utente che esegue un report possa vedere solo i dati per i quali dispone delle autorizzazioni necessarie.  
   
  I parametri del report non vengono utilizzati per la sicurezza a livello di riga poiché non impediscono a utenti o a gruppi di utenti di visualizzare righe specifiche di dati. Per applicare la sicurezza ai dati visualizzati in un report è necessario utilizzare i filtri di sicurezza oppure la sicurezza degli elementi dei modelli.  
   
   
-##  <a name="Interactive"></a> Informazioni sulla sicurezza per la creazione di report per le caratteristiche interattive  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Informazioni sulla sicurezza per la creazione di report per le caratteristiche interattive  
  Nei report vengono spesso utilizzati parametri che consentono a un utente di personalizzare in modo interattivo la visualizzazione di un report. Utilizzare i suggerimenti seguenti per progettare report che seguano procedure consigliate:  
   
 -   Non utilizzare parametri basati su parametri di query e che sono di tipo **Text** a meno che si forniscano valori validi. Un elenco dei valori disponibili aiuta un utente a scegliere solo valori validi. Senza questo elenco non è possibile limitare i valori che possono essere immessi da un utente.  

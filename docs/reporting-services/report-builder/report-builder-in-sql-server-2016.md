@@ -1,5 +1,6 @@
 ---
 title: Generatore report in SQL Server | Microsoft Docs
+description: Generatore report è uno strumento per la creazione di report impaginati. Per creare un report, è necessario specificare i dati da recuperare, dove ottenerli e come visualizzarli.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67688519"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290892"
 ---
 # <a name="report-builder-in-sql-server"></a>Generatore report in SQL Server
 
@@ -30,7 +31,7 @@ ms.locfileid: "67688519"
   
  Questo report impaginato include una matrice con gruppi di righe e colonne, grafici sparkline, indicatori e un grafico a torta riepilogativo nella cella d'angolo, accompagnata da una mappa con due set di dati geografici rappresentati dal colore e dalle dimensioni del cerchio.  
   
-##  <a name="JumpStartReptCreation"></a> Avvio della creazione del report  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> Avvio della creazione del report  
   
 -   **Iniziare con un set di dati condiviso**. I set di dati condivisi sono query basate su un'origine dati condivisa che vengono salvate in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67688519"
   
 -   **Iniziare il report con le parti del report**. Le parti di report sono elementi di report che sono stati pubblicati separatamente in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint e possono essere riusati in altri report. È possibile pubblicare elementi di report quali tabelle, matrici, grafici e immagini come parti di report.  
   
-##  <a name="DesignRept"></a> Progettazione del report  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> Progettazione del report  
   
 -   **Creare report impaginati con tabelle, matrici, grafici e layout in formato libero.** Creare report tabella per dati distribuiti in colonne, report matrice (ad esempio report a campi incrociati o di tabelle pivot) per dati di riepilogo, report grafici per dati grafici e report in formato libero per qualsiasi altra esigenza. Nei report è possibile incorporare altri report e grafici, nonché elenchi, grafica e controlli per le applicazioni Web dinamiche.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "67688519"
   
 -   **Incorporare o fare riferimento a immagini** e altre risorse, ad esempio contenuto esterno.  
   
-##  <a name="ManageRpt"></a> Gestione del report  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> Gestione del report  
   
 -   **Salvare la definizione del report** nel computer o nel server di report per poter gestire e condividere il report con altri utenti.  
   

@@ -1,5 +1,6 @@
 ---
 title: Visualizzazione della struttura set di dati condivisi (Generatore report) | Microsoft Docs
+description: In Generatore report usare la finestra di progettazione di set di dati condivisi per creare set di dati da condividere. Pubblicare i set di dati condivisi in un server di report per l'uso in più report.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ece66b7fbe027f8119bb8703df58ca94098ed515
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190030"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290780"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Visualizzazione di progettazione set di dati condivisi (Generatore report)
   In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Un set di dati condiviso viene pubblicato in un server di report e può essere usato da più report. È possibile creare set di dati da condividere con altri utenti. Nella finestra di progettazione di set di dati condivisi è possibile selezionare un'origine dati condivisa, specificare proprietà per il set di dati condiviso e creare una query in Progettazione query.  
@@ -22,7 +23,7 @@ ms.locfileid: "74190030"
   
  Per altre informazioni sull'uso di dati in un report, vedere [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a> Barra multifunzione  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> Barra multifunzione  
  La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati nei gruppi logici seguenti: Connessione, Set di dati e Progettazione query.  
   
 ### <a name="connection"></a>Connessione  
@@ -58,7 +59,7 @@ ms.locfileid: "74190030"
  Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
   
-##  <a name="DesignSurface"></a> Area di progettazione query  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> Area di progettazione query  
  La finestra Progettazione query consente di compilare una query utilizzando la sintassi richiesta dall'origine dati esterna.  
   
  Per alcuni tipi di origini dati è disponibile una finestra Progettazione query con interfaccia grafica che è possibile utilizzare per esplorare i metadati in un'origine dati esterna. È possibile trascinare nomi in modo interattivo dal riquadro di metadati all'area di progettazione query o selezionare in modo interattivo i nomi da utilizzare.  
@@ -68,7 +69,7 @@ ms.locfileid: "74190030"
  A ogni tipo di origine dati sono associati requisiti specifici per la query che funzioneranno con l'origine dati esterna. Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="Results"></a> Visualizzazione dei risultati di query  
+##  <a name="viewing-query-results"></a><a name="Results"></a> Visualizzazione dei risultati di query  
  Nella visualizzazione di progettazione del set di dati condiviso viene compilata una query che recupererà dati dalla connessione dati al momento dell'elaborazione del report.  
   
  Eseguire la query per visualizzare dati di esempio dalla connessione dati, in modo da verificare che la query restituisca il tipo di dati previsto. Le colonne nel set di risultati appartengono ai metadati relativi agli schemi di dati dalla connessione dati. I nomi delle colonne diventano la raccolta di campi del set di dati. I valori dei dati visualizzati nel set di risultati della query rappresentano i dati della fase di progettazione. Dopo aver salvato il set di dati condiviso come definizione del set di dati condiviso nel server di report, verrà salvato solo il testo della query. I dati nel set di risultati della query non verranno salvati.  
@@ -85,7 +86,7 @@ ms.locfileid: "74190030"
  Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Save"></a> Salvataggio del set di dati condiviso  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Salvataggio del set di dati condiviso  
  Per salvare la query generata, sul pulsante **Generatore report** fare clic su **Salva** o su **Salva con nome**. Passare alla cartella appropriata sul server di report e salvare la definizione del set di dati condiviso. Il set di dati condiviso non sarà disponibile ad altri utenti finché non verrà salvato nel server di report.  
   
   

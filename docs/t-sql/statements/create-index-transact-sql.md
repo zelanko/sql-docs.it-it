@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287255"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448359"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -361,7 +361,7 @@ PAD_INDEX = { ON | **OFF** }
 
 Specifica il riempimento dell'indice. Il valore predefinito è OFF.
 
-ATTIVA      
+ON      
 La percentuale di spazio disponibile specificata da *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.
 
 OFF o _fillfactor_ non è specificato      
@@ -390,7 +390,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 
 Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF, tranne per il database SQL di Azure con servizio Hyperscale. Per tutte le operazioni di compilazione dell'indice in Hyperscale, SORT_IN_TEMPDB è sempre ON, indipendentemente dall'opzione specificata, a meno che non venga usata la ricompilazione dell'indice ripristinabile.
 
-ATTIVA      
+ON      
 I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.
 
 OFF      
@@ -403,7 +403,7 @@ Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH SOR
 IGNORE_DUP_KEY = { ON | **OFF** }      
 Specifica l'errore restituito quando un'operazione di inserimento tenta di inserire valori di chiave duplicati in un indice univoco. L'opzione IGNORE_DUP_KEY viene applicata solo alle operazioni di inserimento eseguite dopo la creazione o la ricompilazione dell'indice. L'opzione non ha alcun effetto se si esegue [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). Il valore predefinito è OFF.
 
-ATTIVA      
+ON      
 Viene visualizzato un messaggio di avviso quando i valori di chiave duplicati vengono inseriti in un indice univoco. Avranno esito negativo solo le righe che violano il vincolo di unicità.
 
 OFF      
@@ -418,7 +418,7 @@ Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH IGN
 STATISTICS_NORECOMPUTE = { ON | **OFF**}      
 Specifica se le statistiche di distribuzione vengono ricalcolate. Il valore predefinito è OFF.
 
-ATTIVA      
+ON      
 Le statistiche non aggiornate non vengono ricalcolate automaticamente.
 
 OFF      
@@ -450,7 +450,7 @@ Se le statistiche per partizione non sono supportate, l'opzione viene ignorata e
 DROP_EXISTING = { ON | **OFF** }      
 Consente di eliminare e ricompilare l'indice cluster o non cluster esistente con le specifiche colonne modificate e di mantenere lo stesso nome per l'indice. Il valore predefinito è OFF.
 
-ATTIVA      
+ON      
 Specifica che l'indice esistente deve essere eliminato e ricompilato e che deve avere lo stesso nome del parametro *index_name*.
 
 OFF      
@@ -473,7 +473,7 @@ Specifica se le tabelle sottostanti e gli indici associati sono disponibili per 
 > [!IMPORTANT]
 > Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
-ATTIVA      
+ON      
 I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. in modo da consentire l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un periodo molto breve. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, in caso di creazione di un indice non cluster. In caso di creazione o di eliminazione di un indice cluster online o di ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.
 
 OFF      
@@ -499,7 +499,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  Specifica se un'operazione sull'indice online è ripristinabile.
 
- ATTIVA      
+ ON      
 L'operazione sull'indice è ripristinabile.
 
  OFF      
@@ -522,7 +522,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
 
 Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.
 
-ATTIVA      
+ON      
 I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.
 
 OFF      
@@ -533,7 +533,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
 
 Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.
 
-ATTIVA      
+ON      
 I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.
 
 OFF      
@@ -568,7 +568,7 @@ Utilizza il numero effettivo di processori o un numero inferiore in base al cari
 DATA_COMPRESSION      
 Specifica l'opzione di compressione dei dati per l'indice, il numero di partizione o l'intervallo di partizioni specificato. descritte di seguito:
 
-Nessuno      
+NONE      
 L'indice o le partizioni specificate non vengono compressi.
 
 ROW      
@@ -654,13 +654,13 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 
     |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-    |ANSI_NULLS|ATTIVA|ATTIVA|ATTIVA|OFF|
-    |ANSI_PADDING|ATTIVA|ATTIVA|ATTIVA|OFF|
-    |ANSI_WARNINGS*|ATTIVA|ATTIVA|ATTIVA|OFF|
-    |ARITHABORT|ATTIVA|ATTIVA|OFF|OFF|
-    |CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ATTIVA|OFF|
+    |ANSI_NULLS|ON|ON|ON|OFF|
+    |ANSI_PADDING|ON|ON|ON|OFF|
+    |ANSI_WARNINGS*|ON|ON|ON|OFF|
+    |ARITHABORT|ON|ON|OFF|OFF|
+    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-    |QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ATTIVA|OFF|
+    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
   
      * Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata su ON in modo esplicito.
 
@@ -750,7 +750,7 @@ Per l'esecuzione di operazioni sugli indici online, è necessario attenersi alle
 
 Per altre informazioni, vedere [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
-### <a name="resumable-indexes"></a>Operazioni sull'indice ripristinabili
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>Operazioni sull'indice ripristinabili
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Per l'esecuzione di operazioni sull'indice ripristinabili, è necessario attenersi alle indicazioni seguenti:

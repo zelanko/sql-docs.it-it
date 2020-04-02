@@ -1,5 +1,6 @@
 ---
 title: Endpoint del servizio Web ReportServer | Microsoft Docs
+description: Il servizio Web ReportServer fornisce tre endpoint per la gestione di un server di report e per l'esecuzione e la navigazione dei report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a546ba4143b7f0cc63281ce9e7a95a4eb6910366
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284625"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509752"
 ---
 # <a name="report-server-web-service-endpoints"></a>Endpoint del servizio Web ReportServer
   Il servizio Web ReportServer fornisce diversi endpoint per la gestione di un server di report e per l'esecuzione e la navigazione dei report.  

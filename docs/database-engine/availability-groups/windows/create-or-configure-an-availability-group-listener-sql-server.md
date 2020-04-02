@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 602502f636d4204364025ae9a8e4b039e822ae8b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6674f818d9983de56b4b015cb446b2c8f2931b84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190564"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434158"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurare un listener per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "79190564"
 >  Per creare il primo listener di un gruppo di disponibilità, è consigliabile usare [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evitare di creare un listener direttamente nel cluster WSFC se non necessario, ad esempio per creare un listener aggiuntivo.  
   
  
-##  <a name="DoesListenerExist"></a> Esiste già un listener per questo gruppo di disponibilità?  
+##  <a name="does-a-listener-exist-for-this-availability-group-already"></a><a name="DoesListenerExist"></a> Esiste già un listener per questo gruppo di disponibilità?  
 
  **Per determinare se un listener già esiste per il gruppo di disponibilità**  
   
@@ -40,14 +40,14 @@ ms.locfileid: "79190564"
 > [!NOTE]  
 >  Se è già presente un listener e si vuole creare un listener aggiuntivo, vedere [Per creare un listener aggiuntivo per un gruppo di disponibilità (facoltativo)](#CreateAdditionalListener), più avanti in questo argomento.  
   
-##  <a name="Restrictions"></a> Limitazioni e restrizioni  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   È possibile creare un solo listener per gruppo di disponibilità tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ogni gruppo di disponibilità richiede in genere un solo listener. Tuttavia, alcuni scenari del cliente richiedono più listener per un gruppo di disponibilità.   Dopo avere creato un listener tramite SQL Server, è possibile utilizzare Windows PowerShell per i cluster di failover o Gestione cluster di failover WSFC per creare listener aggiuntivi. Per altre informazioni, vedere [Per creare un listener aggiuntivo per un gruppo di disponibilità (facoltativo)](#CreateAdditionalListener), più avanti in questo argomento.  
   
-##  <a name="Recommendations"></a> Indicazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
  L'utilizzo di un indirizzo IP statico è consigliato, sebbene non obbligatorio, per più configurazioni di subnet.  
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "79190564"
 > [!IMPORTANT]  
 >  Prima di creare il primo listener, è consigliabile leggere l'agomento [Connettività client AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="DNSnameReqs"></a> Requisiti per il nome DNS di un listener del gruppo di disponibilità  
+###  <a name="requirements-for-the-dns-name-of-an-availability-group-listener"></a><a name="DNSnameReqs"></a> Requisiti per il nome DNS di un listener del gruppo di disponibilità  
  Ogni listener del gruppo di disponibilità richiede un nome host DNS univoco nel dominio e in NetBIOS. Il nome DNS è un valore stringa. Può contenere solo caratteri alfanumerici, trattini/segni meno (-) e caratteri di sottolineatura (_), in qualsiasi ordine. Per i nomi host DNS non viene fatta distinzione tra maiuscole e minuscole. La lunghezza massima è di 63 caratteri, tuttavia in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]è possibile specificare una lunghezza massima di 15 caratteri.  
   
  È consigliabile specificare una stringa significativa. Ad esempio, per un gruppo di disponibilità denominato `AG1`un nome host DNS significativo potrebbe essere `ag1-listener`.  
@@ -64,7 +64,7 @@ ms.locfileid: "79190564"
 > [!IMPORTANT]  
 >  NetBIOS riconosce solo i primi 15 caratteri di dns_name. Se si dispone di due cluster WSFC controllati dallo stesso dominio Active Directory e si tenta di creare listener del gruppo di disponibilità in entrambi i cluster usando nomi con più di 15 caratteri e un prefisso a 15 caratteri identico, verrà restituito un errore in cui si segnala che non è possibile portare online la risorsa del nome di rete virtuale. Per informazioni sulle regole di denominazione dei prefissi per i nomi DNS, vedere [Assegnare nomi ai domini](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-##  <a name="WinPermissions"></a> Autorizzazioni di Windows  
+##  <a name="windows-permissions"></a><a name="WinPermissions"></a> Autorizzazioni di Windows  
   
 |Autorizzazioni|Collegamento|  
 |-----------------|----------|  
@@ -74,14 +74,14 @@ ms.locfileid: "79190564"
 > [!TIP]  
 >  In genere, è più semplice non effettuare la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener. Se è possibile, procedere con la creazione e la configurazione automatica dell'account durante l'esecuzione della procedura guidata Disponibilità elevata WSFC.  
   
-##  <a name="SqlPermissions"></a> Autorizzazioni di SQL Server  
+##  <a name="sql-server-permissions"></a><a name="SqlPermissions"></a> Autorizzazioni di SQL Server  
   
 |Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Per creare un listener del gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare un listener del gruppo di disponibilità esistente|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 > [!TIP]  
 >  In [Creazione guidata Gruppo di disponibilità](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) è supportata la creazione del listener per un nuovo gruppo di disponibilità.  
@@ -98,7 +98,7 @@ ms.locfileid: "79190564"
   
     -   Per modificare il numero di porta di un listener esistente, espandere il nodo **Listener del gruppo di disponibilità** , fare clic con il pulsante destro del mouse sul listener e selezionare il comando **Proprietà** . Immettere il nuovo numero di porta nel campo **Porta** e fare clic su **OK**.  
   
-###  <a name="AddAgListenerDialog"></a> Nuovo listener gruppo di disponibilità (finestra di dialogo)  
+###  <a name="new-availability-group-listener-dialog-box"></a><a name="AddAgListenerDialog"></a> Nuovo listener gruppo di disponibilità (finestra di dialogo)  
  **Nome DNS del listener**  
  Specifica il nome host DNS del listener del gruppo di disponibilità. È inoltre necessario che il nome DNS sia una stringa univoca nel dominio e in NetBIOS. Può contenere solo caratteri alfanumerici, trattini (-) e caratteri di sottolineatura (_), in qualsiasi ordine. Per i nomi host DNS non viene fatta distinzione tra maiuscole e minuscole. La lunghezza massima è di 15 caratteri.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "79190564"
  **OK**  
  Fare clic per creare il listener del gruppo di disponibilità specificato.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per creare o configurare un listener del gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -154,7 +154,7 @@ ms.locfileid: "79190564"
   
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per creare o configurare un listener del gruppo di disponibilità**  
   
 1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica primaria.  
@@ -204,16 +204,16 @@ ms.locfileid: "79190564"
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
   
-###  <a name="ADQuotas"></a> Impossibile creare un listener del gruppo di disponibilità a causa di quote di Active Directory  
+###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a> Impossibile creare un listener del gruppo di disponibilità a causa di quote di Active Directory  
  La creazione di un nuovo listener del gruppo di disponibilità può avere esito negativo perché è stata raggiunta una quota di Active Directory per l'account del computer del nodo del cluster interessato.  Per altre informazioni, vedere gli articoli seguenti:  
   
 -   [Risoluzione dei problemi dell'account del Servizio cluster in relazione alla modifica di oggetti computer](https://support.microsoft.com/kb/307532)  
   
 -   [Quote di Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la creazione di un listener del gruppo di disponibilità  
+##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> Completamento: Dopo la creazione di un listener del gruppo di disponibilità  
   
-###  <a name="MultiSubnetFailover"></a> Parola chiave MultiSubnetFailover e funzionalità associate  
+###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a> Parola chiave MultiSubnetFailover e funzionalità associate  
  **MultiSubnetFailover** è una nuova parola chiave della stringa di connessione usata per accelerare il failover con i gruppi di disponibilità AlwaysOn e le istanze del cluster di failover AlwaysOn in SQL Server 2012. Le tre seguenti funzionalità secondarie vengono abilitate quando `MultiSubnetFailover=True` è impostato nella stringa di connessione:  
   
 -   Failover multisubnet più rapido su un listener su più subnet per un gruppo di disponibilità AlwaysOn o istanze del cluster di failover.  
@@ -244,7 +244,7 @@ ms.locfileid: "79190564"
   
      **Svantaggi:** se si verifica un failover tra subnet, il tempo di recupero del client potrebbe essere di almeno 15 minuti, a seconda dell'impostazione **HostRecordTTL** e della pianificazione della replica DNS/AD tra siti.  
   
-###  <a name="RegisterAllProvidersIP"></a> Impostazione RegisterAllProvidersIP  
+###  <a name="registerallprovidersip-setting"></a><a name="RegisterAllProvidersIP"></a> Impostazione RegisterAllProvidersIP  
  Se si usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell per creare un listener del gruppo di disponibilità, il punto di accesso client viene creato in WSFC con la proprietà **RegisterAllProvidersIP** impostata su 1 (true). L'effetto del valore di questa proprietà dipende dalla stringa di connessione client, come indicato di seguito:  
   
 -   Stringhe di connessione che impostano **MultiSubnetFailover** su true  
@@ -267,10 +267,10 @@ ms.locfileid: "79190564"
     > [!IMPORTANT]  
     >  Durante la creazione di un listener del gruppo di disponibilità con il cluster WSFC (interfaccia utente grafica di Gestione cluster di failover), il valore di **RegisterAllProvidersIP** sarà 0 (false) per impostazione predefinita.  
   
-###  <a name="HostRecordTTL"></a> Impostazione HostRecordTTL  
+###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> Impostazione HostRecordTTL  
  Per impostazione predefinita, tramite i client vengono memorizzati nella cache record DNS del cluster per 20 minuti.  Riducendo il valore di **HostRecordTTL**, la durata (TTL), per i record memorizzati nella cache, i client legacy possono riconnettersi più rapidamente.  La riduzione del valore dell'impostazione **HostRecordTTL** può però comportare anche un aumento del traffico verso i server DNS.  
   
-###  <a name="SampleScript"></a> Script PowerShell di esempio per disabilitare RegisterAllProvidersIP e ridurre TTL  
+###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> Script PowerShell di esempio per disabilitare RegisterAllProvidersIP e ridurre TTL  
  L'esempio di PowerShell seguente illustra come configurare entrambi i parametri cluster **RegisterAllProvidersIP** e **HostRecordTTL** per la risorsa listener.  Il record DNS verrà memorizzato nella cache per 5 minuti, anziché i 20 minuti predefiniti.  Modificando entrambi i parametri del cluster è possibile ridurre il tempo di connessione all'indirizzo IP corretto dopo un failover per i client legacy che non possono usare il parametro **MultiSubnetFailover** .  Sostituire `yourListenerName` con il nome del listener che si sta modificando.  
   
 ```  
@@ -283,7 +283,7 @@ Start-ClusterResource yourListenerName
   
  Per altre informazioni sui tempi di recupero durante i failover, vedere [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS).  
   
-###  <a name="FollowUpRecommendations"></a> Indicazioni sul completamento  
+###  <a name="follow-up-recommendations"></a><a name="FollowUpRecommendations"></a> Indicazioni sul completamento  
  Dopo aver creato un listener del gruppo di disponibilità:  
   
 -   Chiedere all'amministratore di rete di riservare l'indirizzo IP del listener per un uso esclusivo.  
@@ -292,7 +292,7 @@ Start-ClusterResource yourListenerName
   
 -   Incoraggiare gli sviluppatori ad aggiornare le stringhe di connessione client in modo da specificare `MultiSubnetFailover = True`, se possibile. Per informazioni sul supporto per la connettività client, vedere [Connettività client AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="CreateAdditionalListener"></a> Creare un listener aggiuntivo per un gruppo di disponibilità (facoltativo)  
+###  <a name="create-an-additional-listener-for-an-availability-group-optional"></a><a name="CreateAdditionalListener"></a> Creare un listener aggiuntivo per un gruppo di disponibilità (facoltativo)  
  Dopo avere creato un listener tramite SQL Server, è possibile aggiungere un altro listener come indicato di seguito:  
   
 1.  Creare il listener utilizzando uno degli strumenti seguenti:  
@@ -321,21 +321,11 @@ Start-ClusterResource yourListenerName
   
  Per ulteriori informazioni, vedere [Come creare più listener per lo stesso gruppo di disponibilità](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (blog del team di SQL Server AlwaysOn).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+ 
   
--   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
-  
--   [Rimuovere un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
-  
-##  <a name="RelatedContent"></a> Contenuto correlato  
-  
--   [Come creare più listener per lo stesso gruppo di disponibilità](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
-  
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Clustering su più subnet di SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+Dopo aver creato il listener, configurare l'applicazione per [connettersi al listener](listeners-client-connectivity-application-failover.md). È anche possibile esaminare diverse [strategie di monitoraggio dei gruppi di disponibilità](monitoring-of-availability-groups-sql-server.md) per garantire l'integrità del gruppo di disponibilità.
+
+È anche possibile [visualizzare le proprietà di un listener](view-availability-group-listener-properties-sql-server.md) o [rimuovere il listener](remove-an-availability-group-listener-sql-server.md), se necessario. 
   

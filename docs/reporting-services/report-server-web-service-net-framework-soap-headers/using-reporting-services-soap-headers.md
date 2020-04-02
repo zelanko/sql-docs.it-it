@@ -1,5 +1,6 @@
 ---
 title: Using Reporting Services SOAP Headers (Uso di intestazioni SOAP di Reporting Services) | Microsoft Docs
+description: Usare le intestazioni SOAP di Reporting Services per eseguire operazioni in batch in una singola transazione, gestire lo stato della sessione e recuperare le proprietà in base al percorso o all'ID di un elemento.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7f0cb5dc846e8f1f7e292366c7f938366b53de2d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026008"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216197"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Utilizzo di intestazioni SOAP di Reporting Services
   La comunicazione con un metodo di servizio Web utilizzando SOAP segue un formato standard. Fanno parte di questo formato i dati codificati in un documento XML. Il documento XML è costituito da un elemento **Envelope** radice che a sua volta è costituito da un elemento **Body** obbligatorio e da un elemento **Header** facoltativo. L'elemento **Body** contiene i dati specifici del messaggio. L'elemento **Header** facoltativo può contenere informazioni aggiuntive non direttamente correlate al messaggio specifico. Ogni elemento figlio dell'elemento**Header** è definito intestazione SOAP.  

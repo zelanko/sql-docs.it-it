@@ -1,5 +1,6 @@
 ---
 title: Limitare la cronologia dei report - Reporting Services | Microsoft Docs
+description: Informazioni su come configurare la cronologia del report per un server di report. Scoprire anche come configurare la cronologia per un report specifico.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492600"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510122"
 ---
 # <a name="limit-report-history---reporting-services"></a>Limitare la cronologia dei report - Reporting Services
   La cronologia di un report è una raccolta di snapshot del report creati nel tempo. È possibile creare la cronologia del report su richiesta o pianificare la frequenza di creazione di uno snapshot e della relativa aggiunta alla cronologia.  

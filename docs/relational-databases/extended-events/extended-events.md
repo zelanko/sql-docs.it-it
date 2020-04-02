@@ -1,5 +1,6 @@
 ---
 title: Panoramica di Eventi estesi - SQL Server
+description: L'architettura degli eventi estesi di SQL Server consente di raccogliere i dati necessari per identificare e risolvere un problema di prestazioni. È configurabile e scalabile.
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dbd6e4beee31e90d0354345bb25e4f0c32fc969
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234604"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434048"
 ---
 # <a name="extended-events-overview"></a>Panoramica degli eventi estesi
 
@@ -29,7 +30,7 @@ L'architettura di Eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnover
 
 Per altre informazioni sugli eventi estesi, vedere: [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Vantaggi degli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Vantaggi degli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono usate le risorse minime per le prestazioni. Per gli eventi estesi sono disponibili due interfacce utente grafiche per creare, modificare, visualizzare e analizzare i dati della sessione. Queste interfacce sono denominate:
 

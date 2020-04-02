@@ -1,5 +1,6 @@
 ---
 title: 'Accedere ai dati esterni: Archiviazione BLOB di Azure - PolyBase'
+description: L'articolo usa PolyBase su un'istanza di SQL Server con Archiviazione BLOB di Azure. La tecnologia PolyBase è adatta per le query ad hoc di tabelle esterne e per l'importazione/esportazione di dati.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 680a8e28e807505f4824524a686f244621cb3dd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258690"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215868"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare PolyBase per l'accesso a dati esterni in Archiviazione BLOB di Azure
 
@@ -22,7 +23,7 @@ ms.locfileid: "75258690"
 
 L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in Archiviazione BLOB di Azure.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Se PolyBase non è stato installato, vedere [Installazione di PolyBase](polybase-installation.md). Nell'articolo sull'installazione vengono illustrati i prerequisiti.
 
@@ -91,7 +92,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
                USE_TYPE_DEFAULT = TRUE))  
    ```
 
-1. Creare una tabella esterna che punta ai dati archiviati in Archiviazione di Azure con [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In questo esempio, i dati esterni contengono dati di sensori di auto.
+1. Creare una tabella esterna che punta ai dati archiviati in Archiviazione di Azure con [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In questo esempio i dati esterni contengono dati di sensori di auto.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

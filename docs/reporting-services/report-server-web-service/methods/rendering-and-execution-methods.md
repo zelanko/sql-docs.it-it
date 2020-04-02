@@ -1,5 +1,6 @@
 ---
 title: Metodi di rendering e di esecuzione | Microsoft Docs
+description: In Reporting Services è possibile usare i metodi seguenti per gestire l'esecuzione, il rendering e la memorizzazione nella cache degli elementi.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 244541348f583ab5384a0ebfe7321509a421fe1b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ba766cf528de14e93ba9af1943a29c045b34563
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284535"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509792"
 ---
 # <a name="rendering-and-execution-methods"></a>Metodi di rendering e di esecuzione
   Per gestire l'esecuzione, il rendering e la memorizzazione nella cache degli elementi, è possibile utilizzare i metodi seguenti.  

@@ -1,5 +1,6 @@
 ---
 title: Metodi di sottoscrizione e recapito | Microsoft Docs
+description: In Reporting Services è possibile usare questi metodi per creare e gestire le sottoscrizioni e il recapito degli elementi del catalogo.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 474a54a5233b8d96b060f73dc33dfd4a6f86bcda
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6f9c880453fbd90f02d95e287aa23294c68ec9aa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284476"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509732"
 ---
 # <a name="subscription-and-delivery-methods"></a>Metodi di sottoscrizione e recapito
   È possibile utilizzare questi metodi per creare e gestire le sottoscrizioni e il recapito degli elementi del catalogo.  

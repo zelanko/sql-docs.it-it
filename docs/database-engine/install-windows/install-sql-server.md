@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288655"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434178"
 ---
 # <a name="sql-server-installation-guide"></a>Guida all'installazione di SQL Server
 
@@ -44,7 +44,9 @@ A partire da [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnove
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-*  **Requisiti**: Rivedere i requisiti di installazione, i controlli di configurazione del sistema e le considerazioni sulla sicurezza in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **Requisiti**: Rivedere i requisiti di installazione hardware e software per [SQL Server 2016 e 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) o [SQL Server in Linux](../../linux/sql-server-linux-setup.md), oltre ai controlli di configurazione del sistema e alle considerazioni sulla sicurezza in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) 
+
+
   
 * **Esempi di database e di codice**: 
     * Non sono installati come parte predefinita dell'installazione di SQL Server, ma possono essere reperiti 
@@ -68,8 +70,19 @@ Altri componenti SQL Server sono disponibili qui:
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
 
+## <a name="considerations"></a>Considerazioni
+
+-   L'installazione ha esito negativo se viene avviata tramite connessione Desktop remoto con il supporto su una risorsa locale del client connessione Desktop remoto. Per installare il supporto in remoto, questo deve essere in una condivisione di rete o in una macchina virtuale o fisica locale. Il supporto di installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può trovarsi in una condivisione di rete, un'unità mappata, un'unità locale o presentato come un file ISO per una macchina virtuale.  
+  
+  
+-   Tramite il programma di installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati i seguenti componenti software necessari per il funzionamento del prodotto:  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File di supporto per l'installazione  
+
 ## <a name="sql-server-installation"></a>Installazione di SQL Server
- 
+
+
 |Articolo|Descrizione|  
 |-----------|-----------------|  
 |[Installazione guidata](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Installare SQL Server tramite l'interfaccia utente dell'installazione guidata avviata dal supporto di installazione Setup.exe. |  
@@ -111,7 +124,7 @@ Altri componenti SQL Server sono disponibili qui:
 
 [Aggiornare [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
 [Disinstallare [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
-[Installare SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)
-[Installare SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)
-[Installare le funzionalità di Business Intelligence di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+[Installare SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
+[Installare SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
+[Installare le [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]funzionalità di business intelligence](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
 [Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

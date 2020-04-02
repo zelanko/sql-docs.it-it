@@ -1,5 +1,6 @@
 ---
-title: 'Avvio rapido: Eventi estesi in SQL Server'
+title: 'Guida introduttiva: Eventi estesi in SQL Server'
+description: Questo argomento di avvio rapido consente di usare gli eventi estesi, un sistema di monitoraggio delle prestazioni leggero, per raccogliere i dati per il monitoraggio e la risoluzione dei problemi in SQL Server.
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,14 +11,14 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f38c8c3097009a755355e5a7b50e55b55faba3cb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242916"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487649"
 ---
-# <a name="quickstart-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
+# <a name="quickstart-extended-events-in-sql-server"></a>Guida introduttiva: Eventi estesi in SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -555,7 +556,7 @@ Le viste di sistema per gli eventi estesi includono:
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="appendix1"></a> Appendice: Istruzioni SELECT per verificare in anticipo il proprietario delle autorizzazioni
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a><a name="appendix1"></a> Appendice: Istruzioni SELECT per verificare in anticipo il proprietario delle autorizzazioni
 
 Le autorizzazioni indicate in questo articolo sono:
 

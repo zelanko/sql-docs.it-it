@@ -1,5 +1,6 @@
 ---
 title: Distribuzione di un assembly personalizzato | Microsoft Docs
+description: Informazioni su come distribuire un assembly personalizzato in SQL Server Reporting Services. Viene inoltre illustrato come concedere privilegi di assembly personalizzati oltre alle autorizzazioni di esecuzione.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc0b052bd2d932a54a1a857c7aebfe770395c556
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1e89eb61a545cf16fccfae10dfdc735e4845cb47
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194936"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217078"
 ---
 # <a name="deploying-a-custom-assembly"></a>Distribuzione di un assembly personalizzato
   Per distribuire un assembly personalizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], inserire l'assembly nelle cartelle dell'applicazione sia di Progettazione report che del server di report. Per impostazione predefinita, agli assembly personalizzati viene concessa l'autorizzazione **Execution** in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per concedere agli assembly personalizzati altri privilegi oltre all'autorizzazione Execution, è necessario modificare il file di configurazione rssrvpolicy.config per il server di report e il file di configurazione rspreviewpolicy.config per la finestra di anteprima di Progettazione report. In alternativa, è possibile installare l'assembly personalizzato nella Global Assembly Cache (GAC).  

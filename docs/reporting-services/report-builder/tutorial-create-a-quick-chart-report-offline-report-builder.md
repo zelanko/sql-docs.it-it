@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Creare un report grafico rapido offline (Generatore report) | Microsoft Docs'
+description: In questa esercitazione viene creato il grafico a torta in un report impaginato di Reporting Services in Generatore report. Si vedrà poi come aggiungere le percentuali e modificare il grafico a torta.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037966"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290748"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
 
@@ -27,10 +28,10 @@ ms.locfileid: "67037966"
   
  ![Grafico a torta rapido di Generatore report](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Grafico a torta rapido di Generatore report")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Se si usano dati XML o una query [!INCLUDE[tsql](../../includes/tsql-md.md)], è necessario avere accesso a Generatore report. È possibile avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] da un server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint, oppure è possibile scaricare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] dall'Area download Microsoft. Per altre informazioni, vedere [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
-##  <a name="TwoWays"></a> Due modi per eseguire questa esercitazione  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> Due modi per eseguire questa esercitazione  
   
 -   [Creare il grafico a torta con dati XML](#CreatePieChartXML)  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67037966"
   
  [Creare il grafico a torta con una query Transact-SQL contenente dati](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> Creazione del grafico a torta con dati XML  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> Creazione del grafico a torta con dati XML  
   
 1.  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md) dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o dal server di report in modalità integrata SharePoint oppure dal computer.  
   
@@ -137,7 +138,7 @@ ms.locfileid: "67037966"
   
 18. Per continuare la modifica del grafico a torta, vedere [Al termine della procedura guidata](#AfterWizard) in questo articolo.  
   
-##  <a name="CreatePieQueryData"></a> Creazione del grafico a torta con una query [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Creazione del grafico a torta con una query [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 1.  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md) dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , dal server di report in modalità integrata SharePoint oppure dal computer.  
   
@@ -187,7 +188,7 @@ ms.locfileid: "67037966"
   
 15. Per visualizzare il grafico a torta effettivo, fare clic su **Esegui** nella scheda **Home** della barra multifunzione.  
  
-##  <a name="AfterWizard"></a> Al termine della procedura guidata  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Al termine della procedura guidata  
  Dopo aver terminato la creazione del report del grafico a torta, è possibile modificarlo nel modo desiderato. Nella scheda **Esegui** della barra multifunzione fare clic su **Progettazione**per continuare a modificarlo.  
   
 ## <a name="make-the-chart-bigger"></a>Ingrandire il grafico  
@@ -219,7 +220,7 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
   
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
-##  <a name="WhatsNext"></a> Operazioni successive  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> Operazioni successive  
  Al termine della creazione del primo report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è necessario avere l'autorizzazione di accesso alle origini dati, ad esempio ai database, con una *stringa di connessione*che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
   
  Per eseguire le altre esercitazioni, è necessario avere il nome di un'istanza di SQL Server e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  

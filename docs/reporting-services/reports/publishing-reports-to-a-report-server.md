@@ -1,5 +1,6 @@
 ---
 title: Pubblicazione dei report in un server di report | Microsoft Docs
+description: Informazioni su come usare le funzionalità di distribuzione di SQL Server Data Tools (SSDT) per pubblicare i report in un server di report.
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c4891d308c81a82ecb3f371cca8812111467bc37
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72359409"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510092"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
   Dopo aver progettato e testato un report o un set di report, è possibile usare le caratteristiche della distribuzione disponibili in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare i report in un server di report. È possibile pubblicare report singoli o un progetto Server di Report che può includere più report e origini dati. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato il termine *distribuire*anziché *pubblicare*. I due termini sono perfettamente equivalenti.  
@@ -39,7 +40,7 @@ L'autorizzazione è determinata dalla sicurezza basata sui ruoli definita dall'a
 ## <a name="project-configurations"></a>Configurazioni di progetto  
  Nell'ambiente di gestione dei report potrebbero essere installati più server di report e varie versioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile creare più configurazioni e utilizzarne quindi una diversa in base allo scenario di distribuzione. Le configurazioni di progetto includono le proprietà per la compilazione dei report, ad esempio la cartella nella quale archiviare temporaneamente i report compilati e le modalità di gestione dei problemi di compilazione. Le configurazioni dispongono inoltre delle proprietà necessarie per specificare il percorso e la versione del server di report, nonché le cartelle sul server di report.  
   
- Per impostazione predefinita, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sono disponibili tre configurazioni di progetto: **DebugLocal**, **Debug**e **Release**. La configurazione predefinita è DebugLocal. La configurazione DebugLocal viene usata in genere per visualizzare i report in una finestra di anteprima locale, la configurazione Debug per pubblicare i report in un server di prova e la configurazione Release per pubblicare i report in un server di produzione. Nell'elenco a discesa delle configurazioni della soluzione sulla barra degli strumenti Standard viene indicata la configurazione attiva. Per utilizzare una configurazione diversa, selezionarla dall'elenco.  
+ Per impostazione predefinita, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sono disponibili tre configurazioni di progetto: **DebugLocal**, **Debug** e **Release**. La configurazione predefinita è DebugLocal. La configurazione DebugLocal viene usata in genere per visualizzare i report in una finestra di anteprima locale, la configurazione Debug per pubblicare i report in un server di prova e la configurazione Release per pubblicare i report in un server di produzione. Nell'elenco a discesa delle configurazioni della soluzione sulla barra degli strumenti Standard viene indicata la configurazione attiva. Per utilizzare una configurazione diversa, selezionarla dall'elenco.  
   
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   

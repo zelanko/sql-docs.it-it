@@ -1,5 +1,6 @@
 ---
 title: Elemento HelpLink | Microsoft Docs
+description: Informazioni dettagliate sull'elemento HelpLink della proprietà Detail, inclusi gli argomenti dell'URL HelpLink.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5a03f514b2305676d93ada0119326c101595f9c3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68307574"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215671"
 ---
 # <a name="helplink-element"></a>Elemento HelpLink
   L'elemento **HelpLink** della proprietà **Detail** è una stringa URL generata dal server di report. L'URL rimanda a una pagina Web gestita dal Supporto tecnico [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e fornisce ulteriori informazioni e articoli della Knowledge Base su errori specifici che si verificano in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La sintassi dell'URL è la seguente:  

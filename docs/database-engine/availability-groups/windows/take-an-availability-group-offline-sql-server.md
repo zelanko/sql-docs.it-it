@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af8c94c6705578371fcb6b4d260da6313b73e4ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d412a817a3e796e2ed85002ab11575b32e06ca91
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68013838"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216270"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Portare un gruppo di disponibilità offline (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,20 +26,20 @@ ms.locfileid: "68013838"
   
   
 > [!CAUTION]  
->  Utilizzare l'opzione OFFLINE solo per una migrazione tra cluster di risorse di gruppi di disponibilità.  
+>  Usare l'opzione OFFLINE per la migrazione tra cluster delle risorse del gruppo di disponibilità o per il failover di un gruppo di disponibilità con scalabilità in lettura.
   
-##  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
   
 -   L'istanza del server in cui si immette il comando OFFLINE deve eseguire [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] o versioni successive (Enterprise Edition o versioni successive).    
 -   Il gruppo di disponibilità deve essere attualmente online.  
   
-##  <a name="Recommendations"></a> Raccomandazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
  Prima di portare il gruppo di disponibilità offline, eliminare eventuali listener del gruppo. Per altre informazioni, vedere [Rimuovere un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per portare un gruppo di disponibilità offline**  
   
 1.  Connettersi a un'istanza del server in cui viene ospitata una replica di disponibilità del gruppo di disponibilità. Può trattarsi della replica primaria o di una replica secondaria.  
@@ -57,23 +57,23 @@ ms.locfileid: "68013838"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: dopo aver portato il gruppo di disponibilità offline  
+##  <a name="follow-up-after-the-availability-group-goes-offline"></a><a name="FollowUp"></a> Completamento: Dopo aver portato il gruppo di disponibilità offline  
   
--   **Registrazione dell'operazione ONLINE:**  l'identità del nodo WSFC in cui è stata avviata l'operazione OFFLINE è archiviata nel registro del cluster WSFC e in SQL ERRORLOG.  
+-   **Registrazione dell'operazione OFFLINE:**  l'identità del nodo WSFC in cui è stata avviata l'operazione OFFLINE è archiviata nel log del cluster WSFC e in SQL ERRORLOG.  
   
--   **Se prima di portare il gruppo offline non è stato eliminato il listener del gruppo di disponibilità:**  se si esegue la migrazione del gruppo di disponibilità a un altro cluster WSFC, eliminare il nome di rete virtuale (VNN) e l'IP virtuale (VIP) del listener. È possibile eliminarli tramite la console Gestione cluster di failover, il cmdlet [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) di PowerShell o [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Cluster.exe è deprecato in Windows 8.  
+-   **Se non è stato eliminato il listener del gruppo di disponibilità prima di portare offline il gruppo:**  se si esegue la migrazione del gruppo di disponibilità a un altro cluster WSFC, eliminare il nome di rete virtuale e l'indirizzo VIP del listener. È possibile eliminarli tramite la console Gestione cluster di failover, il cmdlet [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) di PowerShell o [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Cluster.exe è deprecato in Windows 8.  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Rimuovere un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
 -   [Modificare il contesto del cluster HADR dell'istanza del server &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
 -   [Articoli tecnici su SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

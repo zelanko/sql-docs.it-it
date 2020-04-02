@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f0f244c15f4183f3214ae28efc2bf3300c571f0e
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 8575a966dba903b17a6c5dcb015eb4471faf28a8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335755"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80290752"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -104,7 +104,7 @@ Se si usano le aggregazioni MIN/MAX nell'elenco SELECT della definizione della v
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- La vista materializzata verrà disabilitata quando si verifica un'operazione UPDATE o DELETE nelle tabelle di base a cui viene fatto riferimento.  Questa restrizione non si applica alle operazioni INSERT.  Per abilitare nuovamente la vista materializzata, eseguire ALTER MATERIALIZED INDEX con REBUILD.
+- La vista materializzata verrà disabilitata quando si verifica un'operazione UPDATE o DELETE nelle tabelle di base a cui viene fatto riferimento.  Questa restrizione non si applica alle operazioni INSERT.  Per abilitare nuovamente la vista materializzata, eseguire ALTER MATERIALIZED VIEW con REBUILD.
   
 ## <a name="remarks"></a>Osservazioni
 

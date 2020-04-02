@@ -1,7 +1,7 @@
 ---
 title: Uso di Always Encrypted con il driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 37057985b6c552091d2989d56a13c52b0b0cf5ac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004610"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271327"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ Questa pagina include informazioni su come sviluppare applicazioni Java usando [
 
 Always Encrypted consente ai client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Di tutto ciò si occupa un driver abilitato per Always Encrypted, come Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server, che esegue in modo trasparente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database Always Encrypted e crittografa i valori di tali parametri prima di passarli a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. Per altre informazioni, vedere [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Informazioni di riferimento sull'API Always Encrypted per il driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 - Assicurarsi che nel computer di sviluppo sia installato Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server. 
 - Scaricare e installare Java Cryptography Extension (JCE) Unlimited Strenght Jurisdiction Policy Files.  Leggere il file leggimi incluso nel file ZIP per istruzioni sull'installazione e dettagli rilevanti sui possibili problemi di importazione/esportazione.  
 
@@ -58,6 +58,8 @@ Tutti questi provider dell'archivio chiavi sono descritti in modo più dettaglia
 
 ### <a name="using-azure-key-vault-provider"></a>Uso del provider dell'insieme di credenziali delle chiavi di Azure
 Azure Key Vault rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se l'applicazione è ospitata in Azure. Microsoft JDBC driver per SQL Server include un provider predefinito, SQLServerColumnEncryptionAzureKeyVaultProvider, per le applicazioni che hanno chiavi archiviate in Azure Key Vault. Il nome di questo provider è AZURE_KEY_VAULT. Per usare il provider dell'archivio Azure Key Vault lo sviluppatore di applicazioni deve creare l'insieme di credenziali e le chiavi in Azure Key Vault e creare una registrazione dell'app in Azure Active Directory. All'applicazione registrata devono essere concesse le autorizzazioni Ottieni, Decrittografa, Crittografa, Annulla il wrapping della chiave, Esegui il wrapping della chiave e Verifica nei criteri di accesso definiti per l'insieme di credenziali delle chiavi creato per l'uso con Always Encrypted. Per altre informazioni su come configurare l'insieme di credenziali delle chiavi e come creare una chiave master della colonna, vedere [Azure Key Vault - Passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [Creazione di chiavi master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+
+Quando si usa il provider Azure Key Vault, il driver JDBC convalida il percorso della chiave master della colonna rispetto all'elenco degli endpoint attendibili. A partire dalla versione del driver 8.2.2, questo elenco è configurabile: creare il file "mssql-jdbc.properties" nella directory di lavoro dell'applicazione, impostare la proprietà `AKVTrustedEndpoints` su un elenco delimitato da punti e virgola. Se il valore inizia con un punto e virgola, estende l'elenco predefinito. In caso contrario, sostituisce l'elenco predefinito.
 
 Per gli esempi in questa pagina, se è stata creata una chiave master della colonna basata su Azure Key Vault e una chiave di crittografia della colonna usando SQL Server Management Studio, lo script T-SQL per ricrearle potrebbe essere simile a questo esempio con **KEY_PATH** e **ENCRYPTED_VALUE** specifici:
 

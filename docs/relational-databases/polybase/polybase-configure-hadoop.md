@@ -1,5 +1,6 @@
 ---
 title: 'Accedere ai dati esterni: Hadoop - PolyBase'
+description: L'articolo usa PolyBase su un'istanza di SQL Server con Hadoop. La tecnologia PolyBase è adatta per le query ad hoc di tabelle esterne e per l'importazione/esportazione di dati.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286905"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215870"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -66,7 +67,7 @@ Configurare prima di tutto SQL Server PolyBase per usare il provider di Hadoop s
   
    ![arrestare e avviare servizi PolyBase in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "arrestare e avviare servizi PolyBase in services.msc")  
   
-## <a id="pushdown"></a> Abilitare il calcolo con distribuzione  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Abilitare il calcolo con distribuzione  
 
 Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzione nel cluster Hadoop:  
   

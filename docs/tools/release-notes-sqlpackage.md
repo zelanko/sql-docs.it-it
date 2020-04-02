@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241221"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386190"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -49,6 +49,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  Nella versione 18.3.1 è stata introdotta una regressione di analisi ScriptDom che considera erroneamente 'RENAME' come token di primo livello, causando l'esito negativo dell'analisi.
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>Problemi noti 
+
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Distribuzione |  È stata introdotta una regressione nella versione 18.4.1, causando la presenza di un errore "Riferimento a un oggetto non impostato su un'istanza di oggetto." durante la distribuzione di un dacpac o l'importazione di un bacpac con un utente con account di accesso esterno. La soluzione alternativa consiste nell'usare sqlpackage 18.4. Il problema verrà corretto nella prossima versione di sqlpackage. | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>sqlpackage 18.4
 

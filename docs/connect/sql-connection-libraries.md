@@ -1,6 +1,6 @@
 ---
 title: Raccolte di connessioni per database Microsoft SQL | Microsoft Docs
-description: Indica collegamenti per il download di moduli che consentono la connessione a Microsoft SQL Server e a database SQL di Azure da una gamma di linguaggi di programmazione client.
+description: Indica collegamenti per il download di moduli che consentono la connessione a Microsoft SQL Server e a database SQL di Azure da un'ampia gamma di linguaggi di programmazione client.
 author: RothJa
 ms.prod: sql
 ms.technology: ''
@@ -8,19 +8,19 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286405"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434118"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Moduli di connessione per i database Microsoft SQL
 
 Questo articolo offre i collegamenti per il download di moduli di connessione o *driver* che i programmi client possono usare per interagire con [Microsoft SQL Server](../relational-databases/database-features.md) e con il suo gemello nel cloud, il [database SQL di Azure](https://docs.microsoft.com/azure/sql-database/). I driver sono disponibili per un'ampia gamma di linguaggi di programmazione, in esecuzione nei sistemi operativi seguenti:
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **Mancata corrispondenza OOP-relazionale:**
@@ -34,17 +34,6 @@ Il presente articolo dedica sezioni separate a questi due tipi di driver di conn
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>Driver per l'accesso relazionale
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Linguaggio | Scaricare il driver SQL |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ Nella tabella seguente sono elencati esempi di framework ORM (Object Relational 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Pagine Web di compilazione app
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** consente di accedere a una serie di pagine Web *di compilazione app*. Le pagine Web offrono informazioni su numerose combinazioni di linguaggio di programmazione, sistema operativo e driver di connessione SQL. Tra le informazioni contenute nelle pagine Web di compilazione app sono disponibili gli elementi seguenti:
 
 - Informazioni dettagliate su come procedere fin dall'inizio, per ogni combinazione di linguaggio + sistema operativo + driver.
-    - Istruzioni per l'installazione dei driver di connessione SQL più recenti.
+  - Istruzioni per l'installazione dei driver di connessione SQL più recenti.
 - Esempi di codice per ognuno degli elementi seguenti:
-    - Esempi di codice relazionale a oggetti.
-    - Esempi di codice ORM.
-    - Dimostrazioni di indice columnstore per ottenere prestazioni molto più veloci.
+  - Esempi di codice relazionale a oggetti.
+  - Esempi di codice ORM.
+  - Dimostrazioni di indice columnstore per ottenere prestazioni molto più veloci.
 
 **Pagine Web di compilazione app, prima pagina:**  
 ![Pagine Web di compilazione app, screenshot prima pagina](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ Nella tabella seguente sono elencati esempi di framework ORM (Object Relational 
 &nbsp;
 
 ## <a name="related-links"></a>Collegamenti correlati
+
 - [Esempi di codice per la connessione al database SQL di Azure nel cloud con Java e altri linguaggi](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!--

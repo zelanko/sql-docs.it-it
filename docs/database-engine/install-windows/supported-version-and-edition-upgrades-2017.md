@@ -1,6 +1,6 @@
 ---
-title: Aggiornamenti di versione ed edizione supportati
-titleSuffix: SQL Server 2017
+title: Aggiornamenti di versione ed edizione supportati (SQL Server 2017)
+description: Aggiornamenti di versione ed edizione supportati per SQL Server 2017.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3f5721cbbd6d56d4fc5f2510775b050c210c981
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258827"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434168"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Aggiornamenti di versione ed edizione supportati per SQL Server 2017
+# <a name="supported-version--edition-upgrades-sql-server-2017"></a>Aggiornamenti di versione ed edizione supportati (SQL Server 2017)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -51,7 +51,7 @@ ms.locfileid: "75258827"
  
 -   I cluster di failover non sono supportati nella modalità WOW.  
     
-## <a name="upgrades-from-earlier-versions-to-includesssqlv14-mdincludessssqlv14-mdmd"></a>Aggiornamenti da versioni precedenti a [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv14-md"></a>Aggiornamenti da versioni precedenti a [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supporta l'aggiornamento dalle versioni di SQL Server seguenti:
  
@@ -112,7 +112,7 @@ ms.locfileid: "75258827"
  \* Il supporto Microsoft per l'aggiornamento da software con versioni finali candidate è destinato ai clienti che hanno partecipato al programma TAP (Technology Adoption Program). 
 
    
-###  <a name="SupportFor2005"></a>Supporto di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="sssqlv14-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a>Supporto di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  In questa sezione viene illustrato il supporto di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]è possibile effettuare le operazioni seguenti:  
   
 -   Collegare un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (file ldf/mdf) all'istanza di [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] del motore di database.  
@@ -145,7 +145,7 @@ Tutti gli scenari non specificati nell'elenco sopra indicato non sono supportati
   
 - Supporto per componenti personalizzati di terze parti di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Integration Services, ad esempio esecuzione e aggiornamento.  
   
-## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Aggiornamento delle edizioni  
+## <a name="sssqlv14-md-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Aggiornamento delle edizioni  
 Nella tabella seguente sono elencati gli scenari di aggiornamento delle edizioni supportati in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 Per istruzioni dettagliate sull'esecuzione di un aggiornamento dell'edizione, vedere [Eseguire l'aggiornamento a un'edizione diversa di SQL Server &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
@@ -153,7 +153,7 @@ Per istruzioni dettagliate sull'esecuzione di un aggiornamento dell'edizione, ve
 |Aggiornamento da|Aggiornamento a|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (Server+CAL e Core)**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licenza Server+CAL o Core) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> L'aggiornamento da Evaluation (edizione gratuita) a qualsiasi edizione a pagamento è supportato per le installazioni autonome, ma non per le installazioni cluster.|  
+|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licenza Server+CAL o Core) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> L'aggiornamento da Evaluation (edizione gratuita) a qualsiasi edizione a pagamento è supportato per le installazioni autonome, ma non per le installazioni cluster. Questa limitazione non si applica alle istanze autonome installate in un cluster di failover Windows che partecipa a un gruppo di disponibilità.|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licenza Server+CAL o Core)|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licenza Server+CAL o Core) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licenza Server+CAL o Core) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  

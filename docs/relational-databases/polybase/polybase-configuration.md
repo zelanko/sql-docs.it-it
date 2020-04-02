@@ -1,5 +1,6 @@
 ---
 title: Configurazione di PolyBase e sicurezza per Hadoop | Microsoft Docs
+description: Usare queste impostazioni per la connettività PolyBase a Hadoop, tra cui Hadoop.RPC.Protection, i file XML di esempio per il cluster CDH 5.X e la configurazione Kerberos.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59d268e0af326a92693cb09cb8e786364cd1f874
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909424"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215900"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configurazione di PolyBase e sicurezza per Hadoop
 
@@ -21,7 +22,7 @@ ms.locfileid: "72909424"
 
 Questo articolo include informazioni di riferimento per varie impostazioni di configurazione che influiscono sulla connettività di PolyBase con Hadoop. Per una procedura dettagliata su come usare PolyBase con Hadoop, vedere [Configurare PolyBase per l'accesso a dati esterni in Hadoop](polybase-configure-hadoop.md).
 
-## <a id="rpcprotection"></a> Impostazione Hadoop.RPC.Protection
+## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Impostazione Hadoop.RPC.Protection
 
 Un modo comune per proteggere la comunicazione in un cluster Hadoop è modificare la configurazione di hadoop.rpc.protection impostandola su "Privacy" o "Integrity". Per impostazione predefinita, PolyBase presuppone che la configurazione sia impostata su "Authenticate". Per eseguire l'override di questa impostazione predefinita, aggiungere la proprietà seguente al file core-site.xml. La modifica di questa configurazione consente il trasferimento sicuro dei dati tra i nodi Hadoop nonché la connessione SSL a SQL Server.
 

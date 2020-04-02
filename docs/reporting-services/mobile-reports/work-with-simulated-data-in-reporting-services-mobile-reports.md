@@ -1,5 +1,6 @@
 ---
 title: Lavorare con dati simulati nei report di Reporting Services per dispositivi mobili | Microsoft Docs
+description: Quando si inserisce un elemento della raccolta nell'area di progettazione, Mobile Report Publisher genera dati simulati per quell'elemento. Progettare i prototipi con i dati simulati.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474870"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448363"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Lavorare con dati simulati nei report di Reporting Services per dispositivi mobili
 Quando si inserisce un elemento della raccolta nell'area di progettazione, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera immediatamente dati simulati per quell'elemento. Questi dati assolvono a molti scopi utili durante la creazione di report per dispositivi mobili.   

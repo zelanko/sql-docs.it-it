@@ -1,5 +1,6 @@
 ---
 title: Visualizzazione avanzata dei dati di destinazione da eventi estesi
+description: Usare le funzionalità avanzate di SQL Server Management Studio per visualizzare in dettaglio i dati di destinazione da eventi estesi. È possibile visualizzare, esportare e modificare i dati.
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 298cebbde96d9de3eadcb6c11ae59b43f2e973d5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255765"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434038"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 
@@ -32,7 +33,7 @@ Questo articolo illustra come è possibile usare le funzionalità avanzate di SQ
 
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 Il presente articolo presuppone che si sappia già come creare e avviare una sessione evento. Le istruzioni per creare una sessione evento sono già state illustrate nell'articolo seguente:
 

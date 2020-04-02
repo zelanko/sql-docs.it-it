@@ -8,13 +8,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
-ms.date: 06/28/2018
-ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.date: 03/17/2020
+ms.openlocfilehash: 3a45b9164d2d81983e9a40f0395189979d4daa7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286485"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448257"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -78,7 +78,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/DiagnosticsFile:**|**/df**|{string}|Specifica un file per archiviare i log di diagnostica. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
-|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: SqlPackage.exe/Action:Publish/?. |
+|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action:Extract /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False. |
 |**/SourceConnectionString:**|**/scs**|{string}|Specifica una stringa di connessione valida di SQL Server o SQL Azure al database di origine. Se questo parametro viene specificato, deve essere usato esclusivamente per altri parametri di origine. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definisce il nome del database di origine. |
@@ -111,7 +111,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|Specifica se le relazioni tra utenti e account di accesso vengono ignorate.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifica il timeout del comando a esecuzione prolungata in secondi quando si eseguono query su SQL Server. Usare 0 per l'attesa indefinita.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Specifica il tipo di archivio di backup per il modello schema utilizzato durante l'estrazione.|
-|**/p:**|TableData=(STRING)|Indica la tabella da cui verranno estratti i dati. Specificare il nome della tabella con o senza parentesi che racchiudono le parti che compongono il nome nel formato seguente: nome_schema.identificatore_tabella.|
+|**/p:**|TableData=(STRING)|Indica la tabella da cui verranno estratti i dati. Specificare il nome della tabella con o senza parentesi che racchiudono le parti che compongono il nome nel formato seguente: nome_schema.identificatore_tabella. Questa opzione può essere specificata più volte.|
 |**/p:**| TempDirectoryForTableData=(STRING)|Specifica la directory temporanea usata per memorizzare nel buffer i dati della tabella prima di essere scritti nel file del pacchetto.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|Specifica se il pacchetto di applicazione livello dati estratto deve essere verificato.|
 
@@ -277,7 +277,7 @@ Un'azione Esportazione di SqlPackage.exe esporta un database attivo da un databa
 |**/DiagnosticsFile:**|**/df**|{string}|Specifica un file per archiviare i log di diagnostica. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
-|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: SqlPackage.exe/Action:Publish/?.|
+|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action:Export /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False.|
 |**/SourceConnectionString:**|**/scs**|{string}|Specifica una stringa di connessione valida di SQL Server o SQL Azure al database di origine. Se questo parametro viene specificato, deve essere usato esclusivamente per altri parametri di origine. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definisce il nome del database di origine. |
@@ -299,7 +299,7 @@ Un'azione Esportazione di SqlPackage.exe esporta un database attivo da un databa
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifica il timeout del blocco a livello di database in secondi quando si eseguono query su SQL Server. Usare -1 per l'attesa indefinita.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifica il timeout del comando a esecuzione prolungata in secondi quando si eseguono query su SQL Server. Usare 0 per l'attesa indefinita.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Specifica il tipo di archivio di backup per il modello schema utilizzato durante l'estrazione.|
-|**/p:**|TableData=(STRING)|Indica la tabella da cui verranno estratti i dati. Specificare il nome della tabella con o senza parentesi che racchiudono le parti che compongono il nome nel formato seguente: nome_schema.identificatore_tabella.|
+|**/p:**|TableData=(STRING)|Indica la tabella da cui verranno estratti i dati. Specificare il nome della tabella con o senza parentesi che racchiudono le parti che compongono il nome nel formato seguente: nome_schema.identificatore_tabella. Questa opzione può essere specificata più volte.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Specifica la directory temporanea usata per memorizzare nel buffer i dati della tabella prima di essere scritti nel file del pacchetto.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Specifica la versione del motore di destinazione necessaria. A seconda dell'impostazione di questo valore, nel bacpac generato saranno consentiti gli oggetti supportati da server di database SQL di Azure con funzionalità della versione 12, ad esempio le tabelle ottimizzate per la memoria.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Specifica se i tipi di documento full-text supportati per il database SQL di Microsoft Azure versione 12 devono essere verificati.|
@@ -317,7 +317,7 @@ L'azione Importazione di SqlPackage.exe importa i dati di tabella e schema da un
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifica un file per archiviare i log di diagnostica. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
-|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: SqlPackage.exe/Action:Publish/?.|
+|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action:Import /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False.|
 |**/SourceFile:**|**/sf**|{string}|Specifica un file di origine da usare come origine dell'azione. Se si utilizza questo parametro, non deve essere valido nessun altro parametro di origine. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifica una stringa di connessione valida di SQL Server o Azure al database di destinazione. Se questo parametro viene specificato, deve essere usato esclusivamente per tutti gli altri parametri di destinazione. |
@@ -362,7 +362,7 @@ Un'azione report di **SqlPackage.exe** crea un report XML delle modifiche che ve
 |**/OutputPath:**|**/op**|{string}|Specifica il percorso file in cui vengono generati i file di output. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Profile:**|**/pr**|{string}|Specifica il percorso file a un profilo di pubblicazione dell'applicazione livello dati. Il profilo consente di definire una raccolta di proprietà e variabili da utilizzare durante la generazione di output. |
-|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: SqlPackage.exe/Action:Publish/?. |
+|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action:DeployReport /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False. |
 |**/SourceConnectionString:**|**/scs**|{string}|Specifica una stringa di connessione valida di SQL Server o SQL Azure al database di origine. Se questo parametro viene specificato, deve essere usato esclusivamente per altri parametri di origine. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definisce il nome del database di origine. |
@@ -527,7 +527,7 @@ L'azione Script di **SqlPackage.exe** consente di creare uno script di aggiornam
 |**/OutputPath:**|**/op**|{string}|Specifica il percorso file in cui vengono generati i file di output. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifica se i file esistenti dovranno essere sovrascritti tramite sqlpackage.exe. Se si specifica False e viene rilevato un file esistente, sqlpackage.exe interrompe l'azione. Il valore predefinito è True. |
 |**/Profile:**|**/pr**|{string}|Specifica il percorso file a un profilo di pubblicazione dell'applicazione livello dati. Il profilo consente di definire una raccolta di proprietà e variabili da utilizzare durante la generazione di output.|
-|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: SqlPackage.exe/Action:Publish/?.|
+|**/Properties:**|**/p**|{NomeProprietà}={Valore}|Specifica una coppia nome/valore per una proprietà specifica dell'azione: {NomeProprietà}={Valore}. Fare riferimento alla Guida di un'azione specifica per visualizzarne i nomi delle proprietà. Esempio: sqlpackage.exe /Action:Script /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifica se la notifica dettagliata dell'interfaccia utente viene eliminata. Il valore predefinito è False.|
 |**/SourceConnectionString:**|**/scs**|{string}|Specifica una stringa di connessione valida di SQL Server o SQL Azure al database di origine. Se questo parametro viene specificato, deve essere usato esclusivamente per altri parametri di origine. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definisce il nome del database di origine. |

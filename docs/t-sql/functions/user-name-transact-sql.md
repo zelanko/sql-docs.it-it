@@ -24,12 +24,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21c085bd942b368259444698cabf5dfa44d0fbe1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73844342"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526786"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,6 +53,9 @@ USER_NAME ( [ id ] )
   
 ## <a name="remarks"></a>Osservazioni  
  Se *id* viene omesso, viene usato l'utente corrente nel contesto corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL. Se la funzione USER_NAME viene chiamata senza specificare *id* dopo un'istruzione EXECUTE AS, viene restituito il nome dell'utente rappresentato. Se un'entità di Windows accede al database in base all'appartenenza a un gruppo, USER_NAME restituisce il nome dell'entità di Windows anziché il gruppo.  
+ 
+> [!NOTE]
+> Sebbene la funzione USER_NAME sia supportata nel database SQL di Azure, l'uso di *Execute As* con USER_NAME non è supportato nel database SQL di Azure. 
   
 ## <a name="examples"></a>Esempi  
   
@@ -123,7 +126,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-user_name-without-an-id"></a>E. Utilizzo di USER_NAME senza un ID  
  Nell'esempio seguente viene restituito il nome dell'utente corrente senza specificare un ID.  

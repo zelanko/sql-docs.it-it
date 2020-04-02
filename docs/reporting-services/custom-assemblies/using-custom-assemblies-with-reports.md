@@ -1,5 +1,6 @@
 ---
 title: Uso di assembly personalizzati con i report | Microsoft Docs
+description: Sviluppare un assembly di codice personalizzato usando Microsoft .NET Framework in modo che sia possibile fare riferimento all'assembly dall'interno dei file di definizione del report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94fdcbb6219aefb0cf38f0d77c0c3437ccf19915
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 526f80fe202c14773aeafce6b5889116b975e3c2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194091"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217051"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Utilizzo di assembly personalizzati con i report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile scrivere codice personalizzato per i valori, gli stili e la formattazione degli elementi dei report. È ad esempio possibile utilizzare il codice personalizzato per formattare le valute in base alle impostazioni locali, per contrassegnare determinati valori con una formattazione speciale o per applicare altre regole di business in uso nella società. Un metodo per includere questo codice nei report consiste nel creare un assembly di codice personalizzato usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], a cui sia possibile fare riferimento dai file di definizione del report. Il server chiama le funzioni degli assembly personalizzati durante l'esecuzione di un report. Gli assembly personalizzati possono essere utilizzati per recuperare funzioni specifiche che si intende utilizzare nei report.  

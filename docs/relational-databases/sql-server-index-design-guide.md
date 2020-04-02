@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287315"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486524"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ Per informazioni sugli indici spaziali, vedere [Panoramica degli indici spaziali
 
 Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](../relational-databases/search/populate-full-text-indexes.md).
   
-##  <a name="Basics"></a> Nozioni fondamentali sulla progettazione di indici  
+##  <a name="index-design-basics"></a><a name="Basics"></a> Nozioni fondamentali sulla progettazione di indici  
  Si pensi a un libro: alla fine del libro è disponibile un indice che consente di trovare rapidamente le informazioni all'interno del libro. L'indice è un elenco ordinato di parole chiave e a ogni parola chiave segue un gruppo di numeri di pagina, che riporta alle pagine in cui è possibile trovare ciascuna parola chiave. Un indice SQL Server funziona in modo simile: è un elenco ordinato di valori e per ogni valore sono presenti puntatori alle [pagine](../relational-databases/pages-and-extents-architecture-guide.md) di dati in cui si trovano questi valori. L'indice stesso è archiviato nelle pagine, che diventano le pagine di indice in SQL Server. In un libro, se l'indice si estende su più pagine e ad esempio è necessario trovare puntatori a tutte le pagine che contengono la parola "SQL", sarà necessario sfogliare il libro fino a quando non si trova la pagina di indice che contiene la parola chiave "SQL". Quindi si seguiranno i puntatori che specificano tutte le pagine del libro.  Questa operazione può essere ulteriormente ottimizzata se all'inizio dell'indice si crea una singola pagina contenente un elenco alfabetico indicante dove è possibile trovare ogni lettera. Ad esempio: "Da A a D - pagina 121", "Da E a G - pagina 122" e così via. Questa pagina aggiuntiva eliminerà il passaggio di consultazione dell'intero indice per trovare il punto di partenza. Questa pagina non esiste nei libri normali, ma esiste in un indice SQL Server. Questa pagina singola viene definita pagina radice dell'indice. La pagina radice è la pagina iniziale della struttura ad albero usata da un indice SQL Server. Per continuare con l'esempio dell'albero, le pagine finali contenenti puntatori ai dati effettivi sono definite "pagine foglia" dell'albero. 
 
  Un indice SQL Server è una struttura su disco o in memoria associata a una tabella o a una vista, che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Per gli indici su disco, queste chiavi vengono archiviate in una struttura ad albero (albero B) che consente a SQL Server di trovare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  
@@ -83,7 +83,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
 5.  Determinare il percorso di archiviazione ottimale per l'indice. Un indice non cluster può essere archiviato nello stesso filegroup della tabella sottostante oppure in un filegroup diverso. Il percorso di archiviazione degli indici può consentire di migliorare le prestazioni di esecuzione delle query grazie a un aumento delle prestazioni di I/O su disco. L'archiviazione, ad esempio, di un indice non cluster in un filegroup in un disco diverso rispetto al filegroup della tabella può consentire di migliorare le prestazioni in quanto è possibile leggere più dischi contemporaneamente.  
      In alternativa, per gli indici cluster e non cluster è possibile utilizzare uno schema di partizione in più filegroup. Il partizionamento semplifica la gestione di tabelle o indici di grandi dimensioni in quanto consente di gestire o accedere a subset di dati in modo rapido ed efficace mantenendo l'integrità della raccolta. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando si considera il partizionamento, determinare se è necessario che l'indice sia allineato, ovvero partizionato nello stesso modo della tabella, o partizionato in modo indipendente.   
 
-##  <a name="General_Design"></a> Linee guida generali per la progettazione di indici  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> Linee guida generali per la progettazione di indici  
  Gli amministratori di database esperti in genere sono in grado di progettare un set di indici adeguato, ma questa attività è molto complessa, richiede tempo ed è soggetta ad errori anche nel caso di database e carichi di lavoro di media complessità. Conoscere le caratteristiche del database, delle query e delle colonne di dati può aiutare a progettare indici ottimali.  
   
 ### <a name="database-considerations"></a>Considerazioni sui database  
@@ -153,7 +153,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
   
 È inoltre possibile personalizzare le caratteristiche iniziali dell'archiviazione dell'indice per ottimizzarne le prestazioni o la gestione impostando un'opzione quale FILLFACTOR. È inoltre possibile determinare la posizione di archiviazione dell'indice utilizzando filegroup o schemi di partizione per ottimizzare le prestazioni.  
   
-###  <a name="Index_placement"></a> Posizione degli indici nei filegroup o negli schemi di partizioni  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> Posizione degli indici nei filegroup o negli schemi di partizioni  
  Durante lo sviluppo della strategia di progettazione degli indici, è opportuno considerare la posizione degli indici nei filegroup associati al database. Un'attenta selezione dello schema di filegroup o di partizione può contribuire a migliorare le prestazioni delle query.  
   
  Per impostazione predefinita, gli indici vengono archiviati nello stesso filegroup della tabella di base in cui viene creato l'indice. Un indice cluster non partizionato e la tabella di base sono sempre inclusi nello stesso filegroup. È tuttavia possibile eseguire una delle operazioni seguenti:  
@@ -177,7 +177,7 @@ Non potendo prevedere il tipo di accesso e tantomeno il momento in cui questo si
   
 Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="Sort_Order"></a> Linee guida per la progettazione dell'ordinamento dell'indice  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> Linee guida per la progettazione dell'ordinamento dell'indice  
  Quando si definiscono gli indici, è necessario valutare se la colonna chiave dell'indice deve essere archiviata in ordine crescente o decrescente. L'ordine crescente rappresenta l'impostazione predefinita e consente di garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintassi delle istruzioni CREATE INDEX, CREATE TABLE e ALTER TABLE supporta le parole chiave ASC (ascending, crescente) e DESC (descending, decrescente) per singole colonne di indici e vincoli.  
   
  È utile specificare l'ordine di archiviazione dei valori chiave in un indice nel caso in cui le query che fanno riferimento alla tabella includono clausole ORDER BY che specificano direzioni diverse per la colonna o le colonne chiave nell'indice. In questi casi, l'indice non richiede un operatore SORT nel piano della query e pertanto la query risulta più efficiente. Gli acquirenti nel reparto acquisti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] , ad esempio, devono valutare la qualità dei prodotti acquistati dai fornitori. Gli acquirenti sono più interessati a trovare i prodotti inviati dai fornitori con una percentuale di resi maggiore. Come illustrato nella query seguente, per recuperare i dati che soddisfano questo criterio è necessario che la colonna `RejectedQty` della tabella `Purchasing.PurchaseOrderDetail` sia disposta in ordine decrescente, ovvero dal valore più grande al più piccolo, e che la colonna `ProductID` sia disposta in ordine crescente, ovvero dal valore più piccolo al più grande.  
@@ -207,7 +207,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Il [!INCLUDE[ssDE](../includes/ssde-md.md)] consente di spostarsi con la stessa efficienza in entrambe le direzioni. Un indice definito come `(RejectedQty DESC, ProductID ASC)` può comunque essere utilizzato per una query in cui l'ordinamento delle colonne nella clausola ORDER BY viene invertito. L'indice può ad esempio essere utilizzato da una query con la clausola ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` .  
   
- È possibile specificare l'ordinamento solo per le colonne chiave. La vista del catalogo [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) e la funzione INDEXKEY_PROPERTY indicano se una colonna di un indice è archiviata in ordine crescente o decrescente.  
+ È possibile specificare l'ordinamento solo per le colonne chiave nell'indice. La vista del catalogo [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) e la funzione INDEXKEY_PROPERTY indicano se una colonna di un indice è archiviata in ordine crescente o decrescente.  
 
 ## <a name="metadata"></a>Metadati  
 Usare queste viste dei metadati per visualizzare gli attributi degli indici. In alcune di queste viste sono incorporate altre informazioni sull'architettura.
@@ -228,7 +228,7 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
 |[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
-##  <a name="Clustered"></a> Linee guida per la progettazione di indici cluster  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> Linee guida per la progettazione di indici cluster  
  Gli indici cluster ordinano e archiviano le righe di dati della tabella in base ai valori di chiave. Per ogni tabella è disponibile un solo indice cluster poiché le righe di dati possono essere ordinate con un solo tipo di ordinamento. Con poche eccezioni, è opportuno definire un indice cluster sulla colonna o sulle colonne di tutte le tabelle che presentano le caratteristiche seguenti:  
   
 -   Possono essere utilizzate per query frequenti.  
@@ -302,7 +302,7 @@ Se l'indice cluster non viene creato con la proprietà `UNIQUE`, tramite il [!IN
   
     Le chiavi estese sono costituite da diverse colonne normali o di grandi dimensioni. I valori di chiave dell'indice cluster vengono utilizzati come chiavi di ricerca da tutti gli indici non cluster. Gli indici non cluster definiti nella stessa tabella saranno significativamente più grandi perché le voci di indice non cluster includono la chiave di clustering, nonché le colonne chiave definite per l'indice non cluster.  
   
-##  <a name="Nonclustered"></a> Linee guida per la progettazione di un indice non cluster  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> Linee guida per la progettazione di un indice non cluster  
  Un indice non cluster contiene i valori della chiave di indice e gli indicatori di posizione delle righe che puntano al percorso di archiviazione dei dati della tabella. In una vista tabella o indicizzata è possibile creare più indici non cluster. In genere, gli indici non cluster consentono di migliorare le prestazioni di query utilizzate di frequente non coperte da un indice cluster.  
   
  Analogamente a quando si utilizza l'indice di un libro, Query Optimizer cerca un valore di dati eseguendo una ricerca nell'indice non cluster per trovare la posizione del valore di dati nella tabella e quindi recupera i dati direttamente da quella posizione. Per questo motivo, gli indici non cluster sono la scelta ottimale per le query di corrispondenza esatta, in quanto l'indice contiene le voci che descrivono la posizione esatta nella tabella dei valori di dati cercati dalle query. Per eseguire, ad esempio, una query sulla tabella `HumanResources. Employee` per cercare tutti i dipendenti che fanno riferimento a un responsabile specifico, tramite Query Optimizer si potrebbe utilizzare l'indice non cluster `IX_Employee_ManagerID`, la cui colonna chiave è `ManagerID` . Query Optimizer consente di trovare in modo rapido tutte le voci di indice che corrispondono all'oggetto `ManagerID`specificato. Ogni voce di indice punta alla pagina e alla riga esatte nella tabella o all'indice cluster in cui è possibile trovare i dati corrispondenti. Dopo avere trovato tutte le voci nell'indice, Query Optimizer può passare direttamente alla pagina e alla riga esatte per recuperare i dati.  
@@ -371,7 +371,7 @@ Nella figura seguente viene illustrata la struttura di un indice non cluster in 
   
      Se sono presenti soltanto pochi valori distinct, ad esempio 1 e 0, la maggior parte delle query non utilizzerà l'indice in quanto una scansione della tabella risulta in genere più efficiente. Per questo tipo di dati, creare un indice filtrato su un valore distinto che presente solo in un numero ridotto di righe. Se la maggior parte dei valori è impostata su 0, Query Optimizer potrebbe utilizzare un indice filtrato per le righe di dati che contengono il valore 1.  
   
-####  <a name="Included_Columns"></a> Utilizzare colonne incluse per estendere gli indici non cluster  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> Utilizzare colonne incluse per estendere gli indici non cluster  
  È possibile estendere le funzionalità degli indici non cluster aggiungendo colonne non chiave a livello foglia dell'indice non cluster. Con l'inclusione di colonne non chiave è possibile creare indici non cluster in grado di coprire più query. Ciò è possibile perché le colonne non chiave presentano i vantaggi seguenti:  
   
 -   Possono essere tipi di dati che non sono consentiti come colonne chiave indice.  
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Sarà necessario determinare se i guadagni in termini di prestazioni delle query offrano maggiore vantaggio rispetto all'influenza sulle prestazioni durante la modifica dei dati e ai maggiori requisiti di spazio su disco.  
   
-##  <a name="Unique"></a> Linee guida per la progettazione di indici univoci  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> Linee guida per la progettazione di indici univoci  
  Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. È consigliabile specificare un indice univoco solo se l'unicità è una caratteristica dei dati stessi. Per verificare, ad esempio, che i valori della colonna `NationalIDNumber` nella tabella `HumanResources.Employee` siano univoci quando la chiave primaria è `EmployeeID`, creare un vincolo UNIQUE nella colonna `NationalIDNumber` . Se l'utente tenta di inserire nella colonna lo stesso valore per più dipendenti, verrà visualizzato un messaggio di errore e il valore duplicato non verrà inserito.  
   
  Per gli indici univoci a più colonne, l'indice garantisce che ogni combinazione di valori nella chiave dell'indice sia univoca. Ad esempio, se si crea un indice univoco basato su una combinazione delle colonne `LastName`, `FirstName`e `MiddleName` , non è possibile che nella tabella siano incluse due righe in cui è presente la stessa combinazione di valori per queste colonne.  
@@ -495,7 +495,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   In un indice non cluster univoco possono essere contenute colonne non chiave. Per altre informazioni, vedere [Indice con colonne incluse](#Included_Columns).  
   
   
-##  <a name="Filtered"></a> Linee guida per la progettazione di indici filtrati  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Linee guida per la progettazione di indici filtrati  
  Un indice filtrato è un indice non cluster ottimizzato, particolarmente indicato per coprire query che selezionano dati da un subset ben definito. Un indice di questo tipo utilizza un predicato del filtro per indicizzare una parte di righe nella tabella. Se confrontato con indici di tabella completa, un indice filtrato progettato correttamente consente di migliorare le prestazioni di esecuzione delle query e di ridurre i costi di manutenzione e di archiviazione dell'indice stesso.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -635,7 +635,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Lo spostamento della conversione dei dati dal lato sinistro a quello destro di un operatore di confronto potrebbe modificare il significato della conversione. Nell'esempio precedente, quando l'operatore CONVERT è stato aggiunto al lato destro, il confronto è stato modificato da un confronto di un tipo integer in un confronto di tipo **varbinary** .  
   
-## <a name="columnstore_index"></a> Linee guida per la progettazione di indici columnstore
+## <a name="columnstore-index-design-guidelines"></a><a name="columnstore_index"></a> Linee guida per la progettazione di indici columnstore
 
 L' *columnstore index* è una tecnologia per l'archiviazione, il recupero e la gestione dei dati utilizzando un formato di dati in colonna, detto columnstore. Per altre informazioni, vedere [Panoramica sugli indici columnstore](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
@@ -725,7 +725,7 @@ Per altre informazioni, vedere [Indici columnstore - Prestazioni delle query ](.
  
 Per altre informazioni, fare riferimento a [Linee guida per la progettazione di un indice columnstore](../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
-##  <a name="hash_index"></a> Linee guida per la progettazione di indici hash 
+##  <a name="hash-index-design-guidelines"></a><a name="hash_index"></a> Linee guida per la progettazione di indici hash 
 
 Tutte le tabelle ottimizzate per la memoria devono contenere almeno un indice in quanto gli indici consentono l'interconnessione delle righe. In una tabella con ottimizzazione per la memoria, ogni indice è anche ottimizzato per la memoria. Gli indici hash sono uno dei tipi di indice possibili in una tabella ottimizzata per la memoria. Per altre informazioni, vedere [Indici per le tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
@@ -759,7 +759,7 @@ Nell'immagine seguente è riepilogata l'interazione tra l'indice hash e i bucket
   
 ![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Chiavi di indice, input nella funzione hash, l'output è l'indirizzo di un bucket di hash, che punta all'inizio della catena.")  
 
-### <a name="configuring_bucket_count"></a> Configurazione del numero di bucket dell'indice hash
+### <a name="configuring-the-hash-index-bucket-count"></a><a name="configuring_bucket_count"></a> Configurazione del numero di bucket dell'indice hash
 Il numero di bucket dell'indice hash viene specificato al momento della creazione dell'indice e può essere modificato tramite la sintassi `ALTER TABLE...ALTER INDEX REBUILD`.  
   
 Nella maggior parte dei casi, il numero di bucket dovrebbe essere in teoria impostato su un valore compreso tra una e due volte il numero di valori distinct della chiave di indice.   
@@ -794,7 +794,7 @@ Le prestazioni di un indice hash sono:
 
 Se si usa un indice hash e il numero di chiavi di indice univoco supera di 100 volte (o più) il numero di righe, è necessario aumentare il numero di bucket per evitare catene di righe troppo grandi oppure usare un [indice non cluster](#inmem_nonclustered_index).
 
-### <a name="h3-b2-declaration-limitations"></a> Considerazioni sulla dichiarazione  
+### <a name="declaration-considerations"></a><a name="h3-b2-declaration-limitations"></a> Considerazioni sulla dichiarazione  
 Un indice hash può essere presente solo in una tabella ottimizzata per la memoria. Non può esistere in una tabella basata su disco.  
   
 Un indice hash può essere dichiarato:  
@@ -817,7 +817,7 @@ L'indice hash potrebbe anche avere versioni diverse delle relative voci per incl
   
 In seguito, quando le versioni precedenti non sono più necessarie, un thread di Garbage Collection (GC) attraversa i bucket e i relativi elenchi di collegamenti per eliminare le voci obsolete. Il thread GC offre prestazioni migliori se le catene degli elenchi di collegamenti sono brevi. Per altre informazioni, vedere [Garbage Collection per OLTP in memoria](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md). 
 
-##  <a name="inmem_nonclustered_index"></a> Linee guida per la progettazione di indici non cluster ottimizzati per la memoria 
+##  <a name="memory-optimized-nonclustered-index-design-guidelines"></a><a name="inmem_nonclustered_index"></a> Linee guida per la progettazione di indici non cluster ottimizzati per la memoria 
 
 Gli indici non cluster sono uno dei tipi di indice possibili in una tabella ottimizzata per la memoria. Per altre informazioni, vedere [Indici per le tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
@@ -886,7 +886,7 @@ Quando si esegue una query su una tabella ottimizzata per la memoria con predica
 > [!TIP]
 > Quando in un indice non cluster le colonne chiave contengono molti valori duplicati, le prestazioni per le operazioni di aggiornamento, inserimento ed eliminazione potrebbero risultare ridotte. Un modo per migliorare le prestazioni in questa situazione è aggiungere un'altra colonna nell'indice non cluster.
 
-##  <a name="Additional_Reading"></a> Ulteriori informazioni  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Ulteriori informazioni  
 [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  

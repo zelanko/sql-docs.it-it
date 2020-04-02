@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 71b949178269c2777f5cacd32997d872d36cfc32
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18d02267ee7093e4e79deb5985abb236898dbe84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74685648"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342862"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>Gruppi di disponibilità Always On di base per un database singolo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,23 @@ ms.locfileid: "74685648"
  I gruppi di disponibilità di base AlwaysOn possono essere creati in due server SQL Server 2016 Standard Edition qualsiasi. Durante la creazione di un gruppo di disponibilità di base, è necessario specificare entrambe le repliche.  
   
  Per creare un gruppo di disponibilità di base, usare il comando transact-SQL **CREATE AVAILABILITY GROUP** e specificare l'opzione **WITH BASIC**. Il valore predefinito è **ADVANCED**. È anche possibile creare il gruppo di disponibilità di base usando l'interfaccia utente in SQL Server Management Studio a partire dalla versione 17.8. Per altre informazioni, vedere [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). 
+
+Vedere l'esempio seguente per creare un gruppo di disponibilità di base usando Transact-SQL: 
+
+```sql
+CREATE AVAILABILITY GROUP [BasicAG]
+WITH (AUTOMATED_BACKUP_PREFERENCE = PRIMARY,
+BASIC,
+DB_FAILOVER = OFF,
+DTC_SUPPORT = NONE,
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 0)
+FOR DATABASE [AdventureWorks]
+REPLICA ON N'SQLVM1\MSSQLSERVER' WITH (ENDPOINT_URL = N'TCP://SQLVM1.Contoso.com:5022', FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, SEEDING_MODE = AUTOMATIC, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO)),
+    N'SQLVM2\MSSQLSERVER' WITH (ENDPOINT_URL = N'TCP://SQLVM2.Contoso.com:5022', FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, SEEDING_MODE = AUTOMATIC, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO));
+
+GO
+```
+
   
 > [!NOTE]  
 >  Quando si specifica **WITH BASIC** , si applicano al comando **CREATE AVAILABILITY GROUP** le limitazioni dei gruppi di disponibilità di base. Si verificherà un errore se ad esempio si tenta di creare un gruppo di disponibilità di base che consente l'accesso in lettura. Le altre limitazioni si applicano allo stesso modo. Per informazioni dettagliate, vedere la sezione Limitazioni di questo argomento.  

@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77255975"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526796"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -59,7 +59,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
@@ -243,6 +243,18 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
+### <a name="g-creating-a-login-with-multiple-arguments"></a>G. Creazione di un account di accesso con più argomenti
+
+Nell'esempio seguente viene illustrato come collegare più argomenti insieme usando le virgole tra ogni argomento.
+
+```sql
+CREATE LOGIN [MyUser]
+WITH PASSWORD = 'MyPassword',
+DEFAULT_DATABASE = MyDatabase,
+CHECK_POLICY = OFF,
+CHECK_EXPIRATION = OFF ;
+```
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
@@ -266,7 +278,7 @@ GO
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 CREATE LOGIN login_name
  { WITH <option_list> }
@@ -278,7 +290,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argomenti
 
-*login_name* specifica il nome dell'account di accesso creato. Database singolo/pool elastico di database SQL di Azure supporta solo account di accesso SQL. Per creare account per gli utenti di Azure Active Directory, usare l'istruzione [CREATE USER](create-user-transact-sql.md).
+*login_name* specifica il nome dell'account di accesso creato. I database singoli e in pool nel database SQL di Azure e i database in Azure Synapse Analytics (in precedenza Azure SQL Data Warehouse) supportano solo gli account di accesso SQL. Per creare account per utenti di Azure Active Directory o per creare account utente non associati a un account di accesso, usare l'istruzione [CREATE USER](create-user-transact-sql.md). Per altre informazioni, vedere [Gestire gli account di accesso nel database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='** password* *'* specifica la password per l'account di accesso SQL da creare. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le informazioni relative alle password archiviate vengono calcolate tramite SHA-512 della password salt.
 
@@ -289,10 +301,10 @@ SID = *sid* si usa per ricreare un account di accesso. Si applica solo agli acco
 ## <a name="remarks"></a>Osservazioni
 
 - Per le password viene fatta distinzione tra maiuscole e minuscole.
-- Per uno script con cui trasferire gli account di accesso, vedere [Trasferimento di accessi e password tra istanze di SQL Server](https://support.microsoft.com/kb/918992).
 - La creazione automatica di un account di accesso abilita il nuovo account a cui viene concessa l'autorizzazione **CONNECT SQL** a livello di server.
-- La [modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md) del server deve corrispondere al tipo di account di accesso per consentire l'accesso.
-- Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+
+> [!IMPORTANT]
+> Per informazioni sull'uso di account di accesso e utenti nel database SQL di Azure, vedere [Gestire gli account di accesso nel database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="login"></a>Login
 
@@ -302,31 +314,15 @@ L'istruzione **CREATE LOGIN** deve essere l'unica istruzione in un batch.
 
 In alcuni metodi di connessione al database SQL, come ad esempio **sqlcmd**, è necessario accodare il nome del server del database SQL al nome dell'account di accesso nella stringa di connessione usando la notazione *\<login>* @ *\<server>* . Ad esempio, se l'account di accesso è `login1` e il nome completo del server del database SQL è `servername.database.windows.net`, il parametro *username* della stringa di connessione deve essere `login1@servername`. Poiché la lunghezza totale del parametro *username* è di 128 caratteri, *login_name* è limitato a 127 caratteri meno la lunghezza del nome del server. Nell'esempio la lunghezza di `login_name` può essere solo di 117 caratteri poiché `servername` è costituito da 10 caratteri.
 
-Nel database SQL è necessario essere connessi al database master per creare un account di accesso.
+Nel database SQL è necessario essere connessi al database master con le autorizzazioni appropriate per creare un account di accesso. Per altre informazioni, vedere [Creare ulteriori account di accesso e utenti con autorizzazioni amministrative](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<nomeaccountaccesso>@\<nomeserver>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com** , l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver** .
 
 Nel database SQL i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Per altre informazioni sugli account di accesso del database SQL, vedere [Gestione di database e account di accesso in Database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
-
 ## <a name="permissions"></a>Autorizzazioni
 
-Solo l'account di accesso dell'entità di livello server (creato dal processo di provisioning) o i membri del ruolo del database `loginmanager` nel database master possono creare nuovi account di accesso. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
-
-## <a name="logins"></a>Logins
-
-- È richiesta l'autorizzazione **ALTER ANY LOGIN** per il server o l'appartenenza al ruolo predefinito del server **securityadmin**. È possibile eseguire il comando solo dall'account di Azure Active Directory (Azure AD) con l'autorizzazione **ALTER ANY LOGIN** per il server o l'appartenenza al ruolo con autorizzazione securityadmin
-- È necessario essere un membro di Azure AD all'interno della stessa directory usata per il server di database SQL di Azure
-
-## <a name="after-creating-a-login"></a>Dopo la creazione di un account di accesso
-
-Una volta creato, un account di accesso può connettersi al database SQL ma ha solo le autorizzazioni concesse al ruolo **public**. Provare a eseguire alcune delle attività seguenti.
-
-- Per connettersi a un database, creare un utente del database per accedere al database stesso. Per altre informazioni, vedere [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Per concedere le autorizzazioni a un utente in un database, usare l'istruzione **ALTER SERVER ROLE** ... **ADD MEMBER** per aggiungere l'utente a uno dei ruoli predefiniti del database o a un ruolo personalizzato o concedere le autorizzazioni all'utente direttamente tramite l'istruzione [GRANT](../../t-sql/statements/grant-transact-sql.md). Per altre informazioni, vedere [Utenti non amministratori](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Ruoli amministrativi aggiuntivi a livello di server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e l'istruzione [GRANT](grant-transact-sql.md).
-- Per concedere autorizzazioni a livello di server, creare un utente del database nel database master e usare l'istruzione **ALTER SERVER ROLE** ... **ADD MEMBER** per aggiungere l'utente a uno dei ruoli di amministrazione del server. Per altre informazioni, vedere [Ruoli a livello di server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Ruoli del server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
-- Usare l'istruzione **GRANT** per concedere le autorizzazioni a livello di server al nuovo account di accesso o a un ruolo in cui esso è contenuto. Per altre informazioni, vedere [GRANT](../../t-sql/statements/grant-transact-sql.md).
+Solo l'account di accesso dell'entità di livello server (creato dal processo di provisioning) o i membri del ruolo del database `loginmanager` nel database master possono creare nuovi account di accesso. Per altre informazioni, vedere [Creare ulteriori account di accesso e utenti con autorizzazioni amministrative](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 ## <a name="examples"></a>Esempi
 
@@ -386,7 +382,7 @@ GO
 
 ## <a name="syntax"></a>Sintassi
 
-```sql
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
@@ -424,6 +420,9 @@ SID **=** *sid* si usa per ricreare l'account di accesso. Si applica solo agli a
 - Gli account di accesso di Azure AD sono visibili in sys.server_principals con il valore type column impostato su **E** e type_desc impostato su **EXTERNAL_LOGIN** per gli account di accesso mappati ad utenti di Azure AD oppure con il valore type column impostato su **X** e il valore type_desc impostato su **EXTERNAL_GROUP** per gli account di accesso mappati a gruppi di Azure AD.
 - Per uno script con cui trasferire gli account di accesso, vedere [Trasferimento di accessi e password tra istanze di SQL Server](https://support.microsoft.com/kb/918992).
 - La creazione automatica di un account di accesso abilita il nuovo account a cui viene concessa l'autorizzazione **CONNECT SQL** a livello di server.
+
+> [!IMPORTANT]
+> Per informazioni sull'uso di account di accesso e utenti nel database SQL di Azure, vedere [Gestire gli account di accesso nel database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="logins-and-permissions"></a>Account di accesso e autorizzazioni
 
@@ -562,7 +561,7 @@ GO
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
@@ -676,7 +675,7 @@ GO
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 

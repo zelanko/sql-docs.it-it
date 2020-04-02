@@ -1,5 +1,6 @@
 ---
 title: Uso di assembly personalizzati con nome sicuro | Microsoft Docs
+description: Informazioni su come usare un assembly personalizzato con nome sicuro per identificare in modo univoco un assembly per Common Language Runtime (CLR) e garantire l'integrità binaria.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31479ae9b460b6a660ec865e68e46afd912f49b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdee8daafe68742dce4c91f1dffb61f849445998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194083"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216996"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Utilizzo di assembly personalizzati con nome sicuro
   Un nome sicuro identifica un assembly e include il nome di testo dell'assembly, il numero di versione in quattro parti, informazioni sulle impostazioni cultura (se disponibili), una chiave pubblica e una firma digitale archiviata nel manifesto dell'assembly. Un nome sicuro identifica in modo univoco un assembly in CLR (Common Language Runtime) e assicura l'integrità binaria.  

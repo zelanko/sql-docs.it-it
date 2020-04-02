@@ -1,5 +1,6 @@
 ---
 title: Ovviare alla limitazione di righe di Excel 2003 | Microsoft Docs
+description: È possibile aggirare il limite di righe di Excel 2003 quando si esportano i report impaginati in Excel forzando un'interruzione di pagina dopo un determinato numero di righe.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 940f5fd22d35ac0a90106c7a325e435e1d479bc4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577788"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290721"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   In questo argomento viene illustrato come risolvere il limite di righe di Excel 2003 quando si esportano i report impaginati in Excel. La soluzione alternativa consiste in un report contenente una sola tabella.  

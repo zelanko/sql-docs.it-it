@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288295"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380812"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ Elenco di uno o più nodi NUMA. Gli ID del nodo NUMA iniziano da 0 e sono valori
 DIAGNOSTICS LOG  
 Avvia o arresta la registrazione dei dati di diagnostica acquisiti dalla stored procedure sp_server_diagnostics. Questo argomento consente anche di impostare i parametri di configurazione del log SQLDIAG, ad esempio il conteggio del rollover dei file, le dimensioni del file di log e il percorso del file. Per altre informazioni, vedere [Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
-ATTIVA  
+ON  
 Consente di avviare la registrazione dei dati di diagnostica di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] nel percorso specificato dall'opzione file PATH. Questo argomento è l'impostazione predefinita.  
   
 OFF  
@@ -177,8 +177,10 @@ Consente di impostare il livello di registrazione per il clustering di failover 
   
 -   2: errori e avvisi  
   
+Negli scenari di failover delle risorse, la DLL della risorsa SQL Server può ottenere un file dump prima che si verifichi un failover. Questo vale sia per le tecnologie FCI che per quelle del gruppo di disponibilità. Quando la DLL della risorsa SQL Server determina che una risorsa SQL Server ha avuto esito negativo, la DLL della risorsa SQL Server usa l'utilità Sqldumper.exe per ottenere un file dump del processo di SQL Server. Per assicurarsi che l'utilità Sqldumper.exe generi correttamente il file dump al momento del failover delle risorse, è necessario impostare le tre proprietà seguenti come prerequisiti: SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
+
 SQLDUMPEREDUMPFLAGS  
-Determina il tipo di file di dump generati dall'utilità SQLDumper di SQL Server. L'impostazione predefinita è 0. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Determina il tipo di file di dump generati dall'utilità SQLDumper di SQL Server. L'impostazione predefinita è 0. Per questa impostazione vengono usati valori decimali, anziché esadecimali. Per il minidump usare 288, per il minidump con memoria indiretta usare 296, per il dump filtrato usare 33024. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 Percorso in cui l'utilità SQLDumper archivia i file di dump. Per altre informazioni, vedere l'[articolo sulla knowledge base dell'utilità SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
@@ -220,7 +222,7 @@ Per altre informazioni, vedere [Modificare il contesto del cluster HADR dell'ist
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
-ATTIVA  
+ON  
 Abilita l'opzione di estensione del pool di buffer. Questa opzione estende le dimensioni del pool di buffer tramite memoria non volatile. Con la memoria non volatile, come le unità SSD, vengono salvate in modo permanente pagine di dati pulite nel pool. Per altre informazioni su questa funzionalità, vedere [Estensione pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md). L'estensione del pool di buffer non è disponibile in tutte le edizioni di SQL Server. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
@@ -241,7 +243,7 @@ Disabilita l'opzione di estensione del pool di buffer. Disabilitare l'opzione di
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
-ATTIVA  
+ON  
 Consente il partizionamento automatico in modo da dividere i nodi hardware NUMA di grandi dimensioni in nodi NUMA di dimensioni ridotte. Per modificare il valore corrente è necessario riavviare il motore di database.  
   
 OFF  
@@ -260,7 +262,7 @@ Disabilita il partizionamento automatico dei nodi hardware NUMA di grandi dimens
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-ATTIVA <br>
+ON <br>
 Abilita tutte le funzionalità a livello di istanza che fanno parte della famiglia di funzionalità del [database in memoria](../../relational-databases/in-memory-database.md). Attualmente include i [metadati tempdb ottimizzati per la memoria](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) e il [pool di buffer ibrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). È necessario un riavvio per rendere effettiva l'impostazione.
 
 OFF <br>
@@ -304,7 +306,7 @@ La DLL della risorsa del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 |[Impostazione delle opzioni del database in memoria](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> Impostazione dell'affinità del processo  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> Impostazione dell'affinità del processo  
 Negli esempi inclusi in questa sezione viene illustrato come impostare l'affinità del processo in CPU e nodi NUMA. Negli esempi si presuppone che il server contenga 256 CPU disposte ciascuna in quattro gruppi di 16 nodi NUMA. I thread non sono assegnati ad alcun nodo NUMA o CPU.  
   
 -   Gruppo 0: nodi NUMA da 0 a 3, CPU da 0 a 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> Impostazione delle proprietà del cluster di failover  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> Impostazione delle proprietà del cluster di failover  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. Modifica del contesto del cluster di una replica di disponibilità  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. Modifica del contesto del cluster di una replica di disponibilità  
 Nell'esempio seguente viene cambiato il contesto del cluster HADR dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per specificare il cluster WSFC di destinazione, `clus01`, nell'esempio viene specificato il nome completo dell'oggetto cluster, `clus01.xyz.com`.  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>Impostazione delle opzioni di estensione del pool di buffer  
   
-####  <a name="BufferPoolExtension"></a> A. Impostazione dell'opzione di estensione del pool di buffer  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. Impostazione dell'opzione di estensione del pool di buffer  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> Impostazione delle opzioni del database in memoria
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Impostazione delle opzioni del database in memoria
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 

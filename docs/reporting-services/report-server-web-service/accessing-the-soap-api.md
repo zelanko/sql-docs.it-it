@@ -1,5 +1,6 @@
 ---
 title: Accesso all'API SOAP | Microsoft Docs
+description: Il servizio Web ReportServer usa SOAP su HTTP e funge da interfaccia di comunicazione tra i client e il server di report. Usare WSDL per chiamare il servizio.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 165302d4bb324dfb79f43e37b8a47e5e11973ce5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026164"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509912"
 ---
 # <a name="accessing-the-soap-api"></a>Accesso all'API SOAP
   Il servizio Web ReportServer utilizza SOAP (Simple Object Access Protocol) tramite HTTP e funge da interfaccia di comunicazione tra i programmi client e il server di report. Il servizio Web fornisce due endpoint, uno per l'esecuzione dei report e uno per la gestione dei report ed è costituito da metodi e un set di oggetti di tipo complesso che è possibile utilizzare per accedere alle funzionalità complete di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per chiamare il servizio, è necessario fare riferimento al linguaggio WSDL (Web Services Description Language) di Reporting Services.  

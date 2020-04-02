@@ -1,5 +1,6 @@
 ---
 title: Pubblicare un'origine dati condivisa in una raccolta di SharePoint | Microsoft Docs
+description: Informazioni su come pubblicare un'origine dati condivisa in un server di report in esecuzione in modalità integrata SharePoint.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50b21145d0e1929b6ef5ba1f6e0f23692d9b4b7c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577525"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510102"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
   Per pubblicare un'origine dati condivisa in un server di report eseguito in modalità integrata SharePoint, è necessario impostare le proprietà del progetto report in Progettazione report. Nelle proprietà del progetto tutti i riferimenti a server, report e origini dati condivise devono essere URL completi.  

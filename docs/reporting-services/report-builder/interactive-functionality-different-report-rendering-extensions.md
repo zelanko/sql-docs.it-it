@@ -1,5 +1,6 @@
 ---
 title: Funzionalità interattiva per estensioni diverse per il rendering di report | Microsoft Docs
+description: Reporting Services consente di interagire con un report impaginato in fase di esecuzione. Questo articolo descrive il funzionamento delle funzionalità interattive in formati specifici.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8df9a5b08f4aa8883bb9351fa59df147e80bac95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580710"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342777"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funzionalità interattiva per estensioni diverse per il rendering di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce funzionalità per l'interazione con un report impaginato in fase di esecuzione. Solo alcuni formati di rendering dei report supportano l'intera gamma di caratteristiche interattive. Usare la tabella seguente per comprendere la modalità di utilizzo delle diverse caratteristiche interattive in formati specifici.  
@@ -60,7 +61,7 @@ ms.locfileid: "65580710"
   
 |Opzione di esportazione|Informazioni relative al supporto|  
 |-------------------|-------------------------|  
-|Anteprima/Visualizzatore report, HTML|Nei report tabella gli utenti fanno clic sulle frecce di ordinamento presenti sulle colonne per modificare il criterio di ordinamento dei dati.|  
+|Anteprima/Visualizzatore report, HTML|Nei report tabella gli utenti fanno clic sulle frecce di ordinamento presenti sulle colonne per modificare la modalità di ordinamento dei dati.|  
 |PDF|Non disponibile in PDF.|  
 |Excel|Non disponibile in Excel.|  
 |Word|Non disponibile in Word.|  

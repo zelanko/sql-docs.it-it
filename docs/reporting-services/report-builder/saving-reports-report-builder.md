@@ -1,5 +1,6 @@
 ---
 title: Salvataggio di report (Generatore report) | Microsoft Docs
+description: In Generatore report è possibile salvare la definizione di un report, che include il layout ma non i dati. I dati vengono aggiornati ogni volta che si esegue il report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682d55f6c805066f5b596e79a074f253db9faa9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c96b1a65c6a576391f072f2bdabb4b70cb0fd63
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66499627"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290797"
 ---
 # <a name="saving-reports-report-builder"></a>Salvataggio di report (Generatore report)
   In Generatore report è possibile salvare un report impaginato in un server di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in una raccolta di SharePoint, in una condivisione file per la quale si dispone di autorizzazioni di scrittura o nel computer in uso. 
@@ -30,7 +31,7 @@ Durante il salvataggio di un report, l'elemento che viene effettivamente salvato
   
  Per altre informazioni sulla visualizzazione e sulla gestione dei report direttamente nel server di report, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md) e [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
-##  <a name="SavingReportDefinitions"></a> Salvataggio di report in un server di report  
+##  <a name="saving-reports-to-a-report-server"></a><a name="SavingReportDefinitions"></a> Salvataggio di report in un server di report  
   Il salvataggio di un report in un server di report è noto anche come pubblicazione di un report. Sebbene sia possibile salvare i report nel computer in uso, il salvataggio in un server di report offre molti vantaggi:  
   
 -   I report vengono resi disponibili per altri utenti che dispongano delle autorizzazioni di accesso alla cartella nella quale è stato salvato il report.  
@@ -45,16 +46,16 @@ Durante il salvataggio di un report, l'elemento che viene effettivamente salvato
   
 -   Le esecuzioni dei report possono essere registrate e fornire informazioni sulle prestazioni e sui controlli.  
   
-##  <a name="ExportingAndSavingReports"></a> Esportazione e salvataggio di report  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> Esportazione e salvataggio di report  
  Se il numero di report da archiviare è limitato, è consigliabile esportare un report e salvarlo come file. Dopo aver esportato un report in un'applicazione, ad esempio in formato PDF o Excel, è possibile salvarlo come file e copiarlo in una directory condivisa protetta in rete. In alternativa, è possibile caricare un file PDF o Excel salvato come risorsa se si desidera mantenere tutte le copie del report, indipendentemente dal formato, nel database del server di report. Per altre informazioni sull'esportazione dei report, vedere [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) e [Caricare un file o un report](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
-##  <a name="UsingFileShareDelivery"></a> Utilizzo del recapito tramite condivisione file  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> Utilizzo del recapito tramite condivisione file  
  Se i report da archiviare sono numerosi, è possibile creare una sottoscrizione che recapiti il report direttamente al file system. Per questo approccio è necessario creare una sottoscrizione per ogni report, scegliere una cartella condivisa per archiviare i report e definire una pianificazione che determini quando il file deve essere creato. Quando un utente definisce una sottoscrizione, il server di report è in grado di eseguire automaticamente il report e di aggiungere i file del report all'archivio in base alla pianificazione specificata dall'utente. È inoltre possibile creare pianificazioni a utilizzo singolo per archiviare report occasionalmente. Per altre informazioni sulle sottoscrizioni e sul recapito tramite condivisione file, vedere [Recapito tramite condivisione file in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
-##  <a name="UsingReportHistory"></a> Utilizzo della cronologia dei report  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> Utilizzo della cronologia dei report  
  È inoltre possibile utilizzare la cronologia dei report per creare copie dei risultati delle esecuzioni dei report in momenti diversi. Per utilizzare queste copie in futuro, è consigliabile eseguire il backup del database del server di report e archiviare tale backup in una posizione sicura. Nel database del server di report viene archiviata l'intera cronologia dei report, insieme ai report, alle origini dei dati condivise, alle cartelle, alle sottoscrizioni e alle pianificazioni condivise. È possibile eseguire il backup per mantenere una copia permanente della cronologia dei report e dei metadati quali le informazioni sulla sottoscrizione che indicano i destinatari di un report. Per altre informazioni, vedere [Creare, modificare ed eliminare snapshot nella cronologia dei report](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md).  
  
-##  <a name="HowTo"></a> Procedure  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Procedure  
   
 -   [Salvare i report in un server di report &#40;Generatore report&#41;](../../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md)  
   

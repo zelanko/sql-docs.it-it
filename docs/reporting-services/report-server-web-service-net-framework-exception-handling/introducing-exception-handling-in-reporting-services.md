@@ -1,5 +1,6 @@
 ---
 title: Introduzione alla gestione delle eccezioni in Reporting Services | Microsoft Docs
+description: Informazioni su come gestire le eccezioni generate dal servizio Web ReportServer in modo da poter restituire informazioni utili agli utenti quando si verificano errori.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee084e9d85a1bee21db3994be8b9473daefc7c0f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: edaacc97dae131afbc0a9b9f3651877e4952754d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992242"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215725"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Introduzione alla gestione delle eccezioni in Reporting Services
   Se l'applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] invia al servizio Web ReportServer una richiesta che non può essere elaborata, viene restituita al client un'eccezione SOAP. La gestione delle eccezioni generate dal servizio Web ReportServer costituisce una parte importante dello sviluppo delle applicazioni, in quanto quando si verificano gli errori è possibile restituire agli utenti informazioni utili.  

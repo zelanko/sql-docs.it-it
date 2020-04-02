@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688783"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271427"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -44,6 +44,39 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4,&nbsp; SSDT per VS 2017
+
+_Data di rilascio:_ &nbsp; 26 marzo 2020  
+_Numero di build:_ &nbsp; 14.0.16214.0  
+_SSDT per Visual Studio 2017._
+
+### <a name="whats-new"></a>Novità
+
+| Nuovo elemento | Dettagli |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Correzione di un problema per cui si verifica un arresto anomalo di Visual Studio quando si spostano righe di vincoli del flusso di controllo all'interno di un contenitore. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale l'interfaccia utente delle attività del piano di manutenzione non è in grado di elencare le gestioni connessioni ADO.NET create all'esterno dell'interfaccia utente delle attività. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale la pagina di accesso interattiva di Azure non viene visualizzata quando si distribuisce un progetto SSAS che appartiene a una soluzione con progetti SSIS caricati. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale facendo clic sul pulsante delle proprietà del driver MSOLAP si verifica l'arresto anomalo della procedura guidata DTS quando SQL Server non è installato. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale il driver MSOLEDBSQL non supporta l'autenticazione AAD nella procedura guidata DTS. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale l'origine XML e la destinazione ADO.NET non possono essere mantenute correttamente quando la destinazione è SQL Server 2012. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale il pulsante "Scarica WSDL" nell'Editor attività servizio Web potrebbe non essere visualizzato correttamente. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale potrebbe non essere possibile selezionare la tabella nella pagina Gestione connessione dell'Editor trasformazione Ricerca. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale il layout dell'Editor trasformazione cache potrebbe essere confuso. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale l'area "Gestioni connessioni" nell'editor pacchetti potrebbe non essere visualizzata correttamente. |
+| Integration Services (SSIS) | Correzione di un problema a causa del quale l'icona dello stato potrebbe non essere visualizzata correttamente nella procedura guidata Converti nel modello di distribuzione del pacchetto. |
+| Integration Services (SSIS) | Il programma di installazione è stato modificato in programma di installazione completo che non richiede il download del payload da Internet. |
+
+### <a name="known-issues"></a>Problemi noti
+
+| Problema noto | Dettagli |
+| :---------- | :------ |
+| L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente. |
+| L'origine Power Query può non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
+| L'origine Power Query può non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
+| L'origine Power Query non è localizzata | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; SSDT per VS 2017
 

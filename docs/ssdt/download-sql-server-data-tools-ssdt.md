@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77652940"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271487"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare SQL Server Data Tools per Visual Studio (SSDT)
 
@@ -79,10 +79,10 @@ Il programma di installazione elenca le istanze di Visual Studio disponibili per
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT per Visual Studio 2017 (programma di installazione autonomo)
 
-[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
+[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.9.4)](https://go.microsoft.com/fwlink/?linkid=2124518 )
 
 > [!IMPORTANT]
-> * Prima di installare SSDT per Visual Studio 2017 (15.9.3), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio.
+> * Prima di installare SSDT per Visual Studio 2017 (15.9.4), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio.
 > * È stato rimosso il componente della posta in arrivo Origine Power Query per SQL Server 2017. È stato annunciato Origine Power Query per SQL Server 2017 e 2019 come componente predefinito. È possibile scaricarlo [qui](https://www.microsoft.com/download/details.aspx?id=100619).
 > * È stato rimosso il componente della posta in arrivo Microsoft Connector per Oracle per SQL Server 2019. È stato annunciato Microsoft Connector per Oracle per SQL Server 2019 come componente predefinito. È possibile scaricarlo [qui](https://www.microsoft.com/download/details.aspx?id=58228).
 
@@ -98,17 +98,17 @@ SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.mi
 
 Questa versione di **SSDT per VS 2017** può essere installata nelle lingue seguenti:
 
-* [Cinese semplificato]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
-* [Cinese tradizionale]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
-* [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
-* [Francese]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
-* [Tedesco]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
-* [Italiano]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
-* [Giapponese]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
-* [Coreano]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
-* [Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
-* [Russo]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
-* [Spagnolo]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
+* [Cinese semplificato]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
+* [Cinese tradizionale]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
+* [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
+* [Francese]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
+* [Tedesco]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
+* [Italiano]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
+* [Giapponese]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
+* [Coreano]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
+* [Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
+* [Russo]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
+* [Spagnolo]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Considerazioni e limiti
 
@@ -129,8 +129,6 @@ Per prima cosa, completare la procedura seguente mentre si è **online**:
 3. Mentre si è ancora online, eseguire uno dei comandi seguenti per scaricare tutti i file necessari per l'installazione offline. L'uso dell'opzione `--layout` è fondamentale, in quanto scarica i file effettivi per l'installazione offline. Sostituire `<filepath>` con il tracciato di layout effettivo in cui salvare i file.
    1. Per una lingua specifica, passare le impostazioni locali: `vs_sql.exe --layout c:\<filepath> --lang en-us` (una sola lingua corrisponde a circa 1 GB).
    1. Per tutte le lingue, omettere l'argomento `--lang`: `vs_sql.exe --layout c:\<filepath>` (tutte le lingue corrispondono a circa 3,9 GB).
-
-4. Eseguire `SSDT-Setup-ENU.exe /layout c:\<filepath>` per estrarre il payload SSDT nella stessa posizione `<filepath>` in cui sono stati scaricati i file di VS2017. Ciò garantisce che tutti i file di entrambe le cartelle vengano combinati in una cartella di layout singola.
 
 Dopo aver completato questa procedura, i passaggi seguenti possono essere eseguiti **offline**:
 

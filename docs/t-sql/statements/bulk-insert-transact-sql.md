@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558364"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448403"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ Prima di [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, i file 
 
  Per informazioni sui casi in cui le operazioni di inserimento di righe eseguite durante l'importazione in blocco in SQL Server vengono registrate nel log delle transazioni, vedere [Prerequisiti per la registrazione minima nell'importazione in blocco](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). La registrazione minima non è supportata nel database SQL di Azure.
 
-## <a name="Limitations"></a> Restrizioni
+## <a name="restrictions"></a><a name="Limitations"></a> Restrizioni
 
 Quando si utilizza un file di formato con BULK INSERT, è possibile specificare al massimo 1024 campi. Si tratta dello stesso numero massimo di colonne consentite in una tabella. Se si usa un file di formato con BULK INSERT insieme a un file di dati contenente più di 1024 campi, verrà generato l'errore 4822. L'[utilità bcp](../../tools/bcp-utility.md) non ha questa limitazione. Pertanto, per i file di dati contenenti più di 1024 campi, usare BULK INSERT senza un file di formato oppure usare il comando **bcp**.
 
@@ -470,9 +470,27 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
+Un altro modo per accedere all'account di archiviazione è tramite [identità gestita](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). A tale scopo, seguire i [passaggi da 1 a 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) per configurare il database SQL per accedere all'archiviazione tramite l'identità gestita, dopo di che è possibile implementare il codice di esempio come indicato di seguito.
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
 
 > [!IMPORTANT]
-> Database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
+> Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importazione di dati da un file nell'archiviazione BLOB di Azure e specifica di un file degli errori
 

@@ -1,7 +1,7 @@
 ---
 title: Requisiti di sistema per il driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 7e80f52f1edba3826c18cc6a306206bdfb254248
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903728"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271387"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisiti di sistema per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "77903728"
 
 **Microsoft JDBC Driver 8.2 per SQL Server:**  
 
-  JDBC Driver 8.2 include tre librerie di classe JAR in ogni pacchetto di installazione: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** e **mssql-jdbc-8.2.1.jre13.jar**.
+  JDBC Driver 8.2 include tre librerie di classe JAR in ogni pacchetto di installazione: **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** e **mssql-jdbc-8.2.2.jre13.jar**.
 
   JDBC Driver 8.2 è progettato per funzionare con ed essere supportato da tutte le principali macchine virtuali Java, ma è testato solo su OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 e Azul Zulu JRE 13.0.
   
@@ -55,9 +55,9 @@ ms.locfileid: "77903728"
   
   |JAR|Conformità versione JDBC|Versione Java consigliata|Descrizione|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.1.jre8.jar|4.2|8|Richiede Java Runtime Environment (JRE) versione 1.8. L'uso di JRE 1.7 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.2 includono: Supporto di JDK 13, Always Encrypted con enclavi sicure e miglioramenti delle prestazioni per i tipi di dati temporali. |
-|mssql-jdbc-8.2.1.jre11.jar|4.3|11|Richiede Java Runtime Environment (JRE) 11.0. L'utilizzo di JRE 10.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.2 includono: Supporto di JDK 13, Always Encrypted con enclavi sicure e miglioramenti delle prestazioni per i tipi di dati temporali. |
-|mssql-jdbc-8.2.1.jre13.jar|4.3|13|Richiede Java Runtime Environment (JRE) versione 13.0. L'uso di JRE 11.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.2 includono: Supporto di JDK 13, Always Encrypted con enclavi sicure e miglioramenti delle prestazioni per i tipi di dati temporali. |
+|mssql-jdbc-8.2.2.jre8.jar|4.2|8|Richiede Java Runtime Environment (JRE) versione 1.8. L'uso di JRE 1.7 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.2 includono: Supporto di JDK 13, Always Encrypted con enclavi sicure e miglioramenti delle prestazioni per i tipi di dati temporali. |
+|mssql-jdbc-8.2.2.jre11.jar|4.3|11|Richiede Java Runtime Environment (JRE) 11.0. L'utilizzo di JRE 10.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.2 includono: Supporto di JDK 13, Always Encrypted con enclavi sicure e miglioramenti delle prestazioni per i tipi di dati temporali. |
+|mssql-jdbc-8.2.2.jre13.jar|4.3|13|Richiede Java Runtime Environment (JRE) versione 13.0. L'uso di JRE 11.0 o versioni precedenti genera un'eccezione.<br /><br /> Le nuove funzionalità della versione 8.2 includono: Supporto di JDK 13, Always Encrypted con enclavi sicure e miglioramenti delle prestazioni per i tipi di dati temporali. |
 
 
   Il driver JDBC 8.2 è disponibile anche nell'archivio centrale di Maven e può essere aggiunto a un progetto Maven aggiungendo il codice seguente nel modello POM.XML:  
@@ -66,7 +66,7 @@ ms.locfileid: "77903728"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
 </dependency>
 ```
 

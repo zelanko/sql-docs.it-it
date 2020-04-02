@@ -1,5 +1,6 @@
 ---
 title: Elementi dei report personalizzati | Microsoft Docs
+description: Informazioni sugli elementi del report personalizzati e su come sono costituiti da un componente di runtime e da un componente della fase di progettazione.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee4b1e82ec3671cdc978c9af889d201ec430ed87
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d3c799f70e0b3df67096e1e6ca2e3a17bcc11572
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194149"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216936"
 ---
 # <a name="custom-report-items"></a>Elementi dei report personalizzati
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un set completo di strumenti per la compilazione e la pubblicazione di report aziendali, la gestione di sicurezza e sottoscrizioni e l'estensione della funzionalità di report tramite un'API completa. I report vengono definiti utilizzando un linguaggio XML denominato Report Definition Language (RDL). RDL offre un set di istruzioni che descrivono le informazioni relative al layout e alle query e i tipi di elementi per un report. È possibile estendere RDL scrivendo un elemento del report personalizzato. Tale elemento è costituito da un componente runtime, che viene chiamato dal componente Elaborazione report in fase di esecuzione, e da un componente della fase di progettazione, che rende disponibile l'elemento del report personalizzato in Progettazione report.  
@@ -42,7 +43,7 @@ ms.locfileid: "63194149"
  [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  Vengono descritte le procedure per la creazione di un componente dell'elemento del report personalizzato in fase in progettazione.  
   
- [Procedura: Distribuzione di un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Procedura: Distribuire un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  Vengono descritte le procedure per la distribuzione di un elemento del report personalizzato.  
   
  [Librerie di classi dell'elemento del report personalizzato](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  

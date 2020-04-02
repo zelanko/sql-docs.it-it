@@ -1,5 +1,6 @@
 ---
 title: Installare PolyBase in Windows | Microsoft Docs
+description: Informazioni su come installare PolyBase come singolo nodo o come gruppo con scalabilità orizzontale di PolyBase. È possibile usare un'installazione guidata o un prompt dei comandi. Abilitare infine PolyBase.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288475"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217124"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -95,7 +96,7 @@ Dopo aver installato PolyBase autonomo o in un gruppo di scalabilità orizzontal
    > Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
 
 
-##  <a name="installing"></a> Usare un prompt dei comandi
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> Usare un prompt dei comandi
 
 Usare i valori in questa tabella per creare gli script di installazione. Il servizio motore PolyBase di SQL Server e SQL Server PolyBase Data Movement Service devono essere eseguiti con lo stesso account. In un gruppo con scalabilità orizzontale di PolyBase, i servizi di PolyBase su tutti i nodi devono essere eseguiti con lo stesso account di dominio.  
    
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> Abilitare PolyBase
+## <a name="enable-polybase"></a><a id="enable"></a> Abilitare PolyBase
 
 Dopo l'installazione, è necessario abilitare PolyBase per accedere alle relative funzionalità. Usare il comando Transact-SQL seguente. Questa impostazione è abilitata per impostazione predefinita nelle istanze di SQL 2019 distribuite durante l'installazione del cluster Big Data.
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase installa tre database utente, DWConfiguration, DWDiagnostics e DWQueue. Questi database sono per l'uso con PolyBase. Non modificarli o eliminarli.  
    
-### <a id="confirminstall"></a> Come confermare l'installazione  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> Come confermare l'installazione  
 
 Eseguire il comando seguente. Se installato, PolyBase restituisce 1; in caso contrario, restituisce 0.  
 

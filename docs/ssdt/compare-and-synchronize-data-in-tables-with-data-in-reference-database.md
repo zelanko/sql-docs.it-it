@@ -7,32 +7,32 @@ ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.reviewer: “”
+ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 02/09/2017
-ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/27/2020
+ms.openlocfilehash: 097a024622dd7550ec3dabac1c1fac2a35dfe4b3
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241703"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402618"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Confrontare e sincronizzare i dati in una o più tabelle e i dati di un database di riferimento
 
-È possibile confrontare i dati in un database di *origine* e in un database di *destinazione* e specificare quali tabelle confrontare. È possibile rivedere i dati e decidere quali modifiche sincronizzare. È quindi possibile aggiornare la destinazione per sincronizzare i database o esportare lo script di aggiornamento nell'editor Transact\-SQL o in un file.  
+È possibile confrontare i dati in un database di *origine* e in un database di *destinazione* e specificare quali tabelle confrontare. È possibile esaminare i dati per prendere una decisione informata su quali modifiche sincronizzare. SI può quindi aggiornare la destinazione per sincronizzare i database o esportare lo script di aggiornamento nell'editor Transact\-SQL o in un file.  
   
-Ad esempio, è possibile sincronizzare i database per aggiornare un server temporaneo con una copia dei dati di produzione. È inoltre possibile sincronizzare una o più tabelle per popolarle con dati di riferimento da un altro database. Inoltre, è possibile confrontare i dati prima e dopo l'esecuzione dei test come forma di verifica aggiuntiva.  
+Ad esempio, è possibile sincronizzare i database per aggiornare un server di gestione temporanea con una copia dei dati di produzione. È inoltre possibile sincronizzare una o più tabelle per popolarle con dati di riferimento da un altro database. Si potrebbero anche confrontare i dati prima e dopo l'esecuzione dei test come forma di verifica aggiuntiva.  
   
 È possibile confrontare i dati in due database, ma non è possibile specificare un file progetto di database o un file con estensione dacpac di confronto perché non contiene dati.  
   
-Questa sezione contiene i seguenti argomenti:  
+Questa sezione contiene le informazioni seguenti:  
   
 -   [Procedura: Confrontare e sincronizzare i dati di due database](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
 -   [Procedura: Visualizzare le differenze dei dati](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Requisiti  
-Quando si confrontano i dati in una tabella o una vista, la tabella o la vista nel database di origine deve condividere diversi attributi con una tabella o una vista nel database di destinazione. Tabelle e viste che non soddisfano i criteri seguenti non vengono confrontate e non vengono visualizzate nella seconda pagina della procedura guidata **Nuovo confronto dati**:  
+Quando si confrontano i dati in una tabella o una vista, la tabella o la vista nel database di origine deve condividere diversi attributi con una tabella o una vista nel database di destinazione. Le tabelle e le viste che non soddisfano i criteri seguenti non vengono confrontate e non vengono visualizzate nella seconda pagina della procedura guidata **Nuovo confronto dati**:  
   
 -   Le tabelle devono avere nomi di colonna corrispondenti con tipi di dati compatibili.  
   
@@ -44,14 +44,14 @@ Quando si confrontano i dati in una tabella o una vista, la tabella o la vista n
   
 -   È possibile confrontare una tabella con una vista solo se hanno lo stesso nome.  
   
-Ogni oggetto dispone di una chiave o di un indice che determina gli altri oggetti a cui corrisponde. Tuttavia, ogni tabella o vista può avere più chiavi primarie, più indici univoci o più vincoli univoci. Pertanto, può essere opportuno specificare quale chiave, indice o vincolo utilizzare.  
+Ogni oggetto dispone di una chiave o di un indice che determina gli altri oggetti a cui corrisponde. Ogni tabella o vista può avere più chiavi primarie, più indici univoci o più vincoli univoci. Può essere quindi opportuno specificare quale chiave, indice o vincolo usare.  
   
 ## <a name="common-tasks"></a>Attività comuni  
 In questa sezione sono riportate le descrizioni delle attività comuni che supportano questo scenario.  
   
 **Impostare le opzioni per controllare il modo in cui i dati vengono confrontati:** quando si confrontano i dati, è possibile ignorare in modo sicuro le colonne Identity, disabilitare i trigger e disabilitare le chiavi esterne. È inoltre possibile eliminare chiavi primarie, indici e vincoli univoci dallo script di aggiornamento.  
   
-**Confrontare i dati nelle tabelle e facoltativamente aggiornare la destinazione in modo corrispondente all'origine:** dopo aver specificato un database di origine e di destinazione da confrontare e dopo aver eseguito il confronto, è possibile visualizzare i risultati nella finestra **Confronto dati**. Non solo è possibile visualizzare i dettagli delle differenze, ma anche aggiornare lo script che è possibile utilizzare per sincronizzare i dati. Dopo aver identificato le differenze tra i due database, è possibile specificare un'azione per ogni differenza. È quindi possibile aggiornare la destinazione o esportare lo script di aggiornamento nell'editor Transact\-SQL o in un file. Può essere opportuno esportare lo script per consentirne la revisione prima di applicare le modifiche.  
+**Confrontare i dati nelle tabelle e facoltativamente aggiornare la destinazione in modo corrispondente all'origine:** dopo aver specificato un database di origine e di destinazione da confrontare e dopo aver eseguito il confronto, visualizzare i risultati nella finestra **Confronto dati**. Visualizzare non solo i dettagli delle differenze, ma anche aggiornare lo script usato per sincronizzare i dati. Dopo aver identificato le differenze tra i due database, specificare un'azione per ogni differenza. Aggiornare quindi la destinazione o esportare lo script di aggiornamento nell'editor Transact\-SQL o in un file. Può essere opportuno esportare lo script per consentirne la revisione prima di applicare le modifiche.  
   
 ## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>Informazioni sui risultati del confronto  
 Nella tabella seguente vengono descritte le cinque colonne nella finestra **Confronto dati**.  
@@ -59,9 +59,9 @@ Nella tabella seguente vengono descritte le cinque colonne nella finestra **Conf
 |Colonna|Note|  
 |----------|---------|  
 |Oggetto|Visualizza il nome della tabella o della vista e una casella di controllo che indica se la destinazione deve essere sincronizzata quando si scrivono gli aggiornamenti o quando si esporta lo script di aggiornamento. La casella di controllo non è disponibile per le tabelle o le viste che non contengono dati.|  
-|Record diversi|Visualizza il numero di record nella destinazione che presentano la stessa chiave, ma non gli stessi dati dell'origine. Tra parentesi è riportato il numero di record contrassegnati per essere aggiornati quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
-|Solo nell'origine|Visualizza il numero di record nell'origine che non sono presenti nella destinazione. Tra parentesi è riportato il numero di record contrassegnati per essere aggiunti quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
-|Solo nella destinazione|Visualizza il numero di record nella destinazione che non sono presenti nell'origine. Tra parentesi è riportato il numero di record contrassegnati per essere eliminati quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
+|Record diversi|Visualizza il numero di record nella destinazione che presentano la stessa chiave, ma non gli stessi dati dell'origine. Tra parentesi è riportato il numero di record contrassegnati per l'aggiornamento quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
+|Solo nell'origine|Visualizza il numero di record nell'origine che non sono presenti nella destinazione. Tra parentesi è riportato il numero di record contrassegnati per l'aggiunta quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
+|Solo nella destinazione|Visualizza il numero di record nella destinazione che non sono presenti nell'origine. Tra parentesi è riportato il numero di record contrassegnati per l'eliminazione quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
 |Record identici|Visualizza il numero di record nella destinazione che presentano la stessa chiave e gli stessi dati dell'origine. Questi record non vengono aggiornati quando si scrivono aggiornamenti o si esporta lo script di aggiornamento.|  
   
 ### <a name="table-and-view-details"></a>Dettagli su viste e tabelle  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94cdaba9319ed683dafcf3e8e29903b1d1957100
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68019833"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428182"
 ---
 # <a name="planning-a-sql-server-installation"></a>Pianificazione di un'installazione di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "68019833"
  [Novità relative all'installazione di SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  In questo articolo vengono descritti i dettagli sulle funzionalità di installazione nuove o migliorate disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Requisiti hardware e software per l'installazione di SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- In questo articolo vengono elencati i requisiti hardware e software minimi per l'installazione e l'esecuzione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Requisiti hardware e software per l'installazione di [SQL Server 2016 e 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) o [SQL Server in Linux](../../linux/sql-server-linux-setup.md). Questo articolo elenca i requisiti hardware e software minimi per l'installazione e l'esecuzione di un'istanza di SQL Server. .  
   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  Questo articolo illustra alcune procedure consigliate per la sicurezza da prendere in considerazione prima dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

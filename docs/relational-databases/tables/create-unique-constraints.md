@@ -1,7 +1,7 @@
 ---
 title: Creare vincoli univoci | Microsoft Docs
 ms.custom: ''
-ms.date: 10/12/2016
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,17 +17,20 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a35a937411a83b9dd27f4ab1673c9a892cf615b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d66d2e0f2ddacb06e5313c6f5a5ee11fefaf2640
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72907913"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448192"
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   È possibile creare un vincolo univoco in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per assicurare non vengano immessi valori duplicat nelle colonne specifiche che non partecipano in una chiave primaria. La creazione automatica di un vincolo univoco crea un indice univoco corrispondente.  
+  
+> [!NOTE]    
+> Per informazioni sui vincoli univoci in Azure Synapse Analytics, vedere [Chiave primaria, chiave esterna e chiave univoca in Azure Synapse Analytics](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints).
   
  **Contenuto dell'articolo**  
   
@@ -41,14 +44,14 @@ ms.locfileid: "72907913"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Sicurezza  
+###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
@@ -60,9 +63,9 @@ ms.locfileid: "72907913"
   
 4.  Nella griglia in **Generale**fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà.  
   
-5.  Scegliere **Salva** **nome tabella** dal menu _File_.  
+5.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
 
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   

@@ -1,5 +1,6 @@
 ---
 title: Esportazione in XML (Generatore report) | Microsoft Docs
+description: In Generatore report l'estensione per il rendering XML esegue il rendering di un report impaginato in formato XML. Importare XML in un database, usarlo come messaggio o inviarlo ad applicazioni.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079315"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342830"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Esportazione in XML (Generatore report e SSRS)
   L'estensione per il rendering XML restituisce un report impaginato in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, usato come messaggio di dati XML o inviato a un'applicazione personalizzata.  
@@ -21,7 +22,7 @@ ms.locfileid: "77079315"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Elementi del report  
+##  <a name="report-items"></a><a name="ReportItems"></a> Elementi del report  
  Nella tabella seguente viene descritto il rendering degli elementi del report.  
   
 |Elemento|Tipo di rendering|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079315"
 -   **Immagini, linee ed elementi personalizzati del report** vengono ignorati.  
   
   
-##  <a name="DataTypes"></a> Tipi di dati  
+##  <a name="data-types"></a><a name="DataTypes"></a> Tipi di dati  
  All'attributo o all'elemento casella di testo viene assegnato un tipo di dati XSD in base ai valori visualizzati nella casella di testo.  
   
 |Se tutti i valori della casella di testo sono|Viene assegnato il tipo di dati|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079315"
 |Altri|**xsd:string**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> Regole di rendering specifiche di XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Regole di rendering specifiche di XML  
  Nelle sezioni seguenti viene descritta l'interpretazione degli elementi di un report da parte delle estensioni per il rendering XML.  
   
 ### <a name="report-body"></a>Corpo del report  
@@ -150,15 +151,15 @@ ms.locfileid: "77079315"
  Se il valore della proprietà DataElementOutput è uguale a Output, l'intestazione di un elemento ripetuto viene visualizzata come elemento figlio dell'elemento dettaglio.  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> Formati personalizzati e trasformazioni XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formati personalizzati e trasformazioni XSL  
  I file XML generati dall'estensione per il rendering XML possono essere trasformati in quasi tutti i formati utilizzando trasformazioni XSL (XSLT). Questa funzionalità consente di produrre dati in formati non supportati dalle estensioni per il rendering esistenti. È consigliabile provare a utilizzare l'estensione per il rendering XML e le trasformazioni XSL prima di creare estensioni per il rendering personalizzate.  
   
   
-##  <a name="DuplicateName"></a> Nomi duplicati  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Nomi duplicati  
  Se sono presenti nomi di elementi dati duplicati all'interno dello stesso ambito, verrà visualizzato un messaggio di errore del renderer.  
   
   
-##  <a name="XSLTTransformations"></a> Trasformazioni XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> Trasformazioni XSLT  
  Il renderer XML può applicare una trasformazione XSLT lato server ai dati XML originali. Quando viene applicata una trasformazione XSLT, il renderer restituisce il contenuto trasformato anziché i dati XML originali. La trasformazione si verifica nel server, non nel client.  
   
  La trasformazione XSLT da applicare all'output viene definita nel file di definizione del report con la proprietà DataTransform del report o con il parametro XSLT *DeviceInfo* . Se viene impostato uno di questi valori, la trasformazione si verifica ogni volta che viene utilizzato il renderer XML. Quando si usano le sottoscrizioni, la trasformazione XSLT deve essere definita nella proprietà RDL DataTransform.  
@@ -166,7 +167,7 @@ ms.locfileid: "77079315"
  Se si specifica un file XSLT, tramite la proprietà di definizione DataTransform e l'impostazione delle informazioni sul dispositivo, la trasformazione XSLT specificata in DataTransform si verifica per prima, seguita dalla trasformazione XSLT specificata tramite le impostazioni delle informazioni sul dispositivo.  
   
   
-###  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo, incluse le seguenti:  
   
 -   Trasformazione (XSLT) da applicare al codice XML  

@@ -1,5 +1,6 @@
 ---
 title: Configurare gruppi con scalabilità orizzontale PolyBase in Windows | Microsoft Docs
+description: Configurare un gruppo con scalabilità orizzontale di PolyBase per creare un cluster di istanze di SQL Server. In questo modo è possibile migliorare le prestazioni delle query per set di dati di grandi dimensioni da origini esterne.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256754"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216080"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurare gruppi con scalabilità orizzontale PolyBase in Windows
 
@@ -21,7 +22,7 @@ ms.locfileid: "77256754"
 
 Questo articolo descrive come configurare un [gruppo con scalabilità orizzontale PolyBase](polybase-scale-out-groups.md) in Windows. Questa funzionalità consente di creare un cluster di istanze di SQL Server per elaborare set di dati di grandi dimensioni da origini dati esterne, ad esempio Hadoop o Archiviazione BLOB di Azure, in una soluzione di scalabilità orizzontale che consente di migliorare le prestazioni delle query.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
   
 - Più di un computer nello stesso dominio  
   

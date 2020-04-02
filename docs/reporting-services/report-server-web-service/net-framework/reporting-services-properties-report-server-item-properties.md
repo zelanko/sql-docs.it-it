@@ -1,5 +1,6 @@
 ---
 title: Proprietà degli elementi del server di report | Microsoft Docs
+description: Le proprietà degli elementi sono specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128822"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509643"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Proprietà di Reporting Services - Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  

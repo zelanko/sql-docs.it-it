@@ -1,6 +1,6 @@
 ---
 title: Gestire il failover di un gruppo di disponibilità - SQL Server in Linux
-description: ''
+description: 'Questo articolo descrive i tipi di failover: failover manuale pianificato e automatico e failover manuale forzato. Con il failover automatico e il failover manuale pianificato vengono conservati tutti i dati.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280875"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216850"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover di un gruppo di disponibilità Always On in Linux
 
@@ -24,7 +24,7 @@ Nel contesto di un gruppo di disponibilità, il ruolo primario e il ruolo second
 
 Per informazioni di base sul failover, vedere [Failover e modalità di failover](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Failover manuale
+## <a name="manual-failover"></a><a name="failover"></a>Failover manuale
 
 Usare gli strumenti per la gestione di cluster per eseguire il failover di un gruppo di disponibilità gestito tramite un modulo di gestione cluster esterno. Se, ad esempio, una soluzione usa Pacemaker per gestire un cluster Linux, usare `pcs` per eseguire failover manuali in RHEL o Ubuntu. In SLES usare `crm`. 
 
@@ -43,7 +43,7 @@ Il failover manuale prevede due passaggi.
 
    Successivamente, [si rimuove il vincolo di posizione](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Passaggio 1. Eseguire manualmente il failover spostando la risorsa del gruppo di disponibilità
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> Passaggio 1. Eseguire manualmente il failover spostando la risorsa del gruppo di disponibilità
 
 Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità denominata *ag_cluster* in un nodo del cluster denominato *nodeName2*, eseguire il comando appropriato per la distribuzione:
 
@@ -62,7 +62,7 @@ Per eseguire manualmente il failover di una risorsa del gruppo di disponibilità
 >[!IMPORTANT]
 >Dopo il failover manuale di una risorsa, è necessario rimuovere un vincolo di posizione che è stato aggiunto automaticamente.
 
-#### <a name="removeLocConstraint"> </a> Passaggio 2. Rimuovere il vincolo di posizione
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Passaggio 2. Rimuovere il vincolo di posizione
 
 Durante un failover manuale, il comando `pcs``move` o il comando `crm``migrate` aggiunge un vincolo di posizione per consentire il posizionamento della risorsa nel nuovo nodo di destinazione. Per visualizzare il nuovo vincolo, eseguire il comando seguente dopo aver spostato manualmente la risorsa:
 
@@ -107,7 +107,7 @@ Per altre informazioni:
 - [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
   (Pacemaker - Spostare manualmente le risorse) [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) (Guida all'amministrazione di SLES - Risorse) 
  
-## <a name="forceFailover"></a> Forzare il failover 
+## <a name="force-failover"></a><a name="forceFailover"></a> Forzare il failover 
 
 Il failover forzato è destinato essenzialmente al ripristino di emergenza. In questo caso non è possibile eseguire il failover con gli strumenti per la gestione di cluster perché il data center principale non è attivo. Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. Forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.
 

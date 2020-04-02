@@ -1,9 +1,8 @@
 ---
 title: Inizializzare una sottoscrizione con uno snapshot | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 03/23/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
 ms.topic: conceptual
@@ -13,44 +12,98 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3624d1eef64f10ae93802c4a7514fd54edcc0e74
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bb09b6d532e6b7db7310e0d375609665d9c45db5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76287928"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216010"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Inizializzazione di una sottoscrizione con uno snapshot
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Al termine della creazione di una pubblicazione, uno snapshot iniziale viene in genere creato e copiato nella cartella snapshot. Per impostazione predefinita, queste operazioni vengono eseguite per le pubblicazioni di tipo merge create mediante la Creazione guidata nuova pubblicazione. Viene quindi applicato al Sottoscrittore dall'agente di distribuzione (per le pubblicazioni transazionali e snapshot) o dall'agente di merge (per le pubblicazioni di tipo merge) durante la sincronizzazione iniziale della sottoscrizione. Il processo di snapshot dipende dal tipo di pubblicazione:  
-  
--   Se lo snapshot è per una pubblicazione snapshot, una pubblicazione transazionale o una pubblicazione di tipo merge che non utilizza filtri con parametri, lo snapshot contiene lo schema e i dati nei file di programma per la copia bulk, nonché vincoli, proprietà estese, indici, trigger e le tabelle di sistema necessarie per la replica. Per altre informazioni sulla creazione e l'applicazione dello snapshot, vedere [Creare e applicare lo snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
-  
--   Se lo snapshot è per una pubblicazione di tipo merge che utilizza filtri con parametri, verrà creato utilizzando un processo a due fasi. Viene innanzitutto creato uno snapshot dello schema contenente gli script di replica e lo schema degli oggetti pubblicati, ma non i dati. Ogni sottoscrizione viene quindi inizializzata con uno snapshot che include gli script e lo schema copiati dallo snapshot dello schema e i dati appartenenti alla partizione della sottoscrizione. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
-  
- Lo snapshot è costituito da file diversi a seconda del tipo di replica e degli articoli contenuti nella pubblicazione. Tali file vengono copiati nella cartella snapshot predefinita specificata al momento della configurazione del server di distribuzione o in quella alternativa specificata al momento della creazione della pubblicazione.  
-  
-|Tipo di replica|File di snapshot comuni|  
-|-------------------------|---------------------------|  
-|Replica snapshot o transazionale|schema (sch), dati (bcp), vincoli e indici (dri), vincoli (idx), trigger (trg) solo per l'aggiornamento dei Sottoscrittori, file di snapshot compressi (cab)|  
-|Replica di tipo merge|schema (sch), dati (bcp), vincoli e indici (dri), trigger (trg), dati di tabelle di sistema (sys), tabelle dei conflitti (cft), file di snapshot compressi (cab)|  
-  
- Se il trasferimento dello snapshot viene interrotto in un punto, verrà ripreso automaticamente senza rinviare i file il cui trasferimento è stato completato. L'unità di recapito per l'agente snapshot è il file con estensione bcp per ogni articolo della pubblicazione e pertanto i file recapitati solo in parte devono essere recapitati nuovamente per intero. Il ripristino dello snapshot, tuttavia, può comportare una riduzione significativa della quantità di dati trasmessi e garantire il recapito dello snapshot in tempo utile anche se la connessione non è affidabile.  
-  
-## <a name="snapshot-options"></a>Opzioni per gli snapshot  
- Quando si inizializza una sottoscrizione con uno snapshot È possibile:  
-  
--   Specificare una posizione alternativa per la cartella snapshot in aggiunta a quella predefinita o al posto di questa. Per altre informazioni, vedere [Modificare le opzioni snapshot](../../relational-databases/replication/snapshot-options.md).  
-  
--   Comprimere gli snapshot per l'archiviazione sui supporti rimovibili o il trasferimento su una rete lenta. Per altre informazioni, vedere [Compressed Snapshots](../../relational-databases/replication/snapshot-options.md#compressed-snapshots). 
 
--   Eseguire gli script Transact-SQL prima o dopo aver applicato lo snapshot. Per altre informazioni, vedere [Eseguire gli script prima e dopo l'applicazione dello snapshot](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
-  
--   Trasferire i file di snapshot mediante il protocollo FTP (File Transfer Protocol). Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Inizializzare una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)   
- [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
-  
-  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+Questo articolo descrive i processi che si verificano durante l'inizializzazione della pubblicazione di una replica. Uno snapshot iniziale viene applicato ai sottoscrittori.
+
+## <a name="snapshot-for-a-new-publication"></a>Snapshot per una nuova pubblicazione
+
+Per impostazione predefinita, dopo la creazione di una pubblicazione viene acquisito uno snapshot.
+Lo snapshot viene copiato nella cartella degli snapshot. Questo comportamento predefinito si verifica per le pubblicazioni di tipo merge create usando la Creazione guidata nuova pubblicazione.
+
+### <a name="snapshot-is-applied-to-subscriber"></a>Lo snapshot viene applicato al sottoscrittore
+
+Il nuovo snapshot viene applicato al sottoscrittore da un agente. L'applicazione si verifica durante la sincronizzazione iniziale della sottoscrizione. L'agente che esegue l'applicazione dipende dal tipo di pubblicazione:
+
+- Per le pubblicazioni _transazionali_ e _snapshot_:
+  - Agente di distribuzione.
+
+- Per le pubblicazioni di tipo _merge_:
+  - Agente di merge.
+
+### <a name="type-of-publication"></a>Tipo di pubblicazione
+
+La tabella seguente visualizza il contenuto dello snapshot, per ogni tipo di pubblicazione.
+
+&nbsp;
+
+| Tipo di pubblicazione dello snapshot | Contenuto dello snapshot |
+| :---------------------------------------- | :----------------------- |
+| <ul> <li>Pubblicazione snapshot</li> <li>Pubblicazione transazionale</li> <li>Pubblicazione di tipo merge che non usa filtri con parametri</li> </ul> | <ul> <li>SCHEMA</li> <li>Dati, in file per il programma per la copia bulk (BCP)</li> <li>Vincoli</li> <li>Proprietà estese</li> <li>Indici</li> <li>Trigger</li> <li>Tabelle di sistema necessarie per la replica</li> </ul> <br/>Vedere [Creare e applicare lo snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). |
+| <ul> <li>Pubblicazione di tipo merge che usa filtri con parametri</li> </ul> | <ul> <li>Snapshot dello schema (script di replica, oggetti pubblicati, ma nessun dato)</li> <li>Dati appartenenti alla partizione della sottoscrizione</li> </ul> <br/>Vedere [Snapshot per pubblicazioni di tipo merge con filtri con parametri](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). |
+| | |
+
+#### <a name="two-part-process-with-merge-publication-that-uses-parameterized-filters"></a>Processo a due fasi con pubblicazione di tipo merge che usa filtri con parametri
+
+Per una pubblicazione di tipo merge che usa filtri con parametri, lo snapshot viene creato usando il processo a due fasi seguente:
+
+1. Viene creato uno snapshot dello schema contenente gli elementi seguenti:
+   - Script di replica.
+   - Schema degli oggetti pubblicati.
+   - _Nessun dato._
+
+2. Ogni sottoscrizione viene quindi inizializzata con uno snapshot. Lo snapshot include gli elementi seguenti:
+   - Script e schema, copiati dallo snapshot dello schema.
+   - Dati appartenenti alla partizione della sottoscrizione.
+
+## <a name="type-of-replication"></a>Tipo di replica
+
+I tipi di file contenuti nello snapshot dipendono dal tipo di replica e dagli articoli della pubblicazione.
+
+&nbsp;
+
+| Tipo di replica | File di snapshot comuni |
+| :------------------ | :-------------------- |
+| Replica snapshot o<br/>Replica transazionale | &bullet; Schema (sch) <br/>&bullet; Dati (bcp) <br/>&bullet; Vincoli e indici (dri) <br/>&bullet; File di snapshot compressi (cab) <br/>&bullet; Trigger (tag), solo per l'aggiornamento di un sottoscrittore <br/><br/>&bullet; Vincoli (idx) |
+| Replica di tipo merge                                      | &bullet; Schema (sch) <br/>&bullet; Dati (bcp) <br/>&bullet; Vincoli e indici (dri) <br/>&bullet; File di snapshot compressi (cab) <br/>&bullet; Trigger (trg) <br/><br/>&bullet; Dati di tabelle di sistema (sys) <br/>&bullet; Tabelle dei conflitti (cft) |
+| | |
+
+### <a name="snapshot-folder"></a>Cartella snapshot
+
+I file vengono trasferiti tramite copia nella _cartella degli snapshot_ predefinita o nella _cartella alternativa_ per gli snapshot.
+
+La cartella degli snapshot viene specificata quando viene configurato il database di distribuzione. La cartella alternativa viene specificata quando viene creata la pubblicazione.
+
+### <a name="resume-transfer-after-interruption"></a>Riprendere il trasferimento dopo un'interruzione
+
+Il trasferimento di file in una cartella degli snapshot riprende automaticamente se il trasferimento viene interrotto da una connessione non affidabile.
+
+Per una maggiore efficienza, i file già trasferiti completamente prima dell'interruzione non vengono inviati nuovamente con la ripresa.
+
+## <a name="snapshot-options"></a>Opzioni per gli snapshot
+
+Quando si inizializza una sottoscrizione con uno snapshot, sono disponibili diverse opzioni. È possibile:
+
+- Specificare una posizione alternativa per la cartella snapshot in aggiunta a quella predefinita o al posto di questa. Per altre informazioni, vedere [Modificare le opzioni snapshot](../../relational-databases/replication/snapshot-options.md).
+
+- Comprimere gli snapshot per l'archiviazione sui supporti rimovibili o il trasferimento su una rete lenta. Per altre informazioni, vedere [Compressed Snapshots](../../relational-databases/replication/snapshot-options.md#compressed-snapshots).
+
+- Eseguire gli script Transact-SQL prima o dopo aver applicato lo snapshot. Per altre informazioni, vedere [Eseguire gli script prima e dopo l'applicazione dello snapshot](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).
+
+- Trasferire i file di snapshot mediante il protocollo FTP (File Transfer Protocol). Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Inizializzare una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)
+
+[Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md)

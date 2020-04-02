@@ -1,5 +1,6 @@
 ---
 title: Aggiungere gli strumenti di spostamento ai report di Reporting Services per dispositivi mobili | Microsoft Docs
+description: In Mobile Report Publisher aggiungere gli strumenti di spostamento per filtrare i dati in base all'ora o alla selezione. Gli strumenti di spostamento sono simili ai filtri dei dati in Power BI e nelle tabelle pivot di Excel.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27060715a2d616dd99e294175163ad74b54a17b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316994"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448206"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Aggiungere gli strumenti di spostamento ai report di Reporting Services per dispositivi mobili
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], si aggiungono gli *strumenti di spostamento* per filtrare i dati in visualizzazioni in base all'ora o alla selezione. 

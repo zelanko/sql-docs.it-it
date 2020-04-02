@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112283"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216260"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Quando si formatta un dispositivo PMEM in Windows, usare le dimensioni di unità di allocazione più grandi disponibili per NTFS (2 MB in Windows Server 2019) e assicurarsi che il dispositivo sia stato formattato per DAX (Direct Access).
 
-Usare il modello di allocazione di memoria per pagine di grandi dimensioni, che può essere abilitato con il [flag di traccia 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Questo è un flag di traccia di avvio.
-
-Il modello di allocazione di memoria per pagine di grandi dimensioni richiede l'uso di [pagine bloccate in memoria](./enable-the-lock-pages-in-memory-option-windows.md) in Windows.
+Usare [Blocco di pagine in memoria](./enable-the-lock-pages-in-memory-option-windows.md) in Windows.
 
 Le dimensioni dei file devono essere un multiplo di 2 MB (modulo 2 MB deve essere uguale a zero).
 

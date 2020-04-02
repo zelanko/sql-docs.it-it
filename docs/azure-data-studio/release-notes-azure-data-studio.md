@@ -1,25 +1,40 @@
 ---
 title: Note sulla versione
-titleSuffix: Azure Data Studio
 description: Note sulla versione di Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408862"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215480"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](download.md)**
+
+## <a name="march-2020"></a>Marzo 2020
+
+18 marzo 2020 &nbsp; / &nbsp; versione: 1.16.0 
+
+&nbsp;
+
+| Modifica | Dettagli |
+| :----- | :------ |
+| Aggiunta del supporto per la creazione di grafici nei notebook SQL | Quando si esegue una query SQL in una cella di codice, gli utenti possono ora creare e salvare grafici. |
+| Aggiunta dell'esperienza di creazione di book Jupyter | Gli utenti possono ora creare book Jupyter personalizzati usando un notebook. |
+| Aggiunta del supporto di AAD per l'estensione Postgres | |
+| Correzione di molti bug di accessibilità | [Elenco dei bug di accessibilità](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| Merge di VS Code in 1.42 | Questa versione include gli aggiornamenti per VS Code dalle 3 versioni precedenti di VS Code. Per altre informazioni, [leggere le note sulla versione](https://code.visualstudio.com/updates/v1_42). |
+| Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>Febbraio (hotfix)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408862"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Problema noto
+
 - Gli utenti in macOS Catalina dovranno fare clic con il pulsante destro del mouse su Azure Data Studio e quindi scegliere Apri.
 
 ## <a name="december-2019-hotfix"></a>Dicembre 2019 (hotfix)
@@ -144,6 +160,7 @@ ms.locfileid: "78408862"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
+
 - Notebook
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raro in cui il notebook viene serializzato in modo non corretto
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408862"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
+
 - Notebook
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raro in cui il notebook viene serializzato in modo non corretto
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408862"
 | Bug e problemi risolti | Nelle versioni precedenti di Azure Data Studio, se veniva selezionato un database utente eseguendo la connessione tramite la finestra di dialogo di connessione, la voce Esplora oggetti risultante aveva come ambito solo tale database. A partire da questa versione, questo comportamento è stato modificato in modo che in Esplora oggetti vengano visualizzate anche le proprietà a livello di server. <br/> Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>Giugno 2019
 
-6 giugno 2019 &nbsp; / &nbsp; versione: 1.8.0 
+6 giugno 2019 &nbsp; / &nbsp; versione: 1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408862"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
+
 - Estensione Database Administration Tool per Windows
     - Non è possibile avviare le proprietà da un nodo server disconnesso
     - Non è possibile avviare le proprietà per i server di Azure

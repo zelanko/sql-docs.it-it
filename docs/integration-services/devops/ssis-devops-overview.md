@@ -9,24 +9,36 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "78225927"
+ms.locfileid: "80402636"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps Tools (anteprima)
 
-L'estensione [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) è disponibile nel Marketplace di **Azure DevOps**.
+L'estensione [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) è disponibile nel marketplace di **Azure DevOps**.
 
 Se non si dispone di un'organizzazione **Azure DevOps**, per prima cosa iscriversi ad [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) e quindi aggiungere l'estensione **SSIS DevOps Tools** seguendo [questa procedura](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
 
-**SSIS DevOps Tools** include l'attività **SSIS Build** (Compilazione SSIS) e l'attività di rilascio **SSIS Deploy** (Distribuzione SSIS).
+**SSIS DevOps Tools** include l'attività di **compilazione SSIS**, l'attività di rilascio della **distribuzione SSIS** e l'**attività di configurazione del catalogo SSIS**.
 
-- L'attività **SSIS Build** (Compilazione SSIS) supporta la compilazione di con estensione dtproj nel modello di distribuzione del progetto o nel modello di distribuzione del pacchetto.
+- L'attività di **[compilazione SSIS](#ssis-build-task)** supporta la compilazione di file con estensione dtproj nel modello di distribuzione del progetto o nel modello di distribuzione del pacchetto.
 
-- L'attività **SSIS Deploy** (Distribuzione SSIS) supporta la distribuzione di uno o più file con estensione ispac nel catalogo SSIS locale e in Azure-SSIS IR o di file SSISDeploymentManifest e relativi file associati in una condivisione file locale o di Azure.
+- L'attività di **[distribuzione SSIS](#ssis-deploy-task)** supporta la distribuzione di uno o più file con estensione ispac nel catalogo SSIS locale e in Azure-SSIS IR o di file SSISDeploymentManifest e relativi file associati in una condivisione file locale o di Azure.
+
+- L'attività di **[configurazione del catalogo SSIS](#ssis-catalog-configuration-task)** supporta la configurazione della cartella, del progetto o dell'ambiente del catalogo SSIS con un file di configurazione in formato JSON. Questa attività supporta gli scenari seguenti:
+    - Cartella
+        - Creare una cartella.
+        - Aggiornare la descrizione della cartella.
+    - Project
+        - Configurare il valore dei parametri. Sono supportati sia il valore letterale che il valore di riferimento.
+        - Aggiungere i riferimenti all'ambiente.
+    - Environment
+        - Creare l'ambiente.
+        - Aggiornare la descrizione dell'ambiente.
+        - Creare o aggiornare la variabile di ambiente.
 
 ## <a name="ssis-build-task"></a>Attività SSIS Build (Compilazione SSIS)
 
@@ -64,8 +76,6 @@ cat log.txt
 
 - Nell'attività di compilazione SSIS non sono supportati i livelli di protezione **EncryptSensitiveWithPassword** e **EncryptAllWithPassword**. Verificare che nessuno dei progetti SSIS presenti nella codebase usi questi due livelli di protezione. In caso contrario, l'attività di compilazione SSIS si bloccherà e genererà un errore di timeout durante l'esecuzione.
 
-- **ConnectByProxy** è una nuova proprietà aggiunta recentemente in SSDT. SSDT installato nell'agente ospitato da Microsoft non è aggiornato, usare quindi l'agente self-hosted come soluzione alternativa.
-
 ## <a name="ssis-deploy-task"></a>Attività SSIS Deploy (Distribuzione SSIS)
 
 ![attività di distribuzione](media/ssis-deploy-task.png)
@@ -98,7 +108,7 @@ L'attività di distribuzione SSIS creerà la cartella e la sottocartella, se non
 
 #### <a name="authentication-type"></a>Tipo di autenticazione
 
-Tipo di autenticazione per accedere al server di destinazione specificato. Questa proprietà è visibile solo se il tipo di destinazione è SSISDB. L'attività di distribuzione SSIS supporta in genere quattro tipi di autenticazione:
+Tipo di autenticazione per accedere al server di destinazione specificato. Questa proprietà è visibile solo se il tipo di destinazione è SSISDB. In generale, sono supportati i tipi di autenticazione seguenti:
 
 - Autenticazione di Windows
 - Autenticazione di SQL Server
@@ -143,7 +153,203 @@ L'attività di distribuzione SSIS non supporta attualmente gli scenari seguenti:
 - Distribuire ispac in SQL Server di Azure o in un'istanza gestita di SQL di Azure che consente solo l'autenticazione a più fattori.
 - Distribuire i pacchetti in MSDB o nell'archivio pacchetti SSIS.
 
+## <a name="ssis-catalog-configuration-task"></a>Attività di configurazione del catalogo SSIS
+
+![Attività di configurazione del catalogo](media/ssis-catalog-configuation-task.png)
+
+### <a name="properties"></a>Proprietà
+
+#### <a name="configuration-file-source"></a>Configuration file source (Origine del file di configurazione)
+
+Origine del file JSON di configurazione del catalogo SSIS. Può essere "Percorso file" o "Inline".
+
+Vedere le informazioni dettagliate su come [definire il file JSON di configurazione](#define-configuration-json):
+
+- Vedere [un file JSON di configurazione inline di esempio](#a-sample-inline-configuration-json).
+- Controllare lo [schema JSON](#json-schema).
+
+#### <a name="configuration-json-file-path"></a>Configuration JSON file path (Percorso del file JSON di configurazione)
+
+Percorso del file JSON di configurazione del catalogo SSIS. Questa proprietà è visibile solo quando si seleziona "Percorso file" come origine del file di configurazione.
+
+Per usare le [variabili della pipeline](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) nel file JSON di configurazione, è necessario aggiungere un'[attività di trasformazione file](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) prima di questa attività per sostituire i valori di configurazione con le variabili della pipeline. Per altre informazioni, vedere [Sostituzione di variabili JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+
+#### <a name="inline-configuration-json"></a>Inline configuration JSON (Percorso del file JSON di configurazione)
+
+File JSON inline della configurazione del catalogo SSIS. Questa proprietà è visibile solo quando si seleziona "Inline" come origine del file di configurazione. È possibile usare direttamente le variabili della pipeline.
+
+#### <a name="roll-back-configuration-when-error-occurs"></a>Roll back configuration when error occurs (Esegui il rollback della configurazione quando si verifica un errore)
+
+Indica se eseguire il rollback della configurazione effettuata da questa attività quando si verifica un errore.
+
+#### <a name="target-server"></a>Server di destinazione
+
+Nome dell'istanza di SQL Server di destinazione. Può corrispondere al nome di un database SQL Server locale, di un database SQL di Azure o di un'istanza gestita di database SQL di Azure.
+
+#### <a name="authentication-type"></a>Tipo di autenticazione
+
+Tipo di autenticazione per accedere al server di destinazione specificato. In generale, sono supportati i tipi di autenticazione seguenti:
+
+- Autenticazione di Windows
+- Autenticazione di SQL Server
+- Active Directory - Password
+- Active Directory - Integrata
+
+Il supporto di un determinato tipo di autenticazione dipende tuttavia dal tipo di server di destinazione e dal tipo di agente. Per una matrice di supporto dettagliata, vedere la tabella seguente.
+
+| |Pool ospitato da Microsoft|Agente self-hosted|
+|---------|---------|---------|
+|SQL Server in locale o macchina virtuale |N/D|Autenticazione di Windows|
+|SQL di Azure|Autenticazione di SQL Server <br> Active Directory - Password|Autenticazione di SQL Server <br> Active Directory - Password <br> Active Directory - Integrata|
+
+#### <a name="username"></a>Username
+
+Nome utente per accedere all'istanza di SQL Server di destinazione. Questa proprietà è visibile solo se il tipo di autenticazione è Autenticazione SQL Server o Active Directory - Password.
+
+#### <a name="password"></a>Password
+
+Password per accedere all'istanza di SQL Server di destinazione. Questa proprietà è visibile solo se il tipo di autenticazione è Autenticazione SQL Server o Active Directory - Password.
+
+### <a name="define-configuration-json"></a>Definire il file JSON di configurazione
+
+Lo schema JSON di configurazione ha tre livelli:
+
+- catalogo
+- folder
+- progetto e ambiente
+
+![Schema della configurazione del catalogo](media/catalog-configuration-schema.png)
+
+#### <a name="a-sample-inline-configuration-json"></a>File JSON di configurazione inline di esempio
+
+```json
+{
+  "folders": [
+    {
+      "name": "devopsdemo",
+      "description": "devops demo folder",
+      "projects": [
+        {
+          "name": "catalog devops",
+          "parameters": [
+            {
+              "name": "password",
+              "container": "Package.dtsx",
+              "value": "passwd",
+              "valueType": "referenced"
+            },
+            {
+              "name": "serverName",
+              "container": "catalog devops",
+              "value": "localhost",
+              "valueType": "literal"
+            }
+          ],
+          "references": [
+            {
+              "environmentName": "test",
+              "environmentFolder": "devopsdemo"
+            },
+            {
+              "environmentName": "test",
+              "environmentFolder": "."
+            }
+          ]
+        }
+      ],
+      "environments": [
+        {
+          "name": "test",
+          "description": "test",
+          "variables": [
+            {
+              "name": "passwd",
+              "type": "string",
+              "description": "",
+              "value": "$(SSISDBServerAdminPassword)",
+              "sensitive": true
+            },
+            {
+              "name": "serverName",
+              "type": "string",
+              "description": "",
+              "value": "$(TargetServerName)",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### <a name="json-schema"></a>Schema JSON
+
+##### <a name="catalog-attributes"></a>Attributi del catalogo
+
+|Proprietà  |Descrizione  |Note  |
+|---------|---------|---------|
+|cartelle  |Matrice di oggetti folder. Ogni oggetto contiene informazioni di configurazione per una cartella del catalogo.|Per lo schema di un oggetto cartella, vedere *Attributi della cartella*.|
+
+##### <a name="folder-attributes"></a>Attributi della cartella
+
+|Proprietà  |Descrizione  |Note  |
+|---------|---------|---------|
+|name  |Nome della cartella del catalogo.|La cartella verrà creata se non esiste.|
+|description|Descrizione della cartella del catalogo.|Il valore *null* verrà ignorato.|
+|projects|Matrice di oggetti project. Ogni oggetto contiene informazioni di configurazione per un progetto.|Per lo schema di un oggetto progetto, vedere *Attributi del progetto*.|
+|environments|Matrice di oggetti environment. Ogni oggetto contiene informazioni di configurazione per un ambiente.|Per lo schema di un oggetto ambiente, vedere *Attributi dell'ambiente*.|
+
+##### <a name="project-attributes"></a>Attributi del progetto
+
+|Proprietà  |Descrizione  |Note  |
+|---------|---------|---------|
+|name|Nome del progetto. |L'oggetto progetto verrà ignorato se il progetto non esiste nella cartella padre.|
+|parametri|Matrice di oggetti parametro. Ogni oggetto contiene informazioni di configurazione per un parametro.|Per lo schema di un oggetto parametro, vedere *Attributi del parametro*.|
+|references|Matrice di oggetti reference. Ogni oggetto rappresenta un riferimento dell'ambiente al progetto di destinazione.|Per lo schema di un oggetto riferimento, vedere *Attributi del riferimento*.|
+
+##### <a name="parameter-attributes"></a>Attributi del parametro
+
+|Proprietà  |Descrizione  |Note  |
+|---------|---------|---------|
+|name|Nome del parametro.|Il parametro può essere un *parametro progetto* o un *parametro pacchetto*. <br> Il parametro verrà ignorato se non esiste nel progetto padre.|
+|contenitore|Contenitore del parametro.|<li>Se il parametro è un parametro progetto, il *contenitore* deve corrispondere al nome del progetto. <li>Se è un parametro pacchetto, il *contenitore* deve corrispondere al nome del pacchetto con estensione **dtsx**. <li> Se il parametro è una proprietà di gestione connessione, il nome deve essere nel formato seguente: **CM.\<nome gestione connessione>.\<nome proprietà>** .|
+|Valore|Valore del parametro.|<li>Quando *valueType* è *referenced*: il valore è un riferimento a una variabile di ambiente nel tipo *string*. <li> Quando *valueType* è *literal*: questo attributo supporta qualsiasi valore JSON di tipo *boolean*, *number* e *string*. <br> Il valore verrà convertito nel tipo di parametro di destinazione. Se non è possibile convertirlo, si verificherà un errore.<li> Il valore *null* non è valido. L'attività ignorerà questo oggetto parametro e visualizzerà un avviso.|
+|valueType|Tipo di valore del parametro.|I tipi validi sono: <br> *literal*: l'attributo *value* rappresenta un valore letterale. <br> *referenced*: l'attributo *valore* rappresenta un riferimento a una variabile di ambiente.|
+
+##### <a name="reference-attributes"></a>Attributi del riferimento
+
+|Proprietà  |Descrizione  |Note  |
+|---------|---------|---------|
+|environmentFolder|Nome cartella dell'ambiente.|La cartella verrà creata se non esiste. <br> Il valore può essere ".", che rappresenta la cartella padre del progetto, che fa riferimento all'ambiente.|
+|environmentName|Nome dell'ambiente con riferimenti.|L'ambiente specificato verrà creato se non esiste.|
+
+##### <a name="environment-attributes"></a>Attributi dell'ambiente
+
+|Proprietà  |Descrizione  |Note  |
+|---------|---------|---------|
+|name|Nome dell'ambiente.|L'ambiente verrà creato se non esiste.|
+|description|Descrizione dell'ambiente.|Il valore *null* verrà ignorato.|
+|variables|Matrice di oggetti variable.|Ogni oggetto contiene informazioni di configurazione per una variabile di ambiente. Per lo schema di un oggetto variabile, vedere *Attributi della variabile*.|
+
+##### <a name="variable-attributes"></a>Attributi della variabile
+
+|Proprietà  |Descrizione  |Note  |
+|---------|---------|---------|
+|name|Nome della variabile di ambiente.|La variabile di ambiente verrà creata se non esiste.|
+|type|Tipo di dati della variabile di ambiente.|I tipi validi sono: <br> *boolean* <br> *byte* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|
+|description|Descrizione della variabile di ambiente.|Il valore *null* verrà ignorato.|
+|Valore|Valore della variabile di ambiente.|Questo attributo supporta qualsiasi valore JSON di tipo boolean, number e string.<br> Il valore verrà convertito nel tipo specificato dall'attributo **type**. Si verificherà un errore se la conversione non riesce.<br>Il valore *null* non è valido. L'attività ignorerà questo oggetto variabile di ambiente e visualizzerà un avviso.|
+|sensitive|Indica se il valore della variabile di ambiente è sensibile.|Gli input validi sono: <br> *true* <br> *false*|
+
 ## <a name="release-notes"></a>Note sulla versione
+
+### <a name="version-020-preview"></a>Versione 0.2.0 Preview
+
+Data di rilascio: 31 marzo 2020
+
+- Aggiunta dell'attività di configurazione del catalogo SSIS.
 
 ### <a name="version-013-preview"></a>Versione 0.1.3 - Anteprima
 

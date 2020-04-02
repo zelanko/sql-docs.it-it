@@ -1,5 +1,6 @@
 ---
 title: Salvare un report in una raccolta di SharePoint (Report Builder) | Microsoft Docs
+description: Questo articolo descrive i requisiti e i processi necessari per salvare i report in un server di report configurato per l'integrazione con SharePoint.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916c135c9de0d67862d4b7300e24c2ae412b0cb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41331a57b9eb8c3981a82e826794b9031b3eb73c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581141"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290858"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>Salvataggio di un report in una raccolta di SharePoint (Generatore report)
   Per salvare un report in un server di report configurato per l'integrazione con SharePoint, è necessario accedere al server di SharePoint e stabilire una connessione con il server di report. Nella definizione del report tutti i riferimenti a elementi correlati al report devono utilizzare valori specifici di un server di report di SharePoint. Tra gli elementi correlati sono inclusi sottoreport, report drill-through e risorse quali immagini basate sul Web. Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  

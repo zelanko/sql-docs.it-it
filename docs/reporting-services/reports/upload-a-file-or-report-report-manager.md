@@ -1,5 +1,6 @@
 ---
 title: Caricare un file o un report nel server di report | Microsoft Docs
+description: Informazioni su come aggiungere report e altri file a un server di report senza dover pubblicare tali elementi da un'applicazione client.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d5d70a2147ea5cb9846ed37ea8963cc8c3f98e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573304"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510052"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Caricare un file o un report nel server di report
 Il portale Web del server di report include una caratteristica di caricamento che consente di aggiungere report e altri file a un server di report senza pubblicarli da un'applicazione client. I file caricati da un file system vengono archiviati come elementi in un server di report. Il tipo di file caricato determina le modalità di archiviazione:  
