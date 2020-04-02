@@ -1,5 +1,5 @@
 ---
-title: sys. dm_server_registry (Transact-SQL) | Microsoft Docs
+title: metodo sys.dm_server_registry (Transact-SQL) Documenti Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090720"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530819"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "68090720"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nome della chiave del Registro di sistema Ammette i valori Null.|  
-|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento visualizzato nella colonna **nome** dell'editor del registro di sistema. Ammette i valori Null.|  
-|value_data|**sql_variant**|Valore dei dati della chiave. Si tratta del valore visualizzato nella colonna di **dati** dell'editor del registro di sistema per una determinata voce. Ammette i valori Null.|  
+|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento visualizzato nella colonna **Nome** dell'Editor del Registro di sistema. Ammette i valori Null.|  
+|value_data|**sql_variant**|Valore dei dati della chiave. Questo è il valore visualizzato nella colonna **Dati** dell'Editor del Registro di sistema per una determinata voce. Ammette i valori Null.|  
   
 ## <a name="security"></a>Security  
   
@@ -67,7 +67,7 @@ WHERE registry_key LIKE N'%SQLAgent%';
 ```  
 SELECT registry_key, value_name, value_data  
 FROM sys.dm_server_registry  
-WHERE registry_key = N'CurrentVersion';  
+WHERE value_name = N'CurrentVersion';  
 ```  
   
 ### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D. Visualizzazione dei parametri passati all'istanza di SQL Server durante l'avvio  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_server_services &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [dm_server_services&#41;Transact-SQLdisql &#40;di sistema](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   
