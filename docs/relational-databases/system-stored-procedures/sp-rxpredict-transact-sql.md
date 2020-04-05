@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517448"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662846"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Genera un valore stimato per un determinato input costituito da un modello di Ma
 
 Fornisce il punteggio sui modelli di machine learning R e Python quasi in tempo reale. `sp_rxPredict`è una stored procedure fornita `rxPredict` come wrapper per la funzione R in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) e [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)e la [funzione rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) e [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Esso è scritto in C , ed è ottimizzato in modo specifico per le operazioni di punteggio.
 
-Anche se il modello deve essere creato utilizzando R o Python, una volta che viene serializzato e archiviato in un formato binario in un'istanza del motore di database di destinazione, può essere utilizzato da tale istanza del motore di database anche quando r o Python integrazione non è installato. Per ulteriori informazioni, consultate [Assegnazione del punteggio in tempo reale con sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
+Anche se il modello deve essere creato utilizzando R o Python, una volta che viene serializzato e archiviato in un formato binario in un'istanza del motore di database di destinazione, può essere utilizzato da tale istanza del motore di database anche quando r o Python integrazione non è installato. Per ulteriori informazioni, consultate [Assegnazione del punteggio in tempo reale con sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -64,7 +64,7 @@ L'utente `EXECUTE` deve disporre dell'autorizzazione per il database.
 
 ### <a name="supported-algorithms"></a>Algoritmi supportati
 
-Per creare ed eseguire il training del modello, utilizzare uno degli algoritmi supportati per R o Python, fornito da [SQL Server 2Machine Learning Services (R o Python),](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning) [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services), SQL Server Machine Learning Server [(autonomo) (R o Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)o [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016).
+Per creare ed eseguire il training del modello, utilizzare uno degli algoritmi supportati per R o Python, fornito da [SQL Server 2Machine Learning Services (R o Python),](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(autonomo) (R o Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)o [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
 
 #### <a name="r-revoscaler-models"></a>R: Modelli RevoScaleR
 
