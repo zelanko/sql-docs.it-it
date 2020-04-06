@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136527"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625496"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **Soluzione alternativa:** per configurare il database di statistiche lingua semantica come prerequisito per l'indicizzazione semantica, seguire questa procedura:  
   
-1.  Individuare ed eseguire il pacchetto di Windows Installer denominato SemanticLanguageDatabase.msi sui supporti di installazione di SQL Server al fine di estrarre il database. Per SQL Server 2012 Express, scaricare il database di Semantic Language Statistics dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) ed eseguire il pacchetto Windows Installer.  
+1.  Individuare ed eseguire il pacchetto di Windows Installer denominato SemanticLanguageDatabase.msi sui supporti di installazione di SQL Server al fine di estrarre il database. Per SQL Server 2012 Express, scaricare il database di Semantic Language Statistics dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681) ) ed eseguire il pacchetto Windows Installer.  
   
 2.  Spostare il database in una cartella di dati adeguata. Se si decide di lasciare il database nella posizione predefinita, è necessario modificare le relative autorizzazioni prima di poter collegarlo correttamente.  
   

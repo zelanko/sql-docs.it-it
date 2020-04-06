@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256869"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607834"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,10 +66,10 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Ad esempio, lo script seguente il tag immagine `2019-CU1-ubuntu-16.04`:
+   Ad esempio, lo script seguente il tag immagine `2019-CU4-ubuntu-16.04`:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +96,7 @@ In questa sezione viene illustrato come aggiornare BDC per SQL Server da una ver
 Per aumentare i timeout per un aggiornamento, usare i parametri **--controller-timeout** e **--component-timeout** per specificare valori più elevati quando si esegue l'aggiornamento. Questa opzione è disponibile solo a partire da SQL Server 2019 CU2. Ad esempio:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** indica il numero di minuti di attesa del completamento dell'aggiornamento del controller o del database del controller.
 **--component-timeout** definisce la quantità di tempo disponibile per il completamento di ogni fase successiva dell'aggiornamento.

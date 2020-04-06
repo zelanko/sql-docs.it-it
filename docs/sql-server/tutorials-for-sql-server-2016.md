@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893086"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665388"
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68893086"
 |[Esercitazioni su Integration Services](../integration-services/integration-services-tutorials.md)|Viene illustrato come creare e distribuire pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Esercitazioni sulla replica](../relational-databases/replication/replication-tutorials.md)|Viene illustrato come installare ed eseguire le topologie di replica tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  
-|[Tutorial SQL Server Machine Learning](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Acquisire familiarità con dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite R o Python. Eseguire gli script R o Python da [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutorial SQL Server Machine Learning](../machine-learning/tutorials/sql-server-r-tutorials.md)|Acquisire familiarità con dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite R o Python. Eseguire gli script R o Python da [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Esercitazioni pubblicate in precedenza 
   

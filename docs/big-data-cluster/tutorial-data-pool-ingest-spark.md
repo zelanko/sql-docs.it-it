@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff4038fd5a09b0776533c2ffa94cb6c1afeb567b
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75776536"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531132"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con processi Spark
 
@@ -201,4 +201,4 @@ DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 
 Informazioni su come eseguire un notebook di esempio in Azure Data Studio:
 > [!div class="nextstepaction"]
-> [Eseguire un notebook di esempio](tutorial-notebook-spark.md)
+> [Eseguire un notebook di esempio](notebooks-tutorial-spark.md)

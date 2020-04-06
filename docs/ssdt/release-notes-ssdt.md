@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271427"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742328"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -106,7 +106,6 @@ _SSDT per Visual Studio 2017._
 | Problema noto | Dettagli |
 | :---------- | :------ |
 | L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente. |
-| Le versioni di SSDT per Visual Studio 2017 superiori alla versione 15.8 non supportano la progettazione di pacchetti contenenti un'origine o una destinazione Teradata. | Usare SSDT per Visual Studio 2017 (15.8). |
 | L'origine Power Query può non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query può non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query non è localizzata | &nbsp; |
@@ -134,7 +133,6 @@ _SSDT per Visual Studio 2017._
 | Problema noto | Dettagli |
 | :---------- | :------ |
 | L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente. |
-| Le versioni di SSDT per Visual Studio 2017 superiori alla versione 15.8 non supportano la progettazione di pacchetti contenenti un'origine o una destinazione Teradata. | Usare SSDT per Visual Studio 2017 (15.8). |
 | Impossibile creare o modificare le origini dati nel modello di distribuzione del pacchetto. | La Creazione guidata origine dati non viene aperta. |
 | L'origine Power Query può non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query può non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
@@ -164,7 +162,6 @@ _SSDT per Visual Studio 2017._
 | Problema noto | Dettagli |
 | :---------- | :------ |
 | L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente. |
-| Le versioni di SSDT per Visual Studio 2017 superiori alla versione 15.8 non supportano la progettazione di pacchetti contenenti un'origine o una destinazione Teradata. | Usare SSDT per Visual Studio 2017 (15.8). |
 | Impossibile creare o modificare le origini dati nel modello di distribuzione del pacchetto. | La Creazione guidata origine dati non viene aperta. |
 | L'origine Power Query può non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query può non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
@@ -198,7 +195,6 @@ _SSDT per Visual Studio 2017._
 | Problema noto | Dettagli |
 | :---------- | :------ |
 | L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente. |
-| Le versioni di SSDT per Visual Studio 2017 superiori alla versione 15.8 non supportano la progettazione di pacchetti contenenti un'origine o una destinazione Teradata. | Usare SSDT per Visual Studio 2017 (15.8). |
 | L'origine Power Query può non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query può non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query non è localizzata. | &nbsp; |
@@ -218,7 +214,6 @@ _SSDT per Visual Studio 2017._
 ### <a name="known-issues"></a>Problemi noti:
 
 - L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
-- SSDT per Visual Studio 2017 (15.8.2) non supporta gli strumenti per la progettazione contenenti un'origine/destinazione Oracle/Teradata. Usare SSDT per Visual Studio 2017 (15.8).
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp; SSDT per VS 2017
 
@@ -237,7 +232,6 @@ _SSDT per Visual Studio 2017._
 
 - L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
 - La distribuzione di progetti SSIS con pacchetti contenenti Attività script/Destinazione file flat in Azure-SSIS impedisce l'esecuzione dei pacchetti in Azure-SSIS.
-- SSDT per Visual Studio 2017 (15.8.1) non supporta gli strumenti per la progettazione contenenti un'origine/destinazione Oracle/Teradata. Usare SSDT per Visual Studio 2017 (15.8).
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp; SSDT per VS 2017
