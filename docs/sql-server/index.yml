@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 2a7c0d83963f82862c89c1262409fe600dcbd7d3
-  ms.sourcegitcommit: 700c07312d1ffc034e7a684cbf4265afc7c84993
+  ms.openlocfilehash: 33578111d1a0ce28dee7fa423d3ee3fdd934f885
+  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "76831740"
+  ms.lasthandoff: 04/04/2020
+  ms.locfileid: "80662762"
 landingContent:
 - title: SQL in Azure
   linkLists:
@@ -102,7 +102,7 @@ landingContent:
       url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
     - text: Replica
       url: ../relational-databases/replication/sql-server-replication.md
-- title: Security
+- title: Sicurezza
   linkLists:
   - linkListType: overview
     links:
@@ -209,7 +209,7 @@ landingContent:
     - text: Sistema della piattaforma di analisi
       url: https://www.microsoft.com/sql/analytics-platform-system/
     - text: SQL Server Machine Learning (R e Python)
-      url: https://docs.microsoft.com/sql/advanced-analytics/
+      url: https://docs.microsoft.com/sql/machine-learning/
     - text: Virtualizzazione dei dati con PolyBase
       url: ../relational-databases/polybase/polybase-guide.md
 - title: Business Intelligence
