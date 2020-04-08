@@ -78,6 +78,8 @@
           items:
             - name: Linee guida per la distribuzione
               href: big-data-cluster/deployment-guidance.md
+            - name: Risorse distribuite
+              href: big-data-cluster/concept-architecture-pods.md
             - name: Eseguire l'aggiornamento a una nuova versione
               href: big-data-cluster/deployment-upgrade.md
             - name: Personalizzare le distribuzioni
@@ -107,7 +109,7 @@
                 - name: Script kubeadm per nodo singolo
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: Distribuire con notebook
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: Concetti
       items:
         - name: Distribuzione dell'applicazione
@@ -122,7 +124,7 @@
           href: big-data-cluster/concept-storage-pool.md
         - name: Pool di calcolo
           href: big-data-cluster/concept-compute-pool.md
-        - name: Security
+        - name: Sicurezza
           href: big-data-cluster/concept-security.md
     - name: Guide pratiche
       items:
@@ -190,26 +192,18 @@
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: Visualizzare lo stato del cluster
               href: big-data-cluster/view-cluster-status.md
-            - name: Risoluzione dei problemi di Kubernetes
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Gestire con notebook
-              href: big-data-cluster/manage-notebooks.md
             - name: Gestire con il dashboard del controller
               href: big-data-cluster/manage-with-controller-dashboard.md
-            - name: Security
+            - name: Gestire i blocchi appunti esistenti
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: Eseguire un notebook con Spark
+              href: big-data-cluster/notebooks-tutorial-spark.md
+            - name: Sicurezza
               items:
                 - name: Aggiornare AZDATA_PASSWORD
                   href: big-data-cluster/change-azdata-password.md
                 - name: Gestire l'accesso utente
                   href: big-data-cluster/manage-user-access.md
-        - name: Notebook
-          items:
-            - name: Panoramica dei notebook
-              href: big-data-cluster/notebooks-guidance.md
-            - name: Esercitazione sui notebook
-              href: big-data-cluster/tutorial-notebook-spark.md
-            - name: Gestire i blocchi appunti esistenti
-              href: big-data-cluster/notebooks-how-to-manage.md
         - name: Processi Spark
           items:
             - name: Inviare processi Spark in Azure Data Studio
@@ -222,7 +216,9 @@
               href: big-data-cluster/spark-history-server.md
         - name: Risolvere problemi
           items:
-            - name: Distribuzione di Active Directory
+            - name: Risolvere i problemi relativi a Kubernetes
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Ambito di gruppo di Active Directory
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: Informazioni di riferimento
       items:
@@ -1087,7 +1083,7 @@
                   href: database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md
                 - name: Risoluzione dei problemi relativi alla configurazione del mirroring del database
                   href: database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md
-            - name: Security
+            - name: Sicurezza
               items:
                 - name: Configurare gli account
                   href: database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md
@@ -1131,7 +1127,7 @@
                   href: database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md
                 - name: Rimuovi mirroring
                   href: database-engine/database-mirroring/removing-database-mirroring-sql-server.md
-            - name: Security
+            - name: Sicurezza
               items:
                 - name: Endpoint
                   href: database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
@@ -1734,7 +1730,7 @@
                   href: relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
                 - name: Eseguire query sui dati
                   href: relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
-                - name: Security
+                - name: Sicurezza
                   href: relational-databases/tables/temporal-table-security.md
                 - name: Modificare lo schema
                   href: relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
@@ -2555,7 +2551,11 @@
             - name: Da tipi di dati Java a SQL
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Creare un file con estensione jar di Java
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: Informazioni di riferimento
+          items:
+            - name: API del framework di estendibilità
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -3762,7 +3762,7 @@
                   href: relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md
                 - name: Memorizzazione nella cache di file XSL
                   href: relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md
-            - name: Security
+            - name: Sicurezza
               href: relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md
               items:
                 - name: Considerazioni sulla sicurezza degli schemi con annotazioni
@@ -5043,7 +5043,7 @@
                       href: relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md
                 - name: Replica transazionale
                   href: relational-databases/replication/administration/enhance-transactional-replication-performance.md
-            - name: Security
+            - name: Sicurezza
               items:
                 - name: Database di distribuzione
                   href: relational-databases/replication/security/secure-the-distributor.md
@@ -5240,7 +5240,7 @@
                   href: relational-databases/replication/concepts/replication-programming-concepts.md
                 - name: Stored procedure di sistema
                   href: relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md
-            - name: Security
+            - name: Sicurezza
               items:
                 - name: Attenuazione di minacce e vulnerabilità
                   href: relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md
@@ -7017,8 +7017,8 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: Report e analisi
   items:
-    - name: Analisi avanzata e Machine Learning >
-      href: advanced-analytics/
+    - name: Machine Learning Services >
+      href: machine-learning/
     - name: Piattaforma di strumenti analitici >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -7386,7 +7386,7 @@
               href: master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
             - name: Modificare un pacchetto di distribuzione di modelli
               href: master-data-services/edit-a-model-deployment-package.md
-        - name: Security
+        - name: Sicurezza
           href: master-data-services/security-master-data-services.md
           items:
             - name: Administrators
@@ -7473,7 +7473,7 @@
                   href: master-data-services/database-object-security-master-data-services.md
                 - name: 'Account di accesso, utenti e ruoli di database'
                   href: master-data-services/database-logins-users-and-roles-master-data-services.md
-- name: Security
+- name: Sicurezza
   href: relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
   items:
     - name: Panoramica
@@ -7791,8 +7791,6 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: Risorse Azure SQL - Explorer
               href: azure-data-studio/azure-resource-explorer.md
-            - name: Notebook SQL
-              href: azure-data-studio/sql-notebooks.md
             - name: Gruppi di server
               href: azure-data-studio/server-groups.md
             - name: Controllo del codice sorgente
@@ -7801,6 +7799,14 @@
               href: azure-data-studio/settings.md
             - name: Autenticazione di Windows (Kerberos)
               href: azure-data-studio/enable-kerberos.md
+            - name: Notebook
+              items:
+                - name: Panoramica dei notebook
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: Come usare il kernel SQL
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Come gestire un notebook
+                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: Raccolta dati di utilizzo
               href: azure-data-studio/usage-data-collection.md
         - name: Estensioni
@@ -9963,7 +9969,7 @@
               items:
                 - name: Configurare un contenitore in Kubernetes
                   href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: Security
+        - name: Sicurezza
           href: linux/sql-server-linux-security-overview.md
           items:
             - name: Introduzione alle funzionalità di sicurezza
@@ -11621,7 +11627,7 @@
               href: relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md
             - name: sys.parameter_type_usages
               href: relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md
-        - name: Security
+        - name: Sicurezza
           href: relational-databases/system-catalog-views/security-catalog-views-transact-sql.md
           items:
             - name: sys.asymmetric_keys
@@ -13918,7 +13924,7 @@
               href: relational-databases/system-stored-procedures/sp-vupgrade-mergeobjects-transact-sql.md
             - name: sp_vupgrade_replication
               href: relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md
-        - name: Security
+        - name: Sicurezza
           href: relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md
           items:
             - name: sp_add_trusted_assembly
@@ -15635,7 +15641,7 @@
                   href: t-sql/functions/openrowset-transact-sql.md
                 - name: OPENXML
                   href: t-sql/functions/openxml-transact-sql.md
-            - name: Security
+            - name: Sicurezza
               href: t-sql/functions/security-functions-transact-sql.md
               items:
                 - name: CERTENCODED

@@ -5,6 +5,8 @@
 - name: Novità di APS
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
+    - name: APS CU7.6
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.6'
     - name: APS CU7.5
       href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5'
     - name: APS CU7.4
@@ -113,7 +115,7 @@
       items:
         - name: Attività di gestione dei carichi di lavoro
           href: ../analytics-platform-system/workload-management-tasks.md
-- name: Security
+- name: Sicurezza
   items:
     - name: Transparent Data Encryption
       href: ../analytics-platform-system/transparent-data-encryption.md
@@ -224,7 +226,7 @@
           href: ../analytics-platform-system/determine-which-cluster-node-failed.md
         - name: Informazioni sugli avvisi della console di amministrazione
           href: ../analytics-platform-system/understanding-admin-console-alerts.md
-- name: Riferimento
+- name: Informazioni di riferimento
   items:
     - name: Elementi del linguaggio T-SQL
       href: ../analytics-platform-system/tsql-language-elements.md
