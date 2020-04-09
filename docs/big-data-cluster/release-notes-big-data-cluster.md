@@ -5,16 +5,16 @@ description: Questo articolo descrive gli aggiornamenti più recenti e i problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/12/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd004554ad45db40beae958bdf0a7142b1b74bab
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286225"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517160"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -24,7 +24,7 @@ Le note sulla versione seguenti si applicano a [!INCLUDE[big-data-clusters-2019]
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
-Questa sezione illustra le piattaforme supportate con i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+Questa sezione illustra le piattaforme supportate con i BDC.
 
 ### <a name="kubernetes-platforms"></a>Piattaforme Kubernetes
 
@@ -50,25 +50,34 @@ Questa sezione illustra le piattaforme supportate con i [!INCLUDE[big-data-clust
 
 |Piattaforma|Versioni supportate|
 |---------|---------|
-|`azdata`|La versione secondaria deve corrispondere a quella del server (dell'istanza master di SQL Server).<br/><br/>Eseguire `azdata –-version` per convalidare la versione.<br/><br/>A partire da SQL Server 2019 CU3, questa versione è `15.0.4023`.|
+|`azdata`|La versione secondaria deve corrispondere a quella del server (dell'istanza master di SQL Server).<br/><br/>Eseguire `azdata –-version` per convalidare la versione.<br/><br/>Vedere [Cronologia delle versioni](#release-history) per la versione più recente.|
 |Azure Data Studio|Ottenere la build più recente di [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
 ## <a name="release-history"></a>Cronologia delle versioni
 
 Nella tabella seguente viene elencata la cronologia delle versioni per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Versione               | Versione       | Data di rilascio |
-|-----------------------|---------------|--------------|
-| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
+| Versione               | Versione         | Data di rilascio |
+|-----------------------|-----------------|--------------|
+| [CU4](#cu4)           | 15.0.4033.1     | 2020-03-31   |
+| [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
-| [CU1](#cu1)           | 15.0.4003.23   | 07 gennaio 2020   |
-| [GDR1](#rtm)            | 15.0.2070.34  | 4 novembre 2019   |
+| [CU1](#cu1)           | 15.0.4003.23    | 07 gennaio 2020   |
+| [GDR1](#rtm)          | 15.0.2070.34    | 4 novembre 2019   |
 
 ## <a name="how-to-install-updates"></a>Come installare gli aggiornamenti
 
 Per installare gli aggiornamenti, vedere [Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3 (marzo 2020)
+## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (aprile 2020)
+
+Aggiornamento cumulativo 4 (CU4) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4033.1.
+
+|Versione pacchetto | Tag dell'immagine |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
+
+## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3 (marzo 2020)
 
 Aggiornamento cumulativo 3 (CU3) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4023.6.
 
@@ -83,7 +92,7 @@ SQL Server 2019 CU3 risolve i problemi seguenti dalle versioni precedenti.
 - [Distribuzione con repository privato](#deployment-with-private-repository)
 - [Possibile esito negativo dell'aggiornamento a causa di un timeout](#upgrade-may-fail-due-to-timeout)
 
-## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2 (feb 2020)
+## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2 (febbraio 2020)
 
 Aggiornamento cumulativo 2 (CU2) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4013.40.
 
@@ -91,7 +100,7 @@ Aggiornamento cumulativo 2 (CU2) per SQL Server 2019. La versione del motore di 
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1 (gennaio 2020)
+## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 (gennaio 2020)
 
 Versione Cumulative Update 1 (CU1) per SQL Server 2019. La versione del motore di database di SQL Server per questa versione è 15.0.4003.23.
 
@@ -99,7 +108,7 @@ Versione Cumulative Update 1 (CU1) per SQL Server 2019. La versione del motore d
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1 (novembre 2019)
+## <a name="gdr1-november-2019"></a><a id="rtm"></a> GDR1 (novembre 2019)
 
 SQL Server 2019 General Distribution Release 1 (GDR1): introduce la disponibilità generale per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. La versione del motore di database di SQL Server per questa versione è 15.0.2070.34.
 

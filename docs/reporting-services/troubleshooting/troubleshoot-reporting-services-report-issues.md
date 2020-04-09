@@ -1,5 +1,6 @@
 ---
-title: Risolvere i problemi relativi ai report di Reporting Services | Microsoft Docs
+title: Risoluzione dei problemi dei servizi Report di Reporting
+description: In questo articolo vengono risolti problemi relativi alla progettazione, alla creazione di un anteprima e all'esportazione di un report, oltre alla sua pubblicazione in un server di report in modalità nativa o SharePoint.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573872"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662805"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Risoluzione dei problemi dei servizi Report di Reporting
 Questo argomento contiene informazioni utili per risolvere i problemi relativi alla progettazione di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , alla visualizzazione in anteprima di un report, alla pubblicazione di un report in un server di report in modalità nativa o in modalità SharePoint, alla visualizzazione di un report nel server di report o all'esportazione di un report in un formato di file diverso.  

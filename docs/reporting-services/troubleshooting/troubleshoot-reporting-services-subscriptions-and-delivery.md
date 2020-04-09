@@ -1,5 +1,6 @@
 ---
-title: Risolvere i problemi di sottoscrizioni e recapito di Reporting Services | Microsoft Docs
+title: Risolvere i problemi di sottoscrizioni e recapito di Reporting Services
+description: In questo articolo vengono diagnosticati e risolti i problemi che possono verificarsi quando si usano le funzionalità di sottoscrizione, pianificazione e recapito di report in SQL Server Reporting Services.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572120"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662748"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Risolvere i problemi di sottoscrizioni e recapito di Reporting Services
   

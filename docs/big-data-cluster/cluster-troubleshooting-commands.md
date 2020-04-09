@@ -1,5 +1,5 @@
 ---
-title: Monitorare e risolvere i problemi
+title: Risolvere i problemi relativi a Kubernetes
 titleSuffix: SQL Server big data clusters
 description: Questo articolo offre utili comandi per il monitoraggio e la risoluzione dei problemi di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153627"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664178"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Monitorare e risolvere i problemi di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Risolvere i problemi relativi a Kubernetes in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo descrive alcuni comandi utili di Kubernetes che è possibile usare per il monitoraggio e la risoluzione dei problemi di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Mostra come visualizzare dettagli approfonditi su un pod o altri elementi di Kubernetes che si trovano nel cluster Big Data. Questo articolo presenta anche le attività comuni, ad esempio la copia di file in o da un contenitore che esegue uno dei cluster Big Data di SQL Server.
 
 > [!TIP]
-> Per il monitoraggio dello stato di componenti di cluster Big Data è possibile usare i comandi [**azdata bdc status**](deployment-guidance.md#status) o i [notebook per la risoluzione dei problemi](manage-notebooks.md) disponibili in Azure Data Studio.
+> Per il monitoraggio dello stato di componenti di cluster Big Data è possibile usare i comandi [**azdata bdc status**](deployment-guidance.md#status) o i [notebook per la risoluzione dei problemi](notebooks-manage-bdc.md) disponibili in Azure Data Studio.
 
 > [!TIP]
 > Eseguire i comandi **kubectl** seguenti in un computer client Windows (cmd.exe o PowerShell) o Linux (Bash). Questi comandi richiedono la precedente autenticazione nel cluster e un contesto del cluster per l'esecuzione. Ad esempio, per un cluster del servizio Azure Kubernetes creato in precedenza è possibile eseguire `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` per scaricare il file di configurazione del cluster Kubernetes e impostare il contesto del cluster.

@@ -1,5 +1,6 @@
 ---
-title: Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa | Microsoft Docs
+title: Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa
+description: In questo articolo vengono diagnosticati e risolti i problemi che si verificano quando si pubblica o si carica un report in un server di report configurato in modalità nativa.
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 097ef18fe98b20794813e711650a9bb85add5c35
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573852"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662728"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa
   

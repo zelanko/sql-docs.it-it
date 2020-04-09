@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seo-lt-2019
-ms.date: 09/05/2018
+ms.date: 03/26/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a877bf2edd04e937cfafaece19c6acd9ecd09c07
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271417"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742252"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI)
 
@@ -54,11 +54,11 @@ Gli ultimi download messi a disposizione possono essere usati nel caso molto imp
 <br>
 
 
-\* SSDT supporta le due versioni più recenti di Visual Studio. Con la versione di Visual Studio 2017, SSDT for VS2013 non viene più aggiornato. Per altre informazioni, vedere la sezione relativa alle *domande frequenti*di [questo post di blog del team SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+\* SSDT supporta le due versioni più recenti di Visual Studio. Con la versione di Visual Studio 2019, SSDT for VS2015 non viene più aggiornato. Per altre informazioni, vedere la sezione relativa alle *domande frequenti*di [questo post di blog del team SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
 ## <a name="links-to-download-pages"></a>Collegamenti alle pagine di download 
-**Motore di database relazionale SQL**  
+**SQL relazionale: motore di database**  
   
 Fornisce modelli per la creazione di database relazionali per il sistema di gestione di database relazionali (RDBMS, Relational Database Management System) e il database SQL di Azure. SSDT è indipendente dalla versione di progettazione del database relazionale. È possibile usare Visual Studio 2012 o 2013 con qualsiasi versione del motore di database di SQL Server o del database SQL di Azure.  
   
@@ -72,7 +72,7 @@ Fornisce modelli per la creazione di database relazionali per il sistema di gest
   
 I clienti di Visual Studio 2013 possono scaricare una versione di anteprima di SSDT per provare le nuove funzionalità non ancora disponibili nella versione finale del prodotto.  
   
-**SQL BI: Analysis Services, Reporting Services, Integration services**  
+**SQL BI: Analysis Services, Reporting Services, servizi di integrazione**  
   
 I modelli di Business Intelligence vengono usati per creare modelli SSAS, report SSRS e pacchetti SSIS. Le finestre di progettazione di BI sono legate a versioni specifiche di SQL Server. Per usare le nuove caratteristiche di Business Intelligence, installare una finestra di progettazione di BI con versione più recente.  
   

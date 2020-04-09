@@ -1,5 +1,6 @@
 ---
 title: Creare e gestire sottoscrizioni per server di report in modalità nativa | Microsoft Docs
+description: Informazioni su come creare e gestire una sottoscrizione standard come singolo utente che vuole che un report venga recapitato tramite posta elettronica o a una cartella condivisa.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0521826132a51b6f0ec18b43bb8008098c61bd4
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971308"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742301"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. In questo argomento vengono fornite informazioni sulle sottoscrizioni standard che vengono create e gestite dai singoli utenti. Le sottoscrizioni guidate dai dati prevedono procedure e requisiti diversi e sono illustrate in un altro argomento. Per altre informazioni, vedere [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -67,8 +68,8 @@ ms.locfileid: "76971308"
 7. In **Destinazione** selezionare **Condivisione file di Windows**.  
   
 8. In **Opzioni di recapito (Condivisione file di Windows)** specificare:  
-   - **Nome file**: digitare un nome di file per il report.
-   - **Aggiungi estensione file alla creazione del file**: questa opzione consente di aggiungere un'estensione di tre caratteri al nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
+   - **Nome del file**: digitare un nome di file per il report.
+   - **Aggiungi estensione file alla creazione del file**: Questa opzione consente di specificare un'estensione di tre caratteri per il nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
    - **Percorso**: digitare il percorso UNC (Universal Naming Convention) di una cartella esistente a cui si vuole che vengano recapitati i report, ad esempio \\<nomeserver\>\<reportpersonali>. Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
   
      ![Sottoscrizione di condivisione file](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Sottoscrizione di condivisione file")  
@@ -112,7 +113,7 @@ Il report viene recapitato come file statico. Se include funzionalità interatti
      >[!NOTE]  
      > A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
   
-   - **Oggetto**: l'impostazione predefinita è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
+   - **Soggetto**: l'impostazione predefinita è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
   
      ![Sottoscrizione tramite posta elettronica](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "Sottoscrizione tramite posta elettronica")  
 

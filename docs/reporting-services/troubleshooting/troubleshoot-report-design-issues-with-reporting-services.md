@@ -1,5 +1,6 @@
 ---
-title: Risolvere i problemi di progettazione dei report con Reporting Services | Microsoft Docs
+title: Risolvere i problemi di progettazione dei report con Reporting Services
+description: In questo articolo vengono diagnosticati e risolti i problemi di progettazione dei report che si verificano quando si crea il layout del report nella visualizzazione Progettazione in un'applicazione per la progettazione di report.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573847"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662809"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Risolvere i problemi di progettazione dei report con Reporting Services
 I problemi di progettazione del report si possono verificare quando si crea il layout del report nella visualizzazione Progettazione in un'applicazione per la progettazione di report. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.   
@@ -41,7 +42,7 @@ I campi predefiniti [&PageNumber] e [&TotalPages] sono validi solo nell'intestaz
 Per aggiungere [&PageNumber] o [&TotalPages] a un report, è necessario prima aggiungere un'intestazione o un piè di pagina. Per altre informazioni, vedere [Aggiungere o rimuovere un'intestazione di pagina](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> Se si include [&TotalPages] nell'intestazione o nel piè di pagina si possono verificare problemi durante l'elaborazione del report. Per altre informazioni, vedere Risoluzione dei problemi dei report: report esportati in un formato di file specifico.  
+> Se si include [&TotalPages] nell'intestazione o nel piè di pagina si possono verificare problemi durante l'elaborazione del report. Per altre informazioni, vedere Risoluzione dei problemi dei report: Report esportati in un formato di file specifico.  
 [Risolvere i problemi di elaborazione dei report di Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md).  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>Progettazione di due tabelle o un grafico e una tabella da visualizzare affiancati  

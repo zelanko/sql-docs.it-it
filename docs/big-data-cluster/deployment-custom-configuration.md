@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285855"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550202"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per risorse e servizi cluster
 
@@ -466,6 +466,8 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
+>[!NOTE]
+> La procedura consigliata prevede di non assegnare al nodo master Kubernetes uno dei ruoli BDC precedenti. Se si prevede comunque di assegnare uno di questi ruoli al nodo master Kubernetes, sarà necessario [rimuoverne il taint ``master:NoSchedule``.](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) Questa operazione potrebbe tuttavia sovraccaricare il nodo master e impedirne la capacità di eseguire attività di gestione Kubernetes su cluster più grandi. È normale vedere alcuni pod pianificati sul master in qualsiasi distribuzione: tollerano già il taint ``master:NoSchedule`` e vengono usati principalmente per semplificare la gestione del cluster. 
 
 ## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> Altre personalizzazioni con file di patch JSON
 

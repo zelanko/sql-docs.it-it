@@ -1,5 +1,6 @@
 ---
-title: Risolvere i problemi di rendering del report di Reporting Services | Microsoft Docs
+title: Risolvere i problemi di rendering del report di Reporting Services
+description: In questo articolo verranno diagnosticati e corretti i problemi di visualizzazione che si verificano quando i dati del layout e del report compilato vengono inviati a un renderer di report in SQL Server Reporting Services.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574690"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662779"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Risolvere i problemi di rendering del report di Reporting Services
 Dopo che le informazioni sul layout e i dati del report sono stati combinati, il report compilato viene inviato a un renderer di report. Ad esempio, quando si visualizza in anteprima un report in locale, si utilizza il renderer HTML per visualizzare il report compilato. Utilizzare le informazioni riportate in questo argomento per risolvere i problemi specifici del rendering del report.   
@@ -60,7 +61,7 @@ Quando l'origine dati è configurata per un tipo di connessione Elenco Microsoft
   
 **Per risolvere questo problema:** modificare l'origine dati per l'uso delle credenziali archiviate anziché delle credenziali di Windows.  
   
-**Questo problema si applica a:** browser configurati per richiedere le credenziali.  
+**Questo problema riguarda:** i browser configurati per richiedere le credenziali.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Errori ed eventi (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

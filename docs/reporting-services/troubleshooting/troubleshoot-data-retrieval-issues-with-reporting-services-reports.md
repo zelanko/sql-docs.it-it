@@ -1,5 +1,6 @@
 ---
-title: Risolvere i problemi di recupero dei dati con i report di Reporting Services | Microsoft Docs
+title: Risolvere i problemi di recupero dei dati con i report di Reporting Services
+description: In questo articolo vengono diagnosticati e risolti i problemi che si verificano quando si recuperano i dati di un report visualizzando in anteprima un report in locale oppure eseguendo un report nel server di report.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574430"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664454"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Risolvere i problemi di recupero dei dati con i report di Reporting Services
 Il primo passaggio dell'elaborazione del report consiste nel recuperare i dati del report per ogni set di dati tramite la query del set di dati. Quando si visualizza in anteprima un report in locale, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel computer. Quando si esegue un report nel server di report, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel server di report. Utilizzare questo argomento per risolvere i problemi relativi al recupero dei dati del report.   
@@ -57,7 +58,7 @@ Quando si definisce una query nella finestra di dialogo Proprietà set di dati e
 Per popolare la raccolta dei campi del set di dati, effettuare le operazioni seguenti:  
 * Verificare di disporre delle autorizzazioni necessarie per recuperare le informazioni dei campi dal database. Per alcune origini dati, è possibile che si abbiano le autorizzazioni necessarie per accedere all'origine dati, ma non alla tabella o alla colonna. È possibile disporre delle autorizzazioni per accedere a una vista ma non per eseguire le stored procedure che creano la vista. Per convalidare l'accesso a tabelle o colonne specifiche in un database, verificare i risultati della query in un'applicazione distinta, ad esempio SQL Server Management Studio, usando le stesse autorizzazioni del report. Se non è possibile visualizzare i risultati desiderati per la query, richiedere il supporto dell'amministratore di sistema per modificare le autorizzazioni per i dati.   
 * Eseguire la query nel riquadro Query della finestra di dialogo **Proprietà set di dati** . Per altre informazioni, vedere [Set di dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
-* Aggiungere manualmente i campi. Per altre informazioni, vedere [Procedura: Aggiungere, modificare e aggiornare i campi nel riquadro dei dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
+* Aggiungere manualmente i campi. Per altre informazioni, vedere [Procedura: Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
 ## <a name="see-also"></a>Vedere anche  
 [Errori ed eventi (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

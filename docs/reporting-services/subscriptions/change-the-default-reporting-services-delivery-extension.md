@@ -1,5 +1,6 @@
 ---
 title: Modificare l'estensione per il recapito predefinita di Reporting Services | Microsoft Docs
+description: Informazioni su come configurare le impostazioni di Reporting Services per riordinare le estensioni per il recapito mostrate nell'elenco "Recapito" e per impostare l'estensione per il recapito predefinita.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83c2c0c6bb3c2a457182e8dcf56c5caa68397184
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500398"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742308"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modificare l'estensione per il recapito predefinita di Reporting Services
   È possibile modificare le impostazioni di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per modificare l'estensione per il recapito predefinita visualizzata nell'elenco **Recapito** di una pagina di definizione della sottoscrizione. Ad esempio, è possibile modificare la configurazione in modo che, quando viene creata una nuova sottoscrizione, il recapito della condivisione file venga selezionato per impostazione predefinita al posto del recapito tramite posta elettronica. È inoltre possibile modificare l'ordine con cui sono elencate le estensioni per il recapito nell'interfaccia utente.  
@@ -83,9 +84,9 @@ ms.locfileid: "66500398"
   
      Il seguente evento viene scritto nel registro eventi di Windows durante la lettura della configurazione.  
   
-     **Event ID:** 109  
+     **ID evento:** 109  
   
-     **Origine:** servizio del server di report di Windows (nome istanza)  
+     **Origine:** Servizio del server di report di Windows (nome istanza)  
   
      Il file RSReportServer.config è stato modificato  
   

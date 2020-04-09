@@ -1,5 +1,6 @@
 ---
-title: Guida di riferimento a errori ed eventi (Reporting Services) | Microsoft Docs
+title: Guida di riferimento a errori ed eventi (Reporting Services)
+description: Visualizzare l'ID, il tipo, la categoria, l'origine e la descrizione per vari eventi del server di report. Questi eventi includono alcuni tipi di errore, di avviso e di informazioni.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bfaa996eb0a0bf02440268c68a8a543470fd022
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68258538"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664401"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guida di riferimento a errori ed eventi (Reporting Services)
 
@@ -36,7 +37,7 @@ Gli eventi del server di report riportati di seguito vengono registrati nel regi
 |109|Informazioni|Gestione|Server di report<br /><br /> portale Web|Un file di configurazione è stato modificato. Per altre informazioni, vedere [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
 |110|Avviso|Gestione|Server di report<br /><br /> portale Web|Un'impostazione in uno dei file di configurazione è stata modificata in modo da non risultare più valida. Verrà utilizzato un valore predefinito. Per altre informazioni, vedere [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md).|  
 |111|Errore|Registrazione|Server di report<br /><br /> portale Web|*\<Source>* non è in grado di creare il log di traccia. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|112|Avviso|Security|Server di report|Nel server di report è stato rilevato un possibile attacco Denial of Service. Per altre informazioni, vedere [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).|  
+|112|Avviso|Sicurezza|Server di report|Nel server di report è stato rilevato un possibile attacco Denial of Service. Per altre informazioni, vedere [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).|  
 |113|Errore|Registrazione|Server di report|Il server di report non è in grado di creare un contatore delle prestazioni.|  
 |114|Errore|Avvio/Chiusura|portale Web|Il portale Web non è in grado di connettersi al servizio del server di report.|  
 |115|Avviso|Pianificazione|Elaborazione pianificazione e recapito|Un'attività pianificata nella coda di SQL Server Agent è stata modificata o eliminata.|  
@@ -55,8 +56,8 @@ Gli eventi del server di report riportati di seguito vengono registrati nel regi
 |128|Errore|Activation|Server di report|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Impossibile utilizzare contemporaneamente componenti appartenenti a edizioni diverse di|  
 |129|Errore|Gestione|Server di report<br /><br /> Elaborazione pianificazione e recapito|Impossibile decrittografare un'impostazione crittografata nel file di configurazione.|  
 |130|Errore|Gestione|Server di report<br /><br /> Elaborazione pianificazione e recapito|*\<Origine>* non è in grado di trovare il file di configurazione. I file di configurazione sono necessari per il server di report.|  
-|131|Errore|Security|Server di report<br /><br /> Elaborazione pianificazione e recapito|Impossibile decrittografare un valore di dati utente crittografato.|  
-|132|Errore|Security|Server di report|Errore durante l'operazione di crittografia dei dati utente. Impossibile salvare il valore.|  
+|131|Errore|Sicurezza|Server di report<br /><br /> Elaborazione pianificazione e recapito|Impossibile decrittografare un valore di dati utente crittografato.|  
+|132|Errore|Sicurezza|Server di report|Errore durante l'operazione di crittografia dei dati utente. Impossibile salvare il valore.|  
 |133|Errore|Gestione|Server di report<br /><br /> portale Web<br /><br /> Elaborazione pianificazione e recapito|Impossibile caricare un file di configurazione. Questo errore potrebbe essere dovuto a codice XML non valido.|  
 |134|Errore|Gestione|Server di report|Il server di report non è stato in grado di crittografare i valori per un'impostazione in un file di configurazione.|  
   

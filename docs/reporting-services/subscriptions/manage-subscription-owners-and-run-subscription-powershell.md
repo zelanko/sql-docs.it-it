@@ -1,6 +1,6 @@
 ---
 title: Gestire i proprietari di sottoscrizioni ed eseguire la sottoscrizione - PowerShell | Microsoft Docs
-description: È possibile trasferire a livello di programmazione la proprietà di una sottoscrizione di Reporting Services da un utente a un altro.
+description: Informazioni su come trasferire a livello di programmazione la proprietà di una sottoscrizione di Reporting Services da un utente a un altro.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259339"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742192"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gestire i proprietari di sottoscrizioni ed eseguire la sottoscrizione - PowerShell
 
@@ -57,23 +57,23 @@ In questa sezione sono riepilogati i livelli di autorizzazione necessari per usa
   
 **Modalità nativa:**
   
-- List Subscriptions: [Enunmerazione ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sul report E (l'utente è proprietario della sottoscrizione) O ReadAnySubscription.  
+- Elenco sottoscrizioni: [Enumerazione ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sul report E (l'utente è proprietario della sottoscrizione) O ReadAnySubscription.  
   
-- Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
+- Modifica sottoscrizioni: l'utente deve essere membro del gruppo BUILTIN\Administrators  
   
-- List Children: ReadProperties on Item  
+- Elenco figli: ReadProperties su Item  
   
-- Fire Event: GenerateEvents (System)  
+- Evento di attivazione: GenerateEvents (System)  
   
  **Modalità SharePoint:**
   
-- List Subscriptions: ManageAlerts O ( [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sul report E l'utente è proprietario della sottoscrizione e la sottoscrizione è a tempo determinato).  
+- Elenco sottoscrizioni: ManageAlerts O [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sul report E l'utente è proprietario della sottoscrizione e la sottoscrizione è a tempo determinato.  
   
-- Change Subscriptions: ManageWeb  
+- Modifica sottoscrizioni: ManageWeb  
   
-- List Children: ViewListItems  
+- Elenco figli: ViewListItems  
   
-- Fire Event: ManageWeb  
+- Evento di attivazione: ManageWeb  
   
  Per altre informazioni, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   

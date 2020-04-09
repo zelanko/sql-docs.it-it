@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255909"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531120"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Creare, esportare e assegnare punteggi ai modelli di Machine Learning Spark in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -52,7 +52,7 @@ In questo esempio, per creare un modello di pipeline per Machine Learning Spark 
 
    Il notebook contiene le celle con i comandi necessari per questa sezione dell'esempio.
 
-1. Aprire il notebook in Azure Data Studio ed eseguire ogni blocco di codice. Per altre informazioni sull'uso dei notebook, vedere [Come usare i notebook in SQL Server](notebooks-guidance.md).
+1. Aprire il notebook in Azure Data Studio ed eseguire ogni blocco di codice. Per altre informazioni sull'uso dei notebook, vedere [Come usare i notebook in SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 Per prima cosa, i dati vengono letti in Spark e suddivisi in set di dati di training e di testing. Il codice esegue quindi il training di un modello di pipeline con i dati di training ed esporta infine il modello in un bundle MLeap.
 
@@ -61,7 +61,7 @@ Per prima cosa, i dati vengono letti in Spark e suddivisi in set di dati di trai
 
 ## <a name="model-scoring-with-sql-server"></a>Assegnazione di punteggi al modello con SQL Server
 
-Ora che il modello di pipeline per Machine Learning Spark si trova nel formato di serializzazione comune [bundle MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html), è possibile assegnare punteggi al modello in Java anche senza la presenza di Spark. 
+Ora che il modello di pipeline per Machine Learning Spark si trova nel formato di serializzazione comune [bundle MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html), è possibile assegnare punteggi al modello in Java anche senza la presenza di Spark.
 
 Questo esempio usa l'[estensione del linguaggio Java](../language-extensions/language-extensions-overview.md) in SQL Server. Per poter assegnare i punteggi al modello in SQL Server, è prima necessario sviluppare un'applicazione Java in grado di caricare il modello in Java e assegnargli i punteggi. È possibile trovare il codice di esempio per questa applicazione Java nella [cartella mssql-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 

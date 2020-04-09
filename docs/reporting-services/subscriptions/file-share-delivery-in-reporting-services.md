@@ -1,5 +1,6 @@
 ---
 title: Recapito tramite condivisione file in Reporting Services | Microsoft Docs
+description: In questo articolo viene illustrato come configurare l'estensione per il recapito tramite condivisione file che consente di recapitare un report a una cartella.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a411b818d0b844f3f43ae29db7a3e1ee732be798
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72278235"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742051"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite condivisione file che consente di recapitare un report a una cartella. L'estensione per il recapito tramite condivisione file è disponibile per impostazione predefinita e non richiede alcuna operazione di configurazione. Per fare in modo che il recapito dei file abbia esito positivo, è necessario impostare autorizzazioni di accesso in scrittura sulla cartella condivisa. L'account che richiede le autorizzazioni di scrittura può avere credenziali configurate nella sottoscrizione o un **account di condivisione file** configurato per il server di report. Per altre informazioni sull'account di condivisione file, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Inoltre, gli utenti che richiedono l'accesso ai report devono disporre di autorizzazioni in lettura per la cartella condivisa.  
@@ -63,14 +64,14 @@ ms.locfileid: "72278235"
 ##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Formati di file  
  Il rendering dei report può essere eseguito in vari formati di file, ad esempio HTML, DOCX ed Excel. Per salvare il report in un formato di file specifico, selezionare il formato di rendering desiderato al momento della creazione della sottoscrizione. Se, ad esempio, si sceglie **Excel** , il report viene salvato come file di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Sebbene sia possibile selezionare qualsiasi formato di rendering supportato, alcuni formati risultano più appropriati quando si esegue il rendering in un file.  
   
- Se si utilizza il recapito tramite condivisione file, scegliere un formato che consenta di recapitare il report in un singolo file e di includere nel report tutte le immagini e il contenuto correlato. I formati adatti a questo scopo sono Archivio Web, PDF, TIFF ed Excel. Evitare il formato HTML4.0. Se nel report sono presenti immagini, queste non verranno incluse nel file se si utilizza il formato HTML 4.0.  
+ Se si utilizza il recapito tramite condivisione file, scegliere un formato che consenta di recapitare il report in un singolo file e di includere nel report tutte le immagini e il contenuto correlato. I formati adatti a questo scopo sono Archivio Web, PDF, TIFF ed Excel. Evitare il formato HTML 4.0. Se nel report sono presenti immagini, queste non verranno incluse nel file se si utilizza il formato HTML 4.0.  
   
 ##  <a name="file-options"></a><a name="bkmk_file_options"></a> Opzioni relative ai file  
  Quando si crea una sottoscrizione di condivisione file, è possibile configurare la modalità di creazione del nome file e se il file sovrascrive le versioni precedenti del report. Un nome file completo è costituito da tre parti, ovvero il nome, l'estensione e un testo o un numero aggiunto al file per creare un nome file univoco  
   
- **Nome file** : il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
+ **Nome file:** il nome file predefinito è basato sul nome del report di origine, tuttavia è possibile specificare un nome personalizzato nella sottoscrizione. L'estensione è facoltativa. Se specificata, il server di report creerà un'estensione corrispondente al formato di rendering.  
   
- **Sovrascrittura:** è possibile specificare le opzioni di sovrascrittura per riusare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
+ **Sovrascrivi:** È possibile specificare le opzioni di sovrascrittura per riutilizzare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
   
  Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A tale scopo, aggiungere la variabile **\@timestamp** al nome file, ad esempio *CompanySales@timestamp* . In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
   

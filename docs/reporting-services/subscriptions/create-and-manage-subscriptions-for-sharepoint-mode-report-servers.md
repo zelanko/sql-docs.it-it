@@ -1,5 +1,6 @@
 ---
 title: Creare e gestire sottoscrizioni per server di report in modalità SharePoint | Microsoft Docs
+description: Informazioni su come creare una sottoscrizione di Reporting Services per il recapito di report da un'app Web di SharePoint integrata con un server di report in modalità SharePoint.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578345"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742263"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità SharePoint
   È possibile creare sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il recapito di report da un'applicazione Web di SharePoint integrata con un server di report in modalità SharePoint. Le sottoscrizioni possono recapitare report a una raccolta documenti o a una cartella di file oppure come messaggio di posta elettronica. Questo argomento fornisce un riepilogo dei requisiti e dei passaggi necessari per la creazione di una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -30,9 +31,9 @@ ms.locfileid: "65578345"
   
 -   **Raccolta documenti**: è possibile creare una sottoscrizione che recapita un documento basato sul report originale a una raccolta disponibile nello stesso sito di SharePoint del report originale. Non è possibile recapitare il documento a una raccolta disponibile in un altro server o in un altro sito della stessa raccolta siti. Per recapitare il documento, è necessario disporre dell'autorizzazione Aggiunta elementi per la raccolta a cui viene recapitato il report.  
   
--   **Cartella di file** : è possibile recapitare un documento basato sul report originale a una cartella condivisa nel file system. È necessario selezionare una cartella esistente accessibile tramite una connessione di rete.  
+-   **Cartella di file:** è possibile recapitare un documento basato sul report originale a una cartella condivisa nel file system. È necessario selezionare una cartella esistente accessibile tramite una connessione di rete.  
   
--   **Posta elettronica** : se il server di report è configurato in modo da usare l'estensione per il recapito tramite posta elettronica del server di report, è possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in uno dei formati di output disponibili) alla propria cartella Posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
+-   **Posta elettronica:** se il server di report è configurato in modo da utilizzare l'estensione del server di report per il recapito tramite posta elettronica, sarà possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in uno dei formati di output disponibili) alla propria cartella di posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
   
  **Contenuto dell'argomento:**  
   

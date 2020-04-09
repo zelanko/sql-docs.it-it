@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866041"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531159"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione SSRS)
 
@@ -91,6 +91,13 @@ In una connessione a un database del server di report è possibile utilizzare tr
   
 Se l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurata per l'autenticazione di Windows e si trova nello stesso dominio o in un dominio trusted con il computer server di report, è possibile configurare la connessione per l'utilizzo dell'account del servizio o di un account utente di dominio da gestire come proprietà di connessione tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se il server di database si trova in un dominio diverso o si utilizza la sicurezza dei gruppi di lavoro, è necessario configurare la connessione per l'utilizzo di un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo caso, assicurarsi di crittografare la connessione.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Se si usa Istanza gestita di SQL di Azure per ospitare i database del server di report, l'autenticazione di SQL Server è l'unico tipo di credenziali supportato. È importante ricordare, inoltre, che Istanza gestita non può ospitare l'istanza del server di report.
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>Utilizzo di account di servizio e sicurezza integrata
 
 È possibile utilizzare la sicurezza integrata di Windows per connettersi tramite l'account di servizio del server di report. All'account vengono concessi diritti di accesso al database del server di report. Si tratta del tipo di credenziali predefinito scelto dal programma di installazione se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato nella configurazione predefinita.  
@@ -105,14 +112,7 @@ Se si configura la connessione di database per l'utilizzo dell'account del servi
 
 #### <a name="using-a-sql-server-login"></a>Utilizzo di un account di accesso di SQL Server
 
-È possibile specificare un singolo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al database del server di report. Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database del server di report si trova in un computer remoto, utilizzare IPSec per proteggere la trasmissione dei dati tra i server. Se si utilizza un account di accesso al database, è necessario aggiornare la connessione al database del server di report ogni volta che si modifica la password o l'account.  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> Quando si usa un'istanza gestita di SQL di Azure per ospitare i database di Reporting Services 2019, il supporto è limitato all'uso delle credenziali di accesso di SQL server per la connessione.
-
-::: moniker-end
+È possibile specificare un singolo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al database del server di report. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database del server di report si trova in un computer remoto, usare IPSec per proteggere la trasmissione dei dati tra i server. Se si utilizza un account di accesso al database, è necessario aggiornare la connessione al database del server di report ogni volta che si modifica la password o l'account.
 
 ### <a name="database-permissions"></a>Autorizzazioni per il database
 
