@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: Pianificare i pacchetti in Azure con SSMS
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: Eseguire la migrazione a processi e strumenti di Azure
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Installazione di Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Installazione side-by-side di versioni di Integration Services
@@ -477,7 +479,7 @@
         - name: Origine OData
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: 'Esercitazione: utilizzo dell''origine OData'
+            - name: 'Esercitazione: uso dell''origine OData'
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: Fornire una query di origine OData in fase di esecuzione
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -933,7 +935,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Introduzione a SSIS Scale Out in un singolo computer
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'Procedura dettagliata: Installare il servizio di scalabilità orizzontale di Integration Services'
+    - name: 'Procedura dettagliata: Installare Integration Services Scale Out'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Eseguire pacchetti in modalità di scalabilità orizzontale
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1175,7 +1177,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: Configurazione
+    - name: Set
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
@@ -1795,7 +1797,7 @@
               href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
             - name: Lezione 5-4 - Test del pacchetto creato nella lezione 5 dell'esercitazione
               href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: 'Lezione 6: Utilizzo di parametri con il modello di distribuzione del progetto'
+        - name: 'Lezione 6: Uso di parametri con il modello di distribuzione del progetto'
           href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
           items:
             - name: Lezione 6-1 - Copia del pacchetto della lezione 5
@@ -1829,7 +1831,7 @@
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: Lezione 2-2 - Verifica del pacchetto di distribuzione
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'Lezione 3: Installare i pacchetti'
+        - name: 'Lezione 3: Installare pacchetti'
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: Lezione 3-1 - Copia del pacchetto di distribuzione
