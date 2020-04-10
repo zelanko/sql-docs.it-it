@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265004"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002665"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
 
@@ -49,7 +49,7 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
 
     **Come procedura consigliata C2WTS deve essere eseguito con la propria identità di dominio.**
 
-    * Creare un account Active Directory e registrarlo come account gestito in SharePoint Server. Per altre informazioni sugli account gestiti, vedere [Managed Accounts in Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/) (Account gestiti in Sharepoint)
+    * Creare un account Active Directory e registrarlo come account gestito in SharePoint Server.
    
     * Configurare il servizio C2WTS per usare l'account gestito tramite Amministrazione centrale SharePoint > Sicurezza > Configura account di servizio > Servizio Windows - Attestazioni per il servizio token Windows
 
