@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5bf2942b79cf7e72efbb36a53019de8208cd3b8e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3310f268bf04b015c5f80cd08b2ae3909fd3a5c2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935820"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926809"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Python con pymssql
 È necessario configurare l'ambiente di sviluppo con i prerequisiti per sviluppare un'applicazione che usa il driver Python per SQL Server.    

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe406ec4c1a198a6657da987e58bcfea289c41fd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993379"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916007"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
