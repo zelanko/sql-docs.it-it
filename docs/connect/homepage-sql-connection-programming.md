@@ -1,7 +1,7 @@
 ---
 title: Home page per la programmazione client SQL | Microsoft Docs
 description: Pagina hub con collegamenti annotati a download e documentazione per numerose combinazioni di linguaggi e sistemi operativi, per la connessione a SQL Server o al database SQL di Azure.
-author: MightyPen
+author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,13 +9,13 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
-ms.author: genemi
-ms.openlocfilehash: 145ca5c64223e4d16b327e4caf23458a479b87a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74491918"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924891"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page per la programmazione client per Microsoft SQL Server
 
