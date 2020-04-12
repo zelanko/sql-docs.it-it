@@ -70,7 +70,7 @@
   href: finishing-test-case-preparation-sybasetosql.md
 - name: Selezione e configurazione degli oggetti da testare
   href: selecting-and-configuring-objects-to-test-sybasetosql.md
-- name: risoluzione dei problemi
+- name: Risoluzione dei problemi
   href: troubleshooting-sybasetosql.md
 - name: Mapping dei tipi di dati Sybase ASE e SQL Server
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
@@ -137,3 +137,5 @@
       href: global-settings-logging-sybasetosql.md
     - name: Tester
       href: global-settings-tester-sybasetosql.md
+- name: Messaggi di conversione
+  href: messages/toc.yml
