@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f00e060bf477d6e43f2ddd42e0fd4bbbf6515898
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94e88af049ca5db3bb975c787cda18176d655346
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943343"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665157"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Query FOR XML e query nidificata FOR XML a confronto
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento viene messa a confronto una query FOR XML con un solo livello con una query FOR XML nidificata. Uno dei vantaggi dell'utilizzo di query FOR XML consiste nella possibilità di specificare una combinazione di XML incentrati sia sugli attributi che sugli elementi per i risultati della query. Tutto ciò è dimostrato nell'esempio riportato di seguito.  
   
 ## <a name="example"></a>Esempio  

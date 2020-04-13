@@ -17,17 +17,17 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5874c8714706e760f40c1862d18b94b3c28952b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907253"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664419"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Genera un valore o punteggi stimati in base a un modello archiviato. Per altre informazioni, vedere [Assegnazione di punteggi nativi tramite la funzione T-SQL PREDICT](../../advanced-analytics/sql-native-scoring.md).
+Genera un valore o punteggi stimati in base a un modello archiviato. Per altre informazioni, vedere [Assegnazione di punteggi nativi tramite la funzione T-SQL PREDICT](../../machine-learning/sql-native-scoring.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -98,7 +98,7 @@ Per usare la funzione `PREDICT` non è necessario che nel server sia installato 
 
 ### <a name="supported-algorithms"></a>Algoritmi supportati
 
-Il modello da usare deve essere stato creato con uno degli algoritmi supportati del pacchetto RevoScaleR. Per l'elenco dei modelli attualmente supportati, vedere [Assegnazione dei punteggi in tempo reale](../../advanced-analytics/real-time-scoring.md).
+Il modello da usare deve essere stato creato con uno degli algoritmi supportati del pacchetto RevoScaleR. Per l'elenco dei modelli attualmente supportati, vedere [Assegnazione dei punteggi in tempo reale](../../machine-learning/real-time-scoring.md).
 
 ### <a name="permissions"></a>Autorizzazioni
 
@@ -182,4 +182,4 @@ WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Assegnazione di punteggi nativi tramite la funzione T-SQL PREDICT](../../advanced-analytics/sql-native-scoring.md)
+- [Assegnazione di punteggi nativi tramite la funzione T-SQL PREDICT](../../machine-learning/sql-native-scoring.md)

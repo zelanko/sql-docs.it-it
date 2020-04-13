@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995324"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664909"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pre-elaborazione di uno schema per unire schemi inclusi
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   L'elemento **include** XSD W3C rende disponibile il supporto per la modularità di schema, che consente di partizionare XML Schema in più file fisici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente non supporta questo elemento. Gli XML Schema che includono tale elemento verranno rifiutati dal server.  
   
  Per risolvere questo problema, è possibile eseguire la pre-elaborazione di tutti gli XML Schema che includono la direttiva \<xsd:include> per copiare e unire il relativo contenuto in un singolo schema da caricare nel server. Per la pre-elaborazione è possibile utilizzare il codice C# seguente. I commenti nella parte iniziale del codice includono informazioni sul relativo utilizzo.  

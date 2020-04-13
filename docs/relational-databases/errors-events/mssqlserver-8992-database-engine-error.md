@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479670"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531070"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+|Elemento|valore|
+|:---|:---|
 |Nome prodotto|SQL Server|  
 |ID evento|8992|  
 |Origine evento|MSSQLSERVER|  
@@ -43,9 +43,9 @@ Questo errore può verificarsi quando una o più tabelle di sistema sono state a
 Questo errore può verificarsi quando si esegue DBCC CHECKDB su un database aggiornato da SQL Server 2000 a SQL Server 2005 o versione successiva. Poiché in SQL Server 2000 DBCC CHECKDB non include la funzionalità DBCC CHECKCATALOG, l'errore non viene rilevato prima dell'aggiornamento a meno di non eseguire DBCC CHECKCATALOG in modo specifico sul database.  
   
 È possibile che venga visualizzato uno degli errori seguenti insieme all'errore 8992:  
-|||
-|-|-| 
+
 |ID messaggio|Testo messaggio|
+|:---|:---|
 |3851|Trovata una riga non valida (%ls) nella tabella di sistema sys.%ls%ls.|
 |3852|Per la riga (%ls) di sys.%ls%ls non esiste una riga corrispondente (%ls) in sys.%ls%ls.|
 |3853|Per l'attributo (%ls) della riga (%ls) di sys.%ls%ls non esiste una riga corrispondente (%ls) in sys.%ls%ls.|

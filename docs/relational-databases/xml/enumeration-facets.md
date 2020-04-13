@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9fd368cdf5289d1b21818d6c7d6e51d395e340d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5430f9549a2c0af3677d3ad374e9fb5513d6bd1f
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006833"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664567"
 ---
 # <a name="enumeration-facets"></a>facet di enumerazione
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta XML Schema con tipi che dispongono di facet basati su pattern o di enumerazioni che violano tali facet.  
   
 ## <a name="example"></a>Esempio  

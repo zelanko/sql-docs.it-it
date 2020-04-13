@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006720"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662976"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Esempio: specifica della direttiva ELEMENTXSINIL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Quando si specifica la direttiva ELEMENT per il recupero di codice XML incentrato sugli elementi, se la colonna contiene un valore NULL, l'elemento corrispondente non viene generato nella modalità EXPLICIT. È possibile specificare facoltativamente la direttiva ELEMENTXSINIL per richiedere la creazione dell'elemento per i valori NULL. In questo caso l'attributo **xsi:nil** viene impostato sul valore TRUE.  
   
  La query seguente genera codice XML che include l'indirizzo di un dipendente. Per le colonne `AddressLine2` e `City` i nomi di colonna specificano la direttiva `ELEMENTXSINIL` . Ciò comporta la generazione dell'elemento per i valori NULL nelle colonne `AddressLine2` e `City` del set di righe.  

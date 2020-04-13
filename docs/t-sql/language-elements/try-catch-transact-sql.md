@@ -29,12 +29,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca4bfd07491b25659253ca56eb1c16adb414544b
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121564"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809841"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,9 +70,14 @@ END CATCH
   
  Un costrutto TRY...CATCH non può estendersi a più batch. Un costrutto TRY...CATCH non può estendersi a più blocchi di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio, un costrutto TRY...CATCH non può estendersi a due blocchi BEGIN…END di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non può estendersi a un costrutto IF…ELSE.  
   
- Se non si verificano errori nel codice racchiuso in un blocco TRY, al termine dell'esecuzione dell'ultima istruzione nel blocco TRY il controllo passa all'istruzione immediatamente successiva all'istruzione END CATCH associata. Se si verifica un errore nel codice racchiuso in un blocco TRY, il controllo passa alla prima istruzione nel blocco CATCH associato. Se l'istruzione END CATCH è l'ultima istruzione in una stored procedure o un trigger, il controllo viene restituito all'istruzione che ha chiamato la stored procedure o attivato il trigger.  
-  
- Al termine del codice nel blocco CATCH, il controllo passa all'istruzione immediatamente successiva all'istruzione END CATCH. Gli errori intercettati da un blocco CATCH non vengono restituiti all'applicazione chiamante. Se qualsiasi parte delle informazioni sugli errori deve essere restituita all'applicazione, il codice nel blocco CATCH deve utilizzare a tale scopo meccanismi come i set di risultati SELECT o le istruzioni RAISERROR e PRINT.  
+ Se non si verificano errori nel codice racchiuso in un blocco TRY, al termine dell'esecuzione dell'ultima istruzione nel blocco TRY il controllo passa all'istruzione immediatamente successiva all'istruzione END CATCH associata.
+ 
+ Se si verifica un errore nel codice racchiuso in un blocco TRY, il controllo passa alla prima istruzione nel blocco CATCH associato. Al termine del codice nel blocco CATCH, il controllo passa all'istruzione immediatamente successiva all'istruzione END CATCH. 
+ 
+ > [!NOTE] 
+ > Se l'istruzione END CATCH è l'ultima istruzione in una stored procedure o un trigger, il controllo viene restituito all'istruzione che ha chiamato la stored procedure o attivato il trigger. 
+ 
+ Gli errori intercettati da un blocco CATCH non vengono restituiti all'applicazione chiamante. Se qualsiasi parte delle informazioni sugli errori deve essere restituita all'applicazione, il codice nel blocco CATCH deve utilizzare a tale scopo meccanismi come i set di risultati SELECT o le istruzioni RAISERROR e PRINT.  
   
  I costrutti TRY...CATCH possono essere nidificati. I costrutti TRY...CATCH nidificati possono essere contenuti in un blocco TRY oppure in un blocco CATCH. Ad esempio, un blocco CATCH può contenere un costrutto TRY...CATCH incorporato per gestire gli errori rilevati dal codice CATCH.  
   

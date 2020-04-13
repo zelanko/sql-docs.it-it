@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287335"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664458"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 
@@ -112,18 +112,6 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
 > [!IMPORTANT]  
 >  I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i propri privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo che usino un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
 
-## <a name="working-with-r-services"></a>Utilizzo di R Services  
-
-**Si applica a:** SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
-
-Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili per la gestione dei pacchetti. Per altre informazioni, vedere [R Package management for SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md) (Gestione dei pacchetti R per SQL Server).
-
-|Nome del ruolo |Descrizione|  
-|-------------|-----------------|
-|**rpkgs-users** |Consente agli utenti di usare i pacchetti condivisi installati dai membri del ruolo condiviso rpkgs.|
-|**rpkgs-private** |Fornisce accesso ai pacchetti condivisi con le stesse autorizzazioni del ruolo rpkgs-users. I membri di questo ruolo possono inoltre installare, rimuovere e usare pacchetti con ambito privato.|
-|**rpkgs-shared** |Fornisce le stesse autorizzazioni del ruolo rpkgs-private. Gli utenti membri di questo ruolo possono anche installare o rimuovere i pacchetti condivisi.|
-  
 ## <a name="working-with-database-level-roles"></a>Utilizzo di ruoli a livello di database  
  Nella tabella seguente vengono spiegati i comandi, le viste e le funzioni necessari per l'utilizzo dei ruoli a livello di database.  
   

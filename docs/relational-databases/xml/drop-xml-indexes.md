@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7d8162a8eef652a14993f67e4e3931be7362e6f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5c638e405f7f2d15b5b48a483a5e46ea58b694e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929668"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664558"
 ---
 # <a name="drop-xml-indexes"></a>Eliminazione di indici XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Per eliminare indici XML e non XML primari o secondari esistenti, è possibile usare l'istruzione [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Tuttavia, nessuna opzione dell'istruzione DROP INDEX si applica agli indici XML. Se si elimina l'indice XML primario, vengono eliminati anche gli indici secondari presenti.  
   
  La sintassi di DROP con *TableName.IndexName* è obsoleta e non è supportata per gli indici XML.  

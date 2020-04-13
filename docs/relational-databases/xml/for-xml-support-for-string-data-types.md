@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e0ad8310f5938d757c30732cf6b1a78a9770254e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15f876fde9403d65ba6af81b7038519d4318100f
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943321"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665118"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Supporto di FOR XML per i tipi di dati stringa
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Il codice XML generato dagli spazi vuoti FOR XML nei dati viene sostituito con delle entità.  
   
  Nell'esempio seguente viene creata la tabella **T** e vengono inseriti dati di esempio che includono i caratteri di avanzamento riga, ritorno a capo e tabulazione. L'istruzione SELECT recupera i dati dalla tabella.  

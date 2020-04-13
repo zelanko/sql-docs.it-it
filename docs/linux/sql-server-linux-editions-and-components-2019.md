@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402666"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002780"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2019 in Linux
 
@@ -152,7 +152,7 @@ La versione Developer Edition continua a supportare un solo client per la [Riese
 |Maschera dati dinamica|Sì|Sì|Sì|Sì|   
 |Controllo di base|Sì|Sì|Sì|Sì| 
 |Controllo con granularità fine|Sì|Sì|Sì|Sì| 
-|Crittografia trasparente del database|Sì|No|No|No|   
+|Crittografia trasparente del database|Sì|Sì|No|No|   
 |Ruoli definiti dall'utente|Sì|Sì|Sì|Sì| 
 |Database indipendenti|Sì|Sì|Sì|Sì| 
 |Crittografia per backup|Sì|Sì|No|No|  
@@ -227,7 +227,6 @@ Le funzionalità e i servizi seguenti non sono disponibili per SQL Server 2019 i
 | **SQL Server Agent** |  Sottosistemi: CmdExec, PowerShell, Agente di lettura coda, SSIS, SSAS, SSRS |
 | &nbsp; | Avvisi |
 | &nbsp; | Backup gestito |
-| &nbsp; | Amministrazione multiserver con MSX/TSX |
 | **Disponibilità elevata** | Mirroring del database  |
 | **Sicurezza** | Extensible Key Management |
 | &nbsp; | Autenticazione AD per i server collegati | 

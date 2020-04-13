@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d626b478a94f796155a895e134eb171c18fcc28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84d76508ad50de0b76266ce936f752065b989105
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216600"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664371"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installare SQL Server Machine Learning Services (Python e R) in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo illustra l'installazione di [SQL Server Machine Learning Services](../advanced-analytics/index.yml) in Linux. Gli script Python e R possono essere eseguiti nel database usando Machine Learning Services.
+Questo articolo illustra l'installazione di [SQL Server Machine Learning Services](../machine-learning/index.yml) in Linux. Gli script Python e R possono essere eseguiti nel database usando Machine Learning Services.
 
 > [!NOTE]
 > Machine Learning Services viene installato per impostazione predefinita nei cluster Big Data di SQL Server. Per altre informazioni, vedere [Usare Machine Learning Services (Python e R) in cluster Big Data](../big-data-cluster/machine-learning-services.md)
@@ -435,10 +435,10 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Gli sviluppatori Python possono apprendere come usare Python con SQL Server seguendo queste esercitazioni:
 
-+ [Esercitazione su Python: Stimare il noleggio di sci con la regressione lineare in Machine Learning Services per SQL Server](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
-+ [Esercitazione: Categorizzazione dei clienti tramite clustering K-Means con Machine Learning Services per SQL Server](../advanced-analytics/tutorials/python-clustering-model.md)
++ [Esercitazione su Python: Stimare il noleggio di sci con la regressione lineare in Machine Learning Services per SQL Server](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Esercitazione su Python: Categorizzazione dei clienti tramite clustering K-Means con Machine Learning Services per SQL Server](../machine-learning/tutorials/python-clustering-model.md)
 
 Gli sviluppatori R possono iniziare alcuni semplici esempi e con le nozioni di base sul funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
-+ [Esercitazione: Eseguire R in T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Esercitazione: Analisi nel database per sviluppatori R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Avvio rapido: Eseguire R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Esercitazione: Analisi nel database per sviluppatori R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

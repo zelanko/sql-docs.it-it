@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971218"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664344"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installare le estensioni del linguaggio di SQL Server in Linux
 
@@ -30,7 +30,7 @@ Il percorso del pacchetto per le estensioni Java si trova nei repository di orig
 
 Le estensioni del linguaggio sono supportate anche nei contenitori Linux. Non vengono forniti contenitori predefiniti con le estensioni del linguaggio, ma è possibile crearne uno dai contenitori di SQL Server usando [un modello di esempio disponibile in GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Le estensioni del linguaggio e [Machine Learning Services](../advanced-analytics/index.yml) vengono installati per impostazione predefinita nei cluster Big Data di SQL Server. Se si usano cluster Big Data, non è necessario seguire la procedura descritta in questo articolo. Per altre informazioni, vedere [Usare Machine Learning Services (Python e R) in cluster Big Data](../big-data-cluster/machine-learning-services.md).
+Le estensioni del linguaggio e [Machine Learning Services](../machine-learning/index.yml) vengono installati per impostazione predefinita nei cluster Big Data di SQL Server. Se si usano cluster Big Data, non è necessario seguire la procedura descritta in questo articolo. Per altre informazioni, vedere [Usare Machine Learning Services (Python e R) in cluster Big Data](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-version"></a>Disinstallare la versione di anteprima
 

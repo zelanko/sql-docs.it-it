@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4acea026f7541466a1bb38819d50f1b529e6f500
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006828"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664545"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Esempio: Creazione di elementi di pari livello utilizzando la modalità EXPLICIT
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Si supponga di voler creare codice XML per fornire informazioni sugli ordini di vendita. <`SalesPerson`> e <`OrderDetail`> sono elementi di pari livello. Ogni ordine dispone di un elemento <`OrderHeader`>, un elemento <`SalesPerson`> e uno o più elementi <`OrderDetail`>.  
   
 ```  
