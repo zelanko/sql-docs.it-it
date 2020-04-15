@@ -1,5 +1,5 @@
 ---
-title: OLE DB tipo di parametro con valori di tabella (proprietà)
+title: Tipo di parametro con valori di tabella OLE DB (proprietà)OLE DB Table-Valued Parameter type (Properties)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242773"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283192"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "75242773"
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
-|ID proprietà|valore|  
+|ID proprietà|Valore|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -78,7 +78,7 @@ ms.locfileid: "75242773"
  I set di proprietà seguenti supportano i parametri con valori di tabella.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Questa proprietà viene utilizzata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella utilizzando ITableDefinitionWithConstraints:: CreateTableWithConstraints per ogni colonna tramite la struttura DBCOLUMNDESC, se necessario.  
+ Questa proprietà viene usata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella tramite ITableDefinitionWithConstraints::CreateTableWithConstraints per ogni colonna della struttura DBCOLUMNDESC, se necessario.  
   
 |ID proprietà|Valore proprietà|  
 |-----------------|--------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "75242773"
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Queste proprietà vengono lette dal consumer durante l'individuazione delle informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParameters:: GetParameterProperties e impostate dall'utente durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella. tramite ISSCommandWithParameters:: SetParameterProperties.  
+ Queste proprietà vengono lette dal consumer durante l'individuazione delle informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParameters::GetParameterProperties e vengono impostate dal consumer durante l'impostazione di proprietà specifiche relative al parametro con valori di tabella tramite ISSCommandWithParameters::SetParameterProperties.  
   
  Tali proprietà vengono descritte in modo dettagliato nella tabella seguente.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "75242773"
 |||
 
 ## <a name="see-also"></a>Vedere anche  
- [Supporto del tipo di parametro con valori di tabella OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [OLE DB Table-Valued Parameter Type Support](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

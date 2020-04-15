@@ -1,5 +1,5 @@
 ---
-title: Data aritmetica | Microsoft Docs
+title: Aritmetica della data Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - date arithmetic [ODBC]
 - SQL grammar [ODBC], date arithmetic
 ms.assetid: 538b274a-822e-4126-993e-7d9a92c6a7d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5fef8e32545b25e9b7925b973cadee135d818215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 188512e0341d966916ac2b7827bb1dd3aab3de87
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096473"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280621"
 ---
 # <a name="date-arithmetic"></a>Aritmetica delle date
-Il driver supporta l'aggiunta e la sottrazione di un intero da una colonna di data, ora o TIMESTAMP. Per una colonna data, il valore integer specifica il numero di giorni da aggiungere o sottrarre. Per una colonna TIME o TIMESTAMP, il valore integer specifica il numero di secondi da aggiungere o sottrarre.
+Il driver supporta l'aggiunta e la sottrazione di un numero intero da una colonna DATE, TIME o TIMESTAMP. Per una colonna DATE, il numero intero specifica il numero di giorni da aggiungere o sottrarre. Per una colonna TIME o TIMESTAMP, il numero intero specifica il numero di secondi da aggiungere o sottrarre.

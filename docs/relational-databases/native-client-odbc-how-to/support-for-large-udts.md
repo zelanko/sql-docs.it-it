@@ -1,5 +1,5 @@
 ---
-title: Supporto per i tipi definiti dall'utente di grandi dimensioni | Microsoft Docs
+title: Supporto per tipi definiti dall'utente di grandi dimensioni Documenti Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780481"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281784"
 ---
 # <a name="support-for-large-udts"></a>Supporto per tipi definiti dall'utente di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,12 +25,12 @@ ms.locfileid: "73780481"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per ulteriori informazioni sul supporto di tipi definiti dall'utente di grandi dimensioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Per ulteriori informazioni sul supporto per tipi definiti dall'utente di grandi dimensioni, vedere [Tipi CLR predefiniti per l'utente ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)di grandi dimensioni &#40;&#41;ODBC .  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice rappresenta il codice sorgente C#. Incollarlo in un file denominato LargeStringUDT.cs e compilarlo in una DLL. Copiare LargeStringUDT.dll nella directory radice dell'unità C.  
   
- Il secondo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) crea l'assembly nel database master.  
+ Il secondo [!INCLUDE[tsql](../../includes/tsql-md.md)]elenco di codice ( ) crea l'assembly nel database master.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e user32.lib. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73780481"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il quarto listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare l'assembly dal database master.  
+ Il quarto [!INCLUDE[tsql](../../includes/tsql-md.md)]codice ( ) che elenca elimina l'assembly dal database master.  
   
 ```  
 // LargeStringUDT.cs  

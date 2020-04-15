@@ -1,5 +1,5 @@
 ---
-title: Assegnazione di un handle di istruzione ODBC | Microsoft Docs
+title: Allocazione di un handle di istruzione ODBC Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - allocating statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf9a15bc4622b15afa9838327edd90383a812270
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077209"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288431"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>Allocazione di un handle di istruzione ODBC
-Prima che l'applicazione possa eseguire un'istruzione, deve allocare un handle di istruzione come indicato di seguito:  
+Prima che l'applicazione possa eseguire un'istruzione, è necessario allocare un handle di istruzione come segue:  
   
 1.  L'applicazione dichiara una variabile di tipo HSTMT. Chiama quindi **SQLAllocHandle** e passa l'indirizzo di questa variabile, l'handle della connessione in cui allocare l'istruzione e l'opzione SQL_HANDLE_STMT. Ad esempio:  
   
@@ -33,10 +33,10 @@ Prima che l'applicazione possa eseguire un'istruzione, deve allocare un handle d
     SQLAllocHandle(SQL_HANDLE_STMT, hdbc1, &hstmt1);  
     ```  
   
-2.  Gestione driver alloca una struttura in cui archiviare le informazioni sull'istruzione e chiama **SQLAllocHandle** nel driver con l'opzione SQL_HANDLE_STMT.  
+2.  Gestione Driver alloca una struttura in cui archiviare le informazioni sull'istruzione e chiama **SQLAllocHandle** nel driver con l'opzione SQL_HANDLE_STMT.  
   
-3.  Il driver alloca la propria struttura in cui archiviare le informazioni sull'istruzione e restituisce l'handle dell'istruzione del driver a gestione driver.  
+3.  Il driver alloca la propria struttura in cui archiviare le informazioni sull'istruzione e restituisce l'handle dell'istruzione del driver a Gestione Driver.  
   
-4.  Gestione driver restituisce l'handle dell'istruzione Gestione driver all'applicazione nella variabile dell'applicazione.  
+4.  Gestione Driver restituisce l'handle di Gestione Driver per l'applicazione nella variabile di applicazione.  
   
- L'handle di istruzione identifica l'istruzione da utilizzare quando si chiamano le funzioni ODBC. Per ulteriori informazioni sugli handle di istruzione, vedere [handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md).
+ L'handle dell'istruzione identifica l'istruzione da utilizzare quando si chiamano le funzioni ODBC. Per ulteriori informazioni sugli handle di istruzione, vedere [Handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md).

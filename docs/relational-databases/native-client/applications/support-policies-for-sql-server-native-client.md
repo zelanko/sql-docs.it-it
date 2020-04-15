@@ -1,5 +1,5 @@
 ---
-title: Criteri di supporto per SQL Server Native Client | Microsoft Docs
+title: Criteri di supporto per SQL Server Native Client Documenti Microsoft
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -7,15 +7,15 @@ ms.custom: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400589fa583a9c75dcde2208622cff4c62e11ab9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4dd81e9d23be08a617cefe9cf756feb83040c11c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761543"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288120"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Criteri di supporto per SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,23 +23,22 @@ ms.locfileid: "73761543"
   In questo argomento si illustrano le possibilità di utilizzo dei vari componenti di accesso ai dati con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="server-support"></a>Supporto server  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supporta le connessioni a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] e al [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supporta le connessioni a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] e al [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
   
 ## <a name="supported-operating-system-versions"></a>Versioni di sistema operativo supportate  
  Nella tabella seguente sono elencati i sistemi operativi supportati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 |Versione di SQL Server Native Client|Sistemi operativi supportati|  
 |--------------------------------------|---------------------------------|  
-|SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 o versione successiva<br /><br /> Microsoft Windows Server 2003 o versione successiva<br /><br /> Microsoft Windows XP Service Pack 1 o versione successiva<br /><br /> Microsoft Windows Vista (è richiesto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 o versione successiva)<br /><br /> Microsoft Windows Server 2008 R2 (richiede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 o versione successiva)|  
-|SQL Server Native Client 10,0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 Service Pack 2 o versione successiva<br /><br /> Microsoft Windows XP Service Pack 2 o versione successiva<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
-|SQL Server Native Client 10,5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 Service Pack 2 o versione successiva<br /><br /> Microsoft Windows XP Service Pack 2 o versione successiva<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
+|SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 o versione successiva<br /><br /> Microsoft Windows Server 2003 o versione successiva<br /><br /> Microsoft Windows XP Service Pack 1 o versione successiva<br /><br /> Microsoft Windows Vista (è richiesto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 o versione successiva)<br /><br /> Microsoft Windows Server 2008 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] R2 (richiede il Service Pack 2 o versione successiva)|  
+|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 Service Pack 2 o versione successiva<br /><br /> Microsoft Windows XP Service Pack 2 o versione successiva<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
+|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 Service Pack 2 o versione successiva<br /><br /> Microsoft Windows XP Service Pack 2 o versione successiva<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
 |SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7<br /><br /> Microsoft Windows 8<br /><br /> Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>Criteri di supporto ADO  
  Le applicazioni ADO possono utilizzare il provider OLE DB SQLOLEDB incluso in Windows se non richiedono alcuna funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
   
- Le applicazioni ADO possono utilizzare la versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di Native Client inclusa [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in. Le applicazioni ADO possono inoltre utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 (incluso in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]). In tal caso, è tuttavia necessario che sia specificato `DataTypeCompatibility=80` nelle stringhe di connessione. Se nelle stringhe di connessione è presente [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], sono disponibili solo le funzionalità di `DataTypeCompatibility=80`.  
+ Le applicazioni ADO possono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzare la [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]versione di Native Client inclusa in . Le applicazioni ADO possono inoltre utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 (incluso in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]). In tal caso, è tuttavia necessario che sia specificato `DataTypeCompatibility=80` nelle stringhe di connessione. Se nelle stringhe di connessione è presente `DataTypeCompatibility=80`, sono disponibili solo le funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 ## <a name="bcp-support-policies"></a>Criteri di supporto BCP  
  A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], bcp.exe supporta file di dati appartenenti a versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non più vecchie di tre versioni rispetto alla versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con cui viene fornito bcp.exe.  
@@ -52,7 +51,7 @@ ms.locfileid: "73761543"
   
  Le applicazioni OLE DB che non sono state certificate per l'utilizzo con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client possono utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se `DataTypeCompatibility=80` è specificato nelle relative stringhe di connessione.  
   
- Le applicazioni OLE DB che utilizzano OLE DB Service Components possono utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client solo se specificano `DataTypeCompatibility=80` nelle stringhe di connessione. Tuttavia, in questo caso non [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] sono disponibili funzionalità aggiunte dopo.  
+ Le applicazioni OLE DB che utilizzano OLE DB Service Components possono utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client solo se specificano `DataTypeCompatibility=80` nelle stringhe di connessione. Tuttavia, in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] questo caso non saranno disponibili funzionalità aggiunte.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

@@ -1,5 +1,5 @@
 ---
-title: Considerazioni sulla programmazione | Microsoft Docs
+title: Considerazioni sulla programmazione - Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023263"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282181"
 ---
 # <a name="programming-considerations"></a>Considerazioni sulla programmazione
-In questa sezione vengono illustrati brevemente alcuni argomenti relativi alla scrittura di applicazioni e driver ODBC.  
+In questa sezione vengono brevemente illustrati alcuni argomenti relativi alla scrittura di driver e applicazioni ODBC.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
 -   [Multithreading](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [Alignment](../../../odbc/reference/develop-app/alignment.md)  
+-   [Allineamento](../../../odbc/reference/develop-app/alignment.md)  
   
 -   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   

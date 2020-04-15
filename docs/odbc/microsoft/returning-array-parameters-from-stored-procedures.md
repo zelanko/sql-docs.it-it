@@ -1,5 +1,5 @@
 ---
-title: Restituzione di parametri di matrice da stored procedure | Microsoft Docs
+title: Restituzione di parametri di matrice da stored procedure Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc998dadc0e0c4a4bfe054bfd1d40296bc176393
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987979"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292861"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Restituzione dei parametri di matrice dalle stored procedure
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- In Oracle 7,3 non esiste alcun modo per accedere a un tipo di record PL/SQL, tranne che per un programma PL/SQL. Se una procedura o una funzione in pacchetto ha un argomento formale definito come tipo di record PL/SQL, non è possibile associare tale argomento formale come parametro. Utilizzare il tipo di tabella PL/SQL in Microsoft ODBC driver for Oracle per richiamare parametri di matrice da routine contenenti le sequenze di escape corrette.  
+ In Oracle 7.3, non è possibile accedere a un tipo di record PL/SQL se non da un programma PL/SQL. Se una routine o una funzione in pacchetto dispone di un argomento formale definito come tipo di record PL/SQL, non è possibile associare tale argomento formale come parametro. Utilizzare il tipo PL/SQL TABLE nel driver Microsoft ODBC per Oracle per richiamare i parametri di matrice dalle procedure contenenti le sequenze di escape corrette.  
   
- Per richiamare la procedura, usare la sintassi seguente:  
+ Per richiamare la procedura, utilizzare la sintassi seguente:  
   
 ```  
 {call  <package-name>.<proc-or-func>;  
@@ -35,13 +35,13 @@ ms.locfileid: "67987979"
 ```  
   
 > [!NOTE]  
->  Il \<parametro> Max-record richiesto deve essere maggiore o uguale al numero di righe presenti nel set di risultati. In caso contrario, Oracle restituisce un errore che viene passato all'utente dal driver.  
+>  Il \<parametro> max-records-requested deve essere maggiore o uguale al numero di righe presenti nel set di risultati. In caso contrario, Oracle restituisce un errore che viene passato all'utente dal driver.  
 >   
->  I record PL/SQL non possono essere usati come parametri di matrice. Ogni parametro di matrice può rappresentare solo una colonna di una tabella di database.  
+>  I record PL/SQL non possono essere utilizzati come parametri di matrice. Ogni parametro di matrice può rappresentare una sola colonna di una tabella di database.  
   
- Nell'esempio seguente viene definito un pacchetto contenente due procedure che restituiscono set di risultati diversi, quindi vengono forniti due modi per restituire i set di risultati dal pacchetto.  
+ Nell'esempio seguente viene definito un pacchetto contenente due procedure che restituiscono set di risultati diversi e quindi vengono forniti due modi per restituire set di risultati dal pacchetto.  
   
-## <a name="package-definition"></a>Definizione del pacchetto:  
+## <a name="package-definition"></a>Definizione pacchetto:  
   
 ```  
 CREATE OR REPLACE PACKAGE SimplePackage AS  
@@ -107,13 +107,13 @@ END SimplePackage;
   
 #### <a name="to-invoke-procedure-proc1"></a>Per richiamare la procedura PROC1  
   
-1.  Restituisce tutte le colonne in un singolo set di risultati:  
+1.  Restituire tutte le colonne in un singolo set di risultati:Return all the columns in a single result set:  
   
     ```  
     {call SimplePackage.Proc1( {resultset  3, o_id , ao_course, ao_dept  } ) }  
     ```  
   
-2.  Restituisce ogni colonna come singolo set di risultati:  
+2.  Restituire ogni colonna come singolo set di risultati:Return each column as a single result set:  
   
     ```  
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
@@ -123,19 +123,19 @@ END SimplePackage;
   
 #### <a name="to-invoke-procedure-proc2"></a>Per richiamare la procedura PROC2  
   
-1.  Restituisce tutte le colonne in un singolo set di risultati:  
+1.  Restituire tutte le colonne in un singolo set di risultati:Return all the columns in a single result set:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset  5, ao_Arg2, ao_Arg3} ) }  
     ```  
   
-2.  Restituisce ogni colonna come singolo set di risultati:  
+2.  Restituire ogni colonna come singolo set di risultati:Return each column as a single result set:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- Assicurarsi che le applicazioni recuperino tutti i set di risultati usando l'API [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) . Per ulteriori informazioni, fare riferimento a *ODBC Programmer ' s Reference*.  
+ Verificare che le applicazioni recuperino tutti i set di risultati utilizzando l'API [SQLMoreResults.](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) Per ulteriori informazioni, fare riferimento a *ODBC Programmer's Reference*.  
   
 > [!NOTE]  
->  Nel driver ODBC per Oracle versione 2,0, le funzioni Oracle che restituiscono matrici PL/SQL non possono essere utilizzate per restituire i set di risultati.
+>  Nel driver ODBC per Oracle versione 2.0, le funzioni Oracle che restituiscono matrici PL/SQL non possono essere utilizzate per restituire set di risultati.
