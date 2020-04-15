@@ -10,27 +10,27 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f26efff82abaaba40caaf9d2868f716e8bb1e308
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73766041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298271"
 ---
 # <a name="set-large-data-ole-db"></a>Impostare dati di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questo esempio viene illustrato come impostare dati BLOB, creare una tabella, aggiungere un record di esempio, recuperare tale record nel set di righe e quindi impostare il valore del campo BLOB. Questo esempio non è supportato in IA64.  
   
- Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama i metodi **IRowsetChange::SetData** o **IRowsetChange::InsertRow**.  
+ Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**.  
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="procedures"></a>Procedure  
   

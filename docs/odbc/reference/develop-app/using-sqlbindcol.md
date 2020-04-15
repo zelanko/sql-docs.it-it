@@ -1,5 +1,5 @@
 ---
-title: Uso di SQLBindCol | Microsoft Docs
+title: Utilizzo di SQLBindCol . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da49ad4db80b93d02534a0c4ecacdc2621c9cf8d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294631"
 ---
 # <a name="using-sqlbindcol"></a>Uso di SQLBindCol
 L'applicazione associa le colonne chiamando **SQLBindCol**. Questa funzione associa una colonna alla volta. Con esso, l'applicazione specifica quanto segue:  
   
--   Numero di colonna. La colonna 0 è la colonna del segnalibro; Questa colonna non è inclusa in alcuni set di risultati. Tutte le altre colonne sono numerate a partire dal numero 1. Si è verificato un errore durante l'associazione di una colonna con un numero maggiore di colonne nel set di risultati. Questo errore non può essere rilevato fino a quando non viene creato il set di risultati, pertanto viene restituito da **SQLFetch**, non da **SQLBindCol**.  
+-   Numero di colonna. La colonna 0 è la colonna del segnalibro; questa colonna non è inclusa in alcuni set di risultati. Tutte le altre colonne sono numerate a partire dal numero 1. È un errore associare una colonna con un numero maggiore rispetto alle colonne nel set di risultati. questo errore non può essere rilevato fino a quando il set di risultati non è stato creato, pertanto viene restituito da **SQLFetch**, non **da SQLBindCol**.  
   
--   Il tipo di dati C, l'indirizzo e la lunghezza in byte della variabile associata alla colonna. Non è possibile specificare un tipo di dati C a cui non è possibile convertire il tipo di dati SQL della colonna. Questo errore potrebbe non essere rilevato fino a quando non viene creato il set di risultati, pertanto viene restituito da **SQLFetch**, non da **SQLBindCol**. Per un elenco delle conversioni supportate, vedere [conversione di dati da SQL ai tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Appendice D: tipi di dati. Per informazioni sulla lunghezza in byte, vedere [lunghezza del buffer dei dati](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   Il tipo di dati C, l'indirizzo e la lunghezza in byte della variabile associata alla colonna. È un errore specificare un tipo di dati C in cui non è possibile convertire il tipo di dati SQL della colonna. questo errore potrebbe non essere rilevato fino a quando non è stato creato il set di risultati, pertanto viene restituito da **SQLFetch**, non **da SQLBindCol**. Per un elenco delle conversioni supportate, vedere [Conversione](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) di dati da SQL a tipi di dati C nell'appendice D: tipi di dati. Per informazioni sulla lunghezza in byte, vedere [Lunghezza del buffer di dati](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
--   Indirizzo di un buffer di lunghezza/indicatore. Il buffer di lunghezza/indicatore è facoltativo. Viene utilizzato per restituire la lunghezza in byte dei dati di tipo binary o character oppure restituire SQL_NULL_DATA se i dati sono NULL. Per ulteriori informazioni, vedere [utilizzo di valori di lunghezza/indicatore](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Indirizzo di un buffer di lunghezza/indicatore. Il buffer di lunghezza/indicatore è facoltativo. Viene utilizzato per restituire la lunghezza in byte dei dati binari o di tipo carattere o SQL_NULL_DATA se i dati sono NULL. Per ulteriori informazioni, consultate [Utilizzo dei valori di lunghezza/indicatore.](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
   
- Quando viene chiamato **SQLBindCol** , il driver associa queste informazioni all'istruzione. Quando viene recuperata ogni riga di dati, vengono utilizzate le informazioni per inserire i dati per ogni colonna nelle variabili dell'applicazione associata.  
+ Quando **SQLBindCol** viene chiamato, il driver associa queste informazioni con l'istruzione. Quando ogni riga di dati viene recuperata, utilizza le informazioni per inserire i dati per ogni colonna nelle variabili di applicazione associate.  
   
- Il codice seguente, ad esempio, associa le variabili alle colonne SalesPerson e CustID. I dati per le colonne verranno restituiti in *venditori* e *CustID*. Poiché il *venditore* è un buffer di caratteri, l'applicazione ne specifica la lunghezza in byte (11), in modo che il driver possa determinare se troncare i dati. La lunghezza in byte del titolo restituito, o se è NULL, verrà restituita in *SalesPersonLenOrInd*.  
+ Ad esempio, il codice seguente associa le variabili alle colonne SalesPerson e CustID. I dati per le colonne verranno restituiti in *SalesPerson* e *CustID*. Poiché *SalesPerson* è un buffer di caratteri, l'applicazione specifica la lunghezza in byte (11) in modo che il driver possa determinare se troncare i dati. La lunghezza in byte del titolo restituito o se è NULL verrà restituita in *SalesPersonLenOrInd*.  
   
- Poiché *CustID* è una variabile di tipo integer con lunghezza fissa, non è necessario specificarne la lunghezza in byte; il driver presuppone che sia **sizeof (** SQLUINTEGER **)**. La lunghezza in byte dei dati ID cliente restituiti, o se è NULL, verrà restituita in *CustIDInd*. Si noti che l'applicazione è interessata solo se lo stipendio è NULL, perché la lunghezza in byte è sempre **sizeof (** SQLUINTEGER **)**.  
+ Poiché *CustID* è una variabile integer e ha lunghezza fissa, non è necessario specificarne la lunghezza in byte. il driver presuppone che sia **sizeof(** SQLUINTEGER **)**. La lunghezza in byte dei dati dell'ID cliente restituiti o se è NULL, verrà restituita in *CustIDInd*. Si noti che l'applicazione è interessata solo a se lo stipendio è NULL, poiché la lunghezza in byte è sempre **sizeof(** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -70,7 +70,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- Il codice seguente esegue un'istruzione **Select** immessa dall'utente e stampa ogni riga di dati nel set di risultati. Poiché l'applicazione non è in grado di stimare la forma del set di risultati creato dall'istruzione **Select** , non è in grado di associare variabili hardcoded al set di risultati come nell'esempio precedente. Al contrario, l'applicazione alloca un buffer che include i dati e un buffer di lunghezza/indicatore per ogni colonna della riga. Per ogni colonna, viene calcolato l'offset all'inizio della memoria per la colonna e tale offset viene regolato in modo che i buffer di dati e di lunghezza/indicatore per la colonna inizino sui limiti di allineamento. Associa quindi la memoria a partire dall'offset alla colonna. Dal punto di vista del driver, l'indirizzo di questa memoria non è distinguibile dall'indirizzo di una variabile associata nell'esempio precedente. Per ulteriori informazioni sull'allineamento, vedere [allineamento](../../../odbc/reference/develop-app/alignment.md).  
+ Il codice seguente esegue un'istruzione **SELECT** immessa dall'utente e stampa ogni riga di dati nel set di risultati. Poiché l'applicazione non è in grado di prevedere la forma del set di risultati creato dall'istruzione **SELECT,** non è in grado di associare variabili hardcoded al set di risultati come nell'esempio precedente. Al contrario, l'applicazione alloca un buffer che contiene i dati e un buffer di lunghezza/indicatore per ogni colonna in tale riga. Per ogni colonna, calcola l'offset all'inizio della memoria per la colonna e regola questo offset in modo che i buffer di dati e lunghezza/indicatore per la colonna inizino sui limiti di allineamento. Associa quindi la memoria a partire dall'offset alla colonna. Dal punto di vista del driver, l'indirizzo di questa memoria è indistinguibile dall'indirizzo di una variabile associata nell'esempio precedente. Per ulteriori informazioni sull'allineamento, vedere [Allineamento](../../../odbc/reference/develop-app/alignment.md).  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

@@ -1,5 +1,5 @@
 ---
-title: SQLNumResultCols | Microsoft Docs
+title: Proprietà SQLNumResultCols . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLNumResultCols function
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ec47c112a41d579710a42c1913785d794f040c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b56dad6564bad751829497117cc74553806b244
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786043"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302382"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Per le istruzioni eseguite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il driver ODBC di Native client non visita il server per segnalare il numero di colonne in un set di risultati. In questo caso, **SQLNumResultCols** non genera un round trip del server. Analogamente a [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) e [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), la chiamata a **SQLNumResultCols** nelle istruzioni preparate ma non eseguite genera un round trip del server.  
+  Per le istruzioni eseguite, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client non visita il server per segnalare il numero di colonne in un set di risultati. In questo caso, **SQLNumResultCols** non causa un round trip del server. Analogamente a [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) e [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), la chiamata di **SQLNumResultCols** sulle istruzioni preparate ma non eseguite genera un round trip del server.  
   
- Quando un'istruzione o un batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] restituisce più set di righe di risultati, è possibile che il numero di colonne del set di risultati cambi da un set all'altro. **SQLNumResultCols** deve essere chiamato per ogni set. Quando il numero di colonne cambia, l'applicazione deve riassociare i valori dei dati prima di recuperare i risultati delle righe. Per ulteriori informazioni sulla gestione di più restituzione di set di risultati, vedere [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
+ Quando un'istruzione o un batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] restituisce più set di righe di risultati, è possibile che il numero di colonne del set di risultati cambi da un set all'altro. **SQLNumResultCols** deve essere chiamato per ogni set. Quando il numero di colonne cambia, l'applicazione deve riassociare i valori dei dati prima di recuperare i risultati delle righe. Per ulteriori informazioni sulla gestione di più restituzioni del set di risultati, vedere [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
- I miglioramenti apportati al motore [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di database a partire da consentono a SQLNumResultCols di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da SQLNumResultCols nelle versioni precedenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Miglioramenti nel motore di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] database che iniziano con consentire SQLNumResultCols per ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono differire dai valori restituiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da SQLNumResultCols nelle versioni precedenti di . Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLNumResultCols (funzione)](https://go.microsoft.com/fwlink/?LinkId=59359)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Funzione SQLNumResultColsSQLNumResultCols Function](https://go.microsoft.com/fwlink/?LinkId=59359)   
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Copia dati bulk tramite IRowsetFastLoad (OLE DB) | Microsoft Docs
+title: Eseguire una copia bulk di dati usando IRowsetFastLoad (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5f597b739f4fd121d1c4174039dae5379122f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37be3d529c1d219318af2743d854a6d1b67f0cee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73768267"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300976"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73768267"
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Per eseguire la copia bulk dei dati in una tabella di SQL Server  
   
@@ -43,15 +43,15 @@ ms.locfileid: "73768267"
   
 2.  Impostare su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD dell'origine dati specifica del provider SQLOLEDB. Grazie a questa impostazione, la sessione appena creata consente al consumer di accedere a **IRowsetFastLoad**.  
   
-3.  Creare una sessione che richiede l'interfaccia **IOpenRowset** .  
+3.  Creare una sessione che richiede l'interfaccia **IOpenRowset**.  
   
 4.  Chiamare **IOpenRowset::OpenRowset** per aprire un set di righe che include tutte le righe della tabella (in cui devono essere copiati i dati usando l'operazione di copia bulk).  
   
-5.  Eseguire le associazioni necessarie e creare una funzione di accesso usando **IAccessor:: CreateAccessor**.  
+5.  Effettuare le associazioni necessarie e creare una funzione di accesso usando **IAccessor::CreateAccessor**.  
   
 6.  Configurare il buffer della memoria dal quale verranno copiati i dati nella tabella.  
   
-7.  Chiamare **IRowsetFastLoad:: InsertRow** per eseguire la copia bulk dei dati nella tabella.  
+7.  Chiamare **IRowsetFastLoad::InsertRow** per eseguire la copia bulk dei dati nella tabella.  
 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono aggiunti 10 record alla tabella IRFLTable. È necessario creare la tabella IRFLTable nel database. Questo esempio non è supportato in IA64.  

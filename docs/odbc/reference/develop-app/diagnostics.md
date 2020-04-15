@@ -1,5 +1,5 @@
 ---
-title: Diagnostica | Microsoft Docs
+title: Proprietà Diagnostics . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - functions [ODBC], diagnostic information
 - diagnostic information [ODBC], about diagnostic information
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022524"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305152"
 ---
 # <a name="diagnostics"></a>Diagnostica
-Le funzioni in ODBC restituiscono informazioni di diagnostica in due modi. Il codice restituito indica l'esito positivo o negativo complessivo della funzione, mentre i record di diagnostica forniscono informazioni dettagliate sulla funzione. Almeno un record di diagnostica, ovvero il record di intestazione, viene restituito anche se la funzione ha esito positivo.  
+Le funzioni in ODBC restituiscono informazioni diagnostiche in due modi. Il codice restituito indica l'esito positivo o negativo complessivo della funzione, mentre i record di diagnostica forniscono informazioni dettagliate sulla funzione. Almeno un record di diagnostica, ovvero il record di intestazione, viene restituito anche se la funzione ha esito positivo.  
   
- Le informazioni di diagnostica vengono utilizzate in fase di sviluppo per rilevare errori di programmazione, ad esempio handle non validi ed errori di sintassi nelle istruzioni SQL hardcoded. Viene utilizzato in fase di esecuzione per rilevare errori di run-time e avvisi quali il troncamento dei dati, le violazioni di accesso e gli errori di sintassi nelle istruzioni SQL immesse dall'utente.  
+ Le informazioni di diagnostica vengono utilizzate in fase di sviluppo per rilevare errori di programmazione quali handle non validi ed errori di sintassi nelle istruzioni SQL hardcoded. Viene utilizzato in fase di esecuzione per rilevare errori e avvisi di runtime, ad esempio troncamento dei dati, violazioni di accesso ed errori di sintassi nelle istruzioni SQL immesse dall'utente.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

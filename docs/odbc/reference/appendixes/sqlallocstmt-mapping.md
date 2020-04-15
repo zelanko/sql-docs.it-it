@@ -1,5 +1,5 @@
 ---
-title: Mapping di SQLAllocStmt | Microsoft Docs
+title: 'Mapping di SQLAllocStmt : Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLAllocStmt
 - SQLAllocStmt function [ODBC], mapping
 ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf79d3ef813e87e785cea588cfc1d6e3eed44ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 447233a3ba014a5ef92f2f49840ad302f8aeccf0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064989"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305484"
 ---
 # <a name="sqlallocstmt-mapping"></a>Mapping di SQLAllocStmt
-Quando un'applicazione chiama **SQLAllocStmt** tramite un driver ODBC *3. x* , la chiamata a:  
+Quando un'applicazione chiama SQLAllocStmt tramite un driver ODBC *3.x,* la chiamata a:When an application calls **SQLAllocStmt** through an ODBC 3.x driver, the call to:  
   
 ```  
 SQLAllocStmt(hdbc, phstmt)  
 ```  
   
- viene mappato a **SQLAllocHandle** da Gestione driver nel driver come indicato di seguito:  
+ viene mappato a **SQLAllocHandle** da Gestione Driver nel driver come segue:  
   
 ```  
 SQLAllocHandle(SQL_HANDLE_STMT, InputHandle, OutputHandlePtr)  
 ```  
   
- con *InputHandle puntare* impostato su *HDBC* e *OutputHandlePtr* impostato su *phstmt*.
+ con *InputHandle* impostato su *hdbc* e *OutputHandlePtr* impostato su *phstmt*.

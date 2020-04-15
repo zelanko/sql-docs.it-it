@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys (driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLPrimaryKeys (driver ODBC di Visual FoxPro) . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,27 +10,27 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLPrimaryKeys function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e85e60cde86c9483e69a8c43de14ef64eb914119
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 83631d22bd07017c4eba8f6af171443ab8c76d9c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301546"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento sono contenute informazioni specifiche del driver ODBC di Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: completo  
+ Supporto: Completo  
   
- Conformità API ODBC: livello 2  
+ Conformità API ODBC: livello 2ODBC API Conformance: Level 2  
   
- Restituisce i nomi delle colonne che costituiscono la chiave primaria per una tabella. Il comportamento dell'implementazione del driver ODBC Visual FoxPro di **SQLPrimaryKeys** è il seguente:  
+ Restituisce i nomi di colonna che costituiscono la chiave primaria di una tabella. L'implementazione del driver ODBC di Visual FoxPro di **SQLPrimaryKeys** si comporta come segue:  
   
--   Ignora gli argomenti *szTableOwner* e *cbTableOwner* .  
+-   Ignora gli argomenti *szTableOwner* e *cbTableOwner.*  
   
--   Funziona solo per le origini dati che sono [database](../../odbc/microsoft/visual-foxpro-terminology.md). Il driver restituisce l'errore "il driver non supporta questa funzione" se l'origine dati è una directory di [tabelle gratuite](../../odbc/microsoft/visual-foxpro-terminology.md).  
+-   Funziona solo per le origini dati che sono [database](../../odbc/microsoft/visual-foxpro-terminology.md). Il driver restituisce l'errore "Driver non supporta questa funzione" se l'origine dati è una directory di [tabelle libere.](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- Per ulteriori informazioni, vedere [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) in *ODBC Programmer ' s Reference*.
+ Per ulteriori informazioni, vedere [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) in *ODBC Programmer's Reference*.

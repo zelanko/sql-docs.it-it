@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: Abort (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789525"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303919"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>Argomenti  
  *hChapter*[in]  
- Handle del capitolo per il quale interrompere l'operazione. Se l'oggetto chiamato non è un oggetto set di righe o l'operazione non è valida per un capitolo, il chiamante deve impostare *hChapter* su DB_NULL_HCHAPTER.  
+ Handle del capitolo per il quale interrompere l'operazione. Se l'oggetto chiamato non è un oggetto set di righe o l'operazione non si applica a un capitolo, il chiamante deve impostare *hChapter* su DB_NULL_HCHAPTER.  
   
  *eOperation*[in]  
  Operazione da interrompere. Deve corrispondere al valore seguente:  
@@ -63,13 +63,13 @@ HRESULT Abort(
  Il parametro *hChapter* non è DB_NULL_HCHAPTER o *eOperation* non è DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus:: Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize:: Initialize** non è stato chiamato oppure non è stato completato.  
+ **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize::Initialize** non è stato chiamato o non è stato completato.  
   
- **ISSAsynchStatus:: Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize:: Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o si è verificato un timeout. L'oggetto origine dati non è ancora inizializzato.  
+ **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati in cui **IDBInitialize::Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o è scaduto. L'oggetto origine dati è ancora non inizializzato.  
   
- **ISSAsynchStatus:: Abort** è stato chiamato su un set di righe su cui è stato precedentemente chiamato **ITransaction:: commit** o **ITransaction:: Abort** e il set di righe non è sopravvissuto al commit o all'interruzione ed è in uno stato non valido.  
+ **ISSAsynchStatus::Abort** è stato chiamato su un set di righe in cui è stato chiamato in precedenza **ITransaction::Commit** o **ITransaction::Abort** e il set di righe non è sopravvissuto al commit o all'interruzione ed è in uno stato di zombie.  
   
- **ISSAsynchStatus:: Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
+ **ISSAsynchStatus::Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   
 ## <a name="remarks"></a>Osservazioni  
  L'interruzione dell'inizializzazione di un set di righe o di un oggetto origine dati potrebbe lasciare il set di righe o l'oggetto origine dati in uno stato non valido e determinare la restituzione di E_UNEXPECTED da parte di tutti i metodi ad eccezione di **IUnknown**. Quando ciò accade, l'unica azione possibile per il consumer consiste nel rilasciare il set di righe o l'oggetto origine dati.  

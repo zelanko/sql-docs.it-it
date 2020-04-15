@@ -1,5 +1,5 @@
 ---
-title: Limitazioni delle funzioni scalari | Microsoft Docs
+title: Limitazioni delle funzioni scalari Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea36de05f813fc32a90a855bd0c08d020cf1f9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2466fefd76b4e285ec2df6e79992e8cf3f33e4e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292881"
 ---
 # <a name="scalar-function-limitations"></a>Limitazioni delle funzioni scalari
-Le funzioni scalari sono supportate solo tramite il formato canonico ODBC.
+Le funzioni scalari sono supportate solo utilizzando il formato canonico ODBC.

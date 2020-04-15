@@ -1,5 +1,5 @@
 ---
-title: Ruolo di gestione driver | Microsoft Docs
+title: Ruolo di Gestione Driver Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee3d704ea43125c3cd912a4e67d90bf5d50c733e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020405"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304302"
 ---
 # <a name="role-of-the-driver-manager"></a>Ruolo di Gestione driver
-Gestione driver determina l'ordine finale in cui restituire i record di stato generati. In particolare, determina quale record ha il rango più alto e deve essere restituito per primo. Il driver è responsabile dell'ordinamento dei record di stato generati. Se i record di stato vengono pubblicati da Gestione driver e dal driver, gestione driver è responsabile dell'ordinamento. Per ulteriori informazioni, vedere [sequenza di record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
+Gestione Driver determina l'ordine finale in cui restituire i record di stato che genera. In particolare, determina quale record ha il rango più alto e deve essere restituito per primo. Il driver è responsabile dell'ordinamento dei record di stato generati. Se i record di stato vengono registrati sia da Gestione Driver che dal driver, Gestione Driver è responsabile dell'ordinazione. Per ulteriori informazioni, consultate [Sequenza dei record di stato.](../../../odbc/reference/develop-app/sequence-of-status-records.md)  
   
- Gestione driver esegue il controllo degli errori nel modo più possibile. In questo modo, ogni driver controlla gli stessi errori. Se, ad esempio, un argomento della funzione accetta un numero discreto di valori, ad esempio l' *operazione* in **SQLSetPos**, gestione driver verifica che il valore specificato sia valido.  
+ Gestione Driver esegue il maggior numero possibile di controllo degli errori. In questo modo ogni driver non verifica la presenza degli stessi errori. Ad esempio, se un argomento di funzione accetta un numero discreto di valori, ad esempio *Operation* in **SQLSetPos**, Gestione Driver verifica che il valore specificato sia valido.  
   
- Nelle sezioni seguenti vengono descritti i tipi di condizioni controllati da Gestione driver. Non sono destinati a essere completi; per un elenco completo dei SQLState restituiti da Gestione driver, vedere la sezione "diagnostica" di ogni funzione. la descrizione di ogni controllo eseguito da Gestione driver inizia con le lettere "(DM)". Vedere anche le tabelle di transizione dello stato in [Appendice B: tabelle di transizione dello stato ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); gli errori visualizzati tra parentesi vengono rilevati da Gestione driver.  
+ Nelle sezioni seguenti vengono descritti i tipi di condizioni controllati da Gestione Driver. Non sono destinati ad essere esaustivi; per un elenco completo di SQLSTATEs restituito da Gestione Driver, vedere la sezione "Diagnostica" di ogni funzione; la descrizione di ogni controllo effettuato da Gestione Driver inizia con le lettere "(DM)". Vedere anche le tabelle di transizione dello stato [nell'Appendice B: Tabelle](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)di transizione dello stato ODBC ; gli errori visualizzati tra parentesi vengono rilevati da Gestione Driver.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

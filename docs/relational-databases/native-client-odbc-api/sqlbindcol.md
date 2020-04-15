@@ -1,5 +1,5 @@
 ---
-title: SQLBindCol | Microsoft Docs
+title: Proprietà SQLBindCol . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,39 +11,39 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLBindCol function
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a92c95a67b6e9fd3d31917af4f5b7b19f4c613d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 69457daccbc7868e58f91c71a48b4b25f15f5318
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787787"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302729"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Come regola generale, prendere in considerazione le implicazioni dell'utilizzo di **SQLBindCol** per la conversione dei dati. Le conversioni per associazione sono processi client. Se ad esempio viene recuperato un valore a virgola mobile associato a una colonna di tipo character, nel driver viene eseguita in locale la conversione da float a character quando viene recuperata una riga. La funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT può essere utilizzata per riportare il costo della conversione dei dati nel server.  
+  Come regola generale, considerare le implicazioni dell'utilizzo di **SQLBindCol** per causare la conversione dei dati. Le conversioni per associazione sono processi client. Se ad esempio viene recuperato un valore a virgola mobile associato a una colonna di tipo character, nel driver viene eseguita in locale la conversione da float a character quando viene recuperata una riga. La funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT può essere utilizzata per riportare il costo della conversione dei dati nel server.  
   
  Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può restituire più set di righe di risultati in una singola esecuzione dell'istruzione. Ogni set di risultati deve essere associato separatamente. Per ulteriori informazioni sull'associazione per più set di risultati, vedere [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
- Lo sviluppatore può associare colonne a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipi di dati C specifici usando il ** valore TargetType **SQL_C_BINARY**. Le colonne associate a tipi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono portabili. I tipi di dati ODBC C specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiti corrispondono alle definizioni del tipo di DB-Library e gli sviluppatori di DB-Library che si occupano della portabilità delle applicazioni potrebbero sfruttare questa caratteristica.  
+ Lo sviluppatore può [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]associare colonne a tipi di dati C specifici utilizzando il valore *TargetType* **SQL_C_BINARY**. Le colonne associate a tipi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono portabili. I tipi di dati ODBC C specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiti corrispondono alle definizioni del tipo di DB-Library e gli sviluppatori di DB-Library che si occupano della portabilità delle applicazioni potrebbero sfruttare questa caratteristica.  
   
- Il troncamento dei dati di Reporting è un processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispendioso per il driver ODBC di Native Client. È possibile evitare il troncamento assicurandosi che la larghezza di tutti i buffer di dati associati sia sufficiente per restituire i dati. Per i dati di tipo character, la larghezza deve includere lo spazio per un carattere di terminazione della stringa quando viene utilizzato il comportamento predefinito del driver per la terminazione della stringa. Ad esempio, l'associazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di una colonna **char (5)** a una matrice di cinque caratteri comporta un troncamento per ogni valore recuperato. L'associazione della stessa colonna a una matrice di sei caratteri evita il troncamento fornendo un elemento character in cui archiviare il terminatore null. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) può essere utilizzato per recuperare in modo efficiente dati binari e di tipo carattere lungo senza troncamenti.  
+ Il troncamento dei dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report è un processo costoso per il driver ODBC Native Client. È possibile evitare il troncamento assicurandosi che la larghezza di tutti i buffer di dati associati sia sufficiente per restituire i dati. Per i dati di tipo character, la larghezza deve includere lo spazio per un carattere di terminazione della stringa quando viene utilizzato il comportamento predefinito del driver per la terminazione della stringa. Ad esempio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'associazione di una colonna **char(5)** a una matrice di cinque caratteri comporta il troncamento per ogni valore recuperato. L'associazione della stessa colonna a una matrice di sei caratteri evita il troncamento fornendo un elemento character in cui archiviare il terminatore null. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) può essere utilizzato per recuperare in modo efficiente i caratteri long e i dati binari senza troncamento.  
   
- Per i tipi di dati con valori di grandi dimensioni, se il buffer fornito dall'utente non è sufficientemente grande da mantenere l'intero valore della colonna, viene restituito **SQL_SUCCESS_WITH_INFO** e la stringa "data; troncamento a destra. viene generato un avviso. L'argomento **StrLen_or_IndPtr** conterrà il numero di caratteri/byte archiviati nel buffer.  
+ Per i tipi di dati valore di grandi dimensioni, se il buffer fornito dall'utente non è sufficientemente grande per contenere l'intero valore della colonna, viene restituito **SQL_SUCCESS_WITH_INFO** e i "dati stringa; troncamento a destra" viene generato l'avviso. **L'argomento StrLen_or_IndPtr** conterrà il numero di caratteri/byte archiviati nel buffer.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>Supporto di SQLBindCol per le caratteristiche avanzate di data e ora  
- I valori della colonna dei risultati dei tipi data/ora vengono convertiti come descritto in [conversioni da SQL a C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Si noti che per recuperare le colonne time e DateTimeOffset come strutture corrispondenti (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**), è necessario specificare *targetType* come **SQL_C_DEFAULT** o **SQL_C_BINARY**.  
+ I valori della colonna dei risultati di tipi data/ora vengono convertiti come descritto in [Conversioni da SQL a C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Si noti che per recuperare le colonne time e datetimeoffset come strutture corrispondenti (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* deve essere specificato come **SQL_C_DEFAULT** o **SQL_C_BINARY**.  
   
- Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per ulteriori informazioni, vedere [Miglioramenti di data e ora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindcol-support-for-large-clr-udts"></a>Supporto di SQLBindCol per tipi CLR definiti dall'utente di grandi dimensioni  
- **SQLBindCol** supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLBindCol** supporta tipi CLR definiti dall'utente (UDT) di grandi dimensioni. Per ulteriori informazioni, vedere [Tipi CLR di grandi dimensioni definiti dall'utente &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLBindCol (funzione)](https://go.microsoft.com/fwlink/?LinkId=59327)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Funzione SQLBindColSQLBindCol Function](https://go.microsoft.com/fwlink/?LinkId=59327)   
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

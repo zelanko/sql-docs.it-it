@@ -1,5 +1,5 @@
 ---
-title: Architettura di accesso al database | Microsoft Docs
+title: Architettura di accesso al database - Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC]
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fba8cf4f3f3553fafd2296e294db3a9105de330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0993dc9891d6ed74f6d149692dac2555346d3d1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135561"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306502"
 ---
 # <a name="database-access-architecture"></a>Architettura di accesso ai database
-Una delle domande nello sviluppo di ODBC è stata la parte dell'architettura di accesso al database per la standardizzazione. Le interfacce di programmazione SQL descritte nella sezione precedente-SQL embedded, moduli SQL e interfacce della riga sono solo una parte di questa architettura. Infatti, poiché ODBC era destinato principalmente alla connessione di applicazioni basate su personal computer ai sistemi DBMS minicomputer e mainframe, era anche disponibile un numero di componenti di rete, alcuni dei quali potevano essere standardizzati.  
+Una delle domande nello sviluppo di ODBC era quale parte dell'architettura di accesso al database standardizzare. Le interfacce di programmazione SQL descritte nella sezione precedente, SQL incorporato, moduli SQL e interfacce interfacce GUIDA che sono solo una parte di questa architettura. Infatti, poiché ODBC era destinato principalmente a collegare applicazioni basate su personal computer a minicomputer e DBSMO mainframe, c'erano anche una serie di componenti di rete, alcuni dei quali potevano essere standardizzati.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

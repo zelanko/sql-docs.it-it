@@ -1,5 +1,5 @@
 ---
-title: Chiamata di una stored procedure (OLE DB) | Microsoft Docs
+title: Chiamata a una stored procedure (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759038"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305339"
 ---
 # <a name="stored-procedures---calling"></a>Stored procedure - Chiamata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si utilizza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il provider di OLE DB di Native client, è possibile passare i parametri di un stored procedure:  
+  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza il provider OLE DB Native Client, i parametri di una stored procedure possono essere passati da:When using the Native Client OLE DB provider, parameters to a stored procedure can be passed by:  
   
 -   Specificando il valore dei dati a livello di codice.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73759038"
   
 1.  Completare le informazioni sui parametri in una matrice di strutture DBPARAMBINDINFO, ovvero nome del parametro, nome specifico del provider per il tipo di dati del parametro o nome del tipo di dati standard e così via. Ogni struttura della matrice descrive un solo parametro. Questa matrice viene quindi passata al metodo **SetParameterInfo**.  
   
-2.  Chiamare il metodo **ICommandWithParameters::SetParameterInfo** per descrivere i parametri al provider. **Sqlparameterinfo** specifica il tipo di dati nativo di ogni parametro. Gli argomenti di **sqlparameterinfo** sono:  
+2.  Chiamare il metodo **ICommandWithParameters::SetParameterInfo** per descrivere i parametri al provider. **SetParameterInfo** specifica il tipo di dati nativo di ogni parametro. Gli argomenti di **SetParameterInfo** sono:  
   
     -   Numero di parametri per i quali impostare le informazioni sul tipo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73759038"
 5.  Eseguire il comando usando **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Metodi per l'esecuzione di una chiamata a una stored procedure  
- Quando si esegue un stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client supporta:  
+ Quando si esegue una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stored [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procedure in , il provider OLE DB Native Client supporta:  
   
 -   Sequenza di escape ODBC CALL.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73759038"
   
  La sintassi generale per la chiamata a una stored procedure mediante la sequenza di escape ODBC CALL è:  
   
- {[**? =**]**chiama**_procedure_name_[**(**[*parametro*] [**,**[*parametro*]]... **)**]}  
+ **?=****call**_[procedure_name[_*parametro*][**,**[*parametro*]]...**(** **)**]}  
   
  Ad esempio:  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73759038"
   
  Quando la sequenza di escape RPC viene utilizzata per eseguire una stored procedure, il provider non chiama la funzione di supporto per determinare le informazioni sui parametri (come avviene nel caso della sintassi ODBC CALL). La sintassi RPC è più semplice della sintassi ODBC CALL, pertanto il comando viene analizzato più velocemente, migliorando le prestazioni. In questo caso, è necessario fornire le informazioni sui parametri eseguendo **ICommandWithParameters::SetParameterInfo**.  
   
- Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile eseguire una query sui metadati delle colonne; IColumnsInfo::GetColumnInfo e IColumnsRowset::GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
+ Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile eseguire una query sui metadati delle colonne. IColumnsInfo::GetColumnInfo e IColumnsRowset::GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
   
  Se si conoscono tutti i metadati dei parametri, la sequenza di escape RPC è la modalità consigliata per eseguire le stored procedure.  
   
@@ -117,12 +117,12 @@ ms.locfileid: "73759038"
 {rpc SalesByCategory}  
 ```  
   
- Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una stored Procedure &#40;utilizzando la sintassi rpc&#41; ed elaborare i codici restituiti e i parametri di Output &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [Eseguire una stored procedure &#40;con la sintassi RPC&#41; ed elaborare i codici restituiti e i parametri di output &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
- La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client utilizza il meccanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC di per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
+ La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza il meccanismo RPC di per ottimizzare l'elaborazione dei comandi. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
- Di seguito è riportato un esempio dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
+ Di seguito è riportato un esempio dell'istruzione  **EXECUTE** di [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

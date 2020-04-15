@@ -1,5 +1,5 @@
 ---
-title: Registrare query con esecuzione prolungata (ODBC) | Microsoft Docs
+title: Registra query a esecuzione prolungata (ODBC) Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d1e931a24462711a742b8008eb04538e0e518d55
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780928"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305367"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilatura dei dati sulle prestazioni del driver ODBC - Registrare query a lunga esecuzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,27 +26,27 @@ ms.locfileid: "73780928"
   In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione di query con esecuzione prolungata. Durante l'esecuzione dell'esempio, viene creato Odbcqry.log, contenente un elenco di query la cui esecuzione supera un intervallo impostato dall'applicazione. Questo esempio non è supportato in IA64. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Per registrare query con esecuzione prolungata tramite Amministratore ODBC  
   
-1.  Nel **Pannello di controllo**fare doppio clic su **strumenti di amministrazione** , quindi fare doppio clic su **origini dati (ODBC)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
+1.  Nel **Pannello di controllo**fare doppio clic su Strumenti di **amministrazione** e quindi su Origini **dati (ODBC)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
   
-2.  Fare clic sulla scheda DSN **utente**, **DSN di sistema**o **DSN su file** .  
+2.  Fare clic sulla scheda **DSN utente**, **DSN**di sistema o **DSN su file.**  
   
 3.  Fare clic sull'origine dati per cui si desidera registrare le query con esecuzione prolungata.  
   
 4.  Fare clic su **Configura**.  
   
-5.  Nella procedura guidata Microsoft SQL Server configurazione DSN, passare alla pagina con **Salva query con esecuzione prolungata nel file di log**.  
+5.  Nella Configurazione guidata DSN di Microsoft SQL Server passare alla pagina Salva **query a esecuzione prolungata nel file**di log.  
   
-6.  Selezionare **Salva query con esecuzione prolungata nel file di log**. Nella casella immettere il nome del file in cui si desidera registrare le query con esecuzione prolungata. Facoltativamente, fare clic su **Sfoglia** per visualizzare i file System del log di query.  
+6.  Selezionare **Salva query a esecuzione prolungata nel file**di registro . Nella casella immettere il nome del file in cui si desidera registrare le query con esecuzione prolungata. Facoltativamente, fare clic su **Sfoglia** per esplorare il file system per il log di query.  
   
-7.  Impostare un intervallo di timeout della query, in millisecondi, nella casella **tempo di query lungo (millisecondi)** .  
+7.  Impostare un intervallo di timeout della query, in millisecondi, nella casella **Tempo di query lunghi (millisecondi).**  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Per registrare dati di query con esecuzione prolungata a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il percorso completo e il nome file del file di log di query con esecuzione prolungata. Ad esempio:  
+1.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il percorso completo e il nome del file di log di query a esecuzione prolungata. Ad esempio:  
   
     ```  
     C:\\Odbcqry.log  
@@ -54,12 +54,12 @@ ms.locfileid: "73780928"
   
 2.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_INTERVAL e impostare sull'intervallo di timeout, in millisecondi.  
   
-3.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY e SQL_PERF_START per avviare la registrazione di query con esecuzione prolungata.  
+3.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY e SQL_PERF_START per avviare la registrazione di query a esecuzione prolungata.  
   
-4.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY e SQL_PERF_STOP per arrestare la registrazione di query con esecuzione prolungata.  
+4.  Chiamare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY e SQL_PERF_STOP per interrompere la registrazione di query a esecuzione prolungata.  
   
 ## <a name="example"></a>Esempio  
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page [di Microsoft SQL Server Samples and Community Projects.](https://go.microsoft.com/fwlink/?LinkID=85384) Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
@@ -219,6 +219,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per la profilatura delle prestazioni del driver ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Profilare argomenti relativi alle prestazioni dei driver ODBC &#40;&#41;ODBCProfiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Altri dettagli sulla programmazione dei driver di Excel | Microsoft Docs
+title: Altri dettagli sulla programmazione dei driver di Excel Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043768"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291001"
 ---
 # <a name="other-excel-driver-programming-details"></a>Altre informazioni sulla programmazione dei driver Excel
 > [!NOTE]  
->  In questa sezione vengono fornite informazioni specifiche del driver per Excel sulle funzioni ODBC e altri dettagli di programmazione. Per informazioni generali su una funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questa sezione vengono fornite informazioni specifiche del driver di Excel sulle funzioni ODBC e altri dettagli di programmazione. Per informazioni generali su una funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68043768"
   
 -   [SQLColumns (driver Excel)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [SQLConfigDataSource (driver Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigDataSource (Excel Driver)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect (driver Excel)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

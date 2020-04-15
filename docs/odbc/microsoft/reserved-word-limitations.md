@@ -1,5 +1,5 @@
 ---
-title: Limitazioni di parole riservate | Microsoft Docs
+title: Limitazioni delle parole riservate Documenti Microsoft
 ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c884d8594c3c4511bed0e24f9b3dd43092176b4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf536e06556e6b2e7b27f220d09a51f91b44d23c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988023"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304009"
 ---
 # <a name="reserved-keyword-limitations"></a>Limitazioni delle parole chiave riservate
 
-Evitare di utilizzare parole chiave riservate ODBC come identificatori nelle tabelle SQL o negli oggetti correlati. Se si verifica un caso dispari in cui è necessario utilizzare una parola chiave riservata come identificatore, è necessario racchiudere l'identificatore con una coppia di *apice* inverso ('). Un altro nome *per l'* *apice inverso è indietro*.
+Evitare di utilizzare parole chiave riservate ODBC come identificatori nelle tabelle SQL o negli oggetti correlati. Se si verifica un caso dispari in cui è necessario utilizzare una parola chiave riservata come identificatore, è necessario racchiudere l'identificatore con una coppia di *backtick* ('). Un altro nome per *backtick* è *back quote*.
 
-La limitazione della parola chiave riservata si applica anche a qualsiasi forma abbreviata delle parole chiave riservate.
+La limitazione delle parole chiave riservate si applica anche a qualsiasi forma abbreviata delle parole chiave riservate.
 
-Un elenco di parole chiave riservate ODBC è disponibile all'indirizzo:
+Un elenco delle parole chiave riservate ODBC è disponibile all'indirizzo:
 
-- [Parole chiave riservate di ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+- [Parole chiave riservate ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
 
-- Nella *Guida di riferimento per programmatori ODBC*vedere [Appendice C: grammatica SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+- Nella Guida di riferimento per programmatori *ODBC,* vedere [Appendice C: Grammatica SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
 

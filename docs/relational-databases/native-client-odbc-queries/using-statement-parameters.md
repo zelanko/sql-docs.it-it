@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei parametri dell'istruzione | Microsoft Docs
+title: Parametri dell'istruzione Using . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297900"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "73779547"
   
 -   Migliorare l'interazione dell'utente nella costruzione di criteri di query.  
   
--   Gestire i dati di tipo **Text**, **ntext**e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Image** e i tipi di dati C specifici di.  
+-   Gestire i dati **text**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**e **image** e i tipi di dati C specifici.  
   
- Una tabella **parts** , ad esempio, include colonne denominate **partID**, **Description**e **Price**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
+ Ad esempio, una tabella **Parts** include colonne denominate **PartID**, **Description**e **Price**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Associazione di parametri](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Esecuzione di query &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

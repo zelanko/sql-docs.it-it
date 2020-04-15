@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM con ISequentialStream (OLE DB)
+title: FILESTREAM tramite ISequentialStream (OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -8,31 +8,31 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f8a296327dae84f5b799fc6aef07e3e4022bb83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca29a19aeae6631606559b6aee00b83b7f138f8a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302248"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperare dati da una colonna FILESTREAM utilizzando ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questo esempio viene illustrato come utilizzare un'interfaccia ISequentialStream in un'interfaccia ICommandText per recuperare un record singolo da una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla funzionalità FILESTREAM, vedere [supporto filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Per ulteriori informazioni sulla funzionalità filestream , vedere [Supporto FILESTREAM &#40;&#41;OLE DB ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Esempio  
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Per creare la tabella letta in questo esempio, utilizzare uno degli esempi seguenti:  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Inviare dati a una colonna FILESTREAM usando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Inviare dati a una colonna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copiare il primo listato di codice e incollarlo in un file denominato ISSHelper.h.  
   

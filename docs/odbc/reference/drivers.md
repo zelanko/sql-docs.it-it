@@ -1,5 +1,5 @@
 ---
-title: Driver | Microsoft Docs
+title: Proprietà Drivers . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - drivers [ODBC]
 - drivers [ODBC], about drivers
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6460410488186c94713d859bf2912f2844ca2736
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c8b40641be3db34fc6929edecdd5dd923700957
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915435"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294184"
 ---
 # <a name="drivers"></a>Driver
-I *driver* sono librerie che implementano le funzioni nell'API ODBC. Ogni è specifico di un determinato sistema DBMS; un driver per Oracle, ad esempio, non può accedere direttamente ai dati in un DBMS di Informix. I driver espongono le funzionalità dei DBMS sottostanti; non è necessario implementare funzionalità non supportate dal sistema DBMS. Se, ad esempio, il sistema DBMS sottostante non supporta outer join, il driver non sarà né. L'unica eccezione principale è che i driver per DBMS che non dispongono di motori di database autonomi, ad esempio Xbase, devono implementare un motore di database che supporta almeno una quantità minima di SQL.  
+*I driver* sono librerie che implementano le funzioni nell'API ODBC. Ognuno è specifico di un particolare DBMS; ad esempio, un driver per Oracle non può accedere direttamente ai dati in un DBMS Informix. I driver espongono le funzionalità dei DBSMO sottostanti; non sono necessari per implementare funzionalità non supportate dal DBMS. Ad esempio, se il DBMS sottostante non supporta outer join, il driver non dovrebbe. L'unica eccezione principale è che i driver per DBSMO che non dispongono di motori di database autonomi, ad esempio Xbase, devono implementare un motore di database che supporta almeno una quantità minima di SQL.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

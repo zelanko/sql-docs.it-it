@@ -1,5 +1,5 @@
 ---
-title: Chiamate di funzioni scalari | Microsoft Docs
+title: Chiamate di funzione scalari Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 349599a51b2996f419e6c8656a71bc9e30146542
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67897744"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304262"
 ---
 # <a name="scalar-function-calls"></a>Chiamate di funzioni scalari
-Le funzioni scalari restituiscono un valore per ogni riga. Ad esempio, la funzione scalare del valore assoluto accetta una colonna numerica come argomento e restituisce il valore assoluto di ogni valore nella colonna. La sequenza di escape per la chiamata di una funzione scalare è  
+Le funzioni scalari restituiscono un valore per ogni riga. Ad esempio, la funzione scalare valore assoluto accetta una colonna numerica come argomento e restituisce il valore assoluto di ogni valore nella colonna. La sequenza di escape per chiamare una funzione scalare è  
   
- **{FN**  _-funzione scalare_ **}**  
+ Funzione_scalare_ **}** **fn**    
   
- dove *Scalar-Function* è una delle funzioni elencate in [Appendice E: funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Per ulteriori informazioni sulla sequenza di escape della funzione scalare, vedere [sequenza di escape della funzione scalare](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) nell'Appendice C: grammatica SQL.  
+ dove *funzione scalare* è una delle funzioni elencate [nell'Appendice E: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Per altre informazioni sulla sequenza di escape della funzione scalare, vedere Sequenza di escape delle funzioni [scalari](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) nell'Appendice C: Grammatica SQL.  
   
- Le istruzioni SQL seguenti, ad esempio, creano lo stesso set di risultati di nomi di clienti in maiuscolo. La prima istruzione usa la sintassi della sequenza di escape. La seconda istruzione usa la sintassi nativa per Ingres per OS/2 e non è interoperativa.  
+ Ad esempio, le istruzioni SQL seguenti creano lo stesso set di risultati di nomi di clienti maiuscoli. La prima istruzione utilizza la sintassi della sequenza di escape. La seconda istruzione utilizza la sintassi nativa per Ingres per OS/2 e non è interoperabile.  
   
 ```  
 SELECT {fn UCASE(Name)} FROM Customers  
@@ -34,21 +34,21 @@ SELECT {fn UCASE(Name)} FROM Customers
 SELECT uppercase(Name) FROM Customers  
 ```  
   
- Un'applicazione può combinare le chiamate a funzioni scalari che usano la sintassi nativa e le chiamate a funzioni scalari che usano la sintassi ODBC. Si supponga, ad esempio, che i nomi nella tabella Employee siano archiviati come cognome, virgola e nome. Nell'istruzione SQL seguente viene creato un set di risultati con i cognomi dei dipendenti della tabella Employee. L'istruzione utilizza la **SOTTOstringa** della funzione scalare ODBC e la SQL Server funzione scalare **CharIndex** e verrà eseguita correttamente solo su SQL Server.  
+ Un'applicazione può combinare chiamate a funzioni scalari che utilizzano la sintassi nativa e chiamate a funzioni scalari che utilizzano la sintassi ODBC. Si supponga, ad esempio, che i nomi nella tabella Employee vengano archiviati come cognome, virgola e nome. L'istruzione SQL seguente crea un set di risultati di cognomi di dipendenti nella tabella Employee. L'istruzione utilizza la funzione scalare ODBC **SUBSTRING** e la funzione scalare di SQL Server **CHARINDEX** e verrà eseguita correttamente solo in SQL Server.  
   
 ```  
 SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers  
 ```  
   
- Per garantire la massima interoperabilità, le applicazioni devono utilizzare la funzione **Convert** Scalar per assicurarsi che l'output di una funzione scalare sia il tipo richiesto. La funzione **Convert** converte i dati da un tipo di dati SQL al tipo di dati SQL specificato. La sintassi della funzione **Convert** è  
+ Per la massima interoperabilità, le applicazioni devono utilizzare la funzione scalare **CONVERT** per assicurarsi che l'output di una funzione scalare sia il tipo richiesto. La funzione **CONVERTI** converte i dati da un tipo di dati SQL al tipo di dati SQL specificato. La sintassi della funzione **CONVERT** è  
   
- **Convert (** _value_exp_ **,** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_**)**  
   
- dove *value_exp* è un nome di colonna, il risultato di un'altra funzione scalare o un valore letterale e *data_type* è una parola chiave che corrisponde al nome **#define** utilizzato da un identificatore del tipo di dati SQL come definito nei [tipi di dati Appendice D](../../../odbc/reference/appendixes/appendix-d-data-types.md). Nell'istruzione SQL seguente, ad esempio, viene utilizzata la funzione **Convert** per assicurarsi che l'output della funzione **cagliate** sia una data, anziché un timestamp o dati di tipo carattere:  
+ dove *value_exp* è un nome di colonna, il risultato di un'altra funzione scalare o un valore letterale e *data_type* è una parola chiave che corrisponde al nome **#define** utilizzato da un identificatore del tipo di dati SQL come definito [nell'Appendice D: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md). Ad esempio, l'istruzione SQL seguente utilizza la funzione **CONVERT** per assicurarsi che l'output della funzione **CURDATE** sia una data, anziché dati timestamp o di tipo carattere:  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
    VALUES (?, ?, {fn CONVERT({fn CURDATE()}, SQL_DATE)}, ?, ?)  
 ```  
   
- Per determinare quali funzioni scalari sono supportate da un'origine dati, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS e SQL_TIMEDATE_FUNCTIONS. Per determinare quali operazioni di conversione sono supportate dalla funzione **Convert** , un'applicazione chiama **SQLGetInfo** con una qualsiasi delle opzioni che iniziano con SQL_CONVERT.
+ Per determinare quali funzioni scalari sono supportate da un'origine dati, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS e SQL_TIMEDATE_FUNCTIONS. Per determinare quali operazioni di conversione sono supportate dalla funzione **CONVERT,** un'applicazione chiama **SQLGetInfo** con una delle opzioni che iniziano con SQL_CONVERT.

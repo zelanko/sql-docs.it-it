@@ -1,5 +1,5 @@
 ---
-title: Attività del driver | Microsoft Docs
+title: Attività del driver Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], tasks
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b30df63a3c955d2ed074ab13649ea55c21a6da7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294201"
 ---
 # <a name="driver-tasks"></a>Attività dei driver
-Le attività specifiche eseguite dai driver includono:  
+Le attività specifiche eseguite dai conducenti includono:  
   
 -   Connessione e disconnessione dall'origine dati.  
   
--   Verifica degli errori di funzione non controllati da Gestione driver.  
+-   Controllo degli errori di funzione non controllato da Gestione Driver.  
   
--   Avvio delle transazioni; Questa operazione è trasparente per l'applicazione.  
+-   Inizio delle transazioni; questo è trasparente per l'applicazione.  
   
--   Invio di istruzioni SQL all'origine dati per l'esecuzione. Il driver deve modificare SQL ODBC in SQL specifico di DBMS; Questa operazione è spesso limitata alla sostituzione delle clausole Escape definite da ODBC con SQL specifico di DBMS.  
+-   Invio di istruzioni SQL all'origine dati per l'esecuzione. Il driver deve modificare ODBC SQL in SQL specifico del DBMS. questo è spesso limitato alla sostituzione di clausole di escape definite da ODBC con SQL specifico DBMS.  
   
--   Invio e recupero di dati dall'origine dati, inclusa la conversione di tipi di dati in base a quanto specificato dall'applicazione.  
+-   Invio e recupero di dati dall'origine dati, inclusa la conversione dei tipi di dati come specificato dall'applicazione.  
   
--   Mapping di errori specifici di DBMS a sqlstates ODBC.
+-   Mapping degli errori specifici del DBMS a SQLSTATE ODBC.

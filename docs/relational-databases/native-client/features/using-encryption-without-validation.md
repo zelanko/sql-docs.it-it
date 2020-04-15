@@ -13,27 +13,26 @@ helpviewer_keywords:
 - encryption [SQL Server Native Client]
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7805a5bc9d18ab183ba1d741dc4962dd6e6fb196
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787995"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303196"
 ---
 # <a name="using-encryption-without-validation"></a>Utilizzo della crittografia senza convalida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa sempre pacchetti di rete associati all'accesso. Se non è stato eseguito il provisioning di nessun certificato nel server quando viene avviato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera un certificato autofirmato utilizzato per crittografare pacchetti di accesso.  
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa sempre pacchetti di rete associati all'accesso. Se non è stato eseguito il provisioning di nessun certificato nel server quando viene avviato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera un certificato autofirmato utilizzato per crittografare pacchetti di accesso.  
+I certificati autofirmati non garantiscono la sicurezza. Lo handshake crittografato è basato su NT LAN Manager (NTLM). È consigliabile eseguire il provisioning di un certificato verificabile in SQL Server per garantire una connettività sicura. Il protocollo TLS (Transport Security Layer) può essere reso sicuro solo con la convalida del certificato.
 
-I certificati autofirmati non garantiscono la sicurezza. L'handshake crittografato è basato su NT LAN Manager (NTLM). Si consiglia di effettuare il provisioning di un certificato verificabile in SQL Server per la connettività sicura. Il protocollo TLS (Transport Security Layer) può essere reso sicuro solo con la convalida del certificato.
+Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per ODBC e OLE DB quando si utilizza una stringa del provider con **IDbInitialize::Initialize**, o "Usa crittografia per dati" per ADO e OLE DB quando si utilizza una stringa di inizializzazione con **IDataInitialize**. Questa configurazione può essere eseguita anche da Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando l'opzione **Forza crittografia protocollo** e configurando il client in modo che richieda connessioni crittografate. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato. Se si imposta il client in modo che consideri attendibile il certificato nel server, l'ambiente può risultare vulnerabile agli attacchi man-in-the-middle. Se si distribuisce un certificato verificabile nel server, assicurarsi di impostare le opzioni client relative all'attendibilità del certificato su FALSE.
 
-Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per ODBC e OLE DB quando si usa una stringa del provider con **IDbInitialize:: Initialize**o "Use Encryption for data" per ADO e OLE DB quando si usa una stringa di inizializzazione con **IDataInitialize**. Questo può essere configurato anche da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager usando l'opzione **Forza crittografia protocollo** e configurando il client per richiedere connessioni crittografate. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato. Impostando il client in modo che consideri attendibile il certificato nel server, è possibile che si siano vulnerabili agli attacchi man-in-the-Middle. Se si distribuisce un certificato verificabile nel server, assicurarsi di modificare le impostazioni client relative all'attendibilità del certificato su FALSE.
-
-Per informazioni sulle parole chiave della stringa di connessione, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Per informazioni sulle parole chiave della stringa di connessione, vedere Utilizzo di parole chiave della stringa di [connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Per abilitare l'uso della crittografia quando nel server non è stato eseguito il provisioning di un certificato, è possibile usare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per impostare le opzioni **Forza crittografia protocollo** e **Certificato server attendibile**. In questo caso, la crittografia utilizzerà un certificato server autofirmato senza convalida se nel server non è stato eseguito il provisioning di alcun certificato verificabile.  
   
@@ -51,15 +50,15 @@ Per informazioni sulle parole chiave della stringa di connessione, vedere [utili
 ||||||
 
 > [!CAUTION]
-> La tabella precedente fornisce solo una guida al comportamento del sistema in configurazioni diverse. Per una connettività sicura, assicurarsi che sia il client che il server richiedano la crittografia. Verificare inoltre che il server disponga di un certificato verificabile e che l'impostazione **TrustServerCertificate** nel client sia impostata su false.
+> La tabella precedente è solo una guida al comportamento del sistema con configurazioni diverse. Per una connettività sicura, verificare che sia il client sia il server richiedano la crittografia. Assicurarsi anche che il server abbia un certificato verificabile e che l'impostazione **TrustServerCertificate** nel client sia FALSE.
 
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la crittografia senza convalida tramite l'aggiunta della proprietà di inizializzazione dell'origine dati SSPROP_INIT_TRUST_SERVER_CERTIFICATE, implementata nel set di proprietà DBPROPSET_SQLSERVERDBINIT. È stata inoltre aggiunta una nuova parola chiave, "TrustServerCertificate", per la stringa di connessione. Accetta i valori yes o no. Il valore predefinito è no. Quando si utilizzano i componenti del servizio, accetta i valori true o false; false è l'impostazione predefinita.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la crittografia senza convalida tramite l'aggiunta della proprietà di inizializzazione dell'origine dati SSPROP_INIT_TRUST_SERVER_CERTIFICATE, implementata nel set di proprietà DBPROPSET_SQLSERVERDBINIT. È stata inoltre aggiunta una nuova parola chiave, "TrustServerCertificate", per la stringa di connessione. Accetta i valori yes o no. Il valore predefinito è no. Quando si utilizzano i componenti del servizio, accetta i valori true o false; false è l'impostazione predefinita.  
   
- Per ulteriori informazioni sui miglioramenti apportati al set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per altre informazioni sui miglioramenti apportati al set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [Proprietà di inizializzazione e di autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la crittografia senza convalida tramite aggiunte alle funzioni [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_TRUST_SERVER_CERTIFICATE è stato aggiunto per accettare SQL_TRUST_SERVER_CERTIFICATE_YES o SQL_TRUST_SERVER_CERTIFICATE_NO. SQL_TRUST_SERVER_CERTIFICATE_NO è l'impostazione predefinita. È stata inoltre aggiunta una nuova parola chiave, "TrustServerCertificate", per la stringa di connessione. Accetta i valori yes o no. Il valore predefinito è "no".  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta la crittografia senza convalida tramite aggiunte alle funzioni [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr.](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_TRUST_SERVER_CERTIFICATE è stato aggiunto per accettare SQL_TRUST_SERVER_CERTIFICATE_YES o SQL_TRUST_SERVER_CERTIFICATE_NO. SQL_TRUST_SERVER_CERTIFICATE_NO è l'impostazione predefinita. È stata inoltre aggiunta una nuova parola chiave, "TrustServerCertificate", per la stringa di connessione. Accetta i valori yes o no. Il valore predefinito è "no".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

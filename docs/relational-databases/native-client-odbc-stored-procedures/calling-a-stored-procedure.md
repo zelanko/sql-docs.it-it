@@ -1,5 +1,5 @@
 ---
-title: Chiamata a una stored procedure | Microsoft Docs
+title: Chiamata di una stored procedure Documenti Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7e6b23ac2091e6ae772e48b91a70613ae8f455
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1fae2e947d0faa38ae875f72b48119b21c30dd47
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73778966"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304572"
 ---
 # <a name="calling-a-stored-procedure"></a>Chiamata di una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta sia la sequenza di escape ODBC Call [!INCLUDE[tsql](../../includes/tsql-md.md)]sia l'istruzione [Execute](../../t-sql/language-elements/execute-transact-sql.md) per l'esecuzione di stored procedure. la sequenza di escape ODBC CALL è il metodo preferito. L'utilizzo di sintassi ODBC consente a un'applicazione di recuperare i codici restituiti delle stored procedure e il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è anch'esso ottimizzato per l'utilizzo di un protocollo sviluppato in origine per l'invio di chiamate a procedure remote (RPC, Remote Procedure Call) tra computer che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta sia la [!INCLUDE[tsql](../../includes/tsql-md.md)]sequenza di escape CALL ODBC che l'istruzione [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) per l'esecuzione di stored procedure; la sequenza di escape ODBC CALL è il metodo preferito. L'utilizzo di sintassi ODBC consente a un'applicazione di recuperare i codici restituiti delle stored procedure e il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è anch'esso ottimizzato per l'utilizzo di un protocollo sviluppato in origine per l'invio di chiamate a procedure remote (RPC, Remote Procedure Call) tra computer che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
 > [!NOTE]  
->  Quando si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiamano stored procedure utilizzando parametri denominati con ODBC (per altre informazioni, vedere [associazione di parametri in base al nome (parametri denominati)](https://go.microsoft.com/fwlink/?LinkID=209721)),\@i nomi dei parametri devono iniziare con il carattere ''. Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applica questa limitazione in modo più restrittivo rispetto a MDAC (Microsoft Data Access Components).  
+>  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si chiamano stored procedure utilizzando parametri denominati con ODBC (per ulteriori informazioni, vedere Binding\@Parameters by Name [(Named Parameters)](https://go.microsoft.com/fwlink/?LinkID=209721)), i nomi dei parametri devono iniziare con il carattere ' '. Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applica questa limitazione in modo più restrittivo rispetto a MDAC (Microsoft Data Access Components).  
   
  La sequenza di escape ODBC CALL per la chiamata a una procedura è la seguente:  
   
- {[**? =**]**chiama**_procedure_name_[([*parametro*] [**,**[*parametro*]]...)]}  
+ **call**_[procedure_name(parametro_[[ ]*parameter*[**,**[**?=***parametro*]]...]]  
   
- dove *procedure_name* specifica il nome di una routine e un *parametro* specifica un parametro di procedura. I parametri denominati sono supportati solo nelle istruzioni che utilizzano la sequenza di escape ODBC CALL.  
+ dove *procedure_name* specifica il nome di una routine e *parametro* specifica un parametro di routine. I parametri denominati sono supportati solo nelle istruzioni che utilizzano la sequenza di escape ODBC CALL.  
   
- Una procedura può avere zero o più parametri. Una procedura può inoltre restituire un valore, come indicato dall'indicatore di parametro facoltativo ?= all'inizio della sintassi. Se un parametro è un parametro di input/output, può essere un valore letterale o un marcatore di parametro. Se il parametro è un parametro di output, deve essere un marcatore di parametro, in quanto l'output non è noto. I marcatori di parametro devono essere associati con [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) prima dell'esecuzione dell'istruzione di chiamata di procedura.  
+ Una procedura può avere zero o più parametri. Una procedura può inoltre restituire un valore, come indicato dall'indicatore di parametro facoltativo ?= all'inizio della sintassi. Se un parametro è un parametro di input/output, può essere un valore letterale o un marcatore di parametro. Se il parametro è un parametro di output, deve essere un marcatore di parametro, in quanto l'output non è noto. Gli indicatori di parametro devono essere associati con [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) prima dell'esecuzione dell'istruzione di chiamata di routine.  
   
  I parametri di input e di input/output possono essere omessi dalle chiamate alle procedure. Se una procedura viene chiamata con parentesi ma senza alcun parametro, il driver indica all'origine dati di utilizzare il valore predefinito per il primo parametro. Ad esempio:  
   
- {**call** _procedure_name_**()**}  
+ -**chiamata** _procedure_name_(**)**  
   
  Se la procedura non include alcun parametro, può non essere eseguita. Se una procedura viene chiamata senza parentesi, il driver non invia alcun valore di parametro. Ad esempio:  
   
- {**call** _procedure_name_}  
+ : _procedure_name_**delle chiamate**  
   
  È possibile specificare valori letterali per parametri di input e di input/output nelle chiamate alle procedure. La procedura InsertOrder, ad esempio, include cinque parametri di input. La chiamata seguente a InsertOrder omette il primo parametro, fornisce un valore letterale per il secondo parametro e utilizza un marcatore di parametro per i parametri terzo, quarto e quinto. I parametri sono numerati in sequenza, a partire dal valore 1.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73778966"
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- Se eseguito con le impostazioni predefinite, tuttavia, il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non supporta l'utilizzo di alcuna forma di identificatore tra virgolette con identificatori che contengono caratteri non specificati come validi negli identificatori dallo standard ISO. Il driver, ad esempio, non può accedere a un stored procedure denominato **"My. proc"** utilizzando un'istruzione Call con identificatori delimitati:  
+ Se eseguito con le impostazioni predefinite, tuttavia, il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non supporta l'utilizzo di alcuna forma di identificatore tra virgolette con identificatori che contengono caratteri non specificati come validi negli identificatori dallo standard ISO. Ad esempio, il driver non può accedere a una stored procedure denominata **"My.Proc"** utilizzando un'istruzione CALL con identificatori tra virgolette:  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  
@@ -85,7 +85,7 @@ ms.locfileid: "73778966"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- Il server genera un errore che segnala che un server collegato denominato **mydb** non esiste.  
+ Il server genera un errore che indica che un server collegato denominato **MyDB** non esiste.  
   
  Il problema non si verifica quando si utilizzano identificatori tra parentesi. In questo caso, l'istruzione viene interpretata correttamente:  
   

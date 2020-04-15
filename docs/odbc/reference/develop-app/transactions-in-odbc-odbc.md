@@ -1,5 +1,5 @@
 ---
-title: Transazioni in ODBC ODBC | Microsoft Docs
+title: Transazioni in ODBC ODBC Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f1f3892929e06cbca39b9d96936860cd9f100f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 073546ef578a8efebff33fef96ae4682dd6f53fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086052"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306447"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transazioni in ODBC
-Le transazioni in ODBC vengono completate a livello di connessione. ovvero, quando un'applicazione completa una transazione, esegue il commit o il rollback di tutte le operazioni eseguite tramite tutti gli handle di istruzione su tale connessione.  
+Le transazioni in ODBC vengono completate a livello di connessione; vale a dire, quando un'applicazione completa una transazione, esegue il commit o il rollback di tutto il lavoro eseguito tramite tutti gli handle di istruzione su tale connessione.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

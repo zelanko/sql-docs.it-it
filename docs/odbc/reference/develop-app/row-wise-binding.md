@@ -1,5 +1,5 @@
 ---
-title: Associazione per riga | Microsoft Docs
+title: Associazione per riga Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061626"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304272"
 ---
 # <a name="row-wise-binding"></a>Associazione per riga
-Quando si utilizza l'associazione per riga, un'applicazione definisce una struttura contenente uno o due elementi, oppure, in alcuni casi, tre elementi per ogni colonna per cui devono essere restituiti i dati. Il primo elemento include il valore dei dati e il secondo elemento include il buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza possono essere archiviati in buffer distinti impostando i campi SQL_DESC_INDICATOR_PTR e descrittore SQL_DESC_OCTET_LENGTH_PTR su valori diversi. Se questa operazione viene eseguita, la struttura contiene un terzo elemento. L'applicazione quindi alloca una matrice di queste strutture, che contiene il numero di elementi presenti nel set di righe.  
+Quando si usa l'associazione per riga, un'applicazione definisce una struttura contenente uno o due elementi o, in alcuni casi, tre elementi per ogni colonna per cui devono essere restituiti dati. Il primo elemento contiene il valore dei dati e il secondo elemento contiene il buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza possono essere memorizzati in buffer separati impostando i campi del descrittore SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR su valori diversi; in questo caso, la struttura contiene un terzo elemento. L'applicazione alloca quindi una matrice di queste strutture, che contiene tutti gli elementi che sono righe nel set di righe.  
   
- L'applicazione dichiara la dimensione della struttura al driver con l'attributo SQL_ATTR_ROW_BIND_TYPE Statement e associa l'indirizzo di ogni membro nel primo elemento della matrice. Pertanto, il driver può calcolare l'indirizzo dei dati per una riga e una colonna particolari come  
+ L'applicazione dichiara la dimensione della struttura al driver con l'attributo di istruzione SQL_ATTR_ROW_BIND_TYPE e associa l'indirizzo di ogni membro nel primo elemento della matrice. Pertanto, il conducente può calcolare l'indirizzo dei dati per una particolare riga e colonna come  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- dove le righe sono numerate da 1 alla dimensione del set di righe. Ne viene sottratto uno dal numero di riga perché l'indicizzazione della matrice in C è in base zero. Nella figura seguente viene illustrato il funzionamento dell'associazione per riga. In genere, solo le colonne che verranno associate vengono incluse nella struttura. La struttura può contenere campi che non sono correlati alle colonne del set di risultati. Le colonne possono essere inserite nella struttura in qualsiasi ordine, ma sono visualizzate in ordine sequenziale per maggiore chiarezza.  
+ dove le righe sono numerate da 1 alla dimensione del set di righe. (Uno viene sottratto dal numero di riga perché l'indicizzazione di matrice in C è in base zero.) Nella figura seguente viene illustrato il funzionamento dell'associazione per riga. In genere, solo le colonne che verranno associate vengono incluse nella struttura. La struttura può contenere campi non correlati alle colonne del set di risultati. Le colonne possono essere posizionate nella struttura in qualsiasi ordine, ma vengono visualizzate in ordine sequenziale per maggiore chiarezza.  
   
- ![Mostra l'associazione saggia&#45;di riga](../../../odbc/reference/develop-app/media/pr22.gif "PR22")  
+ ![Mostra l'associazione&#45;riga](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- Il codice seguente, ad esempio, crea una struttura con gli elementi in cui restituire i dati per le colonne OrderID, SalesPerson e status, nonché la lunghezza/gli indicatori per le colonne SalesPerson e status. Alloca 10 di queste strutture e le associa alle colonne OrderID, SalesPerson e status.  
+ Ad esempio, il codice seguente crea una struttura con elementi in cui restituire i dati per le colonne OrderID, SalesPerson e Status e lunghezza/indicatori per le colonne SalesPerson e Status. Alloca 10 di queste strutture e le associa alle colonne OrderID, SalesPerson e Status.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

@@ -1,5 +1,5 @@
 ---
-title: Metadati del catalogo | Microsoft Docs
+title: Metadati del catalogo Documenti Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de11cf1346010881ae3af0bbdf69035583090dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ebf39ceb63a814b90bc5e6f0e2ebddeec401b126
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783702"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301842"
 ---
 # <a name="metadata---catalog"></a>Metadati - Catalogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "73783702"
   In questo argomento vengono descritti i metadati della colonna restituiti da **SQLColumns** e **SQLProcedureColumns**e i metadati del tipo di dati restituiti da **SQLGetTypeInfo**.  
   
 ## <a name="remarks"></a>Osservazioni  
- I valori di colonna seguenti vengono restituiti per i tipi data/ora da **SQLColumns** e **SQLProcedureColumns**.  
+ I seguenti valori di colonna vengono restituiti per i tipi di data/ora da **SQLColumns** e **SQLProcedureColumns**.  
   
 |Tipo di parametro|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
+|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1.. 7|1.. 7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- I valori di colonna seguenti vengono restituiti per i tipi data/ora da **SQLGetTypeInfo**:  
+ I seguenti valori di colonna vengono restituiti per i tipi data/ora da **SQLGetTypeInfo**:  
   
 |Tipo di parametro|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  

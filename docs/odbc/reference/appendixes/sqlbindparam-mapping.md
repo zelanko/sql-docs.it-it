@@ -1,5 +1,5 @@
 ---
-title: Mapping di SQLBindParam | Microsoft Docs
+title: 'Proprietà SQLBindParam Mapping : Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - SQLBindparam function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLBindParam
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ecec6116ee16f4affa615518a690d2c665648464
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c1df595722297c91dc75398470912188e109e278
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091241"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305441"
 ---
 # <a name="sqlbindparam-mapping"></a>Mapping di SQLBindParam
-**SQLBindParam** non può essere effettivamente chiamato deprecato perché non era mai presente in ODBC; Tuttavia, rappresenta comunque una funzionalità duplicata, che deve essere esportata dal gestore di driver poiché le applicazioni ISO e Open Group conformi lo useranno. Poiché **SQLBindParameter** contiene tutte le funzionalità di **SQLBindParam**, verrà eseguito il mapping di **SQLBindParam** su **SQLBindParameter** (quando il driver sottostante è un driver ODBC *3. x* ). Un driver ODBC *3. x* non deve implementare **SQLBindParam**.  
+**SQLBindParam** non può essere veramente chiamato deprecato perché non è mai stato presente in ODBC; tuttavia, rappresenta ancora funzionalità duplicate - Gestione Driver deve esportarlo perché ISO e applicazioni compatibili con il gruppo aperto lo utilizzerà. Poiché **SQLBindParameter** contiene tutte le funzionalità di **SQLBindParam**, **SQLBindParam** verrà mappato su **SQLBindParameter** (quando il driver sottostante è un driver ODBC *3.x).* Non è necessario che un driver ODBC *3.x* implementi **SQLBindParam**.  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando viene effettuata la chiamata seguente a **SQLBindParam** :  
+ Quando viene effettuata la chiamata seguente a **SQLBindParam:**  
   
 ```  
 SQLBindParam(   StatementHandle,    ParameterNumber,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    StrLen_or_IndPtr)  
 ```  
   
- Gestione driver chiama **SQLBindParameter** nel driver come indicato di seguito:  
+ Gestione Driver chiama **SQLBindParameter** nel driver come segue:  
   
 ```  
 SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    BufferLength,    StrLen_or_IndPtr)  
 ```  
   
- Vedere [informazioni su ODBC 64 bit](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione viene eseguita su un sistema operativo a 64 bit.  
+ Vedere [Informazioni a 64 bit ODBC](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione verrà eseguita in un sistema operativo a 64 bit.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)

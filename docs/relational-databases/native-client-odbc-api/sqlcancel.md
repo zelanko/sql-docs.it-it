@@ -1,5 +1,5 @@
 ---
-title: SQLCancel | Microsoft Docs
+title: Proprietà SQLCancel . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLCancel function
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80b0ac3e21933c378d67b41f1bbc846f04811ed5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2db2c4b66940a81dd65064ee730cd683e2206a58
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787654"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302643"
 ---
 # <a name="sqlcancel"></a>SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Nell' [argomento SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) si afferma che in ODBC 2. x, se un'applicazione **chiama SQLCancel** quando non viene eseguita alcuna elaborazione sull'istruzione, **SQLCancel** ha lo stesso effetto di **SQLFreeStmt** con l'opzione **SQL_CLOSE** ; Questo comportamento viene definito solo per completezza e le applicazioni devono chiamare **SQLFreeStmt** o **SQLCloseCursor** per chiudere i cursori. Tuttavia, anche se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'applicazione client nativa imposta la versione dell'API ODBC su 3.5. x o versioni successive, la funzione **SQLCancel** utilizzerà il comportamento ODBC 2. x.  
+  L'argomento [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) dice che in ODBC 2.x, se un'applicazione chiama **SQLCancel** quando non viene eseguita alcuna elaborazione sull'istruzione, **SQLCancel** ha lo stesso effetto di **SQLFreeStmt** con l'opzione **SQL_CLOSE;** questo comportamento è definito solo per completezza e le applicazioni devono chiamare **SQLFreeStmt** o **SQLCloseCursor** per chiudere i cursori. Ma anche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'applicazione Native Client imposta la versione dell'API ODBC su 3.5.x o versione successiva, la funzione **SQLCancel** utilizzerà il comportamento ODBC 2.x.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Istruzione SQLCancel (Annulla)](https://go.microsoft.com/fwlink/?LinkId=203516)   
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

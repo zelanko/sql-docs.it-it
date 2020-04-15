@@ -1,5 +1,5 @@
 ---
-title: Uso di buffer di dati | Microsoft Docs
+title: Utilizzo dei buffer di dati . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079579"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306772"
 ---
 # <a name="using-data-buffers"></a>Uso dei buffer dei dati
-I buffer di dati sono descritti da tre informazioni: il tipo, l'indirizzo e la lunghezza di byte. Ogni volta che una funzione richiede una di queste informazioni e non lo conosce già, presenta un argomento con cui l'applicazione la passa.  
+I buffer di dati sono descritti da tre informazioni: il tipo, l'indirizzo e la lunghezza in byte. Ogni volta che una funzione ha bisogno di una di queste informazioni e non lo conosce già, ha un argomento con cui l'applicazione lo passa.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

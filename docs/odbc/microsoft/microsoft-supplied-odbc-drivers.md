@@ -1,5 +1,5 @@
 ---
-title: Driver ODBC forniti da Microsoft | Microsoft Docs
+title: Driver ODBC forniti da Microsoft Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - drivers [ODBC], about ODBC drivers
 - ODBC drivers [ODBC]
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dadbc638219803562ef376a44abb37e9f85802cc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045008"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298201"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Driver ODBC forniti da Microsoft
-I *driver* sono librerie che implementano le funzioni nell'API ODBC. Ogni driver è specifico di un sistema di gestione di database (DBMS) specifico. Nella maggior parte dei casi, i driver espongono le funzionalità del sistema DBMS sottostante; non è necessario implementare funzionalità non supportate dal sistema DBMS. I driver eseguono attività specifiche e possono essere classificati in due categorie: basata su file e basata su DBMS. Per ulteriori informazioni sui driver e sull'architettura dei driver, vedere [driver](../../odbc/reference/drivers.md).  
+*I driver* sono librerie che implementano le funzioni nell'API ODBC. Ogni driver è specifico di un particolare sistema di gestione di database (DBMS). Nella maggior parte dei casi, i driver espongono le funzionalità del DBMS sottostante; non sono necessari per implementare funzionalità non supportate dal DBMS. I driver eseguono attività specifiche e possono essere classificati in due categorie: basate su file e basate su DBMS. Per ulteriori informazioni sui driver e sull'architettura dei driver, vedere [Driver](../../odbc/reference/drivers.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

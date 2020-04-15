@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLGetDiagRec | Microsoft Docs
+title: SqlGetDiagRec (funzione) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetDiagRec function [ODBC]
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67911324"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285381"
 ---
 # <a name="sqlgetdiagrec-function"></a>Funzione SQLGetDiagRec
 **Conformità**  
- Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
+ Versione introdotta: ODBC 3.0 Standards Compliance: ISO 92  
   
- **Summary**  
- **SQLGetDiagRec** restituisce i valori correnti di più campi di un record di diagnostica che contiene informazioni su errori, avvisi e stato. A differenza di **SQLGetDiagField**, che restituisce un campo di diagnostica per chiamata, **SQLGetDiagRec** restituisce diversi campi di uso comune di un record di diagnostica, inclusi SQLSTATE, il codice di errore nativo e il testo del messaggio di diagnostica.  
+ **Riepilogo**  
+ **SQLGetDiagRec** restituisce i valori correnti di più campi di un record di diagnostica che contiene informazioni su errori, avvisi e stato. A differenza **di SQLGetDiagField**, che restituisce un campo di diagnostica per ogni chiamata, **SQLGetDiagRec** restituisce diversi campi di uso comune di un record di diagnostica, tra cui SQLSTATE, il codice di errore nativo e il testo del messaggio di diagnostica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +50,7 @@ SQLRETURN SQLGetDiagRec(
   
 ## <a name="arguments"></a>Argomenti  
  *HandleType*  
- Input Identificatore del tipo di handle che descrive il tipo di handle per cui sono necessarie le diagnostica. I possibili valori sono i seguenti:  
+ [Ingresso] Identificatore del tipo di handle che descrive il tipo di handle per il quale è necessaria la diagnostica. I possibili valori sono i seguenti:  
   
 -   SQL_HANDLE_DBC  
   
@@ -62,80 +62,80 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN handle viene utilizzato solo dal driver e dalla gestione driver. Le applicazioni non devono usare questo tipo di handle. Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere [sviluppo della conoscenza del pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ SQL_HANDLE_DBC_INFO_TOKEN handle viene utilizzato solo da Gestione Driver e dal driver. Le applicazioni non devono utilizzare questo tipo di handle. Per ulteriori informazioni su SQL_HANDLE_DBC_INFO_TOKEN, vedere Sviluppo del [riconoscimento](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)del pool di connessioni in un driver ODBC .  
   
- *Gestire*  
- Input Handle per la struttura dei dati di diagnostica, del tipo indicato da *HandleType*. Se *HandleType* è SQL_HANDLE_ENV, *handle* può essere un handle di ambiente condiviso o non condiviso.  
+ *Handle*  
+ [Ingresso] Handle per la struttura dei dati di diagnostica, del tipo indicato da *HandleType*. Se *HandleType* è SQL_HANDLE_ENV, *Handle* può essere un handle di ambiente condiviso o non condiviso.  
   
  *RecNumber*  
- Input Indica il record di stato da cui l'applicazione cerca le informazioni. I record di stato sono numerati da 1.  
+ [Ingresso] Indica il record di stato da cui l'applicazione cerca informazioni. I record di stato sono numerati a partire da 1.  
   
- *SQLState*  
- Output Puntatore a un buffer in cui restituire un codice SQLSTATE di cinque caratteri (e terminando NULL) per il record di diagnostica *RecNumber*. I primi due caratteri indicano la classe; i successivi tre indicano la sottoclasse. Queste informazioni sono contenute nel campo di diagnostica SQL_DIAG_SQLSTATE. Per ulteriori informazioni, vedere [Sqlstates](../../../odbc/reference/develop-app/sqlstates.md).  
+ *Sqlstate*  
+ [Uscita] Puntatore a un buffer in cui restituire un codice SQLSTATE di cinque caratteri (e terminando NULL) per il record di diagnostica *RecNumber*. I primi due caratteri indicano la classe; i tre successivi indicano la sottoclasse. Queste informazioni sono contenute nel campo di diagnostica SQL_DIAG_SQLSTATE. Per ulteriori informazioni, vedere [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md).  
   
  *NativeErrorPtr*  
- Output Puntatore a un buffer in cui restituire il codice di errore nativo, specifico dell'origine dati. Queste informazioni sono contenute nel campo di diagnostica SQL_DIAG_NATIVE.  
+ [Uscita] Puntatore a un buffer in cui restituire il codice di errore nativo, specifico dell'origine dati. Queste informazioni sono contenute nel campo di diagnostica SQL_DIAG_NATIVE.  
   
  *MessageText*  
- Output Puntatore a un buffer in cui restituire la stringa di testo del messaggio di diagnostica. Queste informazioni sono contenute nel campo di diagnostica SQL_DIAG_MESSAGE_TEXT. Per il formato della stringa, vedere [messaggi di diagnostica](../../../odbc/reference/develop-app/diagnostic-messages.md).  
+ [Uscita] Puntatore a un buffer in cui restituire la stringa di testo del messaggio di diagnostica. Queste informazioni sono contenute nel campo di diagnostica SQL_DIAG_MESSAGE_TEXT. Per il formato della stringa, vedere [Messaggi di diagnostica](../../../odbc/reference/develop-app/diagnostic-messages.md).  
   
- Se *MessageText* è null, *TextLengthPtr* restituirà comunque il numero totale di caratteri, escluso il carattere di terminazione null per i dati di tipo carattere, disponibile per restituire nel buffer a cui punta *MessageText*.  
+ Se *MessageText* è NULL, *TextLengthPtr* restituirà comunque il numero totale di caratteri (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile per la restituzione nel buffer a cui punta *MessageText*.  
   
  *BufferLength*  
- Input Lunghezza del buffer **MessageText* in caratteri. Non esiste una lunghezza massima del testo del messaggio di diagnostica.  
+ [Ingresso] Lunghezza del buffer*MessageText* in caratteri. Non esiste una lunghezza massima del testo del messaggio di diagnostica.  
   
  *TextLengthPtr*  
- Output Puntatore a un buffer in cui restituire il numero totale di caratteri, escluso il numero di caratteri necessari per il carattere di terminazione null, disponibile per restituire in * \*MessageText*. Se il numero di caratteri disponibili per la restituzione è maggiore di *bufferLength*, il testo del messaggio di diagnostica in * \*MessageText* viene troncato in *bufferLength* meno la lunghezza di un carattere di terminazione null.  
+ [Uscita] Puntatore a un buffer in cui restituire il numero totale di caratteri (escluso il numero di caratteri necessari per il carattere di terminazione null) disponibile per la restituzione in * \*MessageText*. Se il numero di caratteri disponibili per la restituzione è maggiore di *BufferLength*, il testo del messaggio di diagnostica in * \*MessageText* viene troncato a *BufferLength* meno la lunghezza di un carattere di terminazione null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- **SQLGetDiagRec** non pubblica i record di diagnostica per se stesso. USA i valori restituiti seguenti per segnalare il risultato della propria esecuzione:  
+ **SQLGetDiagRec** non registra record di diagnostica per se stesso. Utilizza i seguenti valori restituiti per segnalare il risultato della propria esecuzione:  
   
 -   SQL_SUCCESS: la funzione ha restituito correttamente le informazioni di diagnostica.  
   
--   SQL_SUCCESS_WITH_INFO: il \*buffer *MessageText* è troppo piccolo per conservare il messaggio di diagnostica richiesto. Nessun record di diagnostica generato. Per determinare se si è verificato un troncamento, l'applicazione deve confrontare *bufferLength* con il numero effettivo di byte disponibili, scritto in **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: \*il buffer *MessageText* era troppo piccolo per contenere il messaggio di diagnostica richiesto. Non sono stati generati record di diagnostica. Per determinare che si è verificato un troncamento, l'applicazione deve confrontare *BufferLength* con il numero effettivo di byte disponibili, che viene scritto in*StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: l'handle indicato da *HandleType* e *handle* non è un handle valido.  
+-   SQL_INVALID_HANDLE: l'handle indicato da *HandleType* e *Handle* non è un handle valido.  
   
--   SQL_ERROR: si è verificata una delle condizioni seguenti:  
+-   SQL_ERROR: si è verificato uno dei seguenti:  
   
-    -   *RecNumber* è negativo o 0.  
+    -   *RecNumber* era negativo o 0.  
   
-    -   *BufferLength* è minore di zero.  
+    -   *BufferLength* era minore di zero.  
   
-    -   Quando si usa la notifica asincrona, l'operazione asincrona sull'handle non è stata completata.  
+    -   Quando si utilizza la notifica asincrona, l'operazione asincrona sull'handle non è stata completata.  
   
--   SQL_NO_DATA: *RecNumber* è maggiore del numero di record di diagnostica esistenti per l'handle specificato nell' *handle.* La funzione restituisce inoltre SQL_NO_DATA per qualsiasi *RecNumber* positivo se non sono presenti record di diagnostica per *handle*.  
+-   SQL_NO_DATA: *RecNumber* era maggiore del numero di record di diagnostica esistenti per l'handle specificato in *Handle.* La funzione restituisce inoltre SQL_NO_DATA per qualsiasi *RecNumber* positivo se non sono presenti record di diagnostica per *Handle*.  
   
 ## <a name="comments"></a>Commenti  
- Un'applicazione in genere chiama **SQLGetDiagRec** quando una precedente chiamata a una funzione ODBC ha restituito SQL_ERROR o SQL_SUCCESS_WITH_INFO. Tuttavia, poiché qualsiasi funzione ODBC può inviare zero o più record di diagnostica ogni volta che viene chiamato, un'applicazione può chiamare **SQLGetDiagRec** dopo qualsiasi chiamata di funzione ODBC. Un'applicazione può chiamare più volte **SQLGetDiagRec** per restituire alcuni o tutti i record nella struttura dei dati di diagnostica. ODBC non impone alcun limite al numero di record di diagnostica che possono essere archiviati in un momento qualsiasi.  
+ Un'applicazione chiama in genere **SQLGetDiagRec** quando una chiamata precedente a una funzione ODBC ha restituito SQL_ERROR o SQL_SUCCESS_WITH_INFO. Tuttavia, poiché qualsiasi funzione ODBC può registrare zero o più record di diagnostica ogni volta che viene chiamata, un'applicazione può chiamare **SQLGetDiagRec** dopo qualsiasi chiamata di funzione ODBC. Un'applicazione può chiamare **SQLGetDiagRec** più volte per restituire alcuni o tutti i record nella struttura dei dati di diagnostica. ODBC non impone alcun limite al numero di record di diagnostica che possono essere archiviati contemporaneamente.  
   
- Impossibile utilizzare **SQLGetDiagRec** per restituire campi dall'intestazione della struttura dei dati di diagnostica. L'argomento *RecNumber* deve essere maggiore di 0. Per questo scopo, l'applicazione deve chiamare **SQLGetDiagField** .  
+ **Impossibile utilizzare SQLGetDiagRec** per restituire campi dall'intestazione della struttura dei dati di diagnostica. L'argomento *RecNumber* deve essere maggiore di 0. L'applicazione deve chiamare **SQLGetDiagField** per questo scopo.  
   
- **SQLGetDiagRec** recupera solo le informazioni di diagnostica associate più di recente all'handle specificato nell'argomento *handle* . Se l'applicazione chiama un'altra funzione ODBC, ad eccezione di **SQLGetDiagRec**, **SQLGetDiagField**o **SQLError**, le informazioni di diagnostica delle chiamate precedenti sullo stesso handle andranno perse.  
+ **SQLGetDiagRec** recupera solo le informazioni di diagnostica associate più di recente all'handle specificato nel *Handle* argomento. Se l'applicazione chiama un'altra funzione ODBC, ad eccezione **di SQLGetDiagRec**, **SQLGetDiagField**o **SQLError**, tutte le informazioni di diagnostica delle chiamate precedenti sullo stesso handle vengono perse.  
   
- Un'applicazione può analizzare tutti i record di diagnostica eseguendo un ciclo, incrementando *RecNumber*, a condizione che **SQLGetDiagRec** restituisca SQL_SUCCESS. Le chiamate a **SQLGetDiagRec** non sono distruttive per i campi di intestazione e di record. L'applicazione può chiamare nuovamente **SQLGetDiagRec** in un secondo momento per recuperare un campo da un record, purché non siano state chiamate altre funzioni, ad eccezione di **SQLGetDiagRec**, **SQLGetDiagField**o **SQLError**, nel frattempo. L'applicazione può anche recuperare un conteggio del numero totale di record di diagnostica disponibili chiamando **SQLGetDiagField** per recuperare il valore del campo SQL_DIAG_NUMBER e quindi chiamando **SQLGetDiagRec** che molte volte.  
+ Un'applicazione può eseguire la scansione di tutti i record di diagnostica eseguendo un ciclo, incrementando *RecNumber*, purché **SQLGetDiagRec restituisca** SQL_SUCCESS. Le chiamate a **SQLGetDiagRec** non sono distruttive per i campi di intestazione e record. L'applicazione può chiamare nuovamente **SQLGetDiagRec** in un secondo momento per recuperare un campo da un record, purché nessun'altra funzione, ad eccezione di **SQLGetDiagRec**, **SQLGetDiagField**o **SQLError**, è stata chiamata nel frattempo. L'applicazione può inoltre recuperare un conteggio del numero totale di record di diagnostica disponibili chiamando **SQLGetDiagField** per recuperare il valore del campo SQL_DIAG_NUMBER e quindi chiamando **SQLGetDiagRec** tale volte.  
   
- Per una descrizione dei campi della struttura dei dati di diagnostica, vedere [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Per altre informazioni, vedere [uso di SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) e [implementazione di SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
+ Per una descrizione dei campi della struttura dei dati di diagnostica, vedere [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Per ulteriori informazioni, vedere [Utilizzo di SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) e Implementazione di [SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
- La chiamata di un'API diversa da quella che viene eseguita in modo asincrono genererà HY010 "errore della sequenza di funzioni". Non è tuttavia possibile recuperare il record di errore prima del completamento dell'operazione asincrona.  
+ La chiamata a un'API diversa da quella eseguita in modo asincrono genererà HY010 "Errore di sequenza di funzioni". Tuttavia, il record di errore non può essere recuperato prima del completamento dell'operazione asincrona.  
   
 ## <a name="handletype-argument"></a>Argomento HandleType  
- A ogni tipo di handle possono essere associate informazioni di diagnostica. L'argomento *HandleType* indica il tipo di handle dell'argomento *handle* .  
+ A ogni tipo di handle possono essere associate informazioni di diagnostica. L'argomento *HandleType* indica il tipo di handle dell'argomento *Handle.*  
   
- Non è possibile restituire alcuni campi di intestazione e record per gli handle di ambiente, connessione, istruzione e descrittore. Gli handle per i quali non è applicabile un campo sono indicati nelle sezioni "campi di intestazione" e "campi dei record" di [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
+ Alcuni campi di intestazione e record non possono essere restituiti per gli handle di ambiente, connessione, istruzione e descrittore. Gli handle per i quali un campo non è applicabile sono indicati nelle sezioni "Campi intestazione" e "Campi record" in [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   
- Una chiamata a **SQLGetDiagRec** restituirà SQL_INVALID_HANDLE se *HandleType* è SQL_HANDLE_SENV, che indica un handle di ambiente condiviso. Tuttavia, se *HandleType* è SQL_HANDLE_ENV, *handle* può essere un handle di ambiente condiviso o non condiviso.  
+ Una chiamata a **SQLGetDiagRec** restituirà SQL_INVALID_HANDLE se *HandleType* è SQL_HANDLE_SENV, che denota un handle di ambiente condiviso. Tuttavia, se *HandleType* è SQL_HANDLE_ENV, *Handle* può essere un handle di ambiente condiviso o non condiviso.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Recupero di un campo di un record di diagnostica o di un campo dell'intestazione di diagnostica|[Funzione SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
+|Recupero di un campo di un record di diagnostica o di un campo dell'intestazione diagnostica|[Funzione SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Guida di riferimento all'API ODBCODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programma di esempio ODBC](../../../odbc/reference/sample-odbc-program.md)
