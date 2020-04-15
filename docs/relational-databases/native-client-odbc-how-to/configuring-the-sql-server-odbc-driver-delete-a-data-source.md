@@ -1,5 +1,5 @@
 ---
-title: Eliminare un'origine dati (ODBC) | Microsoft Docs
+title: Eliminazione di un'origine dati (ODBC) Documenti Microsoft
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -10,35 +10,35 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781683"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294531"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurazione del driver ODBC di SQL Server - Eliminare un'origine dati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Prima di utilizzare le applicazioni ODBC con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versioni successive, è necessario essere in grado di aggiornare la versione delle stored procedure del catalogo nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nonché aggiungere, eliminare e testare le origini dati.  
   
-  È possibile eliminare un'origine dati tramite l'amministratore ODBC, a livello di codice (tramite [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)) oppure eliminando un file (se il nome dell'origine dati è un file).  
+  È possibile eliminare un'origine dati utilizzando l'Amministratore ODBC a livello di codice (utilizzando [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)) o eliminando un file (se il nome di un'origine dati su file).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Per eliminare un'origine dati tramite Amministratore ODBC.  
   
-1.  Nel **Pannello di controllo**aprire **strumenti di amministrazione**, quindi fare doppio clic su **origini dati ODBC (64 bit)** o **origini dati ODBC (32-bit)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
+1.  Nel **Pannello di controllo**aprire Strumenti di **amministrazione**e quindi fare doppio clic su Origini dati **ODBC (64 bit)** o **Origini dati ODBC (32 bit).** In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
   
-2.  Fare clic sulla scheda DSN **utente**, **DSN di sistema**o **DSN su file** .  
+2.  Fare clic sulla scheda **DSN utente**, **DSN**di sistema o **DSN su file.**  
   
-3.  Consente di selezionare l'origine dati da eliminare.  
+3.  Selezionare l'origine dati da eliminare.  
   
-4.  Fare clic su **Rimuovi**, quindi confermare l'eliminazione.  
+4.  Fare clic su **Rimuovi**e quindi confermare l'eliminazione.  
 
 ## <a name="example"></a>Esempio  
- Per eliminare un'origine dati a livello di codice, chiamare [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) usando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN come secondo parametro.  
+ Per eliminare a livello di codice un'origine dati, chiamare [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) utilizzando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN come secondo parametro.  
   
  Nell'esempio seguente viene illustrato come è possibile eliminare un'origine dati a livello di programmazione.  
   
@@ -60,6 +60,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere un'origine dati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [Aggiungere un'origine dati &#40;&#41;ODBCAdd a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Metadati per le colonne di tipo sparse (OLE DB)
+title: Metadati per colonne di tipo sparse (OLE DB)Metadata for Sparse Columns (OLE DB)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29af8a66447644b1e672dca4dfaf2cb890e3d186
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f3bad30dbe0257d341ad91e2ed60bf698ca52dc8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75226026"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295858"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questo esempio viene creata una tabella con tre colonne, ovvero una colonna di tipo sparse, una colonna non di tipo sparse e una colonna ColumnSet. Nell'esempio vengono quindi visualizzati i flag OLE DB che indicano i metadati della colonna e del catalogo per la colonna non di tipo sparse e per quella ColumnSet.  
   
- Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto di colonne di tipo sparse in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [Supporto delle colonne di tipo sparse in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Esempio  
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  

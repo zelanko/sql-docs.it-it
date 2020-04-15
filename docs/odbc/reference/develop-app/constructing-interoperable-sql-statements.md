@@ -1,5 +1,5 @@
 ---
-title: Creazione di istruzioni SQL interoperative | Microsoft Docs
+title: Costruzione di istruzioni SQL interoperabili Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002247"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282517"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Creazione di istruzioni SQL interoperative
-Come indicato nelle sezioni precedenti, le applicazioni interoperative devono utilizzare la grammatica SQL ODBC. Oltre a usare questa grammatica, tuttavia, una serie di problemi aggiuntivi è rivolta alle applicazioni interoperative. Ad esempio, cosa fa un'applicazione se si vuole usare una funzionalità, ad esempio outer join, che non è supportata da tutte le origini dati?  
+Come accennato nelle sezioni precedenti, le applicazioni interoperabili devono utilizzare la grammatica SQL ODBC. Oltre all'utilizzo di questa grammatica, tuttavia, una serie di problemi aggiuntivi sono affrontati da applicazioni interoperabili. Ad esempio, cosa fa un'applicazione se si desidera utilizzare una funzionalità, ad esempio outer join, che non è supportata da tutte le origini dati?  
   
- A questo punto, il writer dell'applicazione deve prendere alcune decisioni relative alle funzionalità del linguaggio richieste e quali sono facoltative. Nella maggior parte dei casi, se un driver specifico non supporta una funzionalità richiesta dall'applicazione, l'applicazione non è più in grado di eseguire con tale driver. Tuttavia, se la funzionalità è facoltativa, l'applicazione può aggirare la funzionalità. Ad esempio, potrebbe disabilitare le parti dell'interfaccia che consentono all'utente di usare la funzionalità.  
+ A questo punto, il writer dell'applicazione deve prendere alcune decisioni sulle funzionalità del linguaggio richieste e facoltative. Nella maggior parte dei casi, se un particolare driver non supporta una funzionalità richiesta dall'applicazione, l'applicazione si rifiuta semplicemente di eseguire con tale driver. Tuttavia, se la funzionalità è facoltativa, l'applicazione può aggirare la funzionalità. Ad esempio, potrebbe disabilitare quelle parti dell'interfaccia che consentono all'utente di utilizzare la funzionalità.  
   
- Per determinare quali funzionalità sono supportate, le applicazioni vengono avviate chiamando **SQLGetInfo** con l'opzione SQL_SQL_CONFORMANCE. Il livello di conformità SQL fornisce all'applicazione un'ampia visualizzazione del supporto di SQL. Per affinare questa visualizzazione, l'applicazione chiama **SQLGetInfo** con una qualsiasi di altre opzioni. Per un elenco completo di queste opzioni, vedere la descrizione della funzione [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) . Infine, **SQLGetTypeInfo** restituisce informazioni sui tipi di dati supportati dall'origine dati. Nelle sezioni seguenti sono elencati diversi fattori possibili che le applicazioni devono controllare per la creazione di istruzioni SQL interoperative.  
+ Per determinare le funzionalità supportate, le applicazioni vengono avviate chiamando **SQLGetInfo** con l'opzione SQL_SQL_CONFORMANCE. Il livello di conformità SQL offre all'applicazione un'ampia visualizzazione del supporto di SQL. Per perfezionare questa visualizzazione, l'applicazione chiama **SQLGetInfo** con una serie di altre opzioni. Per un elenco completo di queste opzioni, vedere il [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione. Infine, **SQLGetTypeInfo** restituisce informazioni sui tipi di dati supportati dall'origine dati. Nelle sezioni seguenti sono elencati alcuni possibili fattori che le applicazioni devono controllare durante la costruzione di istruzioni SQL interoperabili.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

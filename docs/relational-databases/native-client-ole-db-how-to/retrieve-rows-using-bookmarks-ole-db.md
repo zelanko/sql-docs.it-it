@@ -1,5 +1,5 @@
 ---
-title: Recuperare le righe usando i segnalibri (OLE DB) | Microsoft Docs
+title: Recuperare righe usando i segnalibri (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - bookmarks [OLE DB]
 - rows [OLE DB]
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67509c447134edd816c06ac57e7714efd16c7359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9f12644175b20d9055d3a5a73a4ad1e1b003805b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73766391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302177"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperare righe utilizzando i segnalibri (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il consumer imposta il valore del campo **dwFlag** della struttura di associazione su DBCOLUMNSINFO_ISBOOKMARK per indicare che la colonna viene utilizzata come segnalibro. Imposta inoltre la proprietà del set di righe DBPROP_BOOKMARKS su VARIANT_TRUE, consentendo alla colonna 0 di essere presente nel set di righe. **IRowsetLocate:: GetRowsAt** viene quindi utilizzato per recuperare righe a partire dalla riga specificata un offset da un segnalibro.  
+  Il consumer imposta il valore del campo **dwFlag** della struttura di associazione su DBCOLUMNSINFO_ISBOOKMARK per indicare che la colonna viene utilizzata come segnalibro. Imposta inoltre la proprietà del set di righe DBPROP_BOOKMARKS su VARIANT_TRUE, consentendo alla colonna 0 di essere presente nel set di righe. Viene quindi utilizzato **IRowsetLocate::GetRowsAt** per recuperare le righe, a partire da quella specificata in corrispondenza di un offset da un segnalibro.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Per recuperare righe utilizzando i segnalibri  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73766391"
   
 4.  Impostare il campo **dwFlag** della struttura di associazione sul flag DBCOLUMNSINFO_ISBOOKMARK della colonna che verrà utilizzata come segnalibro.  
   
-5.  Usare **IRowsetLocate:: GetRowsAt** per recuperare le righe, a partire dalla riga specificata da un offset dal segnalibro.  
+5.  Usare **IRowsetLocate::GetRowsAt** per recuperare le righe, a partire da quella specificata da un offset del segnalibro.  
 
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare righe mediante un segnalibro. Questo esempio non è supportato in IA64.  

@@ -1,5 +1,5 @@
 ---
-title: Stored procedure, RPC, output
+title: Stored Procedure, RPC, Output
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9148f3aca9a5ea66407a2b471516cc4eade16f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 385a0930b817c4f897619903ae1fa8501fa763ce
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302203"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Eseguire la stored procedure con RPC e l'output del processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "75244474"
   
 3.  Creare un set di associazioni (uno per ogni creatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-4.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor:: CreateAccessor** . **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
+4.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor::CreateAccessor**. **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
   
 5.  Completare la struttura DBPARAMS.  
   
 6.  Chiamare il comando **Execute**, rappresentato in questo caso da una chiamata a una stored procedure.  
   
-7.  Elaborare il set di righe e rilasciarlo utilizzando il metodo **IRowset:: Release** .  
+7.  Elaborare il set di righe e rilasciarlo usando il metodo **IRowset::Release**.  
   
 8.  Elaborare il codice restituito e i valori del parametro di output ricevuti dalla stored procedure.  
 
@@ -397,6 +397,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per l'elaborazione dei risultati &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Procedure relative all'elaborazione dei risultati &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

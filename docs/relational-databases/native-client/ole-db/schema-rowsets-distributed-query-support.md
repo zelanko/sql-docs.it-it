@@ -15,22 +15,22 @@ helpviewer_keywords:
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c162bbcbf9f9212d6adc3838a06b5eaaac8b13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: daf4f4c0c7c6c1d53c2ab899dd150756399d53a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759708"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296992"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Set di righe dello schema - Supporto di query distribuite
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Per supportare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le query distribuite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l'interfaccia **IDBSchemaRowset** del provider di OLE DB di Native Client restituisce i metadati nei server collegati.  
+  Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportare le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query distribuite, l'interfaccia **IDBSchemaRowset** del provider OLEDB Native Client restituisce metadati nei server collegati.  
   
- Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si limita l'output del set di righe dello schema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Catalog, il provider di OLE DB di Native Client riconosce un nome in due parti contenente il nome del catalogo e del server collegato. Per i set di righe dello schema nella tabella seguente, specificando un nome di catalogo in due parti come _linked_server_**.** il _Catalogo_ limita l'output al catalogo applicabile del server collegato denominato.  
+ Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si limita l'output [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del set di righe dello schema in base al catalogo, il provider OLE DB Native Client riconosce un nome in due parti contenente il server collegato e il nome del catalogo. Per i set di righe dello schema nella tabella seguente, specificando un nome di catalogo in due parti come _linked_server_**.** _catalog_ limita l'output al catalogo applicabile del server collegato denominato.  
   
 |Set di righe dello schema|Restrizione per catalogo|  
 |-------------------|-------------------------|  
@@ -46,10 +46,10 @@ ms.locfileid: "73759708"
 > [!NOTE]  
 >  Per limitare un set di righe dello schema a tutti i cataloghi di un server collegato, utilizzare la sintassi *linked_server* (dove il separatore punto fa parte della specifica del nome). Questa sintassi è equivalente alla specifica di NULL come restrizione del nome di catalogo e viene utilizzata anche quando il server collegato indica un'origine dati che non supporta cataloghi.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client definisce il set di righe dello schema LinkedServers, restituendo un elenco di OLE DB origini dati registrate come server collegati.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB native Client definisce il set di righe dello schema LINKEDSERVERS, restituendo un elenco di origini dati OLE DB registrate come server collegati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;OLE DB di supporto per set di righe dello schema&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [Supporto del set di righe dello schema &#40;&#41;OLE DB](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
  [Set di righe LINKEDSERVERS &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

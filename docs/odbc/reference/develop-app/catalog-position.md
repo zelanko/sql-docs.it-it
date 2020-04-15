@@ -1,5 +1,5 @@
 ---
-title: Posizione Catalogo | Microsoft Docs
+title: Posizione del catalogo Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,40 +12,40 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], catalog position
 - catalog position [ODBC]
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d7c320521a9948c7968f4f7f5d42fd715f6c03d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0305d978dc4ecd21892a0be3916fa5072b7be95a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68062685"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303382"
 ---
 # <a name="catalog-position"></a>Posizione del catalogo
-La posizione di un nome di catalogo in un identificatore e il modo in cui è separata dal resto dell'identificatore variano a seconda dell'origine dati. Ad esempio, in un'origine dati Xbase il nome del catalogo è una directory e, in Microsoft® Windows®, è separato dal nome della tabella, ovvero un nome di file, da una barra rovesciata (\\). Nella figura seguente viene illustrata questa condizione.  
+La posizione di un nome di catalogo in un identificatore e il modo in cui viene separato dal resto dell'identificatore varia da origine dati a origine dati. In un'origine dati Xbase, ad esempio, il nome del catalogo è una directory e, in Microsoft® Windows®,\\è separato dal nome della tabella (che è un nome di file) da una barra rovesciata ( ). Nella figura seguente viene illustrata questa condizione.  
   
  ![Posizione catalogo: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
- In un'origine dati SQL Server, il catalogo è un database ed è separato dai nomi dello schema e della tabella in base a un punto (.).  
+ In un'origine dati SQL ServerSQL Server , il catalogo è un database ed è separato dai nomi di tabella e schema da un punto (.).  
   
  ![Posizione catalogo: SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
- In un'origine dati Oracle, il catalogo è anche il database, ma segue il nome della tabella ed è separato dai nomi dello schema e della tabella da un simbolo di chiocciola (@).  
+ In un'origine dati Oracle, il catalogo è anche il database, ma segue il nome della tabella ed è separato dai nomi dello schema e della tabella da un simbolo di chiocciola (-).  
   
  ![Posizione catalogo: Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
   
- Per determinare il separatore di catalogo e il percorso del nome del catalogo, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CATALOG_NAME_SEPARATOR e SQL_CATALOG_LOCATION. Le applicazioni interoperative devono costruire gli identificatori in base a questi valori.  
+ Per determinare il separatore del catalogo e il percorso del nome del catalogo, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CATALOG_NAME_SEPARATOR e SQL_CATALOG_LOCATION. Le applicazioni interoperabili devono costruire identificatori in base a questi valori.  
   
- Quando si citano identificatori che contengono più di una parte, le applicazioni devono prestare attenzione a racchiudere separatamente ogni parte e non racchiudere il carattere che separa gli identificatori. Ad esempio, l'istruzione seguente per selezionare tutte le righe e le colonne di una tabella Xbase cita i nomi di catalogo (\XBASE\SALES\CORP) e Table (Parts. dbf), ma non il separatore di catalogo (\\):  
+ Quando si citano identificatori che contengono più di una parte, le applicazioni devono fare attenzione a citare ogni parte separatamente e non citare il carattere che separa gli identificatori. Ad esempio, l'istruzione seguente per selezionare tutte le righe e le colonne di una tabella Xbase cita i nomi del catalogo ,\\XBASE SALES , CORP , ma non il separatore di catalogo ( ):  
   
 ```  
 SELECT * FROM "\XBASE\SALES\CORP"\"PARTS.DBF"  
 ```  
   
- L'istruzione seguente per selezionare tutte le righe e le colonne di una tabella Oracle include i nomi Catalog (Sales), schema (Corporate) e Table (Parts), ma non i separatori del catalogo (@) o dello schema (.):  
+ L'istruzione seguente per selezionare tutte le righe e le colonne di una tabella Oracle indica i nomi del catalogo (Sales), dello schema (Corporate) e della tabella (Parti), ma non i separatori di catalogo o di schema (.):  
   
 ```  
 SELECT * FROM "Corporate"."Parts"@"Sales"  
 ```  
   
- Per informazioni sugli identificatori di virgolette, vedere la sezione successiva, [identificatori delimitati](../../../odbc/reference/develop-app/quoted-identifiers.md).
+ Per informazioni sugli identificatori di citazione, vedere la sezione [successiva, Identificatori tra virgolette](../../../odbc/reference/develop-app/quoted-identifiers.md).

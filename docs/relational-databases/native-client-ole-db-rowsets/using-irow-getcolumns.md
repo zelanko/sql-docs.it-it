@@ -1,5 +1,5 @@
 ---
-title: 'Utilizzo di IRow:: GetColumns | Microsoft Docs'
+title: Uso di IRow::GetColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - GetColumns method
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50608f4bb72f982ca5e4651ab5da3cb17cd35cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c60197fa0a39d9f6d547946cfaf8a1ff903a6128
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761667"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283042"
 ---
 # <a name="using-irowgetcolumns"></a>Utilizzo di IRow::GetColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 'Da SQL a C: Numeric | Microsoft Docs'
+title: 'Da SQL a C: Numerico Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - numeric data type [ODBC], converting
 - converting data from SQL to C types [ODBC], numeric
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a23e60b161c09367cfb079cea1f7ca146b4ebee5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056856"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296411"
 ---
 # <a name="sql-to-c-numeric"></a>Da SQL a C: dati numerici
 
-Gli identificatori per i tipi di dati ODBC SQL numerici sono i seguenti:
+Gli identificatori per i tipi di dati SQL ODBC numerici sono i seguenti:
 
 - SQL_DECIMAL  
 - SQL_BIGINT  
@@ -34,28 +34,28 @@ Gli identificatori per i tipi di dati ODBC SQL numerici sono i seguenti:
 - SQL_SMALLINT  
 - SQL_DOUBLE SQL_INTEGER  
 
-Nella tabella seguente sono illustrati i tipi di dati ODBC C in cui è possibile convertire i dati SQL numerici. Per una spiegazione delle colonne e dei termini della tabella, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+Nella tabella seguente vengono illustrati i tipi di dati ODBC C in cui è possibile convertire i dati SQL numerici. Per una spiegazione delle colonne e dei termini nella tabella, vedere [Conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
 
-|Identificatore di tipo C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|Identificatore del tipo C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|Lunghezza in byte di caratteri < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >= *bufferLength*|data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Lunghezza in caratteri < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >= *bufferLength*|data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in caratteri<br /><br /> Lunghezza dei dati in caratteri<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|Dati convertiti senza troncamento [a]<br /><br /> Dati convertiti con troncamento di cifre frazionarie [a]<br /><br /> La conversione dei dati comporterebbe la perdita di cifre intere (anziché frazionarie) [a]|data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensioni del tipo di dati C<br /><br /> Dimensioni del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|I dati sono compresi nell'intervallo del tipo di dati in cui viene convertito il numero [a]<br /><br /> I dati non rientrano nell'intervallo del tipo di dati in cui viene convertito il numero [a]|data<br /><br /> Non definito|Dimensioni del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 22003|  
-|SQL_C_BIT|I dati sono 0 o 1 [a]<br /><br /> I dati sono maggiori di 0, minori di 2 e diversi da 1 [a]<br /><br /> I dati sono minori di 0 oppure maggiori o uguali a 2 [a]|data<br /><br /> Dati troncati<br /><br /> Non definito|1 [b]<br /><br /> 1 [b]<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|Lunghezza in byte dei dati <= *bufferLength*<br /><br /> Lunghezza in byte dei dati > *bufferLength*|data<br /><br /> Non definito|Lunghezza dei dati<br /><br /> Non definito|n/d<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|Dati non troncati<br /><br /> Parte relativa ai secondi frazionari troncata<br /><br /> Parte intera del numero troncato|data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|Parte intera del numero troncato|Non definito|Non definito|22015|  
+|SQL_C_CHAR|Lunghezza byte carattere < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >: *BufferLength*|Data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Lunghezza dei caratteri < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >: *BufferLength*|Data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in caratteri<br /><br /> Lunghezza dei dati in caratteri<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|Dati convertiti senza troncamento[a]<br /><br /> Dati convertiti con troncamento delle cifre frazionarie[a]<br /><br /> La conversione dei dati comporterebbe la perdita di cifre intere (anziché frazionarie)[a]|Data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensione del tipo di dati C<br /><br /> Dimensione del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 01S07 (intito)<br /><br /> 22003|  
+|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|I dati sono compresi nell'intervallo del tipo di dati in cui viene convertito il numero[a]<br /><br /> I dati non rientrano nell'intervallo del tipo di dati in cui viene convertito il numero[a]|Data<br /><br /> Non definito|Dimensione del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 22003|  
+|SQL_C_BIT|I dati sono 0 o 1[a]<br /><br /> I dati sono maggiori di 0, minori di 2 e non sono uguali a 1[a]<br /><br /> I dati sono minori di 0 o maggiori o uguali a 2[a]|Data<br /><br /> Dati troncati<br /><br /> Non definito|1[b]<br /><br /> 1[b]<br /><br /> Non definito|n/d<br /><br /> 01S07 (intito)<br /><br /> 22003|  
+|SQL_C_BINARY|Lunghezza in byte dei dati <- *BufferLength*<br /><br /> Lunghezza in byte dei dati > *BufferLength*|Data<br /><br /> Non definito|Lunghezza dei dati<br /><br /> Non definito|n/d<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH[c] SQL_C_INTERVAL_YEAR[c] SQL_C_INTERVAL_DAY[c] SQL_C_INTERVAL_HOUR[c] SQL_C_INTERVAL_MINUTE[c] SQL_C_INTERVAL_SECOND[c]|Dati non troncati<br /><br /> Parte dei secondi frazionari troncata<br /><br /> Parte intera del numero troncata|Data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 01S07 (intito)<br /><br /> 22015|  
+|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|Parte intera del numero troncata|Non definito|Non definito|22015|  
   
- [a] il valore di *bufferLength* viene ignorato per la conversione. Il driver presuppone che le dimensioni di **TargetValuePtr* siano le dimensioni del tipo di dati C.  
+ Il valore di *BufferLength* viene ignorato per questa conversione. Il driver presuppone che la dimensione di*TargetValuePtr* è la dimensione del tipo di dati C.  
   
- [b] corrisponde alla dimensione del tipo di dati C corrispondente.  
+ [b] Questa è la dimensione del tipo di dati C corrispondente.  
   
- [c] Questa conversione è supportata solo per i tipi di dati numerici esatti (SQL_DECIMAL, SQL_NUMERIC, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER e SQL_BIGINT). Non è supportata per i tipi di dati numerici approssimati (SQL_REAL, SQL_FLOAT o SQL_DOUBLE).  
+ Questa conversione è supportata solo per i tipi di dati numerici esatti (SQL_DECIMAL, SQL_NUMERIC, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER e SQL_BIGINT). Non è supportato per i tipi di dati numerici approssimativi (SQL_REAL, SQL_FLOAT o SQL_DOUBLE).  
 
 ## <a name="sql_c_numeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC e SQLSetDescField
 
- La [funzione SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) è necessaria per eseguire un'associazione manuale con valori SQL_C_NUMERIC. (Si noti che SQLSetDescField è stato aggiunto in ODBC 3,0). Per eseguire l'associazione manuale, è innanzitutto necessario ottenere l'handle del descrittore.  
+ La [funzione SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) è necessaria per eseguire l'associazione manuale con valori di SQL_C_NUMERIC. (Si noti che SQLSetDescField è stato aggiunto in ODBC 3.0.) Per eseguire l'associazione manuale, è innanzitutto necessario ottenere l'handle del descrittore.  
 
 ```cpp
 if (fCType == SQL_C_NUMERIC) {   

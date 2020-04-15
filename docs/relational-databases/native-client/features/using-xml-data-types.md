@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di tipi di dati XML | Microsoft Docs
+title: Uso di tipi di dati XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,20 +27,20 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05fbec5afe8083bb6c428e496933ca38092a9a9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5c0331796797ecf215095a56a61ef2c77a3ba7a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761278"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303173"
 ---
 # <a name="using-xml-data-types"></a>Utilizzo di tipi di dati XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in è stato introdotto un tipo di dati **XML** che consente di archiviare documenti e frammenti XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un database di. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro o tipo restituito dalla funzione oppure in funzioni CAST e CONVERT.  
+  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il tipo di dati **xml** che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro o tipo restituito dalla funzione oppure in funzioni CAST e CONVERT.  
   
 ## <a name="programming-considerations"></a>Considerazioni sulla programmazione  
  XML può essere autodescrittivo in quanto può eventualmente includere un'intestazione XML che specifica la codifica del documento, ad esempio:  
@@ -60,32 +60,31 @@ ms.locfileid: "73761278"
   
 -   Stringa di testo  
   
--   
-  **ISequentialStream**  
+-   **ISequentialStream**  
   
 > [!NOTE]  
->  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non include un lettore sax, ma è possibile passare facilmente **ISequentialStream** a oggetti sax e Dom in MSXML.  
+>  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client non include un lettore SAX, ma **ISequentialStream** può essere facilmente passato agli oggetti SAX e DOM in MSXML.  
   
- È consigliabile utilizzare **ISequentialStream** per il recupero di documenti XML di grandi dimensioni. A XML si applicano le stesse tecniche utilizzate per altri tipi di valore di grandi dimensioni. Per ulteriori informazioni, vedere [utilizzo di tipi di valore di grandi dimensioni](../../../relational-databases/native-client/features/using-large-value-types.md).  
+ **ISequentialStream** deve essere utilizzato per il recupero di documenti XML di grandi dimensioni. A XML si applicano le stesse tecniche utilizzate per altri tipi di valore di grandi dimensioni. Per altre informazioni, vedere la sezione [Uso di tipi valore di grandi dimensioni](../../../relational-databases/native-client/features/using-large-value-types.md).  
   
- I dati in colonne di tipo XML in un set di righe possono inoltre essere recuperati, inseriti o aggiornati da un'applicazione tramite le normali interfacce, ad esempio **IRow::GetColumns**, **IRowChange::SetColumns** e **ICommand::Execute**. Analogamente al caso di recupero, un programma applicativo può passare una stringa di testo o un **ISequentialStream** al [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client.  
+ I dati in colonne di tipo XML in un set di righe possono inoltre essere recuperati, inseriti o aggiornati da un'applicazione tramite le normali interfacce, ad esempio **IRow::GetColumns**, **IRowChange::SetColumns** e **ICommand::Execute**. Analogamente al caso di recupero, un programma dell'applicazione può passare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una stringa di testo o un **oggetto ISequentialStream** al provider OLE DB Native Client.  
   
 > [!NOTE]  
 >  Per inviare dati XML in formato stringa tramite l'interfaccia **ISequentialStream**, è necessario ottenere **ISequentialStream** specificando DBTYPE_IUNKNOWN e impostare il relativo argomento *pObject* su Null nell'associazione.  
   
- Quando i dati XML recuperati risultano troncati a causa di un buffer del consumer di dimensioni troppo ridotte, è possibile che la lunghezza venga restituita come 0xffffffff, a indicare che non è nota. Questo comportamento è coerente con l'implementazione come tipo di dati trasmesso al client senza inviare informazioni sulla lunghezza dei dati effettivi. In alcuni casi è possibile che venga restituita la lunghezza effettiva quando il provider ha memorizzato nel buffer l'intero valore, ad esempio **IRowset:: GetData** e dove viene eseguita la conversione dei dati.  
+ Quando i dati XML recuperati risultano troncati a causa di un buffer del consumer di dimensioni troppo ridotte, è possibile che la lunghezza venga restituita come 0xffffffff, a indicare che non è nota. Questo comportamento è coerente con l'implementazione come tipo di dati trasmesso al client senza inviare informazioni sulla lunghezza dei dati effettivi. In alcuni casi la lunghezza effettiva può essere restituita quando il provider ha memorizzato nel buffer l'intero valore, ad esempio **IRowset::GetData** e in cui viene eseguita la conversione dei dati.  
   
  I dati XML inviati a SQL Server vengono considerati dati binari dal server. In questo modo viene impedito il verificarsi di qualsiasi conversione e il parser XML può rilevare automaticamente la codifica XML. Di conseguenza, una più ampia gamma di documenti XML, ad esempio quelli codificati in UTF-8, viene accettata come input in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Se i dati XML di input vengono associati come DBTYPE_WSTR, l'applicazione deve verificare che i dati siano già codificati come Unicode per evitare qualsiasi rischio di danni dovuti a conversioni di dati indesiderate.  
   
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
- Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con il tipo di dati xml[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** di **.  
+ Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si usano i tipi di dati elencati con il tipo di dati  **xml** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-|Tipo di dati|Al server<br /><br /> **XML**|Al server<br /><br /> **Non XML**|Dal server<br /><br /> **XML**|Dal server<br /><br /> **Non XML**|  
+|Tipo di dati|Al server<br /><br /> **Xml**|Al server<br /><br /> **Non XML**|Dal server<br /><br /> **Xml**|Dal server<br /><br /> **Non XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Pass-through<sup>6,7</sup>|Errore<sup>1</sup>|OK<sup>11,6</sup>|Errore<sup>8</sup>|  
-|DBTYPE_BYTES|Pass-through<sup>6,7</sup>|N/A<sup>2</sup>|OK <sup>11, 6</sup>|N/D <sup>2</sup>|  
+|DBTYPE_BYTES|Pass-through<sup>6,7</sup>|N/D<sup>2</sup>|OK <sup>11, 6</sup>|N/D <sup>2</sup>|  
 |DBTYPE_WSTR|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_BSTR|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK <sup>3</sup>|N/D <sup>2</sup>|  
 |DBTYPE_STR|OK<sup>6, 9, 10</sup>|N/D <sup>2</sup>|OK<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
@@ -93,34 +92,34 @@ ms.locfileid: "73761278"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-through<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK<sup>3</sup>|N/D <sup>2</sup>|  
   
- <sup>1</sup> Se un tipo di server diverso da DBTYPE_XML viene specificato con **ICommandWithParameters:: separameterinfo** e il tipo di funzione di accesso è DBTYPE_XML, si verifica un errore durante l'esecuzione dell'istruzione (DB_E_ERRORSOCCURRED, lo stato del parametro è DBSTATUS_E_BADACCESSOR); in caso contrario, i dati vengono inviati al server, ma il server restituisce un errore che indica che non esiste alcuna conversione implicita da XML al tipo di dati del parametro.  
+ <sup>1 : il</sup> nome del Se un tipo di server diverso da DBTYPE_XML viene specificato con **ICommandWithParameters::SetParameterInfo** e il tipo di funzione di accesso è DBTYPE_XML, si verifica un errore quando viene eseguita l'istruzione (DB_E_ERRORSOCCURRED, lo stato del parametro è DBSTATUS_E_BADACCESSOR); in caso contrario, i dati vengono inviati al server, ma il server restituisce un errore che indica che non esiste alcuna conversione implicita da XML al tipo di dati del parametro.  
   
- <sup>2</sup> Esula dall'ambito di questo argomento.  
+ <sup>2 Il</sup> nome del sistema Al di là dell'ambito di questo argomento.  
   
- <sup>3</sup> Il formato è UTF-16, nessun contrassegno per il bye (BOM), nessuna specifica di codifica, nessuna terminazione null.  
+ <sup>3</sup>Il formato è UTF-16, nessun byte order mark (BOM), nessuna specifica di codifica, nessuna terminazione Null.  
   
- <sup>4</sup> Il formato è UTF-16, nessun BOM, nessuna specifica di codifica, terminazione null.  
+ <sup>4</sup>Il formato è UTF-16, nessun BOM, nessuna specifica di codifica, terminazione Null.  
   
- <sup>5</sup> Il formato è caratteri multibyte codificati nella tabella codici del client con terminatore null. Poiché la conversione dal formato Unicode fornito dal server può provocare danni ai dati, questa associazione è sconsigliata.  
+ <sup>5</sup>Il formato è caratteri multibyte codificati nella tabella codici del client con terminatore Null. Poiché la conversione dal formato Unicode fornito dal server può provocare danni ai dati, questa associazione è sconsigliata.  
   
- <sup>6</sup> È possibile utilizzare BY_REF.  
+ <sup>6</sup>Può essere usato BY_REF.  
   
- <sup>7</sup> I dati UTF-16 devono iniziare con un BOM. In caso contrario, la codifica potrebbe non essere riconosciuta correttamente dal server.  
+ <sup>7</sup>I dati UTF-16 devono iniziare con un indicatore BOM. In caso contrario, la codifica potrebbe non essere riconosciuta correttamente dal server.  
   
- <sup>8</sup> La convalida può verificarsi in fase di creazione della funzione di accesso o in fase di recupero. L'errore è DB_E_ERRORSOCCURRED, lo stato dell'associazione è impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
+ <sup>8</sup>La convalida può verificarsi in fase di creazione della funzione di accesso o in fase di recupero. L'errore è DB_E_ERRORSOCCURRED, lo stato dell'associazione è impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
- <sup>9</sup> I dati vengono convertiti in Unicode utilizzando la tabella codici client prima di essere inviati al server. Se la codifica del documento non corrisponde alla tabella codici del client, i dati possono risultare danneggiati e, pertanto, questa associazione è fortemente sconsigliata.  
+ <sup>9</sup>I dati vengono convertiti in Unicode usando la tabella codici del client prima di inviarli al server. Se la codifica del documento non corrisponde alla tabella codici del client, i dati possono risultare danneggiati e, pertanto, questa associazione è fortemente sconsigliata.  
   
- <sup>10</sup> Un BOM viene sempre aggiunto ai dati inviati al server. Se i dati iniziano già con un indicatore dell'ordine dei byte, saranno presenti due indicatori dell'ordine dei byte all'inizio del buffer. Il server utilizza il primo indicatore dell'ordine dei byte per riconoscere la codifica come UTF-16, quindi lo ignora. Il secondo indicatore dell'ordine dei byte viene interpretato come spazio unificatore di larghezza zero.  
+ <sup>10</sup>Ai dati inviati al server viene sempre aggiunto un indicatore BOM (Byte Order Mark). Se i dati iniziano già con un indicatore dell'ordine dei byte, saranno presenti due indicatori dell'ordine dei byte all'inizio del buffer. Il server utilizza il primo indicatore dell'ordine dei byte per riconoscere la codifica come UTF-16, quindi lo ignora. Il secondo indicatore dell'ordine dei byte viene interpretato come spazio unificatore di larghezza zero.  
   
- <sup>11</sup> Il formato è UTF-16, nessuna specifica di codifica, viene aggiunto un BOM ai dati ricevuti dal server. Se dal server viene restituita una stringa vuota, all'applicazione viene comunque restituito un indicatore dell'ordine dei byte. Se la lunghezza di buffer è un numero dispari di byte, i dati vengono troncati correttamente. Se il valore intero viene restituito in blocchi, questi possono essere concatenati per ricostituire il valore corretto.  
+ <sup>11</sup>Il formato è UTF-16, nessuna specifica di codifica, BOM aggiunto ai dati ricevuti dal server. Se dal server viene restituita una stringa vuota, all'applicazione viene comunque restituito un indicatore dell'ordine dei byte. Se la lunghezza di buffer è un numero dispari di byte, i dati vengono troncati correttamente. Se il valore intero viene restituito in blocchi, questi possono essere concatenati per ricostituire il valore corretto.  
   
- <sup>12</sup> Se la lunghezza del buffer è minore di due caratteri, ovvero non è sufficiente spazio per la terminazione null, viene segnalato un errore di overflow.  
+ <sup>12</sup> mila Se la lunghezza del buffer è inferiore a due caratteri, ovvero lo spazio insufficiente per la terminazione null, viene segnalato un errore di overflow.  
   
 > [!NOTE]  
 >  Per i valori XML NULL non viene restituito alcun dato.  
   
- Lo standard XML richiede che i dati XML con codifica UTF-16 inizino con un indicatore dell'ordine dei byte, codice di carattere UTF-16 0xFEFF. Quando si utilizzano binding WSTR e BSTR, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client non richiede né aggiunge un BOM perché la codifica è implicita nell'associazione. Quando si utilizzano associazioni BYTES, XML o IUNKNOWN, lo scopo è semplicità di gestione di altri processori XML e sistemi di archiviazione. In questo caso, con i dati XML con codifica UTF-16 deve essere presente un indicatore dell'ordine dei byte e l'applicazione non deve considerare l'effettiva codifica, in quando la maggior parte dei processori XML, incluso SQL Server, deduce la codifica controllando i primi byte del valore. I dati XML ricevuti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da Native client utilizzando le associazioni bytes, XML o IUnknown sono sempre codificati in UTF-16 con un BOM e senza una dichiarazione di codifica incorporata.  
+ Lo standard XML richiede che i dati XML con codifica UTF-16 inizino con un indicatore dell'ordine dei byte, codice di carattere UTF-16 0xFEFF. Quando si lavora con i binding [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WSTR e BSTR, Native Client non richiede né aggiunge un BOM poiché la codifica è implicita nell'associazione. Quando si utilizzano associazioni BYTES, XML o IUNKNOWN, lo scopo è semplicità di gestione di altri processori XML e sistemi di archiviazione. In questo caso, con i dati XML con codifica UTF-16 deve essere presente un indicatore dell'ordine dei byte e l'applicazione non deve considerare l'effettiva codifica, in quando la maggior parte dei processori XML, incluso SQL Server, deduce la codifica controllando i primi byte del valore. I dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML ricevuti da Native Client utilizzando associazioni BYTES, XML o IUNKNOWN vengono sempre codificati in UTF-16 con un BOM e senza una dichiarazione di codifica incorporata.  
   
  Le conversioni dei dati fornite dai servizi OLE DB (**IDataConvert**) principali non sono applicabili a DBTYPE_XML.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "73761278"
  Come illustrato nella tabella precedente, DBTYPE_IUNKNOWN è un'associazione supportata, ma non è disponibile alcuna conversione tra DBTYPE_XML e DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN non può essere utilizzato con DBTYPE_BYREF.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Aggiunte e modifiche ai set di righe OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client aggiunge nuovi valori o modifiche a molti dei set di righe dello schema core OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Client nativo aggiunge nuovi valori o modifiche a molti dei set di righe dello schema OLE DB di base.  
   
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS  
  Tra le aggiunte ai set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS sono incluse le colonne seguenti.  
@@ -165,10 +164,10 @@ ms.locfileid: "73761278"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Aggiunte e modifiche ai set di proprietà OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client aggiunge nuovi valori o modifiche a molti dei set di proprietà OLE DB principali.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client aggiunge nuovi valori o modifiche a molti degli insiemi di proprietà OLE DB principali.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
- Per supportare il tipo di dati **XML** tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa il nuovo set di proprietà DBPROPSET_SQLSERVERPARAMETER, che contiene i valori seguenti.  
+ Per supportare **xml** il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] xml tramite OLE DB, Native Client implementa il nuovo set di proprietà DBPROPSET_SQLSERVERPARAMETER, che contiene i valori seguenti.  
   
 |Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
@@ -177,7 +176,7 @@ ms.locfileid: "73761278"
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Nome della raccolta di XML Schema all'interno del catalogo. Una delle tre parti di cui è composto l'identificatore del nome SQL.|  
   
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERCOLUMN  
- Per supportare la creazione di tabelle nell'interfaccia **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client aggiunge tre nuove colonne al set di proprietà DBPROPSET_SQLSERVERCOLUMN.  
+ Per supportare la creazione di tabelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel **ITableDefinition** interfaccia, Client nativo aggiunge tre nuove colonne al DBPROPSET_SQLSERVERCOLUMN set di proprietà.  
   
 |Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
@@ -188,16 +187,16 @@ ms.locfileid: "73761278"
  Analogamente ai valori di SSPROP_PARAM, tutte queste proprietà sono facoltative e non sono specificate per impostazione predefinita. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME e SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME possono essere specificate solo se si specifica SSPROP_COL_XML_SCHEMACOLLECTIONNAME. Se quando si passano dati XML al server questi valori sono inclusi, ne viene verificata l'esistenza (validità) rispetto al database corrente e i dati dell'istanza vengono controllati rispetto allo schema. In tutti i casi, per essere validi tali valori devono essere tutti vuoti o specificati.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Aggiunte e modifiche alle interfacce OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client aggiunge nuovi valori o modifiche a molte delle interfacce di OLE DB principali.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client aggiunge nuovi valori o modifiche a molte delle interfacce OLE DB principali.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interfaccia ISSCommandWithParameters  
- Per supportare il tipo di dati **XML** tramite OLE DB, Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client implementa una serie di modifiche, inclusa l'aggiunta dell'interfaccia [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) . Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **separameterinfo**; **ISSCommandWithParameters** fornisce i metodi [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) e [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) utilizzati per gestire i tipi di dati specifici del server.  
+ Per supportare **xml** il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] xml tramite OLE DB, Native Client implementa una serie di modifiche, tra cui l'aggiunta dell'interfaccia [ISSCommandWithParameters.](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **SetParameterInfo**; **ISSCommandWithParameters** fornisce i metodi [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) e [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) utilizzati per gestire tipi di dati specifici del server.  
   
 > [!NOTE]  
 >  L'interfaccia **ISSCommandWithParameters** usa anche la nuova struttura SSPARAMPROPS.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client aggiunge le colonne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]specifiche seguenti al set di righe restituito dal metodo **interfaccia IColumnRowset:: GetColumnsRowset** . Tali colonne contengono il nome in tre parti di una raccolta di XML Schema. Per le colonne non XML o per le colonne XML non tipizzate, le tre colonne assumono tutte il valore predefinito NULL.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Client nativo aggiunge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]le seguenti colonne specifiche al set di righe restituito dal **metodo IColumnRowset::GetColumnsRowset** . Tali colonne contengono il nome in tre parti di una raccolta di XML Schema. Per le colonne non XML o per le colonne XML non tipizzate, le tre colonne assumono tutte il valore predefinito NULL.  
   
 |Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
@@ -219,37 +218,37 @@ ms.locfileid: "73761278"
   
  Se si utilizza il tipo DBTYPE_BSTR, DBTYPE_WSTR o DBTYPE_VARIANT, il provider archivia l'istanza XML che si trova nel buffer del consumer nella colonna appropriata.  
   
- Nel caso di DBTYPE_IUNKNOWN/ISequentialStream, se il consumer non specifica alcun oggetto di archiviazione, il consumer deve creare un oggetto **ISequentialStream** in anticipo, associare il documento XML all'oggetto, quindi passare l'oggetto al provider tramite il metodo **IRowsetChange:: SetData** . Il consumer può creare inoltre un oggetto di archiviazione, impostare l'argomento pObject su IID_ISequentialStream, creare un oggetto **ISequentialStream**, quindi passare l'oggetto **ISequentialStream** al metodo **IRowsetChange::SetData**. In entrambi casi, il provider può recuperare l'oggetto XML tramite l'oggetto **ISequentialStream** e può inserirlo in una colonna appropriata.  
+ Nel caso di DBTYPE_IUNKNOWN/ISequentialStream, se il consumer non specifica alcun oggetto di archiviazione, il consumer deve creare in anticipo un oggetto **ISequentialStream,** associare il documento XML all'oggetto e quindi passare l'oggetto al provider tramite il **metodo IRowsetChange::SetData** . Il consumer può creare inoltre un oggetto di archiviazione, impostare l'argomento pObject su IID_ISequentialStream, creare un oggetto **ISequentialStream**, quindi passare l'oggetto **ISequentialStream** al metodo **IRowsetChange::SetData**. In entrambi casi, il provider può recuperare l'oggetto XML tramite l'oggetto **ISequentialStream** e può inserirlo in una colonna appropriata.  
   
 #### <a name="the-irowsetupdate-interface"></a>Interfaccia IRowsetUpdate  
- L'interfaccia **IRowsetUpdate** fornisce funzionalità per gli aggiornamenti ritardati. I dati resi disponibili per i set di righe non vengono resi disponibili ad altre transazioni fino a quando il consumer non chiama il metodo **IRowsetUpdate: Update** .  
+ L'interfaccia **IRowsetUpdate** fornisce una funzionalità per aggiornamenti ritardati. I dati resi disponibili per i set di righe non vengono resi disponibili per altre transazioni fino a quando il consumer non chiama il **metodo IRowsetUpdate:Update.**  
   
 #### <a name="the-irowsetfind-interface"></a>Interfaccia IRowsetFind  
  Non è possibile usare il metodo **IRowsetFind::FindNextRow** con il tipo di dati **xml**. Quando **IRowsetFind::FindNextRow** viene chiamato e l'argomento *hAccessor* specifica una colonna di tipo DBTYPE_XML, viene restituito DB_E_BADBINDINFO. Ciò si verifica indipendentemente dal tipo di colonna di cui si esegue la ricerca. Per qualsiasi altro tipo di associazione, **FindNextRow** ha esito negativo con DB_E_BADCOMPAREOP se la colonna da cercare è del tipo di dati **xml**.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
- Nel driver [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC di Native Client sono state apportate alcune modifiche a diverse funzioni per supportare il tipo di dati **XML** .  
+ Nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client sono state apportate numerose modifiche a varie funzioni per supportare il tipo di dati **xml.**  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- La funzione [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md) presenta tre nuovi identificatori di campo, tra cui SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME, SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME e SQL_CA_SS _XML_SCHEMACOLLECTION_NAME.  
+ La funzione [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md) dispone di tre nuovi identificatori di campo, tra cui SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME, SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME e SQL_CA_SS _XML_SCHEMACOLLECTION_NAME.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client segnala SQL_SS_LENGTH_UNLIMITED per le colonne SQL_DESC_DISPLAY_SIZE e SQL_DESC_LENGTH.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client segnala SQL_SS_LENGTH_UNLIMITED per le colonne SQL_DESC_DISPLAY_SIZE e SQL_DESC_LENGTH.  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
  La funzione [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md) include tre nuove colonne, tra cui SS_XML_SCHEMACOLLECTION_CATALOG_NAME, SS_XML_SCHEMACOLLECTION_SCHEMA_NAME e SS_XML_SCHEMACOLLECTION_NAME. La colonna TYPE_NAME esistente viene utilizzata per indicare il nome del tipo XML e DATA_TYPE per una colonna o un parametro di tipo XML è SQL_SS_XML.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client segnala SQL_SS_LENGTH_UNLIMITED per i valori COLUMN_SIZE e CHAR_OCTET_LENGTH.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client segnala SQL_SS_LENGTH_UNLIMITED per i valori COLUMN_SIZE e CHAR_OCTET_LENGTH.  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client segnala SQL_SS_LENGTH_UNLIMITED quando non è possibile determinare le dimensioni della colonna nella funzione [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) .  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client segnala SQL_SS_LENGTH_UNLIMITED quando non è possibile determinare la dimensione della colonna nella funzione [SQLDescribeCol.](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client segnala SQL_SS_LENGTH_UNLIMITED come COLUMN_SIZE massimo per il tipo di dati **XML** nella funzione [SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md) .  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client segnala SQL_SS_LENGTH_UNLIMITED come numero massimo COLUMN_SIZE per il tipo di dati **xml** nella funzione [SQLGetTypeInfo.](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)  
   
 ### <a name="sqlprocedurecolumns"></a>SQLProcedureColumns  
- La funzione [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md) presenta le stesse aggiunte di colonna della funzione **SQLColumns** .  
+ Il [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md) funzione ha le stesse aggiunte di colonna come il **SQLColumns** funzione.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client segnala SQL_SS_LENGTH_UNLIMITED come COLUMN_SIZE massimo per il tipo di dati **XML** .  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client segnala SQL_SS_LENGTH_UNLIMITED come COLUMN_SIZE massimo per il tipo di dati **xml.**  
   
 ### <a name="supported-conversions"></a>Conversioni supportate  
  Quando si esegue una conversione dai tipi di dati SQL ai tipi di dati C, SQL_C_WCHAR, SQL_C_BINARY e SQL_C_CHAR possono essere convertiti tutti in SQL_SS_XML alle condizioni seguenti:  
@@ -268,7 +267,7 @@ ms.locfileid: "73761278"
   
 -   SQL_C_CHAR: i dati vengono convertiti in UTF-16 nel client e inviati al server solo come SQL_C_WCHAR, aggiungendo un indicatore dell'ordine dei byte. La mancata codifica dei dati XML nella tabella codici del client può provocare danni ai dati.  
   
- Lo standard XML richiede che i dati XML con codifica UTF-16 inizino con un indicatore dell'ordine dei byte, codice di carattere UTF-16 0xFEFF. Quando si utilizza un'associazione SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client non richiede né aggiunge un BOM, perché la codifica è implicita nell'associazione. Lo scopo consiste nel fornire semplicità di gestione con altri elaboratori XML e sistemi dell'archiviazione. In questo caso, con i dati XML con codifica UTF-16 deve essere presente un indicatore dell'ordine dei byte e l'applicazione non deve considerare l'effettiva codifica, in quando la maggior parte dei processori XML, incluso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], deduce la codifica controllando i primi byte del valore. I dati XML ricevuti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da Native client usando associazioni SQL_C_BINARY vengono sempre codificati in UTF-16 con un BOM e senza una dichiarazione di codifica incorporata.  
+ Lo standard XML richiede che i dati XML con codifica UTF-16 inizino con un indicatore dell'ordine dei byte, codice di carattere UTF-16 0xFEFF. Quando si utilizza un'associazione SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client non richiede né aggiunge un BOM, poiché la codifica è implicita nell'associazione. Lo scopo consiste nel fornire semplicità di gestione con altri elaboratori XML e sistemi dell'archiviazione. In questo caso, con i dati XML con codifica UTF-16 deve essere presente un indicatore dell'ordine dei byte e l'applicazione non deve considerare l'effettiva codifica, in quando la maggior parte dei processori XML, incluso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], deduce la codifica controllando i primi byte del valore. I dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML ricevuti da Native Client utilizzando SQL_C_BINARY le associazioni vengono sempre codificati in UTF-16 con un BOM e senza una dichiarazione di codifica incorporata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   

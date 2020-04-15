@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLCreateDataSource | Microsoft Docs
+title: Funzione SQLCreateDataSource . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCreateDataSource function [ODBC]
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0b3a6fced096c779b5ab91bf4e5b6a3f0a66e5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94dc0d6d6f3b5bc96ae41aecda5b46f119cff85c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68121391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301201"
 ---
 # <a name="sqlcreatedatasource-function"></a>Funzione SQLCreateDataSource
 **Conformità**  
- Versione introdotta: ODBC 2,0  
+ Versione introdotta: ODBC 2.0  
   
- **Summary**  
- **SQLCreateDataSource** Visualizza una finestra di dialogo con cui l'utente può aggiungere un'origine dati.  
+ **Riepilogo**  
+ **SQLCreateDataSource** visualizza una finestra di dialogo con cui l'utente può aggiungere un'origine dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,69 +43,69 @@ BOOL SQLCreateDataSource(
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *HWND*  
- Input Handle della finestra padre.  
+ *Hwnd*  
+ [Ingresso] Handle della finestra padre.  
   
  *lpszDS*  
- Input Nome dell'origine dati. *lpszDS* può essere un puntatore null o una stringa vuota.  
+ [Ingresso] Nome dell'origine dati. *lpszDS* può essere un puntatore null o una stringa vuota.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- **SQLCreateDataSource** restituisce true se l'origine dati viene creata. In caso contrario, restituisce FALSE.  
+ **SQLCreateDataSource** restituisce TRUE se viene creata l'origine dati. In caso contrario, restituisce FALSE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLCreateDataSource** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLCreateDataSource** restituisce FALSE, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. Nella tabella seguente * \** sono elencati i valori pfErrorCode che possono essere restituiti da **SQLInstallerError** e ognuno di essi illustra ognuno nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Descrizione|  
+|*\*pfErrorCode (codice pfErrorCode)*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
-|ODBC_ERROR_INVALID_HWND|Handle di finestra non valido|Argomento *HWND* non valido o null.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non si è verificato alcun errore specifico del programma di installazione.|  
+|ODBC_ERROR_INVALID_HWND|Handle di finestra non valido|L'argomento *hwnd* non è valido o NULL.|  
 |ODBC_ERROR_INVALID_DSN|DSN non valido|L'argomento *lpszDS* contiene una stringa non valida per un DSN.|  
 |ODBC_ERROR_REQUEST_FAILED|*Richiesta* non riuscita|La chiamata a **ConfigDSN** con l'opzione ODBC_ADD_DSN non è riuscita.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Non è stato possibile caricare la libreria di installazione del driver o del convertitore|Non è stato possibile caricare la libreria di installazione del driver.|  
-|ODBC_ERROR_USER_CANCELED|Operazione annullata dall'utente|Creazione di una nuova origine dati annullata dall'utente.|  
-|ODBC_ERROR_CREATE_DSN_FAILED|Non è stato possibile creare il DSN richiesto|Impossibile connettersi al database. la chiamata a **SQLDriverConnect** per un DSN su file non ha restituito una connessione riuscita.<br /><br /> Non è stato possibile scrivere nel file.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa di memoria insufficiente.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Impossibile caricare il driver o la libreria di installazione del convertitore|Impossibile caricare la libreria di installazione del driver.|  
+|ODBC_ERROR_USER_CANCELED|Operazione annullata dall'utente|Creazione annullata dall'utente di una nuova origine dati.|  
+|ODBC_ERROR_CREATE_DSN_FAILED|Impossibile creare il DSN richiesto|Impossibile connettersi al database. la chiamata a **SQLDriverConnect** per un DSN file non ha restituito una connessione riuscita.<br /><br /> Impossibile scrivere nel file.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- Se *HWND* è null, **SQLCreateDataSource** restituisce false. In caso contrario, viene visualizzata la finestra di dialogo **Crea nuova origine dati** con una pagina della procedura guidata per la scelta del tipo di origine dati da impostare, come illustrato nella figura seguente.  
+ Se *hwnd* è null, **SQLCreateDataSource** restituisce FALSE. In caso contrario, viene visualizzata la finestra di dialogo **Crea nuova origine dati** con una pagina della procedura guidata per scegliere il tipo di origine dati da configurare, come illustrato nella figura seguente.  
   
  ![Finestra di dialogo Crea nuova origine dati: selezione del tipo](../../../odbc/reference/syntax/media/ch23a.gif "CH23A")  
   
- L'opzione predefinita è **origine dati file**. Quando si sceglie un'origine dati e si fa clic su **Avanti** , viene visualizzata la pagina della procedura guidata seguente che contiene un elenco dei driver installati.  
+ L'opzione predefinita è **Origine dati file**. Quando si sceglie un'origine dati e si fa clic su **Avanti,** viene visualizzata la seguente pagina della procedura guidata contenente un elenco dei driver installati.  
   
  ![Finestra di dialogo Crea nuova origine dati: selezione del driver](../../../odbc/reference/syntax/media/ch23b.gif "CH23B")  
   
- Se si fa clic su **Annulla** , la finestra di dialogo scompare e **SQLCreateDataSource** restituisce false con il codice di errore ODBC_ERROR_USER_CANCELED. Se è stata selezionata l'opzione **origine dati utente** o **origine dati di sistema** , il pulsante **Avanzate** non è disponibile.  
+ Se si fa clic su **Annulla,** la finestra di dialogo scompare e **SQLCreateDataSource** restituisce FALSE con il codice di errore di ODBC_ERROR_USER_CANCELED. Se è stata selezionata l'opzione **Origine dati utente** o Origine **dati** di sistema, il pulsante **Avanzate** non è disponibile.  
   
- Quando si fa clic sul pulsante **Avanti** , si verifica una delle condizioni seguenti, a seconda del tipo di origine dati selezionato:  
+ Quando si fa clic sul pulsante **Avanti,** si verifica una delle situazioni seguenti, a seconda del tipo di origine dati selezionato:  
   
--   Se è stata selezionata l'opzione **origine dati file** , viene visualizzata una pagina della procedura guidata che consente all'utente di immettere un nome di file.  
+-   Se è stata selezionata **l'opzione Origine dati file,** viene visualizzata una pagina della procedura guidata in cui l'utente può immettere un nome file.  
   
--   Se è stata selezionata un'origine **dati utente** o un' **origine dati di sistema** , viene visualizzata una pagina della procedura guidata che Visualizza il tipo di origine dati e il driver per la revisione e, quando si fa clic su **fine** , viene impostata l'origine dati.  
+-   Se è stata selezionata **l'opzione Origine dati utente** o Origine **dati** di sistema, viene visualizzata una pagina della procedura guidata che visualizza il tipo di origine dati e il driver per la revisione e quando si fa clic su **Fine,** l'origine dati viene impostata.  
   
- Se si fa clic su **Avanzate** nella pagina Creazione guidata nuova origine dati, viene visualizzata una pagina della procedura guidata che consente all'utente di immettere informazioni specifiche del driver. Nella casella di testo della finestra di dialogo digitare il driver e le parole chiave separate da Returns, come illustrato nella figura seguente.  
+ Se si fa clic su **Avanzate** nella pagina della procedura guidata Crea nuova origine dati, viene visualizzata una pagina della procedura guidata in cui l'utente può immettere informazioni specifiche del driver. Nella casella di testo di questa finestra di dialogo digitare il driver e le parole chiave separate da resi, come illustrato nella figura seguente.  
   
  ![Finestra di dialogo Impostazioni avanzate creazione DNS su file](../../../odbc/reference/syntax/media/ch23c.gif "CH23C")  
   
- È possibile trovare altre parole chiave specifiche del driver con la descrizione di **SQLDriverConnect**. Sono consentiti tutti i **DSN** eccetto.  
+ Ulteriori parole chiave specifiche del driver sono disponibili nella descrizione di **SQLDriverConnect**. Sono consentiti tutti tranne **DSN.**  
   
- Il valore predefinito per l'opzione **Verifica connessione** è true. Questa impostazione predefinita si applica se questa pagina della procedura guidata è attivata o meno. Se si fa clic su **OK** , la stringa specificata nella casella di testo e il valore **verifica questa** opzione di connessione vengono memorizzati nella cache. Se si fa clic sul pulsante **Chiudi** o su **Annulla** , le informazioni specifiche del driver appena immesse andranno perse perché la stringa specificata nella casella di testo e il valore di verifica dell'opzione di **connessione** non vengono memorizzati nella cache.  
+ L'impostazione predefinita per l'opzione **Verifica connessione** è TRUE. Questa impostazione predefinita si applica indipendentemente dall'attivazione di questa pagina della procedura guidata. Se si fa clic su **OK,** la stringa specificata nella casella di testo e il valore dell'opzione **Verifica connessione** vengono memorizzati nella cache. Se si fa clic sul pulsante **Chiudi** o **Annulla,** tutte le informazioni specifiche del driver appena immesse vengono perse perché la stringa specificata nella casella di testo e il valore dell'opzione **Verifica connessione** non vengono memorizzati nella cache.  
   
- Se è stata selezionata l'opzione **origine dati file** nella prima pagina della procedura guidata, dopo che è stato selezionato un driver ed è stato immesso il valore della parola chiave nella pagina avanzate della procedura guidata, all'utente viene richiesto di immettere un nome file. Fare clic su **Sfoglia** per cercare un nome di file, nel qual caso la directory predefinita nella casella **Sfoglia** viene specificata da una combinazione del percorso specificato da CommonFileDir in HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion e "ODBC\DataSources". (Se CommonFileDir era "C:\Programmi C:\Programmi\File", la directory predefinita sarebbe "C:\Programmi\File Comuni\odbc\data Sources").  
+ Se origine **dati file** è stata selezionata nella prima pagina della procedura guidata, dopo che è stato selezionato un driver e i valori delle parole chiave sono stati immessi nella pagina avanzata della procedura guidata, all'utente viene richiesto di immettere un nome di file. Fare clic su **Sfoglia** per cercare un nome di file, nel qual caso la directory predefinita nella casella **Sfoglia** è specificata da una combinazione del percorso specificato da CommonFileDir in HKEY_LOCAL_MACHINE SOFTWARE . (Se CommonFileDir era "C:"Programmi "File comuni", la directory predefinita sarà "C:.  
   
- Quando viene immesso un nome file e viene fatto clic su **Avanti** , viene verificata la validità del nome file immesso rispetto alle regole di denominazione dei file standard del sistema operativo. Se il nome file non è valido, una finestra di messaggio di errore informa l'utente che è stato immesso un nome di file non valido. Dopo che l'utente ha riconosciuto la finestra di messaggio, lo stato attivo viene restituito alla pagina della procedura guidata in cui viene immesso il nome del file. Se il nome del file è valido, per la revisione viene visualizzata una pagina della procedura guidata che mostra le coppie parola chiave/valore selezionate, come illustrato nella figura seguente.  
+ Quando viene immesso un nome di file e si fa clic su **Avanti,** viene verificata la validità del nome del file immesso rispetto alle regole standard di denominazione dei file del sistema operativo. Se il nome del file non è valido, una finestra di messaggio di errore notifica all'utente che è stato immesso un nome di file non valido. Dopo che l'utente riconosce la finestra di messaggio, lo stato attivo viene restituito alla pagina della procedura guidata in cui viene immesso il nome del file. Se il nome del file è valido, viene visualizzata una pagina della procedura guidata che mostra le coppie parola chiave-valore selezionate per la revisione, come illustrato nella figura seguente.  
   
- ![Finestra di dialogo Crea nuova origine dati: verifica](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
+ ![Finestra di dialogo Crea nuova origine dati: verifica](../../../odbc/reference/syntax/media/ch23d.gif "CH23D (in inglese)")  
   
- Se si fa clic su **fine** e si seleziona **origine dati file** come tipo di origine dati e se l' **opzione Verifica connessione** è true, **SQLDriverConnect** viene chiamato con le parole chiave **SaveFile** e **driver** . L'argomento *DriverCompletion* è impostato su SQL_DRIVER_COMPLETE. Il nome del file per la parola chiave **SaveFile** è il nome immesso o scelto e il nome del driver per la parola chiave **driver** è il nome scelto. Se nella pagina avanzate della procedura guidata è stata specificata una stringa di connessione specifica del driver, tale stringa verrà aggiunta dopo la parola chiave **driver** .  
+ Se si fa clic su **Fine** ed è stato selezionato **Origine dati file** come tipo di origine dati e se l'opzione Verifica **connessione** è TRUE, **SQLDriverConnect** viene chiamato con le parole chiave **SAVEFILE** e **DRIVER.** L'argomento *DriverCompletion* è impostato su SQL_DRIVER_COMPLETE. Il nome file per la parola chiave **SAVEFILE** è il nome immesso o scelto e il nome del driver per la parola chiave **DRIVER** è il nome scelto. Se nella pagina della procedura guidata Avanzate è stata specificata una stringa di connessione specifica del driver, tale stringa viene aggiunta dopo la parola chiave **DRIVER.**  
   
- Se **SQLDriverConnect** restituisce SQL_SUCCESS, gestione driver ha creato il DSN del file. **SQLCreateDataSource** restituisce true. Se **SQLDriverConnect** non restituisce SQL_SUCCESS, viene visualizzata una finestra di messaggio di avviso che indica che non è stato possibile eseguire una connessione all'origine dati. È ancora possibile creare un DSN con le informazioni di connessione minime. Questa finestra di messaggio consente all'utente di annullare o continuare con la creazione del DSN del file.  
+ Se **SQLDriverConnect** restituisce SQL_SUCCESS, Gestione Driver ha creato il DSN file. **SQLCreateDataSource** restituisce TRUE. Se **SQLDriverConnect** non restituisce SQL_SUCCESS, una finestra di messaggio di avviso indica che non è stato possibile creare una connessione all'origine dati. È comunque possibile creare un DSN con informazioni di connessione minime. Questa finestra di messaggio consente all'utente di annullare o continuare con la creazione del DSN su file.  
   
- Se l'utente sceglie di continuare a creare il DSN, questo processo continua come se l'opzione **Verifica connessione** fosse impostata su false. Se l'utente sceglie di annullare, viene restituito FALSE per **SQLCreateDataSource** con il codice di errore ODBC_ERROR_CREATE_DSN_FAILED.  
+ Se l'utente sceglie di continuare a creare il DSN, questo processo continua come se l'opzione **Verifica questa connessione** fosse impostata su FALSE. Se l'utente sceglie di annullare, FALSE viene restituito per **SQLCreateDataSource** con un codice di errore di ODBC_ERROR_CREATE_DSN_FAILED.  
   
- Se l' **origine dati del file** è stata selezionata come tipo di origine dati e l'opzione **Verifica connessione** è false, viene creato un DSN file con la parola chiave **driver** e la stringa di connessione specificata dall'utente (se presente) dalla pagina avanzate della procedura guidata. Se la creazione del file ha avuto esito positivo, viene restituito TRUE per **SQLCreateDataSource**. Se la creazione del file non è riuscita, una finestra di messaggio di errore informa l'utente che l'errore è stato restituito dal sistema operativo. Viene restituito FALSE per **SQLCreateDataSource** con il codice di errore ODBC_ERROR_CREATE_DSN_FAILED. Per ulteriori informazioni sulle origini dati dei file, vedere [connessione tramite origini dati file](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Se **origine dati file** è stato selezionato come tipo di origine dati e l'opzione Verifica questa **connessione** è FALSE, viene creato un DSN file con la parola chiave **DRIVER** e la stringa di connessione specificata dall'utente (se presente) dalla pagina della procedura guidata Avanzate. Se la creazione del file ha avuto esito positivo, TRUE viene restituito per **SQLCreateDataSource**. Se la creazione del file non è riuscita, una finestra di messaggio di errore notifica all'utente con qualsiasi errore è stato restituito dal sistema operativo. FALSE viene restituito per **SQLCreateDataSource** con un codice di errore di ODBC_ERROR_CREATE_DSN_FAILED. Per ulteriori informazioni sulle origini dati su file, vedere [Connessione tramite origini dati file](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Se è stata selezionata l'opzione **utente** o **origine dati di sistema** come tipo di origine dati, **ConfigDSN** nella libreria di installazione del driver viene chiamato con la ODBC_ADD_DSN *fRequest*. Per ulteriori informazioni, vedere [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Se è stato selezionato **Utente** o **Origine dati** di sistema come tipo di origine dati, **ConfigDSN** nella libreria di installazione del driver viene chiamato con il ODBC_ADD_DSN *fRequest*. Per ulteriori informazioni, vedere [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   

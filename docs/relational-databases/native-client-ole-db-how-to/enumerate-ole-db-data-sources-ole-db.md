@@ -1,5 +1,5 @@
 ---
-title: Enumerare OLE DB origini dati (OLE DB) | Microsoft Docs
+title: Enumerare origini dati OLE DB (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 803e3de97115bea9c467044d59a1a5a305836fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f15092bd515ed16a470c854168b228d5445e3d6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300951"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerare origini dati OLE DB (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questo esempio viene illustrato come utilizzare l'oggetto enumeratore per elencare le origini dati disponibili.  
   
- Per elencare le origini dati visibili all'enumeratore SQLOLEDB, il consumer chiama il metodo [ISourcesRowset:: GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
+ Per elencare le origini dati visibili all'enumeratore SQLOLEDB, il consumer chiama il [metodo ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
   
  A seconda della libreria di rete utilizzata, viene cercato il dominio appropriato per le origini dati. Per le named pipe, si tratta del dominio a cui è connesso il client. Per AppleTalk, si tratta dell'area predefinita. Per SPX/IPX, si tratta dell'elenco di installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuate nel bindery. Per Banyan VINES, si tratta delle installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuate nella rete locale. I socket multiprotocollo e TCP/IP non sono supportati.  
   
@@ -34,19 +34,19 @@ ms.locfileid: "73790104"
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Per enumerare origini dati OLE DB  
   
-1.  Recuperare il set di righe di origine chiamando **ISourceRowset:: GetSourcesRowset**.  
+1.  Recuperare il set di righe di origine chiamando **ISourceRowset::GetSourcesRowset**.  
   
-2.  Trovare la descrizione del set di righe degli enumeratori chiamando **GetColumnInfo:: IColumnInfo**.  
+2.  Trovare la descrizione del set di righe degli enumeratori chiamando **GetColumnInfo::IColumnInfo**.  
   
 3.  Creare le strutture di associazione dalle informazioni di colonna.  
   
-4.  Creare la funzione di accesso del set di righe chiamando **IAccessor:: CreateAccessor**.  
+4.  Creare la funzione di accesso del set di righe chiamando **IAccessor::CreateAccessor**.  
   
-5.  Recuperare le righe chiamando **IRowset:: GetNextRows**.  
+5.  Recuperare le righe chiamando **IRowset::GetNextRows**.  
   
 6.  Recuperare i dati dalla copia del set di righe della riga chiamando **IRowset::GetData** ed elaborarli.  
   
