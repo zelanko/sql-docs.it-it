@@ -1,5 +1,5 @@
 ---
-title: Parametri con valori di tabella (ODBC) | Microsoft Docs
+title: Parametri con valori di tabella (ODBC) Documenti Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790473"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297754"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parametri con valori di tabella (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Il supporto ODBC dei parametri con valori di tabella consente a un'applicazione client di inviare più efficientemente i dati con parametri al server, inviando più righe al server con una sola chiamata.  
   
- Per informazioni sui parametri con valori di tabella nel server, vedere [usare i parametri con valori di tabella &#40;motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Per informazioni sui parametri con valori di tabella nel server, vedere Usare parametri con valori di [tabella &#40;Motore ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)di database&#41;.  
   
  In ODBC è possibile inviare parametri con valori di tabella al server in due modi:  
   
--   Tutti i dati dei parametri con valori di tabella possono essere in memoria al momento della chiamata a SQLExecDirect o SQLExecute. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
+-   Tutti i dati dei parametri con valori di tabella possono essere in memoria nel momento in cui viene chiamato SQLExecDirect o SQLExecute. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
   
--   Un'applicazione può specificare data-at-execution per un parametro con valori di tabella quando viene chiamato SQLExecDirect o SQLExecute. In tal caso, le righe di dati per il valore di tabella possono essere fornite in batch o uno alla volta per ridurre i requisiti di memoria.  
+-   Un'applicazione può specificare data-at-execution per un parametro con valori di tabella quando viene chiamato SQLExecDirect o SQLExecute.An application can specify data-at-execution for a table-valued parameter when SQLExecDirect or SQLExecute is called. In tal caso, le righe di dati per il valore di tabella possono essere fornite in batch o uno alla volta per ridurre i requisiti di memoria.  
   
  La prima opzione consente alle stored procedure di incapsulare più logica di business. Ad esempio, una singola stored procedure può incapsulare un'intera transazione di immissione ordini se gli articoli dell'ordine vengono passati come parametro con valori di tabella. Questa opzione è molto efficiente poiché è necessario un solo round trip del server. In alternativa, è possibile utilizzare altre procedure per gestire separatamente l'intestazione degli ordini e gli articoli richiedendo più codice e un contratto più complesso tra il client e il server.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73790473"
  Viene descritta l'esecuzione delle attività più comuni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server Native Client &#40;&#41;ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Parametri con valori di tabella &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

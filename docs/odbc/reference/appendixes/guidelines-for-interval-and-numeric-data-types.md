@@ -1,5 +1,5 @@
 ---
-title: Linee guida per i tipi di dati interval e numeric | Microsoft Docs
+title: Linee guida per i tipi di dati interval e numerici Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ced117b492a366d69e72a5780f8091627ede7921
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c22cf71468d8128688a44fa825c31dffa1c5414b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041648"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306957"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>Indicazioni per i tipi di dati intervallo e numerici
-Le sezioni seguenti riportano l'intervallo di indirizzi e tipi di dati numerici.  
+Nelle sezioni seguenti vengono indirizzati i tipi di dati numerici e di intervallo.  
   
 -   [Tipi di dati intervallo](../../../odbc/reference/appendixes/interval-data-types.md)  
   

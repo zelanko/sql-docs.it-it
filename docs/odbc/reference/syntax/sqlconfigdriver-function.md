@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLConfigDriver | Microsoft Docs
+title: Funzione SQLConfigDriver . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ f1_keywords:
 helpviewer_keywords:
 - SQLConfigDriver function [ODBC]
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0da15cef06e5d8392408108ce88b53f7885eb65e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68121451"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301246"
 ---
 # <a name="sqlconfigdriver-function"></a>Funzione SQLConfigDriver
 **Conformità**  
- Versione introdotta: ODBC 2,5  
+ Versione introdotta: ODBC 2.5  
   
- **Summary**  
- **SQLConfigDriver** carica la dll di installazione del driver appropriata e chiama la funzione **ConfigDriver** .  
+ **Riepilogo**  
+ **SQLConfigDriver** carica la DLL di installazione del driver appropriata e chiama la funzione **ConfigDriver.**  
   
- È anche possibile accedere alle funzionalità di **SQLConfigDriver** con [ODBCCONF. File EXE](../../../odbc/odbcconf-exe.md).  
+ È inoltre possibile accedere alla funzionalità di **SQLConfigDriver** con [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,11 +50,11 @@ BOOL SQLConfigDriver(
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *hwndParent*  
- Input Handle della finestra padre. Se l'handle è null, nella funzione non verrà visualizzata alcuna finestra di dialogo.  
+ *hwndPadre*  
+ [Ingresso] Handle della finestra padre. La funzione non visualizzerà alcuna finestra di dialogo se l'handle è null.  
   
- *fRequest*  
- Input Tipo di richiesta. *fRequest* deve contenere uno dei valori seguenti:  
+ *fRichiesta*  
+ [Ingresso] Tipo di richiesta. *fRequest* deve contenere uno dei seguenti valori:  
   
  ODBC_CONFIG_DRIVER: modifica il timeout del pool di connessioni utilizzato dal driver.  
   
@@ -62,58 +62,58 @@ BOOL SQLConfigDriver(
   
  ODBC_REMOVE_DRIVER: rimuove un driver esistente.  
   
- Questa opzione può anche essere specifica del driver, nel qual caso il *fRequest* per la prima opzione deve iniziare da ODBC_CONFIG_DRIVER_MAX + 1. Il valore di *fRequest* per qualsiasi opzione aggiuntiva deve iniziare anche da un valore maggiore di ODBC_CONFIG_DRIVER_MAX + 1.  
+ Questa opzione può anche essere specifica del driver, nel qual caso il *fRequest* per la prima opzione deve iniziare da ODBC_CONFIG_DRIVER_MAX1. Il *fRequest* per qualsiasi opzione aggiuntiva deve anche iniziare da un valore maggiore di ODBC_CONFIG_DRIVER_MAX .  
   
  *lpszDriver*  
- Input Nome del driver registrato nelle informazioni di sistema.  
+ [Ingresso] Il nome del driver registrato nelle informazioni di sistema.  
   
- *lpszArgs*  
- Input Stringa con terminazione null che contiene gli argomenti per un *fRequest*specifico del driver.  
+ *lpszArgs (argomenti)*  
+ [Ingresso] Stringa con terminazione null che contiene gli argomenti per un *oggetto fRequest*specifico del driver.  
   
  *lpszMsg*  
- Output Stringa con terminazione null che contiene un messaggio di output generato dall'installazione del driver.  
+ [Uscita] Stringa con terminazione null che contiene un messaggio di output dall'installazione del driver.  
   
- *cbMsgMax*  
- Input Lunghezza di *lpszMsg.*  
+ *CbMsgMax*  
+ [Ingresso] Lunghezza di *lpszMsg.*  
   
- *pcbMsgOut*  
- Output Numero totale di byte disponibili da restituire in *lpszMsg*. Se il numero di byte disponibili per restituire è maggiore o uguale a *cbMsgMax*, il messaggio di output in *lpszMsg* viene troncato in *cbMsgMax* meno il carattere di terminazione null. L'argomento *pcbMsgOut* può essere un puntatore null.  
+ *pcbMsgOut (informazioni in base al tanogra base del file*  
+ [Uscita] Numero totale di byte disponibili da restituire in *lpszMsg*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbMsgMax*, il messaggio di output in *lpszMsg* viene troncato a *cbMsgMax* meno il carattere di terminazione null. L'argomento *pcbMsgOut* può essere un puntatore null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
+ La funzione restituisce TRUE se ha esito positivo, FALSE se ha esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLConfigDriver** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLConfigDriver** restituisce FALSE, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. Nella tabella seguente * \** sono elencati i valori pfErrorCode che possono essere restituiti da **SQLInstallerError** e ognuno di essi illustra ognuno nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Descrizione|  
+|*\*pfErrorCode (codice pfErrorCode)*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valida|L'argomento *lpszMsg* non è valido.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non si è verificato alcun errore specifico del programma di installazione.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza buffer non valida|L'argomento *lpszMsg* non è valido.|  
 |ODBC_ERROR_INVALID_HWND|Handle di finestra non valido|L'argomento *hwndParent* non è valido.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *fRequest* non è uno dei seguenti:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> L'argomento *fRequest* era un'opzione specifica del driver che era minore o uguale a ODBC_CONFIG_DRIVER_MAX.|  
-|ODBC_ERROR_INVALID_NAME|Nome del driver o del traduttore non valido|L'argomento *lpszDriver* non è valido. Non è stato trovato nel registro di sistema.|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Coppie parola chiave/valore non valide|L'argomento *lpszArgs* contiene un errore di sintassi.|  
-|ODBC_ERROR_REQUEST_FAILED|*Richiesta* non riuscita|Il programma di installazione non è riuscito a eseguire l'operazione richiesta dall'argomento *fRequest* . La chiamata a **ConfigDriver** non è riuscita.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Non è stato possibile caricare la libreria di installazione del driver o del convertitore|Non è stato possibile caricare la libreria di installazione del driver.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa di memoria insufficiente.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *fRequest* non è uno dei seguenti:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> L'argomento *fRequest* era un'opzione specifica del driver minore o uguale a ODBC_CONFIG_DRIVER_MAX.|  
+|ODBC_ERROR_INVALID_NAME|Nome del driver o del traduttore non valido|L'argomento *lpszDriver* non è valido. Non è stato trovato nel Registro di sistema.|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Coppie parola chiave-valore non valide|L'argomento *lpszArgs* contiene un errore di sintassi.|  
+|ODBC_ERROR_REQUEST_FAILED|*Richiesta* non riuscita|Il programma di installazione non è in grado di eseguire l'operazione richiesta dall'argomento *fRequest.* La chiamata a **ConfigDriver** non è riuscita.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Impossibile caricare il driver o la libreria di installazione del convertitore|Impossibile caricare la libreria di installazione del driver.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLConfigDriver** consente a un'applicazione di chiamare la routine **ConfigDriver** di un driver senza che sia necessario conoscerne il nome e caricare la dll di installazione specifica del driver. Un programma di installazione chiama questa funzione dopo che è stata installata la DLL di installazione del driver. Il programma chiamante deve tenere presente che questa funzione potrebbe non essere disponibile per tutti i driver. In tal caso, il programma chiamante deve continuare senza errori.  
+ **SQLConfigDriver** consente a un'applicazione di chiamare la routine **ConfigDriver** di un driver senza dover conoscere il nome e caricare la DLL di installazione specifica del driver. Un programma di installazione chiama questa funzione dopo l'installazione della DLL di installazione del driver. Il programma chiamante deve essere consapevole del fatto che questa funzione potrebbe non essere disponibile per tutti i driver. In tal caso, il programma chiamante deve continuare senza errori.  
   
 ## <a name="driver-specific-options"></a>Opzioni specifiche del driver  
- Un'applicazione può richiedere funzionalità specifiche del driver esposte dal driver tramite l'argomento *fRequest* . Il valore di *fRequest* per la prima opzione sarà ODBC_CONFIG_DRIVER_MAX + 1 e le opzioni aggiuntive verranno incrementate di 1 da tale valore. Tutti gli argomenti richiesti dal driver per la funzione devono essere specificati in una stringa con terminazione null passata nell'argomento *lpszArgs* . I driver che forniscono tali funzionalità devono gestire una tabella di opzioni specifiche del driver. Le opzioni devono essere completamente documentate nella documentazione del driver. I writer di applicazioni che utilizzano opzioni specifiche del driver devono tenere presente che questo utilizzo renderà l'applicazione meno interoperativa.  
+ Un'applicazione può richiedere funzionalità specifiche del driver esposte dal driver utilizzando il *fRequest* argomento. Il *fRequest* per la prima opzione sarà ODBC_CONFIG_DRIVER_MAX1 e le opzioni aggiuntive verranno incrementate di 1 da tale valore. Tutti gli argomenti richiesti dal driver per tale funzione devono essere forniti in una stringa con terminazione null passata nell'argomento *lpszArgs.* I driver che forniscono tale funzionalità devono mantenere una tabella di opzioni specifiche del driver. Le opzioni devono essere completamente documentate nella documentazione del driver. I writer di applicazioni che utilizzano opzioni specifiche del driver devono essere consapevoli del fatto che questo utilizzo renderà l'applicazione meno interoperabile.  
   
-## <a name="setting-connection-pooling-timeout"></a>Impostazione del timeout del pool di connessioni  
- È possibile impostare le proprietà di timeout del pool di connessioni quando si imposta la configurazione del driver. **SQLConfigDriver** viene chiamato con un *fRequest* di ODBC_CONFIG_DRIVER e *lpszArgs* impostato su **CPTimeout**. **CPTimeout** determina il periodo di tempo durante il quale una connessione può rimanere nel pool di connessioni senza essere utilizzata. Alla scadenza del timeout, la connessione viene chiusa e rimossa dal pool. Il timeout predefinito è di 60 secondi.  
+## <a name="setting-connection-pooling-timeout"></a>Impostazione del timeout del pool di connessioniSetting Connection Pooling Timeout  
+ Le proprietà di timeout del pool di connessioni possono essere impostate quando si imposta la configurazione del driver. **SQLConfigDriver** viene chiamato con un *fRequest* di ODBC_CONFIG_DRIVER e *lpszArgs* impostato su **CPTimeout**. **CPTimeout** determina il periodo di tempo in cui una connessione può rimanere nel pool di connessioni senza essere utilizzata. Quando il timeout scade, la connessione viene chiusa e rimossa dal pool. Il timeout predefinito è 60 secondi.  
   
- Quando viene chiamato **SQLConfigDriver** con *fRequest* impostato su ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, gestione driver carica la dll di installazione del driver appropriata e chiama la funzione **ConfigDriver** . Quando **SQLConfigDriver** viene chiamato con un *fRequest* di ODBC_CONFIG_DRIVER, tutte le operazioni di elaborazione vengono eseguite nel programma di installazione ODBC, in modo che non sia necessario caricare la dll di installazione del driver.  
+ Quando **SQLConfigDriver** viene chiamato con *fRequest* impostato su ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, Gestione Driver carica la DLL di installazione del driver appropriato e chiama la funzione **ConfigDriver.** Quando **SQLConfigDriver** viene chiamato con un *fRequest* di ODBC_CONFIG_DRIVER, tutta l'elaborazione viene eseguita nel programma di installazione ODBC, in modo che la DLL di installazione del driver non deve essere caricata.  
   
 ## <a name="messages"></a>Messaggi  
- Una routine di installazione dei driver può inviare un messaggio di testo a un'applicazione come stringhe con terminazione null nel buffer di *lpszMsg* . Il messaggio verrà troncato in *cbMsgMax* meno il carattere di terminazione null dalla funzione **ConfigDriver** se è maggiore o uguale a *cbMsgMax* caratteri.  
+ Una routine di installazione del driver può inviare un messaggio di testo a un'applicazione come stringhe con terminazione null nel buffer *lpszMsg.* Il messaggio verrà troncato a *cbMsgMax* meno il carattere di terminazione null dalla funzione **ConfigDriver** se è maggiore o uguale a *cbMsgMax* caratteri.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Aggiunta, modifica o rimozione di un driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(nella DLL di installazione)|  
-|Rimozione dell'origine dati predefinita|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|
+|Rimozione dell'origine dati predefinita|[SQLRemoveDefaultDataSource (Origine datiSQLRemoveDefaultDataSource)](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|

@@ -1,5 +1,5 @@
 ---
-title: Multithreading | Microsoft Docs
+title: Proprietà Multithreading . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - thread-safe drivers [ODBC]
 - multithreaded applications [ODBC]
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c10d1b401ac780d24184c4c2337199e99973e916
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086356"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302416"
 ---
 # <a name="multithreading"></a>Multithreading
-Nei sistemi operativi multithread i driver devono essere thread-safe. Ovvero, è necessario che le applicazioni usino lo stesso handle in più di un thread. Il modo in cui viene eseguita questa operazione è specifico del driver ed è probabile che i driver serializzano tutti i tentativi di usare simultaneamente lo stesso handle su due thread diversi.  
+Nei sistemi operativi multithread, i driver devono essere thread-safe. In altre parte, è possibile che le applicazioni utilizzino lo stesso handle su più thread. Il modo in cui questo viene ottenuto è specifico del driver ed è probabile che i driver serializzeranno tutti i tentativi di utilizzare contemporaneamente lo stesso handle su due thread diversi.  
   
- Le applicazioni utilizzano in genere più thread anziché l'elaborazione asincrona. L'applicazione crea un thread separato, chiama una funzione ODBC su di essa e quindi continua l'elaborazione nel thread principale. Anziché dover eseguire continuamente il polling della funzione asincrona, come nel caso in cui venga utilizzato l'attributo SQL_ATTR_ASYNC_ENABLE Statement, l'applicazione può semplicemente consentire il completamento del thread appena creato.  
+ Le applicazioni usano in genere più thread anziché l'elaborazione asincrona. L'applicazione crea un thread separato, chiama una funzione ODBC su di esso e quindi continua l'elaborazione nel thread principale. Anziché dover eseguire continuamente il polling della funzione asincrona, come nel caso in cui viene utilizzato l'attributo di istruzione SQL_ATTR_ASYNC_ENABLE, l'applicazione può semplicemente consentire il completamento del thread appena creato.  
   
- Le funzioni che accettano un handle di istruzione e sono in esecuzione in un thread possono essere annullate chiamando **SQLCancel** con lo stesso handle di istruzione da un altro thread. Sebbene i driver non debbano serializzare l'utilizzo di **SQLCancel** in questo modo, non esiste alcuna garanzia che la chiamata di **SQLCancel** elimini effettivamente la funzione in esecuzione sull'altro thread.
+ Le funzioni che accettano un handle di istruzione e sono in esecuzione su un thread possono essere annullate chiamando **SQLCancel** con lo stesso handle di istruzione da un altro thread. Anche se i driver non devono serializzare l'utilizzo di **SQLCancel** in questo modo, non vi è alcuna garanzia che la chiamata **SQLCancel** effettivamente annullare la funzione in esecuzione sull'altro thread.

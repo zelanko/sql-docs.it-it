@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di driver | Microsoft Docs
+title: Visualizzazione dei driver Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - viewing drivers [ODBC]
 - ODBC data source administrator [ODBC], viewing drivers
 ms.assetid: 6d43ae52-c6f8-4f07-8911-4d5278dd439e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13a560b4278a0e90b3416c1ecb31b22d77ce33fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 58b8d13b158ba7140812b1ae3576770635ed1cd7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901622"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307172"
 ---
 # <a name="viewing-drivers"></a>Visualizzazione dei driver
-Per configurare le origini dati, è necessario aver installato almeno un driver nel sistema. Nella scheda **driver** della finestra di dialogo **Amministrazione origine dati ODBC** sono elencati tutti i driver installati nel computer, inclusi il nome, la versione, la società, il nome del file e la data di creazione del file di ogni driver. Per aggiungere o eliminare un driver dal sistema, è necessario utilizzare il programma di installazione del driver. Per ulteriori informazioni sulla modifica dei driver, vedere [gestione delle origini dati](../../odbc/admin/managing-data-sources.md).
+Per configurare le origini dati, è necessario aver installato almeno un driver nel sistema. Nella scheda **Driver** della finestra di dialogo **Amministratore origine dati ODBC** sono elencati tutti i driver installati nel computer, inclusi il nome, la versione, la società, il nome file e la data di creazione file di ogni driver. È necessario utilizzare il programma di installazione del driver per aggiungere o eliminare un driver dal sistema. Per ulteriori informazioni sulla modifica dei driver, vedere [Gestione delle origini dati](../../odbc/admin/managing-data-sources.md).

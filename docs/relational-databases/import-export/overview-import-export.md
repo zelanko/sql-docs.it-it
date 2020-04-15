@@ -1,5 +1,6 @@
 ---
 title: Importare ed esportare dati da SQL Server e dal database SQL di Azure
+description: È possibile usare Transact-SQL, gli strumenti da riga di comando e le procedure guidate per importare ed esportare dati in SQL Server e nel database SQL di Azure in svariati formati di dati.
 ms.date: 10/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 721347cd8b61497f5ff2c1beeb058a6457c37708
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99c3baf7bc52d5c0123cb5aeccef963578ebac68
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761865"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980433"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

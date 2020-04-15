@@ -1,5 +1,5 @@
 ---
-title: Mapping di funzioni deprecate | Microsoft Docs
+title: Mappatura delle funzioni deprecate Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,45 +15,45 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299881"
 ---
 # <a name="mapping-deprecated-functions"></a>Mapping di funzioni deprecate
-In questa sezione viene descritto il mapping delle funzioni deprecate da parte di gestione driver ODBC *3. x* per garantire la compatibilità con le versioni precedenti dei driver ODBC *3. x* utilizzati con le applicazioni ODBC *2. x* . Gestione driver esegue questo mapping indipendentemente dalla versione dell'applicazione. Poiché ogni funzione ODBC *2. x* nell'elenco seguente viene mappata alla funzione ODBC *3. x* corrispondente quando viene chiamata in un driver ODBC *3. x* , non è necessario che il driver ODBC *3. x* implementi le funzioni ODBC *2. x* .  
+In questa sezione viene descritto come le funzioni deprecate vengono mappate da Gestione Driver ODBC *3.x* per garantire la compatibilità con le versioni precedenti dei driver ODBC *3.x* utilizzati con le applicazioni ODBC *2.x.* Gestione Driver esegue questo mapping indipendentemente dalla versione dell'applicazione. Poiché ognuna delle funzioni ODBC *2.x* nell'elenco seguente viene mappata alla funzione ODBC *3.x* corrispondente quando viene chiamata in un driver ODBC *3.x,* il driver ODBC *3.x* non deve implementare le funzioni ODBC *2.x.*  
   
- Il mapping nell'elenco viene attivato quando il driver è un driver ODBC *3. x* e il driver non supporta la funzione di cui è in corso il mapping.  
+ Il mapping nell'elenco viene attivato quando il driver è un driver ODBC *3.x* e il driver non supporta la funzione di cui viene eseguito il mapping.  
   
- Nella tabella seguente sono elencate tutte le funzionalità duplicate introdotte in ODBC *3. x*.  
+ Nella tabella riportata di seguito sono elencate tutte le funzionalità duplicate introdotte in ODBC *3.x*.  
   
-|Funzione ODBC *2. x*|Funzione ODBC *3. x*|  
+|ODBC *2.x (funzione)*|ODBC *3.x (funzione)*|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**SQLAllocHandle**|  
-|**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt**|**SQLAllocHandle**|  
+|**SQLAllocConnect (connessione a questo errore)**|**SQLAllocHandle**|  
+|**SQLAllocEnv (informazioni in lingua inglese)**|**SQLAllocHandle**|  
+|**Istruzione SQLAllocStmt (informazioni in lingua inglese)**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
-|**SQLColAttributes**|**SQLColAttribute**|  
-|**SQLError**|**SQLGetDiagRec**|  
-|**SQLFreeConnect**|**SQLFreeHandle**|  
-|**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** con l' *opzione* SQL_DROP|**SQLFreeHandle**|  
-|**SQLGetConnectOption**|**SQLGetConnectAttr**|  
-|**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions**|**SQLSetStmtAttr**|  
-|**SQLSetConnectOption**|**SQLSetConnectAttr**|  
+|**ATTRIBUTI SQLCol**|**SQLColAttribute**|  
+|**Sqlerror**|**SQLGetDiagRec**|  
+|**SQLFreeConnect (informazioni in lingua inglese)**|**SQLFreeHandle**|  
+|**SQLFreeEnv (informazioni in lingua inglese)**|**SQLFreeHandle**|  
+|**SQLFreeStmt** con *un'opzione* di SQL_DROP|**SQLFreeHandle**|  
+|**SQLGetConnectOption (Opzione SQLGetConnectOption)**|**SQLGetConnectAttr**|  
+|**Opzione SQLGetStmtOption**|**SQLGetStmtAttr**|  
+|**Opzioni SQLParam**|**SQLSetStmtAttr**|  
+|**Sqlsetconnectoption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**[2]|**SQLBindParameter**|  
-|**SQLSetScrollOption**|**SQLSetStmtAttr**|  
-|**SQLSetStmtOption**|**SQLSetStmtAttr**|  
-|**SQLTransact**|**SQLEndTran**|  
+|**SQLSetScrollOption (opzione SQLSetScrollOption)**|**SQLSetStmtAttr**|  
+|**Opzione SQLSetStmmtOption**|**SQLSetStmtAttr**|  
+|**SQLTransact (transazione SQLTransact)**|**SQLEndTran**|  
   
- [1] anche se questa funzione non esisteva in ODBC *2. x*, si trova negli standard Open Group e ISO.  
+ [1] Anche se questa funzione non esisteva in ODBC *2.x*, si trova negli standard Open Group e ISO.  
   
- [2] si tratta di una funzione ODBC 1,0.  
+ [2] Questa è una funzione ODBC 1.0.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

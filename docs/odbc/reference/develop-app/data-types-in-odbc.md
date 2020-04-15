@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati in ODBC | Microsoft Docs
+title: Tipi di dati in ODBC . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9a602c43a257dba2cd856625c1520077188bb20
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077002"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305192"
 ---
 # <a name="data-types-in-odbc"></a>Tipi di dati in ODBC
-ODBC utilizza due set di tipi di dati: tipi di dati SQL e tipi di dati C. I tipi di dati SQL vengono usati nell'origine dati e i tipi di dati C vengono usati nel codice C nell'applicazione.  
+ODBC utilizza due set di tipi di dati: tipi di dati SQL e tipi di dati C. I tipi di dati SQL vengono utilizzati nell'origine dati e i tipi di dati C vengono usati nel codice C nell'applicazione.  
   
  Questa sezione contiene l'argomento seguente.  
   
@@ -31,4 +31,4 @@ ODBC utilizza due set di tipi di dati: tipi di dati SQL e tipi di dati C. I tipi
   
 -   [Tipi di dati C in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)  
   
--   [Conversioni dei tipi di dati](../../../odbc/reference/develop-app/data-type-conversions.md)
+-   [Conversioni dei tipi di datiData Type Conversions](../../../odbc/reference/develop-app/data-type-conversions.md)

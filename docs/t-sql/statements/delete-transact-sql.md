@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28329315313f6f08f84aa2d8944eef55d26fdd46
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548277"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873167"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -192,7 +192,7 @@ DELETE
  Non è possibile utilizzare TOP in un'istruzione DELETE in viste partizionate.  
   
 ## <a name="locking-behavior"></a>Comportamento di blocco  
- Per impostazione predefinita, un'istruzione DELETE acquisisce sempre un blocco esclusivo (X) sulla tabella che modifica e mantiene tale blocco fino al completamento della transazione. Con un blocco esclusivo (X), nessun'altra transazione può modificare dati. Le operazioni di lettura possono essere eseguite solo utilizzando l'hint NOLOCK o il livello di isolamento Read Uncommitted. È possibile specificare hint di tabella per eseguire l'override di questo comportamento predefinito per la durata dell'istruzione DELETE specificando un altro metodo di blocco. Gli hint dovrebbero comunque essere utilizzati solo se strettamente necessario ed esclusivamente da sviluppatori e amministratori di database esperti. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Per impostazione predefinita, un'istruzione DELETE acquisisce sempre un blocco preventivo esclusivo (IX) sull'oggetto tabella che modifica e mantiene tale blocco fino al completamento della transazione. Con un blocco preventivo esclusivo (IX) nessun'altra transazione può modificare dati. Le operazioni di lettura possono essere eseguite solo usando l'hint NOLOCK o il livello di isolamento Read Uncommitted. È possibile specificare hint di tabella per eseguire l'override di questo comportamento predefinito per la durata dell'istruzione DELETE specificando un altro metodo di blocco. Gli hint dovrebbero comunque essere utilizzati solo se strettamente necessario ed esclusivamente da sviluppatori e amministratori di database esperti. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Quando si eliminano righe da un heap, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può utilizzare il blocco di riga o di pagina per l'operazione. Le pagine svuotate dall'operazione di eliminazione rimangono pertanto allocate all'heap. Se le pagine vuote non vengono deallocate, non è possibile riutilizzare lo spazio associato per altri oggetti nel database.  
   
@@ -200,7 +200,7 @@ DELETE
   
 -   Specificare l'hint TABLOCK nell'istruzione DELETE. Se si utilizza l'hint TABLOCK, nell'operazione di eliminazione viene accettato un blocco esclusivo nella tabella anziché un blocco di riga o di pagina. In questo modo sarà possibile deallocare le pagine. Per altre informazioni sugli hint TABLOCK, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   Utilizzare TRUNCATE TABLE se è necessario eliminare tutte le righe della tabella.  
+-   Usare `TRUNCATE TABLE` se è necessario eliminare tutte le righe della tabella.  
   
 -   Creare un indice cluster sull'heap prima di eliminare le righe. È possibile eliminare l'indice cluster dopo l'eliminazione delle righe. Questo metodo richiede più tempo rispetto ai precedenti e utilizza una maggiore quantità di risorse temporanee.  
   
@@ -208,20 +208,20 @@ DELETE
 >  Le pagine vuote possono essere rimosse da un heap in qualsiasi momento con l'istruzione `ALTER TABLE <table_name> REBUILD`.  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
- L'istruzione DELETE viene sempre registrata completamente.  
+L'istruzione DELETE viene sempre registrata completamente.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
- È necessario disporre delle autorizzazioni DELETE per la tabella di destinazione. Se l'istruzione contiene una clausola WHERE, sono inoltre richieste le autorizzazioni SELECT.  
+ Le autorizzazioni `DELETE` sono necessarie nella tabella di destinazione. Se l'istruzione contiene una clausola WHERE, sono inoltre richieste le autorizzazioni `SELECT`.  
   
- Le autorizzazioni DELETE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner**, e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
+ Le autorizzazioni DELETE vengono concesse per impostazione predefinita ai membri del ruolo predefinito del server `sysadmin`, ai membri dei ruoli predefiniti del database `db_owner` e `db_datawriter` e al proprietario della tabella. I membri dei ruoli `sysadmin`, `db_owner` e `db_securityadmin` e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
   
 ## <a name="examples"></a>Esempi  
   
 |Category|Elementi di sintassi inclusi|  
 |--------------|------------------------------|  
-|[Sintassi di base](#BasicSyntax)|Elimina|  
+|[Sintassi di base](#BasicSyntax)|DELETE|  
 |[Limitazione delle righe eliminate](#LimitRows)|WHERE • FROM • cursore •|  
 |[Eliminazione di righe da una tabella remota](#RemoteTables)|Server collegato • funzione per set di righe OPENQUERY • funzione per set di righe OPENDATASOURCE|  
 |[Acquisizione dei risultati dell'istruzione DELETE](#CaptureResults)|Clausola OUTPUT|  

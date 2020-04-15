@@ -1,5 +1,5 @@
 ---
-title: Associazione di colonne da utilizzare con cursori a blocchi | Microsoft Docs
+title: Associazione di colonne per l'utilizzo con i cursori di blocco . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,26 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 827f6ddca12f15ce0bce1773b9cbe26fae5069dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284901"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Associazione di colonne per l'uso con cursori rettangolari
-Poiché i cursori a blocchi restituiscono più righe, le applicazioni che le utilizzano devono associare una matrice di variabili a ogni colonna anziché a una singola variabile. Queste matrici sono note collettivamente come buffer del *set di righe*. Di seguito sono riportati i due stili di associazione:  
+Poiché i cursori a blocchi restituiscono più righe, le applicazioni che li utilizzano devono associare una matrice di variabili a ogni colonna anziché a una singola variabile. Queste matrici sono note collettivamente come *buffer di set di righe*. Di seguito sono riportati i due stili di associazione:  
   
--   Associare una matrice a ogni colonna. Questa operazione viene definita *associazione per colonna* perché ogni struttura di dati (matrice) contiene dati per una singola colonna.  
+-   Associare una matrice a ogni colonna. Questa operazione è denominata *associazione per colonna* perché ogni struttura di dati (matrice) contiene dati per una singola colonna.  
   
--   Definire una struttura per conservare i dati per un'intera riga e associare una matrice di queste strutture. Questa operazione viene definita *associazione per riga* perché ogni struttura di dati contiene i dati per una singola riga.  
+-   Definire una struttura per contenere i dati per un'intera riga e associare una matrice di queste strutture. Questa operazione viene definita *associazione per riga* perché ogni struttura di dati contiene i dati per una singola riga.  
   
- Quando l'applicazione associa singole variabili a colonne, chiama **SQLBindCol** per associare le matrici alle colonne. L'unica differenza consiste nel fatto che gli indirizzi passati sono indirizzi di matrice, non singoli indirizzi di variabili. L'applicazione imposta l'attributo dell'istruzione SQL_BIND_BY_COLUMN per specificare se utilizza l'associazione per colonna o per riga. La possibilità di utilizzare l'associazione per colonna o per riga è in gran parte una questione di preferenza dell'applicazione. L'associazione per riga potrebbe corrispondere più strettamente al layout di dati dell'applicazione. in questo caso, è possibile ottenere prestazioni migliori.  
+ Come quando l'applicazione associa singole variabili alle colonne, chiama **SQLBindCol** per associare le matrici alle colonne. L'unica differenza è che gli indirizzi passati sono indirizzi di matrice, non indirizzi di singole variabili. L'applicazione imposta l'attributo di istruzione SQL_BIND_BY_COLUMN per specificare se utilizza l'associazione per colonna o per riga. Se utilizzare l'associazione per colonna o per riga è in gran parte una questione di preferenza dell'applicazione. L'associazione per riga potrebbe corrispondere più strettamente al layout dei dati dell'applicazione, nel qual caso fornirebbe prestazioni migliori.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Associazione per colonna](../../../odbc/reference/develop-app/column-wise-binding.md)  
+-   [Associazione basata su colonneColumn-Wise Binding](../../../odbc/reference/develop-app/column-wise-binding.md)  
   
--   [Associazione per riga](../../../odbc/reference/develop-app/row-wise-binding.md)
+-   [Associazione basata su righe](../../../odbc/reference/develop-app/row-wise-binding.md)

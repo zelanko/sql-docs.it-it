@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLProcedures | Microsoft Docs
+title: Funzione SQLProcedures . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLProcedures function [ODBC]
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bdaf63313a339d2b25ca6648ad25c1b4466b3f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b4c8b8a9f22f6005d1af811e56485299bad3a425
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68005728"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306842"
 ---
 # <a name="sqlprocedures-function"></a>Funzione SQLProcedures
 **Conformità**  
- Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
+ Versione introdotta: ODBC 1.0 Standards Compliance: ODBC  
   
- **Summary**  
- **SQLProcedures** restituisce l'elenco dei nomi di stored procedure archiviati in un'origine dati specifica. La *stored procedure* è un termine generico utilizzato per descrivere un *oggetto eseguibile*o un'entità denominata che può essere richiamata utilizzando parametri di input e output. Per ulteriori informazioni sulle procedure, vedere le [procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
+ **Riepilogo**  
+ **SQLProcedures** restituisce l'elenco dei nomi di stored procedure archiviati in un'origine dati specifica. *La procedura* è un termine generico utilizzato per descrivere un *oggetto eseguibile*o un'entità denominata che può essere richiamata utilizzando parametri di input e di output. Per ulteriori informazioni sulle procedure, vedere [Le procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,110 +49,110 @@ SQLRETURN SQLProcedures(
   
 ## <a name="arguments"></a>Argomenti  
  *StatementHandle*  
- Input Handle di istruzione.  
+ [Ingresso] Handle di istruzione.  
   
  *CatalogName*  
- Input Catalogo delle procedure. Se un driver supporta i cataloghi per alcune tabelle ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, una stringa vuota ("") indica le tabelle che non contengono cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringhe.  
+ [Ingresso] Catalogo delle procedure. Se un driver supporta i cataloghi per alcune tabelle ma non per altri, ad esempio quando il driver recupera i dati da DBS diversi, una stringa vuota ("") indica le tabelle che non dispongono di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
   
- Se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il case non è significativo. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene trattato letteralmente e il suo caso è significativo. Per ulteriori informazioni, vedere [arguments in Catalog Functions](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+ Se l'attributo statement SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo caso non è significativo. Se è SQL_FALSE, *CatalogName* è un argomento ordinario; viene trattato letteralmente, e il suo caso è significativo. Per ulteriori informazioni, vedere [Argomenti nelle funzioni di catalogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  *NameLength1*  
- Input Lunghezza in caratteri di **CatalogName*.  
+ [Ingresso] Lunghezza in caratteri di*nomeCatalogo*.  
   
- *SchemaName*  
- Input Modello di ricerca di stringhe per i nomi degli schemi di procedura. Se un driver supporta schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da sistemi DBMS diversi, una stringa vuota ("") indica le procedure che non dispongono di schemi.  
+ *Nome Schema*  
+ [Ingresso] Criterio di ricerca di stringhe per i nomi degli schemi di procedura. Se un driver supporta gli schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera i dati da DBS diversi, una stringa vuota ("") indica le procedure che non dispongono di schemi.  
   
- Se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il case non è significativo. Se è SQL_FALSE, *SchemaName* è un argomento del valore del modello; viene trattato letteralmente e il suo caso è significativo.  
+ Se l'attributo dell'istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il relativo caso non è significativo. Se è SQL_FALSE, *SchemaName* è un argomento di valore di modello; viene trattato letteralmente, e il suo caso è significativo.  
   
  *NameLength2*  
- Input Lunghezza in caratteri di **SchemaName*.  
+ [Ingresso] Lunghezza in caratteri di :*NomeSchema*.  
   
- *ProcName*  
- Input Modello di ricerca di stringhe per i nomi delle procedure.  
+ *Nomeprocesso*  
+ [Ingresso] Criterio di ricerca di stringhe per i nomi delle routine.  
   
- Se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_TRUE, *ProcName* viene considerato come un identificatore e il case non è significativo. Se è SQL_FALSE, *ProcName* è un argomento del valore del modello; viene trattato letteralmente e il suo caso è significativo.  
+ Se l'attributo dell'istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *ProcName* viene considerato come un identificatore e il relativo caso non è significativo. Se è SQL_FALSE, *ProcName* è un argomento di valore di modello; viene trattato letteralmente, e il suo caso è significativo.  
   
  *NameLength3*  
- Input Lunghezza in caratteri di **ProcName*.  
+ [Ingresso] Lunghezza in caratteri di :*NomeProc*.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLProcedures** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *handle* di *statementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE restituiti comunemente da **SQLProcedures** e ne viene illustrato ciascuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
+ Quando **SQLProcedures** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *handle* di *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLProcedures** e vengono illustrati ognuno di essi nel contesto di questa funzione. la notazione "(DM)" precede le descrizioni di SQLSTATEs restituite da Gestione Driver. Il codice restituito associato a ogni valore SQLSTATE viene SQL_ERROR, se non specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
-|24000|Stato del cursore non valido|Un cursore è stato aperto in *statementHandle*e **SQLFetch** o **SQLFetchScroll** è stato chiamato. Questo errore viene restituito da Gestione driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto in *statementHandle*, ma non è stato chiamato **SQLFetch** o **SQLFetchScroll** .|  
+|01000|Avvertenza generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|08S01|Errore di collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima che la funzione completasse l'elaborazione.|  
+|24000|Stato del cursore non valido|Un cursore era aperto su *StatementHandle*e **SQLFetch** o **SQLFetchScroll** era stato chiamato. Questo errore viene restituito da Gestione Driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore era aperto su *StatementHandle*, ma **SQLFetch** o **SQLFetchScroll** non era stato chiamato.|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
-|40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
-|HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
-|HY009|Uso non valido del puntatore null|L'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE, l'argomento *CatalogName* è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce i nomi dei cataloghi supportati.<br /><br /> (DM) l'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE e l'argomento *SchemaName* o *ProcName* è un puntatore null.|  
-|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
-|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore di uno degli argomenti della lunghezza del nome è minore di 0 ma non uguale a SQL_NTS.<br /><br /> Il valore di uno degli argomenti della lunghezza del nome supera il valore di lunghezza massima per il nome corrispondente.|  
-|HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Funzionalità facoltativa non implementata|È stato specificato un catalogo delle procedure e il driver o l'origine dati non supporta i cataloghi.<br /><br /> È stato specificato uno schema di routine e il driver o l'origine dati non supporta gli schemi.<br /><br /> È stato specificato un criterio di ricerca di stringhe per lo schema della routine o il nome della procedura e l'origine dati non supporta i criteri di ricerca per uno o più di tali argomenti.<br /><br /> La combinazione delle impostazioni correnti degli attributi SQL_ATTR_CONCURRENCY e SQL_ATTR_CURSOR_TYPE istruzione non è supportata dal driver o dall'origine dati.<br /><br /> L'attributo SQL_ATTR_USE_BOOKMARKS Statement è stato impostato su SQL_UB_VARIABLE e l'attributo SQL_ATTR_CURSOR_TYPE Statement è stato impostato su un tipo di cursore per il quale il driver non supporta i segnalibri.|  
-|HYT00|Timeout|Il periodo di timeout della query è scaduto prima che l'origine dati restituisse il set di risultati richiesto. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Il driver non supporta questa funzione|(DM) il driver associato a *statementHandle* non supporta questa funzione.|  
-|IM017|Polling disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
-|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente nell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, è necessario chiamare **SQLCompleteAsync** sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
+|40003|Completamento dell'istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non è stato definito alcun SQLSTATE specifico e per il quale non è stato definito alcun SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la relativa causa.|  
+|I001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|I008|Operation canceled|L'elaborazione asincrona è stata abilitata per *il StatementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *StatementHandle*. Quindi la funzione è stata chiamata nuovamente su *StatementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *StatementHandle* da un thread diverso in un'applicazione multithread.|  
+|I009|Utilizzo non valido del puntatore null|L'attributo dell'istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE, l'argomento *CatalogName* è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce che i nomi dei cataloghi sono supportati.<br /><br /> (DM) l'attributo dell'istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE e l'argomento *SchemaName* o *ProcName* è un puntatore null.|  
+|HY010 (Informazioni in stati incomMIino in|Errore della sequenza di funzioni|(DM) è stata chiamata una funzione in modo asincrono in esecuzione per l'handle di connessione associato a *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *il StatementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) una funzione in esecuzione in modo asincrono (non questo) è stato chiamato per il *StatementHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *StatementHandle* e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
+|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è stato possibile accedere agli oggetti di memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
+|I090|Stringa o lunghezza del buffer non valida|(DM) il valore di uno degli argomenti della lunghezza del nome è minore di 0 ma non uguale a SQL_NTS.<br /><br /> Il valore di uno degli argomenti di lunghezza del nome ha superato il valore di lunghezza massima per il nome corrispondente.|  
+|HY117|La connessione è sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo funzioni di disconnessione e di sola lettura.|(DM) Per ulteriori informazioni sullo stato sospeso, vedere [Funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Funzionalità facoltativa non implementataOptional feature not implemented|È stato specificato un catalogo di procedure e il driver o l'origine dati non supporta i cataloghi.<br /><br /> È stato specificato uno schema di procedura e il driver o l'origine dati non supporta gli schemi.<br /><br /> È stato specificato un criterio di ricerca di stringa per lo schema della routine o il nome della routine e l'origine dati non supporta i criteri di ricerca per uno o più di tali argomenti.<br /><br /> La combinazione delle impostazioni correnti degli attributi di istruzione SQL_ATTR_CONCURRENCY e SQL_ATTR_CURSOR_TYPE non è supportata dal driver o dall'origine dati.<br /><br /> L'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_VARIABLE e l'attributo dell'istruzione SQL_ATTR_CURSOR_TYPE è stato impostato su un tipo di cursore per il quale il driver non supporta i segnalibri.|  
+|HYT00|Timeout|Il periodo di timeout della query è scaduto prima che l'origine dati restituisca il set di risultati richiesto. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr**SQL_ATTR_QUERY_TIMEOUT.|  
+|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati riscisse risposta alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver associato a *StatementHandle* non supporta questa funzione.|  
+|IM017|Il polling è disabilitato in modalità di notifica asincronaPolling is disabled in asynchronous notification mode|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
+|IM018 (in vi eim.|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente sull'handle restituisce SQL_STILL_EXECUTING e se la modalità di notifica è abilitata, **SQLCompleteAsync** deve essere chiamato sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLProcedures** elenca tutte le routine nell'intervallo richiesto. È possibile che un utente non disponga delle autorizzazioni necessarie per eseguire una di queste procedure. Per controllare l'accessibilità, un'applicazione può chiamare **SQLGetInfo** e controllare il valore di SQL_ACCESSIBLE_PROCEDURES Information. In caso contrario, l'applicazione deve essere in grado di gestire una situazione in cui l'utente seleziona una procedura che non può essere eseguita. Per informazioni sul modo in cui queste informazioni possono essere utilizzate, vedere [procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
+ **SQLProcedures** elenca tutte le procedure nell'intervallo richiesto. Un utente può o non può disporre dell'autorizzazione per eseguire una di queste procedure. Per verificare l'accessibilità, un'applicazione può chiamare **SQLGetInfo** e controllare il valore di informazioni SQL_ACCESSIBLE_PROCEDURES. In caso contrario, l'applicazione deve essere in grado di gestire una situazione in cui l'utente seleziona una routine che non può eseguire. Per informazioni sull'utilizzo di queste informazioni, vedere [Procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni sull'utilizzo generale, sugli argomenti e sui dati restituiti delle funzioni del catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
+>  Per ulteriori informazioni sull'utilizzo generale, gli argomenti e i dati restituiti delle funzioni di catalogo ODBC, vedere Funzioni di [catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- **SQLProcedures** restituisce i risultati come set di risultati standard, ordinati in base PROCEDURE_CAT, PROCEDURE_SCHEMA e procedure_name.  
+ **SQLProcedures** restituisce i risultati come set di risultati standard, ordinati per PROCEDURE_CAT, PROCEDURE_SCHEMA e PROCEDURE_NAME.  
   
 > [!NOTE]  
->  **SQLProcedures** non può restituire tutte le routine. Le applicazioni possono utilizzare qualsiasi routine valida, indipendentemente dal fatto che venga restituita da **SQLProcedures**.  
+>  **SQLProcedures** potrebbe non restituire tutte le procedure. Le applicazioni possono utilizzare qualsiasi procedura valida, indipendentemente dal fatto che venga restituita da **SQLProcedures**.  
   
- Le colonne seguenti sono state rinominate per ODBC 3 *. x*. Le modifiche al nome di colonna non influiscono sulla compatibilità con le versioni precedenti perché le applicazioni vengono associate per numero di colonna  
+ Le colonne seguenti sono state rinominate per ODBC 3 *.x*. Le modifiche del nome della colonna non influiscono sulla compatibilità con le versioni precedenti perché le applicazioni vengono associate in base al numero di colonna.  
   
-|ODBC 2,0-colonna|Colonna ODBC 3 *. x*|  
+|Colonna ODBC 2.0|COLONNA *.x* DI ODBC 3|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
-|_OWNER PROCEDURE|_SCHEM PROCEDURE|  
+|_OWNER procedura|_SCHEM procedura|  
   
  Per determinare le lunghezze effettive delle colonne PROCEDURE_CAT, PROCEDURE_SCHEM e PROCEDURE_NAME, un'applicazione può chiamare **SQLGetInfo** con le opzioni SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN e SQL_MAX_PROCEDURE_NAME_LEN.  
   
- Nella tabella seguente sono elencate le colonne del set di risultati. È possibile definire colonne aggiuntive oltre la colonna 8 (PROCEDURE_TYPE) dal driver. Un'applicazione deve ottenere l'accesso alle colonne specifiche del driver eseguendo il conteggio a discesa dalla fine del set di risultati anziché specificare una posizione ordinale esplicita. Per ulteriori informazioni, vedere [dati restituiti da funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
+ Nella tabella seguente sono elencate le colonne del set di risultati. Colonne aggiuntive oltre la colonna 8 (PROCEDURE_TYPE) possono essere definite dal driver. Un'applicazione deve ottenere l'accesso alle colonne specifiche del driver eseguendo il conto alla rovescia dalla fine del set di risultati anziché specificare una posizione ordinale esplicita. Per ulteriori informazioni, vedere [Dati restituiti da Funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
 |Nome colonna|Numero di colonna|Tipo di dati|Commenti|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2,0)|1|Varchar|Identificatore del catalogo delle procedure. NULL se non è applicabile all'origine dati. Se un driver supporta i cataloghi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di cataloghi.|  
-|PROCEDURE_SCHEM (ODBC 2,0)|2|Varchar|Identificatore schema di routine; NULL se non è applicabile all'origine dati. Se un driver supporta schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da sistemi DBMS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di schemi.|  
-|PROCEDURE_NAME (ODBC 2,0)|3|Varchar NOT NULL|Identificatore di procedura.|  
-|NUM_INPUT_PARAMS (ODBC 2,0)|4|N/D|Riservato a un uso futuro. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
-|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|N/D|Riservato a un uso futuro. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
-|NUM_RESULT_SETS (ODBC 2,0)|6|N/D|Riservato a un uso futuro. Le applicazioni non devono basarsi sui dati restituiti nelle colonne di risultati.|  
-|OSSERVAZIONI (ODBC 2,0)|7|Varchar|Descrizione della procedura.|  
-|PROCEDURE_TYPE (ODBC 2,0)|8|Smallint|Definisce il tipo di procedura:<br /><br /> SQL_PT_UNKNOWN: non è possibile determinare se la procedura restituisce un valore.<br /><br /> SQL_PT_PROCEDURE: l'oggetto restituito è una routine. ovvero, non ha un valore restituito.<br /><br /> SQL_PT_FUNCTION: l'oggetto restituito è una funzione. ovvero ha un valore restituito.|  
+|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|Identificatore del catalogo delle procedure; NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune procedure ma non per altri, ad esempio quando il driver recupera i dati da DBS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di cataloghi.|  
+|PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|Identificatore dello schema della procedura; NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera i dati da DBS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di schemi.|  
+|PROCEDURE_NAME (ODBC 2.0)|3|Varchar non NULL|Identificatore della routine.|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|N/D|Riservato per utilizzi futuri. Le applicazioni non devono basarsi sui dati restituiti in queste colonne dei risultati.|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/D|Riservato per utilizzi futuri. Le applicazioni non devono basarsi sui dati restituiti in queste colonne dei risultati.|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|N/D|Riservato per utilizzi futuri. Le applicazioni non devono basarsi sui dati restituiti in queste colonne dei risultati.|  
+|OSSERVAZIONI (ODBC 2.0)|7|Varchar|Descrizione della procedura.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Definisce il tipo di routine:<br /><br /> SQL_PT_UNKNOWN: non è possibile determinare se la routine restituisce un valore.<br /><br /> SQL_PT_PROCEDURE: l'oggetto restituito è una routine. vale a dire, non ha un valore restituito.<br /><br /> SQL_PT_FUNCTION: l'oggetto restituito è una funzione; vale a dire, ha un valore restituito.|  
   
- Gli argomenti *SchemaName* e *ProcName* accettano i criteri di ricerca. Per ulteriori informazioni sui criteri di ricerca validi, vedere argomenti relativi ai [valori di pattern](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ Gli argomenti *SchemaName* e *ProcName* accettano criteri di ricerca. Per ulteriori informazioni sui criteri di ricerca validi, vedere [Argomenti del valore del modello](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 ## <a name="code-example"></a>Esempio di codice  
- Vedere [chiamate di routine](../../../odbc/reference/develop-app/procedure-calls.md).  
+ Vedere [Chiamate di routine](../../../odbc/reference/develop-app/procedure-calls.md).  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Associazione di un buffer a una colonna in un set di risultati|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Annullamento dell'elaborazione di istruzioni|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Recupero di una singola riga o di un blocco di dati in una direzione di sola trasmissione|[Funzione SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Associazione di un buffer a una colonna in un set di risultatiBinding a buffer to a column in a result set|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Annullamento dell'elaborazione delle istruzioniCanceling statement processing|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Recupero di una singola riga o di un blocco di dati in una direzione forward-only|[Funzione SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |Recupero di un blocco di dati o scorrimento di un set di risultati|[Funzione SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Restituzione di informazioni su un driver o un'origine dati|[Funzione SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
-|Restituzione dei parametri e delle colonne del set di risultati di una stored procedure|[Funzione SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|  
-|Sintassi per la chiamata di stored procedure|[Esecuzione di istruzioni](../../../odbc/reference/develop-app/executing-statements-odbc.md)|  
+|Restituzione di informazioni su un driver o un'origine datiReturning information about a driver or data source|[Funzione SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
+|Restituzione dei parametri e delle colonne del set di risultati di una routineReturning the parameters and result set columns of a procedure|[Funzione SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|  
+|Sintassi per richiamare stored procedure|[Esecuzione di istruzioni](../../../odbc/reference/develop-app/executing-statements-odbc.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Guida di riferimento all'API ODBCODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

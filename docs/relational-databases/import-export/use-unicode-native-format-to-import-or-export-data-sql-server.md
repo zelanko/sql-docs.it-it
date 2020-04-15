@@ -1,5 +1,6 @@
 ---
 title: Usare il formato nativo Unicode per importare o esportare dati (SQL Server) | Microsoft Docs
+description: Usare il formato Unicode nativo per il trasferimento bulk dei dati tra istanze di SQL Server, che elimina la conversione dei tipi di dati da e verso il formato carattere.
 ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4b9aefe7e8350eef1990a6a37dbf0266cd11464
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091458"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980348"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utilizzare il formato Unicode nativo per importare o esportare dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

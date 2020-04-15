@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807417"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607853"
 ---
 # <a name="flexible-file-task"></a>Attività File flessibili
 
@@ -44,18 +44,19 @@ Per l'operazione **Copia** sono disponibili le proprietà riportate di seguito.
 - **SourceConnectionType:** specifica il tipo di gestione connessione di origine.
 - **SourceConnection:** specifica la gestione connessione di origine.
 - **SourceFolderPath:** specifica il percorso della cartella di origine.
-- **SourceFileName:** specifica il nome file di origine. Se lasciato vuoto, viene copiata la cartella di origine.
+- **SourceFileName:** specifica il nome file di origine. Se lasciato vuoto, viene copiata la cartella di origine. I caratteri jolly seguenti sono consentiti nel nome del file di origine: `*` (corrisponde a zero o più caratteri), `?` (corrisponde a zero o a un carattere singolo) e `^` (carattere di escape).
 - **SearchRecursively:** specifica se le sottocartelle verranno copiate in modo ricorsivo.
 - **DestinationConnectionType:** specifica il tipo di gestione connessione di destinazione.
 - **DestinationConnection:** specifica la gestione connessione di destinazione.
 - **DestinationFolderPath:** specifica il percorso della cartella di destinazione.
-- **DestinationFileName:** specifica il nome file di destinazione.
+- **DestinationFileName:** specifica il nome file di destinazione. Se lasciato vuoto, verranno usati i nomi dei file di origine.
 
 Per l'operazione **Elimina** sono disponibili le proprietà riportate di seguito.
 - **ConnectionType:** specifica il tipo di gestione connessione.
 - **Connection:** specifica la gestione connessione.
 - **FolderPath:** specifica il percorso della cartella.
-- **FileName:** specifica il nome file. Se questa proprietà viene lasciata vuota, la cartella viene eliminata. Per Archiviazione BLOB di Azure l'eliminazione di cartelle non è supportata.
+- **FileName:** specifica il nome file. Se questa proprietà viene lasciata vuota, la cartella viene eliminata. Per Archiviazione BLOB di Azure l'eliminazione di cartelle non è supportata. I caratteri jolly seguenti sono consentiti nel nome del file: `*` (corrisponde a zero o più caratteri), `?` (corrisponde a zero o a un carattere singolo) e `^` (carattere di escape).
+- **DeleteRecursively:** specifica se eliminare i file in modo ricorsivo.
 
 ***Note sulla configurazione delle autorizzazioni dell'entità servizio***
 

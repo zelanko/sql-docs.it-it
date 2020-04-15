@@ -1,5 +1,5 @@
 ---
-title: Istruzioni SQL costruite in fase di esecuzione | Microsoft Docs
+title: Istruzioni SQL costruite in fase di esecuzione . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 795335be2a2a3aab1be6dac26bf6d213161fe42e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107467"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301972"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Istruzioni SQL costruite in fase di esecuzione
-Le applicazioni che eseguono l'analisi ad hoc compilano comunemente istruzioni SQL in fase di esecuzione. Un foglio di calcolo, ad esempio, può consentire a un utente di selezionare le colonne da cui recuperare i dati:  
+Le applicazioni che eseguono analisi ad hoc in genere compilano istruzioni SQL in fase di esecuzione. Ad esempio, un foglio di calcolo potrebbe consentire all'utente di selezionare le colonne da cui recuperare i dati:  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -68,8 +68,8 @@ int main() {
 }  
 ```  
   
- Un'altra classe di applicazioni che in genere costruisce istruzioni SQL in fase di esecuzione sono gli ambienti di sviluppo dell'applicazione. Tuttavia, le istruzioni che costruiscono sono hardcoded nell'applicazione in cui sono compilate, dove possono essere in genere ottimizzate e testate.  
+ Un'altra classe di applicazioni che in genere costruisce istruzioni SQL in fase di esecuzione sono gli ambienti di sviluppo di applicazioni. Tuttavia, le istruzioni che costruiscono sono hardcoded nell'applicazione che stanno compilando, dove in genere possono essere ottimizzate e testate.  
   
- Le applicazioni che costruiscono istruzioni SQL in fase di esecuzione possono offrire un'enorme flessibilità all'utente. Come si può notare dall'esempio precedente, che non supportava anche operazioni comuni come clausole **where** , clausole **Order by** o join, la costruzione di istruzioni SQL in fase di esecuzione è molto più complessa rispetto alle istruzioni di codifica hardcoded. Inoltre, il test di tali applicazioni è problematico perché può costruire un numero arbitrario di istruzioni SQL.  
+ Le applicazioni che costruiscono istruzioni SQL in fase di esecuzione possono fornire un'enorme flessibilità all'utente. Come si può vedere dall'esempio precedente, che non supportava nemmeno operazioni comuni come clausole **WHERE,** clausole **ORDER BY** o join, la costruzione di istruzioni SQL in fase di esecuzione è molto più complessa delle istruzioni hardcoded. Inoltre, il test di tali applicazioni è problematico perché possono costruire un numero arbitrario di istruzioni SQL.  
   
- Un potenziale svantaggio della creazione di istruzioni SQL in fase di esecuzione è il fatto che richiede molto più tempo per costruire un'istruzione rispetto all'uso di un'istruzione hardcoded. Fortunatamente, questo è raramente un problema. Tali applicazioni tendono a essere a elevato utilizzo di interfaccia utente e il tempo impiegato dall'applicazione per la costruzione di istruzioni SQL è generalmente ridotto rispetto al tempo impiegato dall'utente per l'immissione dei criteri.
+ Un potenziale svantaggio della costruzione di istruzioni SQL in fase di esecuzione è che la costruzione di un'istruzione richiede molto più tempo rispetto all'utilizzo di un'istruzione hardcoded. Fortunatamente, questo è raramente un problema. Tali applicazioni tendono a essere un utilizzo intensivo dell'interfaccia utente e il tempo che l'applicazione trascorre per la costruzione di istruzioni SQL è in genere ridotto rispetto al tempo che l'utente trascorre immettendo criteri.

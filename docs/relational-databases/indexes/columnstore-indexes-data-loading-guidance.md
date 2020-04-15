@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286675"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550216"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Indici columnstore - Linee guida per il caricamento di dati
 
@@ -47,7 +47,7 @@ Il caricamento bulk include le ottimizzazioni seguenti per le prestazioni:
 
 -   **Registrazione ridotta:** i dati caricati direttamente all'interno di rowgroup compressi portano a una riduzione significativa delle dimensioni del log. Se, ad esempio, i dati sono stati compressi 10 volte, il log delle transazioni corrispondente sarà di circa 10 volte più piccolo senza richiedere TABLOCK o il modello di recupero con registrazione minima delle operazioni bulk o il modello di recupero di registrazione minima. Per tutti i dati destinati a un rowgroup differenziale viene usata la registrazione completa. Ciò include qualsiasi dimensione di batch minore di 102.400 righe.  La procedura consigliata corrisponde all'uso di batchsize > = 102400. Poiché non è necessario usare TABLOCK, è possibile caricare i dati in parallelo. 
 
--   **Registrazione minima:** è possibile ottenere ulteriori riduzioni nella registrazione se si soddisfano i prerequisiti per la [registrazione minima](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Tuttavia, a differenza del caricamento dei dati in un rowstore, TABLOCK causa un blocco X (esclusivo) sulla tabella anziché un blocco BU (aggiornamento bulk) e pertanto non è possibile eseguire il caricamento parallelo dei dati. Per altre informazioni sui blocchi, vedere [Blocco e controllo delle versioni delle righe](../sql-server-transaction-locking-and-row-versioning-guide.md).
+-   **Registrazione minima:** è possibile ottenere ulteriori riduzioni nella registrazione se si soddisfano i prerequisiti per la [registrazione minima](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Tuttavia, a differenza del caricamento dei dati in un rowstore, TABLOCK causa un blocco X (esclusivo) sulla tabella anziché un blocco BU (aggiornamento bulk) e pertanto non è possibile eseguire il caricamento parallelo dei dati. Per altre informazioni sul blocco, vedere [Utilizzo di blocchi e controllo delle versioni delle righe](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
 -   **Ottimizzazione del blocco:** Il blocco X su un gruppo di righe viene acquisito automaticamente durante il caricamento dei dati in un rowgroup compresso. Durante il caricamento bulk in un rowgroup delta, tuttavia, viene acquisito un blocco X in corrispondenza del rowgroup, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua a bloccare PAGE/EXTENT perché il blocco X del rowgroup non rientra nella gerarchia di blocco.  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **Ottimizzazione dei log:** registrazione ridotta quando i dati vengono caricati in rowgroup compressi.   
 -   **Ottimizzazione del blocco:** Durante il caricamento in rowgroup compressi, viene acquisito il blocco X sul rowgroup. Tuttavia quando si opera con rowgroup delta viene acquisito il blocco X del rowgroup, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua a bloccare i blocchi PAGE/EXTENT, perché il blocco X del rowgroup non rientra nella gerarchia di blocco.  
   
- In caso di più indici non cluster, non si ha blocco o ottimizzazione della registrazione dell'indice, ma le ottimizzazioni sull'indice columnstore cluster descritte in precedenza sono ancora presenti.  
+ In presenza di uno più indici non cluster, non viene applicato il blocco o l'ottimizzazione della registrazione dell'indice stesso, ma le ottimizzazioni sull'indice columnstore cluster descritte in precedenza sono ancora presenti.  
   
 ## <a name="what-is-trickle-insert"></a>Che cos'è il caricamento con inserimento singolo?
 

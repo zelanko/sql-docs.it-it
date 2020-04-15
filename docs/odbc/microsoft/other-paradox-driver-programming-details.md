@@ -1,5 +1,5 @@
 ---
-title: Altri dettagli di programmazione dei driver Paradox | Microsoft Docs
+title: Altri dettagli sulla programmazione dei driver di Paradox Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b19265c66107e6059639663fac4f6c2ff44219f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f2b19abbb3c1a05342707cf80c9266bc19ee689d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290951"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Altre informazioni sulla programmazione dei driver Paradox
 > [!NOTE]  
->  In questa sezione vengono fornite informazioni specifiche del driver Paradox sulle funzioni ODBC e altri dettagli di programmazione. Per informazioni generali su una funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questa sezione vengono fornite informazioni specifiche del driver di Paradox sulle funzioni ODBC e altri dettagli di programmazione. Per informazioni generali su una funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

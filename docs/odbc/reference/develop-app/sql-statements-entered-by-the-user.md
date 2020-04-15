@@ -1,5 +1,5 @@
 ---
-title: Istruzioni SQL immesse dall'utente | Microsoft Docs
+title: Istruzioni SQL immesse dall'utente Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf2f8cf36be392cb42a970fa2fb0b19c35daeb39
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086067"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301962"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Istruzioni SQL immesse dall'utente
-Anche le applicazioni che eseguono l'analisi ad hoc consentono all'utente di immettere direttamente istruzioni SQL. Ad esempio:  
+Le applicazioni che eseguono analisi ad hoc in genere consentono inoltre all'utente di immettere direttamente istruzioni SQL. Ad esempio:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -48,4 +48,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Questo approccio semplifica la codifica delle applicazioni; l'applicazione si basa sull'utente per compilare l'istruzione SQL e nell'origine dati per verificare la validità dell'istruzione. Poiché è difficile scrivere un'interfaccia utente grafica che espone adeguatamente le complessità di SQL, è sufficiente chiedere all'utente di immettere il testo dell'istruzione SQL potrebbe essere un'alternativa preferibile. Tuttavia, è necessario che l'utente conosca non solo SQL, ma anche lo schema dell'origine dati su cui si esegue la query. Alcune applicazioni forniscono un'interfaccia utente grafica in base alla quale l'utente può creare un'istruzione SQL di base e fornire anche un'interfaccia di testo con cui l'utente può modificarla.
+ Questo approccio semplifica la codifica delle applicazioni; l'applicazione si basa sull'utente per compilare l'istruzione SQL e sull'origine dati per verificare la validità dell'istruzione. Perché è difficile scrivere un'interfaccia utente grafica che espone adeguatamente la complessità di SQL, semplicemente chiedendo all'utente di immettere il testo dell'istruzione SQL può essere un'alternativa preferibile. Tuttavia, ciò richiede all'utente di conoscere non solo SQL, ma anche lo schema dell'origine dati su cui viene eseguita una query. Alcune applicazioni forniscono un'interfaccia utente grafica tramite la quale l'utente può creare un'istruzione SQL di base e fornire anche un'interfaccia di testo con cui l'utente può modificarla.
