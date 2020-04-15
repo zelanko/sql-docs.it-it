@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165226"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809862"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Le colonne **PERIOD** sono sempre considerate prive di supporto per i valori Null, anche se il supporto dei valori Null non è specificato. Se le colonne **PERIOD** sono definite esplicitamente per ammettere valori Null, l'istruzione **CREATE TABLE** non sarà eseguita.
 - La tabella di cronologia deve sempre essere allineata a livello di schema con la tabella corrente o la tabella temporale, in termini di numero di colonne, nomi delle colonne, ordinamento e tipi di dati.
 - Una tabella di cronologia anonima viene creata automaticamente nello stesso schema della tabella corrente o della tabella temporale.
-- Il nome della tabella della cronologia anonima ha il seguente formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffisso]* . Il suffisso è facoltativo e sarà aggiunto solo se la prima parte del nome della tabella non è univoco.
+- Il nome della tabella di cronologia anonimo presenta il seguente formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffisso]* . Il suffisso è facoltativo e sarà aggiunto solo se la prima parte del nome della tabella non è univoco.
 - La tabella di cronologia viene creata come tabella rowstore. Se possibile, viene applicata la compressione di pagina, altrimenti la tabella di cronologia sarà non compressa. Ad esempio, alcune configurazioni di tabella, come le colonne di tipo sparse, non consentono la compressione.
 - Viene creato un indice cluster predefinito per la tabella di cronologia con un nome generato automaticamente in formato *IX_<history_table_name>* . L'indice cluster contiene le colonne **PERIOD** (inizio, fine).
 - Per creare la tabella corrente come una tabella ottimizzata per la memoria, vedere [Tabelle temporali con controllo delle versioni di sistema con tabelle ottimizzate per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - L'aggiunta di colonne che non supportano i valori Null con valori predefiniti a una tabella esistente contenente dati corrisponde a un'operazione di dimensionamento dei dati in tutte le edizioni eccetto SQL Server Enterprise Edition (in cui corrisponde a un'operazione di metadati). Con una tabella di cronologia esistente di grandi dimensioni contenente dati in SQL Server Standard Edition, aggiungere una colonna che non supporta i valori Null può essere un'operazione costosa.
 - I vincoli per le colonne di inizio e fine periodo devono essere scelti attentamente:
-
   - Il valore predefinito per la colonna di inizio specifica da che punto nel tempo le righe esistenti sono considerate valide. Non può essere specificato come valore datetime futuro.
-  - L'ora di fine deve essere specificata come valore massimo per una precisione datetime2 specifica
+  - L'ora di fine deve essere specificata come valore massimo per una determinata precisione datetime2, ad esempio `9999-12-31 23:59:59` o `9999-12-31 23:59:59.9999999`.
 - Se si aggiunge Period, verranno eseguiti controlli di coerenza sulla tabella corrente per garantire che i valori predefiniti per le colonne di period siano validi.
 - Se viene specificata una tabella di cronologia esistente quando si attiva **SYSTEM_VERSIONING**, sarà eseguito un controllo di coerenza sui dati nella tabella corrente e nella tabella di cronologia. Può essere ignorato se si specifica **DATA_CONSISTENCY_CHECK = OFF** come parametro aggiuntivo.
 

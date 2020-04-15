@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 4a: recuperare i risultati | Microsoft Docs'
+title: 'Passo 4a: Recuperare i risultati . Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ab0bdabe8b2d66bf054f07ea51056a4044b4ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c4f810e5c42b54ec871c233ab498936abae610dc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302972"
 ---
 # <a name="step-4a-fetch-the-results"></a>Passaggio 4a: Recuperare i risultati
 Il passaggio successivo consiste nel recuperare i risultati, come illustrato nella figura seguente.  
   
- ![Recupero di risultati in un'applicazione ODBC](../../../odbc/reference/develop-app/media/pr14.gif "PR14")  
+ ![Recupero di risultati in un'applicazione ODBC](../../../odbc/reference/develop-app/media/pr14.gif "pr14 (informazioni in questo da system")  
   
- Se l'istruzione eseguita in "passaggio 3: compilare ed eseguire un'istruzione SQL" era un'istruzione **Select** o una funzione di catalogo, l'applicazione chiama prima **SQLNumResultCols** per determinare il numero di colonne nel set di risultati. Questo passaggio non è necessario se l'applicazione conosce già il numero di colonne del set di risultati, ad esempio quando l'istruzione SQL è hardcoded in un'applicazione verticale o personalizzata.  
+ Se l'istruzione eseguita nel "Passaggio 3: Compilare ed eseguire un'istruzione SQL" è un'istruzione **SELECT** o una funzione di catalogo, l'applicazione chiama prima **SQLNumResultCols** per determinare il numero di colonne nel set di risultati. Questo passaggio non è necessario se l'applicazione conosce già il numero di colonne del set di risultati, ad esempio quando l'istruzione SQL è hardcoded in un'applicazione verticale o personalizzata.  
   
- Successivamente, l'applicazione recupera il nome, il tipo di dati, la precisione e la scala di ogni colonna del set di risultati con **SQLDescribeCol**. Anche in questo caso non è necessario per le applicazioni, ad esempio applicazioni verticali e personalizzate che già conoscono queste informazioni. L'applicazione passa queste informazioni a **SQLBindCol**, che associa una variabile dell'applicazione a una colonna nel set di risultati.  
+ Successivamente, l'applicazione recupera il nome, il tipo di dati, la precisione e la scala di ogni colonna del set di risultati con **SQLDescribeCol**. Anche in questo caso, questo non è necessario per le applicazioni come le applicazioni verticali e personalizzate che già conoscono queste informazioni. L'applicazione passa queste informazioni a **SQLBindCol**, che associa una variabile di applicazione a una colonna nel set di risultati.  
   
- Ora l'applicazione chiama **SQLFetch** per recuperare la prima riga di dati e inserire i dati da tale riga nelle variabili associate a **SQLBindCol**. Se nella riga sono presenti dati Long, viene chiamato **SQLGetData** per recuperare i dati. L'applicazione continua a chiamare **SQLFetch** e **SQLGetData** per recuperare dati aggiuntivi. Al termine del recupero dei dati, chiama **SQLCloseCursor** per chiudere il cursore.  
+ L'applicazione chiama ora **SQLFetch** per recuperare la prima riga di dati e inserire i dati da tale riga nelle variabili associate con **SQLBindCol**. Se sono presenti dati lunghi nella riga, chiama **SQLGetData** per recuperare i dati. L'applicazione continua a chiamare **SQLFetch** e **SQLGetData** per recuperare dati aggiuntivi. Al termine del recupero dei dati, chiama **SQLCloseCursor** per chiudere il cursore.  
   
- Per una descrizione completa del recupero dei risultati, vedere [recupero di risultati (di base)](../../../odbc/reference/develop-app/retrieving-results-basic.md) e [recupero dei risultati (avanzate)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
+ Per una descrizione completa del recupero dei risultati, vedere [Recupero di risultati (base)](../../../odbc/reference/develop-app/retrieving-results-basic.md) e [Recupero dei risultati (avanzato)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
- L'applicazione ora torna a "passaggio 3: compilare ed eseguire un'istruzione SQL" per eseguire un'altra istruzione nella stessa transazione. in alternativa, procedere con "passaggio 5: eseguire il commit della transazione" per eseguire il commit o il rollback della transazione.
+ L'applicazione torna ora al "Passaggio 3: compilare ed eseguire un'istruzione SQL" per eseguire un'altra istruzione nella stessa transazione; o procede al "Passaggio 5: Eseguire il commit della transazione" per eseguire il commit o il rollback della transazione.

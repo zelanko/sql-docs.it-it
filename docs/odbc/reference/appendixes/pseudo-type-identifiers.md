@@ -1,5 +1,5 @@
 ---
-title: Identificatori di pseudo-tipo | Microsoft Docs
+title: Identificatori di pseudo-tipo Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307982"
 ---
 # <a name="pseudo-type-identifiers"></a>Identificatori di pseudo-tipo
-Per praticità di programmazione delle applicazioni, ODBC definisce un numero di identificatori pseudo-tipo. Questi identificatori non corrispondono effettivamente ai tipi di dati effettivi, ma, a seconda della situazione, si risolvono ai tipi di dati esistenti.  
+Per comodità di programmazione dell'applicazione, ODBC definisce una serie di identificatori di pseudo-tipo. Questi identificatori non corrispondono effettivamente ai tipi di dati effettivi, ma, a seconda della situazione, si risolvono in tipi di dati esistenti.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

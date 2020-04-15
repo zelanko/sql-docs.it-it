@@ -1,6 +1,6 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Informazioni di riferimento Transact-SQL per l'istruzione BULK INSERT.
 ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c84ed8db76a2f6841b70910fd94fb513fc2ce1da
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448403"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517464"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -322,7 +322,7 @@ Se il numero di pagine da scaricare in un singolo batch supera una soglia intern
 
 Se si usa il database SQL di Azure e si esegue l'importazione di una quantità elevata di dati, valutare l'opportunità di aumentare temporaneamente il livello delle prestazioni del database o dell'istanza prima dell'importazione.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 ### <a name="security-account-delegation-impersonation"></a>Delega degli account di sicurezza (rappresentazione)
 

@@ -1,5 +1,5 @@
 ---
-title: Stored procedure (driver ODBC per Oracle) | Microsoft Docs
+title: Stored procedure (driver ODBC per Oracle) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ed0dadb81f31492f0dca8801a8ba925a81eacdb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948812"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299181"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>Stored procedure (driver ODBC per Oracle)
 > [!IMPORTANT]  

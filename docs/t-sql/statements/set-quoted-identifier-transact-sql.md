@@ -25,12 +25,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49a731b57b56c5c4499d6d46f7fe8a70875ec1d
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008885"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550181"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -55,18 +55,18 @@ SET QUOTED_IDENTIFIER ON
 ```
 
 ## <a name="remarks"></a>Osservazioni
+Quando `SET QUOTED_IDENTIFIER` è ON (impostazione predefinita), gli identificatori possono essere racchiusi tra virgolette doppie (" "), mentre i valori letterali devono essere racchiusi tra virgolette singole (' '). Tutte le stringhe delimitate da virgolette doppie vengono interpretate come identificatori di oggetto. Gli identificatori delimitati pertanto non devono necessariamente essere conformi alle regole per gli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Possono essere parole chiave riservate e includere caratteri normalmente non consentiti negli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non è possibile utilizzare le virgolette doppie per delimitare espressioni di stringhe letterali. Inoltre le stringhe letterali devono essere racchiuse tra virgolette singole. Se la stringa letterale contiene una virgoletta singola ('), questa può essere rappresentata da due virgolette singole (''). Quando si usano parole chiave riservate per nomi di oggetti nel database, è necessario che l'opzione `SET QUOTED_IDENTIFIER` sia impostata su ON.
 
-Quando l'opzione SET QUOTED_IDENTIFIER è impostata su ON, è possibile delimitare gli identificatori con virgolette doppie, mentre i valori letterali devono essere delimitati da virgolette singole. Quando l'opzione SET QUOTED_IDENTIFIER è impostata su OFF, non è possibile racchiudere tra virgolette gli identificatori, i quali devono essere conformi alle regole per gli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md). È possibile delimitare i valori letterali con virgolette singole o doppie.
+Quando l'opzione `SET QUOTED_IDENTIFIER` è impostata su OFF, non è possibile racchiudere tra virgolette gli identificatori, i quali devono essere conformi a tutte le regole per gli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md). È possibile delimitare i valori letterali con virgolette singole o doppie. Se una stringa letterale è delimitata da virgolette doppie, la stringa può includere virgolette singole, ad esempio gli apostrofi.
 
-Quando l'opzione SET QUOTED_IDENTIFIER è impostata su ON (impostazione predefinita), tutte le stringhe delimitate da virgolette doppie vengono interpretate come identificatori di oggetto. Gli identificatori delimitati pertanto non devono necessariamente essere conformi alle regole per gli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Possono essere parole chiave riservate e includere caratteri normalmente non consentiti negli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non è possibile utilizzare le virgolette doppie per delimitare espressioni di stringhe letterali. Inoltre le stringhe letterali devono essere racchiuse tra virgolette singole. Se la stringa letterale contiene una virgoletta singola ( **'** ), questa può essere rappresentata da due virgolette singole ( **"** ). Quando si utilizzano parole chiave riservate per nomi di oggetti nel database, è necessario che l'opzione SET QUOTED_IDENTIFIER sia impostata su ON.
+> [!NOTE]
+> QUOTED_IDENTIFIER non influisce sugli identificatori delimitati racchiusi tra parentesi quadre ([ ]).
 
-Quando l'opzione SET QUOTED_IDENTIFIER è impostata su OFF, è possibile delimitare le stringhe letterali nelle espressioni con virgolette singole o doppie. Se una stringa letterale è delimitata da virgolette doppie, la stringa può includere virgolette singole, ad esempio gli apostrofi.
+È necessario che l'opzione `SET QUOTED_IDENTIFIER` sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate. Se l'opzione `SET QUOTED_IDENTIFIER` è impostata su OFF, le istruzioni CREATE, UPDATE, INSERT e DELETE eseguite su tabelle con indici in colonne calcolate o con viste indicizzate hanno esito negativo. Per altre informazioni sulle impostazioni dell'opzione SET necessarie per viste indicizzate e indici in colonne calcolate, vedere [Considerazioni sull'uso delle istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).
 
-È necessario che l'opzione SET QUOTED_IDENTIFIER sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate. Se l'opzione SET QUOTED_IDENTIFIER è impostata su OFF, le istruzioni CREATE, UPDATE, INSERT e DELETE eseguite su tabelle che includono indici in colonne calcolate o viste indicizzate hanno esito negativo. Per altre informazioni sulle impostazioni dell'opzione SET necessarie per viste indicizzate e indici nelle colonne calcolate, vedere "Considerazioni sull'uso delle istruzioni SET" nell'argomento [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md).
+`SET QUOTED_IDENTIFIER` deve essere ON quando si crea un indice filtrato.
 
-SET QUOTED_IDENTIFIER deve essere impostata su ON durante la creazione di un indice filtrato.
-
-SET QUOTED_IDENTIFIER deve essere impostata su ON quando si richiamano metodi con tipo di dati XML.
+`SET QUOTED_IDENTIFIER` deve essere ON quando si richiamano metodi con tipo di dati XML.
 
 Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione QUOTED_IDENTIFIER su ON al momento della connessione. È possibile configurare questa impostazione nelle origini dei dati ODBC, negli attributi di connessione ODBC o nelle proprietà di connessione OLE DB. L'impostazione predefinita dell'opzione SET QUOTED_IDENTIFIER è OFF per le connessioni dalle applicazioni DB-Library.
 
@@ -76,32 +76,30 @@ Quando viene creata una stored procedure, le impostazioni delle opzioni SET QUOT
 
 Quando viene eseguita all'interno di una stored procedure, l'impostazione dell'opzione SET QUOTED_IDENTIFIER non viene modificata.
 
-Quando l'opzione SET ANSI_DEFAULTS è impostata su ON, l'opzione SET QUOTED_IDENTIFIER risulta abilitata.
+Quando `SET ANSI_DEFAULTS` è ON, anche QUOTED_IDENTIFIER è ON.
 
-SET QUOTED_IDENTIFIER corrisponde inoltre all'impostazione QUOTED_IDENTIFER di ALTER DATABASE. Per altre informazioni sulle impostazioni del database, vedere [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+`SET QUOTED_IDENTIFIER` corrisponde anche all'impostazione QUOTED_IDENTIFIER di [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-SET QUOTED_IDENTIFIER diventa effettiva in fase di analisi e influisce solo sull'analisi, non sull'esecuzione della query.
+`SET QUOTED_IDENTIFIER` diventa effettiva in fase di analisi di [!INCLUDE[tsql](../../includes/tsql-md.md)] e influisce solo sull'analisi, non sull'ottimizzazione o l'esecuzione delle query.
 
-Per un batch ad hoc di livello superiore l'analisi viene avviata usando l'impostazione corrente della sessione per QUOTED_IDENTIFIER. Durante l'analisi del batch, le occorrenze di SET QUOTED_IDENTIFIER modificheranno il comportamento di analisi da quel punto in poi e questa impostazione verrà salvata per la sessione. Al termine dell'analisi e dell'esecuzione del batch, l'impostazione QUOTED_IDENTIFER della sessione verrà pertanto impostata in base all'ultima occorrenza di SET QUOTED_IDENTIFIER nel batch.
+Per un batch ad hoc di livello superiore l'analisi viene avviata usando l'impostazione corrente della sessione per QUOTED_IDENTIFIER. Durante l'analisi del batch, le occorrenze di `SET QUOTED_IDENTIFIER` modificheranno il comportamento di analisi da quel punto in poi e questa impostazione verrà salvata per la sessione. Al termine dell'analisi e dell'esecuzione del batch, l'impostazione QUOTED_IDENTIFIER della sessione verrà pertanto impostata in base all'ultima occorrenza di `SET QUOTED_IDENTIFIER` nel batch.
 
-Le istruzione SQL statiche in una stored procedure vengono analizzate usando l'impostazione QUOTED_IDENTIFIER in uso per il batch che ha creato o modificato la stored procedure. SET QUOTED_IDENTIFIER non produce alcun effetto quando si trova nel corpo di una stored procedure come istruzione SQL statica.
+Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] statiche in una stored procedure vengono analizzate usando l'impostazione QUOTED_IDENTIFIER in uso per il batch che ha creato o modificato la stored procedure. `SET QUOTED_IDENTIFIER` non produce alcun effetto quando si trova nel corpo di una stored procedure come istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] statica.
 
-Per un batch annidato che usa sp_executesql o exec() l'analisi viene avviata tramite l'impostazione QUOTED_IDENTIFIER della sessione. Se il batch annidato si trova all'interno di una stored procedure, l'analisi viene avviata tramite l'impostazione QUOTED_IDENTIFIER della stored procedure. Durante l'analisi del batch annidato, le occorrenze di SET QUOTED_IDENTIFIER modificheranno il comportamento di analisi da quel punto in poi, ma l'impostazione QUOTED_IDENTIFIER della sessione non verrà aggiornata.
+Per un batch annidato che usa `sp_executesql` o `exec()` l'analisi viene avviata tramite l'impostazione QUOTED_IDENTIFIER della sessione. Se il batch annidato si trova all'interno di una stored procedure, l'analisi viene avviata tramite l'impostazione QUOTED_IDENTIFIER della stored procedure. Durante l'analisi del batch annidato, le occorrenze di `SET QUOTED_IDENTIFIER` modificheranno il comportamento di analisi da quel punto in poi, ma l'impostazione QUOTED_IDENTIFIER della sessione non verrà aggiornata.
 
-L'impostazione QUOTED_IDENTIFIER non influisce sull'uso delle parentesi quadre **[** e **]** per delimitare gli identificatori.
-
-Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query riportata di seguito.
+Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query riportata di seguito:
 
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
-IF ( (256 & @@OPTIONS) = 256 ) SET @QUOTED_IDENTIFIER = 'ON';
-SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
+IF ( (256 & @@OPTIONS) = 256 ) 
+SET @QUOTED_IDENTIFIER = 'ON';
 
+SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```
 
 ## <a name="permissions"></a>Autorizzazioni
-
-È richiesta l'appartenenza al ruolo public.
+Richiede l'appartenenza al ruolo `PUBLIC`.
 
 ## <a name="examples"></a>Esempi
 
@@ -112,15 +110,15 @@ Nell'esempio seguente viene illustrato come, per poter creare e utilizzare ogget
 ```sql
 SET QUOTED_IDENTIFIER OFF
 GO
--- An attempt to create a table with a reserved keyword as a name
--- should fail.
+
+-- Create statement fails.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
 SET QUOTED_IDENTIFIER ON;
 GO
 
--- Will succeed.
+-- Create statement succeeds.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
@@ -143,6 +141,7 @@ GO
 ```sql
 SET QUOTED_IDENTIFIER OFF;
 GO
+
 USE AdventureWorks2012;
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
     WHERE TABLE_NAME = 'Test')
@@ -197,17 +196,17 @@ GO
  ```
 
 ## <a name="see-also"></a>Vedere anche
-
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)
-- [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
-- [CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
-- [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Tipi di dati](../../t-sql/data-types/data-types-transact-sql.md)
-- [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
-- [SELECT](../../t-sql/queries/select-transact-sql.md)
-- [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)    
+[CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)    
+[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)    
+[CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)    
+[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)    
+[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)    
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
+[Tipi di dati](../../t-sql/data-types/data-types-transact-sql.md)    
+[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)    
+[SELECT](../../t-sql/queries/select-transact-sql.md)    
+[Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md)    
+[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)    
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
+[Identificatori del database](../../relational-databases/databases/database-identifiers.md)

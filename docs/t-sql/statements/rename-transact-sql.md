@@ -9,17 +9,17 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13488d4ab9fe2622322eb6e66c653391ff4415b3
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141266"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625512"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Rinomina una tabella creata dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Rinomina una tabella o un database creato dall'utente in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Rinomina una tabella creata dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Rinomina una tabella creata dall'utente, una colonna in una tabella o un database creato dall'utente in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
 > Per rinominare un database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], usare [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Per rinominare un database nel database SQL di Azure, usare l'istruzione [ALTER DATABASE (database SQL di Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Per rinominare un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
@@ -45,6 +45,9 @@ RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ]
 -- Rename a database
 RENAME DATABASE [::] database_name TO new_database_name
 [;]
+
+-- Rename a column 
+RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
 ## <a name="arguments"></a>Argomenti
@@ -69,6 +72,12 @@ Modifica il nome di un database definito dall'utente da *database_name* a *new_d
 - DWDiagnostics
 - DWQueue
 
+
+RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ]. ] | [ *schema_name*. ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+**SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+Modificare il nome di una colonna in una tabella. 
+
 ## <a name="permissions"></a>Autorizzazioni
 
 Per eseguire questo comando, è necessaria questa autorizzazione:
@@ -85,11 +94,17 @@ Non è possibile rinominare tabelle, indici o viste esterne. Anziché rinominare
 
 Non è possibile rinominare una tabella o un database mentre è in uso. Per la ridenominazione di una tabella è necessario un blocco esclusivo su di essa. Se la tabella è in uso, può essere necessario terminare le sessioni che la usano. Per terminare una sessione, è possibile usare il comando KILL. Usare KILL con cautela, poiché quando una sessione viene terminata, viene eseguito il rollback di tutte le operazioni di cui non è stato eseguito il commit. Le sessioni in SQL Data Warehouse sono caratterizzate dal prefisso 'SID'. Quando si richiama il comando KILL, includere il prefisso 'SID' e il numero della sessione. Questo esempio visualizza un elenco di sessioni attive o inattive e quindi termina la sessione 'SID1234'.
 
+### <a name="rename-column-restrictions"></a>Restrizioni per la ridenominazione delle colonne
+
+Non è possibile rinominare una colonna usata per la distribuzione della tabella. Non è inoltre possibile rinominare le colonne in una tabella esterna o una tabella temporanea. 
+
 ### <a name="views-are-not-updated"></a>Le viste non vengono aggiornate
 
 Quando si rinomina un database, tutte le viste che usano il nome precedente non sono più valide. Questo comportamento vale per le viste sia all'interno che all'esterno del database. Se ad esempio il database delle vendite viene rinominato, le viste che contengono `SELECT * FROM Sales.dbo.table1` non sono più valide. Per risolvere questo problema, è possibile evitare di usare nomi in tre parti nelle viste o aggiornare le viste in modo che facciano riferimento al nuovo nome del database.
 
 Quando si rinomina una tabella, le viste non vengono aggiornate in modo che facciano riferimento al nuovo nome di tabella. Tutte le viste, all'interno o all'esterno del database, che fanno riferimento al nome di tabella precedente non sono più valide. Per risolvere questo problema, è possibile aggiornare ogni vista in modo che faccia riferimento al nuovo nome della tabella.
+
+Quando si rinomina una colonna, le viste non vengono aggiornate in modo che facciano riferimento al nuovo nome di colonna. Le viste continueranno a visualizzare il nome della colonna precedente fino a quando non viene eseguita un'operazione di modifica della vista. In alcuni casi, le viste possono diventare non valide rendendo necessario eliminarle e ricrearle.
 
 ## <a name="locking"></a>Blocco
 
@@ -150,4 +165,17 @@ WHERE status='Active' OR status='Idle';
 
 -- Terminate a session using the session_id.
 KILL 'SID1234';
+```
+
+### <a name="e-rename-a-column"></a>E. Rinominare una colonna 
+
+**SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+In questo esempio la colonna FName della tabella Customer viene rinominata in FirstName.
+
+```sql
+-- Rename the Fname column of the customer table
+RENAME OBJECT::Customer COLUMN FName TO FirstName;
+
+RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```

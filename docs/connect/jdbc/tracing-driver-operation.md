@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909127"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219360"
 ---
 # <a name="tracing-driver-operation"></a>Creazione di tracce
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "80909127"
 |WARNING|Indica un potenziale problema.|  
 |INFO|Fornisce messaggi informativi.|  
 |FINE|Fornisce informazioni di base sulle tracce, incluse la creazione e l'eliminazione di oggetti di base. Fornisce inoltre tutte le eccezioni generate dai metodi pubblici.|  
-|FINER|Fornisce informazioni dettagliate sulle tracce, inclusi tutti i punti di ingresso e di uscita dei metodi pubblici con i tipi di dati dei parametri associati, nonché le proprietà pubbliche per le classi pubbliche. Fornisce inoltre parametri di input, parametri di output e valori restituiti del metodo ad eccezione dei tipi di valori restituiti CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Le seguenti categorie di registrazione erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). A partire dalla versione 2.0 sono state aggiornate al livello FINER.|  
-|FINEST|Fornisce le informazioni più dettagliate disponibili sulle tracce. È il livello più basso.<br /><br /> Le seguenti categorie di registrazione erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINEST: TDS.DATA e TDS.TOKEN. A partire dalla versione 2.0 hanno mantenuto lo stesso livello di registrazione.|  
+|FINER|Fornisce informazioni dettagliate sulle tracce, inclusi tutti i punti di ingresso e di uscita dei metodi pubblici con i tipi di dati dei parametri associati, nonché le proprietà pubbliche per le classi pubbliche. Fornisce inoltre parametri di input, parametri di output e valori restituiti del metodo ad eccezione dei tipi di valori restituiti CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Le categorie di registrazione seguenti erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA, e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). A partire dalla versione 2.0 sono state aggiornate al livello FINER.|  
+|FINEST|Fornisce le informazioni più dettagliate disponibili sulle tracce. È il livello più basso.<br /><br /> Le categorie di registrazione seguenti erano incluse nella versione 1.2 del driver JDBC con il livello di registrazione FINEST: TDS.DATA e TDS.TOKEN. A partire dalla versione 2.0 hanno mantenuto lo stesso livello di registrazione.|  
 |OFF|Disattiva la registrazione.|  
 |ALL|Abilita la registrazione di tutti i messaggi.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "80909127"
 |XA|Consente di registrare i messaggi per tutte le transazioni XA nella classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Le applicazioni possono impostare il livello di registrazione su FINE e FINER.|  
 |KerbAuthentication|Registra i messaggi relativi all'autenticazione Kerberos di tipo 4, quando la proprietà di connessione **authenticationScheme** è impostata su **JavaKerberos**. L'applicazione può impostare il livello di registrazione su FINE o FINER.|  
 |TDS.DATA|Registra i messaggi contenenti la conversazione a livello di protocollo TDS tra il driver e SQL Server. Il contenuto dettagliato di ogni pacchetto TDS inviato e ricevuto viene registrato in formato ASCII ed esadecimale. Le credenziali di accesso (nomi utente e password) non vengono registrate. Tutti gli altri dati vengono registrati.<br /><br /> Questa categoria consente di creare messaggi molto dettagliati ed esaustivi e può essere abilitata solo impostando il livello di registrazione su FINEST.|  
-|TDS.Channel|Questa categoria consente di eseguire le tracce delle azioni del canale di comunicazione TCP con SQL Server. I messaggi registrati includono l'apertura e la chiusura di socket, nonché le operazioni di lettura e scrittura. Vengono inoltre eseguite le tracce dei messaggi correlati alla definizione di una connessione SSL (Secure Socket Layer) con SQL Server.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINE, FINER o FINEST.|  
+|TDS.Channel|Questa categoria consente di eseguire le tracce delle azioni del canale di comunicazione TCP con SQL Server. I messaggi registrati includono l'apertura e la chiusura di socket, nonché le operazioni di lettura e scrittura. Vengono inoltre eseguite le tracce dei messaggi correlati alla definizione di una connessione Transport Layer Security (TLS), nota in precedenza come Secure Sockets Layer (SSL), con SQL Server.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINE, FINER o FINEST.|  
 |TDS.Writer|Questa categoria consente di eseguire le tracce delle operazioni di scrittura nel canale TDS. Si noti che vengono eseguite le tracce solo della lunghezza delle operazioni di scrittura e non del contenuto. Vengono inoltre eseguite le tracce dei problemi quando al server viene inviato un segnale di attenzione per annullare l'esecuzione di un'istruzione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  
 |TDS.Reader|Questa categoria consente di eseguire le tracce di alcune operazioni di lettura dal canale TDS con livello FINEST. Con tale livello le tracce possono risultare dettagliate. Con i livelli WARNING e SEVERE questa categoria consente di eseguire le tracce quando il driver riceve un protocollo TDS non valido da SQL Server prima della chiusura della connessione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINER e FINEST.|  
 |TDS.Command|Questa categoria consente di eseguire la traccia delle transizioni di stato di basso livello e di altre informazioni associate all'esecuzione di comandi TDS, ad esempio le esecuzioni di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], i recuperi di cursori ResultSet, i commit e così via.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  

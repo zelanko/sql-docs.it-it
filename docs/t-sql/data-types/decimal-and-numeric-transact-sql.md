@@ -1,6 +1,6 @@
 ---
 title: decimal e numeric (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Informazioni di riferimento Transact-SQL per i tipi di dati decimal e numeric. Decimal e numeric sono sinonimi dei tipi di dati numerici con precisione e scala fisse.
 ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8b1fc6dd8afb9d6cb68f9cf509e29dc47feae97
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682101"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517145"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ Nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] una costante con se
   
 La conversione da **decimal** o **numeric** in **float** o **real** può determinare una perdita di precisione. La conversione da **int**, **smallint**, **tinyint**, **float**, **real**, **money** o **smallmoney** in **decimal** o **numeric** può determinare un overflow.
   
-Per impostazione predefinita, quando si converte un numero in un valore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]decimal**o**numeric**con precisione e scala inferiori, in** viene applicato l'arrotondamento. Se invece l'opzione SET ARITHABORT è impostata su ON, in caso di overflow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnala un errore. La diminuzione di precisione e scala nelle operazioni di conversione non è sufficiente per generare un errore.
+Per impostazione predefinita, quando si converte un numero in un valore **decimal** o **numeric** con precisione e scala inferiori, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene applicato l'arrotondamento. Se invece l'opzione SET ARITHABORT è impostata su ON, in caso di overflow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnala un errore. La diminuzione di precisione e scala nelle operazioni di conversione non è sufficiente per generare un errore.
   
 Prima di [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], la conversione dei valori **float** in **decimal** o **numeric** è limitata ai soli valori con precisione a 17 cifre. Qualsiasi valore **float** minore di 5E-18 (se impostato usando la notazione scientifica di 5E-18 o la notazione decimale di 0.0000000000000000050000000000000005) viene arrotondato per difetto a 0. Questa non è più una restrizione a partire da [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
   

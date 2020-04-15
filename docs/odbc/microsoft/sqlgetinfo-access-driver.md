@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (driver Access) | Microsoft Docs
+title: SQLGetInfo (Driver di accesso) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298591"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (driver Access)
 > [!NOTE]  
->  In questo argomento vengono fornite informazioni specifiche del driver di accesso. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver di accesso. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un intero a 16 bit che indica il modo in cui il driver tratta direttamente i file in un'origine dati:  
+ **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un numero intero a 16 bit che indica come il driver considera direttamente i file in un'origine dati:The returned value is a 16-bit integer that indicates how the driver directly treats files in a data source:  
   
--   SQL_FILE_NOT_SUPPORTED: il driver non è un driver a livello singolo.  
+-   SQL_FILE_NOT_SUPPORTED - Il driver non è un driver a livello singolo.  
   
 -   SQL_FILE_TABLE: un driver a livello singolo considera i file in un'origine dati come tabelle.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "68003312"
  Il driver ODBC restituisce SQL_FILE_QUALIFIER perché ogni file è un database completo.  
   
 ## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
- SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
+ SQL_BP_UPDATE SQL_BP_SCROLL &#124;[1]  
   
- [1] i segnalibri vengono mantenuti dopo un commit, ma non vengono mantenuti dopo un'operazione di rollback.  
+ [1] I segnalibri persistono dopo un commit, ma non vengono mantenuti dopo un rollback.  
   
 ## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
@@ -92,15 +92,15 @@ ms.locfileid: "68003312"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|Versione|Formato dei numeri di versione|  
+|Isam|Versione|Formato dei numeri di versione|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
-||3.5|03.50.0000|  
+||3,5|03.50.0000|  
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  Le versioni 1,0 e 1,1 non sono supportate. Inoltre, non esiste alcuna differenza nel formato dati nelle versioni di Microsoft Access 3,0, 7,0 e 97.  
+>  Le versioni 1.0 e 1.1 non sono supportate. Inoltre, non vi è alcuna differenza nel formato dei dati in Microsoft Access 3.0, 7.0 e 97.  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -111,9 +111,9 @@ ms.locfileid: "68003312"
  SQL_GD_ANY_ORDER &#124; SQL_GD_ANY_COLUMN &#124; SQL_GD_BLOCK &#124; SQL_GD_BOUND  
   
 ## <a name="sql_keywords"></a>SQL_KEYWORDS  
- ALFANUMERICI  
+ Alfanumerici  
   
- AUTOINCREMENT  
+ Autoincrement  
   
  BINARY  
   
@@ -121,65 +121,65 @@ ms.locfileid: "68003312"
   
  BYTE  
   
- COUNTER  
+ Contatore  
   
- Currency  
+ CURRENCY  
   
  DATABASE  
   
- DATABASENAME  
+ Databasename  
   
  DATETIME  
   
- IMPEDIRE  
+ Impedire  
   
- DISTINCTROW  
+ Distinctrow  
   
  DOUBLEFLOAT  
   
  FLOAT4  
   
- FLOAT8  
+ GALLEGGIANTE8  
   
  GENERAL  
   
- IEEEDOUBLE  
+ DOPPIO( IEEE)  
   
- IEEESINGLE  
+ IEEESINGLE (IEEESINGLE)  
   
  IGNORE  
   
  IMAGE  
   
- INTEGER1  
+ INTERO1  
   
- INTEGER2  
+ INTERO2  
   
- INTEGER4  
+ INTERO4  
   
- LOGICO  
+ Logico  
   
- LOGICAL1  
+ LOGICO1  
   
  LONG  
   
- LONGBINARY  
+ LONGBINARY (oggetto LONGBINARY)  
   
  LONGCHAR  
   
- LONGTEXT  
+ TESTO LUNGO  
   
- MEMO  
+ Memo  
   
  MONEY  
   
- NOTE  
+ NOTA  
   
  NUMBER  
   
- OLEOBJECT  
+ Oleobject  
   
- OWNERACCESS OPTION  
+ OWNERACCESS  
   
  PARAMETERS  
   
@@ -187,11 +187,11 @@ ms.locfileid: "68003312"
   
  PIVOT  
   
- BREVE  
+ SHORT  
   
- SINGOLO  
+ Singolo  
   
- SINGLEFLOAT  
+ SINGOLO FLOAT  
   
  STDEV  
   
@@ -199,13 +199,13 @@ ms.locfileid: "68003312"
   
  STRING  
   
- TABLEID  
+ TABLEID (INDICE TABLEID)  
   
  TEXT  
   
- Torna all'inizio  
+ TOP  
   
- TRASFORMAZIONE  
+ Trasformare  
   
  UNSIGNEDBYTE  
   

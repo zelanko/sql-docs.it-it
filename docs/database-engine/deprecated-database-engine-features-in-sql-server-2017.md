@@ -3,7 +3,7 @@ title: Funzionalità del motore di database deprecate | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: Informazioni sulle funzionalità del motore di database deprecate ancora disponibili in SQL Server 2017 (14.x), ma che non devono essere usate nelle nuove applicazioni.
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402597"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550169"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Questo argomento descrive le funzionalità deprecate del motore di database di SQL Server ancora disponibili in SQL Server 2017 (14.x). È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
-
+  In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
+  
 Quando una funzionalità è contrassegnata come deprecata significa che:
 
-- La funzionalità è solo in modalità manutenzione. Non vengono apportate nuove modifiche, incluse quelle correlate all'interoperabilità con le nuove funzionalità.
+- La funzionalità è solo in modalità manutenzione. Non verranno apportate nuove modifiche, incluse quelle correlate all'interoperabilità con le nuove funzionalità.
+- Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. Tuttavia, in rare situazioni, una funzionalità potrebbe essere rimossa in modo permanente da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ne limita le innovazioni future.
+- Per i nuovi progetti di sviluppo, non è consigliabile usare funzionalità deprecate.      
 
-- Microsoft si impegna a non rimuovere una funzionalità deprecata dalle versioni future per semplificare gli aggiornamenti. Tuttavia, in rare situazioni, una funzionalità potrebbe essere rimossa in modo permanente da SQL Server se ne limita le innovazioni future.
+È possibile monitorare l'utilizzo delle funzionalità deprecate tramite il contatore delle prestazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :Funzionalità deprecate e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-- Per i nuovi progetti di sviluppo, non è consigliabile usare funzionalità deprecate.
-
-È possibile monitorare l'uso delle funzionalità deprecate usando il contatore delle prestazioni dell'oggetto Deprecated Features di SQL Server e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).
-
-I valori di questi contatori sono disponibili anche tramite l'istruzione seguente:
+Il valore di questi contatori è disponibile anche tramite l'istruzione seguente:  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ Eseguire l'aggiornamento dalla versione 100 (SQL Server 2008 e SQL Server 2008 R
 | Funzionalità deprecata | Sostituzione | Nome funzionalità | ID funzionalità |
 |--------------------|-------------|--------------|------------|
 | Crittografia tramite RC4 o RC4_128 deprecata. Rimozione pianificata nella prossima versione. Decrittografia RC4 e RC4_128 non deprecate. | Utilizzare un'altra crittografia, ad esempio AES. | Algoritmo di crittografia deprecata | 253 |
-
-### <a name="hash-algorithms"></a>Algoritmi hash
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità | ID funzionalità |
-|--------------------|-------------|--------------|------------|
 | L'uso di MD2, MD4, MD5, SHA e SHA1 è deprecato. | Usare invece SHA2_256 o SHA2_512. Gli algoritmi precedenti continuano a funzionare, ma generano un evento Deprecation. |Algoritmo hash deprecato | nessuno |
 
 ### <a name="remote-servers"></a>Server remoti
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità | ID funzionalità |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Sostituire i server remoti utilizzando server collegati. sp_addserver può essere usata solo con l'opzione locale. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Sostituire i server remoti utilizzando server collegati. sp_addserver può essere usata solo con l'opzione locale. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | Sostituire i server remoti utilizzando server collegati. | nessuno | nessuno |
 | SET REMOTE_PROC_TRANSACTIONS|Sostituire i server remoti utilizzando server collegati. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>Opzioni SET
+### <a name="transact-sql"></a>Transact-SQL
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità | ID funzionalità |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** per istruzioni **INSERT**, **UPDATE**e **DELETE** | Parola chiave TOP | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>Hint di tabella
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità | ID funzionalità |
-|--------------------|-------------|--------------|------------|
 | Hint di tabella HOLDLOCK senza parentesi | Utilizzare HOLDLOCK con parentesi. | Hint di tabella HOLDLOCK senza parentesi | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Funzionalità deprecate in una versione futura di SQL Server
@@ -131,12 +119,6 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 | Hindi <br /><br /> Macedone | Queste regole di confronto sono presenti in SQL Server 2005 (9.x) e versioni successive, ma non è possibile visualizzarle tramite fn_helpcollations. Utilizzare Macedonian_FYROM_90 e Indic_General_90.|Hindi <br /><br /> Macedone |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>Configurazione
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità |
-|--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF e opzione di database ANSI_NULLS OFF<br /><br />SET ANSI_PADDING OFF e opzione di database ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF e opzione di database CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS | No. <br /><br /> ANSI_NULLS, ANSI_PADDING e CONCAT_NULLS_YIELDS_NULL sono sempre impostate su ON. SET OFFSETS non è disponibile. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>Tipi di dati
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità |
@@ -152,6 +134,9 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 | Funzionalità deprecata | Sostituzione | Nome funzionalità |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|Istruzione CREATE DATABASE con l'opzione FOR ATTACH. Per ricompilare più file di log in caso di nuovo percorso di uno o più di questi file, utilizzare l'opzione FOR ATTACH_REBUILD_LOG. | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | MODIFY NAME in ALTER DATABASE | sp_renamedb |
 
 ### <a name="database-objects"></a>Oggetti di database
 
@@ -161,7 +146,6 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | Parola chiave CHECK in CREATE TABLE e ALTER TABLE | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | Utilizzare ALTER USER. | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities e sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | MODIFY NAME in ALTER DATABASE | sp_renamedb |
 | sp_getbindtoken | Utilizzare MARS o transazioni distribuite. | sp_getbindtoken |
 
 ### <a name="database-options"></a>Opzioni di database
@@ -201,12 +185,6 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Utilizzare invece la funzionalità di integrazione CLR. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Utilizzare CREATE_LOGIN<br /><br /> Utilizzare l'argomento DROP LOGIN IsIntegratedSecurityOnly di SERVERPROPERTY. | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig |
 
-### <a name="function"></a>Funzione
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>Disponibilità elevata
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità |
@@ -235,12 +213,6 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 |--------------------|-------------|--------------|
 | Specifica del provider SQLOLEDB per i server collegati. | SQL Server Native Client (SQLNCLI) | SQLOLEDB per server collegati |
 
-### <a name="locking"></a>Blocco
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>Metadati
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità |
@@ -259,14 +231,7 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL for C|Nonostante supporti connessioni da applicazioni esistenti che usano le API DB-Library ed Embedded SQL, il motore di database non include la documentazione o i file necessari per svolgere attività di programmazione per applicazioni che usano tali API. In una versione futura del motore di database di SQL Server verrà eliminato il supporto per le connessioni da applicazioni DB-Library o Embedded SQL. Non utilizzare pertanto DB-Library o Embedded SQL per sviluppare nuove applicazioni. Quando si modificano applicazioni esistenti, rimuovere tutte le dipendenze da DB-Library o Embedded SQL. Invece di queste API, usare lo spazio dei nomi SQLClient o un'API, ad esempio ODBC. SQL Server 2019 (15.x) non include la DLL DB-Library necessaria per eseguire queste applicazioni. Per eseguire applicazioni DB-Library o Embedded SQL, deve essere disponibile la DLL DB-Library di SQL Server versione 6.5, SQL Server 7.0 o SQL Server 2000 (8.x). | nessuno |
 
-### <a name="removable-databases"></a>Database rimovibili
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
-
-### <a name="security"></a>Security
+### <a name="security"></a>Sicurezza
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità |
 |--------------------|-------------|--------------|
@@ -288,12 +253,6 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 | Funzione intrinseca PERMISSIONS | Eseguire una query su sys.fn_my_permissions. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | Algoritmi di crittografia RC4 e DESX|Utilizzare un altro algoritmo, ad esempio AES. | Algoritmo DESX |
-
-### <a name="set-options"></a>Opzioni SET
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>Opzioni di configurazione del server
 
@@ -319,11 +278,14 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 |--------------------|-------------|--------------|
 | Integrazione di Esplora soluzioni in SQL Server Management Studio | | nessuno |
 
-### <a name="system-stored-procedures"></a>Stored procedure di sistema
+### <a name="system-stored-procedures-and-functions"></a>Stored procedure e funzioni di sistema
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | No. Il supporto per l'estensione del numero di partizioni è disponibile per impostazione predefinita in SQL Server 2019 (15.x). | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>Tabelle di sistema
 
@@ -338,12 +300,6 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[Eventi estesi](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>Funzioni di sistema
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>Viste di sistema
 
 | Funzionalità deprecata | Sostituzione | Nome funzionalità |
@@ -357,14 +313,6 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 | Utilizzo del formato di archiviazione vardecimal. | Il formato di archiviazione vardecimal è deprecato. Con la compressione dei dati di SQL Server 2019 (15.x) vengono compressi sia i valori decimali che altri tipi di dati. È consigliabile utilizzare la compressione dei dati anziché il formato di archiviazione vardecimal. | Formato di archiviazione vardecimal |
 | Utilizzo della procedura sp_db_vardecimal_storage_format.|Il formato di archiviazione vardecimal è deprecato. Con la compressione dei dati di SQL Server 2019 (15.x) vengono compressi sia i valori decimali che altri tipi di dati. È consigliabile utilizzare la compressione dei dati anziché il formato di archiviazione vardecimal. | sp_db_vardecimal_storage_format |
 | Utilizzo della procedura sp_estimated_rowsize_reduction_for_vardecimal.|Utilizzare la compressione dei dati e la procedura sp_estimate_data_compression_savings. |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>Hint di tabella
-
-| Funzionalità deprecata | Sostituzione | Nome funzionalità |
-|--------------------|-------------|--------------|
-| Specifica di NOLOCK o READUNCOMMITTED nella clausola FROM di un'istruzione UPDATE o DELETE. | Rimuovere l'hint di tabella NOLOCK o READUNCOMMITTED dalla clausola FROM. | NOLOCK o READUNCOMMITTED in UPDATE o DELETE |
-| Specifica di hint di tabella senza utilizzare la parola chiave WITH.|Utilizzare WITH.|Hint di tabella senza WITH |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>Puntatori di testo
 
@@ -386,13 +334,18 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 | GROUP BY ALL|Utilizzare una soluzione personalizzata caso per caso con UNION o una tabella derivata. | GROUP BY ALL |
 | ROWGUIDCOL come nome di colonna nelle istruzioni DML.|Utilizzare $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL come nome di colonna nelle istruzioni DML.|Utilizzare $identity.|IDENTITYCOL |
-| Utilizzo di # e ## come nomi di tabelle e di stored procedure temporanee.|Usare almeno un carattere aggiuntivo.|'#' e '##' come nomi di tabelle e stored procedure temporanee|185|  
-| Uso di \@, \@\@ o \@\@ come identificatori Transact-SQL.|Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@.|"\@" e nomi che iniziano con "\@\@" come identificatori Transact-SQL |
+| Utilizzo di # e ## come nomi di tabelle e di stored procedure temporanee. | Usare almeno un carattere aggiuntivo.|'#' e '##' come nomi di tabelle e stored procedure temporanee
+| Uso di \@, \@\@ o \@\@ come identificatori Transact-SQL. | Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@. | '\@' e nomi che iniziano con '\@\@' come identificatori Transact-SQL |
 | Utilizzo della parola chiave DEFAULT come valore predefinito.|Non utilizzare la parola DEFAULT come valore predefinito. | Parola chiave DEFAULT come valore predefinito |
 | Utilizzo di uno spazio come separatore tra gli hint di tabella.|Per separare gli hint di tabella, utilizzare la virgola. | Più hint di tabella senza virgola |
-| L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG (\*) in modalità compatibilità 90 | Usare COUNT_BIG (\*). | Elenco di selezioni di una vista indicizzata senza COUNT_BIG(\*)|2|  
+| L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG (\*) in modalità compatibilità 90 | Usare COUNT_BIG (\*). | Elenco di selezioni di una vista indicizzata senza COUNT_BIG(\*) |
 | Applicazione indiretta di hint di tabella a una chiamata di una funzione con valori di tabella composta da più istruzioni tramite una vista.|No.|Hint di funzione con valori di tabella indiretti |
-| Sintassi di ALTER DATABASE:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| Sintassi di ALTER DATABASE:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| SET ANSI_NULLS OFF e opzione di database ANSI_NULLS OFF<br /><br />SET ANSI_PADDING OFF e opzione di database ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF e opzione di database CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS | No. <br /><br /> ANSI_NULLS, ANSI_PADDING e CONCAT_NULLS_YIELDS_NULL sono sempre impostate su ON. SET OFFSETS non è disponibile. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| Specifica di NOLOCK o READUNCOMMITTED nella clausola FROM di un'istruzione UPDATE o DELETE. | Rimuovere l'hint di tabella NOLOCK o READUNCOMMITTED dalla clausola FROM. | NOLOCK o READUNCOMMITTED in UPDATE o DELETE |
+| Specifica di hint di tabella senza utilizzare la parola chiave WITH. | Utilizzare WITH. | Hint di tabella senza WITH |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>Strumenti
 
@@ -415,7 +368,8 @@ Le funzionalità seguenti del motore di database di SQL Server sono supportate n
 
 > [!NOTE]
 > Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Se gli sviluppatori hanno allocato **varbinary(50)** , potrebbe essere necessario apportare modifiche all'applicazione qualora le dimensioni restituite dal cookie aumentino in una versione successiva. Sebbene non si tratti di un problema relativo a elementi deprecati, questo aspetto viene riportato in quanto le modifiche all'applicazione sono simili. Per altre informazioni, vedere [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Funzionalità del motore di database non più usate in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>Vedere anche
-
- [Funzionalità del motore di database non più usate in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)

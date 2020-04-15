@@ -61,7 +61,7 @@
           href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
-        - name: Creare script R
+        - name: Eseguire gli script R
           href: ../machine-learning/tutorials/quickstart-r-create-script.md
         - name: Tipi di dati e oggetti
           href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
@@ -74,7 +74,7 @@
     - name: Python
       items:
         - name: Esercitazioni di Python
-          href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+          href: ../machine-learning/tutorials/python-tutorials.md
         - name: Noleggio di sci (regressione lineare)
           items:
             - name: 1 - Introduzione
@@ -112,7 +112,7 @@
     - name: R
       items:
         - name: Esercitazioni di R
-          href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+          href: ../machine-learning/tutorials/r-tutorials.md
         - name: Creare modelli basati sulla partizione
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: Usare R in T-SQL

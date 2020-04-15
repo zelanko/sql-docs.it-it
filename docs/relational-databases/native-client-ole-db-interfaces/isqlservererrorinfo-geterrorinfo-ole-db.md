@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Microsoft Docs'
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ apitype: COM
 helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9ba54dd905127dc87cb3c14f74036c78daae1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 69ba76725f5a5d3b21224495554cc2a419265f7e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789365"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299921"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Restituisce un puntatore a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] struttura SSERRORINFO del provider OLE DB di Native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente i dettagli dell'errore.  
+  Restituisce un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puntatore a una struttura SSERRORINFO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del provider OLE DB di Native Client contenente i dettagli dell'errore.  
   
  Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce l'interfaccia degli errori **ISQLServerErrorInfo** . Questa interfaccia restituisce i dettagli di un errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusi la gravità e lo stato.  
 
@@ -52,13 +52,13 @@ HRESULT GetErrorInfo(
  Il metodo è riuscito.  
   
  E_INVALIDARG  
- L'argomento *ppSSErrorInfo* o *ppErrorStrings* è null.  
+ L'argomento *ppSSErrorInfo* o *ppErrorStrings* era NULL.  
   
  E_OUTOFMEMORY  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non è in grado di allocare memoria sufficiente per completare la richiesta.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client non è in grado di allocare memoria sufficiente per completare la richiesta.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
   
  La struttura SSERRORINFO viene definita nel modo seguente:  
   
@@ -89,7 +89,7 @@ SSERRORINFO;
  I puntatori nella struttura fanno riferimento agli indirizzi nella stringa restituita nell'argomento *ppErrorStrings*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;&#41;OLE DB](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

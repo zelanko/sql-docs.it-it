@@ -1,5 +1,5 @@
 ---
-title: File di intestazione | Microsoft Docs
+title: File di intestazione Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139032"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300191"
 ---
 # <a name="header-files"></a>File di intestazione
-Il file di intestazione SQL. h contiene prototipi per le funzioni e le funzionalità del livello di conformità dell'interfaccia ODBC di base. Il file di intestazione sqlext. h contiene prototipi per le funzioni e le funzionalità nei livelli di conformità dell'API di livello 1 e 2. Il file di intestazione SqlTypes. h contiene le definizioni e gli indicatori di tipo per i tipi di dati SQL.  
+Il file di intestazione Sql.h contiene prototipi per le funzioni e le funzionalità del livello di conformità dell'interfaccia ODBC Core. Il file di intestazione Sqlext.h contiene prototipi per le funzioni e le funzionalità nei livelli di conformità dell'API di livello 1 e di livello 2. Il file di intestazione Sqltypes.h contiene definizioni e indicatori di tipo per i tipi di dati SQL.  
   
- Tutti i file di intestazione contengono un **#define**, ODBCVer, che un'applicazione o un driver può impostare per la compilazione per versioni diverse di ODBC.  
+ Tutti i file di intestazione contengono un **#define**, ODBCVER, che un'applicazione o un driver può impostare per essere compilato per diverse versioni di ODBC.  
   
- Per l'allineamento con l'interfaccia della riga di comando ISO e l'interfaccia della riga di comando Apri gruppo, i file di intestazione contengono alias per i tipi di informazioni usati nelle chiamate a **SQLGetInfo**. Nella tabella seguente la colonna "nome ODBC" indica il nome ODBC per il tipo di informazioni nel [riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La colonna "alias in file di intestazione" indica il nome usato nell'interfaccia della riga di comando ISO e nell'interfaccia della riga di comando del gruppo aperto. Il valore numerico effettivo di questi nomi di manifesto è lo stesso sia in ODBC che nel interfacce della riga standard. Questi alias consentono a un'applicazione o un driver conforme agli standard di compilare con i file di intestazione ODBC *3. x* .  
+ Per allinearsi all'interfaccia della riga di comando ISO e all'interfaccia della riga di comando Apri gruppo, i file di intestazione contengono alias per i tipi di informazioni utilizzati nelle chiamate a **SQLGetInfo.** Nella tabella seguente la colonna "Nome ODBC" indica il nome ODBC per il tipo di informazioni in [Riferimento all'API ODBC.](../../../odbc/reference/syntax/odbc-api-reference.md) La colonna "Alias nel file di intestazione" indica il nome utilizzato nell'interfaccia della riga di comando ISO e nell'interfaccia della riga di comando Apri gruppo. Il valore numerico effettivo di questi nomi di manifesto è lo stesso sia in ODBC che nelle Interfacce di codice standard. Questi alias consentono la compilazione con i file di intestazione ODBC *3.x* con un'applicazione o un driver conforme agli standard.  
   
- Questi alias includono espansioni delle abbreviazioni nei nomi ODBC in modo che i nomi siano più comprensibili. "MAX" viene espanso in "MAXIMum", "LEN" in "LENGTH", "MULT" in "MULTIPLE", "OJ" in "OUTER_JOIN" e "transazione" in "TRANSACTION".  
+ Questi alias includono espansioni di abbreviazioni nei nomi ODBC in modo che i nomi siano più comprensibili. "MAX" viene espanso in "MAXIMUM", "LEN" a "LENGTH", "MULT" a "MULTIPLE", "OJ" a "OUTER_JOIN" e "TXN" a "TRANSACTION".  
   
 |Nome ODBC|Alias nel file di intestazione|  
 |---------------|--------------------------|  

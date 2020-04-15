@@ -1,5 +1,5 @@
 ---
-title: Architetture di accesso al database standard | Microsoft Docs
+title: Architetture standard per l'accesso al database Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b2113167bb3440c0d772a99b4b8098104d7ed11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6e78202eff69e6b30dc1e97d80f464dad75bb201
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129252"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280034"
 ---
 # <a name="standard-database-access-architectures"></a>Architetture standard di accesso ai database
-Esaminando i componenti di accesso al database descritti nella sezione precedente, è emerso che due interfacce di programmazione e protocolli di flusso dei dati sono ottimi candidati per la standardizzazione. Gli altri due componenti, ovvero il meccanismo IPC e i protocolli di rete, non solo si trovano a un livello troppo basso, ma sono entrambi fortemente dipendenti dalla rete e dal sistema operativo. Esiste anche un terzo approccio, ovvero gateway, che offre la possibilità di standardizzare.  
+Esaminando i componenti di accesso al database descritti nella sezione precedente, si scopre che due di essi - interfacce di programmazione e protocolli di flusso di dati - sono buoni candidati per la standardizzazione. Gli altri due componenti - meccanismo IPC e protocolli di rete - non solo risiedono a un livello troppo basso, ma sono entrambi fortemente dipendenti dalla rete e dal sistema operativo. C'è anche un terzo approccio - gateway - che offre possibilità di standardizzazione.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

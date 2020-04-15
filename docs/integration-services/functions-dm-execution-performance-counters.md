@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02892e3768a01ee834598d620300962f1a2bbb56
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037049"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742322"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Funzioni - dm_execution_performance_counters
 
@@ -51,7 +51,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Buffer memoria lineare in uso|Numero di buffer memoria lineare utilizzati dal motore del flusso di dati. Tutti i buffer memoria lineare sono buffer privati.|  
 |Memoria buffer privati|Quantità di memoria utilizzata da tutti i buffer privati. Un buffer privato è un buffer utilizzato da una trasformazione per un'attività temporanea.<br /><br /> Un buffer non è privato se il motore del flusso di dati crea il buffer per il supporto del flusso di dati.|  
 |Buffer privati in uso|Numero di buffer utilizzati dalle trasformazioni pere un'attività temporanea.|  
-|Righe lette|Numero totale di righe pronte l'esecuzione.|  
+|Righe lette|Numero totale di righe lette dall'esecuzione.|  
 |Righe scritte|Numero totale di righe scritte dall'esecuzione.|  
   
 ## <a name="return"></a>Return  

@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216080"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443373"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurare gruppi con scalabilità orizzontale PolyBase in Windows
 
@@ -87,7 +87,10 @@ Al termine dell'installazione, entrambi i computer possono fungere da nodi head 
 3. Eseguire services.msc sul nodo di calcolo, PQTH4A-CMP02.
   
 4. Arrestare il motore PolyBase e riavviare PolyBase Data Movement Service.
-  
+
+> [!NOTE] 
+> Quando il servizio del motore PolyBase viene riavviato o arrestato nel nodo head, i servizi Data Movement Service (DMS) vengono arrestati non appena il canale di comunicazione viene chiuso tra DMS e il servizio motore Polybase (DW). Se il motore DW viene riavviato più di due volte, il servizio DMS passa a un periodo di attesa di 90 minuti e deve attendere 90 minuti per il successivo tentativo di avvio automatico. In questa situazione è necessario avviare manualmente il servizio in tutti i nodi.
+
 ## <a name="optional-remove-a-compute-node"></a>Facoltativo: Rimuovere un nodo di calcolo  
   
 1. Connettersi al nodo di calcolo PQTH4A-CMP02 per SQL Server.

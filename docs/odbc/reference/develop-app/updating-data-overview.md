@@ -1,5 +1,5 @@
 ---
-title: Panoramica sull'aggiornamento dei dati | Microsoft Docs
+title: Panoramica sull'aggiornamento dei dati - Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - updating data [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300387"
 ---
 # <a name="updating-data-overview"></a>Panoramica sull'aggiornamento dei dati
-Le applicazioni possono aggiornare i dati tramite l'esecuzione di istruzioni SQL o la chiamata a **SQLSetPos** o **SQLBulkOperations**. Le istruzioni **Update**, **Delete**e **Insert** agiscono direttamente sull'origine dati e sono in genere supportate dai driver. Le istruzioni Update e Delete ricercate contengono una specifica delle righe da modificare. Le istruzioni Update e Delete posizionate e **SQLSetPos** agiscono sull'origine dati attraverso un cursore e sono meno ampiamente supportate.  
+Le applicazioni possono aggiornare i dati eseguendo istruzioni SQL o chiamando **SQLSetPos** o **SQLBulkOperations**. **Le**istruzioni UPDATE , **DELETE**e **INSERT** agiscono direttamente sull'origine dati e sono in genere supportate dai driver. Le istruzioni di aggiornamento ed eliminazione ricercate contengono una specifica delle righe da modificare. Le istruzioni di aggiornamento ed eliminazione posizionate e **SQLSetPos** agiscono sull'origine dati tramite un cursore e sono meno ampiamente supportate.  
   
- Indica se i cursori possono rilevare le modifiche apportate al set di risultati con i metodi descritti in questa sezione dipendono dal tipo di cursore e dalla relativa modalità di implementazione. I cursori di sola trasmissione non rivisitano le righe e pertanto non rileveranno alcuna modifica. Per informazioni sul fatto che i cursori scorrevoli possano rilevare le modifiche, vedere [cursori scorrevoli](../../../odbc/reference/develop-app/scrollable-cursors.md).  
+ Il fatto che i cursori siano in grado di rilevare le modifiche apportate al set di risultati con i metodi descritti in questa sezione dipende dal tipo di cursore e dalla modalità di implementazione. I cursori forward-only non rivisitano le righe e pertanto non rilevano alcuna modifica. Per informazioni sull'otazione a i cursori scorrevoli in grado di rilevare le modifiche, vedere [Cursori scorrevoli](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

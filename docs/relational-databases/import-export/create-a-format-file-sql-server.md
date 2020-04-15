@@ -1,5 +1,6 @@
 ---
 title: Creare un file di formato (SQL Server) | Microsoft Docs
+description: Quando si esegue l'importazione o l'esportazione bulk di una tabella di SQL Server, un file di formato consente la scrittura di file di dati con poche modifiche o la lettura di file di dati da altri programmi.
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035823"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980483"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68035823"
  In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML.  
   
 > [!NOTE]  
->  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**di** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**di**, ma l'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**di** non può leggere un file di formato versione 11.0 generato dall'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**di**.  
+>  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità **bcp** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] può leggere un file di formato versione 10.0 generato dall'utilità **bcp** di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ma l'utilità **bcp** di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non può leggere un file di formato versione 11.0 generato dall'utilità **bcp** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata ( **-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
   

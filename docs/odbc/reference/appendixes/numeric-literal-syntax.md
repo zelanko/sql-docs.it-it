@@ -1,5 +1,5 @@
 ---
-title: Sintassi di valori letterali numerici | Microsoft Docs
+title: Sintassi dei valori letterali numerici - Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990724"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299861"
 ---
 # <a name="numeric-literal-syntax"></a>Sintassi dei valori letterali numerici
-Per i valori letterali numerici in ODBC viene utilizzata la sintassi seguente:  
+La sintassi seguente viene utilizzata per i valori letterali numerici in ODBC:  
   
- *numeric-Literal* :: = *signed-numeric-Literal &#124; unsigned-numeric-Literal*  
+ *numerico-letterale* :: *: signed-numeric-literal &#124; unsigned-numeric-literal*  
   
- *signed-numeric-Literal* :: = [*segno*] senza *segno-numeric-Literal*  
+ *signed-numeric-literal* :: [*segno*] *unsigned-numeric-literal*  
   
- *unsigned-numeric-Literal* :: = *exact-numeric-Literal &#124; approssimate-numeric-Literal*  
+ *unsigned-numeric-literal* :: : *esatto-numerico-letterale &#124; approssimativo-numerico-letterale*  
   
- *exact-numeric-Literal* :: = *unsigned-integer* [*periodo*[*senza segno-intero*]] *&#124;periodo senza segno-intero*  
+ *exact-numeric-literal* :: *unsigned-integer* [*punto*[*unsigned-integer*]] *&#124;punto unsigned-integer*  
   
- *Sign::* = *più-sign &#124; segno meno*  
+ *segno* :: : *segno più &#124; segno meno*  
   
- *approssimativo-numeric-Literal* :: = *mantissa ed esponente*  
+ *approssimativo-numerico-letterale* :: : *mantissa E esponente*  
   
- *mantissa* :: = *exact-numeric-Literal*  
+ *mantissa* :: *: esatto-numerico-letterale*  
   
- *esponente* :: = *Signed-Integer*  
+ *esponente* :: *: intero con segno*  
   
- *Signed-Integer* :: = [*segno*] senza *segno-intero*  
+ *signed-integer* :: [*segno*] *unsigned-integer*  
   
- *unsigned-integer* :: = *digit...*  
+ *unsigned-integer* :: *cifra...*  
   
- *segno più* :: =*+*  
+ *segno di addito* ::*+*  
   
- *segno meno* :: =-  
+ *segno meno* ::  
   
- *digit* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *cifra* :: 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; &#124; 9 &#124; 0  
   
- *periodo* :: =.
+ *periodo* :: .

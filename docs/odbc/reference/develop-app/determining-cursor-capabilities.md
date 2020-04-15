@@ -1,5 +1,5 @@
 ---
-title: Determinazione delle funzionalità del cursore | Microsoft Docs
+title: Determinazione delle funzionalità del cursore . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - cursors [ODBC], capabilities
 - cursors [ODBC], scrollable
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 984ad8302f2e1695c8df84a64a18042f4cc9e364
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68040001"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305882"
 ---
 # <a name="determining-cursor-capabilities"></a>Determinazione delle funzionalità del cursore
-Le quattro opzioni seguenti in **SQLGetInfo** descrivono quali tipi di cursori sono supportati e quali sono le rispettive funzionalità:  
+Le quattro opzioni seguenti in **SQLGetInfo** descrivono quali tipi di cursori sono supportati e quali sono le relative funzionalità:  
   
 -   SQL_CURSOR_SENSITIVITY. Indica se un cursore è sensibile alle modifiche apportate da un altro cursore.  
   
--   SQL_SCROLL_OPTIONS. Vengono elencati i tipi di cursore supportati (di tipo "solo", statico, gestito da keyset, dinamico o misto). Tutte le origini dati devono supportare i cursori di sola trasmissione.  
+-   SQL_SCROLL_OPTIONS. Elenca i tipi di cursore supportati (forward-only, static, keyset-driven, dynamic o mixed). Tutte le origini dati devono supportare i cursori forward-only.  
   
 -   SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 (a seconda del tipo di cursore). Elenca i tipi di recupero supportati dai cursori scorrevoli. I bit nel valore restituito corrispondono ai tipi di recupero in **SQLFetchScroll**.  
   
--   SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (a seconda del tipo di cursore). Indica se i cursori statici e gestiti da keyset possono rilevare gli aggiornamenti, le eliminazioni e gli inserimenti.  
+-   SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (a seconda del tipo di cursore). Indica se i cursori statici e basati su keyset possono rilevare i propri aggiornamenti, eliminazioni e inserimenti.  
   
- Un'applicazione può determinare le funzionalità del cursore in fase di esecuzione chiamando **SQLGetInfo** con queste opzioni. Questa operazione viene eseguita comunemente dalle applicazioni generiche. Le funzionalità del cursore possono essere determinate anche durante lo sviluppo di applicazioni e il loro utilizzo hardcoded nell'applicazione. Questa operazione viene in genere eseguita da applicazioni verticali e personalizzate, ma può essere eseguita anche da applicazioni generiche che usano un'implementazione del cursore sul lato client, ad esempio la libreria di cursori ODBC.
+ Un'applicazione può determinare le funzionalità del cursore in fase di esecuzione chiamando **SQLGetInfo** con queste opzioni. Questa operazione viene in genere eseguita da applicazioni generiche. Le funzionalità del cursore possono essere determinate anche durante lo sviluppo dell'applicazione e il loro utilizzo hardcoded nell'applicazione. Questa operazione viene in genere eseguita da applicazioni verticali e personalizzate, ma può essere eseguita anche da applicazioni generiche che utilizzano un'implementazione del cursore sul lato client, ad esempio la libreria di cursori ODBC.

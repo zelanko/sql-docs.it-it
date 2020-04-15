@@ -1,5 +1,5 @@
 ---
-title: Supporto SQL Server Native Client per il database locale | Microsoft Docs
+title: Supporto di SQL Server Native Client per LocalDB Documenti Microsoft
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57fe6bd159be275e9a183c1598b5cde5a82a44dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b5114d0c12fe66b564c0e02ffb951b1ae0be809e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303252"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>Supporto SQL Server Native Client per il database locale
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "73761304"
   
 -   [Riferimento al database locale di SQL Server Express](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express local DB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
   
  Riepilogando, il database locale consente di:  
   
--   Utilizzare **SqlLocalDB. exe** i per individuare il nome dell'istanza predefinita.  
+-   Usare **sqllocaldb.exe** per individuare il nome dell'istanza predefinita.  
   
--   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza del database locale quando l'applicazione viene chiusa.  
+-   Usare la parola chiave della stringa di connessione **AttachDBFilename** per specificare a quale file di database si deve collegare il server. Quando si usa **AttachDBFilename**, se non viene specificato il nome del database con la parola chiave della stringa di connessione **Database**, il database sarà rimosso dall'istanza di Local DB quando l'applicazione viene chiusa.  
   
 -   Specificare un'istanza del database locale nella stringa di connessione:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73761304"
 SERVER=(localdb)\v11.0  
 ```  
   
- Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio **SQLCMD-S (locale) \v11.0**.  
+ Se necessario, è possibile creare un'istanza del database locale con sqllocaldb.exe. È possibile utilizzare anche sqlcmd.exe per aggiungere e modificare i database in un'istanza del database locale. Ad esempio, **sqlcmd -S (localdb)\v11.0**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

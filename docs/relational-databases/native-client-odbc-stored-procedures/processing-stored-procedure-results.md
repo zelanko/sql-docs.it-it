@@ -1,5 +1,5 @@
 ---
-title: Elaborazione dei risultati delle stored procedure | Microsoft Docs
+title: Elaborazione dei risultati delle stored procedure Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], results
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9240940a05768dfbc577cf0c5ef40a44a1f7c497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d246756161e129f3f1d4c6efe5192ce39ff777d0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73778927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304540"
 ---
 # <a name="processing-stored-procedure-results"></a>Risultati dell'elaborazione delle stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73778927"
   
 -   La procedura può avere un codice restituito di tipo integer.  
   
- Le applicazioni devono essere in grado di gestire tutti questi output dalle stored procedure. L'istruzione CALL o EXECUTE deve includere marcatori di parametro per il codice restituito e i parametri di output. Utilizzare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per associarli tutti come parametri di output e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il driver ODBC di Native Client trasferirà i valori di output alle variabili associate. I parametri di output e i codici restituiti sono gli ultimi elementi restituiti al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]client da. non vengono restituiti all'applicazione fino a quando [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) non restituisce SQL_NO_DATA.  
+ Le applicazioni devono essere in grado di gestire tutti questi output dalle stored procedure. L'istruzione CALL o EXECUTE deve includere marcatori di parametro per il codice restituito e i parametri di output. Utilizzare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per associare tutti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parametri di output e il driver ODBC Di client nativo trasferirà i valori di output alle variabili associate. I parametri di output e i codici restituiti sono gli ultimi elementi restituiti al client da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; non vengono restituiti all'applicazione fino a quando [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA.  
   
  ODBC non supporta i parametri di cursore [!INCLUDE[tsql](../../includes/tsql-md.md)] di associazione. Dal momento che tutti i parametri di output devono essere associati prima di eseguire una stored procedure, le stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] che contengono un parametro di cursore di output non possono essere chiamate dalle applicazioni ODBC.  
   

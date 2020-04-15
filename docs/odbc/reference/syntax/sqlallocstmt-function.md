@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLAllocStmt | Microsoft Docs
+title: 'Funzione SQLAllocStmt : Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,25 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC]
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54aeb0ecd88509f9390103e8e476bb0f3cb60440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b45dd8444d5ca2511672952e0637cc3cc500c5d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298751"
 ---
 # <a name="sqlallocstmt-function"></a>Funzione SQLAllocStmt
 **Conformità**  
- Versione introdotta: conformità agli standard ODBC 1,0: deprecato  
+ Versione introdotta: ODBC 1.0 Standards Compliance: Deprecated  
   
- **Summary**  
- In ODBC 3. *x*, ODBC 2. la funzione *x* **SQLAllocStmt** è stata sostituita da **SQLAllocHandle**. Per altre informazioni, vedere [funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ **Riepilogo**  
+ In ODBC 3. *x*, ODBC 2. *X* funzione **SQLAllocStmt** è stata sostituita da **SQLAllocHandle**. Per ulteriori informazioni, vedere [Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni su ciò che Gestione driver esegue il mapping di questa funzione a quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* , vedere [mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Appendice G: linee guida per la compatibilità con le versioni precedenti.  
+>  Per ulteriori informazioni su ciò che Gestione Driver esegue il mapping di questa funzione a quando un ODBC 2. *l'applicazione x* funziona con un'applicazione ODBC 3. *x,* vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'Appendice G: Linee guida del driver per la compatibilità con le versioni precedenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Guida di riferimento all'API ODBCODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

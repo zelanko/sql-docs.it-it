@@ -1,6 +1,6 @@
 ---
 title: COALESCE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Informazioni di riferimento Transact-SQL per COALESCE, che restituisce il valore della prima espressione che non restituisce NULL.
 ms.date: 08/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e3692da70cf2d503dc994646a6cb2e92a05fe94
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950299"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517679"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C: esempio semplice  
+### <a name="c-simple-example"></a>C: Esempio semplice  
 Nell'esempio seguente viene illustrato come `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. Si supponga per questo esempio che la tabella `Products` contenga i dati seguenti:  
   
 ```  
@@ -219,7 +219,7 @@ NULL         White      PN9876         White
   
 Si noti che nella prima riga, il valore `FirstNotNull` è `PN1278`, non `Socks, Mens`. Questo valore è determinato dal fatto che la colonna `Name`non è stata specificata come parametro per `COALESCE` nell'esempio.  
   
-### <a name="d-complex-example"></a>D: esempio complesso  
+### <a name="d-complex-example"></a>D: Esempio complesso  
 L'esempio seguente usa `COALESCE` per confrontare i valori in tre colonne e restituire solo il valore non Null trovato nelle colonne.  
   
 ```sql  

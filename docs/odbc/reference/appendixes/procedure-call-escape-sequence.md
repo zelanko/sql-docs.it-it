@@ -1,5 +1,5 @@
 ---
-title: Sequenza di escape della chiamata di procedura | Microsoft Docs
+title: Sequenza di fuga delle chiamate di routine Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,60 +12,60 @@ helpviewer_keywords:
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1194efe6a21c456a722ccd4352661c998f0316d9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100595"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298221"
 ---
 # <a name="procedure-call-escape-sequence"></a>Sequenza di escape per chiamata di procedura
-ODBC utilizza sequenze di escape per le chiamate di routine. La sintassi di questa sequenza di escape è la seguente:  
+ODBC utilizza sequenze di escape per le chiamate di routine. La sintassi di questa sequenza di escape è la seguente:The syntax of this escape sequence is as follows:  
   
- **{**[? =]**Call** *-routine-nome*[**(**[*parametro*] [, [*parametro*]]... **)**]**}**  
+ **[?]]****chiama** il *nome della routine*[**(**[*parametro*][,[*parametro*]]... **)**]**}**  
   
- Nella notazione BNF la sintassi è la seguente:  
+ Nella notazione BNF, la sintassi è la seguente:  
   
- *ODBC-procedura-Escape* :: =  
+ *ODBC-procedure-escape* ::  
   
- &#124; *ODBC-ESC-initiator* [? =] *procedura di chiamata ODBC-ESC-Terminator*  
+ &#124;'inseguitore di chiamata *ODBC-esc-initiator* [? *procedure ODBC-esc-terminator*  
   
- *procedura* :: = *nome-* procedura &#124; *Procedura-nome* (routine-*parameter-list*)  
+ *procedura* :: *nome-procedura* &#124; *nome-procedura* (*procedure-parametro-elenco*)  
   
- *procedure-Identifier* :: = *nome-definito dall'utente*  
+ *identificatore-procedura* :: : *nome definito dall'utente*  
   
- *routine-Name* :: = *ID procedura*  
+ *nome-procedura* :: : *identificatore-procedura*  
   
- &#124; *nome-proprietario*. *identificatore di routine*  
+ &#124; *nome-proprietario*. *identificatore della procedura*  
   
- &#124; catalogo *-nome catalogo-procedura separatore* *-identificatore*  
+ &#124; *identificatore-procedura di separazione-catalogo-nome-catalogo* *procedure-identifier*  
   
- &#124; nome-catalogo- *separatore* [nome-*proprietario*]. *identificatore di routine*  
+ &#124; *separatore-catalogo-nome-catalogo* [*nome-proprietario*]. *identificatore della procedura*  
   
  La terza sintassi è valida solo se l'origine dati non supporta i proprietari.  
   
- nome- *proprietario* :: = *nome-definito dall'utente*  
+ *proprietario-nome* :: : *nome-definito dall'utente*  
   
- nome- *Catalogo* :: = *nome-definito dall'utente*  
+ *nome-catalogo* :: *nome-definito dall'utente*  
   
- *separatore di catalogo* :: = {*definito dall'implementazione*}  
+ *separatore di catalogo* *implementation-defined*::  
   
- Il separatore di catalogo viene restituito tramite **SQLGetInfo** con l'opzione SQL_CATALOG_NAME_SEPARATOR Information.  
+ Il separatore del catalogo viene restituito tramite **SQLGetInfo** con l'opzione di informazioni SQL_CATALOG_NAME_SEPARATOR.  
   
- *routine-parameter-list* :: = *parametro di routine*  
+ *procedura-parametro-elenco* :: *: parametro-procedura*  
   
- Routine di &#124; *parametro*, *procedure-parameter-list*  
+ &#124; *parametro-procedura*, *procedure-parameter-list*  
   
- *routine-Parameter* :: = *parametro dinamico* &#124; *valore letterale* &#124; *stringa vuota*  
+ *procedura-parametro* :: : *parametro dinamico* &#124; *valore letterale* &#124; *stringa vuota*  
   
- *stringa vuota* :: =  
+ *stringa vuota* ::  
   
- *ODBC-ESC-initiator* :: = {  
+ *ODBC-esc-initiator* ::  
   
- *ODBC-ESC-Terminator* :: =}  
+ *Carattere di terminazione ODBC-esc::: *  
   
- Se un parametro di routine è una stringa vuota, la procedura utilizzerà il valore predefinito per il parametro.  
+ Se un parametro di routine è una stringa vuota, la routine utilizza il valore predefinito per tale parametro.  
   
- Per determinare se l'origine dati supporta le procedure e se il driver supporta la sintassi di chiamata della procedura ODBC, un'applicazione può chiamare **SQLGetInfo** con il tipo di informazioni SQL_PROCEDURES.
+ Per determinare se l'origine dati supporta le procedure e il driver supporta la sintassi di chiamata di procedura ODBC, un'applicazione può chiamare **SQLGetInfo** con il tipo di informazioni SQL_PROCEDURES.

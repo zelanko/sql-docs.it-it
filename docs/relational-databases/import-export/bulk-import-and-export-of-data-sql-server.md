@@ -1,5 +1,6 @@
 ---
 title: Informazioni sull'importazione ed esportazione bulk di dati (SQL Server) | Microsoft Docs
+description: SQL Server supporta l'esportazione bulk dei dati da una tabella di SQL Server e l'importazione bulk dei dati in una tabella o in una vista non partizionata di SQL Server.
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74c9d7286363984825d51fb3598f246da422f88d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71680817"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980493"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Informazioni sull'importazione ed esportazione bulk di dati (SQL Server)
 
@@ -60,7 +61,7 @@ ms.locfileid: "71680817"
 
 ## <a name="format-files"></a><a name="FFs"></a> File di formato
 
-[utilità bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) supportano l'uso di un *file di formato* specializzato che archivia le informazioni sul formato di ogni campo in un file di dati. Un file di formato può inoltre contenere informazioni sulla tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente. Il file di formato può essere utilizzato per specificare tutte le informazioni sul formato necessarie per l'esportazione e l'importazione bulk dei dati da e verso un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+[utilità bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) supportano l'uso di un *file di formato* specializzato che archivia le informazioni sul formato di ogni campo in un file di dati. Un file di formato può inoltre contenere informazioni sulla tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente. Il file di formato può essere utilizzato per specificare tutte le informazioni sul formato necessarie per l'esportazione e l'importazione bulk dei dati da e verso un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]
 > Non è possibile usare BCP per importare o esportare i dati in Archiviazione BLOB di Azure nel database SQL di Azure. Usare [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) per eseguire l'importazione o l'esportazione in Archiviazione BLOB di Azure.

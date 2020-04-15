@@ -1,5 +1,6 @@
 ---
 title: Specificare i caratteri di terminazione del campo e della riga (SQL Server) | Microsoft Docs
+description: I caratteri di terminazione del campo e della riga indicano ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 151254168260a2d7a5a48747daee4de662bdfb70
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062556"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980537"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

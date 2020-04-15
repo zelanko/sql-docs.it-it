@@ -1,6 +1,6 @@
 ---
 title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Informazioni di riferimento Transact-SQL per l'uso delle espressioni di tabella comuni (CTE) nelle query.
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -27,12 +27,12 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d82ec259664eaa0573f841b9fea21fd705b23ee5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287305"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517599"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Identificatore valido per l'espressione di tabella comune. *expression_name* dev
  *CTE_query_definition*  
  Specifica un'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune. L'istruzione SELECT per *CTE_query_definition* deve soddisfare gli stessi requisiti necessari per creare una vista, con la differenza che una CTE non può definire un'altra CTE. Per altre informazioni, vedere la sezione Osservazioni e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se si definiscono più *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Se si definiscono più elementi *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
 ## <a name="remarks"></a>Osservazioni  
   

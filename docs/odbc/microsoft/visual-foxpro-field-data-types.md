@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati dei campi di Visual FoxPro | Microsoft Docs
+title: Tipi di dati di campo di Visual FoxPro Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - field data types [ODBC]
 - Visual FoxPro ODBC driver [ODBC], data types
 ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 72313e0269c93bca9cb2561d89604c3c88c8567b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087948"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304802"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Tipi di dati dei campi Visual FoxPro
-Nella tabella seguente sono elencati i valori per l'argomento *FieldType* in alter table e create table e viene indicato se sono necessari gli argomenti *nFieldWidth* e *nPrecision* .  
+Nella tabella seguente sono elencati i valori per l'argomento *FieldType* in ALTER TABLE e CREATE TABLE e viene indicato se sono necessari gli argomenti *nFieldWidth* e *nPrecision.*  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*|Descrizione|  
+|*Fieldtype*|*NFieldWidth (LarghezzaCampo)*|*nPrecisione*|Descrizione|  
 |-----------------|-------------------|------------------|-----------------|  
-|b|-|d|DOUBLE|  
+|b|-|d|Double|  
 |C|N|-|Campo carattere della larghezza *n*|  
 |D|-|-|Data|  
-|F|N|d|Campo numerico a virgola mobile con larghezza *n* con *d* posizioni decimali|  
+|F|N|d|Campo numerico mobile della larghezza *n* con posizioni decimali *d*|  
 |G|-|-|Generale|  
 |I|-|-|Integer|  
 |L|-|-|Logico|  
 |M|-|-|Memo|  
-|N|N|d|Campo numerico della larghezza *n* con *d* posizioni decimali|  
+|N|N|d|Campo numerico della larghezza *n* con posizioni decimali *d*|  
 |T|-|-|Datetime|  
 |S|-|-|Valuta|

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f01c5e43d7d451cbcdca30dd66cf2ca70227541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759342"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305347"
 ---
 # <a name="stored-procedures---running"></a>Stored procedure - Esecuzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73759342"
   
 -   Maggior numero di funzionalità.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta tre dei meccanismi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzati dalle stored procedure per restituire i dati:  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tre dei meccanismi utilizzati dalle stored procedure per restituire i dati:  
   
 -   Ogni istruzione SELECT nella procedura genera un set di risultati.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "73759342"
   
  L'applicazione deve essere in grado di gestire tutti questi output dalle stored procedure.  
   
- Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati. Nel caso del provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di OLE DB di Native client, i parametri di output e i codici restituiti non vengono forniti fino a quando il consumer non ha recuperato o annullato i set di risultati restituiti dall'stored procedure. I codici e i parametri di output vengono restituiti nell'ultimo pacchetto TDS dal server.  
+ Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati. Nel caso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del provider OLE DB Native Client, i parametri di output e i codici restituiti non vengono forniti fino a quando il consumer non ha recuperato o annullato i set di risultati restituiti dalla stored procedure. I codici e i parametri di output vengono restituiti nell'ultimo pacchetto TDS dal server.  
   
  I provider utilizzano la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY per segnalare la restituzione di parametri di output e valori. Questa proprietà è inclusa nel set di proprietà DBPROPSET_DATASOURCEINFO.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client imposta la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY su DBPROPVAL_OA_ATROWRELEASE per indicare che i codici restituiti e i parametri di output non vengono restituiti finché il set di risultati non viene elaborato o rilasciato.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client imposta la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY oLE DB su DBPROPVAL_OA_ATROWRELEASE per indicare che i codici restituiti e i parametri di output non vengono restituiti fino a quando il set di risultati non viene elaborato o rilasciato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure](../../../relational-databases/native-client/ole-db/stored-procedures.md)  

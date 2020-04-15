@@ -1,7 +1,7 @@
 ---
 title: Monitoraggio delle prestazioni con Query Store | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448172"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012417"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 
@@ -34,9 +34,9 @@ Per informazioni sul funzionamento di Query Store nel [!INCLUDE[ssSDS](../../inc
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Abilitazione di Archivio query
 
- Per impostazione predefinita, la funzionalità Archivio query non è attiva per i nuovi database.
+ Per impostazione predefinita, Query Store non è abilitato per i nuovi database di SQL Server e Azure Synapse Analytics (SQL DW) ed è abilitato per impostazione predefinita per i nuovi database di database SQL di Azure.
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Usare la pagina Archivio query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Usare la pagina Archivio query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. In Esplora oggetti fare clic con il pulsante destro del mouse su un database e quindi scegliere **Proprietà**.
 
@@ -47,7 +47,7 @@ Per informazioni sul funzionamento di Query Store nel [!INCLUDE[ssSDS](../../inc
 
 3. Nella casella **Modalità operativa (richiesta)** selezionare **Lettura/Scrittura**.
 
-## <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL
+### <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL
 
 Per abilitare Query Store per un determinato database, usare l'istruzione **ALTER DATABASE**. Ad esempio:
 

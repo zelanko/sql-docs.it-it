@@ -1,5 +1,5 @@
 ---
-title: Lunghezza dei dati della colonna | Microsoft Docs
+title: Lunghezza dei dati della colonna Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d2998eace4772624a1e6590ab2541577147f5c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0b7ad515661cce4c5b1d407be768cc3da131bb4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304932"
 ---
 # <a name="length-of-column-data"></a>Lunghezza dei dati di colonna
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità del cursore del driver.  
   
- La libreria di cursori crea un buffer nella cache per ogni buffer di lunghezza/indicatore associato al set di risultati con **SQLBindCol**. USA i valori in questi buffer per costruire una clausola **where** quando emula le istruzioni Update o DELETE posizionate. Aggiorna questi buffer dai buffer del set di righe quando recupera i dati dall'origine dati e quando esegue istruzioni UPDATE posizionate.  
+ La libreria di cursori crea un buffer nella cache per ogni buffer di lunghezza/indicatore associato al set di risultati con **SQLBindCol**. Utilizza i valori in questi buffer per costruire una clausola **WHERE** quando emula istruzioni di aggiornamento o eliminazione posizionate. Aggiorna questi buffer dai buffer del set di righe quando recupera i dati dall'origine dati e quando esegue istruzioni di aggiornamento posizionate.  
   
  Se il tipo C di un buffer di dati è SQL_C_CHAR o SQL_C_BINARY e il valore di lunghezza/indicatore è SQL_NTS, la lunghezza della stringa dei dati viene inserita nel buffer di lunghezza/indicatore.  
   
 > [!NOTE]  
->  La libreria di cursori non aggiorna la relativa cache per una colonna se **StrLen_or_IndPtr* nel buffer del set di righe corrispondente è SQL_DATA_AT_EXEC o il risultato della macro SQL_LEN_DATA_AT_EXEC.
+>  La libreria di cursori non aggiorna la cache per una colonna*StrLen_or_IndPtr* se nel buffer del set di righe corrispondente è SQL_DATA_AT_EXEC o il risultato della macro SQL_LEN_DATA_AT_EXEC.

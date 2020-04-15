@@ -21,12 +21,12 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbedcb09ba05ff427fbae722a9223d902f2c438d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1179633f88bef025648b08892859e73b06f14b8
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71271966"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550145"
 ---
 # <a name="database-identifiers"></a>Identificatori del database
 
@@ -37,7 +37,7 @@ ms.locfileid: "71271966"
 
 ```sql
 CREATE TABLE TableX
-(KeyCol INT PRIMARY KEY, Description nvarchar(80))
+(KeyCol INT PRIMARY KEY, Description nvarchar(80));
 ```
 
  La tabella include inoltre un vincolo senza nome. Il vincolo `PRIMARY KEY` è privo di identificatore.
@@ -48,34 +48,55 @@ CREATE TABLE TableX
 > È necessario che i nomi di variabili o i parametri di funzioni e stored procedure siano conformi alle regole relative agli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
 ## <a name="classes-of-identifiers"></a>Classi di identificatori
+Esistono due classi di identificatori:
 
- Esistono due classi di identificatori:
+-  Identificatori regolari    
+   Sono conformi alle regole relative al formato degli identificatori. Gli identificatori regolari non vengono delimitati quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
- Gli identificatori regolari sono conformi alle regole per il formato degli identificatori. Gli identificatori regolari non vengono delimitati quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM HumanResources.Employee
+   WHERE NationalIDNumber = 153479919
+   ```
+
+-  Identificatori delimitati    
+   Sono racchiusi tra virgolette doppie (") o tra parentesi quadre ([ ]). Gli identificatori conformi alle regole relative al formato degli identificatori possono non essere delimitati. Ad esempio:
+
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM [HumanResources].[Employee] --Delimiter is optional.
+   WHERE [NationalIDNumber] = 153479919 --Delimiter is optional.
+   ```
+
+All'interno di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] è necessario che gli identificatori non conformi alle regole relative agli identificatori siano delimitati. Ad esempio:
 
 ```sql
+USE AdventureWorks
+GO
+CREATE TABLE [SalesOrderDetail Table] --Identifier contains a space and uses a reserved keyword.
+(
+    [Order] [int] NOT NULL,
+    [SalesOrderDetailID] [int] IDENTITY(1,1) NOT NULL,
+    [OrderQty] [smallint] NOT NULL,
+    [ProductID] [int] NOT NULL,
+    [UnitPrice] [money] NOT NULL,
+    [UnitPriceDiscount] [money] NOT NULL,
+    [ModifiedDate] [datetime] NOT NULL,
+  CONSTRAINT [PK_SalesOrderDetail_Order_SalesOrderDetailID] PRIMARY KEY CLUSTERED 
+  ([Order] ASC, [SalesOrderDetailID] ASC)
+);
+GO
+
 SELECT *
-FROM TableX
-WHERE KeyCol = 124
+FROM [SalesOrderDetail Table]  --Identifier contains a space and uses a reserved keyword.
+WHERE [Order] = 10;            --Identifier is a reserved keyword.
 ```
 
- Gli identificatori delimitati sono racchiusi tra virgolette doppie (") o parentesi quadre ([]). Gli identificatori conformi alle regole relative al formato degli identificatori possono non essere delimitati. Ad esempio:
-
-```sql
-SELECT *
-FROM [TableX]         --Delimiter is optional.
-WHERE [KeyCol] = 124  --Delimiter is optional.
-```
-
- All'interno di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] è necessario che gli identificatori non conformi alle regole relative agli identificatori siano delimitati. Ad esempio:
-
-```sql
-SELECT *
-FROM [My Table]      --Identifier contains a space and uses a reserved keyword.
-WHERE [order] = 10   --Identifier is a reserved keyword.
-```
-
- Sia gli identificatori regolari che quelli delimitati devono includere da 1 a 128 caratteri. Gli identificatori delle tabelle temporanee locali possono includere al massimo 116 caratteri.
+Sia gli identificatori regolari che quelli delimitati devono includere da 1 a 128 caratteri. Gli identificatori delle tabelle temporanee locali possono includere al massimo 116 caratteri.
 
 ## <a name="rules-for-regular-identifiers"></a>Regole relative agli identificatori regolari
  È necessario che i nomi di variabili, funzioni e stored procedure siano conformi alle seguenti regole relative agli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)] .
@@ -84,11 +105,11 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
     -   Una lettera definita dallo standard Unicode 3,2, ovvero i caratteri dell'alfabeto latino a-z e A-Z e i caratteri di altre lingue.
 
-    -   Il carattere di sottolineatura (_), il simbolo di chiocciola (@) o il simbolo di cancelletto (#).
+    -   Il carattere di sottolineatura (\_), il simbolo di chiocciola (@) o il simbolo di cancelletto (#).
 
-         Alcuni caratteri utilizzati all'inizio di un identificatore assumono un significato particolare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un identificatore regolare che inizia con il carattere @ indica sempre una variabile locale o un parametro e non può essere utilizzato per il nome di un tipo di oggetto diverso. il carattere # indica una tabella o una procedura temporanea, mentre due simboli di cancelletto (##) indicano un oggetto temporaneo globale. Nonostante sia possibile usare uno o due simboli di cancelletto all'inizio dei nomi di altri tipi di oggetti, è consigliabile non adottare questa tecnica.
+        Alcuni caratteri utilizzati all'inizio di un identificatore assumono un significato particolare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un identificatore regolare che inizia con il carattere @ indica sempre una variabile locale o un parametro e non può essere utilizzato per il nome di un tipo di oggetto diverso. il carattere # indica una tabella o una procedura temporanea, mentre due simboli di cancelletto (##) indicano un oggetto temporaneo globale. Nonostante sia possibile usare uno o due simboli di cancelletto all'inizio dei nomi di altri tipi di oggetti, è consigliabile non adottare questa tecnica.
 
-         I nomi di alcune funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] iniziano con due simboli di chiocciola (@@). Per evitare confusione in merito a tali funzioni, è consigliabile non usare nomi che iniziano con @@.
+        I nomi di alcune funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] iniziano con due simboli di chiocciola (@@). Per evitare confusione in merito a tali funzioni, è consigliabile non usare nomi che iniziano con @@.
 
 2.  I caratteri successivi possono includere gli elementi seguenti:
 
@@ -102,7 +123,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
 4.  Non sono consentiti spazi incorporati o caratteri speciali.
 
-5.  Non sono consentiti caratteri supplementari.
+5.  Non sono consentiti [caratteri supplementari](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).
 
  Quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , gli identificatori non conformi a queste regole devono essere racchiusi tra virgolette doppie o parentesi quadre.
 
@@ -110,18 +131,17 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > Alcune regole relative al formato degli identificatori regolari dipendono dal livello di compatibilità del database. È possibile impostare tale livello con [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 ## <a name="see-also"></a>Vedere anche
-
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
-- [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
-- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
-- [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
-- [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
-- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
-- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
-- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-- [Parole chiave riservate &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
-- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+[CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+[CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
+[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
+[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[Parole chiave riservate &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  

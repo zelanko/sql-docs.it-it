@@ -1,5 +1,5 @@
 ---
-title: Stato di sola lettura (driver file di testo) | Microsoft Docs
+title: Stato di sola lettura (Driver file di testo) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - read-only status for text driver [ODBC]
 - text file driver [ODBC], read-only status
 ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e253b3ad8144a75ca3c176c9d9fce94a7e4ec47f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 934d125b8e50d0c3d1c98fdb8b7ec1cdc7bc2e88
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988037"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304862"
 ---
 # <a name="read-only-status-text-file-driver"></a>Stato di sola lettura (driver file di testo)
-Quando si utilizza il driver di testo, le tabelle dell'origine dati sono di sola lettura. Tuttavia, le applicazioni possono eseguire inserimenti per le tabelle di testo.
+Quando viene utilizzato il driver di testo, le tabelle dell'origine dati sono di sola lettura. Tuttavia, le applicazioni possono eseguire inserimenti per le tabelle di testo.

@@ -1,6 +1,6 @@
 ---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Informazioni di riferimento Transact-SQL per la funzione SUBSTRING. Questa funzione restituisce una parte di un'espressione di tipo carattere, binario, testo o immagine specificata.
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68618e0dbafd152c8bdba71f0abf4b7c0b99bdac
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117670"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517088"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Argomenti  
  *expression*  
- È un'**espressione** di tipo **character**, **binary**, **text**, **ntext** o [image](../../t-sql/language-elements/expressions-transact-sql.md).  
+ È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **character**, **binary**, **text**, **ntext** o **image**.  
   
  *start*  
  Valore intero o espressione **bigint** che specifica l'inizio dei caratteri restituiti. (La numerazione è in base 1, ovvero il primo carattere dell'espressione è 1). Se *start* è minore di 1, l'espressione restituita inizierà con il primo carattere specificato in *expression*. In questo caso, il numero di caratteri restituito è il valore maggiore tra la somma di *start* + *length*- 1 oppure 0. Se *start* è maggiore del numero di caratteri nell'espressione valore, viene restituita un'espressione di lunghezza zero.  
@@ -87,10 +87,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |st |
-|tempdb  |t  |mp |
-|model   |m  |de |
-|msdb    |m  |db |
+|master    |m    |st |
+|tempdb    |t    |mp |
+|model    |m    |de |
+|msdb    |m    |db |
 
 
   

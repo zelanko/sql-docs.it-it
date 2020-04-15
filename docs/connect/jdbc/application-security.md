@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 650a298b9cc67b24c33f3da370a8a1b6de6ac63b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922666"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219440"
 ---
 # <a name="application-security"></a>Sicurezza dell'applicazione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,9 +59,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  Il codice "file:/install_dir/lib/-" fa riferimento alla directory di installazione del driver JDBC.  
   
 ## <a name="protecting-server-communication"></a>Protezione delle comunicazioni con il server  
- Quando si usa il driver JDBC per comunicare con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile proteggere il canale di comunicazione usando il protocollo IPSec (Internet Protocol Security) o SSL (Secure Sockets Layer) oppure entrambi.  
+ Quando si usa il driver JDBC per comunicare con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile proteggere il canale di comunicazione usando il protocollo IPSec (Internet Protocol Security) o Transport Layer Security (TLS), noto in precedenza come SSL (Secure Sockets Layer), oppure entrambi.  
   
- Il supporto SSL può essere utilizzato per fornire un livello aggiuntivo di protezione oltre a IPsec. Per altre informazioni sull'uso di SSL, vedere [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md).  
+ Il supporto di TLS può essere usato per fornire un livello aggiuntivo di protezione oltre a IPSec. Per altre informazioni sull'uso di TLS, vedere [Uso della crittografia](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

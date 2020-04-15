@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati (OLE DB) | Microsoft Docs
+title: Oggetti di origine dati (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,28 +16,28 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - CLSID
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2683cdc7762f1f500918edce436153e0130d04bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d8bb984c789f759eb764ad580f971ab71c9fc946
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758261"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297686"
 ---
 # <a name="data-source-objects-ole-db"></a>Oggetti origine dati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native client usa il termine origine dati per il set di interfacce di OLE DB utilizzate per stabilire un collegamento a un archivio dati, ad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esempio. La creazione di un'istanza dell'oggetto origine dati del provider è la prima attività di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer di Native Client.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client utilizza il termine origine dati per il set di interfacce OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB utilizzato per stabilire un collegamento a un archivio dati, ad esempio . La creazione di un'istanza dell'oggetto origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del provider è la prima attività di un consumer Native Client.  
   
- Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. Il CLSID per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client è il GUID C/C++ CLSID_SQLNCLI10 (il simbolo SQLNCLI_CLSID verrà risolto nel ProgID corretto nel file sqlncli. h a cui si fa riferimento). Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
+ Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. Il CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il provider OLE DB di Native Client è il SQLNCLI_CLSID CLSID_SQLNCLI10 GUID C/C Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client è un server in-process. Le istanze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native client OLE DB oggetti provider vengono creati utilizzando la macro CLSCTX_INPROC_SERVER per indicare il contesto eseguibile.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client è un server in-process. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanze degli oggetti provider OLE DB di Native Client vengono create utilizzando la macro CLSCTX_INPROC_SERVER per indicare il contesto eseguibile.  
   
- L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto origine dati del provider OLE DB di Native Client espone le interfacce di inizializzazione OLE DB che consentono al consumer di connettersi ai database esistenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ L'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati del provider OLE DB Native Client espone le interfacce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di inizializzazione OLE DB che consentono al consumer di connettersi ai database esistenti.  
   
- Ogni connessione effettuata tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client imposta automaticamente queste opzioni:  
+ Ogni connessione effettuata tramite il provider OLE DB Native Client imposta automaticamente queste opzioni:Every connection made through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider sets these options automatically:  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73758261"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- Questo esempio usa la macro identificatore di classe per creare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un oggetto origine dati del provider OLE DB di Native client e ottenere un riferimento all'interfaccia **IDBInitialize** .  
+ In questo esempio viene utilizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la macro dell'identificatore di classe per creare un oggetto origine dati del provider OLE DB Native Client e ottenere un riferimento alla relativa interfaccia **IDBInitialize.**  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,13 +72,13 @@ else
 }  
 ```  
   
- Con la corretta creazione di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un oggetto origine dati del provider OLE DB di Native client, l'applicazione consumer può continuare inizializzando l'origine dati e creando sessioni. Le sessioni OLE DB presentano le interfacce che consentono l'accesso ai dati e la relativa modifica.  
+ Con la corretta creazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'istanza di un oggetto origine dati oLE DB Native Client, l'applicazione consumer può continuare inizializzando l'origine dati e creando sessioni. Le sessioni OLE DB presentano le interfacce che consentono l'accesso ai dati e la relativa modifica.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client effettua la prima connessione a un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata di come parte di un'inizializzazione dell'origine dati completata correttamente. La connessione viene mantenuta a condizione che venga mantenuto un riferimento in una delle interfacce di inizializzazione dell'origine dati o fino a quando non viene chiamato il metodo **IDBInitialize::Uninitialize**.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client effettua la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prima connessione a un'istanza specificata di come parte di una corretta inizializzazione dell'origine dati. La connessione viene mantenuta a condizione che venga mantenuto un riferimento in una delle interfacce di inizializzazione dell'origine dati o fino a quando non viene chiamato il metodo **IDBInitialize::Uninitialize**.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Proprietà dell'origine dati &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [Proprietà delle origini dati &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [Proprietà delle informazioni sulle origini dati](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -86,7 +86,7 @@ else
   
 -   [Sessioni](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md)  
   
--   [Proprietà sessione - Provider OLE DB di SQL Server Native Client](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
+-   [Proprietà della sessione - Provider OLE DB di SQL Server Native Client](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
   
 -   [Oggetti origine dati persistenti](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
   

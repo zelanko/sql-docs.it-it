@@ -11,12 +11,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60026dd35a22ccf5ea693619912ef1aadab77745
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7afb01d003e6221b30ea194ff711555b7e982f41
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165705"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873177"
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 
@@ -40,7 +40,7 @@ In SQL Server 2016 è stato introdotto il supporto per le tabelle temporali (not
   - [Uso di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
   - [Modifica dei dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
   - [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
-  - **Download del database di esempio Adventure Works:** Per iniziare a usare le tabelle temporali, scaricare il [database AdventureWorks per SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502), che contiene esempi di script, e seguire le istruzioni nella cartella Temporal
+  - **Download del database di esempio Adventure Works:** Per iniziare a usare le tabelle temporali, scaricare il [database AdventureWorks per SQL Server](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak), che contiene esempi di script, e seguire le istruzioni nella cartella 'Temporal'
 
 - **Sintassi:**
 

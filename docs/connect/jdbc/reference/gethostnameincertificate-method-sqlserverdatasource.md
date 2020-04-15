@@ -15,17 +15,17 @@ apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab96bdce224a8442926054e2f1f02f8855fbb237
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5f35af25109bc68a36560c6496cf5f5268bd9319
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921503"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219260"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>Metodo getHostNameInCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce il nome host utilizzato per la convalida del certificato SSL (Secure Sockets Layer) di SQL Server.  
+  Restituisce il nome host usato per convalidare il certificato Transport Layer Security (TLS) di SQL Server, noto in precedenza come Secure Sockets Layer (SSL).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ public java.lang.String getHostNameInCertificate()
  Valore **String** contenente il nome host oppure Null se non è impostato alcun valore.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il nome host viene utilizzato per la convalida del valore del certificato SSL di SQL Server quando il livello di comunicazione è crittografato tramite SSL.  
+ Il nome host viene usato per la convalida del valore del certificato TLS/SSL di SQL Server quando il livello di comunicazione è crittografato tramite TLS/SSL.  
   
  Se il nome host non è impostato, il metodo [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) restituisce Null.  
   

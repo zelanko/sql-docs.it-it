@@ -1,5 +1,5 @@
 ---
-title: Schema (driver file di testo) | Microsoft Docs
+title: Schema (Driver file di testo) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], schema
 ms.assetid: 27f1b65e-e04d-457f-bd49-02deb3873613
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c52780ab67acf072a3ee61ce1ebd07fc18c0d40e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 46fd8fd41aff394c117a5a0247f187af86049f6a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306632"
 ---
 # <a name="schema-text-file-driver"></a>Schema (driver file di testo)
-Nello schema sono incluse informazioni su ogni tabella (file di testo) in un'origine dati, inclusi il formato della tabella, il numero di righe da analizzare per determinare i tipi di colonna, se la prima riga della tabella contiene nomi di colonna, se il file di origine viene scritto utilizzando un OEM o Tabella codici ANSI e nome, tipo di dati e larghezza di ogni colonna.
+Lo schema include informazioni su ogni tabella (file di testo) in un'origine dati, incluso il formato della tabella, il numero di righe da cercare per determinare i tipi di colonna, se la prima riga della tabella contiene nomi di colonna, se il file di origine viene scritto utilizzando una tabella codici OEM o ANSI e il nome, il tipo di dati e la larghezza di ogni colonna.

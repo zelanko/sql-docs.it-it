@@ -1,5 +1,5 @@
 ---
-title: Sottochiave origini dati ODBC | Microsoft Docs
+title: Sottochiave Origini dati ODBC - Documenti Microsoft
 ms.custom: ''
 ms.date: 09/23/2019
 ms.prod: sql
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - data sources [ODBC], subkeys
 - registry entries for data sources [ODBC], subkeys
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5e97e643a78187b15e91833c832cd16ca435c7f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "71207684"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304059"
 ---
-# <a name="odbc-data-sources-subkey"></a>Sottochiave origini dati ODBC
+# <a name="odbc-data-sources-subkey"></a>Sottochiave Origini dati ODBC
 
-I valori nella `ODBC Data Sources` sottochiave elencano le origini dati. Il formato di questi valori è illustrato nella tabella seguente.
+I valori `ODBC Data Sources` nella sottochiave elencano le origini dati. Il formato di questi valori è illustrato nella tabella seguente.
 
-| Nome | Tipo di dati | data |
+| Nome | Tipo di dati | Data |
 | :--- | :-------- | :--- |
-| *nome origine dati* | REG_SZ | *Driver-Descrizione* |
+| *nome origine dati* | REG_SZ | *descrizione del conducente* |
 | &nbsp; | &nbsp; | &nbsp; |
 
-Il valore del *nome dell'origine dati* è definito dal programma di amministrazione (che in genere richiede l'utente) e *driver-Description* viene definito dallo sviluppatore del driver (si tratta in genere del nome del DBMS associato al driver).
+Il valore *data-source-name* è definito dal programma di amministrazione (che in genere richiede all'utente per esso) e *driver-descrizione* è definita dallo sviluppatore del driver (in genere è il nome del DBMS associato al driver).
 
-Si supponga, ad esempio, che siano state definite tre origini dati: Inventory, che usa SQL Server; Payroll, che usa dBASE; e il personale, che usa file di testo formattato. I valori nella `ODBC Data Sources` sottochiave potrebbero essere i seguenti:
+Si supponga, ad esempio, che siano state definite tre origini dati: Inventory, che utilizza SQL Server; Retribuzioni, che utilizza dBASE; e Personale, che utilizza file di testo formattati. I valori `ODBC Data Sources` nella sottochiave potrebbero essere i seguenti:
 
 ```console
 Inventory : REG_SZ : SQL Server
