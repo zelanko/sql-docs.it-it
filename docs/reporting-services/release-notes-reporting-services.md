@@ -1,6 +1,6 @@
 ---
 title: Note sulla versione di Reporting Services 2017 e versioni successive | Microsoft Docs
-ms.date: 12/04/2019
+ms.date: 04/06/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 39049ee5a2561821e0a2284ed66b9b04730998bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9227aa7ad22b64da499020d0c4bc561de00c14f4
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834255"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809852"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Note sulla versione per SQL Server Reporting Services (SSRS) 2017 e versioni successive
 
@@ -50,7 +50,17 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
-## <a name="1406001451-20191113"></a>14.0.600.1451 2019/11/13 
+## <a name="1406001572-20200406"></a>14.0.600.1572, 06/04/2020 
+
+| Problema risolto | Dettagli |
+| :---------- | :------ |
+| Interfaccia utente di JQuery aggiornata alla versione 1.12  | &nbsp; |
+| È stata corretta la distinzione tra maiuscole e minuscole degli URL  | &nbsp; |
+| È stato corretto il posizionamento dei parametri quando questi sono numerosi  | &nbsp; |
+| È stato corretto il mancato funzionamento di FindString nel rendering del codice HTML5  | &nbsp; |
+| Sono state aggiornate le librerie client Analysis Services per risolvere la deprecazione di TLS 1.0/1.1 | &nbsp; |
+
+## <a name="1406001451-20191113"></a>14.0.600.1451, 13/11/2019 
 
 | Problema risolto | Dettagli |
 | :---------- | :------ |

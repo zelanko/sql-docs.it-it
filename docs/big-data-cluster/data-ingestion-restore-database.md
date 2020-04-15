@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 925254bbdc7200b5e7ca2a3c413de87e8915b2b4
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652231"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002720"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Ripristinare un database nell'istanza master di un cluster Big Data di SQL Server
 
@@ -29,7 +29,7 @@ Come prima operazione, eseguire il backup di un database SQL Server esistente da
 Questo articolo descrive come ripristinare il database AdventureWorks, ma è possibile usare qualsiasi backup di database. 
 
 > [!TIP]
-> È possibile scaricare il backup di AdventureWorks [qui](https://www.microsoft.com/download/details.aspx?id=49502).
+> Scaricare il [backup di AdventureWorks](../samples/adventureworks-install-configure.md).
 
 ## <a name="copy-the-backup-file"></a>Copiare il file di backup
 
