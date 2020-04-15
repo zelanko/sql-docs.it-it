@@ -1,5 +1,5 @@
 ---
-title: Nomi di tabella | Microsoft Docs
+title: Nomi di tabella Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SQL grammar [ODBC], table names
 - table names [ODBC]
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5dd8de055521f4a1831d20a9a34bedb9309d1de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 91a415cd456186f18ef358b9d504145f78152774
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303122"
 ---
 # <a name="table-names"></a>Nomi di tabella
-Quando si usa il driver dBASE, Microsoft Excel, Paradox o text, i nomi di tabella che si verificano nella clausola FROM di SELECT o DELETE, dopo la clausola INTO in INSERT e After UPDATE, CREATE TABLE e DROP TABLE possono contenere un percorso valido, un nome primario e un'estensione di file .  
+Quando si utilizza il driver dBASE, Microsoft Excel, Paradox o Text, i nomi di tabella che si verificano nella clausola FROM di SELECT o DELETE, dopo la clausola INTO in INSERT e dopo UPDATE, CREATE TABLE e DROP TABLE possono contenere un percorso, un nome primario e un'estensione di file validi.  
   
- L'uso di un nome di tabella in un'altra posizione in un'istruzione SQL non supporta l'uso di percorsi o estensioni, ma accetta solo il nome primario (ad esempio, EMP da C:\ABC\EMP).  
+ L'utilizzo di un nome di tabella in un'altra posizione in un'istruzione SQL non supporta l'utilizzo di percorsi o estensioni, ma accetta solo il nome primario (ad esempio, EMP FROM C:  
   
  È possibile utilizzare i nomi di correlazione (alias). Ad esempio:  
   

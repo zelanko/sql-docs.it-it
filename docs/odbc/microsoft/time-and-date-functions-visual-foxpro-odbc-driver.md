@@ -1,5 +1,5 @@
 ---
-title: Funzioni di data e ora (driver ODBC Visual FoxPro) | Microsoft Docs
+title: Funzioni di data e ora (driver ODBC Di Visual FoxPro) . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,59 +15,59 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912398"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303062"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni data e ora (driver ODBC Visual FoxPro)
-Nella tabella seguente sono elencate le funzioni di data e ora ODBC supportate dal driver ODBC Visual FoxPro. Quando la grammatica Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencato l'equivalente Visual FoxPro.  
+Nella tabella seguente sono elencate le funzioni di data e ora ODBC supportate dal driver ODBC di Visual FoxPro. Quando la grammatica di Visual FoxPro per la stessa funzione è diversa dalla sintassi ODBC, viene elencato l'equivalente di Visual FoxPro.  
   
-|Grammatica ODBC|Grammatica Visual FoxPro|  
+|Grammatica ODBC|Grammatica di Visual FoxPro|  
 |------------------|---------------------------|  
-|CAGLIo *()*|Data *()*|  
-|CURTIME *()*|ORA *()*|  
-|NOMEGIORNO *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|GIORNO *()*|  
+|CURDATE *( )*|DATA *( )*|  
+|CURTIME *( )*|TEMPO *( )*|  
+|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|GIORNOOFMONTH(*date_exp)*|GIORNO *( )*|  
 |ORA *(time_exp)*||  
 |MINUTO *(time_exp)*||  
 |MESE *(time_exp)*||  
-|MONTHname *(date_exp)*|CMONTH *(date_exp)*|  
-|ORA *()*|DATETIME *()*|  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
+|ORA *( )*|DATETIME *( )*|  
 |SECONDO *(time_exp)*|SEC *(time_exp)*|  
 |SETTIMANA *(date_exp)*||  
 |ANNO *(date_exp)*||  
   
- Le funzioni di data e ora seguenti non sono supportate:  
+ Le seguenti funzioni di data e ora non sono supportate:  
   
- DAYOFYEAR *(date_exp)*  
+ GIORNOOFYEAR *(date_exp)*  
   
- TRIMESTRE *(date_exp)*  
+ QUARTER *(date_exp)*  
   
  TIMESTAMPADD *(intervallo, integer_exp, timestamp_exp)*  
   
  TIMESTAMPDIFF *(intervallo, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>Sequenze di escape ODBC  
- Il driver supporta inoltre la sequenza di escape ODBC per i dati di data e timestamp. La sintassi della clausola escape è la seguente:  
+ Il driver supporta anche la sequenza di escape ODBC per i dati di data e timestamp. La sintassi della clausola di escape è la seguente:The escape clause syntax is as follows:  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)-  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- In questa sintassi, **d** indica che *value* è una data nel formato *aaaa-mm-gg* e **TS** indica che il *valore* è un timestamp in *aaaa-mm-gg hh: mm: SS*[.* f...*] formato. La sintassi abbreviata per i dati di data e timestamp è la seguente:  
+ In questa sintassi, **d** indica che *value* è una data nel formato *aaaa-mm-gg* e **ts** indica che *value* è un timestamp in *yyyy-mm-dd hh:mm:ss*[.* f...*] Formato. La sintassi abbreviata per i dati di data e ora è la seguente:  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- Ogni istruzione seguente, ad esempio, aggiorna la tabella ALLTYPES usando la sintassi abbreviata date e timestamp in un comando SQL UPDATE supportato:  
+ Ad esempio, ognuna delle istruzioni seguenti aggiorna la tabella ALLTYPES utilizzando la sintassi a sintassi a sintassi a sintassi a sintassi a sintassi a sintassi a sintassi a sintassi a sintassi a sintassi data e ora e ora in un comando SQL UPDATE supportato:  
   
 ```  
 UPDATE alltypes  
@@ -80,4 +80,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni sulle sequenze di escape, vedere [sequenze di escape in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) in ODBC *Programmer ' s Reference*.
+ Per ulteriori informazioni sulle sequenze di escape, vedere [Sequenze di escape in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) in ODBC *Programmer's Reference*.

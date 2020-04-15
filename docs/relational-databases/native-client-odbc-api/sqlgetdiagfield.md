@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagField | Microsoft Docs
+title: Proprietà SQLGetDiagField . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0d704d76caa3f2a70744a3f2cb4358251f26e55
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299711"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client specifica i campi di diagnostica aggiuntivi seguenti per **SQLGetDiagField**. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client specifica i seguenti campi di diagnostica aggiuntivi per **SQLGetDiagField**. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
   
 |Campo del record di diagnostica|Descrizione|  
 |------------------------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "73786477"
   
 |Codice di funzione dinamica|Source (Sorgente)|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|Istruzione ALTER DATABASE|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE - istruzione|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Istruzione CHECKPOINT|  
 |SQL_DIAG_DFC_SS_CONDITION|L'errore si è verificato nella clausola WHERE o HAVING di un'istruzione.|  
 |SQL_DIAG_DFC_SS_CREATE_DATABASE|Istruzione CREATE DATABASE|  
@@ -62,7 +62,7 @@ ms.locfileid: "73786477"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Istruzione DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Istruzione BACKUP o DUMP DATABASE |  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Istruzione DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Restituito anche per un'istruzione CHECKPOINT se il file **tronca. log in chkpt.** l'opzione di database è on.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Restituito anche per un'istruzione CHECKPOINT se il **blocco di accesso chkpt.** l'opzione del database è attiva.|  
 |SQL_DIAG_DFC_SS_GOTO|Istruzione per il controllo di flusso GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Istruzione INSERT BULK |  
 |SQL_DIAG_DFC_SS_KILL|Istruzione KILL|  
@@ -75,7 +75,7 @@ ms.locfileid: "73786477"
 |SQL_DIAG_DFC_SS_READTEXT|Istruzione READTEXT|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|Istruzione RECONFIGURE|  
 |SQL_DIAG_DFC_SS_RETURN|Istruzione per il controllo di flusso RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|Istruzione SELECT INTO|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO - istruzione|  
 |SQL_DIAG_DFC_SS_SET|Istruzione SET (generica, tutte le opzioni) |  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT - istruzione|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT - istruzione|  
@@ -97,12 +97,12 @@ ms.locfileid: "73786477"
 |SQL_DIAG_DFC_SS_WRITETEXT|Istruzione WRITETEXT|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField e parametri con valori di tabella  
- SQLGetDiagField può essere usato per recuperare due campi di diagnostica: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Tali campi consentono di identificare il valore che ha generato l'errore o l'avviso associato al record di diagnostica.  
+ SQLGetDiagField può essere utilizzato per recuperare due campi di diagnostica: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Tali campi consentono di identificare il valore che ha generato l'errore o l'avviso associato al record di diagnostica.  
   
- Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere Parametri con valori di [tabella &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLGetDiagField (funzione)](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Funzione SQLGetDiagFieldSQLGetDiagField Function](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

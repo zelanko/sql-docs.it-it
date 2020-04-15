@@ -14,20 +14,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758316"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297687"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
+  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provider OLE DB Native Client è possibile impostare i dati BLOB passando un puntatore a un oggetto di archiviazione consumer.  
   
  Il consumer crea un oggetto di archiviazione che contiene i dati e passa un puntatore a tale oggetto di archiviazione al provider. Il provider legge quindi i dati dall'oggetto di archiviazione del consumer e li scrive nella colonna BLOB.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "73758316"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>Come impostare dati di grandi dimensioni  
- Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama i metodi **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. Per impostare dati BLOB  
+ Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento *dwFlag* della struttura DBOBJECT su STGM_READ e impostare l'elemento *IID* su IID_ISequentialStream (l'interfaccia da esporre).  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento *dwFlag* della struttura DBOBJECT su STGM_READ e impostare l'elemento *iid* su IID_ISequentialStream (l'interfaccia da esporre).  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB e oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Utilizzo di tipi di dati per valori di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   
