@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults | Microsoft Docs
+title: Proprietà SQLMoreResults . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f22112f57bbb38873956f17189169a4d66efe019
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786293"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289211"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLMoreResults** consente all'applicazione di recuperare più set di righe di risultati. Un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenente una clausola COMPUTE, o un batch inviato di istruzioni ODBC o [!INCLUDE[tsql](../../includes/tsql-md.md)] , comporta la generazione di più set di risultati da parte del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente la creazione di un cursore server per elaborare i risultati in entrambi i casi. Pertanto, lo sviluppatore deve assicurarsi che l'istruzione ODBC sia bloccata. Lo sviluppatore deve esaurire i dati restituiti o annullare l'istruzione ODBC prima di elaborare i dati di altre istruzioni attive nella connessione.  
+  **SQLMoreResults** consente all'applicazione di recuperare più set di righe di risultati. Un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenente una clausola COMPUTE, o un batch inviato di istruzioni ODBC o [!INCLUDE[tsql](../../includes/tsql-md.md)] , comporta la generazione di più set di risultati da parte del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente la creazione di un cursore server per elaborare i risultati in entrambi i casi. Pertanto, lo sviluppatore deve assicurarsi che l'istruzione ODBC sia bloccata. Lo sviluppatore deve esaurire i dati restituiti o annullare l'istruzione ODBC prima di elaborare i dati di altre istruzioni attive nella connessione.  
   
 > [!NOTE]  
 >  Un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenente una clausola COMPUTE è supportata solo in caso di connessione a una versione server antecedente a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -164,7 +163,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLMoreResults (funzione)](https://go.microsoft.com/fwlink/?LinkId=59357)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Funzione SQLMoreResultsSQLMoreResults Function](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

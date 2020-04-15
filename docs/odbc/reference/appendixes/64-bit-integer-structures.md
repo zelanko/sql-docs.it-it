@@ -1,5 +1,5 @@
 ---
-title: Strutture Integer a 64 bit | Microsoft Docs
+title: Strutture Integer a 64 bit Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - data types [ODBC], C data types
 - 64-bit integer structures [ODBC]
 ms.assetid: ac80c798-d9b2-4430-85ed-bd2461db0ac7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93d9e6fd01d6b9ef98ebb10f6728ec4ba205fbb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1ecbe4dae4c1bd21ac3d542ee0d9b18169df0116
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996262"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307512"
 ---
 # <a name="64-bit-integer-structures"></a>Strutture di interi a 64 bit
-Il tipo C per gli identificatori del tipo di dati SQL_C_SBIGINT e SQL_C_UBIGINT sui compilatori Microsoft C è _int64. Quando si usa un compilatore diverso da un compilatore Microsoft® C, il tipo C potrebbe essere diverso. Se il compilatore supporta interi a 64 bit a livello nativo, il driver o l'applicazione deve definire ODBCINT64 come tipo Integer nativo a 64 bit. Se il compilatore non supporta Integer a 64 bit a livello nativo, un'applicazione o un driver può definire le strutture seguenti per assicurarsi che disponga dell'accesso a questi dati:  
+Il tipo C per gli identificatori dei tipi di dati SQL_C_SBIGINT e SQL_C_UBIGINT nei compilatori Microsoft C è _int64. Quando viene utilizzato un compilatore diverso da un compilatore Microsoft® C, il tipo C potrebbe essere diverso. Se il compilatore supporta gli interi a 64 bit in modo nativo, il driver o l'applicazione deve definire ODBCINT64 come tipo integer nativo a 64 bit. Se il compilatore non supporta in modo nativo numeri interi a 64 bit, un'applicazione o un driver può definire le strutture seguenti per garantire che abbia accesso a questi dati:If the compiler does not support 64-bit integers natively, an application or driver can define the following structures to ensure that it has access to this data:  
   
 ```  
 typedef struct{  
@@ -36,4 +36,4 @@ SQLINTEGER sdwHighWord;
 } SQLBIGINT  
 ```  
   
- Queste strutture devono essere allineate a un limite di 8 byte perché un intero a 64 bit è allineato al limite di 8 byte.
+ Queste strutture devono essere allineate a un limite a 8 byte perché un numero intero a 64 bit è allineato al limite di 8 byte.

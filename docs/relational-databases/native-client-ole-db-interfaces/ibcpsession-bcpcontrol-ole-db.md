@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPControl (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPControl (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c9b5e2e8fe587f5dfa69ed698066845663d9268
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 64e93ae57c89ec63627433a8ba29ba354074fb5f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73765638"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307442"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,12 +48,12 @@ HRESULT BCPControl(
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Arresta un'operazione di copia bulk già in corso. È possibile chiamare il metodo **BCPControl** con un argomento *eOption* di BCP_OPTION_ABORT da un altro thread per arrestare un'operazione di copia bulk in esecuzione. L'argomento *iValue* viene ignorato.|  
 |BCP_OPTION_BATCH|Numero di righe per batch. L'impostazione predefinita è 0 e indica tutte le righe di una tabella quando i dati vengono estratti oppure tutte le righe nel file di dati dell'utente quando i dati vengono copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valore minore di 1 consente di reimpostare BCP_OPTION_BATCH sul valore predefinito.|  
-|BCP_OPTION_DELAYREADFMT|Valore booleano che, se impostato su true, comporta la lettura da parte di [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) al momento dell'esecuzione. Se false (impostazione predefinita), IBCPSession:: BCPReadFmt leggerà immediatamente il file di formato. Si verificherà un errore di sequenza se **BCP_OPTION_DELAYREADFMT** è true e si chiama IBCPSession:: BCPColumns o IBCPSession:: BCPColFmt.<br /><br /> Si verificherà un errore di sequenza anche se `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` si chiama `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` dopo avere chiamato e IBCPSession:: BCPWriteFmt.<br /><br /> Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_DELAYREADFMT|Valore booleano che, se impostato su true, comporta la lettura da parte di [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) al momento dell'esecuzione. Se impostato su false (impostazione predefinita), il file di formato viene letto immediatamente da IBCPSession::BCPReadFmt. Si verificherà un errore di sequenza se **BCP_OPTION_DELAYREADFMT** è true e si chiama IBCPSession::BCPColumns o IBCPSession::BCPColFmt.<br /><br /> Un errore nella sequenza si verifica anche se si chiama `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` dopo `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e IBCPSession::BCPWriteFmt.<br /><br /> Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|L'argomento *iValue* contiene il numero della tabella codici per il file di dati. È possibile specificare il numero della tabella codici, ad esempio 1252 o 850, o uno dei valori seguenti:<br /><br /> BCP_FILECP_ACP: i dati contenuti nel file sono inclusi nella tabella codici di Microsoft Windows® del client.<br /><br /> BCP_FILECP_OEMCP: i dati contenuti nel file sono inclusi nella tabella codici OEM del client (impostazione predefinita).<br /><br /> BCP_FILECP_RAW: i dati contenuti nel file sono inclusi nella tabella codici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|Numero di versione del formato del file di dati. Il valore può essere 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 è il valore predefinito. Questo valore è utile per l'esportazione e l'importazione di dati in formati supportati da una versione precedente del server.  Per importare i dati ottenuti, ad esempio, da una colonna di testo di un server [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] in una colonna **varchar(max)** di un server [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, è necessario specificare 80. Analogamente, se si specifica 80 quando si esportano dati da una colonna **varchar(max)**, tali dati vengono salvati esattamente come vengono salvate le colonne di testo nel formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e possono essere importati in una colonna di testo di un server [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |BCP_OPTION_FIRST|Prima riga di dati del file o della tabella da copiare. Il valore predefinito è 1. Un valore minore di 1 reimposta l'opzione sul valore predefinito.|  
 |BCP_OPTION_FIRSTEX|Per le operazioni BCP out, specifica la prima riga della tabella di database da copiare nel file di dati.<br /><br /> Per le operazioni BCP in, specifica la prima riga del file di dati da copiare nella tabella di database.<br /><br /> È previsto che il parametro *iValue* corrisponda all'indirizzo di un numero intero a 64 bit con segno contenente il valore. Il valore massimo che è possibile passare a BCPFIRSTEX è 2^63-1.|  
-|BCP_OPTION_FMTXML|Specifica che il file di formato generato deve essere in formato XML. L'opzione è disattivata per impostazione predefinita e per impostazione predefinita i file di formato vengono salvati come file di testo. I file di formato XML offrono una maggiore flessibilità ma comportano alcuni vincoli aggiuntivi. Diversamente dai file nei formati precedenti, non è ad esempio possibile specificare contemporaneamente il prefisso e il carattere di terminazione per un campo.<br /><br /> Nota: i file di formato XML sono supportati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo quando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati insieme a Native Client.|  
+|BCP_OPTION_FMTXML|Specifica che il file di formato generato deve essere in formato XML. L'opzione è disattivata per impostazione predefinita e per impostazione predefinita i file di formato vengono salvati come file di testo. I file di formato XML offrono una maggiore flessibilità ma comportano alcuni vincoli aggiuntivi. Diversamente dai file nei formati precedenti, non è ad esempio possibile specificare contemporaneamente il prefisso e il carattere di terminazione per un campo.<br /><br /> Nota: i file in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati solo quando gli strumenti vengono installati insieme a Native Client.|  
 |BCP_OPTION_HINTS|L'argomento *iValue* contiene un puntatore alla stringa di caratteri wide. La stringa a cui viene fatto riferimento specifica hint di elaborazione della copia bulk [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce un set di risultati. Se viene specificata un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce più set di risultati, vengono ignorati tutti i set di risultati successivi al primo.|  
 |BCP_OPTION_KEEPIDENTITY|Quando l'argomento *iValue* è impostato su TRUE, questa opzione specifica che i metodi di copia bulk inseriscono i valori di dati specificati per le colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definite con un vincolo di identità. Il file di input deve fornire valori per le colonne di identità. Se questa impostazione non è disponibile, per le righe inserite vengono generati nuovi valori Identity. Eventuali dati presenti nel file per le colonne di identità vengono ignorati.|  
 |BCP_OPTION_KEEPNULLS|Specifica se i valori di dati vuoti nel file verranno convertiti in valori NULL nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando l'argomento *iValue* è impostato su TRUE, i valori vuoti vengono convertiti in valori NULL nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione predefinita prevede che i valori vuoti vengano convertiti in un valore predefinito, se presente, per la colonna nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -76,7 +76,7 @@ HRESULT BCPControl(
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider. per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Si è verificato un errore specifico del provider; per informazioni dettagliate, utilizzare l'interfaccia [ISQLServerErrorInfo.](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)  
   
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) prima della chiamata a questa funzione.  
@@ -85,7 +85,7 @@ HRESULT BCPControl(
  Errore di memoria insufficiente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

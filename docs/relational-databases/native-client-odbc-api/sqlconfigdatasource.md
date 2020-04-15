@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource | Microsoft Docs
+title: Proprietà SQLConfigDataSource . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLConfigDataSource function
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ef8d24c1caba7e2dfa96ce33a828ca98bb6e898
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 816ce460d140ddbdd1c018092cb0c3b0857355b8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787482"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302562"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]varie coppie parola chiave/valore specifiche per le stringhe degli attributi di configurazione dell'origine dati.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Client supporta varie coppie parola chiave/valore specifiche per le stringhe degli attributi di configurazione dell'origine dati.  
   
- Per un elenco delle parole chiave disponibili nel driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC di Native client, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Per un elenco delle parole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiave disponibili nel driver ODBC Native Client, vedere Utilizzo di parole chiave della stringa di [connessione con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLConfigDataSource (funzione)](https://go.microsoft.com/fwlink/?LinkId=59337)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Funzione SQLConfigDataSourceSQLConfigDataSource Function](https://go.microsoft.com/fwlink/?LinkId=59337)   
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

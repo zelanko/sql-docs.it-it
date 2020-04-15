@@ -1,5 +1,5 @@
 ---
-title: Uso di applicazioni a 32 bit con driver a 32 bit | Microsoft Docs
+title: Utilizzo di applicazioni a 32 bit con driver a 32 bit Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31512f9339b9d46225bb4f1198cb617a48509acb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088163"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307602"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 32 bit con driver a 32 bit
 È possibile eseguire applicazioni a 32 bit con driver a 32 bit. Le applicazioni a 32 bit e i driver a 32 bit utilizzano l'API Win32®.  
   
 ## <a name="architecture"></a>Architecture  
- Nella figura seguente viene illustrato il modo in cui le applicazioni a 32 bit comunicano con i driver a 32 bit. L'applicazione chiama Gestione driver a 32 bit, che a sua volta chiama i driver a 32 bit.  
+ Nella figura seguente viene illustrato come le applicazioni a 32 bit comunicano con i driver a 32 bit. L'applicazione chiama Gestione Driver a 32 bit, che a sua volta chiama i driver a 32 bit.  
   
- ![Modalità di comunicazione delle app&#45;bit 32 con i driver di bit per la&#45;32](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![Comunicazione con driver a 32&#45;bit da 32&#45;bit](../../odbc/microsoft/media/sdka6.gif "sdka6 (informazioni in inglese)")  
   
 > [!IMPORTANT]  
->  Non usare la DLL del programma di installazione di thunk a 32 bit in WindowsNT/Windows2000. Anche se ha lo stesso nome di file della DLL del programma di installazione a 32 bit, è un'altra DLL.  
+>  Non utilizzare la DLL del programma di installazione del thunking a 32 bit in WindowsNT/Windows2000. Anche se ha lo stesso nome di file della DLL del programma di installazione a 32 bit, è una DLL diversa.  
   
 ## <a name="administration"></a>Amministrazione  
- È possibile gestire le origini dati per i driver a 32 bit tramite Amministrazione origine dati ODBC. Per aprire Amministratore ODBC nei computer che eseguono Windows 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)**. Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
+ È possibile gestire le origini dati per i driver a 32 bit utilizzando l'Amministratore origine dati ODBC. Per aprire l'Amministratore ODBC nei computer che eseguono Windows 2000, aprire il Pannello di controllo di Windows, fare doppio clic su **Strumenti di amministrazione**, quindi su Origini dati **(ODBC)**. Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
   
 ## <a name="components"></a>Componenti  
- Il componente ODBC include i file seguenti per l'esecuzione di applicazioni a 32 bit con driver a 32 bit. Questi componenti si trovano nella directory redist  
+ Il componente ODBC include i seguenti file per l'esecuzione di applicazioni a 32 bit con driver a 32 bit. Questi componenti si trovano nella directory Redist.  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  
-|Odbc32. dll|Gestione driver a 32 bit|  
-|Odbccp32. dll|DLL del programma di installazione a 32 bit|  
-|Odbcad32. exe|programma di amministrazione ODBC a 32 bit|  
-|Odbcinst. hlp|File della guida del programma di installazione|  
-|MSVCRT40. dll|Libreria di runtime C|
+|Odbc32.dll|Gestione driver a 32 bit|  
+|Odbccp32.dll (informazioni in stati intratto)|DLL del programma di installazione a 32 bit|  
+|Odbcad32.exe (informazioni in o via in cui è stato inesulto)|Programma di amministrazione ODBC a 32 bit|  
+|Odbcinst.hlp|File della Guida del programma di installazione|  
+|Msvcrt40.dll|Libreria di runtime del c|

@@ -1,5 +1,5 @@
 ---
-title: Native client, creare app SQL
+title: Native Client, creare app SQL
 ms.custom: ''
 ms.date: 12/16/2019
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad6dcaf2b22e7aa545727354f911502dcde16aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 302d1958bbc3d6c1cca12f82f04db11119fdbd57
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244215"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302537"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Compilazione di applicazioni con SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "75244215"
  Viene illustrato come connettersi a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Procedure per ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [Argomenti relativi alle procedure ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Procedure per l'utilizzo di OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

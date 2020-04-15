@@ -1,5 +1,5 @@
 ---
-title: Sequenze di escape in ODBC | Microsoft Docs
+title: Sequenze di escape in ODBC . Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68051118"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300421"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequenze di escape in ODBC
-Diverse funzionalità del linguaggio, ad esempio outer join e chiamate di funzioni scalari, sono comunemente implementate da DBMS. Tuttavia, le sintassi per queste funzionalità tendono a essere specifiche di DBMS, anche quando le sintassi standard sono definite dai vari corpi degli standard. Per questo motivo, ODBC definisce sequenze di escape che contengono sintassi standard per le funzionalità del linguaggio seguenti:  
+Un certo numero di funzionalità del linguaggio, ad esempio outer join e chiamate di funzione scalari, sono comunemente implementate da DBMS. Tuttavia, le sintassi per queste funzionalità tendono ad essere specifiche di DBMS, anche quando le sintassi standard sono definite dai vari organismi di standard. Per questo motivo, ODBC definisce le sequenze di escape che contengono sintassi standard per le seguenti funzionalità del linguaggio:  
   
--   Valori letterali di data, ora, timestamp e intervallo DateTime  
+-   Valori letterali di intervallo di data, ora, timestamp e datetime  
   
--   Funzioni scalari come funzioni di conversione di tipi di dati, stringhe e numerici  
+-   Funzioni scalari come le funzioni numeriche, stringa e conversione dei tipi di dati  
   
--   Carattere di escape del predicato LIKE  
+-   Carattere di escape predicato LIKE  
   
 -   Outer join  
   
--   Chiamate di procedure  
+-   Chiamate procedurali  
   
  La sequenza di escape utilizzata da ODBC è la seguente:  
   
@@ -43,18 +43,18 @@ Diverse funzionalità del linguaggio, ad esempio outer join e chiamate di funzio
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- La sequenza di escape viene riconosciuta e analizzata dai driver, che sostituiscono le sequenze di escape con la grammatica specifica di DBMS. Per ulteriori informazioni sulla sintassi della sequenza di escape, vedere [sequenze di escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) nell'Appendice C: grammatica SQL.  
+ La sequenza di escape viene riconosciuta e analizzata dai driver, che sostituiscono le sequenze di escape con la grammatica specifica di DBMS. Per ulteriori informazioni sulla sintassi della sequenza di escape, vedere [Sequenze](../../../odbc/reference/appendixes/odbc-escape-sequences.md) di escape ODBC nell'Appendice C: grammatica SQL.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, questa è la sintassi standard della sequenza di escape: **--(\*fornitore (**_nome-fornitore_**),******_estensione_ ** \*** prodotto (_nome prodotto_))--  
+>  In ODBC 2. *x*, questa era la sintassi standard della sequenza di escape: **--(\*vendor(**_vendor-name_**), product(**_product-name_**)**_extension_ ** \*)-- --**  
 >   
->  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato: **{**_Extension_**}**  
+>  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato:**}** **estensione**_extension_  
 >   
->  In ODBC 3. *x*, la forma estesa della sequenza di escape è stata deprecata e il form abbreviato viene usato in modo esclusivo.  
+>  In ODBC 3. *x*, la forma lunga della sequenza di escape è stata deprecata e la forma abbreviata viene utilizzata in modo esclusivo.  
   
- Poiché le sequenze di escape vengono mappate dal driver a sintassi specifiche di DBMS, un'applicazione può utilizzare la sequenza di escape o la sintassi specifica del sistema DBMS. Tuttavia, le applicazioni che utilizzano la sintassi specifica di DBMS non saranno interoperative. Quando si usa la sequenza di escape, le applicazioni devono verificare che l'attributo dell'istruzione SQL_ATTR_NOSCAN sia disattivato, che è per impostazione predefinita. In caso contrario, la sequenza di escape verrà inviata direttamente all'origine dati, in cui in genere viene generato un errore di sintassi.  
+ Poiché le sequenze di escape vengono mappate dal driver alle sintassi specifiche di DBMS, un'applicazione può utilizzare la sequenza di escape o la sintassi specifica di DBMS. Tuttavia, le applicazioni che utilizzano la sintassi specifica di DBMS non saranno interoperabili. Quando si usa la sequenza di escape, le applicazioni devono assicurarsi che l'attributo dell'istruzione SQL_ATTR_NOSCAN sia disattivato, che è per impostazione predefinita. In caso contrario, la sequenza di escape verrà inviata direttamente all'origine dati, dove in genere causerà un errore di sintassi.  
   
- I driver supportano solo le sequenze di escape di cui è possibile eseguire il mapping alle funzionalità del linguaggio sottostante. Se, ad esempio, l'origine dati non supporta outer join, il driver non viene né. Per determinare quali sequenze di escape sono supportate, un'applicazione chiama **SQLGetTypeInfo** e **SQLGetInfo**. Per ulteriori informazioni, vedere la sezione successiva, [data, ora e valori letterali timestamp](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ I driver supportano solo le sequenze di escape che possono eseguire il mapping alle funzionalità del linguaggio sottostante. Ad esempio, se l'origine dati non supporta outer join, il driver non lo sarà nemmeno il driver. Per determinare quali sequenze di escape sono supportate, un'applicazione chiama **SQLGetTypeInfo** e **SQLGetInfo**. Per ulteriori informazioni, vedere la sezione [successiva, Data, ora e Valori letterali timestamp](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

@@ -1,5 +1,5 @@
 ---
-title: Campi e record di diagnostica | Microsoft Docs
+title: Record e campi di diagnostica Documenti Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - errors [ODBC], diagnostic records
 - fields [ODBC]
 - status information [ODBC]
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bffbd7ce22bf3e1e906e68e880fb76bee36c4b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b9cfea2db0ad0a5eadeede6df3f76ea3979243d0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783663"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291841"
 ---
 # <a name="diagnostic-records-and-fields"></a>Campi e record di diagnostica
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "73783663"
   
  I campi dei record di stato contengono informazioni su errori o avvisi specifici restituiti da Gestione driver ODBC, dal driver o dall'origine dati, quali SQLSTATE, il numero dell'errore nativo, il messaggio di diagnostica, il numero di colonna e il numero di riga. I record di stato vengono creati solo se la funzione restituisce SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA o SQL_STILL_EXECUTING. Per un elenco completo dei campi nei record di stato, vedere **SQLGetDiagField**.  
   
- **SQLGetDiagRec** recupera un singolo record di diagnostica insieme ai campi ODBC SQLSTATE, numero di errore nativo e messaggio di diagnostica. Questa funzionalità è simile a ODBC 2. _x_**SQLError** (funzione). Funzione di gestione degli errori più semplice in ODBC 3. *x* è possibile chiamare ripetutamente **SQLGetDiagRec** a partire dal parametro *RecNumber* impostato su 1 e incrementando *RecNumber* per 1 fino a quando **SQLGetDiagRec** non restituisce SQL_NO_DATA. Equivale a ODBC 2. applicazione *x* che chiama **SQLError** fino a quando non restituisce SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** recupera un singolo record di diagnostica insieme ai relativi SQLSTATE ODBC, al numero di errore nativo e ai campi dei messaggi di diagnostica. Questa funzionalità è simile a ODBC 2. _x_**Funzione SQLError.** La funzione di gestione degli errori più semplice in ODBC 3. *x* è quello di chiamare ripetutamente **SQLGetDiagRec** a partire dal parametro *RecNumber* impostato su 1 e incrementando *RecNumber* di 1 fino a quando **SQLGetDiagRec** non restituisce SQL_NO_DATA. Equivale a un ODBC 2. *x* applicazione che chiama **SQLError** fino a quando non restituisce SQL_NO_DATA_FOUND.  
   
- ODBC 3. *x* supporta molto più informazioni di diagnostica rispetto a ODBC 2. *x*. Queste informazioni vengono archiviate in campi aggiuntivi nei record di diagnostica recuperati tramite **SQLGetDiagField**.  
+ ODBC 3. *x* supporta molte più informazioni diagnostiche rispetto a ODBC 2. *x*. Queste informazioni vengono archiviate in campi aggiuntivi nei record di diagnostica recuperati tramite **SQLGetDiagField**.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client dispone di campi di diagnostica specifici del driver che possono essere recuperati con **SQLGetDiagField**. Le etichette di questi campi specifici del driver sono definite in sqlncli.h. Utilizzarle per recuperare lo stato, il livello di gravità, il nome del server, il nome della procedura e il numero di riga di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associati a ogni record di diagnostica. Inoltre, sqlncli. h contiene le definizioni dei codici utilizzati dal driver per identificare le istruzioni Transact-SQL se un'applicazione chiama **SQLGetDiagField** con *DiagIdentifier* impostato su SQL_DIAG_DYNAMIC_FUNCTION_CODE.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dispone di campi di diagnostica specifici del driver che possono essere recuperati con **SQLGetDiagField**. Le etichette di questi campi specifici del driver sono definite in sqlncli.h. Utilizzarle per recuperare lo stato, il livello di gravità, il nome del server, il nome della procedura e il numero di riga di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associati a ogni record di diagnostica. Inoltre, sqlncli.h contiene le definizioni dei codici utilizzati dal driver per identificare le istruzioni Transact-SQLTransact-SQL se un'applicazione chiama **SQLGetDiagField** con *DiagIdentifier* impostato su SQL_DIAG_DYNAMIC_FUNCTION_CODE.  
   
- **SQLGetDiagField** viene elaborato da Gestione driver ODBC utilizzando le informazioni sugli errori memorizzate nella cache dal driver sottostante. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo una volta stabilita una connessione. **SQLGetDiagField** restituisce SQL_ERROR se viene chiamato per ottenere i campi di diagnostica specifici del driver prima che una connessione venga completata correttamente. Se una funzione di connessione ODBC restituisce SQL_SUCCESS_WITH_INFO, i campi di diagnostica specifici del driver della funzione non sono ancora disponibili. È possibile iniziare a chiamare **SQLGetDiagField** per i campi di diagnostica specifici del driver solo dopo aver eseguito un'altra chiamata di funzione ODBC dopo la funzione Connect.  
+ **SQLGetDiagField** viene elaborato da Gestione driver ODBC utilizzando le informazioni sull'errore che memorizza nella cache dal driver sottostante. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo una volta stabilita una connessione. **SQLGetDiagField** restituisce SQL_ERROR se viene chiamato per ottenere campi di diagnostica specifici del driver prima che sia stata completata una connessione corretta. Se una funzione di connessione ODBC restituisce SQL_SUCCESS_WITH_INFO, i campi di diagnostica specifici del driver della funzione non sono ancora disponibili. È possibile iniziare a chiamare **SQLGetDiagField** per i campi di diagnostica specifici del driver solo dopo aver effettuato un'altra chiamata di funzione ODBC dopo la funzione di connessione.  
   
- La maggior parte degli errori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnalati dal driver ODBC di Native client può essere diagnosticata efficacemente utilizzando solo le informazioni restituite da **SQLGetDiagRec**. In alcuni casi, tuttavia, le informazioni restituite dai campi di diagnostica specifici del driver sono importanti per la diagnosi di un errore. Quando si codifica un gestore degli errori ODBC per le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazioni che utilizzano il driver ODBC di Native client, è consigliabile utilizzare anche **SQLGetDiagField** per recuperare almeno i campi SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY specifici del driver. Se un determinato errore può essere generato in diverse posizioni nel codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica esattamente al supporto tecnico Microsoft il punto in cui è stato generato, fornendo in tal modo un'informazione che in alcuni casi facilita la diagnosi di un problema.  
+ La maggior parte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] degli errori segnalati dal driver ODBC Native Client può essere diagnosticata in modo efficace utilizzando solo le informazioni restituite da **SQLGetDiagRec**. In alcuni casi, tuttavia, le informazioni restituite dai campi di diagnostica specifici del driver sono importanti per la diagnosi di un errore. Quando si codifica un gestore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errori ODBC per le applicazioni che utilizzano il driver ODBC Native Client, è consigliabile utilizzare anche **SQLGetDiagField** per recuperare almeno i campi specifici del driver SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY. Se un determinato errore può essere generato in diverse posizioni nel codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica esattamente al supporto tecnico Microsoft il punto in cui è stato generato, fornendo in tal modo un'informazione che in alcuni casi facilita la diagnosi di un problema.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di errori e messaggi](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

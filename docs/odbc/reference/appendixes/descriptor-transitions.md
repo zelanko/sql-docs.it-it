@@ -1,5 +1,5 @@
 ---
-title: Transizioni di descrittori | Microsoft Docs
+title: Transizioni dei descrittori Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,70 +12,70 @@ helpviewer_keywords:
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44e9d92c7371451d6bfdd2e1513c3f8fdac8447b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec5c26bdde8a0d470f2d93e753504bf1c51edcc0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130003"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307042"
 ---
 # <a name="descriptor-transitions"></a>Transizioni dei descrittori
-I descrittori ODBC presentano i tre stati seguenti.  
+I descrittori ODBC hanno i seguenti tre stati.  
   
 |State|Descrizione|  
 |-----------|-----------------|  
 |D0|Descrittore non allocato|  
 |D1i|Descrittore allocato in modo implicito|  
-|D1e|Descrittore allocato in modo esplicito|  
+|D1e|Descrittore allocato in modo esplicitoExplicitly allocated|  
   
- Nelle tabelle seguenti viene illustrato il modo in cui ogni funzione ODBC influiscono sullo stato del descrittore.  
+ Nelle tabelle seguenti viene illustrato come ogni funzione ODBC influisce sullo stato del descrittore.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> Non allocato|D1i<br /><br /> Implicit (Implicita)|D1e<br /><br /> Esplicito|  
+|D0<br /><br /> Non allocato|D1i<br /><br /> Implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
-|D1i [1]|--|--|  
-|D1e [2]|--|--|  
+|D1i[1]|--|--|  
+|D1e[2]|--|--|  
   
- [1] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_STMT.  
+ [1] Questa riga mostra le transizioni quando *HandleType* è stato SQL_HANDLE_STMT.  
   
- [2] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
+ [2] Questa riga mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
   
-## <a name="sqlcopydesc"></a>SQLCopyDesc  
+## <a name="sqlcopydesc"></a>SQLCopyDesc (informazioni in lingua inglese)  
   
-|D0<br /><br /> Non allocato|D1i<br /><br /> Implicit (Implicita)|D1e<br /><br /> Esplicito|  
+|D0<br /><br /> Non allocato|D1i<br /><br /> Implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
-|IH|--|--|  
+|(IH)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> Non allocato|D1i<br /><br /> Implicit (Implicita)|D1e<br /><br /> Esplicito|  
+|D0<br /><br /> Non allocato|D1i<br /><br /> Implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|IH 2|(HY017)|D0|  
+|(IH) [2]|(HY017)|D0|  
   
- [1] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_STMT.  
+ [1] Questa riga mostra le transizioni quando *HandleType* è stato SQL_HANDLE_STMT.  
   
- [2] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
+ [2] Questa riga mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField e SQLGetDescRec  
   
-|D0<br /><br /> Non allocato|D1i<br /><br /> Implicit (Implicita)|D1e<br /><br /> Esplicito|  
+|D0<br /><br /> Non allocato|D1i<br /><br /> Implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
-|IH|--|--|  
+|(IH)|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField e SQLSetDescRec  
   
-|D0<br /><br /> Non allocato|D1i<br /><br /> Implicit (Implicita)|D1e<br /><br /> Esplicito|  
+|D0<br /><br /> Non allocato|D1i<br /><br /> Implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
-|IH 1|--|--|  
+|(IH) [1]|--|--|  
   
- [1] Questa riga Mostra le transizioni quando *DescriptorHandle* è l'handle di un ARD, APD o dpi oppure (per **SQLSetDescField**) quando *DescriptorHandle* è l'handle di un IRD e *FieldIdentifier* è stato SQL_DESC_ARRAY_STATUS_PTR o SQL_DESC_ROWS_PROCESSED_PTR.  
+ [1] Questa riga mostra le transizioni quando *DescriptorHandle* era l'handle di un ARD, APD o IPD, o (per **SQLSetDescField**) quando *DescriptorHandle* era l'handle di un IRD e *FieldIdentifier* è stato SQL_DESC_ARRAY_STATUS_PTR o SQL_DESC_ROWS_PROCESSED_PTR.  
   
 ## <a name="all-other-odbc-functions"></a>Tutte le altre funzioni ODBC  
   
-|D0<br /><br /> Non allocato|D1i<br /><br /> Implicit (Implicita)|D1e<br /><br /> Esplicito|  
+|D0<br /><br /> Non allocato|D1i<br /><br /> Implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

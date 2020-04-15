@@ -1,5 +1,5 @@
 ---
-title: Parole chiave riservate | Microsoft Docs
+title: Parole chiave riservate Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057215"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307992"
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
-Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non vincolano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con i driver che supportano la grammatica SQL di base, le applicazioni devono evitare di usare una di queste parole chiave. Il valore #**define** SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
+Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non vincolano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con i driver che supportano la grammatica SQL di base, le applicazioni devono evitare di utilizzare una di queste parole chiave. Il valore**di definizione** SQL_ODBC_KEYWORDS contiene un elenco separato da virgole di queste parole chiave.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|AZIONE|ISOLATION|  
+|ACTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -49,26 +49,26 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |BY|NCHAR|  
 |CASCADE|NEXT|  
 |CASCADED|NO|  
-|CASE|Nessuno|  
+|CASE|NONE|  
 |CAST|NOT|  
 |CATALOG|NULL|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ATTIVA|  
+|CHECK|ON|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|o|  
+|COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|SOVRAPPOSIZIONI|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|VINCOLI|PARTIAL|  
+|CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|POSIZIONE|  
+|CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -88,13 +88,13 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|Elimina|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|DIMENSIONE|  
+|DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
@@ -127,7 +127,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITÀ|USER|  
+|IDENTITY|USER|  
 |IMMEDIATE|USING|  
 |IN|VALORE|  
 |INCLUDE|VALUES|  

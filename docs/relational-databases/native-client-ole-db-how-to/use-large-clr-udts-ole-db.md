@@ -1,5 +1,5 @@
 ---
-title: Usare i tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Microsoft Docs
+title: Usare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b228a27169a506c1a1b292ee670bd08e4633201f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9d49440e52d54db9865a96f3f3b8e6fb4fa09da
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73766355"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307502"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utilizzare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In questo esempio viene illustrato come recuperare righe con tipi di grandi dimensioni definiti dall'utente da un set di risultati. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
+  In questo esempio viene illustrato come recuperare righe con tipi di grandi dimensioni definiti dall'utente da un set di risultati. Per altre informazioni, vedere [Tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
   
 ## <a name="example"></a>Esempio  
  L'esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella con una colonna di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà utilizzato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  

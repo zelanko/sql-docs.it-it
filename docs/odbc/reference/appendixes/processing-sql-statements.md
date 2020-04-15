@@ -1,5 +1,5 @@
 ---
-title: Elaborazione di istruzioni SQL | Microsoft Docs
+title: Lavorazione delle istruzioni SQL Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9452ade90f6967dff6d72d5692efcf91b93154d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eda640f6e810eeccbfa17ea2b6ba7c1b19b28e08
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057240"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308002"
 ---
 # <a name="processing-sql-statements"></a>Elaborazione di istruzioni SQL
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità del cursore del driver.  
   
- La libreria di cursori ODBC passa tutte le istruzioni SQL direttamente al driver, ad eccezione di quanto segue:  
+ La libreria di cursori ODBC passa tutte le istruzioni SQL direttamente al driver, ad eccezione delle seguenti:  
   
--   Istruzioni Update e Delete posizionate  
+-   Istruzioni di aggiornamento ed eliminazione posizionate  
   
--   **Select for Update** -istruzioni  
+-   **Istruzioni SELECT FOR UPDATE**  
   
 -   Istruzioni SQL in batch  
   
- Per eseguire le istruzioni Update e Delete posizionate e per posizionare il cursore su una riga per chiamare **SQLGetData** per tale riga, la libreria di cursori crea un'istruzione di ricerca che identifica la riga.  
+ Per eseguire istruzioni update ed delete posizionate e posizionare il cursore su una riga per chiamare **SQLGetData** per tale riga, la libreria di cursori crea un'istruzione cercata che identifica la riga.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

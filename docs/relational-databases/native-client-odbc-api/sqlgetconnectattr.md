@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectAttr | Microsoft Docs
+title: Proprietà SQLGetConnectAttr . Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e302fe1c5a1f4bcf5f51728a866a72b993076f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 590d47d65ab3893dbc9eefc3facd224671668378
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302151"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce gli attributi di connessione specifici del driver. Alcuni degli attributi sono disponibili per **SQLGetConnectAttr**e la funzione viene usata per segnalare le impostazioni correnti. I valori restituiti per questi attributi non sono garantiti finché non viene stabilita una connessione o se l'attributo non è stato impostato tramite [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce gli attributi di connessione specifici del driver. Alcuni degli attributi sono disponibili per **SQLGetConnectAttr**e la funzione viene utilizzata per segnalare le impostazioni correnti. I valori riportati per questi attributi non sono garantiti fino a dopo che è stata stabilita una connessione o l'attributo è stato impostato utilizzando [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
- In questo argomento sono elencati gli attributi di sola lettura. Per informazioni sugli altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attributi di connessione specifici del driver ODBC di Native client, vedere [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ In questo argomento sono elencati gli attributi di sola lettura. Per informazioni sugli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altri attributi di connessione specifici del driver ODBC di Native Client, vedere [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
 ## <a name="sql_copt_ss_connection_dead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  L'attributo SQL_COPT_SS_CONNECTION_DEAD consente di segnalare lo stato di una connessione a un server. Il driver esegue query sulla rete al fine di individuare lo stato corrente della connessione.  
@@ -48,7 +48,7 @@ ms.locfileid: "73786719"
   
 -   Informazioni di diagnostica nei registri di traccia di accesso ai dati, se abilitati.  
   
- Per ulteriori informazioni, vedere [accesso alle informazioni di diagnostica nel log degli eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Per ulteriori informazioni, vedere [Accesso alle informazioni di diagnostica nel registro eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "73786719"
 |SQL_SUCCESS|Connessione attivata. L'ID di connessione client verrà trovato nel buffer di output.|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- Tramite l'attributo SQL_COPT_SS_PERF_DATA viene restituito un puntatore a una struttura SQLPERF contenente le statistiche correnti sulle prestazioni del driver. **SQLGetConnectAttr** restituirà null se la registrazione delle prestazioni non è abilitata. Le statistiche nella struttura SQLPERF non vengono aggiornate in modo dinamico dal driver. Chiamare **SQLGetConnectAttr** ogni volta che è necessario aggiornare le statistiche sulle prestazioni.  
+ Tramite l'attributo SQL_COPT_SS_PERF_DATA viene restituito un puntatore a una struttura SQLPERF contenente le statistiche correnti sulle prestazioni del driver. **SQLGetConnectAttr** restituirà NULL se la registrazione delle prestazioni non è abilitata. Le statistiche nella struttura SQLPERF non vengono aggiornate in modo dinamico dal driver. Chiamare **SQLGetConnectAttr** ogni volta che è necessario aggiornare le statistiche sulle prestazioni.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
@@ -75,20 +75,20 @@ ms.locfileid: "73786719"
 |Qualsiasi altro valore|Puntatore ai dati utente.|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>Supporto di SQLSetConnectAttr per i nomi SPN (Service Principal Names)  
- È possibile utilizzare SQLGetConnectAttr per eseguire una query sul valore dei nuovi attributi di connessione SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. È anche possibile usare SQLGetConnectOption per eseguire una query su questi valori.  
+ SQLGetConnectAttr può essere utilizzato per eseguire query sul valore dei nuovi attributi di connessione SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption può essere utilizzato anche per eseguire query su questi valori.)  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD è disponibile solo per connessioni aperte che utilizzano l'autenticazione di Windows.  
   
  Se non è stato impostato SQL_COPT_SS_SERVER_SPN o SQL_COPT_SS_FAILOVER_PARTNER, viene restituito il valore predefinito (una stringa vuota).  
   
- Per ulteriori informazioni sui nomi SPN, vedere [nomi dell'entità servizio &#40;spn&#41; nelle connessioni Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Per ulteriori informazioni sui nomi SPN, vedere [Nomi delle entità servizio &#40;nomi &#40;NOMI SPN&#41; in Connessioni client &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLGetConnectAttr (funzione)](https://go.microsoft.com/fwlink/?LinkId=59347)   
- [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [IMPOSTA QUOTED_IDENTIFIER &#40;&#41;Transact-SQL](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [Funzione SQLGetConnectAttrSQLGetConnectAttr Function](https://go.microsoft.com/fwlink/?LinkId=59347)   
+ [Dettagli di implementazione dell'API ODBCODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [SET QUOTED_IDENTIFIER &#40;&#41;Transact-SQLSET](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET ANSI_NULLS &#40;transact-SQLTransact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING &#40;&#41;Transact-SQL](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

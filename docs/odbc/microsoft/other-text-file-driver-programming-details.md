@@ -1,5 +1,5 @@
 ---
-title: Altri dettagli di programmazione dei driver file di testo | Microsoft Docs
+title: Altri dettagli di programmazione del driver di file di testo Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5565c5682e8e33fbadd6ffdd66a89098098bea6d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043778"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290941"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Altre informazioni sulla programmazione dei driver file di testo
 > [!NOTE]  
->  In questa sezione vengono fornite informazioni specifiche del driver del file di testo sulle funzioni ODBC e altri dettagli di programmazione. Per informazioni generali su una funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questa sezione vengono fornite informazioni specifiche del driver di file di testo sulle funzioni ODBC e altri dettagli di programmazione. Per informazioni generali su una funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Questa sezione contiene i seguenti argomenti:  
   

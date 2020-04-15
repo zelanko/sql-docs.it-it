@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColumns (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - BCPColumns method
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b5385d32ef349284f261a457391581b6e28da03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4decf679d36aca6c8f44297da0073b75bc42b351
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789700"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307407"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ HRESULT BCPColumns(
  Dopo avere chiamato il metodo **BCPColumns**, è necessario chiamare il metodo **BCPColFmt** per ogni colonna del file utente per definire in modo completo un formato di file personalizzato.  
   
 ## <a name="arguments"></a>Argomenti  
- *nColumns sul*[in]  
+ *nColumns*[in]  
  Numero totale di campi nel file utente. Anche se si prepara la copia bulk dei dati dal file utente in una tabella di SQL Server e non si prevede di copiare tutti i campi del file utente, è comunque necessario impostare l'argomento *nColumns* sul numero totale di campi del file utente. I campi ignorati possono quindi essere specificati tramite **BCPColFmt**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider. per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Si è verificato un errore specifico del provider; per informazioni dettagliate, utilizzare l'interfaccia [ISQLServerErrorInfo.](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)  
   
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo **BCPInit** prima della chiamata a questo metodo. Si verifica inoltre quando questo metodo viene chiamato più volte per un'operazione di copia bulk.  
@@ -64,7 +64,7 @@ HRESULT BCPColumns(
  Errore di memoria insufficiente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

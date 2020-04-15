@@ -1,5 +1,5 @@
 ---
-title: Requisiti di sistema (driver ODBC Visual FoxPro) | Microsoft Docs
+title: Requisiti di sistema (Driver ODBC di Visual FoxPro) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,42 +16,42 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301442"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisiti di sistema (driver ODBC Visual FoxPro)
-I requisiti di sistema per l'installazione di forniscono il sistema operativo minimo e lo spazio su disco necessario per installare correttamente il driver. Dopo aver installato il driver, è possibile selezionare il software dell'applicazione specifico che si vuole usare per accedere ai dati Visual FoxPro.  
+I requisiti di sistema per l'installazione forniscono il sistema operativo minimo e lo spazio su disco necessari per installare correttamente il driver. Dopo aver installato il driver, è possibile selezionare il software applicativo specifico che si desidera utilizzare per accedere ai dati di Visual FoxPro.  
   
 ## <a name="installation-requirements"></a>Requisiti di installazione  
- Per i requisiti di installazione e altre informazioni, vedere [il sito di download del driver ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Per i requisiti di installazione e altre informazioni, vedere il sito di [download del driver ODBC di Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="accessing-visual-foxpro-data"></a>Accesso ai dati Visual FoxPro  
- Per accedere a Microsoft Visual FoxPro o FoxPro 2. *x* data, è necessario disporre di quanto segue:  
+## <a name="accessing-visual-foxpro-data"></a>Accesso ai dati di Visual FoxPro  
+ Per accedere a Microsoft Visual FoxPro o FoxPro 2. *x* dati, è necessario disporre di quanto segue:  
   
 -   Software client ODBC (installato automaticamente con il driver)  
   
--   Driver ODBC Microsoft Visual FoxPro  
+-   Microsoft Visual FoxPro ODBC Driver  
   
 -   Uno dei seguenti tipi di software applicativo:  
   
-    -   Microsoft Office applicazione, ad esempio Microsoft Excel o Microsoft Word  
+    -   Applicazione di Microsoft Office, ad esempio Microsoft Excel o Microsoft Word  
   
-    -   Applicazione ODBC del linguaggio C o C++  
+    -   Applicazione ODBC in linguaggio C o C  
   
-    -   Applicazione ODBC Microsoft Visual Basic  
+    -   Applicazione ODBC di Microsoft Visual Basic  
   
--   Uno dei tipi di dati seguenti:  
+-   Uno dei seguenti tipi di dati:  
   
-    -   [Database](../../odbc/microsoft/visual-foxpro-terminology.md) Visual FoxPro o una directory di [tabelle gratuite](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   Database di Visual [FoxPro](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [tabelle libere](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro 2,0, 2,5, 2,6 [tabella](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   FoxPro 2.0, 2.5, [2.6 tavolo](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- Il driver ODBC Visual FoxPro supporta i set di caratteri DBCS (Double-byte character set). Per ulteriori informazioni, vedere [supporto internazionale](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
+ Il driver ODBC di Visual FoxPro supporta set di caratteri a byte doppio (DBCS). Per ulteriori informazioni, vedere [Supporto internazionale](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- Il driver non supporta le applicazioni Microsoft Windows 3,1 a 16 bit.
+ Il driver non supporta applicazioni Microsoft Windows 3.1 a 16 bit.

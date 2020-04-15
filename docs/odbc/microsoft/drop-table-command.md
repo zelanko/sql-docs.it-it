@@ -1,5 +1,5 @@
 ---
-title: Comando DROP TABLE | Microsoft Docs
+title: Comando DROP TABLE Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - drop table command [ODBC]
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 278950bac7589b8a6b02d894c8133a699c3bd1ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 779c519f720027aea3a6f6cf2587d3c6e0b59b52
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071802"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303422"
 ---
 # <a name="drop-table-command"></a>DROP TABLE (comando)
-Rimuove una tabella dal database specificato con l'origine dati e la Elimina dal disco.  
+Rimuove una tabella dal database specificato con l'origine dati e la elimina dal disco.  
   
- Il driver ODBC Visual FoxPro supporta la sintassi nativa del linguaggio Visual FoxPro per questo comando. Per informazioni specifiche del driver, vedere la sezione Osservazioni.  
+ Il driver ODBC di Visual FoxPro supporta la sintassi nativa del linguaggio Visual FoxPro per questo comando. Per informazioni specifiche del driver, vedere la pagina Osservazioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,22 +32,22 @@ DROP TABLE TableName | FileName | ?
 ```  
   
 ## <a name="settings"></a>Impostazioni  
- *TableName*  
+ *Tablename*  
  Specifica la tabella da rimuovere dal database specificato con l'origine dati e da eliminare dal disco.  
   
- *FileName*  
- Specifica una tabella gratuita da eliminare dal disco.  
+ *Filename*  
+ Specifica una tabella libera da eliminare dal disco.  
   
  ?  
- Consente di visualizzare la finestra di dialogo Rimuovi dalla quale è possibile scegliere una tabella da rimuovere dal database specificato con l'origine dati e da eliminare dal disco.  
+ Visualizza la finestra di dialogo Rimuovi da cui è possibile scegliere una tabella da rimuovere dal database specificato con l'origine dati ed eliminare dal disco.  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando viene eseguita l'eliminazione della tabella, vengono rimossi anche tutti gli indici primari, i valori predefiniti e le regole di convalida associati alla tabella. DROP TABLE influiscono anche sulle altre tabelle del database specificato con l'origine dati se tali tabelle presentano regole o relazioni associate alla tabella da rimuovere. Le regole e le relazioni non sono più valide quando la tabella viene rimossa dal database.  
+ Quando viene emesso DROP TABLE, vengono rimossi anche tutti gli indici primari, i valori predefiniti e le regole di convalida associate alla tabella. DROP TABLE influisce anche sulle altre tabelle del database specificato con l'origine dati se tali tabelle hanno regole o relazioni associate alla tabella da rimuovere. Le regole e le relazioni non sono più valide quando la tabella viene rimossa dal database.  
   
-## <a name="driver-remarks"></a>Osservazioni del driver  
- Quando l'applicazione invia l'istruzione ODBC SQL DROP TABLE all'origine dati, il driver ODBC Visual FoxPro converte il comando nel comando TABLE di Visual FoxProDROP usando la sintassi illustrata nella tabella seguente.  
+## <a name="driver-remarks"></a>Osservazioni del conducente  
+ Quando l'applicazione invia l'istruzione SQL ODBC DROP TABLE all'origine dati, il driver ODBC di Visual FoxPro converte il comando nel comando Table di Visual FoxProDROP utilizzando la sintassi illustrata nella tabella seguente.  
   
 |Sintassi ODBC|Origine dati|Sintassi di Visual FoxPro|  
 |-----------------|-----------------|--------------------------|  
-|DROP TABLE *-base-nome-tabella*|Database (file con estensione DBC)|Rimuovi tabella *TableName* Delete|  
-||Directory delle tabelle gratuite (file con estensione dbf)|Cancella *dbfName*<br /><br /> Cancella *cdxName*<br /><br /> Cancella *fptName*|
+|NOME *tabella di base* DROP TABLE|Database (file con estensione dbc)|REMOVE *TABLEName NOMECAN*|  
+||Directory delle tabelle libere (file con estensione dbf)|Nome *dbf* ERASE<br /><br /> NOME *cdx* ERASE<br /><br /> ERASE *fptName*|

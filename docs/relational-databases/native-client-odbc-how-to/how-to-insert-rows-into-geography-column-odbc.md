@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: inserimento di righe in colonne geografiche (ODBC) | Microsoft Docs'
+title: 'Procedura: inserire righe nella colonna Geography (ODBC) Documenti Microsoft'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781295"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293881"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserimento di righe in colonne geografiche (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserire righe in colonne geografiche (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questo esempio vengono inserite due righe in una tabella con colonna geografica da un input WKB (Well-Known Binary) utilizzando 2 associazioni diverse, SQLCCHAR e SQLCBINARY. Viene quindi selezionata una riga dalla tabella e viene utilizzato ::STAsText() per visualizzarla. Il valore di WKB è 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e tramite l'applicazione viene visualizzato nella console l'output: POINT(56.4595 -2.9842).  
@@ -27,10 +27,10 @@ ms.locfileid: "73781295"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per ulteriori informazioni sull'archiviazione spaziale, vedere [dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
+ Per ulteriori informazioni sull'archiviazione spaziale, vedere [Dati spaziali &#40;&#41;di SQL Server. ](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
 ## <a name="example"></a>Esempio  
- Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata da questo esempio.  
+ Il primo [!INCLUDE[tsql](../../includes/tsql-md.md)]elenco di codice ( ) crea una tabella utilizzata da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e user32.lib. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73781295"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
+ Il terzo [!INCLUDE[tsql](../../includes/tsql-md.md)]elenco di codice ( ) elimina la tabella utilizzata da questo esempio.  
   
 ```sql
 use tempdb  

@@ -1,5 +1,5 @@
 ---
-title: Programmazione SQL Server Native Client | Microsoft Docs
+title: Programmazione di SQL Server Native Client Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,34 +15,31 @@ helpviewer_keywords:
 - SQLNCLI
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce9a9b2333098baf8059169af06e9b9142ea70f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 327a0333915e5b93347438104e7af1006ffffc91
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76909563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305068"
 ---
 # <a name="sql-server-native-client-programming"></a>Programmazione in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è un'API (Application Programming Interface) di accesso ai dati autonoma utilizzata sia in OLE DB sia in ODBC, introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client combina il provider OLE DB per SQL Server e il driver ODBC per SQL Server in una sola DLL (libreria di collegamento dinamico) nativa. Fornisce inoltre nuove funzionalità che estendono quelle fornite da Windows Data Access Components (Windows DAC, applicazione livello dati, precedentemente noto come Microsoft Data Access Components o MDAC). È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per creare nuove applicazioni o per migliorare applicazioni esistenti al fine di sfruttare le nuove caratteristiche di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ad esempio MARS (Multiple Active Result Set), tipi di dati definiti dall'utente (UDT), notifica delle query, isolamento dello snapshot e supporto del tipo di dati XML.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è un'API (Application Programming Interface) di accesso ai dati autonoma utilizzata sia in OLE DB sia in ODBC, introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client combina il provider OLE DB per SQL Server e il driver ODBC per SQL Server in una sola DLL (libreria di collegamento dinamico) nativa. Fornisce inoltre nuove funzionalità che estendono quelle fornite da Windows Data Access Components (Windows DAC, applicazione livello dati, precedentemente noto come Microsoft Data Access Components o MDAC). È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per creare nuove applicazioni o per migliorare applicazioni esistenti al fine di sfruttare le nuove caratteristiche di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ad esempio MARS (Multiple Active Result Set), tipi di dati definiti dall'utente (UDT), notifica delle query, isolamento dello snapshot e supporto del tipo di dati XML.  
   
 > [!NOTE]  
->  Per un elenco delle differenze tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client e Windows DAC, oltre a informazioni sui problemi da prendere in considerazione prima di aggiornare un'applicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DAC Windows a Native client, vedere [aggiornamento di un'applicazione a SQL Server Native Client da MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
+>  Per un elenco delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differenze tra Native Client e Windows DAC, oltre a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sui problemi da considerare prima di aggiornare un'applicazione Windows DAC a Native Client, vedere Aggiornamento di [un'applicazione a SQL Server Native Client da MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene sempre utilizzato in combinazione con Gestione driver ODBC fornito con Windows DAC (applicazione livello dati). Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client può essere utilizzato con i servizi principali OLE DB forniti con Windows DAC (applicazione livello dati), ma non si tratta di un requisito obbligatorio. La scelta di utilizzare o meno i servizi di base dipende dai requisiti dell'applicazione specifica (ad esempio se è richiesto il pool di connessioni).  
   
- Le applicazioni ADO (ActiveX Data Object) possono utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provider di OLE DB di Native client, ma è consigliabile utilizzare ADO insieme alla parola chiave della stringa di connessione **DataTypeCompatibility** (o alla proprietà **DataSource** corrispondente). Quando si utilizza il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le applicazioni ADO possono sfruttare le nuove caratteristiche introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] disponibili tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client attraverso le parole chiave delle stringhe di connessione o le proprietà OLE DB o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per ulteriori informazioni sull'utilizzo di queste funzionalità con ADO, vedere [utilizzo di ADO con SQL Server Native Client](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
+ Le applicazioni ADO (ActiveX Data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Object) possono utilizzare il provider OLE DB Native Client, ma è consigliabile utilizzare ADO insieme alla parola chiave della stringa di connessione **DataTypeCompatibility** (o alla proprietà **DataSource** corrispondente). Quando si utilizza il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le applicazioni ADO possono sfruttare le nuove caratteristiche introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] disponibili tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client attraverso le parole chiave delle stringhe di connessione o le proprietà OLE DB o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per ulteriori informazioni sull'utilizzo di queste funzionalità con ADO, vedere [Utilizzo di ADO con SQL Server Native Client](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è stato progettato come metodo semplificato per ottenere l'accesso ai dati nativo in SQL Server tramite OLE DB o ODBC. La semplicità è data dalla combinazione delle tecnologie OLE DB e ODBC in un'unica libreria e dalla possibilità di sviluppare nuove caratteristiche di accesso ai dati, elaborate senza modificare i componenti Windows DAC (applicazione livello dati) esistenti, facenti ora parte della piattaforma Microsoft Windows.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è stato progettato come metodo semplificato per ottenere l'accesso ai dati nativo in SQL Server tramite OLE DB o ODBC. La semplicità è data dalla combinazione delle tecnologie OLE DB e ODBC in un'unica libreria e dalla possibilità di sviluppare nuove caratteristiche di accesso ai dati, elaborate senza modificare i componenti Windows DAC (applicazione livello dati) esistenti, facenti ora parte della piattaforma Microsoft Windows.  
   
- Sebbene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilizzi componenti di Windows DAC, non dipende in modo esplicito da una particolare versione di Windows DAC. È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client con la versione di Windows DAC (applicazione livello dati) installata con qualsiasi sistema operativo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ Mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilizza i componenti in Windows DAC, non dipende in modo esplicito da una particolare versione di Windows DAC. È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client con la versione di Windows DAC (applicazione livello dati) installata con qualsiasi sistema operativo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client.md)  
@@ -76,7 +73,7 @@ ms.locfileid: "76909563"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento di un'applicazione da SQL Server 2005 Native Client](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
- [Procedure per ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [Argomenti relativi alle procedure ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Procedure per l'utilizzo di OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

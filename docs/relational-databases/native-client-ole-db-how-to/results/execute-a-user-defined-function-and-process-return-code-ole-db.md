@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [OLE DB]
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 068323f82156af0413bc4cc308c474b3b28fd266
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ff1622a3fd5082568120c3e4dc7063b8922b2780
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244477"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302231"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Eseguire una funzione definita dall'utente ed elaborare il codice restituito (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "75244477"
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
  Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per creare la stored procedure usata dall'applicazione.  
@@ -367,6 +367,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per l'elaborazione dei risultati &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Procedure relative all'elaborazione dei risultati &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   
