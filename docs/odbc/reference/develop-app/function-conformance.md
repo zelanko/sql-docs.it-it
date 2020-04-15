@@ -1,5 +1,5 @@
 ---
-title: Conformità della funzione | Microsoft Docs
+title: Conformità alle funzioni Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,44 +13,44 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069747"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305592"
 ---
 # <a name="function-conformance"></a>Conformità della funzione
-Nella tabella seguente viene indicato il livello di conformità di ogni funzione ODBC, in cui questo è ben definito.  
+Nella tabella seguente viene indicato il livello di conformità di ogni funzione ODBC, in cui questa operazione è ben definita.  
   
 |Funzione|Livello di conformità|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|Core|  
 |**SQLBindCol**|Core|  
-|**SQLBindParameter**|Core [1]|  
+|**SQLBindParameter**|Nucleo[1]|  
 |**SQLBrowseConnect**|Livello 1|  
-|**SQLBulkOperations**|Livello 1|  
-|**SQLCancel**|Core [1]|  
+|**Sqlbulkoperations**|Livello 1|  
+|**SQLCancel**|Nucleo[1]|  
 |**SQLCloseCursor**|Core|  
-|**SQLColAttribute**|Core [1]|  
-|**SQLColumnPrivileges**|Level 2|  
+|**SQLColAttribute**|Nucleo[1]|  
+|**SQLColumnPrivileges**|Livello 2|  
 |**SQLColumns**|Core|  
 |**SQLConnect**|Core|  
-|**SQLCopyDesc**|Core|  
-|**SQLDataSources**|Core|  
-|**SQLDescribeCol**|Core [1]|  
-|**SQLDescribeParam**|Level 2|  
-|**SQLDisconnect**|Core|  
+|**SQLCopyDesc (informazioni in lingua inglese)**|Core|  
+|**SqlDataSourcesSQLDataSources**|Core|  
+|**SQLDescribeCol**|Nucleo[1]|  
+|**SQLDescribeParam**|Livello 2|  
+|**Sqldisconnect**|Core|  
 |**SQLDriverConnect**|Core|  
 |**SQLDrivers**|Core|  
-|**SQLEndTran**|Core [1]|  
+|**SQLEndTran**|Nucleo[1]|  
 |**SQLExecDirect**|Core|  
 |**SQLExecute**|Core|  
 |**SQLFetch**|Core|  
-|**SQLFetchScroll**|Core [1]|  
-|**SQLForeignKeys**|Level 2|  
+|**SQLFetchScroll**|Nucleo[1]|  
+|**SQLForeignKeys**|Livello 2|  
 |**SQLFreeHandle**|Core|  
 |**SQLFreeStmt**|Core|  
 |**SQLGetConnectAttr**|Core|  
@@ -60,7 +60,7 @@ Nella tabella seguente viene indicato il livello di conformità di ogni funzione
 |**SQLGetDescRec**|Core|  
 |**SQLGetDiagField**|Core|  
 |**SQLGetDiagRec**|Core|  
-|**SQLGetEnvAttr**|Core|  
+|**SQLGetEnvAttr (Informazioni in lingua inglese)**|Core|  
 |**SQLGetFunctions**|Core|  
 |**SQLGetInfo**|Core|  
 |**SQLGetStmtAttr**|Core|  
@@ -76,18 +76,18 @@ Nella tabella seguente viene indicato il livello di conformità di ogni funzione
 |**SQLProcedures**|Livello 1|  
 |**SQLPutData**|Core|  
 |**SQLRowCount**|Core|  
-|**SQLSetConnectAttr**|Core [2]|  
-|**SQLSetCursorName**|Core|  
-|**SQLSetDescField**|Core [1]|  
+|**SQLSetConnectAttr**|Nucleo[2]|  
+|**SQLSetCursorName (Nome cursore)**|Core|  
+|**SQLSetDescField**|Nucleo[1]|  
 |**SQLSetDescRec**|Core|  
-|**SQLSetEnvAttr**|Core [2]|  
-|**SQLSetPos**|Livello 1 [1]|  
-|**SQLSetStmtAttr**|Core [2]|  
-|**SQLSpecialColumns**|Core [1]|  
+|**SQLSetEnvAttr**|Nucleo[2]|  
+|**SQLSetPos**|Livello 1[1]|  
+|**SQLSetStmtAttr**|Nucleo[2]|  
+|**SQLSpecialColumns**|Nucleo[1]|  
 |**SQLStatistics**|Core|  
-|**SQLTablePrivileges**|Level 2|  
+|**SQLTablePrivileges**|Livello 2|  
 |**SQLTables**|Core|  
   
- [1] le funzionalità significative di questa funzione sono disponibili solo a livelli di conformità più elevati.  
+ [1] Le caratteristiche significative di questa funzione sono disponibili solo a livelli di conformità più elevati.  
   
- [2] l'impostazione di determinati attributi su valori non predefiniti dipende dal livello di conformità. Per ulteriori informazioni, vedere la sezione successiva, [conformità dell'attributo](../../../odbc/reference/develop-app/attribute-conformance.md).
+ [2] L'impostazione di determinati attributi su valori non predefiniti dipende dal livello di conformità. Per ulteriori informazioni, vedere la sezione successiva, [Conformità attributi](../../../odbc/reference/develop-app/attribute-conformance.md).

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo del catalogo e dello schema | Microsoft Docs
+title: 'Utilizzo del catalogo e dello schema : Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], schema names
 - schema names in SQL statements [ODBC]
 ms.assetid: 84f7ef61-1ef1-46f3-9678-b087aa8e8e34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e10460df120451502d798376453d69d111051ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 245bd007f070a94689283830ba7a1362e31353e6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064408"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306252"
 ---
 # <a name="catalog-and-schema-usage"></a>Utilizzo del catalogo e dello schema
-Le origini dati non supportano necessariamente i nomi di catalogo e di schema come identificatori del nome di oggetto in tutte le istruzioni SQL. È possibile che le origini dati supportino i nomi di catalogo e di schema in una o più delle seguenti classi di istruzioni SQL: istruzioni DML (Data Manipulation Language), chiamate di procedure, istruzioni di definizione della tabella, istruzioni per la definizione dell'indice e definizione dei privilegi istruzioni. Per determinare le classi di istruzioni SQL in cui è possibile utilizzare i nomi di catalogo e di schema, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CATALOG_USAGE e SQL_SCHEMA_USAGE.
+Le origini dati non supportano necessariamente i nomi di catalogo e schema come identificatori di nomi di oggetto in tutte le istruzioni SQL. Le origini dati possono supportare i nomi di catalogo e schema in una o più delle seguenti classi di istruzioni SQL: istruzioni DML (Data Manipulation Language), chiamate di routine, istruzioni di definizione di tabella, istruzioni di definizione dell'indice e istruzioni di definizione dei privilegi. Per determinare le classi di istruzioni SQL in cui è possibile utilizzare i nomi di catalogo e schema, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CATALOG_USAGE e SQL_SCHEMA_USAGE.

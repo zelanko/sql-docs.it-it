@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati interval | Microsoft Docs
+title: Tipi di dati Interval Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,39 +23,39 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947552"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304967"
 ---
 # <a name="interval-data-types"></a>Tipi di dati intervallo
-Un intervallo viene definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un intervallo di *anno del mese* che esprime gli intervalli in termini di anni e un numero integrale di mesi. L'altro è un intervallo di *tempo* che esprime gli intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono distinti e non possono essere misti, perché i mesi possono avere un numero di giorni variabile.  
+Un intervallo è definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un intervallo *di un anno* che esprime intervalli in termini di anni e un numero integrale di mesi. L'altro è un intervallo *giorno-tempo* che esprime intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono distinti e non possono essere mescolati, perché i mesi possono avere un numero variabile di giorni.  
   
- Un intervallo è costituito da un set di campi. Esiste un ordinamento implicito tra i campi. Ad esempio, in un intervallo di anno in mese, l'anno viene raggiunto per primo, seguito dal mese. Analogamente, in un intervallo giornaliero, i campi sono inclusi nell'ordine giorno, ora e minuto. Il primo campo in un tipo di intervallo viene chiamato campo *iniziale* o il campo di *ordine superiore* . L'ultimo campo è denominato campo *finale* .  
+ Un intervallo è costituito da un set di campi. C'è un ordinamento implicito tra i campi. Ad esempio, in un intervallo da inizio mese, l'anno viene prima, seguito dal mese. Analogamente, in un intervallo giorno per minuto, i campi sono nell'ordine giorno, ora e minuto. Il primo campo di un tipo di intervallo è denominato campo *iniziale* o campo *di ordine superiore.* L'ultimo campo è denominato campo *finale.*  
   
- A tutti gli intervalli, il campo principale non è vincolato dalle regole del calendario gregoriano. Ad esempio, in un intervallo di ore al minuto, il campo dell'ora non è vincolato a un valore compreso tra 0 e 23 (inclusi), in quanto normalmente è. I campi finali successivi al campo principale seguono i normali vincoli del calendario gregoriano. Per ulteriori informazioni, vedere [Constraints of the Gregorian Calendar](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), più avanti in questa appendice.  
+ In tutti gli intervalli, il campo iniziale non è vincolato dalle regole del calendario gregoriano. Ad esempio, in un intervallo da ora a minuto, il campo delle ore non è vincolato a essere compreso tra 0 e 23 (incluso). I campi finali successivi al campo iniziale seguono i soliti vincoli del calendario gregoriano. Per ulteriori informazioni, vedere [Vincoli del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)più avanti in questa appendice.  
   
- Sono disponibili 13 tipi di dati SQL intervallo e 13 tipi di dati intervallo C. Ognuno dei tipi di dati intervallo C utilizza la stessa struttura, SQL_INTERVAL_STRUCT, per contenere i dati relativi all'intervallo. Per ulteriori informazioni, vedere la sezione successiva, [struttura intervallo C](../../../odbc/reference/appendixes/c-interval-structure.md). Per ulteriori informazioni sui tipi di dati SQL, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md). Per ulteriori informazioni sui tipi di dati C, vedere [tipi di dati c](../../../odbc/reference/appendixes/c-data-types.md).  
+ Esistono 13 tipi di dati SQL a intervalli e 13 tipi di dati a intervalli C. Ognuno dei tipi di dati di intervallo C utilizza la stessa struttura, SQL_INTERVAL_STRUCT, per contenere i dati dell'intervallo. (Per ulteriori informazioni, vedere la sezione successiva, [C Interval Structure](../../../odbc/reference/appendixes/c-interval-structure.md).) Per altre informazioni sui tipi di dati SQL, vedere [Tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md); Per ulteriori informazioni sui tipi di dati C, vedere [Tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificatore di tipo|Classe|Descrizione|  
+|Identificatore del tipo|Classe|Descrizione|  
 |---------------------|-----------|-----------------|  
-|MONTH|Anno mese|Numero di mesi tra due date.|  
-|YEAR|Anno mese|Numero di anni tra due date.|  
-|YEAR_TO_MONTH|Anno mese|Numero di anni e mesi tra due date.|  
-|DAY|Giorno-ora|Numero di giorni tra due date.|  
-|HOUR|Giorno-ora|Numero di ore tra due data/ora.|  
-|MINUTE|Giorno-ora|Numero di minuti tra due date/ore.|  
-|SECOND|Giorno-ora|Numero di secondi tra due date/ore.|  
-|DAY_TO_HOUR|Giorno-ora|Numero di giorni/ore tra due data/ora.|  
-|DAY_TO_MINUTE|Giorno-ora|Numero di giorni/ore/minuti tra due data/ora.|  
-|DAY_TO_SECOND|Giorno-ora|Numero di giorni/ore/minuti/secondi tra due data e ora.|  
-|HOUR_TO_MINUTE|Giorno-ora|Numero di ore/minuti tra due date/ore.|  
-|HOUR_TO_SECOND|Giorno-ora|Numero di ore/minuti/secondi tra due data/ora.|  
-|MINUTE_TO_SECOND|Giorno-ora|Numero di minuti/secondi tra due date/ore.|  
+|MONTH|Anno-Mese|Numero di mesi tra due date.|  
+|YEAR|Anno-Mese|Numero di anni tra due date.|  
+|YEAR_TO_MONTH|Anno-Mese|Numero di anni e mesi tra due date.|  
+|DAY|Giorno-Ora|Numero di giorni tra due date.|  
+|HOUR|Giorno-Ora|Numero di ore tra due date/ore.|  
+|MINUTE|Giorno-Ora|Numero di minuti tra due date/ore.|  
+|SECOND|Giorno-Ora|Numero di secondi tra due date/ore.|  
+|DAY_TO_HOUR|Giorno-Ora|Numero di giorni/ore tra due date/ore.|  
+|DAY_TO_MINUTE|Giorno-Ora|Numero di giorni/ore/minuti tra due date/ore.|  
+|DAY_TO_SECOND|Giorno-Ora|Numero di giorni/ore/minuti/secondi tra due date/ore.|  
+|HOUR_TO_MINUTE|Giorno-Ora|Numero di ore/minuti tra due date/ore.|  
+|HOUR_TO_SECOND|Giorno-Ora|Numero di ore/minuti/secondi tra due date/ore.|  
+|MINUTE_TO_SECOND|Giorno-Ora|Numero di minuti/secondi tra due date/ore.|  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

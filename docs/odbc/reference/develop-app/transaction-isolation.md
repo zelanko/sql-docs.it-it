@@ -1,5 +1,5 @@
 ---
-title: Isolamento delle transazioni | Microsoft Docs
+title: Isolamento delle transazioni Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cf11d125bbdfab3c65d08fbf7d27a5ebe7f9096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 11ece337b06632df82d81dbbc058ff120f25adb4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298023"
 ---
 # <a name="transaction-isolation"></a>Isolamento della transazione
-L' *isolamento delle transazioni* si riferisce al livello di interazione tra più transazioni simultanee. Per capire il motivo per cui questa operazione è importante, è necessario prima di tutto esaminare l'idea della serializzabilità.  
+*L'isolamento delle transazioni* si riferisce al grado di interazione tra più transazioni simultanee. Per capire perché questo è importante, è necessario prima guardare l'idea di serializzabilità.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

@@ -11,20 +11,20 @@ apitype: COM
 helpviewer_keywords:
 - IRowsetFastLoad interface
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39a9f660f39a27a189c81d24d4d155d8764037d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: feea17329a8e809083263a83217aeb87fbf91bc3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307245"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  L'interfaccia **IRowsetFastLoad** espone il supporto per operazioni di copia bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basate sulla memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]I consumer del provider OLE DB di Native client utilizzano l'interfaccia per aggiungere rapidamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati a una tabella esistente.  
+  L'interfaccia **IRowsetFastLoad** espone il supporto per operazioni di copia bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basate sulla memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]I consumer del provider OLE DB client nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano l'interfaccia per aggiungere rapidamente dati a una tabella esistente.  
   
  Se si imposta SSPROP_ENABLEFASTLOAD su VARIANT_TRUE per una sessione, non è possibile leggere dati dai set di righe restituiti successivamente dalla sessione. Quando SSPROP_ENABLEFASTLOAD è impostato su VARIANT_TRUE, tutti i set di righe creati nella sessione saranno del tipo IRowsetFastLoad. I set di righe IRowsetFastLoad non supportano la funzionalità di recupero del set di righe, quindi non è possibile leggere i set di righe.  
   
@@ -32,12 +32,12 @@ ms.locfileid: "73789392"
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[IRowsetFastLoad:: commit &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)|Contrassegna la fine di un batch di righe inserite e scrive le righe nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[IRowsetFastLoad:: InsertRow &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|Aggiunge una riga al set di righe della copia bulk.|  
+|[IRowsetFastLoad::Commit &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)|Contrassegna la fine di un batch di righe inserite e scrive le righe nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[IRowsetFastLoad::InsertRow &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|Aggiunge una riga al set di righe della copia bulk.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interfacce &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
- [Copia dati bulk con IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
- [Inviare dati BLOB a SQL SERVER utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+ [Interfacce &#40;&#41;OLE DB](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [Copia di massa dei dati utilizzando IRowsetFastLoad &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
+ [Inviare dati BLOB a SQL Server usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
   

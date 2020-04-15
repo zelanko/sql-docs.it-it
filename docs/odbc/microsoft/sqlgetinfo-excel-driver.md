@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (driver Excel) | Microsoft Docs
+title: SQLGetInfo (Driver di Excel) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298581"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (driver Excel)
 > [!NOTE]  
->  In questo argomento vengono fornite informazioni specifiche del driver di Excel. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver di Excel.This topic provides Excel Driver-specific information. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un intero a 16 bit che indica il modo in cui il driver tratta direttamente i file in un'origine dati:  
+ **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un numero intero a 16 bit che indica come il driver considera direttamente i file in un'origine dati:The returned value is a 16-bit integer that indicates how the driver directly treats files in a data source:  
   
--   SQL_FILE_NOT_SUPPORTED: il driver non è un driver a livello singolo.  
+-   SQL_FILE_NOT_SUPPORTED - Il driver non è un driver a livello singolo.  
   
 -   SQL_FILE_TABLE: un driver a livello singolo considera i file in un'origine dati come tabelle.  
   
 -   SQL_FILE_QUALIFIER: un driver a livello singolo considera i file in un'origine dati come qualificatore.  
   
- Il driver ODBC restituisce SQL_FILE_TABLE per Microsoft Exceldriver perché ogni file è una tabella.  
+ Il driver ODBC restituisce SQL_FILE_TABLE per ilMicrosoft Exceldriver perché ogni file è una tabella.  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|Versione|Formato dei numeri di versione|  
+|Isam|Versione|Formato dei numeri di versione|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4.0|04.00.0000|  

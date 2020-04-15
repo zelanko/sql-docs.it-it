@@ -1,5 +1,5 @@
 ---
-title: Stabilire una connessione | Microsoft Docs
+title: Creazione di una connessione Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ef6f3d50382d810dd9df246c4d857d9467674f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76941030"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298701"
 ---
 # <a name="establishing-a-connection"></a>Istituzione di una connessione
-Dopo aver allocato gli handle di ambiente e di connessione e aver impostato gli attributi di connessione, l'applicazione è pronta per la connessione all'origine dati o al driver. Per eseguire questa operazione, l'applicazione può usare tre diverse funzioni: **SQLConnect** (livello di conformità dell'interfaccia Core), **SQLDriverConnect** (Core) e **SQLBrowseConnect** (livello 1). Ognuno dei tre è progettato per essere utilizzato in uno scenario diverso. Prima della connessione, l'applicazione può determinare quali di queste funzioni sono supportate con la parola chiave **ConnectFunctions** restituita da **SQLDrivers**.  
+Dopo aver allocato gli handle di ambiente e connessione e aver impostato gli attributi di connessione, l'applicazione è pronta per connettersi all'origine dati o al driver. Esistono tre diverse funzioni che l'applicazione può utilizzare per eseguire questa operazione: **SQLConnect** (livello di conformità dell'interfaccia di base), **SQLDriverConnect** (Core) e **SQLBrowseConnect** (livello 1). Ognuno dei tre è progettato per essere utilizzato in uno scenario diverso. Prima della connessione, l'applicazione può determinare quale di queste funzioni è supportata con la parola chiave **ConnectFunctions** restituita da **SQLDrivers**.  
   
 > [!NOTE]  
->  Alcuni driver limitano il numero di connessioni attive supportate. Un'applicazione chiama **SQLGetInfo** con l'opzione SQL_MAX_DRIVER_CONNECTIONS per determinare il numero di connessioni attive supportate da un determinato driver.  
+>  Alcuni driver limitano il numero di connessioni attive supportate. Un'applicazione chiama **SQLGetInfo** con l'opzione SQL_MAX_DRIVER_CONNECTIONS per determinare il numero di connessioni attive supportate da un driver specifico.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -39,7 +39,7 @@ Dopo aver allocato gli handle di ambiente e di connessione e aver impostato gli 
   
 -   [Connessione con SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)  
   
--   [Stringhe di connessione](../../../odbc/reference/develop-app/connection-strings.md)  
+-   [Stringhe di connessioneConnection Strings](../../../odbc/reference/develop-app/connection-strings.md)  
   
 -   [Connessione con SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)  
   

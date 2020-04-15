@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (driver dBASE) | Microsoft Docs
+title: SQLGetInfo (driver dBASE) Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLGetInfo
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ba029c2f75fc715b1286a950cf11c1658bdab35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ac88f3b563ef7811d9112d8ef7169f533691938
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003298"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298601"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (driver dBASE)
 > [!NOTE]  
->  In questo argomento vengono fornite informazioni specifiche del driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un intero a 16 bit che indica il modo in cui il driver tratta direttamente i file in un'origine dati:  
+ **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un numero intero a 16 bit che indica come il driver considera direttamente i file in un'origine dati:The returned value is a 16-bit integer that indicates how the driver directly treats files in a data source:  
   
--   SQL_FILE_NOT_SUPPORTED: il driver non è un driver a livello singolo.  
+-   SQL_FILE_NOT_SUPPORTED - Il driver non è un driver a livello singolo.  
   
 -   SQL_FILE_TABLE: un driver a livello singolo considera i file in un'origine dati come tabelle.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "68003298"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|Versione|Formato dei numeri di versione|  
+|Isam|Versione|Formato dei numeri di versione|  
 |----------|-------------|-------------------------------|  
-|DBASE|3.0|03.00.0000|  
+|Dbase|3.0|03.00.0000|  
 ||4.0|04.00.0000|  
 ||5.0|05.00.0000|  
   

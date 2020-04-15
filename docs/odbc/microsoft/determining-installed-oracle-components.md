@@ -1,5 +1,5 @@
 ---
-title: Determinazione dei componenti Oracle installati | Microsoft Docs
+title: Determinazione dei componenti Oracle installati Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303492"
 ---
 # <a name="determining-installed-oracle-components"></a>Determinazione dei componenti Oracle installati
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Per determinare i componenti Oracle installati nel sistema (e le relative versioni), passare alla directory \Orainst nella home directory di Oracle. Aprire uno dei file di testo seguenti: NT. RGS, Win95. RGS o Win98. RGS.  
+ Per determinare i componenti Oracle installati nel sistema (e le relative versioni), passare alla directory .Orainst nella home directory di Oracle. Aprire uno dei seguenti file di testo: Nt.rgs, Win95.rgs o Win98.rgs.  
   
  Il formato del file è simile al seguente:  
   
@@ -37,4 +37,4 @@ ms.locfileid: "68079015"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- I file con estensione rgs includono inoltre le informazioni di installazione e le descrizioni di ogni componente.
+ I file .rgs includono anche informazioni sull'installazione e descrizioni di ogni componente.

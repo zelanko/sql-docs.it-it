@@ -14,20 +14,19 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2dee6b8b6967046bb8ce69984fe29b71f223789d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298916"
 ---
 # <a name="fetching-rows"></a>Recupero di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   **IRowset** è l'interfaccia di base dei set di righe. L'interfaccia **IRowset** comprende metodi che consentono di recuperare le righe in modo sequenziale, ottenere dati dalle righe e gestire le righe. I consumer utilizzano i metodi disponibili in **IRowset** per tutte le operazioni di base relative ai set di righe, incluse quelle che consentono di recuperare e rilasciare le righe nonché ottenere i valori delle colonne.  
   
  Quando un consumer ottiene un puntatore di interfaccia su un set di righe, il primo passaggio consiste, in genere, nel determinare le funzionalità del set di righe mediante il metodo **IRowsetInfo::GetProperties**. In questo modo vengono restituite le informazioni sulle interfacce esposte dal set di righe nonché le funzionalità del set di righe che non vengono visualizzate come interfacce distinte, ad esempio il numero massimo di righe attive e il numero di righe che possono presentare aggiornamenti in sospeso contemporaneamente.  

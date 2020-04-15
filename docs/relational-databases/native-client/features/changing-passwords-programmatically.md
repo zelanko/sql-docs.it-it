@@ -18,20 +18,20 @@ helpviewer_keywords:
 - SQL Server Native Client, password expiration
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: def93c4860a7e1a29a4a721de3aa451f91fd1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f4bada5561a4e9af4b779ea26c13fac7ea57dad2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761503"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303854"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native Client supporta la gestione della scadenza delle password a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] livello di programmazione tramite il provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di OLE DB di Native client e il driver ODBC di Native client e le modifiche apportate alle finestre di dialogo **SQL Server account di accesso** .  
+  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]partire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da , Native Client supporta la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestione della scadenza delle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] password a livello di codice tramite il provider OLE DB Native Client e il driver ODBC di Native Client e tramite modifiche alle finestre di dialogo Di accesso a **SQL Server.**  
   
 > [!NOTE]  
 >  Quando possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione ed evitare di archiviarle in un formato persistente. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Per altre informazioni sull'uso delle password, vedere [Password complesse](../../../relational-databases/security/strong-passwords.md).  
@@ -43,19 +43,19 @@ ms.locfileid: "73761503"
 |---------------------------|-------------------|  
 |15113|Accesso non riuscito per l'utente '%.*ls' Motivo: impossibile convalidare la password. L'account è bloccato.|  
 |18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. Impossibile utilizzare la password in questo momento.|  
-|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri perché è troppo corta.|  
+|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
 |18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  
-|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri in quanto non è sufficientemente complessa.|  
+|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto non è sufficientemente complessa.|  
 |18467|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i requisiti della DLL per il filtro delle password.|  
 |18468|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. Si è verificato un errore imprevisto durante la convalida della password.|  
 |18487|Accesso non riuscito per l'utente '%.*ls'. Motivo: la password dell'account è scaduta.|  
 |18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: è necessario modificare la password dell'account.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la scadenza delle password tramite un'interfaccia utente e a livello di codice.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Di Native Client supporta la scadenza della password tramite un'interfaccia utente e a livello di codice.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Scadenza password dell'interfaccia utente OLE DB  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la scadenza delle password tramite le modifiche apportate alle finestre di dialogo **SQL Server account di accesso** . Se il valore di DBPROP_INIT_PROMPT è impostato su DBPROMPT_NOPROMPT, il tentativo di connessione iniziale non riesce se la password è scaduta.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client supporta la scadenza della password tramite le modifiche apportate alle finestre di dialogo Di accesso a **SQL Server.** Se il valore di DBPROP_INIT_PROMPT è impostato su DBPROMPT_NOPROMPT, il tentativo di connessione iniziale non riesce se la password è scaduta.  
   
  Se DBPROP_INIT_PROMPT è stato impostato su qualsiasi altro valore, viene visualizzata la finestra di dialogo **Account di accesso di SQL Server** indipendentemente dalla scadenza della password. L'utente può cambiare la password facendo clic sul pulsante **Opzioni** e selezionando **Cambia password**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73761503"
  Quando il tentativo di ripristino non riesce, la connessione viene rimossa dal pool e viene restituito un errore.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Scadenza password OLE DB a livello di programmazione  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la scadenza delle password tramite l'aggiunta della proprietà SSPROP_AUTH_OLD_PASSWORD (Type VT_BSTR) aggiunta al set di proprietà DBPROPSET_SQLSERVERDBINIT.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la scadenza della password tramite l'aggiunta della proprietà SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) aggiunta al set di proprietà DBPROPSET_SQLSERVERDBINIT.  
   
  La proprietà "Password" esistente si riferisce a DBPROP_AUTH_PASSWORD e viene utilizzata per archiviare la nuova password.  
   
@@ -88,19 +88,19 @@ ms.locfileid: "73761503"
   
  Se un tentativo di modificare la password non riesce in modo imprevisto, il server restituisce il codice di errore 18468. Dal tentativo di connessione viene restituito un errore OLE DB standard.  
   
- Per ulteriori informazioni sul set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per altre informazioni sul set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [Proprietà di inizializzazione e di autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la scadenza delle password tramite un'interfaccia utente e a livello di codice.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Di Native Client supporta la scadenza della password tramite un'interfaccia utente e a livello di codice.  
   
 ### <a name="odbc-user-interface-password-expiration"></a>Scadenza password dell'interfaccia utente ODBC  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la scadenza delle password tramite le modifiche apportate alle finestre di dialogo di **accesso SQL Server** .  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta la scadenza della password tramite le modifiche apportate alle finestre di dialogo di accesso a **SQL Server.The Native Client ODBC** driver supports password expiration through changes made to the SQL Server Login dialog boxes.  
   
- Se viene chiamato [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) e il valore di **DriverCompletion** è impostato su SQL_DRIVER_NOPROMPT, il tentativo di connessione iniziale non riesce se la password è scaduta. Il valore SQLSTATE 28000 e il valore del codice di errore nativo 18487 vengono restituiti dalle chiamate successive a **SQLError** o **SQLGetDiagRec**.  
+ Se [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) viene chiamato e il valore di **DriverCompletion** è impostato su SQL_DRIVER_NOPROMPT, il tentativo di connessione iniziale ha esito negativo se la password è scaduta. Il valore SQLSTATE 28000 e il valore del codice di errore nativo 18487 vengono restituiti dalle chiamate successive a **SQLError** o **SQLGetDiagRec**.  
   
- Se **DriverCompletion** è stato impostato su qualsiasi altro valore, l'utente Visualizza la finestra di dialogo **SQL Server login** , indipendentemente dal fatto che la password sia scaduta o meno. L'utente può cambiare la password facendo clic sul pulsante **Opzioni** e selezionando **Cambia password**.  
+ Se **DriverCompletion** è stato impostato su qualsiasi altro valore, l'utente visualizza la finestra di dialogo di accesso di **SQL Server,** indipendentemente dal fatto che la password sia scaduta o meno. L'utente può cambiare la password facendo clic sul pulsante **Opzioni** e selezionando **Cambia password**.  
   
- Se l'utente fa clic su OK e la password è [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] scaduta, viene richiesto di immettere e confermare una nuova password utilizzando la finestra di dialogo **Cambia SQL Server password** .  
+ Se l'utente fa clic su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OK e la password è scaduta, richiede di immettere e confermare una nuova password utilizzando la finestra di dialogo **Modifica password di SQL Server.**  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>Comportamento del prompt di ODBC e account bloccati  
  È possibile che non si riesca a stabilire una connessione perché l'account è bloccato. Se questo problema si verifica in seguito alla visualizzazione della finestra di dialogo **Account di accesso di SQL Server**, viene visualizzato il messaggio di errore del server e il tentativo di connessione viene interrotto. Il problema può verificarsi anche se, in seguito alla visualizzazione della finestra di dialogo **Modifica password SQL Server**, l'utente immette un valore non corretto per la vecchia password. In questo caso viene visualizzato lo stesso messaggio di errore e il tentativo di connessione viene interrotto.  
@@ -111,11 +111,11 @@ ms.locfileid: "73761503"
  Quando il tentativo di ripristino non riesce, la connessione viene rimossa dal pool e viene restituito un errore.  
   
 ### <a name="odbc-programmatic-password-expiration"></a>Scadenza password ODBC a livello di programmazione  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la scadenza delle password mediante l'aggiunta dell'attributo SQL_COPT_SS_OLDPWD impostato prima della connessione al server tramite la funzione [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) .  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta la scadenza della password tramite l'aggiunta dell'attributo SQL_COPT_SS_OLDPWD impostato prima della connessione al server utilizzando la funzione [SQLSetConnectAttr.](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)  
   
  L'attributo SQL_COPT_SS_OLDPWD dell'handle di connessione si riferisce alla password scaduta. Per questo attributo non è disponibile un attributo di stringa di connessione, in quanto interferirebbe con il pool di connessioni. Se si riesce ad accedere, il driver cancella questo attributo.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client restituisce SQL_ERROR in quattro casi per questa funzionalità: scadenza password, conflitto tra criteri password, blocco account e quando la proprietà vecchia password viene impostata durante l'utilizzo dell'autenticazione di Windows. Il driver restituisce all'utente i messaggi di errore appropriati quando viene richiamato [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) .  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client restituisce SQL_ERROR in quattro casi per questa funzionalità: scadenza della password, conflitto di criteri password, blocco dell'account e quando viene impostata la proprietà della password precedente durante l'utilizzo dell'autenticazione di Windows.The Native Client ODBC driver returns the data in four cases for this feature: password expiration, password policy conflict, account lockout, and when the old password property is set while ing using Windows Authentication. Il driver restituisce i messaggi di errore appropriati all'utente quando viene richiamato [SQLGetDiagField.](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

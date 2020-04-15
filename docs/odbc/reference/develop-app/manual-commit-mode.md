@@ -1,5 +1,5 @@
 ---
-title: Modalità di commit manuale | Microsoft Docs
+title: Modalità di Commit Manuale Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a00ff373e374d0940b3e7259eeb01e26b620cae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036406"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287875"
 ---
 # <a name="manual-commit-mode"></a>Modalità di commit manuale
-*In modalità di commit manuale,* le applicazioni devono completare in modo esplicito le transazioni chiamando **SQLEndTran** per eseguirne il commit o eseguire il rollback. Si tratta della modalità di transazione normale per la maggior parte dei database relazionali.  
+*In modalità di commit manuale,* le applicazioni devono completare in modo esplicito le transazioni chiamando **SQLEndTran** per eseguirne il commit o il rollback. Questa è la modalità di transazione normale per la maggior parte dei database relazionali.  
   
- Non è necessario avviare in modo esplicito le transazioni in ODBC. Una transazione viene invece avviata in modo implicito ogni volta che l'applicazione inizia a funzionare nel database. Se l'origine dati richiede l'avvio esplicito della transazione, il driver deve fornirla ogni volta che l'applicazione esegue un'istruzione che richiede una transazione e non è presente alcuna transazione corrente.
+ Non è necessario che le transazioni in ODBC vengano avviate in modo esplicito. Al contrario, una transazione inizia in modo implicito ogni volta che l'applicazione inizia a operare sul database. Se l'origine dati richiede l'avvio esplicito della transazione, il driver deve fornirlo ogni volta che l'applicazione esegue un'istruzione che richiede una transazione e non è presente alcuna transazione corrente.

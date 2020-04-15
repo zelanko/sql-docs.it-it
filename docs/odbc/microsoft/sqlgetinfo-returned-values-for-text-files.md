@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo valori restituiti per i file di testo | Microsoft Docs
+title: SQLGetInfo Valori restituiti per i file di testo Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 98dcfb671a96e9b82d7349193926e8f0f5349324
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898803"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298521"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Valori restituiti da SQLGetInfo per file di testo
-Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento *fInfoType* e i valori corrispondenti restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando le #defines del linguaggio C elencate a **SQLGetInfo** nell'argomento *fInfoType* . Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere [ODBC Programmer ' s Reference](../../odbc/reference/odbc-programmer-s-reference.md).  
+Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento *fInfoType* e i valori corrispondenti restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines a **SQLGetInfo** nel *fInfoType* argomento. Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 > [!NOTE]  
 >  Dove **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un OR bit per bit.  
   
-|InfoType|Valore restituito|  
+|Infotype|Valore restituito|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Tutti impostati|  
+|SQL_AGGREGATE_FUNCTIONS|Tutto pronto|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|Directory|  
+|SQL_CATALOG_TERM|"Directory"|  
 |SQL_CATALOG_USAGE|Più valori|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN da ODBC. ini o "" Se si usa la parola chiave DRIVER in ODBC. ini|  
+|SQL_DATA_SOURCE_NAME|DSN da Odbc.ini o "" se la parola chiave DRIVER viene utilizzata in Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|Directory database corrente|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|TESTO|  
-|SQL_DBMS_VER|ISAM: testo<br /><br /> Versione: 1,0<br /><br /> Formato del numero di versione: 01.00.0000|  
+|SQL_DBMS_NAME|"TESTO"|  
+|SQL_DBMS_VER|ISAM: Testo<br /><br /> Versione: 1.0<br /><br /> Formato del numero di versione: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Gestito da Gestione driver.|  
-|SQL_DRIVER_HENV|Gestito da Gestione driver.|  
-|SQL_DRIVER_HLIB|Gestito da Gestione driver.|  
-|SQL_DRIVER_HSTMT|Gestito da Gestione driver.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_HDBC|Gestito da Gestione Driver.|  
+|SQL_DRIVER_HENV|Gestito da Gestione Driver.|  
+|SQL_DRIVER_HLIB|Gestito da Gestione Driver.|  
+|SQL_DRIVER_HSTMT|Gestito da Gestione Driver.|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* specifica la data di compilazione)|  
+|SQL_DRIVER_VER|"4.00.*nnnn"*(*nnnn* specifica la data di compilazione)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_GETDATA_EXTENSIONS|Più valori|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (virgoletta indietro)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`(virgoletta posteriore)|  
 |SQL_KEYWORDS|Più valori|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -141,7 +141,7 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Più valori|  
-|CONFORMITÀ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Da Gestione driver|  
 |SQL_OJ_CAPABILITIES|Più valori|  
@@ -155,12 +155,12 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Più valori|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|TESTO|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {"';:?/><,.!' [] &#124; "|  
+|SQL_SERVER_NAME|"TESTO"|  
+|SQL_SPECIAL_CHARACTERS|""\`s "%"& "_-""""""";:?/><,.!\\ []&#124;"|  
 |SQL_STRING_FUNCTIONS|Più valori|  
 |SQL_SUBQUERIES|Più valori|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|TABELLA|  
+|SQL_TABLE_TERM|"TABELLA"|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Più valori|  

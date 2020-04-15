@@ -1,5 +1,5 @@
 ---
-title: Stringhe di connessione | Microsoft Docs
+title: Stringhe di connessione - Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f68a87db729df2f4a27e2766a9de60e8c75a71a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bbbb5b4672a8ea393380063887cfd77b3e910238
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036419"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299031"
 ---
 # <a name="connection-strings"></a>Stringhe di connessione
-Una stringa di connessione contiene le informazioni utilizzate per stabilire una connessione. Una stringa di connessione completa contiene tutte le informazioni necessarie per stabilire una connessione. La stringa di connessione è una serie di coppie parola chiave/valore separate da punti e virgola. Per la sintassi completa di una stringa di connessione, vedere la descrizione della funzione [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) . La stringa di connessione viene utilizzata da:  
+Una stringa di connessione contiene informazioni utilizzate per stabilire una connessione. Una stringa di connessione completa contiene tutte le informazioni necessarie per stabilire una connessione. La stringa di connessione è una serie di coppie parola chiave/valore separate da punto e virgola. (Per la sintassi completa di una stringa di connessione, vedere il [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.) La stringa di connessione viene utilizzata da:The connection string is used by:  
   
--   **SQLDriverConnect**, che completa la stringa di connessione per interazione con l'utente.  
+-   **SQLDriverConnect**, che completa la stringa di connessione in base all'interazione con l'utente.  
   
 -   **SQLBrowseConnect**, che completa la stringa di connessione in modo iterativo con l'origine dati.  
   
- **SQLConnect** non utilizza una stringa di connessione. l'utilizzo di **SQLConnect** è analogo alla connessione tramite una stringa di connessione con esattamente tre coppie parola chiave/valore (per il nome dell'origine dati e, facoltativamente, ID utente e password).
+ **SQLConnect** non utilizza una stringa di connessione; l'utilizzo di **SQLConnect** è analogo alla connessione tramite una stringa di connessione con esattamente tre coppie parola chiave/valore (per il nome dell'origine dati e, facoltativamente, per l'ID utente e la password).

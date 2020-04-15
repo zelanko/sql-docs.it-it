@@ -1,5 +1,5 @@
 ---
-title: Limitazioni del nome di indice | Microsoft Docs
+title: Limitazioni del nome dell'indice Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: e44e5858-696e-4939-93ae-4d6572e3f49a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b7b05a5a6aead6c564cb9b5c4ad9ca678abe3fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0deb6a675601b2b88cf3a8a6d649e704ffaf6870
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300021"
 ---
 # <a name="index-name-limitations"></a>Limitazioni dei nomi di indice
-Quando si usa il driver Paradox, un indice primario deve avere lo stesso nome della tabella su cui è definito. Altri indici univoci o non univoci devono avere lo stesso nome della tabella su cui sono definiti.
+Quando viene utilizzato il driver Paradox, un indice primario deve avere lo stesso nome della tabella in cui è definito. Altri indici univoci o non univoci devono avere lo stesso nome della tabella in cui sono definiti.

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di batch | Microsoft Docs
+title: Esecuzione di batch Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901264"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305732"
 ---
 # <a name="executing-batches"></a>Esecuzione di batch
-Prima di eseguire un batch di istruzioni, un'applicazione deve prima controllare se sono supportate. A tale scopo, l'applicazione chiama **SQLGetInfo** con le opzioni SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. La prima opzione restituisce un valore che indica se le istruzioni di generazione del conteggio delle righe e dei set di risultati sono supportate in batch e procedure esplicite, mentre le ultime due opzioni restituiscono informazioni sulla disponibilità dei conteggi delle righe e dei set di risultati nei parametri esecuzione.  
+Prima che un'applicazione esegua un batch di istruzioni, deve prima verificare se sono supportate. A tale scopo, l'applicazione chiama **SQLGetInfo** con le opzioni SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. La prima opzione restituisce se le istruzioni di generazione e generazione di set di risultati sono supportate in batch e procedure espliciti, mentre le ultime due opzioni restituiscono informazioni sulla disponibilità dei conteggi delle righe e dei set di risultati nell'esecuzione con parametri.  
   
- I batch di istruzioni vengono eseguiti tramite **SQLExecute** o **SQLExecDirect**. La chiamata seguente, ad esempio, esegue un batch esplicito di istruzioni per aprire un nuovo ordine di vendita.  
+ I batch di istruzioni vengono eseguiti tramite **SQLExecute** o **SQLExecDirect**. Ad esempio, la chiamata seguente esegue un batch esplicito di istruzioni per aprire un nuovo ordine cliente.  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -37,9 +37,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- Quando viene eseguito un batch di istruzioni che generano risultati, vengono restituiti uno o più conteggi di righe o set di risultati. Per informazioni su come recuperare questi risultati, vedere [più risultati](../../../odbc/reference/develop-app/multiple-results.md).  
+ Quando viene eseguito un batch di istruzioni che generano risultati, vengono restituiti uno o più conteggi di riga o set di risultati. Per informazioni su come recuperarli, vedere [Risultati multipli](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Se un batch di istruzioni include marcatori di parametro, questi vengono numerati in ordine crescente di parametri così come in qualsiasi altra istruzione. Il batch di istruzioni seguente, ad esempio, include parametri numerati da 1 a 21; quelli nella prima istruzione **Insert** sono numerati da 1 a 5 e quelli nell'ultima istruzione **Insert** sono numerati da 18 a 21.  
+ Se un batch di istruzioni include marcatori di parametro, questi vengono numerati in ordine crescente di parametri come in qualsiasi altra istruzione. Ad esempio, il batch di istruzioni seguente ha parametri numerati da 1 a 21; quelli nella prima istruzione **INSERT** sono numerati da 1 a 5 e quelli nell'ultima istruzione **INSERT** sono numerati da 18 a 21.  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -50,4 +50,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- Per ulteriori informazioni sui parametri, vedere [parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.
+ Per ulteriori informazioni sui parametri, vedere [Parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md)più avanti in questa sezione.

@@ -1,5 +1,5 @@
 ---
-title: Istruzioni per la generazione di risultati e senza risultato | Microsoft Docs
+title: Dichiarazioni di generazione dei risultati e non- dei risultati Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fc94aabd7982fba5879519573980db03b1857ef6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020597"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300091"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Istruzioni per la generazione di risultati e senza risultati
-Le istruzioni SQL possono essere suddivise in categorie separate nelle cinque categorie seguenti:  
+Le istruzioni SQL possono essere suddivise liberamente nelle cinque categorie seguenti:SQL statements can be loosely divided into the following five categories:  
   
--   **Set di risultati-generazione di istruzioni** Si tratta di istruzioni SQL che generano un set di risultati. Ad esempio, un'istruzione **Select** .  
+-   Istruzioni di **generazione set di risultatiResult Set-Generating Statements** Si tratta di istruzioni SQL che generano un set di risultati. Ad esempio, un'istruzione **SELECT.**  
   
--   **Conteggio righe-generazione di istruzioni** Si tratta di istruzioni SQL che generano un conteggio delle righe interessate. Ad esempio, un'istruzione **Update** o **Delete** .  
+-   **Istruzioni per la generazione di conteggi delle righeRow Count-Generating Statements** Si tratta di istruzioni SQL che generano un conteggio delle righe interessate. Ad esempio, **un'istruzione UPDATE** o **DELETE.**  
   
--   **Istruzioni DDL (Data Definition Language)** Si tratta di istruzioni SQL che modificano la struttura del database. Ad esempio, **Create Table** o **Drop index**.  
+-   **Istruzioni DDL (Data Definition Language)** Si tratta di istruzioni SQL che modificano la struttura del database. Ad esempio, **CREATE TABLE** o **DROP INDEX**.  
   
--   **Istruzioni** per la modifica del contesto Si tratta di istruzioni SQL che modificano il contesto di un database. Ad esempio, le istruzioni **use** e **set** in SQL Server.  
+-   **Istruzioni di modifica del contestoContext-Changing Statements** Si tratta di istruzioni SQL che modificano il contesto di un database. Ad esempio, le istruzioni **USE** e **SET** in SQL Server.  
   
--   **Istruzioni amministrative** Si tratta di istruzioni SQL utilizzate per scopi amministrativi in un database. Ad esempio, **Grant** e **Revoke**.  
+-   **Dichiarazioni amministrative** Si tratta di istruzioni SQL utilizzate per scopi amministrativi in un database. Ad esempio, **GRANT** e **REVOKE**.  
   
- Le istruzioni SQL nelle prime due categorie sono note collettivamente come *istruzioni di generazione dei risultati*. Le istruzioni SQL nelle ultime tre categorie sono note collettivamente come *istruzioni senza risultato*. ODBC definisce la semantica dei batch che includono solo istruzioni per la generazione di risultati. Queste semantiche variano notevolmente e sono pertanto specifiche dell'origine dati. Il driver SQL Server, ad esempio, non supporta l'eliminazione di un oggetto e quindi il riferimento o la ricreazione dello stesso oggetto nello stesso batch. Il termine *batch* usato in questo manuale si riferisce quindi solo ai batch di istruzioni di generazione dei risultati.
+ Le istruzioni SQL nelle prime due categorie sono note collettivamente come istruzioni che *generano risultati.* Le istruzioni SQL nelle ultime tre categorie sono collettivamente note come *istruzioni senza risultati*. ODBC definisce la semantica dei batch che includono solo istruzioni che generano risultati. Queste semantiche variano ampiamente e sono pertanto specifiche dell'origine dati. Ad esempio, il driver di SQL Server non supporta l'eliminazione di un oggetto e quindi fa riferimento o ricreare lo stesso oggetto nello stesso batch. Pertanto, il termine *batch* utilizzato in questo manuale si riferisce solo ai batch di istruzioni di generazione di risultati.

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di stored procedure | Microsoft Docs
+title: Esecuzione di stored procedure Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], executing
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0b69a9177f98c8ee1096c18f368af12b11d6b325
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73778086"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304552"
 ---
 # <a name="running-stored-procedures"></a>Esecuzione delle stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Una stored procedure è un oggetto eseguibile archiviato in un database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta  
+  Una stored procedure è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Stored procedure:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73778086"
   
      Le stored procedure estese possono utilizzare le caratteristiche C e C++ non disponibili nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-     Per un esempio di come chiamare una stored procedure, vedere [elaborare i codici restituiti e i parametri di Output &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+     Per un esempio di chiamata a una stored procedure, vedere [Elaborazione di codici restituiti e parametri ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)di output &#40;&#41;ODBC .  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73778086"
 -   [Risultati dell'elaborazione delle stored procedure](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Procedure per l'esecuzione di stored procedure &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [SQL Server Native Client &#40;&#41;ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Esecuzione di argomenti relativi alle stored procedure &#40;&#41;ODBC](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

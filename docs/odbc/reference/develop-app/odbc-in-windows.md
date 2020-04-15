@@ -1,5 +1,5 @@
 ---
-title: ODBC in Windows | Microsoft Docs
+title: 'ODBC in Windows : Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f06b10f1d69b7165e1193b6be78e5aa8d38b1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de5f78f55f7242e0762d9b7cffb6dfe41c83d1dd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104806"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282531"
 ---
 # <a name="odbc-in-windows"></a>ODBC in Windows
-Gli elementi seguenti si applicano solo a ODBC in esecuzione in Microsoft® Windows NT®/Windows 2000 e nei sistemi operativi Microsoft Windows® 95/98.  
+Gli elementi seguenti si applicano solo a ODBC in esecuzione in Microsoft® Windows NT®/Windows 2000 e Microsoft Windows ® sistemi operativi 95/98.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -26,6 +26,6 @@ Gli elementi seguenti si applicano solo a ODBC in esecuzione in Microsoft® Wind
   
 -   [File di intestazione](../../../odbc/reference/develop-app/header-files.md)  
   
--   [Passaggio di oggetti CString alle funzioni ODBC](../../../odbc/reference/develop-app/cstring-class.md)  
+-   [Passaggio di oggetti CString alle funzioni ODBCPassing CString Objects to ODBC Functions](../../../odbc/reference/develop-app/cstring-class.md)  
   
 -   [Creazione e interruzione di thread](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)

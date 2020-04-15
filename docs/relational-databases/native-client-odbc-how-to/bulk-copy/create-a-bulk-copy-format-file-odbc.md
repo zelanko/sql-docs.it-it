@@ -1,5 +1,5 @@
 ---
-title: Creazione di un file di formato per la copia bulk (ODBC) | Microsoft Docs
+title: Creazione di un file di formato di copia di massa (ODBC) Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], file formats
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4085375ac361bb7ae40e0d69bea919a1ac431dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298341"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Creare un file di formato per la copia bulk (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "73781711"
   In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per creare un file di dati e un file di formato. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-create-a-bulk-copy-format-file"></a>Per creare un file di formato per la copia bulk  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73781711"
   
 3.  Connettersi a SQL Server.  
   
-4.  Chiamare [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per impostare le informazioni seguenti:  
+4.  Chiamare [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per impostare le seguenti informazioni:  
   
     -   Nome della tabella o della vista dalla quale o nella quale si desidera eseguire la copia bulk.  
   
@@ -51,22 +51,22 @@ ms.locfileid: "73781711"
   
 6.  Chiamare [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) per ogni colonna per definirne le caratteristiche nel file di dati.  
   
-7.  Chiamare [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) per creare un file di formato che descriva il file di dati che deve essere creato dall'operazione di copia bulk.  
+7.  Chiamare [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) per creare un file di formato che descriva il file di dati che deve essere creato dall'operazione di copia di massa.  
   
-8.  Chiamare [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia bulk.  
+8.  Chiamare [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia di massa.  
   
  L'esecuzione di un'operazione di copia bulk in questo modo determina la creazione di un file di dati che contiene i dati oggetto della copia bulk e un file di formato che descrive il layout del file di dati.  
   
 ## <a name="example"></a>Esempio  
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page [di Microsoft SQL Server Samples and Community Projects.](https://go.microsoft.com/fwlink/?LinkID=85384) Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la tabella che verrà utilizzata dall'esempio.  
+ Eseguire il [!INCLUDE[tsql](../../../includes/tsql-md.md)]primo listato di codice ( ) per creare la tabella che verrà utilizzata nell'esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e odbcbcp.lib.  
   
- Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
+ Eseguire il [!INCLUDE[tsql](../../../includes/tsql-md.md)]terzo elenco di codice ( ) per eliminare la tabella utilizzata dall'esempio.  
   
 ```  
 use AdventureWorks  
@@ -215,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per la copia bulk con il driver ODBC di SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Copia di massa con gli argomenti relativi alle procedure del driver ODBC di SQL Server &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilizzo di file di dati e file di formato](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   
