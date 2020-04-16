@@ -14,12 +14,12 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b7453be98f6877f77eb61af4bbd429704816a219
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78172782"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388329"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query basata su testo (Generatore report)
   La finestra Progettazione query basata su testo consente di specificare una query tramite il linguaggio di query supportato dall'origine dati, eseguire la query e visualizzare i risultati in fase di progettazione. È possibile specificare più istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la sintassi della query o dei comandi per estensioni per l'elaborazione dati personalizzata e query che vengono specificate come espressioni. Poiché non esegue la pre-elaborazione della query e può gestire qualsiasi tipo di sintassi della query, la finestra Progettazione query basata su testo rappresenta lo strumento di progettazione query predefinito per molti tipi di origine dati.
@@ -40,13 +40,13 @@ ms.locfileid: "78172782"
 |------------|-----------------|
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl.|
-|![Eseguire la query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|
+|![Eseguire la query](../../analysis-services/media/rsqdicon-run.gif "Eseguire la query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|
 |**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Nota: se una stored procedure restituisce più set di risultati, solo il primo set viene usato per popolare il set di dati.|
 
 ### <a name="command-type-text"></a>Tipo di comando Text
  Quando si crea un set di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , per impostazione predefinita viene visualizzata la finestra Progettazione query relazionale. Per passare alla finestra Progettazione query basata su testo, fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti. La finestra Progettazione query basata su testo include due riquadri, il riquadro Query e il riquadro Risultati. Nella figura seguente vengono etichettati tutti i riquadri.
 
- ![Finestra Progettazione query standard per query di dati relazionali](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")
+ ![Finestra Progettazione query standard per query di dati relazionali](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")
 
  Nella tabella seguente viene descritta la funzione di ogni riquadro.
 
@@ -56,7 +56,7 @@ ms.locfileid: "78172782"
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|
 
 #### <a name="example"></a>Esempio
- La query seguente restituisce l'elenco dei cognomi dalla [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]tabella del database `ContactType` **2008** per lo `Person` schema.
+ La query seguente restituisce l'elenco dei cognomi [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]dalla tabella di database `ContactType` `Person` **2008** per lo schema.
 
 ```
 SELECT Name FROM Person.ContactType
@@ -69,7 +69,7 @@ SELECT Name FROM Person.ContactType
 
  Nella figura seguente vengono illustrati i riquadri Query e Risultati quando si esegue una stored procedure. In questo caso, i parametri di input sono costanti.
 
- ![Stored procedure in Progettazione query basata su testo](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Stored procedure in Progettazione query basata su testo")
+ ![Stored procedure in Progettazione query basata su testo](../../analysis-services/media/rs-relational-text-sp.gif "Stored procedure in Progettazione query basata su testo")
 
  Nella tabella seguente viene descritta la funzione di ogni riquadro.
 
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|
 
 #### <a name="example"></a>Esempio
- La query seguente chiama il [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **** stored procedure `uspGetWhereUsedProductID`2008. Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del prodotto.
+ La query seguente [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]chiama la stored `uspGetWhereUsedProductID`procedure **2008** . Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del prodotto.
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  Quando si seleziona **Tipo di comando TableDirect**, la finestra Progettazione query basata su testo mostra due riquadri, il riquadro Query e il riquadro Risultati. Quando si immette una tabella e si fa clic sul pulsante **Esegui** , vengono restituite tutte le colonne della tabella.
 
 #### <a name="example"></a>Esempio
- Per un tipo di origine dati OLE DB, la query del set di dati seguente restituisce un set di risultati per [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]tutti i tipi di contatto nel database **2008** .
+ Per un tipo di origine dati OLE DB, la query del [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]set di dati seguente restituisce un set di risultati per tutti i tipi di contatto nel database **2008.**
 
  `Person.ContactType`
 
  L'immissione del nome della tabella Person.ContactType, è equivalente alla creazione dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] di `SELECT * FROM Person.ContactType`.
 
 ## <a name="see-also"></a>Vedere anche
- [Interfaccia utente di progettazione query relazionale &#40;Generatore report](relational-query-designer-user-interface-report-builder.md) [progettazione query&#41;&#40;Generatore report&#41;](../query-designers-report-builder.md)
+ [Interfaccia utente di Progettazione query relazionale &#40;Generatore di report&#41;](relational-query-designer-user-interface-report-builder.md) [Progettazione query &#40;&#41;Generatore reportRelational](../query-designers-report-builder.md) Query Designer User Interface &#40;Report Builder&#41;Query Designers &#40;Report Builder&#41;
 
 

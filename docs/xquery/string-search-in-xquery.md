@@ -1,5 +1,6 @@
 ---
-title: Ricerca di stringhe in XQuery | Microsoft Docs
+title: Ricerca di stringhe in XQuery . Documenti Microsoft
+description: Informazioni su come cercare testo nei documenti XML visualizzando un esempio di ricerca di stringhe in XQuery.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946253"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388056"
 ---
 # <a name="string-search-in-xquery"></a>Ricerca di stringhe in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Nella query precedente, `where` nell'espressione FLOWR filtra il risultato dell' `for` espressione e restituisce solo gli elementi che soddisfano la condizione **Contains ()** .  
+ Nella query precedente, `where` nell'espressione FLOWR filtra `for` il risultato dell'espressione e restituisce solo gli elementi che soddisfano la condizione **contains().**  
   
  Risultato:  
   
@@ -58,7 +59,7 @@ WHERE ProductModelID=19
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [&#41;di SQL Server di data XMLXML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

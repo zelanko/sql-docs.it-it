@@ -16,12 +16,12 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c7f4f40fb819cd9686039d7df8f73c5d7ac96c2b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173220"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388709"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaccia utente di Progettazione query MDX di Analysis Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili finestre Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) e query DMX (Data Mining Expression) per un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In questo argomento viene descritto Progettazione query MDX. Per altre informazioni sulla finestra Progettazione query DMX, vedere [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).
@@ -36,7 +36,7 @@ ms.locfileid: "78173220"
 
  Nella figura seguente vengono etichettati i riquadri per la modalità progettazione.
 
- ![Progettazione query MDX di Analysis Services, visualizzazione progettazione](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services, visualizzazione progettazione")
+ ![Progettazione query MDX di Analysis Services, visualizzazione progettazione](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services, visualizzazione progettazione")
 
  Nella tabella seguente vengono elencati i riquadri disponibili in questa modalità:
 
@@ -48,13 +48,13 @@ ms.locfileid: "78173220"
 |Riquadro Filtro|Consente di scegliere dimensioni e gerarchie correlate per filtrare i dati a livello di origine e limitare i dati restituiti al report.|
 |Riquadro Dati|Consente di visualizzare le intestazioni di colonna per il set di risultati quando si trascinano gli elementi dal riquadro metadati e dal riquadro Membri calcolati. Consente di aggiornare automaticamente il set di risultati se viene selezionato il pulsante **Esecuzione automatica** . .|
 
- È possibile trascinare dimensioni, misure e indicatori di prestazioni chiave (KPI) dal riquadro metadati e membri calcolati dal riquadro Membro calcolato nel riquadro Dati. Nel riquadro Filtro è possibile selezionare dimensioni e gerarchie correlate e impostare espressioni di filtro per limitare i dati disponibili per la query. Se l'interruttore **esecuzione** automatica (![esecuzione automatica della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")) sulla barra degli strumenti è selezionato, progettazione query esegue la query ogni volta che si rilascia un oggetto metadati nel riquadro dati. È possibile eseguire manualmente la query utilizzando il pulsante **Esegui** (![Esegui query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")) sulla barra degli strumenti.
+ È possibile trascinare dimensioni, misure e indicatori di prestazioni chiave (KPI) dal riquadro metadati e membri calcolati dal riquadro Membro calcolato nel riquadro Dati. Nel riquadro Filtro è possibile selezionare dimensioni e gerarchie correlate e impostare espressioni di filtro per limitare i dati disponibili per la query. Se l'interruttore **Esecuzione automatica** (![Esecuzione automatica della query](../../analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")) sulla barra degli strumenti è selezionato, Progettazione query esegue la query ogni volta che si rilascia un oggetto di metadati nel riquadro Dati. È possibile eseguire manualmente la query usando il pulsante **Esegui** (![Esecuzione della query](../../analysis-services/media/rsqdicon-run.gif "Eseguire la query")) sulla barra degli strumenti.
 
  Quando si crea una query MDX in questa modalità, le seguenti proprietà aggiuntive vengono incluse automaticamente nella query:
 
- **Proprietà del membro** MEMBER_CAPTION, MEMBER_UNIQUE_NAME
+ **Proprietà membro** MEMBER_CAPTION, MEMBER_UNIQUE_NAME
 
- **Proprietà delle celle** VALORE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+ **Proprietà cella** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
 
  Per specificare le proprietà aggiuntive personalizzate, è necessario modificare manualmente la query MDX in modalità query.
 
@@ -65,26 +65,26 @@ ms.locfileid: "78173220"
 |------------|-----------------|
 |**Modifica come testo**|Non abilitato per questo tipo di origine dati.|
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
-|![Passaggio alla visualizzazione query MDX](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Passaggio alla visualizzazione query MDX")|Consente di passare al tipo di comando MDX.|
+|![Passaggio alla visualizzazione query MDX](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Passaggio alla visualizzazione query MDX")|Consente di passare al tipo di comando MDX.|
 |![Passaggio alla visualizzazione linguaggio di query DMX](../media/rsqdicon-commandtypedmx.gif "Passaggio alla visualizzazione linguaggio di query DMX")|Consente di passare al tipo di comando DMX.|
-|![Aggiornamento dei dati dei risultati](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Aggiornamento dei dati dei risultati")|Consente di aggiornare i metadati dall'origine dati.|
-|![Aggiungi membro calcolato](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato")|Consente di visualizzare la finestra di dialogo **Generatore membri calcolati** ,|
-|![Mostra/Nascondi celle vuote](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Mostra/Nascondi celle vuote")|Consente di visualizzare o nascondere le celle vuote nel riquadro Dati. Questa operazione equivale a utilizzare la clausola NON EMPTY in MDX.|
-|![Esecuzione automatica della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")|Consente di eseguire automaticamente la query e di visualizzarne i risultati ogni volta che viene apportata una modifica. I risultati verranno visualizzati nel riquadro Dati.|
-|![Pulsante Mostra aggregazioni](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni")|Consente di visualizzare le aggregazioni nel riquadro Dati.|
-|![Elimina](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Delete")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|
-|![Icona della finestra di dialogo Parametri query](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si specificano valori per un parametro di query, viene creato automaticamente un parametro di report con lo stesso nome. Il valore del parametro di query viene impostato su un'espressione che fa riferimento al parametro di report.|
-|![Pulsante Prepara query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-preparequery.gif "Pulsante Prepara query")|Consente di preparare la query.|
-|![Eseguire la query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|
-|![Annulla la query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Annullamento della query")|Consente di annullare la query.|
-|![Passa alla modalità progettazione](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passare alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa.|
+|![Aggiornamento dei dati dei risultati](../../analysis-services/media/rsqdicon-refresh.gif "Aggiornamento dei dati dei risultati")|Consente di aggiornare i metadati dall'origine dati.|
+|![Aggiungi membro calcolato](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato")|Consente di visualizzare la finestra di dialogo **Generatore membri calcolati** ,|
+|![Mostrare/Nascondere le celle vuote](../../analysis-services/media/rsqdicon-showemptycells.gif "Mostrare/Nascondere le celle vuote")|Consente di visualizzare o nascondere le celle vuote nel riquadro Dati. Questa operazione equivale a utilizzare la clausola NON EMPTY in MDX.|
+|![Esecuzione automatica della query](../../analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")|Consente di eseguire automaticamente la query e di visualizzarne i risultati ogni volta che viene apportata una modifica. I risultati verranno visualizzati nel riquadro Dati.|
+|![Pulsante Mostra aggregazioni](../../analysis-services/media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni")|Consente di visualizzare le aggregazioni nel riquadro Dati.|
+|![Elimina](../../analysis-services/media/rsqdicon-delete.gif "Delete")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|
+|![Icona della finestra di dialogo Parametri query](../../analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si specificano valori per un parametro di query, viene creato automaticamente un parametro di report con lo stesso nome. Il valore del parametro di query viene impostato su un'espressione che fa riferimento al parametro di report.|
+|![Pulsante Prepara query](../../analysis-services/media/rsqdicon-preparequery.gif "Pulsante Prepara query")|Consente di preparare la query.|
+|![Eseguire la query](../../analysis-services/media/rsqdicon-run.gif "Eseguire la query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|
+|![Annullare la query](../../analysis-services/media/rsqdicon-cancel.gif "Annullare la query")|Consente di annullare la query.|
+|![Passare alla modalità progettazione](../../analysis-services/media/rsqdicon-designmode.gif "Passare alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa.|
 
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Progettazione query MDX in modalità query
  Per modificare la finestra Progettazione query con interfaccia grafica attivando la modalità **Query** , fare clic sul pulsante **Modalità progettazione** sulla barra degli strumenti.
 
  Nella figura seguente vengono etichettati i riquadri per la modalità query.
 
- ![Progettazione query MDX di Analysis Services, visualizzazione query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Progettazione query MDX di Analysis Services, visualizzazione query")
+ ![Progettazione query MDX di Analysis Services, visualizzazione query](../../analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Progettazione query MDX di Analysis Services, visualizzazione query")
 
  Nella tabella seguente vengono elencati i riquadri disponibili in questa modalità:
 
@@ -106,15 +106,15 @@ ms.locfileid: "78173220"
 
 -   **Modifica come testo**
 
--   **Aggiungi membro calcolato** (![Aggiungi membro calcolato](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato"))
+-   **Aggiungi membro calcolato** (![Aggiungi membro calcolato](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato"))
 
--   **Mostra celle vuote** (![Mostra/Nascondi celle vuote](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Mostra/Nascondi celle vuote"))
+-   **Mostrare/Nascondere le celle vuote** (![Mostrare/Nascondere le celle vuote](../../analysis-services/media/rsqdicon-showemptycells.gif "Mostrare/Nascondere le celle vuote"))
 
--   **Esecuzione** automatica (![esecuzione automatica della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query"))
+-   **Esecuzione automatica** (![Esecuzione automatica della query](../../analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query"))
 
--   **Mostra aggregazioni** (![pulsante Mostra aggregazioni](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni"))
+-   **Mostra aggregazioni** (![Pulsante Mostra aggregazioni](../../analysis-services/media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni"))
 
 ## <a name="see-also"></a>Vedere anche
- [Definire i parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [Analysis Services tipo di connessione per DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [file di configurazione RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Analysis Services tipo di connessione per MDX &#40;SSRS](analysis-services-connection-type-for-mdx-ssrs.md)&#41;
+ [Definire i parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e tipo di connessione [di SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) Analysis Services per D&#41;MX &#40;gruppo di connessione [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) file di configurazione [Analysis Services per i&#41;MDX &#40;SSRS](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)
 
 

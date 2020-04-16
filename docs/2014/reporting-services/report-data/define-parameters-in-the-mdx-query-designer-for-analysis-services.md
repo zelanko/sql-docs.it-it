@@ -1,5 +1,5 @@
 ---
-title: Definire i parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS) | Microsoft Docs
+title: Definizione di parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS) Documenti Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd352eccbe0cba2d29c7c446eef00bea5415084d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176915"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388539"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS)
   Per parametrizzare una query MDX per un'origine dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , è necessario aggiungere un parametro di query alla query. In Progettazione query MDX, è possibile aggiungere un parametro di query sia in modalità progettazione sia in modalità query specificando un filtro. Dopo avere definito la query tramite un parametro di query, in Reporting Services vengono creati automaticamente un parametro di report e un set di dati per l'elenco dei valori validi. In questo modo un utente può specificare un valore che viene passato direttamente alla query.
@@ -59,7 +59,7 @@ ms.locfileid: "78176915"
 
 2.  Fare clic su **Progettazione** nella barra degli strumenti per passare alla modalità query.
 
-3.  Nella barra degli strumenti della progettazione query MDX fare clic su **Parametri query** (![icona della finestra di dialogo Parametri query](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")). Verrà visualizzata la finestra di dialogo Parametri query.
+3.  Nella barra degli strumenti della progettazione query MDX fare clic su **Parametri query** (![icona della finestra di dialogo Parametri query](../../analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")). Verrà visualizzata la finestra di dialogo Parametri query.
 
 4.  Nella colonna **Parametro** selezionare **\<Immetti parametro>** e digitare il nome di un parametro.
 
@@ -82,6 +82,6 @@ ms.locfileid: "78176915"
      Per visualizzare il set di dati dei valori disponibili per il parametro del report, fare clic con il pulsante destro del mouse su un'area vuota nel riquadro Dati report e selezionare **Mostra set di dati nascosti**. Nel riquadro dei dati del report verranno visualizzati tutti i set di dati contenuti nel report.
 
 ## <a name="see-also"></a>Vedere anche
- [Tipo di connessione Analysis Services per mdx &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services interfaccia utente di progettazione query MDX](analysis-services-mdx-query-designer-user-interface.md)
+ [Tipo di connessione di Analysis Services per l'interfaccia](analysis-services-connection-type-for-mdx-ssrs.md) utente di Progettazione query MDX &#40;SSRS&#41;[Analysis Services](analysis-services-mdx-query-designer-user-interface.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Criteri di supporto per SQL Server Native Client Documenti Microsoft
+title: Criteri di supporto
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dd81e9d23be08a617cefe9cf756feb83040c11c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: f7b0c4e271d72188d306fa52a1ccb843ddbb4e1b
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288120"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388231"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Criteri di supporto per SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

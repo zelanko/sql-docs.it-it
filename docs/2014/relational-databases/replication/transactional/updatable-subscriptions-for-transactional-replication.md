@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "62655493"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -123,9 +123,9 @@ ms.locfileid: "62655493"
     -   Se si prevedono conflitti, quando si utilizza l'opzione di risoluzione dei conflitti "Prevale il Sottoscrittore", è consigliabile non utilizzare vincoli di chiave esterna nel server di pubblicazione e nel Sottoscrittore, mentre, quando si utilizza l'opzione di risoluzione dei conflitti "Prevale il server di pubblicazione", è consigliabile non utilizzare vincoli di chiave esterna nel Sottoscrittore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [Replica transazionale peer-to-peer](peer-to-peer-transactional-replication.md)   
  [Replica transazionale](transactional-replication.md)   
- [Pubblicare dati e oggetti di database](../publish/publish-data-and-database-objects.md)   
+ [Pubblicazione di dati e oggetti di databasePublish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
  [Sottoscrizione delle pubblicazioni](../subscribe-to-publications.md)  
   
   

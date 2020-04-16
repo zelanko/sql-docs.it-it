@@ -1,5 +1,5 @@
 ---
-title: Stime avanzate basate su serie temporali (Esercitazione intermedia sul data mining) | Microsoft Docs
+title: Previsioni avanzate di serie temporali (esercitazione intermedia sul data mining) Documenti Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "68893697"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Stime avanzate basate su serie temporali (Esercitazione intermedia sul data mining)
@@ -40,10 +40,10 @@ ms.locfileid: "68893697"
   
 7.  [Rivedere le nuove stime](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-##  <a name="bkmk_newExtendData"></a>Creazione dei nuovi dati di vendita estesi  
+##  <a name="creating-the-new-extended-sales-data"></a><a name="bkmk_newExtendData"></a>Creazione dei nuovi dati di vendita estesi  
  Per aggiornare i dati di vendita, sarà necessario ottenere le cifre di vendita più recenti. Sono di particolare interesse solo i dati dalla regione del Pacifico, dove è stata avviata una promozione di vendite regionali per richiamare l'attenzione sui nuovi punti vendita e generare consapevolezza dei prodotti.  
   
- Per questo scenario si presuppone che i dati siano stati importati da una cartella di lavoro di Excel che contiene solo tre mesi di nuovi dati per un paio di aree. Si creerà una tabella per i dati utilizzando uno script Transact-SQL e quindi si definirà una vista origine dati da utilizzare per la stima.  
+ Per questo scenario, si presuppone che i dati sono stati importati da una cartella di lavoro di Excel che contiene solo tre mesi di nuovi dati per un paio di aree. Si creerà una tabella per i dati utilizzando uno script Transact-SQLTransact-SQL e quindi si definirà una vista origine dati da usare per la stima.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Creare la tabella con i nuovi dati di vendita  
   
@@ -93,43 +93,43 @@ ms.locfileid: "68893697"
     >   
     >  Si noti che le date utilizzate nel database di esempio sono state modificate per questa versione. Se si utilizza una versione di AdventureWorks precedente, potrebbe essere necessario modificare le date inserite in modo appropriato.  
   
-###  <a name="bkmk_newReplaceData"></a>Creare una vista origine dati utilizzando i nuovi dati di vendita  
+###  <a name="create-a-data-source-view-using-the-new-sales-data"></a><a name="bkmk_newReplaceData"></a>Creare una vista origine dati utilizzando i nuovi dati di venditaCreate a data source view using the new sales data  
   
-1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **viste origine dati**, quindi scegliere **nuova vista origine dati**.  
+1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Viste origine dati**, quindi scegliere Nuova vista origine **dati**.  
   
 2.  Nella Creazione guidata vista origine dati effettuare le selezioni seguenti:  
   
      **Origine dati**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Selezione tabelle e viste**: selezionare la tabella appena creata, NewSalesData.  
+     **Seleziona tabelle e viste**: Selezionare la tabella appena creata, NewSalesData.  
   
 3.  Fare clic su **Fine**.  
   
-4.  Nell'area di progettazione della vista origine dati fare clic con il pulsante destro del mouse su NewSalesData, quindi scegliere **Esplora dati** per verificare i dati.  
+4.  Nell'area di progettazione della vista origine dati fare clic con il pulsante destro del mouse su NewSalesData e quindi **scegliere Esplora dati** per verificare i dati.  
   
 > [!WARNING]  
 >  Si utilizzeranno solo questi dati per la stima, pertanto non si importa se i dati sono incompleti.  
   
-##  <a name="bkmk_CrossData2"></a>Creazione dei dati per il modello di stima incrociata  
+##  <a name="creating-the-data-for-the-cross-prediction-model"></a><a name="bkmk_CrossData2"></a>Creazione dei dati per il modello di stima incrociataCreating the Data for the Cross-Prediction Model  
  I dati utilizzati nel modello di previsione originale sono già raggruppati approssimativamente dalla vista vTimeSeries in cui diversi modelli di bicicletta sono stati compressi in un numero di categorie inferiore e i risultati di singoli paesi sono stati uniti in aree. Per creare un modello che possa essere utilizzato per le proiezioni mondiali, si creeranno direttamente alcune semplici aggregazioni aggiuntive nella finestra di progettazione Vista origine dati. La nuova vista origine dati contiene solo una somma e una media delle vendite di tutti i prodotti per tutte le aree.  
   
  Dopo avere creato l'origine dati per il modello, è necessario creare una nuova vista origine dati da utilizzare per la stima. Se si desidera ad esempio stimare le vendite per l'Europa utilizzando il nuovo modello mondiale, è necessario inserire i dati solo per l'area Europa. Si configurerà quindi una nuova vista origine dati che filtra i dati originali e si modificherà la condizione di filtro per ogni set di query di stima.  
   
 #### <a name="to-create-the-model-data-using-a-custom-data-source-view"></a>Per creare i dati del modello utilizzando una vista origine dati personalizzata  
   
-1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **viste origine dati**, quindi scegliere **nuova vista origine dati**.  
+1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Viste origine dati**, quindi scegliere Nuova vista origine **dati**.  
   
 2.  Nella pagina di benvenuto della procedura guidata fare clic su **Avanti**.  
   
 3.  Nella pagina **Selezionare un'origine dati** selezionare [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], quindi scegliere **Avanti**.  
   
-4.  Nella pagina **selezionare tabelle e viste**, non aggiungere alcuna tabella. fare semplicemente clic su **Avanti**.  
+4.  Nella pagina **Seleziona tabelle e viste**non aggiungere tabelle, ma solo fare clic su **Avanti**.  
   
-5.  Nella pagina **Completamento procedura guidata**Digitare il nome `AllRegions`e quindi fare clic su **fine**.  
+5.  Nella pagina **Completamento procedura guidata digitare**il nome `AllRegions`e quindi fare clic su **Fine**.  
   
-6.  Fare quindi clic con il pulsante destro del mouse sull'area di progettazione della vista origine dati vuota, quindi scegliere **nuova query denominata**.  
+6.  Fare quindi clic con il pulsante destro del mouse sull'area di progettazione della vista origine dati vuota e quindi scegliere **Nuova query denominata**.  
   
-7.  Nella finestra di dialogo **Crea query denominata** , per **nome**, digitare `AllRegions`e per **Descrizione**digitare **somma e media delle vendite per tutti i modelli e le aree**.  
+7.  Nella finestra di dialogo Crea query `AllRegions` **denominata** , per **Nome**, digitare e per **Descrizione**, digitare Somma e media **delle vendite per tutti i modelli e le aree**.  
   
 8.  Nel riquadro Testo SQL digitare l'istruzione seguente, quindi scegliere OK:  
   
@@ -142,11 +142,11 @@ ms.locfileid: "68893697"
     GROUP BY ReportingDate  
     ```  
   
-9. Fare clic con il `AllRegions` pulsante destro del mouse sulla tabella, quindi scegliere **Esplora dati**.  
+9. Fare clic `AllRegions` con il pulsante destro del mouse sulla tabella e quindi **scegliere Esplora dati**.  
   
-###  <a name="bkmk_CrossData"></a>Per creare i dati della serie per la stima incrociata  
+###  <a name="to-create-the-series-data-for-cross-prediction"></a><a name="bkmk_CrossData"></a>Per creare i dati della serie per la stima incrociataTo create the series data for cross-prediction  
   
-1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **viste origine dati**, quindi scegliere **nuova vista origine dati**.  
+1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Viste origine dati**, quindi scegliere Nuova vista origine **dati**.  
   
 2.  Nella Creazione guidata vista origine dati effettuare le selezioni seguenti:  
   
@@ -158,13 +158,13 @@ ms.locfileid: "68893697"
   
 3.  Fare clic su **Fine**.  
   
-4.  Fare clic con il pulsante destro del mouse sull'area di progettazione vuota per **T1000 Pacific Region. DSV**, quindi scegliere **nuova query denominata**.  
+4.  Fare clic con il pulsante destro del mouse sull'area di progettazione vuota per **T1000 Pacific Region.dsv**, quindi scegliere **Nuova query denominata**.  
   
      Verrà visualizzata la finestra di dialogo **Crea query denominata** . Digitare nuovamente il nome e aggiungere la descrizione seguente:  
   
      **Nome**:`T1000 Pacific Region`  
   
-     **Descrizione**: **filtrare`vTimeSeries`per area e modello**  
+     **Descrizione**: **Filtra`vTimeSeries`per regione e modello**  
   
 5.  Nel riquadro Testo digitare la query seguente, quindi scegliere OK:  
   
@@ -177,12 +177,12 @@ ms.locfileid: "68893697"
     > [!NOTE]  
     >  Poiché è necessario creare stime separatamente per ogni serie, è possibile copiare il testo della query e salvarlo in un file di testo, in modo da poterlo riutilizzare per l'altra serie di dati.  
   
-6.  Nell'area di progettazione della vista origine dati fare clic con il pulsante destro del mouse su T1000 Pacific, quindi scegliere **Esplora dati** per verificare che i dati vengano filtrati correttamente.  
+6.  Nell'area di progettazione della vista origine dati fare clic con il pulsante destro del mouse su T1000 Pacific e quindi **scegliere Esplora dati** per verificare che i dati vengano filtrati correttamente.  
   
      Si utilizzeranno questi dati come input del modello in caso di creazione di query di stima incrociata.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Stime basate su serie temporali che utilizzano dati aggiornati &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [Previsioni di serie temporali che usano dati aggiornati &#40;esercitazione sul data intermedio&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
