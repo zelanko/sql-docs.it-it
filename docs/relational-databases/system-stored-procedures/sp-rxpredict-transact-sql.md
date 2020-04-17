@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012439"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488540"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>Argomenti
 
-**model**
+**Modello**
 
 Un modello con training preliminare in un formato supportato. 
 
@@ -64,13 +64,13 @@ L'utente `EXECUTE` deve disporre dell'autorizzazione per il database.
 
 ### <a name="supported-algorithms"></a>Algoritmi supportati
 
-Per creare ed eseguire il training del modello, usare uno degli algoritmi supportati per R o Python, fornito da [SQL Server Machine Learning Services (R o Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), SQL Server [2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(Autonomo) (R o Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)o [SQL Server 2016 R Server (Standalone).](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)
+Per creare ed eseguire il training del modello, usare uno degli algoritmi supportati per R o Python, fornito da [SQL Server Machine Learning Services (R o Python)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services), SQL Server [2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(Autonomo) (R o Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)o [SQL Server 2016 R Server (Standalone).](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)
 
 #### <a name="r-revoscaler-models"></a>R: Modelli RevoScaleR
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [rxBAlberi](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxdForesta](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 

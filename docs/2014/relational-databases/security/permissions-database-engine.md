@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128754"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487160"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
   Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Questo argomento contiene informazioni sui seguenti aspetti:  
@@ -32,13 +32,13 @@ ms.locfileid: "63128754"
   
 -   [Autorizzazioni relative a particolari entità a protezione diretta](#_securables)  
   
--   [Autorizzazioni SQL Server](#_permissions)  
+-   [Autorizzazioni di SQL ServerSQL Server permissions](#_permissions)  
   
 -   [Algoritmo di controllo delle autorizzazioni](#_algorithm)  
   
 -   [esempi](#_examples)  
   
-##  <a name="_conventions"></a> Convenzioni di denominazione delle autorizzazioni  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Convenzioni di denominazione delle autorizzazioni  
  Di seguito vengono descritte le convenzioni generali adottate per la denominazione delle autorizzazioni:  
   
 -   CONTROL  
@@ -49,11 +49,11 @@ ms.locfileid: "63128754"
   
      Conferisce la capacità di modificare le proprietà, eccetto il diritto di proprietà, di una particolare entità a protezione diretta. Quando viene concessa in un ambito, l'autorizzazione ALTER concede la capacità di modificare, creare o eliminare una qualsiasi entità a protezione diretta contenuta in tale ambito. Un'autorizzazione ALTER in uno schema, ad esempio, include la capacità di creare, modificare ed eliminare oggetti contenuti nello schema.  
   
--   ALTER ANY \<*Entità a protezione diretta del server*>, dove *Entità a protezione diretta del server* può essere qualsiasi entità a protezione diretta del server.  
+-   ALTER \<ANY *Server securable*>, in cui *l'entità a protezione diretta del server* può essere a protezione diretta del server.  
   
      Conferisce la capacità di creare, modificare o eliminare singole istanze dell' *Entità a protezione diretta del server*. L'autorizzazione ALTER ANY LOGIN, ad esempio, conferisce la capacità di creare, modificare o eliminare un qualsiasi account di accesso nell'istanza.  
   
--   ALTER ANY \<*Entità a protezione diretta del database*>, dove *Entità a protezione diretta del database* può essere una qualsiasi entità a protezione diretta a livello del database.  
+-   ALTER \<ANY *Database Securable*>, dove *Database a protezione diretta* può essere qualsiasi a livello di database.  
   
      Conferisce la capacità di creare, modificare o eliminare singole istanze dell' *Entità a protezione diretta del database*. L'autorizzazione ALTER ANY SCHEMA, ad esempio, conferisce la capacità di creare, modificare o eliminare un qualsiasi schema contenuto nel database.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "63128754"
   
      Consente al beneficiario di prendere possesso dell'entità a protezione diretta sulla quale viene concessa questa autorizzazione.  
   
--   IMPERSONATE \<*Account di accesso*>  
+-   \< *Accesso* IMPERSONATE>  
   
      Consente al beneficiario di rappresentare l'account di accesso.  
   
--   IMPERSONATE \<*Utente*>  
+-   \< *Utente* IMPERSONATE>  
   
      Consente al beneficiario di rappresentare l'utente.  
   
--   CREATE \<*Entità a protezione diretta del server*>  
+-   Create \< *Server a protezione diretta*>  
   
      Conferisce al beneficiario la capacità di creare l' *Entità a protezione diretta del server*.  
   
--   CREATE \<*Entità a protezione diretta del database*>  
+-   Crea \< *database a protezione diretta*>  
   
      Conferisce al beneficiario la capacità di creare l' *Entità a protezione diretta del database*.  
   
--   CREATE \<*Entità a protezione diretta contenuta in uno schema*>  
+-   Entità \< *a protezione diretta create Schema*>  
   
      Conferisce la capacità di creare un'entità a protezione diretta contenuta in uno schema. Per creare un'entità a protezione diretta in un particolare schema, è però necessario avere un'autorizzazione ALTER sullo schema.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "63128754"
      L'autorizzazione REFERENCES è necessaria su un oggetto per creare FUNCTION o VIEW con la clausola `WITH SCHEMABINDING` che faccia riferimento all'oggetto stesso.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Grafico delle autorizzazioni di SQL Server  
- Per un grafico con dimensioni poster di [!INCLUDE[ssDE](../../includes/ssde-md.md)] tutte le autorizzazioni in formato PDF [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142), vedere.  
+ Per un grafico con [!INCLUDE[ssDE](../../includes/ssde-md.md)] dimensioni poster di [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)tutte le autorizzazioni in formato pdf, vedere .  
   
-##  <a name="_securables"></a> Autorizzazioni applicabili a particolari entità a protezione diretta  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Autorizzazioni applicabili a entità a protezione diretta specifiche  
  Nella tabella seguente vengono elencati le classi principali di autorizzazione e i tipi di entità a protezione diretta a cui possono essere applicati.  
   
 |Autorizzazione|Si applica a|  
@@ -104,7 +104,7 @@ ms.locfileid: "63128754"
 |UPDATE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
 |REFERENCES|Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle e colonne<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colonne<br /><br /> Tipi<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
 |INSERT|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
-|Elimina|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
+|DELETE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
 |EXECUTE|Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Sinonimi<br /><br /> Tipi CLR|  
 |RECEIVE|Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
 |VIEW DEFINITION|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
@@ -116,7 +116,7 @@ ms.locfileid: "63128754"
 > [!CAUTION]  
 >  Le autorizzazioni predefinite concesso a oggetti di sistema durante l'installazione vengono valutati attentamente per individuare possibili minacce e non è quindi necessario modificarli per implementare misure di protezione avanzata dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eventuali modifiche alle autorizzazioni per gli oggetti di sistema possono limitare o compromettere la funzionalità e potrebbero lasciare l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno stato non supportato.  
   
-##  <a name="_permissions"></a>Autorizzazioni per database SQL e SQL Server  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL Server and SQL Database Permissions  
  La tabella seguente contiene un elenco completo delle autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni del[!INCLUDE[ssSDS](../../includes/sssds-md.md)] sono disponibili solo per entità a protezione diretta supportate. Non è possibile concedere autorizzazioni a livello di server in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tuttavia in alcuni casi sono disponibili invece autorizzazioni di database.  
   
 |Entità a protezione diretta di base|Autorizzazioni di granularità sull'entità a protezione diretta di base|Codice tipo di autorizzazione|Entità a protezione diretta contenente l'entità a protezione diretta di base|Autorizzazione sull'entità a protezione diretta contenente che implica un'autorizzazione di granularità sull'entità a protezione diretta di base|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128754"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: si [!INCLUDE[ssSDS](../../includes/sssds-md.md)]applica solo a .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128754"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: si [!INCLUDE[ssSDS](../../includes/sssds-md.md)]applica solo a .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -201,10 +201,10 @@ ms.locfileid: "63128754"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|Elimina|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: si [!INCLUDE[ssSDS](../../includes/sssds-md.md)]applica solo a . Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -239,7 +239,7 @@ ms.locfileid: "63128754"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|Elimina|DL|SCHEMA|Elimina|  
+|OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -269,7 +269,7 @@ ms.locfileid: "63128754"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|Elimina|DL|DATABASE|Elimina|  
+|SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -342,13 +342,13 @@ ms.locfileid: "63128754"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Riepilogo delle informazioni sull'algoritmo di controllo delle autorizzazioni  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>Riepilogo dell'algoritmo di controllo delle autorizzazioni  
  Il controllo delle autorizzazioni può essere complesso. L'algoritmo di controllo delle autorizzazioni include le appartenenze a gruppi sovrapposti e il concatenamento di proprietà, nonché autorizzazioni esplicite e implicite. È inoltre possibile che le autorizzazioni per le classi di entità a protezione diretta contenenti l'entità a protezione diretta abbiano impatto su tale algoritmo. Il processo generale dell'algoritmo consiste nel raccogliere tutte le autorizzazioni rilevanti. Se non viene individuato alcun blocco DENY, l'algoritmo cerca un'istruzione GRANT che fornisce accesso sufficiente. L'algoritmo contiene tre elementi fondamentali, ovvero il **contesto di sicurezza**, lo **spazio di autorizzazione**e l' **autorizzazione necessaria**.  
   
 > [!NOTE]  
 >  Non è possibile concedere, negare o revocare autorizzazioni a sa, dbo, proprietari di entità, information_schema, sys o all'utente corrente.  
   
--   **Contesto di sicurezza**  
+-   **contesto di sicurezza**  
   
      Gruppo di entità che fornisce le autorizzazioni per il controllo dell'accesso. Tali autorizzazioni sono correlate all'utente o all'account di accesso corrente, a meno che l'utente o l'account di accesso del contesto di sicurezza non sia stato modificato tramite l'istruzione EXECUTE AS. Il contesto di sicurezza include le seguenti entità:  
   
@@ -362,7 +362,7 @@ ms.locfileid: "63128754"
   
     -   Se si usano la firma del modulo, qualsiasi account utente o di accesso tiene conto del certificato usato per firmare il modulo attualmente eseguito dall'utente e delle appartenenze a ruoli associate di tale entità.  
   
--   **Spazio di autorizzazione**  
+-   **spazio di autorizzazione**  
   
      L'entità a protezione diretta e qualsiasi classe di entità a protezione diretta in cui è contenuta. Ad esempio, una tabella (entità a protezione diretta) è contenuta nella classe di entità a protezione diretta dello schema e nella classe di entità a protezione diretta del database. Sull'accesso possono influire le autorizzazioni a livello di tabella, schema, database e server. Per altre informazioni, vedere [Gerarchia delle autorizzazioni &#40;motore di database&#41;](permissions-hierarchy-database-engine.md).  
   
@@ -396,7 +396,7 @@ ms.locfileid: "63128754"
   
 7.  Restituisce un esito positivo per il controllo delle autorizzazioni se l' **autorizzazione necessaria** non è stata negata e se l' **autorizzazione necessaria** contiene un'autorizzazione GRANT o GRANT WITH GRANT concessa in modo diretto o implicito per un'identità nel **contesto di sicurezza** di un oggetto nello **spazio di autorizzazione**.  
   
-##  <a name="_examples"></a> Esempi  
+##  <a name="examples"></a><a name="_examples"></a> Esempi  
  Negli esempi inclusi in questa sezione viene illustrato come recuperare le informazioni sulle autorizzazioni.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](permissions-hierarchy-database-engine.md)   
+ [&#41;della gerarchia delle autorizzazioni &#40;del Motore di database](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

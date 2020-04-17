@@ -1,5 +1,6 @@
 ---
-title: Gestione degli assembly di integrazione CLR | Microsoft Docs
+title: Gestione degli assembly di integrazione CLR Documenti Microsoft
+description: È possibile ospitare assembly DLL gestiti in SQL ServerSQL Server.You can host managed DLL assemblies in SQL ServerSQL Server.  È possibile registrare, modificare ed eliminare gli assembly, nono gestire i file e le autorizzazioni associati.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,25 +16,24 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19b90d7994aa4b75a294f24345d43333d13a22df
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054455"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484760"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gestione degli assembly dell'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Il codice gestito viene compilato e quindi distribuito in unità denominate assembly. Un assembly viene compresso come DLL o file eseguibile (con estensione exe). Mentre un file eseguibile può essere eseguito in modo autonomo, una DLL deve essere ospitata in un'applicazione esistente. Gli assembly DLL gestiti possono essere caricati e ospitati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]da. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che si registri l'assembly in un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'istruzione CREATE ASSEMBLY, prima che possa essere caricato nel processo e usato. Gli assembly possono inoltre essere aggiornati a una versione più recente tramite l'istruzione ALTER ASSEMBLY o rimossi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'istruzione DROP ASSEMBLY.  
+  Il codice gestito viene compilato e quindi distribuito in unità denominate assembly. Un assembly viene compresso come DLL o file eseguibile (con estensione exe). Mentre un file eseguibile può essere eseguito in modo autonomo, una DLL deve essere ospitata in un'applicazione esistente. Gli assembly DLL gestiti possono [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]essere caricati e ospitati da . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che si registri l'assembly in un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'istruzione CREATE ASSEMBLY, prima che possa essere caricato nel processo e usato. Gli assembly possono inoltre essere aggiornati a una versione più recente tramite l'istruzione ALTER ASSEMBLY o rimossi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'istruzione DROP ASSEMBLY.  
   
- Le informazioni sull'assembly vengono archiviate nella tabella **sys. assembly_files** nel database in cui è stato installato l'assembly. La tabella **sys. assembly_files** contiene le colonne seguenti.  
+ Le informazioni sull'assembly vengono archiviate nella tabella **sys.assembly_files** del database in cui è stato installato l'assembly. La tabella **sys.assembly_files** contiene le colonne seguenti.  
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |assembly_id|Identificatore definito per l'assembly. Questo numero viene assegnato a tutti gli oggetti relativi allo stesso assembly.|  
 |name|Nome dell'oggetto .|  
-|file_id|Numero che identifica ogni oggetto, con il primo oggetto associato a un dato **assembly_id** a cui viene assegnato il valore 1. Se più oggetti sono associati allo stesso **assembly_id**, ogni valore **file_id** successivo viene incrementato di 1.|  
+|file_id|Un numero che identifica ogni oggetto, con il primo oggetto associato a un dato **assembly_id** viene assegnato il valore di 1. Se più oggetti sono associati alla stessa **assembly_id**, ogni valore **file_id** successivo viene incrementato di 1.|  
 |content|Rappresentazione esadecimale dell'assembly o del file.|  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
@@ -47,7 +47,7 @@ ms.locfileid: "68054455"
  Viene descritta l'eliminazione di assembly CLR da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza dell'integrazione con CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Sicurezza dell'integrazione CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Sicurezza da accesso di codice dell'integrazione con CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Oggetto SqlContext | Microsoft Docs
+title: 'Oggetto SqlContext : Documenti Microsoft'
+description: Quando si richiama codice gestito in SQL ServerSQL Server in una connessione utente, l'accesso al contesto del chiamante viene astratto in un oggetto SqlContext.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951670"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487538"
 ---
 # <a name="sqlcontext-object"></a>Oggetto SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   È possibile richiamare il codice gestito nel server quando si chiama una routine o una funzione, quando si chiama un metodo su un tipo CLR definito dall'utente o quando l'azione genera un trigger definito in uno dei linguaggi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Dal momento che l'esecuzione di questo codice viene richiesta come parte di una connessione utente, è necessario l'accesso al contesto del chiamante dal codice in esecuzione sul server. Determinate operazioni di accesso ai dati potrebbero inoltre essere valide solo se eseguite nel contesto del chiamante. L'accesso alle pseudotabelle inserite ed eliminate utilizzate nelle operazioni del trigger, ad esempio, è valido solo nel contesto del chiamante.  
   
- Il contesto del chiamante viene astratto in un oggetto **SqlContext** . Per ulteriori informazioni sui metodi e le proprietà di **SqlTriggerContext** , vedere la documentazione di riferimento della classe **Microsoft. SqlServer. Server. SqlTriggerContext** in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ Il contesto del chiamante è astratto in un oggetto **SqlContext.** Per ulteriori informazioni sui metodi e le proprietà **Di SqlTriggerContext,** vedere la documentazione [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di riferimento della classe **Microsoft.SqlServer.Server.SqlTriggerContext** nell'SDK.  
   
- **SqlContext** consente di accedere ai componenti seguenti:  
+ **SqlContext** fornisce l'accesso ai componenti seguenti:SqlContext provides access to the following components:  
   
--   **SqlPipe**: l'oggetto **SqlPipe** rappresenta il "pipe" tramite il quale i risultati passano al client. Per ulteriori informazioni sull'oggetto **SqlPipe** , vedere [SqlPipe Object](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
+-   **SqlPipe**: L'oggetto **SqlPipe** rappresenta la "pipe" attraverso la quale i risultati scorrono al client. Per ulteriori informazioni sull'oggetto **SqlPipe** , vedere [Oggetto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
   
--   **SqlTriggerContext**: l'oggetto **SqlTriggerContext** può essere recuperato solo dall'interno di un trigger CLR. Fornisce informazioni sull'operazione che ha attivato il trigger e una mappa delle colonne che sono state aggiornate. Per ulteriori informazioni sull'oggetto **SqlTriggerContext** , vedere [oggetto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
+-   **SqlTriggerContext:** l'oggetto **SqlTriggerContext** può essere recuperato solo dall'interno di un trigger CLR. Fornisce informazioni sull'operazione che ha attivato il trigger e una mappa delle colonne che sono state aggiornate. Per ulteriori informazioni sull'oggetto **SqlTriggerContext** , vedere [Oggetto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
   
--   **Disavailable** **: la proprietà** IsSynchronized viene utilizzata per determinare la disponibilità del contesto.  
+-   **IsAvailable:** la proprietà **IsAvailable** viene utilizzata per determinare la disponibilità del contesto.  
   
--   **WindowsIdentity**: la proprietà **WindowsIdentity** viene utilizzata per recuperare l'identità di Windows del chiamante.  
+-   **WindowsIdentity**: la proprietà **WindowsIdentity** viene utilizzata per recuperare l'identità Di Windows del chiamante.  
   
 ## <a name="determining-context-availability"></a>Determinazione della disponibilità del contesto  
- Eseguire una query sulla classe **SqlContext** per verificare se il codice attualmente in esecuzione è in esecuzione in-process. A tale scopo, controllare la proprietà di **disponibilità** dell'oggetto **SqlContext** . La proprietà **disavailable** è di sola lettura e restituisce **true** se il codice chiamante viene eseguito all'interno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di e se è possibile accedere ad altri membri **SqlContext** . Se la **Proprietà** IsSynchronized restituisce **false**, tutti gli altri membri **SqlContext** generano un' **eccezione InvalidOperationException**, se utilizzata. Se **viene** restituito **false**, qualsiasi tentativo di aprire un oggetto connessione con "context connection = true" nella stringa di connessione ha esito negativo.  
+ Eseguire una query sulla classe **SqlContext** per verificare se il codice attualmente in esecuzione è in esecuzione in-process. A tale scopo, controllare il **IsAvailable** proprietà del **SqlContext** oggetto. Il **IsAvailable** proprietà è di sola lettura e restituisce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **True** se il codice chiamante è in esecuzione all'interno e se è possibile accedere ad altri **membri SqlContext.** Se la proprietà **IsAvailable** restituisce **False**, tutti gli altri membri **SqlContext** generano un'eccezione **InvalidOperationException**, se utilizzata. Se **IsAvailable** restituisce **False**, qualsiasi tentativo di aprire un oggetto connessione che contiene "context connection -true" nella stringa di connessione ha esito negativo.  
   
 ## <a name="retrieving-windows-identity"></a>Recupero dell'identità di Windows  
- Il codice CLR in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene sempre richiamato nel contesto dell'account del processo. Se il codice deve eseguire determinate azioni utilizzando l'identità dell'utente chiamante, anziché l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identità del processo, è necessario ottenere un token di rappresentazione tramite la proprietà **WindowsIdentity** dell'oggetto **SqlContext** . La proprietà **WindowsIdentity** restituisce un'istanza **WindowsIdentity** che rappresenta [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'identità Windows del chiamante o null se il client è stato autenticato tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. Solo gli assembly contrassegnati con **EXTERNAL_ACCESS** o le autorizzazioni **unsafe** possono accedere a questa proprietà.  
+ Il codice CLR in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene sempre richiamato nel contesto dell'account del processo. Se il codice deve eseguire determinate azioni usando l'identità dell'utente chiamante, anziché l'identità del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo, è necessario ottenere un token di rappresentazione tramite la proprietà **WindowsIdentity** dell'oggetto **SqlContext.** La proprietà **WindowsIdentity** restituisce un'istanza di **WindowsIdentity** che rappresenta [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'identità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows del chiamante oppure null se il client è stato autenticato tramite autenticazione. Solo gli assembly contrassegnati con autorizzazioni **EXTERNAL_ACCESS** o **UNSAFE** possono accedere a questa proprietà.  
   
- Una volta ottenuto l'oggetto **WindowsIdentity** , i chiamanti possono rappresentare l'account client ed eseguire azioni per loro conto.  
+ Dopo aver ottenuto l'oggetto **WindowsIdentity,** i chiamanti possono rappresentare l'account client ed eseguire azioni per loro conto.  
   
- L'identità del chiamante è disponibile solo tramite **SqlContext. WindowsIdentity** se il client che ha avviato l'esecuzione della stored procedure o della funzione è connessa al server utilizzando l'autenticazione di Windows. Se invece è stata utilizzata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa proprietà è Null e il codice non è in grado di rappresentare il chiamante.  
+ L'identità del chiamante è disponibile solo tramite **SqlContext.WindowsIdentity** se il client che ha avviato l'esecuzione della stored procedure o della funzione si è connesso al server tramite l'autenticazione di Windows. Se invece è stata utilizzata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa proprietà è Null e il codice non è in grado di rappresentare il chiamante.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene illustrato come ottenere l'identità di Windows del client chiamante e rappresentare il client.  
@@ -129,9 +130,9 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SqlPipe (oggetto)](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
+ [Oggetto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
  [Oggetto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
- [Trigger CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
+ [Trigger CLRCLR Triggers](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
  [Estensioni specifiche in-process di SQL Server ad ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

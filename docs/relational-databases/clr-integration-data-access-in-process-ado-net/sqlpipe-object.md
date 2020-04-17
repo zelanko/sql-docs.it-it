@@ -1,5 +1,6 @@
 ---
-title: Oggetto SqlPipe | Microsoft Docs
+title: Proprietà SqlPipe . Documenti Microsoft
+description: Per gli oggetti di database CLR in esecuzione in SQL Server, è possibile inviare i risultati alla pipe connessa utilizzando il Send metodi del SqlPipe oggetto.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913552"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487533"
 ---
 # <a name="sqlpipe-object"></a>Oggetto SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto comune scrivere una stored procedure (o una stored procedure estesa) per l'invio di risultati o parametri di output al client chiamante.  
   
- In una [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, tutte le istruzioni **SELECT** che restituiscono zero o più righe inviano i risultati alla "pipe" del chiamante connesso.  
+ In [!INCLUDE[tsql](../../includes/tsql-md.md)] una stored procedure, qualsiasi istruzione **SELECT** che restituisce zero o più righe invia i risultati alla "pipe" del chiamante connesso.  
   
- Per gli oggetti di database Common Language Runtime (CLR) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in esecuzione in, è possibile inviare risultati alla pipe connessa utilizzando i metodi **Send** dell'oggetto **SqlPipe** . Accedere alla proprietà **pipe** dell'oggetto **SqlContext** per ottenere l'oggetto **SqlPipe** . La classe **SqlPipe** è concettualmente simile alla classe **Response** disponibile in ASP.NET. Per ulteriori informazioni, vedere documentazione di riferimento per la classe SqlPipe in .NET Framework SDK (Software Development Kit).  
+ Per gli oggetti di database CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Common Language Runtime) in esecuzione in , è possibile inviare i risultati alla pipe connessa utilizzando i metodi **Send** dell'oggetto **SqlPipe** . Accedere alla proprietà **Pipe** dell'oggetto **SqlContext** per ottenere l'oggetto **SqlPipe.** La classe **SqlPipe** è concettualmente simile alla classe **Response** presente in ASP.NET. Per ulteriori informazioni, vedere documentazione di riferimento per la classe SqlPipe in .NET Framework SDK (Software Development Kit).  
   
 ## <a name="returning-tabular-results-and-messages"></a>Restituzione di risultati tabulari e messaggi  
- **SqlPipe** ha un metodo **Send** , che presenta tre overload. Sono:  
+ Il **SqlPipe** dispone di un **Send** metodo, che dispone di tre overload. ovvero:  
   
 -   `void Send(string message)`  
   
@@ -38,24 +39,24 @@ ms.locfileid: "67913552"
   
 -   `void Send(SqlDataRecord record)`  
   
- Il metodo **Send** invia i dati direttamente al client o al chiamante. Si tratta in genere del client che utilizza l'output di **SqlPipe**, ma nel caso di stored procedure CLR nidificate, il consumer di output può essere anche un stored procedure. Procedure1 chiama ad esempio SqlCommand.ExecuteReader() con il testo del comando "EXEC Procedure2". Procedure2 è anche una stored procedure gestita. Se Procedure2 chiama il metodo SqlPipe.Send(SqlDataRecord), la riga verrà inviata al lettore di Procedure1, non al client.  
+ Il **metodo Send** invia i dati direttamente al client o al chiamante. In genere è il client che utilizza l'output di **SqlPipe**, ma nel caso di stored procedure CLR annidate il consumer di output può anche essere una stored procedure. Procedure1 chiama ad esempio SqlCommand.ExecuteReader() con il testo del comando "EXEC Procedure2". Procedure2 è anche una stored procedure gestita. Se Procedure2 chiama il metodo SqlPipe.Send(SqlDataRecord), la riga verrà inviata al lettore di Procedure1, non al client.  
   
- Il metodo **Send** Invia un messaggio stringa che viene visualizzato sul client come messaggio informativo, equivalente a Print [!INCLUDE[tsql](../../includes/tsql-md.md)]in. Può inoltre inviare un set di risultati a riga singola utilizzando **SqlDataRecord**o un set di risultati con più righe utilizzando un oggetto **SqlDataReader**.  
+ Il metodo **Send** invia un messaggio stringa che viene visualizzato sul [!INCLUDE[tsql](../../includes/tsql-md.md)]client come messaggio informativo, equivalente a PRINT in . Può inoltre inviare un set di risultati a riga singola utilizzando **SqlDataRecord**o un set di risultati a più righe utilizzando un oggetto **SqlDataReader**.  
   
- L'oggetto **SqlPipe** dispone anche di un metodo **ExecuteAndSend** . Questo metodo può essere utilizzato per eseguire un comando (passato come oggetto **SqlCommand** ) e restituire i risultati direttamente al chiamante. Se sono presenti errori nel comando inviato, le eccezioni vengono inviate alla pipe, ma una copia viene inviata anche al codice gestito chiamante. Se il codice chiamante non rileva l'eccezione, lo stack verrà propagato al codice [!INCLUDE[tsql](../../includes/tsql-md.md)] e verrà visualizzato due volte nell'output. Se il codice chiamante rileva l'eccezione, il consumer della pipe visualizzerà l'errore, ma questo non verrà duplicato.  
+ L'oggetto **SqlPipe** dispone anche di un metodo **ExecuteAndSend.** Questo metodo può essere utilizzato per eseguire un comando (passato come un **SqlCommand** oggetto) e inviare i risultati direttamente al chiamante. Se sono presenti errori nel comando inviato, le eccezioni vengono inviate alla pipe, ma una copia viene inviata anche al codice gestito chiamante. Se il codice chiamante non rileva l'eccezione, lo stack verrà propagato al codice [!INCLUDE[tsql](../../includes/tsql-md.md)] e verrà visualizzato due volte nell'output. Se il codice chiamante rileva l'eccezione, il consumer della pipe visualizzerà l'errore, ma questo non verrà duplicato.  
   
- Può solo assumere un **SqlCommand** associato alla connessione di contesto. non è possibile eseguire un comando associato alla connessione non di contesto.  
+ Può accettare solo un **SqlCommand** associato alla connessione di contesto; non può accettare un comando associato alla connessione non contraddetto.  
   
 ## <a name="returning-custom-result-sets"></a>Restituzione di set di risultati personalizzati  
- Le stored procedure gestite possono inviare set di risultati che non provengono da un oggetto **SqlDataReader**. Il metodo **SendResultsStart** , insieme a **SendResultsRow** e **SendResultsEnd**, consente alle stored procedure di inviare set di risultati personalizzati al client.  
+ Le stored procedure gestite possono inviare set di risultati che non provengono da **un oggetto SqlDataReader**. Il metodo **SendResultsStart,** insieme a **SendResultsRow** e **SendResultsEnd**, consente alle stored procedure di inviare set di risultati personalizzati al client.  
   
- **SendResultsStart** accetta un oggetto **SqlDataRecord** come input. Indica l'inizio di un set di risultati e utilizza i metadati del record per costruire i metadati che descrivono il set in questione. Non invia il valore del record con **SendResultsStart**. Tutte le righe successive, inviate utilizzando **SendResultsRow**, devono corrispondere alla definizione dei metadati.  
+ **SendResultsStart** accetta un **SqlDataRecord** come input. Indica l'inizio di un set di risultati e utilizza i metadati del record per costruire i metadati che descrivono il set in questione. Non invia il valore del record con **SendResultsStart**. Tutte le righe successive, inviate utilizzando **SendResultsRow**, devono corrispondere alla definizione dei metadati.  
   
 > [!NOTE]  
->  Dopo aver chiamato il metodo **SendResultsStart** , è possibile chiamare solo **SendResultsRow** e **SendResultsEnd** . La chiamata di qualsiasi altro metodo nella stessa istanza di **SqlPipe** causa un' **eccezione InvalidOperationException**. **SendResultsEnd** imposta **SqlPipe** nuovamente sullo stato iniziale in cui è possibile chiamare altri metodi.  
+>  Dopo aver chiamato il **SendResultsStart** metodo solo **SendResultsRow** e **SendResultsEnd** può essere chiamato. La chiamata a qualsiasi altro metodo nella stessa istanza di **SqlPipe** causa **un'eccezione InvalidOperationException**. **SendResultsEnd** imposta **SqlPipe** allo stato iniziale in cui è possibile chiamare altri metodi.  
   
 ### <a name="example"></a>Esempio  
- Il stored procedure **uspGetProductLine** restituisce il nome, il numero di prodotto, il colore e il prezzo di listino di tutti i prodotti all'interno di una linea di prodotti specificata. Questo stored procedure accetta corrispondenze esatte per *prodLine*.  
+ La stored procedure **uspGetProductLine** restituisce il nome, il numero di prodotto, il colore e il prezzo di listino di tutti i prodotti all'interno di una linea di prodotti specificata. Questa stored procedure accetta corrispondenze esatte per *prodLine*.  
   
  C#  
   
@@ -133,7 +134,7 @@ End Sub
 End Class  
 ```  
   
- Nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene eseguita la procedura **uspGetProduct** , che restituisce un elenco di prodotti Touring bike.  
+ L'istruzione seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] esegue la routine **uspGetProduct,** che restituisce un elenco di prodotti per biciclette da turismo.  
   
 ```  
 EXEC uspGetProductLineVB 'T';  

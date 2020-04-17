@@ -1,5 +1,6 @@
 ---
-title: Assembly (motore di database) | Microsoft Docs
+title: Assembly (Motore di database) Documenti Microsoft
+description: Un'istanza di SQL ServerSQL Server può ospitare assembly che distribuiscono funzioni, procedure, trigger e aggregazioni e tipi definiti dall'utente scritti in un linguaggio CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed494e55967bb02680f0397d3b651a59fd2d3bbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 386e1980ae19ba4f98222b51a4955b024f815083
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028046"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488080"
 ---
 # <a name="assemblies-database-engine"></a>Assembly (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Gli argomenti di questa sezione includono informazioni utili per comprendere, progettare e implementare assembly.  
   
- Gli assembly sono file dll utilizzati in un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di per distribuire funzioni, stored procedure, trigger, funzioni di aggregazione definite dall'utente e tipi definiti dall'utente scritti in uno dei linguaggi di codice gestito ospitati dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), anziché in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Gli assembly sono file DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzati in un'istanza di per distribuire funzioni, stored procedure, trigger, aggregazioni definite dall'utente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e tipi definiti dall'utente scritti in uno dei linguaggi di codice gestito ospitati da Common Language Runtime (CLR), anziché in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Un assembly di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto che fa riferimento a un modulo di applicazione gestito (file con estensione dll) creato nel linguaggio CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Un assembly contiene i metadati della classe e codice gestito. Il caricamento di un assembly in un'istanza di SQL Server è il primo passaggio da eseguire per creare uno degli oggetti di database seguenti:  
   
--   Funzioni CLR. Per altre informazioni, vedere [create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
+-   Funzioni CLR. Per ulteriori informazioni, vedere [Creare funzioni CLR](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   Stored procedure CLR. Per ulteriori informazioni, vedere [stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   Stored procedure CLR. Per ulteriori informazioni, vedere [Stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
--   Trigger CLR. Per altre informazioni, vedere [create CLR Triggers](../../relational-databases/triggers/create-clr-triggers.md).  
+-   Trigger CLR. Per ulteriori informazioni, vedere [Creare trigger CLR](../../relational-databases/triggers/create-clr-triggers.md).  
   
--   Funzioni di aggregazione definite dall'utente. Per altre informazioni, vedere [creare funzioni di aggregazione definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
+-   Funzioni di aggregazione definite dall'utente. Per ulteriori informazioni, vedere [Creare aggregazioni definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Tipi definiti dall'utente. Per altre informazioni, vedere [Uso dei tipi definiti dall'utente](../../relational-databases/native-client/features/using-user-defined-types.md).  
   

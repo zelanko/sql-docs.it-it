@@ -6,7 +6,7 @@
   expanded: true
   items:
     - name: Che cos'è Machine Learning Services (Python e R)?
-      href: ../machine-learning/what-is-sql-server-machine-learning.md
+      href: ../machine-learning/sql-server-machine-learning-services.md
     - name: Che cos'è R Services?
       href: ../machine-learning/r/sql-server-r-services.md
     - name: Server autonomo

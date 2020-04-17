@@ -13,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721543"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486990"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurare IIS 7 per la sincronizzazione Web
   Le procedure di questo argomento illustrano il processo di configurazione manuale di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) versione 7 e successive per l'uso con la sincronizzazione Web per la replica di tipo merge. 
@@ -28,11 +28,11 @@ ms.locfileid: "62721543"
  Per una panoramica del processo di configurazione, vedere [Configurare la sincronizzazione Web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori, ad esempio "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
+>  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori, ad esempio: "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
   
  Per utilizzare la sincronizzazione Web, è necessario configurare IIS 7 completando i passaggi seguenti. Ogni passaggio è descritto in dettaglio in questo argomento.  
   
-1.  Installare e configurare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listener per la replica nel computer che esegue IIS.  
+1.  Installare e configurare il listener per la replica di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in cui viene eseguito IIS.  
   
 2.  Configurare SSL (Secure Sockets Layer). L'utilizzo di SSL è obbligatorio per la comunicazione tra IIS e tutti i Sottoscrittori.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62721543"
   
 ## <a name="installing-the-sql-server-replication-listener"></a>Installazione del listener per la replica di SQL Server  
 
-La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Configurazione guidata sincronizzazione Web di IIS versione 5 e 6 non è disponibile con IIS versione 7.0 e successive. **A partire da SQL Server 2012, per usare il componente di sincronizzazione Web nel server IIS, è necessario installare SQL Server con la replica. Può trattarsi dell'edizione gratuita SQL Server Express.**
+La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Configurazione guidata sincronizzazione Web di IIS versione 5 e 6 non è disponibile con IIS versione 7.0 e successive. **A partire da SQL Server 2012, per usare il componente di sincronizzazione Web nel server IIS, è necessario installare SQL Server con la replica. Ad esempio, è possibile installare l'edizione gratuita SQL Server Express.**
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>Per installare e configurare Listener per la replica di SQL Server  
   
@@ -54,7 +54,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 4.  Registrare replisapi.dll:  
   
-    1.  Fare clic su **Start**, quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd`, quindi fare clic su **OK**.  
+    1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** `cmd`immettere e quindi fare clic su **OK**.  
   
     2.  Nella directory creata nel passaggio 1 eseguire il comando riportato di seguito:  
   
@@ -66,7 +66,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     1.  In **Gestione Internet Information Services (IIS)**, nel riquadro **Connessioni** fare clic con il pulsante destro del mouse su **Sito Web predefinito**, quindi selezionare **Aggiungi directory virtuale**.  
   
-    2.  In **alias**immettere `SQLReplication`.  
+    2.  In **Alias** `SQLReplication`immettere .  
   
     3.  In **Percorso fisico** immettere **\<unità>:\Inetpub\SQLReplication\\** e quindi fare clic su **OK**.  
   
@@ -78,7 +78,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     3.  Nel riquadro **Azioni** fare clic su **Aggiungi mapping moduli**.  
   
-    4.  In percorso **richiesta** immettere `replisapi.dll`.  
+    4.  In **Request** Percorso richiesta `replisapi.dll`immettere .  
   
     5.  Nell'elenco a discesa **Modulo** selezionare **IsapiModule**.  
   
@@ -155,7 +155,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 ###### <a name="to-test-the-certificate"></a>Per testare il certificato  
   
-1.  In **gestione Internet Information Services (IIS)** fare clic su **sito Web predefinito.**  
+1.  In **Gestione Internet Information Services (IIS)** fare clic su Sito Web **predefinito.**  
   
 2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)**.  
   
@@ -170,7 +170,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
  Oltre a eseguire la procedura seguente, assicurarsi che gli account di accesso necessari siano inclusi nell'elenco di accesso alla pubblicazione. Per altre informazioni sull'elenco di acceso alla pubblicazione, vedere [Proteggere il server di pubblicazione](security/secure-the-publisher.md).  
   
- **Importante** L'account creato in questa sezione è l'account che si connetterà al server di pubblicazione e al server di distribuzione durante la sincronizzazione. È necessario aggiungere questo account come account di accesso SQL nel server di distribuzione e di pubblicazione.  
+ **Importante** L'account creato in questa sezione è quello che verrà utilizzato per la connessione al server di pubblicazione e al database di distribuzione durante la sincronizzazione. È necessario aggiungere questo account come account di accesso SQL nel server di distribuzione e di pubblicazione.  
   
  L'account utilizzato per il listener per la replica di SQL Server deve disporre di autorizzazioni come descritto nell'argomento Sicurezza dell'agente di merge, nella sezione "Connettersi al server di pubblicazione o al database di distribuzione".  
   
@@ -272,7 +272,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 1.  Assicurarsi che le impostazioni per la rete LAN (Local Area Network) nel Sottoscrittore siano corrette:  
   
-    1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer scegliere **Opzioni Internet**dal menu **strumenti** .  
+    1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer fare clic su **Opzioni Internet** dal menu **Strumenti**.  
   
     2.  Nella scheda **Connessioni** fare clic su **Impostazioni LAN**.  
   
@@ -280,7 +280,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     4.  Se viene utilizzato un server proxy, selezionare **Utilizza un server proxy per le connessioni LAN** e **Ignora server proxy per indirizzi locali**, quindi fare clic su **OK**.  
   
-2.  Nel Sottoscrittore, in Internet Explorer, connettersi al server in modalità diagnostica aggiungendo `?diag` alla fine dell'indirizzo di replisapi.dll. Ad esempio: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  Nel Sottoscrittore, in Internet Explorer, connettersi al server in modalità diagnostica aggiungendo `?diag` alla fine dell'indirizzo di replisapi.dll. Ad esempio: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
     >  Nell'esempio precedente sostituire **server.dominio.com** con il nome esatto di **Rilasciato a** elencato nella sezione **Certificati del server** in Gestione IIS.  

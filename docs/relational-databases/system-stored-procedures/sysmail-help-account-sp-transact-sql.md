@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_account_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_help_account_sp (Transact-SQL) Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 857e4139081833980ee6c90eca9d90d16d4c0ad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305150"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528415"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @account_id = ] account_id`ID dell'account per cui elencare le informazioni. *account_id* è di **tipo int**e il valore predefinito è null.  
+`[ @account_id = ] account_id`ID account dell'account per cui elencare le informazioni. *account_id* è **int**, con un valore predefinito NULL.  
   
-`[ @account_name = ] 'account_name'`Nome dell'account per cui elencare le informazioni. *account_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @account_name = ] 'account_name'`Nome dell'account di cui elencare le informazioni. *account_name* è **sysname**, con un valore predefinito NULL.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- **0** (esito positivo) o **1** (esito negativo)  
+ **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce un set di risultati contenente le colonne elencate di seguito.  
@@ -58,20 +58,20 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**email_address**|**nvarchar(128)**|Indirizzo di posta elettronica da cui inviare i messaggi.|  
 |**display_name**|**nvarchar(128)**|Nome visualizzato dell'account.|  
 |**replyto_address**|**nvarchar(128)**|Indirizzo a cui vengono inviate le risposte ai messaggi da questo account.|  
-|**ServerType**|**sysname**|Tipo di server di posta elettronica per l'account.|  
-|**nomeserver**|**sysname**|Nome del server di posta elettronica per l'account.|  
-|**porta**|**int**|Numero della porta del server di posta elettronica.|  
-|**nome utente**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica database non utilizza l'autenticazione per questo account.|  
-|**use_default_credentials**|**bit**|Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando questo parametro è 0, posta elettronica database utilizza il ** \@nome utente** e ** \@la password** per l'autenticazione nel server SMTP. Se ** \@nome utente** e ** \@password** sono null, posta elettronica database usa l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.|  
-|**enable_ssl**|**bit**|Specifica l'utilizzo della crittografia mediante SSL (Secure Sockets Layer) da parte di Posta elettronica database. Utilizzare questa opzione se SSL è obbligatorio per il server SMTP. **enable_ssl** è di bit e non prevede alcun valore predefinito. 1 indica che le comunicazioni vengono crittografate mediante SSL. 0 indica che i messaggi vengono inviati senza utilizzare la crittografia SSL.|  
+|**Servertype**|**sysname**|Tipo di server di posta elettronica per l'account.|  
+|**Nomeserver**|**sysname**|Nome del server di posta elettronica per l'account.|  
+|**port**|**int**|Numero della porta del server di posta elettronica.|  
+|**Nome utente**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **nomeutente** è NULL, Posta elettronica database non utilizza l'autenticazione per questo account.|  
+|**use_default_credentials**|**bit**|Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è bit, senza alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando questo parametro è 0, ** \@** Posta elettronica database utilizza il ** \@nome utente** e la password per l'autenticazione sul server SMTP. Se ** \@nomeutente** e ** \@password** sono NULL, Posta elettronica database utilizza l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.|  
+|**enable_ssl**|**bit**|Specifica se Posta elettronica database crittografa le comunicazioni utilizzando Transport Layer Security (TLS), precedentemente noto come Secure Sockets Layer (SSL). Utilizzare questa opzione se TLS è richiesto sul server SMTP. **enable_ssl** è bit, senza alcun valore predefinito. 1 indica che Posta del database crittografa le comunicazioni utilizzando TLS. 0 indica che Posta elettronica database invia la posta senza crittografia TLS.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando non viene specificato alcun *account_id* o *account_name* , **sysmail_help_account** elenca le informazioni su tutti gli account di posta elettronica database nell'istanza di Microsoft SQL Server.  
+ Quando non viene fornita *alcuna account_id* o *account_name,* **sysmail_help_account** elenca le informazioni su tutti gli account di Posta elettronica database nell'istanza di Microsoft SQL Server.  
   
- Il stored procedure **sysmail_help_account_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
+ La stored procedure **sysmail_help_account_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo.** La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
+ Le autorizzazioni di esecuzione per questa procedura vengono utilizzate per impostazione predefinita per i membri del ruolo predefinito del server **sysadmin.**  
   
 ## <a name="examples"></a>Esempi  
  **A. Visualizzazione di un elenco di informazioni per tutti gli account**  
@@ -110,7 +110,7 @@ account_id  name                         description                            
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Creare un account di posta elettronica del database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail Stored Procedure &#40;&#41;Transact-SQLDatabase Mail Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

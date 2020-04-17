@@ -1,5 +1,5 @@
 ---
-title: Eseguire il backup e il ripristino Reporting Services applicazioni di servizio SharePoint | Microsoft Docs
+title: Backup e ripristino delle applicazioni di servizio SharePoint di Reporting Services Documenti Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,30 +10,30 @@ ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e061ea2394c2fdad1e7d37f56016c73d7787eda0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 59e0de9e8ee6882b19939ef116ef4ac8023782ed
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66109949"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487550"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services
   In questo argomento vengono descritte le procedure di backup e ripristino di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tramite Amministrazione centrale SharePoint o PowerShell. Contenuto dell'argomento:  
   
 -   [Limitazioni e restrizioni](#bkmk_Restrictions)  
   
--   [Eseguire il backup dell'applicazione di servizio](#bkmk_backup)  
+-   [Backup dell'applicazione di servizio](#bkmk_backup)  
   
--   [Ripristinare l'applicazione di servizio](#bkmk_restore)  
+-   [Ripristinare l'applicazione di servizioRestore the Service Application](#bkmk_restore)  
   
-##  <a name="bkmk_BeforeYouBegin"></a> Prima di iniziare  
+##  <a name="before-you-begin"></a><a name="bkmk_BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="bkmk_Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="limitations-and-restrictions"></a><a name="bkmk_Restrictions"></a> Limitazioni e restrizioni  
   
 > [!NOTE]  
->  È possibile eseguire il backup e il ripristino parziale delle applicazioni di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tramite le funzionalità di backup e ripristino di SharePoint. **Sono necessari passaggi aggiuntivi** e i passaggi sono documentati in questo argomento. Attualmente, tramite il processo di backup **non** viene eseguito il backup di credenziali e chiavi di crittografia per gli account di esecuzione automatica (UEA) o l'autenticazione di Windows nel database di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+>  È possibile eseguire il backup e il ripristino parziale delle applicazioni di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tramite le funzionalità di backup e ripristino di SharePoint. **Sono necessari passaggi aggiuntivi** , illustrati in questo argomento. Attualmente, tramite il processo di backup **non** viene eseguito il backup di credenziali e chiavi di crittografia per gli account di esecuzione automatica (UEA) o l'autenticazione di Windows nel database di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-###  <a name="bkmk_recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="bkmk_recommendations"></a> Indicazioni  
   
 -   Eseguire il backup delle chiavi di crittografia prima di avviare il backup di SharePoint. Se non si esegue il backup delle chiavi di crittografia, non sarà possibile accedere ai dati crittografati in seguito al ripristino dell'applicazione di servizio. Sarà necessario eliminare i dati crittografati.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66109949"
   
 -   Rivedere il log di backup di SharePoint creato nella stessa cartella del file di backup. Il file è in genere denominato **spbackup.log**  
   
-##  <a name="bkmk_backup"></a>Eseguire il backup dell'applicazione di servizio  
+##  <a name="backup-the-service-application"></a><a name="bkmk_backup"></a>Backup dell'applicazione di servizio  
  Completare i passaggi seguenti nell'ordine indicato:  
   
 1.  Eseguire il backup delle chiavi di crittografia  
@@ -51,9 +51,9 @@ ms.locfileid: "66109949"
 3.  Verificare se nell'applicazione di servizio viene utilizzato un account di esecuzione automatica o l'autenticazione di Windows per l'accesso al database. In caso affermativo, annotare le credenziali in modo da poterle utilizzare per configurare l'applicazione di servizio dopo il ripristino.  
   
 ### <a name="backup-the-encryption-keys-using-central-administration"></a>Eseguire il backup delle chiavi di crittografia tramite Amministrazione centrale  
- Per informazioni sul backup delle chiavi di crittografia di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere la sezione "Chiavi di crittografia" di [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
+ Per informazioni sul backup [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] delle chiavi di crittografia, vedere la sezione "Chiavi di crittografia" di [Gestire un'applicazione di servizio SharePoint di Reporting Services.](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
-###  <a name="bkmk_centraladmin"></a>Eseguire il backup dell'applicazione di servizio tramite Amministrazione centrale SharePoint  
+###  <a name="backup-the-service-application-using-sharepoint-central-administration"></a><a name="bkmk_centraladmin"></a> Eseguire il backup dell'applicazione di servizio tramite Amministrazione centrale SharePoint  
  Per eseguire il backup dell'applicazione di servizio, attenersi alla procedura seguente:  
   
 1.  In Amministrazione centrale SharePoint fare clic su **Esegui backup** nel gruppo **Backup e ripristino** .  
@@ -73,19 +73,19 @@ ms.locfileid: "66109949"
  [Eseguire il backup di un'applicazione di servizio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Verificare l'account di esecuzione e l'autenticazione del database  
- **Account di esecuzione:** Per verificare se nell'applicazione di servizio viene utilizzato un account di esecuzione:  
+ **Account di esecuzione:** per verificare se nell'applicazione di servizio viene utilizzato un account di esecuzione:  
   
-1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio** nel gruppo **Gestione applicazioni** .  
+1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni** di servizio nel gruppo **Gestione applicazioni.**  
   
-2.  Fare clic sul nome dell'applicazione di servizio, quindi fare clic su **Gestisci** nella barra multifunzione di SharePoint.  
+2.  Fare clic sul nome dell'applicazione di servizio, quindi su **Gestisci** sulla barra multifunzione di SharePoint.  
   
 3.  Fare clic su **Account di esecuzione**.  
   
 4.  Se è configurato un account di esecuzione, è necessario conoscere le credenziali per ripristinare il backup dell'applicazione di servizio. Non procedere con le operazioni di backup e ripristino fino a quando non si conoscono le credenziali corrette.  
   
- **Autenticazione del database:** Per verificare se l'applicazione di servizio utilizza l'autenticazione di Windows per l'autenticazione del database:  
+ **Autenticazione del database:** per verificare se nell'applicazione di servizio viene utilizzata l'autenticazione di Windows per l'autenticazione del database:  
   
-1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio** nel gruppo **Gestione applicazioni** .  
+1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni** di servizio nel gruppo **Gestione applicazioni.**  
   
 2.  Fare clic sul nome dell'applicazione di servizio, quindi su **Proprietà** sulla barra multifunzione di SharePoint.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66109949"
   
 4.  Se è configurata l'autenticazione di Windows, è necessario conoscere le credenziali per poter configurare l'applicazione di servizio dopo il ripristino. Non procedere con le operazioni di backup e ripristino fino a quando non si conoscono le credenziali corrette.  
   
-##  <a name="bkmk_restore"></a>Ripristinare l'applicazione di servizio  
+##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>Ripristinare l'applicazione di servizioRestore the Service Application  
  Completare i passaggi seguenti nell'ordine indicato:  
   
 1.  Ripristinare l'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -122,17 +122,17 @@ ms.locfileid: "66109949"
   
  [Ripristinare un'applicazione di servizio (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
- [Ripristinare un'applicazione di servizio (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
+ [Ripristinare un'applicazione di servizio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>Eseguire il ripristino delle chiavi di crittografia tramite Amministrazione centrale  
- Per informazioni sul ripristino delle chiavi di crittografia di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere la sezione "Chiavi di crittografia" di [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
+ Per informazioni sul [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ripristino delle chiavi di crittografia, vedere la sezione "Chiavi di crittografia" di [Gestire un'applicazione](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)di servizio SharePoint di Reporting Services .  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurare l'account di esecuzione e l'autenticazione del database  
- **Account di esecuzione:** Se l'applicazione di servizio utilizza un account di esecuzione, completare i passaggi seguenti per configurarlo:  
+ **Account di esecuzione:** se nell'applicazione di servizio viene utilizzato un account di esecuzione, attenersi alla procedura seguente per configurarlo:  
   
-1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio** nel gruppo **Gestione applicazioni** .  
+1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni** di servizio nel gruppo **Gestione applicazioni.**  
   
-2.  Fare clic sul nome dell'applicazione di servizio, quindi fare clic su **Gestisci** nella barra multifunzione di SharePoint.  
+2.  Fare clic sul nome dell'applicazione di servizio, quindi su **Gestisci** sulla barra multifunzione di SharePoint.  
   
 3.  Fare clic su **Account di esecuzione**.  
   
@@ -140,9 +140,9 @@ ms.locfileid: "66109949"
   
 5.  Fare clic su **OK**.  
   
- **Autenticazione del database:** Se l'applicazione di servizio utilizza l'autenticazione di Windows per l'autenticazione del database, completare i passaggi seguenti:  
+ **Autenticazione del database:** se nell'applicazione di servizio viene utilizzata l'autenticazione di Windows per l'autenticazione del database, attenersi alla procedura seguente:  
   
-1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio** nel gruppo **Gestione applicazioni** .  
+1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni** di servizio nel gruppo **Gestione applicazioni.**  
   
 2.  Fare clic sul nome dell'applicazione di servizio, quindi su **Proprietà** sulla barra multifunzione di SharePoint.  
   
@@ -152,6 +152,6 @@ ms.locfileid: "66109949"
   
 5.  Digitare l'account e la password. Selezionare **Usa come credenziali di Windows** , se appropriato.  
   
-6.  Fare clic su **OK**  
+6.  Fare clic **su OK**  
   
   

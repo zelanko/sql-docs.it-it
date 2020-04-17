@@ -10,12 +10,12 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "68888661"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487395"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   Nelle procedure contenute in questo argomento viene illustrata l'installazione di un unico server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità di distribuzione SharePoint. Nei passaggi è inclusa l'esecuzione dell'Installazione guidata di SQL Server, nonché di attività di configurazione in cui viene utilizzata Amministrazione centrale SharePoint 2013.  
@@ -70,7 +70,7 @@ ms.locfileid: "68888661"
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> Requisiti relativi all'edizione di SQL Server  
  Non tutte le funzionalità di Business Intelligence sono disponibili in ogni edizione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per informazioni dettagliate, vedere [Funzionalità supportate dalle edizionihttps://go.microsoft.com/fwlink/?linkid=232473) di SQL Server 2012 (](https://go.microsoft.com/fwlink/?linkid=232473) e [edizioni e componenti di SQL Server 2014.](../../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
- Le note sulla versione corrente sono disponibili in Note sullahttps://go.microsoft.com/fwlink/?LinkID=248389)versione di SQL Server [2012 SP1](ttp://go.microsoft.com/fwlink/?LinkID=248389) ( .  
+ Le note sulla versione corrente sono disponibili in Note sullahttps://go.microsoft.com/fwlink/?LinkID=248389)versione di SQL Server [2012 SP1](https://go.microsoft.com/fwlink/?LinkID=248389) ( .  
   
  [Note sulla versione di Microsofthttps://go.microsoft.com/fwlink/?LinkId=236893)SQL Server 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   

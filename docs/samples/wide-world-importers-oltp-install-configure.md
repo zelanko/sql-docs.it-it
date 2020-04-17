@@ -10,85 +10,85 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 14570059925fa5f8d8d24502c18593a118d84e37
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 355eaa254fcc7bb6cd4aa9a39c2cbcb269d88396
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112441"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487070"
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Istruzioni per l'installazione e la configurazione del database OLTP Wide World Importers.
+Istruzioni per l'installazione e la configurazione del database OLTP di Wide World Importers.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) o il [database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, usare SQL Server Evaluation/Developer/Enterprise Edition.
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere risultati ottimali, usare la versione di giugno 2016 o successiva.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) o Database SQL di [Azure.](https://azure.microsoft.com/services/sql-database/) Per la versione completa dell'esempio, usare SQL Server Evaluation/Developer/Enterprise Edition.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere i migliori risultati, utilizzare la versione di giugno 2016 o successiva.
 
 ## <a name="download"></a>Download
 
-La versione più recente dell'esempio:
+L'ultima versione dell'esempio:
 
-[Wide-World-Importers-versione](https://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
-Scaricare il backup del database di esempio WideWorldImporters/BacPac corrispondente all'edizione di SQL Server o al database SQL di Azure.
+Scaricare l'esempio WideWorldImporters database backup/bacpac che corrisponde all'edizione di SQL Server sql Server o del database SQL di Azure.Download the sample WideWorldImporters database backup/bacpac that corresponds to your edition of SQL Server or Azure SQL Database.
 
-Il codice sorgente per ricreare il database di esempio è disponibile nel percorso seguente. Si noti che la ricreazione dell'esempio provocherà lievi differenze nei dati, dal momento che la generazione dei dati presenta un fattore casuale:
+Il codice sorgente per ricreare il database di esempio è disponibile dal percorso seguente. Si noti che la ricreazione dell'esempio comporterà lievi differenze nei dati, poiché esiste un fattore casuale nella generazione dei dati:Note that recreating the sample will result in slight differences in the data, since there is a random factor in the data generation:
 
-[Wide-World-Importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## <a name="install"></a>Installazione
 
 
 ### <a name="sql-server"></a>SQL Server
 
-Per ripristinare un backup in un'istanza di SQL Server, è possibile usare Management Studio.
+To restore a backup to a SQL Server instance, you can use Management Studio.
 
 1. Aprire SQL Server Management Studio e connettersi all'istanza di SQL Server di destinazione.
-2. Fare clic con il pulsante destro del mouse sul nodo **database** e selezionare **Ripristina database**.
-3. Selezionare **Device (dispositivo** ) e fare clic sul pulsante **...**
-4. Nella finestra di dialogo **Seleziona dispositivi di backup**fare clic su **Aggiungi**, passare al backup del database nel file System del server e selezionare il backup. Fare clic su **OK**.
-5. Se necessario, modificare il percorso di destinazione per i file di dati e di log nel riquadro **file** . Si noti che è consigliabile inserire i file di dati e di log in unità diverse.
-6. Fare clic su **OK**. Verrà avviato il ripristino del database. Al termine, il database WideWorldImporters verrà installato nell'istanza di SQL Server.
+2. Fare clic con il pulsante destro del mouse sul nodo **Database** e scegliere **Ripristina database**.
+3. Selezionare **Dispositivo** e fare clic sul pulsante **...**
+4. Nella finestra di dialogo **Selezione periferiche di backup**fare clic su **Aggiungi**, passare al backup del database nel file system del server e selezionare il backup. Fare clic su **OK**.
+5. Se necessario, modificare il percorso di destinazione per i file di dati e di log nel riquadro **File.** Si noti che è consigliabile inserire i file di dati e di log in unità diverse.
+6. Fare clic su **OK**. Verrà avviato il ripristino del database. Al termine, il database WideWorldImporters sarà installato nell'istanza di SQL Server.
 
 ### <a name="azure-sql-database"></a>database SQL di Azure
 
-Per importare un BACPAC in un nuovo database SQL, è possibile usare Management Studio.
+Per importare un bacpac in un nuovo database SQL, è possibile usare Management StudioManagement Studio.To import a bacpac into a new SQL Database, you can use Management StudioManagement Studio.
 
-1. opzionale Se non si dispone ancora di un SQL Server in Azure, passare al [portale di Azure](https://portal.azure.com/) e creare un nuovo database SQL. Nel processo di creazione di un database, si creerà un server. Prendere nota del server.
-   - Vedere [questa esercitazione](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) per creare un database in pochi minuti
-2. Aprire SQL Server Management Studio e connettersi al server in Azure.
-3. Fare clic con il pulsante destro del mouse sul nodo **database** e selezionare **Importa applicazione livello dati**.
-4. Nelle **impostazioni di importazione** selezionare **Importa da disco locale** e selezionare il BACPAC del database di esempio dal file System.
-5. In **Impostazioni database** modificare il nome del database in *wideworldimporters* e selezionare l'edizione di destinazione e l'obiettivo di servizio da usare.
-6. Fare clic su **Avanti** e **fine** per avviare la distribuzione. Il completamento di una P1 sarà di pochi minuti. Se si desidera un piano tariffario inferiore, è consigliabile eseguire l'importazione in un nuovo database P1, quindi impostare il piano tariffario sul livello desiderato.
+1. (opzionale) Se non si dispone ancora di UN SQL Server in Azure, passare al portale di [Azure](https://portal.azure.com/) e creare un nuovo database SQL. Nel processo di creazione di un database, si creerà un server. Prendere nota del server.
+   - Vedere [questa esercitazione](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) per creare un database in pochi minutiSee this tutorial to create a database in minutes
+2. Aprire SQL Server Management Studio e connettersi al server in Azure.Open SQL Server Management Studio and connect to your server in Azure.
+3. Fare clic con il pulsante destro del mouse sul nodo **Database** e selezionare **Importa applicazione livello dati**.
+4. In **Impostazioni di importazione** selezionare **Importa dal disco locale** e selezionare il bacpac del database di esempio dal file system.
+5. In **Impostazioni database** modificare il nome del database in *WideWorldImporters* e selezionare l'edizione di destinazione e l'obiettivo del servizio da utilizzare.
+6. Fare clic su **Avanti** e **Fine** per avviare la distribuzione. Sarà un paio di minuti per completare su un P1. Se si desidera un piano tariffario inferiore, è consigliabile eseguire l'importazione in un nuovo database P1 e quindi modificare il piano tariffario al livello desiderato.
 
 ## <a name="configuration"></a>Configurazione
 
 ### <a name="full-text-indexing"></a>Indicizzazione full-text
 
-Il database di esempio può utilizzare l'indicizzazione full-text. Questa funzionalità, tuttavia, non viene installata per impostazione predefinita con SQL Server, quindi è necessario selezionarla durante l'installazione di SQL Server (è abilitata per impostazione predefinita nel database SQL di Azure). Pertanto, è necessario eseguire un passaggio di post-installazione.
+Il database di esempio può utilizzare l'indicizzazione di testo completo. Tuttavia, tale funzionalità non viene installata per impostazione predefinita con SQL Server: è necessario selezionarla durante l'installazione di SQL Server (è abilitata per impostazione predefinita nel database SQL di Azure). Pertanto, è necessaria una fase di post-installazione.
 
-1. In SQL Server Management Studio connettersi al database WideWorldImporters e aprire una nuova finestra query.
-2. Eseguire il comando T-SQL seguente per abilitare l'utilizzo dell'indicizzazione full-text nel database:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+1. In SQL Server Management StudioSQL Server Management Studioconnettersi al database WideWorldImporters e aprire una nuova finestra di query.
+2. Eseguire il comando T-SQL seguente per abilitare l'utilizzo dell'indicizzazione di testo completo nel database:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
 Si applica a: SQL Server
 
-L'abilitazione del controllo in SQL Server richiede la configurazione del server. Per abilitare SQL Server Audit per l'esempio WideWorldImporters, eseguire l'istruzione seguente nel database:
+L'abilitazione del controllo in SQL ServerSQL Server richiede la configurazione del server. Per abilitare il controllo di SQL Server per l'esempio WideWorldImporters, eseguire l'istruzione seguente nel database:
 
     EXECUTE [Application].[Configuration_ApplyAuditing]
 
-Nel database SQL di Azure, il controllo viene configurato tramite il [portale di Azure](https://portal.azure.com/).
+Nel database SQL di Azure il controllo viene configurato tramite il portale di [Azure.](https://portal.azure.com/)
 
 ### <a name="row-level-security"></a>Sicurezza a livello di riga
 
-Si applica a: database SQL di Azure
+Si applica a: Database SQL di AzureApplies to: Azure SQL Database
 
-La sicurezza a livello di riga non è abilitata per impostazione predefinita nel download di BacPac di WideWorldImporters. Per abilitare la sicurezza a livello di riga nel database, eseguire il stored procedure seguente:
+La sicurezza a livello di riga non è abilitata per impostazione predefinita nel download bacpac di WideWorldImporters. Per abilitare la sicurezza a livello di riga nel database, eseguire la stored procedure seguente:To enable Row-Level Security in the database, run the following stored procedure:
 
     EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

@@ -18,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770858"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487012"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
   La destinazione file non elaborato scrive dati non elaborati in un file. Poiché il formato dei dati è nativo della destinazione, non è necessaria alcuna conversione e quasi nessuna analisi dei dati. Questo significa che la destinazione file non elaborato è in grado di scrivere i dati più rapidamente rispetto ad altre destinazioni, quali le destinazioni file flat e OLE DB.  
@@ -113,7 +113,7 @@ ms.locfileid: "62770858"
   
 1.  Impostare la proprietà WriteOption su **CreateOnce** o **CreateAlways**ed eseguire un'iterazione del ciclo. Il file viene creato e viene garantita così la corrispondenza tra i metadati dei dati accodati e il file.  
   
-2.  Reimpostare la proprietà WriteOption su **Append** e impostare la proprietà ValidateExternalMetadata `False`su.  
+2.  Reimpostare la proprietà WriteOption su **Append** e `False`impostare la proprietà ValidateExternalMetadata su .  
   
  Se si usa l'opzione **TruncateAppend** invece di **Append** , le righe aggiunte in qualsiasi iterazione precedente verranno troncate e quindi verranno accodate nuove righe. Per usare l'opzione **TruncateAppend** , è anche necessario che i dati corrispondano al formato del file.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62770858"
  Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Post di blog sugli [aspetti positivi dei file non elaborati](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)nel sito Web sqlservercentral.com.  
+ Post di blog sugli [aspetti positivi dei file non elaborati](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)nel sito Web sqlservercentral.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origine file non elaborato](raw-file-source.md)   

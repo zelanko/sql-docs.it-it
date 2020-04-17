@@ -118,7 +118,7 @@
                 - name: Log shipping
                   tocHref: /sql/database-engine/log-shipping/
                   topicHref: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-                - name: Security
+                - name: Sicurezza
                   tocHref: /sql/relational-databases/security/
                   topicHref: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
                 - name: Informazioni di riferimento sull'utilità
@@ -211,7 +211,7 @@
                 - name: Monitorare
                   tocHref: /sql/integration-services/performance/
                   topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-                - name: Security
+                - name: Sicurezza
                   tocHref: /sql/integration-services/security/
                   topicHref: /sql/integration-services/security/security-overview-integration-services
                 - name: Estendere i pacchetti tramite scripting
@@ -315,7 +315,7 @@
                     - name: Transazionale
                       tocHref: /sql/relational-databases/replication/transactional/
                       topicHref: /sql/relational-databases/replication/transactional/transactional-replication
-                    - name: Security
+                    - name: Sicurezza
                       tocHref: /sql/relational-databases/replication/security/
                       topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
                 - name: Programmazione di Native Client
@@ -360,7 +360,7 @@
                 - name: Sottoscrizioni e pianificazioni
                   tocHref: /sql/reporting-services/subscriptions/
                   topicHref: /sql/reporting-services/subscriptions/subscriptions-and-delivery-reporting-services
-                - name: Security
+                - name: Sicurezza
                   tocHref: /sql/reporting-services/security/
                   topicHref: /sql/reporting-services/security/reporting-services-security-and-protection
                 - name: Strumenti
@@ -404,21 +404,21 @@
                   tocHref: /sql/analysis-services/schema-rowsets/
                   topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
                 - name: Scripting
-                  tocHref: /sql/analysis-services/scripting/
-                  topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
+                  tocHref: 'https://docs.microsoft.com/analysis-services/assl'
+                  topicHref: 'https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla'
                   items:
                     - name: Oggetti
-                      tocHref: /sql/analysis-services/scripting/objects/
-                      topicHref: /sql/analysis-services/scripting/objects/objects-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/objects'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/objects/objects-assl'
                     - name: Raccolte
-                      tocHref: /sql/analysis-services/scripting/collections/
-                      topicHref: /sql/analysis-services/scripting/collections/collections-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/collections'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/collections/collections-assl'
                     - name: Proprietà
-                      tocHref: /sql/analysis-services/scripting/properties/
-                      topicHref: /sql/analysis-services/scripting/properties/properties-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/properties'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/properties/properties-assl'
                     - name: Tipi di dati
-                      tocHref: /sql/analysis-services/scripting/data-type/
-                      topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/data-type'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/data-type/analysis-services-scripting-language-xml-data-types-assl'
                 - name: XMLA
                   tocHref: /sql/analysis-services/xmla/
                   topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference

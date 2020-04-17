@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664283"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488200"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ Restituisce una riga per ogni account di lavoro attivo che esegue uno script est
   
 > [!NOTE] 
 >  
-> Questa vista a gestione dinamica (DMV) è disponibile solo se è stata installata e abilitata la funzionalità che supporta l'esecuzione di script esterni. Per altre informazioni, vedere [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e Machine Learning Services [(R, Python) in SQL Server 2017 e versioni successive.](../../machine-learning/what-is-sql-server-machine-learning.md)  
+> Questa vista a gestione dinamica (DMV) è disponibile solo se è stata installata e abilitata la funzionalità che supporta l'esecuzione di script esterni. Per altre informazioni, vedere [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) e Machine Learning Services [(R, Python) in SQL Server 2017 e versioni successive.](../../machine-learning/sql-server-machine-learning-services.md)  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**unique identifier**|ID del processo che ha inviato la richiesta di script esterni. Corrisponde all'ID del processo ricevuto da[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |Linguaggio|**nvarchar**|Parola chiave che rappresenta un linguaggio di scripting supportato. |  
-|degree_of_parallelism|**Int**|Numero che indica il numero di processi paralleli che sono stati creati. Questo valore potrebbe essere diverso dal numero di processi paralleli che sono stati richiesti.|  
+|degree_of_parallelism|**int**|Numero che indica il numero di processi paralleli che sono stati creati. Questo valore potrebbe essere diverso dal numero di processi paralleli che sono stati richiesti.|  
 |external_user_name|**nvarchar**|Account di lavoro di Windows con cui è stato eseguito lo script.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

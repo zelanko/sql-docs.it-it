@@ -13,12 +13,12 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62524367"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487730"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   In questa esercitazione viene utilizzato uno scenario per illustrare i concetti sulla sicurezza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relativi a catene di proprietà e cambio di contesto utente.  
@@ -48,7 +48,7 @@ ms.locfileid: "62524367"
  Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare l'esempio completo, vedere [Esempio completo](#CompleteExample) alla fine dell'esercitazione.  
   
 ## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
- Utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice seguente per aprire il `AdventureWorks2012` database e utilizzare l' `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] istruzione per verificare che l'utente dbo venga visualizzato come contesto.  
+ Utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e il codice `AdventureWorks2012` seguente per aprire `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] il database e utilizzare l'istruzione per verificare che l'utente dbo viene visualizzato come contesto.  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,8 +80,7 @@ GO
   
  Per altre informazioni sull'istruzione CREATE USER, vedere [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Per altre informazioni sull'istruzione CREATE LOGIN, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
- Utilizzare il codice seguente per modificare la proprietà dello schema `Purchasing` e impostarla sull'account `TestManagerUser` . In questo modo si consente all'account di utilizzare l'accesso completo alle istruzioni DML (Data Manipulation Language), ad esempio autorizzazioni `SELECT` e `INSERT` , sull'oggetto contenuto. 
-  `TestManagerUser` viene inoltre concessa la possibilità di creare stored procedure.  
+ Utilizzare il codice seguente per modificare la proprietà dello schema `Purchasing` e impostarla sull'account `TestManagerUser` . In questo modo si consente all'account di utilizzare l'accesso completo alle istruzioni DML (Data Manipulation Language), ad esempio autorizzazioni `SELECT` e `INSERT` , sull'oggetto contenuto. `TestManagerUser` viene inoltre concessa la possibilità di creare stored procedure.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -96,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Per altre informazioni sull'istruzione GRANT, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Per altre informazioni sulle stored procedure, vedere [Stored procedure &#40;Motore di database&#41;](stored-procedures/stored-procedures-database-engine.md). Per un poster di tutte [!INCLUDE[ssDE](../includes/ssde-md.md)] le autorizzazioni, [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)vedere.  
+ Per altre informazioni sull'istruzione GRANT, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Per altre informazioni sulle stored procedure, vedere [Stored procedure &#40;Motore di database&#41;](stored-procedures/stored-procedures-database-engine.md). Per un poster [!INCLUDE[ssDE](../includes/ssde-md.md)] di [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)tutte le autorizzazioni, vedere .  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Creazione di una stored procedure per l'accesso ai dati  
  Per cambiare contesto all'interno di un database, utilizzare l'istruzione EXECUTE AS. EXECUTE AS richiede autorizzazioni IMPERSONATE.  
@@ -125,8 +124,7 @@ END
 GO  
 ```  
   
- 
-  `TestEmployeeUser` non dispone attualmente dell'accesso a qualsiasi oggetto di database. Il codice seguente, ancora nel contesto `TestManagerUser` , concede all'account utente la possibilità di eseguire query sulle informazioni delle tabelle di base tramite la stored procedure.  
+ `TestEmployeeUser` non dispone attualmente dell'accesso a qualsiasi oggetto di database. Il codice seguente, ancora nel contesto `TestManagerUser` , concede all'account utente la possibilità di eseguire query sulle informazioni delle tabelle di base tramite la stored procedure.  
   
 ```  
 GRANT EXECUTE  
@@ -158,8 +156,7 @@ GO
  Per altre informazioni sull'istruzione REVERT, vedere [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Accesso ai dati tramite la stored procedure  
- 
-  `TestEmployeeUser` non dispone di autorizzazioni per gli oggetti di database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ad eccezione dell'accesso e dei diritti assegnati al ruolo di database public. Quando `TestEmployeeUser` tenta di accedere alle tabelle di base, il codice seguente restituisce un errore.  
+ `TestEmployeeUser` non dispone di autorizzazioni per gli oggetti di database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ad eccezione dell'accesso e dei diritti assegnati al ruolo di database public. Quando `TestEmployeeUser` tenta di accedere alle tabelle di base, il codice seguente restituisce un errore.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -203,7 +200,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a>Esempio completo  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>Esempio completo  
  In questa sezione è riportato il codice completo dell'esempio.  
   
 > [!NOTE]  

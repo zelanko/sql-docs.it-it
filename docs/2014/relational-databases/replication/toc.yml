@@ -211,7 +211,7 @@
               href: merge/parameterized-filters-optimize-for-precomputed-partitions.md
         - name: Replica transazionale
           href: administration/enhance-transactional-replication-performance.md
-    - name: Security
+    - name: Sicurezza
       items:
         - name: Database di distribuzione
           href: security/secure-the-distributor.md
@@ -362,7 +362,7 @@
         - name: Replica nel database SQL +
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: Replica con Istanza gestita di database SQL +
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: Ripubblicazione dei dati
           href: republish-data.md
         - name: Replica su Internet
@@ -399,7 +399,7 @@
           href: concepts/replication-system-stored-procedures-concepts.md
     - name: Oggetti di pubblicazione
       href: publish/replication-publishing-model-overview.md
-    - name: Security
+    - name: Sicurezza
       items:
         - name: Attenuazione di minacce e vulnerabilità
           href: security/threat-and-vulnerability-mitigation-replication.md

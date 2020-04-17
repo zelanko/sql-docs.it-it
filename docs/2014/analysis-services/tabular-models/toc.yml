@@ -166,7 +166,7 @@
     - name: Analizzare un modello tabulare in Excel
       href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: Distribuzione di una soluzione del modello tabulare
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: 'https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment'
   items:
     - name: Distribuire da SQL Server Data Tools
       href: deploy-from-sql-server-data-tools-ssas-tabular.md

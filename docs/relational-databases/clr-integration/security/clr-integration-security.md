@@ -1,5 +1,6 @@
 ---
-title: Sicurezza dell'integrazione con CLR | Microsoft Docs
+title: Sicurezza dell'integrazione CON CLR Documenti Microsoft
+description: L'integrazione di SQL Server con la sicurezza CLR di .NET Framework gestisce l'accesso tra gli oggetti. I controlli di sicurezza eseguiti sugli oggetti dipendono dalle chiamate in questione.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118506"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487120"
 ---
 # <a name="clr-integration-security"></a>Sicurezza per l'integrazione con CLR
 
@@ -36,8 +37,7 @@ ms.locfileid: "68118506"
   
 -   Non è consigliabile concedere al codice definito dall'utente l'accesso non autorizzato alle risorse di sistema solo perché è in esecuzione nel processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integra ora il modello di sicurezza basato sull'utente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il modello di sicurezza basato sull'accesso al codice di CLR. Alcuni dei vantaggi di questo approccio combinato alla sicurezza vengono esaminati nella presente sezione.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integra ora il modello di sicurezza basato sull'utente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il modello di sicurezza basato sull'accesso al codice di CLR. Alcuni dei vantaggi di questo approccio combinato alla sicurezza vengono esaminati nella presente sezione.  
   
  Nella tabella seguente vengono elencati gli argomenti disponibili in questa sezione.  
   
