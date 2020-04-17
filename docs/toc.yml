@@ -1385,6 +1385,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: Pagina Query Store
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: Notifica degli eventi
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: Implementare
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: Configurare la sicurezza del dialogo
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: Ottenere informazioni
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: 'FileStream, FileTable e BLOB'
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1539,15 +1548,8 @@
       items:
         - name: Proprietà sequenza
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
-    - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: Implementare
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: Configurare la sicurezza del dialogo
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: Ottenere informazioni
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+    - name: Broker di servizio
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: Dati spaziali
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4372,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: Panoramica di Monitoraggio SQL Server
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Broker di servizio
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: Estensione pool di buffer
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: Opzioni di configurazione del server
