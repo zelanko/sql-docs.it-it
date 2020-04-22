@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256728"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488355"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Che cosa sono gli aggiornamenti della sicurezza estesa per SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -207,6 +207,25 @@ Per scaricare gli aggiornamenti della sicurezza estesa, seguire questa procedura
 
 1. Scaricare gli aggiornamenti della sicurezza da qui, se e quando vengono resi disponibili. 
 
+## <a name="configure-regional-redundancy"></a>Configurare la ridondanza a livello di area 
+
+I clienti che richiedono la ridondanza a livello di area per il **Registro di sistema di SQL Server** possono creare dati di registrazione in due aree distinte. I clienti possono quindi scaricare aggiornamenti della sicurezza da entrambe le aree in base alla disponibilità del servizio **Registro di sistema di SQL Server**. 
+
+Per la ridondanza a livello di area, è necessario creare il servizio **Registro di sistema di SQL Server** in due aree diverse e l'inventario SQL Server deve essere suddiviso tra i due servizi. In questo modo la metà dei server SQL Server vengono registrati con il servizio Registro di sistema in un'area e quindi l'altra metà dei server vengono registrati con il servizio Registro di sistema nell'altra area. 
+
+Per configurare la ridondanza a livello di area seguire questa procedura:
+
+1. Dividere l'inventario SQL Server 2008 o 2008 R2 in due file, ad esempio upload1.csv e upload2.csv. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Esempio di caricamento dei file":::
+
+1. Creare il primo servizio **Registro di sistema di SQL Server** in un'area e quindi eseguire la registrazione in blocco di uno dei file con estensione csv in questo servizio. Ad esempio creare il primo servizio **Registro di sistema di SQL Server** nell'area **West US** (Stati Uniti occidentali) ed eseguire la registrazione in blocco dei server SQL Server usando il file upload1.csv. 
+1. Creare il secondo servizio **Registro di sistema di SQL Server** nella seconda area e quindi eseguire la registrazione in blocco di uno dei file con estensione csv in questo servizio. Ad esempio creare il secondo servizio **Registro di sistema di SQL Server** nell'area **East US** (Stati Uniti orientali) ed eseguire la registrazione in blocco dei server SQL Server usando il file upload2.csv. 
+
+
+Dopo che i dati sono stati registrati con le due risorse **Registro di sistema di SQL Server** diverse è possibile scaricare gli aggiornamenti della sicurezza da entrambe le aree, a seconda della disponibilità del servizio. 
+
+
 ## <a name="faq"></a>Domande frequenti
 
 Le domande frequenti generali sugli aggiornamenti della sicurezza estesa sono disponibili in [Aggiornamenti di sicurezza estesa: domande frequenti](https://www.microsoft.com/cloud-platform/extended-security-updates). Le domande frequenti specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono elencate di seguito. 
@@ -217,7 +236,7 @@ La data di fine del supporto per [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.
 
 **Cosa significa fine del supporto?**
 
-I criteri del ciclo di vita dei prodotti Microsoft offrono un supporto di 10 anni (5 anni per il supporto Mainstream e 5 per quello Extended) per i prodotti Business e Developer, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Server. Come indicato nei criteri, al termine del periodo di supporto Extended non verranno forniti altri aggiornamenti della sicurezza o patch. Pertanto, potrebbero verificarsi problemi di sicurezza o conformità e le applicazioni e le attività aziendali dei clienti potrebbero essere esposte a gravi rischi per la sicurezza
+I criteri del ciclo di vita dei prodotti Microsoft offrono un supporto di 10 anni (5 anni per il supporto Mainstream e 5 per quello Extended) per i prodotti Business e Developer, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Server. Come indicato nei criteri, al termine del periodo di supporto Extended non verranno forniti altri aggiornamenti della sicurezza o patch. Pertanto potrebbero verificarsi problemi di sicurezza o conformità e le applicazioni e le attività aziendali dei clienti potrebbero essere esposte a gravi rischi per la sicurezza.
 
 **Quali edizioni di SQL Server sono idonee per gli aggiornamenti della sicurezza estesa?**
 

@@ -1,7 +1,8 @@
 ---
-title: Driver Microsoft per PHP per la matrice di supporto SQL Server | Microsoft Docs
+title: Matrice di supporto dei driver Microsoft per PHP
+description: Questa pagina contiene i criteri relativi al ciclo di vita e alla matrice del supporto di Microsoft PHP Driver per SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922824"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632754"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Driver PHP Microsoft per la matrice di supporto SQL Server
 
@@ -106,7 +107,7 @@ Le versioni seguenti del sistema operativo Windows sono supportate con la versio
 |Windows Vista SP2                   |   |   |   |   |   |S  |S  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-Le versioni seguenti dei sistemi operativi Linux e Mac (solo 64 bit) sono supportate con la versione indicata dei driver PHP Microsoft:
+Le versioni seguenti dei sistemi operativi Linux e macOS (solo 64 bit) sono supportate con la versione indicata dei driver PHP Microsoft:
 
 |PHP per la versione del driver SQL Server &#8594;<br />&#8595; Sistema operativo|5.8|5.6|5.3|5,2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,12 +133,12 @@ Le versioni seguenti dei sistemi operativi Linux e Mac (solo 64 bit) sono suppor
 |macOS El Capitan (a 64 bit)           |   |   |S  |S  |S  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> Il supporto Alpine Linux è sperimentale per la versione 5.8.
+<sup>1</sup> Il supporto di Alpine Linux è sperimentale per la versione 5.8.0. La versione 5.8.1 introduce il supporto per la produzione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Note sulla versione](../../connect/php/release-notes-php-sql-driver.md)
+[Note sulla versione](release-notes-php-sql-driver.md)
 
-[Risorse di supporto](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[Risorse di supporto](support-resources-for-the-php-sql-driver.md)
 
-[System Requirements](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[System Requirements](system-requirements-for-the-php-sql-driver.md)

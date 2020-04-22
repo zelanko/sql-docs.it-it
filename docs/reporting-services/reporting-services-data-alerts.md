@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286625"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487796"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
 
@@ -270,12 +270,12 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce contatori delle prestazioni per altre funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Contatori delle prestazioni per gli oggetti prestazioni ReportServer:Service e ReportServerSharePoint:Service](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 Web Service e MSRS 2011 Windows Service &#40;modalità nativa&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) e [Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 Web Service SharePoint Mode e MSRS 2011 Windows Service SharePoint Mode &#40;modalità SharePoint&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> Supporto per SSL  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] consente di usare il servizio SSL (Secure Sockets Layer) HTTP per stabilire connessioni crittografate a un server di report o a un sito di SharePoint.  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> Supporto per TLS  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] consente di usare il servizio SSL HTTP per stabilire connessioni crittografate a un server di report o a un sito di SharePoint. Il protocollo Transport Layer Security (TLS) era noto in precedenza come Secure Sockets Layer (SSL).
   
- Il servizio di runtime di avvisi e l'interfaccia utente degli avvisi dati supportano SSL e funzionano in modo analogo sia con SSL che con HTTP, anche se vi sono alcune piccole differenze. Quando la definizione di avviso dati viene creata utilizzando una connessione SSL, viene utilizzato SSL anche per l'URL di collegamento alla raccolta di SharePoint dal messaggio di avviso dati. È possibile identificare la connessione SSL in quanto nell'URL viene utilizzato HTTPS anziché HTTP. Analogamente, se la definizione di avviso dati è stata creata utilizzando una connessione HTTP, per il collegamento al sito di SharePoint viene utilizzato HTTP. Se la definizione di avviso è stata creata utilizzando SSL o HTTP, l'esperienza per utenti e amministratori di avvisi è identica in caso di utilizzo della finestra di progettazione Avviso dati o di Gestione avvisi dati. In caso di modifica del protocollo (HTTP o SSL) tra il momento della creazione della definizione di avviso e quello dell'aggiornamento o del nuovo salvataggio, il protocollo originale viene mantenuto e utilizzato negli URL di collegamento.  
+ Il servizio di runtime di avvisi e l'interfaccia utente degli avvisi dati supportano SSL e funzionano in modo analogo sia con TLS che con HTTP, anche se vi sono alcune piccole differenze. Quando la definizione di avviso dati viene creata tramite una connessione TLS, viene usato TLS anche per l'URL di collegamento alla raccolta di SharePoint dal messaggio di avviso dati. È possibile identificare la connessione TLS in quanto nell'URL viene usato HTTPS anziché HTTP. Analogamente, se la definizione di avviso dati è stata creata utilizzando una connessione HTTP, per il collegamento al sito di SharePoint viene utilizzato HTTP. Se la definizione di avviso è stata creata tramite TLS o HTTP, l'esperienza per utenti e amministratori di avvisi è identica in caso di utilizzo della finestra di progettazione Avviso dati o di Gestione avvisi dati. In caso di modifica del protocollo (HTTP o TLS) tra il momento della creazione della definizione di avviso e quello dell'aggiornamento o del nuovo salvataggio, il protocollo originale viene mantenuto e usato negli URL di collegamento.  
   
- Se si crea un avviso dati in un sito di SharePoint configurato per utilizzare SSL e quindi si rimuove il requisito SSL l'avviso continua a funzionare sul sito. Se il sito viene eliminato, viene invece utilizzato il sito dell'area predefinita.  
+ Se si crea un avviso dati in un sito di SharePoint configurato per usare SSL e quindi si rimuove il requisito TLS l'avviso continua a funzionare sul sito. Se il sito viene eliminato, viene invece utilizzato il sito dell'area predefinita.  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> Interfaccia utente degli avvisi dati  
  Gli avvisi dati forniscono pagine di SharePoint per la gestione degli avvisi e una finestra di progettazione per la creazione e la modifica delle definizioni di avviso dati.  

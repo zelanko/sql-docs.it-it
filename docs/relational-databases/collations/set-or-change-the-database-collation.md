@@ -13,22 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f36317fd3572b0fd3b8e7f45cecd735c26da8f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866110"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388072"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene descritto come impostare e modificare le regole di confronto del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non viene specificata alcuna regola di confronto, vengono utilizzate le regole di confronto del server.  
   
 > [!IMPORTANT]
-> La modifica delle regole di confronto del database non è esplicitamente proibita nel database SQL di Azure. Richiede tuttavia il blocco esclusivo sul database e altri processi utente e processi in background, ad esempio il background che esegue i backup, potrebbero mantenere i blocchi del database e impedire la modifica delle regole di confronto. L'istruzione `ALTER DATABASE COLLATE` nel database SQL di Azure avrà esito negativo se viene eseguita mentre i processi in background accedono al database. Se si verifica un errore di timeout del blocco, sarà necessario ripetere l'istruzione. 
- 
-> [!NOTE]
-> Le regole di confronto non possono essere modificate usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Possono essere modificate solo tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].
+> La modifica delle regole di confronto del database non è esplicitamente proibita nel database SQL di Azure. Richiede tuttavia il blocco esclusivo sul database e altri processi utente e processi in background, ad esempio il background che esegue i backup, potrebbero mantenere i blocchi del database e impedire la modifica delle regole di confronto. L'istruzione `ALTER DATABASE COLLATE` nel database SQL di Azure non è supportata.
 
  **Contenuto dell'articolo**  
   
@@ -56,7 +53,7 @@ ms.locfileid: "78866110"
 
 -   Le regole di confronto non possono essere modificate usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Possono essere modificate solo tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 È possibile trovare i nomi delle regole di confronto supportate in [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); oppure è possibile usare la funzione di sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
@@ -77,7 +74,7 @@ Quando si modificano le regole di confronto del database, è possibile modificar
   
  Per modificare le regole di confronto di un database esistente è richiesta l'autorizzazione `ALTER` per il database.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>Per impostare o modificare le regole di confronto del database  
   
@@ -89,7 +86,7 @@ Quando si modificano le regole di confronto del database, è possibile modificar
   
 3.  Al termine dell'operazione scegliere **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Per impostare le regole di confronto del database  
   

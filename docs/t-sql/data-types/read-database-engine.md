@@ -1,7 +1,7 @@
 ---
 title: Read (Motore di database) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,21 +17,28 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 246c24d261879880a079191210841fefef62549f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000610"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633585"
 ---
-# <a name="read-database-engine"></a>Read (Motore di database)
+# <a name="read-database-engine-by-using-csharp"></a>Read (Motore di database) tramite CSharp
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Read legge la rappresentazione binaria di **SqlHierarchyId** dall'elemento passato **BinaryReader** e imposta l'oggetto **SqlHierarchyId** su tale valore. Read non può essere chiamato tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. Utilizzare invece CAST o CONVERT.
   
 ## <a name="syntax"></a>Sintassi  
-  
-```sql
+
+<!--
+This is not T-SQL, despite the ```sql colorizer specified.
+Neither should this be ```syntaxsql.
+Rather, this is C# (or C# syntax).  Same for the later code blocks.
+I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
+-->
+
+```csharp
 void Read( BinaryReader r )   
 ```  
   
@@ -51,7 +58,7 @@ void Read( BinaryReader r )
   
 ## <a name="examples"></a>Esempi  
   
-```sql
+```csharp
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  

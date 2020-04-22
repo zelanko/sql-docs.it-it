@@ -1,5 +1,6 @@
 ---
-title: Uso di Always Encrypted con enclave sicuri con i driver PHP per SQL Server | Microsoft Docs
+title: Always Encrypted con enclave sicuri con i driver PHP
+description: Informazioni sull'uso di Always Encrypted con enclave sicuri con i driver Microsoft per PHP per SQL Server.
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,15 +8,14 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ''
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
-ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941082"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632091"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>Uso di Always Encrypted con enclave sicuri con i driver PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "76941082"
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>Abilitare Always Encrypted con enclave sicuri
 
-Il supporto per Always Encrypted con enclave sicuri è disponibile nei driver PHP per SQL Server a partire dalla versione 5.8.0. Always Encrypted con enclave sicuri richiede SQL Server 2019 o versione successiva e la versione 17.4 o versione successiva del driver ODBC. Altre informazioni sui requisiti generali per Always Encrypted con i driver PHP per SQL Server sono disponibili [qui](../../connect/php/using-always-encrypted-php-drivers.md).
+Il supporto per Always Encrypted con enclave sicuri è disponibile nei driver PHP per SQL Server a partire dalla versione 5.8.0. Always Encrypted con enclave sicuri richiede SQL Server 2019 o versione successiva e la versione 17.4 o versione successiva del driver ODBC. Altre informazioni sui requisiti generali per Always Encrypted con i driver PHP per SQL Server sono disponibili [qui](using-always-encrypted-php-drivers.md).
 
 Always Encrypted con enclave sicuri garantisce la sicurezza dei dati crittografati attestando l'enclave, ovvero verificando l'enclave con a un servizio di attestazione esterno. Per usare gli enclave sicuri, la parola chiave `ColumnEncryption` deve identificare il tipo di attestazione e il protocollo insieme ai dati di attestazione associati, separati da una virgola. La versione 17.4 del driver ODBC supporta solo la sicurezza basata sulla virtualizzazione (VBS) e il protocollo Servizio Sorveglianza host (HGS) per il tipo di enclave e il protocollo. I dati di attestazione associati sono l'URL del server di attestazione. Pertanto alla stringa di connessione verranno aggiunti gli elementi seguenti:
 
@@ -391,8 +391,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## <a name="see-also"></a>Vedere anche  
-[Guida di programmazione per il driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Riferimento all'API del driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Uso di Always Encrypted con i driver PHP per SQL Server | Microsoft Docs](../../connect/php/using-always-encrypted-php-drivers.md)
+[Guida di programmazione per il driver SQL PHP](programming-guide-for-php-sql-driver.md)  
+[Riferimento all'API del driver SQLSRV](sqlsrv-driver-api-reference.md)  
+[Riferimento all'API del driver PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  
+[Uso di Always Encrypted con i driver PHP per SQL Server](using-always-encrypted-php-drivers.md)
   

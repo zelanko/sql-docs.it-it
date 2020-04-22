@@ -1,5 +1,6 @@
 ---
 title: Requisiti di sistema, installazione e file del driver | Microsoft Docs
+description: Questo articolo descrive i requisiti di sistema per Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7969d9505f9f4f1896505849efe0306801838433
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e2b56528a369d58238a545afc20b35787003b6b1
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920157"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484451"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisiti di sistema, installazione e file del driver
 

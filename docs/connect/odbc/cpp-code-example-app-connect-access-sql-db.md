@@ -1,5 +1,6 @@
 ---
 title: App ODBC C++ che accede a un database SQL
+description: L'applicazione di esempio C++ dimostra come usare le API ODBC per connettersi e accedere a un database SQL.
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4f3df5ecdefffc8c9d5ae1cc43ba9210f458c41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 819fdc766d03d845582dfc0ae7885615cd8a6019
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907697"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528925"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>Applicazione di esempio ODBC C++ che accede a un database SQL
 

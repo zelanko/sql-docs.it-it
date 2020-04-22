@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c48422e86cfd3f42e6634a3ca3be1d0dbc85f24
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710346"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528485"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,16 +128,16 @@ snapshot [ -?]
  Posizione di generazione dello snapshot dinamico.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Livello di crittografia SSL (Secure Sockets Layer) utilizzato dall'agente snapshot quando vengono stabilite le connessioni.  
+ Livello di crittografia TLS (Transport Layer Security) noto in precedenza come SSL (Secure Sockets Layer) usato dall'agente di snapshot quando vengono stabilite le connessioni.  
   
 |Valore di EncryptionLevel|Descrizione|  
 |---------------------------|-----------------|  
-|**0**|Specifica che SSL non viene utilizzato.|  
-|**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
-|**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
+|**0**|Specifica che TLS non viene usato.|  
+|**1**|Specifica che TLS viene usato, ma l'agente non verifica che il certificato server TLS/SSL sia firmato da un'autorità di certificazione attendibile.|  
+|**2**|Specifica che TLS viene usato e che il certificato viene verificato.|  
 
  > [!NOTE]  
- >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro ‘Nome Alias’ deve essere il nome del server e il parametro ‘Server’ deve essere impostato per il nome completo di SQL Server.
+ >  Un certificato TLS/SSL valido è definito con un nome di dominio completo di SQL Server. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro ‘Nome Alias’ deve essere il nome del server e il parametro ‘Server’ deve essere impostato per il nome completo di SQL Server.
   
  Per altre informazioni, vedere [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

@@ -9,12 +9,12 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50c10c976cd30db4c8fcdcd1404f4618e77356c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216671"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635427"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore SQL Server in Kubernetes con il servizio Azure Kubernetes
 
@@ -52,7 +52,7 @@ Nel diagramma seguente si è verificato un errore nel nodo che ospita il conteni
 * **Cluster Kubernetes**
    - L'esercitazione richiede un cluster Kubernetes. La procedura usa [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) per gestire il cluster. 
 
-   - Vedere [Distribuire un cluster del servizio Azure Container](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) per creare e connettersi a un cluster Kubernetes a nodo singolo nel servizio Azure Kubernetes con `kubectl`. 
+   - Vedere [Distribuire un cluster del servizio Azure Kubernetes (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) per creare e connettersi a un cluster Kubernetes a nodo singolo nel servizio Azure Kubernetes con `kubectl`. 
 
    >[!NOTE]
    >Per la protezione da errori del nodo, un cluster Kubernetes richiede più di un nodo.

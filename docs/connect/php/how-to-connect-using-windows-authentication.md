@@ -1,5 +1,6 @@
 ---
-title: "Procedura: Connettersi usando l'autenticazione di Windows | Microsoft Docs"
+title: "Procedura: Connettersi con l'autenticazione di Windows"
+description: Informazioni sulla connessione con l'autenticazione integrata di Windows tramite i driver per PHP per SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066c58d9ee72f1160b84d4f4a3de9f7156a47d6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916504"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634833"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procedura: Connettersi con l'autenticazione di Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,7 @@ Quando si usa l'autenticazione di Windows per la connessione a SQL Server è nec
 -   Se SQL Server e il server Web si trovano in computer diversi, SQL Server deve essere configurato per l'abilitazione di connessioni remote.  
   
 > [!NOTE]  
-> Quando si stabilisce una connessione è possibile impostare attributi di connessione quali *Database* e *ConnectionPooling* . Per un elenco completo degli attributi di connessione supportati, vedere [Connection Options](../../connect/php/connection-options.md).  
+> Quando si stabilisce una connessione è possibile impostare attributi di connessione quali *Database* e *ConnectionPooling* . Per un elenco completo degli attributi di connessione supportati, vedere [Connection Options](connection-options.md).  
   
 L'autenticazione di Windows deve essere usata per connettersi a SQL Server ogni volta che è possibile per i motivi seguenti:  
   
@@ -39,7 +40,7 @@ L'autenticazione di Windows deve essere usata per connettersi a SQL Server ogni 
   
 -   Gli utenti sono soggetti a una gestione centralizzata degli account. Vengono applicati criteri di sicurezza, ad esempio i periodi di scadenza delle password, la lunghezza minima delle password e il blocco degli account dopo più richieste di accesso non valide.  
   
-Se l'autenticazione di Windows non è un'opzione possibile, vedere [Procedura: Connettersi con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Se l'autenticazione di Windows non è un'opzione possibile, vedere [Procedura: Connettersi con l'autenticazione di SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Esempio  
 Con il driver SQLSRV dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l'esempio seguente usa l'autenticazione di Windows per connettersi a un'istanza locale di SQL Server. Dopo aver stabilito la connessione, viene richiesto al server l'account dell'utente che accede al database.  
@@ -105,11 +106,11 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: Connettersi con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Procedura: Connettersi con l'autenticazione di SQL Server](how-to-connect-using-sql-server-authentication.md)
 
-[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](programming-guide-for-php-sql-driver.md)
 
-[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
+[Informazioni sugli esempi di codice nella documentazione](about-code-examples-in-the-documentation.md)
 
 [Procedura: Creare un account di accesso di SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 

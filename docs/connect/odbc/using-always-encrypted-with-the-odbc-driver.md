@@ -1,5 +1,6 @@
 ---
-title: Uso di Always Encrypted con ODBC Driver for SQL Server | Microsoft Docs
+title: Uso di Always Encrypted con il driver ODBC
+description: Informazioni su come sviluppare applicazioni ODBC usando Always Encrypted e Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 09/01/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285845"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635418"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "79285845"
 
 ### <a name="introduction"></a>Introduzione
 
-Questo articolo include informazioni su come sviluppare applicazioni ODBC usando [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md) e [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+Questo articolo include informazioni su come sviluppare applicazioni ODBC usando [Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md) e [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted consente alle applicazioni client di eseguire la crittografia dei dati sensibili senza mai rivelare i dati o le chiavi di crittografia a SQL Server o al database SQL di Azure. Di tutto ciò si occupa un driver abilitato per Always Encrypted, come ODBC Driver for SQL Server, che esegue in modo trasparente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver determina automaticamente i parametri di query corrispondenti alle colonne di database con dati sensibili (protette mediante Always Encrypted) e crittografa i valori di tali parametri prima di passare i dati a SQL Server o al database SQL di Azure. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, recuperati dalle colonne di database crittografate nei risultati delle query. *Always Encrypted con enclave sicuri* estende la funzionalità esistente per abilitare funzionalità più avanzate per i dati sensibili, mantenendo i dati riservati.
 
@@ -60,7 +61,7 @@ Si noti che l'abilitazione di Always Encrypted non è sufficiente per l'esito po
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Abilitare Always Encrypted con enclave sicuri
 
 > [!NOTE]
-> In Linux e Mac per usare Always Encrypted con enclave sicuri è necessario OpenSSL versione 1.0.1 o successiva.
+> Per usare Always Encrypted con enclave sicuri in Linux e macOS è necessario OpenSSL versione 1.0.1 o successiva.
 
 A partire dalla versione 17.4, il driver supporta Always Encrypted con enclavi sicuri. Per abilitare l'uso dell'enclave quando ci si connette a SQL Server 2019 o versione successiva, impostare il DSN `ColumnEncryption`, la stringa di connessione o l'attributo di connessione con il nome del tipo di enclave e del protocollo di attestazione e i dati di attestazione associati, separati da una virgola. Nella versione 17.4 sono supportati solo il tipo di enclave [Sicurezza basata su virtualizzazione](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) e il protocollo di attestazione [Servizio Sorveglianza host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indicato da `VBS-HGS`. Per usarlo specificare l'URL del server di attestazione, ad esempio:
 
@@ -431,16 +432,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 Non sono necessarie altre modifiche all'applicazione ODBC per usare Azure Key Vault per l'archiviazione di chiavi master della colonna.
 
 > [!NOTE]
-> Il driver contiene un elenco di endpoint AKV attendibili. A partire dalla versione del driver 17.5.2, questo elenco è configurabile: impostare la proprietà `AKVTrustedEndpoints` nel driver o nella chiave del Registro di sistema ODBCINST.INI o ODBC.INI di DSN (Windows) oppure nella sezione del file `odbcinst.ini` o `odbc.ini` (Linux/Mac) in un elenco delimitato da punti e virgola. L'impostazione nel sistema DSN ha la precedenza su un'impostazione nel driver. Se il valore inizia con un punto e virgola, estende l'elenco predefinito. In caso contrario, sostituisce l'elenco predefinito. L'elenco predefinito (fino alla versione 17.5) è `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+> Il driver contiene un elenco di endpoint AKV attendibili. A partire dalla versione del driver 17.5.2, questo elenco è configurabile: impostare la proprietà `AKVTrustedEndpoints` nel driver o nella chiave del Registro di sistema ODBCINST.INI o ODBC.INI di DSN (Windows) oppure nella sezione del file `odbcinst.ini` o `odbc.ini` (Linux/macOS) in un elenco delimitato da punti e virgola. L'impostazione nel sistema DSN ha la precedenza su un'impostazione nel driver. Se il valore inizia con un punto e virgola, estende l'elenco predefinito. In caso contrario, sostituisce l'elenco predefinito. L'elenco predefinito (fino alla versione 17.5) è `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
 
-ODBC Driver for SQL Server in Windows include un provider di archivio chiavi master della colonna predefinito per l'archivio certificati Windows denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider non è disponibile in macOS o Linux). Con questo provider, la chiave master della colonna viene archiviata in locale nel computer client e non è necessaria alcuna configurazione aggiuntiva da parte dell'applicazione per usarla con il driver. Tuttavia, l'applicazione deve avere accesso al certificato e alla relativa chiave privata nell'archivio. Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted).
+ODBC Driver for SQL Server in Windows include un provider di archivio chiavi master della colonna predefinito per l'archivio certificati Windows denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider non è disponibile in macOS o Linux). Con questo provider, la chiave master della colonna viene archiviata in locale nel computer client e non è necessaria alcuna configurazione aggiuntiva da parte dell'applicazione per usarla con il driver. Tuttavia, l'applicazione deve avere accesso al certificato e alla relativa chiave privata nell'archivio. Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-custom-keystore-providers"></a>Uso di provider di archivi chiavi personalizzati
 
-ODBC Driver for SQL Server supporta anche i provider di archivi chiavi personalizzati di terze parti tramite l'interfaccia CEKeystoreProvider. Questo consente a un'applicazione di caricare, eseguire query e configurare i provider di archivi chiavi in modo che possano essere usati dal driver per accedere alle colonne crittografate. Le applicazioni possono anche interagire direttamente con un provider dell'archivio chiavi per crittografare le chiavi di crittografia della colonna per l'archiviazione in SQL Server ed eseguire attività che vanno oltre l'accesso alle colonne crittografate con ODBC; per altre informazioni, vedere [Provider di archivi chiavi personalizzati](../../connect/odbc/custom-keystore-providers.md).
+ODBC Driver for SQL Server supporta anche i provider di archivi chiavi personalizzati di terze parti tramite l'interfaccia CEKeystoreProvider. Questo consente a un'applicazione di caricare, eseguire query e configurare i provider di archivi chiavi in modo che possano essere usati dal driver per accedere alle colonne crittografate. Le applicazioni possono anche interagire direttamente con un provider dell'archivio chiavi per crittografare le chiavi di crittografia della colonna per l'archiviazione in SQL Server ed eseguire attività che vanno oltre l'accesso alle colonne crittografate con ODBC; per altre informazioni, vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md).
 
 Due attributi di connessione vengono usati per interagire con i provider di archivi chiavi personalizzati, ovvero:
 
@@ -543,7 +544,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 Altre informazioni dettagliate sugli errori possono essere ottenute tramite [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
 
 > [!NOTE]
-> Il provider può usare l'handle di connessione per associare i dati scritti a una connessione specifica, se è opportuno. Questo è utile per implementare la configurazione in base alla connessione. È possibile anche ignorare il contesto della connessione e trattare i dati in modo identico indipendentemente dalla connessione usata per inviare i dati. Per altre informazioni, vedere [Associazione del contesto](../../connect/odbc/custom-keystore-providers.md#context-association).
+> Il provider può usare l'handle di connessione per associare i dati scritti a una connessione specifica, se è opportuno. Questo è utile per implementare la configurazione in base alla connessione. È possibile anche ignorare il contesto della connessione e trattare i dati in modo identico indipendentemente dalla connessione usata per inviare i dati. Per altre informazioni, vedere [Associazione del contesto](custom-keystore-providers.md#context-association).
 
 #### <a name="reading-data-from-a-provider"></a>Lettura di dati da un provider
 
@@ -565,7 +566,7 @@ Il chiamante deve garantire che venga allocato un buffer di lunghezza sufficient
 
 Questa interfaccia non pone requisiti aggiuntivi sul formato dei dati trasferiti tra un'applicazione e un provider dell'archivio chiavi. Ogni provider può definire il proprio protocollo/formato di dati, a seconda delle esigenze.
 
-Per un esempio di implementazione di un proprio provider dell'archivio chiavi, vedere [Provider di archivi chiavi personalizzati](../../connect/odbc/custom-keystore-providers.md).
+Per un esempio di implementazione di un proprio provider dell'archivio chiavi, vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md).
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitazioni del driver ODBC quando si usa Always Encrypted
 

@@ -1,5 +1,6 @@
 ---
 title: Negare le autorizzazioni per una raccolta di XML Schema | Microsoft Docs
+description: Informazioni su come negare l'autorizzazione per la creazione di una nuova raccolta XML Schema o per l'uso di una raccolta esistente.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b20aa168defac0e42c81336581fb61641443c8a1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4084b87320da45e4cff3aa37ba852f708da8976c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664555"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388482"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Negazione delle autorizzazioni per una raccolta di XML Schema
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

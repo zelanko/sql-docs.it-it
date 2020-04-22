@@ -1,5 +1,6 @@
 ---
-title: Provider di archivi chiavi personalizzati | Microsoft Docs
+title: Provider di archivi chiavi personalizzati
+description: Informazioni su come implementare un provider di archivi chiavi personalizzati da usare insieme a Microsoft ODBC Driver for SQL Server e la funzionalità Always Encrypted.
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 author: David-Engel
-ms.openlocfilehash: c3658c1b7e745ad9b51746b26daf68c1b912f2b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c814fa5e755c46d09d3c02a6ef17e3d4ab562db7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924565"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633195"
 ---
 # <a name="custom-keystore-providers"></a>Provider di archivi chiavi personalizzati
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80924565"
 
 Per accedere ai dati archiviati nelle colonne crittografate, la funzionalità di crittografia della colonna di SQL Server 2016 richiede che le chiavi di crittografia della colonna crittografata (ECEK) archiviate nel server siano recuperate dal client e quindi decrittografate in chiavi di crittografia della colonna (chiavi CEK). Le chiavi ECEK vengono crittografate dalle chiavi master della colonna (CMK) e la sicurezza della chiave CMK è importante per la sicurezza della crittografia della colonna. La chiave CMK deve quindi essere archiviata in una posizione sicura. Lo scopo di un provider di archivi chiavi di crittografia della colonna è offrire un'interfaccia per consentire al driver ODBC di accedere a tali chiavi CMK archiviate in modo sicuro. Per gli utenti con una propria archiviazione sicura, l'interfaccia del provider dell'archivio chiavi personalizzato offre un framework per l'implementazione dell'accesso all'archiviazione sicura della chiave CMK per il driver ODBC, che può quindi essere usato per eseguire la crittografia e la decrittografia della chiave CEK.
 
-Ogni provider dell'archivio chiavi contiene e gestisce una o più chiavi CMK, che sono identificate da percorsi delle chiavi (stringhe di un formato definito dal provider) e che, insieme all'algoritmo di crittografia (anch'esso una stringa definita dal provider), si possono usare per eseguire la crittografia di una chiave CEK e la decrittografia di una chiave ECEK. L'algoritmo viene archiviato nei metadati di crittografia del database, insieme alla chiave ECEK e al nome del provider. Per altre informazioni, vedere [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md). Le due operazioni fondamentali di gestione delle chiavi sono quindi:
+Ogni provider dell'archivio chiavi contiene e gestisce una o più chiavi CMK, che sono identificate da percorsi delle chiavi (stringhe di un formato definito dal provider) La chiave CMK, insieme all'algoritmo di crittografia (anch'esso una stringa definita dal provider), può essere usata per eseguire la crittografia di una chiave CEK e la decrittografia di una chiave ECEK. L'algoritmo, insieme alla chiave ECEK e al nome del provider, viene archiviato nei metadati di crittografia del database. Per altre informazioni, vedere [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md). Le due operazioni fondamentali di gestione delle chiavi sono quindi:
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -95,7 +96,7 @@ Ad eccezione di Free, le funzioni in questa interfaccia hanno tutte una coppia d
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-Nome del segnaposto per una funzione di inizializzazione definita dal provider. Il driver chiama questa funzione una sola volta, dopo che un provider è stato caricato ma prima di dover eseguire per la prima volta richieste di decrittografia della chiave ECEK o Read()/Write(). Usare questa funzione per eseguire tutte le operazioni di inizializzazione necessarie. 
+Nome del segnaposto per una funzione di inizializzazione definita dal provider. Il driver chiama questa funzione una sola volta, dopo che un provider è stato caricato ma prima di dover eseguire per la prima volta richieste di decrittografia della chiave ECEK o Read()/Write(). Usare questa funzione per eseguire tutte le operazioni di inizializzazione necessarie.
 
 |Argomento|Descrizione|
 |:--|:--|
@@ -113,8 +114,8 @@ Nome del segnaposto per una funzione di comunicazione definita dal provider. Il 
 |:--|:--|
 |`ctx`|[Input] Contesto dell'operazione.|
 |`onError`|[Input] Funzione di segnalazione degli errori.|
-|`data`|[Output] Puntatore a un buffer in cui il provider scrive i dati che devono essere letti dall'applicazione. Corrisponde al campo dati della struttura CEKEYSTOREDATA.|
-|`len`|[InOut] Puntatore a un valore di lunghezza; al momento dell'input, corrisponde alla lunghezza massima del buffer di dati e il provider non deve scrivervi un numero di byte superiore al valore *len. Al momento della restituzione, il provider deve aggiornare il valore *len con il numero di byte effettivamente scritti.|
+|`data`|[Output] Puntatore a un buffer in cui il provider scrive i dati che devono essere letti dall'applicazione. Il buffer corrisponde al campo dati della struttura CEKEYSTOREDATA.|
+|`len`|[InOut] Puntatore a un valore di lunghezza; al momento dell'input, corrisponde alla lunghezza massima del buffer di dati e il provider non deve scrivervi un numero di byte superiore al valore *len. Al momento della restituzione, il provider deve aggiornare il valore *len con il numero di byte scritti.|
 |`Return Value`|Restituisce un valore diverso da zero per indicare l'esito positivo o zero per indicare un errore.|
 
 ```
@@ -126,7 +127,7 @@ Nome del segnaposto per una funzione di comunicazione definita dal provider. Il 
 |:--|:--|
 |`ctx`|[Input] Contesto dell'operazione.|
 |`onError`|[Input] Funzione di segnalazione degli errori.|
-|`data`|[Input] Puntatore a un buffer contenente i dati per la lettura da parte del provider. Corrisponde al campo dati della struttura CEKEYSTOREDATA. Il provider non deve leggere un numero di byte superiore al valore len da questo buffer.|
+|`data`|[Input] Puntatore a un buffer contenente i dati per la lettura da parte del provider. Il buffer corrisponde al campo dati della struttura CEKEYSTOREDATA. Il provider non deve leggere un numero di byte superiore al valore len da questo buffer.|
 |`len`|[Input] Numero di byte disponibili nei dati. Corrisponde al campo dataSize della struttura CEKEYSTOREDATA.|
 |`Return Value`|Restituisce un valore diverso da zero per indicare l'esito positivo o zero per indicare un errore.|
 
@@ -139,11 +140,11 @@ Nome del segnaposto per una funzione di decrittografia della chiave ECEK definit
 |:--|:--|
 |`ctx`|[Input] Contesto dell'operazione.|
 |`onError`|[Input] Funzione di segnalazione degli errori.|
-|`keyPath`|[Input] Valore dell'attributo dei metadati [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) per la chiave CMK a cui viene fatto riferimento dalla chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Consente di identificare una chiave CMK gestita da questo provider.|
-|`alg`|[Input] Valore dell'attributo dei metadati [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) per la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Consente di identificare l'algoritmo di crittografia usato per crittografare la chiave ECEK specificata.|
+|`keyPath`|[Input] Valore dell'attributo dei metadati [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) per la chiave CMK a cui viene fatto riferimento dalla chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Questo valore consente di identificare una chiave CMK gestita da questo provider.|
+|`alg`|[Input] Valore dell'attributo dei metadati [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) per la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Questo valore consente di identificare l'algoritmo di crittografia usato per crittografare la chiave ECEK specificata.|
 |`ecek`|[Input] Puntatore alla chiave ECEK da decrittografare.|
 |`ecekLen`|[Input] Lunghezza della chiave ECEK.|
-|`cekOut`|[Output] Il provider deve allocare memoria per la chiave ECEK decrittografata e scrivere il relativo indirizzo nel puntatore a cui punta cekOut. Deve essere possibile liberare questo blocco di memoria usando la funzione [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o Free (Linux/Mac). Se non è stata allocata memoria a causa di un errore o per altri motivi, il provider deve impostare *cekOut su un puntatore Null.|
+|`cekOut`|[Output] Il provider deve allocare memoria per la chiave ECEK decrittografata e scrivere il relativo indirizzo nel puntatore a cui punta cekOut. Deve essere possibile liberare questo blocco di memoria usando la funzione [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o Free (Linux/macOS). Se non è stata allocata memoria a causa di un errore o per altri motivi, il provider deve impostare *cekOut su un puntatore Null.|
 |`cekLen`|[Output] Il provider deve scrivere nell'indirizzo a cui punta cekLen la lunghezza della chiave ECEK decrittografata scritta in **cekOut.|
 |`Return Value`|Restituisce un valore diverso da zero per indicare l'esito positivo o zero per indicare un errore.|
 
@@ -157,10 +158,10 @@ Nome del segnaposto per una funzione di crittografia della chiave CEK definita d
 |`ctx`|[Input] Contesto dell'operazione.|
 |`onError`|[Input] Funzione di segnalazione degli errori.|
 |`keyPath`|[Input] Valore dell'attributo dei metadati [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) per la chiave CMK a cui viene fatto riferimento dalla chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Consente di identificare una chiave CMK gestita da questo provider.|
-|`alg`|[Input] Valore dell'attributo dei metadati [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) per la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Consente di identificare l'algoritmo di crittografia usato per crittografare la chiave ECEK specificata.|
+|`alg`|[Input] Valore dell'attributo dei metadati [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) per la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Questo valore consente di identificare l'algoritmo di crittografia usato per crittografare la chiave ECEK specificata.|
 |`cek`|[Input] Puntatore alla chiave CEK da crittografare.|
 |`cekLen`|[Input] Lunghezza della chiave CEK.|
-|`ecekOut`|[Output] Il provider deve allocare memoria per la chiave CEK crittografata e scrivere il relativo indirizzo nel puntatore a cui punta ecekOut. Deve essere possibile liberare questo blocco di memoria usando la funzione [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o Free (Linux/Mac). Se non è stata allocata memoria a causa di un errore o per altri motivi, il provider deve impostare *ecekOut su un puntatore Null.|
+|`ecekOut`|[Output] Il provider deve allocare memoria per la chiave CEK crittografata e scrivere il relativo indirizzo nel puntatore a cui punta ecekOut. Deve essere possibile liberare questo blocco di memoria usando la funzione [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o Free (Linux/macOS). Se non è stata allocata memoria a causa di un errore o per altri motivi, il provider deve impostare *ecekOut su un puntatore Null.|
 |`ecekLen`|[Output] Il provider deve scrivere nell'indirizzo a cui punta ecekLen la lunghezza della chiave ECEK crittografata scritta in **ecekOut.|
 |`Return Value`|Restituisce un valore diverso da zero per indicare l'esito positivo o zero per indicare un errore.|
 
@@ -207,12 +208,12 @@ Usando uno dei valori predefiniti speciali con la macro IDS_MSG, si possono usar
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-Affinché l'errore venga riconosciuto dal driver, la funzione del provider deve restituire un errore. Quando l'esecuzione avviene nel contesto di un'operazione ODBC, gli errori inviati diventeranno accessibili nell'handle di connessione o di istruzione tramite il meccanismo di diagnostica ODBC standard (`SQLError`, `SQLGetDiagRec`e `SQLGetDiagField`).
+Affinché l'errore venga riconosciuto dal driver, la funzione del provider deve restituire un errore. Quando si verifica un errore nel contesto di un'operazione ODBC, gli errori inviati diventeranno accessibili nell'handle di connessione o di istruzione tramite il meccanismo di diagnostica ODBC standard (`SQLError`, `SQLGetDiagRec`e `SQLGetDiagField`).
 
 
 ### <a name="context-association"></a>Associazione del contesto
 
-La struttura di `CEKEYSTORECONTEXT`, oltre a offrire il contesto per il callback dell'errore, può essere usata anche per determinare il contesto ODBC in cui viene eseguita un'operazione del provider. Ciò consente a un provider di associare i dati a ognuno di questi contesti, ad esempio per implementare la configurazione per connessione. A questo scopo, la struttura contiene 3 puntatori opachi che corrispondono al contesto di ambiente, connessione e istruzione:
+La struttura di `CEKEYSTORECONTEXT`, oltre a offrire il contesto per il callback dell'errore, può essere usata anche per determinare il contesto ODBC in cui viene eseguita un'operazione del provider. Questo contesto consente a un provider di associare i dati a ognuno di questi contesti, ad esempio per implementare la configurazione per connessione. A questo scopo, la struttura contiene tre puntatori opachi che corrispondono al contesto di ambiente, connessione e istruzione:
 
 ```
 typedef struct CEKeystoreContext
@@ -229,7 +230,7 @@ void *stmtCtx;
 |`dbcCtx`|Contesto della connessione.|
 |`stmtCtx`|Contesto dell'istruzione.|
 
-Ognuno di questi contesti è un valore opaco che, pur essendo diverso dall'handle ODBC corrispondente, può essere usato come identificatore univoco per l'handle: se l'handle *X* è associato a un valore di contesto *Y*, nessun altro handle di ambiente, connessione o istruzione esistente contemporaneamente a *X* avrà un valore di contesto *Y* e nessun altro valore di contesto verrà associato all'handle *X*. Se l'operazione del provider eseguita non ha un particolare contesto di handle (ad esempio, chiamate SQLSetConnectAttr per caricare e configurare i provider in cui non è presente un handle di istruzione) il valore di contesto corrispondente nella struttura è Null.
+Ognuno di questi contesti è un valore opaco che, pur essendo diverso dall'handle ODBC corrispondente, può essere usato come identificatore univoco per l'handle: se l'handle *X* è associato a un valore di contesto *Y*, nessun altro handle di ambiente, connessione o istruzione esistente contemporaneamente a *X* avrà un valore di contesto *Y* e nessun altro valore di contesto verrà associato all'handle *X*. Se l'operazione del provider eseguita non ha un particolare contesto di handle, ad esempio chiamate SQLSetConnectAttr per caricare e configurare i provider in cui non è presente un handle di istruzione, il valore di contesto corrispondente nella struttura è Null.
 
 
 ## <a name="example"></a>Esempio
@@ -242,7 +243,7 @@ Il codice seguente è un esempio di implementazione minima di provider dell'arch
 /* Custom Keystore Provider Example
 
 Windows:   compile with cl MyKSP.c /LD /MD /link /out:MyKSP.dll
-Linux/Mac: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
+Linux/macOS: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
 
  */
 
@@ -368,7 +369,7 @@ Il codice seguente è un'applicazione demo che usa il provider dell'archivio chi
  Example application for demonstration of custom keystore provider usage
 
 Windows:   compile with cl /MD kspapp.c /link odbc32.lib
-Linux/Mac: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
+Linux/macOS: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
  
  usage: kspapp connstr
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710821"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529255"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "71710821"
  <sup>1</sup> L'autenticazione integrata può essere utilizzata solo se tutti i computer si trovano nello stesso dominio oppure in più domini con relazioni di trust reciproche.  
   
 > [!NOTE]  
->  La delega è necessaria se si utilizza l'autenticazione integrata. Per le connessioni dal Sottoscrittore a IIS è consigliabile utilizzare l'autenticazione di base e SSL.  
+>  La delega è necessaria se si utilizza l'autenticazione integrata. Per le connessioni dal sottoscrittore a IIS è consigliabile usare l'autenticazione di base e TLS.  
   
 ## <a name="e-connection-to-the-publisher"></a>E. Connessione al server di pubblicazione  
  I componenti Listener per la replica e Riconciliatore replica di tipo merge (Merge Replication Reconciler) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono ospitati nel computer che esegue IIS. Questi componenti eseguono le operazioni seguenti:  

@@ -1,6 +1,6 @@
 ---
-title: Uso di ADO con il driver OLE DB per SQL Server | Microsoft Docs
-description: Uso di ADO con il driver OLE DB per SQL Server
+title: Uso di ADO con il driver OLE DB
+description: Informazioni sull'uso di ADO con il driver OLE DB, incluse le nuove funzionalità come Multiple Active Result Set, notifiche delle query, tipi definiti dall'utente o il tipo di dati xml.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72d82433e04ead61ec71eecd3c8771cbe744b751
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989245"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633891"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Uso di ADO con il driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67989245"
 
 -   `DataTypeCompatibility=80`  
 
- Per informazioni sulle parole chiave della stringa di connessione ADO supportate nel driver OLE DB per SQL Server, vedere [Uso delle parole chiave delle stringhe di connessione con driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Per informazioni sulle parole chiave della stringa di connessione ADO supportate nel driver OLE DB per SQL Server, vedere [Uso delle parole chiave delle stringhe di connessione con driver OLE DB per SQL Server](using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Di seguito è riportato un esempio di stringa di connessione ADO completamente abilitata per l'uso nel driver OLE DB per SQL Server con l'abilitazione del servizio MARS:  
 
@@ -61,7 +61,7 @@ con.Open
  Le sezioni seguenti forniscono esempi di come è possibile usare ADO con OLE DB Driver per SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Recupero dei dati delle colonne XML  
- In questo esempio viene usato un recordset per recuperare e visualizzare i dati da una colonna XML nel database di esempio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AdventureWorks**di**.  
+ In questo esempio viene usato un recordset per recuperare e visualizzare i dati da una colonna XML nel database di esempio **AdventureWorks** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -167,4 +167,4 @@ Set con = Nothing
  Nelle versioni precedenti del provider OLE DB questo codice determinerebbe la creazione di una connessione implicita alla seconda esecuzione, in quanto per una sola connessione sarebbe possibile aprire un solo set attivo di risultati. Poiché la connessione implicita non sarebbe inserita nel pool di connessioni OLE DB, questa situazione provocherebbe overhead aggiuntivo. Con la funzionalità MARS esposta dal driver OLE DB per SQL Server, si ottengono più risultati attivi su un'unica connessione.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Compilazione di applicazioni con il driver OLE DB per SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Compilazione di applicazioni con il driver OLE DB per SQL Server](building-applications-with-oledb-driver-for-sql-server.md)  

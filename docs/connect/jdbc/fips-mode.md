@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efa536024021e1182ad565fe534d3e706f4e7eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917952"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293381"
 ---
 # <a name="fips-mode"></a>Modalità FIPS
 
@@ -22,10 +22,10 @@ ms.locfileid: "80917952"
 
 Microsoft JDBC Driver per SQL Server supporta l'esecuzione in JVM (Java Virtual Machine) configurate per essere *conformi a FIPS 140*.
 
-#### <a name="prerequisites"></a>Prerequisites
+#### <a name="prerequisites"></a>Prerequisiti
 
 - JVM configurata per FIPS
-- Certificato SSL appropriato
+- Certificato TLS/SSL appropriato
 - File di criteri appropriati
 - Parametri di configurazione appropriati
 
@@ -38,11 +38,11 @@ Per informazioni sui moduli approvati per la configurazione FIPS, vedere [Moduli
 I fornitori possono prevedere passaggi aggiuntivi per configurare una JVM con FIPS.
 
 ## <a name="appropriate-ssl-certificate"></a>Certificato SSL appropriato
-Per connettersi a SQL Server in modalità FIPS, è necessario un certificato SSL valido. Installarlo o importarlo nell'archivio chiavi Java nel computer client (JVM) in cui è abilitato FIPS.
+Per connettersi a SQL Server in modalità FIPS, è necessario un certificato TLS/SSL valido. Installarlo o importarlo nell'archivio chiavi Java nel computer client (JVM) in cui è abilitato FIPS.
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Importazione del certificato SSL nell'archivio chiavi Java
 Per FIPS, è molto probabile che sia necessario importare il certificato (con estensione cert) in formato PKCS o in un formato specifico del provider.
-Usare il frammento di codice seguente per importare il certificato SSL e archiviarlo in una directory di lavoro con il formato di archivio chiavi appropriato. _TRUST\_STORE\_PASSWORD_ è la password per l'archivio chiavi Java.
+Usare il frammento di codice seguente per importare il certificato TLS/SSL e archiviarlo in una directory di lavoro con il formato di archivio chiavi appropriato. _TRUST\_STORE\_PASSWORD_ è la password per l'archivio chiavi Java.
 
 ```java
 public void saveGenericKeyStore(
@@ -72,7 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-Nell'esempio seguente viene importato un certificato SSL di Azure in formato PKCS12 con il provider BouncyCastle. Il certificato viene importato nella directory di lavoro denominata _MyTrustStore\_PKCS12_ usando il frammento di codice seguente:
+Nell'esempio seguente viene importato un certificato TLS/SSL di Azure in formato PKCS12 con il provider BouncyCastle. Il certificato viene importato nella directory di lavoro denominata _MyTrustStore\_PKCS12_ usando il frammento di codice seguente:
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 

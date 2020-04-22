@@ -1,5 +1,6 @@
 ---
-title: 'Passaggio 4: Connettersi in modo resiliente a SQL con PHP | Microsoft Docs'
+title: 'Passaggio 4: Connettersi in modo resiliente a SQL con PHP'
+description: Il passaggio 4 è un programma demo progettato per illustrare come gli errori temporanei durante un tentativo di connessione comportino un nuovo tentativo.
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9467a62d2d3ca1cbbd9b5a543c27f310f7d3ba60
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926897"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528350"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Passaggio 4: Connettersi in modo resiliente a SQL con PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-Il programma demo è progettato in modo che un errore temporaneo (qualsiasi codice errore con il prefisso "08" elencato in questa [appendice](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante un tentativo di connessione comporti un nuovo tentativo. Ma un errore temporaneo durante un comando di query fa sì che il programma ignori la connessione e crei una nuova connessione, prima di ritentare il comando di query. Non consigliamo né sconsigliamo tale scelta di progettazione. Nel programma demo vengono illustrate alcune flessibilità di progettazione disponibili.  
+Il programma demo è progettato in modo che un errore temporaneo (qualsiasi codice errore con il prefisso "08" elencato in questa [appendice](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante un tentativo di connessione comporti un nuovo tentativo. Ma un errore temporaneo durante un comando di query fa sì che il programma ignori la connessione e crei una nuova connessione, prima di ritentare il comando di query. Questa scelta di progettazione non è consigliabile né sconsigliata. Nel programma demo vengono illustrate alcune flessibilità di progettazione disponibili.  
   
 La lunghezza di questo esempio di codice è dovuta principalmente alla logica di eccezione catch.   
   

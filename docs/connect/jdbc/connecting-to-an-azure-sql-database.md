@@ -1,5 +1,6 @@
 ---
-title: Connessione a un database SQL di Azure | Microsoft Docs
+title: Connessione a un database SQL di Azure
+description: Questo articolo illustra i problemi relativi all'uso di Microsoft JDBC Driver per SQL Server per connettersi a un database SQL di Azure.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,33 +11,33 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7ecc575fc444a7f834cd8ed84ee340902199b09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922471"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632531"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connessione a un database SQL di Azure
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-In questo argomento vengono illustrati i problemi dell'uso di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Per altre informazioni sulla connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vedere:  
+In questo articolo vengono illustrati i problemi dell'uso di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Per altre informazioni sulla connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vedere:  
   
 - [Database SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Procedura: Connettersi a SQL Azure mediante JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Procedura: Connettersi a SQL Azure tramite JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connessione tramite autenticazione di Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Connessione tramite autenticazione di Azure Active Directory](connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Dettagli
 
-Per la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**.  
+Per la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**.  
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases per ottenere i cataloghi. Vedere la discussione relativa alle autorizzazioni in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per comprendere il comportamento di **SQLServerDatabaseMetaData.getCatalogs** in un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Connessioni eliminate
 
-Durante la connessione a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è possibile che le connessioni inattive siano terminate da un componente di rete, ad esempio un firewall, dopo un periodo di inattività. In questo contesto esistono due tipi di inattività:  
+Durante la connessione a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è possibile che le connessioni inattive siano terminate da un componente di rete, ad esempio un firewall, dopo un periodo di inattività. In questo contesto esistono due tipi di inattività:  
 
 - Inattività a livello TCP, in cui le connessioni possono essere eliminate da un certo numero di dispositivi di rete.  
 
@@ -90,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>Vedere anche
 
-[Connessione a SQL Server con il driver JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Connessione a SQL Server con il driver JDBC](connecting-to-sql-server-with-the-jdbc-driver.md)  

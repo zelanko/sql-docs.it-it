@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
-ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262897"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487060"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
 
@@ -109,7 +109,7 @@ Per informazioni sulla migrazione di una distribuzione di [!INCLUDE[ssRSnoversio
   
 * Le restrizioni relative agli indirizzi IP non sono supportate in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive. Se si utilizzano le restrizioni degli indirizzi IP, è necessario riprogettare la soluzione per la creazione di report prima di procedere alla migrazione o utilizzare una tecnologia quale un firewall, un router o la conversione degli indirizzi di rete (NAT, Network Address Translation) per configurare indirizzi che non possono accedere al server di report.  
   
-* I certificati SSL (Secure Sockets Layer) client non sono supportati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive. Se si utilizzano certificati SSL client, è necessario riprogettare la soluzione per la creazione di report prima di procedere alla migrazione.  
+* I certificati Transport Layer Security (TLS), noti in precedenza come Secure Sockets Layer (SSL), non sono supportati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive. Se si usano certificati TLS client, è necessario riprogettare la soluzione per la creazione di report prima di procedere alla migrazione.  
   
 * Se si usa un tipo di autenticazione diverso dall'autenticazione integrata di Windows, è necessario aggiornare l'elemento `<AuthenticationTypes>` nel file **RSReportServer.config** con un tipo di autenticazione supportato. I tipi di autenticazione supportati sono NTLM, Kerberos, Negotiate e Basic. Le autenticazioni anonime, .NET Passport e Digest non sono supportate in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive.  
   
@@ -215,7 +215,7 @@ Per altre informazioni sulle modifiche apportate in SQL Server Reporting Service
   
     1. [Distribuzione di un assembly personalizzato](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Procedura: Distribuzione di un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Procedura: Distribuire un elemento del report personalizzato](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Distribuzione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   

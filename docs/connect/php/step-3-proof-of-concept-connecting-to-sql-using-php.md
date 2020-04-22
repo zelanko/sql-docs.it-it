@@ -1,5 +1,6 @@
 ---
-title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP | Microsoft Docs'
+title: 'Passaggio 3: Connessione a SQL tramite PHP'
+description: Il passaggio 3 è un modello di prova che illustra come è possibile connettersi a SQL Server usando PHP. Gli esempi di base illustrano la selezione e l'inserimento dei dati.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926859"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528585"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,8 +80,7 @@ Per recuperare un set di risultati di una query sul database SQL è possibile us
   
 ## <a name="step-3--insert-a-row"></a>Passaggio 3:  Inserire una riga  
   
-Questo esempio illustra come eseguire un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) in modo sicuro e come passare i parametri che proteggono l'applicazione da attacchi [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
-  
+Questo esempio spiega come eseguire in modo sicuro un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) e passare i parametri. I valori di parametro proteggono l'applicazione dagli [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ Questo esempio illustra come eseguire un'istruzione [INSERT](../../t-sql/stateme
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Passaggio 4:  Eseguire il rollback di una transazione  
+## <a name="step-4--roll-back-a-transaction"></a>Passaggio 4:  Eseguire il rollback di una transazione  
   
   
 Questo esempio di codice illustra l'uso di transazioni con le operazioni seguenti:  
@@ -118,7 +118,7 @@ Questo esempio di codice illustra l'uso di transazioni con le operazioni seguent
   
 -Inserimento di una riga di dati, aggiornamento di un'altra riga di dati  
   
--Commit della transazione se l'inserimento e l'aggiornamento vengono eseguiti correttamente e il rollback della transazione se una di tali operazioni non è riuscita  
+-Commit della transazione se l'inserimento e l'aggiornamento vengono eseguiti correttamente e rollback della transazione se una di tali operazioni non è riuscita  
   
   
 ```php 

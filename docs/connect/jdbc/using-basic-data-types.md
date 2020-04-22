@@ -1,5 +1,6 @@
 ---
-title: Uso di tipi di dati di base | Microsoft Docs
+title: Uso di tipi di dati di base JDBC
+description: Microsoft JDBC driver per SQL Server usa i tipi di dati JDBC di base per convertire i tipi di dati SQL Server in un formato che può essere riconosciuto da Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4608bd48607244c50e7d6fd03b74919448fa074
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924071"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625564"
 ---
 # <a name="using-basic-data-types"></a>Uso di tipi di dati di base
 
@@ -68,37 +69,37 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
   
 (1) Per usare java.sql.Time con il tipo time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario impostare la proprietà di connessione **sendTimeAsDatetime** su false.  
   
-(2) È possibile accedere a livello di codice ai valori di **datetimeoffset** con la [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) È possibile accedere a livello di codice ai valori di **datetimeoffset** con la [classe DateTimeOffset](reference/datetimeoffset-class.md).  
   
-Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati di base. Per un esempio più dettagliato dell'utilizzo dei tipi di dati di base in un'applicazione Java, vedere [Esempio di tipi di dati di base](../../connect/jdbc/basic-data-types-sample.md).  
+Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati di base. Per un esempio più dettagliato dell'utilizzo dei tipi di dati di base in un'applicazione Java, vedere [Esempio di tipi di dati di base](basic-data-types-sample.md).  
   
 ## <a name="retrieving-data-as-a-string"></a>Recupero di dati in forma di stringa
 
-Se è necessario recuperare dati da un'origine dati con mapping a uno qualsiasi dei tipi di dati JDBC di base, per visualizzarli come stringa, o se non sono richiesti dati fortemente tipizzati, è possibile usare il metodo [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) della classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), come nell'esempio seguente:  
+Se è necessario recuperare dati da un'origine dati con mapping a uno qualsiasi dei tipi di dati JDBC di base, per visualizzarli come stringa, o se non sono richiesti dati fortemente tipizzati, è possibile usare il metodo [getString](reference/getstring-method-sqlserverresultset.md) della classe [SQLServerResultSet](reference/sqlserverresultset-class.md), come nell'esempio seguente:  
   
-[!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
+[!code[JDBC#UsingBasicDataTypes1](codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>Recupero di dati per tipo di dati
 
 Se è necessario recuperare dati di cui si conosce il tipo da un'origine dati, usare uno dei metodi get\<Type> della classe SQLServerResultSet, noti anche come *metodi getter*. Con i metodi get\<Type> è possibile usare un nome o un indice di colonna, come nell'esempio seguente:  
   
-[!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
+[!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
 > I metodi con scala getUnicodeStream e getBigDecimal sono deprecati e non sono supportati dal driver JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Aggiornamento di dati per tipo di dati
 
-Se è necessario aggiornare il valore di un campo in un'origine dati, usare uno dei metodi update\<Type> della classe SQLServerResultSet. Nell'esempio seguente il metodo [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) viene usato insieme al metodo [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) per aggiornare i dati nell'origine dati:  
+Se è necessario aggiornare il valore di un campo in un'origine dati, usare uno dei metodi update\<Type> della classe SQLServerResultSet. Nell'esempio seguente il metodo [updateInt](reference/updateint-method-sqlserverresultset.md) viene usato insieme al metodo [updateRow](reference/updaterow-method-sqlserverresultset.md) per aggiornare i dati nell'origine dati:  
   
-[!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
+[!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
 > [!NOTE]  
 > Il driver JDBC non è in grado di aggiornare una colonna SQL Server il cui nome contiene più di 127 caratteri. Se si tenta di aggiornare una colonna il cui nome contiene più di 127 caratteri, verrà generata un'eccezione.  
   
 ## <a name="updating-data-by-parameterized-query"></a>Aggiornamento di dati mediante query con parametri
 
-Se è necessario aggiornare dati in un'origine dati usando una query con parametri, è possibile impostare il tipo di dati dei parametri usando uno dei metodi set\<Type> della classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), noti anche come *metodi setter*. Nell'esempio seguente viene usato il metodo [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) per precompilare la query con parametri, quindi viene usato il metodo [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) per impostare il valore stringa del parametro prima di chiamare il metodo [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md).  
+Se è necessario aggiornare dati in un'origine dati usando una query con parametri, è possibile impostare il tipo di dati dei parametri usando uno dei metodi set\<Type> della classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), noti anche come *metodi setter*. Nell'esempio seguente viene usato il metodo [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) per precompilare la query con parametri, quindi viene usato il metodo [setString](reference/setstring-method-sqlserverpreparedstatement.md) per impostare il valore stringa del parametro prima di chiamare il metodo [executeUpdate](reference/executeupdate-method.md).  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   

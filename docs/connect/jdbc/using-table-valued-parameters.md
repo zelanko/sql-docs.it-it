@@ -1,5 +1,6 @@
 ---
-title: Utilizzo dei parametri con valori di tabella | Microsoft Docs
+title: Uso di parametri con valori di tabella
+description: I parametri con valori di tabella rappresentano un modo efficiente per inviare più righe di dati da un client a SQL Server in un singolo comando con parametri.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a4a46120991400f8e76c91e8a0e9b00ada2eac0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923856"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631941"
 ---
 # <a name="using-table-valued-parameters"></a>Uso di parametri con valori di tabella
 
@@ -48,7 +49,7 @@ Prima dell'introduzione dei parametri con valori di tabella in SQL Server 2008, 
   
 - Creare una serie di singole istruzioni SQL per le modifiche ai dati che interessano più righe. È possibile inviare le modifiche al server singolarmente o in batch in gruppi. Tuttavia, anche in caso di invio in batch contenenti più istruzioni, ogni istruzione viene eseguita separatamente sul server.  
   
-- Usare il programma di utilità bcp o [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) per caricare molte righe di dati in una tabella. Sebbene questa tecnica sia molto efficiente, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.
+- Usare il programma di utilità bcp o [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) per caricare molte righe di dati in una tabella. Sebbene questa tecnica sia molto efficiente, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione dei tipi di parametro con valori di tabella  
 
@@ -314,4 +315,4 @@ A questa classe sono stati aggiunti i metodi seguenti per supportare il passaggi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica del driver JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Panoramica del driver JDBC](overview-of-the-jdbc-driver.md)  

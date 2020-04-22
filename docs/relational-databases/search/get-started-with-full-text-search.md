@@ -1,6 +1,6 @@
 ---
 title: Introduzione alla ricerca full-text | Microsoft Docs
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903829"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288223"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ Per configurare la ricerca full-text con una procedura guidata, vedere [Usare l'
 2.  Prima di creare un indice full-text nella tabella Document, assicurarsi che la tabella disponga di un indice univoco a singola colonna che non ammette valori Null. L'istruzione [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) seguente consente di creare un indice univoco, `ui_ukDoc`, nella colonna DocumentID della tabella Document:  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  Quando si dispone di una chiave univoca, è possibile creare un indice full-text nella tabella `Document` usando l'istruzione [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) seguente.  
+3.  Eliminare l'indice full-text esistente nella tabella `Document` usando l'istruzione [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) seguente. 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  Quando si dispone di una chiave univoca, è possibile creare un indice full-text nella tabella `Document` usando l'istruzione [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) seguente.  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ Per configurare la ricerca full-text con una procedura guidata, vedere [Usare l'
     GO  
   
     ```  
+    
+  
   
      L'elemento TYPE COLUMN definito in questo esempio specifica la colonna del tipo nella tabella che contiene il tipo di documento in ciascuna riga della colonna 'Document' (che è di tipo binario). Nella colonna del tipo è archiviata l'estensione di file fornita dall'utente, ovvero "doc", "xls" e così via, del documento in una determinata riga. Il motore di ricerca full-text utilizza l'estensione file in una determinata riga per richiamare il filtro corretto da utilizzare per l'analisi dei dati di quella riga. Al termine dell'analisi dei dati binari della riga eseguita tramite il filtro, il word breaker specificato analizzerà il contenuto. In questo esempio viene usato il word breaker per l'Inglese britannico. Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
 

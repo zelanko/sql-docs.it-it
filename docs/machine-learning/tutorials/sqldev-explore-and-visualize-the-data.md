@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116104"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632111"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lezione 1: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ Nel set di dati pubblico originale gli identificatori di taxi e i record delle c
 > A partire da SQL Server 2019, il meccanismo di isolamento è stato modificato. È quindi necessario assegnare le autorizzazioni appropriate alla directory in cui è archiviato il file del tracciato. Per altre informazioni su come impostare queste autorizzazioni, vedere [la sezione Autorizzazioni per i file in SQL Server 2019 in Windows: Modifiche al meccanismo di isolamento per Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Per creare il tracciato, usare [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), una delle funzioni R avanzate disponibili in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Questo passaggio traccia un istogramma in base ai dati di una query [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile eseguire il wrapping di questa funzione in una stored procedure, **PlotRxHistogram**.
+Per creare il tracciato, usare [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), una delle funzioni R avanzate disponibili in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Questo passaggio traccia un istogramma in base ai dati di una query [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile eseguire il wrapping di questa funzione in una stored procedure, **RxPlotHistogram**.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Esplora oggetti fare clic con il pulsante destro del mouse sul database **NYCTaxi_Sample** e scegliere **Nuova query**.
 
-2. Incollare lo script seguente per creare una stored procedure che traccia l'istogramma. L'esempio è denominato **RPlotRxHistogram*.
+2. Incollare lo script seguente per creare una stored procedure che traccia l'istogramma. L'esempio è denominato **RxPlotHistogram**.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

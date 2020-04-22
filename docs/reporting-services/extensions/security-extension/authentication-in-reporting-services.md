@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193859"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488587"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticazione in Reporting Services
   L'autenticazione è il processo di determinazione del diritto di un utente a un'identità. Per autenticare un utente sono disponibili numerose tecniche. La più comune consiste nell'utilizzo di password. Quando si implementa l'autenticazione basata su form, ad esempio, si sceglie un'implementazione che richiede le credenziali agli utenti (generalmente tramite un'interfaccia in cui vengono richiesti un nome di accesso e una password), quindi si convalidano gli utenti in base a un archivio dati, ad esempio una tabella di database o un file di configurazione. Se non è possibile convalidare le credenziali, il processo di autenticazione non riesce e all'utente viene assegnata un'identità anonima.  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  Quando un utente viene correttamente autenticato dal servizio Web tramite l'estensione di sicurezza, viene generato un cookie utilizzato per le richieste successive. Il cookie non può essere reso persistente nell'autorità di sicurezza personalizzata perché il server di report non possiede l'autorità di sicurezza. Il cookie viene restituito dal metodo del servizio Web <xref:ReportService2010.ReportingService2010.LogonUser%2A> e viene utilizzato nelle successive chiamate al metodo del servizio Web e nell'accesso con URL.  
   
 > [!NOTE]  
->  Per evitare di compromettere il cookie durante la trasmissione, i cookie di autenticazione restituiti da <xref:ReportService2010.ReportingService2010.LogonUser%2A> devono essere trasmessi in modo protetto utilizzando la crittografia SSL (Secure Sockets Layer).  
+>  Per evitare di compromettere il cookie durante la trasmissione, i cookie di autenticazione restituiti da <xref:ReportService2010.ReportingService2010.LogonUser%2A> devono essere trasmessi in modo protetto usando la crittografia TLS (Transport Layer Security), protocollo precedentemente noto come SSL (Secure Sockets Layer).  
   
  Se si accede al server di report tramite accesso con URL quando un'estensione di sicurezza personalizzata è installata, Internet Information Services (IIS) e [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] gestiscono automaticamente la trasmissione del ticket di autenticazione. Se si accede al server di report tramite l'API SOAP, l'implementazione della classe proxy deve includere supporto aggiuntivo per la gestione del ticket di autenticazione. Per ulteriori informazioni sull'utilizzo dell'API SOAP e sulla gestione del ticket di autenticazione, vedere "Utilizzo del servizio Web con la sicurezza personalizzata".  
   
 ## <a name="forms-authentication"></a>Autenticazione basata su form  
  L'autenticazione basata su form è un tipo di autenticazione di [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] con la quale un utente non autenticato viene indirizzato a un form HTML. Dopo che l'utente ha fornito le credenziali, il sistema produce un cookie contenente un ticket di autenticazione. In occasione delle richieste successive, il sistema controlla innanzitutto il cookie per verificare se l'utente è già stato autenticato dal server di report.  
   
- È possibile estendere [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per supportare l'autenticazione basata su form utilizzando le interfacce di estendibilità della sicurezza disponibili tramite l'API di Reporting Services. Se si estende [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per l'utilizzo dell'autenticazione basata su form, utilizzare SSL (Secure Sockets Layer) per tutte le comunicazioni con il server di report per impedire a utenti malintenzionati di accedere al cookie di un altro utente. SSL consente ai client e a un server di report di autenticarsi a vicenda per garantire che il contenuto delle comunicazioni tra i due computer non possa essere letto da nessun altro computer. Tutti i dati inviati da un client tramite una connessione SSL vengono crittografati in modo che gli utenti malintenzionati non possano intercettare le password o i dati inviati a un server di report.  
+ È possibile estendere [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per supportare l'autenticazione basata su form utilizzando le interfacce di estendibilità della sicurezza disponibili tramite l'API di Reporting Services. Se si estende [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per l'utilizzo dell'autenticazione basata su moduli, usare TLS (Transport Layer Security), protocollo precedentemente noto come SSL (Secure Sockets Layer), per tutte le comunicazioni con il server di report per impedire a utenti malintenzionati di accedere al cookie di un altro utente. TLS consente ai client e a un server di report di autenticarsi a vicenda per assicurare che il contenuto delle comunicazioni tra i due computer non possa essere letto da nessun altro computer. Tutti i dati inviati da un client tramite una connessione TLS vengono crittografati in modo che gli utenti malintenzionati non possano intercettare le password o i dati inviati a un server di report.  
   
  L'autenticazione basata su form viene in genere implementata per supportare account e autenticazione per piattaforme diverse da Windows. Quando un utente richiede l'accesso a un server di report, viene visualizzata un'interfaccia grafica e le credenziali fornite vengono inviate a un'autorità di sicurezza per l'autenticazione.  
   

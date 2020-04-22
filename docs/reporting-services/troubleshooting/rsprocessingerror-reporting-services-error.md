@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError - Errore di Reporting Services | Microsoft Docs
+description: "Questa pagina di riferimento degli errori contiene informazioni sull'ID evento \"rsProcessingError\": Si sono verificati errori durante l'elaborazione del report SQL Server Reporting Services."
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573817"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487220"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Errore di Reporting Services
     
@@ -53,7 +54,7 @@ ms.locfileid: "65573817"
   
 -   Un parametro la cui proprietà che ammette i valori Null è impostata su **False** ha rilevato un valore Null nel parametro.  
   
--   Un'espressione relativa alla proprietà Hidden di un'area dati contiene il seguente errore: "Riferimento oggetto non impostato su un'istanza di un oggetto".  
+-   Un'espressione relativa alla proprietà Hidden di un'area dati contiene un errore: Riferimento oggetto non impostato su un'istanza di oggetto.  
   
 -   Un'espressione ha incluso una chiamata di funzione non valida oppure un errore di sintassi.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "65573817"
  Il valore di un parametro multivalore non può essere Null. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Impossibile elaborare un report principale con sottoreport  
- È necessario che un report con sottoreport venga elaborato dalla stessa versione di Elaborazione report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante l'aggiornamento di report alla versione corrente dello schema di definizione del report, è possibile che il report principale e i sottoreport non vengano aggiornati contemporaneamente. Se la versione di un report non è compatibile con quella dei sottoreport, viene visualizzato un messaggio di errore che indica l'impossibilità di elaborare il sottoreport.  
+ È necessario che un report con sottoreport venga elaborato dalla stessa versione di Elaborazione report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante l'aggiornamento di report alla versione corrente dello schema di definizione del report, è possibile che il report principale e i sottoreport non vengano aggiornati contemporaneamente. Se la versione di un report non è compatibile con quella dei sottoreport, viene visualizzato il messaggio seguente: "Impossibile elaborare il sottoreport."  
   
  È necessario modificare il report principale o i sottoreport in modo che tutti i report possano essere elaborati dalla stessa versione di Elaborazione report. Per informazioni sui motivi relativi all'impossibilità di aggiornare un report, vedere [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md).  
   

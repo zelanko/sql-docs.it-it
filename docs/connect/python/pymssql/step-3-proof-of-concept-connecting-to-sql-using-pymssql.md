@@ -1,5 +1,6 @@
 ---
-title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite pymssql | Microsoft Docs'
+title: 'Passaggio 3: Connessione a SQL tramite pymssql'
+description: Il passaggio 3 è un modello di prova che illustra come è possibile connettersi a SQL Server usando Python e pymssql. Gli esempi di base illustrano la selezione e l'inserimento dei dati.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913098"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528565"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Passaggio 3: Modello di verifica per la connessione a SQL con pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -34,7 +35,7 @@ Per connettersi al database SQL viene usata la funzione [pymssql.connect](https:
   
 ## <a name="step-2--execute-query"></a>Passaggio 2:  Eseguire la query  
   
-Per recuperare un set di risultati di una query sul database SQL è possibile usare la funzione [cursor.execute](https://pypi.org/project/pymssql/) . Questa funzione accetta essenzialmente qualsiasi query e restituisce un set di risultati su cui è possibile eseguire l'iterazione mediante [cursor.fetchone()](https://pypi.org/project/pymssql/).  
+Per recuperare un set di risultati di una query sul database SQL è possibile usare la funzione [cursor.execute](https://pypi.org/project/pymssql/) . Questa funzione accetta essenzialmente qualsiasi query e restituisce un set di risultati su cui è possibile eseguire l'iterazione usando [cursor.fetchone()](https://pypi.org/project/pymssql/).  
   
   
 ```python
@@ -50,7 +51,7 @@ Per recuperare un set di risultati di una query sul database SQL è possibile us
   
 ## <a name="step-3--insert-a-row"></a>Passaggio 3:  Inserire una riga  
   
-Questo esempio illustra come eseguire un'istruzione [INSERT](../../../t-sql/statements/insert-transact-sql.md) in modo sicuro e come passare i parametri che proteggono l'applicazione da attacchi [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Questo esempio spiega come eseguire in modo sicuro un'istruzione [INSERT](../../../t-sql/statements/insert-transact-sql.md) e passare i parametri. Il passaggio di parametri come valori protegge l'applicazione dagli [attacchi SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
   
 ```python
@@ -66,7 +67,7 @@ Questo esempio illustra come eseguire un'istruzione [INSERT](../../../t-sql/stat
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Passaggio 4:  Eseguire il rollback di una transazione  
+## <a name="step-4-roll-back-a-transaction"></a>Passaggio 4: Eseguire il rollback di una transazione  
   
 Questo esempio di codice illustra l'uso di transazioni con le operazioni seguenti:  
   

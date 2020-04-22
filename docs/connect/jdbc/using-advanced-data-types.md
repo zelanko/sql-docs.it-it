@@ -1,5 +1,6 @@
 ---
-title: Uso di tipi di dati avanzati | Microsoft Docs
+title: Uso di tipi di dati avanzati
+description: Informazioni su come usare i tipi di dati avanzati JDBC per eseguire la conversione dei tipi di dati SQL Server in tipi di dati Java tramite Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924080"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528725"
 ---
 # <a name="using-advanced-data-types"></a>Uso di tipi di dati avanzati
 
@@ -148,7 +149,7 @@ Per ulteriori informazioni sui tipi per valori di grandi dimensioni, vedere la s
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile il tipo di dati **xml**, che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come accade con gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, come tipo di parametro o come tipo restituito da una funzione oppure nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST e CONVERT.  
   
-Nel driver JDBC, è possibile eseguire il mapping del tipo di dati **xml** come stringa, matrice di byte, flusso o oggetto CLOB, BLOB o SQLXML. Il mapping predefinito è come stringa. A partire da Microsoft JDBC Driver versione 2.0, il driver JDBC offre il supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il tipo di dati **SQLXML** viene mappato sul tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml**. Per altre informazioni su come leggere e scrivere dati XML da e in un database relazionale con il tipo di dati Java **SQLXML**, vedere [Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md).  
+Nel driver JDBC, è possibile eseguire il mapping del tipo di dati **xml** come stringa, matrice di byte, flusso o oggetto CLOB, BLOB o SQLXML. Il mapping predefinito è come stringa. A partire da Microsoft JDBC Driver versione 2.0, il driver JDBC offre il supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il tipo di dati **SQLXML** corrisponde al tipo di dati **xml** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni su come leggere e scrivere dati XML da e in un database relazionale con il tipo di dati Java **SQLXML**, vedere [Supporto dei dati XML](../../connect/jdbc/supporting-xml-data.md).  
   
 L'implementazione del tipo di dati **xml** nel driver JDBC consente di supportare quanto segue:  
   

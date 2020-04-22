@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c5e66e7ff2b36cd63acb4d05b6503f0bbc33a4a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078779"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528745"
 ---
 # <a name="replication-security-best-practices"></a>Procedure consigliate per la sicurezza della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "68078779"
   
  Le informazioni seguenti sono applicabili alla replica in qualsiasi ambiente:  
   
--   Crittografare le connessioni tra computer in una topologia di replica utilizzano un metodo standard, ad esempio le reti private virtuali (VPN, Virtual Private Network), la crittografia SSL (Secure Sockets Layer) o lo standard IPSec (Internet Protocol Security). Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Per informazioni sull'utilizzo di reti VPN e del protocollo SSL per la replica di dati su Internet, vedere [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
+-   Crittografare le connessioni tra computer in una topologia di replica usando un metodo standard, ad esempio le reti private virtuali (VPN, Virtual Private Network), TLS (Transport Layer Security), noto in precedenza come SSL (Secure Sockets Layer) o lo standard di sicurezza IP (IPSec). Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Per informazioni sull'uso di reti VPN e del protocollo TLS per la replica di dati su Internet, vedere [Protezione della replica su Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
   
-     Se si usa SSL per proteggere le connessioni tra computer in una topologia di replica, specificare un valore pari a **1** o **2** per il parametro **-EncryptionLevel** di ogni agente di replica. È consigliabile usare un valore pari a **2** . Un valore pari a **1** indica che è utilizzata la crittografia, ma l'agente non verifica che il certificato SSL del server sia firmato da un'autorità emittente attendibile; un valore pari a **2** indica che il certificato viene verificato. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
+     Se si usa TLS per proteggere le connessioni tra computer in una topologia di replica, specificare un valore pari a **1** o **2** per il parametro **-EncryptionLevel** di ogni agente di replica. È consigliabile usare un valore pari a **2**. Un valore pari a **1** indica che viene usata la crittografia, ma l'agente non verifica che il certificato TLS/SSL del server sia firmato da un'autorità di certificazione attendibile; un valore pari a **2** indica che il certificato viene verificato. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
     -   [Usare i profili agenti di replica](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

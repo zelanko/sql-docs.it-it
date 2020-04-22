@@ -15,12 +15,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91277deb1aab5916f23d52fed3f8d8f0530b6fab
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285722"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529113"
 ---
 # <a name="replication-programming-concepts"></a>Concetti di base relativi alla programmazione della replica
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "76285722"
   
 2.  Oltre all'accesso ai dati tipico richiesto per un'applicazione di vendita, questa applicazione deve consentire a un venditore di sincronizzare la sottoscrizione pull su richiesta facendo clic su un pulsante. Dopo aver installato ed eseguito l'applicazione, i rappresentanti dovranno inoltre essere in grado di configurare una sottoscrizione e applicare lo snapshot iniziale al client. L'applicazione utilizzerà eventualmente l'infrastruttura fornita da Windows per individuare la connettività wireless e per sincronizzare automaticamente la sottoscrizione nel momento in cui viene rilevata una connessione.  
   
-3.  Seguire tutte le linee guida per la sicurezza della replica, incluso l'utilizzo dell'autenticazione di Windows e di una rete privata virtuale (VPN, Virtual Private Network) per la connessione al server di pubblicazione. In caso di implementazione della sincronizzazione Web, utilizzare una connessione SSL (Secure Sockets Layer). Per altre informazioni, vedere [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Seguire tutte le linee guida per la sicurezza della replica, incluso l'utilizzo dell'autenticazione di Windows e di una rete privata virtuale (VPN, Virtual Private Network) per la connessione al server di pubblicazione. Se si implementa la sincronizzazione Web, usare una connessione tramite protocollo TLS (Transport Layer Security), noto in precedenza come SSL (Secure Sockets Layer). Per altre informazioni, vedere [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  Per sfruttare le caratteristiche offerte da [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], l'applicazione viene sviluppata utilizzando un linguaggio di codice gestito.  
   

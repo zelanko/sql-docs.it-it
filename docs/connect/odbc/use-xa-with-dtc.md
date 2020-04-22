@@ -1,5 +1,6 @@
 ---
-title: Uso di XA con Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Uso di XA con Microsoft ODBC Driver
+description: Microsoft ODBC Driver for SQL Server offre il supporto per le transazioni XA con il controllo DTC (Distributed Transaction Coordinator) in Windows, Linux e macOS.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fc73cec066671c70699b4baa1dc75d249b1860c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544922"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635546"
 ---
 # <a name="using-xa-transactions"></a>Uso delle transazioni XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "77544922"
 
 ## <a name="overview"></a>Panoramica
 
-Microsoft ODBC Driver for SQL Server a partire dalla versione 17.3 offre il supporto per le transazioni XA con il controllo DTC (Distributed Transaction Coordinator) in Windows, Linux e Mac. L'implementazione XA sul lato driver consente all'applicazione client di inviare alla gestione delle transazioni operazioni seriali, ad esempio avvio, commit, rollback di un ramo di transazione e così via. Quindi il servizio di gestione delle transazioni comunicherà con Resource Manager in base a queste operazioni. Per altre informazioni sulla specifica XA e sull'implementazione Microsoft per il controllo DTC (MS DTC), vedere l'argomento relativo al [funzionamento del controllo DTV di SQL Server (transazioni MSDTC e XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Microsoft ODBC Driver for SQL Server a partire dalla versione 17.3 offre il supporto per le transazioni XA con il controllo DTC (Distributed Transaction Coordinator) in Windows, Linux e macOS. L'implementazione XA sul lato driver consente all'applicazione client di inviare alla gestione delle transazioni operazioni seriali, ad esempio avvio, commit, rollback di un ramo di transazione e così via. Quindi il servizio di gestione delle transazioni comunicherà con Resource Manager in base a queste operazioni. Per altre informazioni sulla specifica XA e sull'implementazione Microsoft per il controllo DTC (MS DTC), vedere l'argomento relativo al [funzionamento del controllo DTV di SQL Server (transazioni MSDTC e XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
 
 
 
@@ -49,16 +50,16 @@ typedef struct XACallParam {
 Dimensione della struttura `XACALLPARAM`. Sono escluse le dimensioni dei dati che seguono `XACALLPARAM`.
 
 *operation*  
-Operazione XA da passare alla gestione delle transazioni. Le operazioni possibili sono definite in [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Operazione XA da passare alla gestione delle transazioni. Le operazioni possibili sono definite in [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *xid*  
 Identificatore del ramo di transazione.
 
 *flags*  
-Flag associati alla richiesta per la gestione delle transazioni. I valori possibili sono definiti in [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Flag associati alla richiesta per la gestione delle transazioni. I valori possibili sono definiti in [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *Stato*  
-Stato restituito dalla gestione delle transazioni. Per informazioni sui possibili stati restituiti, vedere il file di intestazione [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Stato restituito dalla gestione delle transazioni. Per informazioni sui possibili stati restituiti, vedere il file di intestazione [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *sizeData*  
 Dimensione del buffer dei dati dopo `XACALLPARAM`. 
@@ -75,7 +76,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Codice di esempio 
 
-Nell'esempio seguente viene illustrato come comunicare con la gestione delle transazioni per le transazioni XA ed eseguire diverse operazioni da un'applicazione client. Se il test viene eseguito in Microsoft SQL Server, MS DTC deve essere configurato correttamente per abilitare le transazioni XA. Le definizioni XA sono disponibili nel file di intestazione [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh). 
+Nell'esempio seguente viene illustrato come comunicare con la gestione delle transazioni per le transazioni XA ed eseguire diverse operazioni da un'applicazione client. Se il test viene eseguito in Microsoft SQL Server, MS DTC deve essere configurato correttamente per abilitare le transazioni XA. Le definizioni XA sono disponibili nel file di intestazione [xadefs.h](#xadefsh). 
 
 ```
 

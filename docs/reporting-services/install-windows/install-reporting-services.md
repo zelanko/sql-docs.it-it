@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77429052"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486820"
 ---
 # <a name="install-sql-server-reporting-services"></a>Installare SQL Server Reporting Services
 
@@ -95,7 +95,7 @@ Le prenotazioni URL sono composte da un prefisso, un nome host, una porta e una 
 
 |Parte|Descrizione|
 |----------|-----------------|
-|Prefisso|Il prefisso predefinito è HTTP. Se in precedenza è stato installato un certificato SSL (Secure Sockets Layer), il programma di installazione tenta di creare prenotazioni URL che usano il prefisso HTTPS.|
+|Prefisso|Il prefisso predefinito è HTTP. Se in precedenza è stato installato un certificato TLS (Transport Layer Security), protocollo precedentemente noto come SSL (Secure Sockets Layer), il programma di installazione tenta di creare prenotazioni URL che usano il prefisso HTTPS.|
 |Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetta le richieste HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui `https://<computername>/reportserver`, `https://localhost/reportserver`, o `https://<IPAddress>/reportserver.`|
 |Porta|La porta predefinita è 80. Se si usa un numero di porta diverso da 80, sarà necessario aggiungerlo in modo esplicito all'URL quando si apre il portale Web in una finestra del browser.|
 |Directory virtuale|Per impostazione predefinita, le directory virtuali vengono create nel formato ReportServer per il servizio Web ReportServer e Reports per il portale Web. Per il servizio Web ReportServer, la directory virtuale predefinita è **reportserver**. Per il portale Web, la directory virtuale predefinita è **reports**.|

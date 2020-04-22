@@ -1,5 +1,6 @@
 ---
-title: "Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Ruby | Microsoft Docs"
+title: "Passaggio 1: Configurare l'ambiente di sviluppo per Ruby"
+description: Informazioni su come configurare l'ambiente di sviluppo per Ruby.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,35 +11,35 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ce61e3fb360d4c8a4db8f717f10b7d107245300
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926733"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634587"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Ruby
 È necessario configurare l'ambiente di sviluppo con i prerequisiti per sviluppare un'applicazione che usa il driver Ruby per SQL Server.    
   
-Si noti che il driver Ruby usa il protocollo TDS che è abilitato per impostazione predefinita in SQL Server e nel database SQL di Azure.  Non è richiesta alcuna configurazione aggiuntiva.  
+Il driver Ruby usa il protocollo TDS che è abilitato per impostazione predefinita in SQL Server e nel database SQL di Azure.  Non è richiesta alcuna configurazione aggiuntiva.  
   
   
 ## <a name="windows"></a>Windows  
   
 1.  **Scaricare il programma di installazione di Ruby**  
-Se nel computer non è installato Ruby, installarlo. Per i nuovi utenti di Ruby, si consiglia di usare i programmi di installazione di Ruby 2.2.X. Questi programmi offrono un linguaggio stabile e un elenco di pacchetti completo (gemme) compatibili e aggiornati. Passare alla [pagina di download di Ruby](https://rubyinstaller.org/downloads/) e scaricare il programma di installazione 2.1.x appropriato. Ad esempio, se si usa un computer a 64 bit, scaricare il programma di installazione di Ruby 2.1.6 (x64).   
+Se nel computer non è installato Ruby, installarlo. Per i nuovi utenti Ruby, è consigliabile usare i programmi di installazione Ruby 2.2.X, che offrono un linguaggio stabile e un elenco completo di pacchetti (gem) compatibili e aggiornati. Passare alla [pagina di download di Ruby](https://rubyinstaller.org/downloads/) e scaricare il programma di installazione 2.1.x appropriato. Se ad esempio si usa un computer a 64 bit, scaricare il programma di installazione di Ruby 2.1.6 (x64).   
   
 2.  **Installare Ruby**  
-Dopo aver scaricato il programma di installazione, seguire questa procedura:  
+Dopo aver scaricato il programma di installazione:  
 a. Fare doppio clic sul file per avviare il programma di installazione.  
 b. Selezionare la lingua e accettare le condizioni.  
-c.  Nella schermata delle impostazioni di installazione selezionare le caselle di controllo accanto ad Add Ruby executables to your PATH (Aggiungi gli eseguibili Ruby a PATH) e Associate .rb and .rbw files with this Ruby installation (Associa i file con estensione rb e rbw a questa installazione di Ruby).  
+c.  Nella schermata delle impostazioni di installazione selezionare le caselle di controllo accanto ad Add Ruby executables to your PATH (Aggiungi gli eseguibili Ruby a PATH) e Associate `.rb` and `.rbw` files with this Ruby installation (Associa i file con estensione rb e rbw a questa installazione di Ruby).  
   
 3.  **Scaricare il kit di sviluppo di Ruby**  
 Scaricare il kit di sviluppo dalla pagina del programma di installazione di Ruby  
   
 4.  **Installare il kit di sviluppo di Ruby**  
-Al termine del download, eseguire le operazioni seguenti:  
+Al termine del download:  
 a. Fare doppio clic sul file. Verrà richiesto di specificare la posizione in cui estrarre i file.  
 b. Fare clic sul pulsante "..." e selezionare "C:\DevKit". È probabile che sia necessario creare prima questa cartella facendo clic su "Crea nuova cartella".  
 c. Fare clic su "OK" e quindi su "Extract" (Estrai) per estrarre i file.  
@@ -61,7 +62,7 @@ c. Fare clic su "OK" e quindi su "Extract" (Estrai) per estrarre i file.
   
 1. **Aprire il terminale**  
   
-2. **Installare Ruby Version Manager (rvm) e i prerequisiti**  
+2. **Installare Ruby Version Manager (`rvm`) e i prerequisiti**  
 ```  
 > sudo apt-get --assume-yes update  
 > command curl -sSL https://rvm.io/mpapis.asc | gpg --import -  
@@ -69,7 +70,7 @@ c. Fare clic su "OK" e quindi su "Extract" (Estrai) per estrarre i file.
 > source ~/.rvm/scripts/rvm  
 ```  
    
-3. **Usare rvm per installare Ruby**  
+3. **Usare `rvm` per installare Ruby**  
 Ad esempio, installare la versione 2.3.0 di Ruby:  
 ```  
 > rvm install 2.3.0  
@@ -88,9 +89,9 @@ Ad esempio, installare la versione 2.3.0 di Ruby:
 > gem install tiny_tds  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-Si noti che in Mac OS X è già preinstallato Ruby poiché il sistema operativo ha una dipendenza.    
+Nota: in macOS è già preinstallato Ruby poiché il sistema operativo ha una dipendenza.
   
 1.  **Aprire il terminale**  
   

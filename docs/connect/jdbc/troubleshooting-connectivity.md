@@ -1,5 +1,6 @@
 ---
-title: Risoluzione dei problemi di connettività | Microsoft Docs
+title: Risoluzione dei problemi di connettività
+description: Informazioni sulla connettività JDBC e su come risolvere i potenziali problemi di connessione quando si usa Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ef0a0e1a261996c71b3b75add30ee2f28899484
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928112"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528335"
 ---
 # <a name="troubleshooting-connectivity"></a>Risoluzione dei problemi di connettività
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

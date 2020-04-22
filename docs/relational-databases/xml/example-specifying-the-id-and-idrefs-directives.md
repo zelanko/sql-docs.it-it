@@ -1,5 +1,6 @@
 ---
-title: 'Esempio: specifica delle direttive ID e IDREFS | Microsoft Docs'
+title: 'Esempio: Specifica delle direttive ID e IDREFS | Microsoft Docs'
+description: Informazioni su come la specifica delle direttive ID e IDREFS in una query SQL può abilitare i collegamenti all'interno del documento.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 29468af968f8e4ffd92e52258b12eb4aece3793b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2a05de3b0fbdec71ec15f221158dc9f2e362da8f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662982"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388661"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>Esempio: specifica delle direttive ID, IDREFS
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Esempio: Specifica delle direttive ID e IDREFS
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 

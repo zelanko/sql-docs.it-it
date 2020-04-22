@@ -1,5 +1,6 @@
 ---
-title: Risorse di supporto dei driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Risorse di supporto dei driver Microsoft per PHP
+description: Risorse utili per lo sviluppo di applicazioni che usano i driver Microsoft per PHP per SQL Server.
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 111700744e046547f43e88fbd02a214438a6b397
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff0627dc43a0004534294158c1a43c6c1c21b529
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926879"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635336"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Risorse di supporto dei driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,13 +26,13 @@ ms.locfileid: "80926879"
 Questo argomento contiene risorse che possono risultare utili per sviluppare applicazioni che usano i [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="ssdriverphp-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Risorse di supporto  
-Per la documentazione più recente, vedere [Microsoft PHP Driver per SQL Server](../../connect/php/microsoft-php-driver-for-sql-server.md) per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Per la documentazione più recente, vedere [Microsoft PHP Driver per SQL Server](microsoft-php-driver-for-sql-server.md) per [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Per il supporto peer-to-peer, visitare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]forum[ di ](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
+Per il supporto peer-to-peer, visitare il [forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp) di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Per inviare feedback, porre domande o sapere di che cosa si sta occupando il team di sviluppo, visitare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]blog del team[ di ](https://blogs.msdn.microsoft.com/sqlphp/).  
+Per inviare feedback, porre domande o sapere di che cosa si sta occupando il team di sviluppo, visitare il [blog del team](https://blogs.msdn.microsoft.com/sqlphp/) di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-[Codice sorgente di Microsoft PHP Driver per SQL Server in Github](https://github.com/Microsoft/msphpsql)  
+[Codice sorgente di Microsoft PHP Driver per SQL Server in GitHub](https://github.com/Microsoft/msphpsql)  
   
 ## <a name="sql-server-and-transact-sql-support-resources"></a>Risorse di supporto per SQL Server e Transact-SQL
 La documentazione di SQL Server e Transact-SQL è reperibile in [Documentazione di SQL Server](../../sql-server/index.yml).
@@ -54,5 +55,4 @@ Per la documentazione di PHP, visitare il sito [http://www.php.net/docs.php](htt
 Per domande sul supporto relative a [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è possibile contattare il [supporto tecnico Microsoft](https://support.microsoft.com/contactus/) o porre le domande nella [pagina del progetto di GitHub](https://github.com/Microsoft/msphpsql/issues).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Panoramica dei driver Microsoft per PHP per SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
-  
+[Panoramica dei driver Microsoft per PHP per SQL Server](overview-of-the-php-sql-driver.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077064"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487170"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurare un URL (Gestione configurazione SSRS)
   Per usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o il servizio Web ReportServer, è necessario configurare almeno un URL per ogni applicazione. La configurazione degli URL è obbligatoria se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato in modalità "solo file", ovvero se è stata selezionata l'opzione **Installa senza configurare il server** nella pagina Opzioni di installazione Server report dell'Installazione guidata. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato con la configurazione predefinita, gli URL sono già configurati per ogni applicazione.  
@@ -33,7 +33,7 @@ ms.locfileid: "77077064"
   
  Per altre informazioni sul modo in cui gli URL vengono archiviati e gestiti o per problemi di interoperabilità, vedere [Informazioni su prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Installare Reporting Services e Internet Information Services side-by-side &#40;SSRS in modalità nativa&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Per esaminare alcuni esempi di URL utilizzati di frequente in un'installazione di Reporting Services, vedere [Esempi di URL](#URLExamples) in questo argomento.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Prima di creare o modificare un URL, tenere presenti gli aspetti seguenti:  
   
 -   È necessario essere un membro del gruppo Administrators locale nel computer server di report.  
@@ -84,20 +84,20 @@ ms.locfileid: "77077064"
   
 6.  Se necessario, verificare che in IIS (se installato) non sia presente una directory virtuale con lo stesso nome che si intende utilizzare.  
   
-7.  Se è stato installato un certificato SSL, è possibile selezionarlo a questo punto per eseguire il binding dell'URL al certificato SSL installato nel computer.  
+7.  Se è stato installato un certificato TLS/SSL, è possibile selezionarlo a questo punto per associare l'URL al certificato TLS/SSL installato nel computer.  
   
-8.  Se si seleziona un certificato SSL, è eventualmente possibile specificare una porta personalizzata. L'impostazione predefinita è 443, ma è possibile utilizzare qualsiasi porta disponibile.  
+8.  Facoltativamente, se si seleziona un certificato TLS/SSL, è possibile specificare una porta personalizzata. L'impostazione predefinita è 443, ma è possibile utilizzare qualsiasi porta disponibile.  
   
 9. Fare clic su **Applica** per creare l'URL.  
   
 10. Eseguire il test dell'URL facendo clic sul collegamento nella sezione **URL** della pagina. Per poter eseguire il test dell'URL, è necessario creare e configurare il database del server di report. Per istruzioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
->  Se si dispone di associazioni SSL esistenti e di prenotazioni di URL e si desidera modificare l'associazione SSL, ad esempio per utilizzare un'intestazione host o un certificato diverso, è consigliabile completare in ordine i passaggi seguenti:  
+>  Se si hanno associazioni TLS esistenti e prenotazioni di URL e si vuole modificare l'associazione TLS, ad esempio per usare un'intestazione host o un certificato diversi, è consigliabile completare in ordine i passaggi seguenti:  
 > 
 >  1.  Innanzitutto rimuovere tutte le prenotazioni di URL.  
-> 2.  Successivamente rimuovere tutte le associazioni SSL.  
-> 3.  Infine ricreare gli URL e le associazioni SSL.  
+> 2.  Successivamente rimuovere tutte le associazioni TLS.  
+> 3.  Infine ricreare gli URL e le associazioni TLS.  
 > 
 >  I passaggi precedenti possono essere completati utilizzando Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077064"
   
 3.  Specificare la directory virtuale. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] è in attesa sulla stessa porta e sullo stesso indirizzo IP del servizio Web ReportServer. Se [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] è stato configurato per puntare a un servizio Web ReportServer diverso, è necessario modificare le impostazioni URL di [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] nel file RSReportServer.config.  
   
-4.  Se è stato installato un certificato SSL, è possibile selezionarlo in modo che tutte le richieste a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] vengano indirizzate tramite HTTPS.  
+4.  Se è stato installato un certificato TLS/SSL, è possibile selezionarlo in modo che tutte le richieste a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] vengano indirizzate tramite HTTPS.  
   
-     Se si seleziona un certificato SSL, è eventualmente possibile specificare una porta personalizzata. L'impostazione predefinita è 443, ma è possibile utilizzare qualsiasi porta disponibile.  
+     Facoltativamente, se si seleziona un certificato TLS/SSL, è possibile specificare una porta personalizzata. L'impostazione predefinita è 443, ma è possibile utilizzare qualsiasi porta disponibile.  
   
 5.  Fare clic su **Applica** per creare l'URL.  
   
@@ -136,20 +136,20 @@ ms.locfileid: "77077064"
  Un'intestazione host è un nome univoco che consente a più siti Web di condividere un singolo indirizzo IP e una singola porta. I nomi di intestazione host sono più semplici da ricordare e da digitare rispetto all'indirizzo IP e ai numeri di porta. Un esempio di un nome di intestazione host potrebbe essere www.adventure-works.com.  
   
  **Porta SSL**  
- Consente di specificare la porta per le connessioni SSL. Il numero di porta predefinito per SSL è 443.  
+ Consente di specificare la porta per le connessioni TLS/SSL. Il numero di porta predefinito per TLS è 443.  
   
  **Certificato SSL**  
- Consente di specificare il nome di un certificato SSL installato nel computer. Se il certificato esegue il mapping a un carattere jolly, è possibile utilizzarlo per una connessione del server di report.  
+ Consente di specificare il nome di un certificato TLS/SSL installato nel computer. Se il certificato esegue il mapping a un carattere jolly, è possibile utilizzarlo per una connessione del server di report.  
   
  Consente di specificare il nome completo del computer per cui viene registrato il certificato. Il nome specificato deve essere identico al nome per cui viene registrato il certificato.  
   
- Per utilizzare questa opzione, è necessario disporre di un certificato installato. È inoltre necessario modificare l'impostazione di configurazione UrlRoot nel file RSReportServer.config in modo che specifichi il nome completo del computer per il quale viene registrato il certificato. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Per utilizzare questa opzione, è necessario disporre di un certificato installato. È inoltre necessario modificare l'impostazione di configurazione UrlRoot nel file RSReportServer.config in modo che specifichi il nome completo del computer per il quale viene registrato il certificato. Per altre informazioni, vedere [Configurare connessioni TLS in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>Per impostare proprietà avanzate in un URL  
   
 1.  Nella pagina **URL servizio Web** o **URL del portale Web** fare clic su **Avanzate**.  
   
-2.  Fare clic su **Aggiungi**.  
+2.  Scegliere **Aggiungi**.  
   
 3.  Fare clic su Indirizzo IP o Nome intestazione host. Nel caso di un'intestazione host, assicurarsi di specificare un nome che il servizio DNS sia in grado di risolvere. Se si specifica un nome di dominio pubblico, specificare l'intero URL, incluso `https://www`.  
   

@@ -1,5 +1,6 @@
 ---
 title: rrRenderingError - Errore di Reporting Services | Microsoft Docs
+description: "Questa pagina di riferimento degli errori contiene informazioni sull'ID evento \"rrRenderingError\": Errore durante il rendering del report."
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fcfe999a7cfaf41cc4b6b9fad437ea14dfe2613
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 143520a4bb62df4f38ed0d1d116fd6dc1df22f2c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575560"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487740"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Errore di Reporting Services
     
@@ -48,7 +49,7 @@ ms.locfileid: "65575560"
   
  Un messaggio che indica che lo stile del bordo non è supportato viene in genere visualizzato quando lo stile del bordo specificato non è valido. Specificare un stile del bordo supportato, quindi effettuare un nuovo tentativo.  
   
- Un messaggio che indica che il formato MimeType per l'immagine non è supportato viene in genere visualizzato quando il formato MimeType specificato per un elemento del report non è valido. Specificare un formato MimeType supportato per l'elemento del report, quindi effettuare un nuovo tentativo.  
+ Un messaggio che indica che il tipo MIME per l'immagine non è supportato viene in genere visualizzato quando il tipo MIME specificato per un elemento del report di immagine non è valido. Specificare un tipo MIME supportato per l'elemento del report, quindi riprovare.  
   
  Un messaggio che indica che il numero di righe supera il numero massimo di righe possibili per foglio di lavoro viene in genere visualizzato quando viene superato il numero massimo di righe in un foglio di lavoro di Excel. Un foglio di lavoro di Excel supporta fino a 65.000 righe.  
   

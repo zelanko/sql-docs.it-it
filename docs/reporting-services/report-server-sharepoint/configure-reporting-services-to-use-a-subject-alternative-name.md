@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580014"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487024"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
 
@@ -20,11 +20,11 @@ Questo argomento descrive come configurare Reporting Services (SSRS) in modo da 
 
 Le istruzioni si applicano all'URL Reporting Service nonché all'URL servizio Web.
 
-Per usare un nome alternativo del soggetto, è necessario che il certificato SSL sia registrato nel server, firmato e che contenga la chiave privata. Non è possibile usare un certificato autofirmato.  
+Per usare un nome alternativo del soggetto, è necessario che il certificato TLS/SSL sia registrato nel server, sia firmato e contenga la chiave privata. Non è possibile usare un certificato autofirmato.  
   
- Gli URL in Reporting Services possono essere configurati per l'uso di un certificato SSL. In genere, un certificato contiene solo un nome del soggetto che consente un solo URL per una sessione SSL (Secure Sockets Layer). Il nome alternativo del soggetto è un campo aggiuntivo nel certificato che consente a un servizio SSL di essere in ascolto per molti URL nonché di condividere la porta SSL con altre applicazioni. Il nome alternativo del soggetto è simile a `www.s2.com`.  
+ Gli URL in Reporting Services possono essere configurati per l'uso di un certificato TLS/SSL. In genere, un certificato contiene solo un nome del soggetto che consente un solo URL per una sessione di TLS (Transport Layer Security), noto in precedenza come SSL (Secure Sockets Layer). Il nome alternativo del soggetto è un campo aggiuntivo nel certificato che consente a un servizio TLS di essere in ascolto per molti URL nonché di condividere la porta TLS con altre applicazioni. Il nome alternativo del soggetto è simile a `www.s2.com`.  
   
- Per altre informazioni sulle impostazioni di SSL per Reporting Services, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Per altre informazioni sulle impostazioni di TLS per Reporting Services, vedere [Configurare connessioni TLS in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurare SSRS per usare un nome alternativo del soggetto per l'URL servizio Web
   
@@ -32,11 +32,11 @@ Per usare un nome alternativo del soggetto, è necessario che il certificato SSL
   
      Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Nella pagina **URL servizio Web** selezionare una porta SSL e un certificato SSL.  
+2.  Nella pagina **URL servizio Web** selezionare una porta TLS/SSL e un certificato TLS/SSL.  
   
      ![Gestione configurazione Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gestione configurazione Reporting Services")  
   
-     Gestione configurazione registra il certificato SSL per la porta.  
+     Gestione configurazione registra il certificato TLS/SSL per la porta.  
   
 3.  Aprire il file rsreportserver.config.  
   

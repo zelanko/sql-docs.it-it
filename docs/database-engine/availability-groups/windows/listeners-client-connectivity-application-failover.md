@@ -1,6 +1,6 @@
 ---
 title: Connettersi a un listener del gruppo di disponibilità
-description: Contiene informazioni sulla connessione a un listener del gruppo di disponibilità Always On, ad esempio come connettersi alla replica primaria e a una replica secondaria di sola lettura e come usare SSL e Kerberos.
+description: Contiene informazioni sulla connessione a un listener del gruppo di disponibilità Always On, ad esempio come connettersi alla replica primaria e a una replica secondaria di sola lettura e come usare TLS/SSL e Kerberos.
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433738"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528495"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Connettersi a un listener del gruppo di disponibilità Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  L'opzione di connessione **MultiSubnetFailover** deve essere impostata su **True** anche se il gruppo di disponibilità si estende su una sola subnet.  In questo modo è possibile preconfigurare nuovi client affinché supportino l'espansione futura su più subnet senza necessità di modificare la stringa di connessione client, oltre a ottimizzare le prestazioni dei failover su una sola subnet.  L'opzione di connessione **MultiSubnetFailover** non è obbligatoria, ma permette di accelerare il failover su subnet.  Il driver client tenta infatti di aprire un socket TCP per ogni indirizzo IP in parallelo associato al gruppo di disponibilità.  Il driver client attende che il primo indirizzo IP risponda, quindi utilizza tale risposta per la connessione.  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> Listener e certificati SSL  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> Listener e certificati TLS/SSL  
 
- Quando ci si connette a un listener del gruppo di disponibilità, se le istanze di SQL Server utilizzano i certificati SSL insieme alla crittografia della sessione, il driver client che tenta la connessione deve supportare il Nome soggetto alternativo nel certificato SSL per forzare la crittografia.  Il supporto del driver SQL Server per il Nome soggetto alternativo del certificato è pianificato per ADO.NET (SqlClient), Microsoft JDBC e SQL Native Client (SNAC).  
+Quando ci si connette a un listener del gruppo di disponibilità, se le istanze di SQL Server usano i certificati TLS/SSL insieme alla crittografia della sessione, il driver client che tenta la connessione deve supportare il nome soggetto alternativo nel certificato TLS/SSL per forzare la crittografia.  Il supporto del driver SQL Server per il Nome soggetto alternativo del certificato è pianificato per ADO.NET (SqlClient), Microsoft JDBC e SQL Native Client (SNAC).  
   
- È necessario configurare un certificato X.509 per ogni nodo server che partecipa nel cluster di failover con un elenco di tutti i listener dei gruppi di disponibilità impostati nel Nome soggetto alternativo del certificato.  
-  
- Ad esempio, se il cluster WSFC dispone di tre listener con i nomi `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`e `AG3_listener.Adventure-Works.com`, il Nome soggetto alternativo per il certificato deve essere impostato nel modo seguente:  
-  
+È necessario configurare un certificato X.509 per ogni nodo server che partecipa nel cluster di failover con un elenco di tutti i listener dei gruppi di disponibilità impostati nel Nome soggetto alternativo del certificato. 
+
+Il formato dei valori del certificato è: 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+Si supponga, ad esempio, di avere i valori seguenti: 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+Per un cluster WSFC che ha un singolo gruppo di disponibilità, il certificato deve avere il nome di dominio completo (FQDN) del server e del listener: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+Con questa configurazione, le connessioni verranno crittografate quando ci si connette all'istanza (`WIN2019\SQL2019`) o al listener (`Listener2019`). 
+
+A seconda della configurazione della rete, un piccolo sottoinsieme di clienti potrebbe dover aggiungere anche NetBIOS al nome alternativo del soggetto. In tal caso, i valori del certificato devono essere: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+Se il cluster WSFC ha tre listener del gruppo di disponibilità, ad esempio: Listener1, Listener2, Listener3
+
+I valori del certificato devono essere: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> Listener e Kerberos (SPN) 
 

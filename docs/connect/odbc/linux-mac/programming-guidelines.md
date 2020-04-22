@@ -1,5 +1,6 @@
 ---
-title: Linee guida per la programmazione (driver ODBC per SQL Server) | Microsoft Docs
+title: Linee guida per la programmazione (driver ODBC)
+description: Le funzionalità di programmazione di Microsoft ODBC Driver for SQL Server in macOS e Linux si basano su ODBC in SQL Server Native Client (ODBC).
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219230"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632791"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -49,7 +50,7 @@ Quando si usa il driver ODBC in macOS o Linux, sono valide le sezioni seguenti d
 Il corretto funzionamento delle caratteristiche seguenti non è stato verificato in questa versione del driver ODBC in macOS e Linux:
 
 -   Connessione al cluster di failover
--   [Risoluzione dell'IP di rete trasparente](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (prima di ODBC Driver 17)
+-   [Risoluzione dell'IP di rete trasparente](../using-transparent-network-ip-resolution.md) (prima di ODBC Driver 17)
 -   [Traccia del driver avanzata](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 Le funzionalità seguenti non sono disponibili in questa versione del driver ODBC in macOS e Linux: 
@@ -108,7 +109,7 @@ Per ODBC Driver 17 sono supportati i dati SQLCHAR in uno dei seguenti set/codifi
 
 Al momento della connessione il driver rileva le impostazioni locali correnti del processo nel quale viene caricato. Se il processo usa una delle codifiche precedenti, il driver usa quella codifica per i dati SQLCHAR (caratteri narrow); in caso contrario assume come impostazione predefinita UTF-8. Dato che tutti i processi iniziano con le impostazioni locali "C" per impostazione predefinita (e di conseguenza il driver assume come impostazione predefinita UTF-8), se un'applicazione deve usare una delle codifiche sopra elencate, dovrà usare la funzione **setlocale** per definire correttamente le impostazioni locali, sia specificando in modo esplicito le impostazioni desiderate, sia usando una stringa vuota come `setlocale(LC_ALL, "")` per richiedere l'uso delle impostazioni locali dell'ambiente.
 
-Pertanto in un tipico ambiente Linux o Mac in cui la codifica è UTF-8, gli utenti di ODBC Driver 17 che aggiornano dalla versione 13 o 13.1 non noteranno nessuna differenza. Tuttavia le applicazioni che usano una codifica non UTF-8 inclusa nell'elenco precedente tramite `setlocale()` dovranno usare tale codifica per i dati da e verso il driver, anziché usare UTF-8.
+Pertanto, in un tipico ambiente Linux o macOS in cui la codifica è UTF-8, gli utenti di ODBC Driver 17 che eseguono l'aggiornamento dalla versione 13 o 13.1 non noteranno alcuna differenza. Tuttavia le applicazioni che usano una codifica non UTF-8 inclusa nell'elenco precedente tramite `setlocale()` dovranno usare tale codifica per i dati da e verso il driver, anziché usare UTF-8.
 
 I dati SQLWCHAR devono essere in formato UTF-16LE (Little Endian).
 
@@ -147,8 +148,8 @@ Al momento della stesura di questo articolo, la dimensione predefinita dello sta
 3.  Quando si usa il driver con applicazioni a elevato multithreading, la convalida degli handle di unixODBC può diventare un collo di bottiglia per le prestazioni. In questi scenari è possibile ottenere prestazioni significativamente maggiori compilando unixODBC con l'opzione `--enable-fastvalidate`. Tenere presente, tuttavia, che a causa di ciò le applicazioni che passano handle non validi alle API ODBC possono subire un arresto anomalo anziché restituire errori `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Vedere anche  
-[Domande frequenti](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Domande frequenti](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[Problemi noti in questa versione del driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[Problemi noti in questa versione del driver](known-issues-in-this-version-of-the-driver.md)
 
-[Note sulla versione](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Note sulla versione](release-notes-odbc-sql-server-linux-mac.md)

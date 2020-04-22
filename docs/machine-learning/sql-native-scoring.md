@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117084"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487700"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Assegnazione dei punteggi nativa tramite la funzione T-SQL PREDICT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 L'assegnazione dei punteggi nativa si basa sulla [funzione T-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) e sulle funzionalità di estensione C++ native di SQL Server 2017 per generare valori di stima o *punteggi* per i nuovi input di dati in tempo quasi reale. Questa metodologia assicura la velocità di elaborazione più rapida possibile per i carichi di lavoro di previsione e stima, ma prevede alcuni requisiti relativi alla piattaforma e alla libreria: solo le funzioni di RevoScaleR e revoscalepy hanno implementazioni in C++.
 
-Per l'assegnazione dei punteggi nativa è necessario disporre di un modello già sottoposto a training. In SQL Server 2017 per Windows o Linux o nel database SQL di Azure è possibile chiamare la funzione PREDICT in Transact-SQL per richiamare l'assegnazione dei punteggi nativa per i nuovi dati forniti come parametro di input. La funzione PREDICT restituisce i punteggi rispetto agli input di dati forniti.
+Per l'assegnazione dei punteggi nativa è necessario disporre di un modello già sottoposto a training. In SQL Server 2017 per Windows o Linux è possibile chiamare la funzione PREDICT in Transact-SQL per richiamare l'assegnazione dei punteggi nativa per i nuovi dati specificati come parametro di input. La funzione PREDICT restituisce i punteggi rispetto agli input di dati forniti.
 
 ## <a name="how-native-scoring-works"></a>Funzionamento dell'assegnazione dei punteggi nativa
 
@@ -36,7 +36,7 @@ La funzione restituisce le stime per i dati di input, insieme alle eventuali col
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-PREDICT è disponibile in tutte le edizioni del motore di database di SQL Server 2017 ed è abilitato per impostazione predefinita, inclusi Machine Learning Services per SQL Server in Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o il database SQL di Azure. Non è necessario installare R o Python, né abilitare funzionalità aggiuntive.
+PREDICT è disponibile ed è abilitato per impostazione predefinita in tutte le edizioni del motore di database di SQL Server 2017 e versioni successive, inclusi Machine Learning Services per SQL Server in Windows, SQL Server 2017 e versioni successive in Windows e Linux. Non è necessario installare R o Python, né abilitare funzionalità aggiuntive.
 
 + Il training del modello deve essere eseguito in anticipo tramite uno degli algoritmi **rx** supportati elencati di seguito.
 

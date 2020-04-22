@@ -1,6 +1,6 @@
 ---
 title: Home page per la programmazione client SQL | Microsoft Docs
-description: Pagina hub con collegamenti annotati a download e documentazione per numerose combinazioni di linguaggi e sistemi operativi, per la connessione a SQL Server o al database SQL di Azure.
+description: Pagina con collegamenti annotati a download e documentazione per diversi linguaggi e sistemi operativi, per la connessione a SQL Server o al database SQL di Azure.
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924891"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529045"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page per la programmazione client per Microsoft SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "80924891"
 Questa è la home page sulla programmazione client per l'interazione con Microsoft SQL Server e con il database SQL di Azure nel cloud. Questo articolo contiene le informazioni seguenti:
 
 - Elenca e descrive le combinazioni di linguaggio e driver disponibili.
-    - Le informazioni disponibili riguardano i sistemi operativi Linux (Ubuntu e altri), macOS e Windows.
+  - Le informazioni disponibili riguardano i sistemi operativi Linux (Ubuntu e altri), macOS e Windows.
 - Mette a disposizione collegamenti a documentazione dettagliata per ogni combinazione.
 - Visualizza le aree e le sottoaree della documentazione gerarchica per linguaggi specifici, ove appropriato.
 
@@ -105,12 +105,12 @@ EF presenta relazioni dirette o indirette con le tecnologie seguenti:
 - .NET Framework
 - [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/) o [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - Miglioramenti della sintassi del linguaggio, ad esempio l'operatore **=>** in C#.
-- Programmi di grande praticità, che generano codice sorgente per le classi di cui viene eseguito il mapping alle tabelle del database SQL. Ad esempio, [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
+- Programmi molto utili, che generano codice sorgente per le classi di cui viene eseguito il mapping alle tabelle del database SQL. Ad esempio, [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
 #### <a name="original-ef-and-new-ef"></a>EF originale e nuovo EF
 
-La [pagina iniziale di Entity Framework](https://docs.microsoft.com/ef/) presenta EF con una descrizione simile alla seguente:
+La [pagina iniziale di Entity Framework](https://docs.microsoft.com/ef/) presenta Entity Framework con una descrizione simile alla seguente:
 
 - Entity Framework è un mapper relazionale a oggetti (O/RM, Object-Relational Mapper) che consente agli sviluppatori .NET di usare un database tramite oggetti .NET. Elimina la necessità della maggior parte del codice sorgente di accesso ai dati che in genere gli sviluppatori devono scrivere.
 
@@ -118,7 +118,7 @@ La [pagina iniziale di Entity Framework](https://docs.microsoft.com/ef/) present
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft ha rilasciato EF per la prima volta nel mese di agosto 2008. Nel marzo 2015 Microsoft ha annunciato che EF 6.x sarebbe stata la versione finale sviluppata dall'azienda e ne ha rilasciato il codice sorgente al pubblico dominio.<br /><br />Inizialmente EF faceva parte di .NET Framework, ma con la versione 6.x EF ne è stato rimosso.<br /><br />[Codice sorgente di EF 6.x in GitHub, nel repository *ASPNET/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft ha rilasciato EF per la prima volta nel mese di agosto 2008. Nel marzo 2015 Microsoft ha annunciato che Entity Framework 6.x sarebbe stata la versione finale sviluppata dall'azienda e ne ha rilasciato il codice sorgente al pubblico dominio.<br /><br />Inizialmente EF faceva parte di .NET Framework, ma con la versione 6.x EF ne è stato rimosso.<br /><br />[Codice sorgente di Entity Framework 6.x in GitHub, nel repository *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft ha rilasciato EF Core, sviluppato più di recente, nel mese di giugno 2016. Progettato per offrire maggiore flessibilità e portabilità, EF Core può essere eseguito all'interno di altri sistemi operativi, oltre a Microsoft Windows. EF Core può interagire con altri database, oltre a Microsoft SQL Server e agli altri database relazionali.<br /><br />**Esempi di codice C&#x23;:**<br />[Introduzione a Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Introduzione a EF Core in .NET Framework con un database esistente](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
@@ -132,7 +132,7 @@ EF e le tecnologie correlate sono molto avanzate e rappresentano una grande quan
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Logo di Java][image-ref-330-java] Java e JDBC
 
-Microsoft offre un driver Java Database Connectivity (JDBC) da usare con SQL Server o, naturalmente, con il database SQL di Azure. Si tratta di un driver JDBC di tipo 4 che offre connettività di database tramite le interfacce API (Application Program Interface) JDBC standard.
+Microsoft offre un driver Java Database Connectivity (JDBC) da usare con SQL Server o con il database SQL di Azure. Si tratta di un driver JDBC di tipo 4 che offre connettività di database tramite le interfacce API (Application Program Interface) JDBC standard.
 
 #### <a name="code-examples"></a>Esempi di codice
 
@@ -162,7 +162,7 @@ La documentazione di JDBC include le aree principali seguenti:
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Logo di Node.js][image-ref-340-node] Node.js
 
-Con Node.js è possibile connettersi a SQL Server da Windows, Linux o Mac. La radice della documentazione di Node.js è disponibile [qui](./node-js/index.md).
+Con Node.js è possibile connettersi a SQL Server da Windows, Linux o macOS. La radice della documentazione di Node.js è disponibile [qui](./node-js/index.md).
 
 Il driver di connessione Node.js per SQL Server è implementato in JavaScript. Il driver usa il protocollo TDS, supportato da tutte le versioni moderne di SQL Server. Il driver è un progetto open source, [disponibile in GitHub](https://tediousjs.github.io/tedious/).
 
@@ -179,7 +179,7 @@ Il driver di connessione Node.js per SQL Server è implementato in JavaScript. I
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>ODBC per C++ 
+## <a name="odbc-for-c"></a>ODBC per C++
 
 ![Logo di ODBC][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ Il contenuto ODBC in questa sezione si concentra sull'accesso a SQL Server o al 
 | Area | Area secondaria | Descrizione |
 | :--- | :------ | :---------- |
 | [ODBC per C++](./odbc/index.md) | Radice della documentazione Microsoft. |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informazioni sull'uso di ODBC nei sistemi operativi Linux e MacOS. |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Informazioni sull'uso di ODBC nei sistemi operativi Linux o macOS. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Informazioni sull'uso di ODBC nel sistema operativo Windows. |
 | [Amministrazione](../odbc/admin/index.md) | &nbsp; | Strumento di amministrazione per la gestione delle origini dati ODBC. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Diversi driver ODBC creati e offerti da Microsoft. |
@@ -293,7 +293,7 @@ Il concetto di *compilazione app* enfatizza la semplicità e la completezza offe
 
 Di seguito sono riportate alcune indicazioni approssimative dei dettagli disponibili nel sito Web:
 
-#### <a name="java-on-ubuntu"></a>Java in Ubuntu:
+#### <a name="java-on-ubuntu"></a>Java in Ubuntu
 
 1. Configurare l'ambiente
     - Passaggio 1.1 installare SQL Server
@@ -306,7 +306,7 @@ Di seguito sono riportate alcune indicazioni approssimative dei dettagli disponi
 3. Rendere l'app Java fino a 100 volte più veloce
     - Passaggio 3.1 Creare un'app Java per illustrare indici columnstore
 
-#### <a name="python-on-windows"></a>Python in Windows:
+#### <a name="python-on-windows"></a>Python in Windows
 
 1. Configurare l'ambiente
     - Passaggio 1.1 installare SQL Server
@@ -325,13 +325,13 @@ Di seguito sono riportate alcune indicazioni approssimative dei dettagli disponi
 
 Gli screenshot seguenti offrono un'idea dell'aspetto del sito Web della documentazione per lo sviluppo SQL.
 
-#### <a name="choose-a-language"></a>Scegliere una lingua:
+#### <a name="choose-a-language"></a>Scegliere una lingua
 
 ![Sito Web di sviluppo SQL, per iniziare][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>Scegliere un sistema operativo:
+#### <a name="choose-an-operating-system"></a>Scegliere un sistema operativo
 
 ![Sito Web di sviluppo SQL, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

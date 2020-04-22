@@ -2,7 +2,6 @@
 title: Utilizzare i dati JSON
 ms.date: 05/14/2019
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -11,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: genemi
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9c9498c6bcef8bf07657d17565bd8b596668033
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288145"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485090"
 ---
 # <a name="json-data-in-sql-server"></a>Dati JSON in SQL Server
 
@@ -374,7 +374,7 @@ Il risultato di questa query è testo JSON interamente conforme alla specifica O
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>Test drive del supporto JSON integrato con il database di esempio AdventureWorks
 
-Per ottenere il database di esempio AdventureWorks, è necessario scaricare almeno il file di database e il file di script ed esempi dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=49502).
+Per ottenere il database di esempio AdventureWorks è necessario scaricare almeno il file di database e il file di script ed esempi da [GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).
 
 Dopo aver ripristinato il database di esempio in un'istanza di SQL Server 2016, estrarre il file degli esempi e quindi aprire il file *JSON Sample Queries procedures views and indexes.sql* dalla cartella JSON. Eseguire gli script in questo file per riformattare alcuni dati esistenti come dati JSON, eseguire test di report e query di esempio sui dati JSON, indicizzare i dati JSON e importare ed esportare JSON.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 461ce274af8d58574afa3e55e44e950b77cb6014
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705886"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633423"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -58,7 +58,7 @@ Crea un'origine dati esterna per le query PolyBase. Le origini dati esterne veng
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -106,7 +106,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 - Per garantire una semantica di esecuzione di query coerente, usare la stessa origine dati esterna per tutte le tabelle quando si eseguono query su Hadoop.
 - È possibile usare il prefisso di posizione `sqlserver` per connettere [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o ad Azure Synapse Analytics.
 - Per la connessione tramite `ODBC` specificare `Driver={<Name of Driver>}`.
-- `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione SSL protetta.
+- `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione TLS/SSL protetta.
 - Per garantire la corretta esecuzione delle query di PolyBase durante un failover di `Namenode` di Hadoop, provare a usare un indirizzo IP virtuale per l'istanza di `Namenode` del cluster Hadoop. In caso contrario, eseguire un comando [ALTER EXTERNAL DATA SOURCE][alter_eds] in modo che punti alla nuova posizione.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -188,7 +188,7 @@ In [Creare un'origine dati esterna per fare riferimento a Hadoop con il pushdown
 
 Acquisisce un blocco condiviso per l'oggetto `EXTERNAL DATA SOURCE`.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 PolyBase supporta l'autenticazione basata su proxy per la maggior parte delle origini dati esterne. Creare credenziali con ambito database per creare l'account proxy.
 
@@ -405,7 +405,7 @@ Crea un'origine dati esterna per le query elastiche. Le origini dati esterne ven
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -622,7 +622,7 @@ Crea un'origine dati esterna per PolyBase. Le origini dati esterne vengono usate
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -654,10 +654,10 @@ Percorso:
 
 Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 
-- L'opzione predefinita consiste nell'usare `enable secure SSL connections` quando si effettua il provisioning di Azure Data Lake Storage Gen 2. Quando questa opzione è abilitata, è necessario usare `abfss` quando viene selezionata una connessione SSL sicura. Si noti che `abfss` funziona anche per le connessioni SSL non sicure.
+- L'opzione predefinita consiste nell'usare `enable secure SSL connections` quando si effettua il provisioning di Azure Data Lake Storage Gen 2. Quando questa opzione è abilitata, è necessario usare `abfss` quando viene selezionata una connessione TLS/SSL protetta. Si noti che `abfss` funziona anche per le connessioni TLS senza protezione.
 - Azure Synapse non verifica l'esistenza dell'origine dati esterna quando viene creato l'oggetto. . Per eseguire la convalida, creare una tabella esterna usando l'origine dati esterna.
 - Per garantire una semantica di esecuzione di query coerente, usare la stessa origine dati esterna per tutte le tabelle quando si eseguono query su Hadoop.
-- `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione SSL protetta.
+- `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione TLS protetta.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -689,7 +689,7 @@ Per un esempio d'uso di `TYPE` = `HADOOP` per caricare i dati da Archiviazione B
 
 Acquisisce un blocco condiviso per l'oggetto `EXTERNAL DATA SOURCE`.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 PolyBase supporta l'autenticazione basata su proxy per la maggior parte delle origini dati esterne. Creare credenziali con ambito database per creare l'account proxy.
 
@@ -872,7 +872,7 @@ Crea un'origine dati esterna per le query PolyBase. Le origini dati esterne veng
 
 ## <a name="syntax"></a>Sintassi
 
-```sql
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -908,7 +908,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 
 - Il motore PDW non verifica l'esistenza dell'origine dati esterna quando viene creato l'oggetto. Per eseguire la convalida, creare una tabella esterna usando l'origine dati esterna.
 - Per garantire una semantica di esecuzione di query coerente, usare la stessa origine dati esterna per tutte le tabelle quando si eseguono query su Hadoop.
-- `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione SSL protetta.
+- `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione TLS protetta.
 - Per garantire la corretta esecuzione delle query di PolyBase durante un failover di `Namenode` di Hadoop, provare a usare un indirizzo IP virtuale per l'istanza di `Namenode` del cluster Hadoop. In caso contrario, eseguire un comando [ALTER EXTERNAL DATA SOURCE][alter_eds] in modo che punti alla nuova posizione.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
@@ -969,7 +969,7 @@ In [Creare un'origine dati esterna per fare riferimento a Hadoop con il pushdown
 
 Acquisisce un blocco condiviso per l'oggetto `EXTERNAL DATA SOURCE`.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 PolyBase supporta l'autenticazione basata su proxy per la maggior parte delle origini dati esterne. Creare credenziali con ambito database per creare l'account proxy.
 

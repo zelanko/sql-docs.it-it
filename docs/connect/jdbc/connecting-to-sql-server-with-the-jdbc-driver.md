@@ -1,5 +1,6 @@
 ---
 title: Connessione a SQL Server con il driver JDBC | Microsoft Docs
+description: Quando ci si connette al database usando Microsoft JDBC Driver per SQL Server, tutte le interazioni con il database passano attraverso l'oggetto SQLServerConnection.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab487442feb91ce49698d554168cd36bf2c7a16
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922480"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487965"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Connessione a SQL Server con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

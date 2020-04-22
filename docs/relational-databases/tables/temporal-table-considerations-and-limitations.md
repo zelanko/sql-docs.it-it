@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70958342"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487450"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 
@@ -49,9 +49,9 @@ Quando si usano le tabelle temporali, tenere presenti le considerazioni seguenti
 - Per non invalidare la logica DML, i trigger**INSTEAD OF** non sono consentiti né per la tabella corrente né per quella di cronologia. I trigger**AFTER** sono consentiti solo per la tabella corrente. Sono bloccati nella tabella di cronologia per evitare di invalidare la logica DML.
 - L'utilizzo di tecnologie di replica è limitato:
 
-  - **Always On:** completamente supportato
-  - **Change Data Capture e Change Data Tracking:** supportati solo per la tabella corrente
-  - **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'. L'uso di più sottoscrittori non è supportato poiché questo scenario potrebbe comportare dati temporali incoerenti in quanto ognuno di essi dipenderebbe dall'orologio di sistema locale.
+  - **Always On:** supporto completo
+  - **Change Data Capture e rilevamento modifiche dati:** supportati solo nella tabella corrente
+  - **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'. All'avvio dell'agente di distribuzione viene aperta una transazione che viene mantenuta aperta fino a quando l'agente di distribuzione non è interrotto. A causa di questo comportamento, SysStartTime e SysEndTime vengono popolati per iniziare l'ora della prima transazione avviata dall'agente di distribuzione. Di conseguenza, può essere preferibile eseguire l'agente di distribuzione in base a una pianificazione anziché in modo continuo, in base all'impostazione predefinita. L'uso di più sottoscrittori non è supportato poiché potrebbe comportare dati temporali incoerenti a causa della dipendenza dall'orologio di sistema locale.
   - **Replica di tipo merge:** non supportata per le tabelle temporali
 
 - Le query normali influiscono solo sui dati della tabella corrente. Per eseguire query sui dati della tabella di cronologia, è necessario usare le query temporali. Questo argomento verrà approfondito più avanti in questo documento nella sezione Esecuzione di query sui dati temporali.

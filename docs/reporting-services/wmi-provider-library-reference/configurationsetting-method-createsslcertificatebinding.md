@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570753"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630647"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Metodo di ConfigurationSetting - CreateSSLCertificateBinding
-  Crea un'associazione certificato SSL.  
+  Crea un'associazione di certificati TLS/SSL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  Indirizzo IP per l'applicazione.  
   
  *Porta*  
- Porta SSL associata all'associazione.  
+ Porta TLS associata all'associazione.  
   
  *LCID*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>Osservazioni  
  Questo metodo aggiunge un'associazione a rsreportserver.config per l'applicazione. Se in HTTP.SYS non esiste già un'associazione, questa viene creata.  
   
- Prima di creare l'associazione, la chiamata al metodo esamina le prenotazioni dell'URL affinché l'applicazione specificata determini se l'associazione certificato SSL è valida.  
+ Prima di creare l'associazione, la chiamata al metodo esamina le prenotazioni dell'URL affinché l'applicazione specificata determini se l'associazione di certificati TLS/SSL è valida.  
   
  Le condizioni seguenti vengono convalidate e possono causare errori:  
   

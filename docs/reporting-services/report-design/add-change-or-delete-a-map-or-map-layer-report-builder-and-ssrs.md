@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080655"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488248"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
   Una mappa è una raccolta di livelli. Quando si aggiunge una mappa a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , si definisce il primo livello. È possibile creare livelli aggiuntivi tramite la creazione guidata del livello mappa.  
@@ -75,7 +75,7 @@ ms.locfileid: "77080655"
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Nella barra degli strumenti fare clic sul pulsante **Aggiungi livello** e, dall'elenco a discesa, scegliere il tipo di livello da aggiungere: **Punto**, **Linea**o **Poligono**.  
+2.  Nella barra degli strumenti fare clic sul pulsante **Aggiungi livello** e, dall'elenco a discesa, scegliere il tipo di livello da aggiungere: **Punto**, **Linea** o **Poligono**.  
   
     > [!NOTE]  
     >  Sebbene sia possibile aggiungere un livello alla mappa e configurarlo manualmente, è consigliabile utilizzare la Creazione guidata livello mappa per aggiungere nuovi livelli. Per avviare la procedura guidata dal riquadro Mappa della barra degli strumenti, fare clic sul pulsante della creazione guidata del livello (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -90,7 +90,7 @@ ms.locfileid: "77080655"
   
     2.  In **Set di dati analitici**fare clic sul nome del set di dati che contiene i dati analitici e i campi delle corrispondenze per compilare una relazione tra i dati analitici e quelli spaziali.  
   
-    3.  Fare clic su **Aggiungi**.  
+    3.  Scegliere **Aggiungi**.  
   
     4.  Digitare il nome del campo delle corrispondenze del set di dati spaziali.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "77080655"
   
 3.  Nel riquadro Proprietà impostare UseSecureConnection su **True**.  
   
- La connessione per il servizio Web di Bing Maps utilizzerà il servizio HTTP SSL (Secure Sockets Layer) per recuperare le tessere mappa di Bing per questo livello.  
+ La connessione per il servizio Web di Bing Maps userà il servizio HTTP SSL per recuperare le tessere mappa di Bing per questo livello. Il protocollo Transport Layer Security (TLS) era noto in precedenza come Secure Sockets Layer (SSL).
   
 ##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> Per specificare la lingua per le etichette delle sezioni  
   
@@ -250,6 +250,6 @@ ms.locfileid: "77080655"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

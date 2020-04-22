@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286885"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487990"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -53,7 +53,7 @@ Questo nome host è l'endpoint di Scale Out Master, che viene creato come un ser
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Installare Scale Out Master nel nodo secondario
 Installare i servizi del motore di database di SQL Server, Integration Services e Scale Out Master nel nodo secondario per Scale Out Master. 
 
-Usare lo stesso certificato di Scale Out Master applicato nel nodo primario. Esportare il certificato SSL di Scale Out Master presente nel nodo primario con una chiave privata e installarlo nell'archivio radice dei certificati del computer locale nel nodo secondario. Selezionare questo certificato durante l'installazione di Scale Out Master nel nodo secondario.
+Usare lo stesso certificato di Scale Out Master applicato nel nodo primario. Esportare il certificato TLS/SSL di Scale Out Master presente nel nodo primario con una chiave privata e installarlo nell'archivio certificati radice del computer locale nel nodo secondario. Selezionare questo certificato durante l'installazione di Scale Out Master nel nodo secondario.
 
 ![Configurazione del master a disponibilità elevata 2](media/ha-master-config2.PNG)
 

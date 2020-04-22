@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258974"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528409"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Usare più versioni e istanze di SQL Server
 
@@ -38,9 +38,8 @@ Gli elementi seguenti correlati a SQL Server sono compatibili con l'installazion
 
 - Analysis Services
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- Reporting Services
-::: moniker-end
+- Reporting Services (in SQL Server 2016 e versioni precedenti). A partire da SQL Server 2016. SQL Server Reporting Services (SSRS) ha un'installazione separata. 
+
 
 È possibile aggiornare le versioni precedenti di SQL Server in un computer in cui sono già installate altre versioni di SQL Server. Per gli scenari di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
   
@@ -76,7 +75,7 @@ Esempi: documentazione online di: [!INCLUDE[ssISnoversion](../../includes/ssisno
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le versioni con componenti che condividono la stessa versione principale e secondaria.
   
-Esempio: file di supporto per l'installazione.
+Esempio: File di supporto per l'installazione.
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Componenti specifici di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -95,23 +94,24 @@ Per altre informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../includ
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insieme a versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui sono già in esecuzione istanze di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se nel computer è già presente un'istanza predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere installato come istanza denominata.  
+
+La tabella seguente illustra il supporto side-by-side per ogni versione di SQL Server nelle versioni di Windows comunemente supportate con le versioni di .NET richieste installate:
+
+| Istanza esistente | Supporto side-by-side| 
+|-------------------|----------------------------|
+| SQL Server 2019 | Da SQL Server 2008 a SQL Server 2017| 
+| SQL Server 2017 | Da SQL Server 2008 a SQL Server 2016| 
+| SQL Server 2016 | Da SQL Server 2008 a SQL Server 2014| 
+
+Per altre informazioni, vedere [Uso di SQL Server in Windows 8 e versioni successive](https://support.microsoft.com/help/2681562/using-sql-server-in-windows-8-and-later-versions-of-windows-operating). 
+
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep non supporta l'installazione side-by-side di istanze predisposte di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer. Ad esempio, non è possibile preparare un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] side-by-side a un'istanza predisposta di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Tuttavia, nello stesso computer, è possibile installare side-by-side più istanze predisposte della stessa versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
 >
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non può essere installato side-by-side con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui è in esecuzione Windows Server 2008 R2 Server Core SP1. Per altre informazioni sulle installazioni di Server Core, vedere [Installare SQL Server 2016 in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+> SQL Server 2016 e versioni successive non può essere installato side-by-side con versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui è in esecuzione Windows Server 2008 R2 Server Core SP1. Per altre informazioni sulle installazioni di Server Core, vedere [Installare SQL Server 2016 in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
-Nella tabella seguente viene descritto il supporto per installazioni side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:
-  
-|Istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Supporto installazione side-by-side|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 
-Nella tabella seguente viene descritto il supporto per installazioni side-by-side di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] con le versioni precedenti:
-
-|Istanza esistente di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Supporto side-by-side per le versioni precedenti|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32 bit)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
 ## <a name="preventing-ip-address-conflicts"></a>Metodi per evitare conflitti di indirizzi IP
 

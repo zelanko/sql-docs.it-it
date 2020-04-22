@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117464"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486730"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapping dei tipi di dati tra R e SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Tra le categorie di tipi di dati supportati dal [sistema di tipi di SQL Server](
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>Differenze relative ai tipi di dati tra SQL Server 2016 e le versioni precedenti
 
-Microsoft SQL Server 2016 e il database SQL di Microsoft Azure includono alcuni miglioramenti per le conversioni dei tipi di dati e per diverse altre operazioni. La maggior parte di questi miglioramenti offre maggiore precisione quando si gestiscono tipi a virgola mobile, nonché alcune modifiche minori alle operazioni su tipi **datetime** classici.
+Microsoft SQL Server 2016 e versioni successive includono alcuni miglioramenti per le conversioni dei tipi di dati e per diverse altre operazioni. La maggior parte di questi miglioramenti offre maggiore precisione quando si gestiscono tipi a virgola mobile, nonché alcune modifiche minori alle operazioni su tipi **datetime** classici.
 
 Questi miglioramenti sono tutti disponibili per impostazione predefinita quando si usa il livello di compatibilità del database 130 o successivo. Tuttavia, se si usa un livello di compatibilità diverso o ci si connette a un database usando una versione meno recente, si potrebbero riscontrare differenze riguardo alla precisione dei numeri o di altri risultati. 
 

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742083"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632532"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un'estensione per il recapito tramite posta elettronica che consente di inviare un report a utenti o gruppi tramite posta elettronica. Per distribuire un report usando la posta elettronica, 1) configurare il server di report per il recapito della posta elettronica e 2) definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. Una singola sottoscrizione non può recapitare più report nello stesso messaggio di posta elettronica. È possibile, tuttavia, creare più sottoscrizioni.  
   
- Il server di report si connette a un server di posta elettronica tramite una connessione standard. non mediante comunicazioni crittografate attraverso SSL (Secure Sockets Layer). Il server di posta elettronica deve essere un server SMTP (Simple Mail Transfer Protocol) locale o remoto disponibile nella stessa rete del server di report.  
+ Il server di report si connette a un server di posta elettronica tramite una connessione standard. Non usa la comunicazione crittografata tramite TLS (Transport Layer Security), protocollo precedentemente noto come SSL (Secure Sockets Layer). Il server di posta elettronica deve essere un server SMTP (Simple Mail Transfer Protocol) locale o remoto disponibile nella stessa rete del server di report.  
   
  Per informazioni dettagliate sulla creazione di una sottoscrizione, vedere quanto segue:  
   

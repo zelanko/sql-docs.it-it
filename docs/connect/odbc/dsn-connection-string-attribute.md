@@ -1,5 +1,6 @@
 ---
-title: Parole chiave per DSN e stringhe di connessione per il driver ODBC - SQL Server | Microsoft Docs
+title: Parole chiave delle stringhe di connessione e del DNS ODBC
+description: Questa pagina elenca le parole chiave per le stringhe di connessione e i DSN e gli attributi di connessione per SQLSetConnectAttr e SQLGetConnectAttr, disponibili nel driver ODBC per SQL Server.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911245"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528983"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Parole chiave e attributi per stringhe di connessione e DSN
 
@@ -22,7 +23,7 @@ Questa pagina elenca le parole chiave per le stringhe di connessione e i DSN e g
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Parole chiave per DSN/stringa di connessione e attributi di connessione supportati
 
-La tabella seguente elenca le parole chiave disponibili e gli attributi per ogni piattaforma (L: Linux ; M: Mac ; W: Windows). Fare clic sulla parola chiave o sull'attributo per altri dettagli.
+La tabella seguente elenca le parole chiave disponibili e gli attributi per ogni piattaforma (L: Linux; M: macOS; W: Windows). Fare clic sulla parola chiave o sull'attributo per altri dettagli.
 
 | Parola chiave DSN / stringa di connessione | Attributo di connessione | Piattaforma |
 |-|-|-|
@@ -151,7 +152,7 @@ Controlla l'uso delle connessioni di fallback di SQL Server. Non è più support
 
 ###  <a name="authentication---sql_copt_ss_authentication"></a>Authentication - SQL_COPT_SS_AUTHENTICATION
 
-Imposta la modalità di autenticazione da usare durante la connessione a SQL Server. Per altre informazioni, vedere [Uso di Azure Active Directory](using-azure-active-directory.md).
+Imposta la modalità di autenticazione da usare durante la connessione a SQL Server. Per altre informazioni vedere [Uso di Azure Active Directory](using-azure-active-directory.md).
 
 | Valore della parola chiave | Valore dell'attributo | Descrizione |
 |-|-|-|
@@ -168,7 +169,7 @@ Imposta la modalità di autenticazione da usare durante la connessione a SQL Ser
 
 ### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
-Controlla la crittografia di colonna trasparente (Always Encrypted). Per altre informazioni, vedere [Uso di Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md).
+Controlla la crittografia di colonna trasparente (Always Encrypted). Per altre informazioni vedere [Uso di Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md).
 
 | Valore della parola chiave | Valore dell'attributo | Descrizione |
 |-|-|-|
@@ -178,7 +179,7 @@ Controlla la crittografia di colonna trasparente (Always Encrypted). Per altre i
 
 ### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
-Controlla la funzionalità Risoluzione dell'IP di rete trasparente che interagisce con MultiSubnetFailover per consentire tentativi di riconnessione più rapidi. Per altre informazioni, vedere [Uso della risoluzione dell'IP di rete trasparente](using-transparent-network-ip-resolution.md).
+Controlla la funzionalità Risoluzione dell'IP di rete trasparente che interagisce con MultiSubnetFailover per consentire tentativi di riconnessione più rapidi. Per altre informazioni vedere [Uso della risoluzione dell'IP di rete trasparente](using-transparent-network-ip-resolution.md).
 
 | Valore della parola chiave | Valore dell'attributo| Descrizione |
 |-|-|-|
@@ -221,7 +222,7 @@ Se il file di chiave privata è protetto da password, è necessario specificare 
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-Consente l'uso di un token di accesso di Azure Active Directory per l'autenticazione. Per altre informazioni, vedere [Uso di Azure Active Directory](using-azure-active-directory.md).
+Consente l'uso di un token di accesso di Azure Active Directory per l'autenticazione. Per altre informazioni vedere [Uso di Azure Active Directory](using-azure-active-directory.md).
 
 | Valore dell'attributo | Descrizione |
 |-|-|
@@ -230,7 +231,7 @@ Consente l'uso di un token di accesso di Azure Active Directory per l'autenticaz
 
 ### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
-Comunica con una libreria del provider dell'archivio chiavi caricata. Controlla la crittografia di colonna trasparente (Always Encrypted). Questo attributo non ha un valore predefinito. Per altre informazioni, vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md).
+Comunica con una libreria del provider dell'archivio chiavi caricata. Controlla la crittografia di colonna trasparente (Always Encrypted). Questo attributo non ha un valore predefinito. Per altre informazioni vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md).
 
 | Valore dell'attributo | Descrizione |
 |-|-|
@@ -238,7 +239,7 @@ Comunica con una libreria del provider dell'archivio chiavi caricata. Controlla 
 
 ### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
-Carica una libreria del provider dell'archivio chiavi per Always Encrypted o recupera i nomi delle librerie del provider dell'archivio chiavi caricate. Per altre informazioni, vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md). Questo attributo non ha un valore predefinito.
+Carica una libreria del provider dell'archivio chiavi per Always Encrypted o recupera i nomi delle librerie del provider dell'archivio chiavi caricate. Per altre informazioni vedere [Provider di archivi chiavi personalizzati](custom-keystore-providers.md). Questo attributo non ha un valore predefinito.
 
 | Valore dell'attributo | Descrizione |
 |-|-|
@@ -246,7 +247,7 @@ Carica una libreria del provider dell'archivio chiavi per Always Encrypted o rec
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-Per abilitare le transazioni XA con elaborazione delle transazioni (TP) conforme a XA, l'applicazione deve chiamare **SQLSetConnectAttr** con SQL_COPT_SS_ENLIST_IN_XA e un puntatore a un oggetto `XACALLPARAM`. Questa opzione è supportata in Windows, Linux (17.3 e versioni successive) e Mac.
+Per abilitare le transazioni XA con elaborazione delle transazioni (TP) conforme a XA, l'applicazione deve chiamare **SQLSetConnectAttr** con SQL_COPT_SS_ENLIST_IN_XA e un puntatore a un oggetto `XACALLPARAM`. Questa opzione è supportata in Windows, Linux (17.3 e versioni successive) e macOS.
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -257,7 +258,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 |valore|Descrizione|Piattaforme|  
 |-----------|-----------------|-----------------|  
-|Oggetto XACALLPARAM*|Puntatore all'oggetto `XACALLPARAM`.|Windows, Linux e Mac|
+|Oggetto XACALLPARAM*|Puntatore all'oggetto `XACALLPARAM`.|Windows, Linux e macOS|
 |TRUE|Associa la transazione XA alla connessione ODBC. Tutte le attività del database correlate verranno eseguite sotto la protezione della transazione XA.|Windows|  
 |FALSE|Annulla l'associazione della transazione XA alla connessione ODBC.|Windows|
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c07a5b8d3e1b34c0bb33f44a20ab5fff867db922
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f431d1598038d0789579697fccbaeffe5ef1fd0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117624"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487840"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare previsioni e stime usando modelli di Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Spesso, la scelta della metodologia di assegnazione dei punteggi da usare è det
 
 | Versione del prodotto e piattaforma | Metodologia |
 |------------------------------|-------------|
-| SQL Server 2017 in Windows, SQL Server 2017 su Linux e database SQL di Azure | **Assegnazione dei punteggi nativa** tramite T-SQL PREDICT |
+| SQL Server 2017 o versione successiva in Windows e Linux | **Assegnazione dei punteggi nativa** tramite T-SQL PREDICT |
 | SQL Server 2017 (solo Windows), R Services per SQL Server 2016 SP1 o versione successiva | **Assegnazione dei punteggi in tempo reale** con la stored procedure SP\_rxPredict |
 
 È consigliabile l'assegnazione dei punteggi nativa con la funzione PREDICT. Per l'uso di sp\_rxPredict è necessario abilitare l'integrazione di SQLCLR. Prima di abilitare questa opzione, valutare le implicazioni per la sicurezza.

@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252042"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630894"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> L'istruzione **RAISERROR** non rispetta **SET XACT_ABORT**. Le nuove applicazioni devono usare **THROW** invece di **RAISERROR**.
 
   Consente di generare un messaggio di errore e di inizializzare l'elaborazione dell'errore per la sessione. RAISERROR può fare riferimento a un messaggio definito dall'utente archiviato nella vista del catalogo sys.messages oppure compilare un messaggio in modo dinamico. Il messaggio viene restituito come messaggio di errore del server all'applicazione chiamante o a un blocco CATCH associato di un costrutto TRY...CATCH. Per le nuove applicazioni è invece necessario usare [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
@@ -45,7 +48,7 @@ ms.locfileid: "72252042"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -120,7 +123,7 @@ RAISERROR ( { msg_str | @local_variable }
 >  Queste specifiche del tipo si basano su quelle originariamente definite per la funzione **printf** nella libreria standard C. Le specifiche del tipo usate nelle stringhe di messaggio di RAISERROR eseguono il mapping ai tipi di dati [!INCLUDE[tsql](../../includes/tsql-md.md)], mentre le specifiche usate in **printf** eseguono il mapping ai tipi di dati del linguaggio C. Le specifiche del tipo usate in **printf** non sono supportate da RAISERROR se [!INCLUDE[tsql](../../includes/tsql-md.md)] non ha un tipo di dati simile al tipo di dati C associato. Ad esempio, la specifica *%p* per i puntatori non è supportata in RAISERROR perché in [!INCLUDE[tsql](../../includes/tsql-md.md)] non è disponibile un tipo di dati puntatore.  
   
 > [!NOTE]  
->  Per convertire un valore nel tipo di dati [!INCLUDE[tsql](../../includes/tsql-md.md)]bigint**di**, specificare **%I64d**.  
+>  Per convertire un valore nel tipo di dati **bigint** di [!INCLUDE[tsql](../../includes/tsql-md.md)], specificare **%I64d**.  
   
  *\@local_variable*  
  Variabile di qualsiasi tipo di dati carattere valido contenente una stringa con la stessa formattazione di *msg_str*. *\@local_variable* deve essere di tipo **char** o **varchar** oppure deve supportare la conversione implicita in questi tipi di dati.  
@@ -159,7 +162,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|LOG|Registra l'errore nel log degli errori e nel registro applicazioni per l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli errori registrati nel log degli errori non possono superare i 440 byte. Solo i membri del ruolo predefinito del server sysadmin oppure gli utenti che hanno l'autorizzazione ALTER TRACE possono specificare WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|Registra l'errore nel log degli errori e nel registro applicazioni per l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli errori registrati nel log degli errori non possono superare i 440 byte. Solo i membri del ruolo predefinito del server sysadmin oppure gli utenti che hanno l'autorizzazione ALTER TRACE possono specificare WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Invia i messaggi direttamente al client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Imposta i valori di @@ERROR e di ERROR_NUMBER su *msg_id* o 50000, indipendentemente dal livello di gravità.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   

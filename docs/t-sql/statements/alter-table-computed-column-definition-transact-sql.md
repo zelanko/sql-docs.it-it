@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b06287c5a21b2b333335cc199a9447200e04110
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982040"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631647"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73982040"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -55,7 +55,7 @@ column_name AS computed_column_expression
  Nome della colonna da modificare, aggiungere o eliminare. *column_name* può avere un numero di caratteri compreso tra 1 e 128. Nel caso di nuove colonne, è possibile omettere *column_name* per le colonne che sono state create con il tipo di dati **timestamp**. Se non viene specificato il nome *column_name* per una colonna con il tipo di dati **timestamp**, viene usato il nome **timestamp**.  
   
 *computed_column_expression*  
- Espressione che definisce il valore di una colonna calcolata. Una colonna calcolata è una colonna virtuale non archiviata fisicamente nella tabella, ma calcolata in base a un'espressione che utilizza altre colonne nella stessa tabella. La definizione di una colonna calcolata potrebbe ad esempio essere cost AS price * qty. L'espressione può essere un nome di colonna non calcolata, una costante, una funzione, una variabile e qualsiasi combinazione di questi elementi uniti da uno o più operatori. L'espressione non può essere una sottoquery o includere dati di tipo alias.  
+ Espressione che definisce il valore di una colonna calcolata. Una colonna calcolata è una colonna virtuale non archiviata fisicamente nella tabella, ma calcolata in base a un'espressione che utilizza altre colonne nella stessa tabella. Un'espressione deve restituire un valore. La definizione di una colonna calcolata potrebbe essere: cost AS price * qty. Un altro esempio con gli operatori bit per bit: is_finalised is_checked | is_approved. L'espressione può essere un nome di colonna non calcolata, una costante, una funzione, una variabile e qualsiasi combinazione di questi elementi uniti da uno o più operatori. L'espressione non può essere una condizione di ricerca, una sottoquery o includere dati di tipo alias.  
   
  È possibile utilizzare colonne calcolate in elenchi di selezione, clausole WHERE, clausole ORDER BY e nelle posizioni in cui è possibile utilizzare espressioni regolari, con le eccezioni seguenti:  
   

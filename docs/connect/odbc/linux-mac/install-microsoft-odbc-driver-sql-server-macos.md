@@ -1,5 +1,6 @@
 ---
 title: Installare Microsoft ODBC Driver for SQL Server (macOS)
+description: Informazioni su come installare Microsoft ODBC Driver for SQL Server nei client macOS per abilitare la connettività del database.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61bbc198c695ba6e1a0b6a339bfb110108435de8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921912"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488519"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Installare Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -59,7 +60,7 @@ Il driver ODBC in macOS include i componenti seguenti:
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib o libmsodbcsql.13.dylib|File della libreria di collegamento dinamico (`dylib`) che contiene tutte le funzionalità del driver. Questo file viene installato in `/usr/local/lib/`.|  
 |`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` per Driver 17 e in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` per Driver 13. | 
-|msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql.h viene installato in `/usr/local/include/msodbcsql17/` per Driver 17 e in `/usr/local/include/msodbcsql/` per Driver 13. |
+|msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e a odbcss.h nello stesso programma.<br /><br /> msodbcsql.h viene installato in `/usr/local/include/msodbcsql17/` per Driver 17 e in `/usr/local/include/msodbcsql/` per Driver 13. |
 |LICENSE.txt|File di testo che contiene i termini del contratto di licenza con l'utente finale. Questo file viene inserito in `/usr/local/share/doc/msodbcsql17/` per Driver 17 e in `/usr/local/share/doc/msodbcsql/` per Driver 13. |
 |RELEASE_NOTES|File di testo che contiene le note sulla versione. Questo file viene inserito in `/usr/local/share/doc/msodbcsql17/` per Driver 17 e in `/usr/local/share/doc/msodbcsql/` per Driver 13. |
 
@@ -67,7 +68,7 @@ Il driver ODBC in macOS include i componenti seguenti:
 
 Perché possa funzionare, il driver deve caricare il file di risorse. Questo file è denominato `msodbcsqlr17.rll` o `msodbcsqlr13.rll` a seconda della versione del driver. La posizione del file `.rll` dipende dalla posizione del driver stesso (`so` o `dylib`), come indicato nella tabella precedente. A partire dalla versione 17.1 il driver tenterà anche di caricare il file `.rll` dalla directory predefinita se il caricamento dal percorso relativo non riesce. Il percorso del file di risorse predefinito in macOS è `/usr/local/share/msodbcsql17/resources/en_US/`
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Se non è possibile effettuare una connessione a SQL Server tramite il driver ODBC, vedere l'articolo sui problemi noti dedicato alla [risoluzione dei problemi di connessione](known-issues-in-this-version-of-the-driver.md#connectivity).
 

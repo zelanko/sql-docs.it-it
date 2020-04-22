@@ -1,5 +1,6 @@
 ---
-title: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite Java | Microsoft Docs'
+title: 'Passaggio 3: Connessione a SQL tramite Java'
+description: Il passaggio 3 è un modello di prova che illustra come è possibile connettersi a SQL Server usando Java e JDBC. Gli esempi di base illustrano la selezione e l'inserimento dei dati.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 014b81238a197f93500ae43a622138bda6818500
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 966c931f5012e5701a0f6db0bd64503be1189d50
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909140"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528895"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite Java
   

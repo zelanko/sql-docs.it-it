@@ -1,5 +1,6 @@
 ---
-title: Uso dell'API di copia bulk per un'operazione di inserimento batch per JDBC Driver per MSSQL | Microsoft Docs
+title: API di copia bulk per l'inserimento batch in JDBC
+description: Microsoft JDBC Driver per SQL Server supporta l'uso dell'API di copia bulk per le operazioni di inserimento batch con Azure Data Warehouse.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62843af006d730c3994519fe4c31182805923478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916887"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633991"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso dell'API di copia bulk per un'operazione di inserimento batch
 
@@ -141,4 +142,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso del driver JDBC per il miglioramento di prestazioni e affidabilità](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Uso del driver JDBC per il miglioramento di prestazioni e affidabilità](improving-performance-and-reliability-with-the-jdbc-driver.md)

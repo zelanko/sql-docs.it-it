@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134428"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529432"
 ---
 # <a name="database-mail-configuration-objects"></a>Oggetti di configurazione di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Posta elettronica database dispone di due oggetti di configurazione: gli oggetti di configurazione del database forniscono una modalità per configurare le impostazioni che Posta elettronica database deve utilizzare per l'invio di messaggi posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Posta elettronica database ha due oggetti di configurazione: gli oggetti di configurazione del database offrono una modalità per configurare le impostazioni che Posta elettronica database deve usare per l'invio di messaggi di posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Account di Posta elettronica database  
   
@@ -59,11 +59,11 @@ ms.locfileid: "68134428"
   
  Posta elettronica database supporta tre metodi di autenticazione per la comunicazione con un server SMTP:  
   
--   Autenticazione di Windows: Posta elettronica database utilizza le credenziali dell'account servizio Windows del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per l'autenticazione sul server SMTP.  
+-   Autenticazione di Windows: Posta elettronica database usa le credenziali dell'account servizio Windows del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per l'autenticazione sul server SMTP.  
   
--   Autenticazione di base: Posta elettronica database utilizza il nome utente e la password specificati per l'autenticazione sul server SMTP.  
+-   Autenticazione di base:  Posta elettronica database usa il nome utente e la password specificati per l'autenticazione sul server SMTP.  
   
--   Autenticazione anonima: il server SMTP non richiede autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
+-   Autenticazione anonima:  il server SMTP non richiede l'autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
   
  Le informazioni sull'account vengono archiviate nel database **msdb** . Ciascun account include le informazioni seguenti:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134428"
   
 -   Numero di porta del server di posta elettronica.  
   
--   Colonna bit che indica se la connessione al server di posta elettronica SMTP viene eseguita utilizzando Secure Sockets Layer (SSL).  
+-   Colonna bit che indica se la connessione al server di posta elettronica SMTP viene eseguita con Transport Layer Security (TLS), noto in precedenza come Secure Sockets Layer (SSL).  
   
 -   Colonna bit che indica se la connessione al server SMTP viene eseguita tramite le credenziali configurate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68134428"
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|Modifica la descrizione o il nome di un profilo di Posta elettronica database.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|Aggiorna il numero di sequenza di un account in un profilo di Posta elettronica database.|  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
   
 |Nome|Descrizione|  
 |----------|-----------------|  

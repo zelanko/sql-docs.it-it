@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896957"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488134"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gestire i certificati in SQL Server Integration Services Scale Out
 
@@ -29,20 +29,20 @@ Per proteggere la comunicazione tra Scale Out Master e istanze di Scale Out Work
 
 Nella maggior parte dei casi, il certificato di Scale Out Master viene configurato durante l'installazione di Scale Out Master.
 
-Nella pagina **Configurazione di Integration Services Scale Out - Nodo master** dell'Installazione guidata di SQL Server, è possibile scegliere di creare un nuovo certificato SSL autofirmato oppure usare un certificato SSL esistente.
+Nella pagina **Configurazione di Integration Services Scale Out - Nodo master** dell'Installazione guidata di SQL Server, è possibile scegliere di creare un nuovo certificato TLS/SSL autofirmato oppure usare un certificato TLS/SSL esistente.
 
 ![Configurazione Master](media/master-config.PNG)
 
-**Nuovo certificato**. Se non si hanno requisiti speciali per i certificati, è possibile scegliere di creare un nuovo certificato SSL autofirmato. In questo certificato è anche possibile specificare i nomi comuni (CN). Verificare che il nome host dell'endpoint master che sarà poi usato dalle istanze di Scale Out Worker sia incluso nei nomi comuni. Per impostazione predefinita, sono inclusi il nome del computer e l'indirizzo IP del nodo master. 
+**Nuovo certificato**. Se non si hanno requisiti speciali per i certificati, è possibile scegliere di creare un nuovo certificato TLS/SSL autofirmato. In questo certificato è anche possibile specificare i nomi comuni (CN). Verificare che il nome host dell'endpoint master che sarà poi usato dalle istanze di Scale Out Worker sia incluso nei nomi comuni. Per impostazione predefinita, sono inclusi il nome del computer e l'indirizzo IP del nodo master. 
 
-**Certificato esistente**. Se si sceglie di usare un certificato esistente, fare clic su **Sfoglia** per selezionare un certificato SSL dall'archivio **Radice** dei certificati del computer locale.
+**Certificato esistente**. Se si sceglie di usare un certificato esistente, fare clic su **Sfoglia** per selezionare un certificato TLS/SSL dall'archivio certificati **Radice** del computer locale.
 
 ### <a name="change-the-scale-out-master-certificate"></a>Modificare il certificato di Scale Out Master
 
 Potrebbe essere necessario modificare il certificato di Scale Out Master perché scaduto o per altri motivi. Per modificare il certificato di Scale Out Master, eseguire le operazioni seguenti:
 
-#### <a name="1-create-an-ssl-certificate"></a>1. Creare un certificato SLL.
-Creare e installare un nuovo certificato SLL nel nodo master con il comando seguente:
+#### <a name="1-create-a-tlsssl-certificate"></a>1. Creare un certificato TLS/SLL.
+Creare e installare un nuovo certificato TLS/SLL nel nodo master con il comando seguente:
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -70,7 +70,7 @@ Eliminare l'associazione originale e configurare la nuova associazione con i com
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 Ad esempio:
@@ -81,18 +81,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3. Aggiornare il file di configurazione del servizio Scale Out Master
-Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` nel nodo master. Aggiornare **SSLCertThumbprint** all'identificazione personale del nuovo certificato SSL.
+Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` nel nodo master. Aggiornare **SSLCertThumbprint** all'identificazione personale del nuovo certificato TLS/SSL.
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4. Riavviare il servizio Scale Out Master
 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Ricollegare le istanze di Scale Out Worker a Scale Out Master
 Per ogni istanza di Scale Out Worker, eliminare il ruolo di lavoro e aggiungerlo di nuovo usando [Scale Out Manager](integration-services-ssis-scale-out-manager.md) oppure eseguire le operazioni seguenti:
 
-a.  Installare il certificato SSL client nell'archivio Radice del computer locale nel nodo di lavoro.
+a.  Installare il certificato TLS/SSL client nell'archivio Radice del computer locale nel nodo di lavoro.
 
 b.  Aggiornare il file di configurazione del servizio Scale Out Worker.
 
-Aggiornare il file di configurazione del servizio Scale Out Worker `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` nel nodo di lavoro. Aggiornare **MasterHttpsCertThumbprint** all'identificazione personale del nuovo certificato SSL.
+Aggiornare il file di configurazione del servizio Scale Out Worker `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` nel nodo di lavoro. Aggiornare **MasterHttpsCertThumbprint** all'identificazione personale del nuovo certificato TLS/SSL.
 
 c.  Riavviare il servizio Scale Out Worker.
 

@@ -1,5 +1,6 @@
 ---
-title: Connessione a bcp | Microsoft Docs
+title: Connessione a bcp
+description: Informazioni su come usare l'utilità bcp con Microsoft ODBC Driver for SQL Server in Linux e macOS.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924551"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632806"
 ---
 # <a name="connecting-with-bcp"></a>Connessione a bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-L'utilità [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS. In questa pagina vengono documentate le differenze rispetto alla versione di Windows di `bcp`.
+L'utilità [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) è disponibile con [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS. In questa pagina vengono documentate le differenze rispetto alla versione di Windows di `bcp`.
   
 - Il carattere di terminazione del campo è tabulazione ("\t").  
   
@@ -37,7 +38,7 @@ L'utilità [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) è disponibile 
 > -   -r "\n"  
 > -   -r '\n'  
   
-Di seguito è riportato un esempio di chiamata a un comando `bcp` per copiare le righe di una tabella in un file di testo:  
+Di seguito è riportato un esempio di chiamata di un comando `bcp` per copiare le righe di una tabella in un file di testo:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -61,7 +62,7 @@ Usa dati di tipo carattere.
 Specifica il database al quale connettersi.  
   
 - -d  
-Indica che il valore passato all'opzione -S di `bcp` deve essere interpretato come nome dell'origine dati (DSN). Per altre informazioni, vedere "Supporto di DSN in sqlcmd e bcp" in [Connessione con sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Indica che il valore passato all'opzione -S di `bcp` deve essere interpretato come nome dell'origine dati (DSN). Per altre informazioni, vedere "Supporto di DSN in sqlcmd e bcp" in [Connessione con sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *file_errori*Specifica il percorso completo di un file di errori usato per archiviare le eventuali righe che l'utilità `bcp` non è in grado di trasferire dal file al database.  
   
@@ -84,7 +85,7 @@ Specifica un timeout accesso. L'opzione -l specifica il numero di secondi che de
 Specifica il numero dell'ultima riga da esportare da una tabella o da importare da un file di dati.  
   
 - -m *max_errors*  
-Specifica il numero massimo di errori di sintassi che possono verificarsi prima dell'annullamento dell'operazione di `bcp`.  
+Specifica il numero massimo di errori di sintassi che possono verificarsi prima dell'annullamento dell'operazione `bcp`.  
   
 - -n  
 Esegue l'operazione di copia bulk usando i tipi di dati nativi del database.  
@@ -147,4 +148,4 @@ Se usato con le opzioni format e -f format_file, genera un file di formato basat
   
 ## <a name="see-also"></a>Vedere anche
 
-[Connessione a **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Connessione a **sqlcmd**](connecting-with-sqlcmd.md)  

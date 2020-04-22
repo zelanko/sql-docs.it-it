@@ -2,7 +2,7 @@
 title: Database tempdb | Microsoft Docs
 description: Questo argomento illustra i dettagli relativi alla configurazione e all'uso del database tempdb in SQL Server e nel database SQL di Azure
 ms.custom: P360
-ms.date: 08/21/2019
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c324d19a0e5005261a1c5a14834ea2d9c2f4f73
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288495"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635349"
 ---
 # <a name="tempdb-database"></a>Database tempdb
 
@@ -80,9 +80,9 @@ Nella tabella seguente sono elencati i valori predefiniti delle singole opzioni 
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|No|  
-|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_CREATE_STATISTICS|ON|Sì|  
 |AUTO_SHRINK|OFF|No|  
-|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS|ON|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
@@ -90,7 +90,7 @@ Nella tabella seguente sono elencati i valori predefiniti delle singole opzioni 
 |CURSOR_DEFAULT|GLOBAL|Sì|  
 |Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ATTIVA|No|  
+|DB_CHAINING|ON|No|  
 |ENCRYPTION|OFF|No|  
 |MIXED_PAGE_ALLOCATION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
@@ -111,26 +111,26 @@ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABAS
 
 |SLO|Dimensioni massime file di dati TempDB (GB)|N. di file di dati TempDB|Dimensioni massime dei dati TempDB (GB)|
 |---|---:|---:|---:|
-|Basic|13|1|13|
-|S0|13|1|13|
-|S1|13|1|13|
-|S2|13|1|13|
+|Basic|13,9|1|13,9|
+|S0|13,9|1|13,9|
+|S1|13,9|1|13,9|
+|S2|13,9|1|13,9|
 |S3|32|1|32
 |S4|32|2|64|
 |S6|32|3|96|
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13|12|156|
-|P2|13|12|156|
-|P4|13|12|156|
-|P6|13|12|156|
-|P11|13|12|156|
-|P15|13|12|156|
-|Pool elastici Premium (tutte le configurazioni DTU)|13|12|156|
-|Pool elastici standard (S0-S2)|13|12|156|
+|P1|13,9|12|166,7|
+|P2|13,9|12|166,7|
+|P4|13,9|12|166,7|
+|P6|13,9|12|166,7|
+|P11|13,9|12|166,7|
+|P15|13,9|12|166,7|
+|Pool elastici Premium (tutte le configurazioni DTU)|13,9|12|166,7|
+|Pool elastici standard (S0-S2)|13,9|12|166,7|
 |Pool elastici standard (S3 e versioni successive) |32|12|384|
-|Pool elastici Basic (tutte le configurazioni DTU)|13|12|156|
+|Pool elastici Basic (tutte le configurazioni DTU)|13,9|12|166,7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Dimensioni di TempDB per i livelli di servizio basati su vCore

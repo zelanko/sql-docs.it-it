@@ -1,5 +1,6 @@
 ---
-title: "Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Node.js | Microsoft Docs"
+title: "Passaggio 1: Configurare l'ambiente di sviluppo per Node.js"
+description: È necessario configurare l'ambiente di sviluppo con i prerequisiti per sviluppare un'applicazione che usa il driver Node.js per SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 38337772d9ec9db2503637122d0d1b616dc6ef5f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923835"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528135"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Node.js
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Passaggio 1:  Configurare l'ambiente di sviluppo per lo sviluppo Node.js
 È necessario configurare l'ambiente di sviluppo con i prerequisiti per sviluppare un'applicazione che usa il driver Node.js per SQL Server.  Sebbene il metodo più comune consista nell'usare la gestione pacchetti del nodo (npm) per installare il modulo tedious, è anche possibile scaricarlo direttamente da [GitHub](https://github.com/pekim/tedious).  
   
-Si noti che il driver Node.js usa il protocollo TDS che è abilitato per impostazione predefinita in SQL Server e nel database SQL di Azure.  Non è richiesta alcuna configurazione aggiuntiva.  
+Il driver Node.js usa il protocollo TDS che è abilitato per impostazione predefinita in SQL Server e nel database SQL di Azure.  Non è richiesta alcuna configurazione aggiuntiva.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Installare il runtime Node.js e la gestione pacchetti npm**  
+1. **Installare il runtime Node.js e la gestione pacchetti npm.**  
 a. Passare a [Node.js](https://nodejs.org/en/download/)  
 b. Fare clic sul collegamento MSI di Windows Installer.   
 c. Al termine del download, eseguire il file con estensione msi per installare Node.js  
@@ -41,7 +42,7 @@ c. Al termine del download, eseguire il file con estensione msi per installare N
 > npm init  
 ```  
   
-5. **Installare il modulo tedious nel progetto.**  Si tratta dell'implementazione del protocollo TDS usato dal driver per comunicare con SQL Server.  
+5. **Installare il modulo tedious nel progetto.**  Il modulo Tedious è l'implementazione del protocollo TDS usato per comunicare con SQL Server.  
 ```  
 > npm install tedious  
 ```  
@@ -50,11 +51,11 @@ c. Al termine del download, eseguire il file con estensione msi per installare N
   
 1.  **Aprire il terminale**  
   
-2. **Installare il runtime Node.js**  
+2. **Installare il runtime Node.js.**  
 ```  
 >sudo apt-get install node  
 ```  
-3. **Installare npm (gestione pacchetti del nodo)**  
+3. **Installare npm (gestione pacchetti del nodo).**  
 ```  
 > sudo apt-get install npm  
 ```  
@@ -69,16 +70,16 @@ c. Al termine del download, eseguire il file con estensione msi per installare N
 > sudo npm init  
 ```  
   
-6. **Installare il modulo tedious nel progetto.**  Si tratta dell'implementazione del protocollo TDS usato dal driver per comunicare con SQL Server.  
+6. **Installare il modulo tedious nel progetto.**  Il modulo Tedious è l'implementazione del protocollo TDS usato per comunicare con SQL Server.  
 ```  
 > sudo npm install tedious  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-1. **Installare il runtime Node.js e la gestione pacchetti npm**  
+1. **Installare il runtime Node.js e la gestione pacchetti npm.**  
 a. Passare a [Node.js](https://nodejs.org/en/download/)  
-b. Fare clic sul collegamento del programma di installazione Mac OS appropriato.  
+b. Fare clic sul collegamento del programma di installazione macOS appropriato.  
 c. Al termine del download, eseguire il file con estensione dmg per installare Node.js  
   
 2. **Aprire il terminale**  
@@ -98,4 +99,3 @@ c. Al termine del download, eseguire il file con estensione dmg per installare N
 ```  
 > npm install tedious  
 ```  
-  

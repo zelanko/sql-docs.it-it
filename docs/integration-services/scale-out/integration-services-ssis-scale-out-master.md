@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903808"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488128"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Master di scalabilità orizzontale di Integration Services (SSIS)
 
@@ -55,7 +55,7 @@ Scale Out Master è un servizio Windows responsabile delle comunicazioni con i c
 |Configurazione  |Descrizione  |Default Value  |
 |---------|---------|---------|
 |PortNumber|Numero di porta di rete usato per comunicare con un ruolo di lavoro di scalabilità orizzontale.|8391|
-|SSLCertThumbprint|Identificazione personale del certificato SSL usato per proteggere la comunicazione con un ruolo di lavoro di scalabilità orizzontale.|Identificazione personale del certificato SSL specificato durante l'installazione del master di scalabilità orizzontale.|
+|SSLCertThumbprint|Identificazione personale del certificato TLS/SSL usato per proteggere la comunicazione con un'istanza di Scale Out Worker.|Identificazione personale del certificato TLS/SSL specificato durante l'installazione di Scale Out Master|
 |SqlServerName|Nome dell'istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] contenente il catalogo SSISDB. Ad esempio, NomeServer\\NomeIstanza.|Nome dell'istanza di SQL Server installata con il master di scalabilità orizzontale.|
 |CleanupCompletedJobsIntervalInMs|Intervallo per l'eliminazione dei processi di esecuzione completati, espresso in millisecondi.|43200000|
 |DealWithExpiredTasksIntervalInMs|Intervallo per la gestione dei processi di esecuzione scaduti, espresso in millisecondi.|300000|
