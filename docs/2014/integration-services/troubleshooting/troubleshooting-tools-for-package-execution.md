@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637808"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087061"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi quando si eseguono i pacchetti dopo averli completati e distribuiti.  
@@ -52,13 +52,13 @@ ms.locfileid: "73637808"
   
 -   **Aggiunta di informazioni descrittive agli output degli errori**. Per semplificare l'analisi dell'output degli errori, oltre ai due identificatori numerici specificati dall'output stesso è possibile aggiungere informazioni descrittive.  
   
-     **Aggiungere la descrizione dell'errore**. Utilizzando un componente script, è possibile analizzare in modo semplice la descrizione dell'errore. Per ulteriori informazioni, vedere [miglioramento di un output degli errori per il componente script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Aggiungere la descrizione dell'errore**. Utilizzando un componente script, è possibile analizzare in modo semplice la descrizione dell'errore. Per ulteriori informazioni, vedere [Miglioramento di un output degli errori per il componente script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Aggiungere il nome della colonna Error**. Per informazioni sul nome della colonna corrispondente all'ID di colonna salvato dall'output degli errori non è sufficiente il componente script, ma sono necessarie ulteriori operazioni. Ogni ID di colonna in un flusso di dati è univoco all'interno dell'attività Flusso di dati ed è persistente nel pacchetto in fase di progettazione. L'approccio seguente consente di aggiungere il nome di colonna all'output degli errori. Per un esempio di come usare questo approccio, vedere [aggiunta del nome della colonna errore a un output degli errori](https://go.microsoft.com/fwlink/?LinkId=261546) in dougbert.com.  
+     **Aggiungere il nome della colonna di errore**. Per informazioni sul nome della colonna corrispondente all'ID di colonna salvato dall'output degli errori non è sufficiente il componente script, ma sono necessarie ulteriori operazioni. Ogni ID di colonna in un flusso di dati è univoco all'interno dell'attività Flusso di dati ed è persistente nel pacchetto in fase di progettazione. L'approccio seguente consente di aggiungere il nome di colonna all'output degli errori. 
   
     1.  **Creare una tabella di ricerca di nomi di colonna**. Creare un'applicazione separata in cui viene utilizzata l'API di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire un'iterazione su ogni pacchetto salvato, ogni flusso di dati nel pacchetto, ogni oggetto nel flusso di dati e ogni input e output nell'oggetto del flusso di dati. Nell'applicazione l'ID di colonna e il nome di ogni colonna devono essere persistenti nella tabella di ricerca, insieme all'ID dell'attività Flusso di dati padre e a quello del pacchetto.  
   
-    2.  **Aggiungere il nome della colonna all'output**. Aggiungere all'output degli errori una trasformazione Ricerca che consenta di eseguire una ricerca del nome della colonna nella tabella di ricerca creata al passaggio precedente. Per la ricerca è possibile utilizzare l'ID di colonna nell'output degli errori, l'ID di pacchetto, disponibile nella variabile di sistema System::PackageID, e l'ID dell'attività Flusso di dati, disponibile nella variabile di sistema System::TaskID.  
+    2.  **Aggiungere il nome della colonna all'output.** Aggiungere all'output degli errori una trasformazione Ricerca che consenta di eseguire una ricerca del nome della colonna nella tabella di ricerca creata al passaggio precedente. Per la ricerca è possibile utilizzare l'ID di colonna nell'output degli errori, l'ID di pacchetto, disponibile nella variabile di sistema System::PackageID, e l'ID dell'attività Flusso di dati, disponibile nella variabile di sistema System::TaskID.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i report delle operazioni  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili report delle operazioni standard per facilitare il monitoraggio dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati distribuiti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con i report relativi ai pacchetti è possibile visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
@@ -66,7 +66,7 @@ ms.locfileid: "73637808"
  Per altre informazioni, vedere [Risoluzione dei problemi relativi ai report per l'esecuzione del pacchetto](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite viste SSISDB  
- Sono disponibili diverse viste di database SSISDB su cui è possibile eseguire una query per monitorare l'esecuzione dei pacchetti e altre informazioni sulle operazioni. Per ulteriori informazioni, vedere [monitoraggio per le esecuzioni di pacchetti e altre operazioni](../performance/monitor-running-packages-and-other-operations.md).  
+ Sono disponibili diverse viste di database SSISDB su cui è possibile eseguire una query per monitorare l'esecuzione dei pacchetti e altre informazioni sulle operazioni. Per ulteriori informazioni, vedere [Monitoraggio per esecuzioni di pacchetti e altre operazioni](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite la registrazione  
  Abilitando la registrazione è possibile tenere traccia di ciò che avviene durante l'esecuzione dei pacchetti. I provider di log consentono di acquisire informazioni sugli eventi specificati da utilizzare per un'analisi successiva e di salvare tali informazioni in una tabella di database, in un file flat, in un file XML o in un altro formato di output supportato.  
@@ -85,7 +85,7 @@ ms.locfileid: "73637808"
   
     3.  **Valutare l'opportunità di acquisire i dati sul conteggio delle righe**. Prendere in considerazione la creazione di una tabella separata per le informazioni sul conteggio delle righe, in cui ogni istanza di esecuzione di un pacchetto è identificata tramite il relativo ExecutionID. Utilizzare la trasformazione Conteggio righe per salvare il conteggio delle righe in una serie di variabili in punti critici del flusso di dati. Al termine del flusso di dati, utilizzare un'attività Esegui SQL per inserire le serie di valori in una riga della tabella, per operazioni successive di analisi e creazione di report.  
   
-     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)][Progetto REAL: progettazione ETL di Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
+     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)][Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582) (Project REAL: Indicazioni di progettazione ETL per Business Intelligence).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i file di dump del debug  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Per altre informazioni, vedere [Generazione di file di dump per l'esecuzione del pacchetto](generating-dump-files-for-package-execution.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "73637808"
   
 -   **Configurazione della proprietà DelayValidation per gli elementi del pacchetto non validi quando il pacchetto viene caricato**. È possibile impostare la proprietà `DelayValidation` su `True` per gli elementi del pacchetto la cui configurazione non è valida, per impedire errori di convalida quando il pacchetto viene caricato. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. La proprietà `DelayValidation` può essere abilitata a livello di pacchetto oppure delle singole attività e dei singoli contenitori del pacchetto.  
   
-     La proprietà `DelayValidation` può essere impostata in un'attività Flusso di dati ma non nei singoli componenti flusso di dati. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Quando, tuttavia, il valore di questa proprietà è impostato su `false`, il componente non riconosce le modifiche ai metadati delle origini dei dati esterne. Impostando la proprietà `true` su <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>, è possibile evitare problemi causati da blocchi nel database, in particolare quando nel pacchetto vengono utilizzate transazioni.  
+     La proprietà `DelayValidation` può essere impostata in un'attività Flusso di dati ma non nei singoli componenti flusso di dati. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Quando, tuttavia, il valore di questa proprietà è impostato su `false`, il componente non riconosce le modifiche ai metadati delle origini dei dati esterne. Impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> su `true`, è possibile evitare problemi causati da blocchi nel database, in particolare quando nel pacchetto vengono utilizzate transazioni.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Risoluzione dei problemi relativi alle autorizzazioni in fase di esecuzione  
  Se si verificano errori quando si cerca di eseguire pacchetti distribuiti tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile che gli account usati non dispongano delle autorizzazioni necessarie. Per informazioni su come risolvere i problemi legati all'esecuzione di pacchetti dai processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Un pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo di SQL Server Agent](https://support.microsoft.com/kb/918760). Per altre informazioni sull'esecuzione di pacchetti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).  
@@ -111,8 +111,5 @@ ms.locfileid: "73637808"
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)  
-  
-## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog relativo all' [aggiunta del nome della colonna di errore a un output degli errori](https://go.microsoft.com/fwlink/?LinkId=261546)nel sito dougbert.com.  
   
   

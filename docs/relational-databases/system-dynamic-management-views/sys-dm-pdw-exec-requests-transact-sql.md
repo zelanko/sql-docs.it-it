@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 851c138e00300a303b1618041a16e2c38516968e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301251"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087561"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -34,10 +34,10 @@ ms.locfileid: "81301251"
 |start_time|**datetime**|Ora di inizio dell'esecuzione della richiesta.|NULL per le richieste in coda; in caso contrario, **datetime** valido minore o uguale all'ora corrente.|  
 |end_compile_time|**datetime**|Ora in cui il motore ha completato la compilazione della richiesta.|NULL per le richieste che non sono ancora state compilate; in caso contrario, un **valore datetime** valido minore di start_time e minore o uguale all'ora corrente.|
 |end_time|**datetime**|Ora in cui l'esecuzione della richiesta è stata completata, non è riuscita o è stata annullata.|Null per le richieste in coda o attive; in caso contrario, un **valore datetime** minore o uguale all'ora corrente.|  
-|total_elapsed_time|**Int**|Tempo trascorso nell'esecuzione dall'avvio della richiesta, in millisecondi.|Tra 0 e la differenza tra start_time e end_time.</br></br> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genererà l'avviso "Il valore massimo è stato superato".</br></br> Il valore massimo in millisecondi è uguale a 24,8 giorni.|  
+|total_elapsed_time|**int**|Tempo trascorso nell'esecuzione dall'avvio della richiesta, in millisecondi.|Tra 0 e la differenza tra start_time e end_time.</br></br> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genererà l'avviso "Il valore massimo è stato superato".</br></br> Il valore massimo in millisecondi è uguale a 24,8 giorni.|  
 |label|**nvarchar(255)**|Stringa di etichetta facoltativa associata ad alcune istruzioni di query SELECT.|Qualsiasi stringa contenente 'a-z','A-''','0-9','_'.|  
 |error_id|**nvarchar(36)**|ID univoco dell'errore associato alla richiesta, se presente.|Vedere [sys.dm_pdw_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); impostato su NULL se non si è verificato alcun errore.|  
-|database_id|**Int**|Identificatore del database utilizzato dal contesto esplicito (ad esempio, USE DB_X).|Vedere ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|**int**|Identificatore del database utilizzato dal contesto esplicito (ad esempio, USE DB_X).|Vedere ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Contiene il testo completo della richiesta inviata dall'utente.|Qualsiasi query o testo di richiesta valido. Le query più lunghe di 4000 byte vengono troncate.|  
 |resource_class|**nvarchar(20)**|Gruppo del carico di lavoro utilizzato per questa richiesta. |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classi di risorse dinamiche</br>PiccoloRC</br>MediaRC</br>GrandeRC</br>XLargeRC (informazioni in cui i valori xico|
 |importance|**nvarchar(128)**|Impostazione importanza in cui è stata eseguita la richiesta.  Questa è l'importanza relativa di una richiesta in questo gruppo di carico di lavoro e tra i gruppi di carico di lavoro per le risorse condivise.  L'importanza specificata nel classificatore sostituisce l'impostazione di importanza del gruppo di carico di lavoro.</br>Si applica a: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normal (predefinito)</br>above_normal</br>high|
@@ -62,7 +62,7 @@ ms.locfileid: "81301251"
 |-**0x08 (in tissuta 0x0**|La memorizzazione nella cache del set di risultati è disabilitata a causa di predicati di sicurezza a livello di riga.|  
 |-**0x10 (in modo 0x10)**|La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della tabella di sistema, della tabella temporanea o della tabella esterna nella query.|  
 |-**0x20 (in questo 0x20)**|La memorizzazione nella cache del set di risultati è disabilitata perché la query contiene costanti di runtime, funzioni definite dall'utente o funzioni non deterministiche.|  
-|-**0x40 (in questo 0x40)**|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono troppo grandi (> 1 milione di righe).|  
+|-**0x40 (in questo 0x40)**|La memorizzazione nella cache del set di risultati è disabilitata perché la dimensione stimata del set di risultati è >10 GB.|  
 |-**0x80 (in questo 0x80)**|La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe con dimensioni grandi (>64kb).|  
   
 ## <a name="permissions"></a>Autorizzazioni
