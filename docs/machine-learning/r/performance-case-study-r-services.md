@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 19935bbcaba9b856ff04b5c618de3b3643e48732
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117574"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486773"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Prestazioni per R Services: risultati e risorse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -351,7 +351,7 @@ Di seguito vengono forniti collegamenti a informazioni, strumenti e script usati
 
 + Articolo che descrive la soluzione per l'individuazione dei curricula corrispondenti: [Optimization tip and tricks for SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/) (Suggerimenti e trucchi per l'ottimizzazione di R Services per SQL Server)
 
-+ Script usati nell'ottimizzazione di SQL per la soluzione per l'individuazione dei curricula corrispondenti: [repository di GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Script usati nell'ottimizzazione di SQL per la soluzione per l'individuazione dei curricula corrispondenti: [repository di GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)
 
 ### <a name="learn-about-windows-server-management"></a>Informazioni sulla gestione di Windows Server
 

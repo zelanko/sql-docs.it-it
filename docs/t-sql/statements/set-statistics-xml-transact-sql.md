@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e06886ec3a66e4860927a9f953c0bee9da2b902
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68004722"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634633"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68004722"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>Esempi  
  Nelle due istruzioni seguenti vengono utilizzate le impostazioni dell'istruzione SET STATISTICS XML per illustrare l'analisi e l'ottimizzazione dell'utilizzo degli indici nelle query da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La prima query utilizza l'operatore di confronto uguale a (=) nella clausola WHERE in una colonna indicizzata. La seconda query utilizza l'operatore LIKE nella clausola WHERE. In tal modo viene imposta l'esecuzione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'analisi di indice cluster per individuare i dati che soddisfano la condizione della clausola WHERE. I valori negli attributi **EstimateRows** e **EstimatedTotalSubtreeCost** della prima query indicizzata sono inferiori, a indicare che la query è stata elaborata molto più rapidamente e con un numero di risorse inferiore rispetto alla query non indicizzata.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

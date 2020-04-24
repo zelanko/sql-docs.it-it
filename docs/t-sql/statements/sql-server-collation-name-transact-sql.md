@@ -17,12 +17,12 @@ ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 540f0947bf68713aa78755a9fe874b909b959e2a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099976"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633566"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>Nome delle regole di confronto di SQL Server (Transact-SQL)
 
@@ -36,7 +36,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportate le 
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 <SQL_collation_name> :: =
 SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 

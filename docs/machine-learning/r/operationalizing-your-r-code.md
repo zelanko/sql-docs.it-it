@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebca30560a437cc8c95b9604cc24fbd7542c9d85
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117584"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486810"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendere operativo il codice R usando le stored procedure in Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Questa procedura dettagliata fornisce esempi di assegnazione dei punteggi tramit
 
 Vedere questi modelli di soluzione per esempi di come integrare l'assegnazione dei punteggi in un'applicazione:
 
-+ [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md) (Previsione di vendita al dettaglio)
++ [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/README.md) (Previsione di vendita al dettaglio)
 + [Rilevamento di frodi](https://github.com/Microsoft/r-server-fraud-detection)
 + [Customer clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering) (Clustering dei clienti)
 

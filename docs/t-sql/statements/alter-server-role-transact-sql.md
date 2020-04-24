@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: pdw, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e16c698947dbe8ad6c324f16e644b2dd43276435
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070267"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631852"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +35,7 @@ Modifica l'appartenenza di un ruolo del server o il nome di un ruolo del server 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER SERVER ROLE server_role_name   
@@ -46,7 +46,7 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
@@ -98,7 +98,7 @@ Per aggiungere un membro a un ruolo del server definito dall'utente, è necessar
 ### <a name="a-changing-the-name-of-a-server-role"></a>R. Modifica del nome di un ruolo del server  
 Nell'esempio seguente viene creato un ruolo del server denominato `Product`, viene quindi modificato il nome del ruolo del server in `Production`.  
   
-```  
+```sql
 CREATE SERVER ROLE Product ;  
 ALTER SERVER ROLE Product WITH NAME = Production ;  
 GO  
@@ -107,14 +107,14 @@ GO
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Aggiunta di un account di dominio a un ruolo del server  
 Nell'esempio seguente viene aggiunto un account di dominio denominato `adventure-works\roberto0` al ruolo del server definito dall'utente denominato `Production`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. Aggiunta di un account di accesso di SQL Server a un ruolo del server  
 Nell'esempio seguente un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominato `Ted` viene aggiunto al ruolo predefinito del server `diskadmin`.  
   
-```  
+```sql
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
 GO  
 ```  
@@ -122,14 +122,14 @@ GO
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. Rimozione di un account di dominio da un ruolo del server  
 Nell'esempio seguente viene rimosso un account di dominio denominato `adventure-works\roberto0` dal ruolo del server definito dall'utente denominato `Production`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Rimozione di un account di accesso di SQL Server da un ruolo del server  
 Nell'esempio seguente l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted` viene rimosso dal ruolo predefinito del server `diskadmin`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
 GO  
 ```  
@@ -137,7 +137,7 @@ GO
 ### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>F. Concessione di un account di accesso all'autorizzazione per aggiungere account di accesso a un ruolo del server definito dall'utente  
 Nell'esempio seguente viene consentito a `Ted` di aggiungere altri account di accesso al ruolo del server definito dall'utente denominato `Production`.  
   
-```  
+```sql
 GRANT ALTER ON SERVER ROLE::Production TO Ted ;  
 GO  
 ```  
@@ -145,7 +145,7 @@ GO
 ### <a name="g-to-view-role-membership"></a>G. Per visualizzare l'appartenenza ai ruoli  
 Per visualizzare l'appartenenza ai ruoli, usare la pagina **Ruolo server (Membri)** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o eseguire la query seguente:  
   
-```  
+```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -161,14 +161,14 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="h-basic-syntax"></a>H. Sintassi di base  
 Nell'esempio seguente l'account di accesso `Anna` viene aggiunto al ruolo del server `LargeRC`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>I. Rimuove un account di accesso da una classe di risorse.  
 L'esempio seguente rimuove l'appartenenza di Anna al ruolo del server `LargeRC`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   

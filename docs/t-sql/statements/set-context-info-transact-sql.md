@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f75a2c8fcbef8109c48e352a9c3987a2a5a7cc2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12bdcb5de42e7a3f78455cd0a3bc0046f89b18bc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866619"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634422"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "78866619"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
@@ -67,7 +67,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
 ### <a name="a-setting-context-information-by-using-a-constant"></a>R. Impostazione delle informazioni relative al contesto tramite una costante  
  Nell'esempio seguente viene illustrato l'utilizzo della costante `SET CONTEXT_INFO`, mediante l'impostazione del valore e la visualizzazione dei risultati. Si noti che per l'esecuzione di una query su `sys.dm_exec_sessions` sono necessarie le autorizzazioni SELECT e VIEW SERVER STATE, mentre non lo sono per l'utilizzo della funzione CONTEXT_INFO.  
   
-```  
+```sql
 SET CONTEXT_INFO 0x01010101;  
 GO  
 SELECT context_info   
@@ -79,7 +79,7 @@ GO
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. Impostazione delle informazioni relative al contesto tramite una funzione  
  L'esempio seguente dimostra l'utilizzo dell'output di una funzione per impostare il valore contestuale, dove il valore restituito dalla funzione deve essere innanzitutto inserito in una variabile **binary**.  
   
-```  
+```sql
 DECLARE @BinVar varbinary(128);  
 SET @BinVar = CAST(REPLICATE( 0x20, 128 ) AS varbinary(128) );  
 SET CONTEXT_INFO @BinVar;  

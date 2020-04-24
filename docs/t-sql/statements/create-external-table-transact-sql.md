@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee3ae71f906b56fa91698d5238e2391d928d8be2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112452"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633369"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Vedere anche [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-externa
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 -- Create a new external table
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )
@@ -585,7 +585,7 @@ Vedere anche [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-externa
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 -- Create a table for use with elastic query  
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -726,7 +726,7 @@ Vedere anche [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-externa
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (
@@ -953,7 +953,7 @@ Vedere anche [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-externa
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117344"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486710"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ Uno dei vantaggi di SQL Server è la possibilità di gestire un volume elevato d
 
 È anche possibile inviare i dati di input come una singola query, che viene poi analizzata da SQL Server. Se è possibile creare un piano di query parallelo per i dati di input, vengono automaticamente partizionati i dati assegnati ai nodi e vengono eseguiti in parallelo anche i join e le aggregazioni richiesti.
 
-Per informazioni dettagliate su come definire una stored procedure da usare per l'assegnazione dei punteggi, vedere il progetto di esempio in [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) e cercare il file "step5_score_for_matching.sql". Lo script di esempio tiene anche traccia delle ore di inizio e di fine della query e scrive l'ora nella console SQL, in modo da poter valutare le prestazioni.
+Per informazioni dettagliate su come definire una stored procedure da usare per l'assegnazione dei punteggi, vedere il progetto di esempio in [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) e cercare il file "step5_score_for_matching.sql". Lo script di esempio tiene anche traccia delle ore di inizio e di fine della query e scrive l'ora nella console SQL, in modo da poter valutare le prestazioni.
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>Assegnazione dei punteggi simultanea con i gruppi di risorse
 
@@ -214,7 +214,7 @@ Nello scenario di individuazione dei curricula corrispondenti la concorrenza è 
 
 - Ogni gruppo di carico di lavoro deve gestire due attività di assegnazione dei punteggi. Non appena un'attività termina la lettura dei dati e avvia l'assegnazione dei punteggi, l'altra attività può iniziare a leggere i dati dal database.
 
-Per visualizzare gli script di PowerShell per questo scenario, aprire il file experiment.ps1 nel [progetto GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips).
+Per visualizzare gli script di PowerShell per questo scenario, aprire il file experiment.ps1 nel [progetto GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching).
 
 ### <a name="storing-models-for-prediction"></a>Archiviazione dei modelli per la stima
 

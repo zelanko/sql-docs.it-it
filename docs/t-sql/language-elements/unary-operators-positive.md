@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b0e559051424f4578942c1ba2c15e10467f6a27
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086153"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632258"
 ---
 # <a name="unary-operators---positive"></a>Operatori unari - positivo
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Restituisce il valore di un'espressione numerica (operatore unario). Gli operato
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 + numeric_expression  
 ```  

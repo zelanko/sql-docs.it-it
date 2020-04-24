@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903818"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631974"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
@@ -36,7 +36,7 @@ Questo articolo illustra come usare l'istruzione COPY in Azure SQL Data Warehous
 
 ## <a name="syntax"></a>Sintassi  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -364,7 +364,7 @@ WITH (
 Il comando COPY avrà prestazioni migliori nel momento in cui la funzionalità è disponibile a livello generale. Per ottimizzare le prestazioni durante l'anteprima pubblica, è consigliabile dividere l'input in più file durante il caricamento del file CSV. COPY presenta attualmente le stesse prestazioni di PolyBase quando si usa INSERT SELECT. 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quali sono le linee guida per la divisione in file per il comando COPY che carica i file CSV?
-Le linee guida per il numero di file sono descritte nella tabella seguente. Una volta raggiunto il numero consigliato di file, si otterranno prestazioni migliori per i file più grandi. Non è necessario dividere i file non compressi quando il comando COPY è disponibile a livello generale. 
+Le linee guida per il numero di file sono descritte nella tabella seguente. Una volta raggiunto il numero consigliato di file, si otterranno prestazioni migliori per i file più grandi. 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

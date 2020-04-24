@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7293db962cb8e74e234a0a168afa1600ee29fd67
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076441"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633565"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68076441"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
@@ -67,7 +67,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come il proprietario del database può adottare l'identità di un altro utente. L'utente `mary` ha creato una tabella denominata `computer_types`. Tramite l'istruzione SETUSER, il proprietario del database rappresenta `mary` per concedere all'utente `joe` l'accesso alla tabella `computer_types` e quindi ripristina la propria identità.  
   
-```  
+```sql
 SETUSER 'mary';  
 GO  
 GRANT SELECT ON computer_types TO joe;  

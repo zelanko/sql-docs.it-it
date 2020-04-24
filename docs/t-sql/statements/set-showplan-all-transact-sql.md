@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941697"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634294"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941697"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Tipo**|Tipo di nodo. Per il nodo padre di ogni query, è il tipo di istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio SELECT, INSERT, EXECUTE e così via. Per sottonodi che rappresentano piani di esecuzione, il tipo è PLAN_ROW.|  
 |**Parallel**|**0** = L'operatore non viene eseguito in parallelo.<br /><br /> **1** = L'operatore viene eseguito in parallelo.|  
 |**EstimateExecutions**|Numero stimato di esecuzioni dell'operatore durante l'elaborazione della query corrente.|  
-  
+|||
+
  *Le unità di costo sono basate su una misurazione interna del tempo, non sul tempo dell'orologio. Si utilizzano per la determinazione del costo relativo di un piano rispetto ad altri piani.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  I valori nelle colonne **EstimateRows** e **TotalSubtreeCost** della prima query indicizzata sono inferiori, a indicare che la query è stata elaborata molto più rapidamente e con un numero di risorse inferiore rispetto alla query non indicizzata.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

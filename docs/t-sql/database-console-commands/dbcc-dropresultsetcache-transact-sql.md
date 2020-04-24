@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e46c70ad39a0f711a81b4ce87450da06ce07c083
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0f87333a1767a8d0a618d2afe5097852b7a6dee
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73729894"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634778"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE (Transact-SQL)
 
@@ -29,7 +29,7 @@ Rimuove tutte le voci della cache dei set di risultati da un'istanza del databas
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```syntaxsql
 DBCC DROPRESULTSETCACHE
 [;]  
 ```  

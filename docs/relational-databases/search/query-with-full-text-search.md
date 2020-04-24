@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053569"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488184"
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Per scrivere query full-text, usare i predicati **CONTAINS** e **FREETEXT** e le
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Esempi di ogni predicato e funzione
 
-Gli esempi seguenti usano il database di esempio AdventureWorks. Per la versione finale di AdventureWorks, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Database e script di AdventureWorks per SQL Server 2016 CTP3). Per eseguire le query di esempio, è necessario impostare anche la ricerca full-text. Per altre informazioni, vedere [Introduzione alla ricerca full-text](get-started-with-full-text-search.md). 
+Gli esempi seguenti usano il database di esempio AdventureWorks. Per la versione finale di AdventureWorks, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) (Database e script di AdventureWorks per SQL Server 2016 CTP3). Per eseguire le query di esempio, è necessario impostare anche la ricerca full-text. Per altre informazioni, vedere [Introduzione alla ricerca full-text](get-started-with-full-text-search.md). 
 
 ### <a name="example---contains"></a>Esempio - CONTAINS  
 L'esempio seguente trova tutti i prodotti con un prezzo di `$80.99` che contengono la parola `"Mountain"`:

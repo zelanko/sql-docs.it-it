@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119114"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487115"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installare pacchetti Python con sqlmlutils
 
@@ -37,7 +37,7 @@ Per altre informazioni sulla posizione dei pacchetti e sui percorsi di installaz
 
 ### <a name="other-considerations"></a>Altre considerazioni
 
-+ I pacchetti devono essere conformi alla versione di Python disponibile. Per altre informazioni sulla versione di Python inclusa in ogni versione di SQL Server, vedere le [versioni di Python e R in Che cos'è Machine Learning Services per SQL Server (Python e R)?](../what-is-sql-server-machine-learning.md#versions)
++ I pacchetti devono essere conformi alla versione di Python disponibile. Per altre informazioni sulla versione di Python inclusa in ogni versione di SQL Server, vedere le [versioni di Python e R in Che cos'è Machine Learning Services per SQL Server (Python e R)?](../sql-server-machine-learning-services.md#versions)
 
 + La libreria di pacchetti Python si trova nella cartella Programmi dell'istanza di SQL Server e, per impostazione predefinita, è necessario disporre delle autorizzazioni di amministratore per eseguire installazioni in questa cartella. Per altre informazioni, vedere [Percorso della libreria dei pacchetti](../package-management/python-package-information.md#default-python-library-location).
 
