@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 746f0763ccc8878ea8f4673888c47983b15f28e5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874461"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636236"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -35,7 +35,7 @@ Specifica il nome delle regole di confronto Windows nella clausola COLLATE in [!
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -234,6 +234,7 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Lithuanian_Classic|Lithuanian_Classic|
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Macedone|Macedone|
+||||
 
 <sup>1</sup> Le regole di confronto solo Unicode di Windows possono essere applicate solo a dati a livello di colonna o a livello di espressione. Tali regole non possono essere usate come regole di confronto del server o del database.
 
